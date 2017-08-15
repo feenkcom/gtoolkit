@@ -9,5 +9,5 @@ nextPutAll: aString with: aBlock
 	text 
 		attributes: { previewAttribute }
 		from: text size - aString size + 1
-		to: text size.
+		to: text size - 1.
 	editor invalidateAll; updateAll
