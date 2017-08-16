@@ -5,7 +5,11 @@ extraStyle: aText ast: ast
 		ast pragmas do: [ :each |
 			each selector = #dependsOn: ifTrue: [ 
 				aText 
-					attributes: { BrTextExpandButtonAttribute new attributesCreatingBlock: [" BrTextAdornmentDynamicAttribute new adornmentBlock: [ BlElement new size: 70 @ 50; background: Color red; yourself ]"] } 
+					attributes: { BrTextExpandButtonAttribute new attributesCreatingBlock: [ BrTextAdornmentDynamicAttribute new beAppend; adornmentBlock: [
+							BlElement new
+								constraintsDo: [ :c | 
+									c textFlow pushLine ];
+								size: 70 @ 50; background: Color red; yourself ]] } 
 					from: each left
 					to: each right.
 				Transcript 
