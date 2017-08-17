@@ -1,0 +1,3 @@
+*GToolkit-Documenter
+gtoLive
+	^ self
