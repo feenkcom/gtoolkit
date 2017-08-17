@@ -1,0 +1,3 @@
+initialization
+defaultLayout
+	^ BlGridLayout horizontal
