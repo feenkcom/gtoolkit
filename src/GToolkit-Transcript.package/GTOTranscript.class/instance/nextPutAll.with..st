@@ -2,8 +2,7 @@ streaming
 nextPutAll: aString with: aBlock
 	| previewAttribute |
 
-	editor insertString: aString asString at: text size.
-	editor moveCursorTo: text size.
+	self nextPutAll: aString.
 	previewAttribute := BrTextExpandButtonAttribute new attributesCreatingBlock: aBlock.
 	text 
 		attributes: { previewAttribute }
