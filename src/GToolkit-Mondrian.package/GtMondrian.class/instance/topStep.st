@@ -1,0 +1,3 @@
+stack
+topStep
+	^ stack top

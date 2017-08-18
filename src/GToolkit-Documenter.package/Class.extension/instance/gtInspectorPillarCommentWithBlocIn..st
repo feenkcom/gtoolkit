@@ -6,7 +6,7 @@ gtInspectorPillarCommentWithBlocIn: composite
 		element: [ 
 			| text styler editor editorElement |
 			text := BrRopedText string: self comment.
-			styler := GTOPillarStyler new fileReference: FileSystem workingDirectory.
+			styler := GtPillarStyler new fileReference: FileSystem workingDirectory.
 			editor := BrTextEditor new.
 			editor styler: styler.
 			editor text: text.

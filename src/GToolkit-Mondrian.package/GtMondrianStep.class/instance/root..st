@@ -1,0 +1,9 @@
+accessing
+root: anElement
+	"Setting the root element essentially contains the Mondrian shape.
+	At this stage we also can already gather the element that can contain children."
+	root := anElement.
+	childrenContainer := root.
+	root allChildrenDo: [ :each | 
+		each isMondrianChildrenContainer ifTrue: [ 
+			childrenContainer := each ] ]
