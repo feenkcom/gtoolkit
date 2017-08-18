@@ -13,8 +13,7 @@ initializeElements
 	editorElement := self newEditorElement: self example.
 	editorElement constraintsDo: [ :c |
 		c horizontal matchParent.
-		self flag: 'Should we match parent vertically?'.
-		c vertical matchParent.
+		c vertical fitContent.
 		"since parent is horizontal, I will take 50% of the available width"
 		c grid horizontal weight: 0.5 ].
 	

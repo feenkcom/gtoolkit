@@ -23,7 +23,7 @@ script
 											constraintsDo: [ :c | 
 												c textFlow pushLine.
 												c horizontal matchParent.
-												c vertical exact: 100  ].
+												c vertical fitContent  ].
 										exampleElement example: exampleMethod gtExample.
 										exampleElement previewShowBlock: selector asSymbol ]
 									ifAbsent: [ 
