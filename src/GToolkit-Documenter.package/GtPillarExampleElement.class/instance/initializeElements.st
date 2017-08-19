@@ -15,20 +15,20 @@ initializeElements
 		c horizontal matchParent.
 		c vertical fitContent.
 		"since parent is horizontal, I will take 50% of the available width"
-		c grid horizontal weight: 0.5 ].
+		c linear weight: 0.5 ].
 	
 	arrowElement := self newArrowElement.
 	arrowElement constraintsDo: [ :c |
 		"Let's put arrow in the middle of its cell"
-		c grid horizontal alignCenter.
-		c grid vertical alignCenter ].
+		c linear horizontal alignCenter.
+		c linear vertical alignCenter ].
 	
 	previewElement := self newPreviewElement.
 	previewElement constraintsDo: [ :c |
         c horizontal matchParent.
         c vertical matchParent.
         "since parent is horizontal, I will take 50% of the available width"
-        c grid horizontal weight: 0.5 ].
+        c linear weight: 0.5 ].
 
 	"we don't add previewElement by default"
 	self addChildren: { editorElement . arrowElement }
