@@ -5,8 +5,7 @@ measure: anElement with: anExtentSpec
 		self
 			measureChild: each
 			parentSpec: anExtentSpec.
-		each position: each measuredBounds origin.
-		each size: each measuredBounds extent ].
+		each extent: each measuredExtent ].
 
 	self applyOn: anElement managedChildren.
 	self fit: anElement with: anExtentSpec
