@@ -21,7 +21,7 @@ figure
 							| anImageForm |
 							anImageForm := pictureFileReference binaryReadStreamDo: [ :stream | 
 								PNGReadWriter formFromStream: stream ].
-							GtPillarPictureAttribute image: anImageForm ].
+							GtPillarPictureAttribute new image: anImageForm; weight: 0.5 ].
 						expandingAttribute := BrTextExpandButtonAttribute new attributesCreatingBlock: previewAttributeBlock.
 						attributesToAdd := OrderedCollection with: expandingAttribute.
 						tokens fourth ifNotNil: [ :parameters | 
