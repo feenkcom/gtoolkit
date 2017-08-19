@@ -1,1 +1,0 @@
-[[[example=GtMondrianDomainExamples>>#umlClassesOn:|noCode|show=gtBlocPropagationIn:]]]
