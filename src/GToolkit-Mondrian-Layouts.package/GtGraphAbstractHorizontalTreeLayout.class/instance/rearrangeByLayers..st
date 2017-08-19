@@ -4,6 +4,6 @@ rearrangeByLayers: aGraph
 	cursor := self leftGap.
 	nodesByLayer do: [ :eachSetOfNodes |
 		layerDepthSize := eachSetOfNodes inject: 0 into: [ :max :eachNode | 
-			translator translateTopLeftOf: eachNode to: (cursor @ eachNode encompassingRectangle top).
+			translator translateTopLeftOf: eachNode to: (cursor @ eachNode measuredBounds top).
 			max max: eachNode measuredWidth ].
 		cursor := cursor + layerDepthSize + self horizontalGap ]
