@@ -1,8 +1,19 @@
 accessing
 affect: aBrText in: aBrEditor
-
-	^ BlElement new
+	| scalableElement imageElement |
+	
+	scalableElement := BlScalableElement new.
+	
+	scalableElement constraintsDo: [ :c |
+		c horizontal matchParent.
+		c textFlow pushLine.
+		c vertical fitContent ].
+	
+	imageElement := BlElement new
 		size: self image extent;
-		constraintsDo: [ :c | c textFlow pushLine ];
 		background: (BlBackground builder image: self image; build);
-		yourself
+		yourself.
+		
+	scalableElement contentElement: imageElement.
+	
+	^ scalableElement
