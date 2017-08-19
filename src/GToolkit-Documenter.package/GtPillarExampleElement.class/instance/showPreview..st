@@ -4,15 +4,15 @@ showPreview: aBlockOrSymbol
 	with resulting object as an argument in order to transform it
 	into a visual element to be opened as a preview"
 	| aResultElement |
-	
+
 	self
 		assert: [ previewElement hasParent not ]
 		description: [ 'Can not show preview if it is already opened' ].
-	
+
 	self
 		assert: [ previewElement hasChildren not ]
 		description: [ 'Preview container must be empty' ].
-	
+
 	"we don't add resulting element directly, but instead put
 	in a container that matches parent. This allows us to preserve
 	layout constrains of resulting element untouched"
