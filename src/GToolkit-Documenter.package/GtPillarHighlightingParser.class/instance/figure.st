@@ -15,19 +15,24 @@ figure
 					and: [ pictureFileReference mimeTypes notNil
 						and: [ pictureFileReference mimeTypes first matches: ZnMimeType imagePng ] ])
 					ifTrue: [
-						| previewAttribute  |
-
-						previewAttribute := BrTextExpandButtonAttribute new attributesCreatingBlock: [
+						| expandingAttribute attributesToAdd previewAttributeBlock previewAttribute |
+						"we are doing a horrible hack here: we are creating the preview by hand if it needs to be expanded"
+						previewAttributeBlock := [
 							| anImageForm |
 							anImageForm := pictureFileReference binaryReadStreamDo: [ :stream | 
-							PNGReadWriter formFromStream: stream ].
+								PNGReadWriter formFromStream: stream ].
 							GtPillarPictureAttribute image: anImageForm ].
-
+						expandingAttribute := BrTextExpandButtonAttribute new attributesCreatingBlock: previewAttributeBlock.
+						attributesToAdd := OrderedCollection with: expandingAttribute.
+						tokens fourth ifNotNil: [ :parameters | 
+							(parameters anySatisfy: [:p | p first = 'expanded' asArray]) ifTrue: [ 
+								previewAttribute := previewAttributeBlock value.
+								expandingAttribute isExpanded: true; createdAttributes: { previewAttribute }.
+								attributesToAdd add: previewAttribute ] ].
 						self targetText 
-							attributes: { previewAttribute }
+							attributes: attributesToAdd
 							from: tokens first start 
 							to: tokens last stop ].
-						
 				self targetText 
 					attributes: { BrTextForegroundAttribute paint: Color blue muchDarker }
 					from: tokens first start 
