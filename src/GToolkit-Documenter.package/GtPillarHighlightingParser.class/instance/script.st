@@ -10,6 +10,11 @@ script
 				[ 
 					| exampleMethod |
 					exampleMethod := Compiler evaluate: exampleString.
+					self targetText 
+						attributes: {
+							BrTextForegroundAttribute paint: Color blue muchDarker }
+						from: aToken first stop + 1
+						to: aToken last start - 1.
 					self targetText attributes: { 
 						BrTextExpandButtonAttribute new attributesCreatingBlock: [ 
 							BrTextAdornmentDynamicAttribute new beAppend; adornmentBlock: [	 
