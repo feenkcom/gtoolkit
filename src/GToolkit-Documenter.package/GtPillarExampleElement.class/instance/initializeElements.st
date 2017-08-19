@@ -25,10 +25,10 @@ initializeElements
 	
 	previewElement := self newPreviewElement.
 	previewElement constraintsDo: [ :c |
-        c horizontal matchParent.
-        c vertical matchParent.
-        "since parent is horizontal, I will take 50% of the available width"
-        c linear weight: 0.5 ].
+		c horizontal matchParent.
+		c vertical matchParent.
+		"since parent is horizontal, I will take 50% of the available width"
+		c linear weight: 0.5 ].
 
 	"we don't add previewElement by default"
 	self addChildren: { editorElement . arrowElement }
