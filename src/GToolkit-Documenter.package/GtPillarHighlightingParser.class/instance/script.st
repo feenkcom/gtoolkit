@@ -8,41 +8,47 @@ script
 			at: 'example' 
 			ifPresent: [ :exampleString | 
 				[ 
-					| exampleMethod |
+					| exampleMethod previewAttributeBlock previewAttribute attributesToAdd expandingAttribute |
 					exampleMethod := Compiler evaluate: exampleString.
 					self targetText 
-						attributes: {
-							BrTextForegroundAttribute paint: Color blue muchDarker }
+						attributes: { BrTextForegroundAttribute paint: Color blue muchDarker }
 						from: aToken first stop + 1
 						to: aToken last start - 1.
-					self targetText attributes: { 
-						BrTextExpandButtonAttribute new attributesCreatingBlock: [ 
-							BrTextAdornmentDynamicAttribute new beAppend; adornmentBlock: [	 
-								aToken second asDictionary 
-									at: 'show'
-									ifPresent: [ :selector | 
-										| exampleElement |
-										exampleElement := GtPillarExampleElement withCode: (aToken second asDictionary includesKey: 'noCode') not.
-										exampleElement
-											margin: (BlInsets top: 0 right: 10 bottom: 10 left: 10);
-											constraintsDo: [ :c | 
-												c textFlow pushLine.
-												c horizontal matchParent.
-												c vertical fitContent  ].
-										exampleElement
-											example: exampleMethod gtExample
-											showBlock: [ :returnValue |
-											| composite |
-											composite := BlElement new constraintsDo: [ :c |
-												c vertical matchParent.
-												c horizontal matchParent ].
-												returnValue perform: selector asSymbol withArguments: {composite}.
-											composite ] ]
-									ifAbsent: [ 
-										(GtExamplesStyler 
-											editorElementOnSourceCode: exampleMethod sourceCode
-											inClass: exampleMethod methodClass)
-											margin: (BlInsets top: 0 right: 10 bottom: 10 left: 10) ] ] ] } 
+					previewAttributeBlock := [ 
+						BrTextAdornmentDynamicAttribute new beAppend; adornmentBlock: [	 
+							aToken second asDictionary 
+								at: 'show'
+								ifPresent: [ :selector | 
+									| exampleElement |
+									exampleElement := GtPillarExampleElement withCode: (aToken second asDictionary includesKey: 'noCode') not.
+									exampleElement
+										margin: (BlInsets top: 0 right: 10 bottom: 10 left: 10);
+										constraintsDo: [ :c | 
+											c textFlow pushLine.
+											c horizontal matchParent.
+											c vertical fitContent  ].
+									exampleElement
+										example: exampleMethod gtExample
+										showBlock: [ :returnValue |
+										| composite |
+										composite := BlElement new constraintsDo: [ :c |
+											c vertical matchParent.
+											c horizontal matchParent ].
+											returnValue perform: selector asSymbol withArguments: {composite}.
+										composite ] ]
+								ifAbsent: [ 
+									(GtExamplesStyler 
+										editorElementOnSourceCode: exampleMethod sourceCode
+										inClass: exampleMethod methodClass)
+										margin: (BlInsets top: 0 right: 10 bottom: 10 left: 10) ] ] ].
+					expandingAttribute := BrTextExpandButtonAttribute new attributesCreatingBlock: previewAttributeBlock.
+					attributesToAdd := OrderedCollection with: expandingAttribute.
+					(aToken second asDictionary includesKey: 'expanded') ifTrue: [ 
+						previewAttribute := previewAttributeBlock value.
+						attributesToAdd add: previewAttribute.
+						expandingAttribute isExpanded: true.
+						expandingAttribute createdAttributes: { previewAttribute } ].
+					self targetText attributes: attributesToAdd
 						from: aToken last start
 						to: aToken last stop.
 				] 

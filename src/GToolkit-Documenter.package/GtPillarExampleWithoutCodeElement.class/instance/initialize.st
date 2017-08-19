@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	
-	previewHeight := 100
+	previewHeight := 200
