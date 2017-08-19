@@ -25,7 +25,13 @@ script
 												c horizontal matchParent.
 												c vertical fitContent  ].
 										exampleElement example: exampleMethod gtExample.
-										exampleElement previewShowBlock: selector asSymbol ]
+										exampleElement previewShowBlock: [ :returnValue |
+											| composite |
+											composite := BlElement new constraintsDo: [ :c |
+												c vertical matchParent.
+												c horizontal matchParent ].
+												returnValue perform: selector asSymbol withArguments: {composite}.
+											composite ] ]
 									ifAbsent: [ 
 										(GtExamplesStyler 
 											editorElementOnSourceCode: exampleMethod sourceCode
