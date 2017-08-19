@@ -1,4 +1,4 @@
 scripting
 connect: aCollection fromAll: aFromAllBlock to: aToBlock
-	aCollection do: [ :each |
+	^ aCollection flatCollect: [ :each |
 		self connect: (aFromAllBlock value: each) from: [ :x | x ] to: [ :x | each ] ]
