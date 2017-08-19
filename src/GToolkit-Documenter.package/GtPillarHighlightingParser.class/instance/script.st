@@ -22,7 +22,7 @@ script
 									at: 'show'
 									ifPresent: [ :selector | 
 										| exampleElement |
-										exampleElement := GtPillarExampleElement withCode: true.
+										exampleElement := GtPillarExampleElement withCode: (aToken second asDictionary includesKey: 'noCode') not.
 										exampleElement
 											margin: (BlInsets top: 0 right: 10 bottom: 10 left: 10);
 											constraintsDo: [ :c | 
