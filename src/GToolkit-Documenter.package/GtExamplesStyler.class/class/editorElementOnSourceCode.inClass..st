@@ -1,12 +1,11 @@
-as yet unclassified
+factory
 editorElementOnSourceCode: aString inClass: aClass
 	| styler editor editorElement text |
 	
 	text := BrRopedText string: aString.
-	
-	styler := GtExamplesStyler new.
+	styler := self new.
 	styler classOrMetaClass: aClass.
-	
+	text attributes: { BrFontGenericFamilyAttribute monospace beNotOverwritableByStyler}.
 	editor := BrTextEditor new.
 	editor styler: styler.
 	editor text: text.
