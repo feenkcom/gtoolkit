@@ -10,7 +10,7 @@ example: aGTExample
 	self
 		assert: [ example isNil ]
 		description: [ 'Can be initialized only once' ].
-		
+
 	example := aGTExample.
 
 	self initializeElements.
