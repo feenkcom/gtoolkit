@@ -13,6 +13,6 @@ nestedWithEdges
 			BlTextElement new text: (BrRopedText string: x asString) ].
 		view nodes: (1 to: each).
 		view edges connect: (1 to: each) from: [ :x | x // 2 ] to: [ :x | x ].
-		view layout: (BlGraphRadialTreeLayout new). ].
-	view layout: (BlGraphCircleLayout new radius: 200).
+		view layout: (GtGraphRadialTreeLayout new). ].
+	view layout: (GtGraphCircleLayout new radius: 200).
 	^ view

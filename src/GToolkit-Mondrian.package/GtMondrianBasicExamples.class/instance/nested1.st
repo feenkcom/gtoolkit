@@ -12,6 +12,6 @@ nested1
 		view shape: [ :x | 
 			BlTextElement new text: (BrRopedText string: x asString) ].
 		view nodes: (1 to: each). 
-		view layout: (BlGraphGridLayout new gapSize: 5). ].
-	view layout: (BlGraphCircleLayout new radius: 200).
+		view layout: (GtGraphGridLayout new gapSize: 5). ].
+	view layout: (GtGraphCircleLayout new radius: 200).
 	^ view topStep root

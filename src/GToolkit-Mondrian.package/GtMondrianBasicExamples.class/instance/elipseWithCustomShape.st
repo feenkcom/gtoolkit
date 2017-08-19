@@ -11,5 +11,5 @@ elipseWithCustomShape
 			constraintsDo: [ :constraints |
 				constraints padding: (BlInsets all: 10) ] ].
 	view nodes: (1 to: 20).	
-	view layout: (BlGraphCircleLayout new radius: 200).
+	view layout: (GtGraphCircleLayout new radius: 200).
 	^ view

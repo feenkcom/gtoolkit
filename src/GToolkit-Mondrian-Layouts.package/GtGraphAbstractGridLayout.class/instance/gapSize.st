@@ -1,0 +1,4 @@
+accessing
+gapSize
+	
+	^ gapSize

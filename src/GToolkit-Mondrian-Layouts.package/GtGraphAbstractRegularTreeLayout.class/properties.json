@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "GtGraphAbstractGraphLayout",
+	"category" : "GToolkit-Mondrian-Layouts-Layouts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"alreadyLayoutedNodes",
+		"topGap",
+		"leftGap",
+		"nodesByLayer",
+		"isLayered",
+		"shouldBeHorizontallyReversed",
+		"shouldBeVerticallyReversed"
+	],
+	"name" : "GtGraphAbstractRegularTreeLayout",
+	"type" : "normal"
+}

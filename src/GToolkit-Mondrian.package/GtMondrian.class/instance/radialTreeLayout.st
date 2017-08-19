@@ -1,3 +1,3 @@
 scripting - layout
 radialTreeLayout
-	^ self layout: BlGraphRadialTreeLayout new
+	^ self layout: GtGraphRadialTreeLayout new

@@ -1,0 +1,3 @@
+constraints
+constraints
+	^ GtGraphConstraints new

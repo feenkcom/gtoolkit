@@ -1,0 +1,1 @@
+I am the abstract root class of weighted circle layout. Look at the class comments of my subclasses for more details.

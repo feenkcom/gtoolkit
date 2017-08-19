@@ -1,0 +1,4 @@
+private
+gap
+	
+	^ self verticalGap

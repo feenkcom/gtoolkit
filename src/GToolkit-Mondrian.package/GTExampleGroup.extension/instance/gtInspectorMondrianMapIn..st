@@ -17,12 +17,12 @@ gtInspectorMondrianMapIn: composite
 						 addEventHandlerOn: BlMouseDownEvent do: [ :anEvent | bloc selection: each ]				
 					 ].
 				view nodes: assoc value.
-				view layout: BlGraphRadialTreeLayout new ].
+				view layout: GtGraphRadialTreeLayout new ].
 			"view shape line color: (Color black alpha: 0.5)."
 			view shape: [ :each | 
 				BlLineElement new
 					border: (BlBorder paint: (Color gray alpha: 0.2) width: 1)  ].
 			view edges connect: self examples fromAll: #directDependents to: #yourself.
-			view layout: BlGraphGridLayout new.
+			view layout: GtGraphGridLayout new.
 			view topStep root ]";
 		send: [ :x | (x isKindOf: Association) ifTrue: [ self class new examples: x value ] ifFalse: [ x ] ]"

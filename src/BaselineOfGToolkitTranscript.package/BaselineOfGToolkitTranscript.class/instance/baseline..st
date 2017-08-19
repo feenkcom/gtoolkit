@@ -6,5 +6,5 @@ baseline: spec
 			baseline: 'Brick' with: [ spec
 				repository: 'github://pharo-graphics/Brick/src';
 				loads: #development ];
-			package: 'GToolkit-Transcript'
+			package: 'GToolkit-Transcript' with: [ spec requires: #(#Brick) ]
 	]
