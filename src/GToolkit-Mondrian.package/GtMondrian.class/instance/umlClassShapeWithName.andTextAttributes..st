@@ -1,9 +1,11 @@
 scripting - shape
-umlClassShapeWithName: aBlock
+umlClassShapeWithName: aBlock andTextAttributes: aTextAttributesBlock
 	self shape: [ :anObject |
-		| label labelContainer contents grid |
+		| label labelContainer contents grid labelText |
+		labelText := BrRopedText string: (aBlock value: anObject).
+		labelText attributes: (aTextAttributesBlock value: anObject).
 		label := BlTextElement new
-			text: (BrRopedText string: (aBlock value: anObject));
+			text: labelText;
 			padding: (BlInsets all: 5);
 			constraintsDo: [ :c | c frame horizontal alignCenter ].
 		labelContainer := BlElement new.
