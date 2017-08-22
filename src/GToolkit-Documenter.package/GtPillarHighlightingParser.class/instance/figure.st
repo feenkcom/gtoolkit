@@ -25,7 +25,7 @@ figure
 						expandingAttribute := BrTextExpandButtonAttribute new attributesCreatingBlock: previewAttributeBlock.
 						attributesToAdd := OrderedCollection with: expandingAttribute.
 						tokens fourth ifNotNil: [ :parameters | 
-							(parameters anySatisfy: [:p | p first = 'expanded' asArray]) ifTrue: [ 
+							(parameters anySatisfy: [:p | p notEmpty and: [p first = 'expanded' asArray]]) ifTrue: [ 
 								previewAttribute := previewAttributeBlock value.
 								expandingAttribute isExpanded: true; createdAttributes: { previewAttribute }.
 								attributesToAdd add: previewAttribute ] ].
