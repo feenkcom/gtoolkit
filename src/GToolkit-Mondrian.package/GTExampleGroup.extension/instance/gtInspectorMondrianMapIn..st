@@ -1,8 +1,7 @@
 *GToolkit-Mondrian
 gtInspectorMondrianMapIn: composite
-	<gtInspectorPresentationOrder: 2>
 	composite bloc
-		title: 'Map';
+		title: 'Map (Bloc)';
 		element: [ :bloc |
 			| view |
 			view := GtMondrian new. 
