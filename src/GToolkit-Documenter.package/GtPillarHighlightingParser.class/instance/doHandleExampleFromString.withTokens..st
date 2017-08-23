@@ -8,7 +8,7 @@ doHandleExampleFromString: exampleString withTokens: aToken
 		to: aToken last start - 1.
 	previewAttributeBlock := [ BrTextAdornmentDynamicAttribute new
 		beAppend;
-		adornmentBlock: [ aToken second asDictionary
+		elementBlock: [ aToken second asDictionary
 				at: 'show'
 				ifPresent: [ :selector | 
 					| exampleElement |

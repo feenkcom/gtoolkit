@@ -7,7 +7,7 @@ extraStyle: aText ast: ast
 				aText 
 					attributes: { 
 					BrTextExpandButtonAttribute new attributesCreatingBlock: [ 
-						BrTextAdornmentDynamicAttribute new beAppend; adornmentBlock: [	 
+						BrTextAdornmentDynamicAttribute new beAppend; elementBlock: [	 
 							| editorElement |
 							editorElement := self class 
 								editorElementOnSourceCode: (ast methodNode methodClass >> each arguments anyOne value) sourceCode
