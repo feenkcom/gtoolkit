@@ -5,5 +5,5 @@ putAll: aString
 	transcript text
 		clearAttributes: transcript text size - aString size + 1
 		to: transcript text size
-		if: [ :anAttribute | anAttribute isKindOf: BrTextExpandButtonAttribute ].
+		if: [ :a | true ].
 	adornmentStrategy executeOn: aString for: self transcript
