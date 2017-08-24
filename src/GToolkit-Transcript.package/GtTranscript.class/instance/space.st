@@ -1,3 +1,3 @@
 streaming
 space
-	self nextPut: Character space
+	self next space

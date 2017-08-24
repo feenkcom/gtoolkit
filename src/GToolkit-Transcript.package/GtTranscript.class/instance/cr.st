@@ -1,3 +1,3 @@
 streaming
 cr
-	self nextPut: Character cr
+	self next cr

@@ -1,3 +1,3 @@
 streaming
 tab
-	self nextPut: Character tab
+	self next tab

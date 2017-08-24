@@ -1,3 +1,3 @@
 streaming
 print: anObject
-	self nextPutAll: anObject asString
+	self next print: anObject
