@@ -1,8 +1,7 @@
 examples
-nested1
+nestedNodesOn: view
 	<gtExample>
-	| view |
-	view := GtMondrian new.
+	<dependsOn: #emptyView>
 	view shape: [ :each | 
 		BlElement new 	
 			border: (BlBorder paint: Color black width: 2);
@@ -14,4 +13,4 @@ nested1
 		view nodes: (1 to: each). 
 		view layout: (GtGraphGridLayout new gapSize: 5). ].
 	view layout: (GtGraphCircleLayout new radius: 200).
-	^ view topStep root
+	^ view

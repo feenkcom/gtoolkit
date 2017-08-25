@@ -1,8 +1,7 @@
 examples
-nestedWithEdges
+nestedWithEdgesOn: view
 	<gtExample>
-	| view |
-	view := GtMondrian new.
+	<dependsOn: #emptyView>
 	view shape: [ :each | 
 		BlElement new 	
 			border: (BlBorder paint: Color black width: 2);
