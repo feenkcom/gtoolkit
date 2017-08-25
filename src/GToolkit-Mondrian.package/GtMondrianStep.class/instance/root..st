@@ -6,4 +6,5 @@ root: anElement
 	childrenContainer := root.
 	root allChildrenDo: [ :each | 
 		each isMondrianChildrenContainer ifTrue: [ 
-			childrenContainer := each ] ]
+			childrenContainer := each ] ].
+	self layout: GtGraphGridLayout new
