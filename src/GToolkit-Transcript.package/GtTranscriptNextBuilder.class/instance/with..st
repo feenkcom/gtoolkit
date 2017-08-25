@@ -1,3 +1,3 @@
 streaming
 with: aBlock
-	adornmentStrategy := GtTranscriptExpandAdornmentStrategy new previewBlock: aBlock 
+	adornmentStrategy := GtTranscriptExpandAdornmentStrategy new previewBlock: aBlock.

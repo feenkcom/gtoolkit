@@ -8,5 +8,4 @@ putAll: aString
 		to: transcript text size
 		if: [ :a | true ].
 	"apply the possible adornment"
-	adornmentStrategy executeOn: aString for: self transcript.
-	self resetStrategy
+	adornmentStrategy executeFor: self

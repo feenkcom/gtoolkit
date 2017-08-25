@@ -1,3 +1,4 @@
 initialize
 initialize
-	self resetStrategy
+	self resetStrategy.
+	
