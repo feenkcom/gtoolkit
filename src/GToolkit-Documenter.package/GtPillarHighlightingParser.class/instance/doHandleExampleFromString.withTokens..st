@@ -1,4 +1,4 @@
-handling scripts
+handling
 doHandleExampleFromString: exampleString withTokens: aToken
 	| previewAttributeBlock exampleMethod attributesToAdd expandingAttribute previewAttribute |
 	exampleMethod := Compiler evaluate: exampleString.
