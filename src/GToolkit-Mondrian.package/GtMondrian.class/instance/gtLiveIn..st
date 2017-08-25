@@ -1,3 +1,3 @@
 ui
-gtBlocPropagationIn: anElement
+gtLiveIn: anElement
 	anElement addChild: self asScalableElement
