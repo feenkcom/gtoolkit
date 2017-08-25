@@ -10,5 +10,6 @@ umlClassesOn: view
 				padding: (BlInsets top: 5 right: 5 bottom: 5 left: 5) ].
 		view nodes: class methods.
 		view layout: BlLinearLayout vertical ].
-	view layout: (GtGraphRectanglePackLayout new). 
+	view edges connectFrom: #superclass.
+	view layout: (GtGraphTreeLayout new verticalGap: 100). 
 	^ view
