@@ -1,4 +1,3 @@
 initialize
 initialize
-	self resetStrategy.
-	
+	attributes := OrderedCollection new

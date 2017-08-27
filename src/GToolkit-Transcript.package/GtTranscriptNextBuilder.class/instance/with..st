@@ -1,3 +1,5 @@
 streaming
 with: aBlock
-	adornmentStrategy := GtTranscriptExpandAdornmentStrategy new previewBlock: aBlock.
+	| previewAttribute |
+	previewAttribute := BrTextExpandButtonAttribute new attributesCreatingBlock: aBlock.
+	attributes add: previewAttribute

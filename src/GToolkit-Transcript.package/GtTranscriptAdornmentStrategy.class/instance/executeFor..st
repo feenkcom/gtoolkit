@@ -1,3 +1,0 @@
-executing
-executeFor: transcriptNextState
-	self subclassResponsibility

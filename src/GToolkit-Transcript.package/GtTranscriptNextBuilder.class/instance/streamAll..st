@@ -6,4 +6,4 @@ streamAll: aBlock
 	aBlock value.
 	adornmentStrategy := rememberedAdornmentStrategy.
 	startPosition := rememberedStartPosition.
-	adornmentStrategy executeFor: self
+	self applyAttributes
