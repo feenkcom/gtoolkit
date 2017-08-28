@@ -5,8 +5,8 @@ edgeElementFor: anObject from: fromElement to: toElement
 		ifNotNil: [ elementBlock value: anObject ]
 		ifNil: [ self defaultEdgeElement ].
 	edgeElement
-		fromAnchor: (BlGeometryAttachPointAnchor attachPoint: fromElement);
-		toAnchor: (BlGeometryAttachPointAnchor attachPoint: toElement).
+		fromAnchor: (BlElementBottomCenterAnchor element: fromElement);
+		toAnchor: (BlElementTopCenterAnchor element: toElement).
 	edgeElement mondrianModel: anObject.
 	edgeElement beMondrianEdge.
 	^ edgeElement
