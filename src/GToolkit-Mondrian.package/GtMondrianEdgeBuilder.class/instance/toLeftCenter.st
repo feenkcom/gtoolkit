@@ -1,0 +1,3 @@
+scripting anchors
+toLeftCenter
+	self toAnchor: BlElementLeftCenterAnchor
