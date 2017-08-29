@@ -20,7 +20,7 @@ umlClassShapeWithName: aBlock
 				c horizontal fitContent ];
 			background: Color white;
 			beMondrianChildrenContainer.
-	    grid := GtUMLClassElement new
+	    grid := GtWidthExpandingElement new
 			layout: (BlGridLayout vertical cellSpacing: 1);
 			constraintsDo: [ :c |
 				c vertical fitContent.

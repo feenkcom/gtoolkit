@@ -1,3 +1,3 @@
-accessing
+private
 topStep
 	^ self mondrian topStep

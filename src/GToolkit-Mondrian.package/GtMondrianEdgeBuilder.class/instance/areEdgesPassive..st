@@ -1,3 +1,3 @@
 accessing
-areEdgesPassive: anObject
-	isPassive := anObject
+areEdgesPassive: aBoolean
+	areEdgesPassive := aBoolean

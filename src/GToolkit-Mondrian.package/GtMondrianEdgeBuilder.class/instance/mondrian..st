@@ -1,3 +1,3 @@
 accessing
-mondrian: anObject
-	mondrian := anObject
+mondrian: aMondrian
+	mondrian := aMondrian
