@@ -1,4 +1,4 @@
-accessing
+private
 defaultNodeElement
 	^ BlElement new
 		background: (BlBackground paint: Color white);

@@ -1,0 +1,1 @@
+I am a special element that can grow horizontally with the children regardless of the layout.

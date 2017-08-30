@@ -18,7 +18,7 @@ example
 	            background: (BlBackground paint: Color white);
 	            yourself.
 	contents addChild: contentLabel.
-	grid := GtUMLClassElement new.
+	grid := GtWidthExpandingElement new.
 	grid 
 	    layout: (BlGridLayout vertical cellSpacing: 2);
 	    constraintsDo: [ :c |

@@ -1,3 +1,3 @@
 accessing
 areEdgesPassive
-	^ isPassive
+	^ areEdgesPassive

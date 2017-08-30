@@ -1,3 +1,5 @@
 initialize
 initialize
-	isPassive := false
+	areEdgesPassive := false.
+	fromAnchorClass := BlElementCenterAnchor.
+	toAnchorClass := BlElementCenterAnchor

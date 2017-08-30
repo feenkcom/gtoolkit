@@ -12,9 +12,9 @@ connect: aCollection from: aFromBlock to: aToBlock
 				child mondrianModel = toObject ifTrue: [ toElement := child ] ] ].
 		(toElement notNil and: [ fromElement notNil ])
 			ifTrue: [ 
-				line := self topStep edgeElementFor: each from: fromElement to: toElement.
+				line := self edgeElementFor: each from: fromElement to: toElement.
 				self areEdgesPassive ifFalse: [ 
-					self topStep edgeConstraintsFrom: fromElement to: toElement ].
+					self edgeConstraintsFrom: fromElement to: toElement ].
 				self topStep root addChild: line.
 				elements add: line ] ].
 	self topStep resetElement.

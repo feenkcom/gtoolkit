@@ -1,4 +1,4 @@
-accessing
+private
 edgeConstraintsFrom: fromElement to: toElement
 	| edge |
 	edge := GtGraphEdge new from: fromElement to: toElement.
