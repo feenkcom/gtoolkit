@@ -1,14 +1,13 @@
 {
 	"commentStamp" : "TudorGirba 8/31/2017 21:18",
-	"super" : "Object",
+	"super" : "GtMondrianBuilder",
 	"category" : "GToolkit-Mondrian",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"mondrian",
 		"elementBlock"
 	],
-	"name" : "GtMondrianInternalBuilder",
+	"name" : "GtMondrianGraphBuilder",
 	"type" : "normal"
 }

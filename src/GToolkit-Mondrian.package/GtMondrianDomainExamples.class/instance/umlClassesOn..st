@@ -11,7 +11,7 @@ umlClassesOn: view
 						text: (BrRopedText string: method selector);
 						padding: (BlInsets top: 5 right: 5 bottom: 5 left: 5) ];
 				for: class methods.
-			view layout: BlLinearLayout vertical ].
+			view layout custom: BlLinearLayout vertical ].
 	view edges connectFrom: #superclass.
-	view layout: (GtGraphTreeLayout new verticalGap: 100). 
+	view layout tree verticalGap: 100. 
 	^ view

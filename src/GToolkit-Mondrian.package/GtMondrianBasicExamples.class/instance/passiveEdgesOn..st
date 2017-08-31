@@ -12,5 +12,5 @@ passiveEdgesOn: view
 				border: (BlBorder paint: (Color red alpha: 0.5) width: 2) ];
 		passive; 
 		connect: { 1->12 . 11 -> 19 } from: #key to: #value.
-	view layout: (GtGraphRadialTreeLayout new).
+	view layout radialTree.
 	^ view

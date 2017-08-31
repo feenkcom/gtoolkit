@@ -1,3 +1,3 @@
-scripting - core
+scripting
 nodes
 	^ GtMondrianNodeBuilder new mondrian: self

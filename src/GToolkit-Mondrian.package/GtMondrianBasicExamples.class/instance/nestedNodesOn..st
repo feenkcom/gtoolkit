@@ -12,6 +12,6 @@ nestedNodesOn: view
 			view nodes
 				shape: [ :x | BlTextElement new text: (BrRopedText string: x asString) ];
 				for: (1 to: each). 
-			view layout: (GtGraphGridLayout new gapSize: 5). ].
-	view layout: (GtGraphCircleLayout new radius: 200).
+			view layout grid gapSize: 5. ].
+	view layout circle radius: 200.
 	^ view

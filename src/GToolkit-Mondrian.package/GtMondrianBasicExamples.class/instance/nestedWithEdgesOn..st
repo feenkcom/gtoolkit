@@ -13,6 +13,6 @@ nestedWithEdgesOn: view
 				shape: [ :x | BlTextElement new text: x asString asRopedText ];
 				for: (1 to: each).
 			view edges connect: (1 to: each) from: [ :x | x // 2 ] to: [ :x | x ].
-			view layout: (GtGraphRadialTreeLayout new). ].
-	view layout: (GtGraphCircleLayout new radius: 200).
+			view layout radialTree. ].
+	view layout circle radius: 200.
 	^ view

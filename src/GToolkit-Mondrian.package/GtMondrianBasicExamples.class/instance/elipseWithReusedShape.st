@@ -11,5 +11,5 @@ elipseWithReusedShape
 				constraintsDo: [ :constraints |
 					constraints padding: (BlInsets all: 10) ] ];
 		for: (1 to: 20).	
-	view layout: (GtGraphCircleLayout new radius: 200).
+	view layout circle radius: 200.
 	^ view

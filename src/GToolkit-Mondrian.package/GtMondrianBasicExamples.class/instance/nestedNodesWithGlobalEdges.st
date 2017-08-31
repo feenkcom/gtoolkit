@@ -13,10 +13,10 @@ nestedNodesWithGlobalEdges
 			view nodes
 				shape: [ :x | BlTextElement new text: (BrRopedText string: x asString) ];
 				for: collection.
-			view layout: (GtGraphCircleLayout new). ].
+			view layout circle. ].
 	view edges
 		connect: { 1 -> 2 . 3 -> 1 . 1 -> 4 . 4 -> 6 . 5 -> 6}
 		from: [ :x | x key ] 
 		to: [ :x | x value ].
-	view layout: (GtGraphCircleLayout new radius: 100).
+	view layout circle radius: 100.
 	^ view

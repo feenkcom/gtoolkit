@@ -1,3 +1,3 @@
-scripting - core
+scripting
 edges
 	^ GtMondrianEdgeBuilder new mondrian: self
