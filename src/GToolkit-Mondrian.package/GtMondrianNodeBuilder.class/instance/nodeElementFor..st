@@ -1,6 +1,6 @@
-accessing
+instance creation
 nodeElementFor: anObject
-	| nodeElement |
+		| nodeElement |
 	nodeElement := elementBlock 
 		ifNotNil: [ elementBlock cull: anObject cull: self defaultNodeElement ]
 		ifNil: [ self defaultNodeElement ].

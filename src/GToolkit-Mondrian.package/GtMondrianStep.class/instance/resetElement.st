@@ -1,3 +1,0 @@
-accessing
-resetElement
-	elementBlock := nil

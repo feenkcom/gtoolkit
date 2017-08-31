@@ -2,13 +2,15 @@ examples
 passiveEdgesOn: view
 	<gtExample>
 	<dependsOn: #emptyView>
-	view shape: [ :x | 
-		BlTextElement new text: (BrRopedText string: x asString) ].
-	view nodes: (1 to: 100).
+	view nodes
+		shape: [ :x | BlTextElement new text: x asString asRopedText ];
+		for: (1 to: 100).
 	view edges connectFrom: [ :x | x // 2 ].
-	view shape: [ :x |
-		BlLineElement new
-			border: (BlBorder paint: Color red width: 2)  ].
-	view edges passive; connect: { 1->12 . 11 -> 19 } from: #key to: #value.
+	view edges 
+		shape: [ :x |
+			BlLineElement new
+				border: (BlBorder paint: (Color red alpha: 0.5) width: 2) ];
+		passive; 
+		connect: { 1->12 . 11 -> 19 } from: #key to: #value.
 	view layout: (GtGraphRadialTreeLayout new).
 	^ view

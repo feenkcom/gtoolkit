@@ -17,5 +17,4 @@ connect: aCollection from: aFromBlock to: aToBlock
 					self edgeConstraintsFrom: fromElement to: toElement ].
 				self topStep root addChild: line.
 				elements add: line ] ].
-	self topStep resetElement.
 	^ elements

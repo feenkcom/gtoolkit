@@ -1,10 +1,9 @@
-scripting - core
-nodes: aCollection
+instance creation
+for: aCollection
 	| elements |
 	elements := aCollection collect: [ :each |
 		| child |
-		child := self topStep nodeElementFor: each.
+		child := self nodeElementFor: each.
 		self topStep addChild: child.
 		child ].
-	self topStep resetElement.
 	^ elements
