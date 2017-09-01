@@ -8,7 +8,7 @@ doHandleExampleFromString: exampleString withTokens: aToken
 		to: aToken last start - 1.
 	previewAttributeBlock := [ BrTextAdornmentDynamicAttribute new
 		beAppend;
-		elementBlock: [ aToken second asDictionary
+		elementBlock: [ [aToken second asDictionary
 				at: 'show'
 				ifPresent: [ :selector | 
 					| exampleElement |
@@ -35,7 +35,7 @@ doHandleExampleFromString: exampleString withTokens: aToken
 				ifAbsent: [ (GtExamplesStyler
 						editorElementOnSourceCode: exampleMethod sourceCode
 						inClass: exampleMethod methodClass)
-						margin: (BlInsets all: 10) ] ] ].
+						margin: (BlInsets all: 10) ]] on: Error do: [ :err | BlElement new background: Color red ] ] ].
 	expandingAttribute := BrTextExpandButtonAttribute new
 		attributesCreatingBlock: previewAttributeBlock.
 	attributesToAdd := OrderedCollection with: expandingAttribute.

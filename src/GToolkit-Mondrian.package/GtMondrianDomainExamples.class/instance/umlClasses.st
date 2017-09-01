@@ -1,7 +1,8 @@
 uml
-umlClassesOn: view
+umlClasses
 	<gtExample>
-	<dependsOn: #emptyView>
+	| view |
+	view := self emptyView.
 	view nodes
 		umlClassShapeWithName: [ :each | each name ];
 		with: OrderedCollection withAllSubclasses
@@ -16,7 +17,7 @@ umlClassesOn: view
 								right: 5
 								bottom: 5
 								left: 5) ];
-				for: class methods.
+				with: class methods.
 			view layout custom: BlLinearLayout vertical ].
 	view edges connectFrom: #superclass.
 	view layout tree verticalGap: 100.
