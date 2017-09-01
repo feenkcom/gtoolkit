@@ -35,7 +35,7 @@ doHandleExampleFromString: exampleString withTokens: aToken
 				ifAbsent: [ (GtExamplesStyler
 						editorElementOnSourceCode: exampleMethod sourceCode
 						inClass: exampleMethod methodClass)
-						margin: (BlInsets all: 10) ]] on: Error do: [ :err | BlElement new background: Color red ] ] ].
+						margin: (BlInsets all: 10) ]] value "on: Error do: [ :err | BlElement new background: Color red ]" ] ].
 	expandingAttribute := BrTextExpandButtonAttribute new
 		attributesCreatingBlock: previewAttributeBlock.
 	attributesToAdd := OrderedCollection with: expandingAttribute.
