@@ -12,7 +12,7 @@ showException: anException
 				constraintsDo: [ :c |
 					c horizontal matchParent.
 					c textFlow pushLine.
-					c vertical fitContent ];
+					c vertical exact: 200 ];
 				background: Color white;
 				border: (BlBorder paint: Color veryLightGray width: 1);
 				editor: (BrTextEditor new text: text) ];
