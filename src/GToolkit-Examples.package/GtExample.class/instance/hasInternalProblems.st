@@ -1,0 +1,3 @@
+testing
+hasInternalProblems
+	^ problems notEmpty
