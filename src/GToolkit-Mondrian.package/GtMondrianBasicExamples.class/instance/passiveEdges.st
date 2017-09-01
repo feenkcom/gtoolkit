@@ -1,7 +1,8 @@
 examples
-passiveEdgesOn: view
+passiveEdges
 	<gtExample>
-	<dependsOn: #emptyView>
+	| view |
+	view := self emptyView.
 	view nodes
 		shape: [ :x | BlTextElement new text: x asString asRopedText ];
 		with: (1 to: 100).

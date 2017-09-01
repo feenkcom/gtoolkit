@@ -1,7 +1,8 @@
 examples
-nestedWithEdgesOn: view
+nestedWithEdges
 	<gtExample>
-	<dependsOn: #emptyView>
+	| view |
+	view := self emptyView.
 	view nodes
 		shape: [ :each | 
 			BlElement new
@@ -11,7 +12,7 @@ nestedWithEdgesOn: view
 			forEach: [ :each | 
 			view nodes
 				shape: [ :x | BlTextElement new text: x asString asRopedText ];
-				for: (1 to: each).
+				with: (1 to: each).
 			view edges
 				connect: (1 to: each)
 				from: [ :x | x // 2 ]

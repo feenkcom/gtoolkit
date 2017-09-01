@@ -1,7 +1,8 @@
 node creation
-twoNodesWithNodesInForEachOn: view
+twoNodesWithNodesInForEach
 	<gtExample>
-	<dependsOn: #emptyView>
+	| view |
+	view := self emptyView.
 	view nodes
 		with:
 			{{1 . 2 . 3}.

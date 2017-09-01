@@ -1,7 +1,8 @@
 examples
-nestedNodesOn: view
+nestedNodes
 	<gtExample>
-	<dependsOn: #emptyView>
+	| view |
+	view := self emptyView.
 	view nodes
 		shape: [ :each | 
 			BlElement new
