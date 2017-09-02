@@ -11,12 +11,36 @@ script
 				ifPresent: [ :exampleString | self handleExampleFromString: exampleString withTokens: tokens ]
 				ifAbsent: [ | styler |
 					tokens third parsedValue notEmpty
-						ifTrue: [ styler := BrRBTextStyler new.
-							styler
-								style: (self targetText from: tokens third start to: tokens third stop).
+						ifTrue: [ 
+							styler := BrRBTextStyler new.
+							styler style: (self targetText from: tokens third start to: tokens third stop).
 							self targetText
-								attributes:
-									{BrFontGenericFamilyAttribute monospace.
-									(BrFontSizeAttribute size: 14)}
+								attributes: { 
+									BrFontGenericFamilyAttribute monospace.
+									(BrFontSizeAttribute size: 14)  }
 								from: tokens third start
-								to: tokens third stop ] ] ]
+								to: tokens third stop.
+							tokens second asDictionary 	
+								at: 'show'
+								ifPresent: [ :selector |
+									| expandingAttribute |
+									expandingAttribute := BrTextExpandButtonAttribute new
+										attributesCreatingBlock: [
+											BrTextAdornmentDynamicAttribute new
+												beAppend;
+												elementBlockWithErrorCatching: [ 
+													| composite |
+													composite := BlElement new
+														constraintsDo: [ :c |
+															c textFlow pushLine.
+															c vertical exact: 100.
+															c horizontal matchParent ].
+													(Compiler evaluate: tokens third parsedValue)
+														perform: selector asSymbol
+														withArguments: {composite}.
+													composite ] ].
+									self targetText
+										attributes: { expandingAttribute }
+										from: tokens fourth start
+										to: tokens fourth stop.
+								] ] ] ]
