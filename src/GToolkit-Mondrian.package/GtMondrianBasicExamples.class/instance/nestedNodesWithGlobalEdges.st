@@ -1,4 +1,4 @@
-examples
+tutorial - advanced
 nestedNodesWithGlobalEdges
 	<gtExample>
 	| view |

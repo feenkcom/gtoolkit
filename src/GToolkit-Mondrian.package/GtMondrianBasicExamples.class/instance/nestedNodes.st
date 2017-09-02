@@ -1,18 +1,18 @@
-examples
+tutorial - nesting
 nestedNodes
 	<gtExample>
 	| view |
 	view := self emptyView.
 	view nodes
-		shape: [ :each | 
-			BlElement new
-				border: (BlBorder paint: Color black width: 2);
-				constraintsDo: [ :constraints | constraints padding: (BlInsets all: 10) ] ];
-		with: (1 to: 10)
-			forEach: [ :each | 
-			view nodes
-				shape: [ :x | BlTextElement new text: (BrRopedText string: x asString) ];
-				for: (1 to: each).
-			view layout grid gapSize: 5 ].
-	view layout circle radius: 200.
+		shape: [ :x | 
+			BlElement new 
+				geometry: BlEllipse new; 
+				background: (BlBackground paint: Color paleOrange);
+				constraintsDo: [ :c | c padding: (BlInsets all: 10) ] ];
+		with: (1 to: 9)
+		forEach: [ :each |
+			view nodes 
+				shape: [ :x | BlTextElement new text: (x asString asRopedText attributes: {BrTextForegroundAttribute paint: Color gray}) ];
+				with: (10 * each to: (10 * each + 4)).
+			view layout circle radius: 20 ].
 	^ view

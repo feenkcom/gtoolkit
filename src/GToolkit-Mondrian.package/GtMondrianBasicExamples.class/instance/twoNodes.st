@@ -1,4 +1,4 @@
-node creation
+tutorial - nodes, edges, layouts
 twoNodes
 	<gtExample>
 	| view |

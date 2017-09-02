@@ -1,4 +1,4 @@
-edge creation
+tutorial - nodes, edges, layouts
 oneEdgeBetweenTwoNodes
 	<gtExample>
 	| view |

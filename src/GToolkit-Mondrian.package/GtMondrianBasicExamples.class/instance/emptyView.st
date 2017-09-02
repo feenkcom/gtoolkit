@@ -1,4 +1,4 @@
-examples
+tutorial - nodes, edges, layouts
 emptyView
 	<gtExample>
 	| view |
