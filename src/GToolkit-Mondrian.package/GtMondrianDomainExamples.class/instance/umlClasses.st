@@ -19,6 +19,9 @@ umlClasses
 								left: 5) ];
 				with: class methods.
 			view layout custom: BlLinearLayout vertical ].
-	view edges connectFrom: #superclass.
+	view edges 
+		fromCenterBottom;
+		toCenterTop;
+		connectFrom: #superclass.
 	view layout tree verticalGap: 100.
 	^ view

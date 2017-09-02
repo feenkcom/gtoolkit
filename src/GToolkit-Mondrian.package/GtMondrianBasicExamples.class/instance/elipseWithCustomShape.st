@@ -1,4 +1,4 @@
-examples
+examples shapes
 elipseWithCustomShape
 	<gtExample>
 	| view |

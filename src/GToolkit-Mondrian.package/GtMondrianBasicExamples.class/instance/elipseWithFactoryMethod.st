@@ -1,4 +1,4 @@
-examples
+examples shapes
 elipseWithFactoryMethod
 	<gtExample>
 	| view |
