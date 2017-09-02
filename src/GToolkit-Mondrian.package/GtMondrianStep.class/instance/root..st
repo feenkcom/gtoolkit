@@ -4,7 +4,7 @@ root: anElement
 	At this stage we also can already gather the element that can contain children."
 	root := anElement.
 	childrenContainer := root.
-	root allChildrenDo: [ :each | 
+	root allChildrenBreadthFirstDo: [ :each | 
 		each isMondrianChildrenContainer ifTrue: [ 
 			childrenContainer := each ] ].
 	self layout: GtGraphGridLayout new

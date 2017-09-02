@@ -6,7 +6,7 @@ connect: aCollection from: aFromBlock to: aToBlock
 		| fromObject toObject fromElement toElement line |
 		fromObject := aFromBlock value: each.
 		toObject := aToBlock value: each.
-		self topStep root allChildrenDo: [ :child |
+		self topStep root allChildrenBreadthFirstDo: [ :child |
 			child isMondrianNode ifTrue: [ 
 				child mondrianModel = fromObject ifTrue: [ fromElement := child ].
 				child mondrianModel = toObject ifTrue: [ toElement := child ] ] ].
