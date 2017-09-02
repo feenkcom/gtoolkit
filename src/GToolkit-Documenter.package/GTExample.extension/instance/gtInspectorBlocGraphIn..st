@@ -1,4 +1,4 @@
-as yet unclassified
+*GToolkit-Documenter
 gtInspectorBlocGraphIn: composite
 	<gtInspectorPresentationOrder: 40>
 	composite bloc

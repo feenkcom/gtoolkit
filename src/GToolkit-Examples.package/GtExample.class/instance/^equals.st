@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 = anExample
 	^ self class = anExample class 
 		and: [ self methodClass = anExample methodClass 
