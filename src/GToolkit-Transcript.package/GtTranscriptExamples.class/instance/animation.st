@@ -1,7 +1,7 @@
 examples
 animation
 	<gtExample>
-	| element child backgroundAnimation scaleIncrease childTranslate1 childTranslate2 childTranslate animation transcript transcriptElement |
+	| element child backgroundAnimation scaleIncrease childTranslate1 childTranslate2 childTranslate animation transcript |
 	
 	element := BlElement new.
 	element size: 50@50.
@@ -51,8 +51,7 @@ animation
 	animation start.
 
 	transcript := GtTranscript new.
-	transcriptElement := transcript newEditorElement.
-
+	
 	animation addEventHandlerOn: BlAnimationStepEvent do: [ :anEvent |
 		| snapshot |
 		snapshot := animation target asSpartaForm.
@@ -68,4 +67,4 @@ animation
 			put: anEvent progress asString.
 		animation target asSpartaForm extent ].
 	
-	^ transcriptElement
+	^ transcript

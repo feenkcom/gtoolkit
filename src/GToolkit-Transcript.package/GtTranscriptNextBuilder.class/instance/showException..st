@@ -7,7 +7,7 @@ showException: anException
 		expanding: [ 
 			| text |
 			text := BrRopedText string: string.
-			text attributes: { BrTextForegroundAttribute new paint: Color red }.
+			text attributes: { BrTextForegroundAttribute new paint: Color red twiceDarker}.
 			BrEditorElement new
 				constraintsDo: [ :c |
 					c horizontal matchParent.
