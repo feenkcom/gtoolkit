@@ -1,7 +1,7 @@
 private
 extraStyle: aText ast: ast
 	| selfSendsExamples |
-	super style: aText ast: ast.
+
 	selfSendsExamples := ast allChildren select: [ :each | 
 		each isMessage and: [ 
 			each isSelfSend and: [ 
