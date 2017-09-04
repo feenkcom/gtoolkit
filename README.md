@@ -26,7 +26,11 @@ Alternatively, you can also load each individual tools separately using the corr
 
 The Documenter offers live rendering of Pillar documents.
 
+For example, Documenter can embed pictures right in place:
+
 ![Documenter: expanded pictures](./doc/documenter-mondrian-example-pictures.png)
+
+And it can even embed live code that can be previewed in place:
 
 ![Documenter: expanded examples](./doc/documenter-mondrian-expanded-examples.png)
 
@@ -40,4 +44,5 @@ The API is backward compatible with the existing transcript. To enable the new f
 ![Transcript: API](./doc/transcript-api.png)
 
 To get an idea of how this tool can be useful, take a look at the following video showing the visual logging of a Bloc animation:
+
 [![GT Transcript: logging an animation](https://img.youtube.com/vi/9VATYNaLwJY/0.jpg)](https://youtu.be/9VATYNaLwJY "GT Transcript: logging an animation")
