@@ -19,3 +19,7 @@ Metacello new
 ```
 
 Alternatively, you can also load each individual tools separately using the corresponding baselines.
+
+## How tools look like
+
+[![GT Transcript: logging an animation](https://img.youtube.com/vi/9VATYNaLwJY/0.jpg)](https://youtu.be/9VATYNaLwJY "GT Transcript: logging an animation")
