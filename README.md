@@ -15,11 +15,15 @@ Iceberg enableMetacelloIntegration: true.
 Metacello new
    baseline: 'GToolkit';
    repository: 'github://feenkcom/gtoolkit/src';
-	load.
+   load.
 ```
 
 Alternatively, you can also load each individual tools separately using the corresponding baselines.
 
 ## How tools look like
+
+### Documenter
+
+![Documenter: expanded pictures](./doc/documenter-mondrian-example-pictures.png)
 
 [![GT Transcript: logging an animation](https://img.youtube.com/vi/9VATYNaLwJY/0.jpg)](https://youtu.be/9VATYNaLwJY "GT Transcript: logging an animation")
