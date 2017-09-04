@@ -1,6 +1,7 @@
 examples
-stringOn: transcript
+putAll
 	<gtExample>
-	<dependsOn: #transcript>
+	| transcript |
+	transcript := self transcript.
 	transcript next putAll: '42'.
 	^ transcript
