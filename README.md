@@ -2,8 +2,8 @@
 The Glamorous Toolkit (GT) is the moldable IDE of Pharo.
 
 The current repository embodies the second generation of GT that is based on the [Bloc project](https://github.com/pharo-graphics/Bloc) and it is comprised of a set of distinct tools. Currently these are:
-- Documenter: a tool for showing live documentation inside Pharo. It is based on Pillar.
-- Transcript: a rethinking of the classic Transcript taking advantage of the rich text editor from Bloc.
+- Documenter: a tool for showing live documentation inside Pharo. It is based on Pillar and on the moldable text editor.
+- Transcript: a rethinking of the classic Transcript taking advantage of the moldable text editor from Bloc.
 - Mondrian: a reimplementation of the graph-based visualization engine on top of Bloc.
 
 ## How to load
@@ -20,10 +20,24 @@ Metacello new
 
 Alternatively, you can also load each individual tools separately using the corresponding baselines.
 
-## How tools look like
+## Details
 
-### Documenter
+### GT Documenter
+
+The Documenter offers live rendering of Pillar documents.
 
 ![Documenter: expanded pictures](./doc/documenter-mondrian-example-pictures.png)
 
+![Documenter: expanded examples](./doc/documenter-mondrian-expanded-examples.png)
+
+
+### GT Transcript
+
+Transcript offers a rich and interactable text interface for displaying live information coming from a system.
+
+The API is backward compatible with the existing transcript. To enable the new features, we introduced a builder. For example, `transcript nextPutAll: 'something'` becomes `transcript next putAll: 'something'`, and after `next` we can add multiple attributes that we want to affect the following insertion of a text. The API can be seen in the following picture:
+
+![Transcript: API](./doc/transcript-api.png)
+
+To get an idea of how this tool can be useful, take a look at the following video showing the visual logging of a Bloc animation:
 [![GT Transcript: logging an animation](https://img.youtube.com/vi/9VATYNaLwJY/0.jpg)](https://youtu.be/9VATYNaLwJY "GT Transcript: logging an animation")
