@@ -5,8 +5,8 @@ umlClasses
 	view := self emptyView.
 	view nodes
 		umlClassShapeWithName: [ :each | each name ];
-		with: OrderedCollection withAllSubclasses
-			forEach: [ :class | 
+		with: OrderedCollection withAllSubclasses;
+		forEach: [ :class | 
 			view nodes
 				shape: [ :method | 
 					BlTextElement new
