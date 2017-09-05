@@ -1,3 +1,3 @@
 accessing
 layout: aLayout
-	childrenContainer layout: aLayout
+	root layout: aLayout

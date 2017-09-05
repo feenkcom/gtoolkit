@@ -1,2 +1,2 @@
-I am an abstract builder.
-I work closely with a ==GtMondrian== and I know how to specify a shape through an ==elementBlock==.
+I am an abstract builder of either nodes or edges.
+I know how to specify a shape through an ==elementBlock==.
