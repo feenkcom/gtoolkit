@@ -1,4 +1,4 @@
-instance creation
+scripting
 nodeElementFor: anObject
 		| nodeElement |
 	nodeElement := elementBlock 

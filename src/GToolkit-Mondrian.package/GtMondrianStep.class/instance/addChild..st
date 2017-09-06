@@ -1,3 +1,3 @@
 accessing
 addChild: anElement
-	childrenContainer addChild: anElement
+	self addChild: anElement in: #default

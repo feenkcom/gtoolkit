@@ -7,4 +7,6 @@ isMondrianChildrenContainer
 	when adding the shape, which is can be a complicated element, the developer can mark the sub-element
 	that can contain children, and this information will be taken into account when adding
 	the children to the node."
-	^ self userData at: #isMondrianChildrenContainer ifAbsent: [ false ]
+	^ self userData at: #isMondrianChildrenContainer 
+		ifPresent: [ :name | true ]
+		ifAbsent: [ false ]

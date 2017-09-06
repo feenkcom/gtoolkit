@@ -18,7 +18,7 @@ extraStyle: aText ast: ast
 							editorElementOnSourceCode: (ast methodNode methodClass lookupSelector: each selector) sourceCode
 							inClass: ast methodNode methodClass.
 						editorElement margin: (BlInsets top: 0 right: 10 bottom: 10 left: 10) ]] } 
-			from: each start
+			from: each stop - 1
 			to: each stop ].
 	(ast pragmas anySatisfy: [ :each | each selector = #gtExample ]) ifTrue: [ 
 		ast pragmas do: [ :each |
