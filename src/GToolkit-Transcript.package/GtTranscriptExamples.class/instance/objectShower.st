@@ -10,7 +10,7 @@ objectShower
 	loop := [
 		| index |
 		index := 1.
-		1000 timesRepeat: [
+		500 timesRepeat: [
 			| color size geometry |
 	
 			color := Color random paler.
