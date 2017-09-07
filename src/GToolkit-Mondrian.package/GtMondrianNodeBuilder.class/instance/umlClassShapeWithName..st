@@ -1,6 +1,5 @@
 scripting - shape
 umlClassShapeWithName: aBlock
 	self shape: [ :each | 
-		GtMondrianUMLClassElement new 
-			newContainers: #(one two); 
+		GtMondrianUMLClassElement withDefaultContainer 
 			label: each asString ]
