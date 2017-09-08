@@ -11,4 +11,4 @@ fit: anElement with: anExtentSpec
 	
 	anElement measuredExtent: (width @ height).
 
-	self normalize: anElement in: anElement boundsInLocal
+	"self normalize: anElement in: anElement boundsInLocal"

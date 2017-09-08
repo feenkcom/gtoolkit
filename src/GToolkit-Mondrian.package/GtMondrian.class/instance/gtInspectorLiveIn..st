@@ -2,5 +2,5 @@ ui
 gtInspectorLiveIn: composite
 	<gtInspectorPresentationOrder: 0>
 	| scalable |
-	scalable := self asScalableElement.
-	^ scalable gtInspectorLiveIn: composite
+	scalable := self "asScalableElement".
+	^ self root gtInspectorLiveIn: composite
