@@ -1,3 +1,0 @@
-testing
-hasInternalProblems
-	^ problems notEmpty
