@@ -1,3 +1,3 @@
 ui
 gtLiveIn: anElement
-	anElement addChild: self "asScalableElement"
+	anElement addChild: self asScalableElement
