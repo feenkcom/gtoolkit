@@ -1,3 +1,0 @@
-accessing
-source
-	^ source
