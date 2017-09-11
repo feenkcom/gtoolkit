@@ -4,7 +4,7 @@ with: aCollection
 	elements := aCollection collect: [ :each |
 		| child |
 		child := self nodeElementFor: each.
-		self topStep addChild: child.
 		child ].
+	self topStep addChildren: elements.
 	createdElements addAll: elements.
 	^ elements
