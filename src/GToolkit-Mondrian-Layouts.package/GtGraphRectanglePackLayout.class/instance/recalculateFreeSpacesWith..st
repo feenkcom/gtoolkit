@@ -3,7 +3,7 @@ recalculateFreeSpacesWith: anElement
 	freeSpace := freeSpace inject: Set new into: [ :set :space |
 		 set
 			addAll: (space areasOverlapingOutside:
-				(anElement measuredBounds expandBy: padding)); 
+				(anElement measuredBounds asRectangle expandBy: padding)); 
 			yourself ].
 		
 	"remove subspaces"

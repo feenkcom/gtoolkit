@@ -1,6 +1,12 @@
 layout
 boundingBox: anElement
-	anElement children isEmpty ifTrue: [ ^ ((0 @ 0) corner: (0 @ 0)) ].
+	| aBoundingBox |
 	
-	^ anElement children inject: nil into: [ :rectangle :child |
-		rectangle ifNil: [ child measuredBounds ] ifNotNil: [ :r | r quickMerge: child measuredBounds ] ]
+	anElement children isEmpty
+		ifTrue: [ ^ BlBounds new asRectangle ].
+
+	aBoundingBox := BlBounds fromRectangle: anElement children first measuredBounds bounds.
+	self
+		layeredChildren: anElement
+		do: [ :aChild | aBoundingBox merge: aChild measuredBounds bounds ].
+	^ aBoundingBox asRectangle

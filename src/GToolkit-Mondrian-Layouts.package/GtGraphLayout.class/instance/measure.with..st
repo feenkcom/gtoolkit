@@ -1,10 +1,12 @@
 layout
 measure: anElement with: anExtentSpec
 	
-	anElement childrenDo: [ :each |
+	self measuredChildren: anElement do: [ :aChild |
 		self
-			measureChild: each
+			measureChild: aChild
 			parentSpec: anExtentSpec ].
+	
+	self measureIgnored: anElement with: anExtentSpec.
 
-	self applyOn: anElement managedChildren.
+	self applyOn: anElement managedChildren .
 	self fit: anElement with: anExtentSpec

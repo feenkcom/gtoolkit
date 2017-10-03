@@ -8,4 +8,5 @@ normalize: anElement in: aRectangle
 	boundingBox := self boundingBox: anElement.
 	delta := (aRectangle extent / 2.0) - boundingBox center.
 
-	anElement childrenDo: [ :child | child position: child position + delta ]
+	anElement childrenDo: [ :child |
+		child measuredBounds position: child measuredBounds position + delta ]

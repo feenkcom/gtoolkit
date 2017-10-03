@@ -4,4 +4,4 @@ groupBounds: aCollectionOfElements
 
 	^ (aCollectionOfElements 
 		ifEmpty: [ (0 @ 0) corner: (0 @ 0) ]
-		ifNotEmpty: [ Rectangle merging: (aCollectionOfElements collect: #measuredBounds) ])
+		ifNotEmpty: [ Rectangle merging: (aCollectionOfElements collect: [ :anElement | anElement measuredBounds asRectangle ]) ])
