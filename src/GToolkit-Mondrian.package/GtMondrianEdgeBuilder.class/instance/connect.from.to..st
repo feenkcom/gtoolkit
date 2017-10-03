@@ -8,13 +8,15 @@ connect: aCollection from: aFromBlock to: aToBlock
 		toObject := aToBlock value: each.
 		self topStep root allChildrenBreadthFirstDo: [ :child |
 			child isMondrianNode ifTrue: [ 
-				child mondrianModel = fromObject ifTrue: [ fromElement := child ].
-				child mondrianModel = toObject ifTrue: [ toElement := child ] ] ].
+				| aMondrianModel |
+				aMondrianModel := child mondrianModel.
+				aMondrianModel = fromObject ifTrue: [ fromElement := child ].
+				aMondrianModel = toObject ifTrue: [ toElement := child ] ] ].
 		(toElement notNil and: [ fromElement notNil ])
 			ifTrue: [ 
 				line := self edgeElementFor: each from: fromElement to: toElement.
 				self areEdgesPassive ifFalse: [ 
 					self edgeConstraintsFrom: fromElement to: toElement ].
-				self topStep root addChild: line.
 				elements add: line ] ].
+	self topStep root addChildren: elements.
 	^ elements
