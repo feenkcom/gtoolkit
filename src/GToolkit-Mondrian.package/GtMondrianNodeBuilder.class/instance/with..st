@@ -5,6 +5,6 @@ with: aCollection
 		| child |
 		child := self nodeElementFor: each.
 		child ].
-	self topStep addChildren: elements.
+	self topStep addChildren: elements asOrderedCollection.
 	createdElements addAll: elements.
 	^ elements
