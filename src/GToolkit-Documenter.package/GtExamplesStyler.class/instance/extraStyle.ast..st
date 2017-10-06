@@ -7,7 +7,7 @@ extraStyle: aText ast: ast
 			each isSelfSend and: [ 
 				each isUnary and: [ 
 					(ast methodNode methodClass canPerform: each selector) and: [ 
-						(ast methodNode methodClass lookupSelector: each selector) isGtExampleMethod ] ] ] ] ].
+						(ast methodNode methodClass lookupSelector: each selector) isGTExampleMethod ] ] ] ] ].
 	selfSendsExamples do: [ :each | 
 		aText 
 			attributes: { 

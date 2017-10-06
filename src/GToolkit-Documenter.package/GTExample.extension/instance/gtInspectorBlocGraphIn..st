@@ -10,8 +10,9 @@ gtInspectorBlocGraphIn: composite
 				shape: [ :each | 
 					BlElement new 
 						geometry: BlEllipse new; 
-						border: (BlBorder paint: Color black width: 2);	
+						border: (BlBorder paint: Color black width: 1);	
 						background: (BlBackground paint: (each = self ifTrue: [Color gray] ifFalse: [Color white]));
+						size: 10@10;
 						addEventHandlerOn: BlMouseDownEvent do: [ :anEvent | bloc selection: each ] ];
 				with: (self withDeepCollect: #dependenciesOrArguments).
 			view edges 
