@@ -1,8 +1,10 @@
 examples
-stringWithAdornmentOn: transcript
+characterWithAdornment
 	<gtExample>
-	<dependsOn: #transcript>
+	| transcript |
+	transcript := self transcript.
 	transcript next
 		expanding: [ BlElement new size: 70 @ 50; background: Color blue; yourself ]; 
-		putAll: '42'.
+		put: $4.
+	transcript next put: $2.
 	^ transcript
