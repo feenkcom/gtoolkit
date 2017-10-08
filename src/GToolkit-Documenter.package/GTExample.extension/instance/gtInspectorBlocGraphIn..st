@@ -1,11 +1,9 @@
 *GToolkit-Documenter
 gtInspectorBlocGraphIn: composite
 	<gtInspectorPresentationOrder: 40>
-	composite bloc
+	composite blocMondrian
 		title: 'Graph (Bloc)';
-		element: [ :bloc |
-			| view |
-			view := GtMondrian new. 
+		painting: [ :view :x :presentation |
 			view nodes 
 				shape: [ :each | 
 					BlElement new 
@@ -13,10 +11,9 @@ gtInspectorBlocGraphIn: composite
 						border: (BlBorder paint: Color black width: 1);	
 						background: (BlBackground paint: (each = self ifTrue: [Color gray] ifFalse: [Color white]));
 						size: 10@10;
-						addEventHandlerOn: BlMouseDownEvent do: [ :anEvent | bloc selection: each ] ];
+						addEventHandlerOn: BlClickEvent do: [ :anEvent | presentation selection: each ] ];
 				with: (self withDeepCollect: #dependenciesOrArguments).
 			view edges 
 				fromCenterBottom; toCenterTop;
 				connectToAll: #dependenciesOrArguments.
-			view layout tree.
-			view asScalableElement ]
+			view layout tree ]
