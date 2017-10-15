@@ -27,6 +27,6 @@ gtInspectorMondrianMapIn: composite
 				shape: [ :each | 
 					BlLineElement new
 						border: (BlBorder paint: (Color gray alpha: 0.2) width: 1) ];
-				connect: self examples from: #yourself toAll: #dependenciesOrArguments.
+				connect: self examples from: #yourself toAll: #directDependencies.
 			view layout custom: GtGraphGridLayout new.
 			view asScalableElement ]
