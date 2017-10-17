@@ -1,1 +1,0 @@
-A ROCircleLayout is xxxxxxxxx.

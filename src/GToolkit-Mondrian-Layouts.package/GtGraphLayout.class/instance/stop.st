@@ -1,3 +1,0 @@
-layout
-stop
-	isStopped := true

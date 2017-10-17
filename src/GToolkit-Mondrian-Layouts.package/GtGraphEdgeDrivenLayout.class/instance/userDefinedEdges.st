@@ -1,4 +1,0 @@
-private
-userDefinedEdges
-	
-	^userDefinedEdges

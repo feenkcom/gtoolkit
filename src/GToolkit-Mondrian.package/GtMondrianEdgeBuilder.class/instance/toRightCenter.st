@@ -1,3 +1,0 @@
-scripting anchors
-toRightCenter
-	self toAnchor: BlElementRightCenterAnchor

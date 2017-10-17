@@ -1,3 +1,0 @@
-scripting anchors
-fromLeftCenter
-	self fromAnchor: BlElementLeftCenterAnchor

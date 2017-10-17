@@ -1,3 +1,0 @@
-private
-rearrangeByLayers: aGraph
-	self subclassResponsibility

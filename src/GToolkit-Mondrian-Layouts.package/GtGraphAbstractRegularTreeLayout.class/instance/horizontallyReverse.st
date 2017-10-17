@@ -1,3 +1,0 @@
-accessing
-horizontallyReverse
-	shouldBeHorizontallyReversed := true

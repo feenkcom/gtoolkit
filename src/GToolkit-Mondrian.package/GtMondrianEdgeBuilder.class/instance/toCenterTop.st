@@ -1,3 +1,0 @@
-scripting anchors
-toCenterTop
-	self toAnchor: BlElementCenterTopAnchor

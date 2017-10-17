@@ -1,4 +1,0 @@
-private
-gap
-	
-	^ self verticalGap

@@ -1,3 +1,0 @@
-accessing
-initialIncrementalAngle: aNumberInRadian
-	initialIncrementalAngle := aNumberInRadian

@@ -1,3 +1,0 @@
-stack
-topStep
-	^ stack top

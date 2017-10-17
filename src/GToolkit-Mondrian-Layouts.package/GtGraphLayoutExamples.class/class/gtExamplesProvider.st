@@ -1,3 +1,0 @@
-examples
-gtExamplesProvider
-	^ self new

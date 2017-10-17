@@ -1,1 +1,0 @@
-I represent a logical connection between two elements. I do not have a visual representation and I am used as a constraint in graph-based layouts.
