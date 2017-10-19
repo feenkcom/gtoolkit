@@ -10,7 +10,7 @@ baseline: spec
 				repository: 'github://feenkcom/gtoolkit-examples/src' ];
 			project: 'Pillar' with: [ spec
 				className: #ConfigurationOfPillar;
-				versionString: #pier;
+				versionString: #development;
 				repository: 'http://smalltalkhub.com/mc/Pier/Pillar/main/' ];
 			package: 'GToolkit-Documenter' with: [ spec requires: #(#Brick #Pillar #GToolkitExamples) ]
 	]
