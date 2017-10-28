@@ -12,7 +12,7 @@ gtInspectorBlocGraphIn: composite
 						background: (BlBackground paint: (each = self ifTrue: [Color gray] ifFalse: [Color white]));
 						size: 10@10;
 						addEventHandlerOn: BlClickEvent do: [ :anEvent | presentation selection: each ] ];
-				with: (self withDeepCollect: #directDependencies).
+				with: (self withDeepCollect: #directDependencies) asSet.
 			view edges 
 				fromCenterBottom; toCenterTop;
 				connectToAll: #directDependencies.
