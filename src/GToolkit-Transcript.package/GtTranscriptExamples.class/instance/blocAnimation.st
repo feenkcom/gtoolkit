@@ -14,19 +14,19 @@ blocAnimation
 	element addChild: child.
 	backgroundAnimation := BlColorTransition new
 		target: element;
-		duration: 5000;
+		duration: 5 seconds;
 		from: Color red twiceDarker;
 		to: Color blue twiceDarker;
 		onStepDo: [ :aColor | element background: aColor ].
 	scaleIncrease := (BlTransformAnimation scale: 3@3)
-		duration: 5000;
+		duration: 5 seconds;
 		yourself.
 	childTranslate1 := (BlTransformAnimation translate: 35 @ 20)
 		target: child;
-		duration: 2500.
+		duration: 2.5 seconds.
 	childTranslate2 := (BlTransformAnimation translate: -30 @ 15)
 		target: child;
-		duration: 2500.
+		duration: 2.5 seconds.
 	childTranslate := BlSequentialAnimation new
 		target: element;
 		addAll:
