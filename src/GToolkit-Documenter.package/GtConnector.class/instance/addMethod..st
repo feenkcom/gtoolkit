@@ -26,6 +26,6 @@ addMethod: method
 	editorElement 
 		when: GtConnectorButtonsChangedInElement 
 		do: [:event | 
-			self removeConnectionsFromButtons: event oldButtons.
-			self connectButtons: event newButtons ]
+			self connectButtons: event newButtons.
+			self removeConnectionsFromButtons: event oldButtons ]
 	
