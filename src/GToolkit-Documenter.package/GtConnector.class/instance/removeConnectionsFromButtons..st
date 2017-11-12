@@ -1,4 +1,4 @@
-children hooks
+private
 removeConnectionsFromButtons: oldButtons
 	(self children select: [ :each | each isKindOf: BlLineElement ]) do: [ :line |
-		line fromAnchor referenceElement isAttachedToSceneGraph ifTrue: [ line removeFromParent ] ]
+		(oldButtons includes: line fromAnchor referenceElement) ifTrue: [ line removeFromParent ] ]
