@@ -1,3 +1,3 @@
 initialization
-affect: aBrText in: aBrEditor
+affect: aBrText in: anEditorElement
 	^ self button

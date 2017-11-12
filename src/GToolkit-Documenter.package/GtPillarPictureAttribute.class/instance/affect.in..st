@@ -1,5 +1,5 @@
 accessing
-affect: aBrText in: aBrEditor
+affect: aBrText in: anEditorElement
 	| scalableElement imageElement |
 
 	scalableElement := BlScalableElement new.
