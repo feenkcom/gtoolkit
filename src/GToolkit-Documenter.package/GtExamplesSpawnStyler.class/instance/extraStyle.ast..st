@@ -1,6 +1,7 @@
 private
 extraStyle: aText ast: ast
-	| selfSendsExamples |
+	| selfSendsExamples newButtonAttributes |
+	newButtonAttributes := OrderedCollection new.
 	selfSendsExamples := ast allChildren select: [ :each | 
 		each isMessage and: [ 
 			each isSelfSend and: [ 
@@ -8,15 +9,22 @@ extraStyle: aText ast: ast
 					(ast methodNode methodClass canPerform: each selector) and: [ 
 						(ast methodNode methodClass lookupSelector: each selector) isGTExampleMethod ] ] ] ] ].
 	selfSendsExamples do: [ :each | 
-		| buttonAttribute |
+		| buttonAttribute targetExampleMethod |
+		targetExampleMethod := ast methodNode methodClass lookupSelector: each selector.
 		buttonAttribute := BrTextActionButtonAttribute new.
+		buttonAttribute target: targetExampleMethod.
+		newButtonAttributes add: buttonAttribute.
 		buttonAttribute
 				actionBlock: [ :ev | 
 					exampleAction 
-						value: (ast methodNode methodClass lookupSelector: each selector)
+						value: targetExampleMethod
 						value: each
 						value: buttonAttribute ].
 		aText 
 			attributes: { buttonAttribute } 
 			from: each stop - 1
-			to: each stop ]
+			to: each stop ].
+	self dispatchEvent: (GtConnectorButtonsChangedByStyler new
+		newButtons: (newButtonAttributes);
+		oldButtons: (buttonAttributes)).
+	buttonAttributes := newButtonAttributes
