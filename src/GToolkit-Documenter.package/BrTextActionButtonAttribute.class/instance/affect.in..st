@@ -1,3 +1,5 @@
 initialization
 affect: aBrText in: anEditorElement
-	^ self button
+	self button.
+	button userData at: #eventualEditorElement put: anEditorElement.
+	^ button

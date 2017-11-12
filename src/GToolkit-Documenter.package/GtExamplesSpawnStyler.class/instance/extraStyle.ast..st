@@ -12,7 +12,9 @@ extraStyle: aText ast: ast
 		| buttonAttribute targetExampleMethod |
 		targetExampleMethod := ast methodNode methodClass lookupSelector: each selector.
 		buttonAttribute := BrTextActionButtonAttribute new.
-		buttonAttribute target: targetExampleMethod.
+		buttonAttribute 
+			source: ast method;
+			target: targetExampleMethod.
 		newButtonAttributes add: buttonAttribute.
 		buttonAttribute
 				actionBlock: [ :ev | 
