@@ -4,10 +4,10 @@ createAndAddElementForMethod: method
 	text := BrRopedText string: method sourceCode.
 	styler := GtExamplesSpawnStyler new
 		exampleAction: [ :exampleMethod :messageNode :button | 
-			self addMethod: exampleMethod.
-			self connectButton: button ];
+			self addMethod: exampleMethod".
+			self connectButton: button" ];
 		classOrMetaClass: method methodClass.
-	editor := BrTextEditor new styler: styler; text: text.
+	editor := BrTextEditor new styler: styler; 	text: text..
 	styler
 		when: GtConnectorButtonsChangedByStyler
 		do: [ :event | 

@@ -29,4 +29,4 @@ extraStyle: aText ast: ast
 	self dispatchEvent: (GtConnectorButtonsChangedByStyler new
 		newButtons: (newButtonAttributes);
 		oldButtons: (buttonAttributes)).
-	buttonAttributes := newButtonAttributes
+	buttonAttributes := newButtonAttributes copy

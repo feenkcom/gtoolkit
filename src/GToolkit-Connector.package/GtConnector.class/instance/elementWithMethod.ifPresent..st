@@ -1,6 +1,6 @@
 search
 elementWithMethod: method ifPresent: aBlock
-	self children 
+	self editorElements 
 		detect: [ :each | 
 			each userData
 				at: #editedMethod

@@ -1,6 +1,7 @@
 private
 connectButton: newButton
 	| sourceMethodElement |
+	newButton button ifNil: [ self halt ].
 	sourceMethodElement := self elementWithMethod: newButton source ifPresent: [ :x | x ].
 	^ self 
 		elementWithMethod: newButton target 
@@ -13,6 +14,9 @@ connectButton: newButton
 				wantsMouse: false;
 				fromAnchor: (BlElementCenterAnchor element: newButton button);
 				toAnchor: (BlElementLeftCenterAnchor element: targetMethodElement).
+			newButton button
+				when: BlElementRemovedEvent 
+				do: [ :event | line removeFromParent ].
 			self addChild: line.
 			edge := GtGraphEdge new
 				from: sourceMethodElement

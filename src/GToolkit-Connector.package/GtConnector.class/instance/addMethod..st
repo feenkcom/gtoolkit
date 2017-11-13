@@ -5,6 +5,5 @@ addMethod: method
 	editorElement := self createAndAddElementForMethod: method.
 	editorElement
 		when: GtConnectorButtonsChangedInElement
-		do: [ :event | 
-			self removeConnectionsFromButtons: event oldButtons.
-			event newButtons do: [ :newButton | self connectButton: newButton ] ]
+		do: [ :event | event newButtons do: [ :newButton | self connectButton: newButton ] ].
+	self editorElements do: [ :each | each ~= method ifTrue: [each editor styler styleInBackgroundProcess: each editor text copy ] ]
