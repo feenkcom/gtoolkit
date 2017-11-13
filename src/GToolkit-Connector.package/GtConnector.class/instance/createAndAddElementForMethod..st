@@ -21,7 +21,11 @@ createAndAddElementForMethod: method
 	editorElement
 		constraintsDo: [ :c | 
 			c horizontal fitContent.
-			c vertical fitContent ].
+			c vertical fitContent.
+			c padding: (BlInsets all: 10) ].
+	editorElement
+		background: Color white;
+		effect: (BlDropShadowEffect color: (Color gray alpha: 0.5) width: 20 offset: 10@10).
 	editorElement editor: editor.
 	editorElement userData at: #editedMethod put: method.
 	editor

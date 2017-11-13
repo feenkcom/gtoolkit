@@ -1,7 +1,6 @@
 private
 connectButton: newButton
 	| sourceMethodElement |
-	newButton button ifNil: [ self halt ].
 	sourceMethodElement := self elementWithMethod: newButton source ifPresent: [ :x | x ].
 	^ self 
 		elementWithMethod: newButton target 
