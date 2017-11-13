@@ -1,7 +1,7 @@
 initialization
 button
 	^ button ifNil: [
-		button := BlElement new
+		button := GtConnectorButtonElement new
 			size: 8 @ 8;
 			margin:
 				(BlInsets

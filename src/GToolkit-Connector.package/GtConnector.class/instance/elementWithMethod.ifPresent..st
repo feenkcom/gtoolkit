@@ -16,4 +16,4 @@ elementWithMethod: aMethod ifPresent: aBlock
 				at: #editedMethod
 				ifPresent: [ :anEditedMethod | aMethod = anEditedMethod ]
 				ifAbsent: [ false ] ]
-		ifFound: [ :anEditorElement | ^ aBlock cull: anEditorElement ]
+		ifFound: [ :anEditorElement | aBlock cull: anEditorElement ]

@@ -1,15 +1,12 @@
-public
+private - adding / removing
 addMethod: aMethod
+	"Create a new editor on a given method, add it to the scene and return that editor"
+	<return: #BrEditorElement>
 	| anEditorElement |
 
-	(self hasOpenedMethod: aMethod)
-		ifTrue: [ ^ self ].
+	self
+		assert: [ (self hasOpenedMethod: aMethod) not ]
+		description: [ 'Can not add already opened method' ].
 
-	anEditorElement := self createAndAddElementForMethod: aMethod.
-	anEditorElement
-		when: GtConnectorButtonsChangedInElement
-		do: [ :anEvent | anEvent newButtons do: [ :newButton | self connectButton: newButton ] ].
-	
-	self editorElements do: [ :each | each ~= aMethod ifTrue: [each editor styler styleInBackgroundProcess: each editor text copy ] ].
-	
-	
+	anEditorElement := self createAndAddElementForMethod: aMethod.	
+	^ anEditorElement
