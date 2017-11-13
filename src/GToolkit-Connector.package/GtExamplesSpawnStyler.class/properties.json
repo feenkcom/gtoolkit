@@ -1,11 +1,14 @@
 {
 	"commentStamp" : "",
 	"super" : "BrRBTextStyler",
-	"category" : "GToolkit-Documenter",
+	"category" : "GToolkit-Connector",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "GtExamplesStyler",
+	"instvars" : [
+		"exampleAction",
+		"buttonAttributes"
+	],
+	"name" : "GtExamplesSpawnStyler",
 	"type" : "normal"
 }

@@ -7,8 +7,7 @@ createAndAddElementForMethod: method
 			self addMethod: exampleMethod.
 			self connectButton: button ];
 		classOrMetaClass: method methodClass.
-	editor := BrTextEditor new.
-	editor styler: styler.
+	editor := BrTextEditor new styler: styler; text: text.
 	styler
 		when: GtConnectorButtonsChangedByStyler
 		do: [ :event | 
@@ -18,7 +17,6 @@ createAndAddElementForMethod: method
 						newButtons: event newButtons;
 						oldButtons: event oldButtons;
 						editor: editor) ].
-	editor text: text.
 	editorElement := BrEditorElement new.
 	editorElement
 		constraintsDo: [ :c | 
