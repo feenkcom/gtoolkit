@@ -10,10 +10,11 @@ The current repository embodies the second generation of GT that is based on the
 
 ## How to load
 
-You can load the whole code in both Pharo 6.1 and in Pharo 7.0 using the following snippet:
+You can load the whole code in Pharo 6.1 using the following snippet:
 
 ```
-Iceberg enableMetacelloIntegration: true.
+"If you want Iceberg integration, uncomment the next line"
+"Iceberg enableMetacelloIntegration: true."
 Metacello new
    baseline: 'GToolkit';
    repository: 'github://feenkcom/gtoolkit/src';
