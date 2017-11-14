@@ -1,4 +1,4 @@
-private
+public
 addMethod: aMethod
 	"Create a new editor on a given method, add it to the scene and return that editor"
 	<return: #BrEditorElement>

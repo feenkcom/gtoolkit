@@ -11,7 +11,7 @@ extraStyle: aText ast: ast
 	selfSendsExamples do: [ :each | 
 		| buttonAttribute targetExampleMethod |
 		targetExampleMethod := ast methodNode methodClass lookupSelector: each selector.
-		buttonAttribute := BrTextActionButtonAttribute new.
+		buttonAttribute := GtConnectorTextButtonAttribute new.
 		buttonAttribute 
 			source: ast method;
 			target: targetExampleMethod.
@@ -26,7 +26,4 @@ extraStyle: aText ast: ast
 			attributes: { buttonAttribute } 
 			from: each stop - 1
 			to: each stop ].
-	self dispatchEvent: (GtConnectorButtonsChangedByStyler new
-		newButtons: (newButtonAttributes);
-		oldButtons: (buttonAttributes)).
-	buttonAttributes := newButtonAttributes copy
+	buttonAttributes := newButtonAttributes

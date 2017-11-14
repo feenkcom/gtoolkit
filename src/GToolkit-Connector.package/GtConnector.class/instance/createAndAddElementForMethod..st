@@ -12,7 +12,7 @@ createAndAddElementForMethod: method
 		background: Color white;
 		effect: (BlDropShadowEffect color: (Color gray alpha: 0.5) width: 10 offset: 5@5).
 
-	styler := GtExamplesSpawnStyler new.
+	styler := GtConnectorExampleStyler new.
 	"What happens when we click on a button"
 	styler exampleAction: [ :exampleMethod :messageNode :buttonAttribute |
 			(self hasOpenedMethod: exampleMethod)

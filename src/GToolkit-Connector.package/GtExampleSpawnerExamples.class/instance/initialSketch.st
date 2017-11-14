@@ -16,7 +16,7 @@ initialSketch
 	    c vertical matchParent ].
 	spawner := [ :method | 
 		text := BrRopedText string: method sourceCode.
-		styler := GtExamplesSpawnStyler new 
+		styler := GtConnectorExampleStyler new 
 			exampleAction: [ :exampleMethod :messageNode :button |
 				newMethod := spawner value: exampleMethod.
 				line := BlLineElement new border: (BlBorder paint: (Color gray alpha: 0.2) width: 5).

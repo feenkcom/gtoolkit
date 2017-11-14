@@ -1,4 +1,4 @@
-public
+private
 openMethod: aMethod relativeTo: aSourceElement linkedTo: anElement
 	"Open a given method connecting newly created editor with the provided source element"
 	| aTargetElement |

@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "GtExamplesStyler",
+	"instvars" : [
+		"exampleAction",
+		"buttonAttributes"
+	],
+	"name" : "GtConnectorExampleStyler",
 	"type" : "normal"
 }
