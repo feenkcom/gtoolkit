@@ -13,4 +13,6 @@ openMethod: aMethod relativeTo: aSourceElement linkedTo: anElement
 	self addEdgeFrom: aSourceElement to: aTargetElement.
 	self addLineFrom: anElement to: aTargetElement.
 	
-	self flag: 'here we should find all buttons with aMethod as target and connect them'
+	(self buttonsWithTargetMethod: aMethod)
+		reject: [ :aButtonElement | aButtonElement == anElement ]
+		thenDo: [ :aButtonElement | self addLineFrom: aButtonElement to: aTargetElement ]

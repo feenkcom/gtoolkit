@@ -10,4 +10,4 @@ closeMethod: aMethod
 		ifPresent: [ :aMethodElement |
 			self removeEdgesFrom: aMethodElement.
 			"as soon as method element is removed, lines will automatically disappear"
-			aMethodElement removeFromParent ].
+			aMethodElement removeFromParent ]
