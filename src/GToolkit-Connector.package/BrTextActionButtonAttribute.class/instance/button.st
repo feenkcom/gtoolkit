@@ -14,5 +14,7 @@ button
 			addEventHandlerOn: BlClickEvent
 				do: [ :anEvent | actionBlock value: anEvent ];
 			yourself.
-		button userData at: #buttonAttributeTarget put: self target.
+		button beConnectorSource.
+		button connectorSource: self source.
+		button connectorTarget: self target.
 		button ]

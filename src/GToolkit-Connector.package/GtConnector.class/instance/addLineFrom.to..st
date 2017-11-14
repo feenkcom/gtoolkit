@@ -1,6 +1,6 @@
 private - adding / removing
 addLineFrom: aSourceElement to: aTargetElement
-	"Add a line between two given elements.
+	"Add a line connecting two given elements.
 	Both elements must not be nil"
 	| aLineElement aDeleteListener |
 	self
@@ -10,6 +10,26 @@ addLineFrom: aSourceElement to: aTargetElement
 	self
 		assert: [ aTargetElement isNotNil ]
 		description: [ 'Target element must not be nil' ].
+		
+	self
+		assert: [ (aSourceElement isConnectedTo: aTargetElement) not ]
+		description: [ 'Source must not be connected to the target' ].
+		
+	self
+		assert: [ (aTargetElement isConnectedTo: aSourceElement) not ]
+		description: [ 'Target must not be connected to the source' ].
+
+	self
+		assert: [ aSourceElement ~~ aTargetElement ]
+		description: [ 'Can not connect element with itself' ].
+
+	self
+		assert: [ self doesExist: aSourceElement ]
+		description: [ 'Source element must be in the scene graph' ].
+		
+	self
+		assert: [ self doesExist: aTargetElement ]
+		description: [ 'Target element must be in the scene graph' ].
 
 	aLineElement := BlLineElement new.
 	aLineElement constraints ignoreByLayout.
@@ -25,9 +45,14 @@ addLineFrom: aSourceElement to: aTargetElement
 	aDeleteListener := BlEventHandler on: BlElementRemovedEvent do: [ :anEvent |
 		aSourceElement removeEventHandler: aDeleteListener.
 		aTargetElement removeEventHandler: aDeleteListener.
+		aSourceElement beNotConnectedTo: aTargetElement.
+		aTargetElement beNotConnectedTo: aSourceElement.
 		aLineElement removeFromParent ].
 	
 	aSourceElement addEventHandler: aDeleteListener.
 	aTargetElement addEventHandler: aDeleteListener.
+	
+	aSourceElement beConnectedTo: aTargetElement.
+	aTargetElement beConnectedTo: aSourceElement.
 
 	self addChild: aLineElement

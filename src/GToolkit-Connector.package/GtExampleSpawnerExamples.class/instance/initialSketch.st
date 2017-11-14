@@ -3,7 +3,8 @@ initialSketch
 	<gtExample>
 	| scalableElement root spawner newMethod line edge styler editor editorElement |
 	scalableElement := BlScalableElement new.
-	scalableElement maxScale: 1.0.
+	scalableElement maxScale: 2.0.
+	scalableElement minScale: 0.5.
 
 	root := BlElement new.
 	scalableElement contentElement: root.
