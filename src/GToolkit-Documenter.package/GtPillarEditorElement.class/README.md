@@ -1,0 +1,1 @@
+I am an editor specialised for pillar
