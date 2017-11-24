@@ -12,5 +12,8 @@ gtInspectorPillarWithBlocIn: composite
 			entitled: 'Zoom out';
 		act: [ :aBlocPresentation | aBlocPresentation element zoomReset ]
 			icon: GLMUIThemeExtraIcons glamorousZoomToFit
-			entitled: 'Zoom reset'; 
+			entitled: 'Zoom reset';
+		act: [ :aBlocPresentation | aBlocPresentation element contentElement editor inspect ]
+			icon: GLMUIThemeExtraIcons glamorousInspect
+			entitled: 'Inspect'; 
 		when: [ #('pier' 'pillar') includes: self extension ]
