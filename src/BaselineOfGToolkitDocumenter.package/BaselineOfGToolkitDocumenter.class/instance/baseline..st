@@ -12,5 +12,9 @@ baseline: spec
 				className: #ConfigurationOfPillar;
 				versionString: #development;
 				repository: 'http://smalltalkhub.com/mc/Pier/Pillar/main/' ];
+			project: 'DeepTraverser' with: [ spec
+				className: #ConfigurationOfDeepTraverser;
+				versionString: #development;
+				repository: 'http://smalltalkhub.com/mc/Moose/DeepTraverser/main/' ];
 			package: 'GToolkit-Documenter' with: [ spec requires: #(#Brick #Pillar #GToolkitExamples) ]
 	]
