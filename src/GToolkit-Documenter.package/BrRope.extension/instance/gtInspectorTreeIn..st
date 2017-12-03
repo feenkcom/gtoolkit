@@ -1,7 +1,7 @@
 *GToolkit-Documenter
 gtInspectorTreeIn: composite
 	<gtInspectorPresentationOrder: 10>
-	composite blocMondrian
+	^ composite blocMondrian
 		title: 'Tree';
 		painting: [ :view :x :presentation |
 			view nodes
@@ -19,7 +19,7 @@ gtInspectorTreeIn: composite
 								when: BlClickEvent do: [ presentation selection: each ] ] ];
 				with: (self withDeepCollect: #children).
 			view edges
-				fromCenterBottom;
+				fromNearestCircle;
 				toCenterTop;
 				connectToAll: #children.
 			view layout tree horizontalGap: 20 ]
