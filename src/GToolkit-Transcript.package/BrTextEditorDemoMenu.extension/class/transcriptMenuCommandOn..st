@@ -1,7 +1,7 @@
 *GToolkit-Transcript
 transcriptMenuCommandOn: aBuilder
 	<worldMenu>
-		
+
 	(aBuilder item: #'5. Transcript API')
 		order: 0.5;
 		iconName: #catalogIcon;
@@ -15,11 +15,11 @@ transcriptMenuCommandOn: aBuilder
 		iconName: #catalogIcon;
 		parent: #'Moldable Editor';
 		action: [ BlUniverse reset.
-			(GtTranscriptExamples>>#objectShower) gtExample returnValue inspect ].
+			(Smalltalk tools inspector openOn: (GtTranscriptExamples new objectShower)) extent: 400@600 ].
 		
 	(aBuilder item: #'7. Transcript - Element animation')
 		order: 0.7;
 		iconName: #catalogIcon;
 		parent: #'Moldable Editor';
 		action: [ BlUniverse reset.
-			(GtTranscriptExamples>>#transcriptWitAnimation) gtExample returnValue inspect ].
+			(Smalltalk tools inspector openOn: (GtTranscriptExamples new transcriptWitAnimation)) extent: 400@600 ].

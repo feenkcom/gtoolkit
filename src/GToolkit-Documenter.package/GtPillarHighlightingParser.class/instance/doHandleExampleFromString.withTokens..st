@@ -14,6 +14,8 @@ doHandleExampleFromString: exampleString withTokens: aToken
 					| exampleElement |
 					exampleElement := GtPillarExampleElement
 						withCode: (aToken second asDictionary includesKey: 'noCode') not.
+					aToken second asDictionary at: 'height' ifPresent: [ :aHeight |
+						exampleElement previewHeight: (Number readFromString: aHeight) ].
 					exampleElement
 						margin: (BlInsets all: 10);
 						constraintsDo: [ :c | 
