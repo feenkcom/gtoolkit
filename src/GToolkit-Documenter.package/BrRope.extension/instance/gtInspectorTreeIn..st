@@ -14,12 +14,20 @@ gtInspectorTreeIn: composite
 								constraintsDo: [ :c | c padding: (BlInsets all: 5) ];
 								text: each asString asRopedText;
 								when: BlClickEvent do: [ presentation selection: each ] ]
-						ifFalse: [ 
+						ifFalse: [
 							BlElement new 
 								zIndex: 10;
 								geometry: BlEllipse new;
-								border: (BlBorder paint: Color black width: 1);
-								background: Color white;
+								in: [ :anElement |
+									(each isKindOf: BrAttributeRope)
+										ifTrue: [
+											anElement
+												background: Color paleRed;
+												border: (BlBorder builder dashedSmall paint: Color black; width: 1; build) ]
+										ifFalse: [
+											anElement
+												border: (BlBorder paint: Color black width: 1);
+												background: Color white ] ];
 								size: 10@10;
 								when: BlClickEvent do: [ presentation selection: each ] ] ];
 				with: (self withDeepCollect: #children).
