@@ -1,3 +1,6 @@
 *GToolkit-Documenter
 gtTextIn: anElement
-	anElement addChild: (BlTextElement text: self)
+	| editorElement |
+	editorElement := BrEditorElement new editor: (BrTextEditor new text: self).
+	editorElement constraintsDo: [ :c | c vertical matchParent. c horizontal matchParent ].
+	anElement addChild: editorElement
