@@ -2,5 +2,8 @@
 gtTextIn: anElement
 	| editorElement |
 	editorElement := BrEditorElement new editor: (BrTextEditor new text: self).
-	editorElement constraintsDo: [ :c | c vertical matchParent. c horizontal matchParent ].
+	editorElement constraintsDo: [ :c | 
+		c vertical matchParent. 
+		c horizontal matchParent.		
+		c padding: (BlInsets all: 10) ].
 	anElement addChild: editorElement
