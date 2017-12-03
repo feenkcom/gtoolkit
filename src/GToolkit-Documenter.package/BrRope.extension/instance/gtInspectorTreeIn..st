@@ -18,16 +18,11 @@ gtInspectorTreeIn: composite
 							BlElement new 
 								zIndex: 10;
 								geometry: BlEllipse new;
+								border: (BlBorder paint: Color black width: 1);
 								in: [ :anElement |
 									(each isKindOf: BrAttributeRope)
-										ifTrue: [
-											anElement
-												background: Color paleRed;
-												border: (BlBorder builder dashedSmall paint: Color black; width: 1; build) ]
-										ifFalse: [
-											anElement
-												border: (BlBorder paint: Color black width: 1);
-												background: Color white ] ];
+										ifTrue: [ anElement background: Color orange ]
+										ifFalse: [ anElement background: Color white ] ];
 								size: 10@10;
 								when: BlClickEvent do: [ presentation selection: each ] ] ];
 				with: (self withDeepCollect: #children).
