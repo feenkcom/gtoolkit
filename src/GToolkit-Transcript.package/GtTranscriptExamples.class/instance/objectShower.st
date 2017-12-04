@@ -11,21 +11,11 @@ objectShower
 		| index |
 		index := 1.
 		500 timesRepeat: [
-			| color size geometry |
-	
-			color := Color random paler.
-			size := (100 atRandom @ 100 atRandom) + (75 @ 50).
-			geometry := geometries atRandom new.
-
 			transcript next
 				cr;
-				putAll: 'Rectangle ';
+				putAll: 'Element ';
 				put: index;
-				expanded: [ BlElement new
-					constraintsDo: [ :c | c textFlow pushLine ];
-					geometry: geometry;
-					size: size;
-					background: color ];
+				expanded: [ self randomElement ];
 				space.
 
 			index := index + 1.
@@ -35,7 +25,3 @@ objectShower
 	loop resume.
 
 	^ transcript
-
-"
-loop terminate
-"

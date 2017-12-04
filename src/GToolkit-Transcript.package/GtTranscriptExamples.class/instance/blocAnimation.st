@@ -4,6 +4,7 @@ blocAnimation
 	| animation childTranslate1 element backgroundAnimation childTranslate2 scaleIncrease childTranslate child |
 	element := BlElement new.
 	element size: 50 @ 50.
+	element relocate: 50@50.
 	element
 		background: Color red twiceDarker;
 		border: (BlBorder paint: Color lightGray width: 5).
