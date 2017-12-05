@@ -1,1 +1,17 @@
-!TranscriptTranscript offers a rich and interactable text interface for displaying live information coming from a system.!!The APIThe API is backward compatible with the existing transcript. To enable the new features, we introduced a builder. For example, ==transcript nextPutAll: 'something'== becomes ==transcript next putAll: 'something'==, and after next we can add multiple attributes that we want to affect the following insertion of a text.The following example shows the complete API.[[[example=GtTranscriptExamples>>#completeAPI|expanded=true|show=gtLiveIn:]]]!!Logging an animationTo get an idea of how this tool can be useful, take a look at the following example showing the visual logging of a Bloc animation.[[[example=GtTranscriptExamples>>#transcriptWitAnimation|expanded=true|show=gtLiveIn:]]]
+!Transcript
+
+The GT Transcript offers a rich and interactive interface for displaying live information coming from a system. Text is only the beginning!
+
+!!The API
+
+The API is backward compatible with the existing transcript. To enable the new features, we introduced a builder. For example, ==transcript nextPutAll: 'something'== becomes ==transcript next putAll: 'something'==. Between `next` and `putAll:`, we can add multiple attributes to the text output.
+
+The following example shows the complete API.
+
+[[[example=GtTranscriptExamples>>#completeAPI|expanded=true|show=gtLiveIn:]]]
+
+!!Logging an animation
+
+To get an idea of how this tool could be useful, take a look at the following example. A Bloc animation is logged in a visual, domain centric way, providing insight far superior to plain text.
+
+[[[example=GtTranscriptExamples>>#transcriptWitAnimation|expanded=true|show=gtLiveIn:]]]
