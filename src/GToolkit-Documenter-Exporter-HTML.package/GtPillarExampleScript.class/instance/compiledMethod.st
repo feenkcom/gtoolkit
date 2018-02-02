@@ -1,3 +1,0 @@
-accessing
-compiledMethod
-	self shouldBeImplemented.

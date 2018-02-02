@@ -1,4 +1,3 @@
 accessing
 exampleCompiledMethod
-	self halt.
-	^ Compiler compile: (self parameters at: 'example')
+	^ Compiler evaluate: (self parameters at: 'example')
