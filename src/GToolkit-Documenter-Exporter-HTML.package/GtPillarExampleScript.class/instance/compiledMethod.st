@@ -1,0 +1,3 @@
+accessing
+compiledMethod
+	self shouldBeImplemented.
