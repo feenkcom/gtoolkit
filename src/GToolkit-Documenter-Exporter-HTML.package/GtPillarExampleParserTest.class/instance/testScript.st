@@ -1,3 +1,0 @@
-tests
-testScript
-	super testScript
