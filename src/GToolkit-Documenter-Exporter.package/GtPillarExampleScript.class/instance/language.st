@@ -1,5 +1,5 @@
 accessing-delegated
 language
 	super language
-		isSpecified ifFalse: [ self language: PRSmalltalkScriptLanguage default ].
+		isSpecified ifFalse: [ ^ PRSmalltalkScriptLanguage default ].
 	^ super language

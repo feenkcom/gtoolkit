@@ -1,4 +1,4 @@
-as yet unclassified
+examples
 empty
 	<gtExample>
 	<label: 'Unitialized instance without any parammeters'>
@@ -7,4 +7,5 @@ empty
 	self assert: instance hasText not.
 	self assert: instance text isNil.
 	self assert: instance language equals: PRSmalltalkScriptLanguage default.
+	self assert: instance noCode not.
 	^ instance
