@@ -5,7 +5,7 @@ empty
 	| instance |
 	instance := GtPillarExampleScript new.
 	self assert: instance hasText not.
-	self assert: instance text isNil.
+	self assert: instance text equals: ''.
 	self assert: instance language equals: PRSmalltalkScriptLanguage default.
 	self assert: instance noCode not.
 	^ instance

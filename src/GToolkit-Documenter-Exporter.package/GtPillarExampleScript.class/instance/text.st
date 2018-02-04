@@ -4,5 +4,5 @@ text
 	For that reasone we return an example source code"
 	<return: #String or: nil>
 	^ super text isEmptyOrNil 
-		ifTrue: [ self exampleSourceCode ]
+		ifTrue: [ self exampleSourceCode ifNil: [ '' ] ]
 		ifFalse: [ super text ]

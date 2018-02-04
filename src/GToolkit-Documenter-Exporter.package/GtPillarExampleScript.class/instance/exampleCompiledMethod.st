@@ -1,3 +1,3 @@
 accessing
 exampleCompiledMethod
-	^ Compiler evaluate: (self parameters at: 'example' ifAbsent: [ 'nil' ])
+	^ self example ifNotNil: [ :example | Compiler evaluate: example ]
