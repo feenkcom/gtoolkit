@@ -5,10 +5,7 @@ exportGtPillarExampleFigureFrom: aGtPillarExampleScript toFile: aFileReference
 	exampleElement previewHeight: aGtPillarExampleScript height.
 	exampleElement
 		margin: (BlInsets all: 10);
-		constraintsDo: [ :c | 
-			c textFlow pushLine.
-			c horizontal matchParent.
-			c vertical fitContent ].
+		size: 500 @ 500.
 	exampleElement
 		example: aGtPillarExampleScript exampleCompiledMethod gtExample
 		showBlock: [ :returnValue | 
@@ -22,4 +19,5 @@ exportGtPillarExampleFigureFrom: aGtPillarExampleScript toFile: aFileReference
 				withArguments: { composite }.
 			composite ].
 	form := exampleElement asSpartaForm.
+	aFileReference ensureDelete.
 	PNGReadWriter putForm: form onFileNamed: aFileReference fullName.

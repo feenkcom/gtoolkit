@@ -15,12 +15,13 @@ visitGtPillarExampleScript: aGtPillarExampleScript
 				do: [ :eachChar | 
 					eachChar isAlphaNumeric
 						ifTrue: [ aStream nextPut: eachChar ]
-						ifFalse: [ aStream nextPut: $_ ] ] ].
+						ifFalse: [ aStream nextPut: $_ ] ].
+			aStream nextPutAll: '.png' ].
 	figure reference: 'file://gt-figures/' , fileName.
 	self visitFigure: figure.
 	directory := 'gt-figures' asFileReference.
 	directory ensureCreateDirectory.
-	fileReference := directory / (fileName, '.png').
+	fileReference := directory / fileName.
 	self
 		exportGtPillarExampleFigureFrom: aGtPillarExampleScript
 		toFile: fileReference
