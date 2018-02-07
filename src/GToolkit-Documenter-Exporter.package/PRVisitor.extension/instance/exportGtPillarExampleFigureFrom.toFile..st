@@ -4,6 +4,7 @@ exportGtPillarExampleFigureFrom: aGtPillarExampleScript toFile: aFileReference
 	exampleElement := GtPillarExampleElement withCode: false.
 	exampleElement previewHeight: aGtPillarExampleScript height.
 	exampleElement
+		background: Color white;
 		margin: (BlInsets all: 10);
 		size: 500 @ 500.
 	exampleElement
