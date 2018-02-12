@@ -1,14 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "GToolkit-Publisher-Client",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TGtPubContentsInspectorIntegration classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"post",
 		"restApi"
 	],
 	"name" : "GtPubPostBuilder",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TGtPubContentsInspectorIntegration",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "GToolkit-Publisher-Client"
 }

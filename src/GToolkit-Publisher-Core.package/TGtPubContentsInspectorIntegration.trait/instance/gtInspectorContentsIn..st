@@ -2,6 +2,6 @@ gt-inspector-extension
 gtInspectorContentsIn: composite
 	<gtInspectorPresentationOrder: 1>
 	^ composite text
-		title: 'Contents';
+		title: [ 'Contents' translated ];
 		display: [ self gtPrintContentsString ];
 		yourself

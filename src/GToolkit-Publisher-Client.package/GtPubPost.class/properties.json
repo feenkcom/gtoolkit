@@ -1,9 +1,5 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "GToolkit-Publisher-Client",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TGtPubContentsInspectorIntegration classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"nonce",
@@ -11,5 +7,11 @@
 		"description"
 	],
 	"name" : "GtPubPost",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "TGtPubContentsInspectorIntegration",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "GToolkit-Publisher-Client"
 }
