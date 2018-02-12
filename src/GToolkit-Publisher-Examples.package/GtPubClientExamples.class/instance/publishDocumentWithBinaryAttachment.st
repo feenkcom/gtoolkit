@@ -1,7 +1,7 @@
 publish documents
 publishDocumentWithBinaryAttachment
 	<gtExample>
-	<label: 'Publish a document with binary attachment'>
+	<label: 'Publish a document with a binary attachment'>
 	| document |
 	self serverReturningDocumentWithBinaryAttachment.
 	document := self postBuilderDocumentWithBinaryAttachment
