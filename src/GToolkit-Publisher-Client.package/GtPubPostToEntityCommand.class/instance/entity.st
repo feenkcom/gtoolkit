@@ -1,3 +1,0 @@
-accessing
-entity
-	^ entity

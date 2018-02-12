@@ -1,3 +1,0 @@
-accessing
-timestamp
-	^ timestamp
