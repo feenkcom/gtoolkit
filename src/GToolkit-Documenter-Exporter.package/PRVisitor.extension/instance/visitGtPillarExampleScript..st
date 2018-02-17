@@ -1,6 +1,6 @@
 *GToolkit-Documenter-Exporter
 visitGtPillarExampleScript: aGtPillarExampleScript
-	| figure fileName directory fileReference |
+	| figure fileName |
 	aGtPillarExampleScript noCode
 		ifFalse: [ self visitScript: aGtPillarExampleScript ].
 	aGtPillarExampleScript example ifNil: [ ^ self ].
@@ -19,9 +19,4 @@ visitGtPillarExampleScript: aGtPillarExampleScript
 			aStream nextPutAll: '.png' ].
 	figure reference: 'file://gt-figures/' , fileName.
 	self visitFigure: figure.
-	directory := 'gt-figures' asFileReference.
-	directory ensureCreateDirectory.
-	fileReference := directory / fileName.
-	self
-		exportGtPillarExampleFigureFrom: aGtPillarExampleScript
-		toFile: fileReference
+	^ fileName
