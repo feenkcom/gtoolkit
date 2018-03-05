@@ -18,5 +18,5 @@ extraStyle: aText ast: ast
 							editorElementOnSourceCode: (ast methodNode methodClass lookupSelector: each selector) sourceCode
 							inClass: ast methodNode methodClass.
 						editorElement margin: (BlInsets top: 0 right: 10 bottom: 10 left: 10) ]] } 
-			from: each stop - 1
+			from: each stop
 			to: each stop ]
