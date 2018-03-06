@@ -29,6 +29,6 @@ gtInspectorTreeIn: composite
 			view edges
 				shape: [ :each | BlLineElement new border: (BlBorder paint: (Color gray alpha: 0.5) width: 1 ) ];
 				connectToAll: #children.
-			view layout tree 
-				horizontalGap: 20;
-				verticalGap: 40 ]
+			view layout horizontalTree 
+				horizontalGap: 30;
+				verticalGap: 10 ]
