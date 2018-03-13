@@ -1,5 +1,5 @@
-# gtoolkit
-The Glamorous Toolkit (GT) is the moldable IDE of Pharo.
+# The Glamorous Toolkit (GT)
+GT is the moldable IDE for Pharo.
 
 The current repository embodies the second generation of GT that is based on the [Bloc project](https://github.com/pharo-graphics/Bloc) and it is comprised of a set of distinct tools. Currently these are:
 - Documenter: a tool for showing live documentation inside Pharo. It is based on Pillar and on the moldable text editor.
