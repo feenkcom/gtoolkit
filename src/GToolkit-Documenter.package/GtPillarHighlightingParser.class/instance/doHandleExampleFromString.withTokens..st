@@ -3,7 +3,7 @@ doHandleExampleFromString: exampleString withTokens: aToken
 	| previewAttributeBlock exampleMethod attributesToAdd expandingAttribute previewAttribute |
 	exampleMethod := Compiler evaluate: exampleString.
 	self targetText
-		attributes: {(BrTextForegroundAttribute paint: Color blue muchDarker)}
+		attributes: {(BrTextForegroundAttribute paint: Color gray)}
 		from: aToken first stop + 1
 		to: aToken last start - 1.
 	previewAttributeBlock := [ BrTextAdornmentDynamicAttribute new
