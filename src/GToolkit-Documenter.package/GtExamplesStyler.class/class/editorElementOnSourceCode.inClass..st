@@ -5,7 +5,7 @@ editorElementOnSourceCode: aString inClass: aClass
 	text := BrRopedText string: aString.
 	styler := self new.
 	styler classOrMetaClass: aClass.
-	text attributes: { BrFontGenericFamilyAttribute monospace beNotOverwritableByStyler . (BrFontSizeAttribute new size: 12) beNotOverwritableByStyler}.
+	text attributes: { BrFontGenericFamilyAttribute monospace beNotOverwritableByStyler . (BrFontSizeAttribute new size: 14) beNotOverwritableByStyler}.
 	editor := BrTextEditor new.
 	editor styler: styler.
 	editor text: text.
