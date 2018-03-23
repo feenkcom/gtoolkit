@@ -2,7 +2,7 @@
 visitGtPillarExampleScript: aGtPillarExampleScript
 	| figure fileName |
 	aGtPillarExampleScript noCode
-		ifFalse: [ self visitScript: aGtPillarExampleScript ].
+		ifFalse: [ self visitCodePartOfGtPillarExampleScript: aGtPillarExampleScript ].
 	aGtPillarExampleScript example ifNil: [ ^ self ].
 	aGtPillarExampleScript show ifNil: [ ^ self ].
 	figure := PRFigure new.

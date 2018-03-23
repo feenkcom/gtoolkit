@@ -1,0 +1,3 @@
+*GToolkit-Documenter-Exporter
+visitCodePartOfGtPillarExampleScript: aGtPillarExampleScript
+	self visitScript: aGtPillarExampleScript
