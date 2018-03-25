@@ -33,7 +33,11 @@ doHandleExampleFromString: exampleString withTokens: aToken
 							returnValue
 								perform: selector asSymbol
 								withArguments: {composite}.
-							composite ] ]
+							composite ].
+					aToken second asDictionary
+						at: 'expandedPreview'
+						ifPresent: [ :isExpandedPreview | (isExpandedPreview asLowercase = 'true') ifTrue: [ exampleElement showPreview ] ].
+					exampleElement ]
 				ifAbsent: [ (GtExamplesStyler
 						editorElementOnSourceCode: exampleMethod sourceCode
 						inClass: exampleMethod methodClass)
