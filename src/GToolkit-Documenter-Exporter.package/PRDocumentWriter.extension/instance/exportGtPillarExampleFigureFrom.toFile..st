@@ -1,24 +1,18 @@
 *GToolkit-Documenter-Exporter
 exportGtPillarExampleFigureFrom: aGtPillarExampleScript toFile: aFileReference 
-	| exampleElement form |
-	exampleElement := GtPillarExampleElement withCode: false.
-	exampleElement previewHeight: aGtPillarExampleScript height.
-	exampleElement
-		background: Color white;
-		margin: (BlInsets all: 10);
-		size: 500 @ 500.
-	exampleElement
-		example: aGtPillarExampleScript exampleCompiledMethod gtExample
-		showBlock: [ :returnValue | 
-			| composite |
-			composite := BlElement new
-				constraintsDo: [ :c | 
-					c vertical matchParent.
-					c horizontal matchParent ].
-			returnValue
-				perform: aGtPillarExampleScript show
-				withArguments: { composite }.
-			composite ].
-	form := exampleElement asSpartaForm.
+	| anExampleReturnValue aContainer |
+	
+	anExampleReturnValue := aGtPillarExampleScript exampleCompiledMethod gtExample returnValue.
+	
+	aContainer := GtPillarExporterContainerElement new.
+	"recommended size"
+	aContainer size: 500@300.
+
+	anExampleReturnValue
+		perform: aGtPillarExampleScript show
+		withArguments: { aContainer }.
+	
+	aContainer forceLayout.
+
 	aFileReference ensureDelete.
-	PNGReadWriter putForm: form onFileNamed: aFileReference fullName.
+	BlSvgExporter new element: aContainer; fileName: aFileReference; export.

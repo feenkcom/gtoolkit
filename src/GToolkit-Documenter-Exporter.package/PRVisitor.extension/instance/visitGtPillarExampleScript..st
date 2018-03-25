@@ -16,7 +16,7 @@ visitGtPillarExampleScript: aGtPillarExampleScript
 					eachChar isAlphaNumeric
 						ifTrue: [ aStream nextPut: eachChar ]
 						ifFalse: [ aStream nextPut: $_ ] ].
-			aStream nextPutAll: '.png' ].
+			aStream nextPutAll: '.svg' ].
 	figure reference: 'file://gt-figures/' , fileName.
 	self visitFigure: figure.
 	^ fileName
