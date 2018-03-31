@@ -7,7 +7,7 @@ initializeListeners
 		anEvent consumed: true ].
 	
 	editorElement
-		addEventHandlerOn: BlInfiniteScrolledEvent
+		addEventHandlerOn: BlElementScrolledEvent
 		do: [ :anEvent |
 			anEvent delta y isZero not
 				ifTrue: [ self isAutoScrollEnabled ifTrue: [ self disableAutoScroll ] ] ]
