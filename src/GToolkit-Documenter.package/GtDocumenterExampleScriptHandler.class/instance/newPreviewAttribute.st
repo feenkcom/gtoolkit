@@ -2,4 +2,4 @@ instance creation
 newPreviewAttribute
 	^ BrTextAdornmentDynamicAttribute new
 		beAppend;
-		elementBlockWithErrorCatching: [ self newElement ]
+		elementBlockWithErrorCatching: [ self newPreviewElement ]

@@ -1,3 +1,3 @@
 testing
 shouldBeExpanded
-	^ self scriptParameters includesKey: 'expanded'
+	^ self scriptParameters includesKey: self class expandedParameterName

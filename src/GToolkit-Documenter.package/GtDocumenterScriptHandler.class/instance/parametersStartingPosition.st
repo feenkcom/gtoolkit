@@ -1,3 +1,3 @@
 accessing - tokens
 parametersStartingPosition
-	^ self tokens first stop + 1
+	^ self startingBracketsEndPosition + 1

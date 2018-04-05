@@ -11,5 +11,5 @@ styleExpandingExample
 			expandingAttribute createdAttributes: {previewAttribute} ].
 	^ self targetText
 		attributes: attributesToAdd
-		from: self tokens last start
-		to: self tokens last stop
+		from: self closingBracketsStartingPosition
+		to: self closingBracketsEndPosition
