@@ -1,20 +1,20 @@
-handling
-doHandleExampleFromString: exampleString withTokens: aToken
+private
+doHandle
 	| previewAttributeBlock exampleMethod attributesToAdd expandingAttribute previewAttribute |
-	exampleMethod := Compiler evaluate: exampleString.
+	exampleMethod := Compiler evaluate: self exampleParameterValue.
 	self targetText
 		attributes: {(BrTextForegroundAttribute paint: Color gray)}
-		from: aToken first stop + 1
-		to: aToken last start - 1.
+		from: self tokens first stop + 1
+		to: self tokens last start - 1.
 	previewAttributeBlock := [ BrTextAdornmentDynamicAttribute new
 		beAppend;
-		elementBlockWithErrorCatching: [ aToken second asDictionary
+		elementBlockWithErrorCatching: [ self scriptParameters
 				at: 'show'
 				ifPresent: [ :selector | 
 					| exampleElement |
 					exampleElement := GtPillarExampleElement
-						withCode: (aToken second asDictionary includesKey: 'noCode') not.
-					aToken second asDictionary at: 'height' ifPresent: [ :aHeight |
+						withCode: (self scriptParameters includesKey: 'noCode') not.
+					self scriptParameters at: 'height' ifPresent: [ :aHeight |
 						exampleElement previewHeight: (Number readFromString: aHeight) ].
 					exampleElement
 						margin: (BlInsets all: 10);
@@ -34,7 +34,7 @@ doHandleExampleFromString: exampleString withTokens: aToken
 								perform: selector asSymbol
 								withArguments: {composite}.
 							composite ].
-					aToken second asDictionary
+					self scriptParameters
 						at: 'expandedPreview'
 						ifPresent: [ :isExpandedPreview | (isExpandedPreview asLowercase = 'true') ifTrue: [ exampleElement showPreview ] ].
 					exampleElement ]
@@ -45,12 +45,12 @@ doHandleExampleFromString: exampleString withTokens: aToken
 	expandingAttribute := BrTextExpandButtonAttribute new
 		attributesCreatingBlock: previewAttributeBlock.
 	attributesToAdd := OrderedCollection with: expandingAttribute.
-	(aToken second asDictionary includesKey: 'expanded')
+	(self scriptParameters includesKey: 'expanded')
 		ifTrue: [ previewAttribute := previewAttributeBlock value.
 			attributesToAdd add: previewAttribute.
 			expandingAttribute isExpanded: true.
 			expandingAttribute createdAttributes: {previewAttribute} ].
 	^ self targetText
 		attributes: attributesToAdd
-		from: aToken last start
-		to: aToken last stop
+		from: self tokens last start
+		to: self tokens last stop
