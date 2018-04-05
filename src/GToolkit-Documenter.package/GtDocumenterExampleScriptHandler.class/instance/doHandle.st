@@ -1,4 +1,4 @@
 private
 doHandle
 	self styleParameters.
-	self styleExpandingExample
+	self styleExpandingCode

@@ -1,8 +1,8 @@
 instance creation
-newPreviewElementFromSelector: selector
+newPreviewElementFromShowParameter
 	| exampleElement |
 	exampleElement := GtPillarExampleElement
-		withCode: (self scriptParameters includesKey: 'noCode') not.
+		withCode: self shouldDisplayCode.
 	self maySetHeightOfPreview: exampleElement.
 	exampleElement
 		margin: (BlInsets all: 10);
@@ -18,7 +18,9 @@ newPreviewElementFromSelector: selector
 				constraintsDo: [ :c | 
 					c vertical matchParent.
 					c horizontal matchParent ].
-			returnValue perform: selector asSymbol withArguments: {composite}.
+			returnValue
+				perform: self showParameterValue
+				withArguments: {composite}.
 			composite ].
 	self mayExpandResultPreviewIn: exampleElement.
 	^ exampleElement
