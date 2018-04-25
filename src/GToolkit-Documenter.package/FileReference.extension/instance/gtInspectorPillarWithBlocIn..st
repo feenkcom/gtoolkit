@@ -1,8 +1,8 @@
 *GToolkit-Documenter
 gtInspectorPillarWithBlocIn: composite
-	<gtInspectorPresentationOrder: 40>
+	<gtInspectorPresentationOrder: -1>
 	^ composite bloc
-		title: 'Bloc Pillar';
+		title: '_Pillar';
 		element: [ GtDocumenter editorForPillar: self ];
 		act: [ :aBlocPresentation | aBlocPresentation element zoomIn ]
 			icon: GLMUIThemeExtraIcons glamorousZoomIn
