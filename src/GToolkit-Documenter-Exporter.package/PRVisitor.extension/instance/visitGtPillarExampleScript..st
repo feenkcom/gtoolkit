@@ -3,8 +3,8 @@ visitGtPillarExampleScript: aGtPillarExampleScript
 	| figure fileName |
 	aGtPillarExampleScript noCode
 		ifFalse: [ self visitCodePartOfGtPillarExampleScript: aGtPillarExampleScript ].
-	aGtPillarExampleScript example ifNil: [ ^ self ].
-	aGtPillarExampleScript show ifNil: [ ^ self ].
+	aGtPillarExampleScript example ifNil: [ ^ nil ].
+	aGtPillarExampleScript show ifNil: [ ^ nil ].
 	figure := PRFigure new.
 	figure label: 'figure-' , aGtPillarExampleScript example.
 	figure
