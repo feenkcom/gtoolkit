@@ -1,11 +1,12 @@
 handling
 handleScriptWithTokens: tokens
-	| handler |
+	| handlerClass handler |
 	scriptParameters := tokens second asDictionary.
-	handler := GtDocumenterScriptHandler handlerForParameters: scriptParameters andTokens: tokens.
-	handler new
-		scriptParameters: scriptParameters;
+	handlerClass := GtDocumenterScriptHandler handlerForParameters: scriptParameters andTokens: tokens.
+	handler := handlerClass new.
+	handler scriptParameters addAll: scriptParameters.
+	handler	
 		tokens: tokens;
 		targetText: self targetText;
 		sourceFile: self fileReference;
-		handle.
+		handle
