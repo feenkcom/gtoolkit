@@ -2,7 +2,7 @@
 gtInspectorBlocSourceIn: composite
 	<gtInspectorPresentationOrder: 40>
 	composite bloc
-		title: 'Source (Bloc)';
+		title: '_Source';
 		element: [ 
 			| text styler editor editorElement |
 			text := BrRopedText string: self method sourceCode.

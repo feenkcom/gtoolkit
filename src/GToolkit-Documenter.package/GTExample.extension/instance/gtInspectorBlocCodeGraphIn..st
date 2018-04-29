@@ -2,7 +2,7 @@
 gtInspectorBlocCodeGraphIn: composite
 	<gtInspectorPresentationOrder: 40>
 	composite blocMondrian
-		title: 'Code graph (Bloc)';
+		title: '_Code graph';
 		painting: [ :view :x :presentation |
 			view nodes 
 				shape: [ :each | 

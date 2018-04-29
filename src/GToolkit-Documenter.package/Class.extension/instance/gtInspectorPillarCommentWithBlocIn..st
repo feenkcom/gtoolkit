@@ -1,6 +1,6 @@
 *GToolkit-Documenter
 gtInspectorPillarCommentWithBlocIn: composite
-	<gtInspectorPresentationOrder: 40>
+	<gtInspectorPresentationOrder: 19>
 	^ composite bloc
-		title: 'Comment (Bloc)';
+		title: '_Comment';
 		element: [ GtDocumenter editorForText: self comment ]
