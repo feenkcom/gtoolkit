@@ -1,7 +1,11 @@
 private-styles
 styleScriptBody
-	| styler |
+	| styler document |
 	styler := BrRBTextStyler new.
+	document := GtDocument new.
+	document addVariableBinding: #variableOne -> 42.
+	self flag: 'debug code'.
+	styler workspace: document.
 	styler
 		style:
 			(self targetText

@@ -9,4 +9,5 @@ handleScriptWithTokens: tokens
 		tokens: tokens;
 		targetText: self targetText;
 		sourceFile: self fileReference;
+		workspace: workspace;
 		handle

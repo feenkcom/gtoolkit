@@ -1,16 +1,19 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "GToolkit-Documenter-ScriptHandler",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "GtDebuggingTrait classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"scriptParameters",
 		"tokens",
 		"sourceFile",
-		"targetText"
+		"targetText",
+		"workspace"
 	],
 	"name" : "GtDocumenterScriptHandler",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "GtDebuggingTrait",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "GToolkit-Documenter-ScriptHandler"
 }
