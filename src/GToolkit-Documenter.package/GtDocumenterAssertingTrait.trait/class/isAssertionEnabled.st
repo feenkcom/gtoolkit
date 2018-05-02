@@ -1,0 +1,3 @@
+asserting
+isAssertionEnabled
+	^ GtDocumenterSettings isAssertionEnabled

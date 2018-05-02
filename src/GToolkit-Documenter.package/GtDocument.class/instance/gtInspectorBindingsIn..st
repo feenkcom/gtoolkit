@@ -1,4 +1,4 @@
-as yet unclassified
+gt-inspector-extension
 gtInspectorBindingsIn: composite
 	<gtInspectorPresentationOrder: 1>
 	^ bindings ifNotNil: [ :aBindings |

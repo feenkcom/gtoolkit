@@ -1,0 +1,3 @@
+binding
+bindingOf: aSymbol
+	^ nil

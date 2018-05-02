@@ -2,12 +2,12 @@
 	"commentStamp" : "",
 	"super" : "Object",
 	"category" : "GToolkit-Documenter-Core",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"isAssertionEnabled"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"bindings"
-	],
-	"name" : "GtSmalltalkCodeBindings",
+	"instvars" : [ ],
+	"name" : "GtDocumenterSettings",
 	"type" : "normal"
 }

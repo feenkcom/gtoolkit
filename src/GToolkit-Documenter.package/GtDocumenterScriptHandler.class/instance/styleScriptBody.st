@@ -1,11 +1,10 @@
 private-styles
 styleScriptBody
-	| styler document |
+	| styler strategy |
 	styler := BrRBTextStyler new.
-	document := GtDocument new.
-	document addVariableBinding: #variableOne -> 42.
-	self flag: 'debug code'.
-	styler workspace: document.
+	workspace ifNotNil: [ 
+		strategy := GtHighlightingBindingStrategy bindings: workspace.
+		styler workspace: strategy ].
 	styler
 		style:
 			(self targetText
