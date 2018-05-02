@@ -4,6 +4,7 @@ baseline: spec
 	spec for: #common do: [ 
 		spec
 			package: 'GToolkit-Utility-File';
-			group: 'Core' with: #( 'GToolkit-Utility-File' );
+			package: 'GToolkit-Utility-Assertion';
+			group: 'Core' with: #( 'GToolkit-Utility-File' 'GToolkit-Utility-Assertion' );
 			group: 'default' with: #( 'Core' )
 	]
