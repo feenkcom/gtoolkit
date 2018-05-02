@@ -1,4 +1,4 @@
-*GToolkit-Documenter
+*GToolkit-Documenter-Exporter
 gtInspectorGtDocumenterParse
 	<gtInspectorAction>
 	^ GLMGenericAction new

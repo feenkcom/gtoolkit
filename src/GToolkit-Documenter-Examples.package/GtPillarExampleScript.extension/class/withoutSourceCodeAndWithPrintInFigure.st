@@ -1,4 +1,4 @@
-examples
+*GToolkit-Documenter-Examples
 withoutSourceCodeAndWithPrintInFigure
 	<gtExample>
 	<label: 'Output without a source code gtPrinIn: Figure output'>

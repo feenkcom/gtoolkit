@@ -1,3 +1,3 @@
-as yet unclassified
+accessing - script parameters
 exampleParameterName
 	^ 'example'

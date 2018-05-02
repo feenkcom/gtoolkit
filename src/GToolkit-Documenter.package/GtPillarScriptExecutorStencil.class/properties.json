@@ -1,14 +1,17 @@
 {
 	"commentStamp" : "",
-	"super" : "GtPillarExampleElement",
+	"super" : "GtPillarBrickStencil",
 	"category" : "GToolkit-Documenter-Brick",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"editorElement",
-		"arrowElement"
+		"description",
+		"codeSnippet",
+		"label",
+		"icon",
+		"workspace"
 	],
-	"name" : "GtPillarExampleWithCodeElement",
+	"name" : "GtPillarScriptExecutorStencil",
 	"type" : "normal"
 }

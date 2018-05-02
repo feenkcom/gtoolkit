@@ -1,4 +1,4 @@
-examples
+*GToolkit-Documenter-Examples
 empty
 	<gtExample>
 	<label: 'Unitialized instance without any parammeters'>
