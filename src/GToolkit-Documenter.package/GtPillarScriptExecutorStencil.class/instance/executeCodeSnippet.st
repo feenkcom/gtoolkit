@@ -12,3 +12,4 @@ executeCodeSnippet
 			bindings: bindingStrategy;
 			requestor: bindingStrategy);
 		evaluate.
+	editor editor styleText.

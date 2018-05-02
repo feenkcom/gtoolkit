@@ -24,6 +24,7 @@ Shared variable:
 variableTwo := 72.
 Transcript show: ''variableOne = ''; show: variableOne; cr.
 Transcript show: ''variableTwo = ''; show: variableTwo; cr.
+Transcript show: ''variableThree = ''; show: variableThree; cr.
 ]]]
 
 '

@@ -1,4 +1,5 @@
 SystemOrganization addCategory: #'GToolkit-Documenter'!
+SystemOrganization addCategory: 'GToolkit-Documenter-Bindings'!
 SystemOrganization addCategory: 'GToolkit-Documenter-Brick'!
 SystemOrganization addCategory: 'GToolkit-Documenter-Core'!
 SystemOrganization addCategory: 'GToolkit-Documenter-Pillar'!

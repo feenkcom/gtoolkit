@@ -1,5 +1,5 @@
 instance creation
-newPreviewElement
+newPreviewElementForText: aBrText inEditor: aTextElement
 	<return: #BlElement>
 	| composite |
 	composite := BlElement new
