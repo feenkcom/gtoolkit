@@ -1,0 +1,3 @@
+announcement registration
+onImpactChangedDo: anOneArgBlock
+	self announcer subscribe: GtEpiceaImpactChangedAnnouncement do: anOneArgBlock

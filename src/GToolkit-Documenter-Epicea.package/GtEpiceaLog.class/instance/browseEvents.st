@@ -1,0 +1,3 @@
+actions
+browseEvents
+	theLog browseEvents
