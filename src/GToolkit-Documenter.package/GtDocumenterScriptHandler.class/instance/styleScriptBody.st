@@ -8,11 +8,11 @@ styleScriptBody
 	styler
 		style:
 			(self targetText
-				from: self scriptBodyStartingPosition
-				to: self scriptBodyStopPosition).
+				from: tokens scriptBodyStartingPosition
+				to: tokens scriptBodyStopPosition).
 	self targetText
 		attributes:
 			{BrFontGenericFamilyAttribute monospace.
 			(BrFontSizeAttribute size: 14)}
-		from: self scriptBodyStartingPosition
-		to: self scriptBodyStopPosition
+		from: tokens scriptBodyStartingPosition
+		to: tokens scriptBodyStopPosition

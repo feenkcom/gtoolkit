@@ -1,0 +1,3 @@
+accessing
+scriptBodyToken
+	^ tokens third

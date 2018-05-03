@@ -1,6 +1,6 @@
 instance creation
 newPreviewElementForText: aBrText inEditor: aTextElement
 	<return: #BlElement>
-	^ self hasShowParameter
+	^ tokens hasShowParameter
 		ifTrue: [ self newPreviewElementFromShowParameter ]
 		ifFalse: [ self newPreviewEditorElement ]

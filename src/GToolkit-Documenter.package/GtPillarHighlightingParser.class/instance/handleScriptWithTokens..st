@@ -1,13 +1,15 @@
 handling
 handleScriptWithTokens: tokens
-	| handlerClass handler |
-	scriptParameters := tokens second asDictionary.
-	handlerClass := GtDocumenterScriptHandler handlerForParameters: scriptParameters andTokens: tokens.
+	| handlerClass handler codeSnippet scriptTokens |
+	scriptTokens := GtPillarScriptTokens new.
+	scriptTokens tokens: tokens.
+	handlerClass := GtDocumenterScriptHandler handlerForScript: scriptTokens.
 	handler := handlerClass new.
-	handler scriptParameters addAll: scriptParameters.
-	handler	
-		tokens: tokens;
+	scriptIndex := scriptIndex + 1.
+	codeSnippet := workspace scriptAt: scriptIndex.
+	handler
+		tokens: scriptTokens;
 		targetText: self targetText;
 		sourceFile: self fileReference;
-		workspace: workspace;
+		workspace: codeSnippet;
 		handle

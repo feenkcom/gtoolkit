@@ -10,7 +10,7 @@ newPreviewElementForText: aBrText inEditor: aTextElement
 			c textFlow pushLine.
 			c vertical exact: 100.
 			c horizontal matchParent ].
-	(Compiler evaluate: self scriptBodyString)
+	(Compiler evaluate: tokens scriptBodyString)
 		perform: self showParameterValue
 		withArguments: {composite}.
 	^ composite

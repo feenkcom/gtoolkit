@@ -1,3 +1,0 @@
-testing
-handlesScriptWithParameters: scriptParameters andTokens: tokens
-	^ scriptParameters includesKey: GtDocumenterConstants exampleParameterName

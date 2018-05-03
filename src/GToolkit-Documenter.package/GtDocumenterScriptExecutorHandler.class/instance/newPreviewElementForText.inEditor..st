@@ -9,5 +9,5 @@ newPreviewElementForText: aBrText inEditor: aTextElement
 		description: 'You will execute a script...';
 		label: self buttonLabelString;
 		icon: GtDocumenterConstants defaultExecuteButtonIcon;
-		codeSnippet: self scriptBodyString;
+		codeSnippet: tokens scriptBodyString;
 		newPreviewElement

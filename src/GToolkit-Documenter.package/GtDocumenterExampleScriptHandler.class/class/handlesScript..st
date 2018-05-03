@@ -1,0 +1,3 @@
+testing
+handlesScript: aGtPillarScriptTokens
+	^ aGtPillarScriptTokens includesParameter: GtDocumenterConstants exampleParameterName

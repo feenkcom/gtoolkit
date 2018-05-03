@@ -1,13 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "GToolkit-Documenter-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "GtBindingsTrait classTrait + GtAssertingTrait classTrait",
 	"classvars" : [ ],
 	"instvars" : [
-		"bindings"
+		"bindings",
+		"outs"
 	],
 	"name" : "GtDocument",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "GtBindingsTrait + GtAssertingTrait",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "GToolkit-Documenter-Core"
 }
