@@ -11,8 +11,8 @@ newPlayButton
 	"aLook := BrIconLook new + (BrLabelLook new fontSize: 12)."
 	aLook := BrMaterialToggleIconifiedLook
 		+ BrMaterialToggleLabelledLook 
-		+ GtPillarSlimButtonLook 
-		+ (GtMarginLook left: 5).
+		+ GtPillarSlimButtonLook
+		"+ (GtMarginLook left: 5)".
 	aButton look: aLook.
 	aButton viewModel: aModel.
 	^ aButton

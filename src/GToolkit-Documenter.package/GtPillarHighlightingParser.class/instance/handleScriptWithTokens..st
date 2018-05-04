@@ -7,6 +7,7 @@ handleScriptWithTokens: tokens
 	handler := handlerClass new.
 	scriptIndex := scriptIndex + 1.
 	codeSnippet := workspace scriptAt: scriptIndex.
+	codeSnippet index: scriptIndex.
 	handler
 		tokens: scriptTokens;
 		targetText: self targetText;
