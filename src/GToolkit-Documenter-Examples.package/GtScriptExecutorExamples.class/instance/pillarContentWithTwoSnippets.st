@@ -1,7 +1,7 @@
 source files
-pillarContent
+pillarContentWithTwoSnippets
 	<gtExample>
-	<label: 'Pillar content with Epicea link'>
+	<label: 'Pillar content with two executable snippets'>
 	^ '! This is en example of build-in executable code snippets
 
 The first example opens a transcript:

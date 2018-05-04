@@ -5,6 +5,7 @@ documentWithTwoCodeSnippets
 	document := self documentWithOneCodeSnippet.
 	codeSnippet := self codeSnippetResult.
 	codeSnippet value: 7.
+	codeSnippet index: 2.
 	codeSnippet document: document.
 	out := codeSnippet bindingOf: GtDocumenterConstants resultVariableName.
 	self assert: out notNil.
