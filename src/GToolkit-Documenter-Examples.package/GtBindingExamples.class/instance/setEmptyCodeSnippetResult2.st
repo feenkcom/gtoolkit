@@ -4,8 +4,9 @@ setEmptyCodeSnippetResult2
 	<label: 'Set result of empty code snippet bindings'>
 	| bindings result |
 	bindings := self codeSnippetResult.
-	bindings addNamed: GtDocumenterConstants resultVariableName value: 42.
+	bindings value: 42.
 	result := bindings
 		bindingOf: GtDocumenterConstants resultVariableName.
+	"The result is nil, because out refers to a previous script."
 	self assert: result isNil.
 	^ bindings

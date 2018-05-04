@@ -1,4 +1,4 @@
 binding
 at: anInteger 
-	^ (collection at: anInteger ifAbsent: [ nil ]) 
+	^ (self scriptAt: anInteger) 
 		ifNotNil: [ :aCodeSnippet | aCodeSnippet value ]
