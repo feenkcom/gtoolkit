@@ -7,7 +7,7 @@ insertThreeBracketsInTheMiddle
 	originalCodes := self extractCodeSnippetsFromEditor: editor.
 	self assert: (self outsFromEditor: editor) size equals: 2.
 	self assert: originalCodes size equals: 2.
-	editor text insertString: self insertedThreeBrackets at: 54.
+	editor text insertString: self insertedThreeBrackets at: self insertMiddlePosition.
 	editor styleText.
 	newCodes := self extractCodeSnippetsFromEditor: editor.
 	self assert: (self outsFromEditor: editor) size equals: 2.

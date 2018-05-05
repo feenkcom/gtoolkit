@@ -7,7 +7,7 @@ insertScriptInTheMiddle
 	twoCodes := self extractCodeSnippetsFromEditor: editor.
 	self assert: (self outsFromEditor: editor) size equals: 2.
 	self assert: twoCodes size equals: 2.
-	editor text insertString: self insertedScript at: 54.
+	editor text insertString: self insertedScript at: self insertMiddlePosition.
 	editor styleText.
 	threeCodes := self extractCodeSnippetsFromEditor: editor.
 	self assert: (self outsFromEditor: editor) size equals: 3.

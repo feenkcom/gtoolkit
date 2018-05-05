@@ -4,5 +4,6 @@ privateStyle: aText
 		fileReference: fileReference;
 		targetText: aText;
 		workspace: workspace;
-		parse: aText asString.
+		parse: aText asString;
+		cleanWorkspace.
 	^ aText

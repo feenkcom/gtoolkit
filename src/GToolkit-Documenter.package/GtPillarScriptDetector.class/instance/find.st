@@ -7,4 +7,8 @@ find
 		ifTrue: [ ^ self newCodeSnippet ].
 	self hasSimilarSourceCodeAtSameIndex
 		ifTrue: [ ^ self scriptAtSameIndex ].
+	self hasSimilarSourceCodeAtFollowingIndex
+		ifTrue: [ 
+			self removeScriptAtSameIndex. 
+			^ self scriptAtSameIndex ]. 
 	^ self newCodeSnippetAtSameIndex
