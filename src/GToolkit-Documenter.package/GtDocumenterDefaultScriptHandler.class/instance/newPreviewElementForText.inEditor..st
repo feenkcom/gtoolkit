@@ -11,6 +11,6 @@ newPreviewElementForText: aBrText inEditor: aTextElement
 			c vertical exact: 100.
 			c horizontal matchParent ].
 	(Compiler evaluate: tokens scriptBodyString)
-		perform: self showParameterValue
+		perform: tokens showParameterValue
 		withArguments: {composite}.
 	^ composite

@@ -11,6 +11,6 @@ pillarContentAddingAndRemovingCodeSnippets
 
 [[[label=Print
 "Second"
-Transcript show: out + 11; cr
+Transcript show: out + 11; cr.
 ]]]
 '

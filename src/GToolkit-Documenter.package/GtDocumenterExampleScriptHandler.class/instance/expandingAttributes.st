@@ -3,7 +3,7 @@ expandingAttributes
 	| attributes expandingAttribute |
 	attributes := super expandingAttributes.
 	expandingAttribute := attributes first.
-	^ self shouldBeExpanded
+	^ tokens shouldBeExpanded
 		ifFalse: [ attributes ]
 		ifTrue: [ | previewAttribute |
 			previewAttribute := self newPreviewAttribute.

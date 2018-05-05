@@ -9,7 +9,9 @@ printOn: aStream
 	sourceCode ifNil: [ ^ self ].
 	aStream nextPut: $[.
 	aStream nextPutAll: (
-		sourceCode lines first printStringLimitedTo: 10).
+		sourceCode lines 
+			ifNotEmpty: [ :aCollection | aCollection first printStringLimitedTo: 10 ]
+			ifEmpty: [ sourceCode ]).
 	aStream nextPut: $].
 	
 	

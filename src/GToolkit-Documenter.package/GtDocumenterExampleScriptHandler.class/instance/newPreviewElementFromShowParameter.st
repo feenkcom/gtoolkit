@@ -2,7 +2,7 @@ instance creation
 newPreviewElementFromShowParameter
 	| exampleElement |
 	exampleElement := GtPillarExampleElement
-		withCode: self shouldDisplayCode.
+		withCode: tokens shouldDisplayCode.
 	self maySetHeightOfPreview: exampleElement.
 	exampleElement
 		margin: (BlInsets all: 10);
@@ -19,7 +19,7 @@ newPreviewElementFromShowParameter
 					c vertical matchParent.
 					c horizontal matchParent ].
 			returnValue
-				perform: self showParameterValue
+				perform: tokens showParameterValue
 				withArguments: {composite}.
 			composite ].
 	self mayExpandResultPreviewIn: exampleElement.
