@@ -1,4 +1,4 @@
 accessing
 exampleMethod
 	<return: #CompiledMethod>
-	^ exampleMethod ifNil: [ exampleMethod := Compiler evaluate: self exampleParameterValue ].
+	^ exampleMethod ifNil: [ exampleMethod := Compiler evaluate: tokens exampleParameterValue ].

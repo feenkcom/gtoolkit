@@ -1,0 +1,4 @@
+common
+scriptHandler
+	<gtExample>
+	^ GtDocumenterScriptHandler

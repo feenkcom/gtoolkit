@@ -16,4 +16,5 @@ handleScriptWithTokens: tokens
 		targetText: self targetText;
 		sourceFile: self fileReference;
 		workspace: codeSnippet;
-		handle
+		handle.
+	 ^ scriptTokens

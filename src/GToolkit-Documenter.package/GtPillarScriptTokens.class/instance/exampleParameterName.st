@@ -1,3 +1,3 @@
-accessing - script parameters
+accessing - parameter names
 exampleParameterName
 	^ 'example'

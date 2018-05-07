@@ -1,4 +1,4 @@
 testing
 handlesScript: aGtPillarScriptTokens
 	<return: #Boolean>
-	^ true
+	^ aGtPillarScriptTokens scriptBodyString trimBoth notEmpty
