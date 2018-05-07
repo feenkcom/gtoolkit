@@ -1,0 +1,3 @@
+testing
+hasParameters
+	^ parameters isNotEmpty
