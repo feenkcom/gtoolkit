@@ -1,0 +1,4 @@
+common
+codeSnippetDetector
+	<gtExample>
+	^ GtPillarCodeSnippetDetector

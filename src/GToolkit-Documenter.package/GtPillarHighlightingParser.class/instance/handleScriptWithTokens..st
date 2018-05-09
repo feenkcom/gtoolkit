@@ -1,15 +1,16 @@
 handling
 handleScriptWithTokens: tokens
-	| handlerClass handler codeSnippet scriptTokens |
+	| handlerClass handler codeSnippet scriptTokens type |
 	scriptTokens := GtPillarScriptTokens new.
 	scriptTokens tokens: tokens.
 	scriptIndex := scriptIndex + 1.
-	codeSnippet := GtPillarScriptDetector new
+	codeSnippet := GtCodeSnippetFinder new
 		document: workspace;
 		scriptIndex: scriptIndex;
 		tokens: scriptTokens;
 		find.
-	handlerClass := GtDocumenterScriptHandler handlerForScript: scriptTokens.
+	type := GtPillarCodeSnippetDetector typeForScriptTokens: scriptTokens.
+	handlerClass := type brickHandlerClass.
 	handler := handlerClass new.
 	handler
 		tokens: scriptTokens;
