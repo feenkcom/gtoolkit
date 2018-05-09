@@ -5,9 +5,8 @@ newPreviewElementForText: aBrText inEditor: aTextElement
 	^ GtPillarScriptExecutorStencil new
 		text: aBrText;
 		editor: aTextElement;
-		workspace: workspace;
+		codeSnippet: codeSnippet;
 		description: 'You will execute a script...';
 		label: self buttonLabelString;
 		icon: GtDocumenterConstants defaultExecuteButtonIcon;
-		codeSnippet: tokens scriptBodyString;
 		newPreviewElement

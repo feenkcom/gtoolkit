@@ -7,5 +7,5 @@ newPreviewElement
 		constraintsDo: [ :c |
 			c horizontal fitContent.
 			c vertical fitContent ];
-		addChild: (BlTextElement new text: (' (outs at: ', workspace index asString, ') ') asRopedText);
+		addChild: (BlTextElement new text: (' (outs at: ', codeSnippet index asString, ') ') asRopedText);
 		addChild: self newPlayButton

@@ -2,8 +2,8 @@ private-styles
 styleScriptBody
 	| styler strategy |
 	styler := BrRBTextStyler new.
-	workspace ifNotNil: [ 
-		strategy := GtHighlightingBindingStrategy bindings: workspace.
+	codeSnippet ifNotNil: [ 
+		strategy := GtHighlightingBindingStrategy bindings: codeSnippet.
 		styler workspace: strategy ].
 	styler
 		style:
