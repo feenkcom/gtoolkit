@@ -1,4 +1,4 @@
-editing document
+editing live document
 pillarContentAddingAndRemovingCodeSnippets
 	<gtExample>
 	<label: 'Pillar content for testing adding and removing code snippets'>

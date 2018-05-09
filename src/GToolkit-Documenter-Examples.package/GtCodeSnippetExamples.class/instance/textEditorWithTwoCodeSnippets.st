@@ -1,4 +1,4 @@
-editing document
+editing live document
 textEditorWithTwoCodeSnippets
 	<gtExample>
 	<label: 'Text editor'>

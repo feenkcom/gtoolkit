@@ -1,4 +1,4 @@
 accessing
-outs
+codeSnippets
 	<return: #GtCodeSnippets>
-	^ self codeSnippets
+	^ codeSnippets

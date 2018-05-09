@@ -1,15 +1,15 @@
-editing document
+editing live document
 insertThreeBracketsInTheMiddle
 	<gtExample>
 	<label: 'Text editor'>
 	| editor originalCodes newCodes |
 	editor := self textEditorWithTwoCodeSnippets.
-	originalCodes := self extractCodeSnippetsFromEditor: editor.
+	originalCodes := self codeSnippetsFromEditor: editor.
 	self assert: (self outsFromEditor: editor) size equals: 2.
 	self assert: originalCodes size equals: 2.
 	editor text insertString: self insertedThreeBrackets at: self insertMiddlePosition.
 	editor styleText.
-	newCodes := self extractCodeSnippetsFromEditor: editor.
+	newCodes := self codeSnippetsFromEditor: editor.
 	self assert: (self outsFromEditor: editor) size equals: 2.
 	self assert: newCodes size equals: 2.
 	self assert: originalCodes first == newCodes first.

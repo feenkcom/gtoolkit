@@ -1,4 +1,4 @@
 binding
 at: anInteger 
-	^ (self scriptAt: anInteger) 
+	^ (self codeSnippetAt: anInteger) 
 		ifNotNil: [ :aCodeSnippet | aCodeSnippet value ]

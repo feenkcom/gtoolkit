@@ -1,5 +1,5 @@
-source files
-pillarContent
+document
+pillarContentWithSevenExecutableCodeSnippets
 	<gtExample>
 	<label: 'Pillar content with Epicea link'>
 	^ '! This is en example of build-in executable code snippets

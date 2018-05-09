@@ -1,3 +1,3 @@
 accessing
-scriptAt: anInteger 
+codeSnippetAt: anInteger 
 	^ collection at: anInteger ifAbsent: [ nil ]

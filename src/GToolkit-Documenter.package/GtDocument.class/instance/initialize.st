@@ -1,8 +1,8 @@
 initialization
 initialize
 	super initialize.
-	outs := GtCodeSnippets new.
+	codeSnippets := GtCodeSnippets new.
 	bindings := GtPlaygroundBindings new.
 	bindings 
 		addNamed: GtDocumenterConstants resultsVariableName 
-		value: outs.
+		value: codeSnippets.
