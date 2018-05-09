@@ -1,4 +1,4 @@
 accessing - computed
 outs
-	<return: #GtCodeSnippetResults>
+	<return: #GtCodeSnippets>
 	^ self document outs
