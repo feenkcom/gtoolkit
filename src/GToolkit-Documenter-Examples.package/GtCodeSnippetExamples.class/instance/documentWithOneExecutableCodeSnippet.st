@@ -2,11 +2,13 @@ executable code snippet
 documentWithOneExecutableCodeSnippet
 	<gtExample>
 	<label: 'Document with an executable code snippet'>
-	| aPillarElement aDocument |
+	| aPillarElement aDocument codeSnippet |
 	aPillarElement := self pillarElementWithOneExecutableCodeSnippet.
 	aDocument := self documentFromPillarElement: aPillarElement.
 	self assert: aDocument codeSnippets size equals: 1.
+	codeSnippet := aDocument codeSnippets codeSnippetAt: 1.
 	self 
-		assert: (aDocument codeSnippets codeSnippetAt: 1) class 
+		assert: codeSnippet class 
 		equals: GtExecutableCodeSnippet.
+	self assert: codeSnippet result isNil.
 	^ aDocument
