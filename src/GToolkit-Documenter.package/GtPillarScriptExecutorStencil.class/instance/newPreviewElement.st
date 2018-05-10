@@ -1,11 +1,15 @@
 instance creation
 newPreviewElement
-	<return: #BlElement>
 	"Return a preview element that is displayed in a document"
-	^ BlElement new
-		layout: BlLinearLayout horizontal alignCenter;
-		constraintsDo: [ :c |
-			c horizontal fitContent.
-			c vertical fitContent ];
-		addChild: (BlTextElement new text: (' (outs at: ', codeSnippet index asString, ') ') asRopedText);
-		addChild: self newPlayButton
+
+	<return: #BlElement>
+	| aComposite |
+	aComposite := BlElement new look: GtPillarInlinedCompositeLook.
+	aComposite addEventHandlerOn: BlElementRemovedEvent do: [ self codeSnippet announcer unsubscribe: self ].
+	(self codeSnippet announcer 
+		subscribe: GtCodeSnippetExecutionAnnouncement 
+		send: #handleCodeSnippetExecutionAnnouncement:
+		to: self) subscriber: aComposite.
+	self codeSnippet hasResult ifTrue: [ aComposite addChild: self newOutsInformationElement ].
+	aComposite addChild: self newPlayButton.
+	^ aComposite

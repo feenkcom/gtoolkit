@@ -1,9 +1,10 @@
 instance creation
-newSlimButtonElement
+newSlimIconifiedButtonElement
 	<return: #BlElement>
 	| aButton aLook |
 	aButton := BlElement new.
-	aLook := BrMaterialToggleLabelledLook 
+	aLook := BrMaterialToggleIconifiedLook 
+		+ BrMaterialToggleLabelledLook 
 		+ GtPillarSlimButtonLook.
 	aButton look: aLook.
 	^ aButton

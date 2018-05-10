@@ -1,0 +1,3 @@
+announcement handling
+handleCodeSnippetExecutionAnnouncement: aGtCodeSnippetFailedExecutionAnnouncement 
+	editor editor styleText.
