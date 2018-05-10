@@ -11,8 +11,10 @@ codeSnippetOfDocumentWithFailedExecutableCodeSnippet
 		when: Announcement 
 		do: [ :signal | anAnnouncements add: signal ].
 	aCodeSnippet executeWithPlaygroundStrategy.
-	self assert: aCodeSnippet result equals: nil.
-	self assert: aCodeSnippet hasResult not.
+	self assert: aCodeSnippet hasResult.
+	self assert: aCodeSnippet result notNil.
+	self assert: aCodeSnippet value class equals: ZeroDivide.
+	self assert: aCodeSnippet isException.
 	self assert: anAnnouncements size equals: 1.
 	self assert: anAnnouncements first class equals: GtCodeSnippetFailedExecutionAnnouncement.
 	self assert: anAnnouncements first exception class equals: ZeroDivide.

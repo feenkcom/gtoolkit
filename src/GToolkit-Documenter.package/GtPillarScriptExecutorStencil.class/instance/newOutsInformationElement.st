@@ -6,7 +6,9 @@ newOutsInformationElement
 	aText := ('(outs at: ' , codeSnippet index asString , ')')
 		asRopedText.
 	aText attributes: { 
-		BrTextForegroundAttribute paint: Color gray.
+		self codeSnippet isException
+			ifTrue: [ BrTextForegroundAttribute paint: Color red ]
+			ifFalse: [ BrTextForegroundAttribute paint: Color gray ].
 		BrFontGenericFamilyAttribute monospace }.
 	aModel label: aText.
 	aModel action: [ self displayResult ].
