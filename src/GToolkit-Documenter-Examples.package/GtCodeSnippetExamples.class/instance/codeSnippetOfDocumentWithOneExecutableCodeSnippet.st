@@ -15,7 +15,7 @@ codeSnippetOfDocumentWithOneExecutableCodeSnippet
 	self assert: aCodeSnippet hasResult.
 	self assert: aCodeSnippet value equals: 24.
 	self assert: anAnnouncements size equals: 1.
-	self assert: anAnnouncements first class equals: GtCodeSnippetSuccessfulExecutionSignal.
+	self assert: anAnnouncements first class equals: GtCodeSnippetSuccessfulExecutionAnnouncement.
 	self assert: anAnnouncements first newValue equals: 24.
 	self assert: anAnnouncements first codeSnippet equals: aCodeSnippet.
 	self assert: anAnnouncements first document equals: aDocument.

@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "GtCodeSnippetExecutionSignal",
+	"super" : "GtDocumentAnnouncement",
 	"category" : "GToolkit-Documenter-Announcements",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"exception"
+		"codeSnippet"
 	],
-	"name" : "GtCodeSnippetFailedExecutionSignal",
+	"name" : "GtCodeSnippetAnnouncement",
 	"type" : "normal"
 }

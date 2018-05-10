@@ -14,7 +14,7 @@ codeSnippetOfDocumentWithFailedExecutableCodeSnippet
 	self assert: aCodeSnippet result equals: nil.
 	self assert: aCodeSnippet hasResult not.
 	self assert: anAnnouncements size equals: 1.
-	self assert: anAnnouncements first class equals: GtCodeSnippetFailedExecutionSignal.
+	self assert: anAnnouncements first class equals: GtCodeSnippetFailedExecutionAnnouncement.
 	self assert: anAnnouncements first exception class equals: ZeroDivide.
 	self assert: anAnnouncements first codeSnippet equals: aCodeSnippet.
 	self assert: anAnnouncements first document equals: aDocument.
