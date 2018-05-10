@@ -7,4 +7,4 @@ newPreviewElementForText: aBrText inEditor: aTextElement
 		editor: aTextElement;
 		codeSnippet: codeSnippet;
 		icon: GtDocumenterConstants defaultExecuteButtonIcon;
-		newPreviewElement
+		create
