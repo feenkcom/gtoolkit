@@ -12,7 +12,8 @@ executeWithStrategy: aGtBindingStrategy
 			class: self documentClass class;
 			forSyntaxHighlighting: false;
 			bindings: aGtBindingStrategy;
-			requestor: aGtBindingStrategy).
+			requestor: aGtBindingStrategy);
+		receiver: self document.
 	[ 
 		newValue := aCompiler evaluate.
 		self value: newValue.
