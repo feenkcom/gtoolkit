@@ -5,6 +5,7 @@ codeSnippetOfDocumentWithOneExecutableCodeSnippet
 	| aDocument aCodeSnippet anAnnouncements |
 	aDocument := self documentWithOneExecutableCodeSnippet.
 	aCodeSnippet := aDocument codeSnippets codeSnippetAt: 1.
+	self assert: aCodeSnippet label equals: 'Evaluate'.
 	anAnnouncements := OrderedCollection new.
 	aCodeSnippet announcer 
 		when: Announcement 

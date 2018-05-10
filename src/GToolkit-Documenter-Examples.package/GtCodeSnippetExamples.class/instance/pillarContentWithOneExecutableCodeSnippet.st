@@ -3,7 +3,7 @@ pillarContentWithOneExecutableCodeSnippet
 	<gtExample>
 	<label: 'Pillar content with an executable code snippet'>
 	^ '
-[[[label=Compute
+[[[label=Evaluate
 4 factorial.
 ]]]
 '

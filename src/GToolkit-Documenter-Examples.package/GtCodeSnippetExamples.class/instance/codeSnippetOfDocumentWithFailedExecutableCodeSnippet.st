@@ -5,6 +5,7 @@ codeSnippetOfDocumentWithFailedExecutableCodeSnippet
 	| aDocument aCodeSnippet anAnnouncements |
 	aDocument := self documentWithFailedExecutableCodeSnippet.
 	aCodeSnippet := aDocument codeSnippets codeSnippetAt: 1.
+	self assert: aCodeSnippet label equals: 'Compute'.
 	anAnnouncements := OrderedCollection new.
 	aCodeSnippet announcer 
 		when: Announcement 

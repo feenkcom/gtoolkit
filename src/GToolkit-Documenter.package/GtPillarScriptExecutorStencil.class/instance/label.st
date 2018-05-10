@@ -1,3 +1,3 @@
 accessing
 label
-	^ label ifNil: [ GtDocumenterConstants defaultExecuteButtonLabel ]
+	^ self codeSnippet label

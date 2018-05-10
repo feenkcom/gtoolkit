@@ -6,4 +6,5 @@ newCodeSnippetAtSameIndex
 	newScript index: self scriptIndex.
 	newScript sourceCode: self sourceCode.
 	newScript document: self document.
+	newScript initializeFromTokens: self tokens.
 	^ newScript
