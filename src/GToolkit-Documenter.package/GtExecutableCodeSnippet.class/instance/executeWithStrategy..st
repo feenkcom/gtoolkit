@@ -1,17 +1,23 @@
 protocol
 executeWithStrategy: aGtBindingStrategy
-	| newValue |
+	| newValue aCompiler |
 	self 
 		assert: [ aGtBindingStrategy notNil ] 
 		description: [ 'Binding strategy has to be defined' ].
 
 	aGtBindingStrategy bindings: self.
-	newValue := self documentClass compiler
+	aCompiler := self documentClass compiler
 		source: self sourceCode readStream;
 		compilationContext: (CompilationContext new
 			class: self documentClass class;
 			forSyntaxHighlighting: false;
 			bindings: aGtBindingStrategy;
-			requestor: aGtBindingStrategy);
-		evaluate.
-	self value: newValue.
+			requestor: aGtBindingStrategy).
+	[ 
+		newValue := aCompiler evaluate.
+		self value: newValue.
+		announcer announce: (GtCodeSnippetSuccessfulExecutionSignal document: self document codeSnippet: self newValue: newValue).
+	] on: Error do: [ :anException | 
+		announcer announce: (GtCodeSnippetFailedExecutionSignal document: self document codeSnippet: self exception: anException).
+	].
+	
