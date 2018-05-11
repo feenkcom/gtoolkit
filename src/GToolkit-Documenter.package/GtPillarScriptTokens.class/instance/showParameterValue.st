@@ -9,4 +9,6 @@ showParameterValue
 			valueOf: self showLiveParameterName 
 			value: [ :selector | selector asSymbol ]
 			emptyValue: [ GtDocumenterConstants defaultShowLiveMethodName ] 
-			defaultValue: [ nil ] ]
+			defaultValue: [ self shouldExpandPreview
+				ifTrue: [ GtDocumenterConstants defaultShowMethodName ]
+				ifFalse: [ nil ] ] ]
