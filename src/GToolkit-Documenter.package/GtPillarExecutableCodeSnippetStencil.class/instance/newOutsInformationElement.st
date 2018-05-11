@@ -3,7 +3,7 @@ newOutsInformationElement
 	| anElement aText aModel |
 	anElement := self newSlimButtonElement.
 	aModel := BrButtonModel new.
-	aText := ('(outs at: ' , codeSnippet index asString , ')')
+	aText := ('(outs at: ' , self codeSnippet index asString , ')')
 		asRopedText.
 	aText attributes: { 
 		self codeSnippet isException

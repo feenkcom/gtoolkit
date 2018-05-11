@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"showMessage",
+		"methodName"
+	],
 	"name" : "GtExampleCodeSnippet",
 	"type" : "normal"
 }
