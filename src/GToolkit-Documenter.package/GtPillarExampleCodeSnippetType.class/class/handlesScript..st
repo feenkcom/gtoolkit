@@ -1,3 +1,4 @@
 testing
 handlesScript: aGtPillarScriptTokens
-	^ aGtPillarScriptTokens hasExampleParameter.
+	^ aGtPillarScriptTokens hasExampleParameter and: [ 
+		aGtPillarScriptTokens exampleParameterValue notNil ].
