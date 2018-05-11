@@ -1,4 +1,4 @@
 accessing
-sourceCode
+methodSourceCode
 	<return: #String>
 	^ self exampleMethod sourceCode

@@ -6,4 +6,5 @@ pillarElementWithOneExampleCodeSnippet
 	fileReference := self fileReferenceWithOneExampleCodeSnippet.
 	pillarElement := GtDocumenterExamplesUtility pillarElementForPillarFileReference: fileReference.
 	self assert: pillarElement notNil.
+	(GtDocumenterExamplesUtility editorFromPillarElement: pillarElement) styleText.
 	^ pillarElement

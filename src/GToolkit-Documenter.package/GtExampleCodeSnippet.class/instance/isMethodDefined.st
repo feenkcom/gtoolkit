@@ -1,0 +1,3 @@
+testing
+isMethodDefined
+	^ methodDefinition isDefined

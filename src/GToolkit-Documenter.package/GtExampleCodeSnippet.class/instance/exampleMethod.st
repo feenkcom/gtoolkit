@@ -1,4 +1,6 @@
 accessing
 exampleMethod
 	<return: #CompiledMethod>
-	^ Compiler evaluate: self methodName
+	^ methodDefinition isDefined
+		ifTrue: [ methodDefinition compiledMethod ] 
+		ifFalse: [ nil ]

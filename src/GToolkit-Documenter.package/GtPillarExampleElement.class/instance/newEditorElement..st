@@ -4,5 +4,5 @@ newEditorElement: aGTExample
 	<return: #BrEditorElement>
 	
 	^ GtExamplesStyler 
-		editorElementOnSourceCode: aGTExample sourceCode
+		editorElementOnSourceCode: aGTExample methodSourceCode
 		inClass: aGTExample methodClass
