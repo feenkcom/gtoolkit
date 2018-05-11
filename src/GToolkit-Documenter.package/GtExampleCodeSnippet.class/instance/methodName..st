@@ -8,7 +8,7 @@ methodName: aString
 
 	aCollection := '>>#' split: aString.
 	aMethodClassName := aCollection first.
-	aMethodName := aCollection second.
+	aMethodName := aCollection size = 2 ifTrue: [ aCollection second ] ifFalse: [ '' ].
 
 	methodDefinition := RGMethodDefinition 
 		class: (RGBehaviorDefinition named: aMethodClassName) 
