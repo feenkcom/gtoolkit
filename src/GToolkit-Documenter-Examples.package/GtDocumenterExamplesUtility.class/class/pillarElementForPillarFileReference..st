@@ -5,7 +5,7 @@ pillarElementForPillarFileReference: aFileReference
 	pillarElement := GtDocumenter editorForPillar: aFileReference.
 	self assert: pillarElement notNil.
 	document := pillarElement document.
-	editor := pillarElement contentElement editor.
+	editor := self editorElementFromPillarElement: pillarElement.
 	self assert: document notNil.
 	self assert: editor notNil.
 	self assert: document outs notNil.

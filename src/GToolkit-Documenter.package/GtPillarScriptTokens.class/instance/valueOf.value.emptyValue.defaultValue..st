@@ -3,7 +3,7 @@ valueOf: aString value: valueBlock emptyValue: emptyBlock defaultValue: defaultB
 	^ self scriptParameters 
 		at: aString
 		ifPresent: [ :aValue | 
-			aValue 
-				ifNil: [ emptyBlock value ]
-				ifNotNil: [ valueBlock cull: aValue ] ]
+			aValue isEmptyOrNil 
+				ifTrue: [ emptyBlock value ]
+				ifFalse: [ valueBlock cull: aValue ] ]
 		ifAbsent: [ defaultBlock value ]

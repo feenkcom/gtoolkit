@@ -1,3 +1,3 @@
 testing
 shouldDisplayResult
-	^ self showMessage notNil
+	^ self showMessageName notNil

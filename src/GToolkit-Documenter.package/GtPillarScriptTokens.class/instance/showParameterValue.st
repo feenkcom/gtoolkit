@@ -4,9 +4,9 @@ showParameterValue
 	^ self 
 		valueOf: self showParameterName
 		value: [ :selector | selector asSymbol ]
-		emptyValue: [ #gtLiveIn: ]
+		emptyValue: [ GtDocumenterConstants defaultShowMethodName ]
 		defaultValue: [ self 
 			valueOf: self showLiveParameterName 
 			value: [ :selector | selector asSymbol ]
-			emptyValue: [ #gtLiveIn: ] 
+			emptyValue: [ GtDocumenterConstants defaultShowLiveMethodName ] 
 			defaultValue: [ nil ] ]

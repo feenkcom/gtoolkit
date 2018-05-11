@@ -6,8 +6,11 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"showMessage",
-		"methodName"
+		"methodName",
+		"showMessageName",
+		"previewHeight",
+		"shouldDisplayCode",
+		"shouldExpandPreview"
 	],
 	"name" : "GtExampleCodeSnippet",
 	"type" : "normal"
