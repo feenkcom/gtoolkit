@@ -4,6 +4,6 @@ pillarElementWithOneExecutableCodeSnippet
 	<label: 'Pillar element with an executable code snippet'>
 	| fileReference pillarElement |
 	fileReference := self fileReferenceWithOneExecutableCodeSnippet.
-	pillarElement := self pillarElementForPillarFileReference: fileReference.
+	pillarElement := GtDocumenterExamplesUtility pillarElementForPillarFileReference: fileReference.
 	self assert: pillarElement notNil.
 	^ pillarElement

@@ -1,6 +1,9 @@
 instance creation
 newPreviewElementForText: aBrText inEditor: aTextElement
 	<return: #BlElement>
-	^ tokens hasShowParameter
-		ifTrue: [ self newPreviewElementFromShowParameter ]
-		ifFalse: [ self newPreviewEditorElement ]
+	^ GtPillarExampleCodeSnippetStencil new
+		text: aBrText;
+		editor: aTextElement;
+		codeSnippet: codeSnippet;
+		icon: GtDocumenterConstants defaultExecuteButtonIcon;
+		create
