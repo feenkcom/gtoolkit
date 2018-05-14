@@ -9,10 +9,10 @@ styleScriptBody
 		style:
 			(self targetText
 				from: tokens scriptBodyStartingPosition
-				to: tokens scriptBodyStopPosition).
+				to: tokens scriptBodyEndPosition).
 	self targetText
 		attributes:
 			{BrFontGenericFamilyAttribute monospace.
 			(BrFontSizeAttribute size: 14)}
 		from: tokens scriptBodyStartingPosition
-		to: tokens scriptBodyStopPosition
+		to: tokens scriptBodyEndPosition

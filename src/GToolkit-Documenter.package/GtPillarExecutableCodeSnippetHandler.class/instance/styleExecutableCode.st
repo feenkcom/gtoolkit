@@ -1,6 +1,6 @@
 private-styles
-styleExpandingCode
+styleExecutableCode
 	self targetText
-		attributes: self expandingAttributes
+		attributes: self executableCodeSnippetAttributes
 		from: tokens closingBracketsEndPosition
 		to: tokens closingBracketsEndPosition

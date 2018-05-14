@@ -1,3 +1,3 @@
 accessing
-scriptBodyStopPosition
+scriptBodyEndPosition
 	^ self scriptBodyToken stop
