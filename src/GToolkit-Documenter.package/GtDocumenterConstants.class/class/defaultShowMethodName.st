@@ -1,3 +1,3 @@
 accessing - code snippet
 defaultShowMethodName
-	^ #gtLiveIn:
+	^ #gtViewsElement

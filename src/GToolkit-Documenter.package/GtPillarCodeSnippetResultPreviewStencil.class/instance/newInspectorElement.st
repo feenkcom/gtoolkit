@@ -1,12 +1,10 @@
 instance creation
 newInspectorElement
 	| anInspectorElement |
-	anInspectorElement := BlElement new.
+	anInspectorElement := BlPannableElement new.
 	anInspectorElement
-		layout: BlLinearLayout vertical;
-		margin: (BlInsets all: 10);
 		constraintsDo: [ :c | 
 			c horizontal matchParent.
-			c vertical fitContent ].
-	self codeSnippet value gtLiveIn: anInspectorElement.
+			c vertical exact: 300 ].
+	anInspectorElement contentElement: self codeSnippet value gtViewsElement.
 	^ anInspectorElement
