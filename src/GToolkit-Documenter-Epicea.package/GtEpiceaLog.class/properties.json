@@ -1,9 +1,5 @@
 {
-	"commentStamp" : "",
-	"super" : "Object",
-	"category" : "GToolkit-Documenter-Epicea",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "GtAssertingTrait classTrait",
 	"classvars" : [
 		"DebugMode"
 	],
@@ -15,5 +11,11 @@
 		"theLog"
 	],
 	"name" : "GtEpiceaLog",
-	"type" : "normal"
+	"commentStamp" : "",
+	"super" : "Object",
+	"traitcomposition" : "GtAssertingTrait",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "GToolkit-Documenter-Epicea"
 }

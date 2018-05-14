@@ -3,5 +3,5 @@ newBrowseLogButtonModel
 	| aModel |
 	aModel := BrButtonModel new
 		label: 'Browse';
-		action: [ epiceaLog browseEvents ].
+		action: [ self epiceaLog browseEvents ].
 	^ aModel

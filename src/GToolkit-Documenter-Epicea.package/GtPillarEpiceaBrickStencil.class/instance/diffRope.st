@@ -1,34 +1,36 @@
 accessing - parameters
 diffRope
 	<return: #BrRopedText>
-	| builder text |
-	builder := PrettyTextDiffBuilder from: epiceaLog currentStateString to: epiceaLog newStateString.
-	text := '' asRopedText.
-	builder
+	| aBuilder aRopedText |
+	aBuilder := PrettyTextDiffBuilder 
+		from: self epiceaLog currentStateString 
+		to: self epiceaLog newStateString.
+	aRopedText := '' asRopedText.
+	aBuilder
 		patchSequenceDoIfMatch: [ :string | | initialPosition |
-			initialPosition := text size max: 1.
-			text insertString: '  ' at: text size.
-			text insertString: string at: text size.
-			text 
+			initialPosition := aRopedText size max: 1.
+			aRopedText insertString: '  ' at: aRopedText size.
+			aRopedText insertString: string at: aRopedText size.
+			aRopedText 
 				attributes: { BrTextForegroundAttribute paint: Color black } 
-				from: initialPosition to: text size.
-			text insertString: String cr at: text size. ]
+				from: initialPosition to: aRopedText size.
+			aRopedText insertString: String cr at: aRopedText size. ]
 		ifInsert: [ :string | | initialPosition |
-			initialPosition := text size max: 1.
-			text insertString: '+ ' at: text size.
-			text insertString: string at: text size.
-			text 
+			initialPosition := aRopedText size max: 1.
+			aRopedText insertString: '+ ' at: aRopedText size.
+			aRopedText insertString: string at: aRopedText size.
+			aRopedText 
 				attributes: { BrTextForegroundAttribute paint: Color green muchDarker } 
-				from: initialPosition to: text size.
-			text insertString: String cr at: text size. ]
+				from: initialPosition to: aRopedText size.
+			aRopedText insertString: String cr at: aRopedText size. ]
 		ifRemove: [ :string | | initialPosition |
-			initialPosition := text size max: 1.
-			text insertString: '- ' at: text size.
-			text insertString: string at: text size.
-			text 
+			initialPosition := aRopedText size max: 1.
+			aRopedText insertString: '- ' at: aRopedText size.
+			aRopedText insertString: string at: aRopedText size.
+			aRopedText 
 				attributes: { BrTextForegroundAttribute paint: Color red muchDarker } 
-				from: initialPosition to: text size.
-			text insertString: String cr at: text size. ].
-	text isEmpty ifFalse: [ 
-		text attributes: { BrFontGenericFamilyAttribute monospace } ].
-	^ text
+				from: initialPosition to: aRopedText size.
+			aRopedText insertString: String cr at: aRopedText size. ].
+	aRopedText isEmpty ifFalse: [ 
+		aRopedText attributes: { BrFontGenericFamilyAttribute monospace } ].
+	^ aRopedText

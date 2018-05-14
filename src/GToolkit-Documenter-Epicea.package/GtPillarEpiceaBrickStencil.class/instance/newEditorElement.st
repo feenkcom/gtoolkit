@@ -2,7 +2,7 @@ instance creation
 newEditorElement
 	<return: #BrEditorElement>
 	| editorElement |
-	editorElement := super newEditorElement.
-	epiceaLog onImpactChangedDo: [ :anAnnouncement | 
+	editorElement := self newEditorElementWithRopedText: self diffRope.
+	self epiceaLog onImpactChangedDo: [ :anAnnouncement | 
 		editorElement editor text: self diffRope ].
 	^ editorElement

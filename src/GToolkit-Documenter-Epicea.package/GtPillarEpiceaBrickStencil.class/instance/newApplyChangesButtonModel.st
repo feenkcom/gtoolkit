@@ -1,11 +1,11 @@
 instance creation
 newApplyChangesButtonModel
 	| aLabel aModel |
-	aLabel := epiceaLog hasImpact ifTrue: [ 'Apply' ] ifFalse: [ 'Applied' ].
+	aLabel := self epiceaLog hasImpact ifTrue: [ 'Apply' ] ifFalse: [ 'Applied' ].
 	aModel := BrButtonModel new
 		label: aLabel;
-		action: [ epiceaLog applyCodeChanges ].
-	epiceaLog onImpactChangedDo: [ :anAnnouncement | | newValue |
+		action: [ self epiceaLog applyCodeChanges ].
+	self epiceaLog onImpactChangedDo: [ :anAnnouncement | | newValue |
 		newValue := anAnnouncement hasImpact ifTrue: [ 'Apply' ] ifFalse: [ 'Applied' ].
 		aModel label: newValue ].
 	^ aModel

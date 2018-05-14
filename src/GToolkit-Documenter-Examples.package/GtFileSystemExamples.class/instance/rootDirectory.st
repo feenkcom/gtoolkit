@@ -2,4 +2,7 @@ file system
 rootDirectory
 	<gtExample>
 	<label: 'Working directory of a memory file system'>
-	^ self basicMemorySystem workingDirectory.
+	^ rootDirectoryName 
+		ifNil: [ self basicMemorySystem workingDirectory ]
+		ifNotNil: [ (self basicMemorySystem workingDirectory / rootDirectoryName)
+			ensureCreateDirectory ]

@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	self add: (BrLayoutLook linearHorizontal alignCenterRight vFitContent hMatchParent).
+	self add: (BrLayoutLook linearHorizontal alignCenterRight vFitContent hFitContent).

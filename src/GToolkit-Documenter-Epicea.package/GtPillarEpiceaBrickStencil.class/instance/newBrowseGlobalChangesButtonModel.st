@@ -3,5 +3,5 @@ newBrowseGlobalChangesButtonModel
 	| aModel |
 	aModel := BrButtonModel new
 		label: 'Edit';
-		action: [ :theModel | epiceaLog displayGlobalChanges: theModel ].
+		action: [ :theModel | self epiceaLog displayGlobalChanges: theModel ].
 	^ aModel

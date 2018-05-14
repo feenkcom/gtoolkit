@@ -1,3 +1,4 @@
 accessing
 epiceaLog
-	^ epiceaLog
+	<return: #GtEpiceaLog>
+	^ self codeSnippet epiceaLog
