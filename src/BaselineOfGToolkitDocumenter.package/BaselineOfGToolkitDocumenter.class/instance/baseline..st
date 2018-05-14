@@ -10,6 +10,8 @@ baseline: spec
 				repository: 'github://feenkcom/gtoolkit/src' ];
 			baseline: 'GToolkitExamples' with: [ spec 
 				repository: 'github://feenkcom/gtoolkit-examples/src' ];
+			baseline: 'GToolkitInspector' with: [ spec
+				repository: 'github://feenkcom/gtoolkit-inspector/src' ];
 			project: 'Pillar' with: [ spec
 				className: #ConfigurationOfPillar;
 				versionString: #development;
@@ -19,7 +21,7 @@ baseline: spec
 				versionString: #development;
 				repository: 'http://smalltalkhub.com/mc/Moose/DeepTraverser/main/' ];
 			package: 'GToolkit-Documenter' with: [ spec requires: #( 
-				#Brick #Pillar #GToolkitUtility #GToolkitExamples ) ];
+				#Brick #Pillar #GToolkitUtility #GToolkitExamples #GToolkitInspector ) ];
 			package: 'GToolkit-Documenter-Exporter' with: [ spec requires: #( 
 				#Brick #Pillar ) ];
 			package: 'GToolkit-Documenter-Exporter-Tests' with: [ spec requires: #( 
