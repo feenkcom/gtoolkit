@@ -13,14 +13,9 @@ newPreviewElementFromShowParameter
 	exampleElement
 		example: self codeSnippet exampleMethod gtExample
 		showBlock: [ :returnValue | 
-			| composite |
-			composite := BlElement new
+			(returnValue perform: self codeSnippet showMessageName)
 				constraintsDo: [ :c | 
 					c vertical matchParent.
-					c horizontal matchParent ].
-			returnValue
-				perform: self codeSnippet showMessageName
-				withArguments: {composite}.
-			composite ].
+					c horizontal matchParent ] ].
 	self mayExpandResultPreviewIn: exampleElement.
 	^ exampleElement
