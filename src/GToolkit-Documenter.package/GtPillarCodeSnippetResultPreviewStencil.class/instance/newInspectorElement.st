@@ -3,4 +3,4 @@ newInspectorElement
 	^ self codeSnippet value gtViewsElement
 		constraintsDo: [ :c | 
 			c horizontal matchParent.
-			c vertical exact: 300 ].
+			c vertical exact: 160 ].
