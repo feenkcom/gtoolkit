@@ -1,4 +1,4 @@
 accessing
 methodClassName
-	<return: #String>
-	^ methodDefinition parent name
+	<return: #String or: nil>
+	^ methodDefinition ifNotNil: [ :aMethodDefinition | aMethodDefinition parent name ]
