@@ -1,4 +1,4 @@
 accessing
 codeSnippetClass
-	<return: #GtDebuggableCodeSnippet>
+	<return: #GtAnnouncableCodeSnippet>
 	^ self subclassResponsibility

@@ -6,3 +6,4 @@ initialize
 	bindings 
 		addNamed: GtDocumenterConstants resultsVariableName 
 		value: codeSnippets.
+	systemChangesHandler := GtSystemChangesHandler forDocument: self.

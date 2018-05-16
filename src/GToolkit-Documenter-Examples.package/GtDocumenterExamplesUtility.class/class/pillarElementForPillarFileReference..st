@@ -1,4 +1,4 @@
-utility
+utility - accessing
 pillarElementForPillarFileReference: aFileReference
 	<return: #GtPillarEditorElement>
 	| pillarElement document editor |

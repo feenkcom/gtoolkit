@@ -1,4 +1,4 @@
-utility
+utility - accessing
 codeSnippetsFromEditor: aBrTextEditor 
 	<return: #Array of: #GtCodeSnippetResult>
 	| outs |

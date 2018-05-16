@@ -1,4 +1,4 @@
-utility
+utility - accessing
 documentFromPillarElement: aGtPillarEditorElement 
 	<return: #GtDocument>
 	| aDocument |
