@@ -15,4 +15,8 @@ addNonExistentExampleClass
 			self assert: anAnnouncements first class equals: GtExampleClassUpdatedAnnouncement.
 			self assert: anAnnouncements first codeSnippet equals: aCodeSnippet.
 			self assert: anAnnouncements first document equals: aCodeSnippet bindings ].
+	self assert: anAnnouncements size equals: 2.
+	self assert: anAnnouncements second class equals: GtExampleClassUpdatedAnnouncement.
+	self assert: anAnnouncements second codeSnippet equals: aCodeSnippet.
+	self assert: anAnnouncements second document equals: aCodeSnippet bindings.
 	^ aCodeSnippet
