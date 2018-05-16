@@ -1,3 +1,7 @@
 announcement handling
 handleMethodAnnouncement: aMethodModified 
-	"self shouldBeImplemented."
+	((aMethodModified classAffected name = self methodClassName) and: [ 
+		aMethodModified selector = self methodSelectorName ]) ifFalse: [ ^ self ].
+	self announcer announce: (GtExampleClassUpdatedAnnouncement 
+		document: self document
+		codeSnippet: self)
