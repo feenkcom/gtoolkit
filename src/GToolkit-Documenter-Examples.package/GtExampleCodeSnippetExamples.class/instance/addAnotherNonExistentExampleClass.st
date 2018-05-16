@@ -10,6 +10,9 @@ addAnotherNonExistentExampleClass
 		anAnnouncements add: anAnnouncement ].
 	GtDocumenterExamplesUtility 
 		createClassNamed: (aCodeSnippet methodClassName, 'Two') asSymbol
-		during: [ self assert: anAnnouncements isEmpty ].
+		during: [ 
+			self assert: anAnnouncements isEmpty.
+			self assert: aCodeSnippet isMethodClassDefined not.
+			self assert: aCodeSnippet isMethodDefined not ].
 	self assert: anAnnouncements isEmpty.
 	^ aCodeSnippet
