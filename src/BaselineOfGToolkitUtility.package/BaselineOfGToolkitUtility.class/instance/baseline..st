@@ -5,6 +5,9 @@ baseline: spec
 		spec
 			package: 'GToolkit-Utility-File';
 			package: 'GToolkit-Utility-Assertion';
-			group: 'Core' with: #( 'GToolkit-Utility-File' 'GToolkit-Utility-Assertion' );
-			group: 'default' with: #( 'Core' )
+			package: 'GToolkit-Utility-Announcer';
+			group: 'default' with: #( 
+				'GToolkit-Utility-File' 
+				'GToolkit-Utility-Assertion'
+				'GToolkit-Utility-Announcer' )
 	]
