@@ -1,4 +1,4 @@
-instance creation
+api - instantiation
 create
 	<return: #BlElement>
 	| aTabGroup aDiffTab aResultTab aComposite aToolbar |
@@ -13,9 +13,7 @@ create
 	aResultTab := BrTabModel new
 		label: 'Code';
 		content: [ self newFinalCodeElement ].
-	aTabGroup := BrTabGroupModel with: {aResultTab}.
-	self codeSnippet epiceaLog hasImpact
-		ifTrue: [ aTabGroup addTab: aDiffTab ].
+	aTabGroup := BrTabGroupModel with: { aResultTab. aDiffTab }.
 	aTabGroup tabs
 		do: [ :aTab | 
 			BlElement new
@@ -26,6 +24,8 @@ create
 			(BlElement new
 				look: BrMaterialTabGroupLook;
 				viewModel: aTabGroup).
+	self codeSnippet epiceaLog hasImpact
+		ifFalse: [ aTabGroup removeTab: aDiffTab ].
 	self codeSnippet
 		subscribe: GtEpiceaImpactChangedAnnouncement
 		do: [ :anAnnouncement | 
