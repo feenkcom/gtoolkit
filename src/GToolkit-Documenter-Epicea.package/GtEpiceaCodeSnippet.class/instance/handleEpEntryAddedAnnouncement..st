@@ -1,4 +1,4 @@
 announcement handling
 handleEpEntryAddedAnnouncement: anEpEntryAdded 
-	self announcer announce: (
+	self announce: (
 			GtEpiceaImpactChangedAnnouncement new hasImpact: true)

@@ -5,6 +5,8 @@ newFinalCodeElement
 	editorElement := self newEditorElementWithRopedText: self finalCodeRope.
 	styler := BrRBTextStyler new.
 	editorElement editor styler: styler.
-	self epiceaLog onImpactChangedDo: [ :anAnnouncement | 
-		editorElement editor text: self finalCodeRope ].
+	self codeSnippet 
+		subscribe: GtEpiceaImpactChangedAnnouncement 
+		do: [ :anAnnouncement | 
+			editorElement editor text: self finalCodeRope ].
 	^ editorElement

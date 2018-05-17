@@ -1,4 +1,4 @@
-system changes
+announcement handling
 handleSystemChange: aSystemAnnouncement
 	self epiceaLog isValid ifFalse: [ ^ self ].
 	self epiceaLog checkImpact.

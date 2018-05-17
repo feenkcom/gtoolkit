@@ -5,7 +5,9 @@ newApplyChangesButtonModel
 	aModel := BrButtonModel new
 		label: aLabel;
 		action: [ self epiceaLog applyCodeChanges ].
-	self epiceaLog onImpactChangedDo: [ :anAnnouncement | | newValue |
-		newValue := anAnnouncement hasImpact ifTrue: [ 'Apply' ] ifFalse: [ 'Applied' ].
-		aModel label: newValue ].
+	self codeSnippet 
+		subscribe: GtEpiceaImpactChangedAnnouncement 
+		do: [ :anAnnouncement | | newValue |
+			newValue := anAnnouncement hasImpact ifTrue: [ 'Apply' ] ifFalse: [ 'Applied' ].
+			aModel label: newValue ].
 	^ aModel

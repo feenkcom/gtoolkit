@@ -1,9 +1,9 @@
 {
+	"classtraitcomposition" : "GtAssertingTrait classTrait + GtAnnouncerTrait classTrait",
 	"classvars" : [
 		"DebugMode"
 	],
 	"instvars" : [
-		"announcer",
 		"ombuFile",
 		"errorHandler",
 		"hasImpact",
@@ -12,7 +12,7 @@
 	"name" : "GtEpiceaLog",
 	"commentStamp" : "",
 	"super" : "Object",
-	"traitcomposition" : "GtAssertingTrait",
+	"traitcomposition" : "GtAssertingTrait + GtAnnouncerTrait",
 	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],

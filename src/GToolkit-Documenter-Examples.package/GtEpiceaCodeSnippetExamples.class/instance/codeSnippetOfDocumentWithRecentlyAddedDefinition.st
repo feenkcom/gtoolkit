@@ -9,7 +9,9 @@ codeSnippetOfDocumentWithRecentlyAddedDefinition
 	anEpEvent := anEpLog entries first.
 	self assert: aCodeSnippet epiceaLog ombuFile exists not.
 	anAnnouncements := OrderedCollection new.
-	aCodeSnippet epiceaLog onImpactChangedDo: [ :anAnnouncement | anAnnouncements add: anAnnouncement ].
+	aCodeSnippet 
+		subscribe: GtEpiceaImpactChangedAnnouncement 
+		do: [ :anAnnouncement | anAnnouncements add: anAnnouncement ].
 	aCodeSnippet epiceaLog addEntryWith: anEpEvent content tags: [ :tags |  ].
 	aCodeSnippet epiceaLog flush.
 	self assert: aCodeSnippet epiceaLog ombuFile exists.

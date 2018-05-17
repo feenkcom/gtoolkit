@@ -4,7 +4,7 @@ gtInspectorEntriesIn: composite
 	^ theLog ifNotNil: [ :aLog | 
 		(aLog gtInspectorEntriesIn: composite)
 			title: [ 'Tutorial' translated ];
-			updateOn: GtEpiceaImpactChangedAnnouncement from: [ self announcer ];
+			updateOn: EpEntryAdded from: [ self announcer ];
 			selectionAct: [ :aPresentation | 
 				self removeSelectedItemsFromPresentation: aPresentation  ] 
 				entitled: 'Remove from tutorial' 
