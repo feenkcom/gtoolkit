@@ -1,30 +1,36 @@
 instance creation
 create
 	<return: #BlElement>
-	| tabGroup diffTab resultTab composite bar |
-		
-	composite := self newCompositeElement.
-	bar := self newRightAlignedToolbarElement.
-	bar addChild: self newApplyChangesButtonElement.
-	bar addChild: self newBrowseGlobalChangesButtonElement.
-	composite addChild: bar.
-	diffTab := BrTabModel new
+	| aTabGroup aDiffTab aResultTab aComposite aToolbar |
+	aComposite := self newCompositeElement.
+	aToolbar := self newRightAlignedToolbarElement.
+	aToolbar addChild: self newApplyChangesButtonElement.
+	aToolbar addChild: self newBrowseGlobalChangesButtonElement.
+	aComposite addChild: aToolbar.
+	aDiffTab := BrTabModel new
 		label: 'Diff';
 		content: [ self newEditorElement ].
-
-	resultTab := BrTabModel new
+	aResultTab := BrTabModel new
 		label: 'Code';
 		content: [ self newFinalCodeElement ].
-
-	tabGroup := BrTabGroupModel with: { resultTab . diffTab }.
-
-	tabGroup tabs do: [ :aTab |
-		BlElement new
-			look: BrMaterialTabLabelledLook;
-			viewModel: aTab ].
-
-	composite addChild: (BlElement new
-		look: BrMaterialTabGroupLook;
-		viewModel: tabGroup).
-
-	^ composite.
+	aTabGroup := BrTabGroupModel with: {aResultTab}.
+	self codeSnippet epiceaLog hasImpact
+		ifTrue: [ aTabGroup addTab: aDiffTab ].
+	aTabGroup tabs
+		do: [ :aTab | 
+			BlElement new
+				look: BrMaterialTabLabelledLook;
+				viewModel: aTab ].
+	aComposite
+		addChild:
+			(BlElement new
+				look: BrMaterialTabGroupLook;
+				viewModel: aTabGroup).
+	self codeSnippet
+		subscribe: GtEpiceaImpactChangedAnnouncement
+		do: [ :anAnnouncement | 
+			self
+				handleEpiceaChangeImpact: anAnnouncement
+				withGroup: aTabGroup
+				diffTab: aDiffTab ].
+	^ aComposite
