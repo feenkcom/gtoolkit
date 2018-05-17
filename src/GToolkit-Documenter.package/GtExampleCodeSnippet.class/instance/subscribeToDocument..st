@@ -1,6 +1,5 @@
 private
 subscribeToDocument: aGtDocument 
-	"Subclasses can register for document and system changes."
 	super subscribeToDocument: aGtDocument.
 	aGtDocument systemChangesHandler
 		subscribe: MethodAdded, MethodModified, MethodRemoved
