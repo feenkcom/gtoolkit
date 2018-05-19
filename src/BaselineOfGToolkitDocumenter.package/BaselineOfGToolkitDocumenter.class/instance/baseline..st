@@ -12,10 +12,13 @@ baseline: spec
 				repository: 'github://feenkcom/gtoolkit-examples/src' ];
 			baseline: 'GToolkitInspector' with: [ spec
 				repository: 'github://feenkcom/gtoolkit-inspector/src' ];
-			project: 'Pillar' with: [ spec
+			"project: 'Pillar' with: [ spec
 				className: #ConfigurationOfPillar;
 				versionString: #development;
 				repository: 'http://smalltalkhub.com/mc/Pier/Pillar/main/' ];
+			"
+			baseline: 'Pillar' with: [ spec
+				repository: 'github://pillar-markup/pillar/src' ];
 			project: 'DeepTraverser' with: [ spec
 				className: #ConfigurationOfDeepTraverser;
 				versionString: #development;
