@@ -13,9 +13,12 @@ newPreviewElementFromShowParameter
 	exampleElement
 		example: self codeSnippet exampleMethod gtExample
 		showBlock: [ :returnValue | 
-			(returnValue perform: self codeSnippet showMessageName)
-				constraintsDo: [ :c | 
+			| view |
+			view := GtPhlowView new.
+			returnValue perform: self codeSnippet showMessageName withArguments: {view}.
+			^ view asElementDo: [ :element |
+				element constraintsDo: [ :c | 
 					c vertical matchParent.
-					c horizontal matchParent ] ].
+					c horizontal matchParent ] ] ].
 	self mayExpandResultPreviewIn: exampleElement.
 	^ exampleElement

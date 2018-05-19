@@ -6,11 +6,11 @@ I allow users to edit GT-Examples and support a preview of the result.
 	| example exampleElement |
 	"Acquire an instance of GT-Example we are interested in"
 	example := (BrTextEditorExamples >> #newElement) gtExample.
-	"create example element"
 	exampleElement := GtPillarExampleElement new.
 	exampleElement size: 300@100.
 	"attach GT-Example"
-	exampleElement example: example.
-	"specify how example's return value should be transformed into an element"
-	exampleElement previewShowBlock: [ :aResult | BlTextElement new text: (BrRopedText string: aResult asString) ]
+	exampleElement 
+		example: example
+		"specify how example's return value should be transformed into an element"
+		showBlock: [ :aResult | BlTextElement new text: (BrRopedText string: aResult asString) ]
 ]]]
