@@ -1,6 +1,9 @@
 instance creation
 newInspectorElement
-	^ self codeSnippet value gtViewsElement
-		constraintsDo: [ :c | 
+	| view |
+	view := GtPhlowView new.
+	self codeSnippet value gtViewsFor: view.
+	^ view asElementDo: [ :element |
+		element constraintsDo: [ :c | 
 			c horizontal matchParent.
-			c vertical exact: 160 ].
+			c vertical exact: 160 ] ].
