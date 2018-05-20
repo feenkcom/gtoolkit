@@ -1,7 +1,7 @@
 instance creation
 newInspectorElement
 	| view |
-	view := GtPhlowView new.
+	view := GtPhlowExplicitView new.
 	self codeSnippet value gtViewsFor: view.
 	^ view asElementDo: [ :element |
 		element constraintsDo: [ :c | 
