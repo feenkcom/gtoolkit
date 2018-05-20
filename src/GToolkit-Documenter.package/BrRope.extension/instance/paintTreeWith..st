@@ -1,5 +1,5 @@
 *GToolkit-Documenter
-viewBlocTreeOn: view
+paintTreeWith: view
 	view nodes
 		shape: [ :each | 
 			(each isKindOf: BrCollectionRope)
