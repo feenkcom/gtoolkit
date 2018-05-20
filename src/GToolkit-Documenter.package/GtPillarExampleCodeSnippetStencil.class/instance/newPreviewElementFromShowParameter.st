@@ -16,7 +16,7 @@ newPreviewElementFromShowParameter
 			| view |
 			view := GtPhlowView new.
 			returnValue perform: self codeSnippet showMessageName withArguments: {view}.
-			^ view asElementDo: [ :element |
+			view asElementDo: [ :element |
 				element constraintsDo: [ :c | 
 					c vertical matchParent.
 					c horizontal matchParent ] ] ].
