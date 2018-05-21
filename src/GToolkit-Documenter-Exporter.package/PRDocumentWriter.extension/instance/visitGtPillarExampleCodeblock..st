@@ -1,7 +1,7 @@
 *GToolkit-Documenter-Exporter
-visitGtPillarExampleScript: aGtPillarExampleScript
+visitGtPillarExampleCodeblock: aGtPillarExampleScript
 	| fileName directory fileReference |
-	fileName := super visitGtPillarExampleScript: aGtPillarExampleScript.
+	fileName := super visitGtPillarExampleCodeblock: aGtPillarExampleScript.
 	fileName ifNil: [ ^ nil ].
 	directory := self configuration outputDirectory asFileReference / 'gt-figures'.
 	directory ensureCreateDirectory.

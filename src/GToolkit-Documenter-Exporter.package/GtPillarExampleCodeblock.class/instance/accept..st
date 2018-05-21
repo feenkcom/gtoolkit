@@ -1,3 +1,3 @@
 visitor
 accept: aVisitor
-	^ aVisitor visitGtPillarExampleScript: self
+	^ aVisitor visitGtPillarExampleCodeblock: self

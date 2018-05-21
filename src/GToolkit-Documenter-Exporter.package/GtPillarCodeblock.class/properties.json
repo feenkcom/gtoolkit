@@ -1,11 +1,15 @@
 {
+	"classtraitcomposition" : "GtAssertingTrait classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"tokens"
+	],
+	"name" : "GtPillarCodeblock",
 	"commentStamp" : "",
 	"super" : "PRCodeblock",
-	"category" : "GToolkit-Documenter-Exporter",
+	"traitcomposition" : "GtAssertingTrait",
+	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "GtPillarCodeblock",
-	"type" : "normal"
+	"category" : "GToolkit-Documenter-Exporter"
 }

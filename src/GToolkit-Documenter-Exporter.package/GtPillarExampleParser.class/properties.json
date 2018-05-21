@@ -1,11 +1,15 @@
 {
+	"classtraitcomposition" : "GtAssertingTrait classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"sourceFile"
+	],
+	"name" : "GtPillarExampleParser",
 	"commentStamp" : "JurajKubelka 2/3/2018 09:18",
 	"super" : "PRPillarParser",
-	"category" : "GToolkit-Documenter-Exporter",
+	"traitcomposition" : "GtAssertingTrait",
+	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "GtPillarExampleParser",
-	"type" : "normal"
+	"category" : "GToolkit-Documenter-Exporter"
 }
