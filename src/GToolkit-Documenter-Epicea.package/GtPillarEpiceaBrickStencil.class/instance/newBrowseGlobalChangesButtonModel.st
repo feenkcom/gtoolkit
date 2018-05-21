@@ -1,7 +1,5 @@
 instance creation
 newBrowseGlobalChangesButtonModel
-	| aModel |
-	aModel := BrButtonModel new
+	^ BrButtonModel new
 		label: 'Edit';
-		action: [ :theModel | self epiceaLog displayGlobalChanges: theModel ].
-	^ aModel
+		action: [ :theModel | self epiceaLog displayGlobalChanges: theModel ]

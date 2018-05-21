@@ -1,4 +1,8 @@
 accessing - parameters
 finalCodeRope
 	<return: #BrRopedText>
-	^ self epiceaLog newStateString asRopedText
+	| aRopedText |
+	aRopedText := self epiceaLog newStateString asRopedText.
+	aRopedText isEmpty ifFalse: [ 
+		aRopedText attributes: { BrFontGenericFamilyAttribute monospace } ].
+	^ aRopedText

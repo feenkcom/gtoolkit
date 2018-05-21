@@ -5,7 +5,7 @@ newPreviewElementFromShowParameter
 		withCode: self codeSnippet shouldDisplayCode.
 	self maySetHeightOfPreview: exampleElement.
 	exampleElement
-		margin: (BlInsets all: 10);
+		margin: (BlInsets top: 0 left: 20 bottom: 0 right: 20);
 		constraintsDo: [ :c | 
 			c textFlow pushLine.
 			c horizontal matchParent.
