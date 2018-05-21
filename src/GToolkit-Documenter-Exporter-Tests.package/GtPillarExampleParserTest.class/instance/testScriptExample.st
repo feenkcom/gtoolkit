@@ -14,4 +14,4 @@ testScriptExample
 		yourself.
 	self 
 		assert: result 
-		equals: (GtPillarExampleScript content: '' parameters: parameters)
+		equals: (GtPillarExampleCodeblock content: '' parameters: parameters)

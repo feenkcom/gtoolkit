@@ -1,3 +1,3 @@
 accessing
 classToTest
-	^ GtPillarExampleScript
+	^ GtPillarExampleCodeblock

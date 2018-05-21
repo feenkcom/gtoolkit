@@ -1,6 +1,6 @@
 initialization
 initialize
 	self markups
-		at: GtPillarExampleScript put: '[[['.
+		at: GtPillarExampleCodeblock put: '[[['.
 	self endMarkups
-		at: GtPillarExampleScript put: ']]]'.
+		at: GtPillarExampleCodeblock put: ']]]'.
