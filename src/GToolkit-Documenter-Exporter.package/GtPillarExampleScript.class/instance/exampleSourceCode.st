@@ -1,9 +1,9 @@
 accessing
 exampleSourceCode
-	| compiledMethod |
-	compiledMethod := self exampleCompiledMethod.
-	compiledMethod ifNil: [ ^ nil ].
+	| methodDefinition |
+	methodDefinition := self exampleMethodDefinition.
+	methodDefinition isDefined ifFalse: [ ^ methodDefinition printString ].
 	^ String streamContents: [ :aStream | 
-		aStream nextPutAll: compiledMethod methodClass name.
+		aStream nextPutAll: methodDefinition methodClass name.
 		aStream nextPutAll: ' >> '.
-		aStream nextPutAll: compiledMethod sourceCode ].
+		aStream nextPutAll: methodDefinition sourceCode ].

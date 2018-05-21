@@ -1,3 +1,4 @@
 accessing
 exampleCompiledMethod
-	^ self example ifNotNil: [ :example | Compiler evaluate: example ]
+	<return: #CompiledMethod or: nil>
+	^ self exampleMethodDefinition compiledMethod
