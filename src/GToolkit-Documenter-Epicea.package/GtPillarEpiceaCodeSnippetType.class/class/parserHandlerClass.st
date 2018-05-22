@@ -1,3 +1,3 @@
-*GToolkit-Documenter-Exporter
+as yet unclassified
 parserHandlerClass
 	^ GtPillarEpiceaCodeblock
