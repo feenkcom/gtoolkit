@@ -16,4 +16,6 @@ gtInspectorPillarWithBlocIn: composite
 		act: [ :aBlocPresentation | aBlocPresentation element contentElement editor inspect ]
 			icon: GLMUIThemeExtraIcons glamorousInspect
 			entitled: 'Inspect'; 
-		when: [ #('pier' 'pillar') includes: self extension ]
+		when: [ 
+			self exists and: [
+				#('pier' 'pillar') includes: self extension ] ] 
