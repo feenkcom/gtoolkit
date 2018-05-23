@@ -6,7 +6,7 @@ codeSnippetOfDocumentWithNonExistentExampleMethod
 	aDocument := self documentWithNonExistentExampleMethod.
 	aCodeSnippet := aDocument codeSnippets codeSnippetAt: 1.
 	self assert: aCodeSnippet methodName equals: 'GtExampleCodeSnippetExamples>>#nonExistentMethod'.
-	self assert: aCodeSnippet shouldDisplayResult not.
+	self assert: aCodeSnippet shouldDisplayResult.
 	self assert: aCodeSnippet shouldExpandPreview not.
 	self assert: aCodeSnippet isMethodDefined not.
 	self assert: aCodeSnippet isMethodClassDefined.

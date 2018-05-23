@@ -7,5 +7,6 @@ initializeFromTokens: aGtPillarScriptTokens
 		ifTrue: [ self showMessageName: aGtPillarScriptTokens showParameterValue ].
 	aGtPillarScriptTokens isPreviewHeightDefined ifTrue: [ 
 		self previewHeight: aGtPillarScriptTokens heightParameterValue ].
+	self showMessageName: aGtPillarScriptTokens showParameterValue.
 	self shouldDisplayCode: aGtPillarScriptTokens shouldDisplayCode.
 	self shouldExpandPreview: aGtPillarScriptTokens shouldExpandPreview.
