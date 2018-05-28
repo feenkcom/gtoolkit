@@ -1,0 +1,3 @@
+initialization
+defaultPreviewStencilBuilder
+	^ self subclassResponsibility

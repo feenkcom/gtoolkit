@@ -1,13 +1,12 @@
 {
 	"commentStamp" : "AliakseiSyrel 11/23/2017 14:23",
-	"super" : "BlScalableElement",
+	"super" : "BlZoomableElement",
 	"category" : "GToolkit-Documenter-Brick",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"editor",
-		"zoomLevel",
 		"document"
 	],
 	"name" : "GtPillarEditorElement",

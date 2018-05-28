@@ -1,4 +1,4 @@
 instance creation
 newRightAlignedToolbarElement
 	<return: #BlElement>
-	^ BlElement new look: GtPillarRightAlignedToolbarLook new.
+	^ BlElement new look: GtPillarRightAlignedToolbarLook new

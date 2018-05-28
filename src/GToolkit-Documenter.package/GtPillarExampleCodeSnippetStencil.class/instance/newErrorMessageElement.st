@@ -2,4 +2,4 @@ instance creation
 newErrorMessageElement
 	<return: #BlElement>
 	^ self newCompositeElement 
-		addChild: (self newEditorElementWithRopedText: self errorMessageRopedText)
+		addChild: (self newEditorElementWithRopedText: self errorMessageText)
