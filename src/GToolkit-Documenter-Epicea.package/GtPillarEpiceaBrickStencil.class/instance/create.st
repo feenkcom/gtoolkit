@@ -12,7 +12,7 @@ create
 		content: [ self newDiffElement ].
 	aResultTab := BrTabModel new
 		label: 'Code';
-		content: [ self newFinalCodeElement ].
+		content: [ self newFinalCodeElement constraintsDo: [ :c | c vertical matchParent ] ].
 	aTabGroup := BrTabGroupModel with: { aResultTab. aDiffTab }.
 	aTabGroup tabs do: [ :aTab | 
 		BlElement new
@@ -21,8 +21,11 @@ create
 	aComposite addChild: (BlElement new
 		look: BrMaterialTabGroupLook;
 		viewModel: aTabGroup).
+		
+	aComposite addChild: (self newResizerBarElementOn: aComposite).
+	
 	aComposite 
-		margin: (BlInsets top: 0 left: 20 bottom: 0 right: 20). 
+		margin: (BlInsets top: 0 left: 20 bottom: 5 right: 20). 
 	self codeSnippet epiceaLog hasImpact
 		ifFalse: [ aTabGroup removeTab: aDiffTab ].
 	self codeSnippet

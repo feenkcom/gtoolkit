@@ -8,4 +8,4 @@ newInspectorElement
 	^ view asElementDo: [ :element |
 		element constraintsDo: [ :c | 
 			c horizontal matchParent.
-			c vertical exact: 160 ] ].
+			c vertical matchParent ] ].

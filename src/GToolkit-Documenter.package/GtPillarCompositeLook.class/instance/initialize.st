@@ -4,5 +4,5 @@ initialize
 	self add: (BrLayoutLook linearVertical 
 		constraintsDo: [ :c | 
 			c textFlow pushLine.
-			c vertical fitContentLimited.
-			c horizontal matchParent ]).
+			c horizontal matchParent.
+			c vertical exact: 200 ])
