@@ -5,5 +5,6 @@ baseline: spec
 		spec
 			baseline: 'GToolkitDocumenter' with: [ spec repository: 'github://feenkcom/gtoolkit/src' ];
 			baseline: 'GToolkitTranscript' with: [ spec repository: 'github://feenkcom/gtoolkit/src' ];
-			baseline: 'GToolkitVisualizer' with: [ spec repository: 'github://feenkcom/gtoolkit-visualizer/src' ]
+			baseline: 'GToolkitVisualizer' with: [ spec repository: 'github://feenkcom/gtoolkit-visualizer/src' ];
+			baseline: 'GToolkitInspector' with: [ spec 	repository: 'github://feenkcom/gtoolkit-inspector/src' ]
 	]
