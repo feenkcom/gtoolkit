@@ -4,4 +4,4 @@ newResizerBarElementOn: aResizableElement
 	
 	^ BlElement new
 		look: BrMaterialResizerBottomBarLook new;
-		addEventHandler: (BlResizerBottomListener new resizeTarget: aResizableElement)
+		addEventHandler: (BlResizerBottomListener new resizeTarget: aResizableElement; minimumExtent: 0@75)

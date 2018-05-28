@@ -1,10 +1,11 @@
 instance creation
 newInspectButtonElement
-	| anElement aText aModel |
-	anElement := self newSlimButtonElement.
+	| anElement aModel |
+	
 	aModel := BrButtonModel new.
-	aText := 'Inspect' asRopedText.
-	aModel label: aText.
+	aModel label: 'Inspect'.
 	aModel action: [ self displayResult ].
+	
+	anElement := self newSlimButtonElement.
 	anElement viewModel: aModel.
 	^ anElement

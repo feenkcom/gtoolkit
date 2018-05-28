@@ -1,7 +1,8 @@
 api - instantiation
 create
 	<return: #BlElement>
-	| aTabGroup aDiffTab aResultTab aComposite aToolbar |
+	| aTabGroup aDiffTab aResultTab aComposite aToolbar aResizerElement aFinalCodeElement |
+
 	aComposite := self newCompositeElement.
 	aToolbar := self newRightAlignedToolbarElement.
 	aToolbar addChild: self newApplyChangesButtonElement.
@@ -12,7 +13,7 @@ create
 		content: [ self newDiffElement ].
 	aResultTab := BrTabModel new
 		label: 'Code';
-		content: [ self newFinalCodeElement constraintsDo: [ :c | c vertical matchParent ] ].
+		content: [ aFinalCodeElement := self newFinalCodeElement constraintsDo: [ :c | c vertical matchParent ] ].
 	aTabGroup := BrTabGroupModel with: { aResultTab. aDiffTab }.
 	aTabGroup tabs do: [ :aTab | 
 		BlElement new
@@ -21,8 +22,19 @@ create
 	aComposite addChild: (BlElement new
 		look: BrMaterialTabGroupLook;
 		viewModel: aTabGroup).
-		
-	aComposite addChild: (self newResizerBarElementOn: aComposite).
+	
+	aResizerElement := self newResizerBarElementOn: aComposite.
+	aResizerElement
+		when: BlDblClickEvent
+		do: [ aFinalCodeElement ifNotNil: [
+			aFinalCodeElement constraintsDo: [ :c | c vertical fitContent ].
+			aComposite constraintsDo: [ :c | c vertical fitContent ] ] ].
+	aResizerElement
+		when: BlResizerResizedEvent
+		do: [ aFinalCodeElement ifNotNil: [
+			aFinalCodeElement constraintsDo: [ :c | c vertical matchParent ] ] ].
+
+	aComposite addChild: aResizerElement.
 	
 	aComposite 
 		margin: (BlInsets top: 0 left: 20 bottom: 5 right: 20). 
