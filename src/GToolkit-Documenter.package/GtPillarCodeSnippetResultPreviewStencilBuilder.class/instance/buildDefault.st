@@ -1,6 +1,13 @@
 api - instantiation
 buildDefault
+	| anOutputText |
+	
+	anOutputText := ('(outs at: ' , self codeSnippet index asString , ')') asRopedText.
+	anOutputText monospace.
+	anOutputText foreground: (self codeSnippet isException
+		ifTrue: [ Color red ]
+		ifFalse: [ Color gray ]).
+
 	^ GtPillarCodeSnippetResultPreviewStencil new
-		text: self text;
-		editor: self editor;
-		codeSnippet: self codeSnippet
+		result: self codeSnippet value;
+		outputInformation: anOutputText

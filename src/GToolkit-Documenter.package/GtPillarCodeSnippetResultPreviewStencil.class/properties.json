@@ -1,11 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "GtPillarBrickStencil",
-	"category" : "GToolkit-Documenter-Brick-Stencils",
+	"classtraitcomposition" : "TGtPillarPreviewStencil classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"result",
+		"outputInformationText"
+	],
+	"name" : "GtPillarCodeSnippetResultPreviewStencil",
+	"commentStamp" : "AliakseiSyrel 5/29/2018 13:16",
+	"super" : "BrStencil",
+	"traitcomposition" : "TGtPillarPreviewStencil",
+	"type" : "normal",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "GtPillarCodeSnippetResultPreviewStencil",
-	"type" : "normal"
+	"category" : "GToolkit-Documenter-Brick-Stencils"
 }
