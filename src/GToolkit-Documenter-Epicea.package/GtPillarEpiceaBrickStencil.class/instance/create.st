@@ -4,24 +4,28 @@ create
 	| aTabGroup aDiffTab aResultTab aComposite aToolbar aResizerElement aFinalCodeElement |
 
 	aComposite := self newCompositeElement.
+	aComposite margin: (BlInsets top: 0 left: 20 bottom: 5 right: 20). 
+
 	aToolbar := self newRightAlignedToolbarElement.
 	aToolbar addChild: self newApplyChangesButtonElement.
 	aToolbar addChild: self newBrowseGlobalChangesButtonElement.
 	aComposite addChild: aToolbar.
-	aDiffTab := BrTabModel new
+
+	aDiffTab := BrTab new
+		look: BrMaterialTabLabelledLook;
 		label: 'Diff';
-		content: [ self newDiffElement ].
-	aResultTab := BrTabModel new
+		stencil: [ self newDiffElement ].
+	
+	aResultTab := BrTab new
+		look: BrMaterialTabLabelledLook;
 		label: 'Code';
-		content: [ aFinalCodeElement := self newFinalCodeElement constraintsDo: [ :c | c vertical matchParent ] ].
-	aTabGroup := BrTabGroupModel with: { aResultTab. aDiffTab }.
-	aTabGroup tabs do: [ :aTab | 
-		BlElement new
-			look: BrMaterialTabLabelledLook;
-			viewModel: aTab ].
-	aComposite addChild: (BlElement new
+		stencil: [ aFinalCodeElement := self newFinalCodeElement constraintsDo: [ :c | c vertical matchParent ] ].
+	
+	aTabGroup := BrTabGroup new
 		look: BrMaterialTabGroupLook;
-		viewModel: aTabGroup).
+		addTabs: { aResultTab . aDiffTab }.
+	
+	aComposite addChild: aTabGroup.
 	
 	aResizerElement := self newResizerBarElementOn: aComposite.
 	aResizerElement
@@ -36,8 +40,7 @@ create
 
 	aComposite addChild: aResizerElement.
 	
-	aComposite 
-		margin: (BlInsets top: 0 left: 20 bottom: 5 right: 20). 
+	
 	self codeSnippet epiceaLog hasImpact
 		ifFalse: [ aTabGroup removeTab: aDiffTab ].
 	self codeSnippet
