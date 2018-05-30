@@ -8,6 +8,6 @@ buildDefault
 		ifTrue: [ Color red ]
 		ifFalse: [ Color gray ]).
 
-	^ GtPillarCodeSnippetResultPreviewStencil new
+	^ GtPillarResultPreviewStencil new
 		result: self codeSnippet value;
 		outputInformation: anOutputText

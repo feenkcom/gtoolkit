@@ -1,10 +1,16 @@
-instance creation
-newSlimIconifiedButtonElement
-	<return: #BlElement>
+api - instantiation
+create
 	| aButton aLook |
-	aButton := BlElement new.
+	
 	aLook := BrMaterialToggleIconifiedLook 
 		+ BrMaterialToggleLabelledLook 
 		+ GtPillarSlimButtonLook.
+
+	aButton := BrButton new.
 	aButton look: aLook.
+
+	aButton icon: self icon.
+	aButton label: self label.
+	aButton action: self action.
+	
 	^ aButton

@@ -1,3 +1,0 @@
-actions
-executeCodeSnippet
-	self codeSnippet executeWithPlaygroundStrategy.

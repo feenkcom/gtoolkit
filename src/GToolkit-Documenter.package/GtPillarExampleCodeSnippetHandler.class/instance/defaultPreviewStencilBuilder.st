@@ -1,3 +1,3 @@
 initialization
 defaultPreviewStencilBuilder
-	^ GtPillarExampleCodeSnippetStencilBuilder new
+	^ GtDocumenterExampleCodeSnippetStencilBuilder new
