@@ -31,6 +31,5 @@ baseline: spec
 				'GToolkit-Documenter-Epicea' ) ];
 			group: 'Core' with: #( 'GToolkit-Documenter' 'GToolkit-Documenter-Exporter'
 				'GToolkit-Documenter-Epicea' 'GToolkit-Documenter-Examples' );
-			group: 'Tests' with: #( 'GToolkit-Documenter-Exporter-Tests' );
-			group: 'default' with: #( 'Core' 'Tests' )
+			group: 'Tests' with: #( 'GToolkit-Documenter-Exporter-Tests' )
 	]
