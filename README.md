@@ -1,11 +1,12 @@
 # The Glamorous Toolkit (GT)
-GT is the moldable IDE for Pharo.
+GT is the moldable IDE for Pharo. The main goal of GT is to redefine the experience of developing software.
 
 The current repository embodies the second generation of GT that is based on the [Bloc project](https://github.com/pharo-graphics/Bloc) and it is comprised of a set of distinct tools. Currently these are:
+- [Inspector](https://github.com/feenkcom/gtoolkit-inspector): the moldable inspector for Pharo on top of Bloc.
 - Documenter: a tool for showing live documentation inside Pharo. It is based on Pillar and on the moldable text editor.
 - Transcript: a rethinking of the classic Transcript taking advantage of the moldable text editor from Bloc.
 - [Visualizer](https://github.com/feenkcom/gtoolkit-visualizer): a set of visualization engines on top of Bloc.
-- [Examples](https://github.com/feenkcom/gtoolkit-examples): a framework for example-driven development in Pharo.
+- [Examples](https://github.com/feenkcom/gtoolkit-examples): an engine for example-driven development in Pharo.
 
 
 ## How to load
@@ -25,7 +26,7 @@ Alternatively, you can also load each individual tools separately using the corr
 
 ### GT Documenter
 
-The Documenter offers live rendering of Pillar documents.
+The Documenter is a tool for creating and consuming live documents directly in the development environment. The interaction happens seamlessly directly in the text editor and it can be combined with different types of previews to serve several use cases.
 
 For example, Documenter can embed pictures right in place:
 
