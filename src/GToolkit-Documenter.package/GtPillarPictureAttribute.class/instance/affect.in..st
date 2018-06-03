@@ -2,7 +2,7 @@ accessing
 affect: aBrText in: anEditorElement
 	| scalableElement imageElement |
 
-	scalableElement := BlScalableElement new.
+	scalableElement := BlPannableElement new.
 
 	scalableElement constraintsDo: [ :c |
 		c horizontal matchParent.
