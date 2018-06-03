@@ -17,11 +17,9 @@ handleFigureWithTokens: tokens
 					[ | expandingAttribute attributesToAdd previewAttributeBlock previewAttribute |
 					"we are doing a horrible hack here: we are creating the preview by hand if it needs to be expanded"
 					previewAttributeBlock := [ | anImageForm |
-					anImageForm := pictureFileReference
-						binaryReadStreamDo: [ :stream | PNGReadWriter formFromStream: stream ].
-					GtPillarPictureAttribute new
-						image: anImageForm;
-						weight: 0.5 ].
+						anImageForm := pictureFileReference
+							binaryReadStreamDo: [ :stream | PNGReadWriter formFromStream: stream ].
+						GtPillarPictureAttribute new image: anImageForm].
 					expandingAttribute := BrTextExpandButtonAttribute new
 						attributesCreatingBlock: previewAttributeBlock.
 					attributesToAdd := OrderedCollection with: expandingAttribute.
