@@ -4,6 +4,11 @@ gtInspectorPillarWithBlocIn: composite
 	^ composite bloc
 		title: '_Pillar';
 		element: [ GtDocumenter editorForPillar: self ];
+		act: [ :bloc |
+				self ensureDelete; writeStreamDo: [ :s | s nextPutAll: bloc element contentElement editor text asString ] ]
+				icon: GLMUIThemeExtraIcons glamorousSave
+				on: $s
+				entitled: 'Save';
 		act: [ :aBlocPresentation | aBlocPresentation element zoomIn ]
 			icon: GLMUIThemeExtraIcons glamorousZoomIn
 			entitled: 'Zoom in';
