@@ -1,3 +1,0 @@
-testing
-hasResult
-	^ result notNil

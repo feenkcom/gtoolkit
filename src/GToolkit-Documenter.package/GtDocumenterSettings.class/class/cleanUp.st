@@ -1,3 +1,0 @@
-cleanup
-cleanUp
-	self reset

@@ -1,3 +1,0 @@
-*GToolkit-Documenter-Exporter
-parserHandlerClass
-	^ GtPillarExecutableCodeblock

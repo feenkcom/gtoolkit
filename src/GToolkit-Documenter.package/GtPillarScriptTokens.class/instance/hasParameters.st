@@ -1,3 +1,0 @@
-testing
-hasParameters
-	^ parameters isNotEmpty

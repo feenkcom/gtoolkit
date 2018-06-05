@@ -1,3 +1,0 @@
-*GToolkit-Documenter-Exporter
-showParsedDocumentIn: aGLMCompositePresentation 
-	aGLMCompositePresentation selection: self parseWithGtDocumenter 

@@ -1,1 +1,0 @@
-I contain common element creation methods shared by various documenter stencils

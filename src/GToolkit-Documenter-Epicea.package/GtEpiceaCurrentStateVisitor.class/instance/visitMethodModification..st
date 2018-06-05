@@ -1,3 +1,0 @@
-visiting
-visitMethodModification: aMethodModification
-	^ self visitMethodChange: aMethodModification

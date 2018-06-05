@@ -1,3 +1,0 @@
-parameters
-epiceaParameterName
-	^ 'epicea'

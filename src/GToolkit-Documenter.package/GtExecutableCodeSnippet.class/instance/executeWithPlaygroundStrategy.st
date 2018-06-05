@@ -1,3 +1,0 @@
-protocol
-executeWithPlaygroundStrategy
-	self executeWithStrategy: GtPlaygroundBindingStrategy new

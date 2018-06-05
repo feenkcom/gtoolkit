@@ -1,3 +1,0 @@
-instance creation
-newButtonLabelLook
-	^ BrMaterialToggleLabelledLook + GtPillarSlimButtonLook

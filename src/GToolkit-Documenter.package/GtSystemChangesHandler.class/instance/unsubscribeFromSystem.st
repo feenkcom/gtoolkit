@@ -1,3 +1,0 @@
-initialization
-unsubscribeFromSystem
-	SystemAnnouncer uniqueInstance unsubscribe: self.

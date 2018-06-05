@@ -1,3 +1,0 @@
-testing
-handlesScript: aGtPillarScriptTokens
-	^ aGtPillarScriptTokens includesParameter: GtPillarEpiceaCodeSnippetHandler epiceaParameterName
