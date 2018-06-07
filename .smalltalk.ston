@@ -5,5 +5,8 @@ SmalltalkCISpec {
       #directory : 'src',
       #platforms : [ #pharo ]
     }
-  ]
+  ],
+  #testing : {
+    #failOnZeroTests : true
+  }
 }
