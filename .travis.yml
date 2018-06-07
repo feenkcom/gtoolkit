@@ -1,7 +1,7 @@
 language: smalltalk
 sudo: false
 
-dist: trusty
+dist: bionic
 
 # Select operating system(s)
 os:
@@ -13,7 +13,7 @@ os:
 smalltalk:
   - Pharo-stable
 
-install: ./install-dependencies.sh
+#install: ./install-dependencies.sh
 
 before_script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
