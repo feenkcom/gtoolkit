@@ -34,10 +34,10 @@ before_install:
       echo "Installing libGL...";
       sudo apt-get install libglu1-mesa:i386;
 
-      cat <<END | sudo tee /etc/security/limits.d/pharo.conf
+      sudo cat >/etc/security/limits.d/pharo.conf <<EOL
       *      hard    rtprio  2
       *      soft    rtprio  2
-      END
+      EOL
 
     fi
 
