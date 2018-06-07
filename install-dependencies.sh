@@ -1,3 +1,4 @@
+
 if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
     sudo dpkg --add-architecture i386;
     sudo apt-get update;
@@ -23,4 +24,9 @@ sudo cat >/etc/security/limits.d/pharo.conf <<bla
 *      soft    rtprio  2
 bla
 
+fi
+
+
+if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+  ssh-add ~/.ssh/id_rsa
 fi
