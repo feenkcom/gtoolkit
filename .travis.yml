@@ -1,7 +1,7 @@
 language: smalltalk
 sudo: false
 
-dist: bionic
+dist: trusty
 
 # Select operating system(s)
 os:
@@ -32,8 +32,6 @@ before_install:
               "Host github.com" \
               "  IdentityFile $SSH_FILE" \
               "  LogLevel ERROR" >> ~/.ssh/config
-
-       ssh-add "$SSH_FILE"
 
        if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
           sudo dpkg --add-architecture i386;
