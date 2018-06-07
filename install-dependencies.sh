@@ -19,14 +19,4 @@ if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
     echo "Installing libGL...";
     sudo apt-get install libglu1-mesa:i386;
 
-sudo cat >/etc/security/limits.d/pharo.conf <<bla
-*      hard    rtprio  2
-*      soft    rtprio  2
-bla
-
-fi
-
-
-if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-  ssh-add ~/.ssh/id_rsa
 fi
