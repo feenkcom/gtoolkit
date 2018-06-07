@@ -42,4 +42,4 @@ before_script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: scripts/deploy.sh
+  script: deploy.sh
