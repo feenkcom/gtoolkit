@@ -39,7 +39,5 @@ before_script:
       sh -e /etc/init.d/xvfb start;
     fi
 
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: deploy.sh
+after_success:
+  - ls  "$SMALLTALK_CI_IMAGE"
