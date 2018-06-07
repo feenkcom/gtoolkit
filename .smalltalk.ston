@@ -1,0 +1,9 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'GToolkit',
+      #directory : 'src',
+      #platforms : [ #pharo ]
+    }
+  ]
+}
