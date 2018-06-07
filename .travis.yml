@@ -15,6 +15,24 @@ smalltalk:
 
 #install: ./install-dependencies.sh
 
+before_install:
+  - |
+       # Otherwise build on OSX stucks at unknown fingerprint question
+       echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
+       declare -r SSH_FILE="$(mktemp -u $HOME/.ssh/$id_rsa)"
+       # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+       openssl aes-256-cbc -K $encrypted_10f94c58ec15_key -iv $encrypted_10f94c58ec15_iv -in travis_github_key.enc -out "$SSH_FILE" -d
+       # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       # Enable SSH authentication
+
+       chmod 600 "$SSH_FILE" \
+         && printf "%s\n" \
+              "Host github.com" \
+              "  IdentityFile $SSH_FILE" \
+              "  LogLevel ERROR" >> ~/.ssh/config
+
 before_script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       export DISPLAY=:99.0;
