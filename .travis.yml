@@ -33,29 +33,13 @@ before_install:
               "  IdentityFile $SSH_FILE" \
               "  LogLevel ERROR" >> ~/.ssh/config
 
-       if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-          sudo dpkg --add-architecture i386;
-          sudo apt-get update;
-          export PKG_CONFIG_PATH=/usr/lib/i386-linux-gnu/pkgconfig/;
-
-          echo "Installing c++ libraries";
-          sudo apt-get install libstdc++6:i386;
-
-          echo "Installing GTK-2.0...";
-          sudo apt-get install libgtk2.0-0:i386;
-
-          echo "Installing GTK-3.0...";
-          sudo apt-get install libgtk-3-0:i386;
-
-          echo "Installing libssl1.0.0...";
-          sudo apt-get install libssl1.0.0:i386;
-
-          echo "Installing libGL...";
-          sudo apt-get install libglu1-mesa:i386;
-       fi
-
 before_script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       export DISPLAY=:99.0;
       sh -e /etc/init.d/xvfb start;
     fi
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: scripts/deploy.sh
