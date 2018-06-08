@@ -36,14 +36,14 @@ before_script:
     fi
 
 after_success:
-  - ls  "$SMALLTALK_CI_IMAGE"
-    readonly PROJECT_NAME="GToolkit"
+  - ls "$SMALLTALK_CI_IMAGE"
+    export PROJECT_NAME="GToolkit"
     # customize the name of the build folder
-    readonly ARTIFACT_DIR="${PROJECT_NAME}-${TRAVIS_BUILD_NUMBER}"
+    export ARTIFACT_DIR="${PROJECT_NAME}-${TRAVIS_BUILD_NUMBER}"
     mkdir "$ARTIFACT_DIR"
     cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}.image"
     cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}.changes"
-    build_zip="${ARTIFACT_DIR}.zip"
+    export build_zip="${ARTIFACT_DIR}.zip"
     zip -qr "$build_zip" "$ARTIFACT_DIR"
 
 deploy:
