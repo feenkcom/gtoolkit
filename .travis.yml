@@ -36,7 +36,8 @@ before_script:
     fi
 
 after_success:
-  - ls "$SMALLTALK_CI_IMAGE"
+  - |
+    ls "$SMALLTALK_CI_IMAGE"
     export PROJECT_NAME="GToolkit"
     # customize the name of the build folder
     export ARTIFACT_DIR="${PROJECT_NAME}-${TRAVIS_BUILD_NUMBER}"
