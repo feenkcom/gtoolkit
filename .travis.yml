@@ -1,11 +1,16 @@
 language: smalltalk
+
 sudo: false
+
 dist: trusty
+
 os:
   - linux
   - osx
+
 smalltalk:
   - Pharo-stable
+
 before_install:
   - |
     # Otherwise build on OSX stucks at unknown fingerprint question
@@ -23,11 +28,13 @@ before_install:
            "Host github.com" \
            "  IdentityFile $SSH_FILE" \
            "  LogLevel ERROR" >> ~/.ssh/config
+
 before_script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       export DISPLAY=:99.0;
       sh -e /etc/init.d/xvfb start;
     fi
+
 after_success:
   - ls  "$SMALLTALK_CI_IMAGE"
     readonly PROJECT_NAME="GToolkit"
