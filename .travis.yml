@@ -1,40 +1,64 @@
 language: smalltalk
+
 sudo: false
 
-dist: bionic
+dist: trusty
 
-# Select operating system(s)
 os:
   - linux
   - osx
 
-
-# Select compatible Smalltalk image(s)
 smalltalk:
   - Pharo-stable
 
-#install: ./install-dependencies.sh
-
 before_install:
   - |
-       # Otherwise build on OSX stucks at unknown fingerprint question
-       echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+    # Otherwise build on OSX stucks at unknown fingerprint question
+    echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-       declare -r SSH_FILE="$(mktemp -u $HOME/.ssh/id_rsa.XXXX)"
-       # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-       openssl aes-256-cbc -K $encrypted_10f94c58ec15_key -iv $encrypted_10f94c58ec15_iv -in travis_github_key.enc -out "$SSH_FILE" -d
-       # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    declare -r SSH_FILE="$(mktemp -u $HOME/.ssh/id_rsa.XXXX)"
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    openssl aes-256-cbc -K $encrypted_10f94c58ec15_key -iv $encrypted_10f94c58ec15_iv -in travis_github_key.enc -out "$SSH_FILE" -d
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-       # Enable SSH authentication
+    # Enable SSH authentication
 
-       chmod 600 "$SSH_FILE" \
-         && printf "%s\n" \
-              "Host github.com" \
-              "  IdentityFile $SSH_FILE" \
-              "  LogLevel ERROR" >> ~/.ssh/config
+    chmod 600 "$SSH_FILE" \
+      && printf "%s\n" \
+           "Host github.com" \
+           "  IdentityFile $SSH_FILE" \
+           "  LogLevel ERROR" >> ~/.ssh/config
 
 before_script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       export DISPLAY=:99.0;
       sh -e /etc/init.d/xvfb start;
     fi
+
+after_success:
+  - |
+    ls "$SMALLTALK_CI_IMAGE"
+    export PROJECT_NAME="GToolkit"
+    # customize the name of the build folder
+    export ARTIFACT_DIR="${PROJECT_NAME}"
+    mkdir "$ARTIFACT_DIR"
+    cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}.image"
+    cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}.changes"
+    export build_zip="${ARTIFACT_DIR}.zip"
+    zip -qr "$build_zip" "$ARTIFACT_DIR"
+
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "YOUR GIT USER NAME"
+  - git config --local user.email "YOUR GIT USER EMAIL"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure:
+      qs1LDPEyShWtMgepESqCHtUePMWT2C7Mn4MlsYdmWVpHbchIt3k9eb2QQrgbvuGLhnjsLlAm05mNqLlfoZxriWmSLqjz8d53Z8hqzCM1U/pLRqmUIcg+A4aBwl75dh1yW3qc5yHdqdVpze6Qg76YAXt98VsFix+Cjj8pkoMhwl27mxzfDfOlQUOVAzrH8ipjmpVEDSKOmAJCnsdnJDivtIz6q0IQeLeQ+sD4VzZSfQ0qZk55xiUQejAMcpYDPXSWOAig02N4VUKZcPSqbCa1LRQC7FPuhLSz8YgmNPIbrqNwO3ZFHJCEmLAhhj9DKUqWFfZ5Tu7udgCd5EMEcIyI/g+S0j/Jp3u3Yivm6tJWRXrPjKk3u6A1JRnnUpqO7EDudLLXZ42qsxf6rZkngcbdDhm7OiZmMejEWZGKqMe/Uk7kZPfPuEW/2odrdlvrl8cINTjDITfj15In82J2RR+GZRcLzjH/3Ewc9+UB2H0vdr6zmW8cPhXpK5DLnJg315WIdA338hBqrwuezBpMVD9J7nEbqHuR2Cb5+hD3AzwSTmDdNaRHDw7QFJzOMEYCshPhHPeZH0Q9CB/Vi+SSy1QIUnY5GVZmpjL3Z0ZVKjE8296LFFUuE0ron3l50JOw7oaahoOyExH1eVlMRnvOohWITVBwcqUHbSUCC3BdXHkft9Y=
+  file: GToolkit.zip
+  on:
+    repo: feenkcom/gtoolkit
