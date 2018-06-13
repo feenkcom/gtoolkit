@@ -22,15 +22,13 @@ Metacello new
 
 Alternatively, you can also load each individual tools separately using the corresponding baselines.
 
-## Details
+## GT Documenter
 
-### GT Documenter
-
-![](https://github.com/feenkcom/gtoolkit-documenter/blob/master/doc/gt-documenter-snipper-preview-resize.gif)
+<img src="https://github.com/feenkcom/gtoolkit-documenter/blob/master/doc/gt-documenter-snipper-preview-resize.gif" alt="Documenter: Documenter: Epicea diff" width="50%"/>
 
 Learn more about [Documenter](https://github.com/feenkcom/gtoolkit-documenter).
 
-### GT Transcript
+## GT Transcript
 
 Transcript offers a rich and interactable text interface for displaying live information coming from a system.
 
