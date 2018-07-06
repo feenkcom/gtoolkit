@@ -6,7 +6,7 @@ showException: anException
 	self 
 		expanding: [ 
 			| text |
-			text := BrRopedText string: string.
+			text := string asRopedText.
 			text attributes: { BrTextForegroundAttribute new paint: Color red twiceDarker}.
 			BrEditorElement new
 				constraintsDo: [ :c |
