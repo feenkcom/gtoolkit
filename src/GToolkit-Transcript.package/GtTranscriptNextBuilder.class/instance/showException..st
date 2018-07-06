@@ -6,8 +6,7 @@ showException: anException
 	self 
 		expanding: [ 
 			| text |
-			text := string asRopedText.
-			text attributes: { BrTextForegroundAttribute new paint: Color red twiceDarker}.
+			text := string asRopedText foreground: Color red twiceDarker.
 			BrEditorElement new
 				constraintsDo: [ :c |
 					c horizontal matchParent.
