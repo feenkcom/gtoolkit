@@ -1,7 +1,6 @@
 private
 applyAttributes
-	transcript text
-		attributes: attributes 
+	(transcript text
 		from: self startPosition
-		to: transcript text size
-	
+		to: transcript text size)
+			attributes: attributes
