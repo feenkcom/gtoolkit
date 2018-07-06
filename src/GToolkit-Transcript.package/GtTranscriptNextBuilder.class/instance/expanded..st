@@ -4,7 +4,7 @@ expanded: aBlock
 	
 	adornmentAttribute := BrTextAdornmentDynamicAttribute new 	
 		beAppend;
-		elementBlock: aBlock.
+		stencil: aBlock.
 	
 	self attributes: {
 		BrTextExpandButtonAttribute new
@@ -13,5 +13,5 @@ expanded: aBlock
 			attributesCreatingBlock: [
 				BrTextAdornmentDynamicAttribute new 	
 					beAppend;
-					elementBlock: aBlock ] . 
+					stencil: aBlock ] . 
 		adornmentAttribute }

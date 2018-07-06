@@ -5,4 +5,4 @@ expanding: aBlock
 			attributesCreatingBlock: [
 				BrTextAdornmentDynamicAttribute new 	
 					beAppend;
-					elementBlock: aBlock ])
+					stencil: aBlock ])
