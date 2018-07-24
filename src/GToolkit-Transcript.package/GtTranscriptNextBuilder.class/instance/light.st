@@ -1,3 +1,3 @@
 attributes
 light
-	self attribute: BrFontLightAttribute new
+	self attribute: BrFontWeightAttribute light
