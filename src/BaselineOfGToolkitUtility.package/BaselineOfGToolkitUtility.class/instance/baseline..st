@@ -7,10 +7,5 @@ baseline: spec
 			package: 'GToolkit-Utility-Assertion';
 			package: 'GToolkit-Utility-Announcer';
 			package: 'GToolkit-Utility-System' with: [
-				spec requires: #( 'GToolkit-Utility-Assertion' ) ];
-			group: 'default' with: #( 
-				'GToolkit-Utility-Assertion'
-				'GToolkit-Utility-Announcer'
-				'GToolkit-Utility-File' 
-				'GToolkit-Utility-System' )
+				spec requires: #( 'GToolkit-Utility-Assertion' ) ]
 	]
