@@ -1,0 +1,3 @@
+initialization
+initialize
+	self enableAssertion

@@ -1,0 +1,3 @@
+configuration
+disableAssertion
+	isAssertionEnabled := false
