@@ -14,6 +14,6 @@ methodDefinitionFromString: aString
 	aMethodClassName := aCollection first trimBoth.
 	aMethodName := aCollection size = 2 ifTrue: [ aCollection second trimBoth ] ifFalse: [ '' ].
 
-	^ RGMethodDefinition 
+	^ (RGMethodDefinition 
 		class: (RGBehaviorDefinition named: aMethodClassName) 
-		selector: aMethodName.
+		selector: aMethodName asSymbol) asActive.
