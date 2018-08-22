@@ -15,10 +15,13 @@ gtMapFor: aView
 				shape: [:each | 
 					| text |
 					text := [
-						((each gtDisplayString 
+						| displayString |
+						displayString := (((each gtDisplayString 
 							copyReplaceAll: 'BaselineOf' with: '')
-							copyReplaceAll: 'ConfigurationOf' with: '') asRopedText
-							foreground: Color black ]
+							copyReplaceAll: 'ConfigurationOf' with: '')
+							copyReplaceAll: 'GToolkit' with: 'GT ').
+						displayString asRopedText
+							foreground: ((displayString beginsWith: 'GT') ifTrue: [Color black] ifFalse: [Color gray]) ]
 						on: Error do: [:e | e asString asRopedText foreground: Color red ].
 					BlTextElement new text: text; zIndex: 1 ];
 				with: projects.
@@ -26,11 +29,11 @@ gtMapFor: aView
 				shape: [ :each |
 					BlLineElement new 
 						zIndex: 0;
-						border: (BlBorder paint: (Color gray alpha: 0.5) width: 2);
+						border: (BlBorder paint: (Color gray alpha: 0.2) width: 2);
 						toHead: (BlArrowheadSimpleArrow new
-							border: (BlBorder builder paint: (Color gray alpha: 0.5); width: 2; build))  ];
-				fromRightCenter;
-				toLeftCenter;
+							border: (BlBorder builder paint: (Color gray alpha: 0.2); width: 2; build))  ];
+				fromNearestBounds;
+				toNearestBounds;
 				connectFrom: #yourself 
 				toAll: [:each | each projects collect: #version].
-			mondrian layout horizontalDominanceTree layered ]
+			mondrian layout horizontalDominanceTree layered horizontalGap: 50; verticalGap: 30]
