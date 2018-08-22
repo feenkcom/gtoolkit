@@ -3,6 +3,7 @@ gtMapFor: aView
 	<gtView>
 	^ aView mondrian
 		title: 'Map';
+		priority: 10;
 		painting: [ :mondrian |
 			| projects |
 			projects := Set new.
