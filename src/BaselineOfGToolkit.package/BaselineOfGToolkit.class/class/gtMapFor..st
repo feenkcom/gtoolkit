@@ -10,8 +10,8 @@ gtMapFor: aView
 			self project version 
 				withDeep: [ :each | each projects collect: #version ]
 				relationDo: [:a :b | 
-					(a spec project configuration class name beginsWith: 'BaselineOfGToolkit') ifTrue: [ 
-						projects add: a; add: b ] ].
+					(a spec project configuration class name beginsWith: 'BaselineOfGToolkit') 
+					ifTrue: [ projects add: a; add: b ] ].
 			mondrian nodes 
 				shape: [:each | 
 					| text |
@@ -37,4 +37,4 @@ gtMapFor: aView
 				toNearestBounds;
 				connectFrom: #yourself 
 				toAll: [:each | each projects collect: #version].
-			mondrian layout horizontalDominanceTree layered horizontalGap: 50; verticalGap: 30]
+			mondrian layout horizontalTree levelDistance: 50; nodeDistance: 10]
