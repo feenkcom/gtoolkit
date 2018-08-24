@@ -1,3 +1,0 @@
-initialization
-defaultLayout
-	^ BlFrameLayout new
