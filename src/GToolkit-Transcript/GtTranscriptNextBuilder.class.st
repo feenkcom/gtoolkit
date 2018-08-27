@@ -126,8 +126,12 @@ GtTranscriptNextBuilder >> put: aCharacter [
 
 { #category : #streaming }
 GtTranscriptNextBuilder >> putAll: aString [
-	transcript editor insertString: aString asString at: transcript text size.
-	transcript editor moveCursorTo: transcript text size.
+
+	transcript editor inserter
+		atEnd;
+		string: aString asString;
+		insert.
+
 	"we delete the possible attributes inherited from the previously existing text"
 	transcript text
 		clearAttributes: transcript text size - aString size + 1
