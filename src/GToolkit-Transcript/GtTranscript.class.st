@@ -57,7 +57,7 @@ GtTranscript >> gtInspectorLiveIn: composite [
 
 { #category : #'gt-extension' }
 GtTranscript >> gtLiveFor: aView [
-	<gtView: 0>
+	<gtView>
 	^ self newEditorElement gtLiveFor: aView
 ]
 
