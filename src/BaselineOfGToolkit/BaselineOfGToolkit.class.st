@@ -47,7 +47,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitInspector' with: [ 
 				spec 	repository: 'github://feenkcom/gtoolkit-inspector/src' ];
 			baseline: 'GToolkitDebugger' with: [ 
-				spec 	repository: 'github://feenkcom/gtoolkit-inspector/src' ];
+				spec 	repository: 'github://feenkcom/gtoolkit-debugger/src' ];
 			baseline: 'GToolkitPlayground' with: [ 
 				spec 	repository: 'github://feenkcom/gtoolkit-playground/src' ]
 	]
