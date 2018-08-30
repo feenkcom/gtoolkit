@@ -10,7 +10,7 @@ GtSceneryFileSystem class >> menuCommandOn: aBuilder [
 	(aBuilder item: self name)
 		order: 200.0; 
 		parent: #GToolkitScenery;
-		label: 'Examples tutorial';
+		label: 'File system';
 		action: [self new setUp]
 ]
 
