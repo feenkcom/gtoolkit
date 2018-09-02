@@ -4,19 +4,20 @@
 The Glamorous Toolkit (GT) is loaded based on ${class:BaselineOfGToolkit}$.
 
 [[[
-	BaselineOfGToolkit.
+BaselineOfGToolkit.
 ]]]
 
 ${class:BaselineOfGToolkit}$ defines an umbrella project that puts together several subprojects. These direct projects are:
 
 [[[
-	BaselineOfGToolkit project version projects.
+BaselineOfGToolkit project version projects.
 ]]]
+
 "
 Class {
 	#name : #BaselineOfGToolkit,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfGToolkit'
+	#category : #BaselineOfGToolkit
 }
 
 { #category : #ui }
