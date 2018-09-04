@@ -1,20 +1,20 @@
 Class {
-	#name : #GtSceneryConnector,
+	#name : #GtSceneryConnectorForExample,
 	#superclass : #GtScenery,
 	#category : #'GToolkit-Scenery'
 }
 
 { #category : #'world menu' }
-GtSceneryConnector class >> menuCommandOn: aBuilder [
+GtSceneryConnectorForExample class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 200.0; 
+		order: 300.0; 
 		parent: #GToolkitScenery;
-		label: 'Connector';
+		label: 'Connector for example';
 		action: [self new setUp]
 ]
 
 { #category : #initialization }
-GtSceneryConnector >> setUp [
+GtSceneryConnectorForExample >> setUp [
 	GtInspector openOn: (BlFrameLayoutExamples>>#example) gtExample
 ]

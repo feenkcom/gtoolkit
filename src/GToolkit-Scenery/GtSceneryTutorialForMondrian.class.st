@@ -1,21 +1,21 @@
 Class {
-	#name : #GtSceneryMondrianDocument,
+	#name : #GtSceneryTutorialForMondrian,
 	#superclass : #GtScenery,
 	#category : #'GToolkit-Scenery'
 }
 
 { #category : #'world menu' }
-GtSceneryMondrianDocument class >> menuCommandOn: aBuilder [
+GtSceneryTutorialForMondrian class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 200.0; 
+		order: 210.0; 
 		parent: #GToolkitScenery;
-		label: 'Mondrian document';
+		label: 'Mondrian tutorial';
 		action: [self new setUp]
 ]
 
 { #category : #initialization }
-GtSceneryMondrianDocument >> setUp [
+GtSceneryTutorialForMondrian >> setUp [
 	| book |
 	book := GtPlayBook new.
 	book pages first snippets first sourceCode: 'IceRepository repositoriesLocation / ''feenkcom''/ ''gtoolkit-visualizer'' / ''doc'' / ''mondrian'' / ''index.pillar'''.

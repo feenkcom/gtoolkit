@@ -8,7 +8,7 @@ Class {
 GtSceneryFileSystem class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 200.0; 
+		order: 50.0; 
 		parent: #GToolkitScenery;
 		label: 'File system';
 		action: [self new setUp]

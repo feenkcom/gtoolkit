@@ -8,7 +8,7 @@ Class {
 GtSceneryHospitalityDocument class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 200.0; 
+		order: 250.0; 
 		parent: #GToolkitScenery;
 		label: 'Hospitality document';
 		action: [self new setUp]

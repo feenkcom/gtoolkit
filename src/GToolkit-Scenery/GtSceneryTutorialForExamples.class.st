@@ -1,20 +1,20 @@
 Class {
-	#name : #GtSceneryExamplesTutorial,
+	#name : #GtSceneryTutorialForExamples,
 	#superclass : #GtScenery,
 	#category : #'GToolkit-Scenery'
 }
 
 { #category : #'world menu' }
-GtSceneryExamplesTutorial class >> menuCommandOn: aBuilder [
+GtSceneryTutorialForExamples class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 200.0; 
+		order: 220.0; 
 		parent: #GToolkitScenery;
 		label: 'Examples tutorial';
 		action: [self new setUp]
 ]
 
 { #category : #initialization }
-GtSceneryExamplesTutorial >> setUp [
+GtSceneryTutorialForExamples >> setUp [
 	(GtInspector openOn: (IceRepository repositoriesLocation / 'feenkcom'/ 'gtoolkit-examples' / 'doc' / 'tutorial' / 'examples-tutorial.pillar'))
 ]

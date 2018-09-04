@@ -1,21 +1,21 @@
 Class {
-	#name : #GtSceneryTwoSnippets,
+	#name : #GtSceneryTwoPharoSnippetsWithVisualization,
 	#superclass : #GtScenery,
 	#category : #'GToolkit-Scenery'
 }
 
 { #category : #'world menu' }
-GtSceneryTwoSnippets class >> menuCommandOn: aBuilder [
+GtSceneryTwoPharoSnippetsWithVisualization class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 200.0; 
+		order: 300.0; 
 		parent: #GToolkitScenery;
-		label: 'Two snippets';
+		label: 'Two Pharo snippets with visualization';
 		action: [self new setUp]
 ]
 
 { #category : #initialization }
-GtSceneryTwoSnippets >> setUp [
+GtSceneryTwoPharoSnippetsWithVisualization >> setUp [
 	| book |
 	book := GtPlayBook new.
 	book pages first snippets first sourceCode: 'directories := ''feenkcom'' asFileReference allDirectories'.
