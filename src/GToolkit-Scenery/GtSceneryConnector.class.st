@@ -16,5 +16,5 @@ GtSceneryConnector class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryConnector >> setUp [
-	(GtInspector openOn: GtConnectorExamples new oneExampleMethod) 
+	GtInspector openOn: (BlFrameLayoutExamples>>#example) gtExample
 ]
