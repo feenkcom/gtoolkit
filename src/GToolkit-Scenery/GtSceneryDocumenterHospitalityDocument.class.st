@@ -1,21 +1,21 @@
 Class {
-	#name : #GtSceneryHospitalityDocument,
+	#name : #GtSceneryDocumenterHospitalityDocument,
 	#superclass : #GtScenery,
 	#category : #'GToolkit-Scenery'
 }
 
 { #category : #'world menu' }
-GtSceneryHospitalityDocument class >> menuCommandOn: aBuilder [
+GtSceneryDocumenterHospitalityDocument class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
 		order: 250.0; 
 		parent: #GToolkitScenery;
-		label: 'Hospitality document';
+		label: 'Documenter: Hospitality document';
 		action: [self new setUp]
 ]
 
 { #category : #initialization }
-GtSceneryHospitalityDocument >> setUp [
+GtSceneryDocumenterHospitalityDocument >> setUp [
 	| book |
 	book := GtPlayBook new.
 	book pages first snippets first sourceCode: 'IceRepository repositoriesLocation / ''feenkcom''/ ''hospitality-reference-model'' / ''doc'' / ''index.pillar'''.

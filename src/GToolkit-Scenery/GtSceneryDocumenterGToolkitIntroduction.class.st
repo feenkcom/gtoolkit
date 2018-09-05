@@ -1,20 +1,20 @@
 Class {
-	#name : #GtSceneryGToolkitIntroduction,
+	#name : #GtSceneryDocumenterGToolkitIntroduction,
 	#superclass : #GtScenery,
 	#category : #'GToolkit-Scenery'
 }
 
 { #category : #'world menu' }
-GtSceneryGToolkitIntroduction class >> menuCommandOn: aBuilder [
+GtSceneryDocumenterGToolkitIntroduction class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
 		order: 200.0; 
 		parent: #GToolkitScenery;
-		label: 'Introduction to GToolkit';
+		label: 'Documenter: Introduction to GToolkit';
 		action: [self new setUp]
 ]
 
 { #category : #initialization }
-GtSceneryGToolkitIntroduction >> setUp [
+GtSceneryDocumenterGToolkitIntroduction >> setUp [
 	(GtInspector openOn: (IceRepository repositoriesLocation / 'feenkcom'/ 'gtoolkit' / 'doc' / 'gtoolkit' / 'gtoolkit.pillar')) 
 ]

@@ -1,20 +1,20 @@
 Class {
-	#name : #GtSceneryFileSystem,
+	#name : #GtSceneryInspectorOnFileSystem,
 	#superclass : #GtScenery,
 	#category : #'GToolkit-Scenery'
 }
 
 { #category : #'world menu' }
-GtSceneryFileSystem class >> menuCommandOn: aBuilder [
+GtSceneryInspectorOnFileSystem class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
 		order: 50.0; 
 		parent: #GToolkitScenery;
-		label: 'File system';
+		label: 'Inspector: file system';
 		action: [self new setUp]
 ]
 
 { #category : #initialization }
-GtSceneryFileSystem >> setUp [
+GtSceneryInspectorOnFileSystem >> setUp [
 	(GtInspector openOn: '.' asFileReference) 
 ]

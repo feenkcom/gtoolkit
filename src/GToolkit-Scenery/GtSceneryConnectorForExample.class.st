@@ -10,7 +10,7 @@ GtSceneryConnectorForExample class >> menuCommandOn: aBuilder [
 	(aBuilder item: self name)
 		order: 300.0; 
 		parent: #GToolkitScenery;
-		label: 'Connector for example';
+		label: 'Connector: for examples';
 		action: [self new setUp]
 ]
 
