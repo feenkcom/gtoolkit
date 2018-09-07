@@ -11,9 +11,7 @@ GtFilePlayBookTypeResolver class >> mainExtension [
 
 { #category : #accessing }
 GtFilePlayBookTypeResolver class >> mimeType [
-	^ ZnMimeType textPlain
-		sub: 'gtoolkit-playbook';
-		yourself
+	^ ZnMimeType applicationJson
 ]
 
 { #category : #accessing }
