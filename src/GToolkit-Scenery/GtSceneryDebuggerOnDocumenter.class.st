@@ -17,7 +17,7 @@ GtSceneryDebuggerOnDocumenter class >> menuCommandOn: aBuilder [
 { #category : #initialization }
 GtSceneryDebuggerOnDocumenter >> setUp [
 	| book |
-	book := GtPlayBook new.
+	book := GtPlayBook newDefault.
 	book pages first snippets first sourceCode: 'process ifNotNil: [process terminate].
 document := GtDocumenter editorForText: ''!This is a debugging example''.
 context := [ document printString ] asContext.

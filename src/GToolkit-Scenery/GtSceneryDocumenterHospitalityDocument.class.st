@@ -17,7 +17,7 @@ GtSceneryDocumenterHospitalityDocument class >> menuCommandOn: aBuilder [
 { #category : #initialization }
 GtSceneryDocumenterHospitalityDocument >> setUp [
 	| book |
-	book := GtPlayBook new.
+	book := GtPlayBook newDefault.
 	book pages first snippets first sourceCode: 'IceRepository repositoriesLocation / ''feenkcom''/ ''hospitality-reference-model'' / ''doc'' / ''index.pillar'''.
 	(GtInspector openOnPlayBook: book)
 ]

@@ -17,7 +17,7 @@ GtSceneryDocumenterTutorialInClassComments class >> menuCommandOn: aBuilder [
 { #category : #initialization }
 GtSceneryDocumenterTutorialInClassComments >> setUp [
 	| book |
-	book := GtPlayBook new.
+	book := GtPlayBook newDefault.
 	book pages first snippets first sourceCode: 'BrToggleExamples'.
 	(GtInspector openOnPlayBook: book)
 ]

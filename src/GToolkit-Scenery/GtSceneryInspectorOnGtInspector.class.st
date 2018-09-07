@@ -18,7 +18,7 @@ GtSceneryInspectorOnGtInspector class >> menuCommandOn: aBuilder [
 { #category : #initialization }
 GtSceneryInspectorOnGtInspector >> setUp [
 	| book |
-	book := GtPlayBook new.
+	book := GtPlayBook newDefault.
 	book pages first snippets first sourceCode: 'GtInspector'.	
 	GtInspector openOnPlayBook: book
 ]
