@@ -36,13 +36,14 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 				with: projects.
 			mondrian edges
 				shape: [ :each |
-					BlLineElement new 
+					BlParabollaArcElement new 
 						zIndex: 0;
+						curvatureFraction: 0.2;
 						border: (BlBorder paint: (Color gray alpha: 0.2) width: 2);
 						toHead: (BlArrowheadSimpleArrow new
 							border: (BlBorder builder paint: (Color gray alpha: 0.2); width: 2; build))  ];
-				fromNearestBounds;
-				toNearestBounds;
+				fromRightCenter;
+				toLeftCenter;
 				connectFrom: #yourself 
 				toAll: [:each | each projects collect: #version].
 			mondrian layout horizontalTree levelDistance: 50; nodeDistance: 10]
