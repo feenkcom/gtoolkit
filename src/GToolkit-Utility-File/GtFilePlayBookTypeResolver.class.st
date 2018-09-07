@@ -5,6 +5,11 @@ Class {
 }
 
 { #category : #accessing }
+GtFilePlayBookTypeResolver class >> mainExtension [
+	^ 'playbook'
+]
+
+{ #category : #accessing }
 GtFilePlayBookTypeResolver class >> mimeType [
 	^ ZnMimeType textPlain
 		sub: 'gtoolkit-playbook';
@@ -15,5 +20,5 @@ GtFilePlayBookTypeResolver class >> mimeType [
 GtFilePlayBookTypeResolver class >> supportedExtensions [
 	"Return collection of extensions that fits the specific mime type"
 	<return: #Array of: #String>
-	^ #( 'playbook' )
+	^ { self mainExtension }
 ]
