@@ -19,7 +19,7 @@ GtSceneryPlaygroundTwoPharoSnippetsWithVisualization class >> menuCommandOn: aBu
 GtSceneryPlaygroundTwoPharoSnippetsWithVisualization >> setUp [
 	| book |
 	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: 'directories := ''feenkcom'' asFileReference allDirectories'.
+	book pages first snippets first sourceCode: 'directories := ''feenk'' asFileReference allDirectories'.
 	book pages first addSnippet: GtPharoSnippet new.
 	book pages last snippets last sourceCode: 'mondrian := GtMondrian new.
 mondrian nodes 

@@ -16,5 +16,5 @@ GtSceneryInspectorOnFileSystem class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryInspectorOnFileSystem >> setUp [
-	(GtInspector openOn: '.' asFileReference) 
+	(GtInspector openOn: './feenk' asFileReference) 
 ]
