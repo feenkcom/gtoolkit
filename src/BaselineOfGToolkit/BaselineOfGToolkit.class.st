@@ -52,7 +52,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitPlayground' with: [ 
 				spec 	repository: 'github://feenkcom/gtoolkit-playground/src' ];
 			baseline: 'GToolkitCoder' with: [ 
-				spec repository: 'github://feenkcom/gtoolkit-coder/src' ]
+				spec repository: 'github://feenkcom/gtoolkit-coder/src' ];
+			baseline: 'GToolkitCognitiveServiceDemo' with: [ 
+				spec repository: 'github://feenkcom/gtoolkit-demos/src' ]
 	]
 
 ]
