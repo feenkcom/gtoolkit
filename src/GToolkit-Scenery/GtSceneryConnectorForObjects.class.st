@@ -8,7 +8,7 @@ Class {
 GtSceneryConnectorForObjects class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 300.0; 
+		order: 501.0; 
 		parent: #GToolkitScenery;
 		label: 'Connector: for objects';
 		action: [self new setUp];

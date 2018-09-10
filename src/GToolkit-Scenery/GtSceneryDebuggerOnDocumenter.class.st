@@ -8,7 +8,7 @@ Class {
 GtSceneryDebuggerOnDocumenter class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 500.0; 
+		order: 600.0; 
 		parent: #GToolkitScenery;
 		label: 'Debugger: on documenter object';
 		action: [self new setUp]

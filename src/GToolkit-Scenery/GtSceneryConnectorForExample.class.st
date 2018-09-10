@@ -8,7 +8,7 @@ Class {
 GtSceneryConnectorForExample class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 300.0; 
+		order: 500.0; 
 		parent: #GToolkitScenery;
 		label: 'Connector: for examples';
 		action: [self new setUp]

@@ -1,22 +1,21 @@
 Class {
-	#name : #GtSceneryInspectorOnGtInspector,
+	#name : #GtSceneryPlaygroundOnGtInspector,
 	#superclass : #GtScenery,
 	#category : #'GToolkit-Scenery'
 }
 
 { #category : #'world menu' }
-GtSceneryInspectorOnGtInspector class >> menuCommandOn: aBuilder [
+GtSceneryPlaygroundOnGtInspector class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 100.0; 
+		order: 400.0; 
 		parent: #GToolkitScenery;
-		label: 'Inspector: GtInspector';
-		action: [self new setUp];
-		withSeparatorAfter
+		label: 'Playground: GtInspector';
+		action: [self new setUp]
 ]
 
 { #category : #initialization }
-GtSceneryInspectorOnGtInspector >> setUp [
+GtSceneryPlaygroundOnGtInspector >> setUp [
 	| book |
 	book := GtPlayBook newDefault.
 	book pages first snippets first sourceCode: 'GtInspector'.	

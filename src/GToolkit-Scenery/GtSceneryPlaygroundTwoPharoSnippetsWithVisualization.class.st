@@ -8,7 +8,7 @@ Class {
 GtSceneryPlaygroundTwoPharoSnippetsWithVisualization class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 400.0; 
+		order: 415.0; 
 		parent: #GToolkitScenery;
 		label: 'Playground: Two Pharo snippets with visualization';
 		action: [self new setUp];
@@ -19,7 +19,7 @@ GtSceneryPlaygroundTwoPharoSnippetsWithVisualization class >> menuCommandOn: aBu
 GtSceneryPlaygroundTwoPharoSnippetsWithVisualization >> setUp [
 	| book |
 	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: 'directories := ''feenk'' asFileReference allDirectories'.
+	book pages first snippets first sourceCode: 'directories := ''feenk'' asFileReference allDirectories.'.
 	book pages first addSnippet: GtPharoSnippet new.
 	book pages last snippets last sourceCode: 'mondrian := GtMondrian new.
 mondrian nodes 

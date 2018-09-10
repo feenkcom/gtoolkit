@@ -8,7 +8,7 @@ Class {
 GtSceneryDebuggerDocumentWithExceptionInExample class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 501.0; 
+		order: 601.0; 
 		parent: #GToolkitScenery;
 		label: 'Debugger: on documenter with exception in example';
 		action: [self new setUp]
