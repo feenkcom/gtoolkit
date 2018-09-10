@@ -18,7 +18,7 @@ GtSceneryPlaygroundOnePharoSnippetWithFolder class >> menuCommandOn: aBuilder [
 GtSceneryPlaygroundOnePharoSnippetWithFolder >> setUp [
 	| book |
 	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: 'directories := ''feenk'' asFileReference allDirectories.'.
+	book pages first snippets first sourceCode: '''feenk'' asFileReference'.
 	
 	GtInspector openOnPlayBook: book
 ]
