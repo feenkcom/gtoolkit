@@ -17,18 +17,5 @@ GtSceneryDocumenterCompletion class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryDocumenterCompletion >> setUp [
-	| documenter |
-	documenter := GtDocumenter editorForText: '!Completion in Documenter
-
-!!Completion for Pharo scripts in Documenter
-
-Just start typing code in the snippet below.
-
-[[[
-
-]]]
-
-
-'.
-	GtInspector openOnPlayBook: documenter
+	(GtInspector openOn: ('./feenk' asFileReference / 'esug2018'))
 ]
