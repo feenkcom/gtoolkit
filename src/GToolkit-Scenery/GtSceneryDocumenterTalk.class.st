@@ -19,5 +19,5 @@ GtSceneryDocumenterTalk >> setUp [
 	| aRegistry aFileReference | 
 	aRegistry := IceRepository registry detect: [ :each | each name = 'gtoolkit-demos' ].
 	aFileReference := aRegistry location / 'doc' / 'tutorial' / 'esug-2018-documenter' / 'documenter.pillar'.
-	GtInspector openOnPlayBook: (GtDocumenter editorForPillar: aFileReference)
+	GtInspector openOn: aFileReference
 ]
