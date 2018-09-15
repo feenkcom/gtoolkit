@@ -3,13 +3,13 @@ Trait {
 	#category : 'GToolkit-Utility-Announcer'
 }
 
-{ #category : #'announcer - accessing' }
+{ #category : #announcer }
 GtDefaultSubscriptionTrait >> announcer [
 	<return: #Announcer>
 	^ self explicitRequirement
 ]
 
-{ #category : #'announcer - testing' }
+{ #category : #announcer }
 GtDefaultSubscriptionTrait >> hasSubscriber: anObject [
 	^ self announcer hasSubscriber: anObject
 ]

@@ -3,12 +3,12 @@ Trait {
 	#category : 'GToolkit-Utility-Announcer'
 }
 
-{ #category : #'announcer - announce' }
+{ #category : #announcer }
 GtAnnouncingTrait >> announce: anAnnouncement [
 	^ self announcer announce: anAnnouncement
 ]
 
-{ #category : #'announcer - accessing' }
+{ #category : #announcer }
 GtAnnouncingTrait >> announcer [
 	<return: #Announcer>
 	^ self explicitRequirement
