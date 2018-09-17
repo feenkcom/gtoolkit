@@ -1,17 +1,32 @@
 "
-!GToolkit organization
+!Glamorous Toolkit
 
-The Glamorous Toolkit (GT) is loaded based on ${class:BaselineOfGToolkit}$.
+The Glamorous Toolkit (GT) is the moldable integrated development environment. For Pharo. It is made of components that are programmable inexpensively while using the tool itself. And it is open-source under an MIT license.
 
-[[[
-BaselineOfGToolkit.
-]]]
+What's interesting about it? It offers a fundamentally new perspective on how programs can be approached. It's not the features that make the difference. Yes, we do have cool widgets and fancy code analyses, but our goal is to change the way you experience software. You can read about it, but to understand it, you have to play with it. And engage with us. We'd love to hear from you.
 
-${class:BaselineOfGToolkit}$ defines an umbrella project that puts together several subprojects. These direct projects are:
+You can learn more details about it at: *https://feenk.com/gt*. 
 
-[[[
-BaselineOfGToolkit project version projects.
-]]]
+!!Organization
+
+It is loaded based on ${class:BaselineOfGToolkit}$ which defines an umbrella project that puts together several subprojects. The picture below provides an overview of the projects and their interdependencies.
+
+${example:BaselineOfGToolkit class>>#itself|show=#gtGtMapFor:|expandedPreview=true|noCode=|previewHeight=300}$
+
+
+!!Learn
+
+!!!Documenter
+
+
+
+!!!Example-driven development
+
+The introductory example-driven development tutorial:
+${inputFile:path=pharo-local/iceberg/feenkcom/gtoolkit-examples/doc/tutorial/examples-tutorial.pillar}$
+
+The exemplifying software tutorial based on a case study of face recognition using the Azure Face API:
+${inputFile:path=pharo-local/iceberg/feenkcom/gtoolkit-demos/doc/tutorial/esug-2018/esug-2018-exemplifying-software.pillar}$
 
 "
 Class {
@@ -32,6 +47,12 @@ BaselineOfGToolkit class >> gtGtMapFor: aView [
 				ifTrue: [Color black] 
 				ifFalse: [Color gray]) ])
 			title: 'Gt Map'
+]
+
+{ #category : #ui }
+BaselineOfGToolkit class >> itself [
+	<gtExample>
+	^ self
 ]
 
 { #category : #baseline }
