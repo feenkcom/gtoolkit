@@ -46,5 +46,5 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 				toLeftCenter;
 				connectFrom: #yourself 
 				toAll: [:each | each projects collect: #version].
-			mondrian layout horizontalTree levelDistance: 50; nodeDistance: 10]
+			mondrian layout custom: (GtGradHorizontalDominanceTreeLayout new levelDistance: 50; nodeDistance: 10)]
 ]
