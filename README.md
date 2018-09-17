@@ -11,6 +11,7 @@ The current repository embodies the second generation of GT that is based on the
 - [Visualizer](https://github.com/feenkcom/gtoolkit-visualizer): a set of visualization engines on top of Bloc.
 - [Examples](https://github.com/feenkcom/gtoolkit-examples): an engine for example-driven development in Pharo.
 - [Completer](https://github.com/feenkcom/gtoolkit-completer): the moldable completion engine.
+- [Phlow](https://github.com/feenkcom/gtoolkit-phlow): the browsing engine.
 
 
 ## How to load
