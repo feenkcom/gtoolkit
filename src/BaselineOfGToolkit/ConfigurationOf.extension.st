@@ -23,7 +23,7 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 					ifTrue: [ projects add: a; add: b ] ].
 			mondrian nodes 
 				shape: [ :each | 
-					| text |
+					| text element |
 					text := [
 						| displayString |
 						displayString := (((each gtDisplayString 
@@ -31,8 +31,12 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 							copyReplaceAll: 'ConfigurationOf' with: '')
 							copyReplaceAll: 'GToolkit' with: 'GT ').
 						(anOneArgBlock value: displayString) asRopedText ]
-						on: Error do: [ :e | e asString asRopedText foreground: Color red ].
-					BlTextElement new text: text; zIndex: 1 ];
+						on: Error do: [ :e | e asString asRopedText foreground: BrGlamorousColors linkWithErrorColor ].
+					element := BlTextElement new.
+					element 	
+						text: text; 
+						zIndex: 1; 
+						when: BlClickEvent do: [ :e | e consumed: true. element fireEvent: (GtPhlowObjectToSpawn new object: each spec project configuration class; sourceElement: element) ] ];
 				with: projects.
 			mondrian edges
 				shape: [ :each |

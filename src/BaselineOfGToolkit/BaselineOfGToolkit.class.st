@@ -57,7 +57,7 @@ BaselineOfGToolkit class >> gtGtMapFor: aView [
 			a spec project configuration class name beginsWith: 'BaselineOfGToolkit' ]
 		nameDisplayedAs: [ :aString | 
 			aString asRopedText foreground: ((aString beginsWith: 'GT') 
-				ifTrue: [Color black] 
+				ifTrue: [BrGlamorousColors linkColor] 
 				ifFalse: [Color gray]) ])
 			title: 'Gt Map'
 ]
