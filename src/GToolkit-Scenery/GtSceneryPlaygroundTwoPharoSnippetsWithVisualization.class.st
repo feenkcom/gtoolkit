@@ -19,7 +19,11 @@ GtSceneryPlaygroundTwoPharoSnippetsWithVisualization class >> menuCommandOn: aBu
 GtSceneryPlaygroundTwoPharoSnippetsWithVisualization >> setUp [
 	| book |
 	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: 'directories := ''feenk'' asFileReference allDirectories.'.
+	book pages first snippets first sourceCode: 'directories := (IceRepository repositoriesLocation / ''feenkcom'')
+	allDirectories 
+	select: [:each | 
+		(each fullName includesSubstring: ''gtoolkit'') and: [
+			(each fullName includesSubstring: ''git'') not]]'.
 	book pages first addSnippet: GtPharoSnippet new.
 	book pages last snippets last sourceCode: 'mondrian := GtMondrian new.
 mondrian nodes 
