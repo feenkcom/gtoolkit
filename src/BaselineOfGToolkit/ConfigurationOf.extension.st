@@ -52,3 +52,47 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 				toAll: [:each | each projects collect: #version].
 			mondrian layout custom: (GtGradHorizontalDominanceTreeLayout new levelDistance: 50; nodeDistance: 10)]
 ]
+
+{ #category : #'*BaselineOfGToolkit' }
+ConfigurationOf class >> gtPackagesFor: aView [
+	<gtView>
+	^ aView explicit
+		title: 'Packages';
+		priority: 50;
+		stencil: [ 
+			| list |
+			list := BrColumnedList new display: [ self project version packages ].
+			list addEventHandler: GtInspectorListToSelectHandler new.
+			list column
+				title: 'Packages';
+				stencil: [ :aNode :index |
+					| text textElement |
+					text := [ aNode gtDisplayString asRopedText ] 
+						on: Error 
+						do: [ aNode errorMessage asRopedText foreground: Color red ].
+					textElement := (BrListLabelStencil matchParent: text) asElement.
+					textElement constraintsDo: [ :c | c horizontal matchParent. c padding: (BlInsets left: 10) ] ].
+			list ]
+]
+
+{ #category : #'*BaselineOfGToolkit' }
+ConfigurationOf class >> gtProjectsFor: aView [
+	<gtView>
+	^ aView explicit
+		title: 'Projects';
+		priority: 10;
+		stencil: [ 
+			| list |
+			list := BrColumnedList new display: [ self project version projects collect: [ :each | each version spec project configuration class ] ].
+			list addEventHandler: GtInspectorListToSelectHandler new.
+			list column
+				title: 'Project';
+				stencil: [ :aNode :index |
+					| text textElement |
+					text := [ aNode gtDisplayString asRopedText ] 
+						on: Error 
+						do: [ aNode errorMessage asRopedText foreground: Color red ].
+					textElement := (BrListLabelStencil matchParent: text) asElement.
+					textElement constraintsDo: [ :c | c horizontal matchParent. c padding: (BlInsets left: 10) ] ].
+			list ]
+]
