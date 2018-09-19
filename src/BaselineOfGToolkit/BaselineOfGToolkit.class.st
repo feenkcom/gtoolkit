@@ -91,7 +91,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-coder/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
-			baseline: 'BaselineOfGToolkitObjectNeuralNetworkDemo' with: [ 
+			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ]
 	]
 
