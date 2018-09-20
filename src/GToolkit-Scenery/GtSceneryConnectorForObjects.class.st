@@ -11,8 +11,7 @@ GtSceneryConnectorForObjects class >> menuCommandOn: aBuilder [
 		order: 501.0; 
 		parent: #GToolkitScenery;
 		label: 'Connector: for objects';
-		action: [self new setUp];
-		withSeparatorAfter
+		action: [self new setUp]
 ]
 
 { #category : #initialization }
