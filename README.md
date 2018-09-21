@@ -23,7 +23,7 @@ Metacello new
    baseline: 'GToolkit';
    repository: 'github://feenkcom/gtoolkit/src';
    load.
-#GtInspector asClass openOnPlayBook: (#GtDocumenter asClass editorForText: #BaselineOfGToolkit asClass comment).
+#GtWorld asClass openTour.
 ```
 
 ## GT Documenter
