@@ -49,7 +49,9 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 				fromRightCenter;
 				toLeftCenter;
 				connectFrom: #yourself 
-				toAll: [:each | each projects collect: #version].
+				toAll: [:each | |dependedProjects |
+					dependedProjects := each projects collect: #version.
+					projects select: [ :project | dependedProjects anySatisfy: [ :dependedProject | dependedProject = project ] ] ].
 			mondrian layout custom: (GtGradHorizontalDominanceTreeLayout new levelDistance: 50; nodeDistance: 10)]
 ]
 
