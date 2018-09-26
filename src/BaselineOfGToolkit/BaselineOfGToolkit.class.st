@@ -21,26 +21,26 @@ ${example:BaselineOfGToolkit class>>#itself|show=#gtGtMapFor:|expandedPreview=tr
 !!!Documenter
 
 This very document is edited and rendered through Documenter. Take a look at the demo file here:
-${inputFile:path=pharo-local/iceberg/feenkcom/gtoolkit-demos/doc/tutorial/esug-2018-documenter/documenter.pillar}$
+${icebergFile:path=feenkcom/gtoolkit-demos/doc/tutorial/esug-2018-documenter/documenter.pillar}$
 
 
 !!!Example-driven development
 
 The introductory example-driven development tutorial:
-${inputFile:path=pharo-local/iceberg/feenkcom/gtoolkit-examples/doc/tutorial/examples-tutorial.pillar}$
+${icebergFile:path=feenkcom/gtoolkit-examples/doc/tutorial/examples-tutorial.pillar}$
 
 The exemplifying software tutorial based on a case study of face recognition using the Azure Face API:
-${inputFile:path=pharo-local/iceberg/feenkcom/gtoolkit-demos/doc/tutorial/esug-2018/esug-2018-exemplifying-software.pillar}$
+${icebergFile:path=feenkcom/gtoolkit-demos/doc/tutorial/esug-2018/esug-2018-exemplifying-software.pillar}$
 
 !!!Mondrian
 
 Mondrian is the engine that allows you to script a graph visualization:
-${inputFile:path=pharo-local/iceberg/feenkcom/gtoolkit-visualizer/doc/mondrian/index.pillar}$
+${icebergFile:path=feenkcom/gtoolkit-visualizer/doc/mondrian/index.pillar}$
 
 !!!Transcript
 
 This is a reimagining of the classic transcript by taking advantage of the text rendering possibilities behind GT:
-${inputFile:path=pharo-local/iceberg/feenkcom/gtoolkit/doc/transcript/index.pillar}$
+${icebergFile:path=feenkcom/gtoolkit/doc/transcript/index.pillar}$
 
 
 "
