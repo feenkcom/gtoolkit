@@ -27,5 +27,7 @@ BaselineOfGToolkitPharo6Compatibility >> updateZincHTTPComponents: spec [
 	Gofer it
 		smalltalkhubUser: 'SvenVanCaekenberghe' project: 'ZincHTTPComponents';
 		package: 'ConfigurationOfZincHTTPComponents';
-		load
+		load.
+	(self class environment at: #ConfigurationOfZincHTTPComponents) project 
+		stableVersion load: 'Character-Encoding'
 ]
