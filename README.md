@@ -1,5 +1,7 @@
 # The Glamorous Toolkit (GT)
-GT is the moldable IDE for Pharo. The main goal of GT is to redefine the experience of developing software.
+The Glamorous Toolkit is the moldable integrated development environment. For Pharo. It is made of components that are programmable inexpensively while using the tool itself. And it is open-source under an MIT license.
+
+More details about it can be found on [the official website](https://feenk.com/gt).
 
 The current repository embodies the second generation of GT that is based on the [Bloc project](https://github.com/pharo-graphics/Bloc) and it is comprised of a set of distinct tools. Currently these are:
 - [Inspector](https://github.com/feenkcom/gtoolkit-inspector): the moldable inspector for Pharo on top of Bloc.
@@ -26,20 +28,6 @@ Metacello new
 #GtWorld asClass openTour.
 ```
 
-## GT Documenter
+## License
 
-<img src="https://github.com/feenkcom/gtoolkit-documenter/blob/master/doc/gt-documenter-snipper-preview-resize.gif" alt="Documenter: Documenter: Epicea diff" width="50%"/>
-
-Learn more about [Documenter](https://github.com/feenkcom/gtoolkit-documenter).
-
-## GT Transcript
-
-Transcript offers a rich and interactable text interface for displaying live information coming from a system.
-
-The API is backward compatible with the existing transcript. To enable the new features, we introduced a builder. For example, `transcript nextPutAll: 'something'` becomes `transcript next putAll: 'something'`, and after `next` we can add multiple attributes that we want to affect the following insertion of a text. The API can be seen in the following picture:
-
-![Transcript: API](./doc/transcript-api.png)
-
-To get an idea of how this tool can be useful, take a look at the following video showing the visual logging of a Bloc animation:
-
-[![GT Transcript: logging an animation](https://img.youtube.com/vi/9VATYNaLwJY/0.jpg)](https://youtu.be/9VATYNaLwJY "GT Transcript: logging an animation")
+See [LICENSE](LICENSE).
