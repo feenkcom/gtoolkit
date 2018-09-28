@@ -3,7 +3,9 @@ The Glamorous Toolkit is the moldable integrated development environment. For Ph
 
 More details about it can be found on [the official website](https://feenk.com/gt).
 
-The current repository embodies the second generation of GT that is based on the [Bloc project](https://github.com/pharo-graphics/Bloc) and it is comprised of a set of distinct tools. Currently these are:
+## Components
+
+The current repository embodies the second generation of GT that is based on the [Bloc project](https://github.com/pharo-graphics/Bloc) and it is comprised of a set of distinct components. Currently these are:
 - [Inspector](https://github.com/feenkcom/gtoolkit-inspector): the moldable inspector for Pharo on top of Bloc.
 - [Playground](https://github.com/feenkcom/gtoolkit-playground): the moldable playground for Pharo on top of Bloc.
 - [Documenter](https://github.com/feenkcom/gtoolkit-documenter): an engine for manipulating live documents in Pharo.
