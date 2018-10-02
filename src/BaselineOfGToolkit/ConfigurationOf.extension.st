@@ -79,7 +79,6 @@ ConfigurationOf class >> gtPackagesFor: aView [
 
 { #category : #'*BaselineOfGToolkit' }
 ConfigurationOf class >> gtPillarCommentFor: aView [
-	<gtView>
 	^ (super gtPillarCommentFor: aView)
 		priority: 0
 ]
