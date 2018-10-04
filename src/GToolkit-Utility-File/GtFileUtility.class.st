@@ -25,11 +25,27 @@ GtFileUtility class >> fileNameOf: aFileReference relativeTo: directoryFileRefer
 ]
 
 { #category : #'accessing - file' }
+GtFileUtility class >> fileNameOfUri: aFileName [
+	<return: #String or: nil>
+	(aFileName beginsWith: 'file://') ifFalse: [ ^ nil ].
+	^ aFileName
+		copyFrom: 'file://' size + 1
+		to: aFileName size.
+]
+
+{ #category : #'accessing - file' }
 GtFileUtility class >> fileReferenceOfFileName: relativeFileName relativeTo: directoryFileReference [ 
 	<return: #FileReference>
 	| path |
 	path := Path from: relativeFileName.
 	^ directoryFileReference resolvePath: path.
+]
+
+{ #category : #'accessing - file' }
+GtFileUtility class >> fileReferenceOfUri: aUriFileName relativeTo: directoryFileReference [
+	<return: #FileReference or: nil>
+	^ (self fileNameOfUri: aUriFileName) ifNotNil: [ :aFileName | 
+		self fileReferenceOfFileName: aFileName relativeTo: directoryFileReference ]
 ]
 
 { #category : #'accessing - mime type' }
