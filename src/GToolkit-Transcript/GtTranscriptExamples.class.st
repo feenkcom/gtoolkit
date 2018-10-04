@@ -223,10 +223,7 @@ GtTranscriptExamples >> transcriptWitAnimation [
 				expanded: [ BlElement new
 						constraintsDo: [ :c | c textFlow pushLine ];
 						size: snapshot extent;
-						background:
-							(BlBackground builder
-								image: snapshot;
-								build) ];
+						background: snapshot ];
 				putAll: 'Animation progress:';
 				space;
 				put: anEvent progress asString.
