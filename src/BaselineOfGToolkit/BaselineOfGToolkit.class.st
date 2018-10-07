@@ -120,7 +120,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
-			baseline: 'BaselineOfGToolkitWhatMakesBlocSpecialDemo' with: [ 
+			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ]
 	]
 
