@@ -9,22 +9,37 @@ And engage with us. We'd love to hear from you: *https://feenk.com/gt*.
 
 !!Organization
 
-Glamorous Toolkit is an umbrella project that puts together several subprojects. The picture below provides an overview of these projects and their interdependencies.
+Glamorous Toolkit is an umbrella project that puts together several subprojects. The picture below provides an overview of these projects and their interdependencies. The map is naviagable. Click on each component to learn more about it.
 
 ${example:BaselineOfGToolkit class>>#itself|show=#gtGtMapFor:|expandedPreview=true|noCode=|previewHeight=300}$
+
+
+
+!!Moldable development
+
+The core principle behind the Glamorous Toolkit is moldability. This means that any object in the system can have multiple views and ways to be interacted with. This applies to handling static code, to inspecting individual objects, to debugging and to the way we search. To make this practical, the cost of creating a new view or interaction is small and in most cases the target is to extend the system live during the interaction. Throughout the whole environment the way to extend the environment is directly explorable.
+
+Let us consider an example.
+
+[[[
+'.' asFileReference
+]]]
+
+Evaluating the code above leads to an instance of ${class:FileReference}$. As the object points to a folder, the first view shows the contents of the object through a view that is common in file browsers. This view stands in contrast with the default Raw view which shows the internal state of the object. While the Raw view is generic in that it is applicable to any object, the contextualized view is powerful in that it allows us to understand and interact with the object.
+
+To exploit the full potential of the Glamorous Toolkit you need to contextualize it by programming it. To this end, the Glamorous Toolkit offers multiple ways to extend the tools and to express views and other interactions. Throughout the environment the goal of the engines is to make the cost of custom tools to be as inexpensive as possible.
 
 
 !!Learn
 
 
-
 !!!Documenter
-
 This very document is edited and rendered through Documenter. Take a look at the demo file here:
 ${icebergFile:path=feenkcom/gtoolkit-demos/doc/tutorial/esug-2018-documenter/documenter.pillar}$
 
 
 !!!Example-driven development
+Examples offer both a new way to organize the test code and a bridge between the testing effort and documentation.
 
 The introductory example-driven development tutorial:
 ${icebergFile:path=feenkcom/gtoolkit-examples/doc/tutorial/examples-tutorial.pillar}$
@@ -32,15 +47,27 @@ ${icebergFile:path=feenkcom/gtoolkit-examples/doc/tutorial/examples-tutorial.pil
 The exemplifying software tutorial based on a case study of face recognition using the Azure Face API:
 ${icebergFile:path=feenkcom/gtoolkit-demos/doc/tutorial/esug-2018/esug-2018-exemplifying-software.pillar}$
 
-!!!Mondrian
 
+!!!Mondrian
 Mondrian is the engine that allows you to script a graph visualization:
 ${icebergFile:path=feenkcom/gtoolkit-visualizer/doc/mondrian/index.pillar}$
 
-!!!Transcript
 
+!!!Transcript
 This is a reimagining of the classic transcript by taking advantage of the text rendering possibilities behind GT:
 ${icebergFile:path=feenkcom/gtoolkit/doc/transcript/index.pillar}$
+
+
+!!!A few words about the graphical stack
+
+The Glamorous Toolkit is based on the ${class:BaselineOfSparta}$ / ${class:BaselineOfBloc}$ /${class:BaselineOfBrick}$ graphical stack. This stack has a few properties that make it distinct:
+- it relies on one rendering tree at all times.
+- it features moldable and scalable text editor is made out of elements. This means that we can embed text with graphics to obtain live editors.
+- graph layouts are regular layouts. The implication here is that any element can be part of a graph-based visualization.
+- debuggable. There are a significant amount of tools and mechanisms that are built for this.
+
+Learn more about it in ${class:GtWhatMakesBlocSpecialExamples}$
+
 
 
 "
