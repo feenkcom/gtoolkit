@@ -7,6 +7,10 @@ SmalltalkCISpec {
     }
   ],
 
+  #preTesting : [
+    'scripts/savePillars.st'
+  ],
+
   #testing : {
     #include : {
       #packages : [ 'GToolkit.*' ]
