@@ -60,7 +60,7 @@ ${icebergFile:path=feenkcom/gtoolkit/doc/transcript/index.pillar}$
 
 !!!A few words about the graphical stack
 
-The Glamorous Toolkit is based on the ${class:BaselineOfSparta}$ / ${class:BaselineOfBloc}$ /${class:BaselineOfBrick}$ graphical stack. This stack has a few properties that make it distinct:
+The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This stack has a few properties that make it distinct:
 - it relies on one rendering tree at all times.
 - it features moldable and scalable text editor is made out of elements. This means that we can embed text with graphics to obtain live editors.
 - graph layouts are regular layouts. The implication here is that any element can be part of a graph-based visualization.
