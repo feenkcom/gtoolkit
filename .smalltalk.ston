@@ -8,15 +8,13 @@ SmalltalkCISpec {
   ],
 
   #testing : {
-    // Include specific TestCases
     #include : {
-      #packages : [ 'GToolkit.*' ],
+      #packages : [ 'GToolkit.*' ]
     },
     #failOnZeroTests : false,
-    // Exclude specific TestCases from testing
     #exclude : {
       #classes : [ #GtExamplesReleaseTest ]
     },
-    #hidePassingTests : true // Hide passing tests when printing to stdout
+    #hidePassingTests : true
   }
 }
