@@ -51,7 +51,7 @@ after_success:
     mkdir "$ARTIFACT_DIR"
     cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
     cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
-    export build_zip="${ARTIFACT_DIR}${BITS}.zip"
+    export build_zip="${ARTIFACT_DIR}.zip"
     zip -qr "$build_zip" "$ARTIFACT_DIR"
 
 before_deploy:
