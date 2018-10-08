@@ -6,10 +6,17 @@ dist: trusty
 
 os:
   - linux
-  - osx
 
-smalltalk:
-  - Pharo-stable
+matrix:
+  include:
+  - smalltalk: Pharo-7.0
+    env: BITS=32
+  - smalltalk: Pharo64-7.0
+    env: BITS=64
+
+branches:
+  only:
+    - master
 
 before_install:
   - |
@@ -40,11 +47,11 @@ after_success:
     ls "$SMALLTALK_CI_IMAGE"
     export PROJECT_NAME="GToolkit"
     # customize the name of the build folder
-    export ARTIFACT_DIR="${PROJECT_NAME}"
+    export ARTIFACT_DIR="${PROJECT_NAME}${BITS}"
     mkdir "$ARTIFACT_DIR"
-    cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}.image"
-    cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}.changes"
-    export build_zip="${ARTIFACT_DIR}.zip"
+    cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
+    cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
+    export build_zip="${ARTIFACT_DIR}${BITS}.zip"
     zip -qr "$build_zip" "$ARTIFACT_DIR"
 
 before_deploy:
@@ -59,6 +66,8 @@ deploy:
   api_key:
     secure:
       qs1LDPEyShWtMgepESqCHtUePMWT2C7Mn4MlsYdmWVpHbchIt3k9eb2QQrgbvuGLhnjsLlAm05mNqLlfoZxriWmSLqjz8d53Z8hqzCM1U/pLRqmUIcg+A4aBwl75dh1yW3qc5yHdqdVpze6Qg76YAXt98VsFix+Cjj8pkoMhwl27mxzfDfOlQUOVAzrH8ipjmpVEDSKOmAJCnsdnJDivtIz6q0IQeLeQ+sD4VzZSfQ0qZk55xiUQejAMcpYDPXSWOAig02N4VUKZcPSqbCa1LRQC7FPuhLSz8YgmNPIbrqNwO3ZFHJCEmLAhhj9DKUqWFfZ5Tu7udgCd5EMEcIyI/g+S0j/Jp3u3Yivm6tJWRXrPjKk3u6A1JRnnUpqO7EDudLLXZ42qsxf6rZkngcbdDhm7OiZmMejEWZGKqMe/Uk7kZPfPuEW/2odrdlvrl8cINTjDITfj15In82J2RR+GZRcLzjH/3Ewc9+UB2H0vdr6zmW8cPhXpK5DLnJg315WIdA338hBqrwuezBpMVD9J7nEbqHuR2Cb5+hD3AzwSTmDdNaRHDw7QFJzOMEYCshPhHPeZH0Q9CB/Vi+SSy1QIUnY5GVZmpjL3Z0ZVKjE8296LFFUuE0ron3l50JOw7oaahoOyExH1eVlMRnvOohWITVBwcqUHbSUCC3BdXHkft9Y=
-  file: GToolkit.zip
+  file:
+    - GToolkit32.zip
+    - GToolkit64.zip
   on:
     repo: feenkcom/gtoolkit
