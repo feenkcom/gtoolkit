@@ -3,7 +3,6 @@ docFolders := (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) lo
 
 docFolders addAll:  (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'data').
 
-
 docFolders do: [ :each |
 	icebergIndex := each absolutePath segments indexOf: 'iceberg'.
 	size := each absolutePath segments size.
