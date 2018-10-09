@@ -1,3 +1,4 @@
+GtDocumenterConstants localGtDirectory asFileReference ensureCreateDirectory.
 docFolders := (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'doc') asOrderedCollection.
 
 docFolders addAll:  (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'data').

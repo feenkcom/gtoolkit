@@ -44,7 +44,8 @@ before_script:
 
 after_success:
   - |
-    ls "$SMALLTALK_CI_IMAGE"
+    pwd
+    ls
     export PROJECT_NAME="GToolkit"
     # customize the name of the build folder
     export ARTIFACT_DIR="${PROJECT_NAME}${BITS}"
@@ -52,7 +53,7 @@ after_success:
     cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
     cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
     cp "${SMALLTALK_CI_BUILD}/"*.sources "${ARTIFACT_DIR}/"
-    cp gt-extras "${ARTIFACT_DIR}/"
+    cp -Rv gt-extra "${ARTIFACT_DIR}/"
     export build_zip="${ARTIFACT_DIR}.zip"
     zip -qr "$build_zip" "$ARTIFACT_DIR"
 
