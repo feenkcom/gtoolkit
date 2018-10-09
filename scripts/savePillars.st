@@ -10,4 +10,4 @@ docFolders do: [ :each |
 
 	s:=String streamContents: [:s | topSegments asStringOn: s delimiter:'/'].
 
-	[each copyAllTo: ('gt-docs' asFileReference / s) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
+	[each copyAllTo: (GtDocumenterConstants localGtDirectory asFileReference / s) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
