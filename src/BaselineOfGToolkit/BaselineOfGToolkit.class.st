@@ -37,7 +37,7 @@ Learn about it in ${class:BaselineOfGToolkitInspector}$.
 
 
 !!!Documenter
-This very document is edited and rendered through Documenter. Take a look at the demo file here:
+This very document is edited and rendered through ${class:BaselineOfGToolkitDocumenter}$. Take a look at the demo file here:
 ${icebergFile:path=feenkcom/gtoolkit-demos/doc/tutorial/esug-2018-documenter/documenter.pillar}$
 
 
