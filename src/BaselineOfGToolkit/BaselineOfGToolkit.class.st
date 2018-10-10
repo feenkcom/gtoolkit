@@ -57,8 +57,7 @@ ${icebergFile:path=feenkcom/gtoolkit-visualizer/doc/mondrian/index.pillar}$
 
 
 !!!Transcript
-This is a reimagining of the classic transcript by taking advantage of the text rendering possibilities behind GT:
-${icebergFile:path=feenkcom/gtoolkit/doc/transcript/index.pillar}$
+This is a reimagining of the classic transcript by taking advantage of the text rendering possibilities. Learn more at ${class:BaselineOfGToolkitTranscript}$.
 
 
 !!!A few words about the graphical stack
@@ -69,7 +68,7 @@ The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This sta
 - graph layouts are regular layouts. The implication here is that any element can be part of a graph-based visualization.
 - debuggable. There are a significant amount of tools and mechanisms that are built for this.
 
-Learn more about it in ${class:GtWhatMakesBlocSpecialExamples}$
+Learn more about it at ${class:GtWhatMakesBlocSpecialExamples}$
 
 
 
