@@ -32,6 +32,9 @@ To exploit the full potential of the Glamorous Toolkit you need to contextualize
 
 !!Learn
 
+!!Inspector
+Learn about it in ${class:BaselineOfGToolkitInspector}$.
+
 
 !!!Documenter
 This very document is edited and rendered through Documenter. Take a look at the demo file here:
