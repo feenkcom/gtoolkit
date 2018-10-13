@@ -21,11 +21,9 @@ The core principle behind the Glamorous Toolkit is moldability. This means that 
 
 Let us consider an example.
 
-[[[
-'.' asFileReference
-]]]
+${example:FileReference class>>#gtExampleDirectory|noCode}$
 
-Evaluating the code above leads to an instance of ${class:FileReference}$. As the object points to a folder, the first view shows the contents of the object through a view that is common in file browsers. This view stands in contrast with the default Raw view which shows the internal state of the object. While the Raw view is generic in that it is applicable to any object, the contextualized view is powerful in that it allows us to understand and interact with the object.
+The examples above shows an instance of ${class:FileReference}$. As the object points to a folder, the first view shows the contents of the object through a view that is common in file browsers. This view stands in contrast with the default Raw view which shows the internal state of the object. While the Raw view is generic in that it is applicable to any object, the contextualized view is powerful in that it allows us to understand and interact with the object.
 
 To exploit the full potential of the Glamorous Toolkit you need to contextualize it by programming it. To this end, the Glamorous Toolkit offers multiple ways to extend the tools and to express views and other interactions. Throughout the environment the goal of the engines is to make the cost of custom tools to be as inexpensive as possible.
 
