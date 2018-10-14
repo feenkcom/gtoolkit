@@ -46,17 +46,17 @@ GtTranscriptNextBuilder >> attributes: aCollection [
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> backgroundColor: aColor [
-	self attribute: (BrTextBackgroundAttribute paint: aColor)
+	self attribute: (BlTextBackgroundAttribute paint: aColor)
 ]
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> bold [
-	self attribute: BrFontWeightAttribute bold
+	self attribute: BlFontWeightAttribute bold
 ]
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> color: aColor [
-	self attribute: (BrTextForegroundAttribute paint: aColor)
+	self attribute: (BlTextForegroundAttribute paint: aColor)
 ]
 
 { #category : #streaming }
@@ -96,7 +96,7 @@ GtTranscriptNextBuilder >> expanding: aBlock [
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> fontSize: aNumber [
-	self attribute: (BrFontSizeAttribute size: aNumber)
+	self attribute: (BlFontSizeAttribute size: aNumber)
 ]
 
 { #category : #initialize }
@@ -106,12 +106,12 @@ GtTranscriptNextBuilder >> initialize [
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> italic [
-	self attribute: BrFontItalicAttribute new
+	self attribute: BlFontItalicAttribute new
 ]
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> light [
-	self attribute: BrFontWeightAttribute light
+	self attribute: BlFontWeightAttribute light
 ]
 
 { #category : #streaming }
