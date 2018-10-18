@@ -120,15 +120,18 @@ ConfigurationOf class >> paintPackagesMapWith: mondrian [
 	packages := BaselineOfBloc project version packages.
 	projects := BaselineOfBloc project version projects.
 	mondrian nodes 
-		stencil: [ :package |
-			BlTextElement new text: package name asRopedText ];
+		stencil: [ :packageSpec |
+			BlTextElement new text: packageSpec name asRopedText ];
 		with: packages.
 	mondrian nodes 
-		stencil: [ :project |
-			BlTextElement new text: (project name asRopedText foreground: Color gray) ];
+		stencil: [ :projectSpec |
+			| element |
+			element := BlTextElement new.
+			element 
+				when: BlClickEvent do: [ :e | e consumed: true. element fireEvent: (GtPhlowObjectToSpawn new object: (Smalltalk globals at: projectSpec constructClassName asSymbol); sourceElement: element) ];
+				text: (projectSpec name asRopedText foreground: Color gray) ];
 		with: projects.
-
-	packages collect: [ :p | 
+	packages do: [ :p | 
 		mondrian edges
 			stencil: [ :x | 
 				BlParabollaArcElement new 
