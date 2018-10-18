@@ -78,6 +78,15 @@ ConfigurationOf class >> gtPackagesFor: aView [
 ]
 
 { #category : #'*BaselineOfGToolkit' }
+ConfigurationOf class >> gtPackagesMapFor: aView [
+	<gtView>
+	^ aView mondrian
+		title: 'Packages map';
+		priority: 11;
+		painting: [ :mondrian | self paintPackagesMapWith: mondrian]
+]
+
+{ #category : #'*BaselineOfGToolkit' }
 ConfigurationOf class >> gtPillarCommentFor: aView [
 	^ (super gtPillarCommentFor: aView)
 		priority: 0
@@ -103,4 +112,38 @@ ConfigurationOf class >> gtProjectsFor: aView [
 					textElement := (BrListLabelStencil matchParent: text) asElement.
 					textElement constraintsDo: [ :c | c horizontal matchParent. c padding: (BlInsets left: 10) ] ].
 			list ]
+]
+
+{ #category : #'*BaselineOfGToolkit' }
+ConfigurationOf class >> paintPackagesMapWith: mondrian [
+	| packages projects |
+	packages := BaselineOfBloc project version packages.
+	projects := BaselineOfBloc project version projects.
+	mondrian nodes 
+		stencil: [ :package |
+			BlTextElement new text: package name asRopedText ];
+		with: packages.
+	mondrian nodes 
+		stencil: [ :project |
+			BlTextElement new text: (project name asRopedText foreground: Color gray) ];
+		with: projects.
+
+	packages collect: [ :p | 
+		mondrian edges
+			stencil: [ :x | 
+				BlParabollaArcElement new 
+					zIndex: 0;
+					curvatureFraction: 0.2;
+					border: (BlBorder paint: (Color gray alpha: 0.2) width: 2);
+					toHead: (BlArrowheadSimpleArrow new
+						border: (BlBorder builder paint: (Color gray alpha: 0.2); width: 2; build)) ]; 
+			fromRightCenter;
+			toLeftCenter;
+			connect: (p requires collect: [ :symbol | 
+				packages 
+					detect: [:package | package name = symbol ]
+					ifNone: [ projects detect: [ :project | project name = symbol ] ] ])
+			from:	[ :x | p ]
+			to: #yourself ].
+	mondrian layout horizontalTree nodeDistance: 10; levelDistance: 20
 ]
