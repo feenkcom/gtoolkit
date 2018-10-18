@@ -117,8 +117,8 @@ ConfigurationOf class >> gtProjectsFor: aView [
 { #category : #'*BaselineOfGToolkit' }
 ConfigurationOf class >> paintPackagesMapWith: mondrian [
 	| packages projects |
-	packages := BaselineOfBloc project version packages.
-	projects := BaselineOfBloc project version projects.
+	packages := self project version packages.
+	projects := self project version projects.
 	mondrian nodes 
 		stencil: [ :packageSpec |
 			BlTextElement new text: packageSpec name asRopedText ];
