@@ -16,5 +16,5 @@ GtSceneryDocumenterTutorialForExamples class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryDocumenterTutorialForExamples >> setUp [
-	GtInspector openOnPlayBook: (GtDocumenter editorForPillar: (IceRepository repositoriesLocation / 'feenkcom'/ 'gtoolkit-examples' / 'doc' / 'tutorial' / 'examples-tutorial.pillar'))
+	GtInspector openOnPlayBook: (GtDocumenter editorForPillar: (GtIcebergUtility repositoriesLocation / 'feenkcom'/ 'gtoolkit-examples' / 'doc' / 'tutorial' / 'examples-tutorial.pillar'))
 ]
