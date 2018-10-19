@@ -17,7 +17,7 @@ SmalltalkCISpec {
     },
     #failOnZeroTests : false,
     #exclude : {
-      #classes : [ #GtExamplesReleaseTest, #GtExampleMethodAfterTest, #GtInspectorExamplesTest, #GtCSPictureTest ]
+      #classes : [ #GtExamplesReleaseTest, #GtExampleMethodAfterTest, #GtInspectorExamplesTest, #GtCSPictureTest, #GtToolkitExamplesTests ]
     },
     #hidePassingTests : true
   }
