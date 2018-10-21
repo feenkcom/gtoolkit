@@ -52,7 +52,7 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 				toAll: [:each | |dependedProjects |
 					dependedProjects := each projects collect: #version.
 					projects select: [ :project | dependedProjects anySatisfy: [ :dependedProject | dependedProject = project ] ] ].
-			mondrian layout custom: (GtGradHorizontalDominanceTreeLayout new levelDistance: 50; nodeDistance: 10)]
+			mondrian layout horizontalDominanceTree levelDistance: 50; nodeDistance: 10]
 ]
 
 { #category : #'*BaselineOfGToolkit' }
@@ -148,5 +148,5 @@ ConfigurationOf class >> paintPackagesMapWith: mondrian [
 					ifNone: [ projects detect: [ :project | project name = symbol ] ] ])
 			from:	[ :x | p ]
 			to: #yourself ].
-	mondrian layout horizontalTree nodeDistance: 10; levelDistance: 20
+	mondrian layout horizontalDominanceTree nodeDistance: 10; levelDistance: 20
 ]
