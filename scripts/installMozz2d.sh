@@ -7,4 +7,4 @@ else
   curl https://dl.feenk.com/Moz2D/win/development/x86_64/libMoz2D.dll -o libMoz2D.dll
 fi
 
-cp -v "libMoz2D*" "${ARTIFACT_DIR}/"
+cp -v libMoz2D.* "${ARTIFACT_DIR}/"
