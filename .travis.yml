@@ -54,7 +54,7 @@ after_success:
     cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
     cp "${SMALLTALK_CI_BUILD}/"*.sources "${ARTIFACT_DIR}/"
     cp -Rv gt-extra "${ARTIFACT_DIR}/"
-    cp -v "mozz2d-${BITS}/*" "${ARTIFACT_DIR}/"
+    cp -v "${SMALLTALK_CI_BUILD}/mozz2d-${BITS}/*" "${ARTIFACT_DIR}/"
     export build_zip="${ARTIFACT_DIR}.zip"
     zip -qr "$build_zip" "$ARTIFACT_DIR"
 
