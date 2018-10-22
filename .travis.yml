@@ -67,7 +67,6 @@ before_deploy:
 jobs:
   include:
     - stage: deploy
-      script: skip
       deploy:
         skip_cleanup: true
         provider: releases
