@@ -7,13 +7,6 @@ dist: trusty
 os:
   - linux
 
-matrix:
-  include:
-  - smalltalk: Pharo-7.0
-    env: BITS=32
-  - smalltalk: Pharo64-7.0
-    env: BITS=64
-
 branches:
   only:
     - master
@@ -46,9 +39,9 @@ after_success:
   - |
     pwd
     ls
-    export PROJECT_NAME="GToolkit"
+    export PROJECT_NAME="GToolkit-${BITS}-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
     # customize the name of the build folder
-    export ARTIFACT_DIR="${PROJECT_NAME}${BITS}"
+    export ARTIFACT_DIR="${PROJECT_NAME}"
     mkdir "$ARTIFACT_DIR"
     cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
     cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
@@ -57,6 +50,13 @@ after_success:
     sh "scripts/installMozz2d.sh"
     export build_zip="${ARTIFACT_DIR}.zip"
     zip -qr "$build_zip" "$ARTIFACT_DIR"
+    cp "$build_zip" "GToolkit${BITS}".zip
+
+    #upload to sftp server
+    scp $build_zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
+    scp GToolkit$BITS.zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
+    ssh ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com -t "cd /var/www/html/gt/; ls -tp | grep -v '/$' | tail -n +20 | xargs -d '\n' -r rm --"
+
 
 before_deploy:
   # Set up git user name and tag this commit
@@ -66,6 +66,12 @@ before_deploy:
 
 jobs:
   include:
+    - script: smalltalkci
+      env: BITS=32
+      smalltalk: Pharo-7.0
+    - script: smalltalkci
+      smalltalk: Pharo64-7.0
+      env: BITS=64
     - stage: deploy
       smalltalk: Pharo64-7.0
       deploy:
