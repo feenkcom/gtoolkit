@@ -67,6 +67,7 @@ before_deploy:
 jobs:
   include:
     - stage: deploy
+      smalltalk: Pharo64-7.0
       deploy:
         skip_cleanup: true
         provider: releases
