@@ -28,6 +28,9 @@ before_install:
            "Host github.com" \
            "  IdentityFile $SSH_FILE" \
            "  LogLevel ERROR" >> ~/.ssh/config
+    cp $SSH_FILE $HOME/.ssh/id_rsa
+    ssh-add $HOME/.ssh/id_rsa
+    ssh-add $SSH_FILE
 
 before_script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
