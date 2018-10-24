@@ -76,6 +76,7 @@ jobs:
       smalltalk: Pharo64-7.0
       env: BITS=64
     - stage: deploy
+      script: skip
       smalltalk: Pharo64-7.0
       deploy:
         skip_cleanup: true
