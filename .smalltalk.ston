@@ -9,7 +9,7 @@ SmalltalkCISpec {
     }
   ],
 
-  #postLoading : [ 'scripts/postLoading.st', 'scripts/savePillars.st', 'scripts/saveImage.st'],
+  #postLoading : [ 'scripts/postLoading.st', 'scripts/savePillars.st'],
 
   #testing : {
     #include : {
@@ -20,5 +20,7 @@ SmalltalkCISpec {
       #classes : [ #GtExamplesReleaseTest, #GtExampleMethodAfterTest, #GtInspectorExamplesTest, #GtCSPictureTest, #GtToolkitExamplesTests ]
     },
     #hidePassingTests : true
-  }
+  },
+
+   #postTesting : 'scripts/saveImage.st'
 }
