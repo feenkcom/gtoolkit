@@ -1,4 +1,3 @@
-Transcript crShow: 'openTour about to run'.
+World closeAllWindowsDiscardingChanges.
 #GtWorld asClass openTour.
-Transcript crShow: 'backup about to run'.
 SmalltalkImage current backupTo: 'beforeTests'.
