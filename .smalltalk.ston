@@ -8,7 +8,8 @@ SmalltalkCISpec {
   ],
 
   #preTesting : [
-    'scripts/savePillars.st'
+    'scripts/savePillars.st',
+    'scripts/saveImage.st'
   ],
 
   #testing : {
