@@ -1,4 +1,5 @@
 SmalltalkCISpec {
+  #preLoading : 'scripts/preLoading.st',
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'GToolkit',
@@ -6,6 +7,7 @@ SmalltalkCISpec {
       #platforms : [ #pharo ]
     }
   ],
+  #postLoading : 'scripts/postLoading.st',
 
   #preTesting : [
     'scripts/savePillars.st',
