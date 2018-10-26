@@ -40,7 +40,7 @@ before_script:
 after_success:
   - |
     pwd
-    ls
+    ls "${SMALLTALK_CI_BUILD}/"
     export PROJECT_NAME="GToolkit-${BITS}-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
     # customize the name of the build folder
     export ARTIFACT_DIR="${PROJECT_NAME}"
