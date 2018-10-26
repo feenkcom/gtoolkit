@@ -8,13 +8,8 @@ SmalltalkCISpec {
       #platforms : [ #pharo ]
     }
   ],
-  
-  #postLoading : 'scripts/postLoading.st',
 
-  #preTesting : [
-    'scripts/savePillars.st',
-    'scripts/saveImage.st'
-  ],
+  #postLoading : [ 'scripts/postLoading.st', 'scripts/savePillars.st', 'scripts/saveImage.st'],
 
   #testing : {
     #include : {
