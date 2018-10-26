@@ -39,26 +39,30 @@ before_script:
 
 after_success:
   - |
-    pwd
-    ls "${SMALLTALK_CI_BUILD}/"
-    export PROJECT_NAME="GToolkit-${BITS}-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-    # customize the name of the build folder
-    export ARTIFACT_DIR="${PROJECT_NAME}"
-    mkdir "$ARTIFACT_DIR"
-    sh scripts/resizeImage.sh "${SMALLTALK_CI_BUILD}/beforeTests.image" 800 600
-    cp "${SMALLTALK_CI_BUILD}/beforeTests.image" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
-    cp "${SMALLTALK_CI_BUILD}/beforeTests.changes" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
-    cp "${SMALLTALK_CI_BUILD}/"*.sources "${ARTIFACT_DIR}/"
-    cp -Rv gt-extra "${ARTIFACT_DIR}/"
-    sh "scripts/installMozz2d.sh"
-    export build_zip="${ARTIFACT_DIR}.zip"
-    zip -qr "$build_zip" "$ARTIFACT_DIR"
-    cp "$build_zip" "GToolkit${BITS}".zip
+    if [ -n "$BITS" ]
+    then
+      #run only in build steps, not in deploy step
+      pwd
+      ls "${SMALLTALK_CI_BUILD}/"
+      export PROJECT_NAME="GToolkit-${BITS}-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+      # customize the name of the build folder
+      export ARTIFACT_DIR="${PROJECT_NAME}"
+      mkdir "$ARTIFACT_DIR"
+      sh scripts/resizeImage.sh "${SMALLTALK_CI_BUILD}/beforeTests.image" 800 600
+      cp "${SMALLTALK_CI_BUILD}/beforeTests.image" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
+      cp "${SMALLTALK_CI_BUILD}/beforeTests.changes" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
+      cp "${SMALLTALK_CI_BUILD}/"*.sources "${ARTIFACT_DIR}/"
+      cp -Rv gt-extra "${ARTIFACT_DIR}/"
+      sh "scripts/installMozz2d.sh"
+      export build_zip="${ARTIFACT_DIR}.zip"
+      zip -qr "$build_zip" "$ARTIFACT_DIR"
+      cp "$build_zip" "GToolkit${BITS}".zip
 
-    #upload to sftp server
-    scp $build_zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
-    scp GToolkit$BITS.zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
-    ssh ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com -t "cd /var/www/html/gt/; ls -tp | grep -v '/$' | tail -n +20 | xargs -d '\n' -r rm --"
+      #upload to sftp server
+      scp $build_zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
+      scp GToolkit$BITS.zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
+      ssh ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com -t "cd /var/www/html/gt/; ls -tp | grep -v '/$' | tail -n +20 | xargs -d '\n' -r rm --"
+    fi
 
 
 before_deploy:
