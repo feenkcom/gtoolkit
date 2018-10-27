@@ -13,8 +13,3 @@ GtSceneryConnectorForExample class >> menuCommandOn: aBuilder [
 		label: 'Connector: for examples';
 		action: [self new setUp]
 ]
-
-{ #category : #initialization }
-GtSceneryConnectorForExample >> setUp [
-	GtInspector openOn: (BlFrameLayoutExamples>>#example) gtExample
-]
