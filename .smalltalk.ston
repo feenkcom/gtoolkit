@@ -16,9 +16,6 @@ SmalltalkCISpec {
       #packages : [ 'GToolkit.*' ]
     },
     #failOnZeroTests : false,
-    #exclude : {
-      #classes : [ #GtExamplesReleaseTest, #GtExampleMethodAfterTest, #GtInspectorExamplesTest, #GtCSPictureTest, #GtToolkitExamplesTests ]
-    },
     #hidePassingTests : true
   },
 
