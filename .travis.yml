@@ -4,7 +4,7 @@ sudo: false
 
 os:
   - linux
-  
+
 smalltalk_edge:
   source: feenkcom/smalltalkCI
   branch: master
@@ -65,7 +65,7 @@ after_success:
       #upload to sftp server
       scp $build_zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
       scp GToolkit$BITS.zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
-      ssh ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com -t "cd /var/www/html/gt/; ls -tp | grep -v '/$' | tail -n +20 | xargs -d '\n' -r rm --"
+      ssh ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com -t "cd /var/www/html/gt/; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n' -r rm --"
     fi
 
 
