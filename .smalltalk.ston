@@ -15,7 +15,13 @@ SmalltalkCISpec {
     #include : {
       #packages : [ 'GToolkit.*' ]
     },
+
     #failOnZeroTests : false,
+
+    #exclude : {
+      #classes : [ #GtDocumenterExamples, #GtDiagrammerExamples, #GtAsyncAnnouncerExamples, #GtMethodCoderExamples, #GtPlaygroundExamples ]
+    },
+
     #hidePassingTests : true
   }
 
