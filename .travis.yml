@@ -52,9 +52,9 @@ after_success:
       # customize the name of the build folder
       export ARTIFACT_DIR="${PROJECT_NAME}"
       mkdir "$ARTIFACT_DIR"
-      sh scripts/resizeImage.sh "${SMALLTALK_CI_BUILD}/beforeTests.image" 800 600
-      cp "${SMALLTALK_CI_BUILD}/beforeTests.image" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
-      cp "${SMALLTALK_CI_BUILD}/beforeTests.changes" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
+      sh scripts/resizeImage.sh "$SMALLTALK_CI_IMAGE" 800 600
+      cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
+      cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
       cp "${SMALLTALK_CI_BUILD}/"*.sources "${ARTIFACT_DIR}/"
       cp -Rv gt-extra "${ARTIFACT_DIR}/"
       sh scripts/installMozz2d.sh
