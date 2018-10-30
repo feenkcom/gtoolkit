@@ -102,6 +102,7 @@ BaselineOfGToolkit >> baseline: spec [
 	<baseline>
 	spec for: #common do: [ 
 		spec
+			package: 'GToolkit-Scenery';
 			baseline: 'GToolkitDocumenter' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-documenter/src' ];
 			baseline: 'GToolkitTranscript' with: [ 
