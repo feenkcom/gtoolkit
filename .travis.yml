@@ -3,7 +3,7 @@ language: smalltalk
 sudo: false
 
 os:
-  - osx
+  - linux
 
 smalltalk_edge:
   source: feenkcom/smalltalkCI
@@ -52,7 +52,7 @@ after_success:
       # customize the name of the build folder
       export ARTIFACT_DIR="${PROJECT_NAME}"
       mkdir "$ARTIFACT_DIR"
-      
+      sh scripts/resizeImage.sh "$SMALLTALK_CI_IMAGE" 800 600
       cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
       cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
       cp "${SMALLTALK_CI_BUILD}/"*.sources "${ARTIFACT_DIR}/"
