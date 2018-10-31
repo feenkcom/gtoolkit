@@ -15,5 +15,5 @@ docFolders do: [ :each |
 	[each copyAllTo: (GtDocumenterConstants localGtDirectory asFileReference / s) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
 
 World closeAllWindowsDiscardingChanges.
+(Delay forSeconds: 3) wait.
 #GtWorld asClass openTour.
-"SmalltalkImage current backupTo: 'beforeTests'."
