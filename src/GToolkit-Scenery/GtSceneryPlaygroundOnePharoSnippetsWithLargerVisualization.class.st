@@ -1,31 +1,29 @@
 Class {
-	#name : #GtSceneryPlaygroundTwoPharoSnippetsWithVisualization,
+	#name : #GtSceneryPlaygroundOnePharoSnippetsWithLargerVisualization,
 	#superclass : #GtScenery,
 	#category : #'GToolkit-Scenery'
 }
 
 { #category : #'world menu' }
-GtSceneryPlaygroundTwoPharoSnippetsWithVisualization class >> menuCommandOn: aBuilder [
+GtSceneryPlaygroundOnePharoSnippetsWithLargerVisualization class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 415.0; 
+		order: 414.0; 
 		parent: #GToolkitScenery;
-		label: 'Playground: Two Pharo snippets with larger visualization';
-		action: [self new setUp];
-		withSeparatorAfter
+		label: 'Playground: One Pharo snippet with larger visualization';
+		action: [self new setUp]
 ]
 
 { #category : #initialization }
-GtSceneryPlaygroundTwoPharoSnippetsWithVisualization >> setUp [
+GtSceneryPlaygroundOnePharoSnippetsWithLargerVisualization >> setUp [
 	| book |
 	book := GtPlayBook newDefault.
 	book pages first snippets first sourceCode: 'directories := (IceLibgitRepository repositoriesLocation / ''feenkcom'')
 	allDirectories 
 	select: [:each | 
 		(each fullName includesSubstring: ''gtoolkit'') and: [
-			(each fullName includesSubstring: ''git'') not]]'.
-	book pages first addSnippet: GtPharoSnippet new.
-	book pages last snippets last sourceCode: 'mondrian := GtMondrian new.
+			(each fullName includesSubstring: ''git'') not]].
+mondrian := GtMondrian new.
 mondrian nodes 
 	stencil: [:dir | 
 		BlTextElement new text: dir basename asRopedText ];
