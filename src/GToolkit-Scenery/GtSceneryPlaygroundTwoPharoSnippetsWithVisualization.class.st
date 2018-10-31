@@ -19,7 +19,7 @@ GtSceneryPlaygroundTwoPharoSnippetsWithVisualization class >> menuCommandOn: aBu
 GtSceneryPlaygroundTwoPharoSnippetsWithVisualization >> setUp [
 	| book |
 	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: 'directories := (IceRepository repositoriesLocation / ''feenkcom'')
+	book pages first snippets first sourceCode: 'directories := (IceLibgitRepository repositoriesLocation / ''feenkcom'')
 	allDirectories 
 	select: [:each | 
 		(each fullName includesSubstring: ''gtoolkit'') and: [

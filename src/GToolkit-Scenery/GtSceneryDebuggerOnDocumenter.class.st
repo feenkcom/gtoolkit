@@ -29,7 +29,7 @@ debuggingSession := (process
 	startedAt: process suspendedContext).
 20 timesRepeat: [ 
 	debuggingSession stepInto ].
-GtDebugger openInspectorOn: debuggingSession.'.
+GtExpandableDebugger openInspectorOn: debuggingSession.'.
 	
 	GtInspector openOnPlayBook: book
 ]
