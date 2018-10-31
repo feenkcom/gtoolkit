@@ -15,5 +15,6 @@ docFolders do: [ :each |
 	[each copyAllTo: (GtDocumenterConstants localGtDirectory asFileReference / s) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
 
 World closeAllWindowsDiscardingChanges.
-(Delay forSeconds: 3) wait.
-#GtWorld asClass openTour.
+"builder:=(Bloc environment at: #BlSpartaRenderer) availableCanvasBuilderClasses detect:[:r| r name = #BlSpartaMozCanvasBuilder].
+Bloc preferableSpartaCanvas: builder."
+"#GtWorld asClass openTour."
