@@ -16,5 +16,5 @@ GtSceneryDocumenterGToolkitIntroduction class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryDocumenterGToolkitIntroduction >> setUp [
-	(GtInspector openOn: (IceRepository repositoriesLocation / 'feenkcom'/ 'gtoolkit' / 'doc' / 'gtoolkit' / 'gtoolkit.pillar')) 
+	(GtInspector openOn: (IceLibgitRepository repositoriesLocation / 'feenkcom'/ 'gtoolkit' / 'doc' / 'gtoolkit' / 'gtoolkit.pillar')) 
 ]

@@ -18,6 +18,6 @@ GtSceneryDocumenterTutorialForMondrian class >> menuCommandOn: aBuilder [
 GtSceneryDocumenterTutorialForMondrian >> setUp [
 	| book |
 	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: 'IceRepository repositoriesLocation / ''feenkcom''/ ''gtoolkit-visualizer'' / ''doc'' / ''mondrian'' / ''index.pillar'''.
+	book pages first snippets first sourceCode: 'IceLibgitRepository repositoriesLocation / ''feenkcom''/ ''gtoolkit-visualizer'' / ''doc'' / ''mondrian'' / ''index.pillar'''.
 	(GtInspector openOnPlayBook: book)
 ]
