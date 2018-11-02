@@ -4,6 +4,16 @@ Class {
 	#category : #'GToolkit-Scenery'
 }
 
+{ #category : #'world menu' }
+GtSceneryDocumenterTutorialForFaceAPI class >> menuCommandOn: aBuilder [
+	<worldMenu>
+	(aBuilder item: self name)
+		order: 221.0; 
+		parent: #GToolkitScenery;
+		label: 'Documenter: Examples tutorial - Face API';
+		action: [self new setUp]
+]
+
 { #category : #initialization }
 GtSceneryDocumenterTutorialForFaceAPI >> setUp [
 	| book |
