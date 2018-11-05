@@ -8,9 +8,9 @@ Class {
 GtSceneryDocumenterTalk class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 1000.0; 
+		order: 222.0; 
 		parent: #GToolkitScenery;
-		label: 'Documenter Talk';
+		label: 'Documenter: Three Use Case Scenarios Talk';
 		action: [self new setUp]
 ]
 

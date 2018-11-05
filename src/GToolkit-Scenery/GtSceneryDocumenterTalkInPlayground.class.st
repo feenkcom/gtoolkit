@@ -8,9 +8,9 @@ Class {
 GtSceneryDocumenterTalkInPlayground class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 1010.0; 
+		order: 223.0; 
 		parent: #GToolkitScenery;
-		label: 'Documenter Talk in Playground';
+		label: 'Documenter: Three Use Case Scenarios Talk in Playground';
 		action: [self new setUp]
 ]
 
