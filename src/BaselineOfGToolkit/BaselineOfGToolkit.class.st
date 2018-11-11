@@ -11,7 +11,7 @@ And engage with us. We'd love to hear from you: *https://feenk.com/gt*.
 
 Glamorous Toolkit is an umbrella project that puts together several subprojects. The picture below provides an overview of these projects and their interdependencies. The map is naviagable. Click on each component to learn more about it.
 
-${example:BaselineOfGToolkit class>>#itself|show=#gtGtMapFor:|expandedPreview=true|noCode=|previewHeight=300}$
+${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:||noCode=|previewHeight=300}$
 
 
 
