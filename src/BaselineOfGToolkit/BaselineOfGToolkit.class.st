@@ -31,7 +31,7 @@ Which one is more recognizable? Which one makes you feel more comfortable relati
 
 While the first view is generic in that it is applicable to any object, the second one is useful exactly because it is specific. In fact, each point of view can benefit from a specific view. It is for this reason that the inspector offers multiple views and enables you to craft your own for every single object.
 
-${example:FileReference class>>#gtExampleDirectory|noCode}$
+${example:FileReference class>>#gtExampleDirectory|noCode|previewHeight=200}$
 
 To exploit the full potential of the Glamorous Toolkit you need to contextualize it by programming it. To this end, the Glamorous Toolkit offers multiple ways to extend the tools and to express views and other interactions. Throughout the environment the goal of the engines is to make the cost of custom tools to be as inexpensive as possible.
 
