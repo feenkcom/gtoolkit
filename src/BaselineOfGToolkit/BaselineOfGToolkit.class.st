@@ -11,7 +11,7 @@ And engage with us. We'd love to hear from you: *https://feenk.com/gt*.
 
 Glamorous Toolkit is an umbrella project that puts together several subprojects. The picture below provides an overview of these projects and their interdependencies. The map is naviagable. Click on each component to learn more about it.
 
-${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:|noCode=|previewHeight=300}$
+${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:||noCode=|previewHeight=300}$
 
 
 
@@ -19,14 +19,23 @@ ${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:|noCode=|pre
 
 The core principle behind the Glamorous Toolkit is moldability. This means that any object in the system can have multiple views and ways to be interacted with. This applies to handling static code, to inspecting individual objects, to debugging and to the way we search. To make this practical, the cost of creating a new view or interaction is small and in most cases the target is to extend the system live during the interaction. Throughout the whole environment the way to extend the environment is directly explorable.
 
-Let us consider an example.
+As an example, let us consider inspecting the object corresponding to the current working directory. A default inspector would show this. It's an accurate description of the variables of the ${class:FileReference}$ instance.
 
-${example:FileReference class>>#gtExampleDirectory|noCode}$
+${example:FileReference class>>#gtExampleDirectory|noCode|previewShow=#gtRawFor:|previewHeight=150}$
 
-The examples above shows an instance of ${class:FileReference}$. As the object points to a folder, the first view shows the contents of the object through a view that is common in file browsers. This view stands in contrast with the default Raw view which shows the internal state of the object. While the Raw view is generic in that it is applicable to any object, the contextualized view is powerful in that it allows us to understand and interact with the object.
+Now consider this view of the same object.
+
+${example:FileReference class>>#gtExampleDirectory|noCode|previewShow=#gtItemsFor:|previewHeight=150}$
+
+Which one is more recognizable? Which one makes you feel more comfortable relating to. Likely the second one. We do not have to think whether the instance represents a file or a directory. The view clearly shows a the contents of the directory through a view that is common in file browsers. 
+
+While the first view is generic in that it is applicable to any object, the second one is useful exactly because it is specific. In fact, each point of view can benefit from a specific view. It is for this reason that the inspector offers multiple views and enables you to craft your own for every single object.
+
+${example:FileReference class>>#gtExampleDirectory|noCode|previewHeight=200}$
 
 To exploit the full potential of the Glamorous Toolkit you need to contextualize it by programming it. To this end, the Glamorous Toolkit offers multiple ways to extend the tools and to express views and other interactions. Throughout the environment the goal of the engines is to make the cost of custom tools to be as inexpensive as possible.
 
+This little change in perspective has a dramatic influence on how you can approach software systems. We call this moldable development.
 
 !!Learn
 
