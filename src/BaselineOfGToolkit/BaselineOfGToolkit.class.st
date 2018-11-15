@@ -9,7 +9,7 @@ And engage with us. We'd love to hear from you: *https://feenk.com/gt*.
 
 !!Organization
 
-Glamorous Toolkit is an umbrella project that puts together several subprojects. The picture below provides an overview of these projects and their interdependencies. The map is naviagable. Click on each component to learn more about it.
+Glamorous Toolkit is an umbrella project that puts together several subprojects. The picture below provides an overview of these projects and their interdependencies. The map is navigable. Click on each component to learn more about it.
 
 ${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:||noCode=|previewHeight=300}$
 
