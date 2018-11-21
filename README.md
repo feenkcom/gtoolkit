@@ -23,10 +23,12 @@ The current repository embodies the second generation of GT that is based on the
 You can load the whole code in Pharo 7.0 using the following snippet:
 
 ```
+EpMonitor current disable.
 Metacello new
    baseline: 'GToolkit';
    repository: 'github://feenkcom/gtoolkit/src';
    load.
+EpMonitor current enable.
 #GtWorld asClass openTour.
 ```
 
