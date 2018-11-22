@@ -43,6 +43,10 @@ This little change in perspective has a dramatic influence on how you can approa
 Learn about it in ${class:BaselineOfGToolkitInspector}$.
 
 
+!!Playground
+Learn about it in ${class:BaselineOfGToolkitPlayground}$.
+
+
 !!!Documenter
 This very document is edited and rendered through ${class:BaselineOfGToolkitDocumenter}$. Take a look at the demo file here:
 ${icebergFile:path=feenkcom/gtoolkit-demos/doc/tutorial/esug-2018-documenter/documenter.pillar}$
