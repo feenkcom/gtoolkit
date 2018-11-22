@@ -7,12 +7,12 @@ What's interesting about it? It offers a fundamentally new perspective on how pr
 
 And engage with us. We'd love to hear from you: *https://feenk.com/gt*. 
 
-!!Organization
+
+!!Project organization
 
 Glamorous Toolkit is an umbrella project that puts together several subprojects. The picture below provides an overview of these projects and their interdependencies. The map is navigable. Click on each component to learn more about it.
 
 ${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:||noCode=|previewHeight=300}$
-
 
 
 !!Moldable development
@@ -37,13 +37,16 @@ To exploit the full potential of the Glamorous Toolkit you need to contextualize
 
 This little change in perspective has a dramatic influence on how you can approach software systems. We call this moldable development.
 
+
+
 !!Learn
 
-!!Inspector
+
+!!!Inspector
 Learn about it in ${class:BaselineOfGToolkitInspector}$.
 
 
-!!Playground
+!!!Playground
 Learn about it in ${class:BaselineOfGToolkitPlayground}$.
 
 
@@ -63,7 +66,6 @@ ${icebergFile:path=feenkcom/gtoolkit-demos/doc/tutorial/esug-2018/esug-2018-exem
 
 
 !!!Visualizer
-
 Visualizer is a set of visualization engines to ease the creation of custom visualizations directly in the environment. Learn more at ${class:BaselineOfGToolkitVisualizer}$.
 
 
@@ -71,8 +73,7 @@ Visualizer is a set of visualization engines to ease the creation of custom visu
 This is a reimagining of the classic transcript by taking advantage of the text rendering possibilities. Learn more at ${class:BaselineOfGToolkitTranscript}$.
 
 
-!!!A few words about the graphical stack
-
+!!A few words about the graphical stack
 The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This stack has a few properties that make it distinct:
 - it relies on one rendering tree at all times.
 - it features moldable and scalable text editor is made out of elements. This means that we can embed text with graphics to obtain live editors.
