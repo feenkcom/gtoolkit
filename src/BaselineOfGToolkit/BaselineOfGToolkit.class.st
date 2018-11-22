@@ -52,7 +52,7 @@ This very document is edited and rendered through ${class:BaselineOfGToolkitDocu
 ${icebergFile:path=feenkcom/gtoolkit-demos/doc/tutorial/esug-2018-documenter/documenter.pillar}$
 
 
-!!!Example-driven development
+!!!Examples and example-driven development
 Examples offer both a new way to organize the test code and a bridge between the testing effort and documentation.
 
 The introductory example-driven development tutorial:
@@ -62,9 +62,9 @@ The exemplifying software tutorial based on a case study of face recognition usi
 ${icebergFile:path=feenkcom/gtoolkit-demos/doc/tutorial/esug-2018/esug-2018-exemplifying-software.pillar}$
 
 
-!!!Mondrian
-Mondrian is the engine that allows you to script a graph visualization:
-${icebergFile:path=feenkcom/gtoolkit-visualizer/doc/mondrian/index.pillar}$
+!!!Visualizer
+
+Visualizer is a set of visualization engines to ease the creation of custom visualizations directly in the environment. Learn more at ${class:BaselineOfGToolkitVisualizer}$.
 
 
 !!!Transcript
