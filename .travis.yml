@@ -75,7 +75,7 @@ before_deploy:
 jobs:
   include:
     - stage: build
-    - script: smalltalkci
+      script: smalltalkci
       env: BITS=32
       os: linux
       smalltalk: Pharo-7.0
