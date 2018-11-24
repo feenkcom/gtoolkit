@@ -90,6 +90,8 @@ jobs:
       os: osx
     - script: scripts/prepareLinux64Package.sh
       os: linux
+    - script: scripts/prepareWin32Package.sh
+      os: linux
     # - stage: deploy
     #   script: skip
     #   smalltalk: Pharo64-7.0

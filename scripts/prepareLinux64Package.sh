@@ -2,12 +2,12 @@
 set -e
 curl https://dl.feenk.com/gt/GToolkit64.zip -o GToolkit64.zip
 unzip -u GToolkit64.zip
-mkdir -p GToolkit64Linux
-cp -r GToolkit-64*/ GToolkit64Linux
+mkdir -p GToolkitLinux64
+cp -r GToolkit-64*/ GToolkitLinux64
 
 curl https://get.pharo.org/64/vmLatest70 | bash
-mv -fv pharo-ui GToolkit64Linux/
-mv -fv pharo GToolkit64Linux/
-mv -fv pharo-vm GToolkit64Linux/
-zip -qyr GToolkit64Linux.zip GToolkit64Linux
-scp GToolkit64Linux.zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
+mv -fv pharo-ui GToolkitLinux64/
+mv -fv pharo GToolkitLinux64/
+mv -fv pharo-vm GToolkitLinux64/
+zip -qyr GToolkitLinux64.zip GToolkitLinux64
+scp GToolkitLinux64.zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
