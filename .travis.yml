@@ -85,10 +85,13 @@ jobs:
     - stage: packagevm
     - script: scripts/prepareOSXPackage.sh
       os: osx
+      env: ENV=osx
     - script: scripts/prepareLinux64Package.sh
       os: linux
+      env: ENV=linux
     - script: scripts/prepareWin32Package.sh
       os: linux
+      env: ENV=win
     # - stage: deploy
     #   script: skip
     #   smalltalk: Pharo64-7.0
