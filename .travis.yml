@@ -74,6 +74,7 @@ before_deploy:
   - sh scripts/downloadGT.sh
 jobs:
   include:
+    - stage: build
     - script: smalltalkci
       env: BITS=32
       os: linux
@@ -83,7 +84,7 @@ jobs:
       env: BITS=64
       os: linux
     - stage: packagevm
-    - script: scripts/prepareOSXPackage.sh
+      script: scripts/prepareOSXPackage.sh
       os: osx
       env: ENV=osx
     - script: scripts/prepareLinux64Package.sh
