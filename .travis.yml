@@ -2,9 +2,6 @@ language: smalltalk
 
 sudo: false
 
-os:
-  - linux
-
 smalltalk_edge:
   source: feenkcom/smalltalkCI
   branch: master
@@ -86,12 +83,12 @@ jobs:
       env: BITS=64
       os: linux
     - stage: packagevm
-      - script: scripts/prepareOSXPackage.sh
-        os: osx
-      - script: scripts/prepareLinux64Package.sh
-        os: linux
-      - script: scripts/prepareWin32Package.sh
-        os: linux
+    - script: scripts/prepareOSXPackage.sh
+      os: osx
+    - script: scripts/prepareLinux64Package.sh
+      os: linux
+    - script: scripts/prepareWin32Package.sh
+      os: linux
     # - stage: deploy
     #   script: skip
     #   smalltalk: Pharo64-7.0
