@@ -76,10 +76,6 @@ jobs:
   include:
     - stage: build
       script: smalltalkci
-      env: BITS=32
-      os: linux
-      smalltalk: Pharo-7.0
-    - script: smalltalkci
       smalltalk: Pharo64-7.0
       env: BITS=64
       os: linux
@@ -90,7 +86,7 @@ jobs:
     - script: scripts/prepareLinux64Package.sh
       os: linux
       env: ENV=linux
-    - script: scripts/prepareWin32Package.sh
+    - script: scripts/prepareWin64Package.sh
       os: linux
       env: ENV=win
     # - stage: deploy
