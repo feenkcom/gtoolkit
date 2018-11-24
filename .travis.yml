@@ -88,6 +88,8 @@ jobs:
     - stage: packagevm
     - script: scripts/prepareOSXPackage.sh
       os: osx
+    - script: scripts/prepareOSXPackage.sh
+      os: linux
     # - stage: deploy
     #   script: skip
     #   smalltalk: Pharo64-7.0
