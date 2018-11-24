@@ -77,23 +77,28 @@ before_deploy:
   - sh scripts/downloadGT.sh
 jobs:
   include:
-    - script: smalltalkci
-      env: BITS=32
-      smalltalk: Pharo-7.0
-    - script: smalltalkci
-      smalltalk: Pharo64-7.0
-      env: BITS=64
-    - stage: deploy
-      script: skip
-      smalltalk: Pharo64-7.0
-      deploy:
-        skip_cleanup: true
-        provider: releases
-        api_key:
-          secure:
-            qs1LDPEyShWtMgepESqCHtUePMWT2C7Mn4MlsYdmWVpHbchIt3k9eb2QQrgbvuGLhnjsLlAm05mNqLlfoZxriWmSLqjz8d53Z8hqzCM1U/pLRqmUIcg+A4aBwl75dh1yW3qc5yHdqdVpze6Qg76YAXt98VsFix+Cjj8pkoMhwl27mxzfDfOlQUOVAzrH8ipjmpVEDSKOmAJCnsdnJDivtIz6q0IQeLeQ+sD4VzZSfQ0qZk55xiUQejAMcpYDPXSWOAig02N4VUKZcPSqbCa1LRQC7FPuhLSz8YgmNPIbrqNwO3ZFHJCEmLAhhj9DKUqWFfZ5Tu7udgCd5EMEcIyI/g+S0j/Jp3u3Yivm6tJWRXrPjKk3u6A1JRnnUpqO7EDudLLXZ42qsxf6rZkngcbdDhm7OiZmMejEWZGKqMe/Uk7kZPfPuEW/2odrdlvrl8cINTjDITfj15In82J2RR+GZRcLzjH/3Ewc9+UB2H0vdr6zmW8cPhXpK5DLnJg315WIdA338hBqrwuezBpMVD9J7nEbqHuR2Cb5+hD3AzwSTmDdNaRHDw7QFJzOMEYCshPhHPeZH0Q9CB/Vi+SSy1QIUnY5GVZmpjL3Z0ZVKjE8296LFFUuE0ron3l50JOw7oaahoOyExH1eVlMRnvOohWITVBwcqUHbSUCC3BdXHkft9Y=
-        file:
-          - GToolkit32.zip
-          - GToolkit64.zip
-        on:
-          repo: feenkcom/gtoolkit
+    # - script: smalltalkci
+    #   env: BITS=32
+    #   os: linux
+    #   smalltalk: Pharo-7.0
+    # - script: smalltalkci
+    #   smalltalk: Pharo64-7.0
+    #   env: BITS=64
+    #   os: linux
+    - stage: packagevm
+    - script: scripts/prepareOSXPackage.sh
+      os: osx
+    # - stage: deploy
+    #   script: skip
+    #   smalltalk: Pharo64-7.0
+    #   deploy:
+    #     skip_cleanup: true
+    #     provider: releases
+    #     api_key:
+    #       secure:
+    #         qs1LDPEyShWtMgepESqCHtUePMWT2C7Mn4MlsYdmWVpHbchIt3k9eb2QQrgbvuGLhnjsLlAm05mNqLlfoZxriWmSLqjz8d53Z8hqzCM1U/pLRqmUIcg+A4aBwl75dh1yW3qc5yHdqdVpze6Qg76YAXt98VsFix+Cjj8pkoMhwl27mxzfDfOlQUOVAzrH8ipjmpVEDSKOmAJCnsdnJDivtIz6q0IQeLeQ+sD4VzZSfQ0qZk55xiUQejAMcpYDPXSWOAig02N4VUKZcPSqbCa1LRQC7FPuhLSz8YgmNPIbrqNwO3ZFHJCEmLAhhj9DKUqWFfZ5Tu7udgCd5EMEcIyI/g+S0j/Jp3u3Yivm6tJWRXrPjKk3u6A1JRnnUpqO7EDudLLXZ42qsxf6rZkngcbdDhm7OiZmMejEWZGKqMe/Uk7kZPfPuEW/2odrdlvrl8cINTjDITfj15In82J2RR+GZRcLzjH/3Ewc9+UB2H0vdr6zmW8cPhXpK5DLnJg315WIdA338hBqrwuezBpMVD9J7nEbqHuR2Cb5+hD3AzwSTmDdNaRHDw7QFJzOMEYCshPhHPeZH0Q9CB/Vi+SSy1QIUnY5GVZmpjL3Z0ZVKjE8296LFFUuE0ron3l50JOw7oaahoOyExH1eVlMRnvOohWITVBwcqUHbSUCC3BdXHkft9Y=
+    #     file:
+    #       - GToolkit32.zip
+    #       - GToolkit64.zip
+    #     on:
+    #       repo: feenkcom/gtoolkit
