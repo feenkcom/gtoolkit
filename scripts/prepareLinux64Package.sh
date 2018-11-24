@@ -3,7 +3,7 @@ set -e
 curl https://dl.feenk.com/gt/GToolkit64.zip -o GToolkit64.zip
 unzip -u GToolkit64.zip
 mkdir -p GToolkitLinux64
-cp -r GToolkit-64*/ GToolkitLinux64
+cp -r GToolkit-64*/* GToolkitLinux64
 
 curl https://get.pharo.org/64/vmLatest70 | bash
 mv -fv pharo-ui GToolkitLinux64/
