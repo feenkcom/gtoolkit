@@ -77,14 +77,14 @@ before_deploy:
   - sh scripts/downloadGT.sh
 jobs:
   include:
-    # - script: smalltalkci
-    #   env: BITS=32
-    #   os: linux
-    #   smalltalk: Pharo-7.0
-    # - script: smalltalkci
-    #   smalltalk: Pharo64-7.0
-    #   env: BITS=64
-    #   os: linux
+    - script: smalltalkci
+      env: BITS=32
+      os: linux
+      smalltalk: Pharo-7.0
+    - script: smalltalkci
+      smalltalk: Pharo64-7.0
+      env: BITS=64
+      os: linux
     - stage: packagevm
     - script: scripts/prepareOSXPackage.sh
       os: osx
