@@ -3,7 +3,7 @@ set -e
 curl https://dl.feenk.com/gt/GToolkit32.zip -o GToolkit32.zip
 unzip -u GToolkit32.zip
 mkdir -p GToolkitWin32
-cp -r GToolkit-32*/ GToolkitWin32
+cp -rv GToolkit-32*/ GToolkitWin32
 
 curl https://files.pharo.org/platform/Pharo6.1-win.zip -o Pharo6.1-win.zip
 unzip Pharo6.1-win.zip
