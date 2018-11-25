@@ -78,7 +78,7 @@ jobs:
   include:
     - stage: build
       script: smalltalkci
-      smalltalk: Pharo64-7.0
+      smalltalk: Pharo64-alpha
       env: BITS=64
       os: linux
     - stage: packagevm
