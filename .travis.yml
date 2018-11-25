@@ -36,8 +36,8 @@ before_script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       export DISPLAY=:99.0;
       sh -e /etc/init.d/xvfb start;
-      ls -al "${SMALLTALK_CI_BUILD}/"
-      echo ".${SMALLTALK_CI_BUILD}/vm/pharo"
+      ls -al "${SMALLTALK_CI_BUILD}/";
+      echo ".${SMALLTALK_CI_BUILD}/vm/pharo";
     fi
 
 after_success:
