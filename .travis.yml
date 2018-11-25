@@ -51,7 +51,7 @@ after_success:
       export ARTIFACT_DIR="${PROJECT_NAME}"
       mkdir "$ARTIFACT_DIR"
       sh scripts/resizeImage.sh "$SMALLTALK_CI_IMAGE" 800 600
-      ".${SMALLTALK_CI_BUILD}/vm" "$SMALLTALK_CI_IMAGE" st --save --quit scripts/opentour.st
+      ./$SMALLTALK_CI_BUILD/vm "$SMALLTALK_CI_IMAGE" st --save --quit scripts/opentour.st
       cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
       cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
       cp "${SMALLTALK_CI_BUILD}/"*.sources "${ARTIFACT_DIR}/"
