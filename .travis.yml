@@ -80,7 +80,7 @@ jobs:
       script: smalltalkci
       smalltalk: Pharo64-alpha
       env: BITS=64
-      os: linux
+      os: osx
     - stage: packagevm
       script: scripts/prepareOSXPackage.sh
       os: osx
