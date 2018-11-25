@@ -36,8 +36,6 @@ before_script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
       export DISPLAY=:99.0;
       sh -e /etc/init.d/xvfb start;
-      ls -al "${SMALLTALK_CI_BUILD}/";
-      echo ".${SMALLTALK_CI_BUILD}/vm/pharo";
     fi
 
 after_success:
@@ -46,7 +44,7 @@ after_success:
     then
       #run only in build steps, not in deploy step
       pwd
-      ls "${SMALLTALK_CI_BUILD}/vm"
+      ls -al "${SMALLTALK_CI_BUILD}/"
       export PROJECT_NAME="GToolkit-${BITS}-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
       # customize the name of the build folder
       export ARTIFACT_DIR="${PROJECT_NAME}"
