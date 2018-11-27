@@ -28,14 +28,14 @@ GtSceneryDocumenterTalkInPlayground >> setUp [
 	instanceVariableNames: ''''
 	classVariableNames: ''''
 	package: ''EsugDemo'''.
-	aPlayBook addPlayPage: (aPlayPage addSnippet: aSnippet).
+	aPlayPage addSnippet: aSnippet.
 	aSnippet := GtPharoSnippet new sourceCode: '"logo"
 	"<gtExample>"
 	^ PolymorphSystemSettings desktopLogo'.
-	aPlayBook addPlayPage: (aPlayPage addSnippet: aSnippet).
+	aPlayPage addSnippet: aSnippet.
 	aSnippet := GtPharoSnippet new sourceCode: '"set to 400"
 	GtDocumenterConstants class>>#exactPreviewHeight'.
-	aPlayBook addPlayPage: (aPlayPage addSnippet: aSnippet).
+	aPlayPage addSnippet: aSnippet.
 	
 	GtInspector openOnPlayBook: aPlayBook
 ]
