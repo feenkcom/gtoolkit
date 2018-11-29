@@ -8,52 +8,52 @@ Class {
 GtTranscriptExamples >> blocAnimation [
 	<gtExample>
 	| animation childTranslate1 element backgroundAnimation childTranslate2 scaleIncrease childTranslate child |
-	element := BlElement new.
-	element size: 50 @ 50.
-	element relocate: 50@50.
-	element
+
+	element := BlElement new
+		size: 50 @ 50;
+		relocate: 50@50;
 		background: Color red twiceDarker;
 		border: (BlBorder paint: Color lightGray width: 5).
+		
 	child := BlElement new
 		size: 10 @ 10;
 		geometry: BlEllipse new;
 		background: Color white.
 	element addChild: child.
+
 	backgroundAnimation := BlColorTransition new
-		target: element;
 		duration: 5 seconds;
 		from: Color red twiceDarker;
 		to: Color blue twiceDarker;
-		onStepDo: [ :aColor | element background: aColor ].
+		onStepDo: [ :aColor :anElement | anElement background: aColor ].
+
 	scaleIncrease := (BlTransformAnimation scale: 3@3)
 		duration: 5 seconds;
 		yourself.
+
 	childTranslate1 := (BlTransformAnimation translate: 35 @ 20)
-		target: child;
 		duration: 2.5 seconds.
+
 	childTranslate2 := (BlTransformAnimation translate: -30 @ 15)
-		target: child;
 		duration: 2.5 seconds.
 	childTranslate := BlSequentialAnimation new
-		target: element;
-		addAll:
-			{childTranslate1.
-			childTranslate2}.
-	animation := BlParallelAnimation new
-		target: element;
+		addAll: { childTranslate1. childTranslate2 }.
+			
+	child addAnimation: childTranslate.
+	
+	element addAnimation: (animation := BlParallelAnimation new
 		addAll:
 			{backgroundAnimation.
 			scaleIncrease.
-			childTranslate}.
+			childTranslate}).
 	^ animation
 ]
 
 { #category : #examples }
 GtTranscriptExamples >> blocElementWithAnimation [
 	<gtExample>
-	^ self blocAnimation 
-		start; 
-		target
+
+	^ self blocAnimation target
 ]
 
 { #category : #examples }
@@ -209,10 +209,15 @@ GtTranscriptExamples >> transcript [
 { #category : #examples }
 GtTranscriptExamples >> transcriptWitAnimation [
 	<gtExample>
-	| animation transcript |
+	| animation transcript space |
 	transcript := self transcript.
 	animation := self blocAnimation.
-	animation start.
+	
+	space := BlSpace new.
+	space host: BlHeadlessHost new.
+	space addChild: animation target.
+	space show.
+		
 	animation
 		addEventHandlerOn: BlAnimationStepEvent
 		do: [ :anEvent | 
@@ -227,6 +232,8 @@ GtTranscriptExamples >> transcriptWitAnimation [
 				putAll: 'Animation progress:';
 				space;
 				put: anEvent progress asString.
-			animation target asSpartaForm extent ].
+			animation target asSpartaForm extent ];
+		onFinishedDo: [ space close ].
+	
 	^ transcript
 ]
