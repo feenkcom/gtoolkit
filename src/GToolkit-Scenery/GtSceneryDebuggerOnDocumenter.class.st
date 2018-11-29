@@ -16,10 +16,11 @@ GtSceneryDebuggerOnDocumenter class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryDebuggerOnDocumenter >> setUp [
-	| book |
-	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: 'process ifNotNil: [process terminate].
-document := GtDocumenter editorForText: ''!This is a debugging example''.
+	| aBook aDocumentConstructor |
+	aBook := GtPlayBook newDefault.
+	aDocumentConstructor := Gt2Document name.
+	aBook pages first snippets first sourceCode: 'process ifNotNil: [process terminate].
+document := ', aDocumentConstructor, ' new text: ''!This is a debugging example''.
 context := [ document printString ] asContext.
 process := Process
 	forContext: context
@@ -31,5 +32,5 @@ debuggingSession := (process
 	debuggingSession stepInto ].
 GtExpandableDebugger openInspectorOn: debuggingSession.'.
 	
-	GtInspector openOnPlayBook: book
+	GtInspector openOnPlayBook: aBook
 ]

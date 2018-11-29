@@ -16,9 +16,15 @@ GtSceneryPlaygroundOnePharoSnippetWithVisualization class >> menuCommandOn: aBui
 
 { #category : #initialization }
 GtSceneryPlaygroundOnePharoSnippetWithVisualization >> setUp [
-	| book |
+	| book aSubDirectories aFileReference |
 	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: 'directories := ''feenk'' asFileReference allDirectories.
+	aSubDirectories := #allDirectories.
+	aFileReference := 'feenk' asFileReference.
+	aFileReference exists ifFalse: [ 
+		aFileReference := GtIcebergUtility documentAtPath: 'feenkcom'.
+		aSubDirectories := #directories ].
+	book pages first snippets first sourceCode: 'rootDirectory := ', aFileReference fullName printString, ' asFileReference.
+directories := Array with: rootDirectory withAll: rootDirectory ', aSubDirectories asString, '.
 mondrian := GtMondrian new.
 mondrian nodes 
 	stencil: [:dir | 

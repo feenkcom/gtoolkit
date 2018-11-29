@@ -8,7 +8,7 @@ Class {
 GtSceneryPlaygroundOnePharoSnippetWithFolder class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 410.0; 
+		order: 405.0; 
 		parent: #GToolkitScenery;
 		label: 'Playground: File system';
 		action: [self new setUp]
@@ -16,9 +16,12 @@ GtSceneryPlaygroundOnePharoSnippetWithFolder class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryPlaygroundOnePharoSnippetWithFolder >> setUp [
-	| book |
-	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: '''feenk'' asFileReference'.
+	| aBook aFileReference |
+	aBook := GtPlayBook newDefault.
+	aFileReference := 'feenk' asFileReference.
+	aFileReference exists ifFalse: [ 
+		aFileReference := GtIcebergUtility documentAtPath: 'feenkcom' ].
+	aBook pages first snippets first sourceCode: aFileReference fullName printString, ' asFileReference'.
 	
-	GtInspector openOnPlayBook: book
+	GtInspector openOnPlayBook: aBook
 ]

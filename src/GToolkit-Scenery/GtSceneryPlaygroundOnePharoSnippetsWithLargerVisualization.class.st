@@ -16,9 +16,11 @@ GtSceneryPlaygroundOnePharoSnippetsWithLargerVisualization class >> menuCommandO
 
 { #category : #initialization }
 GtSceneryPlaygroundOnePharoSnippetsWithLargerVisualization >> setUp [
-	| book |
-	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: 'directories := (IceLibgitRepository repositoriesLocation / ''feenkcom'')
+	| aBook aPathConstructor |
+	aBook := GtPlayBook newDefault.
+	aPathConstructor := GtIcebergUtility name, 
+		String space, #documentAtPath: asString, String space, 'feenkcom' printString.
+	aBook pages first snippets first sourceCode: 'directories := (', aPathConstructor, ')
 	allDirectories 
 	select: [:each | 
 		(each fullName includesSubstring: ''gtoolkit'') and: [
@@ -35,5 +37,5 @@ mondrian edges
 mondrian layout horizontalTree.
 mondrian'.
 	
-	GtInspector openOnPlayBook: book
+	GtInspector openOnPlayBook: aBook
 ]
