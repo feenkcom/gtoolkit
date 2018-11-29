@@ -16,5 +16,10 @@ GtSceneryInspectorOnFileSystem class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryInspectorOnFileSystem >> setUp [
-	(GtInspector openOn: './feenk' asFileReference) 
+	| aFileReference |
+	aFileReference := './feenk' asFileReference.
+		aFileReference exists ifFalse: [ 
+			aFileReference := GtIcebergUtility documentAtPath: 'feenkcom' ].
+		
+	(GtInspector openOn: aFileReference) 
 ]

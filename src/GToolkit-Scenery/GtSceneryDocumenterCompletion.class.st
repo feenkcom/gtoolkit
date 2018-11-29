@@ -17,5 +17,10 @@ GtSceneryDocumenterCompletion class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryDocumenterCompletion >> setUp [
-	(GtInspector openOn: ('./feenk' asFileReference / 'esug2018'))
+	| aFileReference |
+	aFileReference := './feenk' asFileReference.
+		aFileReference exists ifFalse: [ 
+			aFileReference := GtIcebergUtility documentAtPath: 'feenkcom' ].
+
+	GtInspector openOn: aFileReference
 ]
