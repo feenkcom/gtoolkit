@@ -16,8 +16,7 @@ GtSceneryDocumenterTalk class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryDocumenterTalk >> setUp [
-	| aRegistry aFileReference | 
-	aRegistry := IceRepository registry detect: [ :each | each name = 'gtoolkit-demos' ].
-	aFileReference := aRegistry location / 'doc' / 'tutorial' / 'esug-2018-documenter' / 'documenter.pillar'.
-	GtInspector openOn: aFileReference
+	GtInspector openOnPlayBook: (Gt2Document forFile: (GtIcebergUtility documentAtPath: (Path * 
+		'feenkcom' / 'gtoolkit-demos' / 
+		'doc' / 'tutorial' / 'esug-2018-documenter' / 'documenter.pillar')))
 ]
