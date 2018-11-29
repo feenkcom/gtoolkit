@@ -54,6 +54,10 @@ This very document is edited and rendered through ${class:BaselineOfGToolkitDocu
 ${icebergFile:path=feenkcom/gtoolkit-demos/doc/tutorial/esug-2018-documenter/documenter.pillar}$
 
 
+!!!Coder
+Coder offers a set of components that allow us to manipulate code. More details at: ${class:BaselineOfGToolkitCoder}$.
+
+
 !!!Examples and example-driven development
 Examples offer both a new way to organize the test code and a bridge between the testing effort and documentation.
 
