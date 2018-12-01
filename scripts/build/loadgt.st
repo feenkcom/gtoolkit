@@ -1,4 +1,4 @@
-timeToRun := [EpMonitor current disable.
+EpMonitor current disable.
 Metacello new
   baseline: 'GToolkit';
   repository: 'github://feenkcom/gtoolkit/src';
