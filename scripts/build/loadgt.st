@@ -4,3 +4,4 @@ Metacello new
   repository: 'github://feenkcom/gtoolkit/src';
   load.
 EpMonitor current enable.
+Smalltalk snapshot: true andQuit: false.
