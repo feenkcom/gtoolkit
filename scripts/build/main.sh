@@ -1,6 +1,5 @@
 #/bin/sh!
 set -o xtrace
-set -e
 echo $DISPLAY
 export DISPLAY=:99.0
 curl https://get.pharo.org/64/alpha+vmLatest | bash
