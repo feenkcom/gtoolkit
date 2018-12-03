@@ -17,4 +17,7 @@ export build_zip="${ARTIFACT_DIR}.zip"
 zip -qr "$build_zip" "$ARTIFACT_DIR"
 cp "$build_zip" "GToolkit64".zip
 ./pharo-ui Pharo.image examples --junit-xml-output 'GToolkit-.*'
+sh scripts/build/prepareWin64Package.sh
+sh scripts/build/prepareOSXPackage.sh
+sh scripts/build/prepareLinux64Package.sh
 exit 0
