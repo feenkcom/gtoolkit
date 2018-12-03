@@ -1,9 +1,9 @@
 #/bin/sh!
 set -o xtrace
+set -e
 echo $DISPLAY
 export DISPLAY=:99.0
-curl https://get.pharo.org/64/alpha+vm | bash
-./pharo Pharo.image st --quit scripts/build/loadgt.st
+
 export PROJECT_NAME="GToolkit-64-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 # customize the name of the build folder
 export ARTIFACT_DIR="${PROJECT_NAME}"
@@ -16,5 +16,7 @@ sh scripts/installMozz2d.sh
 export build_zip="${ARTIFACT_DIR}.zip"
 zip -qr "$build_zip" "$ARTIFACT_DIR"
 cp "$build_zip" "GToolkit64".zip
+
+set +e
 ./pharo-ui Pharo.image examples --junit-xml-output 'GToolkit-.*'
 exit 0
