@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
-curl https://dl.feenk.com/gt/GToolkit64.zip -o GToolkit64.zip
-unzip -u GToolkit64.zip
+#curl https://dl.feenk.com/gt/GToolkit64.zip -o GToolkit64.zip
+#unzip -u GToolkit64.zip
 mkdir -p GToolkitWin64
 cp -rv GToolkit-64*/* GToolkitWin64
 
