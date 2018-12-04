@@ -9,5 +9,5 @@ curl https://files.pharo.org/get-files/70/pharo64-mac-latest.zip -o pharo64-mac-
 unzip pharo64-mac-latest.zip -d pharo64-mac-latest
 mv -fv pharo64-mac-latest/* GToolkitOSX64/
 zip -qyr GToolkitOSX64.zip GToolkitOSX64
-# scp GToolkitOSX64.zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
+# 
 set +e

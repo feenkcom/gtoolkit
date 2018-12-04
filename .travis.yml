@@ -38,42 +38,12 @@ before_script:
       sh -e /etc/init.d/xvfb start;
     fi
 
-after_success:
-  - |
-    set -e
-    if [ -n "$BITS" ]
-    then
-      #run only in build steps, not in deploy step
-      pwd
-      ls -al "${SMALLTALK_CI_BUILD}/"
-      export PROJECT_NAME="GToolkit-${BITS}-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-      # customize the name of the build folder
-      export ARTIFACT_DIR="${PROJECT_NAME}"
-      mkdir "$ARTIFACT_DIR"
-      sh scripts/resizeImage.sh "$SMALLTALK_CI_IMAGE" 800 600
-      $SMALLTALK_CI_BUILD/vm "$SMALLTALK_CI_IMAGE" st --save --quit scripts/opentour.st
-      cp "$SMALLTALK_CI_IMAGE" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.image"
-      cp "$SMALLTALK_CI_CHANGES" "${ARTIFACT_DIR}/${PROJECT_NAME}${BITS}.changes"
-      cp "${SMALLTALK_CI_BUILD}/"*.sources "${ARTIFACT_DIR}/"
-      cp -Rv gt-extra "${ARTIFACT_DIR}/"
-      sh scripts/installMozz2d.sh
-      export build_zip="${ARTIFACT_DIR}.zip"
-      zip -qr "$build_zip" "$ARTIFACT_DIR"
-      cp "$build_zip" "GToolkit${BITS}".zip
-
-      #upload to sftp server
-      scp $build_zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
-      scp GToolkit$BITS.zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
-      ssh ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com -t "cd /var/www/html/gt/; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n' -r rm --"
-    fi
-
 
 before_deploy:
   # Set up git user name and tag this commit
   - git config --local user.name "YOUR GIT USER NAME"
   - git config --local user.email "YOUR GIT USER EMAIL"
   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-  - sh scripts/downloadGT.sh
 jobs:
   include:
     - stage: build
@@ -81,28 +51,28 @@ jobs:
       smalltalk: Pharo64-alpha
       env: BITS=64
       os: osx
-    - stage: packagevm
-      script: scripts/prepareOSXPackage.sh
-      os: osx
-      env: ENV=osx
-    - script: scripts/prepareLinux64Package.sh
-      os: linux
-      env: ENV=linux
-    - script: scripts/prepareWin64Package.sh
-      os: linux
-      env: ENV=win
-    - stage: deploy
-      script: skip
-      smalltalk: Pharo64-7.0
-      deploy:
-        skip_cleanup: true
-        provider: releases
-        name: TravisBuild
-        api_key:
-          secure:
-            qs1LDPEyShWtMgepESqCHtUePMWT2C7Mn4MlsYdmWVpHbchIt3k9eb2QQrgbvuGLhnjsLlAm05mNqLlfoZxriWmSLqjz8d53Z8hqzCM1U/pLRqmUIcg+A4aBwl75dh1yW3qc5yHdqdVpze6Qg76YAXt98VsFix+Cjj8pkoMhwl27mxzfDfOlQUOVAzrH8ipjmpVEDSKOmAJCnsdnJDivtIz6q0IQeLeQ+sD4VzZSfQ0qZk55xiUQejAMcpYDPXSWOAig02N4VUKZcPSqbCa1LRQC7FPuhLSz8YgmNPIbrqNwO3ZFHJCEmLAhhj9DKUqWFfZ5Tu7udgCd5EMEcIyI/g+S0j/Jp3u3Yivm6tJWRXrPjKk3u6A1JRnnUpqO7EDudLLXZ42qsxf6rZkngcbdDhm7OiZmMejEWZGKqMe/Uk7kZPfPuEW/2odrdlvrl8cINTjDITfj15In82J2RR+GZRcLzjH/3Ewc9+UB2H0vdr6zmW8cPhXpK5DLnJg315WIdA338hBqrwuezBpMVD9J7nEbqHuR2Cb5+hD3AzwSTmDdNaRHDw7QFJzOMEYCshPhHPeZH0Q9CB/Vi+SSy1QIUnY5GVZmpjL3Z0ZVKjE8296LFFUuE0ron3l50JOw7oaahoOyExH1eVlMRnvOohWITVBwcqUHbSUCC3BdXHkft9Y=
-        file:
-          - GToolkit32.zip
-          - GToolkit64.zip
-        on:
-          repo: feenkcom/gtoolkit
+    # - stage: packagevm
+    #   script: scripts/prepareOSXPackage.sh
+    #   os: osx
+    #   env: ENV=osx
+    # - script: scripts/prepareLinux64Package.sh
+    #   os: linux
+    #   env: ENV=linux
+    # - script: scripts/prepareWin64Package.sh
+    #   os: linux
+    #   env: ENV=win
+    # - stage: deploy
+    #   script: skip
+    #   smalltalk: Pharo64-7.0
+    #   deploy:
+    #     skip_cleanup: true
+    #     provider: releases
+    #     name: TravisBuild
+    #     api_key:
+    #       secure:
+    #         qs1LDPEyShWtMgepESqCHtUePMWT2C7Mn4MlsYdmWVpHbchIt3k9eb2QQrgbvuGLhnjsLlAm05mNqLlfoZxriWmSLqjz8d53Z8hqzCM1U/pLRqmUIcg+A4aBwl75dh1yW3qc5yHdqdVpze6Qg76YAXt98VsFix+Cjj8pkoMhwl27mxzfDfOlQUOVAzrH8ipjmpVEDSKOmAJCnsdnJDivtIz6q0IQeLeQ+sD4VzZSfQ0qZk55xiUQejAMcpYDPXSWOAig02N4VUKZcPSqbCa1LRQC7FPuhLSz8YgmNPIbrqNwO3ZFHJCEmLAhhj9DKUqWFfZ5Tu7udgCd5EMEcIyI/g+S0j/Jp3u3Yivm6tJWRXrPjKk3u6A1JRnnUpqO7EDudLLXZ42qsxf6rZkngcbdDhm7OiZmMejEWZGKqMe/Uk7kZPfPuEW/2odrdlvrl8cINTjDITfj15In82J2RR+GZRcLzjH/3Ewc9+UB2H0vdr6zmW8cPhXpK5DLnJg315WIdA338hBqrwuezBpMVD9J7nEbqHuR2Cb5+hD3AzwSTmDdNaRHDw7QFJzOMEYCshPhHPeZH0Q9CB/Vi+SSy1QIUnY5GVZmpjL3Z0ZVKjE8296LFFUuE0ron3l50JOw7oaahoOyExH1eVlMRnvOohWITVBwcqUHbSUCC3BdXHkft9Y=
+    #     file:
+    #       - GToolkit32.zip
+    #       - GToolkit64.zip
+    #     on:
+    #       repo: feenkcom/gtoolkit

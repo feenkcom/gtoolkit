@@ -9,5 +9,5 @@ curl https://files.pharo.org/get-files/70/pharo64-linux-latest.zip -o pharo64-li
 unzip pharo64-linux-latest.zip -d pharo64-linux-latest
 mv -fv pharo64-linux-latest/* GToolkitLinux64/
 zip -qyr GToolkitLinux64.zip GToolkitLinux64
-# scp GToolkitLinux64.zip ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com:/var/www/html/gt/
+# 
 set +e
