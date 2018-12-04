@@ -18,5 +18,5 @@ zip -qr "$build_zip" "$ARTIFACT_DIR"
 cp "$build_zip" "GToolkit64".zip
 
 set +e
-./pharo-ui Pharo.image examples --junit-xml-output 'GToolkit-.*'
+./pharo-ui Pharo.image examples --junit-xml-output 'GToolkit-.*' 2>&1
 exit 0
