@@ -26,7 +26,7 @@ GtSceneryPlaygroundTwoPharoSnippetsWithVisualization >> setUp [
 	select: [:each | 
 		(each fullName includesSubstring: ''gtoolkit'') and: [
 			(each fullName includesSubstring: ''git'') not]]'.
-	aBook pages first addSnippet: GtPharoSnippet new.
+	aBook pages first addSnippet: GtCoderSnippet new.
 	aBook pages last snippets last sourceCode: 'mondrian := GtMondrian new.
 mondrian nodes 
 	stencil: [:dir | 
