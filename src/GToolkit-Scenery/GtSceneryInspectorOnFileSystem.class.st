@@ -11,7 +11,8 @@ GtSceneryInspectorOnFileSystem class >> menuCommandOn: aBuilder [
 		order: 50.0; 
 		parent: #GToolkitScenery;
 		label: 'Inspector: file system';
-		action: [self new setUp]
+		action: [self new setUp];
+		withSeparatorAfter
 ]
 
 { #category : #initialization }

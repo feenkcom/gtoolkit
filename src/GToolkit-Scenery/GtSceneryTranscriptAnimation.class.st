@@ -11,8 +11,7 @@ GtSceneryTranscriptAnimation class >> menuCommandOn: aBuilder [
 		order: 905.0; 
 		parent: #GToolkitScenery;
 		label: 'Transcript: Animation';
-		action: [self new setUp];
-		withSeparatorAfter
+		action: [self new setUp]
 ]
 
 { #category : #initialization }
