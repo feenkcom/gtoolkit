@@ -159,6 +159,7 @@ GtTranscriptNextBuilder >> showException: anException [
 			list := (GtPhlowEmptyView new list items: stack) asElementDo: #yourself.
 			card := list asVerticallyResizableDo: [ :aContainer |
 				aContainer layout: BlLinearLayout vertical.
+				aContainer padding: (BlInsets all: 10).
 				aContainer constraintsDo: [ :c |
 					c horizontal matchParent.
 					c vertical exact: 200 ] ].
