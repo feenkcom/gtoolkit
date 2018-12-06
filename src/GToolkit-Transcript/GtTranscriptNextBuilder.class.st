@@ -127,17 +127,19 @@ GtTranscriptNextBuilder >> put: aCharacter [
 { #category : #streaming }
 GtTranscriptNextBuilder >> putAll: aString [
 
-	transcript editor inserter
-		atEnd;
-		string: aString asString;
-		insert.
+	"We should only modify the editor from within the UI thread"
+	BlUniverse defer: [ 
+		transcript editor inserter
+			atEnd;
+			string: aString asString;
+			insert.
 
-	"we delete the possible attributes inherited from the previously existing text"
-	transcript text
-		clearAttributes: transcript text size - aString size + 1
-		to: transcript text size
-		if: [ :a | true ].
-	self applyAttributes
+		"we delete the possible attributes inherited from the previously existing text"
+		transcript text
+			clearAttributes: transcript text size - aString size + 1
+			to: transcript text size
+			if: [ :a | true ].
+		self applyAttributes ]
 ]
 
 { #category : #streaming }
