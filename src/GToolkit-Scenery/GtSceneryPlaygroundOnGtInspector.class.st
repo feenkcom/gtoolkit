@@ -8,7 +8,7 @@ Class {
 GtSceneryPlaygroundOnGtInspector class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: self name)
-		order: 400.0; 
+		order: 410.0; 
 		parent: #GToolkitScenery;
 		label: 'Playground: GtInspector';
 		action: [self new setUp]
