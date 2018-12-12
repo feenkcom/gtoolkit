@@ -127,17 +127,19 @@ GtTranscriptNextBuilder >> put: aCharacter [
 { #category : #streaming }
 GtTranscriptNextBuilder >> putAll: aString [
 
-	transcript editor inserter
-		atEnd;
-		string: aString asString;
-		insert.
+	"We should only modify the editor from within the UI thread"
+	BlUniverse defer: [ 
+		transcript editor inserter
+			atEnd;
+			string: aString asString;
+			insert.
 
-	"we delete the possible attributes inherited from the previously existing text"
-	transcript text
-		clearAttributes: transcript text size - aString size + 1
-		to: transcript text size
-		if: [ :a | true ].
-	self applyAttributes
+		"we delete the possible attributes inherited from the previously existing text"
+		transcript text
+			clearAttributes: transcript text size - aString size + 1
+			to: transcript text size
+			if: [ :a | true ].
+		self applyAttributes ]
 ]
 
 { #category : #streaming }
@@ -147,21 +149,22 @@ GtTranscriptNextBuilder >> show: anObject [
 
 { #category : #streaming }
 GtTranscriptNextBuilder >> showException: anException [
-	| string |
-	string := String streamContents: [ :s | 
-		anException signalerContext shortDebugStackOn: s ].
+	| stack |
+	
+	stack := anException signalerContext stack.
+
 	self 
 		expanding: [ 
-			| text |
-			text := string asRopedText foreground: Color red twiceDarker.
-			BrEditorElement new
-				constraintsDo: [ :c |
+			| list card |
+			list := (GtPhlowEmptyView new list items: stack) asElementDo: #yourself.
+			card := list asVerticallyResizableDo: [ :aContainer |
+				aContainer layout: BlLinearLayout vertical.
+				aContainer padding: (BlInsets all: 10).
+				aContainer constraintsDo: [ :c |
 					c horizontal matchParent.
-					c textFlow pushLine.
-					c vertical exact: 200 ];
-				background: Color white;
-				border: (BlBorder paint: Color veryLightGray width: 1);
-				editor: (BrTextEditor new text: text) ];
+					c vertical exact: 200 ] ].
+			card addLook: Gt2PreviewLook new.
+			card ];
 		print: anException
 ]
 
