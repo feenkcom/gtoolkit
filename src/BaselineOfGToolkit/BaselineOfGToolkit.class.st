@@ -141,6 +141,8 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [ 
-				spec repository: 'github://feenkcom/gtoolkit-demos/src' ]
+				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
+			baseline: 'GToolkitReleaser' with: [ 
+				spec repository: 'github://feenkcom/gtoolkit-releaser/src' ]
 	]
 ]
