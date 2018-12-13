@@ -117,32 +117,32 @@ BaselineOfGToolkit class >> itself [
 { #category : #baseline }
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>
-	spec for: #common do: [ 
-		spec
-			package: 'GToolkit-Scenery';
-			baseline: 'GToolkitDocumenter' with: [ 
+	spec for: #'common' do: [
+		spec 
+			baseline: 'GToolkitDocumenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-documenter/src' ];
-			baseline: 'GToolkitTranscript' with: [ 
+			baseline: 'GToolkitTranscript' with: [
 				spec repository: 'github://feenkcom/gtoolkit/src' ];
-			baseline: 'GToolkitVisualizerPhlow' with: [ 
+			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer/src' ];
-			baseline: 'GToolkitInspector' with: [ 
-				spec 	repository: 'github://feenkcom/gtoolkit-inspector/src' ];
-			baseline: 'GToolkitDebugger' with: [ 
-				spec 	repository: 'github://feenkcom/gtoolkit-debugger/src' ];
-			baseline: 'GToolkitPlayground' with: [ 
-				spec 	repository: 'github://feenkcom/gtoolkit-playground/src' ];
-			baseline: 'GToolkitCoder' with: [ 
+			baseline: 'GToolkitInspector' with: [
+				spec repository: 'github://feenkcom/gtoolkit-inspector/src' ];
+			baseline: 'GToolkitDebugger' with: [
+				spec repository: 'github://feenkcom/gtoolkit-debugger/src' ];
+			baseline: 'GToolkitPlayground' with: [
+				spec repository: 'github://feenkcom/gtoolkit-playground/src' ];
+			baseline: 'GToolkitCoder' with: [
 				spec repository: 'github://feenkcom/gtoolkit-coder/src' ];
-			baseline: 'GToolkitCognitiveServiceDemo' with: [ 
+			baseline: 'GToolkitCognitiveServiceDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
-			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [ 
+			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
-			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [ 
+			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
-			baseline: 'GToolkitMoldableDevelopmentDemo' with: [ 
+			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
-			baseline: 'GToolkitReleaser' with: [ 
-				spec repository: 'github://feenkcom/gtoolkit-releaser/src' ]
-	]
+			baseline: 'GToolkitReleaser' with: [
+				spec repository: 'github://feenkcom/gtoolkit-releaser/src' ].
+		spec package: 'GToolkit-Scenery'. ].
+
 ]
