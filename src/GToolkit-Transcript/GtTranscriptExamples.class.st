@@ -111,12 +111,11 @@ GtTranscriptExamples >> completeAPI [
 		transcript next 
 			tab;
 			putAll: 'Exception: ';
-			showException: err;
-			cr ].
-	transcript next 
+			showException: err ].
+	"transcript next 
 		tab;
 		italic;
-		streamAll: [ transcript next putAll: 'And others ...' ].
+		streamAll: [ transcript next putAll: 'And others ...' ]."
 	^ transcript 
 ]
 
