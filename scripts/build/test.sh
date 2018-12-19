@@ -18,7 +18,7 @@ zip -qr "$build_zip" "$ARTIFACT_DIR"
 cp "$build_zip" "GToolkit64".zip
 
 set +e
-./pharo-ui Pharo.image examples --junit-xml-output 'GToolkit-.*' 2>&1
+./pharo Pharo.image examples --junit-xml-output 'GToolkit-.*' 2>&1
 export AWS=ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com
 export GTfolder=/var/www/html/gt/
 scp $build_zip $AWS:$GTfolder
