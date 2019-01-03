@@ -15,7 +15,7 @@ pipeline {
         stage('Run gtoolkit-releaser') {
             when {
               expression {
-                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+                currentBuild.result == null || currentBuild.result == 'UNSTABLE' 
               }
             }
             steps {
