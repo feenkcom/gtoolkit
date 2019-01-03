@@ -9,6 +9,7 @@ pipeline {
         stage('Save image then test') {
             steps {
                 sh 'scripts/build/test.sh'
+                junit '*.xml'
             }
         }
         stage('Prepare deploy packages') {
