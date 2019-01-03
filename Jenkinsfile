@@ -6,25 +6,20 @@ pipeline {
                 sh 'scripts/build/load.sh'
             }
         }
-        stage('Save image then test') {
+        stage('Run examples') {
             steps {
                 sh 'scripts/build/test.sh'
                 junit '*.xml'
             }
         }
-        stage('Prepare deploy packages') {
+        stage('Run gtoolkit-releaser') {
             when {
               expression {
                 currentBuild.result == null || currentBuild.result == 'SUCCESS' 
               }
             }
             steps {
-                sh 'scripts/build/package.sh'
-            }
-        }
-        stage('Deploy packages') {
-            steps {
-                sh 'scripts/build/upload.sh'
+                sh './pharo Pharo.image st --quit scripts/build/runreleaser.st'
             }
         }
     }
