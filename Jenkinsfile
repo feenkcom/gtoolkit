@@ -1,10 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Clean Workspace') 
+        stage('Clean Workspace') {
             steps {
                 git clean -fdx
             }
+        }
         stage('Load') {
             steps {
                 sh 'scripts/build/load.sh'
