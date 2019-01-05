@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    when { branch 'logging' }
     stages {
         stage('Load') {
             steps {
