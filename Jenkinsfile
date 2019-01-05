@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    when { branch 'logging' }
     stages {
         stage('Load') {
+            when { branch 'logging' }
             steps {
                 sh 'scripts/build/load.sh'
             }
