@@ -20,7 +20,7 @@ pipeline {
               }
             }
             steps {
-                sh './pharo Pharo.image st --quit scripts/build/runreleaser.st'
+                sh './pharo Pharo.image st --quit scripts/build/runreleaser.st 2>&1'
             }
         }
     }
