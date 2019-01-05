@@ -1,2 +1,2 @@
 "Run releaser"
-GtRlReleaserExportWorkflow performGToolkitRelease.
+GtRlReleaserExportWorkflow buildGToolkitRelease.
