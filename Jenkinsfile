@@ -4,6 +4,7 @@ pipeline {
         stage('Load') {
             when { branch 'logging' }
             steps {
+                sh 'git clean -f -d'
                 sh 'scripts/build/load.sh'
             }
         }
