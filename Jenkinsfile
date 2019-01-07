@@ -5,6 +5,7 @@ pipeline {
             when { branch 'logging' }
             steps {
                 sh 'git clean -f -d'
+                sh 'rm -rf pharo-local'
                 sh 'scripts/build/load.sh'
             }
         }
