@@ -30,7 +30,7 @@ BaselineOfGToolkitTranscript >> baseline: spec [
 	<baseline>
 	spec for: #'common' do: [
 		spec baseline: 'Brick' with: [
-				spec repository: 'github://pharo-graphics/Brick:v0.4.0/src' ].
+				spec repository: 'github://pharo-graphics/Brick:v0.4.1/src' ].
 		spec package: 'GToolkit-Transcript' with: [
 				spec requires: #(#Brick ). ]. ].
 
