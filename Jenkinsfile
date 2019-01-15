@@ -2,7 +2,10 @@ pipeline {
     agent any
     stages {
         stage('Load latest commit') {
-            when { allOf { branch 'logging';  not { tag "v*" } } }
+            when { expression {
+                    env.BRANCH_NAME.toString().equals('logging') && (env.TAG_NAME.toString().size() == 0)
+                }
+            }
             steps {
                 sh 'git clean -f -d'
                 sh 'rm -rf pharo-local'
@@ -10,7 +13,10 @@ pipeline {
             }
         }
         stage('Load latest tag') {
-            when { allOf { branch 'logging'; tag "v*" } }
+            when { expression {
+                    env.BRANCH_NAME.toString().equals('logging') && (env.TAG_NAME.toString().startsWith("v"))
+                }
+            }
             steps {
                 sh 'git clean -f -d'
                 sh 'rm -rf pharo-local'
