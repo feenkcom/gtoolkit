@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Load latest tag') {
             when { expression {
-                    env.BRANCH_NAME.toString().equals('logging') && (env.TAG_NAME.toString().startsWith("v"))
+                    env.TAG_NAME.toString().startsWith("v")
                 }
             }
             steps {
