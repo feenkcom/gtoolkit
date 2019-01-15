@@ -10,7 +10,7 @@ pipeline {
         stage('Load latest commit') {
 
             when { expression {
-                    env.BRANCH_NAME.toString().equals('logging') && (env.TAG_NAME == null)
+                    env.BRANCH_NAME.toString().equals('loggin') && (env.TAG_NAME == null)
                 }
             }
             steps {
