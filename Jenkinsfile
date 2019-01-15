@@ -1,9 +1,16 @@
 pipeline {
     agent any
     stages {
+        stage('Echo tags') {
+            steps {
+                sh 'echo $TAG_NAME'
+                sh 'echo $BRANCH_NAME'
+            }
+        }
         stage('Load latest commit') {
+
             when { expression {
-                    env.BRANCH_NAME.toString().equals('logging') && (env.TAG_NAME.toString().size() == 0)
+                    env.BRANCH_NAME.toString().equals('logging') && (env.TAG_NAME == null)
                 }
             }
             steps {
