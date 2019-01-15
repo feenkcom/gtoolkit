@@ -10,7 +10,7 @@ pipeline {
             }
         }
         stage('Load latest tag') {
-            when { allOf { branch 'logging'; { tag '.*' } } }
+            when { allOf { branch 'logging'; tag '.*' } }
             steps {
                 sh 'git clean -f -d'
                 sh 'rm -rf pharo-local'
