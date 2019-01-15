@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'echo $TAG_NAME'
                 sh 'echo $BRANCH_NAME'
+                sh 'ssh-add ~/.ssh/id_rsa'
             }
         }
         stage('Load latest commit') {
