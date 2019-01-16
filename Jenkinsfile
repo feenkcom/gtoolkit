@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clean Workspace') {
             steps {
-                git clean -fdx
+                sh 'git clean -fdx'
             }
         }
         stage('Load latest commit') {
