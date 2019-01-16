@@ -11,8 +11,7 @@ GtSceneryDocumenterTutorialInClassComments class >> menuCommandOn: aBuilder [
 		order: 230.0; 
 		parent: #GToolkitScenery;
 		label: 'Documenter: Bloc class comments';
-		action: [self new setUp];
-		withSeparatorAfter
+		action: [self new setUp]
 ]
 
 { #category : #initialization }
