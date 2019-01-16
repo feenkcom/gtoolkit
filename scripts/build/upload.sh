@@ -2,7 +2,7 @@ set -o xtrace
 set -e
 export AWS=ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com
 export GTfolder=/var/www/html/gt/
-export build_zip=$(ls GToolkit-64-*)
+export build_zip=$(ls GToolkit-64-*.zip)
 scp GToolkit64.zip $AWS:$GTfolder
 scp GToolkitWin64.zip $AWS:$GTfolder
 scp GToolkitOSX64.zip $AWS:$GTfolder
