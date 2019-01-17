@@ -4,6 +4,7 @@ pipeline {
         stage('Clean Workspace') {
             steps {
                 sh 'git clean -fdx'
+                sh 'chmod +x scripts/build/*.sh'
             }
         }
         stage('Load latest commit') {
