@@ -21,7 +21,5 @@ set +e
 git config --global user.name "Jenkins"
 git config --global user.email "jenkins@feenk.com"
 ./pharo Pharo.image examples --junit-xml-output 'GToolkit-.*' 2>&1
-export AWS=ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com
-export GTfolder=/var/www/html/gt/
 
 exit 0
