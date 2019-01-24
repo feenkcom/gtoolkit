@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    options { 
+        disableConcurrentBuilds() 
+    }
     stages {
         stage('Clean Workspace') {
             steps {
@@ -57,7 +60,7 @@ pipeline {
         stage('Upload packages') {
             when {
               expression {
-                (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.TAG_NAME.toString().startsWith("v")
+                (currentBuild.result == null || currentBuild.result == 'SUCCESS') 
               }
             }
             steps {

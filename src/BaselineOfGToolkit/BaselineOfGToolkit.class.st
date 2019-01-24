@@ -5,7 +5,7 @@ The Glamorous Toolkit (GT) is the moldable integrated development environment. F
 
 What's interesting about it? It offers a fundamentally new perspective on how programs can be approached. It's not the features that make the difference. Yes, we do have cool widgets and fancy code analyses, but our goal is to change the way you experience software. You can read about it, but to understand it, you have to play with it.
 
-And engage with us. We'd love to hear from you: *https://feenk.com/gt*. 
+And engage with us. We'd love to hear from you: *https://gtoolkit.com*. 
 
 
 !!Project organization
