@@ -4,7 +4,7 @@ export AWS=ubuntu@ip-172-31-37-111.eu-central-1.compute.internal
 export GTfolder=/var/www/html/gt/
 export build_zip=$(ls GToolkit-64-*.zip)
 
-if [ -z "${TAG_NAME}" ]
+if [ -v "${TAG_NAME}" ]
 then
     scp GToolkitWin64*.zip $AWS:$GTfolder
     scp GToolkitOSX64*.zip $AWS:$GTfolder

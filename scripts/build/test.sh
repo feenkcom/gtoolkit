@@ -6,9 +6,9 @@ export DISPLAY=:99.0
 
 if [ -z "${TAG_NAME}" ] 
 then
-  export PROJECT_NAME="GToolkit-64-${TAG_NAME}-$(date +'%Y%m%d%H%M%S')"
-else
   export PROJECT_NAME="GToolkit-64-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+else
+  export PROJECT_NAME="GToolkit-64-${TAG_NAME}-$(date +'%Y%m%d%H%M%S')"
 fi
 
 # customize the name of the build folder
