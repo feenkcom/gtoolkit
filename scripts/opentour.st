@@ -1,1 +1,0 @@
-#GtWorld asClass openTour.
