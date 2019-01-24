@@ -4,11 +4,13 @@ export AWS=ubuntu@ip-172-31-37-111.eu-central-1.compute.internal
 export GTfolder=/var/www/html/gt/
 export build_zip=$(ls GToolkit-64-*.zip)
 
-if [ -v "${TAG_NAME}" ]
+if [ ! -z "${TAG_NAME}" ]
 then
     scp GToolkitWin64*.zip $AWS:$GTfolder
     scp GToolkitOSX64*.zip $AWS:$GTfolder
     scp GToolkitLinux64*.zip $AWS:$GTfolder
+else
+    echo "TAG_NAME not set"
 fi
 
 scp $build_zip $AWS:$GTfolder
