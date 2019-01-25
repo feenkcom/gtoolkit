@@ -16,6 +16,8 @@ The current repository embodies the second generation of GT that is based on the
 - [Examples](https://github.com/feenkcom/gtoolkit-examples): an engine for example-driven development in Pharo.
 - [Completer](https://github.com/feenkcom/gtoolkit-completer): the moldable completion engine.
 - [Phlow](https://github.com/feenkcom/gtoolkit-phlow): the browsing engine.
+- [Releaser](https://github.com/feenkcom/gtoolkit-releaser): the engine that allows us to manage and release deeply nested projects.
+
 
 
 ## How to load
