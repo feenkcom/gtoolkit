@@ -73,7 +73,7 @@ pipeline {
                         remote.user = userName
                         remote.identityFile = identity
                         remote.allowAnyHosts = true
-                        sshScript remote: remote, script: "build/update-latest-links.sh"
+                        sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
                     }
                 }
             }
