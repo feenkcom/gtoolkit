@@ -20,8 +20,23 @@ Class {
 		'text',
 		'editor'
 	],
-	#category : 'GToolkit-Transcript'
+	#classInstVars : [
+		'default'
+	],
+	#category : #'GToolkit-Transcript'
 }
+
+{ #category : #accessing }
+GtTranscript class >> cleanUp [
+	super cleanUp.
+	
+	default := nil
+]
+
+{ #category : #accessing }
+GtTranscript class >> default [
+	^ default ifNil: [ default := self new ]
+]
 
 { #category : #streaming }
 GtTranscript >> << anObject [
