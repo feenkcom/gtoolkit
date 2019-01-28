@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    parameters { string(name: 'FORCED_TAG_NAME', defaultValue: null, description: 'params.FORCED_TAG_NAME env variable') }
+    parameters { string(name: 'FORCED_TAG_NAME', defaultValue: '', description: 'params.FORCED_TAG_NAME env variable') }
     options { 
         disableConcurrentBuilds() 
     }
@@ -43,7 +43,7 @@ pipeline {
 
         stage('Run releaser') { 
             when { expression {
-                    env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (params.FORCED_TAG_NAME != null)
+                    env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (params.FORCED_TAG_NAME != '')
                 }
             }
             steps {
