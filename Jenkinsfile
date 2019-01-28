@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    parameters { string(name: 'FORCED_TAG_NAME', defaultValue: '', description: 'params.FORCED_TAG_NAME env variable') }
     options { 
         disableConcurrentBuilds() 
     }
@@ -40,11 +41,15 @@ pipeline {
             }
         }
 
-        // stage('Run releaser') { we run releaser manually for now
-        //     steps {
-        //         sh 'scripts/build/runreleaser.sh'
-        //     }
-        // }
+        stage('Run releaser') { 
+            when { expression {
+                    env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (params.FORCED_TAG_NAME != '')
+                }
+            }
+            steps {
+                sh 'scripts/build/runreleaser.sh'
+            }
+        }
 
         stage('Prepare deploy packages') {
             when {
