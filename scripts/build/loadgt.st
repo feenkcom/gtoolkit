@@ -22,6 +22,6 @@ docFolders do: [ :each |
 
 World closeAllWindowsDiscardingChanges.
 
-#GtWorld asClass openTour.
+#GtWorldMenu asClass openTour.
 
 Smalltalk snapshot: true andQuit: false.
