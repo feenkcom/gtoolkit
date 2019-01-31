@@ -9,6 +9,7 @@ pipeline {
             steps {
                 sh 'git clean -fdx'
                 sh 'chmod +x scripts/build/*.sh'
+                slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
         stage('Load latest commit') {
