@@ -22,6 +22,6 @@ docFolders do: [ :each |
 	
 World closeAllWindowsDiscardingChanges.
 
-#GtWorld asClass openTour.
+#GtWorldMenu asClass openTour.
 IceRepository registry removeAll.
 Smalltalk snapshot: true andQuit: false.

@@ -43,7 +43,7 @@ pipeline {
 
         stage('Run releaser') { 
             when { expression {
-                    env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (params.FORCED_TAG_NAME != '')
+                    env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null)
                 }
             }
             steps {
