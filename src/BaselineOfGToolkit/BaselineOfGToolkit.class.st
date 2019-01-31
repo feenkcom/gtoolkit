@@ -84,7 +84,8 @@ The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This sta
 - debuggable. There are a significant amount of tools and mechanisms that are built for this.
 
 Learn more about it at ${class:GtWhatMakesBlocSpecialExamples}$
-
+!! Blog
+${xdocs}$
 
 
 "
