@@ -18,7 +18,7 @@ cp Pharo.image "${ARTIFACT_DIR}/${PROJECT_NAME}64.image"
 cp Pharo.changes "${ARTIFACT_DIR}/${PROJECT_NAME}64.changes"
 cp *.sources "${ARTIFACT_DIR}/"
 cp -Rv gt-extra "${ARTIFACT_DIR}/"
-sh scripts/installMozz2d.sh
+sh scripts/build/installMozz2d.sh
 export build_zip="${ARTIFACT_DIR}.zip"
 zip -qr "$build_zip" "$ARTIFACT_DIR"
 
