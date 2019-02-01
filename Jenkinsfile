@@ -39,6 +39,9 @@ pipeline {
             steps {
                 sh 'scripts/build/test.sh'
                 junit '*.xml'
+                echo env.BRANCH_NAME
+                echo env.TAG_NAME
+                echo currentBuild.result
             }
         }
 
