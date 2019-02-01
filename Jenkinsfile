@@ -41,7 +41,7 @@ pipeline {
                 junit '*.xml'
                 echo env.BRANCH_NAME
                 echo env.TAG_NAME
-                echo currentBuild
+                echo currentBuild.toString()
                 echo currentBuild.result
             }
         }
