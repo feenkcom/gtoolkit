@@ -51,8 +51,7 @@ transcript cr.'.
 	transcript next 
 		tab;
 		putAll: ''Exception: '';
-		showException: err;
-		cr ].'.
+		showException: err ].'.
 "	book pages first addSnippet: GtCoderSnippet new."
 
 	GtInspector openOnPlayBook: book

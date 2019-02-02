@@ -20,19 +20,10 @@ Class {
 	#instVars : [
 		'transcript',
 		'adornmentStrategy',
-		'startPosition',
 		'attributes'
 	],
-	#category : 'GToolkit-Transcript'
+	#category : #'GToolkit-Transcript'
 }
-
-{ #category : #private }
-GtTranscriptNextBuilder >> applyAttributes [
-	(transcript text
-		from: self startPosition
-		to: transcript text size)
-			attributes: attributes
-]
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> attribute: anAttribute [
@@ -129,6 +120,10 @@ GtTranscriptNextBuilder >> putAll: aString [
 
 	"We should only modify the editor from within the UI thread"
 	BlUniverse defer: [ 
+		| aStartPosition |
+		
+		aStartPosition := transcript editor text size + 1.
+		
 		transcript editor inserter
 			atEnd;
 			string: aString asString;
@@ -139,7 +134,14 @@ GtTranscriptNextBuilder >> putAll: aString [
 			clearAttributes: transcript text size - aString size + 1
 			to: transcript text size
 			if: [ :a | true ].
-		self applyAttributes ]
+			
+		(transcript text
+			from: aStartPosition
+			to: transcript text size)
+				attributes: attributes.
+		
+		transcript editor update: aStartPosition to: transcript text size.
+		transcript editor invalidate: aStartPosition to: transcript text size ]
 ]
 
 { #category : #streaming }
@@ -173,20 +175,23 @@ GtTranscriptNextBuilder >> space [
 	self put: Character space
 ]
 
-{ #category : #accessing }
-GtTranscriptNextBuilder >> startPosition [
-	^ startPosition
-]
-
 { #category : #streaming }
 GtTranscriptNextBuilder >> streamAll: aBlock [
-	| rememberedAdornmentStrategy rememberedStartPosition |
+	| rememberedAdornmentStrategy aStartPosition |
+	
+	aStartPosition := transcript text size.
+	
 	rememberedAdornmentStrategy := adornmentStrategy.
-	rememberedStartPosition := startPosition.
 	aBlock value.
 	adornmentStrategy := rememberedAdornmentStrategy.
-	startPosition := rememberedStartPosition.
-	self applyAttributes
+
+	(transcript text
+			from: aStartPosition
+			to: transcript text size)
+				attributes: attributes.
+		
+		transcript editor update: aStartPosition to: transcript text size.
+		transcript editor invalidate: aStartPosition to: transcript text size
 ]
 
 { #category : #streaming }
@@ -201,8 +206,7 @@ GtTranscriptNextBuilder >> transcript [
 
 { #category : #accessing }
 GtTranscriptNextBuilder >> transcript: aTranscript [
-	transcript := aTranscript.
-	startPosition := transcript text size + 1
+	transcript := aTranscript
 ]
 
 { #category : #streaming }
