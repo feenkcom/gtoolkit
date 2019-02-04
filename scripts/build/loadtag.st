@@ -5,8 +5,8 @@ Metacello new
   load.
 EpMonitor current enable.
 
-GtDocumenterConstants localGtDirectory asFileReference ensureCreateDirectory.
-Transcript crShow: ('localGtDirectory: ', GtDocumenterConstants localGtDirectory).
+Gt2DocumentConstants localGtDirectory asFileReference ensureCreateDirectory.
+Transcript crShow: ('localGtDirectory: ', Gt2DocumentConstants localGtDirectory printString).
 docFolders := (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'doc') asOrderedCollection.
 
 docFolders addAll:  (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'data').
@@ -18,10 +18,10 @@ docFolders do: [ :each |
 
 	s := String streamContents: [:s | topSegments asStringOn: s delimiter:'/'].
 	Transcript crShow: ('copying ', each printString, ' to ', s).
-	[each copyAllTo: (GtDocumenterConstants localGtDirectory asFileReference / s) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
-
+	[each copyAllTo: (Gt2DocumentConstants localGtDirectory asFileReference / s) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
+	
 World closeAllWindowsDiscardingChanges.
 
-#GtWorld asClass openTour.
+#GtWorldMenu asClass openTour.
 IceRepository registry removeAll.
 Smalltalk snapshot: true andQuit: false.

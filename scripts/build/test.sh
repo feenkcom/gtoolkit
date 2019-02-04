@@ -18,11 +18,14 @@ cp Pharo.image "${ARTIFACT_DIR}/${PROJECT_NAME}64.image"
 cp Pharo.changes "${ARTIFACT_DIR}/${PROJECT_NAME}64.changes"
 cp *.sources "${ARTIFACT_DIR}/"
 cp -Rv gt-extra "${ARTIFACT_DIR}/"
-sh scripts/installMozz2d.sh
+sh scripts/build/installMozz2d.sh
 export build_zip="${ARTIFACT_DIR}.zip"
 zip -qr "$build_zip" "$ARTIFACT_DIR"
 
 set +e
+./pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" st --quit scripts/build/icebergunconfig.st  2>&1
+./pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --save 'IceRepository registry removeAll.'
+
 git config --global user.name "Jenkins"
 git config --global user.email "jenkins@feenk.com"
 ./pharo Pharo.image examples --junit-xml-output 'GToolkit-.*' 2>&1
