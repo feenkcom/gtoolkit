@@ -95,23 +95,10 @@ ConfigurationOf class >> gtPillarCommentFor: aView [
 { #category : #'*BaselineOfGToolkit' }
 ConfigurationOf class >> gtProjectsFor: aView [
 	<gtView>
-	^ aView explicit
+	^ aView list
 		title: 'Projects';
 		priority: 10;
-		stencil: [ 
-			| list |
-			list := BrColumnedList new display: [ self project version projects collect: [ :each | each version spec project configuration class ] ].
-			list addEventHandler: GtInspectorListToSelectHandler new.
-			list column
-				title: 'Project';
-				stencil: [ :aNode :index |
-					| text textElement |
-					text := [ aNode gtDisplayString asRopedText ] 
-						on: Error 
-						do: [ aNode errorMessage asRopedText foreground: Color red ].
-					textElement := (BrListLabelStencil matchParent: text) asElement.
-					textElement constraintsDo: [ :c | c horizontal matchParent. c padding: (BlInsets left: 10) ] ].
-			list ]
+		items: [ self project version projects collect: [ :each | each version spec project configuration class ] ]
 ]
 
 { #category : #'*BaselineOfGToolkit' }
