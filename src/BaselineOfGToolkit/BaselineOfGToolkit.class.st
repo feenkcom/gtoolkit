@@ -128,17 +128,17 @@ BaselineOfGToolkit >> baseline: spec [
 	spec for: #'common' do: [
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.4.11/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.4.12/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.4.12/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.4.13/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.4.11/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.4.11/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.4.12/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.4.11/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.4.12/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.4.11/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.4.12/src' ];
 			baseline: 'GToolkitCoder' with: [
 				spec repository: 'github://feenkcom/gtoolkit-coder:v0.4.11/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
