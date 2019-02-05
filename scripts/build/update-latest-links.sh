@@ -1,9 +1,9 @@
 set -o xtrace
 set -e
 export GTfolder=/var/www/html/gt
-ln -fvs `ls -rt $GTfolder/GToolkitWin64*.zip | tail -n 1` $GTfolder/GToolkitWin64-release.zip
-ln -fvs `ls -rt $GTfolder/GToolkitOSX64*.zip | tail -n 1` $GTfolder/GToolkitOSX64-release.zip
-ln -fvs `ls -rt $GTfolder/GToolkitLinux64*.zip | tail -n 1` $GTfolder/GToolkitLinux64-release.zip
-ln -fvs `ls -rt $GTfolder/GToolkit-64-*.zip | tail -n 1` $GTfolder/GToolkit-latest-build.zip
-ln -fvs `ls -rt $GTfolder/GToolkit-64-v*.zip | tail -n 1` $GTfolder/GToolkit-latest-tag.zip
+ln -fvs `find $GTfolder/GToolkitWin64* -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2` $GTfolder/GToolkitWin64-release.zip
+ln -fvs `find $GTfolder/GToolkitOSX64* -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2` $GTfolder/GToolkitOSX64-release.zip
+ln -fvs `find $GTfolder/GToolkitLinux64* -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2` $GTfolder/GToolkitLinux64-release.zip
+ln -fvs `find $GTfolder/GToolkit-64-* -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2` $GTfolder/GToolkit-latest-build.zip
+ln -fvs `find $GTfolder/GToolkit-64-v* -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2` $GTfolder/GToolkit-latest-tag.zip
 set +e
