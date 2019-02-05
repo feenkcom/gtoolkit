@@ -84,8 +84,14 @@ The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This sta
 - debuggable. There are a significant amount of tools and mechanisms that are built for this.
 
 Learn more about it at ${class:GtWhatMakesBlocSpecialExamples}$
-!! Blog
+
+!!Blog
+
+This is our blog. Each post below is delivered fresh from our XDoc bakery.
+
 ${xdocs}$
+
+What is XDoc? Learn here: ${class:BaselineOfXdoc}$
 
 
 "
@@ -101,9 +107,10 @@ BaselineOfGToolkit class >> gtGtMapFor: aView [
 	^ (self 
 		gtMapFor: aView 
 		selectRelationsThat: [ :a :b | 
-			a spec project configuration class name beginsWith: 'BaselineOfGToolkit' ]
+			(a spec project configuration class name beginsWith: 'BaselineOfGToolkit') or: [ 
+				a spec project configuration class name beginsWith: 'BaselineOfXdoc' ] ]
 		nameDisplayedAs: [ :aString | 
-			aString asRopedText foreground: ((aString beginsWith: 'GT') 
+			aString asRopedText foreground: (((aString beginsWith: 'GT') or: [ aString beginsWith: 'Xdoc' ]) 
 				ifTrue: [BrGlamorousColors linkColor] 
 				ifFalse: [Color gray]) ])
 			title: 'Gt Map'
