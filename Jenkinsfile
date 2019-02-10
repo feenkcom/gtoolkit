@@ -12,9 +12,9 @@ pipeline {
                 slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
-        stage('Load latest commit') {
+        stage('Load latest master commit') {
             when { expression {
-                    env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null)
+                    env.BRANCH_NAME.toString().equals('master')
                 }
             }
             steps {
@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Load latest tag') {
             when { expression {
-                    env.TAG_NAME.toString().startsWith("v")
+                    env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
                 }
             }
             steps {
