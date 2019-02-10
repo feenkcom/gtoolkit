@@ -18,10 +18,9 @@ pipeline {
                 }
             }
             steps {
-                echo 'skip'
-                // sh 'git clean -f -d'
-                // sh 'rm -rf pharo-local'
-                // sh 'scripts/build/load.sh'
+                sh 'git clean -f -d'
+                sh 'rm -rf pharo-local'
+                sh 'scripts/build/load.sh'
             }
         }
         stage('Load latest tag') {
@@ -38,13 +37,12 @@ pipeline {
 
         stage('Run examples') {
             steps {
-                echo 'skip'
-                // sh 'scripts/build/test.sh'
-                // junit '*.xml'
-                // echo env.BRANCH_NAME
-                // echo env.TAG_NAME
-                // echo currentBuild.toString()
-                // echo currentBuild.result
+                sh 'scripts/build/test.sh'
+                junit '*.xml'
+                echo env.BRANCH_NAME
+                echo env.TAG_NAME
+                echo currentBuild.toString()
+                echo currentBuild.result
             }
         }
 
@@ -54,8 +52,7 @@ pipeline {
                 }
             }
             steps {
-                echo 'skip'
-                // sh 'scripts/build/runreleaser.sh'
+                sh 'scripts/build/runreleaser.sh'
             }
         }
 
@@ -66,8 +63,7 @@ pipeline {
               }
             }
             steps {
-                echo 'skip'
-                // sh 'scripts/build/package.sh'
+                sh 'scripts/build/package.sh'
             }
         }
 
@@ -78,7 +74,7 @@ pipeline {
               }
             }
             steps {
-                // sh 'scripts/build/upload.sh'
+                sh 'scripts/build/upload.sh'
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
                         def remote = [:]
