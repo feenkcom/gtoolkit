@@ -13,6 +13,6 @@ else
     echo "TAG_NAME not set"
 fi
 
-scp $build_zip $AWS:$GTfolder
+scp $build_zip $AWS:$GTfolder 
 ssh $AWS -t "cd ${GTfolder}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n' -r rm --"
 set +e
