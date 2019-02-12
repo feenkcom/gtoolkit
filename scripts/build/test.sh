@@ -11,6 +11,9 @@ else
   export PROJECT_NAME="GToolkit-64-${TAG_NAME}-$(date +'%Y%m%d%H%M%S')"
 fi
 
+#save the date so we can show it in the download button
+date +%s > releasedateinseconds
+
 # customize the name of the build folder
 export ARTIFACT_DIR="${PROJECT_NAME}"
 mkdir "$ARTIFACT_DIR"
