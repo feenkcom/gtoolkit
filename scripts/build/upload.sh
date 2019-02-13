@@ -9,6 +9,7 @@ then
     scp GToolkitWin64*.zip $AWS:$GTfolder
     scp GToolkitOSX64*.zip $AWS:$GTfolder
     scp GToolkitLinux64*.zip $AWS:$GTfolder
+    scp releasedateinseconds $AWS:$GTfolder/.releasedateinseconds
 else
     echo "TAG_NAME not set"
 fi
