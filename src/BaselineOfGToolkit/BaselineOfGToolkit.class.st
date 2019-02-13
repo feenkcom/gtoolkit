@@ -128,9 +128,9 @@ BaselineOfGToolkit >> baseline: spec [
 	spec for: #'common' do: [
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.8/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.9/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.5.8/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.5.9/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.5.5/src' ];
 			baseline: 'GToolkitInspector' with: [
