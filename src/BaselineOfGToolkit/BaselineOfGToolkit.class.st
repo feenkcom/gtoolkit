@@ -75,6 +75,9 @@ Visualizer is a set of visualization engines to ease the creation of custom visu
 !!!Transcript
 This is a reimagining of the classic transcript by taking advantage of the text rendering possibilities. Learn more at ${class:BaselineOfGToolkitTranscript}$.
 
+!!!Releaser
+Releaser is the engine for releasing deeply nested projects spread over multiple repositories. We are using it to release Glamorous Toolkit with it. Learn more at ${class:BaselineOfGToolkitReleaser}$.
+
 
 !!A few words about the graphical stack
 The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This stack has a few properties that make it distinct:
