@@ -135,34 +135,35 @@ BaselineOfGToolkit >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.15/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.5.17/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.5.11/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.5.12/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.5.13/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.5.10/src' ];
 			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-coder:v0.5.10/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.5.10/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.5.10/src' ];
 			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.5.10/src' ];
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.5.10/src' ];
 			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.5.7/src' ];
 			baseline: 'GToolkitConstrainer' with: [
-				spec repository: 'github://feenkcom/gtoolkit-constrainer/src' ].
-		spec package: 'GToolkit-Scenery'.
-		spec package: 'GToolkit-World'.
-	]
+				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.5.1/src' ].
+		spec 
+			package: 'GToolkit-Scenery';
+			package: 'GToolkit-World'. ].
+
 ]
 
 { #category : #'post load' }
