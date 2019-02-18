@@ -172,8 +172,5 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		ifTrue: [ ^ self ].
 	PostLoaded := true.
 	
-	GtEmbeddedDebuggerElement isRegistered ifFalse: [
-		GtEmbeddedDebuggerElement register ].
-	GtBlocMorphicUIManager useAsDefault.
-	GtExpandableDebuggerElement register.
+	GtWorld useGToolkitDebuggersAsDefault
 ]
