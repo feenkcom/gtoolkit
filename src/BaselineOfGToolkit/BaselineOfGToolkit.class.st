@@ -101,6 +101,9 @@ What is XDoc? Learn here: ${class:BaselineOfXdoc}$
 Class {
 	#name : #BaselineOfGToolkit,
 	#superclass : #BaselineOf,
+	#classVars : [
+		'PostLoaded'
+	],
 	#category : #BaselineOfGToolkit
 }
 
@@ -129,6 +132,7 @@ BaselineOfGToolkit class >> itself [
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>
 	spec for: #'common' do: [
+		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-documenter/src' ];
@@ -159,4 +163,16 @@ BaselineOfGToolkit >> baseline: spec [
 		spec package: 'GToolkit-Scenery'.
 		spec package: 'GToolkit-World'.
 	]
+]
+
+{ #category : #'post load' }
+BaselineOfGToolkit >> postLoadGToolkit: spec [
+	(PostLoaded isNotNil and: [ PostLoaded ])
+		ifTrue: [ ^ self ].
+	PostLoaded := true.
+	
+	GtEmbeddedDebuggerElement isRegistered ifFalse: [
+		GtEmbeddedDebuggerElement register ].
+	GtBlocMorphicUIManager useAsDefault.
+	GtExpandableDebuggerElement register.
 ]
