@@ -131,11 +131,11 @@ BaselineOfGToolkit >> baseline: spec [
 	spec for: #'common' do: [
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.14/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.15/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.5.15/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.5.16/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.5.10/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.5.11/src' ];
 			baseline: 'GToolkitInspector' with: [
 				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.5.12/src' ];
 			baseline: 'GToolkitDebugger' with: [
@@ -153,7 +153,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.5.10/src' ];
 			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.5.6/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.5.7/src' ];
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.5.1/src' ].
 		spec 
