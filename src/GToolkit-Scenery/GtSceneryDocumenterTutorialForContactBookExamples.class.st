@@ -16,7 +16,7 @@ GtSceneryDocumenterTutorialForContactBookExamples class >> menuCommandOn: aBuild
 
 { #category : #initialization }
 GtSceneryDocumenterTutorialForContactBookExamples >> setUp [
-	GtInspector openOnPlayBook: (Gt2Document forFile: (
+	GtInspector openOnPlayBook: (GtDocument forFile: (
 		GtIcebergUtility documentAtPath: (Path * 
 			'feenkcom'/ 'gtoolkit-demos' 
 			/ 'doc' / 'tutorial' 

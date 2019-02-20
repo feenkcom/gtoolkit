@@ -17,5 +17,5 @@ GtSceneryDocumenterEmpty class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryDocumenterEmpty >> setUp [
-	GtInspector openOnPlayBook: (Gt2Document new)
+	GtInspector openOnPlayBook: (GtDocument new)
 ]

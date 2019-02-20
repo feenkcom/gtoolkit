@@ -16,5 +16,5 @@ GtSceneryDocumenterTutorialInClassComments class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryDocumenterTutorialInClassComments >> setUp [
-	GtInspector openOnPlayBook: (Gt2Document forClass: BrToggleExamples)
+	GtInspector openOnPlayBook: (GtDocument forClass: BrToggleExamples)
 ]

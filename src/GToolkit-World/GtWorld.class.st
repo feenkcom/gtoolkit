@@ -136,7 +136,7 @@ GtWorld >> openPlayground [
 GtWorld >> openTour [
 	| aTour aSpace |
 
-	aTour := GtInspector createOnPlayBook: (Gt2Document forClass: BaselineOfGToolkit).
+	aTour := GtInspector createOnPlayBook: (GtDocument forClass: BaselineOfGToolkit).
 
 	aSpace := BlSpace new.
 	aSpace withHalos.
