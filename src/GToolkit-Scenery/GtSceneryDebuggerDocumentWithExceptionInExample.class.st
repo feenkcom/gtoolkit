@@ -18,7 +18,7 @@ GtSceneryDebuggerDocumentWithExceptionInExample class >> menuCommandOn: aBuilder
 { #category : #initialization }
 GtSceneryDebuggerDocumentWithExceptionInExample >> setUp [
 	
-	GtInspector openOnPlayBook: (Gt2Document new text: '!An example with an exception
+	GtInspector openOnPlayBook: (GtDocument new text: '!An example with an exception
 ${example:GtDummyExamplesWithExceptions class>>#j}$
 ')
 ]

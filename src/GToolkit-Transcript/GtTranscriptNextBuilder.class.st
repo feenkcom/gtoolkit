@@ -165,7 +165,7 @@ GtTranscriptNextBuilder >> showException: anException [
 				aContainer constraintsDo: [ :c |
 					c horizontal matchParent.
 					c vertical exact: 200 ] ].
-			card addLook: Gt2PreviewLook new.
+			card addLook: GtPreviewLook new.
 			card ];
 		print: anException
 ]

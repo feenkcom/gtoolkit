@@ -16,7 +16,7 @@ GtSceneryDocumenterTalk class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryDocumenterTalk >> setUp [
-	GtInspector openOnPlayBook: (Gt2Document forFile: (GtIcebergUtility documentAtPath: (Path * 
+	GtInspector openOnPlayBook: (GtDocument forFile: (GtIcebergUtility documentAtPath: (Path * 
 		'feenkcom' / 'gtoolkit-demos' / 
 		'doc' / 'tutorial' / 'esug-2018-documenter' / 'documenter.pillar')))
 ]
