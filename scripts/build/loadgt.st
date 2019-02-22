@@ -21,7 +21,7 @@ docFolders do: [ :each |
 	[each copyAllTo: (GtDocumentConstants localGtDirectory asFileReference / s) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
 	
 World closeAllWindowsDiscardingChanges.
-GtWorldMenu setGtDesktopLogo.
+#GtWorldMenu asClass setGtDesktopLogo.
 #GtWorldMenu asClass openTour.
 
 Smalltalk snapshot: true andQuit: false.

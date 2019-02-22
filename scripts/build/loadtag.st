@@ -22,7 +22,7 @@ docFolders do: [ :each |
 	[each copyAllTo: (GtDocumentConstants localGtDirectory asFileReference / localPath) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
 	
 World closeAllWindowsDiscardingChanges.
-
+#GtWorldMenu asClass setGtDesktopLogo.
 #GtWorldMenu asClass openTour.
 IceRepository registry removeAll.
 Smalltalk snapshot: true andQuit: false.
