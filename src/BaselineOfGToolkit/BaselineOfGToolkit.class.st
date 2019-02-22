@@ -137,7 +137,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitDocumenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.22/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.5.27/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.5.28/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.5.13/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -157,11 +157,11 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.5.11/src' ];
 			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.5.8/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.5.9/src' ];
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.5.1/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:v0.4.0/src' ].
+				spec repository: 'github://feenkcom/gt4smacc:v0.4.1/src' ].
 		spec 
 			package: 'GToolkit-Scenery';
 			package: 'GToolkit-World'. ].
