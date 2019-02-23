@@ -23,7 +23,7 @@ GtWorld class >> useBlocAwareDefaultPharoDebuggers [
 	This makes sure the Bloc UI process is restarted automatically in case of exceptions in that process."
 	BlBlocMorphicUIManager useAsDefault.
 	GTGenericStackDebugger register.
-	GtEmbeddedDebuggerElement disable.
+	GtEmbeddedDebuggerElement register. "Allow the embeddable debugger as it will open the default debugger"
 ]
 
 { #category : #config }
