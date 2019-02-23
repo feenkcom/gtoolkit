@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters { string(name: 'FORCED_TAG_NAME', defaultValue: '', description: 'params.FORCED_TAG_NAME env variable') }
     options { 
-        buildDiscarder(logRotator(numToKeepStr: '50', artifactNumToKeepStr: 50'))
+        buildDiscarder(logRotator(numToKeepStr: '50'))
         disableConcurrentBuilds() 
     }
     stages {
