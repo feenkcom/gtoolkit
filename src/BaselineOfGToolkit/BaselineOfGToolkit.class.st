@@ -161,7 +161,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc/src' ].
+				spec repository: 'github://feenkcom/gt4smacc/src' ];
+			baseline: 'GToolkit4PetitParser2' with: [
+				spec repository: 'github://feenkcom/gt4petitparser2/src' ].
 		spec package: 'GToolkit-Scenery'.
 		spec package: 'GToolkit-World'.
 	]
