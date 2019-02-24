@@ -8,4 +8,5 @@ curl https://files.pharo.org/get-files/70/pharo64-mac-stable.zip -o pharo64-mac-
 unzip pharo64-mac-stable.zip -d pharo64-mac-stable
 mv -fv pharo64-mac-stable/* $GTFolder/
 zip -qyr $GTFolder.zip $GTFolder
+rm -rf $GTFolder
 set +e
