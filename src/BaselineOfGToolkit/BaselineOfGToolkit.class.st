@@ -135,19 +135,19 @@ BaselineOfGToolkit >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.28/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.29/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.5.36/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.5.37/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.5.18/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.5.19/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.5.22/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.5.23/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.5.25/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.5.26/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.5.19/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.5.20/src' ];
 			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder:v0.5.21/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-coder:v0.5.22/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.5.14/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
@@ -163,7 +163,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkit4SmaCC' with: [
 				spec repository: 'github://feenkcom/gt4smacc:v0.4.2/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
-				spec repository: 'github://feenkcom/gt4petitparser2:v0.4.1/src' ].
+				spec repository: 'github://feenkcom/gt4petitparser2:v0.4.2/src' ].
 		spec 
 			package: 'GToolkit-Scenery';
 			package: 'GToolkit-World'. ].
