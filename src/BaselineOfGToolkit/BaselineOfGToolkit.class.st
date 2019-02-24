@@ -175,5 +175,5 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		ifTrue: [ ^ self ].
 	PostLoaded := true.
 	
-	GtWorld useBlocAwareDefaultPharoDebuggers
+	GtWorld useGToolkitDebuggersAsDefault
 ]
