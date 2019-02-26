@@ -165,6 +165,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkit4PetitParser2' with: [
 				spec repository: 'github://feenkcom/gt4petitparser2/src' ].
 		spec package: 'GToolkit-Scenery'.
+		spec package: 'GToolkit-Constraints' with: [ spec requires: 'GToolkitConstrainer' ].
 		spec package: 'GToolkit-World'.
 	]
 ]
