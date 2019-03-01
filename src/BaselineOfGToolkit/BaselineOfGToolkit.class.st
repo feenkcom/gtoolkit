@@ -135,15 +135,15 @@ BaselineOfGToolkit >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.56/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.57/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.5.66/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.5.67/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.5.26/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.5.38/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.5.39/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.5.41/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.5.42/src' ];
 			baseline: 'GToolkitPlayground' with: [
 				spec repository: 'github://feenkcom/gtoolkit-playground:v0.5.31/src' ];
 			baseline: 'GToolkitCoder' with: [
