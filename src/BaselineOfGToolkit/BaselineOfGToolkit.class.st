@@ -35,7 +35,7 @@ ${example:FileReference class>>#gtExampleDirectory|noCode|previewHeight=200}$
 
 To exploit the full potential of the Glamorous Toolkit you need to contextualize it by programming it. To this end, the Glamorous Toolkit offers multiple ways to extend the tools and to express views and other interactions. Throughout the environment the goal of the engines is to make the cost of custom tools to be as inexpensive as possible.
 
-This little change in perspective has a dramatic influence on how you can approach software systems. We call this moldable development. Want to learn more? Take a look at: ${class:GtMoldableDevelopmentExamples}$.
+This little change in perspective has a dramatic influence on how you can approach software systems. We call this moldable development. Want to learn more? Take a look at: ${class:GtMoldableDevelopmentExplanation}$.
 
 
 !!Learn
