@@ -86,7 +86,7 @@ The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This sta
 - graph layouts are regular layouts. The implication here is that any element can be part of a graph-based visualization.
 - debuggable. There are a significant amount of tools and mechanisms that are built for this.
 
-Learn more about it at ${class:GtWhatMakesBlocSpecialExamples}$
+Learn more about it: ${class:GtWhatMakesBlocSpecialExplanation}$
 
 !!Blog
 
