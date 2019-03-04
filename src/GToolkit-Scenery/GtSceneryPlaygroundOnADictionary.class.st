@@ -20,8 +20,10 @@ GtSceneryPlaygroundOnADictionary >> setUp [
 	book := GtPlayBook newDefault.
 	book pages first snippets first sourceCode: '{
 	#number -> 42 . 
+	#date -> Date today.
+	#color -> Color cyan.
 	#string -> ''fourty-two'' . 
-	#date -> Date today } 
+	 } 
 		asDictionary'.	
 	GtInspector openOnPlayBook: book
 ]
