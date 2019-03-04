@@ -10,14 +10,13 @@ Glamorous Toolkit has cool widgets and fancy code analyses, yet the emphasis is 
 
 !!Project organization
 
-Glamorous Toolkit is an umbrella project that puts together several subprojects. The picture below provides an overview of these projects and their interdependencies. The map is navigable. Click on each component to learn more about it.
+Glamorous Toolkit is made out of independent, yet combinable, components. The picture below provides an overview of these components and their interdependencies. The map is navigable. Click on each component to learn more about it.
 
 ${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:||noCode=|previewHeight=300}$
 
 
 !!Moldable development
-
-The core principle behind the Glamorous Toolkit is moldability. This means that any object in the system can have multiple views and ways to be interacted with. This applies to handling static code, to inspecting individual objects, to debugging and to the way we search. To make this practical, the cost of creating a new view or interaction is small and in most cases the target is to extend the system live during the interaction. Throughout the whole environment the way to extend the environment is directly explorable.
+Glamorous Toolkit is not just a tool. It's a platform that embodies a new approach to software development. The core principle behind the Glamorous Toolkit is moldability. This means that any object in the system can have multiple views and ways to be interacted with. This applies to handling static code, to inspecting individual objects, to debugging and to the way we search. To make this practical, the cost of creating a new view or interaction is small and in most cases the target is to extend the system live during the interaction. Throughout the whole environment the way to extend the environment is directly explorable.
 
 As an example, let us consider inspecting the object corresponding to the current working directory. A default inspector would show this. It's an accurate description of the variables of the ${class:FileReference}$ instance.
 
@@ -35,7 +34,7 @@ ${example:FileReference class>>#gtExampleDirectory|noCode|previewHeight=200}$
 
 To exploit the full potential of the Glamorous Toolkit you need to contextualize it by programming it. To this end, the Glamorous Toolkit offers multiple ways to extend the tools and to express views and other interactions. Throughout the environment the goal of the engines is to make the cost of custom tools to be as inexpensive as possible.
 
-This little change in perspective has a dramatic influence on how you can approach software systems. We call this moldable development.
+This apparently small change in perspective has a dramatic influence on how you can approach software systems. We call this moldable development.
 
 Want to learn more? Take a look at: ${class:GtMoldableDevelopmentExplanation}$.
 
@@ -88,7 +87,7 @@ The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This sta
 
 Learn more about it: ${class:GtWhatMakesBlocSpecialExplanation}$
 
-!!Blog
+!!feenk blog
 
 This is our blog. Each post below is delivered fresh from our XDoc bakery.
 
