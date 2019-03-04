@@ -4,6 +4,16 @@ Class {
 	#category : #'GToolkit-Scenery'
 }
 
+{ #category : #'world menu' }
+GtSceneryPlaygroundOnZincJsonRequest class >> menuCommandOn: aBuilder [
+	<worldMenu>
+	(aBuilder item: self name)
+		order: 402.0; 
+		parent: #GToolkitScenery;
+		label: 'Playground: a Zinc JSON';
+		action: [self new setUp]
+]
+
 { #category : #initialization }
 GtSceneryPlaygroundOnZincJsonRequest >> setUp [
 	| book |
