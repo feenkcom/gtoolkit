@@ -16,6 +16,7 @@ ${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:||noCode=|pr
 
 
 !!Moldable development
+
 Glamorous Toolkit is not just a tool. It's a platform that embodies a new approach to software development. The core principle behind the Glamorous Toolkit is moldability. This means that any object in the system can have multiple views and ways to be interacted with. This applies to handling static code, to inspecting individual objects, to debugging and to the way we search. To make this practical, the cost of creating a new view or interaction is small and in most cases the target is to extend the system live during the interaction. Throughout the whole environment the way to extend the environment is directly explorable.
 
 As an example, let us consider inspecting the object corresponding to the current working directory. A default inspector would show this. It's an accurate description of the variables of the ${class:FileReference}$ instance.
@@ -53,6 +54,7 @@ Learn about it in ${class:BaselineOfGToolkitPlayground}$.
 !!!Documenter
 This very document is edited and rendered through ${class:BaselineOfGToolkitDocumenter}$.
 
+
 !!!Coder
 Coder offers a set of components that allow us to manipulate code. More details at: ${class:BaselineOfGToolkitCoder}$.
 
@@ -79,6 +81,7 @@ Releaser is the engine for releasing deeply nested projects spread over multiple
 
 
 !!A few words about the graphical stack
+
 The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This stack has a few properties that make it distinct:
 - it relies on one rendering tree at all times.
 - it features moldable and scalable text editor is made out of elements. This means that we can embed text with graphics to obtain live editors.
@@ -86,6 +89,7 @@ The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This sta
 - debuggable. There are a significant amount of tools and mechanisms that are built for this.
 
 Learn more about it: ${class:GtWhatMakesBlocSpecialExplanation}$
+
 
 !!feenk blog
 
