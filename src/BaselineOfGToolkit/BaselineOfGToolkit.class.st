@@ -138,19 +138,19 @@ BaselineOfGToolkit >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.80/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.5.81/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.5.93/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.5.94/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.5.38/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.5.39/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.5.60/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.5.61/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.5.63/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.5.64/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.5.43/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.5.44/src' ];
 			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder:v0.5.50/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-coder:v0.5.51/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.5.30/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
@@ -160,11 +160,11 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.5.30/src' ];
 			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.5.13/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.5.14/src' ];
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.5.3/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:v0.4.6/src' ];
+				spec repository: 'github://feenkcom/gt4smacc:v0.4.7/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
 				spec repository: 'github://feenkcom/gt4petitparser2:v0.4.3/src' ].
 		spec 
