@@ -17,7 +17,5 @@ fi
 scp $build_zip $AWS:$GTfolder 
 ssh $AWS -t "cd ${GTfolder}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n' -r rm --"
 pwd
-find ../../ -type d -name workspace 
-# -mtime +4
-# -exec rm -rf  {} \;
+find ../../ -type d -name workspace -mtime +4 -exec rm -rf {} \;
 set +e
