@@ -30,7 +30,7 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 							copyReplaceAll: 'BaselineOf' with: '')
 							copyReplaceAll: 'ConfigurationOf' with: '')
 							copyReplaceAll: 'GToolkit' with: 'GT ').
-						(anOneArgBlock value: displayString) asRopedText ]
+						(anOneArgBlock value: displayString) asRopedText glamorousRegularFont ]
 						on: Error do: [ :e | e asString asRopedText foreground: BrGlamorousColors linkWithErrorColor ].
 					element := BlTextElement new.
 					element 	
