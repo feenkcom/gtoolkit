@@ -31,3 +31,8 @@ GtSceneryBuilder >> item: aString [
 	items add: item.
 	^ item
 ]
+
+{ #category : #accessing }
+GtSceneryBuilder >> items [
+	^ items sorted: [ :a :b | a order < b order ]
+]

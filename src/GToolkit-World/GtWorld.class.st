@@ -99,8 +99,16 @@ GtWorld >> initialize [
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self openExamples ]).
 	
-	
-	
+	self addChild: (BrSimpleList new
+		display: (GtSceneryBuilder build items);
+		margin: (BlInsets top: 20 left: 0 bottom: 5 right: 0);
+		stencil: [ :item |
+			BrButton new
+				look: BrGlamorousButtonWithLabelLook new;
+				label: item name;
+				constraintsDo: [ :c | c horizontal matchParent  ];
+				margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
+				action: [ item action value ] ]).
 ]
 
 { #category : #initialization }
