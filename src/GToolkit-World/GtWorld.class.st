@@ -67,40 +67,68 @@ GtWorld >> initialize [
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Tour';
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 0);
+		constraintsDo: [ :c | c horizontal matchParent  ];
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self openTour ]).
 	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Playground';
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 0);
+		constraintsDo: [ :c | c horizontal matchParent  ];
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self openPlayground ]).
+	
+	self addChild: (BrButton new
+		look: BrGlamorousButtonWithLabelLook new;
+		label: 'Coder';
+		constraintsDo: [ :c | c horizontal matchParent  ];
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
+		action: [ self openCoder ]).
 		
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Transcript';
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 0);
+		constraintsDo: [ :c | c horizontal matchParent  ];
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self openTranscript ]).
 		
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Examples';
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 0);
-		action: [ self openExamples ])
+		constraintsDo: [ :c | c horizontal matchParent  ];
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
+		action: [ self openExamples ]).
+	
+	
+	
 ]
 
 { #category : #initialization }
 GtWorld >> initializeLogo [
 	| aText |
 	
-	aText := 'glamoroustoolkit' asRopedText fontSize: 30.
-	(aText from: 1 to: 9) thin.
-	(aText from: 10 to: aText size) bold.
+	aText := 'gt' asRopedText fontSize: 30.
+	(aText from: 1 to: 1) thin.
+	(aText from: 2 to: aText size) bold.
 	
 	self addChild: (BlTextElement new
 		padding: (BlInsets top: 20 bottom: 20);
 		text: aText;
 		constraintsDo: [ :c | c linear horizontal alignCenter ]).
+]
+
+{ #category : #'api - tools' }
+GtWorld >> openCoder [
+	| aCoder aSpace |
+			
+	aCoder := GtInspector createOnPlayBook: (GtClassCoder new).
+	aSpace := BlSpace new.
+	aSpace withHalos.
+	aSpace host: BlOSWindowHost new.
+	aSpace title: 'Coder'.
+	aSpace extent: 1200@600.
+	aSpace addChild: aCoder.
+	aSpace show
 ]
 
 { #category : #'api - tools' }
