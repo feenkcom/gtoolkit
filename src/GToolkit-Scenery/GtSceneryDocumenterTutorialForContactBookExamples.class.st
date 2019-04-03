@@ -10,7 +10,7 @@ GtSceneryDocumenterTutorialForContactBookExamples class >> menuCommandOn: aBuild
 	(aBuilder item: self name)
 		order: 221.0; 
 		parent: #GToolkitScenery;
-		label: 'Documenter: Examples tutorial - Address Book';
+		label: 'Documenter: Address Book';
 		action: [self new setUp]
 ]
 

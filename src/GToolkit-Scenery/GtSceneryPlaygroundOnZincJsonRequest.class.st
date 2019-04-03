@@ -10,7 +10,7 @@ GtSceneryPlaygroundOnZincJsonRequest class >> menuCommandOn: aBuilder [
 	(aBuilder item: self name)
 		order: 402.0; 
 		parent: #GToolkitScenery;
-		label: 'Playground: a Zinc JSON';
+		label: 'Playground: Zinc JSON';
 		action: [self new setUp]
 ]
 
