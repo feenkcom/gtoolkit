@@ -10,7 +10,7 @@ GtSceneryPlaygroundTwoPharoSnippetsWithVisualization class >> menuCommandOn: aBu
 	(aBuilder item: self name)
 		order: 415.0; 
 		parent: #GToolkitScenery;
-		label: 'Playground: Two Pharo snippets with larger visualization';
+		label: 'Pl: Two snippets with visualization';
 		action: [self new setUp];
 		withSeparatorAfter
 ]
@@ -30,7 +30,7 @@ GtSceneryPlaygroundTwoPharoSnippetsWithVisualization >> setUp [
 	aBook pages last snippets last sourceCode: 'mondrian := GtMondrian new.
 mondrian nodes 
 	stencil: [:dir | 
-		BlTextElement new text: dir basename asRopedText ];
+		BrLabel new text: dir basename asRopedText; look: BrGlamorousLabelLook ];
 	with: directories.
 mondrian edges 
 	fromRightCenter;

@@ -10,7 +10,7 @@ GtSceneryPlaygroundOnePharoSnippetWithVisualization class >> menuCommandOn: aBui
 	(aBuilder item: self name)
 		order: 408.0; 
 		parent: #GToolkitScenery;
-		label: 'Playground: One Pharo snippet with visualization';
+		label: 'Pl: One snippet with visualization';
 		action: [self new setUp]
 ]
 
@@ -28,7 +28,7 @@ directories := Array with: rootDirectory withAll: rootDirectory ', aSubDirectori
 mondrian := GtMondrian new.
 mondrian nodes 
 	stencil: [:dir | 
-		BlTextElement new text: dir basename asRopedText ];
+		BrLabel new text: dir basename asRopedText; look: BrGlamorousLabelLook ];
 	with: directories.
 mondrian edges 
 	fromRightCenter;
