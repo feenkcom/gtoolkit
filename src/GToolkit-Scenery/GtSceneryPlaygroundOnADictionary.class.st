@@ -10,7 +10,7 @@ GtSceneryPlaygroundOnADictionary class >> menuCommandOn: aBuilder [
 	(aBuilder item: self name)
 		order: 400.0; 
 		parent: #GToolkitScenery;
-		label: 'Playground: a dictionary';
+		label: 'Playground: dictionary';
 		action: [self new setUp]
 ]
 

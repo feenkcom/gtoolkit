@@ -11,7 +11,8 @@ GtSceneryTranscriptReflection class >> menuCommandOn: aBuilder [
 		order: 910.0; 
 		parent: #GToolkitScenery;
 		label: 'Transcript: Reflection';
-		action: [self new setUp]
+		action: [self new setUp];
+		withSeparatorAfter
 ]
 
 { #category : #initialization }

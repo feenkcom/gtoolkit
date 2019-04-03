@@ -10,7 +10,7 @@ GtSceneryDocumenterTutorialForFaceAPI class >> menuCommandOn: aBuilder [
 	(aBuilder item: self name)
 		order: 221.0; 
 		parent: #GToolkitScenery;
-		label: 'Documenter: Examples tutorial - Face API';
+		label: 'Documenter: Face API';
 		action: [self new setUp]
 ]
 

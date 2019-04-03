@@ -10,7 +10,7 @@ GtSceneryDocumenterTutorialInClassComments class >> menuCommandOn: aBuilder [
 	(aBuilder item: self name)
 		order: 230.0; 
 		parent: #GToolkitScenery;
-		label: 'Documenter: Bloc class comments';
+		label: 'Documenter: Bloc class comment';
 		action: [self new setUp]
 ]
 
