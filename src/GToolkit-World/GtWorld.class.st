@@ -11,7 +11,7 @@ GtWorld class >> open [
 	
 	aSpace := BlSpace new.
 	aSpace host: BlOSWindowHost new.
-	aSpace title: 'GToolkit'.
+	aSpace title: 'gt'.
 	aSpace addChild: self new.
 	aSpace extent: 300@500.
 	aSpace show
