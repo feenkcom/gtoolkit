@@ -10,8 +10,8 @@ GtWorld class >> open [
 	| aSpace |
 	
 	aSpace := BlSpace new.
-	aSpace host: BlOSWindowHost new.
-	aSpace title: 'GToolkit'.
+	aSpace host: BlOSWindowHost default.
+	aSpace title: 'gt'.
 	aSpace addChild: self new.
 	aSpace extent: 300@500.
 	aSpace show
@@ -132,7 +132,7 @@ GtWorld >> openCoder [
 	aCoder := GtInspector createOnPlayBook: (GtClassCoder new).
 	aSpace := BlSpace new.
 	aSpace withHalos.
-	aSpace host: BlOSWindowHost new.
+	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Coder'.
 	aSpace extent: 1200@600.
 	aSpace addChild: aCoder.
@@ -147,7 +147,7 @@ GtWorld >> openExamples [
 
 	aSpace := BlSpace new.
 	aSpace withHalos.
-	aSpace host: BlOSWindowHost new.
+	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Examples'.
 	aSpace extent: 1200@600.
 	aSpace addChild: anExamplesExplorer.
@@ -161,7 +161,7 @@ GtWorld >> openPlayground [
 	aPlayground := GtInspector createOnPlayBook: GtPlayBook newDefault.
 	aSpace := BlSpace new.
 	aSpace withHalos.
-	aSpace host: BlOSWindowHost new.
+	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Playground'.
 	aSpace extent: 1200@600.
 	aSpace addChild: aPlayground.
@@ -176,7 +176,7 @@ GtWorld >> openTour [
 
 	aSpace := BlSpace new.
 	aSpace withHalos.
-	aSpace host: BlOSWindowHost new.
+	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Tour'.
 	aSpace extent: 1200@600.
 	aSpace addChild: aTour.
@@ -195,7 +195,7 @@ GtWorld >> openTranscript [
 
 	aSpace := BlSpace new.
 	aSpace withHalos.
-	aSpace host: BlOSWindowHost new.
+	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Transcript'.
 	aSpace extent: 400@600.
 	aSpace addChild: aTranscriptElement.

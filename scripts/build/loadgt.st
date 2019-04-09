@@ -22,6 +22,5 @@ docFolders do: [ :each |
 	
 World closeAllWindowsDiscardingChanges.
 #GtWorldMenu asClass setGtDesktopLogo.
-#GtWorldMenu asClass openTour.
 
 Smalltalk snapshot: true andQuit: false.
