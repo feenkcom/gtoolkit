@@ -3,6 +3,7 @@ set -e
 GTFolder=GToolkitLinux64-$TAG_NAME
 mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
+rm -rf $GTFolder/pharo-local
 
 curl https://files.pharo.org/get-files/70/pharo64-linux-stable.zip -o pharo64-linux-stable.zip
 unzip pharo64-linux-stable.zip -d pharo64-linux-stable
