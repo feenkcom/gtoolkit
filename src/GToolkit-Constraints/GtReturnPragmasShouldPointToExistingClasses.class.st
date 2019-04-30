@@ -6,21 +6,18 @@ Class {
 
 { #category : #accessing }
 GtReturnPragmasShouldPointToExistingClasses >> description [
-	^ 'All references from class comments should be present in the image'
+	^ 'The type defined in ==<return: #AType>== must exist in the image.'
 ]
 
 { #category : #accessing }
 GtReturnPragmasShouldPointToExistingClasses >> issues [
-	| results packages |
-	results := GtDocumentMissingReferencesGroup new.
-	packages := RPackage organizer packages select: [ :each | 
-		each name beginsWith: 'GToolkit' ].
-	packages do: [ :aPackage | 
-	((aPackage definedClasses select: #hasComment)) do: [ :aClass |
-		| visitor missingReferences |
-		visitor := GtDocumentMissingReferencesVisitor new.
-		missingReferences := visitor missingReferencesInClassCommentFor: aClass.
-		missingReferences isNotEmpty ifTrue: [ 
-			results addMissingReferences: missingReferences ] ] ].
-	^ results
+	^ #return: gtPragmas & 
+		(RBParser parseRewriteMethod: '
+		    a 
+		        <return: `{:node | 
+		            node isLiteralNode and: [
+		                | name |
+		                name := node value.
+		                (name indexOfSubCollection: '' class'') > 0 ifTrue: [name := name copyFrom: 1 to: name size - 6].
+		                (Smalltalk includesKey: name asSymbol) not]}>') pragmas first gtASTMatches
 ]
