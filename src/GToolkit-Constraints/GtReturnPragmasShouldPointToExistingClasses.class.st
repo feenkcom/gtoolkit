@@ -11,7 +11,7 @@ GtReturnPragmasShouldPointToExistingClasses >> description [
 
 { #category : #accessing }
 GtReturnPragmasShouldPointToExistingClasses >> issues [
-	^ #return: gtPragmas & 
+	^ (#return: gtPragmas & 
 		(RBParser parseRewriteMethod: '
 		    a 
 		        <return: `{:node | 
@@ -19,5 +19,10 @@ GtReturnPragmasShouldPointToExistingClasses >> issues [
 		                | name |
 		                name := node value.
 		                (name indexOfSubCollection: '' class'') > 0 ifTrue: [name := name copyFrom: 1 to: name size - 6].
-		                (Smalltalk includesKey: name asSymbol) not]}>') pragmas first gtASTMatches
+		                (Smalltalk includesKey: name asSymbol) not]}>') pragmas first gtASTMatches) result
+]
+
+{ #category : #accessing }
+GtReturnPragmasShouldPointToExistingClasses >> name [
+	^ 'Methods with return pragmas pointing to missing classes'
 ]

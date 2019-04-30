@@ -12,6 +12,11 @@ GtClassWithCommentsContainingMissingReferences >> description [
 ]
 
 { #category : #accessing }
+GtClassWithCommentsContainingMissingReferences >> name [
+	^ 'Classes with comments containing missing references'
+]
+
+{ #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
 	^ RPackage organizer packages select: [ :each | 
 		each name beginsWith: 'GToolkit' ]
