@@ -32,7 +32,7 @@ EpMonitor current disable.
     repository: 'github://feenkcom/gtoolkit/src';
     load
 ] ensure: [ EpMonitor current enable ].
-#GtWorld asClass openTour.
+#GtWorld asClass open.
 ```
 
 ## How to load the latest development release
@@ -47,7 +47,7 @@ EpMonitor current disable.
     repository: 'github://feenkcom/gtoolkit:release/src';
     load
 ] ensure: [ EpMonitor current enable ].
-#GtWorld asClass openTour.
+#GtWorld asClass open.
 ```
 ## License
 
