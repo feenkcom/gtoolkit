@@ -23,6 +23,6 @@ docFolders do: [ :each |
 	
 World closeAllWindowsDiscardingChanges.
 #GtWorldMenu asClass setGtDesktopLogo.
-#GtWorldMenu asClass openTour.
+#GtWorld asClass open.
 IceRepository registry removeAll.
 Smalltalk snapshot: true andQuit: false.
