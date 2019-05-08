@@ -26,7 +26,7 @@ export build_zip="${ARTIFACT_DIR}.zip"
 zip -qr "$build_zip" "$ARTIFACT_DIR"
 
 set +e
-env
+echo $DISPLAY
 ./pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" st --quit scripts/build/icebergunconfig.st  2>&1
 ./pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --save 'IceRepository registry removeAll.'
 
