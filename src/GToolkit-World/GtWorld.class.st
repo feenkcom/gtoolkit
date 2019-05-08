@@ -187,11 +187,7 @@ GtWorld >> openTour [
 GtWorld >> openTranscript [ 
 	| aTranscriptElement aSpace |
 
-	aTranscriptElement := GtTranscriptElement new.
-	aTranscriptElement constraintsDo: [ :c |
-		c horizontal matchParent.
-		c vertical matchParent ].
-	aTranscriptElement transcript: GtTranscript default.
+	aTranscriptElement :=  GtTranscript default asElement.
 
 	aSpace := BlSpace new.
 	aSpace withHalos.
