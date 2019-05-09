@@ -42,6 +42,10 @@ GtTranscriptElement >> enableAutoScroll [
 GtTranscriptElement >> initialize [
 	super initialize.
 	
+	self constraintsDo: [ :c |
+		c padding: (BlInsets all: 10).
+		c horizontal matchParent.
+		c vertical matchParent ].
 	isAutoScrollEnabled := true.
 	self initializeElements.
 	self initializeListeners
@@ -50,9 +54,7 @@ GtTranscriptElement >> initialize [
 { #category : #initialization }
 GtTranscriptElement >> initializeElements [
 	editorElement := self newEditorElement.
-	editorElement constraintsDo: [ :c |
-		c horizontal matchParent.
-		c vertical matchParent ].
+	editorElement matchParent.
 
 	scrollButtonElement := self newScrollButtonElement.
 	scrollButtonElement constraintsDo: [ :c |
@@ -85,7 +87,7 @@ GtTranscriptElement >> isAutoScrollEnabled [
 
 { #category : #'instance creation' }
 GtTranscriptElement >> newEditorElement [
-	^ BrEditorElement new
+	^ BrEditor new look: BrGlamorousCodeEditorLook new
 ]
 
 { #category : #'instance creation' }
