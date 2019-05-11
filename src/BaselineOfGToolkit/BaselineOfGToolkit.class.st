@@ -138,9 +138,9 @@ BaselineOfGToolkit >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.6.60/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.6.61/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.6.61/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.6.62/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.6.27/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -150,7 +150,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitPlayground' with: [
 				spec repository: 'github://feenkcom/gtoolkit-playground:v0.6.33/src' ];
 			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder:v0.6.35/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-coder:v0.6.36/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.6.21/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
@@ -164,7 +164,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.6.1/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:v0.6.15/src' ];
+				spec repository: 'github://feenkcom/gt4smacc:v0.6.16/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
 				spec repository: 'github://feenkcom/gt4petitparser2:v0.6.1/src' ].
 		spec 
