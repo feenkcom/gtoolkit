@@ -43,6 +43,11 @@ GtTranscript >> << anObject [
 	self show: anObject
 ]
 
+{ #category : #ui }
+GtTranscript >> asElement [
+	^ GtTranscriptElement new transcript: self
+]
+
 { #category : #streaming }
 GtTranscript >> clear [ 
 	self flag: 'todo'.
@@ -73,7 +78,7 @@ GtTranscript >> gtInspectorLiveIn: composite [
 { #category : #'gt-extension' }
 GtTranscript >> gtLiveFor: aView [
 	<gtView>
-	^ self newEditorElement gtLiveFor: aView
+	^ self asElement gtLiveFor: aView
 ]
 
 { #category : #initialization }
@@ -81,17 +86,6 @@ GtTranscript >> initialize [
 	text := '' asRopedText.
 	editor := BrTextEditor new.
 	editor text: text
-]
-
-{ #category : #ui }
-GtTranscript >> newEditorElement [
-	| transcriptElement |
-	transcriptElement := GtTranscriptElement new
-		transcript: self.
-	transcriptElement constraintsDo: [ :c |
-		c horizontal matchParent.
-		c vertical matchParent ].
-	^ transcriptElement
 ]
 
 { #category : #streaming }
