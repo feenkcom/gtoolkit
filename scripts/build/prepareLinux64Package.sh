@@ -12,6 +12,9 @@ mv -fv pharo64-linux-stable/* $GTFolder/
 curl https://dl.feenk.com/Glutin/linux/development/x86_64/libGlutin.so -o libGlutin.so
 mv libGlutin.so $GTFolder
 
+curl https://dl.feenk.com/Moz2D/linux/development/x86_64/libMoz2D.so -o libMoz2D.so
+mv libMoz2D.so $GTFolder
+
 zip -qyr $GTFolder.zip $GTFolder
 rm -rf $GTFolder
 set +e
