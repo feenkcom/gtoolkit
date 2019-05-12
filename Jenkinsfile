@@ -48,8 +48,12 @@ pipeline {
         }
 
         stage('Run releaser') { 
+            // when { expression {
+            //         env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (currentBuild.result == null || currentBuild.result == 'SUCCESS')
+            //     }
+            // }
             when { expression {
-                    env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (currentBuild.result == null || currentBuild.result == 'SUCCESS')
+                    env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null)
                 }
             }
             steps {
