@@ -64,7 +64,7 @@ pipeline {
         stage('Prepare deploy packages') {
             when {
               expression {
-                (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.TAG_NAME.toString().startsWith("v")
+                env.TAG_NAME.toString().startsWith("v")
               }
             }
             steps {
@@ -73,11 +73,11 @@ pipeline {
         }
 
         stage('Upload packages') {
-            when {
-              expression {
-                (currentBuild.result == null || currentBuild.result == 'SUCCESS') 
-              }
-            }
+            // when {
+            //   expression {
+            //     (currentBuild.result == null || currentBuild.result == 'SUCCESS') 
+            //   }
+            // }
             steps {
                 sh 'scripts/build/upload.sh'
                 script {
