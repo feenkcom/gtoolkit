@@ -2,4 +2,4 @@
 set -o xtrace
 set -e
 
-./pharo Pharo.image releasegtoolkit ${FORCED_TAG_NAME}
+xvfb-run -a -e /dev/stdout ./pharo Pharo.image releasegtoolkit ${FORCED_TAG_NAME}
