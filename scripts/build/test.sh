@@ -25,10 +25,10 @@ zip -qr "$build_zip" "$ARTIFACT_DIR"
 
 set +e
 
-xvfb-run ./pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" st --quit scripts/build/icebergunconfig.st  2>&1
-xvfb-run ./pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --save 'IceRepository registry removeAll.'
+./pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" st --quit scripts/build/icebergunconfig.st  2>&1
+./pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --save 'IceRepository registry removeAll.'
 
 git config --global user.name "Jenkins"
 git config --global user.email "jenkins@feenk.com"
-xvfb-run  ./pharo Pharo.image examples --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Starta-.*' 2>&1
-xvfb-run  ./pharo Pharo.image gtexportreport --report=GtGtoolkitArchitecturalReport
+./pharo Pharo.image examples --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Starta-.*' 2>&1
+./pharo Pharo.image gtexportreport --report=GtGtoolkitArchitecturalReport
