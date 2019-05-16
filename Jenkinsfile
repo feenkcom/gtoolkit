@@ -48,12 +48,8 @@ pipeline {
         }
 
         stage('Run releaser') { 
-            // when { expression {
-            //         env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (currentBuild.result == null || currentBuild.result == 'SUCCESS')
-            //     }
-            // }
             when { expression {
-                    env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null)
+                    env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (currentBuild.result == null || currentBuild.result == 'SUCCESS')
                 }
             }
             steps {
@@ -64,7 +60,7 @@ pipeline {
         stage('Prepare deploy packages') {
             when {
               expression {
-                env.TAG_NAME.toString().startsWith("v")
+                (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.TAG_NAME.toString().startsWith("v")
               }
             }
             steps {
@@ -73,11 +69,11 @@ pipeline {
         }
 
         stage('Upload packages') {
-            // when {
-            //   expression {
-            //     (currentBuild.result == null || currentBuild.result == 'SUCCESS') 
-            //   }
-            // }
+            when {
+              expression {
+                (currentBuild.result == null || currentBuild.result == 'SUCCESS') 
+              }
+            }
             steps {
                 sh 'scripts/build/upload.sh'
                 script {
