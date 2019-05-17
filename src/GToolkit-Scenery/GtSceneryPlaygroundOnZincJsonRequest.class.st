@@ -18,10 +18,12 @@ GtSceneryPlaygroundOnZincJsonRequest class >> menuCommandOn: aBuilder [
 GtSceneryPlaygroundOnZincJsonRequest >> setUp [
 	| book |
 	book := GtPlayBook newDefault.
-	book pages first snippets first sourceCode: 'ZnClient new
-	url: ''https://blog.feenk.com'' asZnUrl 
+	book pages first snippets first sourceCode: 'url := ''https://blog.feenk.com'' asZnUrl 
 		/ XdConstants cdnPathSegments
-		/ XdConstants listFileName;
+		/ XdConstants listFileName'.
+	book pages first addSnippet: GtCoderSnippet new.
+	book pages last snippets last sourceCode: 'ZnClient new
+	url: url;
 	get;
 	response'.	
 	GtInspector openOnPlayBook: book
