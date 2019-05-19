@@ -138,19 +138,19 @@ BaselineOfGToolkit >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.6.67/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.6.68/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.6.72/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.6.73/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.6.33/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.6.34/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.6.42/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.6.43/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.6.42/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.6.43/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.6.38/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.6.39/src' ];
 			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder:v0.6.40/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-coder:v0.6.41/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.6.25/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
@@ -164,7 +164,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.6.2/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:v0.6.21/src' ];
+				spec repository: 'github://feenkcom/gt4smacc:v0.6.22/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
 				spec repository: 'github://feenkcom/gt4petitparser2:v0.6.2/src' ].
 		spec 
