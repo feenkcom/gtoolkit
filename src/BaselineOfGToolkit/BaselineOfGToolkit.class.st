@@ -138,11 +138,11 @@ BaselineOfGToolkit >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.6.81/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.6.82/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.6.86/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.6.87/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.6.42/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.6.43/src' ];
 			baseline: 'GToolkitInspector' with: [
 				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.6.49/src' ];
 			baseline: 'GToolkitDebugger' with: [
@@ -164,9 +164,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.6.3/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:v0.6.26/src' ];
+				spec repository: 'github://feenkcom/gt4smacc:v0.6.27/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
-				spec repository: 'github://feenkcom/gt4petitparser2:v0.6.2/src' ].
+				spec repository: 'github://feenkcom/gt4petitparser2:v0.6.3/src' ].
 		spec 
 			package: 'GToolkit-Scenery';
 			package: 'GToolkit-Constraints' with: [
