@@ -166,7 +166,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkit4SmaCC' with: [
 				spec repository: 'github://feenkcom/gt4smacc/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
-				spec repository: 'github://feenkcom/gt4petitparser2/src' ].
+				spec repository: 'github://feenkcom/gt4petitparser2/src' ];
+			baseline: 'GToolkit4Famix3' with: [ 
+				spec repository: 'github://feenkcom/gt4famix3/src' ].
 		spec package: 'GToolkit-Scenery'.
 		spec package: 'GToolkit-Constraints' with: [ 
 			spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter') ].
