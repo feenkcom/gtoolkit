@@ -138,11 +138,11 @@ BaselineOfGToolkit >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.6.86/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.6.87/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.6.91/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.6.92/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.6.47/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.6.48/src' ];
 			baseline: 'GToolkitInspector' with: [
 				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.6.49/src' ];
 			baseline: 'GToolkitDebugger' with: [
