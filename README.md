@@ -17,6 +17,9 @@ The current repository embodies the second generation of GT that is based on the
 - [Completer](https://github.com/feenkcom/gtoolkit-completer): the moldable completion engine.
 - [Phlow](https://github.com/feenkcom/gtoolkit-phlow): the browsing engine.
 - [Releaser](https://github.com/feenkcom/gtoolkit-releaser): the engine that allows us to manage and release deeply nested projects.
+- [GToolkit4Smacc](https://github.com/feenkcom/gtoolkit-releaser): the user interface for creating, debugging and testing SmaCC-based parsers.
+- [GToolkit4PetitParser2](https://github.com/feenkcom/gtoolkit-releaser): the user interface for creating, debugging and testing PetitParser2-based parsers.
+- [GToolkit4Famix3](https://github.com/feenkcom/gtoolkit-releaser): the user interface and dedicated importers that work with the Famix meta-model for source code analysis.
 
 
 
