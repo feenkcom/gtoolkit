@@ -140,7 +140,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitDocumenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.6.99/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.6.106/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.6.107/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.6.57/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -160,7 +160,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.6.32/src' ];
 			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.6.7/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.6.8/src' ];
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.6.4/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
