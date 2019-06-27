@@ -77,35 +77,56 @@ GtSlider >> slides: anObject [
 
 { #category : #'api - instantiation' }
 GtSlider >> slidesDropdown [
-	| aList |
+	| dropdown aList |
+	dropdown := BrDropdown new.
 	aList := BrSimpleList new.
 	aList
-		stencil: [ :each :index |
+		stencil: [ :each :index | 
 			BlTextElement new
 				text: each name asRopedText;
 				constraintsDo: [ :c | c horizontal matchParent ];
 				padding: (BlInsets all: 5);
-				when: BlClickEvent do: [ :anEvent  |
+				when: BlClickEvent
+					do: [ :anEvent | 
 					anEvent consumed: true.
 					aList selectOne: index ] ];
-		display: (self slides);
-		when: BrSelectionChanged do: [ :anEvent | anEvent selectedDo: [ :aSlide | self showSlide: aSlide ]  ];
+		display: self slides;
+		when: BrSelectionChanged
+			do: [ :anEvent | 
+			anEvent
+				selectedDo: [ :aSlide | 
+					dropdown collapse.
+					self showSlide: (self slides at: aSlide first) ] ];
 		yourself.
-	^ BrDropdown new
+	^ dropdown
 		layout: BlLinearLayout horizontal;
 		constraintsDo: [ :c | 
 			c horizontal fitContent.
 			c vertical fitContent ];
-		in: [ :aDropdown | aDropdown toggle: [ 
-				BrButton new
-					look: BrGlamorousButtonWithIconLook;
-					padding: (BlInsets top: 6 right: 8 bottom: 6 left: 15);
-					icon: (BlElement new
-						size: 8@8;
-						geometry: (BlPolygon vertices: {(0 @ 0). (8 @ 0). ((8 / 2) rounded @ 8)});
-						background: Color black;
-						margin: (BlInsets left: 4 right: 4);
-						constraintsDo: [ :c | c linear vertical alignCenter ]) ] ];
-		popup: [ aList ];
+		in: [ :aDropdown | 
+			aDropdown
+				toggle: [ BrButton new
+						look: BrGlamorousButtonWithIconLook;
+						padding:
+							(BlInsets
+								top: 6
+								right: 8
+								bottom: 6
+								left: 15);
+						icon:
+							(BlElement new
+								size: 8 @ 8;
+								geometry:
+									(BlPolygon
+										vertices:
+											{(0 @ 0).
+											(8 @ 0).
+											((8 / 2) rounded @ 8)});
+								background: Color black;
+								margin: (BlInsets left: 4 right: 4);
+								constraintsDo: [ :c | c linear vertical alignCenter ]) ] ];
+		popup: [ aList
+				hExact: 150;
+				vExact: 80 ];
 		look: BrGlamorousDropdownLook new
 ]
