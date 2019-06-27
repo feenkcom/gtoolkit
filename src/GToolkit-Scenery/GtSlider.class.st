@@ -14,21 +14,17 @@ Class {
 GtSlider >> create [
 	| previousElement nextElement |
 	slideElement := BlElement new
-		look: BrShadowLook;
-		background: Color white;	
-		padding: (BlInsets all: 5);
 		constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
 		layout: BlLinearLayout horizontal.
 	previousElement := BlElement new 
-		constraintsDo: [:c | c horizontal exact: 20. c vertical matchParent ];
+		constraintsDo: [:c | c horizontal exact: 30. c vertical matchParent ];
 		when: BlClickEvent do: [:e | self showPreviousSlide ].
 	nextElement := BlElement new 
-		constraintsDo: [:c | c horizontal exact: 20. c vertical matchParent ];
+		constraintsDo: [:c | c horizontal exact: 30. c vertical matchParent ];
 		when: BlClickEvent do: [:e | self showNextSlide ].
 	slidesContainer := BlElement new 
 		constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
 		layout: BlLinearLayout horizontal;
-		padding: (BlInsets top: 20 bottom: 20);
 		addChild: previousElement;
 		addChild: slideElement;
 		addChild: nextElement.
@@ -61,7 +57,7 @@ GtSlider >> showPreviousSlide [
 { #category : #'api - instantiation' }
 GtSlider >> showSlide: aSlide [
 	| slideContentElement |
-	slideContentElement := aSlide asElement.
+	slideContentElement := aSlide asCachedElement.
 	slideElement removeChildren.
 	slideElement addChild: slideContentElement.
 	currentSlide := aSlide
