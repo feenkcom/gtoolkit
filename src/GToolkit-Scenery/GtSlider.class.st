@@ -12,8 +12,11 @@ Class {
 
 { #category : #'api - instantiation' }
 GtSlider >> create [
-	| previousElement nextElement |
-	
+	| previousElement nextElement container |
+
+	container := BlElement new.
+	container constraintsDo: [:c | c horizontal matchParent. c vertical matchParent.];
+		layout: BlLinearLayout vertical.
 	slideElement := BlElement new
 		constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
 		layout: BlLinearLayout horizontal.
@@ -28,10 +31,12 @@ GtSlider >> create [
 		layout: BlLinearLayout horizontal;
 		addChild: previousElement;
 		addChild: slideElement;
-		addChild: nextElement;
-		addChild: self slidesDropdown.
+		addChild: nextElement";
+		addChild: self slidesDropdown".
 	self showSlide: self slides first.
-	^ slidesContainer
+	container addChild: slidesContainer.
+	container addChild: self slidesDropdown.
+	^ container
 ]
 
 { #category : #'api - instantiation' }
