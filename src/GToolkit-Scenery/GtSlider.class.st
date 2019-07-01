@@ -31,8 +31,7 @@ GtSlider >> create [
 		layout: BlLinearLayout horizontal;
 		addChild: previousElement;
 		addChild: slideElement;
-		addChild: nextElement";
-		addChild: self slidesDropdown".
+		addChild: nextElement.
 	self showSlide: self slides first.
 	container addChild: slidesContainer.
 	container addChild: self slidesDropdown.
@@ -107,29 +106,13 @@ GtSlider >> slidesDropdown [
 		layout: BlLinearLayout horizontal;
 		constraintsDo: [ :c | 
 			c horizontal fitContent.
-			c vertical fitContent ];
+			c vertical fitContent.
+			c linear horizontal alignRight ];
 		in: [ :aDropdown | 
 			aDropdown
 				toggle: [ BrButton new
 						look: BrGlamorousButtonWithIconLook;
-						padding:
-							(BlInsets
-								top: 6
-								right: 8
-								bottom: 6
-								left: 15);
-						icon:
-							(BlElement new
-								size: 8 @ 8;
-								geometry:
-									(BlPolygon
-										vertices:
-											{(0 @ 0).
-											(8 @ 0).
-											((8 / 2) rounded @ 8)});
-								background: Color black;
-								margin: (BlInsets left: 4 right: 4);
-								constraintsDo: [ :c | c linear vertical alignCenter ]) ] ];
+						icon: 	(BrGlamorousIcons hamburger asElement) ] ];
 		popup: [ aList
 				hExact: 150;
 				vExact: 80 ];
