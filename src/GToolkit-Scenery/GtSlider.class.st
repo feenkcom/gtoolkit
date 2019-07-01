@@ -21,10 +21,10 @@ GtSlider >> create [
 		constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
 		layout: BlLinearLayout horizontal.
 	previousElement := BlElement new 
-		constraintsDo: [:c | c horizontal exact: 30. c vertical matchParent ];
+		constraintsDo: [:c | c horizontal exact: 20. c vertical matchParent ];
 		when: BlClickEvent do: [:e | self showPreviousSlide ].
 	nextElement := BlElement new 
-		constraintsDo: [:c | c horizontal exact: 30. c vertical matchParent ];
+		constraintsDo: [:c | c horizontal exact: 20. c vertical matchParent ];
 		when: BlClickEvent do: [:e | self showNextSlide ].
 	slidesContainer := BlElement new 
 		constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
@@ -108,13 +108,14 @@ GtSlider >> slidesDropdown [
 			c horizontal fitContent.
 			c vertical fitContent.
 			c linear horizontal alignRight ];
+		padding: (BlInsets all: 10);
 		in: [ :aDropdown | 
 			aDropdown
 				toggle: [ BrButton new
 						look: BrGlamorousButtonWithIconLook;
 						icon: 	(BrGlamorousIcons hamburger asElement) ] ];
 		popup: [ aList
-				hExact: 150;
-				vExact: 80 ];
+				hExact: 250;
+				vExact: 250 ];
 		look: BrGlamorousDropdownLook new
 ]
