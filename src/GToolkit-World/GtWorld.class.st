@@ -1,12 +1,27 @@
 Class {
 	#name : #GtWorld,
 	#superclass : #BlElement,
+	#classInstVars : [
+		'world'
+	],
 	#category : #'GToolkit-World'
 }
 
+{ #category : #'system startup' }
+GtWorld class >> cleanUp [
+	<script: 'self cleanUp'>
+
+	world
+		ifNil: [ ^ self ].
+
+	world isOpened
+		ifTrue: [ world close ].
+		
+	world := nil
+]
+
 { #category : #'instance creation' }
-GtWorld class >> open [
-	<script: 'self open'>
+GtWorld class >> create [
 	| aSpace |
 	
 	aSpace := BlSpace new.
@@ -14,7 +29,32 @@ GtWorld class >> open [
 	aSpace title: 'gt'.
 	aSpace addChild: self new.
 	aSpace extent: 300@500.
-	aSpace show
+	
+	^ aSpace
+]
+
+{ #category : #'system startup' }
+GtWorld class >> initialize [
+	SessionManager default registerUserClassNamed: self name
+]
+
+{ #category : #'instance creation' }
+GtWorld class >> open [
+	<script: 'self open'>
+
+	self startUp: true
+]
+
+{ #category : #'system startup' }
+GtWorld class >> startUp: isImageStarting [
+	isImageStarting
+		ifFalse: [ ^ self ].
+
+	world
+		ifNil: [ world := self create ].
+
+	world isOpened
+		ifFalse: [ world show ]
 ]
 
 { #category : #config }
