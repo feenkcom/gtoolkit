@@ -33,22 +33,9 @@ GtWorld class >> create [
 	^ aSpace
 ]
 
-{ #category : #'system startup' }
-GtWorld class >> initialize [
-	"SessionManager default registerUserClassNamed: self name"
-]
-
 { #category : #'instance creation' }
 GtWorld class >> open [
 	<script: 'self open'>
-
-	self startUp: true
-]
-
-{ #category : #'system startup' }
-GtWorld class >> startUp: isImageStarting [
-	isImageStarting
-		ifFalse: [ ^ self ].
 
 	world
 		ifNil: [ world := self create ].
