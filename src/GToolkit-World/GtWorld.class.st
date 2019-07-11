@@ -35,7 +35,7 @@ GtWorld class >> create [
 
 { #category : #'system startup' }
 GtWorld class >> initialize [
-	SessionManager default registerUserClassNamed: self name
+	"SessionManager default registerUserClassNamed: self name"
 ]
 
 { #category : #'instance creation' }
@@ -102,6 +102,14 @@ GtWorld >> initialize [
 		c horizontal matchParent.
 		c vertical matchParent ].
 		
+	self initializeElements
+]
+
+{ #category : #initialization }
+GtWorld >> initializeElements [
+
+	self removeChildren.
+
 	self initializeLogo.
 	
 	self addChild: (BrButton new
@@ -117,14 +125,21 @@ GtWorld >> initialize [
 		constraintsDo: [ :c | c horizontal matchParent  ];
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self openPlayground ]).
-	
+			
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Coder';
 		constraintsDo: [ :c | c horizontal matchParent  ];
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self openCoder ]).
-		
+	
+	self addChild: (BrButton new
+		look: BrGlamorousButtonWithLabelLook new;
+		label: 'Spotter';
+		constraintsDo: [ :c | c horizontal matchParent  ];
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
+		action: [ self openSpotter ]).
+	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Transcript';
@@ -163,6 +178,13 @@ GtWorld >> initializeLogo [
 		padding: (BlInsets top: 20 bottom: 20);
 		text: aText;
 		constraintsDo: [ :c | c linear horizontal alignCenter ]).
+]
+
+{ #category : #'hooks - children' }
+GtWorld >> onAddedToSceneGraph [
+	super onAddedToSceneGraph.
+	
+	self initializeElements
 ]
 
 { #category : #'api - tools' }
@@ -205,6 +227,24 @@ GtWorld >> openPlayground [
 	aSpace title: 'Playground'.
 	aSpace extent: 1200@600.
 	aSpace addChild: aPlayground.
+	aSpace show
+]
+
+{ #category : #'api - tools' }
+GtWorld >> openSpotter [
+	| aSpotter aSpotterElement aSpace |
+			
+	aSpotter := GtSpotter new.
+	aSpotterElement := GtSpotterElementWithPreview new.
+	aSpotterElement spotterModel: aSpotter.
+	aSpotterElement searchField requestFocus.
+
+	aSpace := BlSpace new.
+	aSpace host: BlOSWindowHost default.
+	aSpace title: 'Spotter'.
+	aSpace extent: 800@600.
+	aSpace root: aSpotterElement.
+	aSpace borderless: true.
 	aSpace show
 ]
 
