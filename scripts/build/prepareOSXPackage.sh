@@ -6,9 +6,9 @@ mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
-curl https://files.pharo.org/get-files/70/pharo64-mac-stable.zip -o pharo64-mac-stable.zip
-unzip pharo64-mac-stable.zip -d pharo64-mac-stable
-mv -fv pharo64-mac-stable/* $GTFolder/
+wget  https://bintray.com/opensmalltalk/vm/download_file?file_path=pharo.cog.spur-cmake-minhdls_macos64x64_201907031959.dmg -O pharo.cog.spur-cmake-minhdls_macos64x64_201907031959.dmg
+7z x pharo.cog.spur-cmake-minhdls_macos64x64_201907031959.dmg
+mv -fv pharo.cog.spur-cmake-minhdls_macos64x64_201907031959/Pharo.app $GTFolder/
 
 curl https://dl.feenk.com/Glutin/osx/development/x86_64/libGlutin.dylib -o libGlutin.dylib
 mv libGlutin.dylib $GTFolder

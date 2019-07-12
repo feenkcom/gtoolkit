@@ -16,5 +16,5 @@ GtSceneryDocumenterTutorialForMondrian class >> menuCommandOn: aBuilder [
 
 { #category : #initialization }
 GtSceneryDocumenterTutorialForMondrian >> setUp [
-	GtInspector openOnPlayBook: (GtDocument forFile: (GtIcebergUtility documentAtPath: (Path *  'feenkcom'/ 'gtoolkit-visualizer' / 'doc' / 'mondrian' / 'index.pillar')))
+	GtInspector openOnPlayBook: (GtDocument forClass: GtMondrianBasicExamples)
 ]
