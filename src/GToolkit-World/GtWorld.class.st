@@ -2,7 +2,8 @@ Class {
 	#name : #GtWorld,
 	#superclass : #BlElement,
 	#classInstVars : [
-		'world'
+		'world',
+		'morphicWorld'
 	],
 	#category : #'GToolkit-World'
 }
@@ -11,13 +12,15 @@ Class {
 GtWorld class >> cleanUp [
 	<script: 'self cleanUp'>
 
-	world
-		ifNil: [ ^ self ].
+	world ifNotNil: [
+		world isOpened
+			ifTrue: [ world close ].
+		world := nil ].
 
-	world isOpened
-		ifTrue: [ world close ].
-		
-	world := nil
+	morphicWorld ifNotNil: [
+		morphicWorld isOpened
+			ifTrue: [ morphicWorld close ].
+		morphicWorld := nil ]
 ]
 
 { #category : #'instance creation' }
@@ -34,6 +37,17 @@ GtWorld class >> create [
 ]
 
 { #category : #'instance creation' }
+GtWorld class >> createMorphicWorld [
+	| aSpace |
+
+	aSpace := BlSpace new.
+	aSpace title: 'Morph World'.
+	aSpace extent: 1280@800.
+	aSpace root: BlMorphicWorldEmbeddingElement new beMain.
+	^ aSpace
+]
+
+{ #category : #'instance creation' }
 GtWorld class >> open [
 	<script: 'self open'>
 
@@ -42,6 +56,21 @@ GtWorld class >> open [
 
 	world isOpened
 		ifFalse: [ world show ]
+]
+
+{ #category : #'instance creation' }
+GtWorld class >> openMorphicWorld [
+	<script: 'self openMorphicWorld'>
+
+	morphicWorld
+		ifNotNil: [ morphicWorld isOpened
+			ifTrue: [ morphicWorld close ] ].
+
+	morphicWorld
+		ifNil: [ morphicWorld := self createMorphicWorld ].
+
+	morphicWorld isOpened
+		ifFalse: [ morphicWorld show ]
 ]
 
 { #category : #config }
@@ -140,7 +169,14 @@ GtWorld >> initializeElements [
 		constraintsDo: [ :c | c horizontal matchParent  ];
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self openExamples ]).
-	
+		
+	self addChild: (BrButton new
+		look: BrGlamorousButtonWithLabelLook new;
+		label: 'Morphic World';
+		constraintsDo: [ :c | c horizontal matchParent  ];
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
+		action: [ self openMorphicWorld ]).
+
 	self addChild: (BrSimpleList new
 		display: (GtSceneryBuilder build items);
 		margin: (BlInsets top: 20 left: 0 bottom: 5 right: 0);
@@ -201,6 +237,11 @@ GtWorld >> openExamples [
 	aSpace extent: 1200@600.
 	aSpace addChild: anExamplesExplorer.
 	aSpace show
+]
+
+{ #category : #'api - tools' }
+GtWorld >> openMorphicWorld [
+	self class openMorphicWorld
 ]
 
 { #category : #'api - tools' }
