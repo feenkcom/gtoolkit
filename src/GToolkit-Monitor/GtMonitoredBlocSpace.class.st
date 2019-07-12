@@ -23,6 +23,13 @@ GtMonitoredBlocSpace >> gtPointersFor: aView [
 			item: [ :anObject | anObject gtDisplayText ]
 ]
 
+{ #category : #accessing }
+GtMonitoredBlocSpace >> gtPreviewFor: aView [
+	<gtView>
+	self space ifNil: [ ^ aView empty ].
+	^ self space  gtPreviewFor: aView
+]
+
 { #category : #testing }
 GtMonitoredBlocSpace >> isDead [
 	^ self isRunning not
