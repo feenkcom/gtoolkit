@@ -2,7 +2,8 @@ Class {
 	#name : #GtWorld,
 	#superclass : #BlElement,
 	#classInstVars : [
-		'world'
+		'world',
+		'morphicWorld'
 	],
 	#category : #'GToolkit-World'
 }
@@ -11,13 +12,15 @@ Class {
 GtWorld class >> cleanUp [
 	<script: 'self cleanUp'>
 
-	world
-		ifNil: [ ^ self ].
+	world ifNotNil: [
+		world isOpened
+			ifTrue: [ world close ].
+		world := nil ].
 
-	world isOpened
-		ifTrue: [ world close ].
-		
-	world := nil
+	morphicWorld ifNotNil: [
+		morphicWorld isOpened
+			ifTrue: [ morphicWorld close ].
+		morphicWorld := nil ]
 ]
 
 { #category : #'instance creation' }
@@ -33,28 +36,41 @@ GtWorld class >> create [
 	^ aSpace
 ]
 
-{ #category : #'system startup' }
-GtWorld class >> initialize [
-	SessionManager default registerUserClassNamed: self name
+{ #category : #'instance creation' }
+GtWorld class >> createMorphicWorld [
+	| aSpace |
+
+	aSpace := BlSpace new.
+	aSpace title: 'Morph World'.
+	aSpace extent: 1280@800.
+	aSpace root: BlMorphicWorldEmbeddingElement new beMain.
+	^ aSpace
 ]
 
 { #category : #'instance creation' }
 GtWorld class >> open [
 	<script: 'self open'>
 
-	self startUp: true
-]
-
-{ #category : #'system startup' }
-GtWorld class >> startUp: isImageStarting [
-	isImageStarting
-		ifFalse: [ ^ self ].
-
 	world
 		ifNil: [ world := self create ].
 
 	world isOpened
 		ifFalse: [ world show ]
+]
+
+{ #category : #'instance creation' }
+GtWorld class >> openMorphicWorld [
+	<script: 'self openMorphicWorld'>
+
+	morphicWorld
+		ifNotNil: [ morphicWorld isOpened
+			ifTrue: [ morphicWorld close ] ].
+
+	morphicWorld
+		ifNil: [ morphicWorld := self createMorphicWorld ].
+
+	morphicWorld isOpened
+		ifFalse: [ morphicWorld show ]
 ]
 
 { #category : #config }
@@ -102,6 +118,14 @@ GtWorld >> initialize [
 		c horizontal matchParent.
 		c vertical matchParent ].
 		
+	self initializeElements
+]
+
+{ #category : #initialization }
+GtWorld >> initializeElements [
+
+	self removeChildren.
+
 	self initializeLogo.
 	
 	self addChild: (BrButton new
@@ -117,14 +141,21 @@ GtWorld >> initialize [
 		constraintsDo: [ :c | c horizontal matchParent  ];
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self openPlayground ]).
-	
+			
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Coder';
 		constraintsDo: [ :c | c horizontal matchParent  ];
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self openCoder ]).
-		
+	
+	self addChild: (BrButton new
+		look: BrGlamorousButtonWithLabelLook new;
+		label: 'Spotter';
+		constraintsDo: [ :c | c horizontal matchParent  ];
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
+		action: [ self openSpotter ]).
+	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Transcript';
@@ -138,7 +169,14 @@ GtWorld >> initialize [
 		constraintsDo: [ :c | c horizontal matchParent  ];
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self openExamples ]).
-	
+		
+	self addChild: (BrButton new
+		look: BrGlamorousButtonWithLabelLook new;
+		label: 'Morphic World';
+		constraintsDo: [ :c | c horizontal matchParent  ];
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
+		action: [ self openMorphicWorld ]).
+
 	self addChild: (BrSimpleList new
 		display: (GtSceneryBuilder build items);
 		margin: (BlInsets top: 20 left: 0 bottom: 5 right: 0);
@@ -163,6 +201,13 @@ GtWorld >> initializeLogo [
 		padding: (BlInsets top: 20 bottom: 20);
 		text: aText;
 		constraintsDo: [ :c | c linear horizontal alignCenter ]).
+]
+
+{ #category : #'hooks - children' }
+GtWorld >> onAddedToSceneGraph [
+	super onAddedToSceneGraph.
+	
+	self initializeElements
 ]
 
 { #category : #'api - tools' }
@@ -195,6 +240,11 @@ GtWorld >> openExamples [
 ]
 
 { #category : #'api - tools' }
+GtWorld >> openMorphicWorld [
+	self class openMorphicWorld
+]
+
+{ #category : #'api - tools' }
 GtWorld >> openPlayground [
 	| aPlayground aSpace |
 			
@@ -205,6 +255,24 @@ GtWorld >> openPlayground [
 	aSpace title: 'Playground'.
 	aSpace extent: 1200@600.
 	aSpace addChild: aPlayground.
+	aSpace show
+]
+
+{ #category : #'api - tools' }
+GtWorld >> openSpotter [
+	| aSpotter aSpotterElement aSpace |
+			
+	aSpotter := GtSpotter new.
+	aSpotterElement := GtSpotterElementWithPreview new.
+	aSpotterElement spotterModel: aSpotter.
+	aSpotterElement searchField requestFocus.
+
+	aSpace := BlSpace new.
+	aSpace host: BlOSWindowHost default.
+	aSpace title: 'Spotter'.
+	aSpace extent: 800@600.
+	aSpace root: aSpotterElement.
+	aSpace borderless: true.
 	aSpace show
 ]
 
