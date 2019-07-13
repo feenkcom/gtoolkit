@@ -309,7 +309,7 @@ GtWorld >> openPlayground [
 
 { #category : #'api - tools' }
 GtWorld >> openSpotter [
-	self class openSpotter
+	self class openSpotter
 ]
 
 { #category : #'api - tools' }
