@@ -172,6 +172,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkit4Famix3' with: [ 
 				spec repository: 'github://feenkcom/gt4famix3/src' ].
 		spec package: 'GToolkit-Scenery'.
+		spec package: 'GToolkit-Monitor'.
 		spec package: 'GToolkit-Constraints' with: [ 
 			spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter') ].
 		spec package: 'GToolkit-World'.
