@@ -15,7 +15,7 @@ GtSlider >> create [
 	| previousElement nextElement container |
 
 	container := BlElement new.
-	container constraintsDo: [:c | c horizontal matchParent. c vertical matchParent.];
+	container constraintsDo: [:c | c horizontal matchParent. c vertical matchParent];
 		layout: BlLinearLayout vertical.
 	slideElement := BlElement new
 		constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
@@ -35,6 +35,15 @@ GtSlider >> create [
 	self showSlide: self slides first.
 	container addChild: slidesContainer.
 	container addChild: self slidesDropdown.
+	
+	container addShortcut: (BlShortcut new
+		repeatable: false;
+		combination: BlKeyCombination builder alt arrowRight build;
+		action: [ self showNextSlide ]).
+	container addShortcut: (BlShortcut new
+		repeatable: false;
+		combination: BlKeyCombination builder alt arrowLeft build;
+		action: [ self showPreviousSlide ]).
 	^ container
 ]
 
