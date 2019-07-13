@@ -304,12 +304,12 @@ GtWorld >> openMorphicWorld [
 
 { #category : #'api - tools' }
 GtWorld >> openPlayground [
-	self class openPlayground
+	self class openPlayground
 ]
 
 { #category : #'api - tools' }
 GtWorld >> openSpotter [
-	self class openSpotter
+	self class openSpotter
 ]
 
 { #category : #'api - tools' }
