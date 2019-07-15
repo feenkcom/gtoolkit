@@ -25,6 +25,7 @@ GtTitleSlide >> create [
 						addChild: (BlTextElement new 
 							constraintsDo: [ :c |
 								c linear horizontal alignCenter ];
+							padding: (BlInsets top: 40; bottom: 40);
 							text: title);
 						addChild: (BlTextElement new 
 							constraintsDo: [ :c |
