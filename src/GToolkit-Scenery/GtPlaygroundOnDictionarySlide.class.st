@@ -9,10 +9,10 @@ GtPlaygroundOnDictionarySlide >> create [
 	| book |
 	book := GtPlayBook newDefault.
 	book pages first snippets first sourceCode: '{
-	#number -> 42 . 
-	#date -> Date today.
+	#number -> (21/2) . 
 	#color -> Color cyan.
-	#string -> ''fourty-two'' . 
+	#string -> ''A string is a basic data structure.
+What could we possibly see different about it?''. 
 	 } 
 		asDictionary'.	
 	^ GtInspector createOnPlayBook: book
