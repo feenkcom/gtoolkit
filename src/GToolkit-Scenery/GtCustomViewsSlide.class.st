@@ -1,6 +1,6 @@
 Class {
 	#name : #GtCustomViewsSlide,
-	#superclass : #GtSlide,
+	#superclass : #GtInspectorViewsSlide,
 	#category : #'GToolkit-Scenery'
 }
 

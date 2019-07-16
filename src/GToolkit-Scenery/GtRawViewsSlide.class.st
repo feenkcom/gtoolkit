@@ -1,6 +1,6 @@
 Class {
 	#name : #GtRawViewsSlide,
-	#superclass : #GtSlide,
+	#superclass : #GtInspectorViewsSlide,
 	#category : #'GToolkit-Scenery'
 }
 
@@ -16,7 +16,7 @@ GtRawViewsSlide >> create [
 	Color red . 
 	FileLocator imageDirectory asFileReference .
 	FileLocator imageDirectory asFileReference / 'dx' / 'gtoolkit.png' .
-	GtGraphCircleEnclosureExamples new enclosureWithThreeCircles .
+	GtGraphCircleNeighbourhoodExamples new emptyNeighborhoodWithThreeCirclesAndSpace .
 	GtWhatMakesBlocSpecialExplanation new sampleText} do: [:x | 
 		container addChild: (((x gtRawFor: GtPhlowView empty) 
 			asElementDo: [:e | 
