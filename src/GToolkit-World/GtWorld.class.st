@@ -31,7 +31,7 @@ GtWorld class >> create [
 	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Glamorous Toolkit'.
 	aSpace addChild: self new.
-	aSpace extent: 200@500.
+	aSpace extent: 260@500.
 	aSpace withSpotter.	
 	^ aSpace
 ]
@@ -51,14 +51,67 @@ GtWorld class >> createMorphicWorld [
 GtWorld class >> open [
 	<script: 'self open'>
 
-	world
-		ifNil: [ world := self create ].
+	(world isNotNil and: [ world isOpened ])
+		ifTrue: [ world close ].
+
+	world := self create.
 
 	world isOpened
 		ifFalse: [ world show ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : #'api - tools' }
+GtWorld class >> openCoder [
+	<script: 'self openCoder'>
+	| aCoder aSpace |
+		
+	aCoder := GtInspector createOnPlayBook: (GtClassCoder new).
+
+	aSpace := BlSpace new.
+	aSpace host: BlOSWindowHost default.
+	aSpace title: 'Coder'.
+	aSpace extent: 1200@600.
+	aSpace addChild: aCoder.
+	aSpace withHalos.
+	aSpace withSpotter.
+	aSpace show
+]
+
+{ #category : #'api - tools' }
+GtWorld class >> openExamples [
+	<script: 'self openExamples'>
+	| anExamplesExplorer aSpace |
+			
+	anExamplesExplorer := GtInspector createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject.
+
+	aSpace := BlSpace new.
+	aSpace host: BlOSWindowHost default.
+	aSpace title: 'Examples'.
+	aSpace extent: 1200@600.
+	aSpace addChild: anExamplesExplorer.
+	aSpace withHalos.
+	aSpace withSpotter.
+	aSpace show
+]
+
+{ #category : #'api - tools' }
+GtWorld class >> openMonitor [
+	<script: 'self openMonitor'>
+	| aBlocSpacesMonitor aSpace |
+			
+	aBlocSpacesMonitor := GtInspector createOn: GtMonitoredBlocSpaces new.
+
+	aSpace := BlSpace new.
+	aSpace host: BlOSWindowHost default.
+	aSpace title: 'Monitor'.
+	aSpace extent: 1200@600.
+	aSpace addChild: aBlocSpacesMonitor.
+	aSpace withHalos.
+	aSpace withSpotter.
+	aSpace show
+]
+
+{ #category : #'api - tools' }
 GtWorld class >> openMorphicWorld [
 	<script: 'self openMorphicWorld'>
 
@@ -75,27 +128,29 @@ GtWorld class >> openMorphicWorld [
 
 { #category : #'api - tools' }
 GtWorld class >> openPlayground [
+	<script: 'self openPlayground'>
 	| aPlayground aSpace |
 
 	aPlayground := GtInspector createOnPlayBook: GtPlayBook newDefault.
+
 	aSpace := BlSpace new.
 	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Playground'.
 	aSpace extent: 1200@600.
 	aSpace addChild: aPlayground.
-	aSpace withSpotter.
 	aSpace withHalos.
+	aSpace withSpotter.
 	aSpace show
 ]
 
-{ #category : #spotter }
+{ #category : #'api - tools' }
 GtWorld class >> openSpotter [
+	<script: 'self openSpotter'>
 	| aSpotter aSpotterElement aSpace |
 			
 	aSpotter := GtSpotter new.
 	aSpotterElement := GtSpotterElementWithPreview new.
 	aSpotterElement spotterModel: aSpotter.
-	aSpotterElement searchField requestFocus.
 
 	aSpace := BlSpace new.
 	aSpace host: BlOSWindowHost default.
@@ -103,6 +158,41 @@ GtWorld class >> openSpotter [
 	aSpace extent: 800@600.
 	aSpace root: aSpotterElement.
 	aSpace borderless: true.
+	aSpace withHalos.
+	aSpace show
+]
+
+{ #category : #'api - tools' }
+GtWorld class >> openTour [
+	<script: 'self openTour'>
+	| aTour aSpace |
+
+	aTour := GtInspector createOnPlayBook: (GtDocument forClass: BaselineOfGToolkit).
+
+	aSpace := BlSpace new.
+	aSpace host: BlOSWindowHost default.
+	aSpace title: 'Glamorous Toolkit Tour'.
+	aSpace extent: 1200@600.
+	aSpace addChild: aTour.
+	aSpace withHalos.
+	aSpace withSpotter.
+	aSpace show
+]
+
+{ #category : #'api - tools' }
+GtWorld class >> openTranscript [
+	<script: 'self openTranscript'>
+	| aTranscriptElement aSpace |
+
+	aTranscriptElement :=  GtTranscript default asElement.
+
+	aSpace := BlSpace new.
+	aSpace host: BlOSWindowHost default.
+	aSpace title: 'Transcript'.
+	aSpace extent: 400@600.
+	aSpace addChild: aTranscriptElement.
+	aSpace withHalos.
+	aSpace withSpotter.
 	aSpace show
 ]
 
@@ -170,58 +260,77 @@ GtWorld >> initializeElements [
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Tour';
-		constraintsDo: [ :c | c horizontal matchParent  ];
+		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openTour ]).
+		action: [ self class openTour ]).
 	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Playground';
-		constraintsDo: [ :c | c horizontal matchParent  ];
+		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openPlayground ]).
+		action: [ self class openPlayground ]).
 			
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Coder';
-		constraintsDo: [ :c | c horizontal matchParent  ];
+		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openCoder ]).
+		action: [ self class openCoder ]).
 	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Spotter';
-		constraintsDo: [ :c | c horizontal matchParent  ];
+		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openSpotter ]).
+		action: [ self class openSpotter ]).
 	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Transcript';
-		constraintsDo: [ :c | c horizontal matchParent  ];
+		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openTranscript ]).
+		action: [ self class openTranscript ]).
 		
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Examples';
-		constraintsDo: [ :c | c horizontal matchParent  ];
+		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openExamples ]).
+		action: [ self class openExamples ]).
 	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Monitor';
-		constraintsDo: [ :c | c horizontal matchParent  ];
+		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openMonitor ]).
+		action: [ self class openMonitor ]).
 		
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Morphic World';
-		constraintsDo: [ :c | c horizontal matchParent  ];
+		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openMorphicWorld ]).
+		action: [ self class openMorphicWorld ]).
+		
+	self addChild: (BlElement new
+		layout: (BlLinearLayout horizontal cellSpacing: 10);
+		margin: (BlInsets top: 5 left: 10 bottom: 5 right: 10);
+		constraintsDo: [ :c |
+			c horizontal matchParent.
+			c vertical fitContent ];
+		addChildren: {
+			BrButton new
+				look: BrGlamorousButtonWithLabelLook new;
+				label: 'Save';
+				hMatchParent;
+				action: [ Smalltalk snapshot: true andQuit: false ].
+				
+			BrButton new
+				look: (BrGlamorousButtonWithLabelLook new);
+				label: 'Quit';
+				hMatchParent;
+				action: [ Smalltalk snapshot: false andQuit: true ] }).
 
 	self addChild: (BrSimpleList new
 		display: (GtSceneryBuilder build items);
@@ -230,23 +339,9 @@ GtWorld >> initializeElements [
 			BrButton new
 				look: BrGlamorousButtonWithLabelLook new;
 				label: item name;
-				constraintsDo: [ :c | c horizontal matchParent  ];
+				hMatchParent;
 				margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 				action: [ item action value ] ]).
-]
-
-{ #category : #initialization }
-GtWorld >> initializeLogo [
-	| aText |
-	
-	aText := 'gt' asRopedText fontSize: 30.
-	(aText from: 1 to: 1) thin.
-	(aText from: 2 to: aText size) bold.
-	
-	self addChild: (BlTextElement new
-		padding: (BlInsets top: 20 bottom: 20);
-		text: aText;
-		constraintsDo: [ :c | c linear horizontal alignCenter ]).
 ]
 
 { #category : #'hooks - children' }
@@ -254,92 +349,4 @@ GtWorld >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	
 	self initializeElements
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openCoder [
-	| aCoder aSpace |
-		
-	aCoder := GtInspector createOnPlayBook: (GtClassCoder new).
-	aSpace := BlSpace new.
-	aSpace host: BlOSWindowHost default.
-	aSpace title: 'Coder'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aCoder.
-	aSpace withHalos.
-	aSpace withSpotter.
-	aSpace show
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openExamples [
-	| anExamplesExplorer aSpace |
-			
-	anExamplesExplorer := GtInspector createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject.
-
-	aSpace := BlSpace new.
-	aSpace withHalos.
-	aSpace host: BlOSWindowHost default.
-	aSpace title: 'Examples'.
-	aSpace extent: 1200@600.
-	aSpace addChild: anExamplesExplorer.
-	aSpace show
-]
-
-{ #category : #accessing }
-GtWorld >> openMonitor [
-	| aSpace |
-	
-	aSpace := BlSpace new.
-	aSpace title: 'Monitor'.
-	aSpace addChild: (GtInspector createOn: GtMonitoredBlocSpaces new)..
-	aSpace withSpotter.
-	aSpace show
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openMorphicWorld [
-	self class openMorphicWorld
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openPlayground [
-	self class openPlayground
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openSpotter [
-	self class openSpotter
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openTour [
-	| aTour aSpace |
-
-	aTour := GtInspector createOnPlayBook: (GtDocument forClass: BaselineOfGToolkit).
-
-	aSpace := BlSpace new.
-	aSpace withHalos.
-	aSpace host: BlOSWindowHost default.
-	aSpace title: 'Glamorous Toolkit Tour'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aTour.
-	aSpace withSpotter.
-	aSpace show
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openTranscript [ 
-	| aTranscriptElement aSpace |
-
-	aTranscriptElement :=  GtTranscript default asElement.
-
-	aSpace := BlSpace new.
-	aSpace withHalos.
-	aSpace host: BlOSWindowHost default.
-	aSpace title: 'Transcript'.
-	aSpace extent: 400@600.
-	aSpace addChild: aTranscriptElement.
-	aSpace withSpotter.
-	aSpace show
 ]
