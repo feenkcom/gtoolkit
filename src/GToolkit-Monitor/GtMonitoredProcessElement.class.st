@@ -1,0 +1,41 @@
+Class {
+	#name : #GtMonitoredProcessElement,
+	#superclass : #GtMonitoredServiceElement,
+	#instVars : [
+		'stackList'
+	],
+	#category : #'GToolkit-Monitor'
+}
+
+{ #category : #initialization }
+GtMonitoredProcessElement >> initialize [
+	super initialize.
+	self
+		constraintsDo: [ :c | 
+			c horizontal matchParent.
+			c vertical matchParent ].
+	stackList := BrSimpleList new.
+	stackList
+		stencil: [ :eachContext | (GtMethodCoder forMethod: eachContext) expanded: true; asElement  ].
+	self addChild: stackList.
+	self updateList.
+]
+
+{ #category : #updating }
+GtMonitoredProcessElement >> updateList [
+	self
+		enqueueTask:
+			(BlEnqueuedTaskItAction new
+				name: '[Monitor] Process Stack Update';
+				action: [ self service stack ];
+				onFailureEnqueueAction: [ :anException | 
+					'Failed to update process stack' traceCr.
+					anException traceCr ];
+				onSuccessEnqueueAction: [ :theStackList | 
+					stackList display: theStackList.
+					self
+						enqueueTask:
+							(BlDelayedTaskAction new
+								delay: 5 seconds;
+								action: [ self updateList ]) ])
+]
