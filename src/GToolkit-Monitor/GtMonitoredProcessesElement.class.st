@@ -70,7 +70,7 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 
 { #category : #initialization }
 GtMonitoredProcessesElement >> onClickTransformation [
-	^ [ :aMonitoredService | aMonitoredService service ifNil: [ aMonitoredService ] ]
+	^ [ :aMonitoredService | aMonitoredService "service ifNil: [ aMonitoredService ]" ]
 ]
 
 { #category : #updating }
