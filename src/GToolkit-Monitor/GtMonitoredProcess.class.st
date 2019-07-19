@@ -17,6 +17,13 @@ GtMonitoredProcess >> priority [
 ]
 
 { #category : #accessing }
+GtMonitoredProcess >> processIdAndContext [
+	<return: #String>
+	^ self service ifNotNil: [ :aProcess | 
+			aProcess name, ': ', aProcess suspendedContext asString ]
+]
+
+{ #category : #accessing }
 GtMonitoredProcess >> title [
 	<return: #String>
 	^ self service ifNotNil: [ :aService | aService gtName ] ifNil: [ '' ]

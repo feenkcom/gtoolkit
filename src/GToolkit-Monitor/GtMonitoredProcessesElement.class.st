@@ -40,8 +40,9 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 			| aTitle |
 			
 			aTitle := aMonitoredService title.
-			aTitle isEmptyOrNil ifTrue: [ 
-				aTitle := '[No name]' asRopedText italic ].
+			aTitle isEmpty ifTrue: [ 
+				aTitle := aMonitoredService processIdAndContext asRopedText foreground: Color gray ].
+			aTitle isEmpty ifTrue: [ aTitle := '[No name]' asRopedText italic ].
 			
 			BrLabel new
 				look: BrGlamorousLabelLook;
