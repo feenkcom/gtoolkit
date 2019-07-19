@@ -40,5 +40,8 @@ GtMonitoredBlocSpaces >> gtTaskItServicesFor: aView [
 	^ aView explicit
 		title: 'Services';
 		priority: 2;
-		stencil: [ GtMonitoredTaskItServicesElement new ]
+		stencil: [ GtMonitoredTaskItServicesElement new ];
+		actionButtonIcon: BrGlamorousIcons trash 
+			action: [ :aButton | TKTConfiguration serviceManager purge ]
+			
 ]
