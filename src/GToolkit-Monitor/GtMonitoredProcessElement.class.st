@@ -21,13 +21,18 @@ GtMonitoredProcessElement >> initialize [
 	self updateList.
 ]
 
+{ #category : #accessing }
+GtMonitoredProcessElement >> stack [
+	^ self service ifNotNil: #stack ifNil: [ #() ]
+]
+
 { #category : #updating }
 GtMonitoredProcessElement >> updateList [
 	self
 		enqueueTask:
 			(BlEnqueuedTaskItAction new
 				name: '[Monitor] Process Stack Update';
-				action: [ self service stack ];
+				action: [ self stack ];
 				onFailureEnqueueAction: [ :anException | 
 					'Failed to update process stack' traceCr.
 					anException traceCr ];
