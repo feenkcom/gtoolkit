@@ -7,10 +7,9 @@ Class {
 { #category : #'gt-extension' }
 GtMonitoredProcess >> gtStackFor: aView [
 	<gtView>
-	^ aView list
+	^ aView explicit
 		title: 'Stack';
-		items: [ self stack ];
-		itemStencil: [ :eachContext | (GtMethodCoder forMethod: eachContext) expanded: true; asElement  ]
+		stencil: [ GtMethodsCoder forItems: self stack ]
 ]
 
 { #category : #'gt-extension' }

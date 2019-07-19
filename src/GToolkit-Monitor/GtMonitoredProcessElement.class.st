@@ -16,7 +16,7 @@ GtMonitoredProcessElement >> initialize [
 			c vertical matchParent ].
 	stackList := BrSimpleList new.
 	stackList
-		stencil: [ :eachContext | (GtMethodCoder forMethod: eachContext) expanded: true; asElement  ].
+		stencil: [ :eachContext | (GtMethodCoder forMethod: eachContext) expanded: false; asElement  ].
 	self addChild: stackList.
 	self updateList.
 ]
