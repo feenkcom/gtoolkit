@@ -5,13 +5,13 @@ Class {
 }
 
 { #category : #'gt-extension' }
-GtMonitoredBlocSpaces >> gtServicesFor: aView [
+GtMonitoredBlocSpaces >> gtProcessesFor: aView [
 	<gtView>
 	
 	^ aView explicit
-		title: 'Services';
-		priority: 2;
-		stencil: [ GtMonitoredTaskItServicesElement new ]
+		title: 'Processes';
+		priority: 3;
+		stencil: [ GtMonitoredProcessesElement new ]
 ]
 
 { #category : #'gt-extension' }
@@ -31,4 +31,14 @@ GtMonitoredBlocSpaces >> gtSpacesFor: aView [
 						eachSpace isOpened
 							ifTrue: [ eachSpace close ] ].
 					Smalltalk garbageCollect ] ]
+]
+
+{ #category : #'gt-extension' }
+GtMonitoredBlocSpaces >> gtTaskItServicesFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'Services';
+		priority: 2;
+		stencil: [ GtMonitoredTaskItServicesElement new ]
 ]
