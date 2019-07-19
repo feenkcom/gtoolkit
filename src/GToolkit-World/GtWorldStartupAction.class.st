@@ -15,6 +15,6 @@ GtWorldStartupAction class >> startUp: isImageStarting [
 	"Only handle when lauching a new image,  not when saving the image"
 	isImageStarting ifFalse: [ ^ self ].
 	
-	Author fullName isEmptyOrNil ifTrue: [ 
+	Author fullNamePerSe isEmptyOrNil ifTrue: [ 
 		Author fullName: 'GlamorousAuthor' ]
 ]
