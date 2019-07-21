@@ -148,8 +148,9 @@ GtWorld class >> openSpotter [
 	aSpotterElement spotterModel: aSpotter.
 
 	aSpace := BlSpace new.
+	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Spotter'.
-	aSpace extent: 800@600.
+	aSpace extent: 750@500.
 	aSpace root: aSpotterElement.
 	aSpace borderless: true.
 	aSpace withHalos.

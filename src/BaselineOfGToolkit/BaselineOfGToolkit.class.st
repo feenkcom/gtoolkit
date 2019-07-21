@@ -185,5 +185,6 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		ifTrue: [ ^ self ].
 	PostLoaded := true.
 	
-	GtWorld useGToolkitDebuggersAsDefault
+	GtWorld useGToolkitDebuggersAsDefault.
+	Author fullName: 'GlamorousAuthor'
 ]
