@@ -28,7 +28,6 @@ GtWorld class >> create [
 	| aSpace |
 	
 	aSpace := BlSpace new.
-	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Glamorous Toolkit'.
 	aSpace addChild: self new.
 	aSpace extent: 260@500.
@@ -68,7 +67,6 @@ GtWorld class >> openCoder [
 	aCoder := GtInspector createOnPlayBook: (GtClassCoder new).
 
 	aSpace := BlSpace new.
-	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Coder'.
 	aSpace extent: 1200@600.
 	aSpace addChild: aCoder.
@@ -85,7 +83,6 @@ GtWorld class >> openExamples [
 	anExamplesExplorer := GtInspector createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject.
 
 	aSpace := BlSpace new.
-	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Examples'.
 	aSpace extent: 1200@600.
 	aSpace addChild: anExamplesExplorer.
@@ -102,7 +99,6 @@ GtWorld class >> openMonitor [
 	aBlocSpacesMonitor := GtInspector createOn: GtMonitoredBlocSpaces new.
 
 	aSpace := BlSpace new.
-	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Monitor'.
 	aSpace extent: 1200@600.
 	aSpace addChild: aBlocSpacesMonitor.
@@ -134,7 +130,6 @@ GtWorld class >> openPlayground [
 	aPlayground := GtInspector createOnPlayBook: GtPlayBook newDefault.
 
 	aSpace := BlSpace new.
-	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Playground'.
 	aSpace extent: 1200@600.
 	aSpace addChild: aPlayground.
@@ -153,7 +148,6 @@ GtWorld class >> openSpotter [
 	aSpotterElement spotterModel: aSpotter.
 
 	aSpace := BlSpace new.
-	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Spotter'.
 	aSpace extent: 750@500.
 	aSpace root: aSpotterElement.
@@ -170,7 +164,6 @@ GtWorld class >> openTour [
 	aTour := GtInspector createOnPlayBook: (GtDocument forClass: BaselineOfGToolkit).
 
 	aSpace := BlSpace new.
-	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Glamorous Toolkit Tour'.
 	aSpace extent: 1200@600.
 	aSpace addChild: aTour.
@@ -187,7 +180,6 @@ GtWorld class >> openTranscript [
 	aTranscriptElement :=  GtTranscript default asElement.
 
 	aSpace := BlSpace new.
-	aSpace host: BlOSWindowHost default.
 	aSpace title: 'Transcript'.
 	aSpace extent: 400@600.
 	aSpace addChild: aTranscriptElement.
