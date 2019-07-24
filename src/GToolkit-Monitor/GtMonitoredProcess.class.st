@@ -10,7 +10,6 @@ GtMonitoredProcess >> annotations [
 	| aService |
 	aService := self service.
 	aService ifNil: [ ^ #() ].
-	(aService isKindOf: BlProcess) ifFalse: [ ^ #() ].
 	aService hasProcessAnnotations ifFalse: [ ^ #() ].
 	^ Array streamContents: [ :aStream |
 		aService processAnnotation associationsDo: [ :eachAssoc | 
