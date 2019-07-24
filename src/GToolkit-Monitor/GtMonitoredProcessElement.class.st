@@ -33,6 +33,7 @@ GtMonitoredProcessElement >> updateList [
 			(BlEnqueuedTaskItAction new
 				name: '[Monitor] Process Stack Update';
 				action: [ self stack ];
+				element: self;
 				onFailureEnqueueAction: [ :anException | 
 					'Failed to update process stack' traceCr.
 					anException traceCr ];

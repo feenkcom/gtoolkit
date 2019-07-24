@@ -73,6 +73,7 @@ GtMonitoredBlocSpacesElement >> initialize [
 GtMonitoredBlocSpacesElement >> updateList [
 	self enqueueTask: (BlEnqueuedTaskItAction new
 		name: '[Monitor] Bloc spaces';
+		element: self;
 		action: [
 			| allSpaces |
 			allSpaces := BlSpace allSubInstances sorted: [ :a :b | a title < b title ].
