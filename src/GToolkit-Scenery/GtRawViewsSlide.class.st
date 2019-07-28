@@ -14,8 +14,8 @@ GtRawViewsSlide >> create [
 		layout: (BlGridLayout new columnCount: 3).
 	{21/2 . 
 	Color red . 
-	FileLocator imageDirectory asFileReference .
-	FileLocator imageDirectory asFileReference / 'dx' / 'gtoolkit.png' .
+	FileLocator imageDirectory asFileReference.
+	GtIcebergUtility documentAtPath: (Path * 'feenkcom' / 'gtoolkit' / 'doc' / 'gtoolkit.png'). 
 	GtGraphCircleNeighbourhoodExamples new emptyNeighborhoodWithThreeCirclesAndSpace .
 	GtWhatMakesBlocSpecialExplanation new sampleText} do: [:x | 
 		container addChild: (((x gtRawFor: GtPhlowView empty) 

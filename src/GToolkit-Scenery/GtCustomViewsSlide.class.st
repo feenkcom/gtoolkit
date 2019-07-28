@@ -15,7 +15,7 @@ GtCustomViewsSlide >> create [
 	{(21/2 gtPreviewFor: GtPhlowView empty) . 
 	(Color red gtPreviewFor: GtPhlowView empty) . 
 	(FileLocator imageDirectory asFileReference gtItemsFor: GtPhlowView empty) . 
-	(FileLocator imageDirectory asFileReference / 'dx' / 'gtoolkit.png' gtFigureFor: GtPhlowView empty) . 
+	((GtIcebergUtility documentAtPath: (Path * 'feenkcom' / 'gtoolkit' / 'doc' / 'gtoolkit.png')) gtFigureFor: GtPhlowView empty) . 
 	(GtGraphCircleNeighbourhoodExamples new emptyNeighborhoodWithThreeCirclesAndSpace gtPreviewFor: GtPhlowView empty) . 
 	(GtWhatMakesBlocSpecialExplanation new sampleText gtTreeFor: GtPhlowView empty)} do: [:view | 
 		container addChild: (( view
