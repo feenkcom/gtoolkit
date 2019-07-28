@@ -5,9 +5,9 @@ mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
-wget https://bintray.com/opensmalltalk/vm/download_file?file_path=pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201907112020.tar.gz -O pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201907112020.tar.gz
-tar xvzf pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201907112020.tar.gz
-mv -fv phcogspurlinuxmhdls64/* $GTFolder/
+curl https://files.pharo.org/get-files/70/pharo64-linux-stable.zip -o pharo64-linux-stable.zip
+unzip pharo64-linux-stable.zip -d pharo64-linux-stable
+mv -fv pharo64-linux-stable/* $GTFolder/
 
 curl https://dl.feenk.com/Glutin/linux/development/x86_64/libGlutin.so -o libGlutin.so
 mv libGlutin.so $GTFolder
