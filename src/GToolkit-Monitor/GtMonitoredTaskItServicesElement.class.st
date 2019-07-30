@@ -47,6 +47,20 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 				look: BrGlamorousLabelLook;
 				text: isOpened;
 				hExact: 100 ].
+			
+	servicesList column
+		title: 'Queue';
+		stencil: [ :aMonitoredService |
+			| aQueueSize |
+			aQueueSize := aMonitoredService queueSize.
+			aQueueSize := aQueueSize isZero 
+				ifTrue: [ '0' asRopedText foreground: Color gray ]
+				ifFalse: [ aQueueSize asString asRopedText ].
+			
+			BrLabel new
+				look: BrGlamorousLabelLook;
+				text: aQueueSize;
+				hExact: 100 ].
 ]
 
 { #category : #initialization }
