@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #accessing }
+GtMonitoredTaskItService >> queueSize [
+	<return: #Integer>
+	^ self service ifNil: 0 ifNotNil: [ :aService | aService taskQueueSize ]
+]
+
+{ #category : #accessing }
 GtMonitoredTaskItService >> title [
 	<return: #String>
 	^ self service name ifNil: [ '' ] ifNotNil: #trimmed
