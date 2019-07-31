@@ -91,7 +91,8 @@ Class {
 	#name : #BaselineOfGToolkit,
 	#superclass : #BaselineOf,
 	#classVars : [
-		'PostLoaded'
+		'PostLoaded',
+		'PreLoaded'
 	],
 	#category : #BaselineOfGToolkit
 }
@@ -121,6 +122,7 @@ BaselineOfGToolkit class >> itself [
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>
 	spec for: #'common' do: [
+		spec preLoadDoIt: #'preLoadGToolkit:'.
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitDocumenter' with: [
@@ -172,5 +174,13 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 	PostLoaded := true.
 	
 	GtWorld useGToolkitDebuggersAsDefault.
+]
+
+{ #category : #'post load' }
+BaselineOfGToolkit >> preLoadGToolkit: spec [
+	(PreLoaded isNotNil and: [ PreLoaded ])
+		ifTrue: [ ^ self ].
+	PreLoaded := true.
+	
 	Author fullName: 'GlamorousAuthor'
 ]
