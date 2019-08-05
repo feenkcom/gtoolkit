@@ -10,6 +10,11 @@ Class {
 	#category : #'GToolkit-Scenery'
 }
 
+{ #category : #accessing }
+GtSlider >> addSlide: aSlide [
+	slides add: aSlide
+]
+
 { #category : #'api - instantiation' }
 GtSlider >> create [
 	| previousElement nextElement container |
@@ -55,6 +60,12 @@ GtSlider >> hasNextSlide [
 { #category : #'api - instantiation' }
 GtSlider >> hasPreviousSlide [
 	^ self slides first ~= currentSlide
+]
+
+{ #category : #initialization }
+GtSlider >> initialize [
+	super initialize.
+	slides := OrderedCollection new
 ]
 
 { #category : #'api - instantiation' }
