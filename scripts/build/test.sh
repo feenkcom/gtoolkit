@@ -1,6 +1,7 @@
 #/bin/sh!
 set -o xtrace
 set -e
+export RUST_BACKTRACE=1
 
 if [ -z "${TAG_NAME}" ] 
 then
