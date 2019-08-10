@@ -1,7 +1,7 @@
 # Glamorous Toolkit (GT)
-Glamorous Toolkit is the moldable integrated development environment. For Pharo. It is free and open-source under an MIT license.
+Glamorous Toolkit is the moldable development environment. It is a live notebook. It is a flexible search interface. It is a fancy code editor. It is a software analysis platform. It is a data visualization engine. All in one. It is built in Pharo and it is free and open-source under an MIT license.
 
-More details about it can be found on the official website: https://gtoolkit.com. 
+Learn more about it at: https://gtoolkit.com. 
 
 ## Components
 
