@@ -1,11 +1,11 @@
 # Glamorous Toolkit (GT)
-Glamorous Toolkit is the moldable integrated development environment. For Pharo. It is free and open-source under an MIT license.
+Glamorous Toolkit is the moldable development environment. It is a live notebook. It is a flexible search interface. It is a fancy code editor. It is a software analysis platform. It is a data visualization engine. All in one. It is built in Pharo and it is free and open-source under an MIT license.
 
-More details about it can be found on the official website: https://gtoolkit.com. 
+Learn more about it at: https://gtoolkit.com. 
 
 ## Components
 
-The current repository embodies the second generation of GT that is based on the [Bloc project](https://github.com/pharo-graphics/Bloc) and it is comprised of a set of distinct components. Currently these are:
+The current repository embodies the second generation of GT and it is comprised of a set of distinct components:
 - [Inspector](https://github.com/feenkcom/gtoolkit-inspector): the moldable inspector for Pharo on top of Bloc.
 - [Playground](https://github.com/feenkcom/gtoolkit-playground): the moldable playground for Pharo on top of Bloc.
 - [Documenter](https://github.com/feenkcom/gtoolkit-documenter): an engine for manipulating live documents in Pharo.
@@ -19,9 +19,12 @@ The current repository embodies the second generation of GT that is based on the
 - [Releaser](https://github.com/feenkcom/gtoolkit-releaser): the engine that allows us to manage and release deeply nested projects.
 - [GToolkit4Smacc](https://github.com/feenkcom/gt4smacc): the environment for creating, debugging and testing SmaCC-based parsers.
 - [GToolkit4PetitParser2](https://github.com/feenkcom/gt4petitparser2): the environment for creating, debugging and testing PetitParser2-based parsers.
-- [GToolkit4Famix3](https://github.com/feenkcom/gt4famix3): the environment and dedicated algorithms that work with the Famix meta-model for source code analysis.
+- [GToolkit4Famix3](https://github.com/feenkcom/gt4famix3): the environment and dedicated algorithms for source code analysis.
 
-
+Glamorous Toolkit is based on graphical stack made of:
+- [Sparta](https://github.com/feenkcom/Sparta): the graphical canvas
+- [Bloc](https://github.com/feenkcom/Bloc): the graphical framework
+- [Brick](https://github.com/feenkcom/Brick): the widget set
 
 ## How to load
 
