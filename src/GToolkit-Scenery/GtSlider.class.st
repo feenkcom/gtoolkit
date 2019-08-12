@@ -52,6 +52,15 @@ GtSlider >> create [
 	^ container
 ]
 
+{ #category : #accessing }
+GtSlider >> gtSlidesFor: aView [
+	<gtView>
+	^ aView list 
+		title: 'Slides';
+		items: [ self slides ];
+		itemFormat: #name
+]
+
 { #category : #'api - instantiation' }
 GtSlider >> hasNextSlide [
 	^ self slides last ~= currentSlide
@@ -106,14 +115,26 @@ GtSlider >> slidesDropdown [
 	aList := BrSimpleList new.
 	aList
 		stencil: [ :each :index | 
-			BlTextElement new
+			"BlTextElement new
 				text: each name asRopedText;
 				constraintsDo: [ :c | c horizontal matchParent ];
 				padding: (BlInsets all: 5);
 				when: BlClickEvent
 					do: [ :anEvent | 
 					anEvent consumed: true.
-					aList selectOne: index ] ];
+					aList selectOne: index ]" 
+			| container |
+			container := BlElement new.
+			container 
+				layout: BlLinearLayout vertical;
+				constraintsDo: [:c |
+					c vertical fitContent. c horizontal fitContent ];
+				padding: (BlInsets all: 10).
+			container addChild: (each asCachedElement asSpartaForm asElement asPannableElement
+				background: Color white;
+				look: BrShadowLook new;
+				constraintsDo: [ :c | c vertical exact: 100. c horizontal exact: 200 ]).
+			container ];
 		display: self slides;
 		when: BrSelectionChanged
 			do: [ :anEvent | 
