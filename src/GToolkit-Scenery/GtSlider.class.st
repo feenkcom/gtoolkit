@@ -52,6 +52,15 @@ GtSlider >> create [
 	^ container
 ]
 
+{ #category : #accessing }
+GtSlider >> gtSlidesFor: aView [
+	<gtView>
+	^ aView list 
+		title: 'Slides';
+		items: [ self slides ];
+		itemFormat: #name
+]
+
 { #category : #'api - instantiation' }
 GtSlider >> hasNextSlide [
 	^ self slides last ~= currentSlide
@@ -101,27 +110,21 @@ GtSlider >> slides: anObject [
 
 { #category : #'api - instantiation' }
 GtSlider >> slidesDropdown [
-	| dropdown aList |
+	| dropdown container |
 	dropdown := BrDropdown new.
-	aList := BrSimpleList new.
-	aList
-		stencil: [ :each :index | 
-			BlTextElement new
-				text: each name asRopedText;
-				constraintsDo: [ :c | c horizontal matchParent ];
-				padding: (BlInsets all: 5);
-				when: BlClickEvent
-					do: [ :anEvent | 
-					anEvent consumed: true.
-					aList selectOne: index ] ];
-		display: self slides;
-		when: BrSelectionChanged
-			do: [ :anEvent | 
-			anEvent
-				selectedDo: [ :aSlide | 
-					dropdown collapse.
-					self showSlide: (self slides at: aSlide first) ] ];
-		yourself.
+	container := BlElement new.
+	container 
+				layout: BlFlowLayout new;
+				constraintsDo: [:c |
+					c vertical fitContent. c horizontal matchParent ];
+				padding: (BlInsets all: 10).
+	self slides do: [:each | 
+			container addChild: (each asCachedElement asSpartaForm asElement asPannableElement
+				background: Color white;
+				look: BrShadowLook new;
+				margin: (BlInsets all: 10);
+				constraintsDo: [ :c | c vertical exact: 100. c horizontal exact: 150 ])
+		 ].
 	^ dropdown
 		layout: BlLinearLayout horizontal;
 		constraintsDo: [ :c | 
@@ -133,9 +136,12 @@ GtSlider >> slidesDropdown [
 			aDropdown
 				toggle: [ BrButton new
 						look: BrGlamorousButtonWithIconLook;
-						icon: 	(BrGlamorousIcons hamburger asElement) ] ];
-		popup: [ aList
-				hExact: 250;
-				vExact: 250 ];
+						icon: (BrGlamorousIcons hamburger asElement) ] ];
+		popup: [ 
+			BlElement new 
+				size: 400@250;
+				layout: BlLinearLayout new;
+				addChild: (container asScrollableElement)
+			  ];
 		look: BrGlamorousDropdownLook new
 ]
