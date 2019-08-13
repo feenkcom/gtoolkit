@@ -200,16 +200,16 @@ GtWorld class >> spotterShortcut [
 GtWorld class >> useDefaultPharoDebuggers [
 	"Use the default debugger from Pharo without support for handling the Bloc UI process.
 	The Bloc UI process need to be restarted automatically after every exception that happens in that process."
-	MorphicUIManager new beDefault.
+
 	GTGenericStackDebugger register.
-	GtEmbeddedDebuggerElement disable.
+	GtEmbeddedDebuggerElement disable
 ]
 
 { #category : #config }
 GtWorld class >> useGToolkitDebuggersAsDefault [
 	"Set the gtoolkit debugger as default for all errors.
 	This includes errors that happen in the Morphic UI process."
-	GtBlocMorphicUIManager useAsDefault.
+
 	GtEmbeddedDebuggerElement register.
 	GtExpandableDebuggerElement register
 ]
