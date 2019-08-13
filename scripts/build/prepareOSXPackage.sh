@@ -6,9 +6,8 @@ mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
-curl https://dl.feenk.com/pharovm/Pharo.app.zip -o Pharo.app.zip
-unzip Pharo.app.zip
-mv -fv Pharo.app $GTFolder/
+curl http://files.pharo.org/get-files/80/pharo64-mac-headless-latest.zip -o pharo64-mac-headless-latest.zip
+unzip pharo64-mac-headless-latest.zip -d $GTFolder/
 
 curl https://dl.feenk.com/Glutin/osx/development/x86_64/libGlutin.dylib -o libGlutin.dylib
 mv libGlutin.dylib $GTFolder
