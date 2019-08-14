@@ -5,7 +5,9 @@ Class {
 		'slides',
 		'currentSlide',
 		'slidesContainer',
-		'slideElement'
+		'slideElement',
+		'nextArrow',
+		'previousArrow'
 	],
 	#category : #'GToolkit-Scenery'
 }
@@ -26,11 +28,33 @@ GtSlider >> create [
 		constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
 		layout: BlLinearLayout horizontal.
 	previousElement := BlElement new 
-		constraintsDo: [:c | c horizontal exact: 20. c vertical matchParent ];
-		when: BlClickEvent do: [:e | self showPreviousSlide ].
+		constraintsDo: [:c | c horizontal exact: 24. c vertical matchParent ];
+		when: BlClickEvent do: [:e | self showPreviousSlide ];
+		layout: BlLinearLayout new alignCenter.
+	previousArrow := BrPagerNextButton new
+		size: 12 @ 24;
+		geometry:
+			(BlPolygon
+				vertices:
+					{(12 @ 0).
+					(0 @ 12).
+					(12 @ 24)});
+		background: ((Color fromHexString: #BDBDBD) alpha: 0.5).
+	previousElement addChild: previousArrow.
 	nextElement := BlElement new 
-		constraintsDo: [:c | c horizontal exact: 20. c vertical matchParent ];
-		when: BlClickEvent do: [:e | self showNextSlide ].
+		constraintsDo: [:c | c horizontal exact: 24. c vertical matchParent ];
+		when: BlClickEvent do: [:e | self showNextSlide ];
+		layout: BlLinearLayout new alignCenter.
+	nextArrow := BrPagerNextButton new
+		size: 12 @ 24;
+		geometry:
+			(BlPolygon
+				vertices:
+					{(0 @ 0).
+					(12 @ 12).
+					(0 @ 24)});
+		background: ((Color fromHexString: #BDBDBD) alpha: 0.5).
+	nextElement addChild: nextArrow.
 	slidesContainer := BlElement new 
 		constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
 		layout: BlLinearLayout horizontal;
@@ -92,10 +116,12 @@ GtSlider >> showPreviousSlide [
 { #category : #'api - instantiation' }
 GtSlider >> showSlide: aSlide [
 	| slideContentElement |
+	currentSlide = aSlide ifTrue: [ ^ self ].
 	slideContentElement := aSlide asCachedElement.
 	slideElement removeChildren.
 	slideElement addChild: slideContentElement.
-	currentSlide := aSlide
+	currentSlide := aSlide.
+"	self hasPreviousSlide ifTrue: [ previousArrow visibility: ]"
 ]
 
 { #category : #accessing }
@@ -123,7 +149,8 @@ GtSlider >> slidesDropdown [
 				background: Color white;
 				look: BrShadowLook new;
 				margin: (BlInsets all: 10);
-				constraintsDo: [ :c | c vertical exact: 100. c horizontal exact: 150 ])
+				constraintsDo: [ :c | c vertical exact: 100. c horizontal exact: 150 ];
+				when: BlClickEvent do: [:e | self showSlide: each])
 		 ].
 	^ dropdown
 		layout: BlLinearLayout horizontal;
