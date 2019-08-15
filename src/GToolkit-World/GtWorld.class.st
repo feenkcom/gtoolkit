@@ -211,7 +211,7 @@ GtWorld class >> useGToolkitDebuggersAsDefault [
 	This includes errors that happen in the Morphic UI process."
 
 	GtEmbeddedDebuggerElement register.
-	GtExpandableDebuggerElement register
+	GtMoldableDebuggerElement register.
 ]
 
 { #category : #initialization }
