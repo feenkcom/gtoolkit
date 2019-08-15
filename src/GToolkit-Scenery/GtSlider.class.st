@@ -121,7 +121,12 @@ GtSlider >> showSlide: aSlide [
 	slideElement removeChildren.
 	slideElement addChild: slideContentElement.
 	currentSlide := aSlide.
-"	self hasPreviousSlide ifTrue: [ previousArrow visibility: ]"
+	self hasPreviousSlide 
+		ifTrue: [ previousArrow visibility: BlVisibility visible]
+		ifFalse: [ previousArrow visibility: BlVisibility hidden ] .
+	self hasNextSlide 
+		ifTrue: [ nextArrow visibility: BlVisibility visible]
+		ifFalse: [ nextArrow visibility: BlVisibility hidden ] 
 ]
 
 { #category : #accessing }
