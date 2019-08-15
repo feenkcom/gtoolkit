@@ -173,7 +173,7 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		ifTrue: [ ^ self ].
 	PostLoaded := true.
 	
-	GtWorld useGToolkitDebuggersAsDefault.
+	GtMoldableDebuggerElement register.
 ]
 
 { #category : #'post load' }
