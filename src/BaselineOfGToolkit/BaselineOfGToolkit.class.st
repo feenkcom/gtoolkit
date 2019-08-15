@@ -173,6 +173,7 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		ifTrue: [ ^ self ].
 	PostLoaded := true.
 	
+	GtExpandableDebuggerElement register.
 	GtMoldableDebuggerElement register.
 ]
 
