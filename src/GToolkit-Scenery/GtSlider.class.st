@@ -7,7 +7,8 @@ Class {
 		'slidesContainer',
 		'slideElement',
 		'nextArrow',
-		'previousArrow'
+		'previousArrow',
+		'arrowsAreVisible'
 	],
 	#category : #'GToolkit-Scenery'
 }
@@ -20,7 +21,7 @@ GtSlider >> addSlide: aSlide [
 { #category : #'api - instantiation' }
 GtSlider >> create [
 	| previousElement nextElement container |
-
+	
 	container := BlElement new.
 	container constraintsDo: [:c | c horizontal matchParent. c vertical matchParent];
 		layout: BlLinearLayout vertical.
@@ -31,7 +32,7 @@ GtSlider >> create [
 		constraintsDo: [:c | c horizontal exact: 24. c vertical matchParent ];
 		when: BlClickEvent do: [:e | self showPreviousSlide ];
 		layout: BlLinearLayout new alignCenter.
-	previousArrow := BrPagerNextButton new
+	previousArrow := BrButton new
 		size: 12 @ 24;
 		geometry:
 			(BlPolygon
@@ -45,7 +46,7 @@ GtSlider >> create [
 		constraintsDo: [:c | c horizontal exact: 24. c vertical matchParent ];
 		when: BlClickEvent do: [:e | self showNextSlide ];
 		layout: BlLinearLayout new alignCenter.
-	nextArrow := BrPagerNextButton new
+	nextArrow := BrButton new
 		size: 12 @ 24;
 		geometry:
 			(BlPolygon
@@ -98,7 +99,13 @@ GtSlider >> hasPreviousSlide [
 { #category : #initialization }
 GtSlider >> initialize [
 	super initialize.
-	slides := OrderedCollection new
+	slides := OrderedCollection new.
+	arrowsAreVisible := false
+]
+
+{ #category : #accessing }
+GtSlider >> makeArrowsVisible [
+	arrowsAreVisible := true
 ]
 
 { #category : #'api - instantiation' }
@@ -116,17 +123,13 @@ GtSlider >> showPreviousSlide [
 { #category : #'api - instantiation' }
 GtSlider >> showSlide: aSlide [
 	| slideContentElement |
-	currentSlide = aSlide ifTrue: [ ^ self ].
+	currentSlide = aSlide
+		ifTrue: [ ^ self ].
 	slideContentElement := aSlide asCachedElement.
 	slideElement removeChildren.
 	slideElement addChild: slideContentElement.
 	currentSlide := aSlide.
-	self hasPreviousSlide 
-		ifTrue: [ previousArrow visibility: BlVisibility visible]
-		ifFalse: [ previousArrow visibility: BlVisibility hidden ] .
-	self hasNextSlide 
-		ifTrue: [ nextArrow visibility: BlVisibility visible]
-		ifFalse: [ nextArrow visibility: BlVisibility hidden ] 
+	self updateArrows
 ]
 
 { #category : #accessing }
@@ -141,7 +144,22 @@ GtSlider >> slides: anObject [
 
 { #category : #'api - instantiation' }
 GtSlider >> slidesDropdown [
-	| dropdown container |
+	| dropdown container aToolbar |
+	
+	aToolbar := BrToolbar new.
+	aToolbar look: BrGlamorousToolbarLook.
+
+	aToolbar addItem: (BrToggle new 
+			look: BrGlamorousButtonWithIconLook + BrGlamorousToggleBackgroundLook;
+			icon: (BrGlamorousIcons edit asElement);
+			when: BrToggleActivatedEvent do: [ :anEvent | 
+				arrowsAreVisible := true.
+				self updateArrows.
+				 ];
+			when: BrToggleDeactivatedEvent do: [ :anEvent | 
+				arrowsAreVisible := false.
+				self updateArrows. ]).
+				
 	dropdown := BrDropdown new.
 	container := BlElement new.
 	container 
@@ -158,7 +176,7 @@ GtSlider >> slidesDropdown [
 				when: BlClickEvent do: [:e | self showSlide: each])
 		 ].
 	^ dropdown
-		layout: BlLinearLayout horizontal;
+		layout: BlLinearLayout vertical;
 		constraintsDo: [ :c | 
 			c horizontal fitContent.
 			c vertical fitContent.
@@ -172,8 +190,19 @@ GtSlider >> slidesDropdown [
 		popup: [ 
 			BlElement new 
 				size: 400@250;
-				layout: BlLinearLayout new;
-				addChild: (container asScrollableElement)
+				layout: BlLinearLayout vertical;
+				addChild: (container asScrollableElement);
+				addChild: aToolbar.
 			  ];
 		look: BrGlamorousDropdownLook new
+]
+
+{ #category : #accessing }
+GtSlider >> updateArrows [
+	(arrowsAreVisible and: [ self hasPreviousSlide ])
+		ifTrue: [ previousArrow visibility: BlVisibility visible ]
+		ifFalse: [ previousArrow visibility: BlVisibility hidden ].
+	(arrowsAreVisible and: [ self hasNextSlide ])
+		ifTrue: [ nextArrow visibility: BlVisibility visible ]
+		ifFalse: [ nextArrow visibility: BlVisibility hidden ]
 ]
