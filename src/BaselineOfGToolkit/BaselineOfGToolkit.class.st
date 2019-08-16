@@ -168,6 +168,12 @@ BaselineOfGToolkit >> baseline: spec [
 ]
 
 { #category : #'post load' }
+BaselineOfGToolkit >> fixCommandLineHandlerForPharo7 [
+	BasicCommandLineHandler compile: ((BasicCommandLineHandler>>#gtHandleArgument:) sourceCode
+		copyReplaceAll: 'gtHandleArgument: aString' with: 'handleArgument: aString')
+]
+
+{ #category : #'post load' }
 BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ])
 		ifTrue: [ ^ self ].
@@ -175,6 +181,7 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 	
 	GtExpandableDebuggerElement register.
 	GtMoldableDebuggerElement register.
+	self fixCommandLineHandlerForPharo7.
 ]
 
 { #category : #'post load' }
