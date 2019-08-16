@@ -150,6 +150,7 @@ GtSlider >> slidesDropdown [
 	aToolbar look: BrGlamorousToolbarLook.
 
 	aToolbar addItem: (BrToggle new 
+			beSmall;
 			look: BrGlamorousButtonWithIconLook + BrGlamorousToggleBackgroundLook;
 			icon: (BrGlamorousIcons edit asElement);
 			when: BrToggleActivatedEvent do: [ :anEvent | 
