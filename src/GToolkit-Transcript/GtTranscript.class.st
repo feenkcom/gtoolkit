@@ -72,7 +72,7 @@ GtTranscript >> editor: anObject [
 { #category : #ui }
 GtTranscript >> gtInspectorLiveIn: composite [
 	<gtInspectorPresentationOrder: 0>
-	^ self newEditorElement gtInspectorLiveIn: composite
+	^ self asElement gtInspectorLiveIn: composite
 ]
 
 { #category : #'gt-extension' }
@@ -109,7 +109,7 @@ GtTranscript >> open [
 	| space |
 	space := BlSpace new.
 	space extent: 600@400.
-	space root addChild: self newEditorElement.
+	space root addChild: self asElement.
 	space show
 ]
 
