@@ -60,54 +60,6 @@ GtWorld class >> open [
 ]
 
 { #category : #'api - tools' }
-GtWorld class >> openCoder [
-	<script: 'self openCoder'>
-	| aCoder aSpace |
-		
-	aCoder := GtInspector createOnPlayBook: (GtClassCoder new).
-
-	aSpace := BlSpace new.
-	aSpace title: 'Coder'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aCoder.
-	aSpace withHalos.
-	aSpace withSpotter.
-	aSpace show
-]
-
-{ #category : #'api - tools' }
-GtWorld class >> openExamples [
-	<script: 'self openExamples'>
-	| anExamplesExplorer aSpace |
-			
-	anExamplesExplorer := GtInspector createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Examples'.
-	aSpace extent: 1200@600.
-	aSpace addChild: anExamplesExplorer.
-	aSpace withHalos.
-	aSpace withSpotter.
-	aSpace show
-]
-
-{ #category : #'api - tools' }
-GtWorld class >> openMonitor [
-	<script: 'self openMonitor'>
-	| aBlocSpacesMonitor aSpace |
-			
-	aBlocSpacesMonitor := GtInspector createOn: GtMonitoredBlocSpaces new.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Monitor'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aBlocSpacesMonitor.
-	aSpace withHalos.
-	aSpace withSpotter.
-	aSpace show
-]
-
-{ #category : #'api - tools' }
 GtWorld class >> openMorphicWorld [
 	<script: 'self openMorphicWorld'>
 
@@ -120,22 +72,6 @@ GtWorld class >> openMorphicWorld [
 
 	morphicWorld isOpened
 		ifFalse: [ morphicWorld show ]
-]
-
-{ #category : #'api - tools' }
-GtWorld class >> openPlayground [
-	<script: 'self openPlayground'>
-	| aPlayground aSpace |
-
-	aPlayground := GtInspector createOnPlayBook: GtPlayBook newDefault.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Playground'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aPlayground.
-	aSpace withHalos.
-	aSpace withSpotter.
-	aSpace show
 ]
 
 { #category : #'api - tools' }
@@ -153,22 +89,6 @@ GtWorld class >> openSpotter [
 	aSpace root: aSpotterElement.
 	aSpace borderless: true.
 	aSpace withHalos.
-	aSpace show
-]
-
-{ #category : #'api - tools' }
-GtWorld class >> openTour [
-	<script: 'self openTour'>
-	| aTour aSpace |
-
-	aTour := GtInspector createOnPlayBook: (GtDocument forClass: BaselineOfGToolkit).
-
-	aSpace := BlSpace new.
-	aSpace title: 'Glamorous Toolkit Tour'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aTour.
-	aSpace withHalos.
-	aSpace withSpotter.
 	aSpace show
 ]
 
@@ -218,21 +138,21 @@ GtWorld >> initializeElements [
 		label: 'Tour';
 		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self class openTour ]).
+		action: [ self openTour ]).
 	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Playground';
 		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self class openPlayground ]).
+		action: [ self openPlayground ]).
 			
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Coder';
 		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self class openCoder ]).
+		action: [ self openCoder ]).
 	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
@@ -253,14 +173,14 @@ GtWorld >> initializeElements [
 		label: 'Examples';
 		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self class openExamples ]).
+		action: [ self openExamples ]).
 	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Monitor';
 		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self class openMonitor ]).
+		action: [ self openMonitor ]).
 		
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
@@ -305,4 +225,89 @@ GtWorld >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	
 	self initializeElements
+]
+
+{ #category : #'api - tools' }
+GtWorld >> openCoder [
+	<script: 'self new openCoder'>
+	| aCoder aSpace |
+
+	aCoder := GtInspector createOnPlayBook: (GtClassCoder new).
+
+	aSpace := BlSpace new.
+	aSpace title: 'Coder'.
+	aSpace extent: 1200@600.
+	aSpace addChild: aCoder.
+	aSpace withHalos.
+	aSpace withSpotter.
+	
+	self showSpace: aSpace
+]
+
+{ #category : #'api - tools' }
+GtWorld >> openExamples [
+	<script: 'self new openExamples'>
+	| anExamplesExplorer aSpace |
+			
+	anExamplesExplorer := GtInspector createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject.
+
+	aSpace := BlSpace new.
+	aSpace title: 'Examples'.
+	aSpace extent: 1200@600.
+	aSpace addChild: anExamplesExplorer.
+	aSpace withHalos.
+	aSpace withSpotter.
+	
+	self showSpace: aSpace
+]
+
+{ #category : #'api - tools' }
+GtWorld >> openMonitor [
+	<script: 'self openMonitor'>
+	| aBlocSpacesMonitor aSpace |
+			
+	aBlocSpacesMonitor := GtInspector createOn: GtMonitoredBlocSpaces new.
+
+	aSpace := BlSpace new.
+	aSpace title: 'Monitor'.
+	aSpace extent: 1200@600.
+	aSpace addChild: aBlocSpacesMonitor.
+	aSpace withHalos.
+	aSpace withSpotter.
+	
+	self showSpace: aSpace
+]
+
+{ #category : #'api - tools' }
+GtWorld >> openPlayground [
+	<script: 'self openPlayground'>
+	| aPlayground aSpace |
+
+	aPlayground := GtInspector createOnPlayBook: GtPlayBook newDefault.
+
+	aSpace := BlSpace new.
+	aSpace title: 'Playground'.
+	aSpace extent: 1200@600.
+	aSpace addChild: aPlayground.
+	aSpace withHalos.
+	aSpace withSpotter.
+	
+	self showSpace: aSpace
+]
+
+{ #category : #'api - tools' }
+GtWorld >> openTour [
+	<script: 'self openTour'>
+	| aTour aSpace |
+
+	aTour := GtInspector createOnPlayBook: (GtDocument forClass: BaselineOfGToolkit).
+
+	aSpace := BlSpace new.
+	aSpace title: 'Glamorous Toolkit Tour'.
+	aSpace extent: 1200@600.
+	aSpace addChild: aTour.
+	aSpace withHalos.
+	aSpace withSpotter.
+	
+	self showSpace: aSpace
 ]
