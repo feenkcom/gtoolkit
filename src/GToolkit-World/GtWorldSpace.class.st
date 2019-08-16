@@ -29,6 +29,7 @@ GtWorldSpace >> defaultRoot [
 { #category : #'api - displaying' }
 GtWorldSpace >> showSpace: aSpace [
 	(self root childNamed: #tabs) addTab: (BrTab new
+		select;
 		look: BrGlamorousTabLook new;
 		label: aSpace title;
 		stencil: [

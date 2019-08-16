@@ -74,40 +74,6 @@ GtWorld class >> openMorphicWorld [
 		ifFalse: [ morphicWorld show ]
 ]
 
-{ #category : #'api - tools' }
-GtWorld class >> openSpotter [
-	<script: 'self openSpotter'>
-	| aSpotter aSpotterElement aSpace |
-			
-	aSpotter := GtSpotter new.
-	aSpotterElement := GtSpotterElementWithPreview new.
-	aSpotterElement spotterModel: aSpotter.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Spotter'.
-	aSpace extent: 750@500.
-	aSpace root: aSpotterElement.
-	aSpace borderless: true.
-	aSpace withHalos.
-	aSpace show
-]
-
-{ #category : #'api - tools' }
-GtWorld class >> openTranscript [
-	<script: 'self openTranscript'>
-	| aTranscriptElement aSpace |
-
-	aTranscriptElement :=  GtTranscript default asElement.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Transcript'.
-	aSpace extent: 400@600.
-	aSpace addChild: aTranscriptElement.
-	aSpace withHalos.
-	aSpace withSpotter.
-	aSpace show
-]
-
 { #category : #spotter }
 GtWorld class >> spotterShortcut [
 	^ BlShortcut new
@@ -159,14 +125,14 @@ GtWorld >> initializeElements [
 		label: 'Spotter';
 		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self class openSpotter ]).
+		action: [ self openSpotter ]).
 	
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Transcript';
 		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self class openTranscript ]).
+		action: [ self openTranscript ]).
 		
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
@@ -296,6 +262,25 @@ GtWorld >> openPlayground [
 ]
 
 { #category : #'api - tools' }
+GtWorld >> openSpotter [
+	<script: 'self new openSpotter'>
+	| aSpotter aSpotterElement aSpace |
+			
+	aSpotter := GtSpotter new.
+	aSpotterElement := GtSpotterElementWithPreview new.
+	aSpotterElement spotterModel: aSpotter.
+
+	aSpace := BlSpace new.
+	aSpace title: 'Spotter'.
+	aSpace extent: 750@500.
+	aSpace root: aSpotterElement.
+	aSpace borderless: true.
+	aSpace withHalos.
+	
+	self showSpace: aSpace
+]
+
+{ #category : #'api - tools' }
 GtWorld >> openTour [
 	<script: 'self openTour'>
 	| aTour aSpace |
@@ -309,5 +294,22 @@ GtWorld >> openTour [
 	aSpace withHalos.
 	aSpace withSpotter.
 	
+	self showSpace: aSpace
+]
+
+{ #category : #'api - tools' }
+GtWorld >> openTranscript [
+	<script: 'self new openTranscript'>
+	| aTranscriptElement aSpace |
+
+	aTranscriptElement :=  GtTranscript default asElement.
+
+	aSpace := BlSpace new.
+	aSpace title: 'Transcript'.
+	aSpace extent: 400@600.
+	aSpace addChild: aTranscriptElement.
+	aSpace withHalos.
+	aSpace withSpotter.
+
 	self showSpace: aSpace
 ]
