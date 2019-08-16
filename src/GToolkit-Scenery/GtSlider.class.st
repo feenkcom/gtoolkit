@@ -145,21 +145,6 @@ GtSlider >> slides: anObject [
 { #category : #'api - instantiation' }
 GtSlider >> slidesDropdown [
 	| dropdown container aToolbar |
-	
-	aToolbar := BrToolbar new.
-	aToolbar look: BrGlamorousToolbarLook.
-
-	aToolbar addItem: (BrToggle new 
-			beSmall;
-			look: BrGlamorousButtonWithIconLook + BrGlamorousToggleBackgroundLook;
-			icon: (BrGlamorousIcons edit asElement);
-			when: BrToggleActivatedEvent do: [ :anEvent | 
-				arrowsAreVisible := true.
-				self updateArrows.
-				 ];
-			when: BrToggleDeactivatedEvent do: [ :anEvent | 
-				arrowsAreVisible := false.
-				self updateArrows. ]).
 				
 	dropdown := BrDropdown new.
 	container := BlElement new.
@@ -189,6 +174,20 @@ GtSlider >> slidesDropdown [
 						look: BrGlamorousButtonWithIconLook;
 						icon: (BrGlamorousIcons hamburger asElement) ] ];
 		popup: [ 
+			aToolbar := BrToolbar new.
+			aToolbar look: BrGlamorousToolbarLook.
+
+			aToolbar addItem: (BrToggle new 
+					beSmall;
+					look: BrGlamorousButtonWithIconLook + BrGlamorousToggleBackgroundLook;
+					icon: (BrGlamorousIcons edit asElement);
+					when: BrToggleActivatedEvent do: [ :anEvent | 
+						arrowsAreVisible := true.
+						self updateArrows.
+						 ];
+					when: BrToggleDeactivatedEvent do: [ :anEvent | 
+						arrowsAreVisible := false.
+						self updateArrows. ]).
 			BlElement new 
 				size: 400@250;
 				layout: BlLinearLayout vertical;
