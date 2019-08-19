@@ -18,10 +18,9 @@ GtWorldSpace class >> open [
 { #category : #initialization }
 GtWorldSpace >> defaultRoot [
 	| aTabGroup |
-		
+
 	aTabGroup := BrTabGroup new.
-	aTabGroup background: Color white.
-	aTabGroup look: BrGlamorousTabGroupLook new.
+	aTabGroup look: BrGlamorousSpaceTabGroupLook new.
 
 	^ super defaultRoot addChild: aTabGroup as: #tabs
 ]
@@ -30,7 +29,7 @@ GtWorldSpace >> defaultRoot [
 GtWorldSpace >> showSpace: aSpace [
 	(self root childNamed: #tabs) addTab: (BrTab new
 		select;
-		look: BrGlamorousTabLook new;
+		look: BrGlamorousSpaceTabLook new;
 		label: aSpace title;
 		stencil: [
 			aSpace root dispatchRemovedFromSceneGraph.
