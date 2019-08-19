@@ -149,6 +149,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
+			baseline: 'GToolkitPharo101' with: [
+				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
 			baseline: 'GToolkitReleaser' with: [
 				spec repository: 'github://feenkcom/gtoolkit-releaser/src' ];
 			baseline: 'GToolkitConstrainer' with: [
