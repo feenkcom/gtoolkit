@@ -171,7 +171,9 @@ BaselineOfGToolkit >> baseline: spec [
 { #category : #'post load' }
 BaselineOfGToolkit >> fixCommandLineHandlerForPharo7 [
 	BasicCommandLineHandler compile: ((BasicCommandLineHandler>>#gtHandleArgument:) sourceCode
-		copyReplaceAll: 'gtHandleArgument: aString' with: 'handleArgument: aString')
+		copyReplaceAll: 'gtHandleArgument: aString' with: 'handleArgument: aString').
+	EvaluateCommandLineHandler compile: ((EvaluateCommandLineHandler>>#gtArgumentString) sourceCode
+		copyReplaceAll: 'gtArgumentString' with: 'argumentString')
 ]
 
 { #category : #'post load' }
