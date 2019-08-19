@@ -1,6 +1,6 @@
 Class {
 	#name : #GtDebuggerOnRopeSlide,
-	#superclass : #GtInspectorViewsSlide,
+	#superclass : #GtSlide,
 	#category : #'GToolkit-Scenery'
 }
 
