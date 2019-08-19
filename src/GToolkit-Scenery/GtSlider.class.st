@@ -30,7 +30,7 @@ GtSlider >> create [
 		layout: BlLinearLayout horizontal.
 	previousElement := BlElement new 
 		constraintsDo: [:c | c horizontal exact: 24. c vertical matchParent ];
-		when: BlClickEvent do: [:e | self showPreviousSlide ];
+		when: BlClickEvent do: [:e | self previousStep ];
 		layout: BlLinearLayout new alignCenter.
 	previousArrow := BrButton new
 		size: 12 @ 24;
@@ -44,7 +44,7 @@ GtSlider >> create [
 	previousElement addChild: previousArrow.
 	nextElement := BlElement new 
 		constraintsDo: [:c | c horizontal exact: 24. c vertical matchParent ];
-		when: BlClickEvent do: [:e | self showNextSlide ];
+		when: BlClickEvent do: [:e | self nextStep ];
 		layout: BlLinearLayout new alignCenter.
 	nextArrow := BrButton new
 		size: 12 @ 24;
@@ -69,11 +69,11 @@ GtSlider >> create [
 	container addShortcut: (BlShortcut new
 		repeatable: false;
 		combination: BlKeyCombination builder alt arrowRight build;
-		action: [ self showNextSlide ]).
+		action: [ self nextStep ]).
 	container addShortcut: (BlShortcut new
 		repeatable: false;
 		combination: BlKeyCombination builder alt arrowLeft build;
-		action: [ self showPreviousSlide ]).
+		action: [ self previousStep ]).
 	^ container
 ]
 
@@ -109,15 +109,32 @@ GtSlider >> makeArrowsVisible [
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> showNextSlide [
+GtSlider >> nextStep [
 	self hasNextSlide ifFalse: [ ^ self ].
-	self showSlide: (self slides after: currentSlide)
+	currentSlide nextStepWith: self
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> showPreviousSlide [
+GtSlider >> openInSpace [ 
+	| space |
+	space := BlSpace new.
+	space extent: 800@500.
+	space root addChild: self asElement.
+	space root addShortcut: (BlShortcut new 
+		repeatable: false;
+		combination: (BlSingleKeyCombination new key: BlKeyboardKey pageDown);
+			action: [ self nextStep ]).
+	space root addShortcut: (BlShortcut new 
+		repeatable: false;
+		combination: (BlSingleKeyCombination new key: BlKeyboardKey pageUp);
+			action: [ self previousStep ]).
+	space show
+]
+
+{ #category : #'api - instantiation' }
+GtSlider >> previousStep [
 	self hasPreviousSlide ifFalse: [ ^ self ].
-	self showSlide: (self slides before: currentSlide)
+	currentSlide previousStepWith: self
 ]
 
 { #category : #'api - instantiation' }
@@ -130,6 +147,16 @@ GtSlider >> showSlide: aSlide [
 	slideElement addChild: slideContentElement.
 	currentSlide := aSlide.
 	self updateArrows
+]
+
+{ #category : #'api - instantiation' }
+GtSlider >> showSlideAfter: aSlide [
+	self showSlide: (self slides after: currentSlide)
+]
+
+{ #category : #'api - instantiation' }
+GtSlider >> showSlideBefore: aSlide [
+	self showSlide: (self slides before: currentSlide)
 ]
 
 { #category : #accessing }
