@@ -16,3 +16,13 @@ GtSlide >> asCachedElement [
 GtSlide >> name [
 	^ (self class name gtRemovePrefix: 'Gt') gtRemoveSuffix: 'Slide'
 ]
+
+{ #category : #accessing }
+GtSlide >> nextStepWith: aSlider [
+	aSlider showSlideAfter: self
+]
+
+{ #category : #accessing }
+GtSlide >> previousStepWith: aSlider [
+	aSlider showSlideBefore: self
+]
