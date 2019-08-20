@@ -27,14 +27,28 @@ GtWorldSpace >> defaultRoot [
 
 { #category : #'api - displaying' }
 GtWorldSpace >> showSpace: aSpace [
-	(self root childNamed: #tabs) addTab: (BrTab new
-		select;
+	| aTab |
+	
+	aTab := nil.
+	aTab := (BrTab new
 		look: BrGlamorousSpaceTabLook new;
+		select;
 		label: aSpace title;
 		stencil: [
 			aSpace root dispatchRemovedFromSceneGraph.
 			aSpace root
 				constraintsDo: [ :c |
 					c horizontal matchParent.
-					c vertical matchParent ] ])
+					c vertical matchParent ] ];
+		actionbarStencil: [
+			BrButton new
+				exact: 20@12;
+				opacity: 0.5;
+				margin: (BlInsets top: 2 left: 4 bottom: 0 right: 0);
+				look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousButtonWithLabelTooltipLook;
+				icon: BrGlamorousIcons close;
+				label: 'Close';
+				action: [ (self root childNamed: #tabs) removeTab: aTab ] ]).
+
+	(self root childNamed: #tabs) addTab: aTab
 ]
