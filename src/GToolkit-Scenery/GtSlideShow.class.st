@@ -34,6 +34,7 @@ GtSlideShow >> create [
 		layout: BlLinearLayout new alignCenter.
 	previousArrow := BrButton new
 		size: 12 @ 24;
+		when: BlClickEvent do: [:e | self previousStep ];
 		geometry:
 			(BlPolygon
 				vertices:
@@ -48,6 +49,7 @@ GtSlideShow >> create [
 		layout: BlLinearLayout new alignCenter.
 	nextArrow := BrButton new
 		size: 12 @ 24;
+		when: BlClickEvent do: [:e | self nextStep ];
 		geometry:
 			(BlPolygon
 				vertices:
