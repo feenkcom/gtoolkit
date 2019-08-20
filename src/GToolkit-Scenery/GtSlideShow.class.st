@@ -1,5 +1,5 @@
 Class {
-	#name : #GtSlider,
+	#name : #GtSlideShow,
 	#superclass : #BrStencil,
 	#instVars : [
 		'slides',
@@ -14,12 +14,12 @@ Class {
 }
 
 { #category : #accessing }
-GtSlider >> addSlide: aSlide [
+GtSlideShow >> addSlide: aSlide [
 	slides add: aSlide
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> create [
+GtSlideShow >> create [
 	| previousElement nextElement container |
 	
 	container := BlElement new.
@@ -78,7 +78,7 @@ GtSlider >> create [
 ]
 
 { #category : #accessing }
-GtSlider >> gtSlidesFor: aView [
+GtSlideShow >> gtSlidesFor: aView [
 	<gtView>
 	^ aView list 
 		title: 'Slides';
@@ -87,35 +87,35 @@ GtSlider >> gtSlidesFor: aView [
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> hasNextSlide [
+GtSlideShow >> hasNextSlide [
 	^ self slides last ~= currentSlide
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> hasPreviousSlide [
+GtSlideShow >> hasPreviousSlide [
 	^ self slides first ~= currentSlide
 ]
 
 { #category : #initialization }
-GtSlider >> initialize [
+GtSlideShow >> initialize [
 	super initialize.
 	slides := OrderedCollection new.
 	arrowsAreVisible := false
 ]
 
 { #category : #accessing }
-GtSlider >> makeArrowsVisible [
+GtSlideShow >> makeArrowsVisible [
 	arrowsAreVisible := true
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> nextStep [
+GtSlideShow >> nextStep [
 	self hasNextSlide ifFalse: [ ^ self ].
 	currentSlide nextStepWith: self
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> openInSpace [ 
+GtSlideShow >> openInSpace [ 
 	| space |
 	space := BlSpace new.
 	space extent: 800@500.
@@ -132,13 +132,13 @@ GtSlider >> openInSpace [
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> previousStep [
+GtSlideShow >> previousStep [
 	self hasPreviousSlide ifFalse: [ ^ self ].
 	currentSlide previousStepWith: self
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> showSlide: aSlide [
+GtSlideShow >> showSlide: aSlide [
 	| slideContentElement |
 	currentSlide = aSlide
 		ifTrue: [ ^ self ].
@@ -150,27 +150,27 @@ GtSlider >> showSlide: aSlide [
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> showSlideAfter: aSlide [
+GtSlideShow >> showSlideAfter: aSlide [
 	self showSlide: (self slides after: currentSlide)
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> showSlideBefore: aSlide [
+GtSlideShow >> showSlideBefore: aSlide [
 	self showSlide: (self slides before: currentSlide)
 ]
 
 { #category : #accessing }
-GtSlider >> slides [
+GtSlideShow >> slides [
 	^ slides
 ]
 
 { #category : #accessing }
-GtSlider >> slides: anObject [
+GtSlideShow >> slides: anObject [
 	slides := anObject
 ]
 
 { #category : #'api - instantiation' }
-GtSlider >> slidesDropdown [
+GtSlideShow >> slidesDropdown [
 	| dropdown container aToolbar |
 				
 	dropdown := BrDropdown new.
@@ -225,7 +225,7 @@ GtSlider >> slidesDropdown [
 ]
 
 { #category : #accessing }
-GtSlider >> updateArrows [
+GtSlideShow >> updateArrows [
 	(arrowsAreVisible and: [ self hasPreviousSlide ])
 		ifTrue: [ previousArrow visibility: BlVisibility visible ]
 		ifFalse: [ previousArrow visibility: BlVisibility hidden ].
