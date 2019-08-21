@@ -21,8 +21,56 @@ GtWorldSpace >> defaultRoot [
 
 	aTabGroup := BrTabGroup new.
 	aTabGroup look: BrGlamorousSpaceTabGroupLook new.
+	aTabGroup actionbarStencil: [ self newActionbar ].
 
 	^ super defaultRoot addChild: aTabGroup as: #tabs
+]
+
+{ #category : #'instance - creation' }
+GtWorldSpace >> newActionbar [
+	| anActionbar |
+	
+	anActionbar := BrToolbar new.
+	anActionbar look: BrGlamorousToolbarLook new.
+	anActionbar addItem: self newSpotterButton.
+	
+	^ anActionbar
+]
+
+{ #category : #'instance - creation' }
+GtWorldSpace >> newSpotterButton [
+	| dropdown |
+	
+	dropdown := BrDropdown new.
+	dropdown
+		look: (BrGlamorousDropdownLook new outskirtsEmbellisher: [ :e | e background: BrGlamorousColors lightBorderColor ]);
+		layout: BlLinearLayout horizontal;
+		constraintsDo: [ :c | 
+			c horizontal fitContent.
+			c vertical fitContent ];
+		toggle: [ BrButton new
+			look: BrGlamorousButtonWithIconLook;
+			icon: BrGlamorousIcons search asElement;
+			when: BlElementBackgroundChangedEvent
+				do: [ :e | 
+						(dropdown isExpanded
+							and: [ e target background paint color
+								~= BrGlamorousColors lightBorderColor ])
+						ifTrue: [ e target background: BrGlamorousColors lightBorderColor ] ] ];
+		popup: [ | model |
+			model := GtSpotter new.
+			model announcer
+				when: GtSpotterExitAnnouncement
+				do: [ :e | dropdown collapse ].
+			GtSpotterElementWithPreview new
+				spotterModel: model;
+				size: 600@400;
+				margin: (BlInsets all: 1);
+				geometry: (BlRectangle cornerRadius: 4);
+				yourself ];
+		yourself.
+		
+	^ dropdown
 ]
 
 { #category : #'api - displaying' }
