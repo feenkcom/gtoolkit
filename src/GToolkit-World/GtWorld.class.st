@@ -43,7 +43,11 @@ GtWorld >> initialize [
 	self root addShortcut: (BlShortcut new
 		repeatable: false;
 		combination: BlKeyCombination shiftReturn;
-		action: [ spotterDropdown ifNotNil: #expand ])
+		action: [ spotterDropdown ifNotNil: #expand ]).
+	self root addShortcut: (BlShortcut new
+		repeatable: false;
+		combination: BlKeyCombination primaryT;
+		action: [ subSpaceDropdown ifNotNil: #expand ]).
 ]
 
 { #category : #'instance - creation' }
