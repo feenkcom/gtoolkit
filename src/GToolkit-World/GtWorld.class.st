@@ -14,7 +14,7 @@ GtWorld class >> open [
 	| aSpace |
 	
 	aSpace := GtWorld new.
-	aSpace title: 'World'.
+	aSpace title: 'Glamorous Toolkit'.
 	aSpace show
 ]
 
