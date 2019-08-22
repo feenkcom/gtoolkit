@@ -18,7 +18,6 @@ GtToolStencil >> gtSpotterActDefaultFrom: aSpotterElement [
 	aSpace extent: 1200@600.
 	aSpace addChild: self asElement.
 	aSpace withHalos.
-	aSpace withSpotter.	
 	aSpotterElement showSpace: aSpace
 ]
 
