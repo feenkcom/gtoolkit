@@ -56,8 +56,8 @@ GtWorld >> newActionbar [
 
 	anActionbar := BrToolbar new.
 	anActionbar look: BrGlamorousToolbarLook new.
-	anActionbar addItem: self newSubSpaceButton.
 	anActionbar addItem: self newSpotterButton.
+	anActionbar addItem: self newSubSpaceButton.
 
 	^ anActionbar
 ]
@@ -105,8 +105,8 @@ GtWorld >> newSubSpaceButton [
 		toggle: [
 			BrButton new
 				look: (BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook + BrGlamorousDropdownToggleLook);
-				icon: BrGlamorousIcons add asElement;
-				label: 'Tools' ];
+				icon: BrGlamorousIcons hamburger asElement;
+				label: 'Menu' ];
 		popup: [
 			GtToolsMenu new
 				constraintsDo: [ :c |
