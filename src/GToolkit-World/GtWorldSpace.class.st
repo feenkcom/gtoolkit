@@ -40,10 +40,10 @@ GtWorldSpace >> newActionbar [
 { #category : #'instance - creation' }
 GtWorldSpace >> newSpotterButton [
 	| dropdown |
-	
+
 	dropdown := BrDropdown new.
 	dropdown
-		look: (BrGlamorousDropdownLook new outskirtsEmbellisher: [ :e | e background: BrGlamorousColors lightBorderColor ]);
+		look: (BrGlamorousDropdownLook new outskirtsEmbellisher: [ :e | e background: BrGlamorousColors secondaryHeaderBackgroundColor ]);
 		layout: BlLinearLayout horizontal;
 		constraintsDo: [ :c | 
 			c horizontal fitContent.
@@ -53,10 +53,8 @@ GtWorldSpace >> newSpotterButton [
 			icon: BrGlamorousIcons search asElement;
 			when: BlElementBackgroundChangedEvent
 				do: [ :e | 
-						(dropdown isExpanded
-							and: [ e target background paint color
-								~= BrGlamorousColors lightBorderColor ])
-						ifTrue: [ e target background: BrGlamorousColors lightBorderColor ] ] ];
+					(dropdown isExpanded and: [ e target background paint color ~= BrGlamorousColors secondaryHeaderBackgroundColor ])
+						ifTrue: [ e target background: BrGlamorousColors secondaryHeaderBackgroundColor ] ] ];
 		popup: [ | model |
 			model := GtSpotter new.
 			model announcer
