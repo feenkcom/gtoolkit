@@ -125,6 +125,8 @@ BaselineOfGToolkit >> baseline: spec [
 		spec preLoadDoIt: #'preLoadGToolkit:'.
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
+			baseline: 'GToolkitClipboard' with: [
+				spec repository: 'github://feenkcom/gtoolkit-clipboard/src' ];
 			baseline: 'GToolkitDocumenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-documenter/src' ];
 			baseline: 'GToolkitPresenter' with: [
