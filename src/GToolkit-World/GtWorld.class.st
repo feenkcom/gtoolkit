@@ -15,6 +15,7 @@ GtWorld class >> open [
 	
 	aSpace := GtWorld new.
 	aSpace title: 'Glamorous Toolkit'.
+	aSpace fullsize: true.
 	aSpace show
 ]
 
