@@ -51,26 +51,33 @@ GtHome >> initializeDocumentation [
 GtHome >> initializeTools [
 	| aContainer |
 	self addChild: (self newHeaderLabel: 'Tools').
-	
+
 	aContainer := self newCardsContainer.
-	aContainer addChild: (self newCard title: 'Playground'; description: 'for scripting').
-	aContainer addChild: (self newCard title: 'Coder'; description: 'for coding').
+	aContainer addChild: (self newCard
+		title: 'Playground';
+		description: (('Playground' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: (String loremIpsum asRopedText fontSize: 14));
+		picture: ((GtPlayBook newDefault gtLiveFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; preventMeAndChildrenMouseEvents ])).
+	aContainer addChild: (self newCard
+		title: 'Coder';
+		description: 'for coding';
+		picture: (GtCoderStencil new asElement preventMeAndChildrenMouseEvents)).
 	aContainer addChild: (self newCard title: 'Transcript'; description: 'for logging').
-	
+
 	self addChild: aContainer
 ]
 
 { #category : #'instance creation' }
 GtHome >> newCard [
 	^ BrCard new
-		look: BrShadowLook + (BrGlamorousTextLabelLook new fontSize: 20) + (BrDescriptionLook new fitContent readonly glamorousRegularFont foreground: Color gray; fontSize: 16);
+		look: (BrShadowLook new width: 6; color: (Color black alpha: 0.5)) + (BrDescriptionLook new readonly glamorousRegularFont foreground: Color black; descriptionDo: [:e | e margin: (BlInsets all: 10)]) + BrIconLook new;
+		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
+		geometry: (BlRectangle cornerRadius: 4);
 		background: Color white;
-		layout: (BlLinearLayout vertical alignTopCenter cellSpacing: 8);
 		constraintsDo: [ :c |
-			c horizontal fitContent.
-			c vertical fitContent ];
-		padding: (BlInsets top: 0 left: (self spaceGap / 4.0 * 3.0) bottom: (self spaceGap / 4.0) right: (self spaceGap / 4.0 * 3.0));
-		margin: (BlInsets right: self spaceGap * 1.5)
+			c horizontal exact: 400.
+			c vertical exact: 200 ];
+		padding: (BlInsets all: self spaceGap/ 2.0);
+		margin: (BlInsets all: self spaceGap * 1.5)
 ]
 
 { #category : #'instance creation' }
@@ -87,8 +94,9 @@ GtHome >> newCardsContainer [
 GtHome >> newHeaderLabel: aString [
 
 	^ BrLabel new
-		look: (BrGlamorousLabelLook new fontSize: 30);
-		padding: (BlInsets left: (self spaceGap / 4.0));
+		look: (BrGlamorousLabelLook new foreground: Color gray; fontSize: 16);
+		padding: (BlInsets left: (self spaceGap / 2.0));
+		margin: (BlInsets top: self spaceGap);
 		text: aString
 ]
 
