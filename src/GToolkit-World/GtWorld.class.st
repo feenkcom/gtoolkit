@@ -1,315 +1,148 @@
 Class {
 	#name : #GtWorld,
-	#superclass : #BlElement,
-	#classInstVars : [
-		'world',
-		'morphicWorld'
+	#superclass : #BlSpace,
+	#instVars : [
+		'spotterDropdown',
+		'subSpaceDropdown'
 	],
 	#category : #'GToolkit-World'
 }
 
-{ #category : #'system startup' }
-GtWorld class >> cleanUp [
-	<script: 'self cleanUp'>
-
-	world ifNotNil: [
-		world isOpened
-			ifTrue: [ world close ].
-		world := nil ].
-
-	morphicWorld ifNotNil: [
-		morphicWorld isOpened
-			ifTrue: [ morphicWorld close ].
-		morphicWorld := nil ]
-]
-
-{ #category : #'instance creation' }
-GtWorld class >> create [
-	| aSpace |
-	
-	aSpace := BlSpace new.
-	aSpace title: 'Glamorous Toolkit'.
-	aSpace addChild: self new.
-	aSpace extent: 260@500.
-	aSpace withSpotter.	
-	^ aSpace
-]
-
-{ #category : #'instance creation' }
-GtWorld class >> createMorphicWorld [
-	| aSpace |
-
-	aSpace := BlSpace new.
-	aSpace title: 'Morph World'.
-	aSpace extent: 1280@800.
-	aSpace root: BlMorphicWorldEmbeddingElement new beMain.
-	^ aSpace
-]
-
 { #category : #'instance creation' }
 GtWorld class >> open [
 	<script: 'self open'>
-
-	(world isNotNil and: [ world isOpened ])
-		ifTrue: [ world close ].
-
-	world := self create.
-
-	world isOpened
-		ifFalse: [ world show ]
+	| aSpace |
+	
+	aSpace := GtWorld new.
+	aSpace title: 'Glamorous Toolkit'.
+	aSpace fullsize: true.
+	aSpace show
 ]
 
-{ #category : #'api - tools' }
-GtWorld class >> openMorphicWorld [
-	<script: 'self openMorphicWorld'>
+{ #category : #initialization }
+GtWorld >> defaultRoot [
+	| aTabGroup |
 
-	morphicWorld
-		ifNotNil: [ morphicWorld isOpened
-			ifTrue: [ morphicWorld close ] ].
+	aTabGroup := BrTabGroup new.
+	aTabGroup look: BrGlamorousSpaceTabGroupLook new.
+	aTabGroup actionbarStencil: [ self newActionbar ].
+	
+	aTabGroup addTab: (BrTab new
+		vExact: 36;
+		look: BrGlamorousSpaceTabWithIconLook;
+		icon: BrGlamorousIcons gt asElement;
+		label: 'Home';
+		stencil: [ GtHome new ]).
 
-	morphicWorld
-		ifNil: [ morphicWorld := self createMorphicWorld ].
-
-	morphicWorld isOpened
-		ifFalse: [ morphicWorld show ]
-]
-
-{ #category : #spotter }
-GtWorld class >> spotterShortcut [
-	^ BlShortcut new
-		repeatable: false;
-		combination: BlKeyCombination shiftReturn;
-		action: [ GtWorld openSpotter ]
+	^ super defaultRoot addChild: aTabGroup as: #tabs
 ]
 
 { #category : #initialization }
 GtWorld >> initialize [
 	super initialize.
 	
-	self layout: BlLinearLayout vertical.
-	self constraintsDo: [ :c |
-		c horizontal matchParent.
-		c vertical matchParent ].
-	self padding: (BlInsets top: 10 bottom: 10).
-	self initializeElements
+	self root addShortcut: (BlShortcut new
+		repeatable: false;
+		combination: BlKeyCombination shiftReturn;
+		action: [ spotterDropdown ifNotNil: #expand ]).
+	self root addShortcut: (BlShortcut new
+		repeatable: false;
+		combination: BlKeyCombination primaryT;
+		action: [ subSpaceDropdown ifNotNil: #expand ]).
 ]
 
-{ #category : #initialization }
-GtWorld >> initializeElements [
+{ #category : #'instance - creation' }
+GtWorld >> newActionbar [
+	| anActionbar |
 
-	self removeChildren.
-	
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Tour';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openTour ]).
-	
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Playground';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openPlayground ]).
-			
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Coder';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openCoder ]).
-	
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Spotter';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openSpotter ]).
-	
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Transcript';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openTranscript ]).
-		
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Examples';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openExamples ]).
-	
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Monitor';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openMonitor ]).
-		
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Morphic World';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self class openMorphicWorld ]).
-		
-	self addChild: (BlElement new
-		layout: (BlLinearLayout horizontal cellSpacing: 10);
-		margin: (BlInsets top: 5 left: 10 bottom: 5 right: 10);
-		constraintsDo: [ :c |
-			c horizontal matchParent.
-			c vertical fitContent ];
-		addChildren: {
+	anActionbar := BrToolbar new.
+	anActionbar look: BrGlamorousToolbarLook new.
+	anActionbar addItem: self newSpotterButton.
+	anActionbar addItem: self newSubSpaceButton.
+
+	^ anActionbar
+]
+
+{ #category : #'instance - creation' }
+GtWorld >> newSpotterButton [
+
+	self
+		assert: [ spotterDropdown isNil ]
+		description: [ 'Spotter dropdown is already created!' ].
+
+	spotterDropdown := BrDropdown new
+		look: (BrGlamorousDropdownLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
+		toggle: [
 			BrButton new
-				look: BrGlamorousButtonWithLabelLook new;
-				label: 'Save';
-				hMatchParent;
-				action: [ Smalltalk snapshot: true andQuit: false ].
-				
+				look: (BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook + BrGlamorousDropdownToggleLook);
+				icon: BrGlamorousIcons search asElement;
+				label: 'Search' ];
+		popup: [
+			| model |
+			model := GtSpotter new.
+			model announcer
+				when: GtSpotterExitAnnouncement
+				do: [ :e | spotterDropdown collapse ].
+			GtSpotterElementWithPreview new
+				spotterModel: model;
+				size: 600@400;
+				margin: (BlInsets all: 1);
+				geometry: (BlRectangle cornerRadius: 4);
+				yourself ];
+		yourself.
+		
+	^ spotterDropdown
+]
+
+{ #category : #'instance - creation' }
+GtWorld >> newSubSpaceButton [
+	
+	self
+		assert: [ subSpaceDropdown isNil ]
+		description: [ 'Sub-space dropdown is already created!' ].
+	
+	subSpaceDropdown := BrDropdown new
+		look: BrGlamorousDropdownLook new;
+		toggle: [
 			BrButton new
-				look: (BrGlamorousButtonWithLabelLook new);
-				label: 'Quit';
-				hMatchParent;
-				action: [ Smalltalk snapshot: false andQuit: true ] }).
+				look: (BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook + BrGlamorousDropdownToggleLook);
+				icon: BrGlamorousIcons hamburger asElement;
+				label: 'Menu' ];
+		popup: [
+			GtToolsMenu new
+				constraintsDo: [ :c |
+					c vertical fitContent.
+					c horizontal exact: 200 ] ];
+		yourself.
 
-	self addChild: (BrSimpleList new
-		display: (GtSceneryBuilder build items);
-		margin: (BlInsets top: 20 left: 0 bottom: 5 right: 0);
-		stencil: [ :item |
+	^ subSpaceDropdown
+]
+
+{ #category : #'api - displaying' }
+GtWorld >> showSpace: aSpace [
+	| aTab |
+
+	aTab := nil.
+	aTab := (BrTab new
+		vExact: 36;
+		look: BrGlamorousSpaceTabWithLabelLook new;
+		select;
+		label: aSpace title;
+		stencil: [
+			aSpace root dispatchRemovedFromSceneGraph.
+			aSpace root
+				constraintsDo: [ :c |
+					c horizontal matchParent.
+					c vertical matchParent ] ];
+		actionbarStencil: [
 			BrButton new
-				look: BrGlamorousButtonWithLabelLook new;
-				label: item name;
-				hMatchParent;
-				margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-				action: [ item action value ] ]).
-]
+				exact: 20@12;
+				opacity: 0.5;
+				margin: (BlInsets top: 2 left: 4 bottom: 0 right: 0);
+				look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousButtonWithLabelTooltipLook;
+				icon: BrGlamorousIcons close;
+				label: 'Close';
+				action: [ (self root childNamed: #tabs) removeTab: aTab ] ]).
 
-{ #category : #'hooks - children' }
-GtWorld >> onAddedToSceneGraph [
-	super onAddedToSceneGraph.
-	
-	self initializeElements
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openCoder [
-	<script: 'self new openCoder'>
-	| aCoder aSpace |
-
-	aCoder := GtInspector createOnPlayBook: (GtClassCoder new).
-
-	aSpace := BlSpace new.
-	aSpace title: 'Coder'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aCoder.
-	aSpace withHalos.
-	aSpace withSpotter.
-	
-	self showSpace: aSpace
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openExamples [
-	<script: 'self new openExamples'>
-	| anExamplesExplorer aSpace |
-			
-	anExamplesExplorer := GtInspector createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Examples'.
-	aSpace extent: 1200@600.
-	aSpace addChild: anExamplesExplorer.
-	aSpace withHalos.
-	aSpace withSpotter.
-	
-	self showSpace: aSpace
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openMonitor [
-	<script: 'self openMonitor'>
-	| aBlocSpacesMonitor aSpace |
-			
-	aBlocSpacesMonitor := GtInspector createOn: GtMonitoredBlocSpaces new.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Monitor'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aBlocSpacesMonitor.
-	aSpace withHalos.
-	aSpace withSpotter.
-	
-	self showSpace: aSpace
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openPlayground [
-	<script: 'self openPlayground'>
-	| aPlayground aSpace |
-
-	aPlayground := GtInspector createOnPlayBook: GtPlayBook newDefault.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Playground'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aPlayground.
-	aSpace withHalos.
-	aSpace withSpotter.
-	
-	self showSpace: aSpace
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openSpotter [
-	<script: 'self new openSpotter'>
-	| aSpotter aSpotterElement aSpace |
-			
-	aSpotter := GtSpotter new.
-	aSpotterElement := GtSpotterElementWithPreview new.
-	aSpotterElement spotterModel: aSpotter.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Spotter'.
-	aSpace extent: 750@500.
-	aSpace root: aSpotterElement.
-	aSpace borderless: true.
-	aSpace withHalos.
-	
-	self showSpace: aSpace
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openTour [
-	<script: 'self openTour'>
-	| aTour aSpace |
-
-	aTour := GtInspector createOnPlayBook: (GtDocument forClass: BaselineOfGToolkit).
-
-	aSpace := BlSpace new.
-	aSpace title: 'Glamorous Toolkit Tour'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aTour.
-	aSpace withHalos.
-	aSpace withSpotter.
-	
-	self showSpace: aSpace
-]
-
-{ #category : #'api - tools' }
-GtWorld >> openTranscript [
-	<script: 'self new openTranscript'>
-	| aTranscriptElement aSpace |
-
-	aTranscriptElement :=  GtTranscript default asElement.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Transcript'.
-	aSpace extent: 400@600.
-	aSpace addChild: aTranscriptElement.
-	aSpace withHalos.
-	aSpace withSpotter.
-
-	self showSpace: aSpace
+	(self root childNamed: #tabs) addTab: aTab
 ]
