@@ -63,12 +63,13 @@ GtHome >> initializeTools [
 { #category : #'instance creation' }
 GtHome >> newCard [
 	^ BrCard new
-		look: BrShadowLook + (BrGlamorousTextLabelLook new fontSize: 20) + (BrDescriptionLook new fitContent readonly glamorousRegularFont foreground: Color gray; fontSize: 16);
+		look: BrGlamorousButtonExteriorLook + (BrGlamorousTextLabelLook new fontSize: 18) + (BrDescriptionLook new fitContent readonly glamorousRegularFont foreground: Color gray; fontSize: 16);
 		background: Color white;
-		layout: (BlLinearLayout vertical alignTopCenter cellSpacing: 8);
+		layout: (BlLinearLayout vertical alignCenter cellSpacing: 0);
+		geometry: (BlRectangle cornerRadius: 4);
 		constraintsDo: [ :c |
-			c horizontal fitContent.
-			c vertical fitContent ];
+			c horizontal exact: 140.
+			c vertical exact: 70 ];
 		padding: (BlInsets top: 0 left: (self spaceGap / 4.0 * 3.0) bottom: (self spaceGap / 4.0) right: (self spaceGap / 4.0 * 3.0));
 		margin: (BlInsets right: self spaceGap * 1.5)
 ]
@@ -87,8 +88,9 @@ GtHome >> newCardsContainer [
 GtHome >> newHeaderLabel: aString [
 
 	^ BrLabel new
-		look: (BrGlamorousLabelLook new fontSize: 30);
-		padding: (BlInsets left: (self spaceGap / 4.0));
+		look: (BrGlamorousLabelLook new fontSize: 24);
+		padding: (BlInsets left: (self spaceGap / 2.0));
+		margin: (BlInsets top: self spaceGap);
 		text: aString
 ]
 
