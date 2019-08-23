@@ -138,10 +138,30 @@ GtToolsMenu >> initializeElements [
 		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
 		action: [ self class openMorphicWorld ]).
+
+	self addChild: (BrButton new
+		look: BrGlamorousButtonWithLabelLook new;
+		label: 'Documentation';
+		hMatchParent;
+		margin: (BlInsets top: 25 left: 20 bottom: 5 right: 20);
+		action: [ self openBaseline ]).
+	self addChild: (BrButton new
+		look: BrGlamorousButtonWithLabelLook new;
+		label: 'Tour';
+		hMatchParent;
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
+		action: [ self openTour ]).
+	self addChild: (BrButton new
+		look: BrGlamorousButtonWithLabelLook new;
+		label: 'Pharo 101';
+		hMatchParent;
+		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
+		action: [ self openPharo101 ]).
+
 		
 	self addChild: (BlElement new
 		layout: (BlLinearLayout horizontal cellSpacing: 10);
-		margin: (BlInsets top: 5 left: 10 bottom: 5 right: 10);
+		margin: (BlInsets top: 25 left: 10 bottom: 5 right: 10);
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ];
@@ -167,16 +187,30 @@ GtToolsMenu >> onAddedToSceneGraph [
 ]
 
 { #category : #'api - tools' }
+GtToolsMenu >> openBaseline [
+	<script: 'self new openBaseline'>
+	| inspector aSpace |
+			
+	inspector := GtInspector createOnPlayBook: (GtDocument forClass: BaselineOfGToolkit).
+
+	aSpace := BlSpace new.
+	aSpace title: 'GT Tour'.
+	aSpace extent: 1200@600.
+	aSpace addChild: inspector.
+	aSpace withHalos.
+	
+	self showSpace: aSpace
+]
+
+{ #category : #'api - tools' }
 GtToolsMenu >> openCoder [
 	<script: 'self new openCoder'>
-	| aCoder aSpace |
-
-	aCoder := GtInspector createOnPlayBook: (GtClassCoder new).
+	| aSpace |
 
 	aSpace := BlSpace new.
 	aSpace title: 'Coder'.
 	aSpace extent: 1200@600.
-	aSpace addChild: aCoder.
+	aSpace addChild: GtCoderStencil new create.
 	aSpace withHalos.
 	
 	self showSpace: aSpace
@@ -215,6 +249,22 @@ GtToolsMenu >> openMonitor [
 ]
 
 { #category : #'api - tools' }
+GtToolsMenu >> openPharo101 [
+	<script: 'self new openPharo101'>
+	| aBlocSpacesMonitor aSpace |
+			
+	aBlocSpacesMonitor := GtPharo101 new create asElement.
+
+	aSpace := BlSpace new.
+	aSpace title: 'Pharo 101'.
+	aSpace extent: 1200@600.
+	aSpace addChild: aBlocSpacesMonitor.
+	aSpace withHalos.
+	
+	self showSpace: aSpace
+]
+
+{ #category : #'api - tools' }
 GtToolsMenu >> openPlayground [
 	<script: 'self openPlayground'>
 	| aPlayground aSpace |
@@ -232,15 +282,15 @@ GtToolsMenu >> openPlayground [
 
 { #category : #'api - tools' }
 GtToolsMenu >> openTour [
-	<script: 'self openTour'>
-	| aTour aSpace |
-
-	aTour := GtInspector createOnPlayBook: (GtDocument forClass: BaselineOfGToolkit).
+	<script: 'self new openTour'>
+	| tour aSpace |
+			
+	tour := GtTour new create asElement.
 
 	aSpace := BlSpace new.
-	aSpace title: 'Glamorous Toolkit Tour'.
+	aSpace title: 'GT Tour'.
 	aSpace extent: 1200@600.
-	aSpace addChild: aTour.
+	aSpace addChild: tour.
 	aSpace withHalos.
 	
 	self showSpace: aSpace
