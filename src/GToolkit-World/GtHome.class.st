@@ -69,11 +69,11 @@ GtHome >> initializeTools [
 	aContainer := self newCardsContainer.
 	aContainer addChild: (self newCard
 		title: 'Playground & Inspector';
-		description: (('Playground & Inspector' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Inspector lets you define custom views for each and every object. Playground powers up the inspector and makes the code part of the live inspection flow.' asRopedText fontSize: 14));
+		description: (('Playground & Inspector' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Inspector lets you play with objects through custom views. Playground makes the code part of the inspection flow.' asRopedText fontSize: 14));
 		picture: ((GtPlayBook newDefault gtLiveFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ])).
 	aContainer addChild: (self newCard
 		title: 'Coder';
-		description: (('Coder' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Coder is for manipulating the static code. It is both standalone and integrated in the Inspector.' asRopedText fontSize: 14));
+		description: (('Coder' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Coder is for manipulating the static code.' asRopedText fontSize: 14));
 		picture: (((GtClassCoder forClass: GtClassCoder) asElement size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents)).
 
 	self addChild: aContainer
@@ -89,8 +89,8 @@ GtHome >> newCard [
 		constraintsDo: [ :c |
 			c horizontal exact: 400.
 			c vertical exact: 200 ];
-		padding: (BlInsets all: self spaceGap/ 2.0);
-		margin: (BlInsets all: self spaceGap * 1.5)
+		padding: (BlInsets all: self spaceGap);
+		margin: (BlInsets all: self spaceGap)
 ]
 
 { #category : #'instance creation' }
