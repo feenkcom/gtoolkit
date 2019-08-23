@@ -40,9 +40,23 @@ GtHome >> initializeDocumentation [
 	self addChild: (self newHeaderLabel: 'Documentation').
 	
 	aContainer := self newCardsContainer.
-	aContainer addChild: (self newCard title: 'GT Tour'; description: '...').
 	aContainer addChild: (self newCard title: 'Pharo 101'; description: '...').
-	aContainer addChild: (self newCard title: 'Examples'; description: '...').
+	aContainer addChild: (self newCard 
+		title: 'Examples'; 
+		description: (('Examples' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Examples are both tests and units of documentation.' asRopedText fontSize: 14));
+		picture: ((GtRlGToolkitExamplesExplorer buildForGToolkitProject gtViewAllExamplesInImageFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ])).
+	aContainer addChild: (self newCard title: 'Glamorous Toolkit Tour'; 
+		description: (('Glamorous Toolkit Tour' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('What exactly is Glamorous Toolkit? Take an interative tour through the tools and engines that make up Glamorous Toolkit.' asRopedText fontSize: 14));
+		picture: ((GtTitleSlide new
+			titleText: ('glamoroustoolkit' asRopedText 
+				fontSize: 30; fontName: 'Helvetica Neue'; bold;
+				in: [:title | (title from: 1 to: 'glamorous' size) thin];
+				yourself)) asElement in: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ])).
+	aContainer addChild: (self newCard title: 'Pharo 101'; 
+		description: (('Pharo 101' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('New to Pharo? Take an interactive introductory tutorial.' asRopedText fontSize: 14));
+		picture: ((GtTitleSlide new
+			titleText: ('Pharo 101' asRopedText glamorousRegularFont
+				fontSize: 30)) asElement in: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ])).
 	
 	self addChild: aContainer
 ]
@@ -54,14 +68,13 @@ GtHome >> initializeTools [
 
 	aContainer := self newCardsContainer.
 	aContainer addChild: (self newCard
-		title: 'Playground';
-		description: (('Playground' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: (String loremIpsum asRopedText fontSize: 14));
-		picture: ((GtPlayBook newDefault gtLiveFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; preventMeAndChildrenMouseEvents ])).
+		title: 'Playground & Inspector';
+		description: (('Playground & Inspector' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Inspector lets you play with objects through custom views. Playground makes the code part of the inspection flow.' asRopedText fontSize: 14));
+		picture: ((GtPlayBook newDefault gtLiveFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ])).
 	aContainer addChild: (self newCard
 		title: 'Coder';
-		description: 'for coding';
-		picture: (GtCoderStencil new asElement preventMeAndChildrenMouseEvents)).
-	aContainer addChild: (self newCard title: 'Transcript'; description: 'for logging').
+		description: (('Coder' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Coder is for manipulating the static code.' asRopedText fontSize: 14));
+		picture: (((GtClassCoder forClass: GtClassCoder) asElement size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents)).
 
 	self addChild: aContainer
 ]
@@ -76,8 +89,8 @@ GtHome >> newCard [
 		constraintsDo: [ :c |
 			c horizontal exact: 400.
 			c vertical exact: 200 ];
-		padding: (BlInsets all: self spaceGap/ 2.0);
-		margin: (BlInsets all: self spaceGap * 1.5)
+		padding: (BlInsets all: self spaceGap);
+		margin: (BlInsets all: self spaceGap)
 ]
 
 { #category : #'instance creation' }

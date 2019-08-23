@@ -89,14 +89,7 @@ GtToolsMenu >> initialize [
 GtToolsMenu >> initializeElements [
 
 	self removeChildren.
-	
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Tour';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openTour ]).
-	
+		
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Playground';
