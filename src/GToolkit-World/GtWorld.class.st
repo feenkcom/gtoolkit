@@ -15,6 +15,7 @@ GtWorld class >> open [
 	
 	aSpace := GtWorld new.
 	aSpace title: 'World'.
+	aSpace fullsize: false.
 	aSpace show
 ]
 
