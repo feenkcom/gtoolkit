@@ -40,7 +40,11 @@ GtHome >> initializeDocumentation [
 	self addChild: (self newHeaderLabel: 'Documentation').
 	
 	aContainer := self newCardsContainer.
-	aContainer addChild: (self newCard title: 'Pharo 101'; description: '...').
+	aContainer addChild: (self newCard 
+		title: 'Documentation'; 
+		description: (('Documentation' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Start from the central point (BaselineOfGToolkit), and inspect your way through the documentation.' asRopedText fontSize: 14));
+		picture: (((GtDocument new text: (BaselineOfGToolkit comment first: 500)) gtTextFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ])).
+	
 	aContainer addChild: (self newCard 
 		title: 'Examples'; 
 		description: (('Examples' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Examples are both tests and units of documentation.' asRopedText fontSize: 14));
