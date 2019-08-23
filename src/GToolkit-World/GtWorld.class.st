@@ -14,8 +14,7 @@ GtWorld class >> open [
 	| aSpace |
 	
 	aSpace := GtWorld new.
-	aSpace title: 'World'.
-	aSpace fullsize: false.
+	aSpace title: 'Glamorous Toolkit'.
 	aSpace show
 ]
 
@@ -44,7 +43,11 @@ GtWorld >> initialize [
 	self root addShortcut: (BlShortcut new
 		repeatable: false;
 		combination: BlKeyCombination shiftReturn;
-		action: [ spotterDropdown ifNotNil: #expand ])
+		action: [ spotterDropdown ifNotNil: #expand ]).
+	self root addShortcut: (BlShortcut new
+		repeatable: false;
+		combination: BlKeyCombination primaryT;
+		action: [ subSpaceDropdown ifNotNil: #expand ]).
 ]
 
 { #category : #'instance - creation' }
@@ -53,8 +56,8 @@ GtWorld >> newActionbar [
 
 	anActionbar := BrToolbar new.
 	anActionbar look: BrGlamorousToolbarLook new.
-	anActionbar addItem: self newSubSpaceButton.
 	anActionbar addItem: self newSpotterButton.
+	anActionbar addItem: self newSubSpaceButton.
 
 	^ anActionbar
 ]
@@ -102,8 +105,8 @@ GtWorld >> newSubSpaceButton [
 		toggle: [
 			BrButton new
 				look: (BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook + BrGlamorousDropdownToggleLook);
-				icon: BrGlamorousIcons add asElement;
-				label: 'Tools' ];
+				icon: BrGlamorousIcons hamburger asElement;
+				label: 'Menu' ];
 		popup: [
 			GtToolsMenu new
 				constraintsDo: [ :c |
