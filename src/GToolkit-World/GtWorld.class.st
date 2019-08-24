@@ -49,6 +49,9 @@ GtWorld >> initialize [
 		repeatable: false;
 		combination: BlKeyCombination primaryT;
 		action: [ subSpaceDropdown ifNotNil: #expand ]).
+	self root when: GtSpawnSpotter do: [:e | 
+		e consumed: true.
+		spotterDropdown ifNotNil: #expand ].
 ]
 
 { #category : #'instance - creation' }
