@@ -124,7 +124,10 @@ GtHome >> initializeTools [
 { #category : #'instance creation' }
 GtHome >> newCard [
 	^ BrCard new
-		look: (BrShadowLook new width: 6; color: (Color black alpha: 0.5)) + (BrDescriptionLook new readonly glamorousRegularFont foreground: Color black; descriptionDo: [:e | e margin: (BlInsets all: 10)]) + BrIconLook new + BrGlamorousButtonExteriorLook new;
+		look: (BrShadowLook new width: 6; color: (Color black alpha: 0.5)) +
+			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e margin: (BlInsets all: 10)]) +
+			BrIconLook new +
+			BrGlamorousButtonExteriorLook new;
 		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
 		geometry: (BlRectangle cornerRadius: 4);
 		background: Color white;
@@ -132,7 +135,7 @@ GtHome >> newCard [
 			c horizontal exact: 300.
 			c vertical exact: 150 ];
 		padding: (BlInsets all: self spaceGap);
-		margin: (BlInsets top: self spaceGap left: self spaceGap*2 bottom: self spaceGap right: self spaceGap*2)
+		margin: (BlInsets top: self spaceGap * 2 left: self spaceGap * 2 bottom: self spaceGap * 2 right: self spaceGap * 2)
 ]
 
 { #category : #'instance creation' }
@@ -142,7 +145,7 @@ GtHome >> newCardsContainer [
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ];
-		padding: (BlInsets top: self spaceGap*2 left: 0 bottom: self spaceGap*2 right: 0)
+		padding: (BlInsets all: 0)
 ]
 
 { #category : #'instance creation' }

@@ -32,7 +32,7 @@ GtWorld >> defaultRoot [
 		look: BrGlamorousSpaceTabWithIconLook;
 		icon: BrGlamorousIcons gt asElement;
 		label: 'Home';
-		stencil: [ GtHome new ]).
+		stencil: [ GtHome new asScrollableElement ]).
 
 	^ super defaultRoot addChild: aTabGroup as: #tabs
 ]
