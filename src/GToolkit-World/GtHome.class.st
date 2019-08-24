@@ -11,7 +11,7 @@ GtHome >> initialize [
 	self background: Color white.
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
-		c vertical matchParent ].
+		c vertical fitContent ].
 	
 	self layout: BlLinearLayout vertical.
 	self padding: (BlInsets all: self spaceGap).
@@ -124,7 +124,7 @@ GtHome >> initializeTools [
 { #category : #'instance creation' }
 GtHome >> newCard [
 	^ BrCard new
-		look: (BrShadowLook new width: 6; color: (Color black alpha: 0.5)) +
+		look: (BrShadowLook new width: 4) +
 			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e margin: (BlInsets all: 10)]) +
 			BrIconLook new +
 			BrGlamorousButtonExteriorLook new;
