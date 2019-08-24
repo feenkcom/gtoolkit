@@ -27,9 +27,9 @@ GtHome >> initializeCommunity [
 	self addChild: (self newHeaderLabel: 'Community').
 	
 	aContainer := self newCardsContainer.
-	aContainer addChild: (self newCard title: 'Spectrum'; description: '...').
-	aContainer addChild: (self newCard title: 'Github'; description: '...').
-	aContainer addChild: (self newCard title: 'Web'; description: '...').
+	aContainer addChild: (self newCard title: 'Spectrum'; description: 'Join the community on Spectrum.').
+	aContainer addChild: (self newCard title: 'Github'; description: 'Take a look at the code. Open issues.').
+	aContainer addChild: (self newCard title: 'Web'; description: 'The official webpage.').
 	
 	self addChild: aContainer
 ]
@@ -86,7 +86,7 @@ GtHome >> initializeTools [
 { #category : #'instance creation' }
 GtHome >> newCard [
 	^ BrCard new
-		look: (BrShadowLook new width: 6; color: (Color black alpha: 0.5)) + (BrDescriptionLook new readonly glamorousRegularFont foreground: Color black; descriptionDo: [:e | e margin: (BlInsets all: 10)]) + BrIconLook new;
+		look: (BrShadowLook new width: 6; color: (Color black alpha: 0.5)) + (BrDescriptionLook new readonly glamorousRegularFont foreground: Color black; descriptionDo: [:e | e margin: (BlInsets all: 10)]) + BrIconLook new + BrGlamorousButtonExteriorLook new;
 		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
 		geometry: (BlRectangle cornerRadius: 4);
 		background: Color white;
@@ -94,7 +94,7 @@ GtHome >> newCard [
 			c horizontal exact: 300.
 			c vertical exact: 150 ];
 		padding: (BlInsets all: self spaceGap);
-		margin: (BlInsets all: self spaceGap)
+		margin: (BlInsets top: 0 left: self spaceGap*2 bottom: 0 right: self spaceGap*2)
 ]
 
 { #category : #'instance creation' }
@@ -104,7 +104,7 @@ GtHome >> newCardsContainer [
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ];
-		padding: (BlInsets top: self spaceGap left: (self spaceGap / 2.0) bottom: self spaceGap right: (self spaceGap / 2.0))
+		padding: (BlInsets top: self spaceGap*2 left: 0 bottom: self spaceGap*2 right: 0)
 ]
 
 { #category : #'instance creation' }
@@ -113,7 +113,7 @@ GtHome >> newHeaderLabel: aString [
 	^ BrLabel new
 		look: (BrGlamorousLabelLook new foreground: Color gray; fontSize: 16);
 		padding: (BlInsets left: (self spaceGap*2));
-		margin: (BlInsets top: self spaceGap*2);
+		margin: (BlInsets top: self spaceGap*2 bottom: 0);
 		text: aString
 ]
 
