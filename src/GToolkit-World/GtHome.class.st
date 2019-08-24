@@ -11,7 +11,7 @@ GtHome >> initialize [
 	self background: Color white.
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
-		c vertical matchParent ].
+		c vertical fitContent ].
 	
 	self layout: BlLinearLayout vertical.
 	self padding: (BlInsets all: self spaceGap).
@@ -94,7 +94,7 @@ GtHome >> newCard [
 			c horizontal exact: 300.
 			c vertical exact: 150 ];
 		padding: (BlInsets all: self spaceGap);
-		margin: (BlInsets top: 0 left: self spaceGap*2 bottom: 0 right: self spaceGap*2)
+		margin: (BlInsets top: self spaceGap * 2 left: self spaceGap * 2 bottom: self spaceGap * 2 right: self spaceGap * 2)
 ]
 
 { #category : #'instance creation' }
@@ -104,7 +104,7 @@ GtHome >> newCardsContainer [
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ];
-		padding: (BlInsets top: self spaceGap*2 left: 0 bottom: self spaceGap*2 right: 0)
+		padding: (BlInsets all: 0)
 ]
 
 { #category : #'instance creation' }
