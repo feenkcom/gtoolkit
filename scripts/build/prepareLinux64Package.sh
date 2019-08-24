@@ -19,6 +19,10 @@ mv libGlutin.so $GTFolder
 curl https://dl.feenk.com/Moz2D/linux/development/x86_64/libMoz2D.so -o libMoz2D.so
 mv libMoz2D.so $GTFolder
 
+curl https://dl.feenk.com/Clipboard/linux/development/x86_64/libClipboard.so -o libClipboard.so
+mv libClipboard.so $GTFolder
+
+
 zip -qyr $GTFolder.zip $GTFolder
 rm -rf $GTFolder
 set +e
