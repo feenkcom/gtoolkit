@@ -32,7 +32,7 @@ GtWorld >> defaultRoot [
 		look: BrGlamorousSpaceTabWithIconLook;
 		icon: BrGlamorousIcons gt asElement;
 		label: 'Home';
-		stencil: [ GtHome new ]).
+		stencil: [ GtHome new asScrollableElement background: Color white]).
 
 	^ super defaultRoot addChild: aTabGroup as: #tabs
 ]
@@ -49,6 +49,9 @@ GtWorld >> initialize [
 		repeatable: false;
 		combination: BlKeyCombination primaryT;
 		action: [ subSpaceDropdown ifNotNil: #expand ]).
+	self root when: GtSpawnSpotter do: [:e | 
+		e consumed: true.
+		spotterDropdown ifNotNil: #expand ].
 ]
 
 { #category : #'instance - creation' }
