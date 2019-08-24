@@ -59,6 +59,19 @@ GtToolsMenu class >> open [
 ]
 
 { #category : #'api - tools' }
+GtToolsMenu class >> openCoderFrom: anElement [
+	| aSpace |
+
+	aSpace := BlSpace new.
+	aSpace title: 'Coder'.
+	aSpace extent: 1200@600.
+	aSpace addChild: GtCoderStencil new create.
+	aSpace withHalos.
+	
+	anElement showSpace: aSpace
+]
+
+{ #category : #'api - tools' }
 GtToolsMenu class >> openMorphicWorld [
 	<script: 'self openMorphicWorld'>
 
@@ -71,6 +84,21 @@ GtToolsMenu class >> openMorphicWorld [
 
 	morphicWorld isOpened
 		ifFalse: [ morphicWorld show ]
+]
+
+{ #category : #'api - tools' }
+GtToolsMenu class >> openPlaygroundFrom: anElement [
+	| aPlayground aSpace |
+
+	aPlayground := GtInspector createOnPlayBook: GtPlayBook newDefault.
+
+	aSpace := BlSpace new.
+	aSpace title: 'Playground'.
+	aSpace extent: 1200@600.
+	aSpace addChild: aPlayground.
+	aSpace withHalos.
+	
+	anElement showSpace: aSpace
 ]
 
 { #category : #initialization }
@@ -198,15 +226,8 @@ GtToolsMenu >> openBaseline [
 { #category : #'api - tools' }
 GtToolsMenu >> openCoder [
 	<script: 'self new openCoder'>
-	| aSpace |
 
-	aSpace := BlSpace new.
-	aSpace title: 'Coder'.
-	aSpace extent: 1200@600.
-	aSpace addChild: GtCoderStencil new create.
-	aSpace withHalos.
-	
-	self showSpace: aSpace
+	self class openCoderFrom: self
 ]
 
 { #category : #'api - tools' }
@@ -260,17 +281,8 @@ GtToolsMenu >> openPharo101 [
 { #category : #'api - tools' }
 GtToolsMenu >> openPlayground [
 	<script: 'self openPlayground'>
-	| aPlayground aSpace |
-
-	aPlayground := GtInspector createOnPlayBook: GtPlayBook newDefault.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Playground'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aPlayground.
-	aSpace withHalos.
 	
-	self showSpace: aSpace
+	self class openPlaygroundFrom: self
 ]
 
 { #category : #'api - tools' }

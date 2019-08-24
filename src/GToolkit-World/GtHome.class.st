@@ -74,11 +74,13 @@ GtHome >> initializeTools [
 	aContainer addChild: (self newCard
 		title: 'Playground & Inspector';
 		description: (('Playground & Inspector' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Script, inspect and code. Live.' asRopedText fontSize: 14));
-		picture: ((GtPlayBook newDefault gtLiveFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ])).
+		picture: ((GtPlayBook newDefault gtLiveFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ]);
+		action: [ :aButton | GtToolsMenu openPlaygroundFrom: aButton ]).
 	aContainer addChild: (self newCard
 		title: 'Coder';
 		description: (('Coder' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Browse, manipulate and organize code.' asRopedText fontSize: 14));
-		picture: (((GtClassCoder forClass: GtClassCoder) asElement size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents)).
+		picture: (((GtClassCoder forClass: GtClassCoder) asElement size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents);
+		action: [ :aButton | GtToolsMenu openCoderFrom: aButton ]).
 
 	self addChild: aContainer
 ]
@@ -86,7 +88,10 @@ GtHome >> initializeTools [
 { #category : #'instance creation' }
 GtHome >> newCard [
 	^ BrCard new
-		look: (BrShadowLook new width: 6; color: (Color black alpha: 0.5)) + (BrDescriptionLook new readonly glamorousRegularFont foreground: Color black; descriptionDo: [:e | e margin: (BlInsets all: 10)]) + BrIconLook new + BrGlamorousButtonExteriorLook new;
+		look: (BrShadowLook new width: 6; color: (Color black alpha: 0.5)) +
+			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e margin: (BlInsets all: 10)]) +
+			BrIconLook new +
+			BrGlamorousButtonExteriorLook new;
 		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
 		geometry: (BlRectangle cornerRadius: 4);
 		background: Color white;
