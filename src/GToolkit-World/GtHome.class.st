@@ -27,37 +27,37 @@ GtHome >> initializeDocumentation [
 	self addChild: (self newHeaderLabel: 'Documentation').
 	
 	aContainer := self newCardsContainer.
-	aContainer addChild: (self newCard 
-		title: 'Documentation'; 
-		description: (('Documentation' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Start from the central point and inspect your way through the docs.' asRopedText fontSize: 14));
-		picture: (((GtDocument new text: (BaselineOfGToolkit comment first: 500)) gtTextFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ]);
+	aContainer addChild: (self 
+		newCardWithTitle: 'Documentation' 
+		description: 'Start from the central point and inspect your way through the docs.'
+		picture: (((GtDocument new text: (BaselineOfGToolkit comment first: 500)) gtTextFor: GtPhlowView empty) asElementDo: [:e | e ])
 		action: [ :card |
 			self showSpaceWithTitle: 'Documentation' with: (GtInspector createOnPlayBook: (GtDocument forClass: BaselineOfGToolkit)) from: card ]).
 	
-	aContainer addChild: (self newCard 
-		title: 'Examples'; 
-		description: (('Examples' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Examples are both tests and units of documentation.' asRopedText fontSize: 14));
-		picture: ((GtRlGToolkitExamplesExplorer buildForGToolkitProject gtViewAllExamplesInImageFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ]);
+	aContainer addChild: (self 
+		newCardWithTitle: 'Examples'
+		description: 'Examples are both tests and units of documentation.'
+		picture: ((GtRlGToolkitExamplesExplorer buildForGToolkitProject gtViewAllExamplesInImageFor: GtPhlowView empty) asElementDo: [:e | e ])
 		action: [ :card |
 			self showSpaceWithTitle: 'Documentation' with: (GtInspector createOn: (GtRlGToolkitExamplesExplorer buildForGToolkitProject)) from: card ]).
 		
-	aContainer addChild: (self newCard title: 'Tour'; 
-		description: (('Tour' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Take an interative tour through the tools and engines.' asRopedText fontSize: 14));
-		picture: ((GtTitleSlide new
+	aContainer addChild: (self 
+		newCardWithTitle: 'Tour'
+		description: 'Take an interative tour through the tools and engines.'
+		picture: (GtTitleSlide new
 			titleText: ('glamoroustoolkit' asRopedText 
 				fontSize: 30; fontName: 'Helvetica Neue'; bold;
 				in: [:title | (title from: 1 to: 'glamorous' size) thin];
-				yourself)) asElement in: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ]);
-		action: [ :card |
-			self showSpaceWithTitle: 'Tour' with: (GtTour new create) from: card ]).
-				
-	aContainer addChild: (self newCard title: 'Pharo 101'; 
-		description: (('Pharo 101' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('New to Pharo? Take an interactive tutorial.' asRopedText fontSize: 14));
-		picture: ((GtTitleSlide new
+				yourself))
+		action: [ :card |self showSpaceWithTitle: 'Tour' with: (GtTour new create) from: card ]).
+
+	aContainer addChild: (self 
+		newCardWithTitle:'Pharo 101' 
+		description: 'New to Pharo? Take an introductory tutorial.'
+		picture: (GtTitleSlide new
 			titleText: ('Pharo 101' asRopedText glamorousRegularFont
-				fontSize: 30)) asElement in: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ]);
-		action: [ :card |
-			self showSpaceWithTitle: 'Pharo 101' with: (GtPharo101 new create) from: card ]).
+				fontSize: 30))
+		action: [ :card | self showSpaceWithTitle: 'Pharo 101' with: (GtPharo101 new create) from: card ]).
 	
 	self addChild: aContainer
 ]
@@ -69,25 +69,25 @@ GtHome >> initializeExternalLinks [
 	
 	aContainer := self newCardsContainer.
 	
-	aContainer addChild: (self newCard title: 'Web'; 
-		description: (('Web' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('The official webpage.' asRopedText fontSize: 14));
-		picture: ((GtTitleSlide new
-			titleText: ('gtoolkit.com' asRopedText glamorousRegularFont fontSize: 20)) asElement 
-				in: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ]);
+	aContainer addChild: (self 
+		newCardWithTitle: 'Web' 
+		description: 'The official webpage.'
+		picture: (GtTitleSlide new
+			titleText: ('gtoolkit.com' asRopedText glamorousRegularFont fontSize: 20))
 		action: [ :card | WebBrowser openOn: 'https://gtoolkit.com' ]).	
 
-	aContainer addChild: (self newCard title: 'GitHub'; 
-		description: (('GitHub' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Browse the code. Open issues. Engage.' asRopedText fontSize: 14));
-		picture: ((GtTitleSlide new
-			titleText: ('github.com/feenkcom/gtoolkit' asRopedText glamorousRegularFont fontSize: 20)) asElement 
-				in: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ]);
+	aContainer addChild: (self 
+		newCardWithTitle: 'GitHub'
+		description: 'Browse the code. Open issues. Engage.'
+		picture: (GtTitleSlide new
+			titleText: ('github.com/feenkcom/gtoolkit' asRopedText glamorousRegularFont fontSize: 20))
 		action: [ :card | WebBrowser openOn: 'https://github.com/feenkcom/gtoolkit' ]).	
 	
-	aContainer addChild: (self newCard title: 'Spectrum'; 
-		description: (('Community' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Join our online community to ask questions and have fun.' asRopedText fontSize: 14));
-		picture: ((GtTitleSlide new
-			titleText: ('spectrum.chat/gtoolkit' asRopedText glamorousRegularFont fontSize: 25)) asElement 
-				in: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ]);
+	aContainer addChild: (self 
+		newCardWithTitle: 'Community' 
+		description: 'Join our online community to ask questions and have fun.'
+		picture: (GtTitleSlide new
+			titleText: ('spectrum.chat/gtoolkit' asRopedText glamorousRegularFont fontSize: 25))
 		action: [ :card | WebBrowser openOn: 'https://spectrum.chat/gtoolkit' ]).	
 	
 	self addChild: aContainer
@@ -99,23 +99,22 @@ GtHome >> initializeTools [
 	self addChild: (self newHeaderLabel: 'Tools').
 
 	aContainer := self newCardsContainer.
-	aContainer addChild: (self newCard
-		title: 'Playground';
-		description: (('Playground' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Script, inspect and code. Live.' asRopedText fontSize: 14));
-		picture: ((GtPlayBook newDefault gtLiveFor: GtPhlowView empty) asElementDo: [:e | (e size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents ]);
-		action: [ :card |
-			self showSpaceWithTitle: 'Playground' with: GtPlaygroundStencil new create from: card ]).
-	aContainer addChild: (self newCard
-		title: 'Coder';
-		description: (('Coder' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Browse, manipulate and organize code.' asRopedText fontSize: 14));
-		picture: (((GtClassCoder forClass: GtClassCoder) asElement size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents);
-		action: [ :card |
-			self showSpaceWithTitle: 'Coder' with: GtCoderStencil new create from: card ]).
+	aContainer addChild: (self 
+		newCardWithTitle: 'Playground' 
+		description: 'Script, inspect and code. Live.'
+		picture: ((GtPlayBook newDefault gtLiveFor: GtPhlowView empty) asElementDo: [:e | e ])
+		action: [ :card | self showSpaceWithTitle: 'Playground' with: GtPlaygroundStencil new create from: card ]).
+	
+	aContainer addChild: (self 
+		newCardWithTitle: 'Coder'
+		description: 'Browse, manipulate and organize code.'
+		picture: (GtClassCoder forClass: GtClassCoder)
+		action: [ :card | 	self showSpaceWithTitle: 'Coder' with: GtCoderStencil new create from: card ]).
 
-	aContainer addChild: (self newCard
-		title: 'Spotter';
-		description: (('Spotter' asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: ('Search anything. Really anything.' asRopedText fontSize: 14));
-		picture: ((GtSpotterSlide new create asElement size: 300@300; asScalableElement) background: Color white; look: BrShadowLook; preventMeAndChildrenMouseEvents);
+	aContainer addChild: (self 
+		newCardWithTitle: 'Spotter'
+		description: 'Search anything. Really anything.'
+		picture: GtSpotterSlide new create
 		action: [ :card | card fireEvent: GtSpawnSpotter new ]).
 
 	self addChild: aContainer
@@ -124,18 +123,33 @@ GtHome >> initializeTools [
 { #category : #'instance creation' }
 GtHome >> newCard [
 	^ BrCard new
-		look: (BrShadowLook new width: 4) +
-			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e margin: (BlInsets all: 10)]) +
+		look: (BrShadowLook new) +
+			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e padding: (BlInsets all: 10)]) +
 			BrIconLook new +
-			BrGlamorousButtonExteriorLook new;
+			(BrGlamorousButtonExteriorLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
 		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
 		geometry: (BlRectangle cornerRadius: 4);
-		background: Color white;
 		constraintsDo: [ :c |
 			c horizontal exact: 300.
 			c vertical exact: 150 ];
-		padding: (BlInsets all: self spaceGap);
 		margin: (BlInsets top: self spaceGap * 2 left: self spaceGap * 2 bottom: self spaceGap * 2 right: self spaceGap * 2)
+]
+
+{ #category : #initialization }
+GtHome >> newCardWithTitle: aTitle description: aDescription picture: anElementOrStencil action: aBlock [ 	
+	^ self newCard
+		title: aTitle;
+		description: ((aTitle asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: (aDescription asRopedText "foreground: Color gray; "fontSize: 14));
+		picture: (BlElement new 
+			constraintsDo: [ :c |
+				c horizontal matchParent.
+				c vertical matchParent ];
+			layout: BlLinearLayout new;
+			addChild: (anElementOrStencil asElement background: Color white; size: 300@300; asScalableElement);
+			margin: (BlInsets all: 1);
+"			border: (BlBorder paint: BrGlamorousColors defaultButtonBorderColor); "
+			preventMeAndChildrenMouseEvents);
+		action: aBlock
 ]
 
 { #category : #'instance creation' }
