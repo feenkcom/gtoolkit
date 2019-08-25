@@ -126,3 +126,8 @@ GtWorldElement >> showSpace: aSpace [
 
 	tabs addTab: aTab
 ]
+
+{ #category : #'children accessing' }
+GtWorldElement >> topMostParent [
+	^ self
+]
