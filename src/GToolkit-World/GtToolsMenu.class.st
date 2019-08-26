@@ -191,13 +191,13 @@ GtToolsMenu >> initializeElements [
 				look: BrGlamorousButtonWithLabelLook new;
 				label: 'Save';
 				hMatchParent;
-				action: [ Smalltalk snapshot: true andQuit: false ].
+				action: [ :aButton | aButton space universe snapshot: true andQuit: false ].
 				
 			BrButton new
 				look: (BrGlamorousButtonWithLabelLook new);
 				label: 'Quit';
 				hMatchParent;
-				action: [ Smalltalk snapshot: false andQuit: true ] })
+				action: [ :aButton | aButton space universe snapshot: false andQuit: true ] })
 ]
 
 { #category : #'hooks - children' }
