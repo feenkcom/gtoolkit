@@ -23,6 +23,18 @@ GtWorldElement >> initialize [
 		icon: BrGlamorousIcons gt asElement;
 		label: 'Home';
 		stencil: [ GtHome new asScrollableElement background: Color white]).
+	
+	self addShortcut: (BlShortcut new
+		repeatable: false;
+		combination: BlKeyCombination shiftReturn;
+		action: [ spotterDropdown ifNotNil: #expand ]).
+	self addShortcut: (BlShortcut new
+		repeatable: false;
+		combination: BlKeyCombination primaryT;
+		action: [ subSpaceDropdown ifNotNil: #expand ]).
+	self when: GtSpawnSpotter do: [:e | 
+		e consumed: true.
+		spotterDropdown ifNotNil: #expand ].
 		
 	self addChild: tabs.
 	
