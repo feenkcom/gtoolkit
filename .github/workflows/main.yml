@@ -15,4 +15,4 @@ jobs:
       run: |
         git clean -fdx
         chmod +x scripts/build/*.sh
-        ./scripts/build/load.sh
+        ./scripts/build/macLoad.sh
