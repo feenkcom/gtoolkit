@@ -13,6 +13,6 @@ jobs:
       run: echo Hello, world!
     - name: Run a multi-line script
       run: |
-        git clean -fdx,
-        chmod +x scripts/build/*.sh,
+        git clean -fdx
+        chmod +x scripts/build/*.sh
         ./scripts/build/load.sh
