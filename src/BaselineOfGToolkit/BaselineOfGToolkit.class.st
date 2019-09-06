@@ -132,7 +132,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.17/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.7.127/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.7.128/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.61/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -144,7 +144,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitCoder' with: [
 				spec repository: 'github://feenkcom/gtoolkit-coder:v0.7.76/src' ];
 			baseline: 'GToolkitSpotter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.64/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.65/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.58/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
