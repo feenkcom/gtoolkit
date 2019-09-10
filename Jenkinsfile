@@ -5,6 +5,9 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '50'))
         disableConcurrentBuilds() 
     }
+    environment {
+        GITHUB_TOKEN = credentials('githubrelease')
+    }
     stages {
         stage('Clean Workspace') {
             steps {
