@@ -52,6 +52,14 @@ GtHome >> initializeDocumentation [
 		action: [ :card |self showSpaceWithTitle: 'Tour' with: (GtTour new create) from: card ]).
 
 	aContainer addChild: (self 
+		newCardWithTitle:'One rendering tree' 
+		description: 'All rendering relies on a single tree at a time.'
+		picture: (GtTitleSlide new
+			titleText: ('One rendering tree' asRopedText glamorousRegularFont
+				fontSize: 30))
+		action: [ :card | self showSpaceWithTitle: 'One rendering tree' with: (GtOneRenderingTree new create) from: card ]).
+
+	aContainer addChild: (self 
 		newCardWithTitle:'Pharo 101' 
 		description: 'New to Pharo? Take an introductory tutorial.'
 		picture: (GtTitleSlide new
