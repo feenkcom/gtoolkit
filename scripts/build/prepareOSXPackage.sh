@@ -6,6 +6,9 @@ mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
+libFolder=libOSX64-$TAG_NAME
+mkdir -p $libFolder
+
 curl http://files.pharo.org/get-files/80/pharo64-mac-headless-latest.zip -o pharo64-mac-headless-latest.zip
 unzip pharo64-mac-headless-latest.zip -d $GTFolder/
 
@@ -13,14 +16,19 @@ unzip pharo64-mac-headless-latest.zip -d $GTFolder/
 # unzip PharoOSX64.zip -d $GTFolder/
 
 curl https://dl.feenk.com/Glutin/osx/development/x86_64/libGlutin.dylib -o libGlutin.dylib
-mv libGlutin.dylib $GTFolder
+cp libGlutin.dylib $GTFolder
+cp libGlutin.dylib $libFolder
 
 curl https://dl.feenk.com/Moz2D/osx/development/x86_64/libMoz2D.dylib -o libMoz2D.dylib
-mv libMoz2D.dylib $GTFolder
+cp libMoz2D.dylib $GTFolder
+cp libMoz2D.dylib $libFolder
 
 curl https://dl.feenk.com/Clipboard/osx/development/x86_64/libClipboard.dylib -o libClipboard.dylib
-mv libClipboard.dylib $GTFolder
+cp libClipboard.dylib $GTFolder
+cp libClipboard.dylib $libFolder
 
 zip -qyr $GTFolder.zip $GTFolder
+zip -qyr $libFolder.zip $libFolder
 rm -rf $GTFolder
+rm -rf $libFolder
 set +e
