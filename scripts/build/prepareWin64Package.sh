@@ -6,6 +6,10 @@ mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
+
+libFolder=libWin64-$TAG_NAME
+mkdir -p $libFolder
+
 curl https://files.pharo.org/get-files/80/pharo64-win-headless-latest.zip -o pharo64-win-headless-latest.zip
 unzip pharo64-win-headless-latest.zip -d $GTFolder/
 
@@ -19,14 +23,21 @@ curl https://dl.feenk.com/Moz2D/windows/development/x86_64/vcruntime140.dll -o v
 curl https://dl.feenk.com/Moz2D/windows/development/x86_64/libMoz2D.dll -o libMoz2D.dll
 curl https://dl.feenk.com/Clipboard/windows/development/x86_64/libClipboard.dll -o libClipboard.dll
 
-mv libGlutin.dll $GTFolder
-mv msvcp140.dll $GTFolder
-mv vcruntime140.dll $GTFolder
-mv libMoz2D.dll $GTFolder
-mv libClipboard.dll $GTFolder
+cp libGlutin.dll $GTFolder
+cp msvcp140.dll $GTFolder
+cp vcruntime140.dll $GTFolder
+cp libMoz2D.dll $GTFolder
+cp libClipboard.dll $GTFolder
 
+cp libGlutin.dll $libFolder
+cp msvcp140.dll $libFolder
+cp vcruntime140.dll $libFolder
+cp libMoz2D.dll $libFolder
+cp libClipboard.dll $libFolder
 
 zip -qyr $GTFolder.zip $GTFolder
+zip -qyr $libFolder.zip $libFolder
 rm -rf $GTFolder
+rm -rf $libFolder
 set +e
 

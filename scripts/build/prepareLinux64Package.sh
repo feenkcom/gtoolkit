@@ -5,6 +5,9 @@ mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
+libFolder=libLinux64-$TAG_NAME
+mkdir -p $libFolder
+
 # wget https://bintray.com/opensmalltalk/vm/download_file?file_path=pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201908070737.tar.gz -O pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201908070737.tar.gz
 # tar xvzf pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201908070737.tar.gz
 # mv -fv phcogspurlinuxmhdls64/* $GTFolder/
@@ -17,15 +20,20 @@ unzip pharo64-linux-headless-latest.zip  -d $GTFolder/
 
 
 curl https://dl.feenk.com/Glutin/linux/development/x86_64/libGlutin.so -o libGlutin.so
-mv libGlutin.so $GTFolder
+cp libGlutin.so $GTFolder
+cp libGlutin.so $libFolder
 
 curl https://dl.feenk.com/Moz2D/linux/development/x86_64/libMoz2D.so -o libMoz2D.so
-mv libMoz2D.so $GTFolder
+cp libMoz2D.so $GTFolder
+cp libMoz2D.so $libFolder
 
 curl https://dl.feenk.com/Clipboard/linux/development/x86_64/libClipboard.so -o libClipboard.so
-mv libClipboard.so $GTFolder
+cp libClipboard.so $GTFolder
+cp libClipboard.so $libFolder
 
 
+zip -qyr $libFolder.zip $libFolder
 zip -qyr $GTFolder.zip $GTFolder
+rm -rf $libFolder
 rm -rf $GTFolder
 set +e
