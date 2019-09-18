@@ -11,6 +11,11 @@ jobs:
     - uses: actions/checkout@v1
     - name: Download pharo
       run: |
-        Invoke-WebRequest -Uri https://files.pharo.org/get-files/70/pharo64-win-stable.zip -OutFile pharo64-win-stable.zip -UseBasicParsing
+        Invoke-WebRequest -Uri https://dl.feenk.com/gt/GToolkitWin64-v0.7.174.zip -OutFile GToolkitWin64-v0.7.1741.zip -UseBasicParsing
         ls
+        Expand-Archive GToolkitWin64-v0.7.174.zip -DestinationPath .
+         .\GToolkitWin64-v0.7.174\PharoConsole.exe .\GToolkitWin64-v0.7.174\GToolkit-64-v0.7.174-2019091809544664.image --no-quit
       shell: powershell
+
+
+      
