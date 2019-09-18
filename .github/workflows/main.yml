@@ -12,6 +12,6 @@ jobs:
     - name: Run a multi-line script
       run: |
         git clean -fdx
-        Invoke-WebRequest -Uri https://files.pharo.org/get-files/70/pharo64-win-stable.zip -OutFile pharo64-win-stable.zip -UseBasicParsing
+        powershell -command "& {&'Invoke-WebRequest' -Uri https://files.pharo.org/get-files/70/pharo64-win-stable.zip -OutFile pharo64-win-stable.zip -UseBasicParsing}"
         # chmod +x scripts/build/*.sh
         # ./scripts/build/macLoad.sh
