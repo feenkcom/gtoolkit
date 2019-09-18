@@ -13,5 +13,3 @@ jobs:
       run: |
         git clean -fdx
         powershell -command "& {&'Invoke-WebRequest' -Uri https://files.pharo.org/get-files/70/pharo64-win-stable.zip -OutFile pharo64-win-stable.zip -UseBasicParsing}"
-        # chmod +x scripts/build/*.sh
-        # ./scripts/build/macLoad.sh
