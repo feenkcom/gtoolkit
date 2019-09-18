@@ -5,14 +5,12 @@ on: [push]
 jobs:
   build:
 
-    runs-on: macOS-10.13
+    runs-on: windows-latest
     
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
     - name: Run a multi-line script
       run: |
         git clean -fdx
-        chmod +x scripts/build/*.sh
-        ./scripts/build/macLoad.sh
+        Invoke-WebRequest -Uri https://files.pharo.org/get-files/70/pharo64-win-stable.zip -OutFile pharo64-win-stable.zip -UseBasicParsing
+      shell: powershell
