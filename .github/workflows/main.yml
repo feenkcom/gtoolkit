@@ -10,5 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Download pharo
-      run: Invoke-WebRequest -Uri https://files.pharo.org/get-files/70/pharo64-win-stable.zip -OutFile pharo64-win-stable.zip -UseBasicParsing
+      run: |
+        Invoke-WebRequest -Uri https://files.pharo.org/get-files/70/pharo64-win-stable.zip -OutFile pharo64-win-stable.zip -UseBasicParsing
+        ls
       shell: powershell
