@@ -17,7 +17,6 @@ jobs:
         .\wglinfo64.exe
         ls
         Expand-Archive GToolkitWin64-v0.7.178.zip -DestinationPath .
-         .\GToolkitWin64-v0.7.178\PharoConsole.exe .\GToolkitWin64-v0.7.178\GToolkit-64-v0.7.178-2019091819324164.image --interactive 2> error.txt 
       shell: powershell
 
 
