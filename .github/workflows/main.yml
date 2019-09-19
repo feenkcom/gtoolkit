@@ -11,13 +11,13 @@ jobs:
     - uses: actions/checkout@v1
     - name: Download pharo
       run: |
-        Invoke-WebRequest -Uri https://dl.feenk.com/gt/GToolkitWin64-v0.7.174.zip -OutFile GToolkitWin64-v0.7.174.zip -UseBasicParsing
+        Invoke-WebRequest -Uri https://dl.feenk.com/gt/GToolkitWin64-v0.7.178.zip -OutFile GToolkitWin64-v0.7.178.zip -UseBasicParsing
         Invoke-WebRequest -Uri https://github.com/gkv311/wglinfo/releases/download/19_05/wglinfo64.exe -OutFile wglinfo64.exe -UseBasicParsing
         ls
         .\wglinfo64.exe
         ls
-        Expand-Archive GToolkitWin64-v0.7.174.zip -DestinationPath .
-         .\GToolkitWin64-v0.7.174\PharoConsole.exe .\GToolkitWin64-v0.7.174\GToolkit-64-v0.7.174-2019091809544664.image --no-quit
+        Expand-Archive GToolkitWin64-v0.7.178.zip -DestinationPath .
+         .\GToolkitWin64-v0.7.178\PharoConsole.exe .\GToolkitWin64-v0.7.178\GToolkit-64-v0.7.178-2019091819324164.image --no-quit
       shell: powershell
 
 
