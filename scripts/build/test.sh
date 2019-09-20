@@ -49,7 +49,7 @@ then
   set -e
 
   #run smoke tests
-  timeout 20 xvfb-run -a ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" &
+  timeout 20 xvfb-run -a --server-args="-screen 0 3840x2160x24" ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" &
   sleep 3
   export DISPLAY=$(ps -aux | grep screen -m 1 | awk '{print $12}')
   export XAUTHORITY=$(ps -aux | grep screen -m 1 | awk '{print $19}')
