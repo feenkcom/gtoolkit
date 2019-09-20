@@ -58,7 +58,8 @@ then
 
   ls -al
 
-  if [[ $(find gt.jpg -type f -size +40000c 2>/dev/null) ]]; then
+  if [ $(find gt.jpg -type f -size +40000c 2>/dev/null) ] 
+  then
       echo "Screenshot looking good."
   else 
       ls -al
