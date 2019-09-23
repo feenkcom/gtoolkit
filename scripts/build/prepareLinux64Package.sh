@@ -8,16 +8,11 @@ rm -rf $GTFolder/pharo-local
 libFolder=libLinux64-$TAG_NAME
 mkdir -p $libFolder
 
-# wget https://bintray.com/opensmalltalk/vm/download_file?file_path=pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201908070737.tar.gz -O pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201908070737.tar.gz
-# tar xvzf pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201908070737.tar.gz
-# mv -fv phcogspurlinuxmhdls64/* $GTFolder/
+# curl https://files.pharo.org/get-files/80/pharo64-linux-headless-latest.zip -o pharo64-linux-headless-latest.zip 
+# unzip pharo64-linux-headless-latest.zip  -d $GTFolder/
 
-curl https://files.pharo.org/get-files/80/pharo64-linux-headless-latest.zip -o pharo64-linux-headless-latest.zip 
-unzip pharo64-linux-headless-latest.zip  -d $GTFolder/
-
-# curl https://dl.feenk.com/gtvm/PharoLinux64.zip -o PharoLinux64.zip
-# unzip PharoLinux64.zip -d $GTFolder/
-
+curl https://ci.inria.fr/pharo-ci-jenkins2/job/pharo-vm/job/PR-31/7/artifact/build/build/packages/PharoVM-8.1.0-6273a4d-linux64-bin.zip -o PharoVM-8.1.0-6273a4d-linux64-bin.zip
+unzip PharoVM-8.1.0-6273a4d-linux64-bin.zip -d $GTFolder/
 
 curl https://dl.feenk.com/Glutin/linux/development/x86_64/libGlutin.so -o libGlutin.so
 cp libGlutin.so $GTFolder
