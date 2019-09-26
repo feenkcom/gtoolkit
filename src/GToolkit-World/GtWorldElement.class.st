@@ -75,7 +75,7 @@ GtWorldElement >> newSpotterButton [
 			model announcer
 				when: GtSpotterExitAnnouncement
 				do: [ :e | spotterDropdown collapse ].
-			GtSpotterElementWithPreview new
+			GtSpotterElement new
 				spotterModel: model;
 				size: 600@400;
 				margin: (BlInsets all: 1);
