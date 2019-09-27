@@ -32,7 +32,7 @@ then
   tar xvzf pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201909110300.tar.gz
   # curl https://ci.inria.fr/pharo-ci-jenkins2/job/pharo-vm/job/PR-31/7/artifact/build/build/packages/PharoVM-8.1.0-6273a4d-linux64-bin.zip -o PharoVM-8.1.0-6273a4d-linux64-bin.zip
   # unzip PharoVM-8.1.0-6273a4d-linux64-bin.zip -d phcogspurlinuxmhdls64
-  xvfb-run -a  ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval "GtWorld open. [ 2 seconds wait. BlHost pickHost universe snapshot: true andQuit: true ] fork."
+  xvfb-run -a  ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval "GtWorld openWithShutdownListener. [ 2 seconds wait. BlHost pickHost universe snapshot: true andQuit: true ] fork."
 fi
 
 set +e
