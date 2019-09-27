@@ -49,7 +49,7 @@ GtHome >> initializeDocumentation [
 				fontSize: 30; fontName: 'Helvetica Neue'; bold;
 				in: [:title | (title from: 1 to: 'glamorous' size) thin];
 				yourself))
-		action: [ :card |self showSpaceWithTitle: 'Tour' with: (GtTour new create) from: card ]).
+		action: [ :card |self showSpaceWithTitle: 'Tour' with: (GtTour new create makeArrowsVisible) from: card ]).
 
 	aContainer addChild: (self 
 		newCardWithTitle:'One rendering tree' 
@@ -65,7 +65,7 @@ GtHome >> initializeDocumentation [
 		picture: (GtTitleSlide new
 			titleText: ('Pharo 101' asRopedText glamorousRegularFont
 				fontSize: 30))
-		action: [ :card | self showSpaceWithTitle: 'Pharo 101' with: (GtPharo101 new create) from: card ]).
+		action: [ :card | self showSpaceWithTitle: 'Pharo 101' with: (GtPharo101 new create makeArrowsVisible) from: card ]).
 	
 	self addChild: aContainer
 ]
