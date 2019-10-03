@@ -128,19 +128,19 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.6.10/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.143/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.144/src' ];
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.55/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.7.207/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.7.208/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.101/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.102/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.121/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.122/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.130/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.131/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.112/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.113/src' ];
 			baseline: 'GToolkitCoder' with: [
 				spec repository: 'github://feenkcom/gtoolkit-coder:v0.7.117/src' ];
 			baseline: 'GToolkitSpotter' with: [
@@ -160,7 +160,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.7.1/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:v0.7.29/src' ];
+				spec repository: 'github://feenkcom/gt4smacc:v0.7.30/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
 				spec repository: 'github://feenkcom/gt4petitparser2:v0.7.1/src' ];
 			baseline: 'GToolkit4Famix3' with: [
