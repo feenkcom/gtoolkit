@@ -187,9 +187,10 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		ifTrue: [ ^ self ].
 	PostLoaded := true.
 	
-	GtExpandableDebuggerElement register.
 	GtMoldableDebuggerElement register.
-	self fixCommandLineHandlerForPharo7.
+	
+	SystemVersion current major = 7 ifTrue: [ 
+		self fixCommandLineHandlerForPharo7 ].
 ]
 
 { #category : #'post load' }
