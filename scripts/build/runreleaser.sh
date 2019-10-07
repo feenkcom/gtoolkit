@@ -7,5 +7,5 @@ xvfb-run -a -e /dev/stdout ./pharo Pharo.image eval --save "GtPharoCompletionStr
 xvfb-run -a -e /dev/stdout ./pharo Pharo.image releasegtoolkit ${FORCED_TAG_NAME}
 
 set +e
-export NEWCOMMITS=$(cat newcommits.txt)
+
 
