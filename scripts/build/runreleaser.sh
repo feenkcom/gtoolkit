@@ -2,9 +2,10 @@
 set -o xtrace
 set -e
 
-rm newcommits.txt
+rm -f newcommits.txt
 xvfb-run -a -e /dev/stdout ./pharo Pharo.image eval --save "GtPharoCompletionStrategy unsubscribeFromSystem"
 xvfb-run -a -e /dev/stdout ./pharo Pharo.image releasegtoolkit ${FORCED_TAG_NAME}
 
+set +e
 export NEWCOMMITS=$(cat newcommits.txt)
 
