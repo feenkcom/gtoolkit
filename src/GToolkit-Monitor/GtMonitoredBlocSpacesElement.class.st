@@ -71,17 +71,24 @@ GtMonitoredBlocSpacesElement >> initialize [
 
 { #category : #updating }
 GtMonitoredBlocSpacesElement >> updateList [
-	self enqueueTask: (BlEnqueuedTaskItAction new
-		name: '[Monitor] Bloc spaces';
-		element: self;
-		action: [
-			| allSpaces |
-			allSpaces := BlSpace allSubInstances sorted: [ :a :b | a title < b title ].
-			allSpaces := allSpaces sorted: [ :a :b | a isOpened ].
-			allSpaces := allSpaces collect: [ :eachSpace | GtMonitoredBlocSpace new space: eachSpace ].
-			allSpaces ];
-		onFailureEnqueueAction: [ 'Failed to update Spaces list' logCr ];
-		onSuccessEnqueueAction: [ :theSpaces |
-			spacesList display: theSpaces.
-			self enqueueTask: (BlDelayedTaskAction new delay: 5 seconds; action: [ self updateList ]) ])
+	self
+		enqueueTask:
+			(BlEnqueuedTaskItAction new
+				name: '[Monitor] Bloc spaces';
+				element: self;
+				action: [ | allSpaces |
+					allSpaces := BlSpace allSubInstances
+						sorted: [ :a :b | a title < b title ].
+					allSpaces := allSpaces sorted: [ :a :b | a isOpened ].
+					allSpaces := allSpaces
+						collect: [ :eachSpace | GtMonitoredBlocSpace new space: eachSpace ].
+					allSpaces ];
+				onFailureEnqueueAction: [ 'Failed to update Spaces list' traceCr ];
+				onSuccessEnqueueAction: [ :theSpaces | 
+					spacesList display: theSpaces.
+					self
+						enqueueTask:
+							(BlDelayedTaskAction new
+								delay: 5 seconds;
+								action: [ self updateList ]) ])
 ]
