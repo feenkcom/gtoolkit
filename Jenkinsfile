@@ -96,7 +96,7 @@ pipeline {
     post {
         success {
             slackUploadFile (filePath: "newcommits.txt", channel: "#ci")
-            sh "export NEWCOMMITS=$(cat newcommits.txt)"
+            sh 'export NEWCOMMITS=$(cat newcommits.txt)'
             slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) https://dl.feenk.com/gt/gt.jpg ${env.NEWCOMMITS}" )   
         }
 
