@@ -77,9 +77,7 @@ pipeline {
                 (currentBuild.result == null || currentBuild.result == 'SUCCESS') 
               }
             }
-            environment {
-               NEWCOMMITS = sh(script: 'cat newcommits.txt', , returnStdout: true)
-            }
+
             steps {
                 sh 'scripts/build/upload.sh'
                 script {
@@ -97,6 +95,9 @@ pipeline {
         }
     }
     post {
+        environment {
+            NEWCOMMITS = sh(script: 'cat newcommits.txt', , returnStdout: true)
+        }
         success {
             slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) https://dl.feenk.com/gt/gt.jpg ${env.NEWCOMMITS}" )   
         }
