@@ -97,8 +97,8 @@ pipeline {
     post {
 
         success {
-            env.NEWCOMMITS = sh(script: 'cat newcommits.txt', , returnStdout: true)
-            slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) https://dl.feenk.com/gt/gt.jpg ${env.NEWCOMMITS}" )   
+            def NEWCOMMITS = sh(script: 'cat newcommits.txt', , returnStdout: true)
+            slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) https://dl.feenk.com/gt/gt.jpg ${NEWCOMMITS}" )   
         }
 
         failure {
