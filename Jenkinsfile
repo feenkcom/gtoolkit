@@ -95,8 +95,8 @@ pipeline {
     }
     post {
         success {
-            slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) https://dl.feenk.com/gt/gt.jpg" )
-            slackUploadFile (filePath: 'newcommits.txt', initialComment: 'new commits to be included in next build' )
+            slackUploadFile (filePath: 'newcommits.txt' )
+            slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) https://dl.feenk.com/gt/gt.jpg" )   
         }
 
         failure {
