@@ -29,7 +29,7 @@ Glamorous Toolkit is based on graphical stack made of:
 
 ## How to load
 
-You can load the whole code in Pharo 7.0 using the following snippet:
+You can load the whole code in Pharo 8.0 using the following snippet:
 
 ```
 EpMonitor current disable.
@@ -44,7 +44,7 @@ EpMonitor current disable.
 
 ## How to load the latest development release
 
-You can load the code we're working on in Pharo 7.0 using the following snippet:
+You can load the code we're working on in Pharo 8.0 using the following snippet:
 
 ```
 EpMonitor current disable.
