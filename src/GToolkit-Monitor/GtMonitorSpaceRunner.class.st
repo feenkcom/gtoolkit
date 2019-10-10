@@ -68,7 +68,10 @@ GtMonitorSpaceRunner >> createSignalTree: aLogger [
 
 { #category : #'instance creation' }
 GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [ 
-	| aNode theSignals |
+	| aContainer aNode theSignals |
+	
+	
+	aContainer := BrHorizontalPane new fitContent.
 	
 	aNode := BrEditor new
 		look: BrGlamorousRegularEditorLook new;
@@ -78,8 +81,9 @@ GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [
 		padding: (BlInsets all: 5);
 		border: (BlBorder paint: Color gray width: 1);
 		background: (Color veryVeryLightGray);
-		text: aSignalClass label.
-	
+		text: aSignalClass label;
+		preventMeAndChildrenMouseEvents.
+
 	theSignals := OrderedCollection new.
 	
 	aLogger announcer when: aSignalClass do: [ :aSignal |
@@ -87,7 +91,7 @@ GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [
 		aNode background: BrGlamorousColors successBackgroundColor.
 		aNode border: (BlBorder paint: BrGlamorousColors successBorderColor width: 1) ].
 	
-	aNode when: BlClickEvent do: [ :anEvent |
+	aContainer when: BlClickEvent do: [ :anEvent |
 		anEvent consumed: true.
 		
 		theSignals isNotEmpty
@@ -95,8 +99,10 @@ GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [
 				theSignals size > 1
 					ifTrue: [ anEvent currentTarget phlow spawnObject: theSignals ]
 					ifFalse: [ anEvent currentTarget phlow spawnObject: theSignals anyOne ] ] ].
+			
+	aContainer addChild: aNode.
 
-	^ aNode
+	^ aContainer
 ]
 
 { #category : #'instance creation' }
@@ -166,7 +172,7 @@ GtMonitorSpaceRunner >> start [
 	stopButton enable.
 
 	logger start.
-	self showSpace: monitoredSpace
+	monitoredSpace show
 ]
 
 { #category : #accessing }
