@@ -10,7 +10,8 @@ Class {
 		'logger',
 		'toolbar',
 		'signalTree',
-		'resetButton'
+		'resetButton',
+		'monitoredSpace'
 	],
 	#category : #'GToolkit-Monitor-Tools'
 }
@@ -118,7 +119,7 @@ GtMonitorSpaceRunner >> initialize [
 	
 	self matchParent.
 
-	space := self createSpace.
+	monitoredSpace := self createSpace.
 	logger := self createLogger.
 	
 	toolbar := BrToolbar new
@@ -158,14 +159,14 @@ GtMonitorSpaceRunner >> reset [
 
 { #category : #accessing }
 GtMonitorSpaceRunner >> start [
-	space isOpened
+	monitoredSpace isOpened
 		ifTrue: [ ^ self ].
 
 	startButton disable.
 	stopButton enable.
 
 	logger start.
-	self showSpace: space
+	self showSpace: monitoredSpace
 ]
 
 { #category : #accessing }
@@ -173,6 +174,6 @@ GtMonitorSpaceRunner >> stop [
 	startButton enable.
 	stopButton disable.
 
-	space close.
+	monitoredSpace close.
 	logger stop; reset
 ]
