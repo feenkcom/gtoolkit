@@ -165,14 +165,11 @@ GtMonitorSpaceRunner >> start [
 	stopButton enable.
 
 	logger start.
-	space show
+	self showSpace: space
 ]
 
 { #category : #accessing }
-GtMonitorSpaceRunner >> stop [
-	space isOpened
-		ifFalse: [ ^ self ].
-		
+GtMonitorSpaceRunner >> stop [		
 	startButton enable.
 	stopButton disable.
 
