@@ -28,7 +28,7 @@ pipeline {
                 script {
                     env.NEWCOMMITS = sh(script: 'cat newcommits.txt', , returnStdout: true)
                 }
-                slackSend (color: '#00FF00', message: "${env.NEWCOMMITS}" )   
+                slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n${env.NEWCOMMITS}" )   
             }
         }
         stage('Load latest tag') {
@@ -99,14 +99,8 @@ pipeline {
         }
     }
     post {
-
         success {
-            script {
-                if( "${env.BRANCH_NAME}" == "master" ) {
-                    env.NEWCOMMITS = sh(script: 'cat newcommits.txt', , returnStdout: true)
-                }
-            }
-            slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) https://dl.feenk.com/gt/gt.jpg ${env.NEWCOMMITS}" )   
+            slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) https://dl.feenk.com/gt/gt.jpg" )   
         }
 
         failure {
