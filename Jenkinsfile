@@ -25,6 +25,10 @@ pipeline {
                 sh 'git clean -f -d'
                 sh 'rm -rf pharo-local'
                 sh 'scripts/build/load.sh'
+                script {
+                    env.NEWCOMMITS = sh(script: 'cat newcommits.txt', , returnStdout: true)
+                }
+                slackSend (color: '#00FF00', message: "${env.NEWCOMMITS}" )   
             }
         }
         stage('Load latest tag') {
