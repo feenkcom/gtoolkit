@@ -1,7 +1,7 @@
 Class {
 	#name : #GtTranscriptExamples,
 	#superclass : #Object,
-	#category : 'GToolkit-Transcript'
+	#category : #'GToolkit-Transcript'
 }
 
 { #category : #examples }
@@ -208,6 +208,7 @@ GtTranscriptExamples >> transcript [
 { #category : #examples }
 GtTranscriptExamples >> transcriptWitAnimation [
 	<gtExample>
+	<noTest>
 	| animation transcript space |
 	transcript := self transcript.
 	animation := self blocAnimation.
