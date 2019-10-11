@@ -183,6 +183,12 @@ BaselineOfGToolkit >> fixCommandLineHandlerForPharo7 [
 ]
 
 { #category : #'post load' }
+BaselineOfGToolkit >> fixCommandLineHandlerForPharo8 [
+	EvaluateCommandLineHandler compile: ((EvaluateCommandLineHandler>>#gtArgumentString) sourceCode
+		copyReplaceAll: 'gtArgumentString' with: 'argumentString')
+]
+
+{ #category : #'post load' }
 BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ])
 		ifTrue: [ ^ self ].
@@ -192,6 +198,8 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 	
 	SystemVersion current major = 7 ifTrue: [ 
 		self fixCommandLineHandlerForPharo7 ].
+	SystemVersion current major = 8 ifTrue: [ 
+		self fixCommandLineHandlerForPharo8 ].
 ]
 
 { #category : #'post load' }
