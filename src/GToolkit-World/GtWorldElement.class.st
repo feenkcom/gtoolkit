@@ -57,6 +57,7 @@ GtWorldElement >> newActionbar [
 
 { #category : #initialization }
 GtWorldElement >> newSpotterButton [
+	| look |
 	self
 		assert: [ spotterDropdown isNil ]
 		description: [ 'Spotter dropdown is already created!' ].
@@ -64,28 +65,28 @@ GtWorldElement >> newSpotterButton [
 		look:
 			BrGlamorousButtonWithIconLook
 				+
-					(BrGlamorousWithDropdownLook
-						stencil: [ | model look |
+					(look := BrGlamorousWithDropdownLook
+						stencil: [ | model |
 							model := GtSpotter new.
 							model announcer
 								when: GtSpotterExitAnnouncement
 								do: [ :e | look hide ].
-							look := BrGlamorousDropdownLook new
-								handle:
-									(BrButton new
-										look:
-											BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook
-												- BrGlamorousButtonExteriorLook;
-										icon: BrGlamorousIcons search asElement;
-										yourself);
-								content:
-									(GtSpotterElement new
-										spotterModel: model;
-										size: 600 @ 400;
-										yourself);
-								yourself.
 							BlElement new
-								look: look;
+								look:
+									(BrGlamorousDropdownLook new
+										handle:
+											(BrButton new
+												look:
+													BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook
+														- BrGlamorousButtonExteriorLook;
+												icon: BrGlamorousIcons search asElement;
+												yourself);
+										content:
+											(GtSpotterElement new
+												spotterModel: model;
+												size: 600 @ 400;
+												yourself);
+										yourself);
 								background: BrGlamorousColors secondaryHeaderBackgroundColor;
 								yourself ]);
 		icon: BrGlamorousIcons search asElement;
