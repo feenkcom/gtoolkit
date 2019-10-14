@@ -51,7 +51,7 @@ then
 
   #run smoke tests
   timeout 20 xvfb-run -a ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" &
-  sleep 3
+  sleep 5
   export DISPLAY=$(ps -aux | grep screen -m 1 | awk '{print $12}')
   export XAUTHORITY=$(ps -aux | grep screen -m 1 | awk '{print $19}')
   xwd -display $DISPLAY -id 0x1e4 -out gt.xwd
