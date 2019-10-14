@@ -2,8 +2,7 @@ Class {
 	#name : #GtToolsMenu,
 	#superclass : #BlElement,
 	#classInstVars : [
-		'world',
-		'morphicWorld'
+		'world'
 	],
 	#category : #'GToolkit-World'
 }
@@ -15,12 +14,7 @@ GtToolsMenu class >> cleanUp [
 	world ifNotNil: [
 		world isOpened
 			ifTrue: [ world close ].
-		world := nil ].
-
-	morphicWorld ifNotNil: [
-		morphicWorld isOpened
-			ifTrue: [ morphicWorld close ].
-		morphicWorld := nil ]
+		world := nil ]
 ]
 
 { #category : #'instance creation' }
@@ -31,17 +25,6 @@ GtToolsMenu class >> create [
 	aSpace title: 'Glamorous Toolkit'.
 	aSpace addChild: self new.
 	aSpace extent: 260@500.
-	^ aSpace
-]
-
-{ #category : #'instance creation' }
-GtToolsMenu class >> createMorphicWorld [
-	| aSpace |
-
-	aSpace := BlSpace new.
-	aSpace title: 'Morph World'.
-	aSpace extent: 1280@800.
-	aSpace root: BlMorphicWorldEmbeddingElement new beMain.
 	^ aSpace
 ]
 
@@ -69,21 +52,6 @@ GtToolsMenu class >> openCoderFrom: anElement [
 	aSpace withHalos.
 	
 	anElement showSpace: aSpace
-]
-
-{ #category : #'api - tools' }
-GtToolsMenu class >> openMorphicWorld [
-	<script: 'self openMorphicWorld'>
-
-	morphicWorld
-		ifNotNil: [ morphicWorld isOpened
-			ifTrue: [ morphicWorld close ] ].
-
-	morphicWorld
-		ifNil: [ morphicWorld := self createMorphicWorld ].
-
-	morphicWorld isOpened
-		ifFalse: [ morphicWorld show ]
 ]
 
 { #category : #'api - tools' }
@@ -158,7 +126,7 @@ GtToolsMenu >> initializeElements [
 		label: 'Morphic World';
 		hMatchParent;
 		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self class openMorphicWorld ]).
+		action: [ self openMorphicWorld ]).
 
 	self addChild: (BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
@@ -260,6 +228,14 @@ GtToolsMenu >> openMonitor [
 	aSpace withHalos.
 	
 	self showSpace: aSpace
+]
+
+{ #category : #'api - tools' }
+GtToolsMenu >> openMorphicWorld [
+	self isAttachedToSceneGraph
+		ifFalse: [ ^ self ].
+		
+	self space host openMorphicWorld
 ]
 
 { #category : #'api - tools' }
