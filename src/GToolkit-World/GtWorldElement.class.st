@@ -57,56 +57,69 @@ GtWorldElement >> newActionbar [
 
 { #category : #initialization }
 GtWorldElement >> newSpotterButton [
-
+	| look |
 	self
 		assert: [ spotterDropdown isNil ]
 		description: [ 'Spotter dropdown is already created!' ].
-
-	spotterDropdown := BrDropdown new
-		look: (BrGlamorousDropdownLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
-		toggle: [
-			BrButton new
-				look: (BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook + BrGlamorousDropdownToggleLook);
-				icon: BrGlamorousIcons search asElement;
-				label: 'Search' ];
-		popup: [
-			| model |
-			model := GtSpotter new.
-			model announcer
-				when: GtSpotterExitAnnouncement
-				do: [ :e | spotterDropdown collapse ].
-			GtSpotterElement new
-				spotterModel: model;
-				size: 600@400;
-				margin: (BlInsets all: 1);
-				geometry: (BlRectangle cornerRadius: 4);
-				yourself ];
+	spotterDropdown := BrButton new
+		look:
+			BrGlamorousButtonWithIconLook
+				+
+					(look := BrGlamorousWithDropdownLook
+						stencil: [ | model |
+							model := GtSpotter new.
+							model announcer
+								when: GtSpotterExitAnnouncement
+								do: [ :e | look hide ].
+							BlElement new
+								look:
+									(BrGlamorousDropdownLook new
+										handle:
+											(BrButton new
+												look:
+													BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook
+														- BrGlamorousButtonExteriorLook;
+												icon: BrGlamorousIcons search asElement;
+												yourself);
+										content:
+											(GtSpotterElement new
+												spotterModel: model;
+												size: 600 @ 400;
+												yourself);
+										yourself);
+								background: BrGlamorousColors secondaryHeaderBackgroundColor;
+								yourself ]);
+		icon: BrGlamorousIcons search asElement;
+		label: 'Search';
 		yourself.
-		
 	^ spotterDropdown
 ]
 
 { #category : #initialization }
 GtWorldElement >> newSubSpaceButton [
-	
 	self
 		assert: [ subSpaceDropdown isNil ]
 		description: [ 'Sub-space dropdown is already created!' ].
-	
-	subSpaceDropdown := BrDropdown new
-		look: BrGlamorousDropdownLook new;
-		toggle: [
-			BrButton new
-				look: (BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook + BrGlamorousDropdownToggleLook);
-				icon: BrGlamorousIcons hamburger asElement;
-				label: 'Menu' ];
-		popup: [
-			GtToolsMenu new
-				constraintsDo: [ :c |
-					c vertical fitContent.
-					c horizontal exact: 200 ] ];
+	subSpaceDropdown := BrButton new
+		look:
+			BrGlamorousButtonWithIconLook
+				+
+					(BrGlamorousWithDropdownLook
+						handle: [ BrButton new
+								look:
+									BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook
+										- BrGlamorousButtonExteriorLook;
+								icon: BrGlamorousIcons hamburger asElement;
+								label: 'Menu';
+								yourself ]
+						content: [ GtToolsMenu new
+								constraintsDo: [ :c | 
+									c vertical fitContent.
+									c horizontal exact: 200 ];
+								yourself ]);
+		icon: BrGlamorousIcons hamburger asElement;
+		label: 'Menu';
 		yourself.
-
 	^ subSpaceDropdown
 ]
 
@@ -131,7 +144,7 @@ GtWorldElement >> showSpace: aSpace [
 				exact: 20@12;
 				opacity: 0.5;
 				margin: (BlInsets top: 2 left: 4 bottom: 0 right: 0);
-				look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousButtonWithLabelTooltipLook;
+				look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousWithLabelTooltipLook;
 				icon: BrGlamorousIcons close;
 				label: 'Close';
 				action: [ tabs removeTab: aTab ] ]).
