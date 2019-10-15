@@ -28,8 +28,8 @@ pipeline {
                 script {
                     def newCommitFiles = findFiles(glob: 'newcommits*.txt')
                     for (int i = 0; i < newCommitFiles.size(); ++i) {
-                        env.NEWCOMMITS = readFile( ${newCommitFiles[i]} )
-                        slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n${env.NEWCOMMITS}" )   
+                        env.NEWCOMMITS = readFile(newCommitFiles[i])
+                        slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n ${env.NEWCOMMITS}" )   
                     }
                 } 
             }
