@@ -57,7 +57,7 @@ GtHome >> initializeDocumentation [
 		picture: (GtTitleSlide new
 			titleText: ('One rendering tree' asRopedText glamorousRegularFont
 				fontSize: 30))
-		action: [ :card | self showSpaceWithTitle: 'One rendering tree' with: (GtOneRenderingTree new create) from: card ]).
+		action: [ :card | self showSpaceWithTitle: 'One rendering tree' with: (GtOneRenderingTree new create makeArrowsVisible) from: card ]).
 
 	aContainer addChild: (self 
 		newCardWithTitle:'Pharo 101' 
