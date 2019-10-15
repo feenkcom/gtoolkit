@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh 'git clean -fdx'
                 sh 'chmod +x scripts/build/*.sh'
-                slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' ```(${env.BUILD_URL})```")
             }
         }
         stage('Load latest master commit') {
@@ -28,7 +28,7 @@ pipeline {
                 script {
                     env.NEWCOMMITS = sh(script: 'cat newcommits.txt', , returnStdout: true)
                 }
-                slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n${env.NEWCOMMITS}" )   
+                slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n```${env.NEWCOMMITS}```" )   
             }
         }
         stage('Load latest tag') {
