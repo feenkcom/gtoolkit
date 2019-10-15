@@ -28,7 +28,7 @@ pipeline {
                 script {
                     env.NEWCOMMITS = sh(script: 'cat newcommits.txt', , returnStdout: true)
                 }
-                slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n```${env.NEWCOMMITS}```" )   
+                slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n${env.NEWCOMMITS}" )   
             }
         }
         stage('Load latest tag') {
