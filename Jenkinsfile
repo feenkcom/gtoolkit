@@ -11,13 +11,6 @@ pipeline {
     stages {
         stage('Clean Workspace') {
             steps {
-                script {
-                    def newCommitFiles = findFiles(glob: 'newcommits*.txt')
-                    for (int i = 0; i < newCommitFiles.size(); ++i) {
-                        env.NEWCOMMITS = readFile(newCommitFiles[i].path)
-                        slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n ${env.NEWCOMMITS}" )   
-                    }
-                } 
                 sh 'git clean -fdx'
                 sh 'chmod +x scripts/build/*.sh'
                 slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
@@ -32,7 +25,13 @@ pipeline {
                 sh 'git clean -f -d'
                 sh 'rm -rf pharo-local'
                 sh 'scripts/build/load.sh'
-
+                script {
+                    def newCommitFiles = findFiles(glob: 'newcommits*.txt')
+                    for (int i = 0; i < newCommitFiles.size(); ++i) {
+                        env.NEWCOMMITS = readFile(newCommitFiles[i].path)
+                        slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n ${env.NEWCOMMITS}" )   
+                    }
+                } 
             }
         }
         stage('Load latest tag') {
