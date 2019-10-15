@@ -26,9 +26,12 @@ pipeline {
                 sh 'rm -rf pharo-local'
                 sh 'scripts/build/load.sh'
                 script {
-                    env.NEWCOMMITS = sh(script: 'cat newcommits.txt', , returnStdout: true)
-                }
-                slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n${env.NEWCOMMITS}" )   
+                    def newCommitFiles = findFiles(glob: 'newcommits*.txt')
+                    for (int i = 0; i < newCommitFiles.size(); ++i) {
+                        env.NEWCOMMITS = readFile( ${newCommitFiles[i]} )
+                        slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n${env.NEWCOMMITS}" )   
+                    }
+                } 
             }
         }
         stage('Load latest tag') {
