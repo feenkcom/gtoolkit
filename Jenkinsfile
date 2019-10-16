@@ -111,7 +111,7 @@ pipeline {
         }
 
         regression {
-            slackSend (color: '#FF0000', message: "Regression: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            slackSend (color: '#FFFF00', message: "Regression: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
         }
 
         fixed {
@@ -119,7 +119,7 @@ pipeline {
         }
 
         unstable {
-            slackSend (color: '#FF0000', message: "Unstable: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            slackSend (color: '#FFFF00', message: "Unstable: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
         }
     }
 }
