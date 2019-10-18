@@ -11,10 +11,8 @@ libFolder=libWin64-$TAG_NAME
 mkdir -p $libFolder
 
 
-
-
-curl https://ci.inria.fr/pharo-ci-jenkins2/job/pharo-vm/job/PR-31/7/artifact/build/build/packages/PharoVM-8.1.0-91719c8fc-win64-bin.zip -o PharoVM-8.1.0-91719c8fc-win64-bin.zip
-unzip PharoVM-8.1.0-91719c8fc-win64-bin.zip -d $GTFolder/
+curl https://ci.inria.fr/pharo-ci-jenkins2/job/pharo-vm/view/change-requests/job/PR-42/lastSuccessfulBuild/artifact/build/build/packages/PharoVM-8.1.0-432674b27-win64-bin.zip -o PharoVM-8.1.0-432674b27-win64-bin.zip
+unzip PharoVM-8.1.0-432674b27-win64-bin.zip -d $GTFolder/
 
 # curl https://files.pharo.org/get-files/80/pharo64-win-headless-latest.zip -o pharo64-win-headless-latest.zip
 # unzip pharo64-win-headless-latest.zip -d $GTFolder/
