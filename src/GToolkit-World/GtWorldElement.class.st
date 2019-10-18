@@ -82,7 +82,7 @@ GtWorldElement >> newSpotterButton [
 		description: [ 'Spotter dropdown is already created!' ].
 	spotterDropdown := BrButton new
 		look:
-			BrGlamorousButtonWithIconLook
+			BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook
 				+
 					(look := BrGlamorousWithDropdownLook
 						stencil: [ | model |
@@ -121,7 +121,7 @@ GtWorldElement >> newSubSpaceButton [
 		description: [ 'Sub-space dropdown is already created!' ].
 	subSpaceDropdown := BrButton new
 		look:
-			BrGlamorousButtonWithIconLook
+			BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook
 				+
 					(BrGlamorousWithDropdownLook
 						handle: [ BrButton new
