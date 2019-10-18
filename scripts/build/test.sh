@@ -29,8 +29,8 @@ if [ ! -z "${TAG_NAME}" ]
 then
   #download a pharo headless vm and save the image with GtWorld opened
 
-  wget https://bintray.com/opensmalltalk/vm/download_file?file_path=pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201909292337.tar.gz -O pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201909292337.tar.gz
-  tar xvzf pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201909292337.tar.gz
+  curl https://files.pharo.org/get-files/80/pharo64-linux-headless-latest.zip -o pharo64-linux-headless-latest.zip
+  unzip pharo64-linux-headless-latest.zip  -d phcogspurlinuxmhdls64
 
   # It is important to run headless vm with --interactive flag, otherwise the UI will not open
   # We should also pass --no-quit flag, otherwise the VM will be terminated before the universe ever gets a chance to save an image.
