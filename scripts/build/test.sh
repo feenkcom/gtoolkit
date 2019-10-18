@@ -32,7 +32,10 @@ then
   wget https://bintray.com/opensmalltalk/vm/download_file?file_path=pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201909292337.tar.gz -O pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201909292337.tar.gz
   tar xvzf pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201909292337.tar.gz
 
-  xvfb-run -a  ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval "GtWorld openWithShutdownListener. [ 2 seconds wait. BlHost pickHost universe snapshot: true andQuit: true ] fork."
+  # It is important to run headless vm with --interactive flag, otherwise the UI will not open
+  # It takes significant amount of time to start GtWorld, so let's wait for 10 seconds to make sure everything is initialized
+  # There is not need to run save and quit an image from a forked process, because the save request is deffered though the universe
+  xvfb-run -a  ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --interactive "GtWorld openWithShutdownListener. 10 seconds wait. BlHost pickHost universe snapshot: true andQuit: true"
 fi
 
 set +e
@@ -51,10 +54,11 @@ then
 
   #run smoke tests
   timeout 20 xvfb-run -a ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" --interactive &
-  sleep 5
+  sleep 10
   export DISPLAY=$(ps -aux | grep screen -m 1 | awk '{print $12}')
   export XAUTHORITY=$(ps -aux | grep screen -m 1 | awk '{print $19}')
-  xwd -display $DISPLAY -id 0x1e4 -out gt.xwd
+  # It is enough to specify -root to take a screenshot of the main screen
+  xwd -display $DISPLAY -root -out gt.xwd
   convert -verbose gt.xwd gt.jpg
 
   ls -al
