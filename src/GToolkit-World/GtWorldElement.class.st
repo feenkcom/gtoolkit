@@ -12,35 +12,54 @@ Class {
 { #category : #initialization }
 GtWorldElement >> initialize [
 	super initialize.
-
 	tabs := BrTabGroup new.
 	tabs look: BrGlamorousSpaceTabGroupLook new.
 	tabs actionbarStencil: [ self newActionbar ].
-	
-	tabs addTab: (BrTab new
-		vExact: 36;
-		look: BrGlamorousSpaceTabWithIconLook;
-		icon: BrGlamorousIcons gt asElement;
-		label: 'Home';
-		stencil: [ GtHome new asScrollableElement background: Color white]).
-	
-	self addShortcut: (BlShortcut new
-		repeatable: false;
-		combination: BlKeyCombination shiftReturn;
-		action: [ spotterDropdown ifNotNil: #expand ]).
-	self addShortcut: (BlShortcut new
-		repeatable: false;
-		combination: BlKeyCombination primaryT;
-		action: [ subSpaceDropdown ifNotNil: #expand ]).
-	self when: GtSpawnSpotter do: [:e | 
-		e consumed: true.
-		spotterDropdown ifNotNil: #expand ].
-		
+	tabs
+		addTab:
+			(BrTab new
+				vExact: 36;
+				look: BrGlamorousSpaceTabWithIconLook;
+				icon: BrGlamorousIcons gt asElement;
+				label: 'Home';
+				stencil: [ GtHome new asScrollableElement background: Color white ]).
+	self
+		addShortcut:
+			(BlShortcut new
+				repeatable: false;
+				combination: BlKeyCombination shiftReturn;
+				action: [ spotterDropdown
+						ifNotNil: [ spotterDropdown
+								dispatchEvent:
+									(BrDropdownShowWish new
+										anchor: spotterDropdown;
+										yourself) ] ]).
+	self
+		addShortcut:
+			(BlShortcut new
+				repeatable: false;
+				combination: BlKeyCombination primaryT;
+				action: [ subSpaceDropdown
+						ifNotNil: [ subSpaceDropdown
+								dispatchEvent:
+									(BrDropdownShowWish new
+										anchor: subSpaceDropdown;
+										yourself) ] ]).
+	self
+		when: GtSpawnSpotter
+		do: [ :e | 
+			e consumed: true.
+			spotterDropdown
+				ifNotNil: [ spotterDropdown
+						dispatchEvent:
+							(BrDropdownShowWish new
+								anchor: spotterDropdown;
+								yourself) ] ].
 	self addChild: tabs.
-	
-	self constraintsDo: [ :c |
-		c horizontal matchParent.
-		c vertical matchParent ]
+	self
+		constraintsDo: [ :c | 
+			c horizontal matchParent.
+			c vertical matchParent ]
 ]
 
 { #category : #'instance creation' }
