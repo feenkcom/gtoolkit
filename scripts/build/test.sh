@@ -29,8 +29,8 @@ if [ ! -z "${TAG_NAME}" ]
 then
   #download a pharo headless vm and save the image with GtWorld opened
 
-  curl https://files.pharo.org/get-files/80/pharo64-linux-headless-latest.zip -o pharo64-linux-headless-latest.zip 
-  unzip pharo64-linux-headless-latest.zip  -d phcogspurlinuxmhdls64
+  wget https://bintray.com/opensmalltalk/vm/download_file?file_path=pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201909292337.tar.gz -O pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201909292337.tar.gz
+  tar xvzf pharo.cog.spur-cmake-minhdls_linux64x64_itimer_201909292337.tar.gz
 
   xvfb-run -a  ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval "GtWorld openWithShutdownListener. [ 2 seconds wait. BlHost pickHost universe snapshot: true andQuit: true ] fork."
 fi
