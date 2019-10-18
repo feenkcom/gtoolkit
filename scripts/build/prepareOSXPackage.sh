@@ -12,8 +12,8 @@ mkdir -p $libFolder
 # curl http://files.pharo.org/get-files/80/pharo64-mac-headless-latest.zip -o pharo64-mac-headless-latest.zip
 # unzip pharo64-mac-headless-latest.zip -d $GTFolder/
 
-curl https://ci.inria.fr/pharo-ci-jenkins2/job/pharo-vm/view/change-requests/job/PR-42/lastSuccessfulBuild/artifact/build/build/packages/PharoVM-8.1.0-432674b-mac64-bin.zip -o PharoVM-8.1.0-432674b-mac64-bin.zip
-unzip PharoVM-8.1.0-432674b-mac64-bin.zip -d $GTFolder/
+curl https://dl.feenk.com/gtvm/PharoVM-8.1.0-4a6a3adc5-mac64-bin.zip -o PharoVM-8.1.0-4a6a3adc5-mac64-bin.zip
+unzip PharoVM-8.1.0-4a6a3adc5-mac64-bin.zip -d $GTFolder/
 
 curl https://dl.feenk.com/Glutin/osx/development/x86_64/libGlutin.dylib -o libGlutin.dylib
 cp libGlutin.dylib $GTFolder
