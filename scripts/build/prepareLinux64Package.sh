@@ -11,7 +11,7 @@ mkdir -p $libFolder
 # curl https://files.pharo.org/get-files/80/pharo64-linux-headless-latest.zip -o pharo64-linux-headless-latest.zip 
 # unzip pharo64-linux-headless-latest.zip  -d $GTFolder/
 
-curl https://jenkins.feenk.com/job/feenkcom/job/opensmalltalk-vm/job/gt-headless/6/artifact/build/build/packages/PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip -o PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip
+curl https://dl.feenk.com/gtvm/PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip -o PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip
 unzip PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip -d $GTFolder/
 
 curl https://dl.feenk.com/Glutin/linux/development/x86_64/libGlutin.so -o libGlutin.so
