@@ -14,7 +14,7 @@ mkdir -p $libFolder
 curl https://dl.feenk.com/gtvm/PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip -o PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip
 unzip PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip -d $GTFolder/
 
-function package_binary {
+package_binary() {
 	curl https://dl.feenk.com/$1/linux/development/x86_64/lib$1.so -o lib$1.so
 	cp lib$1.so $GTFolder
 	cp lib$1.so $libFolder

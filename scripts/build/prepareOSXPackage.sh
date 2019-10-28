@@ -17,11 +17,11 @@ cp -rv GToolkit-64*/* $GTFolder/GToolkit.app/Contents/MacOS/
 rm -rf $GTFolder/GToolkit.app/Contents/MacOS/pharo-local
 
 
-function package_binary {
+package_binary() {
 	curl https://dl.feenk.com/$1/osx/development/x86_64/lib$1.dylib -o lib$1.dylib
 	cp lib$1.dylib $GTFolder/GToolkit.app/Contents/MacOS/
 	cp lib$1.dylib $libFolder
-} 
+}
 
 package_binary Boxer
 package_binary Glutin
