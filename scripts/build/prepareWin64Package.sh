@@ -23,8 +23,8 @@ unzip PharoVM-8.1.0-4a6a3adc5-win64-bin.zip -d $GTFolder/
 
 package_binary() {
 	curl https://dl.feenk.com/$1/windows/development/x86_64/lib$1.dll -o lib$1.dll
-	cp lib$1.so $GTFolder
-	cp lib$1.so $libFolder
+	cp lib$1.dll $GTFolder
+	cp lib$1.dll $libFolder
 }
 
 package_extra_moz2d_binary() {
