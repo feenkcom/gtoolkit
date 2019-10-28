@@ -14,18 +14,16 @@ mkdir -p $libFolder
 curl https://dl.feenk.com/gtvm/PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip -o PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip
 unzip PharoVM-8.1.0-4a6a3adc5-linux64-bin.zip -d $GTFolder/
 
-curl https://dl.feenk.com/Glutin/linux/development/x86_64/libGlutin.so -o libGlutin.so
-cp libGlutin.so $GTFolder
-cp libGlutin.so $libFolder
+function package_binary {
+	curl https://dl.feenk.com/$1/linux/development/x86_64/lib$1.so -o lib$1.so
+	cp lib$1.so $GTFolder
+	cp lib$1.so $libFolder
+}
 
-curl https://dl.feenk.com/Moz2D/linux/development/x86_64/libMoz2D.so -o libMoz2D.so
-cp libMoz2D.so $GTFolder
-cp libMoz2D.so $libFolder
-
-curl https://dl.feenk.com/Clipboard/linux/development/x86_64/libClipboard.so -o libClipboard.so
-cp libClipboard.so $GTFolder
-cp libClipboard.so $libFolder
-
+package_binary Boxer
+package_binary Glutin
+package_binary Moz2D
+package_binary Clipboard
 
 zip -qyr $libFolder.zip $libFolder
 zip -qyr $GTFolder.zip $GTFolder

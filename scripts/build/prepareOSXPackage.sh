@@ -16,17 +16,17 @@ unzip PharoVM-8.1.0-4a6a3adc5-mac64-bin.zip -d $GTFolder/
 cp -rv GToolkit-64*/* $GTFolder/GToolkit.app/Contents/MacOS/
 rm -rf $GTFolder/GToolkit.app/Contents/MacOS/pharo-local
 
-curl https://dl.feenk.com/Glutin/osx/development/x86_64/libGlutin.dylib -o libGlutin.dylib
-cp libGlutin.dylib $GTFolder/GToolkit.app/Contents/MacOS/
-cp libGlutin.dylib $libFolder
 
-curl https://dl.feenk.com/Moz2D/osx/development/x86_64/libMoz2D.dylib -o libMoz2D.dylib
-cp libMoz2D.dylib $GTFolder/GToolkit.app/Contents/MacOS/
-cp libMoz2D.dylib $libFolder
+function package_binary {
+	curl https://dl.feenk.com/$1/osx/development/x86_64/lib$1.dylib -o lib$1.dylib
+	cp lib$1.dylib $GTFolder/GToolkit.app/Contents/MacOS/
+	cp lib$1.dylib $libFolder
+} 
 
-curl https://dl.feenk.com/Clipboard/osx/development/x86_64/libClipboard.dylib -o libClipboard.dylib
-cp libClipboard.dylib $GTFolder/GToolkit.app/Contents/MacOS/
-cp libClipboard.dylib $libFolder
+package_binary Boxer
+package_binary Glutin
+package_binary Moz2D
+package_binary Clipboard
 
 zip -qyr $GTFolder.zip $GTFolder
 zip -qyr $libFolder.zip $libFolder
