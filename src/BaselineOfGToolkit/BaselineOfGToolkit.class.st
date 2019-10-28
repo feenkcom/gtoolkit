@@ -161,6 +161,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
 				spec repository: 'github://feenkcom/gt4smacc/src' ];
+			baseline: 'GToolkit4XMLSupport' with: [
+				spec repository: 'github://feenkcom/gt4xmlsupport/src' ];				
 			baseline: 'GToolkit4PetitParser2' with: [
 				spec repository: 'github://feenkcom/gt4petitparser2/src' ];
 			baseline: 'GToolkit4Famix3' with: [ 
