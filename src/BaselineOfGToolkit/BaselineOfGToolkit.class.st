@@ -166,7 +166,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkit4PetitParser2' with: [
 				spec repository: 'github://feenkcom/gt4petitparser2/src' ];
 			baseline: 'GToolkit4Famix3' with: [ 
-				spec repository: 'github://feenkcom/gt4famix3/src' ].
+				spec repository: 'github://feenkcom/gt4famix3/src' ];
+			baseline: 'GToolkitRemote' with: [ 
+				spec repository: 'github://feenkcom/gtoolkit-remote/src' ].
 		spec package: 'GToolkit-Scenery'.
 		spec package: 'GToolkit-Monitor'.
 		spec package: 'GToolkit-Constraints' with: [ 
