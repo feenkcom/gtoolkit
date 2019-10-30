@@ -126,37 +126,37 @@ BaselineOfGToolkit >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitClipboard' with: [
-				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.6.14/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.6.15/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.196/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.197/src' ];
 			baseline: 'GToolkitPresenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.87/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.88/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.7.287/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.7.288/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.147/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.148/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.166/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.167/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.177/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.178/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.156/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.157/src' ];
 			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder:v0.7.163/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-coder:v0.7.164/src' ];
 			baseline: 'GToolkitSpotter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.149/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.150/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.142/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.143/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.142/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.143/src' ];
 			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.142/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.143/src' ];
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.142/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.143/src' ];
 			baseline: 'GToolkitPharo101' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.142/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.143/src' ];
 			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.23/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.24/src' ];
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.7.2/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
