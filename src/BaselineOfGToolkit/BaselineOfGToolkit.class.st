@@ -122,6 +122,7 @@ BaselineOfGToolkit class >> itself [
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>
 	spec for: #'common' do: [
+		
 		spec preLoadDoIt: #'preLoadGToolkit:'.
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
