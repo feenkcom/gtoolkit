@@ -6,7 +6,7 @@ Class {
 
 { #category : #'api - instantiation' }
 GtPlaygroundStencil >> create [
-	^ GtInspector createOnPlayBook: GtPlayBook newDefault.
+	^ GtInspector withToolOn: GtPlayBook newDefault
 ]
 
 { #category : #accessing }
