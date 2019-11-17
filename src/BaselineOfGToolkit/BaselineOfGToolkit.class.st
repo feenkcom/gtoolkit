@@ -132,7 +132,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.116/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.7.326/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.7.327/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.175/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -158,7 +158,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitReleaser' with: [
 				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.32/src' ];
 			baseline: 'GToolkitConstrainer' with: [
-				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.7.3/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.7.4/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
 				spec repository: 'github://feenkcom/gt4smacc:v0.7.39/src' ];
 			baseline: 'GToolkit4XMLSupport' with: [
