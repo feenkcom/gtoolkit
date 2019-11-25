@@ -27,6 +27,7 @@ package_binary Boxer
 package_binary Glutin
 package_binary Moz2D
 package_binary Clipboard
+package_binary Skia
 
 zip -qyr $GTFolder.zip $GTFolder
 zip -qyr $libFolder.zip $libFolder
