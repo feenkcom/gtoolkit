@@ -131,7 +131,7 @@ GtHome >> initializeTools [
 { #category : #'instance creation' }
 GtHome >> newCard [
 	^ BrCard new
-		look: (BrShadowLook new) +
+		look: "(BrShadowLook new) +"
 			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e padding: (BlInsets all: 10)]) +
 			BrIconLook new +
 			(BrGlamorousButtonExteriorLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
@@ -154,7 +154,10 @@ GtHome >> newCardWithTitle: aTitle description: aDescription picture: anElementO
 				c vertical matchParent ];
 			layout: BlLinearLayout new;
 			addChild: (anElementOrStencil asElement background: Color white; size: 300@300; asScalableElement);
-			margin: (BlInsets all: 1);
+			margin: (BlInsets all: 10);
+			background: Color white;
+			geometry: (BlRectangle cornerRadius: 4);
+			look:" BrGlamorousButtonExteriorLook new + "BrShadowLook new;
 "			border: (BlBorder paint: BrGlamorousColors defaultButtonBorderColor); "
 			preventMeAndChildrenMouseEvents);
 		action: aBlock
@@ -174,7 +177,7 @@ GtHome >> newCardsContainer [
 GtHome >> newHeaderLabel: aString [
 
 	^ BrLabel new
-		look: (BrGlamorousLabelLook new foreground: Color gray; fontSize: 16);
+		look: (BrGlamorousLabelLook new foreground: Color black; fontSize: 20);
 		padding: (BlInsets left: (self spaceGap*2));
 		margin: (BlInsets top: self spaceGap*2 bottom: 0);
 		text: aString
