@@ -13,13 +13,13 @@ mkdir -p $libFolder
 curl https://dl.feenk.com/gtvm/PharoVM-8.1.0-4a6a3adc5-mac64-bin.zip -o PharoVM-8.1.0-4a6a3adc5-mac64-bin.zip
 unzip PharoVM-8.1.0-4a6a3adc5-mac64-bin.zip -d $GTFolder/
 
-cp -rv GToolkit-64*/* $GTFolder/GToolkit.app/Contents/MacOS/
-rm -rf $GTFolder/GToolkit.app/Contents/MacOS/pharo-local
+cp -rv GToolkit-64*/* $GTFolder
+rm -rf $GTFolder/pharo-local
 
 
 package_binary() {
 	curl https://dl.feenk.com/$1/osx/development/x86_64/lib$1.dylib -o lib$1.dylib
-	cp lib$1.dylib $GTFolder/GToolkit.app/Contents/MacOS/
+	cp lib$1.dylib $GTFolder
 	cp lib$1.dylib $libFolder
 }
 
