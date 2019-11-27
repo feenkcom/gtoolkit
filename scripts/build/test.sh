@@ -34,9 +34,9 @@ then
 
   # It is important to run headless vm with --interactive flag, otherwise the UI will not open
   # We should also pass --no-quit flag, otherwise the VM will be terminated before the universe ever gets a chance to save an image.
-  # It takes significant amount of time to start GtWorld, so let's wait for 10 seconds to make sure everything is initialized
+  # It takes significant amount of time to start GtWorld, so let's wait for 30 seconds to make sure everything is initialized
   # There is not need to run save and quit an image from a forked process, because the save request is deffered though the universe
-  xvfb-run -a  ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --interactive --no-quit "GtWorld openWithShutdownListener. 10 seconds wait. BlHost pickHost universe snapshot: true andQuit: true"
+  xvfb-run -a  ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --interactive --no-quit "GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true"
 fi
 
 set +e
