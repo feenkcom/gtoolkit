@@ -1,3 +1,9 @@
+
+IceCredentialsProvider useCustomSsh: true.
+IceCredentialsProvider sshCredentials
+	publicKey: '/data/jenkins/.ssh/id_rsa.pub';
+	privateKey: '/data/jenkins/.ssh/id_rsa'.
+	
 EpMonitor current disable.
 Metacello new
   baseline: 'GToolkit';
