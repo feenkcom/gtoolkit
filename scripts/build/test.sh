@@ -54,8 +54,8 @@ then
   set -e
 
   #run smoke tests
-  timeout 45 xvfb-run -a ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" --interactive &
-  sleep 30
+  timeout 60 xvfb-run -a ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" --interactive &
+  sleep 50
   export DISPLAY=$(ps -aux | grep screen -m 1 | awk '{print $12}')
   export XAUTHORITY=$(ps -aux | grep screen -m 1 | awk '{print $19}')
   # It is enough to specify -root to take a screenshot of the main screen
