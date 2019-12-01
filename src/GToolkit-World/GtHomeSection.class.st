@@ -9,24 +9,31 @@ Class {
 
 { #category : #'instance creation' }
 GtHomeSection >> newCard [
-	^ BrCard new
-		look: "(BrShadowLook new) +"
-			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e padding: (BlInsets all: 10)]) +
-			BrIconLook new +
-			(BrGlamorousButtonExteriorLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
-		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
-		geometry: (BlRectangle cornerRadius: 4);
-		constraintsDo: [ :c |
-			c horizontal exact: 300.
-			c vertical exact: 150 ];
-		margin: (BlInsets top: self spaceGap * 2 left: self spaceGap * 2 bottom: self spaceGap * 2 right: self spaceGap * 2)
+	^ self newCardWithoutIcon
+		addLook: BrIconLook new;
+		yourself
+]
+
+{ #category : #initialization }
+GtHomeSection >> newCardWithTitle: aTitle description: aDescription action: aBlock [ 
+	| cardElement |	
+	cardElement := self newCardWithoutIcon
+		title: aTitle;
+		description: ((aTitle asRopedText fontSize: 18) 
+			append: ((String cr, String cr) asRopedText); 
+			append: (aDescription asRopedText "foreground: Color gray; "fontSize: 14)).
+	cardElement action: aBlock.
+		
+	^ cardElement
 ]
 
 { #category : #initialization }
 GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anElementOrStencil action: aBlock [ 	
 	^ self newCard
 		title: aTitle;
-		description: ((aTitle asRopedText fontSize: 18) append: ((String cr, String cr) asRopedText); append: (aDescription asRopedText "foreground: Color gray; "fontSize: 14));
+		description: ((aTitle asRopedText fontSize: 18) 
+			append: ((String cr, String cr) asRopedText); 
+			append: (aDescription asRopedText "foreground: Color gray; "fontSize: 14));
 		picture: (BlElement new 
 			constraintsDo: [ :c |
 				c horizontal matchParent.
@@ -40,6 +47,20 @@ GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anE
 "			border: (BlBorder paint: BrGlamorousColors defaultButtonBorderColor); "
 			preventMeAndChildrenMouseEvents);
 		action: aBlock
+]
+
+{ #category : #'instance creation' }
+GtHomeSection >> newCardWithoutIcon [
+	^ BrCard new
+		look: "(BrShadowLook new) +"
+			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e padding: (BlInsets all: 10)]) +
+			(BrGlamorousButtonExteriorLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
+		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
+		geometry: (BlRectangle cornerRadius: 4);
+		constraintsDo: [ :c |
+			c horizontal exact: 300.
+			c vertical exact: 150 ];
+		margin: (BlInsets top: self spaceGap * 2 left: self spaceGap * 2 bottom: self spaceGap * 2 right: self spaceGap * 2)
 ]
 
 { #category : #'instance creation' }
