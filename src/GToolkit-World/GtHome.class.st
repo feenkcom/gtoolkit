@@ -5,6 +5,35 @@ Class {
 }
 
 { #category : #initialization }
+GtHome >> collectHomeSectionStencils [
+	^ GtHomeSectionsCollector new
+		fromObject: self;
+		collect
+]
+
+{ #category : #sections }
+GtHome >> documentationSection [
+	<gtHomeSection>
+	^ GtHomeDocumentationSection new
+		priority: 20
+]
+
+{ #category : #sections }
+GtHome >> externalLinksSection [
+	<gtHomeSection>
+	^ GtHomeExternalLinksSection new
+		priority: 30
+]
+
+{ #category : #ui }
+GtHome >> gtViewHomeSectionsFor: aView [
+	<gtView>
+	^ aView list 
+		title: 'Section Stencils';
+		items: [ self collectHomeSectionStencils ]
+]
+
+{ #category : #initialization }
 GtHome >> initialize [
 	super initialize.
 	
@@ -16,27 +45,25 @@ GtHome >> initialize [
 	self layout: BlLinearLayout vertical.
 	self padding: (BlInsets all: self spaceGap).
 	
-	self initializeTools.
-	self initializeDocumentation.
-	self initializeExternalLinks
+	self initializeSections
 ]
 
 { #category : #initialization }
-GtHome >> initializeDocumentation [
-	self addChild: GtHomeDocumentationSection new asElement
-]
-
-{ #category : #initialization }
-GtHome >> initializeExternalLinks [
-	^ GtHomeExternalLinksSection new asElement
-]
-
-{ #category : #initialization }
-GtHome >> initializeTools [
-	self addChild: GtHomeToolsSection new asElement
+GtHome >> initializeSections [
+	| homeSectionStencils |
+	homeSectionStencils := self collectHomeSectionStencils.
+	homeSectionStencils do: [ :aHomeSectionStencil |
+		self addChild: aHomeSectionStencil asElement ]
 ]
 
 { #category : #initialization }
 GtHome >> spaceGap [
 	^ 10
+]
+
+{ #category : #sections }
+GtHome >> toolsSection [
+	<gtHomeSection>
+	^ GtHomeToolsSection new
+		priority: 10
 ]
