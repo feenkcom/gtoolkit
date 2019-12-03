@@ -24,13 +24,16 @@ cp -Rv gt-extra "${ARTIFACT_DIR}/"
 export build_zip="${ARTIFACT_DIR}.zip"
 zip -qr "$build_zip" "$ARTIFACT_DIR"
 
+
+  curl https://files.pharo.org/get-files/80/pharo64-linux-headless-latest.zip -o pharo64-linux-headless-latest.zip
+  unzip pharo64-linux-headless-latest.zip  -d phcogspurlinuxmhdls64
+
 #if we are in a tag build, then save the image with GtWorld opened
 if [ ! -z "${TAG_NAME}" ]
 then
   #download a pharo headless vm and save the image with GtWorld opened
 
-  curl https://files.pharo.org/get-files/80/pharo64-linux-headless-latest.zip -o pharo64-linux-headless-latest.zip
-  unzip pharo64-linux-headless-latest.zip  -d phcogspurlinuxmhdls64
+
 
   # It is important to run headless vm with --interactive flag, otherwise the UI will not open
   # We should also pass --no-quit flag, otherwise the VM will be terminated before the universe ever gets a chance to save an image.
@@ -43,8 +46,8 @@ set +e
 #run unit tests
 git config --global user.name "Jenkins"
 git config --global user.email "jenkins@feenk.com"
-xvfb-run -a -e /dev/stdout ./phcogspurlinuxmhdls64/pharo Pharo.image examples --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Starta-.*' 2>&1
-xvfb-run -a -e /dev/stdout ./phcogspurlinuxmhdls64/pharo Pharo.image gtexportreport --report=GtGtoolkitArchitecturalReport
+xvfb-run -a -e /dev/stdout ./phcogspurlinuxmhdls64/pharo Pharo.image examples --interactive --no-quit --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Starta-.*' 2>&1
+xvfb-run -a -e /dev/stdout ./phcogspurlinuxmhdls64/pharo Pharo.image gtexportreport --interactive --no-quit --report=GtGtoolkitArchitecturalReport
 
 
 
