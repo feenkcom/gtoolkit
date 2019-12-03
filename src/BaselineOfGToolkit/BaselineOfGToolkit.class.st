@@ -10,7 +10,7 @@ Glamorous Toolkit has cool widgets and fancy code analyses, yet the emphasis is 
 
 !!Project organization
 
-Glamorous Toolkit is made out of independent, yet combinable, components. The picture below provides an overview of these components and their interdependencies. The map is navigable. Click on each component to learn more about it.
+Glamorous Toolkit is made out of ${example:BaselineOfGToolkit class>>#withAllContainedProjects|label=#size}$ distinct, yet combinable, components. The picture below provides an overview of these components and their interdependencies. The map is navigable. Click on each component to learn more about it.
 
 ${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:||noCode=|previewHeight=300}$
 
@@ -116,6 +116,12 @@ BaselineOfGToolkit class >> gtGtMapFor: aView [
 BaselineOfGToolkit class >> itself [
 	<gtExample>
 	^ self
+]
+
+{ #category : #ui }
+BaselineOfGToolkit class >> withAllContainedProjects [
+	<gtExample>
+	^ (self project version withDeepCollect: [ :each | each projects collect: #version ] as: Set) sorted: [ :a :b | a name < b name ]
 ]
 
 { #category : #baseline }
