@@ -24,6 +24,9 @@ cp -Rv gt-extra "${ARTIFACT_DIR}/"
 export build_zip="${ARTIFACT_DIR}.zip"
 zip -qr "$build_zip" "$ARTIFACT_DIR"
 
+
+
+
 #if we are in a tag build, then save the image with GtWorld opened
 if [ ! -z "${TAG_NAME}" ]
 then
@@ -40,11 +43,17 @@ then
 fi
 
 set +e
+
+mkdir normalvm
+cd normalvm
+curl https://get.pharo.org/64/vm80 | bash
+cd -
+
 #run unit tests
 git config --global user.name "Jenkins"
 git config --global user.email "jenkins@feenk.com"
-xvfb-run -a -e /dev/stdout ./pharo Pharo.image examples --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Starta-.*' 2>&1
-xvfb-run -a -e /dev/stdout ./pharo Pharo.image gtexportreport --report=GtGtoolkitArchitecturalReport
+xvfb-run -a -e /dev/stdout ./normalvm/pharo Pharo.image examples --interactive --no-quit --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Starta-.*' 2>&1
+xvfb-run -a -e /dev/stdout ./normalvm/pharo Pharo.image gtexportreport --interactive --no-quit --report=GtGtoolkitArchitecturalReport
 
 
 
@@ -55,7 +64,7 @@ then
 
   #run smoke tests
   timeout 60 xvfb-run -a ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" --interactive &
-  sleep 30
+  sleep 50
   export DISPLAY=$(ps -aux | grep screen -m 1 | awk '{print $12}')
   export XAUTHORITY=$(ps -aux | grep screen -m 1 | awk '{print $19}')
   # It is enough to specify -root to take a screenshot of the main screen
