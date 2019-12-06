@@ -103,23 +103,23 @@ pipeline {
     }
     post {
         success {
-            slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) https://dl.feenk.com/gt/gt.jpg" )   
+            slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' ${env.BUILD_URL} https://dl.feenk.com/gt/gt.jpg" )   
         }
 
         failure {
-            slackSend (color: '#FF0000', message: "Failed: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            slackSend (color: '#FF0000', message: "Failed: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' ${env.BUILD_URL}consoleFull")
         }
 
         regression {
-            slackSend (color: '#FFFF00', message: "Regression: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            slackSend (color: '#FFFF00', message: "Regression: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' ${env.BUILD_URL}testReport")
         }
 
         fixed {
-            slackSend (color: '#00FF00', message: "Fixed: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            slackSend (color: '#00FF00', message: "Fixed: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' ${env.BUILD_URL}")
         }
 
         unstable {
-            slackSend (color: '#FFFF00', message: "Unstable: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            slackSend (color: '#FFFF00', message: "Unstable: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' ${env.BUILD_URL}testReport")
         }
     }
 }
