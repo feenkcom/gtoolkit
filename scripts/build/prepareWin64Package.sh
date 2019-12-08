@@ -36,6 +36,7 @@ package_extra_moz2d_binary() {
 package_binary Boxer
 package_binary Gleam
 package_binary Glutin
+package_binary Skia
 package_binary Moz2D
 package_extra_moz2d_binary msvcp140
 package_extra_moz2d_binary vcruntime140
