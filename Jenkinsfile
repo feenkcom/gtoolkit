@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'unix' }
     parameters { string(name: 'FORCED_TAG_NAME', defaultValue: '', description: 'params.FORCED_TAG_NAME env variable') }
     options { 
         buildDiscarder(logRotator(numToKeepStr: '50'))
@@ -10,6 +10,7 @@ pipeline {
     }
     stages {
         stage('Clean Workspace') {
+            
             steps {
                 sh 'git clean -fdx'
                 sh 'chmod +x scripts/build/*.sh'
@@ -17,6 +18,7 @@ pipeline {
             }
         }
         stage('Load latest master commit') {
+            
             when { expression {
                     env.BRANCH_NAME.toString().equals('master')
                 }
@@ -35,6 +37,7 @@ pipeline {
             }
         }
         stage('Load latest tag') {
+            
             when { expression {
                     env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
                 }
@@ -47,6 +50,7 @@ pipeline {
         }
 
         stage('Run examples') {
+            
             steps {
                 sh 'scripts/build/test.sh'
                 junit '*.xml'
@@ -58,6 +62,7 @@ pipeline {
         }
 
         stage('Run releaser') { 
+            
             when { expression {
                     env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (currentBuild.result == null || currentBuild.result == 'SUCCESS')
                 }
@@ -68,6 +73,7 @@ pipeline {
         }
 
         stage('Prepare deploy packages') {
+            
             when {
               expression {
                 (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.TAG_NAME.toString().startsWith("v")
@@ -79,6 +85,7 @@ pipeline {
         }
 
         stage('Upload packages') {
+            
             when {
               expression {
                 (currentBuild.result == null || currentBuild.result == 'SUCCESS') 
