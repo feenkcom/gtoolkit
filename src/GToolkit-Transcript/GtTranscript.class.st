@@ -46,6 +46,8 @@ GtTranscript >> << anObject [
 
 { #category : #'announcement handling' }
 GtTranscript >> announceInsertString: aString withAttributes: attributes [
+	self announcer numberOfSubscriptions isZero ifTrue: [ 
+		self insertString: aString withAttributes: attributes ].
 	self announcer announce: (GtTranscriptInsertStringAnnouncement new 
 		editor: self editor;
 		text: self text;
@@ -103,6 +105,16 @@ GtTranscript >> initialize [
 	text := '' asRopedText.
 	editor := BrTextEditor new.
 	editor text: text
+]
+
+{ #category : #'private - actions' }
+GtTranscript >> insertString: aString withAttributes: aCollection [ 
+	GtTranscriptInsertStringCommand new
+		string: aString;
+		attributes: aCollection;
+		text: self text;
+		editor: self editor;
+		execute.
 ]
 
 { #category : #streaming }

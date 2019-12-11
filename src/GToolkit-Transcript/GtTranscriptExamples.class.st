@@ -137,14 +137,18 @@ GtTranscriptExamples >> error [
 	^ transcript
 ]
 
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> feenkString [
+	<gtExample>
+	^ 'How do you feenk today?'
+]
+
 { #category : #examples }
 GtTranscriptExamples >> objectShower [
 	<gtExample>
-	| geometries transcript loop |
+	| transcript loop |
 
 	transcript := GtTranscript new.
-
-	geometries := { BlEllipse . BlRectangle }.
 
 	loop := [
 		| index |
@@ -203,18 +207,36 @@ GtTranscriptExamples >> scripter [
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> scripterShowString [
 	<gtExample>
-	| aScripter aText |
+	| aScripter |
 	aScripter := self scripterWithTranscript.
-	aText := 'How do you feenk today?'.
 	aScripter substep: 'Write with #show:' do: [ :aStep |
 		aStep model
-			label: aText;
-			do: [ :aTranscript | aTranscript show: aText ].
+			label: self feenkString;
+			do: [ :aTranscript | aTranscript show: self feenkString ].
 		aStep wait forEmptySpaceTaskQueue.
 		aStep check
 			label: 'Check Transcript Content';
-			satisfies: [ :aTranscript | aTranscript text asString = aText ];
+			satisfies: [ :aTranscript | aTranscript text asString = self feenkString ];
 			onModel ].
+	aScripter syncContinue.
+	^ aScripter
+]
+
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI [
+	<gtExample>
+	| aScripter aTranscript |
+	aScripter := self scripter.
+	aTranscript := self transcript.
+	aScripter model: aTranscript.
+	aScripter substep: 'Write with #show:' do: [ :aStep |
+		aStep model
+			label: self feenkString;
+			do: [ :theTranscript | theTranscript show: self feenkString ].
+		aStep check
+			label: 'Check Transcript Content';
+			satisfies: [ :theTranscript | theTranscript text asString = self feenkString ];
+			onModel. ].
 	aScripter syncContinue.
 	^ aScripter
 ]
