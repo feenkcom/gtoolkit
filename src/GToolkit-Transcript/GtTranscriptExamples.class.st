@@ -230,7 +230,7 @@ GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI [
 	aScripter substep: 'Write with #show:' do: [ :aStep |
 		aStep set model: [ self transcript ].
 		aStep model
-			label: self feenkString;
+			label: 'Show: ', self feenkString;
 			do: [ :theTranscript | theTranscript show: self feenkString ].
 		aStep check
 			label: 'Check Transcript Content';
