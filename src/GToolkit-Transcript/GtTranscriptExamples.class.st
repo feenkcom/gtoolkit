@@ -119,6 +119,12 @@ GtTranscriptExamples >> completeAPI [
 	^ transcript 
 ]
 
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> defaultSpaceExtent [
+	<gtExample>
+	^ 400@640
+]
+
 { #category : #examples }
 GtTranscriptExamples >> error [
 	<gtExample>
@@ -131,14 +137,18 @@ GtTranscriptExamples >> error [
 	^ transcript
 ]
 
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> feenkString [
+	<gtExample>
+	^ 'How do you feenk today?'
+]
+
 { #category : #examples }
 GtTranscriptExamples >> objectShower [
 	<gtExample>
-	| geometries transcript loop |
+	| transcript loop |
 
 	transcript := GtTranscript new.
-
-	geometries := { BlEllipse . BlRectangle }.
 
 	loop := [
 		| index |
@@ -186,6 +196,61 @@ GtTranscriptExamples >> randomElement [
 		background: color;
 		"to allow transcript to log measured size"
 		forceLayout
+]
+
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> scripter [
+	<gtExample>
+	^ BlDevScripter new
+]
+
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> scripterShowString [
+	<gtExample>
+	| aScripter |
+	aScripter := self scripterWithTranscript.
+	aScripter substep: 'Write with #show:' do: [ :aStep |
+		aStep model
+			label: self feenkString;
+			do: [ :aTranscript | aTranscript show: self feenkString ].
+		aStep wait forEmptySpaceTaskQueue.
+		aStep check
+			label: 'Check Transcript Content';
+			satisfies: [ :aTranscript | aTranscript text asString = self feenkString ];
+			onModel ].
+	aScripter syncContinue.
+	^ aScripter
+]
+
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI [
+	<gtExample>
+	<noTest>
+	"I need to redesign targets logic"
+	| aScripter |
+	aScripter := self scripter.
+	aScripter substep: 'Write with #show:' do: [ :aStep |
+		aStep set model: [ :theScripter | self transcript ].
+		aStep model
+			label: self feenkString;
+			do: [ :theTranscript | theTranscript show: self feenkString ].
+		aStep check model "same as onModel?"
+			label: 'Check Transcript Content';
+			satisfies: [ :theTranscript | theTranscript text asString = self feenkString ];
+			onModel. ].
+	aScripter syncContinue.
+	^ aScripter
+]
+
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> scripterWithTranscript [
+	<gtExample>
+	| aTranscript |
+	aTranscript := self transcript.
+	^ self scripter 
+		model: aTranscript;
+		element: aTranscript asElement;
+		extent: self defaultSpaceExtent
 ]
 
 { #category : #examples }

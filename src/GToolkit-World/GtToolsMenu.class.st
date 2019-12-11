@@ -56,17 +56,14 @@ GtToolsMenu class >> openCoderFrom: anElement [
 
 { #category : #'api - tools' }
 GtToolsMenu class >> openPlaygroundFrom: anElement [
-	| aPlayground aSpace |
-
-	aPlayground := GtInspector createOnPlayBook: GtPlayBook newDefault.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Playground'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aPlayground.
-	aSpace withHalos.
-	
-	anElement showSpace: aSpace
+	  | aPlayground aSpace |
+	  aPlayground := GtInspector withToolOn: GtPlayBook newDefault.
+	  aSpace := BlSpace new.
+	  aSpace title: 'Playground'.
+	  aSpace extent: 1200 @ 600.
+	  aSpace addChild: aPlayground.
+	  aSpace withHalos.
+	  anElement showSpace: aSpace
 ]
 
 { #category : #initialization }

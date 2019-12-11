@@ -119,29 +119,7 @@ GtTranscriptNextBuilder >> put: aCharacter [
 GtTranscriptNextBuilder >> putAll: aString [
 
 	"We should only modify the editor from within the UI thread"
-	BlUniverse defer: [ 
-		| aStartPosition |
-		
-		aStartPosition := transcript editor text size + 1.
-		
-		transcript editor inserter
-			atEnd;
-			string: aString asString;
-			insert.
-
-		"we delete the possible attributes inherited from the previously existing text"
-		transcript text
-			clearAttributes: transcript text size - aString size + 1
-			to: transcript text size
-			if: [ :a | true ].
-			
-		(transcript text
-			from: aStartPosition
-			to: transcript text size)
-				attributes: attributes.
-		
-		transcript editor update: aStartPosition to: transcript text size.
-		transcript editor invalidate: aStartPosition to: transcript text size ]
+	transcript announceInsertString: aString withAttributes: attributes.
 ]
 
 { #category : #streaming }
@@ -158,7 +136,7 @@ GtTranscriptNextBuilder >> showException: anException [
 	self 
 		expanding: [ 
 			| list card |
-			list := (GtPhlowEmptyView new list items: stack) asElementDo: #yourself.
+			list := (GtPhlowView empty list items: stack) asElementDo: #yourself.
 			card := list asVerticallyResizableDo: [ :aContainer |
 				aContainer layout: BlLinearLayout vertical.
 				aContainer padding: (BlInsets all: 10).
@@ -173,25 +151,6 @@ GtTranscriptNextBuilder >> showException: anException [
 { #category : #streaming }
 GtTranscriptNextBuilder >> space [
 	self put: Character space
-]
-
-{ #category : #streaming }
-GtTranscriptNextBuilder >> streamAll: aBlock [
-	| rememberedAdornmentStrategy aStartPosition |
-	
-	aStartPosition := transcript text size.
-	
-	rememberedAdornmentStrategy := adornmentStrategy.
-	aBlock value.
-	adornmentStrategy := rememberedAdornmentStrategy.
-
-	(transcript text
-			from: aStartPosition
-			to: transcript text size)
-				attributes: attributes.
-		
-		transcript editor update: aStartPosition to: transcript text size.
-		transcript editor invalidate: aStartPosition to: transcript text size
 ]
 
 { #category : #streaming }
