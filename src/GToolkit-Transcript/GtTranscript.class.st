@@ -18,7 +18,8 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'text',
-		'editor'
+		'editor',
+		'announcer'
 	],
 	#classInstVars : [
 		'default'
@@ -41,6 +42,21 @@ GtTranscript class >> default [
 { #category : #streaming }
 GtTranscript >> << anObject [
 	self show: anObject
+]
+
+{ #category : #'announcement handling' }
+GtTranscript >> announceInsertString: aString withAttributes: attributes [
+	self announcer announce: (GtTranscriptInsertStringAnnouncement new 
+		editor: self editor;
+		text: self text;
+		string: aString; 
+		attributes: attributes)
+]
+
+{ #category : #accessing }
+GtTranscript >> announcer [
+	<return: #Announcer>
+	^ announcer
 ]
 
 { #category : #ui }
@@ -83,6 +99,7 @@ GtTranscript >> gtLiveFor: aView [
 
 { #category : #initialization }
 GtTranscript >> initialize [
+	announcer := Announcer new.
 	text := '' asRopedText.
 	editor := BrTextEditor new.
 	editor text: text

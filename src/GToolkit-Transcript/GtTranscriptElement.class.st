@@ -20,7 +20,7 @@ Class {
 		'scrollButtonElement',
 		'isAutoScrollEnabled'
 	],
-	#category : 'GToolkit-Transcript'
+	#category : #'GToolkit-Transcript'
 }
 
 { #category : #initialization }
@@ -80,6 +80,16 @@ GtTranscriptElement >> initializeListeners [
 				ifTrue: [ self isAutoScrollEnabled ifTrue: [ self disableAutoScroll ] ] ]
 ]
 
+{ #category : #'announcement handling' }
+GtTranscriptElement >> insertStringAnnouncement: aGtTranscriptInsertStringAnnouncement [
+	editorElement enqueueTask: (GtTranscriptInsertStringTaskAction new
+		announcement: aGtTranscriptInsertStringAnnouncement;
+		editor: aGtTranscriptInsertStringAnnouncement editor;
+		text: aGtTranscriptInsertStringAnnouncement text;
+		string: aGtTranscriptInsertStringAnnouncement string;
+		attributes: aGtTranscriptInsertStringAnnouncement attributes)
+]
+
 { #category : #testing }
 GtTranscriptElement >> isAutoScrollEnabled [
 	^ isAutoScrollEnabled
@@ -123,6 +133,9 @@ GtTranscriptElement >> transcript: aGtTranscript [
 	transcript editor
 		addEventFilterOn: BrTextEditorInsertedEvent
 		do: [ self updateScroll ].
+		
+	transcript announcer
+		when: GtTranscriptInsertStringAnnouncement send: #insertStringAnnouncement: to: self.
 
 	self updateScroll
 ]

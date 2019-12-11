@@ -119,6 +119,12 @@ GtTranscriptExamples >> completeAPI [
 	^ transcript 
 ]
 
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> defaultSpaceExtent [
+	<gtExample>
+	^ 400@640
+]
+
 { #category : #examples }
 GtTranscriptExamples >> error [
 	<gtExample>
@@ -186,6 +192,42 @@ GtTranscriptExamples >> randomElement [
 		background: color;
 		"to allow transcript to log measured size"
 		forceLayout
+]
+
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> scripter [
+	<gtExample>
+	^ BlDevScripter new
+]
+
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> scripterShowString [
+	<gtExample>
+	| aScripter aText |
+	aScripter := self scripterWithTranscript.
+	aText := 'How do you feenk today?'.
+	aScripter substep: 'Write with #show:' do: [ :aStep |
+		aStep model
+			label: aText;
+			do: [ :aTranscript | aTranscript show: aText ].
+		aStep wait forEmptySpaceTaskQueue.
+		aStep check
+			label: 'Check Transcript Content';
+			satisfies: [ :aTranscript | aTranscript text asString = aText ];
+			onModel ].
+	aScripter syncContinue.
+	^ aScripter
+]
+
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> scripterWithTranscript [
+	<gtExample>
+	| aTranscript |
+	aTranscript := self transcript.
+	^ self scripter 
+		model: aTranscript;
+		element: aTranscript asElement;
+		extent: self defaultSpaceExtent
 ]
 
 { #category : #examples }
