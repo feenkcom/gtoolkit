@@ -225,19 +225,37 @@ GtTranscriptExamples >> scripterShowString [
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI [
 	<gtExample>
-	<noTest>
-	"I need to redesign targets logic"
 	| aScripter |
 	aScripter := self scripter.
 	aScripter substep: 'Write with #show:' do: [ :aStep |
-		aStep set model: [ :theScripter | self transcript ].
+		aStep set model: [ self transcript ].
 		aStep model
 			label: self feenkString;
 			do: [ :theTranscript | theTranscript show: self feenkString ].
-		aStep check model "same as onModel?"
+		aStep check
 			label: 'Check Transcript Content';
 			satisfies: [ :theTranscript | theTranscript text asString = self feenkString ];
 			onModel. ].
+	aScripter syncContinue.
+	^ aScripter
+]
+
+{ #category : #'examples - scripter' }
+GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI_AndDisplayTheUI [
+	<gtExample>
+	<noTest>
+	| aScripter |
+	aScripter := self scripterShowStringBeforeDisplayingUI.
+	aScripter substep: 'Display Transcript UI' do: [ :aStep |
+		aStep set 
+			element: [ :theTranscript | theTranscript asElement ];
+			onModel.
+		aStep wait forEmptySpaceTaskQueue.
+		aStep check
+			label: 'Check UI Transcript Content';
+			childrenCount: 9;
+			onChildOfClass: BrEditor;
+			onChildOfClass: BrTextEditorSegmentElement ].
 	aScripter syncContinue.
 	^ aScripter
 ]
