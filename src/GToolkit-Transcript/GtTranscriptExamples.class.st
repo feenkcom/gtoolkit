@@ -225,15 +225,16 @@ GtTranscriptExamples >> scripterShowString [
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI [
 	<gtExample>
-	| aScripter aTranscript |
+	<noTest>
+	"I need to redesign targets logic"
+	| aScripter |
 	aScripter := self scripter.
-	aTranscript := self transcript.
-	aScripter model: aTranscript.
 	aScripter substep: 'Write with #show:' do: [ :aStep |
+		aStep set model: [ :theScripter | self transcript ].
 		aStep model
 			label: self feenkString;
 			do: [ :theTranscript | theTranscript show: self feenkString ].
-		aStep check
+		aStep check model "same as onModel?"
 			label: 'Check Transcript Content';
 			satisfies: [ :theTranscript | theTranscript text asString = self feenkString ];
 			onModel. ].
