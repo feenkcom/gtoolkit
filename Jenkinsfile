@@ -14,18 +14,17 @@ pipeline {
             steps {
                 sh 'git clean -fdx'
                 sh 'chmod +x scripts/build/*.sh'
+                sh 'rm -rf pharo-local'
+                sh 'scripts/build/prefetch-repos.sh'
                 slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
         stage('Load latest master commit') {
-            
             when { expression {
                     env.BRANCH_NAME.toString().equals('master')
                 }
             }
             steps {
-                sh 'git clean -f -d'
-                sh 'rm -rf pharo-local'
                 sh 'scripts/build/load.sh'
                 script {
                     def newCommitFiles = findFiles(glob: 'newcommits*.txt')
