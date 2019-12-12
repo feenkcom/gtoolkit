@@ -1,7 +1,7 @@
 IceCredentialsProvider useCustomSsh: true.
 IceCredentialsProvider sshCredentials
-	publicKey: '/Users/george/.ssh/id_rsa.pub';
-	privateKey: '/Users/george/.ssh/id_rsa'.
+	publicKey: '/home/parallels/.ssh/id_rsa.pub';
+	privateKey: '/home/parallels/.ssh/id_rsa'.
 
 EpMonitor current disable.
 Metacello new
