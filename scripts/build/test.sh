@@ -44,10 +44,13 @@ fi
 
 set +e
 
-mkdir normalvm
-cd normalvm
-curl https://get.pharo.org/64/vm80 | bash
-cd -
+# mkdir normalvm
+# cd normalvm
+# curl https://get.pharo.org/64/vm80 | bash
+# cd -
+
+curl https://files.pharo.org/vm/pharo-spur64-headless/linux/PharoVM-8.2.0-cb2f1ff-linux64-bin.zip -o pharo64-linux-latest.zip
+unzip pharo64-linux-latest.zip  -d normalvm
 
 #run unit tests
 git config --global user.name "Jenkins"
