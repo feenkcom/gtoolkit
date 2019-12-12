@@ -13,3 +13,5 @@ curl https://dl.feenk.com/gtvm/Pharo-8.2.0-654ac0031-linux64-bin.zip -o Pharo-8.
 unzip Pharo-8.2.0-654ac0031-linux64-bin.zip
 
 time ./pharo Pharo.image st --quit loadgt.st 2>&1
+
+./pharo Pharo.image examples --interactive --no-quit --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Starta-.*' 2>&1
