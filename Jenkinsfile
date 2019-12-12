@@ -15,7 +15,7 @@ pipeline {
                 sh 'git clean -fdx'
                 sh 'chmod +x scripts/build/*.sh'
                 sh 'rm -rf pharo-local'
-                sh 'scripts/build/prefetch-repos.sh'
+                
                 slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
