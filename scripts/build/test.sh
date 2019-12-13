@@ -46,7 +46,8 @@ set +e
 
 mkdir normalvm
 cd normalvm
-curl https://get.pharo.org/64/vm80 | bash
+# curl https://get.pharo.org/64/vm80 | bash
+curl get.pharo.org/64/vmHeadlessLatest80 | bash
 cd -
 
 #run unit tests

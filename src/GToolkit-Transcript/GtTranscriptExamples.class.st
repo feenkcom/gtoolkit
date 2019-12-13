@@ -244,7 +244,6 @@ GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI [
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI_AndDisplayTheUI [
 	<gtExample>
-	<noTest>
 	| aScripter |
 	aScripter := self scripterShowStringBeforeDisplayingUI.
 	aScripter substep: 'Display Transcript UI' do: [ :aStep |
