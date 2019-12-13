@@ -1,22 +1,19 @@
-name: CI
+# name: CI
 
-on:   
-  push:
-    branches:
-      - master
+# on:   
+#   push:
+#     branches:
+#       - master
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: macos-latest
+#     runs-on: macos-latest
     
-    steps:
-    - uses: actions/checkout@v1
-    - name: Load
-      run: |
-        chmod +x ./scripts/actions/*.sh
-        ./scripts/actions/load.sh
-      shell: bash
-
-
-      
+#     steps:
+#     - uses: actions/checkout@v1
+#     - name: Load
+#       run: |
+#         chmod +x ./scripts/actions/*.sh
+#         ./scripts/actions/load.sh
+#       shell: bash
