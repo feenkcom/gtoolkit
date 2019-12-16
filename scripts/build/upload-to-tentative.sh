@@ -6,9 +6,10 @@ export GTfolder=/var/www/html/tentative/
 
 if [ ! -z "${TAG_NAME}" ]
 then
-    scp GToolkitWin64*.zip $AWS:$GTfolder
-    scp GToolkitOSX64*.zip $AWS:$GTfolder
-    scp GToolkitLinux64*.zip $AWS:$GTfolder
+    echo ${TAG_NAME} > version.txt
+    scp GToolkitWin64*.zip $AWS:$GTfolder/GToolkitWin64.zip 
+    scp GToolkitOSX64*.zip $AWS:$GTfolder/GToolkitOSX64.zip
+    scp GToolkitLinux64*.zip $AWS:$GTfolder/GToolkitLinux64.zip
 else
     echo "TAG_NAME not set"
 fi
