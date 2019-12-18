@@ -23,7 +23,6 @@ package_binary() {
 package_binary Boxer
 package_binary Gleam
 package_binary Glutin
-package_binary Moz2D
 package_binary Clipboard
 package_binary Skia
 
