@@ -4,6 +4,12 @@ IceCredentialsProvider sshCredentials
 	publicKey: '/data/jenkins/.ssh/id_rsa.pub';
 	privateKey: '/data/jenkins/.ssh/id_rsa'.
 	
+SourceFileArray compile: 'deferFlushDuring: aBlock	
+	flushChanges ifFalse: [ ^ aBlock value ].
+	"flushChanges := false."
+	^ [ aBlock value ] ensure: [
+		flushChanges := true.
+		self flushChangesFile ]'.
 
 EpMonitor current disable.
 Metacello new
