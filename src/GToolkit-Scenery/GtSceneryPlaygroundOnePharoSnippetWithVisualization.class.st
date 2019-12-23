@@ -21,7 +21,7 @@ GtSceneryPlaygroundOnePharoSnippetWithVisualization >> setUp [
 	aSubDirectories := #allDirectories.
 	aFileReference := 'feenk' asFileReference.
 	aFileReference exists ifFalse: [ 
-		aFileReference := GtIcebergUtility documentAtPath: 'feenkcom'.
+		aFileReference := GtIcebergUtility resourceAtPath: 'feenkcom'.
 		aSubDirectories := #directories ].
 	book pages first snippets first sourceCode: 'rootDirectory := ', aFileReference fullName printString, ' asFileReference.
 directories := Array with: rootDirectory withAll: rootDirectory ', aSubDirectories asString, '.

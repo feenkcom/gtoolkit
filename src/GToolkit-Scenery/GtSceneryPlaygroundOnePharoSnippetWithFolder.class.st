@@ -20,7 +20,7 @@ GtSceneryPlaygroundOnePharoSnippetWithFolder >> setUp [
 	aBook := GtPlayBook newDefault.
 	aFileReference := 'feenk' asFileReference.
 	aFileReference exists ifFalse: [ 
-		aFileReference := GtIcebergUtility documentAtPath: 'feenkcom' ].
+		aFileReference := GtIcebergUtility resourceAtPath: 'feenkcom' ].
 	aBook pages first snippets first sourceCode: aFileReference fullName printString, ' asFileReference'.
 	
 	GtInspector openOnPlayBook: aBook
