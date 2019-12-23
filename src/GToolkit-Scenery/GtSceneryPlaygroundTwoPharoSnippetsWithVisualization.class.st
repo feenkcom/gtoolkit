@@ -19,7 +19,7 @@ GtSceneryPlaygroundTwoPharoSnippetsWithVisualization class >> menuCommandOn: aBu
 GtSceneryPlaygroundTwoPharoSnippetsWithVisualization >> setUp [
 	| aBook aPathConstructor |
 	aBook := GtPlayBook newDefault.
-	aPathConstructor := GtIcebergUtility name, 
+	aPathConstructor := GtResourcesUtility name, 
 		String space, #resourceAtPath: asString, String space, 'feenkcom' printString.
 	aBook pages first snippets first sourceCode: 'directories := (', aPathConstructor, ')
 	allDirectories 
