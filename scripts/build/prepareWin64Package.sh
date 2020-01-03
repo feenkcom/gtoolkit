@@ -11,8 +11,8 @@ libFolder=libWin64-$TAG_NAME
 mkdir -p $libFolder
 
 
-curl https://dl.feenk.com/gtvm/PharoVM-8.1.0-4a6a3adc5-win64-bin.zip -o PharoVM-8.1.0-4a6a3adc5-win64-bin.zip
-unzip PharoVM-8.1.0-4a6a3adc5-win64-bin.zip -d $GTFolder/
+curl https://dl.feenk.com/gtvm/GToolkitVM-8.2.0-ea61a04db-win64-bin.zip -o GToolkitVM-8.2.0-ea61a04db-win64-bin.zip
+unzip GToolkitVM-8.2.0-ea61a04db-win64-bin.zip -d $GTFolder/
 
 # curl https://files.pharo.org/get-files/80/pharo64-win-headless-latest.zip -o pharo64-win-headless-latest.zip
 # unzip pharo64-win-headless-latest.zip -d $GTFolder/
