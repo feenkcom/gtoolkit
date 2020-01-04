@@ -12,7 +12,7 @@ mkdir -p $libFolder
 # unzip pharo64-linux-headless-latest.zip  -d $GTFolder/
 
 curl https://dl.feenk.com/gtvm/GToolkitVM-8.2.0-ea61a04db-linux64-bin.zip -o GToolkitVM-8.2.0-ea61a04db-linux64-bin.zip
-unzip GToolkitVM-8.2.0-ea61a04db-linux64-bin.zip-d $GTFolder/
+unzip GToolkitVM-8.2.0-ea61a04db-linux64-bin.zip -d $GTFolder/
 
 package_binary() {
 	curl https://dl.feenk.com/$1/linux/development/x86_64/lib$1.so -o lib$1.so
