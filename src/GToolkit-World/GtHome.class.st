@@ -56,6 +56,13 @@ GtHome >> initializeSections [
 		self addChild: aHomeSectionStencil asElement ]
 ]
 
+{ #category : #sections }
+GtHome >> slideShowsSection [
+	<gtHomeSection>
+	^ GtHomeSlideShowsSection new
+		priority: 19
+]
+
 { #category : #initialization }
 GtHome >> spaceGap [
 	^ 10
