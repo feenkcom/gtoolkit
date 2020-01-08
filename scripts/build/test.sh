@@ -25,8 +25,9 @@ export build_zip="${ARTIFACT_DIR}.zip"
 zip -qr "$build_zip" "$ARTIFACT_DIR"
 
 # Download and run tests using the pharo64-linux-headless vm.
-curl https://files.pharo.org/get-files/80/pharo64-linux-headless-latest.zip -o pharo64-linux-headless-latest.zip	
-unzip pharo64-linux-headless-latest.zip  -d phcogspurlinuxmhdls64
+
+curl https://dl.feenk.com/gtvm/GToolkitVM-8.2.0-ea61a04db-linux64-bin.zip -o GToolkitVM-8.2.0-ea61a04db-linux64-bin.zip	
+unzip GToolkitVM-8.2.0-ea61a04db-linux64-bin.zip -d gtcogspurlinuxmhdls64
 
 #if we are in a tag build, then save the image with GtWorld opened
 if [ ! -z "${TAG_NAME}" ]
@@ -39,7 +40,7 @@ then
   # We should also pass --no-quit flag, otherwise the VM will be terminated before the universe ever gets a chance to save an image.
   # It takes significant amount of time to start GtWorld, so let's wait for 30 seconds to make sure everything is initialized
   # There is not need to run save and quit an image from a forked process, because the save request is deffered though the universe
-  xvfb-run -a  ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --interactive --no-quit " ThreadedFFIMigration enableThreadedFFI. GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true"
+  xvfb-run -a  ./gtcogspurlinuxmhdls64/gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --interactive --no-quit " ThreadedFFIMigration enableThreadedFFI. GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true"
 fi
 
 set +e
@@ -62,7 +63,7 @@ then
   set -e
 
   #run smoke tests
-  timeout 60 xvfb-run -a ./phcogspurlinuxmhdls64/pharo "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" --interactive &
+  timeout 60 xvfb-run -a ./gtcogspurlinuxmhdls64/gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" --interactive &
   sleep 50
   export DISPLAY=$(ps -aux | grep screen -m 1 | awk '{print $12}')
   export XAUTHORITY=$(ps -aux | grep screen -m 1 | awk '{print $19}')
