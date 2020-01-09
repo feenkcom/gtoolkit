@@ -10,17 +10,7 @@ rm -rf $GTFolder/pharo-local
 libFolder=libWin64-$TAG_NAME
 mkdir -p $libFolder
 
-
-curl https://dl.feenk.com/gtvm/GToolkitVM-8.2.0-ea61a04db-win64-bin.zip -o GToolkitVM-8.2.0-ea61a04db-win64-bin.zip
-unzip GToolkitVM-8.2.0-ea61a04db-win64-bin.zip
-mv GToolkitVM-8.2.0-ea61a04db-win64-bin/* $GTFolder/
-
-# curl https://files.pharo.org/get-files/80/pharo64-win-headless-latest.zip -o pharo64-win-headless-latest.zip
-# unzip pharo64-win-headless-latest.zip -d $GTFolder/
-
-# wget https://bintray.com/opensmalltalk/vm/download_file?file_path=pharo.cog.spur-cmake-minhdls_win64x64_201908212333.zip -O pharo.cog.spur-cmake-minhdls_win64x64_201908212333.zip
-# unzip pharo.cog.spur-cmake-minhdls_win64x64_201908212333.zip -d pharo64-win-stable
-# mv -fv pharo64-win-stable/* $GTFolder/
+unzip build-artifacts/GToolkitVM-8.2.0-*-win64-bin.zip -d $GTFolder/
 
 package_binary() {
 	curl https://dl.feenk.com/$1/windows/development/x86_64/lib$1.dll -o lib$1.dll
