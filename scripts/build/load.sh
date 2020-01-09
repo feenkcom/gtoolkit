@@ -1,6 +1,6 @@
 #/bin/sh!
 set -o xtrace
-export RUST_BACKTRACE=1
+export RUST_BACKTRACE=full
 
 # wget https://files.pharo.org/image/80/Pharo8.0-SNAPSHOT.build.1059.sha.9dd40fe.arch.64bit.zip -O Pharo.zip
 # unzip Pharo.zip
@@ -9,11 +9,13 @@ export RUST_BACKTRACE=1
 
 curl https://get.pharo.org/64/80 | bash
 
-curl https://dl.feenk.com/gtvm/Pharo-8.2.0-654ac0031-linux64-bin.zip -o Pharo-8.2.0-654ac0031-linux64-bin.zip
-unzip Pharo-8.2.0-654ac0031-linux64-bin.zip
+# curl https://dl.feenk.com/gtvm/Pharo-8.2.0-654ac0031-linux64-bin.zip -o Pharo-8.2.0-654ac0031-linux64-bin.zip
+# unzip Pharo-8.2.0-654ac0031-linux64-bin.zip
 
+curl https://dl.feenk.com/gtvm/GToolkitVM-8.2.0-ea61a04db-linux64-bin.zip -o GToolkitVM-8.2.0-ea61a04db-linux64-bin.zip
+unzip GToolkitVM-8.2.0-ea61a04db-linux64-bin.zip
 
-xvfb-run -a -e /dev/stdout ./pharo Pharo.image st --quit scripts/build/loadgt.st  2>&1
+xvfb-run -a -e /dev/stdout ./gtoolkit Pharo.image st --quit scripts/build/loadgt.st  2>&1
 rm -f newcommits*
-xvfb-run -a -e /dev/stdout ./pharo Pharo.image printNewCommits
+xvfb-run -a -e /dev/stdout ./gtoolkit Pharo.image printNewCommits
 exit 0

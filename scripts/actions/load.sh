@@ -1,6 +1,6 @@
 #/bin/sh!
 set -o xtrace
-export RUST_BACKTRACE=1
+export RUST_BACKTRACE=full
 
 wget https://files.pharo.org/image/80/Pharo8.0-SNAPSHOT.build.1059.sha.9dd40fe.arch.64bit.zip -O Pharo.zip
 unzip Pharo.zip
