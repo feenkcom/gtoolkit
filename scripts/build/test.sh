@@ -1,7 +1,7 @@
 #/bin/sh!
 set -o xtrace
 set -e
-export RUST_BACKTRACE=1
+export RUST_BACKTRACE=full
 
 if [ -z "${TAG_NAME}" ] 
 then
@@ -53,6 +53,7 @@ set +e
 #run unit tests
 git config --global user.name "Jenkins"
 git config --global user.email "jenkins@feenk.com"
+
 xvfb-run -a -e /dev/stdout ./pharo Pharo.image examples --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Starta-.*' 2>&1
 xvfb-run -a -e /dev/stdout ./pharo Pharo.image gtexportreport --report=GtGtoolkitArchitecturalReport
 
