@@ -7,11 +7,7 @@ mkdir -p $GTFolder
 libFolder=libOSX64-$TAG_NAME
 mkdir -p $libFolder
 
-# curl http://files.pharo.org/get-files/80/pharo64-mac-headless-latest.zip -o pharo64-mac-headless-latest.zip
-# unzip pharo64-mac-headless-latest.zip -d $GTFolder/
-
-curl https://dl.feenk.com/gtvm/GToolkitVM-8.2.0-ea61a04db-mac64-bin.zip -o GToolkitVM-8.2.0-ea61a04db-mac64-bin.zip
-unzip GToolkitVM-8.2.0-ea61a04db-mac64-bin.zip -d $GTFolder/
+unzip build-artifacts/GToolkitVM-8.2.0-*-mac64-bin.zip -d $GTFolder/
 
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
