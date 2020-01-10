@@ -19,7 +19,7 @@ ditto -c -k --sequesterRsrc --keepParent GToolkitOSX64-*/ GToolkitOSX64-"${TAG_N
 
 xcrun altool -t osx -f GToolkitOSX64-"${TAG_NAME}".zip -itc_provider "77664ZXL29" --primary-bundle-id "com.feenk.gtoolkit" --notarize-app --verbose  --username "george.ganea@feenk.com" --password "${APPLEPASSWORD}"
 
-export AWS=ubuntu@ip-172-31-37-111.eu-central-1.compute.internal
+export AWS=ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com 
 export GTfolder=/var/www/html/gt/
 
 scp GToolkitOSX64*.zip $AWS:$GTfolder
