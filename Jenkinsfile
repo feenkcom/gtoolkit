@@ -120,18 +120,7 @@ pipeline {
                     }
 
                     steps {
-                        sh 'scripts/build/upload.sh'                        
-                        script {
-                            withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-                                def remote = [:]
-                                remote.name = 'deploy'
-                                remote.host = 'ip-172-31-37-111.eu-central-1.compute.internal'
-                                remote.user = userName
-                                remote.identityFile = identity
-                                remote.allowAnyHosts = true
-                                sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
-                            }
-                        }
+                        sh 'scripts/build/upload.sh'
                     }
                 }
             }
@@ -146,6 +135,7 @@ pipeline {
             }
             environment {
                 CERT = credentials('devcertificate')
+                APPLEPASSWORD = credentials('notarizepassword')
                 SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
             } 
             stages {
@@ -155,6 +145,17 @@ pipeline {
                         sh 'chmod +x scripts/build/*.sh'
                         sh 'ls -al'
                         sh 'scripts/build/osx_sign_notarize.sh'
+                        script {
+                            withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+                                def remote = [:]
+                                remote.name = 'deploy'
+                                remote.host = 'ip-172-31-37-111.eu-central-1.compute.internal'
+                                remote.user = userName
+                                remote.identityFile = identity
+                                remote.allowAnyHosts = true
+                                sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
+                            }
+                        }
                     }
                 }
             }
