@@ -12,7 +12,7 @@ security unlock-keychain -p 'temporaryPassword' MyKeychain.keychain
 security import pipe.p12 -k MyKeychain.keychain -P ""
 unzip GToolkitOSX64.zip
 
-codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s $SIGNING_IDENTITY GToolkitOSX64-*/GToolkit.app
-codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s $SIGNING_IDENTITY GToolkitOSX64-*/*.dylib 
+codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GToolkitOSX64-*/GToolkit.app
+codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GToolkitOSX64-*/*.dylib 
 
 ditto -c -k --sequesterRsrc --keepParent GToolkitOSX64-*/ GToolkitVM-8.2.0-latest-mac64-bin-signed.zip
