@@ -3,6 +3,7 @@ set -o xtrace
 ls -al
 
 curl https://dl.feenk.com/tentative/GToolkitOSX64.zip -o GToolkitOSX64.zip
+security delete-keychain MyKeychain.keychain
 security create-keychain -p 'temporaryPassword' MyKeychain.keychain
 security list-keychains -d user -s login.keychain MyKeychain.keychain
 security list-keychains
