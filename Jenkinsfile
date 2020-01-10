@@ -120,7 +120,7 @@ pipeline {
                     }
 
                     steps {
-                        sh 'scripts/build/upload.sh'
+                        sh 'scripts/build/upload.sh'                        
                         script {
                             withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
                                 def remote = [:]
@@ -132,6 +132,29 @@ pipeline {
                                 sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
                             }
                         }
+                    }
+                }
+            }
+        }
+        stage ('Sign OSX Build') {
+            agent {
+                label "macosx"
+            }
+            when { expression {
+                    env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
+                }
+            }
+            environment {
+                CERT = credentials('devcertificate')
+                SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
+            } 
+            stages {
+                stage('Clean Workspace') {
+                    steps {
+                        sh 'git clean -fdx'
+                        sh 'chmod +x scripts/build/*.sh'
+                        sh 'ls -al'
+                        sh 'scripts/build/osx_sign_notarize.sh'
                     }
                 }
             }
