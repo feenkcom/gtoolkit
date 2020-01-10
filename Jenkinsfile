@@ -139,7 +139,7 @@ pipeline {
                 SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
             } 
             stages {
-                stage('Clean Workspace') {
+                stage('Clean osx ws') {
                     steps {
                         sh 'git clean -fdx'
                         sh 'chmod +x scripts/build/*.sh'
