@@ -15,4 +15,11 @@ unzip GToolkitOSX64.zip
 codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GToolkitOSX64-*/GToolkit.app
 codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GToolkitOSX64-*/*.dylib 
 
-ditto -c -k --sequesterRsrc --keepParent GToolkitOSX64-*/ GToolkitVM-8.2.0-latest-mac64-bin-signed.zip
+ditto -c -k --sequesterRsrc --keepParent GToolkitOSX64-*/ GToolkitOSX64-"${TAG_NAME}".zip
+
+xcrun altool -t osx -f GToolkitOSX64-"${TAG_NAME}".zip -itc_provider "77664ZXL29" --primary-bundle-id "com.feenk.gtoolkit" --notarize-app --verbose  --username "george.ganea@feenk.com" --password "${APPLEPASSWORD}"
+
+export AWS=ubuntu@ip-172-31-37-111.eu-central-1.compute.internal
+export GTfolder=/var/www/html/gt/
+
+scp GToolkitOSX64*.zip $AWS:$GTfolder

@@ -7,7 +7,7 @@ export build_zip=$(ls GToolkit-64-*.zip)
 if [ ! -z "${TAG_NAME}" ]
 then
     scp GToolkitWin64*.zip $AWS:$GTfolder
-    scp GToolkitOSX64*.zip $AWS:$GTfolder
+    # scp GToolkitOSX64*.zip $AWS:$GTfolder
     scp GToolkitLinux64*.zip $AWS:$GTfolder
     scp gt.jpg $AWS:$GTfolder
     scp releasedateinseconds $AWS:$GTfolder/.releasedateinseconds
