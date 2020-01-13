@@ -139,7 +139,7 @@ pipeline {
                 SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
             } 
             stages {
-                stage('Clean osx ws') {
+                stage('Codesign and notarize') {
                     steps {
                         sh 'git clean -fdx'
                         sh 'chmod +x scripts/build/*.sh'
