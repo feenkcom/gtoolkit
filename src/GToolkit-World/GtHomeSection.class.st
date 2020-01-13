@@ -186,11 +186,16 @@ GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock de
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newUrlCard: aUrlString description: aDescriptionString [
+GtHomeSection >> newUrlCardWithTitle: aUrlString description: aDescriptionString url: anObject [
 	^ self 
 		newHeaderCardWithTitle: 'www' 
-		size: 200@100
-		content: (BrLabel new text: aUrlString; look: BrGlamorousLabelLook) 
+		size: 200@80
+		content: (
+			BlElement new 
+				constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
+				layout: BlLinearLayout vertical alignCenter;
+				addChild: (BrLabel new text: aUrlString; look: BrGlamorousLabelLook);
+				addChild: (BrLabel new text: aDescriptionString; look: (BrGlamorousLabelLook new fontSize: 10; foreground: Color gray)))
 		action: [ :card | WebBrowser openOn: aUrlString ]
 ]
 
