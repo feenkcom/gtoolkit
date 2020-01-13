@@ -8,45 +8,20 @@ Class {
 GtHomeSlideShowsSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := self newSectionContainer.
-	sectionContainer addChild: (self newHeaderLabel: 'Slide Shows').
+	sectionContainer addChild: (self newSectionTitle: 'Slideshows').
 	cardsContainer := self newCardsContainer.
+	cardsContainer addChild: (self 
+		newShowCardWithTitle: 'Tour' 
+		slideshow: GtTour new create
+		description: 'Take an interative tour through the tools and engines.').
+	cardsContainer addChild: (self 
+		newShowCardWithTitle: 'One rendering tree' 
+		slideshow: GtOneRenderingTree new create
+		description: 'In Glamorous Toolkit, all rendering relies on a single tree at a time.').
 	cardsContainer addChild: (self
-			 newCardWithTitle: 'Tour'
-			 description:
-			 'Take an interative tour through the tools and engines.'
-			 picture:
-				 (GtTitleSlide new titleText: ('glamoroustoolkit' asRopedText
-						   fontSize: 30;
-						   fontName: 'Helvetica Neue';
-						   bold;
-						   in: [ :title | (title from: 1 to: 'glamorous' size) thin ];
-						   yourself))
-			 action: [ :card | 
-				 self
-					 showSpaceWithTitle: 'Tour'
-					 with: GtTour new create makeArrowsVisible
-					 from: card ]).
-	cardsContainer addChild: (self
-			 newCardWithTitle: 'One rendering tree'
-			 description: 'All rendering relies on a single tree at a time.'
-			 picture: (GtTitleSlide new titleText:
-					  ('One rendering tree' asRopedText glamorousRegularFont 
-						   fontSize: 30))
-			 action: [ :card | 
-				 self
-					 showSpaceWithTitle: 'One rendering tree'
-					 with: GtOneRenderingTree new create makeArrowsVisible
-					 from: card ]).
-	cardsContainer addChild: (self
-			 newCardWithTitle: 'Pharo 101'
-			 description: 'New to Pharo? Take an introductory tutorial.'
-			 picture: (GtTitleSlide new titleText:
-					  ('Pharo 101' asRopedText glamorousRegularFont fontSize: 30))
-			 action: [ :card | 
-				 self
-					 showSpaceWithTitle: 'Pharo 101'
-					 with: GtPharo101 new create makeArrowsVisible
-					 from: card ]).
+		newShowCardWithTitle: 'Pharo 101'
+		slideshow: GtPharo101 new create
+		description: 'New to Pharo? Take an introductory tutorial.').
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
