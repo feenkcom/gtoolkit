@@ -42,7 +42,7 @@ GtHome >> initialize [
 		c horizontal matchParent.
 		c vertical fitContent ].
 	
-	self layout: BlLinearLayout vertical.
+	self layout: (BlLinearLayout vertical cellSpacing: 2 * self spaceGap).
 	self padding: (BlInsets all: self spaceGap).
 	
 	self initializeSections
