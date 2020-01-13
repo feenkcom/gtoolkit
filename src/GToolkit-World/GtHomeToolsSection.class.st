@@ -8,24 +8,29 @@ Class {
 GtHomeToolsSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := self newSectionContainer.
-	sectionContainer addChild: (self newHeaderLabel: 'Tools').
+	sectionContainer addChild: (self newSectionTitle: 'Tools').
 
 	cardsContainer := self newCardsContainer.
 	cardsContainer addChild: (self 
 		newToolCardWithTitle: 'Playground'
 		icon: BrGlamorousIcons largePlay asElement
-		action: [ :card | self showSpaceWithTitle: 'Playground' with: GtPlaygroundStencil new create from: card ]).
+		action: [ :card | self showSpaceWithTitle: 'Playground' with: GtPlaygroundStencil new create from: card ]
+		description: 'Play with code. Live.').
 
 	cardsContainer addChild: (self 
 		newToolCardWithTitle: 'Coder'
 		icon: BrGlamorousIcons largeBook asElement
-		action: [ :card | 	self showSpaceWithTitle: 'Coder' with: GtCoderStencil new create from: card ]).
+		action: [ :card | 	self showSpaceWithTitle: 'Coder' with: GtCoderStencil new create from: card ]
+		description: 'Browse and manipulate code.').
 
 	cardsContainer addChild: (self 
-		newToolCardWithTitle: 'Spotter'
-"		description: 'Search anything. Really anything.'"
-		icon: BrGlamorousIcons largeSearch asElement
-		action: [ :card | card fireEvent: GtSpawnSpotter new ]).
+		newToolCardWithTitle: 'Monitor'
+		icon: BrGlamorousIcons largeSignal asElement
+		action: [ :card | self 
+			showSpaceWithTitle: 'Monitor' 
+			with: (GtInspector createOn: GtMonitoredBlocSpaces new)
+			from: card ]
+		description: 'Monitor processes and high level tasks.').	
 
 	cardsContainer addChild: (self 
 		newToolCardWithTitle: 'Examples'
@@ -33,29 +38,16 @@ GtHomeToolsSection >> create [
 		action: [ :card | self 
 			showSpaceWithTitle: 'Examples' 
 			with: (GtInspector createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject)
-			from: card ]).	
+			from: card ]
+		description: 'Units of tests and of documentation. In one.').	
+
+	cardsContainer addChild: (self 
+		newToolCardWithTitle: 'Spotter'
+		icon: BrGlamorousIcons largeSearch asElement
+		action: [ :card | card fireEvent: GtSpawnSpotter new ]
+		description: 'Search anything. Really anything.').
+
 
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
-]
-
-{ #category : #'api - instantiation' }
-GtHomeToolsSection >> newToolCardWithTitle: aString icon: anElement action: aBlock [
-	| iconElement labelElement |
-	iconElement := anElement margin: (BlInsets bottom: 5).
-	labelElement := BrLabel new 
-	    text: aString;
-	    look: (BrGlamorousLabelLook new fontSize: 14).
-	^ BrButton new
-		constraintsDo:[ :c | 
-	        c horizontal exact: 120.
-	        c vertical exact: 120 ];
-		margin: (BlInsets all: 20);
-		action: aBlock;
-		padding: (BlInsets all: 10);
-		look: BrGlamorousButtonExteriorLook new;
-		geometry: (BlRectangle cornerRadius: 4);
-		layout: BlLinearLayout vertical alignCenter;
-		addChild: iconElement;
-		addChild: labelElement.
 ]
