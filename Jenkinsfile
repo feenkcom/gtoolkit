@@ -19,7 +19,7 @@ pipeline {
                     steps {
                         sh 'git clean -fdx'
                         sh 'chmod +x scripts/build/*.sh'
-                        sh 'rm -rf pharo-local'
+                        sh 'rm -rf pharo-local/iceberg'
                         slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
                     }
                 }
