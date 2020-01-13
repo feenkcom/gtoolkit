@@ -19,8 +19,7 @@ CERT_IDENTITY=$(security find-identity -v -p codesigning "$MY_KEYCHAIN" | head -
 CERT_UUID=$(security find-identity -v -p codesigning "$MY_KEYCHAIN" | head -1 | grep '"' | awk '{print $2}') # Handy to have UUID (just in case)
 security set-key-partition-list -S apple-tool:,apple: -s -k $MY_KEYCHAIN_PASSWORD -D "$CERT_IDENTITY" -t private $MY_KEYCHAIN # Enable codesigning from a non user interactive shell
 
-
-curl https://dl.feenk.com/tentative/GToolkitOSX64.zip -o GToolkitOSX64.zip
+rm -rf GToolkitOSX64-*/
 unzip GToolkitOSX64.zip
 rm GToolkitOSX64.zip
 
@@ -30,10 +29,5 @@ codesign --entitlements scripts/resources/Product.entitlements  --force -v --opt
 ditto -c -k --sequesterRsrc --keepParent GToolkitOSX64-*/ GToolkitOSX64-"${TAG_NAME}".zip
 
 xcrun altool -t osx -f GToolkitOSX64-"${TAG_NAME}".zip -itc_provider "77664ZXL29" --primary-bundle-id "com.feenk.gtoolkit" --notarize-app --verbose  --username "george.ganea@feenk.com" --password "${APPLEPASSWORD}"
-
-export AWS=ubuntu@ec2-35-157-37-37.eu-central-1.compute.amazonaws.com 
-export GTfolder=/var/www/html/gt/
-
-scp GToolkitOSX64*.zip $AWS:$GTfolder
 
 security delete-keychain "$MY_KEYCHAIN" # Delete temporary keychain

@@ -92,7 +92,7 @@ pipeline {
 
                     when {
                         expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') 
+                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.TAG_NAME.toString().startsWith("v")
                         }
                     }
                     steps {
@@ -125,41 +125,97 @@ pipeline {
                 }
             }
         }
-        stage ('Sign OSX Build') {
-            agent {
-                label "macosx"
-            }
+        stage('Run UI Tests') {
             when { expression {
                     env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
                 }
             }
-            environment {
-                CERT = credentials('devcertificate')
-                APPLEPASSWORD = credentials('notarizepassword')
-                SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
-            } 
-            stages {
-                stage('Codesign and notarize') {
-                    steps {
-                        sh 'git clean -fdx'
-                        sh 'chmod +x scripts/build/*.sh'
-                        sh 'ls -al'
-                        sh 'scripts/build/osx_sign_notarize.sh'
-                        script {
-                            withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-                                def remote = [:]
-                                remote.name = 'deploy'
-                                remote.host = 'ec2-35-157-37-37.eu-central-1.compute.amazonaws.com'
-                                remote.user = userName
-                                remote.identityFile = identity
-                                remote.allowAnyHosts = true
-                                sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
+            parallel {
+                stage('Test On Linux') {
+                    agent {
+                        label "unix"
+                    }
+                     stages {
+                        stage('Download') {
+                             steps {
+                                sh 'git clean -fdx'
+                                sh 'chmod +x scripts/build/parallelsmoke/*.sh'
+                                sh 'chmod +x scripts/build/parallelsmoke/lnx_1_download.sh'
+                             }
+                        }
+                        stage('Smoke Test') {
+                             steps {
+                                sh 'chmod +x scripts/build/parallelsmoke/lnx_2_smoke.sh'
+                             }
+                        }
+                        stage('Upload') {
+                             steps {
+                                sh 'chmod +x scripts/build/parallelsmoke/lnx_3_upload.sh'
+                             }
+                        }
+                    }
+                }
+                stage ('Test Sign and Notarize on MacOSX') {
+                    agent {
+                        label "macosx"
+                    }
+                    environment {
+                        CERT = credentials('devcertificate')
+                        APPLEPASSWORD = credentials('notarizepassword')
+                        SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
+                    } 
+                    stages {
+                        stage('Download') {
+                             steps {
+                                sh 'git clean -fdx'
+                                sh 'chmod +x scripts/build/parallelsmoke/*.sh'
+                                sh 'chmod +x scripts/build/parallelsmoke/osx_1_download.sh'
+                             }
+                        }
+                        stage('Smoke Test') {
+                             steps {
+                                sh 'chmod +x scripts/build/parallelsmoke/osx_2_smoke.sh'
+                             }
+                        }
+                        stage('Codesign and Notarize') {
+                            steps {
+                                sh 'chmod +x scripts/build/parallelsmoke/osx_3_sign_notarize.sh'
+
                             }
+                        }
+                        stage('Upload') {
+                             steps {
+                                sh 'chmod +x scripts/build/parallelsmoke/osx_4_upload.sh'
+                             }
                         }
                     }
                 }
             }
         }
+        stage('Update website') {
+            agent {
+                label "unix"
+            }
+            when { expression {
+                    env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
+                }
+            }
+            steps {
+                script {
+                    withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+                            def remote = [:]
+                            remote.name = 'deploy'
+                            remote.host = 'ec2-35-157-37-37.eu-central-1.compute.amazonaws.com'
+                            remote.user = userName
+                            remote.identityFile = identity
+                            remote.allowAnyHosts = true
+                            sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
+                    }
+                }
+
+            }
+        }
+
     }
     post {
         success {
