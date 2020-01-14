@@ -140,17 +140,17 @@ pipeline {
                              steps {
                                 sh 'git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
-                                sh 'chmod +x scripts/build/parallelsmoke/lnx_1_download.sh'
+                                sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
                              }
                         }
                         stage('Smoke Test') {
                              steps {
-                                sh 'chmod +x scripts/build/parallelsmoke/lnx_2_smoke.sh'
+                                sh 'scripts/build/parallelsmoke/lnx_2_smoke.sh'
                              }
                         }
                         stage('Upload') {
                              steps {
-                                sh 'chmod +x scripts/build/parallelsmoke/lnx_3_upload.sh'
+                                sh 'scripts/build/parallelsmoke/lnx_3_upload.sh'
                              }
                         }
                     }
@@ -169,23 +169,23 @@ pipeline {
                              steps {
                                 sh 'git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
-                                sh 'chmod +x scripts/build/parallelsmoke/osx_1_download.sh'
+                                sh 'scripts/build/parallelsmoke/osx_1_download.sh'
                              }
                         }
                         stage('Smoke Test') {
                              steps {
-                                sh 'chmod +x scripts/build/parallelsmoke/osx_2_smoke.sh'
+                                sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
                              }
                         }
                         stage('Codesign and Notarize') {
                             steps {
-                                sh 'chmod +x scripts/build/parallelsmoke/osx_3_sign_notarize.sh'
+                                sh 'scripts/build/parallelsmoke/osx_3_sign_notarize.sh'
 
                             }
                         }
                         stage('Upload') {
                              steps {
-                                sh 'chmod +x scripts/build/parallelsmoke/osx_4_upload.sh'
+                                sh 'scripts/build/parallelsmoke/osx_4_upload.sh'
                              }
                         }
                     }
