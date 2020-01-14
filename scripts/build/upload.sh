@@ -1,8 +1,10 @@
 set -o xtrace
 set -e
-export AWS=ubuntu@ip-172-31-37-111.eu-central-1.compute.internal
+export AWS=ubuntu@$AWSIP
 export GTfolder=/var/www/html/gt/
 export build_zip=$(ls GToolkit-64-*.zip)
+
+scp $build_zip $AWS:$GTfolder
 
 if [ ! -z "${TAG_NAME}" ]
 then

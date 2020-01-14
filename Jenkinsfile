@@ -7,6 +7,7 @@ pipeline {
     }
     environment {
         GITHUB_TOKEN = credentials('githubrelease')
+        AWSIP = 'ec2-35-157-37-37.eu-central-1.compute.amazonaws.com'
     }
     stages {
         stage ('Build pre release') {
