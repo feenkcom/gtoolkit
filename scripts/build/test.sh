@@ -27,8 +27,8 @@ zip -qr "$build_zip" "$ARTIFACT_DIR"
 # Download and run tests using the pharo64-linux-headless vm.
 
 #if we are in a tag build, then save the image with GtWorld opened
-if [ ! -z "${TAG_NAME}" ]
-then
+# if [ ! -z "${TAG_NAME}" ]
+# then
   #download a pharo headless vm and save the image with GtWorld opened	
   #curl https://files.pharo.org/get-files/80/pharo64-linux-headless-latest.zip -o pharo64-linux-headless-latest.zip	
   #unzip pharo64-linux-headless-latest.zip  -d phcogspurlinuxmhdls64
@@ -37,9 +37,9 @@ then
   # We should also pass --no-quit flag, otherwise the VM will be terminated before the universe ever gets a chance to save an image.
   # It takes significant amount of time to start GtWorld, so let's wait for 30 seconds to make sure everything is initialized
   # There is not need to run save and quit an image from a forked process, because the save request is deffered though the universe
-  xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --save "ThreadedFFIMigration enableThreadedFFI."
-  xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --interactive --no-quit "GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true"
-fi
+xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --save "ThreadedFFIMigration enableThreadedFFI."
+xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --interactive --no-quit "GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true"
+# fi
 
 set +e
 
@@ -51,9 +51,9 @@ xvfb-run -a -e /dev/stdout ./gtoolkit Pharo.image examples --junit-xml-output 'G
 xvfb-run -a -e /dev/stdout ./gtoolkit Pharo.image gtexportreport --report=GtGtoolkitArchitecturalReport
 
 
-#if we are in a tag build, then srun smoke tests
-if [ ! -z "${TAG_NAME}" ]
-then
+#run smoke tests
+# if [ ! -z "${TAG_NAME}" ]
+# then
   set -e
 
   #run smoke tests
@@ -75,4 +75,4 @@ then
       echo "gt.jpg does not exist or is too small. Exiting with 1 in order to fail the build."
       exit 1
   fi
-fi
+# fi
