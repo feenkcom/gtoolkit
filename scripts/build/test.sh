@@ -43,11 +43,6 @@ fi
 
 set +e
 
-#mkdir normalvm
-#cd normalvm
-#curl https://get.pharo.org/64/vm80 | bash
-#cd -
-
 #run unit tests
 git config --global user.name "Jenkins"
 git config --global user.email "jenkins@feenk.com"
