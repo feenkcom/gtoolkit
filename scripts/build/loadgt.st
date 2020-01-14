@@ -17,6 +17,7 @@ Metacello new
   repository: 'github://feenkcom/gtoolkit/src';
   load.
 EpMonitor current enable.
+GtRlReleaserExportWorkflow switchAllRepositoriesBackToMasterBranch.
 
 GtDocumentConstants localGtDirectory asFileReference ensureCreateDirectory.
 Transcript crShow: ('localGtDirectory: ', GtDocumentConstants localGtDirectory printString).
