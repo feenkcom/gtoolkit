@@ -25,7 +25,6 @@ pipeline {
                     }
                 }
                 stage('Load latest master commit') {
-    
                     when { expression {
                             env.BRANCH_NAME.toString().equals('master')
                         }
@@ -41,21 +40,11 @@ pipeline {
                         } 
                     }
                 }
-                stage('Load latest tag') {
-
+                stage('Run examples') {
                     when { expression {
-                            env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
+                            env.BRANCH_NAME.toString().equals('master')
                         }
                     }
-                    steps {
-                        sh 'git clean -f -d'
-                        sh 'rm -rf pharo-local'
-                        sh 'scripts/build/loadtag.sh'
-                    }
-                }
-
-                stage('Run examples') {
-
                     steps {
                         sh 'scripts/build/test.sh'
                         junit '*.xml'
@@ -63,6 +52,19 @@ pipeline {
                         echo env.TAG_NAME
                         echo currentBuild.toString()
                         echo currentBuild.result
+                    }
+                }
+
+                stage('Upload image') {
+
+                    when {
+                        expression {
+                            env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (currentBuild.result == null || currentBuild.result == 'SUCCESS')
+                        }
+                    }
+
+                    steps {
+                        sh 'scripts/build/upload-image-to-tentative.sh'
                     }
                 }
 
@@ -74,6 +76,19 @@ pipeline {
                     }
                     steps {
                         sh 'scripts/build/runreleaser.sh'
+                    }
+                }
+
+                stage('Load latest tag') {
+
+                    when { expression {
+                            env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
+                        }
+                    }
+                    steps {
+                        sh 'git clean -f -d'
+                        sh 'rm -rf pharo-local'
+                        sh 'scripts/build/download_image.sh'
                     }
                 }
 
@@ -109,19 +124,6 @@ pipeline {
                             }
                         }
                         sh 'scripts/build/upload-to-tentative.sh'
-                    }
-                }
-
-                stage('Upload packages') {
-
-                    when {
-                        expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') 
-                        }
-                    }
-
-                    steps {
-                        sh 'scripts/build/upload.sh'
                     }
                 }
             }
@@ -194,7 +196,7 @@ pipeline {
                 }
             }
         }
-        stage('Update website') {
+        stage('Deploy release') {
             agent {
                 label "unix"
             }
@@ -203,6 +205,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'scripts/build/upload.sh'
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
                             def remote = [:]
@@ -214,7 +217,6 @@ pipeline {
                             sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
                     }
                 }
-
             }
         }
 
