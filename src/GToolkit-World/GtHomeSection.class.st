@@ -79,7 +79,7 @@ GtHomeSection >> newDocCardForClass: aClass [
 		newHeaderCardWithTitle: 'Doc' 
 		size: 150@200
 		content: (((GtDocument new 
-						text: (aClass comment first: 1000)) 
+						text: aClass comment) 
 					   gtTextFor: GtPhlowView empty) 
 						asElementDo: [ :e | e size: 300@400; asScalableElement]) 
 		action: [ :card | 
