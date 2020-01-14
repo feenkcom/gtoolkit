@@ -196,7 +196,7 @@ pipeline {
                 }
             }
         }
-        stage('Update website') {
+        stage('Deploy release') {
             agent {
                 label "unix"
             }
@@ -205,6 +205,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'scripts/build/upload.sh'
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
                             def remote = [:]
@@ -216,19 +217,6 @@ pipeline {
                             sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
                     }
                 }
-                stage('Upload packages') {
-
-                    when {
-                        expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS')
-                        }
-                    }
-
-                    steps {
-                        sh 'scripts/build/upload.sh'
-                    }
-                }
-
             }
         }
 
