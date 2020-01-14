@@ -161,6 +161,7 @@ pipeline {
                     }
                     environment {
                         CERT = credentials('devcertificate')
+                        SUDO = credentials('sudo')
                         APPLEPASSWORD = credentials('notarizepassword')
                         SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
                     } 
