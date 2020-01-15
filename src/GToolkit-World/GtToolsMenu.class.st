@@ -70,7 +70,7 @@ GtToolsMenu class >> openPlaygroundFrom: anElement [
 GtToolsMenu >> initialize [
 	super initialize.
 	
-	self layout: BlLinearLayout vertical.
+	self layout: BlFlowLayout new.
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
 		c vertical matchParent ].
@@ -82,41 +82,12 @@ GtToolsMenu >> initialize [
 GtToolsMenu >> initializeElements [
 
 	self removeChildren.
-		
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Playground';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openPlayground ]).
-			
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Coder';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openCoder ]).
 
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Examples';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openExamples ]).
-	
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Monitor';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openMonitor ]).
-		
-	self addChild: (BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
-		label: 'Morphic World';
-		hMatchParent;
-		margin: (BlInsets top: 5 left: 20 bottom: 5 right: 20);
-		action: [ self openMorphicWorld ]).
+	self addChild: (GtHomeToolsSection new newPlaygroundButtonStencil smallIcon create size: 100@100).
+	self addChild: (GtHomeToolsSection new newCoderButtonStencil smallIcon create  size: 100@100).
+	self addChild: (GtHomeToolsSection new newMonitorButtonStencil smallIcon create  size: 100@100).
+	self addChild: (GtHomeToolsSection new newExamplesButtonStencil smallIcon create  size: 100@100).
+	self addChild: (GtHomeToolsSection new newMorphicWorldButtonStencil smallIcon create  size: 100@100).
 		
 	self addChild: (BlElement new
 		layout: (BlLinearLayout horizontal cellSpacing: 10);
@@ -143,74 +114,4 @@ GtToolsMenu >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	
 	self initializeElements
-]
-
-{ #category : #'api - tools' }
-GtToolsMenu >> openCoder [
-	<script: 'self new openCoder'>
-
-	self class openCoderFrom: self
-]
-
-{ #category : #'api - tools' }
-GtToolsMenu >> openExamples [
-	<script: 'self new openExamples'>
-	| anExamplesExplorer aSpace |
-			
-	anExamplesExplorer := GtInspector createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Examples'.
-	aSpace extent: 1200@600.
-	aSpace addChild: anExamplesExplorer.
-	aSpace withHalos.
-	
-	self showSpace: aSpace
-]
-
-{ #category : #'api - tools' }
-GtToolsMenu >> openMonitor [
-	<script: 'self openMonitor'>
-	| aBlocSpacesMonitor aSpace |
-			
-	aBlocSpacesMonitor := GtInspector createOn: GtMonitoredBlocSpaces new.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Monitor'.
-	aSpace extent: 1200@600.
-	aSpace addChild: aBlocSpacesMonitor.
-	aSpace withHalos.
-	
-	self showSpace: aSpace
-]
-
-{ #category : #'api - tools' }
-GtToolsMenu >> openMorphicWorld [
-	self isAttachedToSceneGraph
-		ifFalse: [ ^ self ].
-		
-	self space host openMorphicWorld
-]
-
-{ #category : #'api - tools' }
-GtToolsMenu >> openPlayground [
-	<script: 'self openPlayground'>
-	
-	self class openPlaygroundFrom: self
-]
-
-{ #category : #'api - tools' }
-GtToolsMenu >> openTranscript [
-	<script: 'self new openTranscript'>
-	| aTranscriptElement aSpace |
-
-	aTranscriptElement :=  GtTranscript default asElement.
-
-	aSpace := BlSpace new.
-	aSpace title: 'Transcript'.
-	aSpace extent: 400@600.
-	aSpace addChild: aTranscriptElement.
-	aSpace withHalos.
-
-	self showSpace: aSpace
 ]

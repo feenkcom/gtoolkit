@@ -9,52 +9,85 @@ GtHomeToolsSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := self newSectionContainer.
 	sectionContainer addChild: (self newSectionTitle: 'Tools').
-
 	cardsContainer := self newCardsContainer.
-	cardsContainer addChild: (self 
-		newToolCardWithTitle: 'Playground'
-		icon: BrGlamorousIcons largePlay asElement
-		action: [ :card | self showSpaceWithTitle: 'Playground' with: GtPlaygroundStencil new create from: card ]
-		description: 'Play with code. Live.').
-
-	cardsContainer addChild: (self 
-		newToolCardWithTitle: 'Coder'
-		icon: BrGlamorousIcons largeBook asElement
-		action: [ :card | 	self showSpaceWithTitle: 'Coder' with: GtCoderStencil new create from: card ]
-		description: 'Browse and manipulate code.').
-
-	cardsContainer addChild: (self 
-		newToolCardWithTitle: 'Monitor'
-		icon: BrGlamorousIcons largeSignal asElement
-		action: [ :card | self 
-			showSpaceWithTitle: 'Monitor' 
-			with: (GtInspector createOn: GtMonitoredBlocSpaces new)
-			from: card ]
-		description: 'Monitor processes and high level tasks.').	
-
-	cardsContainer addChild: (self 
-		newToolCardWithTitle: 'Examples'
-		icon: BrGlamorousIcons largeEg asElement
-		action: [ :card | self 
-			showSpaceWithTitle: 'Examples' 
-			with: (GtInspector createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject)
-			from: card ]
-		description: 'Units of tests and of documentation. In one.').	
-
-	cardsContainer addChild: (self 
-		newToolCardWithTitle: 'Morphic World'
-		icon: BrGlamorousIcons largeWindow asElement
-		action: [ :card | card space host openMorphicWorld ]
-		description: 'The legacy Morphic World interface and tools.').	
-
-
-	cardsContainer addChild: (self 
-		newToolCardWithTitle: 'Spotter'
-		icon: BrGlamorousIcons largeSearch asElement
-		action: [ :card | card fireEvent: GtSpawnSpotter new ]
-		description: 'Search anything. Really anything.').
-
-
+	cardsContainer addChild: self newPlaygroundButtonStencil create.
+	cardsContainer addChild: self newCoderButtonStencil create.
+	cardsContainer addChild: self newMonitorButtonStencil create.
+	cardsContainer addChild: self newExamplesButtonStencil create.
+	cardsContainer addChild: self newMorphicWorldButtonStencil create.
+	cardsContainer addChild: self newSpotterButtonStencil create.
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
+]
+
+{ #category : #'api - instantiation' }
+GtHomeToolsSection >> newCoderButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Coder';
+		icon: BrGlamorousIcons largeBook asElement;
+		action: [ :card | 
+			self
+				showSpaceWithTitle: 'Coder'
+				with: GtCoderStencil new create
+				from: card ];
+		description: 'Browse and manipulate code.'
+]
+
+{ #category : #'api - instantiation' }
+GtHomeToolsSection >> newExamplesButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Examples';
+		icon: BrGlamorousIcons largeEg asElement;
+		action: [ :card | 
+			self
+				showSpaceWithTitle: 'Examples'
+				with:
+					(GtInspector
+						createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject)
+				from: card ];
+		description: 'Units of tests and of documentation. In one.'
+]
+
+{ #category : #'api - instantiation' }
+GtHomeToolsSection >> newMonitorButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Monitor';
+		icon: BrGlamorousIcons largeSignal asElement;
+		action: [ :card | 
+			self
+				showSpaceWithTitle: 'Monitor'
+				with: (GtInspector createOn: GtMonitoredBlocSpaces new)
+				from: card ];
+		description: 'Monitor processes and high level tasks.'
+]
+
+{ #category : #'api - instantiation' }
+GtHomeToolsSection >> newMorphicWorldButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Morphic World';
+		icon: BrGlamorousIcons largeWindow asElement;
+		action: [ :card | card space host openMorphicWorld ];
+		description: 'The legacy Morphic World interface and tools.'
+]
+
+{ #category : #'api - instantiation' }
+GtHomeToolsSection >> newPlaygroundButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Playground';
+		icon: BrGlamorousIcons largePlay asElement;
+		action: [ :card | 
+			self
+				showSpaceWithTitle: 'Playground'
+				with: GtPlaygroundStencil new create
+				from: card ];
+		description: 'Play with code. Live.'
+]
+
+{ #category : #'api - instantiation' }
+GtHomeToolsSection >> newSpotterButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Spotter';
+		icon: BrGlamorousIcons largeSearch asElement;
+		action: [ :card | card fireEvent: GtSpawnSpotter new ];
+		description: 'Search anything. Really anything.'
 ]
