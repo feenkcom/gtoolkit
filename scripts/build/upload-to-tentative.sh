@@ -1,6 +1,6 @@
 set -o xtrace
 set -e
-export AWS=ubuntu@ip-172-31-37-111.eu-central-1.compute.internal
+export AWS=ubuntu@$AWSIP
 export GTfolder=/var/www/html/tentative
 
 
