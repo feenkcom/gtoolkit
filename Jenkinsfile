@@ -79,7 +79,7 @@ pipeline {
                     }
                 }
 
-                stage('Load latest tag') {
+                stage('Download master image') {
 
                     when { expression {
                             env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
@@ -103,6 +103,7 @@ pipeline {
                         sh 'scripts/build/package.sh'
                         stash includes: 'GToolkitWin64*.zip', name: 'winbuild'
                         stash includes: 'lib*.zip', name: 'alllibs'
+                        stash includes: 'GT.zip', name: 'gtimage'
                     }
                 }
 
@@ -210,6 +211,7 @@ pipeline {
                 sh 'chmod +x scripts/build/*.sh'
                 unstash 'winbuild'
                 unstash 'alllibs'
+                unstash 'gtimage'
                 sh 'ls -al'
                 sh 'scripts/build/upload.sh'
                 script {
