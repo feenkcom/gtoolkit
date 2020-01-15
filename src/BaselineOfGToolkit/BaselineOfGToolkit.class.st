@@ -12,7 +12,7 @@ Glamorous Toolkit has cool widgets and fancy code analyses, yet the emphasis is 
 
 Glamorous Toolkit is made out of ${example:BaselineOfGToolkit class>>#withAllContainedProjects|label=#size}$ distinct, yet combinable, components. The picture below provides an overview of these components and their interdependencies. The map is navigable. Click on each component to learn more about it.
 
-${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:||noCode=|previewHeight=300}$
+${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:|noCode=|previewHeight=300}$
 
 
 !!Moldable development
