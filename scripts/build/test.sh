@@ -22,7 +22,7 @@ cp *.sources "${ARTIFACT_DIR}/"
 cp -Rv gt-extra "${ARTIFACT_DIR}/"
 
 export build_zip="${ARTIFACT_DIR}.zip"
-zip -qr "$build_zip" "$ARTIFACT_DIR"
+
 
 # Download and run tests using the pharo64-linux-headless vm.
 
@@ -40,6 +40,7 @@ zip -qr "$build_zip" "$ARTIFACT_DIR"
 xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --save "ThreadedFFIMigration enableThreadedFFI."
 xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --interactive --no-quit "GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true"
 # fi
+zip -qr "$build_zip" "$ARTIFACT_DIR"
 
 set +e
 
