@@ -42,6 +42,13 @@ GtHomeToolsSection >> create [
 		description: 'Units of tests and of documentation. In one.').	
 
 	cardsContainer addChild: (self 
+		newToolCardWithTitle: 'Morphic World'
+		icon: BrGlamorousIcons largeWindow asElement
+		action: [ :card | card space host openMorphicWorld ]
+		description: 'The legacy Morphic World interface and tools.').	
+
+
+	cardsContainer addChild: (self 
 		newToolCardWithTitle: 'Spotter'
 		icon: BrGlamorousIcons largeSearch asElement
 		action: [ :card | card fireEvent: GtSpawnSpotter new ]
