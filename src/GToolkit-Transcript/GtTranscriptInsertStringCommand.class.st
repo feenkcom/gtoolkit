@@ -51,11 +51,7 @@ GtTranscriptInsertStringCommand >> execute [
 	(self text
 		from: aStartPosition
 		to: self text size)
-			attributes: self attributes.
-	
-	self editor update: aStartPosition to: self text size.
-	self editor invalidate: aStartPosition to: self text size.
-	
+			attributes: self attributes
 ]
 
 { #category : #accessing }
