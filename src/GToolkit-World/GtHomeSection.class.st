@@ -107,7 +107,7 @@ GtHomeSection >> newHeaderCardWithTitle: aString size: aPoint content: anElement
 		addChild: (BrLabel new look: (BrGlamorousLabelLook new fontSize: 10);
 		text: aString).
 	^ container
-		addChild: headerContainer; 
+		addChild: headerContainer preventMeAndChildrenMouseEvents; 
 		addChild: (anElement preventMeAndChildrenMouseEvents).
 ]
 
@@ -186,7 +186,7 @@ GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock de
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newUrlCardWithTitle: aUrlString description: aDescriptionString url: anObject [
+GtHomeSection >> newUrlCardWithTitle: aTitleString description: aDescriptionString url: aUrlString [
 	^ self 
 		newHeaderCardWithTitle: 'www' 
 		size: 200@80
@@ -194,7 +194,7 @@ GtHomeSection >> newUrlCardWithTitle: aUrlString description: aDescriptionString
 			BlElement new 
 				constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
 				layout: BlLinearLayout vertical alignCenter;
-				addChild: (BrLabel new text: aUrlString; look: BrGlamorousLabelLook);
+				addChild: (BrLabel new text: aTitleString; look: BrGlamorousLabelLook);
 				addChild: (BrLabel new text: aDescriptionString; look: (BrGlamorousLabelLook new fontSize: 10; foreground: Color gray)))
 		action: [ :card | WebBrowser openOn: aUrlString ]
 ]
