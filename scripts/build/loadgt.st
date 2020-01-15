@@ -38,10 +38,5 @@ docFolders do: [ :each |
 World closeAllWindowsDiscardingChanges.
 #GtWorldMenu asClass setGtDesktopLogo.
 
-IceCredentialsProvider sshCredentials
-	publicKey: '';
-	privateKey: ''.
-
-IceCredentialsProvider useCustomSsh: false.
 
 Smalltalk snapshot: true andQuit: false.
