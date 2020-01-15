@@ -44,5 +44,4 @@ IceCredentialsProvider sshCredentials
 
 IceCredentialsProvider useCustomSsh: false.
 
-IceRepository registry removeAll.
 Smalltalk snapshot: true andQuit: false.
