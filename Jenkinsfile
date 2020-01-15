@@ -152,6 +152,7 @@ pipeline {
                         stage('Smoke Test') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/lnx_2_smoke.sh'
+                                junit '*.xml'
                              }
                         }
                         stage('Upload') {
@@ -182,6 +183,7 @@ pipeline {
                         stage('Smoke Test') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
+                                junit '*.xml'
                              }
                         }
                         stage('Codesign and Notarize') {
