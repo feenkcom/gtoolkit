@@ -101,6 +101,8 @@ pipeline {
                     }
                     steps {
                         sh 'scripts/build/package.sh'
+                        stash includes: 'GToolkitWin64*.zip', name: 'winbuild'
+                        stash includes: 'lib*.zip', name: 'alllibs'
                     }
                 }
 
@@ -206,6 +208,8 @@ pipeline {
             }
             steps {
                 sh 'chmod +x scripts/build/*.sh'
+                unstash 'winbuild'
+                unstash 'alllibs'
                 sh 'ls -al'
                 sh 'scripts/build/upload.sh'
                 script {

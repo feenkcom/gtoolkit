@@ -29,10 +29,6 @@ export build_zip="${ARTIFACT_DIR}.zip"
 #if we are in a tag build, then save the image with GtWorld opened
 # if [ ! -z "${TAG_NAME}" ]
 # then
-  #download a pharo headless vm and save the image with GtWorld opened	
-  #curl https://files.pharo.org/get-files/80/pharo64-linux-headless-latest.zip -o pharo64-linux-headless-latest.zip	
-  #unzip pharo64-linux-headless-latest.zip  -d phcogspurlinuxmhdls64
-
   # It is important to run headless vm with --interactive flag, otherwise the UI will not open
   # We should also pass --no-quit flag, otherwise the VM will be terminated before the universe ever gets a chance to save an image.
   # It takes significant amount of time to start GtWorld, so let's wait for 30 seconds to make sure everything is initialized
