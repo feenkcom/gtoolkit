@@ -139,7 +139,7 @@ pipeline {
             parallel {
                 stage('Test On Windows') {
                     agent {
-                        label "unix"
+                        label "windows"
                     }
                      stages {
                         stage('Download') {
