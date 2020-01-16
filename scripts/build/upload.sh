@@ -4,11 +4,7 @@ export AWS=ubuntu@$AWSIP
 export GTfolder=/var/www/html/gt/
 export build_zip=GT.zip
 
-scp $build_zip $AWS:$GTfolder
-
-
 scp GToolkitWin64*.zip $AWS:$GTfolder
-scp $build_zip $AWS:$GTfolder
 
 #save the date so we can show it in the download button
 date +%s > releasedateinseconds
