@@ -134,7 +134,7 @@ GtWorldElement >> newSubSpaceButton [
 						content: [ GtToolsMenu new
 								constraintsDo: [ :c | 
 									c vertical fitContent.
-									c horizontal exact: 200 ];
+									c horizontal exact: 420 ];
 								yourself ]);
 		icon: BrGlamorousIcons hamburger asElement;
 		label: 'Menu';

@@ -107,7 +107,7 @@ GtHomeSection >> newHeaderCardWithTitle: aString size: aPoint content: anElement
 		addChild: (BrLabel new look: (BrGlamorousLabelLook new fontSize: 10);
 		text: aString).
 	^ container
-		addChild: headerContainer; 
+		addChild: headerContainer preventMeAndChildrenMouseEvents; 
 		addChild: (anElement preventMeAndChildrenMouseEvents).
 ]
 
@@ -143,27 +143,6 @@ GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShow description
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock [
-	| iconElement labelElement |
-	iconElement := anElement margin: (BlInsets bottom: 5).
-	labelElement := BrLabel new 
-	    text: aString;
-	    look: (BrGlamorousLabelLook new fontSize: 14).
-	^ BrButton new
-		constraintsDo:[ :c | 
-	        c horizontal exact: 120.
-	        c vertical exact: 120 ];
-		margin: (BlInsets top: 10 left: 20 bottom: 10 right: 20);
-		action: aBlock;
-		padding: (BlInsets all: 10);
-		look: BrGlamorousButtonExteriorLook new;
-		geometry: (BlRectangle cornerRadius: 4);
-		layout: BlLinearLayout vertical alignCenter;
-		addChild: iconElement;
-		addChild: labelElement.
-]
-
-{ #category : #'instance creation' }
 GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock description: aDescriptionString [
 	| iconElement labelElement |
 	iconElement := anElement margin: (BlInsets bottom: 5).
@@ -186,7 +165,7 @@ GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock de
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newUrlCardWithTitle: aUrlString description: aDescriptionString url: anObject [
+GtHomeSection >> newUrlCardWithTitle: aTitleString description: aDescriptionString url: aUrlString [
 	^ self 
 		newHeaderCardWithTitle: 'www' 
 		size: 200@80
@@ -194,7 +173,7 @@ GtHomeSection >> newUrlCardWithTitle: aUrlString description: aDescriptionString
 			BlElement new 
 				constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
 				layout: BlLinearLayout vertical alignCenter;
-				addChild: (BrLabel new text: aUrlString; look: BrGlamorousLabelLook);
+				addChild: (BrLabel new text: aTitleString; look: BrGlamorousLabelLook);
 				addChild: (BrLabel new text: aDescriptionString; look: (BrGlamorousLabelLook new fontSize: 10; foreground: Color gray)))
 		action: [ :card | WebBrowser openOn: aUrlString ]
 ]
