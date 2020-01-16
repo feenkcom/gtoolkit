@@ -137,28 +137,6 @@ pipeline {
                 }
             }
             parallel {
-                stage('Test On Windows') {
-                    agent {
-                        label "windows"
-                    }
-                     stages {
-                        stage('Download') {
-                             steps {
-                                powershell 'Write-Output "Hello, World!"'
-                             }
-                        }
-                        stage('Smoke Test') {
-                             steps {
-                                powershell 'Write-Output "Hello, World!"'
-                             }
-                        }
-                        stage('Upload') {
-                             steps {
-                                powershell 'Write-Output "Hello, World!"'
-                             }
-                        }
-                    }
-                }
                 stage('Test On Linux') {
                     agent {
                         label "unix"
