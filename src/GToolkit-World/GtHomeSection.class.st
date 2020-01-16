@@ -143,27 +143,6 @@ GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShow description
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock [
-	| iconElement labelElement |
-	iconElement := anElement margin: (BlInsets bottom: 5).
-	labelElement := BrLabel new 
-	    text: aString;
-	    look: (BrGlamorousLabelLook new fontSize: 14).
-	^ BrButton new
-		constraintsDo:[ :c | 
-	        c horizontal exact: 120.
-	        c vertical exact: 120 ];
-		margin: (BlInsets top: 10 left: 20 bottom: 10 right: 20);
-		action: aBlock;
-		padding: (BlInsets all: 10);
-		look: BrGlamorousButtonExteriorLook new;
-		geometry: (BlRectangle cornerRadius: 4);
-		layout: BlLinearLayout vertical alignCenter;
-		addChild: iconElement;
-		addChild: labelElement.
-]
-
-{ #category : #'instance creation' }
 GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock description: aDescriptionString [
 	| iconElement labelElement |
 	iconElement := anElement margin: (BlInsets bottom: 5).
