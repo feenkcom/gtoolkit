@@ -13,4 +13,15 @@ unzip build-artifacts/GToolkitVM-8.2.0-*-linux64-bin.zip
 # We should also pass --no-quit flag, otherwise the VM will be terminated before the universe ever gets a chance to save an image.
 # It takes significant amount of time to start GtWorld, so let's wait for 30 seconds to make sure everything is initialized
 # There is not need to run save and quit an image from a forked process, because the save request is deffered though the universe
+
+download_lib() {
+	curl https://dl.feenk.com/$1/linux/development/x86_64/lib$1.so -o lib$1.so
+}
+
+download_lib Boxer
+download_lib Gleam
+download_lib Glutin
+download_lib Clipboard
+download_lib Skia
+
 xvfb-run -a -e /dev/stdout ./gtoolkit GToolkit-64-*/GToolkit-64-*.image eval --interactive --no-quit "GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true"
