@@ -84,8 +84,24 @@ GtHomeSection >> newDocCardForClass: aClass [
 						asElementDo: [ :e | e size: 300@400; asScalableElement]) 
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Documentation'
+				showSpaceWithTitle: aClass name
 				with: (GtInspector withToolOn: (GtDocument forClass: aClass))
+				from: card ]
+]
+
+{ #category : #'instance creation' }
+GtHomeSection >> newDocCardForFile: aReference [
+	^ self 
+		newHeaderCardWithTitle: 'Doc' 
+		size: 150@200
+		content: (((GtDocument new 
+						text: aReference fileReference contents) 
+					   gtTextFor: GtPhlowView empty) 
+						asElementDo: [ :e | e size: 300@400; asScalableElement]) 
+		action: [ :card | 
+			self
+				showSpaceWithTitle: aReference fileReference basename
+				with: (GtInspector withToolOn: (GtDocument forFile: aReference fileReference))
 				from: card ]
 ]
 
