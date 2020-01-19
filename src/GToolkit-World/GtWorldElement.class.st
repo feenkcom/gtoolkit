@@ -4,10 +4,16 @@ Class {
 	#instVars : [
 		'spotterDropdown',
 		'subSpaceDropdown',
-		'tabs'
+		'tabs',
+		'home'
 	],
 	#category : #'GToolkit-World'
 }
+
+{ #category : #'instance creation' }
+GtWorldElement >> home [
+	^ home
+]
 
 { #category : #initialization }
 GtWorldElement >> initialize [
@@ -15,6 +21,7 @@ GtWorldElement >> initialize [
 	tabs := BrTabGroup new.
 	tabs look: BrGlamorousSpaceTabGroupLook new.
 	tabs actionbarStencil: [ self newActionbar ].
+	home := GtHome new.
 	tabs
 		addTab:
 			(BrTab new
@@ -22,7 +29,7 @@ GtWorldElement >> initialize [
 				look: BrGlamorousSpaceTabWithIconLook;
 				icon: BrGlamorousIcons gt asElement;
 				label: 'Home';
-				stencil: [ GtHome new asScrollableElement background: Color white ]).
+				stencil: [ home asScrollableElement background: Color white ]).
 	self
 		addShortcut:
 			(BlShortcut new
@@ -140,6 +147,27 @@ GtWorldElement >> newSubSpaceButton [
 		label: 'Menu';
 		yourself.
 	^ subSpaceDropdown
+]
+
+{ #category : #initialization }
+GtWorldElement >> onAddedToSceneGraph [
+	super onAddedToSceneGraph.
+
+	SystemAnnouncer uniqueInstance weak
+		when: (ClassAnnouncement where: [ :ann | ann classAffected = GtHome ])
+		send: #update:
+		to: self home. 
+
+	SystemAnnouncer uniqueInstance weak
+		when: (MethodAnnouncement where: [ :ann | ann classAffected = GtHome ])
+		send: #update:
+		to: self home. 
+]
+
+{ #category : #initialization }
+GtWorldElement >> onRemovedFromSceneGraph [
+	super onRemovedFromSceneGraph.
+	SystemAnnouncer uniqueInstance unsubscribe: self home
 ]
 
 { #category : #'api - opening' }
