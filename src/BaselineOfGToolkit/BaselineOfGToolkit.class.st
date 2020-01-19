@@ -177,6 +177,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitRemote' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-remote/src' ].
 		spec package: 'GToolkit-Scenery'.
+		spec package: 'GToolkit-Docs'.
 		spec package: 'GToolkit-Monitor'.
 		spec package: 'GToolkit-Constraints' with: [ 
 			spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter') ].
