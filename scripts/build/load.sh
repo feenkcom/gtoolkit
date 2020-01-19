@@ -2,7 +2,11 @@
 set -o xtrace
 export RUST_BACKTRACE=full
 
-curl https://get.pharo.org/64/80 | bash
+rm -rf Pharo8.0-SNAPSHOT*
+curl https://files.pharo.org/image/80/Pharo8.0-SNAPSHOT.build.1114.sha.2258354.arch.64bit.zip -o Pharo8.0-SNAPSHOT.build.1114.sha.2258354.arch.64bit.zip
+unzip Pharo8.0-SNAPSHOT.build.1114.sha.2258354.arch.64bit.zip
+mv Pharo8.0-SNAPSHOT-64bit-*.image Pharo.image
+mv Pharo8.0-SNAPSHOT-64bit-*.changes Pharo.changes
 
 sh scripts/build/downloadLatestVM.sh
 unzip build-artifacts.zip

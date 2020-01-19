@@ -56,6 +56,27 @@ GtHome >> initializeSections [
 		self addChild: aHomeSectionStencil asElement ]
 ]
 
+{ #category : #initialization }
+GtHome >> onAddedToSceneGraph [
+	super onAddedToSceneGraph.
+
+	SystemAnnouncer uniqueInstance weak
+		when: (ClassAnnouncement where: [ :ann | ann classAffected = GtHome ])
+		send: #update:
+		to: self. 
+
+	SystemAnnouncer uniqueInstance weak
+		when: (MethodAnnouncement where: [ :ann | ann classAffected = GtHome ])
+		send: #update:
+		to: self. 
+]
+
+{ #category : #initialization }
+GtHome >> onRemovedFromSceneGraph [
+	super onRemovedFromSceneGraph.
+	SystemAnnouncer uniqueInstance unsubscribe: self
+]
+
 { #category : #sections }
 GtHome >> slideShowsSection [
 	<gtHomeSection>
@@ -73,4 +94,10 @@ GtHome >> toolsSection [
 	<gtHomeSection>
 	^ GtHomeToolsSection new
 		priority: 10
+]
+
+{ #category : #initialization }
+GtHome >> update: anAnnouncement [
+	self removeChildren.
+	self initializeSections
 ]

@@ -212,7 +212,8 @@ GtTranscriptExamples >> scripterShowString [
 	aScripter substep: 'Write with #show:' do: [ :aStep |
 		aStep do
 			label: self feenkString;
-			action: [ :aTranscript | aTranscript show: self feenkString ].
+			action: [ :aTranscript | aTranscript show: self feenkString ];
+			onModel.
 		aStep wait forEmptySpaceTaskQueue.
 		aStep check
 			label: 'Check Transcript Content';
