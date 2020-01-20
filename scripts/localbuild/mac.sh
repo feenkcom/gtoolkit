@@ -3,6 +3,8 @@ set -o xtrace
 
 # find . ! -name '*.st' ! -name '*.sh' ! -name '.' -exec rm -rf {} +
 
+wget https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -O loadgt.st
+
 curl https://files.pharo.org/image/80/Pharo8.0-SNAPSHOT.build.1114.sha.2258354.arch.64bit.zip -o Pharo8.0-SNAPSHOT.build.1114.sha.2258354.arch.64bit.zip
 unzip Pharo8.0-SNAPSHOT.build.1114.sha.2258354.arch.64bit.zip
 mv Pharo8.0-SNAPSHOT-64bit-*.image Pharo.image
