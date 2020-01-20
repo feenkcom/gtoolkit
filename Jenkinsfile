@@ -199,6 +199,30 @@ pipeline {
                         }
                     }
                 }
+                stage('Test On Windows') {
+                    agent {
+                        label "windows"
+                    }
+                    stages {
+                        stage('Download') {
+                             steps {
+                                powershell 'ls'
+                                powershell './scripts/build/parallelsmoke/win_1_download.ps1'
+                             }
+                        }
+                        stage('Smoke Test') {
+                             steps {
+                               powershell './scripts/build/parallelsmoke/win_2_smoke.ps1'
+                               junit '*.xml'
+                             }
+                        }
+                        stage('Upload') {
+                             steps {
+                              powershell 'Write-Output "Linux node will do the windows upload."'
+                             }
+                        }
+                    }
+                }
             }
         }
         stage('Deploy release') {
