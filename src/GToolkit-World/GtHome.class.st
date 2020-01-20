@@ -74,3 +74,9 @@ GtHome >> toolsSection [
 	^ GtHomeToolsSection new
 		priority: 10
 ]
+
+{ #category : #initialization }
+GtHome >> update: anAnnouncement [
+	self removeChildren.
+	self initializeSections
+]
