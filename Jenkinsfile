@@ -48,23 +48,8 @@ pipeline {
                     steps {
                         sh 'scripts/build/test.sh'
                         junit '*.xml'
-                        echo env.BRANCH_NAME
-                        echo env.TAG_NAME
                         echo currentBuild.toString()
                         echo currentBuild.result
-                    }
-                }
-
-                stage('Upload image') {
-
-                    when {
-                        expression {
-                            env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (currentBuild.result == null || currentBuild.result == 'SUCCESS')
-                        }
-                    }
-
-                    steps {
-                        sh 'scripts/build/upload-image-to-tentative.sh'
                     }
                 }
 
@@ -79,16 +64,15 @@ pipeline {
                     }
                 }
 
-                stage('Download master image') {
-
+                stage('Save Image With GTWorld opened') {
                     when { expression {
-                            env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
+                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
                         }
                     }
                     steps {
                         sh 'git clean -f -d'
                         sh 'rm -rf pharo-local'
-                        sh 'scripts/build/download_image.sh'
+                        sh 'scripts/build/open_gt_world.sh'
                     }
                 }
 
@@ -96,7 +80,7 @@ pipeline {
 
                     when {
                         expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.TAG_NAME.toString().startsWith("v")
+                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
                         }
                     }
                     steps {
@@ -104,6 +88,7 @@ pipeline {
                         stash includes: 'GToolkitWin64*.zip', name: 'winbuild'
                         stash includes: 'lib*.zip', name: 'alllibs'
                         stash includes: 'GT.zip', name: 'gtimage'
+                        stash includes: 'tagname.txt', name: 'tagname'
                     }
                 }
 
@@ -111,7 +96,7 @@ pipeline {
 
                     when {
                         expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.TAG_NAME.toString().startsWith("v")
+                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
                         }
                     }
                     steps {
@@ -133,7 +118,7 @@ pipeline {
         }
         stage('Run UI Tests') {
             when { expression {
-                    env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
+                   (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
                 }
             }
             parallel {
@@ -147,6 +132,7 @@ pipeline {
                                 sh 'git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
                                 sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
+                                unstash 'tagname'
                              }
                         }
                         stage('Smoke Test') {
@@ -178,6 +164,7 @@ pipeline {
                                 sh 'git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
                                 sh 'scripts/build/parallelsmoke/osx_1_download.sh'
+                                unstash 'tagname'
                              }
                         }
                         stage('Smoke Test') {
@@ -208,6 +195,7 @@ pipeline {
                              steps {
                                 powershell 'ls'
                                 powershell './scripts/build/parallelsmoke/win_1_download.ps1'
+                                
                              }
                         }
                         stage('Smoke Test') {
@@ -230,7 +218,7 @@ pipeline {
                 label "unix"
             }
             when { expression {
-                    env.TAG_NAME != null && env.TAG_NAME.toString().startsWith("v") 
+                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
                 }
             }
             steps {
@@ -238,6 +226,7 @@ pipeline {
                 unstash 'winbuild'
                 unstash 'alllibs'
                 unstash 'gtimage'
+                unstash 'tagname'
                 sh 'ls -al'
                 sh 'scripts/build/upload.sh'
                 script {

@@ -1,6 +1,7 @@
 #!/bin/sh
 set -o xtrace
 ls -al
+TAG_NAME=$( cat tagname.txt )
 
 echo $CERT > encoded
 base64 --decode encoded -o pipe.p12

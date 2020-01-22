@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
 set -o xtrace
+TAG_NAME=$( cat tagname.txt )
 GTFolder=GToolkitWin64-$TAG_NAME
 mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder

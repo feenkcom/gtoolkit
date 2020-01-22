@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+TAG_NAME=$( cat tagname.txt )
 GTFolder=GToolkitLinux64-$TAG_NAME
 mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
