@@ -5,8 +5,8 @@ set -o xtrace
 
 wget https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -O loadgt.st
 
-wget https://files.pharo.org/image/80/Pharo8.0-SNAPSHOT.build.1114.sha.2258354.arch.64bit.zip -O Pharo8.0-SNAPSHOT.build.1114.sha.2258354.arch.64bit.zip
-unzip Pharo8.0-SNAPSHOT.build.1114.sha.2258354.arch.64bit.zip
+wget https://files.pharo.org/image/80/Pharo8.0-SNAPSHOT.build.1116.sha.e967f28.arch.64bit.zip -O Pharo8.0-SNAPSHOT.build.1116.sha.e967f28.arch.64bit.zip
+unzip Pharo8.0-SNAPSHOT.build.1116.sha.e967f28.arch.64bit.zip
 mv Pharo8.0-SNAPSHOT-64bit-*.image Pharo.image
 mv Pharo8.0-SNAPSHOT-64bit-*.changes Pharo.changes
 
