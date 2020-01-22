@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-
+TAG_NAME=$( cat tagname.txt )
 GTFolder=GToolkitOSX64-$TAG_NAME
 mkdir -p $GTFolder
 

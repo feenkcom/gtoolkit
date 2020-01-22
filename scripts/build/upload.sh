@@ -3,7 +3,7 @@ set -e
 export AWS=ubuntu@$AWSIP
 export GTfolder=/var/www/html/gt/
 export build_zip=GT.zip
-
+TAG_NAME=$( cat tagname.txt )
 scp GToolkitWin64*.zip $AWS:$GTfolder
 
 #save the date so we can show it in the download button
