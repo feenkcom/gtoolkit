@@ -16,12 +16,12 @@ cp *.sources "${ARTIFACT_DIR}/"
 cp -Rv gt-extra "${ARTIFACT_DIR}/"
 
 export build_zip="${ARTIFACT_DIR}.zip"
-cp $build_zip GT.zip
 
 xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --save "IceCredentialsProvider sshCredentials publicKey: ''; privateKey: ''. IceCredentialsProvider useCustomSsh: false. IceRepository registry removeAll." 
 # xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --save "IceCredentialsProvider providerType: IceNonInteractiveCredentialsProvider. IceCredentialsProvider sshCredentials publicKey: ''; privateKey: ''. IceCredentialsProvider useCustomSsh: false. IceRepository registry removeAll." 
 xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}64.image" eval --save "ThreadedFFIMigration enableThreadedFFI." 
 zip -qr "$build_zip" "$ARTIFACT_DIR"
+cp $build_zip GT.zip
 
 set +e
 
