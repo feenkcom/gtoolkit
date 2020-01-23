@@ -241,7 +241,6 @@ pipeline {
                 }
             }
         }
-
     }
     post {
         success {
