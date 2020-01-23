@@ -160,7 +160,7 @@ pipeline {
                     stages {
                         stage('Download') {
                              steps {
-                                sh 'git clean -fdx'
+                                sh 'echo "${SUDO}" | sudo -S git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
                                 sh 'scripts/build/parallelsmoke/osx_1_download.sh'
                                 unstash 'tagname'
