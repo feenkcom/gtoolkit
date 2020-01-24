@@ -121,7 +121,7 @@ pipeline {
                 }
             }
             parallel {
-                stage('Test On Linux') {
+                stage('Linux') {
                     agent {
                         label "unix"
                     }
@@ -147,7 +147,7 @@ pipeline {
                         }
                     }
                 }
-                stage ('Test Sign and Notarize on MacOSX') {
+                stage ('MacOSX') {
                     agent {
                         label "macosx"
                     }
@@ -185,7 +185,7 @@ pipeline {
                         }
                     }
                 }
-                stage('Test On Windows') {
+                stage('Windows') {
                     agent {
                         label "windows"
                     }
