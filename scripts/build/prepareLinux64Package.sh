@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-
+set -o xtrace
 GTFolder=GToolkitLinux64
 mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder

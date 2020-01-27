@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+set -o xtrace
 GTFolder=GToolkitOSX64
 mkdir -p $GTFolder
 
