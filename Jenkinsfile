@@ -77,11 +77,11 @@ pipeline {
                     }
                     steps {
                         sh 'scripts/build/package.sh'
-                        stash includes: 'build-artifacts/GToolkitVM-8.2.0-*-linux64-bin.zip', name: 'linuxvm'
+                        
                         stash includes: 'GToolkitWin64*.zip', name: 'winbuild'
                         stash includes: 'lib*.zip', name: 'alllibs'
                         stash includes: 'GT.zip', name: 'gtimage'
-                        stash includes: 'tagname.txt', name: 'tagname'
+                        
                     }
                 }
 
@@ -125,7 +125,7 @@ pipeline {
                                 sh 'git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
                                 sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
-                                unstash 'tagname'
+                                
                              }
                         }
                         stage('Smoke Test') {
@@ -152,7 +152,7 @@ pipeline {
                                 sh 'echo "${SUDO}" | sudo -S git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
                                 sh 'scripts/build/parallelsmoke/osx_1_download.sh'
-                                unstash 'tagname'
+                                
                              }
                         }
                         stage('Smoke Test') {
@@ -211,8 +211,8 @@ pipeline {
                     unstash 'winbuild'
                     unstash 'alllibs'
                     unstash 'gtimage'
-                    unstash 'tagname'
-                    unstash 'linuxvm'
+
+                    
                     sh 'scripts/build/runreleaser.sh'
                     sh 'ls -al'
                     sh 'scripts/build/upload.sh'
