@@ -158,7 +158,7 @@ pipeline {
                         stage('Smoke Test') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
-                                junit '*.xml'
+                                // junit '*.xml'
                              }
                         }
                         stage('Codesign and Notarize') {
@@ -173,6 +173,11 @@ pipeline {
                             }
                         }
                         stage('Upload') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS')
+                                }
+                            }
                              steps {
                                 sh 'scripts/build/parallelsmoke/osx_4_upload.sh'
                              }
@@ -194,7 +199,7 @@ pipeline {
                         stage('Smoke Test') {
                              steps {
                                powershell './scripts/build/parallelsmoke/win_2_smoke.ps1'
-                               junit '*.xml'
+                            //    junit '*.xml'
                              }
                         }
                     }
