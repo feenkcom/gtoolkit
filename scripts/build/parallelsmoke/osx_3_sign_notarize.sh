@@ -19,12 +19,12 @@ CERT_IDENTITY=$(security find-identity -v -p codesigning "$MY_KEYCHAIN" | head -
 CERT_UUID=$(security find-identity -v -p codesigning "$MY_KEYCHAIN" | head -1 | grep '"' | awk '{print $2}') # Handy to have UUID (just in case)
 security set-key-partition-list -S apple-tool:,apple: -s -k $MY_KEYCHAIN_PASSWORD -D "$CERT_IDENTITY" -t private $MY_KEYCHAIN # Enable codesigning from a non user interactive shell
 
-rm -rf GToolkitOSX64*/
+echo "${SUDO}" | sudo -S rm -rf GToolkitOSX64*
 unzip GToolkitOSX64.zip
 rm GToolkitOSX64.zip
 
-codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GToolkitOSX64-*/GToolkit.app
-codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GToolkitOSX64-*/*.dylib 
+codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GToolkitOSX64/GToolkit.app
+codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GToolkitOSX64/*.dylib 
 
 ditto -c -k --sequesterRsrc --keepParent GToolkitOSX64/ GToolkitOSX64.zip
 
