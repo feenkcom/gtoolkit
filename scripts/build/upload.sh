@@ -3,8 +3,25 @@ set -e
 export AWS=ubuntu@$AWSIP
 export GTfolder=/var/www/html/gt/
 export build_zip=GT.zip
-TAG_NAME=$( cat tagname.txt )
-scp GToolkitWin64*.zip $AWS:$GTfolder
+
+TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 | sort -t '/' -k 3 -V | tail -n1 |sed 's/.*\///; s/\^{}//')
+echo $TAG_NAME > tagname.txt
+
+#download GToolkitOSX64 from tentative because the osx vm uploaded a notarized version of it 
+rm GToolkitOSX64.zip
+curl https://dl.feenk.com/tentative/GToolkitOSX64.zip -o GToolkitOSX64.zip
+
+mv GToolkitWin64.zip GToolkitWin64-$TAG_NAME.zip
+mv GToolkitLinux64.zip GToolkitLinux64-$TAG_NAME.zip
+mv GToolkitOSX64.zip GToolkitOSX64-$TAG_NAME.zip
+mv libOSX64.zip libOSX64-$TAG_NAME.zip
+mv libWin64.zip libWin64-$TAG_NAME.zip
+mv libLinux64.zip libLinux64-$TAG_NAME.zip
+
+
+scp GToolkitWin64-$TAG_NAME.zip $AWS:$GTfolder
+scp GToolkitLinux64-$TAG_NAME.zip $AWS:$GTfolder
+scp GToolkitOSX64-$TAG_NAME.zip $AWS:$GTfolder
 
 #save the date so we can show it in the download button
 date +%s > releasedateinseconds
