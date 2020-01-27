@@ -51,7 +51,7 @@ pipeline {
                     }
                     steps {
                         sh 'scripts/build/pack_image.sh'
-                        junit '*.xml'
+                        
                         echo currentBuild.toString()
                         echo currentBuild.result
                     }
