@@ -19,7 +19,7 @@ CERT_IDENTITY=$(security find-identity -v -p codesigning "$MY_KEYCHAIN" | head -
 CERT_UUID=$(security find-identity -v -p codesigning "$MY_KEYCHAIN" | head -1 | grep '"' | awk '{print $2}') # Handy to have UUID (just in case)
 security set-key-partition-list -S apple-tool:,apple: -s -k $MY_KEYCHAIN_PASSWORD -D "$CERT_IDENTITY" -t private $MY_KEYCHAIN # Enable codesigning from a non user interactive shell
 
-echo "${SUDO}" | sudo -S rm -rf GToolkitOSX64*
+echo "${SUDO}" | sudo -S rm -rf GToolkitOSX64/
 unzip GToolkitOSX64.zip
 rm GToolkitOSX64.zip
 
