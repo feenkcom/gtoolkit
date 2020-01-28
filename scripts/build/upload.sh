@@ -8,7 +8,7 @@ TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 
 echo $TAG_NAME > tagname.txt
 
 #download GToolkitOSX64 from tentative because the osx vm uploaded a notarized version of it 
-rm GToolkitOSX64.zip
+
 curl https://dl.feenk.com/tentative/GToolkitOSX64.zip -o GToolkitOSX64.zip
 
 mv GToolkitWin64.zip GToolkitWin64-$TAG_NAME.zip
