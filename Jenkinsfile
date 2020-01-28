@@ -51,7 +51,7 @@ pipeline {
                     }
                     steps {
                         sh 'scripts/build/pack_image.sh'
-                        
+                        junit '*.xml'
                         echo currentBuild.toString()
                         echo currentBuild.result
                     }
@@ -131,7 +131,7 @@ pipeline {
                         stage('Smoke Test') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/lnx_2_smoke.sh'
-                                junit '*.xml'
+                                // junit '*.xml'
                              }
                         }
                     }
