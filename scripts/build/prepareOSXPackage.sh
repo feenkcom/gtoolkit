@@ -1,10 +1,10 @@
 #!/bin/sh
 set -e
-TAG_NAME=$( cat tagname.txt )
-GTFolder=GToolkitOSX64-$TAG_NAME
+set -o xtrace
+GTFolder=GToolkitOSX64
 mkdir -p $GTFolder
 
-libFolder=libOSX64-$TAG_NAME
+libFolder=libOSX64
 mkdir -p $libFolder
 
 unzip build-artifacts/GToolkitVM-8.2.0-*-mac64-bin.zip -d $GTFolder/

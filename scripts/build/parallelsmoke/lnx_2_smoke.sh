@@ -1,11 +1,11 @@
 #!/bin/sh
 set -o xtrace
-TAG_NAME=$( cat tagname.txt )
-xvfb-run -a -e /dev/stdout ./GToolkitLinux64-"${TAG_NAME}"/gtoolkit GToolkitLinux64-"${TAG_NAME}"/GToolkit-64-*.image examples --junit-xml-output 'GToolkit-Coder-Examples'
 
+#xvfb-run -a -e /dev/stdout ./GToolkitLinux64/gtoolkit GToolkitLinux64/GToolkit-64-*.image examples --interactive --no-quit --junit-xml-output  'GToolkit-Coder-Examples' 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Sparta-.*'
+#xvfb-run -a -e /dev/stdout ./GToolkitLinux64/gtoolkit GToolkitLinux64/GToolkit-64-*.image gtexportreport --report=GtGtoolkitArchitecturalReport
 
 #run smoke tests
-timeout 60 xvfb-run -a ./GToolkitLinux64-"${TAG_NAME}"/gtoolkit GToolkitLinux64-"${TAG_NAME}"/GToolkit-64-*.image --interactive &
+timeout 60 xvfb-run -a ./GToolkitLinux64/gtoolkit GToolkitLinux64/GToolkit-64-*.image --interactive &
 sleep 50
 export DISPLAY=$(ps -aux | grep screen -m 1 | awk '{print $12}')
 export XAUTHORITY=$(ps -aux | grep screen -m 1 | awk '{print $19}')

@@ -1,14 +1,13 @@
 #!/bin/sh
 set -e
 set -o xtrace
-TAG_NAME=$( cat tagname.txt )
-GTFolder=GToolkitWin64-$TAG_NAME
+GTFolder=GToolkitWin64
 mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
 
-libFolder=libWin64-$TAG_NAME
+libFolder=libWin64
 mkdir -p $libFolder
 
 unzip build-artifacts/GToolkitVM-8.2.0-*-win64-bin.zip -d $GTFolder/

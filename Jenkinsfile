@@ -8,6 +8,7 @@ pipeline {
     environment {
         GITHUB_TOKEN = credentials('githubrelease')
         AWSIP = 'ec2-35-157-37-37.eu-central-1.compute.amazonaws.com'
+        MASTER_WORKSPACE = ""
     }
     stages {
         stage ('Build pre release') {
@@ -18,6 +19,9 @@ pipeline {
                 stage('Clean Workspace') {
 
                     steps {
+                        script {
+                            MASTER_WORKSPACE = WORKSPACE
+                        }
                         sh 'git clean -fdx -e pharo-local/package-cache'
                         sh 'chmod +x scripts/build/*.sh'
                         // sh 'rm -rf pharo-local/iceberg'
@@ -40,23 +44,22 @@ pipeline {
                         } 
                     }
                 }
-                stage('Run examples') {
+                stage('Package Image') {
                     when { expression {
                             env.BRANCH_NAME.toString().equals('master')
                         }
                     }
                     steps {
-                        sh 'scripts/build/test.sh'
+                        sh 'scripts/build/pack_image.sh'
                         junit '*.xml'
                         echo currentBuild.toString()
                         echo currentBuild.result
                     }
                 }
 
-                stage('Run releaser') { 
-
+                stage('Run Releaser') {
                     when { expression {
-                            env.BRANCH_NAME.toString().equals('master') && (env.TAG_NAME == null) && (currentBuild.result == null || currentBuild.result == 'SUCCESS')
+                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
                         }
                     }
                     steps {
@@ -84,10 +87,11 @@ pipeline {
                     }
                     steps {
                         sh 'scripts/build/package.sh'
+                        
                         stash includes: 'GToolkitWin64*.zip', name: 'winbuild'
                         stash includes: 'lib*.zip', name: 'alllibs'
                         stash includes: 'GT.zip', name: 'gtimage'
-                        stash includes: 'tagname.txt', name: 'tagname'
+                        
                     }
                 }
 
@@ -131,18 +135,13 @@ pipeline {
                                 sh 'git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
                                 sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
-                                unstash 'tagname'
+                                
                              }
                         }
                         stage('Smoke Test') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/lnx_2_smoke.sh'
-                                junit '*.xml'
-                             }
-                        }
-                        stage('Upload') {
-                             steps {
-                                sh 'scripts/build/parallelsmoke/lnx_3_upload.sh'
+                                // junit '*.xml'
                              }
                         }
                     }
@@ -163,22 +162,32 @@ pipeline {
                                 sh 'echo "${SUDO}" | sudo -S git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
                                 sh 'scripts/build/parallelsmoke/osx_1_download.sh'
-                                unstash 'tagname'
+                                
                              }
                         }
                         stage('Smoke Test') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
-                                junit '*.xml'
+                                // junit '*.xml'
                              }
                         }
                         stage('Codesign and Notarize') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS')
+                                }
+                            }
                             steps {
                                 sh 'scripts/build/parallelsmoke/osx_3_sign_notarize.sh'
 
                             }
                         }
                         stage('Upload') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS')
+                                }
+                            }
                              steps {
                                 sh 'scripts/build/parallelsmoke/osx_4_upload.sh'
                              }
@@ -200,12 +209,7 @@ pipeline {
                         stage('Smoke Test') {
                              steps {
                                powershell './scripts/build/parallelsmoke/win_2_smoke.ps1'
-                               junit '*.xml'
-                             }
-                        }
-                        stage('Upload') {
-                             steps {
-                              powershell 'Write-Output "Linux node will do the windows upload."'
+                            //    junit '*.xml'
                              }
                         }
                     }
@@ -221,22 +225,24 @@ pipeline {
                 }
             }
             steps {
-                sh 'chmod +x scripts/build/*.sh'
-                unstash 'winbuild'
-                unstash 'alllibs'
-                unstash 'gtimage'
-                unstash 'tagname'
-                sh 'ls -al'
-                sh 'scripts/build/upload.sh'
-                script {
-                    withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-                            def remote = [:]
-                            remote.name = 'deploy'
-                            remote.host = 'ec2-35-157-37-37.eu-central-1.compute.amazonaws.com'
-                            remote.user = userName
-                            remote.identityFile = identity
-                            remote.allowAnyHosts = true
-                            sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
+                dir(MASTER_WORKSPACE) {
+                    sh 'chmod +x scripts/build/*.sh'
+                    
+                    unstash 'winbuild'
+                    unstash 'alllibs'
+                    unstash 'gtimage'
+                    sh 'ls -al'
+                    sh 'scripts/build/upload.sh'
+                    script {
+                        withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+                                def remote = [:]
+                                remote.name = 'deploy'
+                                remote.host = 'ec2-35-157-37-37.eu-central-1.compute.amazonaws.com'
+                                remote.user = userName
+                                remote.identityFile = identity
+                                remote.allowAnyHosts = true
+                                sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
+                        }
                     }
                 }
             }

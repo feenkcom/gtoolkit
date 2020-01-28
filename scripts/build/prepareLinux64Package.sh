@@ -1,12 +1,12 @@
 #!/bin/sh
 set -e
-TAG_NAME=$( cat tagname.txt )
-GTFolder=GToolkitLinux64-$TAG_NAME
+set -o xtrace
+GTFolder=GToolkitLinux64
 mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
-libFolder=libLinux64-$TAG_NAME
+libFolder=libLinux64
 mkdir -p $libFolder
 
 unzip build-artifacts/GToolkitVM-8.2.0-*-linux64-bin.zip -d $GTFolder/
