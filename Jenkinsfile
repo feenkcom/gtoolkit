@@ -57,6 +57,16 @@ pipeline {
                     }
                 }
 
+                stage('Run Releaser') {
+                    when { expression {
+                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
+                        }
+                    }
+                    steps {
+                        sh 'scripts/build/runreleaser.sh'
+                    }
+                }
+
                 stage('Save Image With GTWorld opened') {
                     when { expression {
                             (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
@@ -221,9 +231,6 @@ pipeline {
                     unstash 'winbuild'
                     unstash 'alllibs'
                     unstash 'gtimage'
-
-                    
-                    sh 'scripts/build/runreleaser.sh'
                     sh 'ls -al'
                     sh 'scripts/build/upload.sh'
                     script {
