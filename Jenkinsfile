@@ -58,16 +58,6 @@ pipeline {
                     }
                 }
 
-                stage('Run Releaser') {
-                    when { expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
-                        }
-                    }
-                    steps {
-                        sh 'scripts/build/runreleaser.sh'
-                    }
-                }
-
                 stage('Save Image With GTWorld opened') {
                     when { expression {
                             (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
@@ -228,7 +218,8 @@ pipeline {
                     
                     unstash 'winbuild'
                     unstash 'alllibs'
-                    unstash 'gtimage'                
+                    unstash 'gtimage'  
+                    sh 'scripts/build/runreleaser.sh'              
                     sh 'scripts/build/upload.sh'
                     script {
                         withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
