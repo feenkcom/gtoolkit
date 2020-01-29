@@ -25,7 +25,8 @@ pipeline {
                         sh 'git clean -fdx -e pharo-local/package-cache'
                         sh 'chmod +x scripts/build/*.sh'
                         // sh 'rm -rf pharo-local/iceberg'
-                        slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                        
+                        slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline'")
                     }
                 }
                 stage('Load latest master commit') {
@@ -73,7 +74,6 @@ pipeline {
                         }
                     }
                     steps {
-                        sh 'rm -rf pharo-local'
                         sh 'scripts/build/open_gt_world.sh'
                     }
                 }
@@ -132,10 +132,8 @@ pipeline {
                      stages {
                         stage('Download') {
                              steps {
-                                sh 'git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
                                 sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
-                                
                              }
                         }
                         stage('Smoke Test') {
@@ -230,8 +228,7 @@ pipeline {
                     
                     unstash 'winbuild'
                     unstash 'alllibs'
-                    unstash 'gtimage'
-                    sh 'ls -al'
+                    unstash 'gtimage'                
                     sh 'scripts/build/upload.sh'
                     script {
                         withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
