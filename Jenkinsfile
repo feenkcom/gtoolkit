@@ -25,7 +25,8 @@ pipeline {
                         sh 'git clean -fdx -e pharo-local/package-cache'
                         sh 'chmod +x scripts/build/*.sh'
                         // sh 'rm -rf pharo-local/iceberg'
-                        slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                        
+                        slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline'")
                     }
                 }
                 stage('Load latest master commit') {
