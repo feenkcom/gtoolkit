@@ -2,6 +2,9 @@
 set -o xtrace
 export RUST_BACKTRACE=full
 
+pwd
+ls -al
+
 curl https://get.pharo.org/64/80 | bash
 
 sh scripts/build/downloadLatestVM.sh

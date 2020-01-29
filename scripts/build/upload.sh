@@ -1,5 +1,7 @@
 set -o xtrace
 set -e
+pwd
+ls -al
 export AWS=ubuntu@$AWSIP
 export GTfolder=/var/www/html/gt/
 export build_zip=GT.zip
