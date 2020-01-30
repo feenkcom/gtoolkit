@@ -52,7 +52,6 @@ pipeline {
                     }
                     steps {
                         sh 'scripts/build/pack_image.sh'
-                        junit '*.xml'
                         echo currentBuild.toString()
                         echo currentBuild.result
                     }
@@ -126,10 +125,10 @@ pipeline {
                                 sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
                              }
                         }
-                        stage('Smoke Test') {
+                        stage('Test') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/lnx_2_smoke.sh'
-                                // junit '*.xml'
+                                junit '*.xml'
                              }
                         }
                     }
@@ -153,7 +152,7 @@ pipeline {
                                 
                              }
                         }
-                        stage('Smoke Test') {
+                        stage('Test') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
                                 // junit '*.xml'
@@ -194,7 +193,7 @@ pipeline {
                                 
                              }
                         }
-                        stage('Smoke Test') {
+                        stage('Test') {
                              steps {
                                powershell './scripts/build/parallelsmoke/win_2_smoke.ps1'
                             //    junit '*.xml'

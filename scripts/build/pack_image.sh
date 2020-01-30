@@ -17,10 +17,6 @@ cp -Rv gt-extra "${ARTIFACT_DIR}/"
 
 export build_zip="${ARTIFACT_DIR}.zip"
 
-
-xvfb-run -a  ./gtoolkit Pharo.image examples --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Sparta-.*'
-xvfb-run -a  ./gtoolkit Pharo.image gtexportreport --report=GtGtoolkitArchitecturalReport
-
 xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}.image" eval --save "IceCredentialsProvider sshCredentials publicKey: ''; privateKey: ''. IceCredentialsProvider useCustomSsh: false. IceRepository registry removeAll." 
 xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}.image" eval --save "ThreadedFFIMigration enableThreadedFFI." 
 zip -qr "$build_zip" "$ARTIFACT_DIR"
