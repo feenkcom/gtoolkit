@@ -10,9 +10,9 @@ Glamorous Toolkit has cool widgets and fancy code analyses, yet the emphasis is 
 
 !!Project organization
 
-Glamorous Toolkit is made out of independent, yet combinable, components. The picture below provides an overview of these components and their interdependencies. The map is navigable. Click on each component to learn more about it.
+Glamorous Toolkit is made out of ${example:BaselineOfGToolkit class>>#withAllContainedProjects|label=#size}$ distinct, yet combinable, components. The picture below provides an overview of these components and their interdependencies. The map is navigable. Click on each component to learn more about it.
 
-${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:||noCode=|previewHeight=300}$
+${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:|noCode=|previewHeight=300}$
 
 
 !!Moldable development
@@ -118,10 +118,17 @@ BaselineOfGToolkit class >> itself [
 	^ self
 ]
 
+{ #category : #ui }
+BaselineOfGToolkit class >> withAllContainedProjects [
+	<gtExample>
+	^ (self project version withDeepCollect: [ :each | each projects collect: #version ] as: Set) sorted: [ :a :b | a name < b name ]
+]
+
 { #category : #baseline }
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>
 	spec for: #'common' do: [
+		
 		spec preLoadDoIt: #'preLoadGToolkit:'.
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
@@ -183,14 +190,23 @@ BaselineOfGToolkit >> fixCommandLineHandlerForPharo7 [
 ]
 
 { #category : #'post load' }
+BaselineOfGToolkit >> fixCommandLineHandlerForPharo8 [
+	EvaluateCommandLineHandler compile: ((EvaluateCommandLineHandler>>#gtArgumentString) sourceCode
+		copyReplaceAll: 'gtArgumentString' with: 'argumentString')
+]
+
+{ #category : #'post load' }
 BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ])
 		ifTrue: [ ^ self ].
 	PostLoaded := true.
 	
-	GtExpandableDebuggerElement register.
 	GtMoldableDebuggerElement register.
-	self fixCommandLineHandlerForPharo7.
+	
+	SystemVersion current major = 7 ifTrue: [ 
+		self fixCommandLineHandlerForPharo7 ].
+	SystemVersion current major = 8 ifTrue: [ 
+		self fixCommandLineHandlerForPharo8 ].
 ]
 
 { #category : #'post load' }

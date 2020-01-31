@@ -4,43 +4,69 @@ Class {
 	#instVars : [
 		'spotterDropdown',
 		'subSpaceDropdown',
-		'tabs'
+		'tabs',
+		'home'
 	],
 	#category : #'GToolkit-World'
 }
 
+{ #category : #'instance creation' }
+GtWorldElement >> home [
+	^ home
+]
+
 { #category : #initialization }
 GtWorldElement >> initialize [
 	super initialize.
-
 	tabs := BrTabGroup new.
 	tabs look: BrGlamorousSpaceTabGroupLook new.
 	tabs actionbarStencil: [ self newActionbar ].
-	
-	tabs addTab: (BrTab new
-		vExact: 36;
-		look: BrGlamorousSpaceTabWithIconLook;
-		icon: BrGlamorousIcons gt asElement;
-		label: 'Home';
-		stencil: [ GtHome new asScrollableElement background: Color white]).
-	
-	self addShortcut: (BlShortcut new
-		repeatable: false;
-		combination: BlKeyCombination shiftReturn;
-		action: [ spotterDropdown ifNotNil: #expand ]).
-	self addShortcut: (BlShortcut new
-		repeatable: false;
-		combination: BlKeyCombination primaryT;
-		action: [ subSpaceDropdown ifNotNil: #expand ]).
-	self when: GtSpawnSpotter do: [:e | 
-		e consumed: true.
-		spotterDropdown ifNotNil: #expand ].
-		
+	home := GtHome new.
+	tabs
+		addTab:
+			(BrTab new
+				vExact: 36;
+				look: BrGlamorousSpaceTabWithIconLook;
+				icon: BrGlamorousIcons gt asElement;
+				label: 'Home';
+				stencil: [ home asScrollableElement background: Color white ]).
+	self
+		addShortcut:
+			(BlShortcut new
+				repeatable: false;
+				combination: BlKeyCombination shiftReturn;
+				action: [ spotterDropdown
+						ifNotNil: [ spotterDropdown
+								dispatchEvent:
+									(BrDropdownShowWish new
+										anchor: spotterDropdown;
+										yourself) ] ]).
+	self
+		addShortcut:
+			(BlShortcut new
+				repeatable: false;
+				combination: BlKeyCombination primaryT;
+				action: [ subSpaceDropdown
+						ifNotNil: [ subSpaceDropdown
+								dispatchEvent:
+									(BrDropdownShowWish new
+										anchor: subSpaceDropdown;
+										yourself) ] ]).
+	self
+		when: GtSpawnSpotter
+		do: [ :e | 
+			e consumed: true.
+			spotterDropdown
+				ifNotNil: [ spotterDropdown
+						dispatchEvent:
+							(BrDropdownShowWish new
+								anchor: spotterDropdown;
+								yourself) ] ].
 	self addChild: tabs.
-	
-	self constraintsDo: [ :c |
-		c horizontal matchParent.
-		c vertical matchParent ]
+	self
+		constraintsDo: [ :c | 
+			c horizontal matchParent.
+			c vertical matchParent ]
 ]
 
 { #category : #'instance creation' }
@@ -57,57 +83,91 @@ GtWorldElement >> newActionbar [
 
 { #category : #initialization }
 GtWorldElement >> newSpotterButton [
-
+	| look |
 	self
 		assert: [ spotterDropdown isNil ]
 		description: [ 'Spotter dropdown is already created!' ].
-
-	spotterDropdown := BrDropdown new
-		look: (BrGlamorousDropdownLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
-		toggle: [
-			BrButton new
-				look: (BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook + BrGlamorousDropdownToggleLook);
-				icon: BrGlamorousIcons search asElement;
-				label: 'Search' ];
-		popup: [
-			| model |
-			model := GtSpotter new.
-			model announcer
-				when: GtSpotterExitAnnouncement
-				do: [ :e | spotterDropdown collapse ].
-			GtSpotterElementWithPreview new
-				spotterModel: model;
-				size: 600@400;
-				margin: (BlInsets all: 1);
-				geometry: (BlRectangle cornerRadius: 4);
-				yourself ];
+	spotterDropdown := BrButton new
+		look:
+			BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook
+				+
+					(look := BrGlamorousWithDropdownLook
+						stencil: [ | model |
+							model := GtSpotter new.
+							model announcer
+								when: GtSpotterExitAnnouncement
+								do: [ :e | look hide ].
+							BlElement new
+								look:
+									(BrGlamorousDropdownLook new
+										handle:
+											(BrButton new
+												look:
+													BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook
+														- BrGlamorousButtonExteriorLook;
+												icon: BrGlamorousIcons search asElement;
+												yourself);
+										content:
+											(GtSpotterElement new
+												spotterModel: model;
+												size: 600 @ 400;
+												yourself);
+										yourself);
+								background: BrGlamorousColors secondaryHeaderBackgroundColor;
+								yourself ]);
+		icon: BrGlamorousIcons search asElement;
+		label: 'Search';
 		yourself.
-		
 	^ spotterDropdown
 ]
 
 { #category : #initialization }
 GtWorldElement >> newSubSpaceButton [
-	
 	self
 		assert: [ subSpaceDropdown isNil ]
 		description: [ 'Sub-space dropdown is already created!' ].
-	
-	subSpaceDropdown := BrDropdown new
-		look: BrGlamorousDropdownLook new;
-		toggle: [
-			BrButton new
-				look: (BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook + BrGlamorousDropdownToggleLook);
-				icon: BrGlamorousIcons hamburger asElement;
-				label: 'Menu' ];
-		popup: [
-			GtToolsMenu new
-				constraintsDo: [ :c |
-					c vertical fitContent.
-					c horizontal exact: 200 ] ];
+	subSpaceDropdown := BrButton new
+		look:
+			BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook
+				+
+					(BrGlamorousWithDropdownLook
+						handle: [ BrButton new
+								look:
+									BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook
+										- BrGlamorousButtonExteriorLook;
+								icon: BrGlamorousIcons hamburger asElement;
+								label: 'Menu';
+								yourself ]
+						content: [ GtToolsMenu new
+								constraintsDo: [ :c | 
+									c vertical fitContent.
+									c horizontal exact: 420 ];
+								yourself ]);
+		icon: BrGlamorousIcons hamburger asElement;
+		label: 'Menu';
 		yourself.
-
 	^ subSpaceDropdown
+]
+
+{ #category : #initialization }
+GtWorldElement >> onAddedToSceneGraph [
+	super onAddedToSceneGraph.
+
+	SystemAnnouncer uniqueInstance weak
+		when: (ClassAnnouncement where: [ :ann | ann classAffected = GtHome ])
+		send: #update:
+		to: self home. 
+
+	SystemAnnouncer uniqueInstance weak
+		when: (MethodAnnouncement where: [ :ann | ann classAffected = GtHome ])
+		send: #update:
+		to: self home. 
+]
+
+{ #category : #initialization }
+GtWorldElement >> onRemovedFromSceneGraph [
+	super onRemovedFromSceneGraph.
+	SystemAnnouncer uniqueInstance unsubscribe: self home
 ]
 
 { #category : #'api - opening' }
@@ -131,7 +191,7 @@ GtWorldElement >> showSpace: aSpace [
 				exact: 20@12;
 				opacity: 0.5;
 				margin: (BlInsets top: 2 left: 4 bottom: 0 right: 0);
-				look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousButtonWithLabelTooltipLook;
+				look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousWithLabelTooltipLook;
 				icon: BrGlamorousIcons close;
 				label: 'Close';
 				action: [ tabs removeTab: aTab ] ]).

@@ -26,5 +26,6 @@ AUTH="Authorization: token $github_api_token"
 curl -o /dev/null -sH "$AUTH" $GH_REPO || { echo "Error: Invalid repo, token or network issue!";  exit 1; }
 
 #create the release
-API_JSON=$(printf '{"tag_name": "%s","name": "%s","body": "Release of version %s","draft": false,"prerelease": false}' $tag $tag $tag)
+API_JSON=$(printf '{"tag_name": "%s","name": "%s","draft": false,"prerelease": false}' $tag $tag)
+echo $API_JSON
 curl --data "$API_JSON" -H "Authorization: token $github_api_token" $GH_RELEASE

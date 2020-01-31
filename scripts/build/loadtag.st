@@ -1,3 +1,16 @@
+
+IceCredentialsProvider useCustomSsh: true.
+IceCredentialsProvider sshCredentials
+	publicKey: '/data/jenkins/.ssh/id_rsa.pub';
+	privateKey: '/data/jenkins/.ssh/id_rsa'.
+	
+SourceFileArray compile: 'deferFlushDuring: aBlock	
+	flushChanges ifFalse: [ ^ aBlock value ].
+	"flushChanges := false."
+	^ [ aBlock value ] ensure: [
+		flushChanges := true.
+		self flushChangesFile ]'.
+
 EpMonitor current disable.
 Metacello new
   baseline: 'GToolkit';
@@ -23,6 +36,12 @@ docFolders do: [ :each |
 	
 World closeAllWindowsDiscardingChanges.
 #GtWorldMenu asClass setGtDesktopLogo.
+
+IceCredentialsProvider sshCredentials
+	publicKey: '';
+	privateKey: ''.
+
+IceCredentialsProvider useCustomSsh: false.
 
 IceRepository registry removeAll.
 Smalltalk snapshot: true andQuit: false.

@@ -1,43 +1,39 @@
 #!/bin/sh
 set -e
 set -o xtrace
-GTFolder=GToolkitWin64-$TAG_NAME
+GTFolder=GToolkitWin64
 mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
 
-libFolder=libWin64-$TAG_NAME
+libFolder=libWin64
 mkdir -p $libFolder
 
-curl https://files.pharo.org/get-files/80/pharo64-win-headless-latest.zip -o pharo64-win-headless-latest.zip
-unzip pharo64-win-headless-latest.zip -d $GTFolder/
+unzip build-artifacts/GToolkitVM-8.2.0-*-win64-bin.zip -d $GTFolder/
 
-# wget https://bintray.com/opensmalltalk/vm/download_file?file_path=pharo.cog.spur-cmake-minhdls_win64x64_201908212333.zip -O pharo.cog.spur-cmake-minhdls_win64x64_201908212333.zip
-# unzip pharo.cog.spur-cmake-minhdls_win64x64_201908212333.zip -d pharo64-win-stable
-# mv -fv pharo64-win-stable/* $GTFolder/
+package_binary() {
+	curl https://dl.feenk.com/$1/windows/development/x86_64/lib$1.dll -o lib$1.dll
+	cp lib$1.dll $GTFolder
+	cp lib$1.dll $libFolder
+}
 
-curl https://dl.feenk.com/Glutin/windows/development/x86_64/libGlutin.dll -o libGlutin.dll
-curl https://dl.feenk.com/Moz2D/windows/development/x86_64/msvcp140.dll -o msvcp140.dll
-curl https://dl.feenk.com/Moz2D/windows/development/x86_64/vcruntime140.dll -o vcruntime140.dll
-curl https://dl.feenk.com/Moz2D/windows/development/x86_64/libMoz2D.dll -o libMoz2D.dll
-curl https://dl.feenk.com/Clipboard/windows/development/x86_64/libClipboard.dll -o libClipboard.dll
+package_extra_moz2d_binary() {
+	curl https://dl.feenk.com/Moz2D/windows/development/x86_64/$1.dll -o $1.dll
+	cp $1.dll $GTFolder
+	cp $1.dll $libFolder
+}
 
-cp libGlutin.dll $GTFolder
-cp msvcp140.dll $GTFolder
-cp vcruntime140.dll $GTFolder
-cp libMoz2D.dll $GTFolder
-cp libClipboard.dll $GTFolder
-
-cp libGlutin.dll $libFolder
-cp msvcp140.dll $libFolder
-cp vcruntime140.dll $libFolder
-cp libMoz2D.dll $libFolder
-cp libClipboard.dll $libFolder
+package_binary Boxer
+package_binary Gleam
+package_binary Glutin
+package_binary Skia
+package_extra_moz2d_binary msvcp140
+package_extra_moz2d_binary vcruntime140
+package_binary Clipboard
 
 zip -qyr $GTFolder.zip $GTFolder
 zip -qyr $libFolder.zip $libFolder
 rm -rf $GTFolder
 rm -rf $libFolder
 set +e
-

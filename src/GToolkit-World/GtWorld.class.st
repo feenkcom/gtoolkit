@@ -15,8 +15,18 @@ GtWorld class >> open [
 	
 	aSpace := GtWorld new.
 	aSpace title: 'Glamorous Toolkit'.
-	aSpace fullsize: true.
 	aSpace show
+]
+
+{ #category : #'instance creation' }
+GtWorld class >> openWithShutdownListener [
+	<script: 'self openWithShutdownListener'>
+	| aSpace |
+	
+	aSpace := GtWorld new.
+	aSpace title: 'Glamorous Toolkit'.
+	aSpace addEventHandler: BlSpaceShutdownOnCloseListener new.
+	aSpace show.
 ]
 
 { #category : #initialization }

@@ -10,7 +10,7 @@ GtMonitoredBlocSpaces >> gtProcessesFor: aView [
 	
 	^ aView explicit
 		title: 'Processes';
-		priority: 3;
+		priority: 4;
 		stencil: [ GtMonitoredProcessesElement new ]
 ]
 
@@ -20,7 +20,7 @@ GtMonitoredBlocSpaces >> gtSpacesFor: aView [
 	
 	^ aView explicit
 		title: 'Spaces';
-		priority: 1;
+		priority: 2;
 		stencil: [ GtMonitoredBlocSpacesElement new ];
 		actionStencil: [ 
 			BrButton new 
@@ -39,9 +39,19 @@ GtMonitoredBlocSpaces >> gtTaskItServicesFor: aView [
 	
 	^ aView explicit
 		title: 'Services';
-		priority: 2;
+		priority: 3;
 		stencil: [ GtMonitoredTaskItServicesElement new ];
 		actionButtonIcon: BrGlamorousIcons trash 
 			action: [ :aButton | TKTConfiguration serviceManager purge ]
 			
+]
+
+{ #category : #'gt-extension' }
+GtMonitoredBlocSpaces >> gtUniversesFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'Universes';
+		priority: 1;
+		stencil: [ GtMonitoredUniversesElement new ]
 ]

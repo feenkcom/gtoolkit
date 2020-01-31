@@ -6,7 +6,7 @@ Class {
 
 { #category : #'api - instantiation' }
 GtCoderStencil >> create [
-	^ GtInspector createOnPlayBook: (GtClassCoder new).
+	^ GtInspector withToolOn: GtPackagesCoder new
 ]
 
 { #category : #accessing }

@@ -21,6 +21,7 @@ The current repository embodies the second generation of GT and it is comprised 
 - [GToolkit4Smacc](https://github.com/feenkcom/gt4smacc): the environment for creating, debugging and testing SmaCC-based parsers.
 - [GToolkit4PetitParser2](https://github.com/feenkcom/gt4petitparser2): the environment for creating, debugging and testing PetitParser2-based parsers.
 - [GToolkit4Famix3](https://github.com/feenkcom/gt4famix3): the environment and dedicated algorithms for source code analysis.
+- [GToolkit4XMLSupport](https://github.com/feenkcom/gt4xmlsupport): the extensions for manipulating and browsing XML.
 
 Glamorous Toolkit is based on graphical stack made of:
 - [Sparta](https://github.com/feenkcom/Sparta): the graphical canvas
@@ -29,7 +30,7 @@ Glamorous Toolkit is based on graphical stack made of:
 
 ## How to load
 
-You can load the whole code in Pharo 7.0 using the following snippet:
+You can load the whole code in Pharo 8.0 using the following snippet:
 
 ```
 EpMonitor current disable.
@@ -44,7 +45,7 @@ EpMonitor current disable.
 
 ## How to load the latest development release
 
-You can load the code we're working on in Pharo 7.0 using the following snippet:
+You can load the code we're working on in Pharo 8.0 using the following snippet:
 
 ```
 EpMonitor current disable.
