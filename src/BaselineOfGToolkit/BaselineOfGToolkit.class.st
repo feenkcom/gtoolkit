@@ -21,8 +21,6 @@ Glamorous Toolkit is not just a tool. It's a platform that embodies a new approa
 
 Just take a look at these slides. They show the same objects. The generic view shows all objects in the same way. The contextual views take, well, context into account. The generic view is generic. The contextual view is valuable because we can relate to the specifics of the object. This is important because the value of software lies in the specifics.
 
-${slides:list=#(GtRawViewsSlide GtCustomViewsSlide GtAllViewsSlide)|show=#gtLiveFor:|height=500}$
-
 Want to learn more? Take a look at: ${class:GtMoldableDevelopmentExplanation}$.
 
 
@@ -75,13 +73,7 @@ The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This sta
 - debuggable. There are a significant amount of tools and mechanisms that are built for this.
 
 Learn more about it: ${class:GtWhatMakesBlocSpecialExplanation}$
-
-
-!!feenk blog
-
-This is our blog. Each post below is delivered fresh from our XDoc bakery.
-
-${xdocs}$
+!!And about XDoc
 
 What is XDoc? Learn here: ${class:BaselineOfXdoc}$
 
