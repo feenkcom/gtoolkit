@@ -26,7 +26,7 @@ pipeline {
                         sh 'chmod +x scripts/build/*.sh'
                         // sh 'rm -rf pharo-local/iceberg'
                         
-                        slackSend (color: '#FFFF00', message: "STARTED: '<https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]>'")
+                        slackSend (color: '#FFFF00', message: "Started <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]>")
                     }
                 }
                 stage('Load latest master commit') {
@@ -238,15 +238,15 @@ pipeline {
     }
     post {
         success {
-            slackSend (color: '#00FF00', message: "Successful: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' ${env.BUILD_URL}" )   
+            slackSend (color: '#00FF00', message: "Successful ${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}" )   
         }
 
         failure {
-            slackSend (color: '#FF0000', message: "Failed: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' ${env.BUILD_URL}consoleFull")
+            slackSend (color: '#FF0000', message: "Failed ${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}consoleFull")
         }
 
         unstable {
-            slackSend (color: '#FFFF00', message: "Unstable: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' ${env.BUILD_URL}testReport")
+            slackSend (color: '#FFFF00', message: "Unstable ${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}testReport")
         }
     }
 }
