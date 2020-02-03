@@ -10,6 +10,10 @@ SourceFileArray compile: 'deferFlushDuring: aBlock
 	^ [ aBlock value ] ensure: [
 		flushChanges := true.
 		self flushChangesFile ]'.
+
+IceGitWorkingCopyUpdateVisitor compile: 'remoteFileReferenceInPath: anUndefinedObject 
+	
+	"I do not remove nothing from the file in the image"'.
 	
 EpMonitor current disable.
 Metacello new
