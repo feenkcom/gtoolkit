@@ -40,7 +40,7 @@ pipeline {
                             def newCommitFiles = findFiles(glob: 'newcommits*.txt')
                             for (int i = 0; i < newCommitFiles.size(); ++i) {
                                 env.NEWCOMMITS = readFile(newCommitFiles[i].path)
-                                slackSend (color: '#00FF00', message: "Commits to be included in the next build:\n ${env.NEWCOMMITS}" )   
+                                slackSend (color: '#00FF00', message: "Commits from <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )   
                             }
                         } 
                     }
@@ -239,7 +239,7 @@ pipeline {
     }
     post {
         success {
-            slackSend (color: '#00FF00', message: ("Started <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]> " + TAG_NAME) )   
+            slackSend (color: '#00FF00', message: ("Successful <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]> <https://github.com/feenkcom/gtoolkit/releases/latest|${TAG_NAME}>" ) )   
         }
 
         failure {
