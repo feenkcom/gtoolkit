@@ -21,13 +21,12 @@ pipeline {
                     steps {
                         script {
                             MASTER_WORKSPACE = WORKSPACE
-                            TAG_NAME='v0.7.007'
                         }
                         sh 'git clean -fdx -e pharo-local/package-cache'
                         sh 'chmod +x scripts/build/*.sh'
                         // sh 'rm -rf pharo-local/iceberg'
                         
-                        slackSend (color: '#FFFF00', message: ("Started <https://github.com/feenkcom/gtoolkit/releases/latest|${TAG_NAME}> <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ") )
+                        slackSend (color: '#FFFF00', message: ("Started <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME}-[${env.BUILD_NUMBER}]> ") )
                     }
                 }
                 stage('Load latest master commit') {
@@ -223,7 +222,7 @@ pipeline {
                     sh 'scripts/build/runreleaser.sh' 
                     sh 'scripts/build/upload.sh'
                     script {
-                        TAG_NAME = readFile('tagname.txt')
+                        TAG_NAME = readFile('tagname.txt').trim()
                         withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
                                 def remote = [:]
                                 remote.name = 'deploy'
