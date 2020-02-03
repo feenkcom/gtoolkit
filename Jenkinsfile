@@ -26,7 +26,7 @@ pipeline {
                         sh 'chmod +x scripts/build/*.sh'
                         // sh 'rm -rf pharo-local/iceberg'
                         
-                        slackSend (color: '#FFFF00', message: "Started <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]>")
+                        slackSend (color: '#FFFF00', message: ("Started <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ") )
                     }
                 }
                 stage('Load latest master commit') {
@@ -219,9 +219,10 @@ pipeline {
                     unstash 'winbuild'
                     unstash 'alllibs'
                     unstash 'gtimage'  
-                    sh 'scripts/build/runreleaser.sh'              
+                    sh 'scripts/build/runreleaser.sh' 
                     sh 'scripts/build/upload.sh'
                     script {
+                        TAG_NAME = readFile('tagname.txt')
                         withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
                                 def remote = [:]
                                 remote.name = 'deploy'
@@ -238,15 +239,15 @@ pipeline {
     }
     post {
         success {
-            slackSend (color: '#00FF00', message: "Successful ${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}" )   
+            slackSend (color: '#00FF00', message: ("Started <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]> " + TAG_NAME) )   
         }
 
         failure {
-            slackSend (color: '#FF0000', message: "Failed ${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}consoleFull")
+            slackSend (color: '#FF0000', message: "Failed  <${env.BUILD_URL}consoleFull|${env.JOB_NAME} [${env.BUILD_NUMBER}]>")
         }
 
         unstable {
-            slackSend (color: '#FFFF00', message: "Unstable ${env.JOB_NAME} [${env.BUILD_NUMBER}] ${env.BUILD_URL}testReport")
+            slackSend (color: '#FFFF00', message:  "Unstable <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/tests|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ")
         }
     }
 }
