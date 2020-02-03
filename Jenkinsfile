@@ -239,7 +239,7 @@ pipeline {
     }
     post {
         success {
-            slackSend (color: '#00FF00', message: ("Successful <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]> <https://github.com/feenkcom/gtoolkit/releases/latest|${TAG_NAME}>" ) )   
+            slackSend (color: '#00FF00', message: ("Successful <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]> <https://github.com/feenkcom/gtoolkit/releases/latest|[${TAG_NAME}]> " ) )   
         }
 
         failure {
