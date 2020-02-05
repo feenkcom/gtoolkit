@@ -79,7 +79,7 @@ GtHomeSection >> newDocCardForClass: aClass [
 		newHeaderCardWithTitle: 'Doc' 
 		size: 150@200
 		content: (((GtDocument new 
-						text: (aClass comment copyUpTo: Character cr))
+						text: (aClass comment))
 					   gtTextFor: GtPhlowView empty) 
 						asElementDo: [ :e | e size: 300@400; asScalableElement]) 
 		action: [ :card | 
@@ -95,7 +95,7 @@ GtHomeSection >> newDocCardForFile: aReference [
 		newHeaderCardWithTitle: 'Doc' 
 		size: 150@200
 		content: (((GtDocument new 
-						text: (aReference fileReference contents copyUpTo: Character cr)) 
+						text: (aReference fileReference contents)) 
 					   gtTextFor: GtPhlowView empty) 
 						asElementDo: [ :e | e size: 300@400; asScalableElement]) 
 		action: [ :card | 
