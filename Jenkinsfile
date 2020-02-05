@@ -26,7 +26,7 @@ pipeline {
                         sh 'chmod +x scripts/build/*.sh'
                         // sh 'rm -rf pharo-local/iceberg'
                         
-                        slackSend (color: '#FFFF00', message: ("Started <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME}-[${env.BUILD_NUMBER}]> ") )
+                        slackSend (color: '#FFFF00', message: ("Started <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ") )
                     }
                 }
                 stage('Load latest master commit') {
@@ -155,8 +155,8 @@ pipeline {
                         stage('Test') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
-                                // sh 'rm -rf GToolkit-Releaser-*.xml'
-                                // junit '*.xml'
+                                sh 'rm -rf GToolkit-Releaser-*.xml'
+                                junit '*.xml'
                              }
                         }
                         stage('Codesign and Notarize') {
@@ -239,7 +239,7 @@ pipeline {
     }
     post {
         success {
-            slackSend (color: '#00FF00', message: "Successful -<https://github.com/feenkcom/gtoolkit/releases/latest|${TAG_NAME}>- <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]>" )   
+            slackSend (color: '#00FF00', message: "Successful <https://github.com/feenkcom/gtoolkit/releases/latest|${TAG_NAME}> <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]>" )   
         }
 
         failure {
