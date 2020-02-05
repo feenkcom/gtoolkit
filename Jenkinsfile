@@ -155,8 +155,8 @@ pipeline {
                         stage('Test') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
-                                sh 'rm -rf GToolkit-Releaser-*.xml'
-                                junit '*.xml'
+                                // sh 'rm -rf GToolkit-Releaser-*.xml'
+                                // junit '*.xml'
                              }
                         }
                         stage('Codesign and Notarize') {
