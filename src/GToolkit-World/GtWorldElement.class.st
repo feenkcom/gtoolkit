@@ -110,7 +110,7 @@ GtWorldElement >> newSpotterButton [
 										content:
 											(GtSpotterElement new
 												spotterModel: model;
-												size: 600 @ 400;
+												size: 800 @ 500;
 												yourself);
 										yourself);
 								background: BrGlamorousColors secondaryHeaderBackgroundColor;
