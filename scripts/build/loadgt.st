@@ -42,5 +42,8 @@ docFolders do: [ :each |
 World closeAllWindowsDiscardingChanges.
 #GtWorldMenu asClass setGtDesktopLogo.
 
+theVersion := GtRlReleaserExportWorkflow buildGToolkitRelease rootProjectRelease version.
+GTImageVersion version: theVersion.
+
 
 Smalltalk snapshot: true andQuit: false.
