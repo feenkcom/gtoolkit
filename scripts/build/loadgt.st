@@ -44,6 +44,6 @@ World closeAllWindowsDiscardingChanges.
 
 theVersion := GtRlReleaserExportWorkflow buildGToolkitRelease rootProjectRelease version.
 GTImageVersion version: theVersion.
-
+GTImageVersion timestamp: DateAndTime now.
 
 Smalltalk snapshot: true andQuit: false.
