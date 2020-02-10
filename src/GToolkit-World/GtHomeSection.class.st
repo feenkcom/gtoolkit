@@ -146,15 +146,15 @@ GtHomeSection >> newSectionTitle: aString [
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShow description: anObject [ 
+GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShowBlock description: anObject [ 
 	^ self 
 		newHeaderCardWithTitle: 'Slideshow' 
 		size: 200@150
-		content: ((aSlideShow slides first create constraintsDo: [:c | c horizontal exact: 800. c vertical exact: 600]; padding: (BlInsets all: 10)) asScalableElement )
+		content: ((aSlideShowBlock value slides first create constraintsDo: [:c | c horizontal exact: 800. c vertical exact: 600]; padding: (BlInsets all: 10)) asScalableElement )
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aString
-				with: aSlideShow makeArrowsVisible
+				with: aSlideShowBlock value makeArrowsVisible
 				from: card ]
 ]
 
