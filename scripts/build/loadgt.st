@@ -43,7 +43,7 @@ World closeAllWindowsDiscardingChanges.
 #GtWorldMenu asClass setGtDesktopLogo.
 
 theVersion := GtRlReleaserExportWorkflow buildGToolkitRelease rootProjectRelease version.
-GTImageVersion version: theVersion.
-GTImageVersion timestamp: DateAndTime now.
+GtImage version: theVersion.
+GtImage timestamp: DateAndTime now.
 
 Smalltalk snapshot: true andQuit: false.
