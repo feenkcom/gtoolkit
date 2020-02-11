@@ -194,10 +194,22 @@ pipeline {
                                 
                              }
                         }
-                        stage('Test') {
+                        stage('Test UI') {
                              steps {
-                               powershell './scripts/build/parallelsmoke/win_2_smoke.ps1'
-                            //    junit '*.xml'
+                               powershell './scripts/build/parallelsmoke/win_2_test_ui.ps1'
+                               junit '*.xml'
+                             }
+                        }
+                        stage('Test Gt') {
+                             steps {
+                               powershell './scripts/build/parallelsmoke/win_2_test_gt.ps1'
+                               junit '*.xml'
+                             }
+                        }
+                        stage('Test Bloc') {
+                             steps {
+                               powershell './scripts/build/parallelsmoke/win_2_test_bloc.ps1'
+                               junit '*.xml'
                              }
                         }
                     }
