@@ -130,7 +130,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.315/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.7.690/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.7.691/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.418/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -154,7 +154,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitPharo101' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.396/src' ];
 			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.43/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.44/src' ];
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.7.4/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
