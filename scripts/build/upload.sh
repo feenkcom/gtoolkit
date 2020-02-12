@@ -36,11 +36,11 @@ ssh $AWS -t "cd ${GTfolder}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n'
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libWin64-$TAG_NAME.zip
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libLinux64-$TAG_NAME.zip
 
-file="build-artifacts/GToolkitVM-8.2.0-*-linux64-bin.zip"
+file=$(echo build-artifacts/GToolkitVM-8.2.0-*-linux64-bin.zip)
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=$file
-file="build-artifacts/GToolkitVM-8.2.0-*-mac64-bin.zip"
+file=$(build-artifacts/GToolkitVM-8.2.0-*-mac64-bin.zip)
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=$file
-file="build-artifacts/GToolkitVM-8.2.0-*-win64-bin.zip"
+file=$(build-artifacts/GToolkitVM-8.2.0-*-win64-bin.zip)
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=$file
 
 
