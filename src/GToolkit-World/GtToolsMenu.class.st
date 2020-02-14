@@ -87,6 +87,7 @@ GtToolsMenu >> initializeElements [
 	self addChild: (GtHomeToolsSection new newCoderButtonStencil smallIcon create  size: 100@100).
 	self addChild: (GtHomeToolsSection new newMonitorButtonStencil smallIcon create  size: 100@100).
 	self addChild: (GtHomeToolsSection new newExamplesButtonStencil smallIcon create  size: 100@100).
+	self addChild: (GtHomeToolsSection new newTranscriptButtonStencil smallIcon create  size: 100@100).
 	self addChild: (GtHomeToolsSection new newMorphicWorldButtonStencil smallIcon create  size: 100@100).
 		
 	self addChild: (BlElement new

@@ -14,6 +14,7 @@ GtHomeToolsSection >> create [
 	cardsContainer addChild: self newCoderButtonStencil create.
 	cardsContainer addChild: self newMonitorButtonStencil create.
 	cardsContainer addChild: self newExamplesButtonStencil create.
+	cardsContainer addChild: self newTranscriptButtonStencil create.
 	cardsContainer addChild: self newMorphicWorldButtonStencil create.
 	cardsContainer addChild: self newSpotterButtonStencil create.
 	sectionContainer addChild: cardsContainer.
@@ -36,11 +37,11 @@ GtHomeToolsSection >> newCoderButtonStencil [
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> newExamplesButtonStencil [
 	^ GtToolButtonStencil new 
-		title: 'Examples';
+		title: 'Examples Explorer';
 		icon: BrGlamorousIcons largeEg asElement;
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Examples'
+				showSpaceWithTitle: 'Examples Explorer'
 				with:
 					(GtInspector
 						createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject)
@@ -90,4 +91,17 @@ GtHomeToolsSection >> newSpotterButtonStencil [
 		icon: BrGlamorousIcons largeSearch asElement;
 		action: [ :card | card fireEvent: GtSpawnSpotter new ];
 		description: 'Search anything. Really anything.'
+]
+
+{ #category : #'api - instantiation' }
+GtHomeToolsSection >> newTranscriptButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Transcript';
+		icon: BrGlamorousIcons largeTranscript asElement;
+		action: [ :card | 
+			self
+				showSpaceWithTitle: 'Transcript'
+				with: GtTranscriptStencil new create
+				from: card ];
+		description: 'Transcript is the place to see logs.'
 ]
