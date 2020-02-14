@@ -29,7 +29,7 @@ GtWorldElement >> initialize [
 				look: BrGlamorousSpaceTabWithIconLook;
 				icon: BrGlamorousIcons gt asElement;
 				label: 'Home';
-				stencil: [ home asScrollableElement background: Color white ]).
+				stencil: [ home ]).
 	self
 		addShortcut:
 			(BlShortcut new
