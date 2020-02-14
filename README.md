@@ -28,6 +28,21 @@ Glamorous Toolkit is based on graphical stack made of:
 - [Bloc](https://github.com/feenkcom/Bloc): the graphical framework
 - [Brick](https://github.com/feenkcom/Brick): the widget set
 
+# Get the code
+## How to get the latest vm and the latest code in one step
+
+MacOSX
+```
+curl https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/mac.sh | bash
+```
+Linux
+```
+curl https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/linux.sh | bash
+```
+Windows
+
+Using Powershell cd into `scripts/localbuild` and execute `.\windows.ps1`
+
 ## How to load
 
 You can load the whole code in Pharo 8.0 using the following snippet:
