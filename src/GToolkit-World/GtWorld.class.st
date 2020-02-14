@@ -29,6 +29,19 @@ GtWorld class >> openWithShutdownListener [
 	aSpace show.
 ]
 
+{ #category : #'instance creation' }
+GtWorld class >> openWithSpaces: aCollectionOfSpaces [
+	| aSpace |
+
+	aSpace := GtWorld new.
+	aSpace title: 'Glamorous Toolkit'.
+	
+	aCollectionOfSpaces do: [ :eachSpace |
+		aSpace root showSpace: eachSpace ].
+
+	aSpace show
+]
+
 { #category : #initialization }
 GtWorld >> defaultRoot [
 	^ GtWorldElement new

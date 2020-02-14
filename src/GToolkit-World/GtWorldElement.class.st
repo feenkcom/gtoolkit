@@ -181,20 +181,33 @@ GtWorldElement >> showSpace: aSpace [
 		select;
 		label: aSpace title;
 		stencil: [
-			aSpace root dispatchRemovedFromSceneGraph.
+			aSpace root hasParent
+				ifTrue: [ aSpace root removeFromParent ]
+				ifFalse: [ aSpace root dispatchRemovedFromSceneGraph ].
 			aSpace root
 				constraintsDo: [ :c |
 					c horizontal matchParent.
 					c vertical matchParent ] ];
 		actionbarStencil: [
-			BrButton new
-				exact: 20@12;
-				opacity: 0.5;
-				margin: (BlInsets top: 2 left: 4 bottom: 0 right: 0);
-				look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousWithLabelTooltipLook;
-				icon: BrGlamorousIcons close;
-				label: 'Close';
-				action: [ tabs removeTab: aTab ] ]).
+			BrToolbar new
+				look: BrGlamorousToolbarLook new;
+				addItems: {
+					BrButton new
+						exact: 20@12;
+						opacity: 0.5;
+						look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousWithLabelTooltipLook;
+						icon: BrGlamorousIcons maximize;
+						label: 'Open in a new window';
+						action: [
+							tabs removeTab: aTab.
+							GtWorld openWithSpaces: { aSpace } ].
+					BrButton new
+						exact: 20@12;
+						opacity: 0.5;
+						look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousWithLabelTooltipLook;
+						icon: BrGlamorousIcons close;
+						label: 'Close';
+						action: [ tabs removeTab: aTab ] } ]).
 
 	tabs addTab: aTab
 ]
