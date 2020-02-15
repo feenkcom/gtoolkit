@@ -95,10 +95,10 @@ BaselineOfGToolkit class >> gtGtMapFor: aView [
 	^ (self 
 		gtMapFor: aView 
 		selectRelationsThat: [ :a :b | 
-			(a spec project configuration class name beginsWith: 'BaselineOfGToolkit') or: [ 
-				a spec project configuration class name beginsWith: 'BaselineOfXdoc' ] ]
+			{'BaselineOfGToolkit' . 'BaselineOfXdoc' . 'BaselineOfBloc' . 'BaselineOfBrick' . 'BaselineOfSparta' . 'BaselineOfGlutin'} anySatisfy: [:prefix | 
+			(a spec project configuration class name beginsWith: prefix) ] ]
 		nameDisplayedAs: [ :aString | 
-			aString asRopedText foreground: (((aString beginsWith: 'GT') or: [ aString beginsWith: 'Xdoc' ]) 
+			aString asRopedText foreground: (({'GT' . 'Brick' . 'Bloc' . 'Sparta' . 'Xdoc' . 'Glutin'} anySatisfy: [:prefix | aString beginsWith: prefix ]) 
 				ifTrue: [BrGlamorousColors linkColor] 
 				ifFalse: [Color gray]) ])
 			title: 'Gt Map'
