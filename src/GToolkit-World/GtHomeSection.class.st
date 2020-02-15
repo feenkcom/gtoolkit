@@ -128,6 +128,21 @@ GtHomeSection >> newHeaderCardWithTitle: aString size: aPoint content: anElement
 ]
 
 { #category : #'instance creation' }
+GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook [
+	^ self 
+		newHeaderCardWithTitle: 'Playground' 
+		size: 200@200
+		content: ((aPlaybook asElement) 
+						size: 400@400; 
+						asScalableElement) 
+		action: [ :card | 
+			self
+				showSpaceWithTitle: 'Playground'
+				with: (GtInspector withToolOn: aPlaybook)
+				from: card ]
+]
+
+{ #category : #'instance creation' }
 GtHomeSection >> newSectionContainer [
 	^ BlElement new
 		layout: BlLinearLayout vertical;
