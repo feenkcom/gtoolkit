@@ -12,7 +12,7 @@ Glamorous Toolkit has cool widgets and fancy code analyses, yet the emphasis is 
 
 Glamorous Toolkit is made out of ${example:BaselineOfGToolkit class>>#withAllContainedProjects|label=#size}$ distinct, yet combinable, components. The picture below provides an overview of these components and their interdependencies. The map is navigable. Click on each component to learn more about it.
 
-${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:|noCode=|previewHeight=300}$
+${example:BaselineOfGToolkit class>>#itself|previewShow=#gtGtMapFor:|noCode=|previewHeight=420}$
 
 
 !!Moldable development
@@ -95,10 +95,10 @@ BaselineOfGToolkit class >> gtGtMapFor: aView [
 	^ (self 
 		gtMapFor: aView 
 		selectRelationsThat: [ :a :b | 
-			(a spec project configuration class name beginsWith: 'BaselineOfGToolkit') or: [ 
-				a spec project configuration class name beginsWith: 'BaselineOfXdoc' ] ]
+			{'BaselineOfGToolkit' . 'BaselineOfXdoc' . 'BaselineOfBloc' . 'BaselineOfBrick' . 'BaselineOfSparta' . 'BaselineOfGlutin'} anySatisfy: [:prefix | 
+			(a spec project configuration class name beginsWith: prefix) ] ]
 		nameDisplayedAs: [ :aString | 
-			aString asRopedText foreground: (((aString beginsWith: 'GT') or: [ aString beginsWith: 'Xdoc' ]) 
+			aString asRopedText foreground: (({'GT' . 'Brick' . 'Bloc' . 'Sparta' . 'Xdoc' . 'Glutin'} anySatisfy: [:prefix | aString beginsWith: prefix ]) 
 				ifTrue: [BrGlamorousColors linkColor] 
 				ifFalse: [Color gray]) ])
 			title: 'Gt Map'
