@@ -128,7 +128,7 @@ GtHomeSection >> newHeaderCardWithTitle: aString size: aPoint content: anElement
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook [
+GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook description: anObject [
 	^ self 
 		newHeaderCardWithTitle: 'Playground' 
 		size: 200@200
