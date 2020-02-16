@@ -75,13 +75,16 @@ GtHomeSection >> newCardsContainer [
 
 { #category : #'instance creation' }
 GtHomeSection >> newDocCardForClass: aClass [
-	^ self 
-		newHeaderCardWithTitle: 'Doc' 
-		size: 150@200
-		content: (((GtDocument new 
-						text: (aClass comment))
-					   gtTextFor: GtPhlowView empty) 
-						asElementDo: [ :e | e size: 300@400; asScalableElement]) 
+	^ self
+		newHeaderCardWithTitle: 'Doc'
+		description: aClass name
+		size: 150 @ 200
+		content:
+			(((GtDocument new text: aClass comment) gtTextFor: GtPhlowView empty)
+				asElementDo: [ :e | 
+					e
+						size: 300 @ 400;
+						asScalableElement ])
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aClass name
@@ -91,27 +94,34 @@ GtHomeSection >> newDocCardForClass: aClass [
 
 { #category : #'instance creation' }
 GtHomeSection >> newDocCardForFile: aReference [
-	^ self 
-		newHeaderCardWithTitle: 'Doc' 
-		size: 150@200
-		content: (((GtDocument new 
-						text: (aReference fileReference contents)) 
-					   gtTextFor: GtPhlowView empty) 
-						asElementDo: [ :e | e size: 300@400; asScalableElement]) 
+	^ self
+		newHeaderCardWithTitle: 'Doc'
+		description: aReference fullName
+		size: 150 @ 200
+		content:
+			(((GtDocument new text: aReference fileReference contents)
+				gtTextFor: GtPhlowView empty)
+				asElementDo: [ :e | 
+					e
+						size: 300 @ 400;
+						asScalableElement ])
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aReference fileReference basename
-				with: (GtInspector withToolOn: (GtDocument forFile: aReference fileReference))
+				with:
+					(GtInspector
+						withToolOn: (GtDocument forFile: aReference fileReference))
 				from: card ]
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newHeaderCardWithTitle: aString size: aPoint content: anElement action: aBlock [
+GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: aPoint content: anElement action: aBlock [
 	| container headerContainer |
 	container := BrButton new
 		constraintsDo: [:c | c horizontal exact: aPoint x. c vertical exact: aPoint y ];
 		layout: BlLinearLayout vertical;
-		look: BrGlamorousButtonExteriorLook new;
+		look: (BrGlamorousButtonExteriorLook new + BrGlamorousWithLabelTooltipLook new);
+		label: aDescription;
 		padding: (BlInsets all: 1);
 		margin: (BlInsets top: self spaceGap left: 2*self spaceGap bottom: self spaceGap right: 2 * self spaceGap);
 		geometry: (BlRectangle cornerRadius: 4);
@@ -121,23 +131,25 @@ GtHomeSection >> newHeaderCardWithTitle: aString size: aPoint content: anElement
 		layout: BlLinearLayout vertical;
 		background: BrGlamorousColors defaultButtonBorderColor;
 		addChild: (BrLabel new look: (BrGlamorousLabelLook new fontSize: 10);
-		text: aString).
+		text: aTitle).
 	^ container
 		addChild: headerContainer preventMeAndChildrenMouseEvents; 
 		addChild: (anElement preventMeAndChildrenMouseEvents).
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook description: anObject [
-	^ self 
-		newHeaderCardWithTitle: 'Playground' 
-		size: 200@200
-		content: ((aPlaybook asElement) 
-						size: 400@400; 
-						asScalableElement) 
+GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook title: aTitle description: aDescription [
+	^ self
+		newHeaderCardWithTitle: 'Playground: ' , aTitle
+		description: aDescription
+		size: 200 @ 200
+		content:
+			(aPlaybook asElement
+				size: 400 @ 400;
+				asScalableElement)
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Playground'
+				showSpaceWithTitle: aTitle
 				with: (GtInspector withToolOn: aPlaybook)
 				from: card ]
 ]
@@ -161,11 +173,17 @@ GtHomeSection >> newSectionTitle: aString [
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShowBlock description: anObject [ 
-	^ self 
-		newHeaderCardWithTitle: 'Slideshow' 
-		size: 200@150
-		content: ((aSlideShowBlock value slides first create constraintsDo: [:c | c horizontal exact: 800. c vertical exact: 600]; padding: (BlInsets all: 10)) asScalableElement )
+GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShowBlock description: aDescription [
+	^ self
+		newHeaderCardWithTitle: 'Slideshow'
+		description: aDescription
+		size: 200 @ 150
+		content:
+			(aSlideShowBlock value slides first create
+				constraintsDo: [ :c | 
+					c horizontal exact: 800.
+					c vertical exact: 600 ];
+				padding: (BlInsets all: 10)) asScalableElement
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aString
@@ -196,17 +214,29 @@ GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock de
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newUrlCardWithTitle: aTitleString description: aDescriptionString url: aUrlString [
-	^ self 
-		newHeaderCardWithTitle: 'www' 
-		size: 200@80
-		content: (
-			BlElement new 
-				constraintsDo: [:c | c horizontal matchParent. c vertical matchParent ];
+GtHomeSection >> newUrlCardWithTitle: aTitle description: aDescription url: aUrl [
+	^ self
+		newHeaderCardWithTitle: 'www'
+		description: aDescription
+		size: 200 @ 80
+		content:
+			(BlElement new
+				constraintsDo: [ :c | 
+					c horizontal matchParent.
+					c vertical matchParent ];
 				layout: BlLinearLayout vertical alignCenter;
-				addChild: (BrLabel new text: aTitleString; look: BrGlamorousLabelLook);
-				addChild: (BrLabel new text: aDescriptionString; look: (BrGlamorousLabelLook new fontSize: 10; foreground: Color gray)))
-		action: [ :card | WebBrowser openOn: aUrlString ]
+				addChild:
+					(BrLabel new
+						text: aTitle;
+						look: BrGlamorousLabelLook);
+				addChild:
+					(BrLabel new
+						text: aDescription;
+						look:
+							(BrGlamorousLabelLook new
+								fontSize: 10;
+								foreground: Color gray)))
+		action: [ :card | WebBrowser openOn: aUrl ]
 ]
 
 { #category : #accessing }
