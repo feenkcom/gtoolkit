@@ -15,6 +15,6 @@ time ./GToolkit.app/Contents/MacOS/GToolkit Pharo.image st --quit loadgt.st 2>&1
 
 ./GToolkit.app/Contents/MacOS/GToolkit Pharo.image eval --save "ThreadedFFIMigration enableThreadedFFI." 
 ./GToolkit.app/Contents/MacOS/GToolkit Pharo.image eval --interactive --no-quit "GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true."
-./GToolkit.app/Contents/MacOS/GToolkit Pharo.image
+./GToolkit.app/Contents/MacOS/GToolkit Pharo.image --no-quit --interactive
 
 exit 0
