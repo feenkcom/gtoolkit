@@ -13,4 +13,3 @@ xvfb-run -a -e /dev/stdout ./gtoolkit Pharo.image st --quit scripts/build/loadgt
 rm -f newcommits*
 xvfb-run -a -e /dev/stdout ./gtoolkit Pharo.image eval "ThreadedFFIMigration gtTFFIversionString" 2>&1
 xvfb-run -a -e /dev/stdout ./gtoolkit Pharo.image printNewCommits
-exit 0
