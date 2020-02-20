@@ -16,7 +16,9 @@ GtHomeDocumentationSection >> create [
 	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitCoder).
 	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitDocumenter).
 	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitVisualizer).
-"	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitSpotter)."
+	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitSpotter).
+	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitReleaser).
+	cardsContainer addChild: (self newDocCardForClass: GtAndPharoExplanation).
 	cardsContainer addChild: (self newDocCardForClass: GtMoldableDevelopmentExplanation).
 	cardsContainer addChild: (self newDocCardForClass: GtWhatMakesBlocSpecialExplanation).
 	cardsContainer addChild: (self newDocCardForFile: (GtResourceReference path: Path * 'feenkcom' / 'gtoolkit-examples' / 'doc' / 'tutorial' / 'examples-tutorial.pillar')).
