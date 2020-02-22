@@ -18,6 +18,10 @@ GtHomeSlideShowsSection >> create [
 		newShowCardWithTitle: 'One rendering tree' 
 		slideshow: [ GtOneRenderingTree new create ]
 		description: 'In Glamorous Toolkit, all rendering relies on a single tree at a time.').
+	cardsContainer addChild: (self 
+		newShowCardWithTitle: 'Inspector views' 
+		slideshow: [ GtInspectorViews new create ]
+		description: 'Every object can define how it can be viewed in the inspector. Learn how this work.').
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Pharo 101'
 		slideshow: [ GtPharo101 new create ]
