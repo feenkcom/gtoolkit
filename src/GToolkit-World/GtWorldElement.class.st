@@ -7,8 +7,21 @@ Class {
 		'tabs',
 		'home'
 	],
+	#classVars : [
+		'WorldSpotterSize'
+	],
 	#category : #'GToolkit-World'
 }
+
+{ #category : #'as yet unclassified' }
+GtWorldElement class >> worldSpotterSize [
+	^ WorldSpotterSize ifNil: [ WorldSpotterSize := 800@600 ]
+]
+
+{ #category : #'as yet unclassified' }
+GtWorldElement class >> worldSpotterSize: aPoint [
+	WorldSpotterSize := aPoint
+]
 
 { #category : #'instance creation' }
 GtWorldElement >> home [
@@ -84,40 +97,28 @@ GtWorldElement >> newActionbar [
 { #category : #initialization }
 GtWorldElement >> newSpotterButton [
 	| look |
-	self
+	self 
 		assert: [ spotterDropdown isNil ]
 		description: [ 'Spotter dropdown is already created!' ].
 	spotterDropdown := BrButton new
-		look:
-			BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook
-				+
-					(look := BrGlamorousWithDropdownLook
-						stencil: [ | model |
+		look: BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook
+				+ (look := BrGlamorousWithDropdownLook stencil: [ | model |
 							model := GtSpotter new.
 							model announcer
 								when: GtSpotterExitAnnouncement
 								do: [ :e | look hide ].
-							BlElement new
-								look:
-									(BrGlamorousDropdownLook new
-										handle:
-											(BrButton new
-												look:
-													BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook
-														- BrGlamorousButtonExteriorLook;
-												icon: BrGlamorousIcons search asElement;
-												yourself);
-										content:
-											(GtSpotterElement new
-												spotterModel: model;
-												size: 800 @ 500;
-												yourself);
-										yourself);
-								background: BrGlamorousColors secondaryHeaderBackgroundColor;
-								yourself ]);
+							BlElement new 
+								look: (BrGlamorousDropdownLook new
+									handle: (BrButton new 
+										look: BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook - BrGlamorousButtonExteriorLook;
+										icon: BrGlamorousIcons search asElement);
+									content: (GtSpotterElement new
+										spotterModel: model;
+										size: self class worldSpotterSize;
+										when: GtSpotterResizedEvent do: [ :e | self class worldSpotterSize: e target size ]));
+								background: BrGlamorousColors secondaryHeaderBackgroundColor ]);
 		icon: BrGlamorousIcons search asElement;
-		label: 'Search';
-		yourself.
+		label: 'Search'.
 	^ spotterDropdown
 ]
 
