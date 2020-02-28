@@ -16,8 +16,11 @@ pipeline {
                 label "unix"
             }
             stages {
-                stage('Clean Workspace') {
-
+                stage('Load latest master commit') {
+                    when { expression {
+                            env.BRANCH_NAME.toString().equals('master')
+                        }
+                    }
                     steps {
                         script {
                             MASTER_WORKSPACE = WORKSPACE
@@ -27,14 +30,7 @@ pipeline {
                         // sh 'rm -rf pharo-local/iceberg'
                         
                         slackSend (color: '#FFFF00', message: ("Started <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ") )
-                    }
-                }
-                stage('Load latest master commit') {
-                    when { expression {
-                            env.BRANCH_NAME.toString().equals('master')
-                        }
-                    }
-                    steps {
+
                         sh 'scripts/build/load.sh'
                         script {
                             def newCommitFiles = findFiles(glob: 'newcommits*.txt')
