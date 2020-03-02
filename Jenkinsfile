@@ -121,10 +121,21 @@ pipeline {
                                 sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
                              }
                         }
-                        stage('Test') {
+                        stage('Examples') {
                              steps {
-                                sh 'scripts/build/parallelsmoke/lnx_2_smoke.sh'
+                                sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
                                 junit '*.xml'
+                             }
+                        }
+                        stage('UI Tests') {
+                             steps {
+                                sh 'scripts/build/parallelsmoke/lnx_2_2_test_ui.sh'
+                                junit '*.xml'
+                             }
+                        }
+                        stage('Smoke Test') {
+                             steps {
+                                sh 'scripts/build/parallelsmoke/lnx_2_3_smoke.sh'
                              }
                         }
                     }
