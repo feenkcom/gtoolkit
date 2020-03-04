@@ -41,7 +41,7 @@ pipeline {
                         } 
                     }
                 }
-                stage('Package Image') {
+                stage('Package image') {
                     when { expression {
                             env.BRANCH_NAME.toString().equals('master')
                         }
@@ -53,7 +53,7 @@ pipeline {
                     }
                 }
 
-                stage('Save Image With GTWorld opened') {
+                stage('Save with GtWorld') {
                     when { expression {
                             (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
                         }
