@@ -29,14 +29,14 @@ pipeline {
                         sh 'chmod +x scripts/build/*.sh'
                         // sh 'rm -rf pharo-local/iceberg'
                         
-                        slackSend (color: '#FFFF00', message: ("Started <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ") )
+                        slackSend (color: '#FFFF00', message: ("Started <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>") )
 
                         sh 'scripts/build/load.sh'
                         script {
                             def newCommitFiles = findFiles(glob: 'newcommits*.txt')
                             for (int i = 0; i < newCommitFiles.size(); ++i) {
                                 env.NEWCOMMITS = readFile(newCommitFiles[i].path)
-                                slackSend (color: '#00FF00', message: "Commits from <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )   
+                                slackSend (color: '#00FF00', message: "Commits from <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )   
                             }
                         } 
                     }
@@ -258,7 +258,7 @@ pipeline {
     }
     post {
         success {
-            slackSend (color: '#00FF00', message: "Successful <https://github.com/feenkcom/gtoolkit/releases/latest|${TAG_NAME}> <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/pipeline|${env.JOB_NAME} [${env.BUILD_NUMBER}]>" )   
+            slackSend (color: '#00FF00', message: "Successful <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>" )   
         }
 
         failure {
@@ -266,7 +266,7 @@ pipeline {
         }
 
         unstable {
-            slackSend (color: '#FFFF00', message:  "Unstable <https://jenkins.feenk.com/blue/organizations/jenkins/feenkcom%2Fgtoolkit/detail/master/${env.BUILD_NUMBER}/tests|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ")
+            slackSend (color: '#FFFF00', message:  "Unstable <https://jenkins.feenk.com/job/feenkcom/job/${env.JOB_NAME}/job/master/${env.BUILD_NUMBER}/testReport|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ")
         }
     }
 }
