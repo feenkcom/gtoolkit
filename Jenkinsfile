@@ -262,11 +262,11 @@ pipeline {
         }
 
         failure {
-            slackSend (color: '#FF0000', message: "Failed  <${env.BUILD_URL}consoleFull|${env.JOB_NAME} [${env.BUILD_NUMBER}]>")
+            slackSend (color: '#FF0000', message: "Failed  <${env.BUILD_URL}/consoleFull|${env.JOB_NAME} [${env.BUILD_NUMBER}]>")
         }
 
         unstable {
-            slackSend (color: '#FFFF00', message:  "Unstable <https://jenkins.feenk.com/job/feenkcom/job/${env.JOB_NAME}/job/master/${env.BUILD_NUMBER}/testReport|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ")
+            slackSend (color: '#FFFF00', message:  "Unstable <${env.BUILD_URL}/testReport|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ")
         }
     }
 }
