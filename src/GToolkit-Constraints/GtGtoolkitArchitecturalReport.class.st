@@ -13,5 +13,6 @@ GtGtoolkitArchitecturalReport >> build: aComposite [
 	aComposite
 		addConstraint: GtClassWithCommentsContainingMissingReferences new;
 		addConstraint: GtReturnPragmasShouldPointToExistingClasses new;
-		addConstraint: GtRBAcceptVisitorCalledFromNonVisitingMethods  new
+		addConstraint: GtRBAcceptVisitorCalledFromNonVisitingMethods  new;
+		addConstraint: GtButtonsDefiningActionsThroughModels new
 ]
