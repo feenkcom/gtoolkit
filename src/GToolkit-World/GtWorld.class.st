@@ -35,7 +35,7 @@ GtWorld class >> openWithSpaces: aCollectionOfSpaces [
 
 	aSpace := GtWorld new.
 	aSpace title: 'Glamorous Toolkit'.
-	
+
 	aCollectionOfSpaces do: [ :eachSpace |
 		aSpace root showSpace: eachSpace ].
 

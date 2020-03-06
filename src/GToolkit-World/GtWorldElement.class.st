@@ -82,7 +82,7 @@ GtWorldElement >> initialize [
 			c vertical matchParent ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : #'private - instance creation' }
 GtWorldElement >> newActionbar [
 	| anActionbar |
 
@@ -150,6 +150,17 @@ GtWorldElement >> newSubSpaceButton [
 	^ subSpaceDropdown
 ]
 
+{ #category : #'private - instance creation' }
+GtWorldElement >> newTabButtonLook [
+	^ BrGlamorousButtonIconLook + BrGlamorousWithLabelTooltipLook + BrLayoutResizerLook inherit + BrLayoutAlignmentLook forHorizontalLinearLayout + (BrInteractiveCommonLook new
+			default: [ :aWidget |
+				aWidget geometry: BlCircle new.
+				aWidget layout: BlLinearLayout horizontal alignCenter.
+				aWidget background: (Color transparent) ];
+			hovered: [ :aWidget | aWidget background: (Color gray alpha: 0.2) ];
+			pressed: [ :aWidget | aWidget background: (Color gray alpha: 0.4) ])
+]
+
 { #category : #initialization }
 GtWorldElement >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
@@ -191,24 +202,32 @@ GtWorldElement >> showSpace: aSpace [
 					c vertical matchParent ] ];
 		actionbarStencil: [
 			BrToolbar new
-				look: BrGlamorousToolbarLook new;
+				look: BrToolbarLook new;
+				layout: BlLinearLayout horizontal;
+				margin: (BlInsets left: 6);
+				constraintsDo: [ :c |
+					c horizontal fitContent.
+					c vertical fitContent ];
 				addItems: {
 					BrButton new
-						exact: 20@12;
-						opacity: 0.5;
-						look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousWithLabelTooltipLook;
 						icon: BrGlamorousIcons maximize;
+						exact: 16@16;
+						opacity: 0.5;
+						look: self newTabButtonLook;
 						label: 'Open in a new window';
 						action: [
 							tabs removeTab: aTab.
+							aTab := nil.
 							GtWorld openWithSpaces: { aSpace } ].
 					BrButton new
-						exact: 20@12;
-						opacity: 0.5;
-						look: BrGlamorousButtonRectangularLook + BrGlamorousButtonIconLook + BrGlamorousWithLabelTooltipLook;
 						icon: BrGlamorousIcons close;
+						exact: 16@16;
+						opacity: 0.5;
+						look: self newTabButtonLook;
 						label: 'Close';
-						action: [ tabs removeTab: aTab ] } ]).
+						action: [
+							tabs removeTab: aTab.
+							aTab := nil. ] } ]).
 
 	tabs addTab: aTab
 ]
