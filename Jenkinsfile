@@ -104,7 +104,7 @@ pipeline {
                 }
             }
         }
-        stage('Run UI Tests') {
+        stage('Run Examples') {
             when { expression {
                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
                 }
@@ -193,14 +193,9 @@ pipeline {
                                 powershell './scripts/build/parallelsmoke/win_1_download.ps1'
                              }
                         }
-                        stage('Windows Gt Examples') {
+                        stage('Windows Examples') {
                              steps {
-                               powershell './scripts/build/parallelsmoke/win_2_test_gt.ps1'
-                             }
-                        }
-                        stage('Windows Bloc Examples') {
-                             steps {
-                               powershell './scripts/build/parallelsmoke/win_2_test_bloc.ps1'
+                               powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
                                junit '*.xml'
                              }
                         }
