@@ -202,12 +202,8 @@ GtWorldElement >> showSpace: aSpace [
 					c vertical matchParent ] ];
 		actionbarStencil: [
 			BrToolbar new
-				look: BrToolbarLook new;
-				layout: BlLinearLayout horizontal;
+				look: (BrGlamorousToolbarLook new spacing: 0);
 				margin: (BlInsets left: 6);
-				constraintsDo: [ :c |
-					c horizontal fitContent.
-					c vertical fitContent ];
 				addItems: {
 					BrButton new
 						icon: BrGlamorousIcons maximize;
