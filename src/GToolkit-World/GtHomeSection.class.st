@@ -83,7 +83,7 @@ GtHomeSection >> newDocCardForClass: aClass [
 			(((GtDocument new text: aClass comment) gtTextFor: GtPhlowView empty)
 				asElementDo: [ :e | 
 					e
-						size: 300 @ 400;
+						exact: 300 @ 400;
 						asScalableElement ])
 		action: [ :card | 
 			self
@@ -103,7 +103,7 @@ GtHomeSection >> newDocCardForFile: aReference [
 				gtTextFor: GtPhlowView empty)
 				asElementDo: [ :e | 
 					e
-						size: 300 @ 400;
+						exact: 300 @ 400;
 						asScalableElement ])
 		action: [ :card | 
 			self
@@ -117,21 +117,24 @@ GtHomeSection >> newDocCardForFile: aReference [
 { #category : #'instance creation' }
 GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: aPoint content: anElement action: aBlock [
 	| container headerContainer |
+
 	container := BrButton new
-		constraintsDo: [:c | c horizontal exact: aPoint x. c vertical exact: aPoint y ];
+		size: aPoint;
 		layout: BlLinearLayout vertical;
 		look: (BrGlamorousButtonExteriorLook new + BrGlamorousWithLabelTooltipLook new);
 		label: aDescription;
 		padding: (BlInsets all: 1);
-		margin: (BlInsets top: self spaceGap left: 2*self spaceGap bottom: self spaceGap right: 2 * self spaceGap);
+		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap right: 2 * self spaceGap);
 		geometry: (BlRectangle cornerRadius: 4);
 		action: aBlock.
+
 	headerContainer := BlElement new
 		constraintsDo: [:c | c horizontal matchParent. c vertical fitContent ];
 		layout: BlLinearLayout vertical;
 		background: BrGlamorousColors defaultButtonBorderColor;
 		addChild: (BrLabel new look: (BrGlamorousLabelLook new fontSize: 10);
 		text: aTitle).
+	
 	^ container
 		addChild: headerContainer preventMeAndChildrenMouseEvents; 
 		addChild: (anElement preventMeAndChildrenMouseEvents).
