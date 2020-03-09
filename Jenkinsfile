@@ -104,7 +104,7 @@ pipeline {
                 }
             }
         }
-        stage('Run UI Tests') {
+        stage('Run Examples') {
             when { expression {
                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
                 }
@@ -121,21 +121,15 @@ pipeline {
                                 sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
                              }
                         }
-                        stage('Examples') {
+                        stage('Linux Examples') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
                                 junit '*.xml'
-                             }
-                        }
-                        stage('UI Tests') {
-                             steps {
-                                sh 'scripts/build/parallelsmoke/lnx_2_2_test_ui.sh'
-                                junit '*.xml'
-                             }
+                             } 
                         }
                         stage('Smoke Test') {
                              steps {
-                                sh 'scripts/build/parallelsmoke/lnx_2_3_smoke.sh'
+                                sh 'scripts/build/parallelsmoke/lnx_2_2_smoke.sh'
                              }
                         }
                     }
@@ -156,10 +150,9 @@ pipeline {
                                 sh 'echo "${SUDO}" | sudo -S git clean -fdx'
                                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
                                 sh 'scripts/build/parallelsmoke/osx_1_download.sh'
-                                
                              }
                         }
-                        stage('Test') {
+                        stage('MacOSX Examples') {
                              steps {
                                 sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
                                 sh 'rm -rf GToolkit-Releaser-*.xml'
@@ -198,24 +191,11 @@ pipeline {
                              steps {
                                 powershell 'ls'
                                 powershell './scripts/build/parallelsmoke/win_1_download.ps1'
-                                
                              }
                         }
-                        stage('Test UI') {
+                        stage('Windows Examples') {
                              steps {
-                               powershell './scripts/build/parallelsmoke/win_2_test_ui.ps1'
-                               junit '*.xml'
-                             }
-                        }
-                        stage('Test Gt') {
-                             steps {
-                               powershell './scripts/build/parallelsmoke/win_2_test_gt.ps1'
-                               junit '*.xml'
-                             }
-                        }
-                        stage('Test Bloc') {
-                             steps {
-                               powershell './scripts/build/parallelsmoke/win_2_test_bloc.ps1'
+                               powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
                                junit '*.xml'
                              }
                         }
