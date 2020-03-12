@@ -13,8 +13,10 @@ unzip build-artifacts/GToolkitVM-8.2.0-*-mac64-bin.zip
 
 time ./GToolkit.app/Contents/MacOS/GToolkit Pharo.image st --quit loadgt.st 2>&1
 
-./GToolkit.app/Contents/MacOS/GToolkit Pharo.image --save eval "ThreadedFFIMigration enableThreadedFFI." 
-./GToolkit.app/Contents/MacOS/GToolkit Pharo.image --interactive --no-quit eval "GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true."
+echo "ThreadedFFIMigration enableThreadedFFI. Smalltalk snapshot: true andQuit: true."  > tffi.st
+echo "GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true." > gtworld.st
+./GToolkit.app/Contents/MacOS/GToolkit Pharo.image st tffi.st
+./GToolkit.app/Contents/MacOS/GToolkit Pharo.image st gtworld.st --interactive --no-quit 
 ./GToolkit.app/Contents/MacOS/GToolkit Pharo.image --no-quit --interactive
 
 exit 0
