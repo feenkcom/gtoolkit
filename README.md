@@ -22,6 +22,7 @@ The current repository embodies the second generation of GT and it is comprised 
 - [GToolkit4PetitParser2](https://github.com/feenkcom/gt4petitparser2): the environment for creating, debugging and testing PetitParser2-based parsers.
 - [GToolkit4Famix3](https://github.com/feenkcom/gt4famix3): the environment and dedicated algorithms for source code analysis.
 - [GToolkit4XMLSupport](https://github.com/feenkcom/gt4xmlsupport): the extensions for manipulating and browsing XML.
+- [GToolkit4Jenkins](https://github.com/feenkcom/gt4jenkins): the extensions for browsing Jenkins.
 
 Glamorous Toolkit is based on graphical stack made of:
 - [Sparta](https://github.com/feenkcom/Sparta): the graphical canvas
