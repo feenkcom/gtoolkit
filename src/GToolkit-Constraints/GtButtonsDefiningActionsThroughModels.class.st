@@ -12,7 +12,7 @@ GtButtonsDefiningActionsThroughModels >> description [
 { #category : #accessing }
 GtButtonsDefiningActionsThroughModels >> issues [
 	^ '`@a addViewModel: (BrButtonModel new action: [:`var | | `@temps | `@.Stmts ])'
-		gtASTMatches
+		gtASTMatches result
 ]
 
 { #category : #accessing }
