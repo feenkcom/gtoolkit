@@ -168,6 +168,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4famix3/src' ];
 			baseline: 'GToolkitRemote' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-remote/src' ];
+			baseline: 'GToolkit4Git' with: [ 
+				spec repository: 'github://feenkcom/gt4git/src' ];
 			baseline: 'GToolkit4Jenkins' with: [ 
 				spec repository: 'github://feenkcom/gt4jenkins/src' ].
 		spec package: 'GToolkit-Docs'.
