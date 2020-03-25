@@ -126,19 +126,19 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.6.76/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.610/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.611/src' ];
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.352/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.7.827/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.7.828/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.471/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.472/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.498/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.499/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.509/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.510/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.456/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.457/src' ];
 			baseline: 'GToolkitCoder' with: [
 				spec repository: 'github://feenkcom/gtoolkit-coder:v0.7.488/src' ];
 			baseline: 'GToolkitSpotter' with: [
@@ -166,9 +166,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkit4Famix3' with: [
 				spec repository: 'github://feenkcom/gt4famix3:v0.7.44/src' ];
 			baseline: 'GToolkitRemote' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.289/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.290/src' ];
 			baseline: 'GToolkit4Git' with: [
-				spec repository: 'github://feenkcom/gt4git:v0.6.2/src' ];
+				spec repository: 'github://feenkcom/gt4git:v0.6.3/src' ];
 			baseline: 'GToolkit4Jenkins' with: [
 				spec repository: 'github://feenkcom/gt4jenkins:v0.6.2/src' ].
 		spec 
