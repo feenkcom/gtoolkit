@@ -130,7 +130,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.352/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.7.826/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.7.827/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.471/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -144,15 +144,15 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitSpotter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.437/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.463/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.464/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.463/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.464/src' ];
 			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.463/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.464/src' ];
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.463/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.464/src' ];
 			baseline: 'GToolkitPharo101' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.463/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.464/src' ];
 			baseline: 'GToolkitReleaser' with: [
 				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.67/src' ];
 			baseline: 'GToolkitConstrainer' with: [
@@ -168,9 +168,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitRemote' with: [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.289/src' ];
 			baseline: 'GToolkit4Git' with: [
-				spec repository: 'github://feenkcom/gt4git:v0.6.1/src' ];
+				spec repository: 'github://feenkcom/gt4git:v0.6.2/src' ];
 			baseline: 'GToolkit4Jenkins' with: [
-				spec repository: 'github://feenkcom/gt4jenkins:v0.6.1/src' ].
+				spec repository: 'github://feenkcom/gt4jenkins:v0.6.2/src' ].
 		spec 
 			package: 'GToolkit-Docs';
 			package: 'GToolkit-Monitor';
