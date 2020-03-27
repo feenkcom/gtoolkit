@@ -12,6 +12,7 @@ GtHomeToolsSection >> create [
 	cardsContainer := self newCardsContainer.
 	cardsContainer addChild: self newPlaygroundButtonStencil create.
 	cardsContainer addChild: self newCoderButtonStencil create.
+	cardsContainer addChild: self newGitButtonStencil create.
 	cardsContainer addChild: self newMonitorButtonStencil create.
 	cardsContainer addChild: self newExamplesButtonStencil create.
 	cardsContainer addChild: self newTranscriptButtonStencil create.
@@ -45,6 +46,21 @@ GtHomeToolsSection >> newExamplesButtonStencil [
 				with:
 					(GtInspector
 						createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject)
+				from: card ];
+		description: 'Units of tests and of documentation. In one.'
+]
+
+{ #category : #accessing }
+GtHomeToolsSection >> newGitButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Git';
+		icon: BrGlamorousIcons largebranching asElement;
+		action: [ :card | 
+			self
+				showSpaceWithTitle: 'Git'
+				with:
+					(GtInspector
+						createOn: Gt4Git new allRepositoriesGroup)
 				from: card ];
 		description: 'Units of tests and of documentation. In one.'
 ]
