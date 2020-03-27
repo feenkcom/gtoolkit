@@ -1,6 +1,6 @@
 Extension { #name : #ConfigurationOf }
 
-{ #category : #'*BaselineOfGToolkit' }
+{ #category : #'*GToolkit-Extensions' }
 ConfigurationOf class >> gtMapFor: aView [
 	<gtView>
 	^ self 
@@ -9,7 +9,7 @@ ConfigurationOf class >> gtMapFor: aView [
 		nameDisplayedAs: [ :aRopedText | aRopedText ]
 ]
 
-{ #category : #'*BaselineOfGToolkit' }
+{ #category : #'*GToolkit-Extensions' }
 ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameDisplayedAs: anOneArgBlock [
 	^ aView mondrian
 		title: 'Map';
@@ -55,7 +55,7 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 			mondrian layout custom: (GtGradHorizontalDominanceCenteredTreeLayout new levelDistance: 10; nodeDistance: 10)]
 ]
 
-{ #category : #'*BaselineOfGToolkit' }
+{ #category : #'*GToolkit-Extensions' }
 ConfigurationOf class >> gtPackagesFor: aView [
 	<gtView>
 	^ aView explicit
@@ -77,7 +77,7 @@ ConfigurationOf class >> gtPackagesFor: aView [
 			list ]
 ]
 
-{ #category : #'*BaselineOfGToolkit' }
+{ #category : #'*GToolkit-Extensions' }
 ConfigurationOf class >> gtPackagesMapFor: aView [
 	<gtView>
 	^ aView mondrian
@@ -86,13 +86,13 @@ ConfigurationOf class >> gtPackagesMapFor: aView [
 		painting: [ :mondrian | self paintPackagesMapWith: mondrian]
 ]
 
-{ #category : #'*BaselineOfGToolkit' }
+{ #category : #'*GToolkit-Extensions' }
 ConfigurationOf class >> gtPillarCommentFor: aView [
 	^ (super gtPillarCommentFor: aView)
 		priority: 0
 ]
 
-{ #category : #'*BaselineOfGToolkit' }
+{ #category : #'*GToolkit-Extensions' }
 ConfigurationOf class >> gtProjectsFor: aView [
 	<gtView>
 	^ aView list
@@ -101,7 +101,7 @@ ConfigurationOf class >> gtProjectsFor: aView [
 		items: [ self project version projects collect: [ :each | each version spec project configuration class ] ]
 ]
 
-{ #category : #'*BaselineOfGToolkit' }
+{ #category : #'*GToolkit-Extensions' }
 ConfigurationOf class >> paintPackagesMapWith: mondrian [
 	| packages projects |
 	packages := self project version packages.

@@ -89,33 +89,6 @@ Class {
 	#category : #BaselineOfGToolkit
 }
 
-{ #category : #ui }
-BaselineOfGToolkit class >> gtGtMapFor: aView [
-	<gtView>
-	^ (self 
-		gtMapFor: aView 
-		selectRelationsThat: [ :a :b | 
-			{'BaselineOfGToolkit' . 'BaselineOfXdoc' . 'BaselineOfBloc' . 'BaselineOfBrick' . 'BaselineOfSparta' . 'BaselineOfGlutin'} anySatisfy: [:prefix | 
-			(a spec project configuration class name beginsWith: prefix) ] ]
-		nameDisplayedAs: [ :aString | 
-			aString asRopedText foreground: (({'GT' . 'Brick' . 'Bloc' . 'Sparta' . 'Xdoc' . 'Glutin'} anySatisfy: [:prefix | aString beginsWith: prefix ]) 
-				ifTrue: [BrGlamorousColors linkColor] 
-				ifFalse: [Color gray]) ])
-			title: 'Gt Map'
-]
-
-{ #category : #ui }
-BaselineOfGToolkit class >> itself [
-	<gtExample>
-	^ self
-]
-
-{ #category : #ui }
-BaselineOfGToolkit class >> withAllContainedProjects [
-	<gtExample>
-	^ (self project version withDeepCollect: [ :each | each projects collect: #version ] as: Set) sorted: [ :a :b | a name < b name ]
-]
-
 { #category : #baseline }
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>
@@ -168,6 +141,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4famix3/src' ];
 			baseline: 'GToolkitRemote' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-remote/src' ].
+		spec package: 'GToolkit-Extensions' with: [ 
+			spec requires: #( 'GToolkitVisualizerPhlow' ) ].
 		spec package: 'GToolkit-Docs'.
 		spec package: 'GToolkit-Monitor'.
 		spec package: 'GToolkit-Constraints' with: [ 
