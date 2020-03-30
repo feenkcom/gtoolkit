@@ -101,9 +101,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitDocumenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.622/src' ];
 			baseline: 'GToolkitPresenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.360/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.361/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.7.840/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.7.841/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.482/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -117,15 +117,15 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitSpotter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.447/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.475/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.476/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.475/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.476/src' ];
 			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.475/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.476/src' ];
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.475/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.476/src' ];
 			baseline: 'GToolkitPharo101' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.475/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.476/src' ];
 			baseline: 'GToolkitReleaser' with: [
 				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.68/src' ];
 			baseline: 'GToolkitConstrainer' with: [
