@@ -1,3 +1,9 @@
+
+Metacello new
+        githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
+        baseline: 'Iceberg';
+        load.
+
 EpMonitor current disable.
 Metacello new
   baseline: 'GToolkit';
@@ -11,6 +17,8 @@ SourceFileArray compile: 'deferFlushDuring: aBlock
 	^ [ aBlock value ] ensure: [
 		flushChanges := true.
 		self flushChangesFile ]'.
+
+
 	
 
 GtDocumentConstants localGtDirectory asFileReference ensureCreateDirectory.
