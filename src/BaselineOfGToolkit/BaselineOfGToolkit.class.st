@@ -99,35 +99,35 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.6.77/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.627/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.628/src' ];
 			baseline: 'GToolkitPresenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.363/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.364/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.7.846/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.7.847/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.484/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.485/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.510/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.511/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.521/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.522/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.468/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.469/src' ];
 			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder:v0.7.505/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-coder:v0.7.506/src' ];
 			baseline: 'GToolkitSpotter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.449/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.450/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.479/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.480/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.479/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.480/src' ];
 			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.479/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.480/src' ];
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.479/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.480/src' ];
 			baseline: 'GToolkitPharo101' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.479/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.480/src' ];
 			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.69/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.70/src' ];
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.7.8/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
@@ -139,13 +139,13 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkit4Famix3' with: [
 				spec repository: 'github://feenkcom/gt4famix3:v0.7.44/src' ];
 			baseline: 'GToolkitRemote' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.302/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.303/src' ];
 			baseline: 'GToolkit4Git' with: [
 				spec repository: 'github://feenkcom/gt4git:v0.6.5/src' ];
 			baseline: 'GToolkit4Jenkins' with: [
 				spec repository: 'github://feenkcom/gt4jenkins:v0.6.3/src' ];
 			baseline: 'Gt4PharoLink' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.302/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.303/src' ].
 		spec 
 			package: 'GToolkit-Extensions' with: [
 				spec requires: #('GToolkitVisualizerPhlow' ). ];
