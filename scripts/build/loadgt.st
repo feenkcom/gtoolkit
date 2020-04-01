@@ -14,6 +14,12 @@ SourceFileArray compile: 'deferFlushDuring: aBlock
 IceGitWorkingCopyUpdateVisitor compile: 'remoteFileReferenceInPath: anUndefinedObject 
 	
 	"I do not remove nothing from the file in the image"'.
+
+
+Metacello new
+        githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
+        baseline: 'Iceberg';
+        load.
 	
 EpMonitor current disable.
 Metacello new
