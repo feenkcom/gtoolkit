@@ -178,6 +178,8 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 	PostLoaded := true.
 	
 	GtMoldableDebuggerElement register.
+	GtInspectorToolRegistryAdaptor register.
+	GtPlaygroundToolRegistryAdaptor register.
 	
 	SystemVersion current major = 7 ifTrue: [ 
 		self fixCommandLineHandlerForPharo7 ].
