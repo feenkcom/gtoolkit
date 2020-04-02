@@ -29,8 +29,8 @@ Metacello new
 EpMonitor current enable.
 GtRlReleaserExportWorkflow switchAllRepositoriesBackToMasterBranch.
 
-GtResourcesUtilityConstants localGtDirectory asFileReference ensureCreateDirectory.
-Transcript crShow: ('localGtDirectory: ', GtResourcesUtilityConstants localGtDirectory printString).
+GtDocumentConstants localGtDirectory asFileReference ensureCreateDirectory.
+Transcript crShow: ('localGtDirectory: ', GtDocumentConstants localGtDirectory printString).
 docFolders := (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'doc') asOrderedCollection.
 
 docFolders addAll:  (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'data').
@@ -43,12 +43,10 @@ docFolders do: [ :each |
 
 	localPath := String streamContents: [ :stream | topSegments asStringOn: stream delimiter:'/'].
 	Transcript crShow: ('copying ', each printString, ' to ', localPath).
-	[each copyAllTo: (GtResourcesUtilityConstants localGtDirectory asFileReference / localPath) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
+	[each copyAllTo: (GtDocumentConstants localGtDirectory asFileReference / localPath) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
 	
 World closeAllWindowsDiscardingChanges.
 #GtWorldMenu asClass setGtDesktopLogo.
-#GtInspectorToolRegistryAdaptor asClass register. 
-#GtPlaygroundToolRegistryAdaptor asClass register.
 
 theVersion := GtRlReleaserExportWorkflow buildGToolkitRelease rootProjectRelease version.
 GtImage version: theVersion.
