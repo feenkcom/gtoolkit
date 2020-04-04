@@ -39,10 +39,51 @@ For example, let's search certain methods in a certain package. The result will 
 
 ${example:GtWorkWithQueriesHowToGuide>>#searchInCertainPackage}$
 
-There already exists a number of such predicates readily available. You can see them by using a query.
+There already exists a number of such predicates readily available. Below is a diagram of the GtSearchFilter class hierarchy.
 
-${example:GtWorkWithQueriesHowToGuide>>#searchAllFilters}$
+${example:GtWorkWithQueriesHowToGuide>>#searchFiltersDiagram|previewShow=#gtHierarchyFor:|noCode=|previewHeight=720}$
 
+!!More Filters
+
+Now let's take a closer look at the filters in the diagram above.
+
+!!!Binary
+
+The intersetion filter is a result of the & message. The result is a collection of elements that satisfy both the left side and the right side of the query.
+
+${example:GtIntersectionFilterExamples>>#intersectionDifferentFilters}$
+
+The union filter is a result of the | message. The result is a collection of elements that satisfy at least one of the query parts.
+
+${example:GtUnionFilterExamples>>#unionDifferentMethods}$
+
+!!!Packages
+
+These filters allow us to see all the packages in the current image
+
+${example:GtSearchPackageFilterExamples>>#packagesInImageFilter}$
+
+and the packages that are deprecated.
+
+${example:GtSearchPackageFilterExamples>>#deprecatedPackagesFilter}$
+
+!!!Classes
+
+Using these we can search the classes in the current image,
+
+${example:GtSearchClassFilterExamples>>#classesInImageFilter}$
+
+in a certain package,
+
+${example:GtSearchClassFilterExamples>>#classesInCurrentPackageFilter}$
+
+the deprecated classes
+
+${example:GtSearchClassFilterExamples>>#deprecatedClassesFilter}$
+
+and the test classes.
+
+${example:GtSearchClassFilterExamples>>#testClassesFilter}$
 "
 Class {
 	#name : #GtWorkWithQueriesHowToGuide,
@@ -63,6 +104,13 @@ GtWorkWithQueriesHowToGuide >> searchAllFilters [
 	<gtExample>
 	^ GtSearchFilter allSubclasses
 		reject: [ :each | each gtReferences size = 0 ].
+]
+
+{ #category : #'as yet unclassified' }
+GtWorkWithQueriesHowToGuide >> searchFiltersDiagram [
+	<gtExample>
+	
+	^ GtSearchFilter.
 ]
 
 { #category : #'as yet unclassified' }
