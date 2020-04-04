@@ -36,6 +36,13 @@ GtHome >> gtViewHomeSectionsFor: aView [
 		items: [ self collectHomeSectionStencils ]
 ]
 
+{ #category : #accessing }
+GtHome >> howToSection [
+	<gtHomeSection>
+	^ GtHomeHowToSection new
+		priority: 19
+]
+
 { #category : #initialization }
 GtHome >> initialize [
 	super initialize.
@@ -78,7 +85,7 @@ GtHome >> initializeSections [
 GtHome >> slideShowsSection [
 	<gtHomeSection>
 	^ GtHomeSlideShowsSection new
-		priority: 19
+		priority: 15
 ]
 
 { #category : #initialization }
