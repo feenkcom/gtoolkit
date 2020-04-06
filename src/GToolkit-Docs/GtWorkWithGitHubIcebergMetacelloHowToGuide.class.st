@@ -1,5 +1,5 @@
 "
-!How to work with GitHub, Metacello and Iceberg
+!How to work with GitHub and Metacello
 
 Before being able to work with GitHub, you first need to setup the credentials for GitHub.
 
@@ -17,7 +17,7 @@ store storeSshCredential: credentials forHostname: credentials host.
 IceCredentialsProvider useCustomSsh: true.
 ]]]
 
-Once credentials are set, we can load the actual code via a Metacello script. For example, try loading:
+Once credentials are set, we can load the actual code via a script that loads a Metacello baseline. For example, try loading:
 
 [[[
 Metacello new
@@ -26,7 +26,11 @@ Metacello new
 	load.
 ]]]
 
-Or you can use the Iceberg interface from within the legacy Morphic World.
+This will load the baseline and the code from the repository and will make it available in the image.
+
+Once you have a Git repository, you can further use the Git interface.
+
+
 "
 Class {
 	#name : #GtWorkWithGitHubIcebergMetacelloHowToGuide,
