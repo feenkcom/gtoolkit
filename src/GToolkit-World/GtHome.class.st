@@ -53,7 +53,7 @@ GtHome >> initialize [
 		c vertical matchParent ].
 
 	self padding: (BlInsets all: self spaceGap).
-
+	self layout: BlLinearLayout vertical.
 	sectionsList := BrSimpleList new
 		matchParent;
 		items: #();
@@ -72,7 +72,20 @@ GtHome >> initialize [
 			eachAssociation value ].
 
 	self addChild: sectionsList.
-
+	self addChild: (BrLabel new 
+		text: 'Glamorous Toolkit ', GtImage instance version versionString; 
+		look: (BrGlamorousLabelLook new 
+			foreground: Color gray; 
+			fontSize: 10);
+		constraintsDo: [ :c | c linear horizontal alignRight ];
+		when: BlClickEvent do: [ :e | 
+			| aSpace |
+			aSpace := BlSpace new.
+			aSpace title: 'Glamorous Toolkit'.
+			aSpace extent: 1200@600.
+			aSpace addChild: (GtInspector createOn: GtImage instance).
+			e target showSpace: aSpace ]).
+	
 	self initializeSections
 ]
 
