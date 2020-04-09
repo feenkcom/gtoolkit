@@ -111,13 +111,13 @@ GtWorldElement >> newSpotterButton [
 								look: (BrGlamorousDropdownLook new
 									handle: (BrButton new 
 										look: BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook - BrGlamorousButtonExteriorLook;
-										icon: BrGlamorousIcons search asElement);
+										icon: BrGlamorousVectorIcons search);
 									content: (GtSpotterElement new
 										spotterModel: model;
 										size: self class worldSpotterSize;
 										when: GtSpotterResizedEvent do: [ :e | self class worldSpotterSize: e target size ]));
 								background: BrGlamorousColors secondaryHeaderBackgroundColor ]);
-		icon: BrGlamorousIcons search asElement;
+		icon: BrGlamorousVectorIcons search;
 		label: 'Search'.
 	^ spotterDropdown
 ]
@@ -216,7 +216,7 @@ GtWorldElement >> showSpace: aSpace [
 							aTab := nil.
 							GtWorld openWithSpaces: { aSpace } ].
 					BrButton new
-						icon: BrGlamorousIcons close;
+						icon: BrGlamorousVectorIcons close;
 						exact: 16@16;
 						opacity: 0.5;
 						look: self newTabButtonLook;
