@@ -40,7 +40,7 @@ GtWorldElement >> initialize [
 			(BrTab new
 				vExact: 36;
 				look: BrGlamorousSpaceTabWithIconLook;
-				icon: BrGlamorousIcons gt asElement;
+				icon: BrGlamorousVectorIcons gt;
 				label: 'Home';
 				stencil: [ home ]).
 	self
