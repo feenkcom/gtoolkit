@@ -136,7 +136,7 @@ GtWorldElement >> newSubSpaceButton [
 								look:
 									BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook
 										- BrGlamorousButtonExteriorLook;
-								icon: BrGlamorousIcons hamburger asElement;
+								icon: BrGlamorousIcons hamburger;
 								label: 'Menu';
 								yourself ]
 						content: [ GtToolsMenu new
@@ -144,7 +144,7 @@ GtWorldElement >> newSubSpaceButton [
 									c vertical fitContent.
 									c horizontal exact: 420 ];
 								yourself ]);
-		icon: BrGlamorousIcons hamburger asElement;
+		icon: BrGlamorousIcons hamburger;
 		label: 'Menu';
 		yourself.
 	^ subSpaceDropdown

@@ -26,7 +26,7 @@ GtToolButtonStencil >> create [
 	<return: #BrButton>
 
 	| iconElement labelElement |
-	iconElement := self icon asElement size: self iconSize; margin: (BlInsets bottom: 5).
+	iconElement := (self icon asElement asScalableElement) size: self iconSize; margin: (BlInsets bottom: 5).
 	labelElement := BrLabel new 
 	    text: self title;
 	    look: (BrGlamorousLabelLook new fontSize: 14).
