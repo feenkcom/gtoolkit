@@ -4,12 +4,6 @@ Metacello new
         baseline: 'Iceberg';
         load.
 
-EpMonitor current disable.
-Metacello new
-  baseline: 'GToolkit';
-  repository: 'github://feenkcom/gtoolkit/src';
-  load.
-EpMonitor current enable.
 
 SourceFileArray compile: 'deferFlushDuring: aBlock	
 	flushChanges ifFalse: [ ^ aBlock value ].
@@ -18,9 +12,13 @@ SourceFileArray compile: 'deferFlushDuring: aBlock
 		flushChanges := true.
 		self flushChangesFile ]'.
 
-
+EpMonitor current disable.
+Metacello new
+  baseline: 'GToolkit';
+  repository: 'github://feenkcom/gtoolkit/src';
+  load.
+EpMonitor current enable.
 	
-
 GtDocumentConstants localGtDirectory asFileReference ensureCreateDirectory.
 Transcript crShow: ('localGtDirectory: ', GtDocumentConstants localGtDirectory printString).
 docFolders := (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'doc') asOrderedCollection.
