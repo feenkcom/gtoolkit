@@ -84,6 +84,76 @@ ${example:GtSearchClassFilterExamples>>#deprecatedClassesFilter}$
 and the test classes.
 
 ${example:GtSearchClassFilterExamples>>#testClassesFilter}$
+
+!!!Methods
+
+These allow us to perform various searches related to methods. For example, we can search methods in the current image,
+
+${example:GtSearchMethodFilterExamples>>#methodsInImageFilter}$
+
+in a certain package,
+
+${example:GtSearchMethodFilterExamples>>#methodsInPackageFilter}$
+
+with a certain category,
+
+${example:GtSearchMethodFilterExamples>>#methodsInCategoryFilter}$
+
+or methods that are deprecated.
+
+${example:GtSearchMethodFilterExamples>>#deprecatedMethodsFilter}$
+
+Inside a class, we can also search for instance side methods,
+
+${example:GtSearchMethodsContainedInClassFilterExamples>>#methodsInClassFilter}$
+
+for both instance and class side methods,
+
+${example:GtSearchMethodsContainedInClassFilterExamples>>#methodsInClassOnBothSidesFilter}$
+
+or for methods that use a certain instance variable.
+
+${example:GtMethodsCoderExamples>>#instanceVariableFilter}$
+
+Through these method filters we can search different patterns. For example, we can search for methods that have a certain pattern in the source code,
+
+${example:GtSearchMethodFilterExamples>>#astPatternFilter}$
+
+or in the name.
+
+${example:GtSearchMethodFilterExamples>>#implementorsPatternFilter}$
+
+At the same time we can search for methods that are in a class with a certain pattern,
+
+${example:GtSearchMethodFilterExamples>>#methodsWithClassPatternFilter}$
+
+or in a package with a certain pattern.
+
+${example:GtSearchMethodFilterExamples>>#packagePatternFilter}$
+
+It is also possible to search methods by a name,
+
+${example:GtSearchMethodFilterExamples>>#implementorsOfThisMessage}$
+
+or by the annotation
+
+${example:GtSearchMethodFilterExamples>>#gtExamplePragmas}$
+
+and to search all the methods that reference something.
+
+${example:GtSearchMethodReferencesFilterExamples>>#referencesTo42}$
+
+!!!Negation
+
+This filter takes another filter and does the opposite of that filter. For example, if we search for all deprecated packages and apply this filter, we end up with all the packages that are not deprecated.
+
+${example:GtSearchNegationFilterExamples>>#negationSearchFilter}$
+
+!!!Null
+
+The Null filter always returns an empty search. It doesn't match anything.
+
+${example:GtSearchNullFilterExamples>>#nullSearchFilter}$
 "
 Class {
 	#name : #GtWorkWithQueriesHowToGuide,

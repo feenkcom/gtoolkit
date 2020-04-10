@@ -39,7 +39,4 @@ docFolders do: [ :each |
 World closeAllWindowsDiscardingChanges.
 #GtWorldMenu asClass setGtDesktopLogo.
 
-GtImage version:(GtRlReleaserExportWorkflow buildGToolkitRelease rootProjectRelease devVersion).
-GtImage timestamp: DateAndTime now.
-
 Smalltalk snapshot: true andQuit: false.

@@ -26,7 +26,7 @@ GtHomeToolsSection >> create [
 GtHomeToolsSection >> newCoderButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Coder';
-		icon: BrGlamorousIcons largeBook asElement;
+		icon: BrGlamorousVectorIcons largeBook;
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Coder'
@@ -39,7 +39,7 @@ GtHomeToolsSection >> newCoderButtonStencil [
 GtHomeToolsSection >> newExamplesButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Examples Explorer';
-		icon: BrGlamorousIcons largeEg asElement;
+		icon: BrGlamorousVectorIcons largeEg;
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Examples Explorer'
@@ -54,7 +54,7 @@ GtHomeToolsSection >> newExamplesButtonStencil [
 GtHomeToolsSection >> newGitButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Git';
-		icon: BrGlamorousIcons largebranching asElement;
+		icon: BrGlamorousVectorIcons largebranching;
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Git'
@@ -69,7 +69,7 @@ GtHomeToolsSection >> newGitButtonStencil [
 GtHomeToolsSection >> newMonitorButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Monitor';
-		icon: BrGlamorousIcons largeSignal asElement;
+		icon: BrGlamorousVectorIcons largeSignal;
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Monitor'
@@ -82,7 +82,7 @@ GtHomeToolsSection >> newMonitorButtonStencil [
 GtHomeToolsSection >> newMorphicWorldButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Morphic World';
-		icon: BrGlamorousIcons largeWindow asElement;
+		icon: BrGlamorousVectorIcons largeWindow;
 		action: [ :card | card space host openMorphicWorld ];
 		description: 'The legacy Morphic World interface and tools.'
 ]
@@ -91,7 +91,7 @@ GtHomeToolsSection >> newMorphicWorldButtonStencil [
 GtHomeToolsSection >> newPlaygroundButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Playground';
-		icon: BrGlamorousIcons largePlay asElement;
+		icon: BrGlamorousVectorIcons largePlay;
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Playground'
@@ -104,7 +104,7 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 GtHomeToolsSection >> newSpotterButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Spotter';
-		icon: BrGlamorousIcons largeSearch asElement;
+		icon: BrGlamorousVectorIcons largeSearch;
 		action: [ :card | card fireEvent: GtSpawnSpotter new ];
 		description: 'Search anything. Really anything.'
 ]
@@ -113,7 +113,7 @@ GtHomeToolsSection >> newSpotterButtonStencil [
 GtHomeToolsSection >> newTranscriptButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Transcript';
-		icon: BrGlamorousIcons largeTranscript asElement;
+		icon: BrGlamorousVectorIcons largeTranscript;
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Transcript'
