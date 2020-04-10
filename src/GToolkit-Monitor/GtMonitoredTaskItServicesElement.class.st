@@ -61,6 +61,23 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 				look: BrGlamorousLabelLook;
 				text: aQueueSize;
 				hExact: 100 ].
+			
+	servicesList column
+		title: 'Errors';
+		stencil: [ :aMonitoredService |
+			| aNumberOfFailedTasks |
+			aNumberOfFailedTasks := aMonitoredService numberOfFailedTasks.
+			aNumberOfFailedTasks := aNumberOfFailedTasks isZero 
+				ifTrue: [ '' asRopedText ]
+				ifFalse: [ 
+					(aNumberOfFailedTasks asString, 
+						(' failure' asPluralBasedOn: aNumberOfFailedTasks))
+					 		asRopedText foreground: Color red ].
+			
+			BrLabel new
+				look: BrGlamorousLabelLook;
+				text: aNumberOfFailedTasks;
+				hExact: 100 ].
 ]
 
 { #category : #initialization }

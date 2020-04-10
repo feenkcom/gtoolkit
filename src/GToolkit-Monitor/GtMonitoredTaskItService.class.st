@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #accessing }
+GtMonitoredTaskItService >> numberOfFailedTasks [
+	<return: #Integer>
+	^ self service ifNil: 0 ifNotNil: [ :aService | aService numberOfFailedTasks ]
+]
+
+{ #category : #accessing }
 GtMonitoredTaskItService >> queueSize [
 	<return: #Integer>
 	^ self service ifNil: 0 ifNotNil: [ :aService | aService taskQueueSize ]
