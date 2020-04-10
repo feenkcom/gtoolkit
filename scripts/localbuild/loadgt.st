@@ -1,4 +1,10 @@
-
+SourceFileArray compile: 'deferFlushDuring: aBlock	
+	flushChanges ifFalse: [ ^ aBlock value ].
+	"flushChanges := false."
+	^ [ aBlock value ] ensure: [
+		flushChanges := true.
+		self flushChangesFile ]'.
+		
 Metacello new
         githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
         baseline: 'Iceberg';
@@ -10,17 +16,7 @@ Metacello new
   repository: 'github://feenkcom/gtoolkit/src';
   load.
 EpMonitor current enable.
-
-SourceFileArray compile: 'deferFlushDuring: aBlock	
-	flushChanges ifFalse: [ ^ aBlock value ].
-	"flushChanges := false."
-	^ [ aBlock value ] ensure: [
-		flushChanges := true.
-		self flushChangesFile ]'.
-
-
 	
-
 GtDocumentConstants localGtDirectory asFileReference ensureCreateDirectory.
 Transcript crShow: ('localGtDirectory: ', GtDocumentConstants localGtDirectory printString).
 docFolders := (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'doc') asOrderedCollection.
