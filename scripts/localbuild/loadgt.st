@@ -1,16 +1,14 @@
-
-Metacello new
-        githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
-        baseline: 'Iceberg';
-        load.
-
-
 SourceFileArray compile: 'deferFlushDuring: aBlock	
 	flushChanges ifFalse: [ ^ aBlock value ].
 	"flushChanges := false."
 	^ [ aBlock value ] ensure: [
 		flushChanges := true.
 		self flushChangesFile ]'.
+		
+Metacello new
+        githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
+        baseline: 'Iceberg';
+        load.
 
 EpMonitor current disable.
 Metacello new
