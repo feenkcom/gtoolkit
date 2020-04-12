@@ -77,21 +77,13 @@ in a certain package,
 
 ${example:GtSearchClassFilterExamples>>#classesInCurrentPackageFilter}$
 
-the deprecated classes
+and the deprecated classes.
 
 ${example:GtSearchClassFilterExamples>>#deprecatedClassesFilter}$
 
-and the test classes.
-
-${example:GtSearchClassFilterExamples>>#testClassesFilter}$
-
 !!!Methods
 
-These allow us to perform various searches related to methods. For example, we can search methods in the current image,
-
-${example:GtSearchMethodFilterExamples>>#methodsInImageFilter}$
-
-in a certain package,
+These allow us to perform various searches related to methods. For example, we can search methods in a certain package,
 
 ${example:GtSearchMethodFilterExamples>>#methodsInPackageFilter}$
 
@@ -139,7 +131,7 @@ or by the annotation
 
 ${example:GtSearchMethodFilterExamples>>#gtExamplePragmas}$
 
-and to search all the methods that reference something.
+and to search all the methods that reference something: a piece of code, another method or a class.
 
 ${example:GtSearchMethodReferencesFilterExamples>>#referencesTo42}$
 
@@ -151,7 +143,7 @@ ${example:GtSearchNegationFilterExamples>>#negationSearchFilter}$
 
 !!!Null
 
-The Null filter always returns an empty search. It doesn't match anything.
+The Null filter always returns false, not matching anything.
 
 ${example:GtSearchNullFilterExamples>>#nullSearchFilter}$
 "
