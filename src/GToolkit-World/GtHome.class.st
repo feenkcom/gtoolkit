@@ -77,6 +77,7 @@ GtHome >> initialize [
 		look: (BrGlamorousLabelLook new 
 			foreground: Color gray; 
 			fontSize: 10);
+		margin: (BlInsets right: 5);
 		constraintsDo: [ :c | c linear horizontal alignRight ];
 		when: BlClickEvent do: [ :e | 
 			| aSpace |
