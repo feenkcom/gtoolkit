@@ -19,4 +19,6 @@ vn="$(cut -d '.' -f3 <<<$version)"
 previous="$(($vn - 1))"
 sed -i "s/${vn}/${previous}/g" $GTfolder/GToolkitLinux64-release
 
+stat -c %Y $(cat $GTfolder/GToolkitLinux64-release) > .releasedateinseconds
+
 set +e
