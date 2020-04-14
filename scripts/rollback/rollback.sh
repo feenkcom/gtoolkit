@@ -25,6 +25,6 @@ sed -i "s/${vn}/${previous}/g" $GTfolder/GToolkitLinux64-release
 version=$(cat $GTfolder/GToolkitLinux64-release)
 cp $version $GTfolder/GToolkitLinux64-release.zip
 
-stat -c %Y $(cat $GTfolder/GToolkitLinux64-release) > .releasedateinseconds
+stat -c %Y "$GTfolder/$(cat $GTfolder/GToolkitLinux64-release)" > .releasedateinseconds
 
 set +e
