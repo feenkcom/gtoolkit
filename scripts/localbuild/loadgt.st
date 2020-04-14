@@ -16,6 +16,7 @@ Metacello new
   repository: 'github://feenkcom/gtoolkit/src';
   load.
 EpMonitor current enable.
+PharoLightTheme beCurrent.
 	
 GtDocumentConstants localGtDirectory asFileReference ensureCreateDirectory.
 Transcript crShow: ('localGtDirectory: ', GtDocumentConstants localGtDirectory printString).
