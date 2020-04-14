@@ -4,6 +4,8 @@ set -e
 
 export GTfolder=/var/www/html/gt
 
+cd $GTfolder
+
 version=$(cat $GTfolder/GToolkitWin64-release)
 vn="$(cut -d '.' -f3 <<<$version)"
 previous="$(($vn - 1))"
@@ -25,7 +27,7 @@ sed -i "s/${vn}/${previous}/g" $GTfolder/GToolkitLinux64-release
 version=$(cat $GTfolder/GToolkitLinux64-release)
 cp $version $GTfolder/GToolkitLinux64-release.zip
 
-cd $GTfolder
+
 stat -c %Y "$(cat $GTfolder/GToolkitLinux64-release)" > .releasedateinseconds
 cd -
 
