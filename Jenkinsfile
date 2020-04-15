@@ -25,9 +25,9 @@ pipeline {
                         script {
                             MASTER_WORKSPACE = WORKSPACE
                         }
-                        sh 'git clean -fdx -e pharo-local/package-cache'
+                        sh 'git clean -fdx'
                         sh 'chmod +x scripts/build/*.sh'
-                        // sh 'rm -rf pharo-local/iceberg'
+                        sh 'rm -rf pharo-local/iceberg'
                         
                         slackSend (color: '#FFFF00', message: ("Started <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>") )
 
