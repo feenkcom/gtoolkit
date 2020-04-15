@@ -154,6 +154,8 @@ BaselineOfGToolkit >> baseline: spec [
 		spec package: 'GToolkit-Constraints' with: [ 
 			spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter') ].
 		spec package: 'GToolkit-World'.
+		spec package: 'GToolkit-Setup' with: [ 
+			spec requires: #('GToolkitReleaser' 'GToolkitInspector' 'GToolkitDebugger' 'GToolkitPlayground') ].
 	]
 ]
 
@@ -176,10 +178,6 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ])
 		ifTrue: [ ^ self ].
 	PostLoaded := true.
-	
-	GtMoldableDebuggerElement register.
-	GtInspectorToolRegistryAdaptor register.
-	GtPlaygroundToolRegistryAdaptor register.
 	
 	SystemVersion current major = 7 ifTrue: [ 
 		self fixCommandLineHandlerForPharo7 ].
