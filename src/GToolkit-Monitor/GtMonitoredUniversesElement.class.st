@@ -8,17 +8,21 @@ Class {
 GtMonitoredUniversesElement >> createUniverseCard: aUniverse [
 	| aContainer |
 	
-	aContainer := BrVerticalPane new
-		background: Color white;
-		margin: (BlInsets all: 7);
-		padding: (BlInsets all: 1);
-		addLook: (BrShadowLook new);
-		exact: 150@100.
-
-	aContainer viewModel addState: BrHoverModel new.
+	aContainer := BlElement new
+		layout: BlLinearLayout vertical.
+	aContainer viewModel: (BrInteractiveModel new addState: (BrHoverModel new)).
 	aContainer addLook: (BrInteractiveCommonLook new
 		default: [ :w | w border: (BlBorder paint: Color veryVeryLightGray width: 1) ];
 		hovered: [ :w | w border: (BlBorder paint: BrGlamorousColors hoveredButtonBorderColor width: 1) ]).
+	
+	aContainer
+		constraintsDo: [ :c |
+			c horizontal exact: 150.
+			c vertical exact: 100 ];
+		background: Color white;
+		margin: (BlInsets all: 7);
+		padding: (BlInsets all: 1);
+		addLook: (BrShadowLook new).
 
 	aContainer when: BlClickEvent do: [ :anEvent |
 		anEvent consumed: true.
