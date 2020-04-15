@@ -48,12 +48,8 @@ loadWarnings ifNotEmpty: [
 			asStringOn: aStream 
 			delimiter: OSPlatform current lineEnding ]) ].
 
-"To remove"
-GtRlReleaserExportWorkflow switchAllRepositoriesBackToMasterBranch.
-
 GtImageSetup performSetup.
-	
-World closeAllWindowsDiscardingChanges.
 
+World closeAllWindowsDiscardingChanges.
 
 Smalltalk snapshot: true andQuit: false.
