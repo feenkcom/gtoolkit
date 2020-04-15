@@ -48,7 +48,7 @@ loadWarnings ifNotEmpty: [
 			asStringOn: aStream 
 			delimiter: OSPlatform current lineEnding ]) ].
 
-GtImageSetup performSetup.
+GtImageSetup performSetupForRelease.
 
 World closeAllWindowsDiscardingChanges.
 
