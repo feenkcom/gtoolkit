@@ -36,7 +36,21 @@ GtImageSetup class >> installLogo [
 ]
 
 { #category : #actions }
+GtImageSetup class >> performLocalSetup [
+	self installLogo.
+	self registerTools.
+]
+
+{ #category : #actions }
 GtImageSetup class >> performSetup [
+	self copyDataAndDocsFolders.
+	self installLogo.
+	self registerTools.
+	self updateImageVersion.
+]
+
+{ #category : #actions }
+GtImageSetup class >> performSetupForRelease [
 	self copyDataAndDocsFolders.
 	self installLogo.
 	self registerTools.
