@@ -16,17 +16,40 @@ IceGitWorkingCopyUpdateVisitor compile: 'remoteFileReferenceInPath: anUndefinedO
 	"I do not remove nothing from the file in the image"'.
 
 
-Metacello new
-        githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
-        baseline: 'Iceberg';
-        load.
-	
-EpMonitor current disable.
-Metacello new
-  baseline: 'GToolkit';
-  repository: 'github://feenkcom/gtoolkit/src';
-  load.
-EpMonitor current enable.
+
+[ 
+	EpMonitor current disable.
+	Metacello new
+		githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
+		baseline: 'Iceberg';
+		load ] ensure: [ EpMonitor current enable ].
+
+loadWarnings := OrderedCollection new.
+[ 
+	EpMonitor current disable.
+	Metacello new
+		baseline: 'GToolkit';
+		repository: 'github://feenkcom/gtoolkit/src';
+		onWarning: [ :anException |
+			"Log the error now."
+			MetacelloNotification signal: anException description.
+			"Create a list of all warnings."
+			loadWarnings add: anException description.
+			
+			anException resume ];
+		load ] ensure: [ EpMonitor current enable ].
+
+"In case there are warnings during the loading fail here.
+Otherwise most likely the failure will happen only when 
+running tests or when running releaser."
+loadWarnings ifNotEmpty: [  
+	Error signal: (String streamContents: [ :aStream |
+		aStream nextPutAll: 'Warnings detected during loading: '.
+		aStream nextPutAll: OSPlatform current lineEnding.
+		loadWarnings 
+			asStringOn: aStream 
+			delimiter: OSPlatform current lineEnding ]) ].
+
 GtRlReleaserExportWorkflow switchAllRepositoriesBackToMasterBranch.
 
 GtResourcesUtilityConstants localGtDirectory asFileReference ensureCreateDirectory.
