@@ -35,15 +35,21 @@ GtImageSetup class >> installLogo [
 	GtWorldMenu setGtDesktopLogo.
 ]
 
-{ #category : #actions }
-GtImageSetup class >> performSetup [
+{ #category : #api }
+GtImageSetup class >> performLocalSetup [
+	self installLogo.
+	self registerTools.
+]
+
+{ #category : #api }
+GtImageSetup class >> performSetupForRelease [
 	self copyDataAndDocsFolders.
 	self installLogo.
 	self registerTools.
 	self updateImageVersion.
 ]
 
-{ #category : #api }
+{ #category : #actions }
 GtImageSetup class >> registerTools [
 	GtMoldableDebuggerElement register.
 	GtInspectorToolRegistryAdaptor register.
