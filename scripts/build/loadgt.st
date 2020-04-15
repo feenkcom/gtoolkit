@@ -15,43 +15,41 @@ IceGitWorkingCopyUpdateVisitor compile: 'remoteFileReferenceInPath: anUndefinedO
 	
 	"I do not remove nothing from the file in the image"'.
 
+[ 
+	EpMonitor current disable.
+	Metacello new
+		githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
+		baseline: 'Iceberg';
+		load ] ensure: [ EpMonitor current enable ].
 
-Metacello new
-        githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
-        baseline: 'Iceberg';
-        load.
-	
-EpMonitor current disable.
-Metacello new
-  baseline: 'GToolkit';
-  repository: 'github://feenkcom/gtoolkit/src';
-  load.
-EpMonitor current enable.
-GtRlReleaserExportWorkflow switchAllRepositoriesBackToMasterBranch.
+loadWarnings := OrderedCollection new.
+[ 
+	EpMonitor current disable.
+	Metacello new
+		baseline: 'GToolkit';
+		repository: 'github://feenkcom/gtoolkit/src';
+		onWarning: [ :anException |
+			"Log the error now."
+			MetacelloNotification signal: anException description.
+			"Create a list of all warnings."
+			loadWarnings add: anException description.
+			
+			anException resume ];
+		load ] ensure: [ EpMonitor current enable ].
 
-GtResourcesUtilityConstants localGtDirectory asFileReference ensureCreateDirectory.
-Transcript crShow: ('localGtDirectory: ', GtResourcesUtilityConstants localGtDirectory printString).
-docFolders := (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'doc') asOrderedCollection.
+"In case there are warnings during the loading fail here.
+Otherwise most likely the failure will happen only when 
+running tests or when running releaser."
+loadWarnings ifNotEmpty: [  
+	Error signal: (String streamContents: [ :aStream |
+		aStream nextPutAll: 'Warnings detected during loading: '.
+		aStream nextPutAll: OSPlatform current lineEnding.
+		loadWarnings 
+			asStringOn: aStream 
+			delimiter: OSPlatform current lineEnding ]) ].
 
-docFolders addAll:  (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'data').
+GtImageSetup performSetupForRelease.
 
-docFolders do: [ :each |
-	|icebergIndex size topSegments localPath|
-	icebergIndex := each absolutePath segments indexOf: 'iceberg'.
-	size := each absolutePath segments size.
-	topSegments := each absolutePath segments asOrderedCollection copyFrom: (icebergIndex + 1) to: size.
-
-	localPath := String streamContents: [ :stream | topSegments asStringOn: stream delimiter:'/'].
-	Transcript crShow: ('copying ', each printString, ' to ', localPath).
-	[each copyAllTo: (GtResourcesUtilityConstants localGtDirectory asFileReference / localPath) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
-	
 World closeAllWindowsDiscardingChanges.
-#GtWorldMenu asClass setGtDesktopLogo.
-#GtInspectorToolRegistryAdaptor asClass register. 
-#GtPlaygroundToolRegistryAdaptor asClass register.
-
-theVersion := GtRlReleaserExportWorkflow buildGToolkitRelease rootProjectRelease version.
-GtImage version: theVersion.
-GtImage timestamp: DateAndTime now.
 
 Smalltalk snapshot: true andQuit: false.

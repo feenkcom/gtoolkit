@@ -56,6 +56,7 @@ EpMonitor current disable.
     repository: 'github://feenkcom/gtoolkit/src';
     load
 ] ensure: [ EpMonitor current enable ].
+#GtImageSetup asClass performLocalSetup.
 #GtWorld asClass open.
 ```
 
@@ -71,6 +72,7 @@ EpMonitor current disable.
     repository: 'github://feenkcom/gtoolkit:release/src';
     load
 ] ensure: [ EpMonitor current enable ].
+#GtImageSetup asClass performLocalSetup.
 #GtWorld asClass open.
 ```
 ## License
