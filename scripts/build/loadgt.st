@@ -15,8 +15,6 @@ IceGitWorkingCopyUpdateVisitor compile: 'remoteFileReferenceInPath: anUndefinedO
 	
 	"I do not remove nothing from the file in the image"'.
 
-
-
 [ 
 	EpMonitor current disable.
 	Metacello new
@@ -50,31 +48,12 @@ loadWarnings ifNotEmpty: [
 			asStringOn: aStream 
 			delimiter: OSPlatform current lineEnding ]) ].
 
+"To remove"
 GtRlReleaserExportWorkflow switchAllRepositoriesBackToMasterBranch.
 
-GtResourcesUtilityConstants localGtDirectory asFileReference ensureCreateDirectory.
-Transcript crShow: ('localGtDirectory: ', GtResourcesUtilityConstants localGtDirectory printString).
-docFolders := (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'doc') asOrderedCollection.
-
-docFolders addAll:  (((IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent) allChildrenMatching: 'data').
-
-docFolders do: [ :each |
-	|icebergIndex size topSegments localPath|
-	icebergIndex := each absolutePath segments indexOf: 'iceberg'.
-	size := each absolutePath segments size.
-	topSegments := each absolutePath segments asOrderedCollection copyFrom: (icebergIndex + 1) to: size.
-
-	localPath := String streamContents: [ :stream | topSegments asStringOn: stream delimiter:'/'].
-	Transcript crShow: ('copying ', each printString, ' to ', localPath).
-	[each copyAllTo: (GtResourcesUtilityConstants localGtDirectory asFileReference / localPath) ] on: FileExists do: [ :e | Transcript crShow: e printString ]].
+GtImageSetup performSetup.
 	
 World closeAllWindowsDiscardingChanges.
-#GtWorldMenu asClass setGtDesktopLogo.
-#GtInspectorToolRegistryAdaptor asClass register. 
-#GtPlaygroundToolRegistryAdaptor asClass register.
 
-theVersion := GtRlReleaserExportWorkflow buildGToolkitRelease rootProjectRelease version.
-GtImage version: theVersion.
-GtImage timestamp: DateAndTime now.
 
 Smalltalk snapshot: true andQuit: false.
