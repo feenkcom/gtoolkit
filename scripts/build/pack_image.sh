@@ -3,7 +3,7 @@ set -o xtrace
 set -e
 export RUST_BACKTRACE=full
 
-export PROJECT_NAME="GToolkit-64-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+export PROJECT_NAME="GlamorousToolkit-64-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 
 echo $PROJECT_NAME > projectversion.txt
 
@@ -17,8 +17,8 @@ cp -Rv gt-extra "${ARTIFACT_DIR}/"
 
 export build_zip="${ARTIFACT_DIR}.zip"
 
-xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}.image" eval --save "IceCredentialsProvider sshCredentials publicKey: ''; privateKey: ''. IceCredentialsProvider useCustomSsh: false. IceRepository registry removeAll." 
-xvfb-run -a  ./gtoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}.image" eval --save "ThreadedFFIMigration enableThreadedFFI." 
+xvfb-run -a  ./glamoroustoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}.image" eval --save "IceCredentialsProvider sshCredentials publicKey: ''; privateKey: ''. IceCredentialsProvider useCustomSsh: false. IceRepository registry removeAll." 
+xvfb-run -a  ./glamoroustoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}.image" eval --save "ThreadedFFIMigration enableThreadedFFI." 
 zip -qr "$build_zip" "$ARTIFACT_DIR"
 cp $build_zip GT.zip
 

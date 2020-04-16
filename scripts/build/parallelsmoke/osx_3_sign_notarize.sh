@@ -19,15 +19,15 @@ CERT_IDENTITY=$(security find-identity -v -p codesigning "$MY_KEYCHAIN" | head -
 CERT_UUID=$(security find-identity -v -p codesigning "$MY_KEYCHAIN" | head -1 | grep '"' | awk '{print $2}') # Handy to have UUID (just in case)
 security set-key-partition-list -S apple-tool:,apple: -s -k $MY_KEYCHAIN_PASSWORD -D "$CERT_IDENTITY" -t private $MY_KEYCHAIN # Enable codesigning from a non user interactive shell
 
-echo "${SUDO}" | sudo -S rm -rf GToolkitOSX64/
-unzip GToolkitOSX64.zip
-rm GToolkitOSX64.zip
+echo "${SUDO}" | sudo -S rm -rf GlamorousToolkitOSX64/
+unzip GlamorousToolkitOSX64.zip
+rm GlamorousToolkitOSX64.zip
 
-codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GToolkitOSX64/GToolkit.app
-codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GToolkitOSX64/*.dylib 
+codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GlamorousToolkitOSX64/GlamorousToolkit.app
+codesign --entitlements scripts/resources/Product.entitlements  --force -v --options=runtime  --deep --timestamp --file-list - -s "$SIGNING_IDENTITY" GlamorousToolkitOSX64/*.dylib 
 
-ditto -c -k --sequesterRsrc --keepParent GToolkitOSX64/ GToolkitOSX64.zip
+ditto -c -k --sequesterRsrc --keepParent GlamorousToolkitOSX64/ GlamorousToolkitOSX64.zip
 
-xcrun altool -t osx -f GToolkitOSX64.zip -itc_provider "77664ZXL29" --primary-bundle-id "com.feenk.gtoolkit" --notarize-app --verbose  --username "george.ganea@feenk.com" --password "${APPLEPASSWORD}"
+xcrun altool -t osx -f GlamorousToolkitOSX64.zip -itc_provider "77664ZXL29" --primary-bundle-id "com.feenk.gtoolkit" --notarize-app --verbose  --username "george.ganea@feenk.com" --password "${APPLEPASSWORD}"
 
 security delete-keychain "$MY_KEYCHAIN" # Delete temporary keychain

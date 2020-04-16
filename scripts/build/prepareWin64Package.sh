@@ -1,16 +1,15 @@
 #!/bin/sh
 set -e
 set -o xtrace
-GTFolder=GToolkitWin64
+GTFolder=GlamorousToolkitWin64
 mkdir -p $GTFolder
-cp -rv GToolkit-64*/* $GTFolder
+cp -rv GlamorousToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
-
 
 libFolder=libWin64
 mkdir -p $libFolder
 
-unzip build-artifacts/GToolkitVM-8.2.0-*-win64-bin.zip -d $GTFolder/
+unzip build-artifacts/GlamorousToolkitVM-8.2.0-*-win64-bin.zip -d $GTFolder/
 
 package_binary() {
 	curl https://dl.feenk.com/$1/windows/development/x86_64/lib$1.dll -o lib$1.dll
