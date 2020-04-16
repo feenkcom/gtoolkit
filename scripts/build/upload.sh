@@ -10,17 +10,17 @@ export build_zip=GT.zip
 TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 | sort -t '/' -k 3 -V | tail -n1 |sed 's/.*\///; s/\^{}//')
 echo $TAG_NAME > tagname.txt
 
-#download GToolkitOSX64 from tentative because the osx vm uploaded a notarized version of it 
+#download GlamorousToolkitOSX64 from tentative because the osx vm uploaded a notarized version of it 
 
-curl https://dl.feenk.com/tentative/GToolkitOSX64.zip -o GToolkitOSX64.zip
+curl https://dl.feenk.com/tentative/GlamorousToolkitOSX64.zip -o GlamorousToolkitOSX64.zip
 
-mv GToolkitWin64.zip GToolkitWin64-$TAG_NAME.zip
-mv GToolkitLinux64.zip GToolkitLinux64-$TAG_NAME.zip
-mv GToolkitOSX64.zip GToolkitOSX64-$TAG_NAME.zip
+mv GlamorousToolkitWin64.zip GlamorousToolkitWin64-$TAG_NAME.zip
+mv GlamorousToolkitLinux64.zip GlamorousToolkitLinux64-$TAG_NAME.zip
+mv GlamorousToolkitOSX64.zip GlamorousToolkitOSX64-$TAG_NAME.zip
 
-scp GToolkitWin64-$TAG_NAME.zip $AWS:$GTfolder
-scp GToolkitLinux64-$TAG_NAME.zip $AWS:$GTfolder
-scp GToolkitOSX64-$TAG_NAME.zip $AWS:$GTfolder
+scp GlamorousToolkitWin64-$TAG_NAME.zip $AWS:$GTfolder
+scp GlamorousToolkitLinux64-$TAG_NAME.zip $AWS:$GTfolder
+scp GlamorousToolkitOSX64-$TAG_NAME.zip $AWS:$GTfolder
 
 #save the date so we can show it in the download button
 date +%s > releasedateinseconds

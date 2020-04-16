@@ -1,9 +1,9 @@
 #!/bin/sh
 set -e
 set -o xtrace
-GTFolder=GToolkitLinux64
+GTFolder=GlamorousToolkitLinux64
 mkdir -p $GTFolder
-cp -rv GToolkit-64*/* $GTFolder
+cp -rv GlamorousToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
 TAG_NAME=$(cat tagname.txt)

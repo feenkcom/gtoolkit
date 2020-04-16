@@ -8,4 +8,4 @@ echo $TAG_NAME > tagname.txt
 sh scripts/build/prepareWin64Package.sh
 sh scripts/build/prepareOSXPackage.sh
 sh scripts/build/prepareLinux64Package.sh
-find . -name "GToolkit-64*/*" -print
+find . -name "GlamorousToolkit-64*/*" -print
