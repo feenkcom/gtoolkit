@@ -17,10 +17,6 @@ curl https://dl.feenk.com/tentative/GToolkitOSX64.zip -o GToolkitOSX64.zip
 mv GToolkitWin64.zip GToolkitWin64-$TAG_NAME.zip
 mv GToolkitLinux64.zip GToolkitLinux64-$TAG_NAME.zip
 mv GToolkitOSX64.zip GToolkitOSX64-$TAG_NAME.zip
-mv libOSX64.zip libOSX64-$TAG_NAME.zip
-mv libWin64.zip libWin64-$TAG_NAME.zip
-mv libLinux64.zip libLinux64-$TAG_NAME.zip
-
 
 scp GToolkitWin64-$TAG_NAME.zip $AWS:$GTfolder
 scp GToolkitLinux64-$TAG_NAME.zip $AWS:$GTfolder
@@ -33,9 +29,9 @@ scp releasedateinseconds $AWS:$GTfolder/.releasedateinseconds
 ssh $AWS -t "cd ${GTfolder}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n' -r rm --"
 ./scripts/build/create-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=$build_zip
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libOSX64-$TAG_NAME.zip
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libWin64-$TAG_NAME.zip
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libLinux64-$TAG_NAME.zip
+./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libOSX64.zip
+./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libWin64.zip
+./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libLinux64.zip
 
 file=$(echo build-artifacts/GToolkitVM-8.2.0-*-linux64-bin.zip)
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=$file

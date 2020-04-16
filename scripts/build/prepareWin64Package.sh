@@ -6,8 +6,10 @@ mkdir -p $GTFolder
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
+TAG_NAME=$(cat tagname.txt)
 
-libFolder=libWin64
+libZipFilename=libWin64
+libFolder=libWin64-$TAG_NAME
 mkdir -p $libFolder
 
 unzip build-artifacts/GToolkitVM-8.2.0-*-win64-bin.zip -d $GTFolder/
@@ -33,7 +35,7 @@ package_extra_moz2d_binary vcruntime140
 package_binary Clipboard
 
 zip -qyr $GTFolder.zip $GTFolder
-zip -qyr $libFolder.zip $libFolder
+zip -qyr $libZipFilename.zip $libFolder
 rm -rf $GTFolder
 rm -rf $libFolder
 set +e
