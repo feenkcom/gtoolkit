@@ -12,7 +12,7 @@ libZipFilename=libWin64
 libFolder=libWin64-$TAG_NAME
 mkdir -p $libFolder
 
-unzip build-artifacts/GToolkitVM-8.2.0-*-win64-bin.zip -d $GTFolder/
+unzip build-artifacts/GlamorousToolkitVM-8.2.0-*-win64-bin.zip -d $GTFolder/
 
 package_binary() {
 	curl https://dl.feenk.com/$1/windows/development/x86_64/lib$1.dll -o lib$1.dll
@@ -35,7 +35,7 @@ package_extra_moz2d_binary vcruntime140
 package_binary Clipboard
 
 zip -qyr $GTFolder.zip $GTFolder
-zip -qyr $libZipFilename.zip $libFolder
+
 rm -rf $GTFolder
 rm -rf $libFolder
 set +e

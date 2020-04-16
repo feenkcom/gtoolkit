@@ -10,7 +10,7 @@ libZipFilename=libOSX64
 libFolder=libOSX64-$TAG_NAME
 mkdir -p $libFolder
 
-unzip build-artifacts/GToolkitVM-8.2.0-*-mac64-bin.zip -d $GTFolder/
+unzip build-artifacts/GlamorousToolkitVM-8.2.0-*-mac64-bin.zip -d $GTFolder/
 
 cp -rv GToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
@@ -29,7 +29,7 @@ package_binary Clipboard
 package_binary Skia
 
 zip -qyr $GTFolder.zip $GTFolder
-zip -qyr $libZipFilename.zip $libFolder
+
 rm -rf $GTFolder
 rm -rf $libFolder
 set +e
