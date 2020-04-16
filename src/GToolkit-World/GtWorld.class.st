@@ -1,10 +1,6 @@
 Class {
 	#name : #GtWorld,
 	#superclass : #BlSpace,
-	#instVars : [
-		'spotterDropdown',
-		'subSpaceDropdown'
-	],
 	#category : #'GToolkit-World'
 }
 
