@@ -32,18 +32,21 @@ ssh $AWS -t "cd ${GTfolder}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n'
 
 libFolder=libOSX64
 unzip $libFolder.zip
+rm $libFolder.zip
 mv $libFolder $libFolder-$TAG_NAME
 zip -qyr libOSX64.zip $libFolder-$TAG_NAME
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libOSX64.zip
 
 libFolder=libWin64
 unzip $libFolder.zip
+rm $libFolder.zip
 mv $libFolder $libFolder-$TAG_NAME
 zip -qyr libWin64.zip $libFolder-$TAG_NAME
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libWin64.zip
 
 libFolder=libLinux64
 unzip $libFolder.zip
+rm $libFolder.zip
 mv $libFolder $libFolder-$TAG_NAME
 zip -qyr libLinux64.zip $libFolder-$TAG_NAME
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libLinux64.zip
