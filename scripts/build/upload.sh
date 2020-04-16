@@ -4,6 +4,7 @@ pwd
 ls -al
 export AWS=ubuntu@$AWSIP
 export GTfolder=/var/www/html/gt/
+export ScriptsFolder=/var/www/html/scripts/
 export build_zip=GT.zip
 
 TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 | sort -t '/' -k 3 -V | tail -n1 |sed 's/.*\///; s/\^{}//')
@@ -43,6 +44,10 @@ file=$(echo build-artifacts/GToolkitVM-8.2.0-*-mac64-bin.zip)
 file=$(echo build-artifacts/GToolkitVM-8.2.0-*-win64-bin.zip)
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=$file
 
+
+#deploy local build scripts
+scp scripts/localbuild/linux.sh $AWS:$ScriptsFolder
+scp scripts/localbuild/mac.sh $AWS:$ScriptsFolder
 
 pwd
 find ../../ -type d -name workspace -mtime +4 | xargs /bin/rm -rf

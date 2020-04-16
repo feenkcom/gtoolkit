@@ -39,6 +39,7 @@ GtImageSetup class >> installLogo [
 GtImageSetup class >> performLocalSetup [
 	self installLogo.
 	self registerTools.
+	self updateLocalVersion.
 ]
 
 { #category : #api }
@@ -46,7 +47,7 @@ GtImageSetup class >> performSetupForRelease [
 	self copyDataAndDocsFolders.
 	self installLogo.
 	self registerTools.
-	self updateImageVersion.
+	self updateNextReleaseVersion.
 ]
 
 { #category : #actions }
@@ -57,7 +58,26 @@ GtImageSetup class >> registerTools [
 ]
 
 { #category : #actions }
-GtImageSetup class >> updateImageVersion [
+GtImageSetup class >> updateLocalVersion [
+	| gtoolkitRepository releaseTags theVersion |
+	gtoolkitRepository := IceRepository registry 
+		detect: [ :anIceRepository | anIceRepository name = 'gtoolkit' ]
+		ifNone: [ ^ self ].
+	
+	releaseTags := ((gtoolkitRepository tags 
+		select: #gtIsSemanticVersion
+		thenCollect: [ :anIceTag | 
+			anIceTag gtAsSemanticVersionNumber]) sorted: [ :a :b |
+				a <= b ]).
+	releaseTags ifEmpty: [ ^ self ].
+	theVersion := releaseTags last asDevSemanticVersion. 
+	
+	GtImage version: theVersion.
+	GtImage timestamp: DateAndTime now.
+]
+
+{ #category : #actions }
+GtImageSetup class >> updateNextReleaseVersion [
 	| theVersion |
 	theVersion := GtRlReleaserExportWorkflow buildGToolkitRelease rootProjectRelease version.
 	
