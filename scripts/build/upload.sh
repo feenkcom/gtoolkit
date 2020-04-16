@@ -30,19 +30,22 @@ ssh $AWS -t "cd ${GTfolder}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n'
 ./scripts/build/create-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=$build_zip
 
-libZipFilename=libOSX64
-libFolder=libOSX64-$TAG_NAME
-zip -qyr $libZipFilename.zip $libFolder
+libFolder=libOSX64
+unzip $libFolder.zip
+mv $libFolder $libFolder-$TAG_NAME
+zip -qyr libOSX64.zip $libFolder-$TAG_NAME
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libOSX64.zip
 
-libZipFilename=libWin64
-libFolder=libWin64-$TAG_NAME
-zip -qyr $libZipFilename.zip $libFolder
+libFolder=libWin64
+unzip $libFolder.zip
+mv $libFolder $libFolder-$TAG_NAME
+zip -qyr libWin64.zip $libFolder-$TAG_NAME
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libWin64.zip
 
-libZipFilename=libLinux64
-libFolder=libLinux64-$TAG_NAME
-zip -qyr $libZipFilename.zip $libFolder
+libFolder=libLinux64
+unzip $libFolder.zip
+mv $libFolder $libFolder-$TAG_NAME
+zip -qyr libLinux64.zip $libFolder-$TAG_NAME
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libLinux64.zip
 
 

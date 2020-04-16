@@ -6,10 +6,7 @@ mkdir -p $GTFolder
 cp -rv GlamorousToolkit-64*/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
-TAG_NAME=$(cat tagname.txt)
-
-libZipFilename=libWin64
-libFolder=libWin64-$TAG_NAME
+libFolder=libWin64
 mkdir -p $libFolder
 
 unzip build-artifacts/GlamorousToolkitVM-8.2.0-*-win64-bin.zip -d $GTFolder/
@@ -35,7 +32,7 @@ package_extra_moz2d_binary vcruntime140
 package_binary Clipboard
 
 zip -qyr $GTFolder.zip $GTFolder
-
+zip -qyr $libFolder.zip $libFolder
 rm -rf $GTFolder
 rm -rf $libFolder
 set +e
