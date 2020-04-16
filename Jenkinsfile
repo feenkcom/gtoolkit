@@ -73,7 +73,7 @@ pipeline {
                     steps {
                         sh 'scripts/build/package.sh'
                         
-                        stash includes: 'GToolkitWin64*.zip', name: 'winbuild'
+                        stash includes: 'GlamorousToolkitWin64*.zip', name: 'winbuild'
                         stash includes: 'lib*.zip', name: 'alllibs'
                         stash includes: 'GT.zip', name: 'gtimage'
                         
