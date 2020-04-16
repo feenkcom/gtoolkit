@@ -73,7 +73,7 @@ GtHomeToolsSection >> newMonitorButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Monitor'
-				with: (GtInspector createOn: GtMonitoredBlocSpaces new)
+				with: (GtInspector createOn: GtMonitor new)
 				from: card ];
 		description: 'Monitor processes and high level tasks.'
 ]
