@@ -1,26 +1,26 @@
 Class {
-	#name : #GtMonitoredBlocSpaces,
+	#name : #GtMonitor,
 	#superclass : #Object,
 	#category : #'GToolkit-Monitor'
 }
 
 { #category : #'gt-extension' }
-GtMonitoredBlocSpaces >> gtProcessesFor: aView [
+GtMonitor >> gtProcessesFor: aView [
 	<gtView>
 	
 	^ aView explicit
 		title: 'Processes';
-		priority: 4;
+		priority: 5;
 		stencil: [ GtMonitoredProcessesElement new ]
 ]
 
 { #category : #'gt-extension' }
-GtMonitoredBlocSpaces >> gtSpacesFor: aView [
+GtMonitor >> gtSpacesFor: aView [
 	<gtView>
 	
 	^ aView explicit
 		title: 'Spaces';
-		priority: 2;
+		priority: 3;
 		stencil: [ GtMonitoredBlocSpacesElement new ];
 		actionStencil: [ 
 			BrButton new 
@@ -34,12 +34,22 @@ GtMonitoredBlocSpaces >> gtSpacesFor: aView [
 ]
 
 { #category : #'gt-extension' }
-GtMonitoredBlocSpaces >> gtTaskItServicesFor: aView [
+GtMonitor >> gtSystemInfoFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'System';
+		priority: 1;
+		stencil: [ GtMonitorSystemInfoElement new ]
+]
+
+{ #category : #'gt-extension' }
+GtMonitor >> gtTaskItServicesFor: aView [
 	<gtView>
 	
 	^ aView explicit
 		title: 'Services';
-		priority: 3;
+		priority: 4;
 		stencil: [ GtMonitoredTaskItServicesElement new ];
 		actionButtonIcon: BrGlamorousIcons trash 
 			action: [ :aButton | TKTConfiguration serviceManager purge ]
@@ -47,11 +57,11 @@ GtMonitoredBlocSpaces >> gtTaskItServicesFor: aView [
 ]
 
 { #category : #'gt-extension' }
-GtMonitoredBlocSpaces >> gtUniversesFor: aView [
+GtMonitor >> gtUniversesFor: aView [
 	<gtView>
 	
 	^ aView explicit
 		title: 'Universes';
-		priority: 1;
+		priority: 2;
 		stencil: [ GtMonitoredUniversesElement new ]
 ]

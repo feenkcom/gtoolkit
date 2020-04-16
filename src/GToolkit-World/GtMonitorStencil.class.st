@@ -6,7 +6,7 @@ Class {
 
 { #category : #'api - instantiation' }
 GtMonitorStencil >> create [
-	^ GtInspector createOn: GtMonitoredBlocSpaces new
+	^ GtInspector createOn: GtMonitor new
 ]
 
 { #category : #accessing }
