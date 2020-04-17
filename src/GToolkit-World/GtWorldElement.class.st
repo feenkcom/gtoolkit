@@ -10,7 +10,7 @@ Class {
 	#classVars : [
 		'WorldSpotterSize'
 	],
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-UI'
 }
 
 { #category : #'as yet unclassified' }

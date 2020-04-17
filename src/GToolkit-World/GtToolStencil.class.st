@@ -1,7 +1,7 @@
 Class {
 	#name : #GtToolStencil,
 	#superclass : #BrStencil,
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-Stencils'
 }
 
 { #category : #accessing }

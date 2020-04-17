@@ -4,8 +4,13 @@ Class {
 	#instVars : [
 		'priority'
 	],
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-Sections'
 }
+
+{ #category : #testing }
+GtHomeSection class >> isAbstract [ 
+	^ self name = #GtHomeSection 
+]
 
 { #category : #'instance creation' }
 GtHomeSection >> newCard [
