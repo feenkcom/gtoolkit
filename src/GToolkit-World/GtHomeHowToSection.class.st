@@ -1,7 +1,7 @@
 Class {
 	#name : #GtHomeHowToSection,
 	#superclass : #GtHomeSection,
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-Sections'
 }
 
 { #category : #accessing }

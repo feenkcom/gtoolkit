@@ -1,7 +1,7 @@
 Class {
 	#name : #GtHomeToolsSection,
 	#superclass : #GtHomeSection,
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-Sections'
 }
 
 { #category : #'api - instantiation' }

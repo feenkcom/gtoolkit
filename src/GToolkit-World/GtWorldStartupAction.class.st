@@ -1,7 +1,7 @@
 Class {
 	#name : #GtWorldStartupAction,
 	#superclass : #Object,
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-Utilities'
 }
 
 { #category : #'class initialization' }
