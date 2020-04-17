@@ -8,7 +8,7 @@ Class {
 		'action',
 		'iconSize'
 	],
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-Stencils'
 }
 
 { #category : #accessing }

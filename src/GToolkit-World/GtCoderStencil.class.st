@@ -1,12 +1,12 @@
 Class {
 	#name : #GtCoderStencil,
 	#superclass : #GtToolStencil,
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-Stencils'
 }
 
 { #category : #'api - instantiation' }
 GtCoderStencil >> create [
-	^ GtInspector withToolOn: GtPackagesCoder new
+	^ GtInspector withToolOn: GtCoder new
 ]
 
 { #category : #accessing }

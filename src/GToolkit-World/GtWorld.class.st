@@ -1,7 +1,7 @@
 Class {
 	#name : #GtWorld,
 	#superclass : #BlSpace,
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-UI'
 }
 
 { #category : #'instance creation' }

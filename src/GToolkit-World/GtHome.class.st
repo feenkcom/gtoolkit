@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'sectionsList'
 	],
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-UI'
 }
 
 { #category : #initialization }
@@ -26,6 +26,13 @@ GtHome >> externalLinksSection [
 	<gtHomeSection>
 	^ GtHomeExternalLinksSection new
 		priority: 30
+]
+
+{ #category : #sections }
+GtHome >> feenkBlogSection [
+	<gtHomeSection>
+	^ GtHomeFeenkBlogSection newDefault
+		priority: 18
 ]
 
 { #category : #ui }

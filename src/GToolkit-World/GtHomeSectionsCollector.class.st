@@ -1,7 +1,7 @@
 Class {
 	#name : #GtHomeSectionsCollector,
 	#superclass : #GtPhlowCollector,
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-Utilities'
 }
 
 { #category : #accessing }
@@ -22,12 +22,7 @@ GtHomeSectionsCollector >> collect [
 				perform: eachPragma methodSelector
 				withArguments: {}
 				inClass: self object class ].
-	sectionStencils sort: [ :a :b | 
-		[a priority < b priority]
-			on: Error
-			do: [ :error | 
-				"Log error"
-				true ] ].
+	self sortByPriority: sectionStencils.
 	^ sectionStencils
 ]
 

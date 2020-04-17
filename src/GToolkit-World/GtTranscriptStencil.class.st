@@ -1,7 +1,7 @@
 Class {
 	#name : #GtTranscriptStencil,
 	#superclass : #GtToolStencil,
-	#category : #'GToolkit-World'
+	#category : #'GToolkit-World-Stencils'
 }
 
 { #category : #'api - instantiation' }
