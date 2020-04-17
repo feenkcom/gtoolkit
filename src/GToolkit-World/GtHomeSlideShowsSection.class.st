@@ -26,6 +26,10 @@ GtHomeSlideShowsSection >> create [
 		newShowCardWithTitle: 'Pharo 101'
 		slideshow: [ GtPharo101 new create ]
 		description: 'New to Pharo? Take an introductory tutorial.').
+	cardsContainer addChild: (self
+		newShowCardWithTitle: 'Querying Code'
+		slideshow: [ GtQueries new create ]
+		description: 'Search is pervasive in Glamorous Toolkit. Learn more about queries and how to use them.').
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
