@@ -18,7 +18,14 @@ GtHomeFeenkBlogSection class >> newDefault [
 		client: self defaultClient
 ]
 
-{ #category : #'instance creation' }
+{ #category : #private }
+GtHomeFeenkBlogSection >> addChildren: aNewCards in: aCardsContainer [
+	aCardsContainer enqueueTask: (BlTaskAction new action: [ aCardsContainer 
+		removeChildren;
+		addChildren: aNewCards ])
+]
+
+{ #category : #defaults }
 GtHomeFeenkBlogSection >> cardSize [
 	^ 150 @ 200
 ]
@@ -64,7 +71,7 @@ GtHomeFeenkBlogSection >> initialize [
 ]
 
 { #category : #'instance creation' }
-GtHomeFeenkBlogSection >> newDocsExplorer [
+GtHomeFeenkBlogSection >> newDocsExplorerWith: aCollectionOfPosts [
 	^ self
 		newHeaderCardWithTitle: 'Post'
 		description: 'Browse all feenk blog posts.'
@@ -77,9 +84,7 @@ GtHomeFeenkBlogSection >> newDocsExplorer [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Feenk Blog'
-				with:
-					(GtInspector
-						createOn: GtRlGToolkitDocumentationExplorer buildForGToolkitProject)
+				with: (GtInspector createOn: aCollectionOfPosts)
 				from: card ]
 ]
 
@@ -125,21 +130,41 @@ GtHomeFeenkBlogSection >> newTextFor: aXdFileInfo [
 	^ aText
 ]
 
+{ #category : #'instance creation' }
+GtHomeFeenkBlogSection >> newUpdateDocsContent [
+	^ BrLabel new
+		text: 'Update ...';
+		look: BrGlamorousLabelLook;
+		padding: (BlInsets all: 20)
+]
+
+{ #category : #'instance creation' }
+GtHomeFeenkBlogSection >> newUpdateDocsIn: aCardsContainer [
+	^ self
+		newHeaderCardWithTitle: 'Post'
+		description: 'Update feenk blog list.'
+		size: self cardSize
+		content: self newUpdateDocsContent asScalableElement
+		action: [ :card | 
+				self documentsInto: aCardsContainer ]
+]
+
 { #category : #hooks }
 GtHomeFeenkBlogSection >> onFailure: anException in: aCardsContainer [
-	anException inspect
+	| aCard |
+	aCard := self newUpdateDocsIn: aCardsContainer.
+	self addChildren: { aCard } in: aCardsContainer.
 ]
 
 { #category : #hooks }
 GtHomeFeenkBlogSection >> onPosts: aCollectionOfPosts in: aCardsContainer [
 	| newCards |
-	aCollectionOfPosts inspect.
 	newCards := OrderedCollection 
 		streamContents: [ :aStream |
 			self newPostCardsFor: aCollectionOfPosts into: aStream ]
 		limitedTo: 5.
-	aCardsContainer enqueueTask: (BlTaskAction new action: [ aCardsContainer 
-		removeChildren;
-		addChildren: newCards;
-		addChild: self newDocsExplorer ])
+	newCards := newCards asOrderedCollection.
+	newCards add: (self newDocsExplorerWith: aCollectionOfPosts).
+	newCards add: (self newUpdateDocsIn: aCardsContainer).
+	self addChildren: newCards in: aCardsContainer.
 ]
