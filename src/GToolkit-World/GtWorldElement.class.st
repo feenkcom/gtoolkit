@@ -13,12 +13,12 @@ Class {
 	#category : #'GToolkit-World-UI'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 GtWorldElement class >> worldSpotterSize [
 	^ WorldSpotterSize ifNil: [ WorldSpotterSize := 800@600 ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 GtWorldElement class >> worldSpotterSize: aPoint [
 	WorldSpotterSize := aPoint
 ]

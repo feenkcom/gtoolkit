@@ -51,7 +51,7 @@ GtHomeFeenkBlogSection >> defaultClient [
 
 { #category : #blog }
 GtHomeFeenkBlogSection >> documentsInto: aCardsContainer [
-	^ self client async 
+	self client async 
 		onSuccessDo: [ :aResult | self onPosts: aResult in: aCardsContainer ];
 		onFailureDo: [ :anException | self onFailure: anException in: aCardsContainer ];
 		documents
@@ -101,7 +101,7 @@ GtHomeFeenkBlogSection >> newPostCardFor: aXdFileInfo [
 		action: [ :aCard | 
 			self
 				showSpaceWithTitle: aXdFileInfo title
-				with: (GtInspector createOn: aXdFileInfo)
+				with: aXdFileInfo asElement
 				from: aCard ]
 ]
 
@@ -133,6 +133,7 @@ GtHomeFeenkBlogSection >> onFailure: anException in: aCardsContainer [
 { #category : #hooks }
 GtHomeFeenkBlogSection >> onPosts: aCollectionOfPosts in: aCardsContainer [
 	| newCards |
+	aCollectionOfPosts inspect.
 	newCards := OrderedCollection 
 		streamContents: [ :aStream |
 			self newPostCardsFor: aCollectionOfPosts into: aStream ]
