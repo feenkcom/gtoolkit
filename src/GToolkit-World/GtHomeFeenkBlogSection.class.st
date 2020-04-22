@@ -44,8 +44,8 @@ GtHomeFeenkBlogSection >> client: anObject [
 GtHomeFeenkBlogSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := self newSectionContainer.
-	sectionContainer addChild: (self newSectionTitle: 'Feenk Blog').
 	cardsContainer := self newCardsContainer.
+	sectionContainer addChild: (self newSectionTitleWithUpdatesIn: cardsContainer).
 	self documentsInto: cardsContainer.
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
@@ -84,8 +84,18 @@ GtHomeFeenkBlogSection >> newDocsExplorerWith: aCollectionOfPosts [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Feenk Blog'
-				with: (GtInspector createOn: aCollectionOfPosts)
+				with: (GtInspector createOn: (GtBlogPostList new posts: aCollectionOfPosts))
 				from: card ]
+]
+
+{ #category : #'instance creation' }
+GtHomeFeenkBlogSection >> newExceptionLabelFor: anException [
+	^ BrLabel new
+		look: (BrGlamorousLabelLook new
+			foreground: BrGlamorousColors linkWithErrorColor;
+			fontSize: 14);
+		padding: self newSectionTitlePaddingInsets;
+		text: anException messageText
 ]
 
 { #category : #'instance creation' }
@@ -106,7 +116,7 @@ GtHomeFeenkBlogSection >> newPostCardFor: aXdFileInfo [
 		action: [ :aCard | 
 			self
 				showSpaceWithTitle: aXdFileInfo title
-				with: aXdFileInfo asElement
+				with: (GtInspector withToolOn: aXdFileInfo asElement)
 				from: aCard ]
 ]
 
@@ -116,6 +126,19 @@ GtHomeFeenkBlogSection >> newPostCardsFor: aCollectionOfPosts into: aStream [
 		| anElement |
 		anElement := self newPostCardFor: eachXdFileInfo.
 		aStream nextPut: anElement ]
+]
+
+{ #category : #'instance creation' }
+GtHomeFeenkBlogSection >> newSectionTitleWithUpdatesIn: aCardsContainer [
+	| aLabel aButton aContainer |
+	aLabel := self newSectionTitle: 'blog.feenk.com'.
+	aButton := self newSectionButtonWithIcon: BrGlamorousVectorIcons refresh.
+	aButton margin: (BlInsets left: 5).
+	aButton label: 'Update blog feed'.
+	aButton action: [ :card | self documentsInto: aCardsContainer ].
+	aButton beSmall.
+	aContainer := self newSectionTitleContainer.
+	^ aContainer addChild: aLabel; addChild: aButton
 ]
 
 { #category : #'instance creation' }
@@ -138,21 +161,10 @@ GtHomeFeenkBlogSection >> newUpdateDocsContent [
 		padding: (BlInsets all: 20)
 ]
 
-{ #category : #'instance creation' }
-GtHomeFeenkBlogSection >> newUpdateDocsIn: aCardsContainer [
-	^ self
-		newHeaderCardWithTitle: 'Post'
-		description: 'Update feenk blog list.'
-		size: self cardSize
-		content: self newUpdateDocsContent asScalableElement
-		action: [ :card | 
-				self documentsInto: aCardsContainer ]
-]
-
 { #category : #hooks }
 GtHomeFeenkBlogSection >> onFailure: anException in: aCardsContainer [
 	| aCard |
-	aCard := self newUpdateDocsIn: aCardsContainer.
+	aCard := self newExceptionLabelFor: anException.
 	self addChildren: { aCard } in: aCardsContainer.
 ]
 
@@ -165,6 +177,5 @@ GtHomeFeenkBlogSection >> onPosts: aCollectionOfPosts in: aCardsContainer [
 		limitedTo: 5.
 	newCards := newCards asOrderedCollection.
 	newCards add: (self newDocsExplorerWith: aCollectionOfPosts).
-	newCards add: (self newUpdateDocsIn: aCardsContainer).
 	self addChildren: newCards in: aCardsContainer.
 ]

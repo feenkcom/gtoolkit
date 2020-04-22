@@ -30,7 +30,7 @@ GtHome >> externalLinksSection [
 
 { #category : #sections }
 GtHome >> feenkBlogSection [
-	"<gtHomeSection>"
+	<gtHomeSection>
 	^ GtHomeFeenkBlogSection newDefault
 		priority: 18
 ]
