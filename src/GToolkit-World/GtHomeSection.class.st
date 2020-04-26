@@ -163,6 +163,21 @@ GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook title: aTitle descripti
 ]
 
 { #category : #'instance creation' }
+GtHomeSection >> newSectionButton [
+
+	^ BrButton new
+		padding: self newSectionTitlePaddingInsets
+]
+
+{ #category : #'instance creation' }
+GtHomeSection >> newSectionButtonWithIcon: anIcon [
+
+	^ self newSectionButton 
+		look: BrGlamorousButtonWithIconLook;
+		icon: anIcon asElement
+]
+
+{ #category : #'instance creation' }
 GtHomeSection >> newSectionContainer [
 	^ BlElement new
 		layout: BlLinearLayout vertical;
@@ -173,11 +188,25 @@ GtHomeSection >> newSectionContainer [
 
 { #category : #'instance creation' }
 GtHomeSection >> newSectionTitle: aString [
-
 	^ BrLabel new
-		look: (BrGlamorousLabelLook new foreground: Color gray; fontSize: 14);
-		padding: (BlInsets left: (self spaceGap*2));
+		look:
+			(BrGlamorousLabelLook new
+				foreground: Color gray;
+				fontSize: 14);
+		padding: self newSectionTitlePaddingInsets;
 		text: aString
+]
+
+{ #category : #'instance creation' }
+GtHomeSection >> newSectionTitleContainer [
+	^ BrHorizontalPane new
+		vFitContent;
+		hMatchParent.
+]
+
+{ #category : #'instance creation' }
+GtHomeSection >> newSectionTitlePaddingInsets [
+	^ BlInsets left: self sectionPaddingLeftInsets
 ]
 
 { #category : #'instance creation' }
@@ -255,6 +284,11 @@ GtHomeSection >> priority [
 { #category : #accessing }
 GtHomeSection >> priority: aNumber [
 	priority := aNumber
+]
+
+{ #category : #accessing }
+GtHomeSection >> sectionPaddingLeftInsets [
+	^ self spaceGap * 2
 ]
 
 { #category : #'instance creation' }
