@@ -17,12 +17,14 @@ See *https://github.com/feenkcom/gtoolkit/issues/837*'
 
 { #category : #accessing }
 GtRBAcceptVisitorCalledFromNonVisitingMethods >> issues [
-	^ (#acceptVisitor: gtReferences select: [:each | 
+	| all |
+	all := (#acceptVisitor: gtReferences select: [:each | 
 		"to ignore the reference from this method"
 		each method ~= thisContext method and: [ 
 			(each selector beginsWith: 'visit') not and: [
 				(each methodClass name beginsWith: 'Br') or: [
-					(each methodClass name beginsWith: 'Gt') ]]] ]) result
+					(each methodClass name beginsWith: 'Gt') ]]] ]).
+	^ (self ignoreIssuesInMethodsBasedOnPragmas: all) result
 ]
 
 { #category : #accessing }
