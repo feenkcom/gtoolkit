@@ -1,6 +1,6 @@
 Class {
 	#name : #GtRBAcceptVisitorCalledFromNonVisitingMethods,
-	#superclass : #GtLeafConstraint,
+	#superclass : #GtPharoConstraint,
 	#category : #'GToolkit-Constraints'
 }
 

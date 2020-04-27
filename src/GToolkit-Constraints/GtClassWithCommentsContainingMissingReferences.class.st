@@ -1,6 +1,6 @@
 Class {
 	#name : #GtClassWithCommentsContainingMissingReferences,
-	#superclass : #GtLeafConstraint,
+	#superclass : #GtPharoConstraint,
 	#traits : 'TGtDocumentInvalidCommentsConstraint',
 	#classTraits : 'TGtDocumentInvalidCommentsConstraint classTrait',
 	#category : #'GToolkit-Constraints'

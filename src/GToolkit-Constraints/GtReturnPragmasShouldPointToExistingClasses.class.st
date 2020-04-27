@@ -1,6 +1,6 @@
 Class {
 	#name : #GtReturnPragmasShouldPointToExistingClasses,
-	#superclass : #GtLeafConstraint,
+	#superclass : #GtPharoConstraint,
 	#category : #'GToolkit-Constraints'
 }
 

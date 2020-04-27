@@ -1,6 +1,6 @@
 Class {
 	#name : #GtLooksSubscribingToEventsNotFromInitializeListenerMethods,
-	#superclass : #GtLeafConstraint,
+	#superclass : #GtPharoConstraint,
 	#category : #'GToolkit-Constraints'
 }
 
