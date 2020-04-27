@@ -1,6 +1,6 @@
 Class {
 	#name : #GtBlocEventsShouldHaveDispatchMethodSimilarToClass,
-	#superclass : #GtLeafConstraint,
+	#superclass : #GtPharoConstraint,
 	#category : #'GToolkit-Constraints'
 }
 

@@ -1,6 +1,6 @@
 Class {
 	#name : #GtButtonsDefiningActionsThroughModels,
-	#superclass : #GtLeafConstraint,
+	#superclass : #GtPharoConstraint,
 	#category : #'GToolkit-Constraints'
 }
 
