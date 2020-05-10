@@ -3,6 +3,7 @@ Extension { #name : #BaselineOfGToolkit }
 { #category : #'*GToolkit-Extensions' }
 BaselineOfGToolkit class >> gtGtMapFor: aView [
 	<gtView>
+	<gtClassView>
 	^ (self 
 		gtMapFor: aView 
 		selectRelationsThat: [ :a :b | 
