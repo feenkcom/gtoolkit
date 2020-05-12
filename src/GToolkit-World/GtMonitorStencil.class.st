@@ -4,6 +4,11 @@ Class {
 	#category : #'GToolkit-World-Stencils'
 }
 
+{ #category : #converting }
+GtMonitorStencil >> asPreviewElement [
+	^ Gt2Inspector newOn: GtMonitor new
+]
+
 { #category : #'api - instantiation' }
 GtMonitorStencil >> create [
 	^ Gt2Inspector createOn: GtMonitor new

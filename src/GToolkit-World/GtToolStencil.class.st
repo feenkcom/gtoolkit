@@ -9,6 +9,12 @@ GtToolStencil class >> isAbstract [
 	^ self name = #GtToolStencil 
 ]
 
+{ #category : #converting }
+GtToolStencil >> asPreviewElement [
+	<return: #BlElement>
+	^ self subclassResponsibility
+]
+
 { #category : #accessing }
 GtToolStencil >> gtDisplayOn: aStream [
 	aStream nextPutAll: self name

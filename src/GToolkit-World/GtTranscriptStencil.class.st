@@ -4,9 +4,14 @@ Class {
 	#category : #'GToolkit-World-Stencils'
 }
 
+{ #category : #converting }
+GtTranscriptStencil >> asPreviewElement [
+	^ GtTranscript default
+]
+
 { #category : #'api - instantiation' }
 GtTranscriptStencil >> create [
-	^ GtTranscript default
+	^ (GtPager createWrappedOn: GtTranscript default) maximized.
 ]
 
 { #category : #accessing }
