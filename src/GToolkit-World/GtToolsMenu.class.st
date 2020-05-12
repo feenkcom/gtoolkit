@@ -42,28 +42,8 @@ GtToolsMenu class >> open [
 ]
 
 { #category : #'api - tools' }
-GtToolsMenu class >> openCoderFrom: anElement [
-	| aSpace |
-
-	aSpace := BlSpace new.
-	aSpace title: 'Coder'.
-	aSpace extent: 1200@600.
-	aSpace addChild: GtCoderStencil new create.
-	aSpace withHalos.
-	
-	anElement showSpace: aSpace
-]
-
-{ #category : #'api - tools' }
 GtToolsMenu class >> openPlaygroundFrom: anElement [
-	  | aPlayground aSpace |
-	  aPlayground := GtInspector withToolOn: GtPlayBook newDefault.
-	  aSpace := BlSpace new.
-	  aSpace title: 'Playground'.
-	  aSpace extent: 1200 @ 600.
-	  aSpace addChild: aPlayground.
-	  aSpace withHalos.
-	  anElement showSpace: aSpace
+	  GtPlayground openFrom: anElement
 ]
 
 { #category : #initialization }

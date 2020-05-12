@@ -6,7 +6,7 @@ Class {
 
 { #category : #'api - instantiation' }
 GtTranscriptStencil >> create [
-	^ GtTranscript default asElement
+	^ GtTranscript default
 ]
 
 { #category : #accessing }

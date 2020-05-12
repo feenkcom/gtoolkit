@@ -44,7 +44,7 @@ GtHomeToolsSection >> newExamplesButtonStencil [
 			self
 				showSpaceWithTitle: 'Examples Explorer'
 				with:
-					(GtInspector
+					(Gt2Inspector
 						createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject)
 				from: card ];
 		description: 'Units of tests and of documentation. In one.'
@@ -59,7 +59,7 @@ GtHomeToolsSection >> newGitButtonStencil [
 			self
 				showSpaceWithTitle: 'Git'
 				with:
-					(GtInspector
+					(Gt2Inspector
 						createOn: Gt4Git new allRepositoriesGroup)
 				from: card ];
 		description: 'Units of tests and of documentation. In one.'
@@ -73,7 +73,7 @@ GtHomeToolsSection >> newMonitorButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Monitor'
-				with: (GtInspector createOn: GtMonitor new)
+				with: (Gt2Inspector createOn: GtMonitor new)
 				from: card ];
 		description: 'Monitor processes and high level tasks.'
 ]

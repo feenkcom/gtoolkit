@@ -84,7 +84,7 @@ GtHomeFeenkBlogSection >> newDocsExplorerWith: aCollectionOfPosts [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Feenk Blog'
-				with: (GtInspector createOn: (GtBlogPostList new posts: aCollectionOfPosts))
+				with: (Gt2Inspector createOn: (GtBlogPostList new posts: aCollectionOfPosts))
 				from: card ]
 ]
 
@@ -116,7 +116,7 @@ GtHomeFeenkBlogSection >> newPostCardFor: aXdFileInfo [
 		action: [ :aCard | 
 			self
 				showSpaceWithTitle: aXdFileInfo title
-				with: (GtInspector withToolOn: aXdFileInfo asElement)
+				with: (GtPager createWrappedOn: aXdFileInfo asElement)
 				from: aCard ]
 ]
 

@@ -93,7 +93,7 @@ GtHomeSection >> newDocCardForClass: aClass [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aClass name
-				with: (GtInspector withToolOn: (GtDocument forClass: aClass))
+				with: (GtPager createWrappedOn: (GtDocument forClass: aClass))
 				from: card ]
 ]
 
@@ -114,8 +114,8 @@ GtHomeSection >> newDocCardForFile: aReference [
 			self
 				showSpaceWithTitle: aReference fileReference basename
 				with:
-					(GtInspector
-						withToolOn: (GtDocument forFile: aReference fileReference))
+					(GtPager
+						createWrappedOn: (GtDocument forFile: aReference fileReference))
 				from: card ]
 ]
 
@@ -158,7 +158,7 @@ GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook title: aTitle descripti
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aTitle
-				with: (GtInspector withToolOn: aPlaybook)
+				with: (GtPlayground createOn: aPlaybook)
 				from: card ]
 ]
 

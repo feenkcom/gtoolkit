@@ -10,13 +10,7 @@ Class {
 { #category : #'instance creation' }
 GtMonitoredBlocSpacesElement class >> open [
 	<script: 'self open'>
-	| aSpace |
-	
-	aSpace := BlSpace new.
-	aSpace title: 'Space Monitor'.
-	aSpace addChild: (GtInspector createOn: self new).
-	aSpace extent: 1280@800.
-	aSpace show
+	Gt2Inspector openOn: self new title: 'Monitor'
 ]
 
 { #category : #initialization }

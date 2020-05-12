@@ -87,12 +87,10 @@ GtHome >> initialize [
 		margin: (BlInsets right: 5);
 		constraintsDo: [ :c | c linear horizontal alignRight ];
 		when: BlClickEvent do: [ :e | 
-			| aSpace |
-			aSpace := BlSpace new.
-			aSpace title: 'Glamorous Toolkit'.
-			aSpace extent: 1200@600.
-			aSpace addChild: (GtInspector createOn: GtImage instance).
-			e target showSpace: aSpace ]).
+			Gt2Inspector 
+				openOn: GtImage instance
+				title: 'Glamorous Toolkit'
+				from: e target ]).
 	
 	self initializeSections
 ]

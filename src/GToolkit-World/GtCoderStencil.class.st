@@ -6,7 +6,7 @@ Class {
 
 { #category : #'api - instantiation' }
 GtCoderStencil >> create [
-	^ GtInspector withToolOn: GtCoder new
+	^ GtPager createWrappedOn: GtCoder new
 ]
 
 { #category : #accessing }
