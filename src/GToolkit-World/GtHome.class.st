@@ -87,7 +87,7 @@ GtHome >> initialize [
 		margin: (BlInsets right: 5);
 		constraintsDo: [ :c | c linear horizontal alignRight ];
 		when: BlClickEvent do: [ :e | 
-			Gt2Inspector 
+			GtInspector 
 				openOn: GtImage instance
 				title: 'Glamorous Toolkit'
 				from: e target ]).

@@ -42,7 +42,7 @@ GtHomeDocumentationSection >> newDocsExplorer [
 			self
 				showSpaceWithTitle: 'Documentation'
 				with:
-					(Gt2Inspector
+					(GtInspector
 						createOn: GtRlGToolkitDocumentationExplorer buildForGToolkitProject)
 				from: card ]
 ]

@@ -10,7 +10,7 @@ Class {
 { #category : #'instance creation' }
 GtMonitoredBlocSpacesElement class >> open [
 	<script: 'self open'>
-	Gt2Inspector openOn: self new title: 'Monitor'
+	GtInspector openOn: self new title: 'Monitor'
 ]
 
 { #category : #initialization }

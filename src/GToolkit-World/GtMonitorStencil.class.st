@@ -6,12 +6,12 @@ Class {
 
 { #category : #converting }
 GtMonitorStencil >> asPreviewElement [
-	^ Gt2Inspector newOn: GtMonitor new
+	^ GtInspector newOn: GtMonitor new
 ]
 
 { #category : #'api - instantiation' }
 GtMonitorStencil >> create [
-	^ Gt2Inspector createOn: GtMonitor new
+	^ GtInspector createOn: GtMonitor new
 ]
 
 { #category : #accessing }

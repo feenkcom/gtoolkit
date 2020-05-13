@@ -84,7 +84,7 @@ GtHomeFeenkBlogSection >> newDocsExplorerWith: aCollectionOfPosts [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Feenk Blog'
-				with: (Gt2Inspector createOn: (GtBlogPostList new posts: aCollectionOfPosts))
+				with: (GtInspector createOn: (GtBlogPostList new posts: aCollectionOfPosts))
 				from: card ]
 ]
 

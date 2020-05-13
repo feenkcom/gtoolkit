@@ -7,7 +7,7 @@ Class {
 { #category : #'instance creation' }
 GtMonitoredTaskItServicesElement class >> open [
 	<script: 'self open'>
-	Gt2Inspector openOn: self new
+	GtInspector openOn: self new
 ]
 
 { #category : #initialization }
