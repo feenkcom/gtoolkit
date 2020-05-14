@@ -95,7 +95,7 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Playground'
-				with: GtPlaygroundStencil new create maximized
+				with: GtPlaygroundStencil new create
 				from: card ];
 		description: 'Play with code. Live.'
 ]

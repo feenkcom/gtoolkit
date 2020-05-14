@@ -11,7 +11,7 @@ GtPlaygroundStencil >> asPreviewElement [
 
 { #category : #'api - instantiation' }
 GtPlaygroundStencil >> create [
-	^ GtPlayground create maximized
+	^ GtPlayground create
 ]
 
 { #category : #accessing }
