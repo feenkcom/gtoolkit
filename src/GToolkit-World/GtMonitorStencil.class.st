@@ -11,7 +11,7 @@ GtMonitorStencil >> asPreviewElement [
 
 { #category : #'api - instantiation' }
 GtMonitorStencil >> create [
-	^ GtInspector createOn: GtMonitor new
+	^ (GtInspector createOn: GtMonitor new) maximized
 ]
 
 { #category : #accessing }

@@ -45,7 +45,7 @@ GtHomeToolsSection >> newExamplesButtonStencil [
 				showSpaceWithTitle: 'Examples Explorer'
 				with:
 					(GtInspector
-						createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject)
+						createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject) maximized
 				from: card ];
 		description: 'Units of tests and of documentation. In one.'
 ]
@@ -60,7 +60,7 @@ GtHomeToolsSection >> newGitButtonStencil [
 				showSpaceWithTitle: 'Git'
 				with:
 					(GtInspector
-						createOn: Gt4Git new allRepositoriesGroup)
+						createOn: Gt4Git new allRepositoriesGroup) maximized
 				from: card ];
 		description: 'Units of tests and of documentation. In one.'
 ]
@@ -73,7 +73,7 @@ GtHomeToolsSection >> newMonitorButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Monitor'
-				with: (GtInspector createOn: GtMonitor new)
+				with: (GtInspector createOn: GtMonitor new) maximized
 				from: card ];
 		description: 'Monitor processes and high level tasks.'
 ]
@@ -95,7 +95,7 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Playground'
-				with: GtPlaygroundStencil new create
+				with: GtPlaygroundStencil new create maximized
 				from: card ];
 		description: 'Play with code. Live.'
 ]
