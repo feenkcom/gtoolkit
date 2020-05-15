@@ -37,7 +37,9 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 					element 	
 						text: text; 
 						zIndex: 1; 
-						when: BlClickEvent do: [ :e | e consumed: true. element fireEvent: (GtPhlowObjectToSpawn new object: each spec project configuration class; sourceElement: element) ] ];
+						when: BlClickEvent do: [ :e | 
+							e consumed: true. 
+							element phlow spawnObject: each spec project configuration class ] ];
 				with: projects.
 			mondrian edges
 				shape: [ :each |
@@ -116,7 +118,9 @@ ConfigurationOf class >> paintPackagesMapWith: mondrian [
 			| element |
 			element := BlTextElement new.
 			element 
-				when: BlClickEvent do: [ :e | e consumed: true. element fireEvent: (GtPhlowObjectToSpawn new object: (Smalltalk globals at: projectSpec constructClassName asSymbol); sourceElement: element) ];
+				when: BlClickEvent do: [ :e | 
+					e consumed: true. 
+					element phlow spawnObject: (Smalltalk globals at: projectSpec constructClassName asSymbol) ];
 				text: (projectSpec name asRopedText foreground: Color gray) ];
 		with: projects.
 	packages do: [ :p | 
