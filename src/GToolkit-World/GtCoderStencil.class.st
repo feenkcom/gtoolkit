@@ -4,9 +4,14 @@ Class {
 	#category : #'GToolkit-World-Stencils'
 }
 
+{ #category : #converting }
+GtCoderStencil >> asPreviewElement [
+	^ GtCoder new asElement
+]
+
 { #category : #'api - instantiation' }
 GtCoderStencil >> create [
-	^ GtInspector withToolOn: GtCoder new
+	^ (GtPager createWrappedOn: GtCoder new) maximized.
 ]
 
 { #category : #accessing }

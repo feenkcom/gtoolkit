@@ -4,9 +4,14 @@ Class {
 	#category : #'GToolkit-World-Stencils'
 }
 
+{ #category : #converting }
+GtMonitorStencil >> asPreviewElement [
+	^ GtInspector newOn: GtMonitor new
+]
+
 { #category : #'api - instantiation' }
 GtMonitorStencil >> create [
-	^ GtInspector createOn: GtMonitor new
+	^ (GtInspector createOn: GtMonitor new) maximized
 ]
 
 { #category : #accessing }

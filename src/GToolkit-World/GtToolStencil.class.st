@@ -4,12 +4,23 @@ Class {
 	#category : #'GToolkit-World-Stencils'
 }
 
+{ #category : #testing }
+GtToolStencil class >> isAbstract [
+	^ self name = #GtToolStencil 
+]
+
+{ #category : #converting }
+GtToolStencil >> asPreviewElement [
+	<return: #BlElement>
+	^ self subclassResponsibility
+]
+
 { #category : #accessing }
 GtToolStencil >> gtDisplayOn: aStream [
 	aStream nextPutAll: self name
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'gt-extensions' }
 GtToolStencil >> gtSpotterActDefaultFrom: aSpotterElement [
 	| aSpace |
 

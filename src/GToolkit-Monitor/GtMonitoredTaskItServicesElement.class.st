@@ -7,13 +7,7 @@ Class {
 { #category : #'instance creation' }
 GtMonitoredTaskItServicesElement class >> open [
 	<script: 'self open'>
-	| aSpace |
-	
-	aSpace := BlSpace new.
-	aSpace title: 'Space Monitor'.
-	aSpace addChild: (GtInspector createOn: self new).
-	aSpace extent: 1280@800.
-	aSpace show
+	GtInspector openOn: self new
 ]
 
 { #category : #initialization }
