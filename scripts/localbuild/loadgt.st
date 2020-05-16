@@ -18,7 +18,7 @@ SourceFileArray compile: 'deferFlushDuring: aBlock
 		load ] ensure: [ EpMonitor current enable].
 PharoLightTheme beCurrent.
 
-GtImageSetup performLocalSetup.
+#GtImageSetup asClass performLocalSetup.
 
 World closeAllWindowsDiscardingChanges.
 
