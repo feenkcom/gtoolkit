@@ -11,7 +11,7 @@ GtCoderStencil >> asPreviewElement [
 
 { #category : #'api - instantiation' }
 GtCoderStencil >> create [
-	^ (GtPager createWrappedOn: GtCoder new) maximized.
+	^ GtCoder new createInPager maximized.
 ]
 
 { #category : #accessing }
