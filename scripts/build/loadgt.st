@@ -20,33 +20,11 @@ IceGitWorkingCopyUpdateVisitor compile: 'remoteFileReferenceInPath: anUndefinedO
 	Metacello new
 		githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
 		baseline: 'Iceberg';
-		load ] ensure: [ EpMonitor current enable ].
-
-loadWarnings := OrderedCollection new.
-[ 
-	EpMonitor current disable.
-	Metacello new
-		baseline: 'GToolkit';
-		repository: 'github://feenkcom/gtoolkit/src';
-		onWarning: [ :anException |
-			"Log the error now."
-			MetacelloNotification signal: anException description.
-			"Create a list of all warnings."
-			loadWarnings add: anException description.
-			
-			anException resume ];
-		load ] ensure: [ EpMonitor current enable ].
-
-"In case there are warnings during the loading fail here.
-Otherwise most likely the failure will happen only when 
-running tests or when running releaser."
-loadWarnings ifNotEmpty: [  
-	Error signal: (String streamContents: [ :aStream |
-		aStream nextPutAll: 'Warnings detected during loading: '.
-		aStream nextPutAll: OSPlatform current lineEnding.
-		loadWarnings 
-			asStringOn: aStream 
-			delimiter: OSPlatform current lineEnding ]) ].
+		load.
+	Metacello new baseline: 'GToolkitReleaser'; repository: 'github://feenkcom/gtoolkit-releaser/src'; load.
+	GtRlRepositoriesCloner getProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'.
+	GtRlReleaserExportWorkflow loadgt.
+] ensure: [ EpMonitor current enable ].
 
 #GtImageSetup asClass performSetupForRelease.
 
