@@ -56,7 +56,7 @@ GtMonitoredServicesElement >> updateList [
 					'Failed to update TaskIt services list' traceCr.
 					anException traceCr ];
 				onSuccessEnqueueAction: [ :theServices | 
-					servicesList display: theServices.
+					servicesList items: theServices.
 					self
 						enqueueTask:
 							(BlDelayedTaskAction new
