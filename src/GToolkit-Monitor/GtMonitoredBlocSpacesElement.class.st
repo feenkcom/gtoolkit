@@ -79,7 +79,7 @@ GtMonitoredBlocSpacesElement >> updateList [
 					allSpaces ];
 				onFailureEnqueueAction: [ 'Failed to update Spaces list' traceCr ];
 				onSuccessEnqueueAction: [ :theSpaces | 
-					spacesList display: theSpaces.
+					spacesList items: theSpaces.
 					self
 						enqueueTask:
 							(BlDelayedTaskAction new
