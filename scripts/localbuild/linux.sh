@@ -3,15 +3,15 @@ set -o xtrace
 
 # find . ! -name '*.st' ! -name '*.sh' ! -name '.' -exec rm -rf {} +
 
-wget https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/tffi.st -O tffi.st
+curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/tffi.st -o tffi.st
 
 ./glamoroustoolkit Pharo.image st tffi.st --save --quit
 
-wget https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -O loadgt.st
+curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -o loadgt.st
 
 curl https://get.pharo.org/64/80 | bash
 
-wget https://github.com/feenkcom/opensmalltalk-vm/releases/latest/download/build-artifacts.zip -O build-artifacts.zip
+curl -L https://github.com/feenkcom/opensmalltalk-vm/releases/latest/download/build-artifacts.zip -o build-artifacts.zip
 unzip build-artifacts.zip
 unzip build-artifacts/GlamorousToolkitVM-8.2.0-*-linux64-bin.zip
 
