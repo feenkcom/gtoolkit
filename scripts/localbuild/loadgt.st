@@ -10,8 +10,8 @@ Metacello new
     baseline: 'Iceberg';
     load.
 Metacello new baseline: 'GToolkitReleaser'; repository: 'github://feenkcom/gtoolkit-releaser/src'; load.
-GtRlRepositoriesCloner getProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'.
-GtRlReleaserExportWorkflow loadgt.
+GtRlRepositoriesCloner loadProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'.
+
 
 
 PharoLightTheme beCurrent.

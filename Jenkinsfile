@@ -123,8 +123,10 @@ pipeline {
                         }
                         stage('Linux Examples') {
                              steps {
-                                sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
-                                junit '*.xml'
+                                retry(3) {
+                                    sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
+                                    junit '*.xml'
+                                }
                              } 
                         }
                         stage('Smoke Test') {
@@ -154,9 +156,11 @@ pipeline {
                         }
                         stage('MacOSX Examples') {
                              steps {
-                                sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
-                                sh 'rm -rf GToolkit-Releaser-*.xml'
-                                junit '*.xml'
+                                retry(3) {
+                                    sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
+                                    sh 'rm -rf GToolkit-Releaser-*.xml'
+                                    junit '*.xml'
+                                }
                              }
                         }
                         stage('Codesign and Notarize') {
@@ -195,8 +199,10 @@ pipeline {
                         }
                         stage('Windows Examples') {
                              steps {
-                               powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
-                               junit '*.xml'
+                                retry(3) {
+                                    powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
+                                    junit '*.xml'
+                                }
                              }
                         }
                     }
