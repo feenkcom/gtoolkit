@@ -5,7 +5,7 @@ set -e
 TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 | sort -t '/' -k 3 -V | tail -n1 |sed 's/.*\///; s/\^{}//')
 TAG=$(echo $TAG_NAME | cut -d'.' -f3)
 TAG=$((TAG+1))
-TAG_NAME=$TAG
+TAG_NAME=$(echo $TAG_NAME | cut -d'.' -f1 -f2).$TAG
 
 echo $TAG_NAME > tagname.txt
 

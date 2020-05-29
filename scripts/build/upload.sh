@@ -68,6 +68,7 @@ mv $file GlamorousToolkitVM-8.2.0-win64-bin.zip
 #deploy local build scripts
 scp scripts/localbuild/linux.sh $AWS:$ScriptsFolder
 scp scripts/localbuild/mac.sh $AWS:$ScriptsFolder
+scp scripts/zeroconf/get $AWS:$GTfolder
 
 pwd
 find ../../ -type d -name workspace -mtime +4 | xargs /bin/rm -rf
