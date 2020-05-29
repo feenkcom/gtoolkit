@@ -6,7 +6,7 @@ TAG_NAME=$(cat tagname.txt)
 GTFolderZip=GlamorousToolkitWin64
 GTFolder=$GTFolderZip-$TAG_NAME
 mkdir -p $GTFolder
-cp -rv GlamorousToolkit-64*/* $GTFolder
+cp -rv GlamorousToolkit/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
 libFolder=libWin64
