@@ -1,0 +1,44 @@
+#/bin/sh!
+# DETECT SYSTEM PROPERTIES ======================================================
+TMP_OS=`uname | tr "[:upper:]" "[:lower:]"`
+if [[ "{$TMP_OS}" = *darwin* ]]; then
+    OS="mac";
+elif [[ "{$TMP_OS}" = *linux* ]]; then
+    OS="linux";
+elif [[ "{$TMP_OS}" = *win* ]]; then
+    OS="win";
+elif [[ "{$TMP_OS}" = *mingw* ]]; then
+    OS="win";
+elif [[ "{$TMP_OS}" = *msys* ]]; then
+    OS="win";
+else
+    echo "Unsupported OS";
+    exit 1;
+fi
+
+if [ -z "$ARCHITECTURE" ] ; then
+    ARCHITECTURE=32;
+fi
+
+if [ "$OS" == "win" ]; then
+    GTRELEASE=$(curl https://dl.feenk.com/gt/GlamorousToolkitWin64-release)
+elif [ "$OS" == "mac" ]; then
+    GTRELEASE=$(curl https://dl.feenk.com/gt/GlamorousToolkitOSX64-release)
+elif [ "$OS" == "linux" ]; then
+    GTRELEASE=$(curl https://dl.feenk.com/gt/GlamorousToolkitLinux64-release)
+fi
+
+GT=https://dl.feenk.com/gt/$GTRELEASE
+
+curl $GT -o $GTRELEASE
+
+unzip $GTRELEASE
+
+
+if [ "$OS" == "win" ]; then
+   
+elif [ "$OS" == "mac" ]; then
+    GlamorousToolkitOSX64-*/GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkitOSX64-*/GlamorousToolkit.image --interactive --no-quit
+elif [ "$OS" == "linux" ]; then
+    GlamorousToolkitLinux64-*/glamorousToolkit GlamorousToolkitLinux64-*/GlamorousToolkit.image --interactive --no-quit
+fi
