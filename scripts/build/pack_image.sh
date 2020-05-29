@@ -3,8 +3,8 @@ set -o xtrace
 set -e
 export RUST_BACKTRACE=full
 
-export PROJECT_NAME="GlamorousToolkit-64-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-
+# export PROJECT_NAME="GlamorousToolkit-64-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+export PROJECT_NAME="GlamorousToolkit"
 echo $PROJECT_NAME > projectversion.txt
 
 # customize the name of the build folder

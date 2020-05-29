@@ -2,7 +2,7 @@
 set -o xtrace
 
 #run smoke tests
-timeout 60 xvfb-run -a ./GlamorousToolkitLinux64/glamoroustoolkit GlamorousToolkitLinux64/GlamorousToolkit-64-*.image --interactive &
+timeout 60 xvfb-run -a ./GlamorousToolkitLinux64*/glamoroustoolkit GlamorousToolkitLinux64*/GlamorousToolkit.image --interactive &
 sleep 50
 export DISPLAY=$(ps -aux | grep screen -m 1 | awk '{print $12}')
 export XAUTHORITY=$(ps -aux | grep screen -m 1 | awk '{print $19}')

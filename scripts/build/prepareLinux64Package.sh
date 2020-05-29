@@ -1,9 +1,12 @@
 #!/bin/sh
 set -e
 set -o xtrace
-GTFolder=GlamorousToolkitLinux64
+TAG_NAME=$(cat tagname.txt)
+GTFolderZip=GlamorousToolkitLinux64
+GTFolder=$GTFolderZip-$TAG_NAME
+
 mkdir -p $GTFolder
-cp -rv GlamorousToolkit-64*/* $GTFolder
+cp -rv GlamorousToolkit/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
 libFolder=libLinux64
@@ -24,7 +27,7 @@ package_binary Clipboard
 package_binary Skia
 
 
-zip -qyr $GTFolder.zip $GTFolder
+zip -qyr $GTFolderZip.zip $GTFolder
 zip -qyr $libFolder.zip $libFolder
 rm -rf $libFolder
 rm -rf $GTFolder

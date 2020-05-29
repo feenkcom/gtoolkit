@@ -1,9 +1,12 @@
 #!/bin/sh
 set -e
 set -o xtrace
-GTFolder=GlamorousToolkitWin64
+
+TAG_NAME=$(cat tagname.txt) 
+GTFolderZip=GlamorousToolkitWin64
+GTFolder=$GTFolderZip-$TAG_NAME
 mkdir -p $GTFolder
-cp -rv GlamorousToolkit-64*/* $GTFolder
+cp -rv GlamorousToolkit/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
 libFolder=libWin64
@@ -31,7 +34,7 @@ package_extra_moz2d_binary msvcp140
 package_extra_moz2d_binary vcruntime140
 package_binary Clipboard
 
-zip -qyr $GTFolder.zip $GTFolder
+zip -qyr $GTFolderZip.zip $GTFolder
 zip -qyr $libFolder.zip $libFolder
 rm -rf $GTFolder
 rm -rf $libFolder

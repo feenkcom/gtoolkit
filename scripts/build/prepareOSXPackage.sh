@@ -1,17 +1,18 @@
 #!/bin/sh
 set -e
 set -o xtrace
-GTFolder=GlamorousToolkitOSX64
-mkdir -p $GTFolder
 
-TAG_NAME=$(cat tagname.txt)
+TAG_NAME=$(cat tagname.txt) 
+GTFolderZip=GlamorousToolkitOSX64
+GTFolder=$GTFolderZip-$TAG_NAME
+mkdir -p $GTFolder
 
 libFolder=libOSX64
 mkdir -p $libFolder
 
 unzip build-artifacts/GlamorousToolkitVM-8.2.0-*-mac64-bin.zip -d $GTFolder/
 
-cp -rv GlamorousToolkit-64*/* $GTFolder
+cp -rv GlamorousToolkit/* $GTFolder
 rm -rf $GTFolder/pharo-local
 
 
@@ -27,7 +28,7 @@ package_binary Glutin
 package_binary Clipboard
 package_binary Skia
 
-zip -qyr $GTFolder.zip $GTFolder
+zip -qyr $GTFolderZip.zip $GTFolder
 zip -qyr $libFolder.zip $libFolder
 rm -rf $GTFolder
 rm -rf $libFolder
