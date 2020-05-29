@@ -2,6 +2,10 @@
 set -o xtrace
 export RUST_BACKTRACE=full
 
+TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 | sort -t '/' -k 3 -V | tail -n1 |sed 's/.*\///; s/\^{}//')
+TAG=$(echo $TAG_NAME | cut -d'.' -f3)
+echo $TAG
+
 curl https://get.pharo.org/64/80 | bash
 
 sh scripts/build/downloadLatestVM.sh
