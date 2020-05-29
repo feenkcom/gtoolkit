@@ -38,12 +38,15 @@ GT=https://dl.feenk.com/gt/$GTRELEASE
 curl $GT -o $GTRELEASE
 
 unzip $GTRELEASE
+GTFOLDER="${GTRELEASE%.*}"
 
 
 if [ "$OS" == "win" ]; then
-   echo $OS
+    echo $OS
 elif [ "$OS" == "mac" ]; then
-    GlamorousToolkitOSX64-*/GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkitOSX64-*/GlamorousToolkit.image --interactive --no-quit
+    echo "running $GTFOLDER/GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit $GTFOLDER/GlamorousToolkit.image --interactive --no-quit"
+    $GTFOLDER/GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit $GTFOLDER/GlamorousToolkit.image --interactive --no-quit
 elif [ "$OS" == "linux" ]; then
-    GlamorousToolkitLinux64-*/glamoroustoolkit GlamorousToolkitLinux64-*/GlamorousToolkit.image --interactive --no-quit
+    echo "running $GTFOLDER/glamoroustoolkit $GTFOLDER/GlamorousToolkit.image --interactive --no-quit"
+    $GTFOLDER/glamoroustoolkit $GTFOLDER/GlamorousToolkit.image --interactive --no-quit
 fi
