@@ -28,6 +28,11 @@ elif [ "$OS" == "linux" ]; then
     GTRELEASE=$(curl https://dl.feenk.com/gt/GlamorousToolkitLinux64-release)
 fi
 
+if [ -f "$GTRELEASE" ]; then
+    echo "$GTRELEASE already exists in current folder, exitting"
+    exit 0
+fi
+
 GT=https://dl.feenk.com/gt/$GTRELEASE
 
 curl $GT -o $GTRELEASE
