@@ -71,7 +71,6 @@ Metacello new
 You can load the code we're working on in Pharo 8.0 using the following snippet:
 
 ```
-EpMonitor current disable.
 Metacello new
     baseline: 'GToolkit';
     repository: 'github://feenkcom/gtoolkit:release/src';
