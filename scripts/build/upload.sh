@@ -11,7 +11,6 @@ TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 
 echo $TAG_NAME > tagname.txt
 
 #download GlamorousToolkitOSX64 from tentative because the osx vm uploaded a notarized version of it 
-
 curl https://dl.feenk.com/tentative/GlamorousToolkitOSX64.zip -o GlamorousToolkitOSX64.zip
 
 mv GlamorousToolkitWin64.zip GlamorousToolkitWin64-$TAG_NAME.zip
