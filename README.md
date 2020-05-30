@@ -36,15 +36,15 @@ Please install it via the instructions available at https://gtoolkit.com/install
 
 ## Get the latest vm and the latest code in one step
 
-MacOSX
+### MacOSX
 ```
 curl https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/mac.sh | bash
 ```
-Linux
+### Linux
 ```
 curl https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/linux.sh | bash
 ```
-Windows
+### Windows
 
 Using Powershell cd into `scripts\localbuild` and execute `.\windows.ps1`
 
