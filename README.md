@@ -46,7 +46,7 @@ curl https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbui
 ```
 Windows
 
-Using Powershell cd into `scripts/localbuild` and execute `.\windows.ps1`
+Using Powershell cd into `scripts\localbuild` and execute `.\windows.ps1`
 
 
 ## License
