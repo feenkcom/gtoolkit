@@ -37,7 +37,7 @@ GT=https://dl.feenk.com/gt/$GTRELEASE
 
 curl $GT -o $GTRELEASE
 
-unzip $GTRELEASE
+unzip -q $GTRELEASE
 GTFOLDER="${GTRELEASE%.*}"
 
 
