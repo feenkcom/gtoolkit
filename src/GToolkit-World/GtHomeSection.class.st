@@ -126,7 +126,7 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: 
 	container := BrButton new
 		size: aPoint;
 		layout: BlLinearLayout vertical;
-		look: (BrGlamorousButtonExteriorLook new + BrGlamorousWithLabelTooltipLook new);
+		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new);
 		label: aDescription;
 		padding: (BlInsets all: 1);
 		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap right: 2 * self spaceGap);
@@ -243,7 +243,7 @@ GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock de
 		action: aBlock;
 		padding: (BlInsets all: 10);
 		label: aDescriptionString;
-		look: (BrGlamorousButtonExteriorLook new + BrGlamorousWithLabelTooltipLook new);
+		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new);
 		geometry: (BlRectangle cornerRadius: 4);
 		layout: BlLinearLayout vertical alignCenter;
 		addChild: iconElement;
