@@ -110,7 +110,7 @@ GtWorldElement >> newSpotterButton [
 							BlElement new 
 								look: (BrGlamorousDropdownLook new
 									handle: (BrButton new 
-										look: BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook - BrGlamorousButtonExteriorLook;
+										look: BrGlamorousButtonWithIconLook - BrGlamorousButtonWithLabelTooltipLook - BrGlamorousButtonExteriorLook;
 										icon: BrGlamorousVectorIcons search);
 									content: (GtSpotterElement new
 										spotterModel: model;
@@ -134,7 +134,7 @@ GtWorldElement >> newSubSpaceButton [
 					(BrGlamorousWithDropdownLook
 						handle: [ BrButton new
 								look:
-									BrGlamorousButtonWithIconLook - BrGlamorousWithLabelTooltipLook
+									BrGlamorousButtonWithIconLook - BrGlamorousButtonWithLabelTooltipLook
 										- BrGlamorousButtonExteriorLook;
 								icon: BrGlamorousIcons hamburger;
 								label: 'Menu';
@@ -152,7 +152,7 @@ GtWorldElement >> newSubSpaceButton [
 
 { #category : #'private - instance creation' }
 GtWorldElement >> newTabButtonLook [
-	^ BrGlamorousButtonIconLook + BrGlamorousWithLabelTooltipLook + BrLayoutResizerLook inherit + BrLayoutAlignmentLook forHorizontalLinearLayout + (BrInteractiveCommonLook new
+	^ BrGlamorousButtonIconLook + BrGlamorousButtonWithLabelTooltipLook + BrLayoutResizerLook inherit + BrLayoutAlignmentLook forHorizontalLinearLayout + (BrInteractiveCommonLook new
 			default: [ :aWidget |
 				aWidget geometry: BlCircle new.
 				aWidget layout: BlLinearLayout horizontal alignCenter.
