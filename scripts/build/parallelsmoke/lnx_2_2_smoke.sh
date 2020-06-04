@@ -10,7 +10,7 @@ export XAUTHORITY=$(ps -aux | grep screen -m 1 | awk '{print $19}')
 xwd -display $DISPLAY -root -out gt.xwd
 convert -verbose gt.xwd gt.jpg
 
-if [ $(find gt.jpg -type f -size +20000c 2>/dev/null) ] 
+if [ $(find gt.jpg -type f -size +15000c 2>/dev/null) ] 
 then
     echo "Screenshot looking good."
 else 
