@@ -185,12 +185,16 @@ GtWorldElement >> onRemovedFromSceneGraph [
 { #category : #'api - opening' }
 GtWorldElement >> showSpace: aSpace [
 	| aTab |
+	self showSpace: aSpace select: true.
+]
 
+{ #category : #accessing }
+GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
+	| aTab |
 	aTab := nil.
 	aTab := (BrTab new
 		vExact: 36;
 		look: BrGlamorousSpaceTabWithLabelLook new;
-		select;
 		label: aSpace title;
 		stencil: [
 			aSpace root hasParent
@@ -224,7 +228,8 @@ GtWorldElement >> showSpace: aSpace [
 						action: [
 							tabs removeTab: aTab.
 							aTab := nil. ] } ]).
-
+	
+	shouldBeSelected ifTrue:[ aTab select].
 	tabs addTab: aTab
 ]
 

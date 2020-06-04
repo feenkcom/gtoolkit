@@ -25,7 +25,9 @@ GtWorld class >> openWithShutdownListener [
 	tourSpace title: 'Tour'.
 	tourSpace addChild: GtTour new create value makeArrowsVisible asElement.
 	tourSpace withHalos.
-	GtWorld openWithSpaces: { tourSpace }.
+	aSpace root showSpace: tourSpace select: false.
+	aSpace show.
+	
 ]
 
 { #category : #'instance creation' }
