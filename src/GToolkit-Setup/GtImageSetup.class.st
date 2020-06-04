@@ -1,3 +1,14 @@
+"
+I provide utility methods for configuring a Glamorous Tookit image after loading the code for production of for local development. 
+
+I provide the following two API methods: 
+- ${method:GtImageSetup class>>#performLocalSetup}$: use when creating an image locally for development;
+- ${method:GtImageSetup class>>#performSetupForRelease}$: used during the release process
+
+The various configurations that I support are in class-side methods in the ==actions== category. For example, setting a new logo or updating the ${class:GtImage}$ version.
+
+
+"
 Class {
 	#name : #GtImageSetup,
 	#superclass : #Object,
@@ -37,6 +48,8 @@ GtImageSetup class >> installLogo [
 
 { #category : #api }
 GtImageSetup class >> performLocalSetup [
+	"Perform a setup for images that should be used locally for development."
+	
 	self installLogo.
 	self registerTools.
 	self updateLocalVersion.
@@ -44,6 +57,9 @@ GtImageSetup class >> performLocalSetup [
 
 { #category : #api }
 GtImageSetup class >> performSetupForRelease [
+	"Perform a setup for images that should be released. This should 
+	be called on the CI server during the release process"
+	
 	self copyDataAndDocsFolders.
 	self installLogo.
 	self registerTools.
