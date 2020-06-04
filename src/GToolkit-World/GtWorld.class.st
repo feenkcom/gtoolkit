@@ -21,8 +21,6 @@ GtWorld class >> openWithShutdownListener [
 	aSpace := GtWorld new.
 	aSpace title: 'Glamorous Toolkit'.
 	aSpace addEventHandler: BlSpaceShutdownOnCloseListener new.
-	aSpace show.
-		
 	tourSpace := BlSpace new.
 	tourSpace title: 'Tour'.
 	tourSpace addChild: GtTour new create value makeArrowsVisible asElement.
