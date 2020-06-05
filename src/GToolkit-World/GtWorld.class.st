@@ -17,15 +17,12 @@ GtWorld class >> open [
 { #category : #'instance creation' }
 GtWorld class >> openWithShutdownListener [
 	<script: 'self openWithShutdownListener'>
-	| aSpace tourSpace|
+	| aSpace |
 	aSpace := GtWorld new.
 	aSpace title: 'Glamorous Toolkit'.
 	aSpace addEventHandler: BlSpaceShutdownOnCloseListener new.
-	tourSpace := BlSpace new.
-	tourSpace title: 'Tour'.
-	tourSpace addChild: GtTour new create value makeArrowsVisible asElement.
-	tourSpace withHalos.
-	GtWorld openWithSpaces: { tourSpace }.
+	aSpace show.
+	^ aSpace
 ]
 
 { #category : #'instance creation' }
