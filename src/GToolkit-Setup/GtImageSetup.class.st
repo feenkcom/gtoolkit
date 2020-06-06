@@ -71,6 +71,7 @@ GtImageSetup class >> registerTools [
 	GtMoldableDebuggerElement register.
 	GtInspectorToolRegistryAdaptor register.
 	GtPlaygroundToolRegistryAdaptor register.
+	Smalltalk globals at: #Transcript put: GtTranscript default
 ]
 
 { #category : #actions }
