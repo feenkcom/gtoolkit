@@ -163,6 +163,11 @@ GtTranscript >> space [
 	self next space
 ]
 
+{ #category : #accessing }
+GtTranscript >> stepGlobal [
+	"do nothing. it's here for compatibility with the old Transcript"
+]
+
 { #category : #streaming }
 GtTranscript >> tab [
 	self next tab
