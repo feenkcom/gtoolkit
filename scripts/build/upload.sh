@@ -51,17 +51,17 @@ zip -qyr libLinux64.zip $libFolder-$TAG_NAME
 ./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libLinux64.zip
 
 
-file=$(echo build-artifacts/GlamorousToolkitVM-8.2.0-*-linux64-bin.zip)
-mv $file GlamorousToolkitVM-8.2.0-linux64-bin.zip
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=GlamorousToolkitVM-8.2.0-linux64-bin.zip
+file=$(echo build-artifacts/GlamorousToolkitVM-*-linux64-bin.zip)
+mv $file GlamorousToolkitVM-linux64-bin.zip
+./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=GlamorousToolkitVM-linux64-bin.zip
 
-file=$(echo build-artifacts/GlamorousToolkitVM-8.2.0-*-mac64-bin.zip)
-mv $file GlamorousToolkitVM-8.2.0-mac64-bin.zip
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=GlamorousToolkitVM-8.2.0-mac64-bin.zip
+file=$(echo build-artifacts/GlamorousToolkitVM-*-mac64-bin.zip)
+mv $file GlamorousToolkitVM-mac64-bin.zip
+./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=GlamorousToolkitVM-mac64-bin.zip
 
-file=$(echo build-artifacts/GlamorousToolkitVM-8.2.0-*-win64-bin.zip)
-mv $file GlamorousToolkitVM-8.2.0-win64-bin.zip
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=GlamorousToolkitVM-8.2.0-win64-bin.zip
+file=$(echo build-artifacts/GlamorousToolkitVM-*-win64-bin.zip)
+mv $file GlamorousToolkitVM-win64-bin.zip
+./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=GlamorousToolkitVM-win64-bin.zip
 
 
 #deploy local build scripts

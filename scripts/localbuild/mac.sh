@@ -9,7 +9,7 @@ curl https://get.pharo.org/64/80 | bash
 
 curl -L https://github.com/feenkcom/opensmalltalk-vm/releases/latest/download/build-artifacts.zip -o build-artifacts.zip
 unzip build-artifacts.zip
-unzip build-artifacts/GlamorousToolkitVM-8.2.0-*-mac64-bin.zip
+unzip build-artifacts/GlamorousToolkitVM-*-mac64-bin.zip
 
 time ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit Pharo.image st --quit loadgt.st 2>&1
 

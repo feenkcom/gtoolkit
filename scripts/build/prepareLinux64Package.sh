@@ -12,7 +12,7 @@ rm -rf $GTFolder/pharo-local
 libFolder=libLinux64
 mkdir -p $libFolder
 
-unzip build-artifacts/GlamorousToolkitVM-8.2.0-*-linux64-bin.zip -d $GTFolder/
+unzip build-artifacts/GlamorousToolkitVM-*-linux64-bin.zip -d $GTFolder/
 
 package_binary() {
 	curl https://dl.feenk.com/$1/linux/development/x86_64/lib$1.so -o lib$1.so
