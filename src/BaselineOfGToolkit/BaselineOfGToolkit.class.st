@@ -99,35 +99,35 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.6.83/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.767/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.768/src' ];
 			baseline: 'GToolkitPresenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.415/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.416/src' ];
 			baseline: 'GToolkitTranscript' with: [
 				spec
 					loads: #();
-					repository: 'github://feenkcom/gtoolkit:v0.7.1027/src' ];
+					repository: 'github://feenkcom/gtoolkit:v0.7.1028/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.560/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.561/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.611/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.612/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.622/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.623/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.558/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.559/src' ];
 			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder:v0.7.620/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-coder:v0.7.621/src' ];
 			baseline: 'GToolkitSpotter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.521/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.522/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.561/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.562/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.561/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.562/src' ];
 			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.561/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.562/src' ];
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.561/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.562/src' ];
 			baseline: 'GToolkitPharo101' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.561/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.562/src' ];
 			baseline: 'GToolkitReleaser' with: [
 				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.95/src' ];
 			baseline: 'GToolkitConstrainer' with: [
@@ -141,13 +141,13 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkit4Famix3' with: [
 				spec repository: 'github://feenkcom/gt4famix3:v0.7.52/src' ];
 			baseline: 'GToolkitRemote' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.377/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.378/src' ];
 			baseline: 'GToolkit4Git' with: [
 				spec repository: 'github://feenkcom/gt4git:v0.6.14/src' ];
 			baseline: 'GToolkit4Jenkins' with: [
 				spec repository: 'github://feenkcom/gt4jenkins:v0.6.13/src' ];
 			baseline: 'Gt4PharoLink' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.377/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.378/src' ].
 		spec 
 			package: 'GToolkit-Extensions' with: [
 				spec requires: #('GToolkitVisualizerPhlow' ). ];
