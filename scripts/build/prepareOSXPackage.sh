@@ -10,7 +10,7 @@ mkdir -p $GTFolder
 libFolder=libOSX64
 mkdir -p $libFolder
 
-unzip build-artifacts/GlamorousToolkitVM-8.2.0-*-mac64-bin.zip -d $GTFolder/
+unzip build-artifacts/GlamorousToolkitVM-*-mac64-bin.zip -d $GTFolder/
 
 cp -rv GlamorousToolkit/* $GTFolder
 rm -rf $GTFolder/pharo-local

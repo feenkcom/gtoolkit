@@ -12,7 +12,7 @@ rm -rf $GTFolder/pharo-local
 libFolder=libWin64
 mkdir -p $libFolder
 
-unzip build-artifacts/GlamorousToolkitVM-8.2.0-*-win64-bin.zip -d $GTFolder/
+unzip build-artifacts/GlamorousToolkitVM-*-win64-bin.zip -d $GTFolder/
 
 package_binary() {
 	curl https://dl.feenk.com/$1/windows/development/x86_64/lib$1.dll -o lib$1.dll
