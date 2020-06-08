@@ -226,18 +226,18 @@ pipeline {
                     unstash 'gtimage'  
                     sh 'scripts/build/runreleaser.sh' 
                     sh 'scripts/build/upload.sh'
-                    script {
-                        TAG_NAME = readFile('tagname.txt').trim()
-                        withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-                                def remote = [:]
-                                remote.name = 'deploy'
-                                remote.host = 'ec2-35-157-37-37.eu-central-1.compute.amazonaws.com'
-                                remote.user = userName
-                                remote.identityFile = identity
-                                remote.allowAnyHosts = true
-                                sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
-                        }
-                    }
+                    // script {
+                    //     TAG_NAME = readFile('tagname.txt').trim()
+                    //     withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+                    //             def remote = [:]
+                    //             remote.name = 'deploy'
+                    //             remote.host = 'ec2-35-157-37-37.eu-central-1.compute.amazonaws.com'
+                    //             remote.user = userName
+                    //             remote.identityFile = identity
+                    //             remote.allowAnyHosts = true
+                    //             sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
+                    //     }
+                    // }
                 }
             }
         }
