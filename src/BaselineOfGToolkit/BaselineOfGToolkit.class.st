@@ -101,11 +101,11 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitDocumenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.791/src' ];
 			baseline: 'GToolkitPresenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.426/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.427/src' ];
 			baseline: 'GToolkitTranscript' with: [
 				spec
 					loads: #();
-					repository: 'github://feenkcom/gtoolkit:v0.7.1056/src' ];
+					repository: 'github://feenkcom/gtoolkit:v0.7.1057/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.571/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -119,15 +119,15 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitSpotter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.7.532/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.574/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.575/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.574/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.575/src' ];
 			baseline: 'GToolkitWhatMakesBlocSpecialDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.574/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.575/src' ];
 			baseline: 'GToolkitMoldableDevelopmentDemo' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.574/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.575/src' ];
 			baseline: 'GToolkitPharo101' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.574/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.7.575/src' ];
 			baseline: 'GToolkitReleaser' with: [
 				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.7.100/src' ];
 			baseline: 'GToolkitConstrainer' with: [
