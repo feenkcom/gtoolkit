@@ -15,6 +15,16 @@ GtMonitor >> gtProcessesFor: aView [
 ]
 
 { #category : #'gt-extension' }
+GtMonitor >> gtSpaceRunnerFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'Space runner';
+		priority: 6;
+		stencil: [ GtMonitorSpaceRunner new ]
+]
+
+{ #category : #'gt-extension' }
 GtMonitor >> gtSpacesFor: aView [
 	<gtView>
 	
