@@ -31,7 +31,7 @@ Glamorous Toolkit is based on graphical stack made of:
 
 ## How to install
 
-Please install it via the instructions available at https://gtoolkit.com/install.
+Please download it via the instructions available at: https://gtoolkit.com/download.
 
 
 ## Get the latest vm and the latest code in one step
