@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'space'
 	],
-	#category : #'GToolkit-Monitor'
+	#category : #'GToolkit-Monitor-Bloc Spaces'
 }
 
 { #category : #testing }
@@ -27,7 +27,7 @@ GtMonitoredBlocSpace >> gtPointersFor: aView [
 GtMonitoredBlocSpace >> gtPreviewFor: aView [
 	<gtView>
 	self space ifNil: [ ^ aView empty ].
-	^ self space  gtPreviewFor: aView
+	^ self space gtPreviewFor: aView
 ]
 
 { #category : #testing }

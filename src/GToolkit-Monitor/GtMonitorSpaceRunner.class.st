@@ -1,9 +1,18 @@
 "
-I start a space and let users know if everything went according to plan
+!Welcome to the space runner!
+
+Here you will learn what happens when ask to ==show== a ${class:BlSpace}$. On the right is a flow diagram of the important actions that should happen in order for a space to appear. By default all nodes in the diagram are gray, meaning that those actions didn't happen yet.
+
+Now press the ==Start== button to show a new space created by ${method:GtMonitorSpaceRunner>>#createSpace}$. Don't be afraid, expand the method to customize and create your own space!
+
+If everything worked correctly a new space should have appeared and most of the step in the diagram are now green. It is possible that a few nodes are still gray, it means that those steps were not neccessary and were skipped. Important is that there is a path in the flow diagram that goes from the very first step until the end and connects only green nodes.
+
+Congratulations! Your Space is alive! Feel free to play with it :)
+When done press the ==Stop== button to safely close the space. Or press the ==Reset== button to put everything back, just like it was before.
 "
 Class {
 	#name : #GtMonitorSpaceRunner,
-	#superclass : #BrVerticalPane,
+	#superclass : #BrHorizontalPane,
 	#instVars : [
 		'startButton',
 		'stopButton',
@@ -13,8 +22,16 @@ Class {
 		'resetButton',
 		'monitoredSpace'
 	],
-	#category : #'GToolkit-Monitor-Tools'
+	#category : #'GToolkit-Monitor-Space Runner'
 }
+
+{ #category : #'instance creation' }
+GtMonitorSpaceRunner >> createExplanation [
+	^ (GtDocument new text: self explanationText) asElementWithoutSaveAction
+			matchParent;
+			constraintsDo: [ :c | c linear weight: 0.75 ];
+			margin: (BlInsets left: 10)
+]
 
 { #category : #'instance creation' }
 GtMonitorSpaceRunner >> createLogger [
@@ -70,7 +87,6 @@ GtMonitorSpaceRunner >> createSignalTree: aLogger [
 GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [ 
 	| aContainer aNode theSignals |
 	
-	
 	aContainer := BrHorizontalPane new fitContent.
 	
 	aNode := BrEditor new
@@ -119,6 +135,11 @@ GtMonitorSpaceRunner >> createSpace [
 	^ aSpace
 ]
 
+{ #category : #'instance creation' }
+GtMonitorSpaceRunner >> explanationText [
+	^ self class comment
+]
+
 { #category : #initialization }
 GtMonitorSpaceRunner >> initialize [
 	super initialize.
@@ -133,17 +154,20 @@ GtMonitorSpaceRunner >> initialize [
 	
 	startButton := BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
+		beSmall;
 		label: 'Start';
 		action: [ :aButton | self start ].
 
 	stopButton := BrButton new
 		disable;
+		beSmall;
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Stop';
 		action: [ self stop ].
 		
 	resetButton := BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
+		beSmall;
 		label: 'Reset';
 		action: [ self reset ].
 
@@ -151,8 +175,12 @@ GtMonitorSpaceRunner >> initialize [
 	
 	signalTree := self createSignalTree: logger.
 	
-	self addChild: toolbar.
-	self addChild: signalTree
+	self addChild: self createExplanation.
+	self addChild: (BrVerticalPane new
+		alignCenter;
+		margin: (BlInsets all: 10);
+		matchParent;
+		addChildren: { toolbar . signalTree })
 ]
 
 { #category : #accessing }
@@ -160,7 +188,7 @@ GtMonitorSpaceRunner >> reset [
 	self stop.
 	
 	logger := self createLogger.
-	self replaceChild: signalTree with: (signalTree := self createSignalTree: logger)
+	signalTree parent replaceChild: signalTree with: (signalTree := self createSignalTree: logger)
 ]
 
 { #category : #accessing }
