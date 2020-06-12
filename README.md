@@ -1,7 +1,7 @@
 # Glamorous Toolkit (GT)
 [Glamorous Toolkit](https://gtoolkit.com) is the moldable development environment. It is a live notebook. It is a flexible search interface. It is a fancy code editor. It is a software analysis platform. It is a data visualization engine. All in one. And it is free and open-source under an MIT license.
 
-![Glamorous Toolkit overview](./docs/gtr-overview.png)
+![Glamorous Toolkit overview](https://raw.githubusercontent.com/feenkcom/gtoolkit/master/doc/gtr-overview.png)
 
 ## Components
 
