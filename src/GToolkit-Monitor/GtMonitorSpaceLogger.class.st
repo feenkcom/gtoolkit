@@ -4,7 +4,7 @@ I log space and universe related events
 Class {
 	#name : #GtMonitorSpaceLogger,
 	#superclass : #MemoryLogger,
-	#category : #'GToolkit-Monitor-Tools'
+	#category : #'GToolkit-Monitor-Space Runner'
 }
 
 { #category : #initialization }

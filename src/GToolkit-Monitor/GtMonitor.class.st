@@ -5,6 +5,24 @@ Class {
 }
 
 { #category : #'gt-extension' }
+GtMonitor >> gtLoggersFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'Loggers';
+		priority: 6;
+		stencil: [ GtMonitoredSignalLoggersElement new ];
+		actionStencil: [ 
+			BrButton new 
+				look: BrGlamorousButtonWithIconLook;
+				icon: BrGlamorousIcons trash asElement;
+				action:  [ :aButton |
+					SignalLogger allSubInstances
+						do: [ :eachLogger | eachLogger stop; reset ].
+					Smalltalk garbageCollect ] ]
+]
+
+{ #category : #'gt-extension' }
 GtMonitor >> gtProcessesFor: aView [
 	<gtView>
 	
@@ -20,7 +38,7 @@ GtMonitor >> gtSpaceRunnerFor: aView [
 	
 	^ aView explicit
 		title: 'Space runner';
-		priority: 6;
+		priority: 20;
 		stencil: [ GtMonitorSpaceRunner new ]
 ]
 

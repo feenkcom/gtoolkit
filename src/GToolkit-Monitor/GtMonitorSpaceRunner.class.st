@@ -22,7 +22,7 @@ Class {
 		'resetButton',
 		'monitoredSpace'
 	],
-	#category : #'GToolkit-Monitor-Tools'
+	#category : #'GToolkit-Monitor-Space Runner'
 }
 
 { #category : #'instance creation' }
