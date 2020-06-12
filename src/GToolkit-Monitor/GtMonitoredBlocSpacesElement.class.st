@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'spacesList'
 	],
-	#category : #'GToolkit-Monitor'
+	#category : #'GToolkit-Monitor-Bloc Spaces'
 }
 
 { #category : #'instance creation' }
