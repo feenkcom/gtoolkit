@@ -33,6 +33,16 @@ GtMonitor >> gtProcessesFor: aView [
 ]
 
 { #category : #'gt-extension' }
+GtMonitor >> gtProfilerFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'Profiler';
+		priority: 3;
+		stencil: [ GtMonitorSpaceProfiler new ]
+]
+
+{ #category : #'gt-extension' }
 GtMonitor >> gtSpaceRunnerFor: aView [
 	<gtView>
 	
