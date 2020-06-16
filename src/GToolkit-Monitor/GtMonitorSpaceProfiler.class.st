@@ -1,8 +1,9 @@
 Class {
 	#name : #GtMonitorSpaceProfiler,
-	#superclass : #BrHorizontalPane,
+	#superclass : #BrPager,
 	#instVars : [
-		'openedSpaces'
+		'openedSpaces',
+		'framesChart'
 	],
 	#category : #'GToolkit-Monitor-Space Profiler'
 }
@@ -12,9 +13,39 @@ GtMonitorSpaceProfiler >> initialize [
 	super initialize.
 	
 	self matchParent.
+	self look: BrProportionalPagerLook new.
 	
 	openedSpaces := GtMonitorOpenedSpacesElement new.
-	openedSpaces width: 300.
+	framesChart := GtMonitorSpaceFramesChart new.
 	
-	self addChild: openedSpaces
+	self addPage: (BlElement new
+		viewModel: BrPagerPageModel new;
+		constraintsDo: [ :c |
+			c horizontal matchParent.
+			c vertical matchParent ];
+		addChild: openedSpaces).
+		
+		
+	self addPage: (BlElement new
+		viewModel: BrPagerPageModel new;
+		constraintsDo: [ :c |
+			c horizontal matchParent.
+			c vertical matchParent ];
+		addChild: framesChart).
+	
+	self
+		when: GtPhlowObjectToSpawn
+		do: [ :anEvent |
+			(anEvent object isKindOf: GtMonitorOpenedSpace)
+				ifTrue: [
+					anEvent consumed: true.
+					framesChart profileSpace: anEvent object ] ].
+	
+	self
+		when: GtPhlowObjectToSelect
+		do: [ :anEvent |
+			(anEvent object isKindOf: GtMonitorOpenedSpace)
+				ifTrue: [
+					anEvent consumed: true.
+					framesChart profileSpace: anEvent object ] ]
 ]

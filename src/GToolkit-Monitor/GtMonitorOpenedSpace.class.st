@@ -7,6 +7,17 @@ Class {
 	#category : #'GToolkit-Monitor-Space Profiler'
 }
 
+{ #category : #comparing }
+GtMonitorOpenedSpace >> = anObject [
+	"Answer whether the receiver and anObject represent the same object."
+
+	self == anObject
+		ifTrue: [ ^ true ].
+	self class = anObject class
+		ifFalse: [ ^ false ].
+	^ space = anObject space
+]
+
 { #category : #'gt-extension' }
 GtMonitorOpenedSpace >> gtPointersFor: aView [
 	<gtView>
@@ -24,6 +35,13 @@ GtMonitorOpenedSpace >> gtPreviewFor: aView [
 
 	^ self space
 		gtPreviewFor: aView
+]
+
+{ #category : #comparing }
+GtMonitorOpenedSpace >> hash [
+	"Answer an integer value that is related to the identity of the receiver."
+
+	^ space hash
 ]
 
 { #category : #testing }

@@ -89,6 +89,6 @@ GtMonitorOpenedSpacesElement >> updateList [
 					self
 						enqueueTask:
 							(BlDelayedTaskAction new
-								delay: 5 seconds;
+								delay: 2 seconds;
 								action: [ self updateList ]) ])
 ]
