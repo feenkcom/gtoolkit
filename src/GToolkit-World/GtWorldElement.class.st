@@ -191,20 +191,22 @@ GtWorldElement >> showSpace: aSpace [
 { #category : #accessing }
 GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
 	| aTab |
-	aTab := nil.
 	aTab := (BrTab new
 		vExact: 36;
+		model: aSpace;
 		look: BrGlamorousSpaceTabWithLabelLook new;
 		label: aSpace title;
-		stencil: [
-			aSpace root hasParent
-				ifTrue: [ aSpace root removeFromParent ]
-				ifFalse: [ aSpace root dispatchRemovedFromSceneGraph ].
-			aSpace root
+		stencil: [ :aTabModel |
+			| anActualSpace |
+			anActualSpace := aTabModel model.
+			anActualSpace root hasParent
+				ifTrue: [ anActualSpace root removeFromParent ]
+				ifFalse: [ anActualSpace root dispatchRemovedFromSceneGraph ].
+			anActualSpace root
 				constraintsDo: [ :c |
 					c horizontal matchParent.
 					c vertical matchParent ] ];
-		actionbarStencil: [
+		actionbarStencil: [ :aTabModel |			
 			BrToolbar new
 				look: (BrGlamorousToolbarLook new spacing: 0);
 				margin: (BlInsets left: 6);
@@ -214,20 +216,20 @@ GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
 						exact: 16@16;
 						opacity: 0.5;
 						look: self newTabButtonLook;
+						model: aTabModel;
 						label: 'Open in a new window';
-						action: [
-							tabs removeTab: aTab.
-							aTab := nil.
-							GtWorld openWithSpaces: { aSpace } ].
+						action: [ :aButtonElement |
+							tabs viewModel removeTab: aButtonElement model.
+							GtWorld openWithSpaces: { aButtonElement model model } ].
 					BrButton new
 						icon: BrGlamorousVectorIcons close;
 						exact: 16@16;
 						opacity: 0.5;
 						look: self newTabButtonLook;
 						label: 'Close';
-						action: [
-							tabs removeTab: aTab.
-							aTab := nil. ] } ]).
+						model: aTabModel;
+						action: [ :aButtonElement |
+							tabs viewModel removeTab: aButtonElement model ] } ]).
 	
 	shouldBeSelected ifTrue:[ aTab select].
 	tabs addTab: aTab

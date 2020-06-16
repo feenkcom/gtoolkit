@@ -13,11 +13,24 @@ GtMonitoredBlocSpace >> exists [
 ]
 
 { #category : #'gt-extension' }
+GtMonitoredBlocSpace >> gtPathToFor: aView [
+	<gtView>
+	
+	^ aView columnedList
+		title: 'Path';
+		priority: 11;
+		items: [ self pathTo ];
+		column: 'Path from Smalltalk' 
+			item: [ :anObject | anObject gtDisplayText ]
+]
+
+{ #category : #'gt-extension' }
 GtMonitoredBlocSpace >> gtPointersFor: aView [
 	<gtView>
 	
 	^ aView columnedList
 		title: 'Pointers';
+		priority: 10;
 		items: [ self pointers ];
 		column: 'Pointers' 
 			item: [ :anObject | anObject gtDisplayText ]
@@ -38,6 +51,15 @@ GtMonitoredBlocSpace >> isDead [
 { #category : #testing }
 GtMonitoredBlocSpace >> isRunning [
 	^ self space isOpened
+]
+
+{ #category : #accessing }
+GtMonitoredBlocSpace >> pathTo [
+	Smalltalk garbageCollectMost.
+
+	^ self exists
+		ifTrue: [ ReferenceFinder findPathTo: self space ]
+		ifFalse: [ {  } ]
 ]
 
 { #category : #accessing }
