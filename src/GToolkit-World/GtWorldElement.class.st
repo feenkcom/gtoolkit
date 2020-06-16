@@ -150,17 +150,6 @@ GtWorldElement >> newSubSpaceButton [
 	^ subSpaceDropdown
 ]
 
-{ #category : #'private - instance creation' }
-GtWorldElement >> newTabButtonLook [
-	^ BrGlamorousButtonIconLook + BrGlamorousButtonWithLabelTooltipLook + BrLayoutResizerLook inherit + BrLayoutAlignmentLook forHorizontalLinearLayout + (BrInteractiveCommonLook new
-			default: [ :aWidget |
-				aWidget geometry: BlCircle new.
-				aWidget layout: BlLinearLayout horizontal alignCenter.
-				aWidget background: (Color transparent) ];
-			hovered: [ :aWidget | aWidget background: (Color gray alpha: 0.2) ];
-			pressed: [ :aWidget | aWidget background: (Color gray alpha: 0.4) ])
-]
-
 { #category : #initialization }
 GtWorldElement >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
@@ -215,7 +204,7 @@ GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
 						icon: BrGlamorousIcons maximize;
 						exact: 16@16;
 						opacity: 0.5;
-						look: self newTabButtonLook;
+						look: GtWorldTabToolbarButtonLook;
 						model: aTabModel;
 						label: 'Open in a new window';
 						action: [ :aButtonElement |
@@ -225,7 +214,7 @@ GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
 						icon: BrGlamorousVectorIcons close;
 						exact: 16@16;
 						opacity: 0.5;
-						look: self newTabButtonLook;
+						look: GtWorldTabToolbarButtonLook;
 						label: 'Close';
 						model: aTabModel;
 						action: [ :aButtonElement |
