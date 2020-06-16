@@ -155,12 +155,12 @@ GtWorldElement >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 
 	SystemAnnouncer uniqueInstance weak
-		when: (ClassAnnouncement where: [ :ann | ann classAffected = GtHome ])
+		when: ClassAnnouncement
 		send: #update:
 		to: self home. 
 
 	SystemAnnouncer uniqueInstance weak
-		when: (MethodAnnouncement where: [ :ann | ann classAffected = GtHome ])
+		when: MethodAnnouncement
 		send: #update:
 		to: self home. 
 ]
