@@ -124,82 +124,82 @@ pipeline {
                 }
             }
             parallel {
-                stage('Linux') {
-                    agent {
-                        label "unix"
-                    }
-                     stages {
-                        stage('Download') {
-                             steps {
-                                sh 'chmod +x scripts/build/parallelsmoke/*.sh'
-                                sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
-                             }
-                        }
-                        stage('Linux Examples') {
-                             steps {
-                                retry(3) {
-                                    sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
-                                    junit '*.xml'
-                                }
-                             } 
-                        }
-                        stage('Smoke Test') {
-                             steps {
-                                sh 'scripts/build/parallelsmoke/lnx_2_2_smoke.sh'
-                             }
-                        }
-                    }
-                }
-                stage ('MacOSX') {
-                    agent {
-                        label "macosx"
-                    }
-                    environment {
-                        CERT = credentials('devcertificate')
-                        SUDO = credentials('sudo')
-                        APPLEPASSWORD = credentials('notarizepassword')
-                        SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
-                    } 
-                    stages {
-                        stage('Download') {
-                             steps {
-                                sh 'echo "${SUDO}" | sudo -S git clean -fdx'
-                                sh 'chmod +x scripts/build/parallelsmoke/*.sh'
-                                sh 'scripts/build/parallelsmoke/osx_1_download.sh'
-                             }
-                        }
-                        stage('MacOSX Examples') {
-                             steps {
-                                retry(3) {
-                                    sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
-                                    sh 'rm -rf GToolkit-Releaser-*.xml'
-                                    junit '*.xml'
-                                }
-                             }
-                        }
-                        stage('Codesign and Notarize') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS')
-                                }
-                            }
-                            steps {
-                                sh 'scripts/build/parallelsmoke/osx_3_sign_notarize.sh'
+                // stage('Linux') {
+                //     agent {
+                //         label "unix"
+                //     }
+                //      stages {
+                //         stage('Download') {
+                //              steps {
+                //                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
+                //                 sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
+                //              }
+                //         }
+                //         stage('Linux Examples') {
+                //              steps {
+                //                 retry(3) {
+                //                     sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
+                //                     junit '*.xml'
+                //                 }
+                //              } 
+                //         }
+                //         stage('Smoke Test') {
+                //              steps {
+                //                 sh 'scripts/build/parallelsmoke/lnx_2_2_smoke.sh'
+                //              }
+                //         }
+                //     }
+                // }
+                // stage ('MacOSX') {
+                //     agent {
+                //         label "macosx"
+                //     }
+                //     environment {
+                //         CERT = credentials('devcertificate')
+                //         SUDO = credentials('sudo')
+                //         APPLEPASSWORD = credentials('notarizepassword')
+                //         SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
+                //     } 
+                //     stages {
+                //         stage('Download') {
+                //              steps {
+                //                 sh 'echo "${SUDO}" | sudo -S git clean -fdx'
+                //                 sh 'chmod +x scripts/build/parallelsmoke/*.sh'
+                //                 sh 'scripts/build/parallelsmoke/osx_1_download.sh'
+                //              }
+                //         }
+                //         stage('MacOSX Examples') {
+                //              steps {
+                //                 retry(3) {
+                //                     sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
+                //                     sh 'rm -rf GToolkit-Releaser-*.xml'
+                //                     junit '*.xml'
+                //                 }
+                //              }
+                //         }
+                //         stage('Codesign and Notarize') {
+                //             when {
+                //                 expression {
+                //                     (currentBuild.result == null || currentBuild.result == 'SUCCESS')
+                //                 }
+                //             }
+                //             steps {
+                //                 sh 'scripts/build/parallelsmoke/osx_3_sign_notarize.sh'
 
-                            }
-                        }
-                        stage('Upload') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS')
-                                }
-                            }
-                             steps {
-                                sh 'scripts/build/parallelsmoke/osx_4_upload.sh'
-                             }
-                        }
-                    }
-                }
+                //             }
+                //         }
+                //         stage('Upload') {
+                //             when {
+                //                 expression {
+                //                     (currentBuild.result == null || currentBuild.result == 'SUCCESS')
+                //                 }
+                //             }
+                //              steps {
+                //                 sh 'scripts/build/parallelsmoke/osx_4_upload.sh'
+                //              }
+                //         }
+                //     }
+                // }
                 stage('Windows') {
                     agent {
                         label "windows"
@@ -214,9 +214,7 @@ pipeline {
                         stage('Windows Examples') {
                              steps {
                                 retry(3) {
-                                    timeout(5) { 
-                                        powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
-                                    }
+                                    powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
                                     // junit '*.xml'
                                 }
                                 deleteDir()
