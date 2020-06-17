@@ -203,7 +203,7 @@ pipeline {
                                     timeout(5) { 
                                         powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
                                     }
-                                    junit '*.xml'
+                                    // junit '*.xml'
                                 }
                                 deleteDir()
                              }
