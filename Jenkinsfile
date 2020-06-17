@@ -193,6 +193,7 @@ pipeline {
                     stages {
                         stage('Download') {
                              steps {
+                                deleteDir()
                                 powershell 'ls'
                                 powershell './scripts/build/parallelsmoke/win_1_download.ps1'
                              }
