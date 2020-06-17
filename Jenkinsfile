@@ -26,82 +26,96 @@ pipeline {
                             MASTER_WORKSPACE = WORKSPACE
                         }
                         sh 'git clean -fdx'
-                        sh 'chmod +x scripts/build/*.sh'
-                        sh 'rm -rf pharo-local/iceberg'
-                        
                         slackSend (color: '#FFFF00', message: ("Started <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>") )
-
-                        sh 'scripts/build/load.sh'
-                        script {
-                            def newCommitFiles = findFiles(glob: 'newcommits*.txt')
-                            for (int i = 0; i < newCommitFiles.size(); ++i) {
-                                env.NEWCOMMITS = readFile(newCommitFiles[i].path)
-                                slackSend (color: '#00FF00', message: "Commits from <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )   
-                            }
-                        } 
-                    }
-                }
-                stage('Package image') {
-                    when { expression {
-                            env.BRANCH_NAME.toString().equals('master')
-                        }
-                    }
-                    steps {
-                        sh 'scripts/build/pack_image.sh'
-                        echo currentBuild.toString()
-                        echo currentBuild.result
                     }
                 }
 
-                stage('Save with GtWorld') {
-                    when { expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
-                        }
-                    }
-                    steps {
-                        sh 'scripts/build/open_gt_world.sh'
-                    }
-                }
-
-                stage('Prepare deploy packages') {
-
-                    when {
-                        expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
-                        }
-                    }
-                    steps {
-                        sh 'scripts/build/package.sh'
+                // stage('Load latest master commit') {
+                //     when { expression {
+                //             env.BRANCH_NAME.toString().equals('master')
+                //         }
+                //     }
+                //     steps {
+                //         script {
+                //             MASTER_WORKSPACE = WORKSPACE
+                //         }
+                //         sh 'git clean -fdx'
+                //         sh 'chmod +x scripts/build/*.sh'
+                //         sh 'rm -rf pharo-local/iceberg'
                         
-                        stash includes: 'GlamorousToolkitWin64*.zip', name: 'winbuild'
-                        stash includes: 'lib*.zip', name: 'alllibs'
-                        stash includes: 'GT.zip', name: 'gtimage'
+                //         slackSend (color: '#FFFF00', message: ("Started <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>") )
+
+                //         sh 'scripts/build/load.sh'
+                //         script {
+                //             def newCommitFiles = findFiles(glob: 'newcommits*.txt')
+                //             for (int i = 0; i < newCommitFiles.size(); ++i) {
+                //                 env.NEWCOMMITS = readFile(newCommitFiles[i].path)
+                //                 slackSend (color: '#00FF00', message: "Commits from <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )   
+                //             }
+                //         } 
+                //     }
+                // }
+                // stage('Package image') {
+                //     when { expression {
+                //             env.BRANCH_NAME.toString().equals('master')
+                //         }
+                //     }
+                //     steps {
+                //         sh 'scripts/build/pack_image.sh'
+                //         echo currentBuild.toString()
+                //         echo currentBuild.result
+                //     }
+                // }
+
+                // stage('Save with GtWorld') {
+                //     when { expression {
+                //             (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
+                //         }
+                //     }
+                //     steps {
+                //         sh 'scripts/build/open_gt_world.sh'
+                //     }
+                // }
+
+                // stage('Prepare deploy packages') {
+
+                //     when {
+                //         expression {
+                //             (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
+                //         }
+                //     }
+                //     steps {
+                //         sh 'scripts/build/package.sh'
                         
-                    }
-                }
+                //         stash includes: 'GlamorousToolkitWin64*.zip', name: 'winbuild'
+                //         stash includes: 'lib*.zip', name: 'alllibs'
+                //         stash includes: 'GT.zip', name: 'gtimage'
+                        
+                //     }
+                // }
 
-                stage('Upload prerelease') {
+                // stage('Upload prerelease') {
 
-                    when {
-                        expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
-                        }
-                    }
-                    steps {
-                        script {
-                            withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-                                def remote = [:]
-                                remote.name = 'deploy'
-                                remote.host = 'ip-172-31-37-111.eu-central-1.compute.internal'
-                                remote.user = userName
-                                remote.identityFile = identity
-                                remote.allowAnyHosts = true
-                                sshScript remote: remote, script: "scripts/build/clean-tentative.sh"
-                            }
-                        }
-                        sh 'scripts/build/upload-to-tentative.sh'
-                    }
-                }
+                //     when {
+                //         expression {
+                //             (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
+                //         }
+                //     }
+                //     steps {
+                //         script {
+                //             withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+                //                 def remote = [:]
+                //                 remote.name = 'deploy'
+                //                 remote.host = 'ip-172-31-37-111.eu-central-1.compute.internal'
+                //                 remote.user = userName
+                //                 remote.identityFile = identity
+                //                 remote.allowAnyHosts = true
+                //                 sshScript remote: remote, script: "scripts/build/clean-tentative.sh"
+                //             }
+                //         }
+                //         sh 'scripts/build/upload-to-tentative.sh'
+                //     }
+                // }
             }
         }
         stage('Run Examples') {
