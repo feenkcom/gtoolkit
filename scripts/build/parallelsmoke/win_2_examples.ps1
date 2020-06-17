@@ -1,5 +1,6 @@
 $image=Get-Childitem -Include *.image -Recurse -Name
-ls $image
+
+(get-acl $image).access | ft IdentityReference,FileSystemRights,AccessControlType,IsInherited,InheritanceFlags -auto 
 
 $timeoutSeconds = 10
 $code = {
