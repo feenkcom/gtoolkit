@@ -31,6 +31,11 @@ GtTranscript class >> default [
 	^ default ifNil: [ default := self new ]
 ]
 
+{ #category : #actions }
+GtTranscript class >> installDefault [
+	Smalltalk globals at: #Transcript put: self default.
+]
+
 { #category : #streaming }
 GtTranscript >> << anObject [
 	self show: anObject
