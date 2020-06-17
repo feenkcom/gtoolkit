@@ -2,6 +2,10 @@ $image=Get-Childitem -Include *.image -Recurse -Name
 
 (get-acl $image).access | ft IdentityReference,FileSystemRights,AccessControlType,IsInherited,InheritanceFlags -auto 
 
+pwd
+ls 
+ls GlamorousToolkitWin64-v0.7.1074
+
 $timeoutSeconds = 10
 $code = {
     .\GlamorousToolkitWin64-*\GlamorousToolkitConsole.exe "$image" eval "1+2"
