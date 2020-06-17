@@ -1,17 +1,9 @@
 "
 I am a transcript that can handle both strings and adornments.
 
-!Example
+!!Examples
 
-[[[
-transcript := GTOTranscript new.
-element := transcript newEditorElement.
-transcript nextPutAll: 'test
-asdasda'.
-transcript nextPutAll: 'enhanced' with: [ BrTextAdornmentDynamicAttribute new beAppend; adornmentBlock: [ BlElement new size: 70 @ 50; background: Color red; yourself  ]].
-transcript nextPutAll: 'test'.
-element
-]]]
+See ${class:GtTranscriptExamples}$.
 "
 Class {
 	#name : #GtTranscript,
@@ -37,6 +29,11 @@ GtTranscript class >> cleanUp [
 { #category : #accessing }
 GtTranscript class >> default [
 	^ default ifNil: [ default := self new ]
+]
+
+{ #category : #actions }
+GtTranscript class >> installDefault [
+	Smalltalk globals at: #Transcript put: self default.
 ]
 
 { #category : #streaming }

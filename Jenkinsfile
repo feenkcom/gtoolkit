@@ -200,9 +200,12 @@ pipeline {
                         stage('Windows Examples') {
                              steps {
                                 retry(3) {
-                                    powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
-                                    junit '*.xml'
+                                    timeout(5) { 
+                                        powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
+                                    }
+                                    // junit '*.xml'
                                 }
+                                deleteDir()
                              }
                         }
                     }
