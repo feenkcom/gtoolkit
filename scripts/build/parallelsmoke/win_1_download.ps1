@@ -8,10 +8,10 @@ net user
 
 
 
-$acl = Get-Acl GlamorousToolkitWin64-*
+# $acl = Get-Acl GlamorousToolkitWin64-*
 
-$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("EC2AMAZ-NPR6PPU\Guest","FullControl","Allow")
+# $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("EC2AMAZ-NPR6PPU\Guest","FullControl","Allow")
 
-$acl.SetAccessRule($AccessRule)
+# $acl.SetAccessRule($AccessRule)
 
-$acl | Set-Acl GlamorousToolkitWin64-*
+# $acl | Set-Acl GlamorousToolkitWin64-*
