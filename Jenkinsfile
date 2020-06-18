@@ -217,45 +217,45 @@ pipeline {
                                     powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
                                     // junit '*.xml'
                                 }
-                                deleteDir()
+                                
                              }
                         }
                     }
                 }
             }
         }
-        stage('Deploy release') {
-            agent {
-                label "unix"
-            }
-            when { expression {
-                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
-                }
-            }
-            steps {
-                dir(MASTER_WORKSPACE) {
-                    sh 'chmod +x scripts/build/*.sh'
+        // stage('Deploy release') {
+        //     agent {
+        //         label "unix"
+        //     }
+        //     when { expression {
+        //             (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
+        //         }
+        //     }
+        //     steps {
+        //         dir(MASTER_WORKSPACE) {
+        //             sh 'chmod +x scripts/build/*.sh'
                     
-                    unstash 'winbuild'
-                    unstash 'alllibs'
-                    unstash 'gtimage'  
-                    sh 'scripts/build/runreleaser.sh' 
-                    sh 'scripts/build/upload.sh'
-                    script {
-                        TAG_NAME = readFile('tagname.txt').trim()
-                        withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-                                def remote = [:]
-                                remote.name = 'deploy'
-                                remote.host = 'ec2-35-157-37-37.eu-central-1.compute.amazonaws.com'
-                                remote.user = userName
-                                remote.identityFile = identity
-                                remote.allowAnyHosts = true
-                                sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
-                        }
-                    }
-                }
-            }
-        }
+        //             unstash 'winbuild'
+        //             unstash 'alllibs'
+        //             unstash 'gtimage'  
+        //             sh 'scripts/build/runreleaser.sh' 
+        //             sh 'scripts/build/upload.sh'
+        //             script {
+        //                 TAG_NAME = readFile('tagname.txt').trim()
+        //                 withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+        //                         def remote = [:]
+        //                         remote.name = 'deploy'
+        //                         remote.host = 'ec2-35-157-37-37.eu-central-1.compute.amazonaws.com'
+        //                         remote.user = userName
+        //                         remote.identityFile = identity
+        //                         remote.allowAnyHosts = true
+        //                         sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
     }
     post {
         success {
