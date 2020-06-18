@@ -26,20 +26,6 @@ pipeline {
                             MASTER_WORKSPACE = WORKSPACE
                         }
                         sh 'git clean -fdx'
-                        slackSend (color: '#FFFF00', message: ("Started <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>") )
-                    }
-                }
-
-                stage('Load latest master commit') {
-                    when { expression {
-                            env.BRANCH_NAME.toString().equals('master')
-                        }
-                    }
-                    steps {
-                        script {
-                            MASTER_WORKSPACE = WORKSPACE
-                        }
-                        sh 'git clean -fdx'
                         sh 'chmod +x scripts/build/*.sh'
                         sh 'rm -rf pharo-local/iceberg'
                         
