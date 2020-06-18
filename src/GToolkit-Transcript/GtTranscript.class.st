@@ -132,11 +132,12 @@ GtTranscript >> nextPutAll: aString [
 
 { #category : #ui }
 GtTranscript >> open [
-	| space |
-	space := BlSpace new.
-	space extent: 600@400.
-	space root addChild: self asElement.
-	space show
+	| aSpace |
+	aSpace := BlSpace new.
+	aSpace extent: 600@400.
+	aSpace title: 'Transcript'.
+	aSpace addChild: self asElement.
+	aSpace show
 ]
 
 { #category : #streaming }
