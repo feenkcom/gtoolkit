@@ -10,7 +10,7 @@ net user
 
 $acl = Get-Acl GlamorousToolkitWin64-*
 
-$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("EC2AMAZ-NPR6PPU\Users","FullControl","Allow")
+$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("EC2AMAZ-NPR6PPU\Guest","FullControl","Allow")
 
 $acl.SetAccessRule($AccessRule)
 
