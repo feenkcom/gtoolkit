@@ -2,13 +2,12 @@ $image=Get-Childitem -Include *.image -Recurse -Name
 
 (get-acl $image).access | ft IdentityReference,FileSystemRights,AccessControlType,IsInherited,InheritanceFlags -auto 
 
-pwd
-ls 
-ls GlamorousToolkitWin64-v0.7.1074
+$fullPathImage = (Join-Path (pwd) $image)
+echo $fullPathImage
 
 $timeoutSeconds = 10
 $code = {
-    .\GlamorousToolkitWin64-*\GlamorousToolkitConsole.exe "$image" eval "1+2"
+    .\GlamorousToolkitWin64-*\GlamorousToolkitConsole.exe "$fullPathImage" eval "1+2"
 }
 $j = Start-Job -ScriptBlock $code
 if (Wait-Job $j -Timeout $timeoutSeconds) { Receive-Job $j }
