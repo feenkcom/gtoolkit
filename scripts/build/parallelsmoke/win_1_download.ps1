@@ -10,7 +10,7 @@ Expand-Archive GlamorousToolkitWin64.zip -DestinationPath .
 
 $acl = Get-Acl GlamorousToolkitWin64-*
 
-$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("EC2AMAZ-NPR6PPU\DefaultUser","FullControl","Allow")
+$AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("EC2AMAZ-NPR6PPU\DefaultAccount","FullControl","Allow")
 
 $acl.SetAccessRule($AccessRule)
 
