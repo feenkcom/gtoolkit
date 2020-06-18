@@ -89,6 +89,7 @@ GtHomeSection >> newDocCardForClass: aClass [
 				asElementDo: [ :e | 
 					e
 						exact: 300 @ 400;
+						beInSingleCompositionLayer;
 						asScalableElement ])
 		action: [ :card | 
 			self
@@ -214,13 +215,12 @@ GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShowBlock descri
 	^ self
 		newHeaderCardWithTitle: 'Slideshow'
 		description: aDescription
-		size: 200 @ 150
+		size: 200@150
 		content:
 			(aSlideShowBlock value slides first create
-				constraintsDo: [ :c | 
-					c horizontal exact: 800.
-					c vertical exact: 600 ];
-				padding: (BlInsets all: 10)) asScalableElement
+				size: 800@600;
+				padding: (BlInsets all: 10);
+				beInSingleCompositionLayer) asScalableElement
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aString

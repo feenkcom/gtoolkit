@@ -150,28 +150,17 @@ GtWorldElement >> newSubSpaceButton [
 	^ subSpaceDropdown
 ]
 
-{ #category : #'private - instance creation' }
-GtWorldElement >> newTabButtonLook [
-	^ BrGlamorousButtonIconLook + BrGlamorousButtonWithLabelTooltipLook + BrLayoutResizerLook inherit + BrLayoutAlignmentLook forHorizontalLinearLayout + (BrInteractiveCommonLook new
-			default: [ :aWidget |
-				aWidget geometry: BlCircle new.
-				aWidget layout: BlLinearLayout horizontal alignCenter.
-				aWidget background: (Color transparent) ];
-			hovered: [ :aWidget | aWidget background: (Color gray alpha: 0.2) ];
-			pressed: [ :aWidget | aWidget background: (Color gray alpha: 0.4) ])
-]
-
 { #category : #initialization }
 GtWorldElement >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 
 	SystemAnnouncer uniqueInstance weak
-		when: (ClassAnnouncement where: [ :ann | ann classAffected = GtHome ])
+		when: ClassAnnouncement
 		send: #update:
 		to: self home. 
 
 	SystemAnnouncer uniqueInstance weak
-		when: (MethodAnnouncement where: [ :ann | ann classAffected = GtHome ])
+		when: MethodAnnouncement
 		send: #update:
 		to: self home. 
 ]
@@ -191,20 +180,22 @@ GtWorldElement >> showSpace: aSpace [
 { #category : #accessing }
 GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
 	| aTab |
-	aTab := nil.
 	aTab := (BrTab new
 		vExact: 36;
+		model: aSpace;
 		look: BrGlamorousSpaceTabWithLabelLook new;
 		label: aSpace title;
-		stencil: [
-			aSpace root hasParent
-				ifTrue: [ aSpace root removeFromParent ]
-				ifFalse: [ aSpace root dispatchRemovedFromSceneGraph ].
-			aSpace root
+		stencil: [ :aTabModel |
+			| anActualSpace |
+			anActualSpace := aTabModel model.
+			anActualSpace root hasParent
+				ifTrue: [ anActualSpace root removeFromParent ]
+				ifFalse: [ anActualSpace root dispatchRemovedFromSceneGraph ].
+			anActualSpace root
 				constraintsDo: [ :c |
 					c horizontal matchParent.
 					c vertical matchParent ] ];
-		actionbarStencil: [
+		actionbarStencil: [ :aTabModel |			
 			BrToolbar new
 				look: (BrGlamorousToolbarLook new spacing: 0);
 				margin: (BlInsets left: 6);
@@ -213,21 +204,21 @@ GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
 						icon: BrGlamorousIcons maximize;
 						exact: 16@16;
 						opacity: 0.5;
-						look: self newTabButtonLook;
+						look: GtWorldTabToolbarButtonLook;
+						model: aTabModel;
 						label: 'Open in a new window';
-						action: [
-							tabs removeTab: aTab.
-							aTab := nil.
-							GtWorld openWithSpaces: { aSpace } ].
+						action: [ :aButtonElement |
+							tabs viewModel removeTab: aButtonElement model.
+							GtWorld openWithSpaces: { aButtonElement model model } ].
 					BrButton new
 						icon: BrGlamorousVectorIcons close;
 						exact: 16@16;
 						opacity: 0.5;
-						look: self newTabButtonLook;
+						look: GtWorldTabToolbarButtonLook;
 						label: 'Close';
-						action: [
-							tabs removeTab: aTab.
-							aTab := nil. ] } ]).
+						model: aTabModel;
+						action: [ :aButtonElement |
+							tabs viewModel removeTab: aButtonElement model ] } ]).
 	
 	shouldBeSelected ifTrue:[ aTab select].
 	tabs addTab: aTab

@@ -11,7 +11,7 @@ GtReturnPragmasShouldPointToExistingClasses >> description [
 
 { #category : #accessing }
 GtReturnPragmasShouldPointToExistingClasses >> issues [
-	^ (#return: gtPragmas & 
+	^ ((#return: gtPragmas | #return:or: gtPragmas | #return:of: gtPragmas) & 
 		(RBParser parseRewriteMethod: '
 		    a 
 		        <return: `{:node | 

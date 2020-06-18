@@ -121,5 +121,8 @@ GtHome >> toolsSection [
 
 { #category : #initialization }
 GtHome >> update: anAnnouncement [
+	anAnnouncement classAffected == self class
+		ifFalse: [ ^ self ].
+
 	self initializeSections
 ]
