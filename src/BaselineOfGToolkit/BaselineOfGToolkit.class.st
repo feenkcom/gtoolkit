@@ -99,21 +99,21 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.6.83/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.814/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.7.815/src' ];
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.6.438/src' ];
 			baseline: 'GToolkitTranscript' with: [
 				spec
 					loads: #();
-					repository: 'github://feenkcom/gtoolkit:v0.7.1084/src' ];
+					repository: 'github://feenkcom/gtoolkit:v0.7.1085/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.590/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.647/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.7.648/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.658/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.7.659/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.590/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.7.591/src' ];
 			baseline: 'GToolkitCoder' with: [
 				spec repository: 'github://feenkcom/gtoolkit-coder:v0.7.663/src' ];
 			baseline: 'GToolkitSpotter' with: [
@@ -133,7 +133,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.7.9/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:v0.7.76/src' ];
+				spec repository: 'github://feenkcom/gt4smacc:v0.7.77/src' ];
 			baseline: 'GToolkit4XMLSupport' with: [
 				spec repository: 'github://feenkcom/gt4xmlsupport:v0.6.7/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
