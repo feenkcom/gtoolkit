@@ -93,7 +93,6 @@ GtMonitorSpaceFramesChart >> onRemovedFromSceneGraph [
 
 { #category : #accessing }
 GtMonitorSpaceFramesChart >> profileSpace: anOpenedSpace [
-	NonInteractiveTranscript stdout nextPutAll: anOpenedSpace class name; cr.
 	profiledSpace = anOpenedSpace
 		ifTrue: [ ^ self ].
 
