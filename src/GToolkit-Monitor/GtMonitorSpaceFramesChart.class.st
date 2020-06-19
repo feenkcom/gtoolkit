@@ -7,10 +7,19 @@ Class {
 		'toolbar',
 		'startButton',
 		'stopButton',
-		'resetButton'
+		'resetButton',
+		'isPaused'
 	],
 	#category : #'GToolkit-Monitor-Space Profiler'
 }
+
+{ #category : #'as yet unclassified' }
+GtMonitorSpaceFramesChart >> computeIsRunning [
+	^ profiledSpace notNil
+		and: [ profiledSpace space telemetry = BlNullTelemetry uniqueInstance
+			and: [ currentLogger notNil
+				and: [ currentLogger isRunning ] ] ]
+]
 
 { #category : #initialization }
 GtMonitorSpaceFramesChart >> initialize [
@@ -19,6 +28,8 @@ GtMonitorSpaceFramesChart >> initialize [
 	self matchParent.
 	self alignTopCenter.
 	self padding: (BlInsets all: 10).
+	
+	isPaused := false.
 	
 	toolbar := BrToolbar new
 		look: BrGlamorousToolbarLook new.
@@ -63,6 +74,9 @@ GtMonitorSpaceFramesChart >> instrumentSpace: aSpace [
 GtMonitorSpaceFramesChart >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	
+	isPaused
+		ifFalse: [ ^ self ].
+	
 	self startLogger.
 	self instrumentSpace
 ]
@@ -71,13 +85,15 @@ GtMonitorSpaceFramesChart >> onAddedToSceneGraph [
 GtMonitorSpaceFramesChart >> onRemovedFromSceneGraph [
 	super onRemovedFromSceneGraph.
 	
+	isPaused := self computeIsRunning.
+	
 	self stopLogger.
 	self uninstrumentSpace
 ]
 
 { #category : #accessing }
 GtMonitorSpaceFramesChart >> profileSpace: anOpenedSpace [
-
+	NonInteractiveTranscript stdout nextPutAll: anOpenedSpace class name; cr.
 	profiledSpace = anOpenedSpace
 		ifTrue: [ ^ self ].
 
@@ -91,9 +107,7 @@ GtMonitorSpaceFramesChart >> profileSpace: anOpenedSpace [
 	currentLogger := BlTelemetryLogger new.
 
 	(currentLogger gtFramesFor: GtPhlowEmptyView new)
-		asElementDo: [ :aChart | self addChild: aChart as: #chart ].
-		
-	self start
+		asElementDo: [ :aChart | self addChild: aChart as: #chart ]
 ]
 
 { #category : #'api - profiler' }
@@ -108,7 +122,6 @@ GtMonitorSpaceFramesChart >> resetLogger [
 
 { #category : #'api - profiler' }
 GtMonitorSpaceFramesChart >> start [
-
 	self
 		instrumentSpace;
 		startLogger.
@@ -146,5 +159,6 @@ GtMonitorSpaceFramesChart >> uninstrumentSpace [
 
 { #category : #'private - profiling' }
 GtMonitorSpaceFramesChart >> uninstrumentSpace: aSpace [
-	aSpace enqueueTask: (BlTaskAction new action: [ aSpace telemetry: BlNullTelemetry new ])
+	aSpace enqueueTask: (BlTaskAction new action: [
+		aSpace telemetry: BlNullTelemetry uniqueInstance ])
 ]
