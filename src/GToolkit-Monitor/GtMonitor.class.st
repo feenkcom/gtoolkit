@@ -39,7 +39,12 @@ GtMonitor >> gtProfilerFor: aView [
 	^ aView explicit
 		title: 'Profiler';
 		priority: 3;
-		stencil: [ GtMonitorSpaceProfiler new ]
+		stencil: [ GtMonitorSpaceProfiler new ];
+		actionStencil: [
+			BrButton new 
+				look: BrGlamorousButtonWithIconLook;
+				icon: [ (BrGlamorousVectorIcons largeWindow asElement asScalableElement size: 16@16) ] asStencil;
+				action: [ GtMonitorSpaceProfiler open ] ]
 ]
 
 { #category : #'gt-extension' }
