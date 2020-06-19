@@ -38,7 +38,7 @@ GtMonitoredProcessElement >> updateList [
 					'Failed to update process stack' traceCr.
 					anException traceCr ];
 				onSuccessEnqueueAction: [ :theStackList | 
-					stackList display: theStackList.
+					stackList items: theStackList.
 					self
 						enqueueTask:
 							(BlDelayedTaskAction new
