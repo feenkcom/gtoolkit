@@ -191,16 +191,31 @@ pipeline {
                         label "windows"
                     }
                     stages {
+                        stage('Git clean') {
+                             steps {
+                                powershell './scripts/build/parallelsmoke/win_1_gitclean.ps1'
+                             }
+                        }
+                        stage('Remove all') {
+                             steps {
+                                powershell './scripts/build/parallelsmoke/win_2_rmrf.ps1'
+                             }
+                        }
                         stage('Download') {
                              steps {
+                                powershell './scripts/build/parallelsmoke/win_3_download.ps1'
+                             }
+                        }
+                        stage('Unpack') {
+                             steps {
                                 powershell 'ls'
-                                powershell './scripts/build/parallelsmoke/win_1_download.ps1'
+                                powershell './scripts/build/parallelsmoke/win_3_download.ps1'
                              }
                         }
                         stage('Windows Examples') {
                              steps {
                                 retry(3) {
-                                    powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
+                                    powershell './scripts/build/parallelsmoke/win_5_examples.ps1'
                                     junit '*.xml'
                                 }
                              }
