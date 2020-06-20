@@ -186,28 +186,27 @@ pipeline {
                         }
                     }
                 }
-                // stage('Windows') {
-                //     agent {
-                //         label "windows"
-                //     }
-                //     stages {
-                //         stage('Download') {
-                //              steps {
-                //                 powershell 'ls'
-                //                 powershell './scripts/build/parallelsmoke/win_1_download.ps1'
-                //              }
-                //         }
-                //         stage('Windows Examples') {
-                //              steps {
-                //                 retry(3) {
-                //                     powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
-                //                     // junit '*.xml'
-                //                 }
-                                
-                //              }
-                //         }
-                //     }
-                // }
+                stage('Windows') {
+                    agent {
+                        label "windows"
+                    }
+                    stages {
+                        stage('Download') {
+                             steps {
+                                powershell 'ls'
+                                powershell './scripts/build/parallelsmoke/win_1_download.ps1'
+                             }
+                        }
+                        stage('Windows Examples') {
+                             steps {
+                                retry(3) {
+                                    powershell './scripts/build/parallelsmoke/win_2_examples.ps1'
+                                    junit '*.xml'
+                                }
+                             }
+                        }
+                    }
+                }
             }
         }
         stage('Deploy release') {

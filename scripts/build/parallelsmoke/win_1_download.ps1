@@ -1,17 +1,6 @@
 
-# git clean -fdx
-# echo $env:UserName 
-# net user
+git clean -fdx
+Get-ChildItem . | Where {$_.PSIsContainer -and ($_ -match '^GlamorousToolkitWin64-')} | Remove-Item -Recurse -Force
 
-# wget https://dl.feenk.com/tentative/GlamorousToolkitWin64.zip -OutFile GlamorousToolkitWin64.zip
-# Expand-Archive GlamorousToolkitWin64.zip -DestinationPath .
-
-
-
-# $acl = Get-Acl GlamorousToolkitWin64-*
-
-# $AccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule("EC2AMAZ-NPR6PPU\Guest","FullControl","Allow")
-
-# $acl.SetAccessRule($AccessRule)
-
-# $acl | Set-Acl GlamorousToolkitWin64-*
+wget https://dl.feenk.com/tentative/GlamorousToolkitWin64.zip -OutFile GlamorousToolkitWin64.zip
+Expand-Archive GlamorousToolkitWin64.zip -DestinationPath .
