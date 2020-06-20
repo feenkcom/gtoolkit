@@ -8,6 +8,15 @@ Class {
 	#category : #'GToolkit-Monitor-Space Profiler'
 }
 
+{ #category : #'instance creation' }
+GtMonitorSpaceProfiler class >> open [
+	<script: 'self open'>
+
+	GtPager
+		openWrappedOn: self new
+		title: 'Profiler'
+]
+
 { #category : #initialization }
 GtMonitorSpaceProfiler >> initialize [
 	super initialize.
