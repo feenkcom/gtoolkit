@@ -208,8 +208,7 @@ pipeline {
                         }
                         stage('Unpack') {
                              steps {
-                                powershell 'ls'
-                                powershell './scripts/build/parallelsmoke/win_3_download.ps1'
+                                powershell './scripts/build/parallelsmoke/win_4_unpack.ps1'
                              }
                         }
                         stage('Windows Examples') {
