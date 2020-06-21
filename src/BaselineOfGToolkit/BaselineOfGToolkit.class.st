@@ -105,7 +105,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitTranscript' with: [
 				spec
 					loads: #();
-					repository: 'github://feenkcom/gtoolkit:v0.7.1091/src' ];
+					repository: 'github://feenkcom/gtoolkit:v0.7.1092/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.7.591/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -133,13 +133,13 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.7.9/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:v0.7.78/src' ];
+				spec repository: 'github://feenkcom/gt4smacc:v0.7.79/src' ];
 			baseline: 'GToolkit4XMLSupport' with: [
 				spec repository: 'github://feenkcom/gt4xmlsupport:v0.6.7/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
 				spec repository: 'github://feenkcom/gt4petitparser2:v0.7.16/src' ];
 			baseline: 'GToolkit4Famix3' with: [
-				spec repository: 'github://feenkcom/gt4famix3:v0.7.62/src' ];
+				spec repository: 'github://feenkcom/gt4famix3:v0.7.63/src' ];
 			baseline: 'GToolkitRemote' with: [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.6.408/src' ];
 			baseline: 'GToolkit4Git' with: [
