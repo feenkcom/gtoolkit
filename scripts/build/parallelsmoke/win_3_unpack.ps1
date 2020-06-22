@@ -1,0 +1,1 @@
+Expand-Archive GlamorousToolkitWin64.zip -DestinationPath .
