@@ -67,6 +67,7 @@ mv $file GlamorousToolkitVM-win64-bin.zip
 #deploy local build scripts
 scp scripts/localbuild/linux.sh $AWS:$ScriptsFolder
 scp scripts/localbuild/mac.sh $AWS:$ScriptsFolder
+scp scripts/localbuild/windows.ps1 $AWS:$ScriptsFolder
 scp scripts/zeroconf/get $AWS:$GTfolder
 
 pwd
