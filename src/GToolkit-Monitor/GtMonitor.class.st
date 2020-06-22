@@ -5,6 +5,16 @@ Class {
 }
 
 { #category : #'gt-extension' }
+GtMonitor >> gtGlutinEventFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'Events';
+		priority: 3;
+		stencil: [ GtMonitorGlutinEventsElement new ]
+]
+
+{ #category : #'gt-extension' }
 GtMonitor >> gtLoggersFor: aView [
 	<gtView>
 	
