@@ -35,7 +35,7 @@ GtMonitoredBlocSpacesElement >> initialize [
 			aTitle := aMonitoredSpace exists
 				ifTrue: [ aMonitoredSpace title trimmed ]
 				ifFalse: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
-			aTitle ifEmpty: [ aTitle := '[No name]' asRopedText italic ].
+			aTitle size isZero ifTrue: [ aTitle := '[No name]' asRopedText italic ].
 			
 			BrLabel new
 				look: BrGlamorousLabelLook;
