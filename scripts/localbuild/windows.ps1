@@ -1,4 +1,5 @@
 Invoke-WebRequest https://github.com/feenkcom/opensmalltalk-vm/releases/latest/download/build-artifacts.zip -OutFile build-artifacts.zip
+Invoke-WebRequest https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -OutFile loadgt.st
 Expand-Archive build-artifacts.zip -DestinationPath .
 Expand-Archive build-artifacts\GlamorousToolkitVM-*-win64-bin.zip  -DestinationPath GlamorousToolkit
 Invoke-WebRequest https://files.pharo.org/get-files/80/pharo64.zip -OutFile pharo64.zip
