@@ -6,7 +6,7 @@ SourceFileArray compile: 'deferFlushDuring: aBlock
 		self flushChangesFile ]'.
 
 Metacello new
-    githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
+    githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'v1.8.3' path: '';
     baseline: 'Iceberg';
     load.
 Metacello new baseline: 'GToolkitReleaser'; repository: 'github://feenkcom/gtoolkit-releaser/src'; load.
