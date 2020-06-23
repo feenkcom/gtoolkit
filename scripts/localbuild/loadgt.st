@@ -9,7 +9,10 @@ Metacello new
     githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'v1.8.3' path: '';
     baseline: 'Iceberg';
     load.
-Metacello new baseline: 'GToolkitReleaser'; repository: 'github://feenkcom/gtoolkit-releaser/src'; load.
+Metacello new 
+	baseline: 'GToolkitReleaser'; 
+	githubUser: 'feenkcom' project: 'gtoolkit-releaser' commitish: 'master' path: ''; 
+	load.
 GtRlRepositoriesCloner loadProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'.
 
 
