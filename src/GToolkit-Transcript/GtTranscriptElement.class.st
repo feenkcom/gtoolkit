@@ -18,8 +18,7 @@ Class {
 		'editorElement',
 		'transcript',
 		'scrollButtonElement',
-		'isAutoScrollEnabled',
-		'scrollEventHandler'
+		'isAutoScrollEnabled'
 	],
 	#category : #'GToolkit-Transcript'
 }
@@ -47,8 +46,9 @@ GtTranscriptElement >> initialize [
 		c padding: (BlInsets all: 10).
 		c horizontal matchParent.
 		c vertical matchParent ].
-	scrollEventHandler := BlEventHandler on: BrTextEditorInsertedEvent do: [ self updateScroll ].
+
 	isAutoScrollEnabled := true.
+
 	self initializeElements.
 	self initializeListeners
 ]
@@ -57,6 +57,10 @@ GtTranscriptElement >> initialize [
 GtTranscriptElement >> initializeElements [
 	editorElement := self newEditorElement.
 	editorElement matchParent.
+	
+	editorElement editor
+		when: BrTextEditorInsertedEvent
+		do: [ self updateScroll ].
 
 	scrollButtonElement := self newScrollButtonElement.
 	scrollButtonElement constraintsDo: [ :c |
@@ -86,8 +90,7 @@ GtTranscriptElement >> initializeListeners [
 GtTranscriptElement >> insertStringAnnouncement: aGtTranscriptInsertStringAnnouncement [
 	editorElement enqueueTask: (GtTranscriptInsertStringTaskAction new
 		announcement: aGtTranscriptInsertStringAnnouncement;
-		editor: aGtTranscriptInsertStringAnnouncement editor;
-		text: aGtTranscriptInsertStringAnnouncement text;
+		editor: editorElement editor;
 		string: aGtTranscriptInsertStringAnnouncement string;
 		attributes: aGtTranscriptInsertStringAnnouncement attributes)
 ]
@@ -99,7 +102,8 @@ GtTranscriptElement >> isAutoScrollEnabled [
 
 { #category : #'instance creation' }
 GtTranscriptElement >> newEditorElement [
-	^ BrEditor new look: BrGlamorousCodeEditorLook new
+	^ BrEditor new
+		look: BrGlamorousCodeEditorLook new
 ]
 
 { #category : #'instance creation' }
@@ -115,20 +119,30 @@ GtTranscriptElement >> newScrollButtonElement [
 GtTranscriptElement >> onAddedToSceneGraph [
 	| aTranscript |
 	super onAddedToSceneGraph.
-	aTranscript := self transcript ifNil: [ ^ self ].
-	aTranscript announcer
-		when: GtTranscriptInsertStringAnnouncement send: #insertStringAnnouncement: to: self.
-	aTranscript editor addEventHandler: scrollEventHandler.
-	self updateScroll.
+
+	aTranscript := self transcript
+		ifNil: [ ^ self ].
+
+	aTranscript textDo: [ :aText |
+		editorElement text: aText copy.
+	
+		aTranscript announcer
+			when: GtTranscriptInsertStringAnnouncement
+			send: #insertStringAnnouncement:
+			to: self ].
+
+	self updateScroll
 ]
 
 { #category : #'hooks - children' }
 GtTranscriptElement >> onRemovedFromSceneGraph [
 	| aTranscript |
 	super onRemovedFromSceneGraph.
-	aTranscript := self transcript ifNil: [ ^ self ].
-	aTranscript announcer unsubscribe: self.
-	aTranscript editor addEventHandler: scrollEventHandler.
+
+	aTranscript := self transcript
+		ifNil: [ ^ self ].
+
+	aTranscript announcer unsubscribe: self
 ]
 
 { #category : #accessing }
@@ -148,8 +162,7 @@ GtTranscriptElement >> transcript [
 
 { #category : #accessing }
 GtTranscriptElement >> transcript: aGtTranscript [
-	transcript := aGtTranscript.	
-	editorElement editor: transcript editor.
+	transcript := aGtTranscript
 ]
 
 { #category : #updating }

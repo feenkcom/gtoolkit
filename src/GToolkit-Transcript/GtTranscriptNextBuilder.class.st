@@ -119,7 +119,9 @@ GtTranscriptNextBuilder >> put: aCharacter [
 GtTranscriptNextBuilder >> putAll: aString [
 
 	"We should only modify the editor from within the UI thread"
-	transcript announceInsertString: aString withAttributes: attributes.
+	transcript
+		insertString: aString
+		withAttributes: attributes
 ]
 
 { #category : #streaming }

@@ -32,15 +32,11 @@ GtTranscriptInsertStringTaskAction >> attributes: anObject [
 { #category : #'api - running' }
 GtTranscriptInsertStringTaskAction >> run [
 	"We should only modify the editor from within the UI thread"
-	self announcement wasExecuted ifTrue: [ ^ self ].
+	self announcement wasExecuted
+		ifTrue: [ ^ self ].
 	self announcement beExecuted.
-	
-	GtTranscriptInsertStringCommand new
-		string: self string;
-		attributes: self attributes;
-		text: self text;
-		editor: self editor;
-		execute.
+
+	self editor text append: (self string asRopedText attributes: self attributes)
 ]
 
 { #category : #accessing }
