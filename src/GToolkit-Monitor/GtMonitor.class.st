@@ -33,6 +33,16 @@ GtMonitor >> gtLoggersFor: aView [
 ]
 
 { #category : #'gt-extension' }
+GtMonitor >> gtMixedAnnouncersFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'Mixed announcers';
+		priority: 7;
+		stencil: [ GtMonitoredMixedAnnouncersElement new ]
+]
+
+{ #category : #'gt-extension' }
 GtMonitor >> gtProcessesFor: aView [
 	<gtView>
 	
@@ -74,7 +84,7 @@ GtMonitor >> gtSpacesFor: aView [
 	^ aView explicit
 		title: 'Spaces';
 		priority: 3;
-		stencil: [ GtMonitoredBlocSpacesElement new ];
+		stencil: [ GtMonitoredMixedAnnouncersElement new ];
 		actionStencil: [ 
 			BrButton new 
 				look: BrGlamorousButtonWithIconLook;
