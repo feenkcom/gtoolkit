@@ -72,10 +72,6 @@ GtMonitoredBlocSpace >> pointers [
 ]
 
 { #category : #accessing }
-GtMonitoredBlocSpace >> references [
-]
-
-{ #category : #accessing }
 GtMonitoredBlocSpace >> space [
 	<return: #BlSpace or: nil>
 
