@@ -1,10 +1,7 @@
 "
 !How to work with queries
-
 One of the design principles behind Glamorous Toolkit is that search must be universal. This is achieved using queries.
-
 !!What are queries?
-
 They are small pieces of code, written in plain Pharo, that we can use to get information about a package, a class, a method or an object that satisfies one or more conditions.
 
 Let's see an example: a search for all the methods annotated with the #gtView pragma.
@@ -32,7 +29,6 @@ ${example:GtWorkWithQueriesHowToGuide>>#exampleMethodsFromGToolkitPackages}$
 Earlier we mentioned filters helping us to work with queries.
 
 !!What are filters? 
-
 They are predicates that work as conditions in the query.
 
 For example, let's search certain methods in a certain package. The result will be an instance of GtSearchIntersectionFilter, being the intersetion of two filters: GtSearchReferencesFilter and GtSearchMethodsWithPackagePatternFilter.
@@ -44,11 +40,8 @@ There already exists a number of such predicates readily available. Below is a d
 ${example:GtWorkWithQueriesHowToGuide>>#searchFiltersDiagram|previewShow=#gtHierarchyFor:|noCode=|previewHeight=720}$
 
 !!More Filters
-
 Now let's take a closer look at the filters in the diagram above.
-
 !!!Binary
-
 The intersetion filter is a result of the & message. The result is a collection of elements that satisfy both the left side and the right side of the query.
 
 ${example:GtIntersectionFilterExamples>>#intersectionDifferentFilters}$
@@ -56,9 +49,7 @@ ${example:GtIntersectionFilterExamples>>#intersectionDifferentFilters}$
 The union filter is a result of the | message. The result is a collection of elements that satisfy at least one of the query parts.
 
 ${example:GtUnionFilterExamples>>#unionDifferentMethods}$
-
 !!!Packages
-
 These filters allow us to see all the packages in the current image
 
 ${example:GtSearchPackageFilterExamples>>#packagesInImageFilter}$
@@ -68,7 +59,6 @@ and the packages that are deprecated.
 ${example:GtSearchPackageFilterExamples>>#deprecatedPackagesFilter}$
 
 !!!Classes
-
 Using these we can search the classes in the current image,
 
 ${example:GtSearchClassFilterExamples>>#classesInImageFilter}$
@@ -80,9 +70,7 @@ ${example:GtSearchClassFilterExamples>>#classesInCurrentPackageFilter}$
 and the deprecated classes.
 
 ${example:GtSearchClassFilterExamples>>#deprecatedClassesFilter}$
-
 !!!Methods
-
 These allow us to perform various searches related to methods. For example, we can search methods in a certain package,
 
 ${example:GtSearchMethodFilterExamples>>#methodsInPackageFilter}$
@@ -134,15 +122,11 @@ ${example:GtSearchMethodFilterExamples>>#gtExamplePragmas}$
 and to search all the methods that reference something: a piece of code, another method or a class.
 
 ${example:GtSearchMethodReferencesFilterExamples>>#referencesTo42}$
-
 !!!Negation
-
 This filter takes another filter and does the opposite of that filter. For example, if we search for all deprecated packages and apply this filter, we end up with all the packages that are not deprecated.
 
 ${example:GtSearchNegationFilterExamples>>#negationSearchFilter}$
-
 !!!Null
-
 The Null filter always returns false, not matching anything.
 
 ${example:GtSearchNullFilterExamples>>#nullSearchFilter}$

@@ -1,6 +1,5 @@
 "
 !How to work with GitHub and Metacello
-
 Before being able to work with GitHub, you first need to setup the credentials for GitHub.
 
 [[[
