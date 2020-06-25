@@ -9,8 +9,8 @@ Class {
 	#name : #GtTranscript,
 	#superclass : #Object,
 	#instVars : [
+		'mutex',
 		'text',
-		'editor',
 		'announcer'
 	],
 	#classInstVars : [
@@ -41,17 +41,6 @@ GtTranscript >> << anObject [
 	self show: anObject
 ]
 
-{ #category : #'announcement handling' }
-GtTranscript >> announceInsertString: aString withAttributes: attributes [
-	self announcer numberOfSubscriptions isZero ifTrue: [ 
-		self insertString: aString withAttributes: attributes ].
-	self announcer announce: (GtTranscriptInsertStringAnnouncement new 
-		editor: self editor;
-		text: self text;
-		string: aString; 
-		attributes: attributes)
-]
-
 { #category : #accessing }
 GtTranscript >> announcer [
 	<return: #Announcer>
@@ -74,25 +63,10 @@ GtTranscript >> cr [
 	self next cr
 ]
 
-{ #category : #accessing }
-GtTranscript >> editor [
-	^ editor
-]
-
-{ #category : #accessing }
-GtTranscript >> editor: anObject [
-	editor := anObject
-]
-
-{ #category : #ui }
-GtTranscript >> gtInspectorLiveIn: composite [
-	<gtInspectorPresentationOrder: 0>
-	^ self asElement gtInspectorLiveIn: composite
-]
-
 { #category : #'gt-extension' }
 GtTranscript >> gtLiveFor: aView [
 	<gtView>
+
 	^ self asElement gtLiveFor: aView
 ]
 
@@ -100,18 +74,17 @@ GtTranscript >> gtLiveFor: aView [
 GtTranscript >> initialize [
 	announcer := Announcer new.
 	text := '' asRopedText.
-	editor := BrTextEditor new.
-	editor text: text
+
+	mutex := Mutex new
 ]
 
 { #category : #'private - actions' }
-GtTranscript >> insertString: aString withAttributes: aCollection [ 
-	GtTranscriptInsertStringCommand new
-		string: aString;
-		attributes: aCollection;
-		text: self text;
-		editor: self editor;
-		execute.
+GtTranscript >> insertString: aString withAttributes: aCollection [
+	self textDo: [ :aText |
+		aText append: (aString asRopedText attributes: aCollection).
+		self announcer announce: (GtTranscriptInsertStringAnnouncement new 
+			string: aString; 
+			attributes: aCollection) ]
 ]
 
 { #category : #streaming }
@@ -172,11 +145,8 @@ GtTranscript >> tab [
 ]
 
 { #category : #accessing }
-GtTranscript >> text [
-	^ text
-]
+GtTranscript >> textDo: aBlock [
+	<return: #BlText>
 
-{ #category : #accessing }
-GtTranscript >> text: anObject [
-	text := anObject
+	^ mutex critical: [ aBlock value: text ]
 ]
