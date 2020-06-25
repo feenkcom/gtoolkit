@@ -58,9 +58,7 @@ GtMonitorOpenedSpace >> isRunning [
 GtMonitorOpenedSpace >> pointers [
 	Smalltalk garbageCollectMost.
 
-	^ self exists
-		ifTrue: [ self space pointersTo reject: [ :eachObject | eachObject isKindOf: WeakArray ] ]
-		ifFalse: [ {  } ]
+	^ self space pointersTo reject: [ :eachObject | eachObject isKindOf: WeakArray ]
 ]
 
 { #category : #accessing }
