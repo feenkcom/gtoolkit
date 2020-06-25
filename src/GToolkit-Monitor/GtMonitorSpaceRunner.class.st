@@ -27,7 +27,7 @@ Class {
 
 { #category : #'instance creation' }
 GtMonitorSpaceRunner >> createExplanation [
-	^ (GtDocument new text: self explanationText) asElementWithoutSaveAction
+	^ (GtDocumenter forText: self explanationText)
 			matchParent;
 			constraintsDo: [ :c | c linear weight: 0.75 ];
 			margin: (BlInsets left: 10)
