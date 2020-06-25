@@ -7,14 +7,8 @@ Class {
 	#category : #'GToolkit-Monitor-Mixed Announcers'
 }
 
-{ #category : #'instance creation' }
-GtMonitoredMixedAnnouncersElement class >> open [
-	<script: 'self open'>
-	GtInspector openOn: self new title: 'Monitor'
-]
-
 { #category : #private }
-GtMonitoredMixedAnnouncersElement >> allMixedAnnouncers [
+GtMonitoredMixedAnnouncersElement class >> allMixedAnnouncers [
 	| allMixedAnnouncers |
 	
 	allMixedAnnouncers := Announcer allSubInstances select: [ :eachAnnouncer |
@@ -25,6 +19,12 @@ GtMonitoredMixedAnnouncersElement >> allMixedAnnouncers [
 		collect: [ :eachAnnouncer | GtMonitoredMixedAnnouncer new announcer: eachAnnouncer ].
 	
 	^ allMixedAnnouncers
+]
+
+{ #category : #'instance creation' }
+GtMonitoredMixedAnnouncersElement class >> open [
+	<script: 'self open'>
+	GtInspector openOn: self new title: 'Monitor'
 ]
 
 { #category : #initialization }
@@ -73,5 +73,5 @@ GtMonitoredMixedAnnouncersElement >> initialize [
 
 { #category : #updating }
 GtMonitoredMixedAnnouncersElement >> updateList [
-	announcersList items: self allMixedAnnouncers
+	announcersList items: self class allMixedAnnouncers
 ]

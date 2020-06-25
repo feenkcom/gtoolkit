@@ -39,7 +39,15 @@ GtMonitor >> gtMixedAnnouncersFor: aView [
 	^ aView explicit
 		title: 'Mixed announcers';
 		priority: 7;
-		stencil: [ GtMonitoredMixedAnnouncersElement new ]
+		stencil: [ GtMonitoredMixedAnnouncersElement new ];
+		actionStencil: [ :aTab |
+			BrButton new 
+				look: BrGlamorousButtonWithIconLook;
+				icon: BrGlamorousIcons trash asElement;
+				label: 'Reset all';
+				action:  [
+					GtMonitoredMixedAnnouncersElement allMixedAnnouncers do: [ :each | each makeStrong; removeSubscriptions ].
+					aTab viewContentElement children first updateList ] ]
 ]
 
 { #category : #'gt-extension' }
