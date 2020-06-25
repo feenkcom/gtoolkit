@@ -77,7 +77,23 @@ GtMonitoredMixedAnnouncer >> gtSubscriptionsFor: aView [
 		title: 'Subscriptions';
 		priority: 1;
 		object: [ self announcer ifNil: [ Announcer new ] ];
-		view: #gtSubscriptionsFor:
+		view: #gtSubscriptionsFor:;
+		in: [ :aForwardView |
+			self isSystemAnnouncer
+				ifFalse: [
+					aForwardView
+						actionStencil: [ 
+							BrButton new 
+								look: BrGlamorousButtonWithIconLook;
+								icon: BrGlamorousVectorIcons debug;
+								label: 'Make strong';
+								action:  [ self makeStrong ] ];
+						actionStencil: [ 
+							BrButton new 
+								look: BrGlamorousButtonWithIconLook;
+								icon: BrGlamorousIcons trash asElement;
+								label: 'Remove subscriptions';
+								action:  [ self removeSubscriptions ] ] ] ]
 ]
 
 { #category : #accessing }
@@ -102,6 +118,23 @@ GtMonitoredMixedAnnouncer >> instVarPointers [
 						(eachObject instVarAt: i) == anAnnouncer
 							ifTrue: [ aStream nextPut: (instVarNames at: i) ] ] ]) ])
 		select: [ :eachAssoc | eachAssoc value isNotEmpty ]
+]
+
+{ #category : #accessing }
+GtMonitoredMixedAnnouncer >> isSystemAnnouncer [
+	^ self announcer
+		ifNotNil: [ :anAnnouncer | anAnnouncer isKindOf: SystemAnnouncer ]
+		ifNil: [ false ]
+]
+
+{ #category : #accessing }
+GtMonitoredMixedAnnouncer >> makeStrong [
+	self isSystemAnnouncer
+		ifTrue: [ ^ self ].
+
+	self announcer ifNotNil: [ :anAnnouncer |
+		anAnnouncer subscriptions subscriptions asArray do: [ :each |
+			[ each makeStrong ] on: Error do: [  ] ] ]
 ]
 
 { #category : #accessing }
@@ -145,6 +178,15 @@ GtMonitoredMixedAnnouncer >> pointers [
 	^ self announcer
 		ifNotNil: [ :anAnnouncer | anAnnouncer pointersTo reject: [ :eachObject | eachObject isKindOf: WeakArray ] ]
 		ifNil: [ {  } ]
+]
+
+{ #category : #accessing }
+GtMonitoredMixedAnnouncer >> removeSubscriptions [
+	self isSystemAnnouncer
+		ifTrue: [ ^ self ].
+
+	self announcer
+		ifNotNil: [ :anAnnouncer | anAnnouncer subscriptions reset ]
 ]
 
 { #category : #private }
