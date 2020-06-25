@@ -92,7 +92,7 @@ GtMonitor >> gtSpacesFor: aView [
 	^ aView explicit
 		title: 'Spaces';
 		priority: 3;
-		stencil: [ GtMonitoredMixedAnnouncersElement new ];
+		stencil: [ GtMonitoredBlocSpacesElement new ];
 		actionStencil: [ 
 			BrButton new 
 				look: BrGlamorousButtonWithIconLook;
