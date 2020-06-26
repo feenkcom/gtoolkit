@@ -92,7 +92,8 @@ GtHomeSection >> newDocCardForClass: aClass [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aClass name
-				with: (GtPager createWrappedOn: (GtDocumenter forClass: aClass))
+				with: (GtPager createWrappedOn: (
+					GtDocumenter forClass: aClass) withDefaultToolbar)
 				from: card ]
 ]
 
@@ -109,9 +110,8 @@ GtHomeSection >> newDocCardForFile: aReference [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aReference fileReference basename
-				with:
-					(GtPager
-						createWrappedOn: (GtDocumenter forFile: aReference fileReference))
+				with: (GtPager createWrappedOn: (
+					GtDocumenter forFile: aReference fileReference) withDefaultToolbar)
 				from: card ]
 ]
 
