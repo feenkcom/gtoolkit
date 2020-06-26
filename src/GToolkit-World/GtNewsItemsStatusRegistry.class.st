@@ -1,7 +1,7 @@
 "
 I provide support for marking cards in the home screen as viewed.
 
-I hold a list of status objects for cards and know how to persists it and read it from a STON preference file. For cards that are viewed I return a ${class:GtHomeViewedCardStatus}$. Otherwise if no status was saved for a card I return a status of type ${class:GtHomeNullCardStatus}$.
+I hold a list of status objects for cards and know how to persists it and read it from a STON preference file. For cards that are viewed I return a ${class:GtNewsItemViewedStatus}$. Otherwise if no status was saved for a card I return a status of type ${class:GtNewsItemNullStatus}$.
 "
 Class {
 	#name : #GtNewsItemsStatusRegistry,
