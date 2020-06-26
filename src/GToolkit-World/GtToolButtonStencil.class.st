@@ -6,9 +6,10 @@ Class {
 		'title',
 		'description',
 		'action',
-		'iconSize'
+		'iconSize',
+		'id'
 	],
-	#category : #'GToolkit-World-Stencils'
+	#category : #'GToolkit-World-Cards'
 }
 
 { #category : #accessing }
@@ -73,6 +74,16 @@ GtToolButtonStencil >> iconSize [
 { #category : #accessing }
 GtToolButtonStencil >> iconSize: aPoint [
 	iconSize := aPoint
+]
+
+{ #category : #accessing }
+GtToolButtonStencil >> id [
+	^ id
+]
+
+{ #category : #accessing }
+GtToolButtonStencil >> id: anObject [
+	id := anObject
 ]
 
 { #category : #initialization }
