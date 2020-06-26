@@ -7,11 +7,47 @@ Class {
 	#category : #'GToolkit-World-UI'
 }
 
-{ #category : #initialization }
+{ #category : #accessing }
 GtHome >> collectHomeSectionStencils [
 	^ GtHomeSectionsCollector new
 		fromObject: self;
 		collect
+]
+
+{ #category : #building }
+GtHome >> createSectionsList [
+	^ BrSimpleList new
+		matchParent;
+		items: #();
+		stencil: [ :eachAssociation |
+			eachAssociation value
+				ifNil: [ eachAssociation value: (BlLazyElement new
+					margin: (BlInsets all: self spaceGap);
+					layout: BlFrameLayout new;
+					withGlamorousPreview;
+					constraintsDo: [ :c |
+						c vertical exact: 100.
+						c horizontal matchParent ];
+					postAction: [ :theLazyElement | theLazyElement constraintsDo: [ :c | c vertical fitContent ] ];
+					elementBuilder: [ eachAssociation key asElement ]) ]
+				ifNotNil: [ eachAssociation value removeFromParent ].
+			eachAssociation value ]
+]
+
+{ #category : #building }
+GtHome >> createVersionLabel [
+	^ BrLabel new 
+		text: 'Glamorous Toolkit ', GtImage instance version versionString; 
+		look: (BrGlamorousLabelLook new 
+			foreground: Color gray; 
+			fontSize: 10);
+		margin: (BlInsets right: 5);
+		constraintsDo: [ :c | c linear horizontal alignRight ];
+		when: BlClickEvent do: [ :e | 
+			GtInspector 
+				openOn: GtImage instance
+				title: 'Glamorous Toolkit'
+				from: e target ]
 ]
 
 { #category : #sections }
@@ -52,45 +88,42 @@ GtHome >> howToSection [
 
 { #category : #initialization }
 GtHome >> initialize [
+	| contentHolder sectionsHolder newsHolder |
 	super initialize.
 	
 	self background: Color white.
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
 		c vertical matchParent ].
-
 	self padding: (BlInsets all: self spaceGap).
 	self layout: BlLinearLayout vertical.
-	sectionsList := BrSimpleList new
-		matchParent;
-		items: #();
-		stencil: [ :eachAssociation |
-			eachAssociation value
-				ifNil: [ eachAssociation value: (BlLazyElement new
-					margin: (BlInsets all: self spaceGap);
-					layout: BlFrameLayout new;
-					withGlamorousPreview;
-					constraintsDo: [ :c |
-						c vertical exact: 100.
-						c horizontal matchParent ];
-					postAction: [ :theLazyElement | theLazyElement constraintsDo: [ :c | c vertical fitContent ] ];
-					elementBuilder: [ eachAssociation key asElement ]) ]
-				ifNotNil: [ eachAssociation value removeFromParent ].
-			eachAssociation value ].
-
-	self addChild: sectionsList.
-	self addChild: (BrLabel new 
-		text: 'Glamorous Toolkit ', GtImage instance version versionString; 
-		look: (BrGlamorousLabelLook new 
-			foreground: Color gray; 
-			fontSize: 10);
-		margin: (BlInsets right: 5);
-		constraintsDo: [ :c | c linear horizontal alignRight ];
-		when: BlClickEvent do: [ :e | 
-			GtInspector 
-				openOn: GtImage instance
-				title: 'Glamorous Toolkit'
-				from: e target ]).
+	
+	contentHolder := BlElement new 
+		layout: BlLinearLayout horizontal;
+		constraintsDo: [ :c |
+			c horizontal matchParent.
+			c vertical matchParent ].
+	sectionsHolder := BlElement new 
+		layout: BlLinearLayout vertical;
+		constraintsDo: [ :c |
+			c linear weight: 0.7.
+			c horizontal matchParent.
+			c vertical matchParent ].
+	newsHolder := GtHomeNews new
+		constraintsDo: [ :c |
+			c linear weight: 0.3.
+			c horizontal matchParent.
+			c vertical matchParent ].
+	
+	sectionsList := self createSectionsList.
+	sectionsHolder addChild: sectionsList.
+	
+	contentHolder addChild: sectionsHolder.
+	newsHolder hasNewsItems ifTrue: [ 
+		contentHolder addChild: newsHolder ].
+	
+	self addChild: contentHolder.
+	self addChild: self createVersionLabel.
 	
 	self initializeSections
 ]
@@ -107,7 +140,7 @@ GtHome >> slideShowsSection [
 		priority: 15
 ]
 
-{ #category : #initialization }
+{ #category : #accessing }
 GtHome >> spaceGap [
 	^ 10
 ]
