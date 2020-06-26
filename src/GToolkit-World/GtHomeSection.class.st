@@ -85,16 +85,15 @@ GtHomeSection >> newDocCardForClass: aClass [
 		description: aClass name
 		size: 150 @ 200
 		content:
-			(((GtDocument new text: aClass comment) gtTextFor: GtPhlowView empty)
-				asElementDo: [ :e | 
-					e
-						exact: 300 @ 400;
-						beInSingleCompositionLayer;
-						asScalableElement ])
+			((GtDocumenter forClass: aClass)
+				exact: 300 @ 400;
+				beInSingleCompositionLayer;
+				asScalableElement)
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aClass name
-				with: (GtPager createWrappedOn: (GtDocument forClass: aClass))
+				with: (GtPager createWrappedOn: (
+					GtDocumenter forClass: aClass) withDefaultToolbar)
 				from: card ]
 ]
 
@@ -105,18 +104,14 @@ GtHomeSection >> newDocCardForFile: aReference [
 		description: aReference fullName
 		size: 150 @ 200
 		content:
-			(((GtDocument new text: aReference fileReference contents)
-				gtTextFor: GtPhlowView empty)
-				asElementDo: [ :e | 
-					e
-						exact: 300 @ 400;
-						asScalableElement ])
+			((GtDocumenter forFile: aReference fileReference)
+				exact: 300 @ 400;
+				asScalableElement)
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aReference fileReference basename
-				with:
-					(GtPager
-						createWrappedOn: (GtDocument forFile: aReference fileReference))
+				with: (GtPager createWrappedOn: (
+					GtDocumenter forFile: aReference fileReference) withDefaultToolbar)
 				from: card ]
 ]
 

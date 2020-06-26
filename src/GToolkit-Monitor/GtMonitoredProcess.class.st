@@ -31,15 +31,6 @@ GtMonitoredProcess >> gtAnnotationsFor: aView [
 ]
 
 { #category : #'gt-extension' }
-GtMonitoredProcess >> gtInvocatedByElementPreviewFor: aView [
-	<gtView>
-	^ self service 
-		ifNil: [ aView empty ]
-		ifNotNil: [ :aService | (aService gtInvocatedByElementPreviewFor: aView)
-			priority: 4 ]
-]
-
-{ #category : #'gt-extension' }
 GtMonitoredProcess >> gtStackFor: aView [
 	<gtView>
 	^ aView explicit
