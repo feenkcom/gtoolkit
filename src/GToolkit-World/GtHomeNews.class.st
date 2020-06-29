@@ -62,7 +62,7 @@ GtHomeNews >> takeATourStencil [
 		tooltipText: 'Take an interactive tour through tools and engines';
 		action: [ :card |
 			self
-				showSpaceWithTitle: 'Slideshow'
+				showSpaceWithTitle: 'Tour'
 				with: GtTour new create makeArrowsVisible
 				from: card.
 			self statusRegistry markNewsViewedForId: 'slide/take-a-tour' ] 
