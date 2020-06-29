@@ -21,8 +21,7 @@ GtHomeNews >> initialize [
 GtHomeNews >> initializeNews [
 	| availableNews |
 	availableNews := { 
-		"self newCoderNews.
-		self newPlaygroundNews" }.
+		"self takeATourNews" }.
 	availableNews do: [ :aNews |
 		aNews status: (self statusRegistry statusForNewsId: aNews id) ].
 	
@@ -30,48 +29,6 @@ GtHomeNews >> initializeNews [
 		select: [ :aNews | aNews status isViewed not ]
 		thenDo:[ :aNews |
 			self addChild: aNews cardStencil create ]
-]
-
-{ #category : #'instance creation' }
-GtHomeNews >> newCoderButtonStencil [
-	^ GtToolButtonStencil new 
-		title: 'Coder';
-		id: 'tools/coder';
-		icon: BrGlamorousVectorIcons largeBook;
-		action: [ :card |
-			self
-				showSpaceWithTitle: 'Coder'
-				with: GtCoderStencil new create
-				from: card.
-			self statusRegistry markNewsViewedForId: 'tools/coder' ];
-		description: 'Browse and manipulate code.'
-]
-
-{ #category : #'instance creation' }
-GtHomeNews >> newCoderNews [
-	^ GtNewsItem new
-		cardStencil: self newCoderButtonStencil
-]
-
-{ #category : #'instance creation' }
-GtHomeNews >> newPlaygroundButtonStencil [
-	^ GtToolButtonStencil new 
-		title: 'Playground';
-		id: 'tools/playground';
-		icon: BrGlamorousVectorIcons largePlay;
-		action: [ :card | 
-			self
-				showSpaceWithTitle: 'Playground'
-				with: GtPlaygroundStencil new create
-				from: card.
-			self statusRegistry markNewsViewedForId: 'tools/playground' ];
-		description: 'Play with code. Live.'
-]
-
-{ #category : #'instance creation' }
-GtHomeNews >> newPlaygroundNews [
-	^ GtNewsItem new
-		cardStencil: self newPlaygroundButtonStencil 
 ]
 
 { #category : #'instance creation' }
@@ -88,4 +45,25 @@ GtHomeNews >> showSpaceWithTitle: aString with: anElement from: anotherElement [
 { #category : #accessing }
 GtHomeNews >> statusRegistry [
 	^ GtNewsItemsStatusRegistry defaultInstance
+]
+
+{ #category : #'instance creation' }
+GtHomeNews >> takeATourNews [
+	^ GtNewsItem new
+		id: 'slide/take-a-tour';
+		cardStencil: self takeATourStencil
+]
+
+{ #category : #'instance creation' }
+GtHomeNews >> takeATourStencil [
+	^ GtNewsCardStencil new
+		headerText: 'New to Glamorous Toolkit?';
+		actionText: 'Take a tour';
+		tooltipText: 'Take an interactive tour through tools and engines';
+		action: [ :card |
+			self
+				showSpaceWithTitle: 'Slideshow'
+				with: GtTour new create makeArrowsVisible
+				from: card.
+			self statusRegistry markNewsViewedForId: 'slide/take-a-tour' ] 
 ]

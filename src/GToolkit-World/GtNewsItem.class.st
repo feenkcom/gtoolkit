@@ -2,6 +2,7 @@ Class {
 	#name : #GtNewsItem,
 	#superclass : #Object,
 	#instVars : [
+		'id',
 		'status',
 		'trigger',
 		'cardStencil'
@@ -21,7 +22,12 @@ GtNewsItem >> cardStencil: anObject [
 
 { #category : #accessing }
 GtNewsItem >> id [
-	^ self cardStencil id
+	^ id
+]
+
+{ #category : #accessing }
+GtNewsItem >> id: anId [
+	id := anId
 ]
 
 { #category : #accessing }
