@@ -54,7 +54,7 @@ GtHomeNews >> takeATourNews [
 		statusRegistry: self statusRegistry;
 		openAction: [ :cardElement |
 			self
-				showSpaceWithTitle: 'Slideshow'
+				showSpaceWithTitle: 'Tour'
 				with: GtTour new create makeArrowsVisible
 				from: cardElement ];
 		cardStencil: self takeATourStencil
