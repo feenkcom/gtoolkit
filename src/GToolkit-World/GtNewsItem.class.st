@@ -4,8 +4,9 @@ Class {
 	#instVars : [
 		'id',
 		'status',
-		'trigger',
-		'cardStencil'
+		'cardStencil',
+		'openAction',
+		'statusRegistry'
 	],
 	#category : #'GToolkit-World-News'
 }
@@ -16,8 +17,17 @@ GtNewsItem >> cardStencil [
 ]
 
 { #category : #accessing }
-GtNewsItem >> cardStencil: anObject [
-	cardStencil := anObject
+GtNewsItem >> cardStencil: aCardStencil [
+	cardStencil := aCardStencil.
+	cardStencil action: [ :newsElement|
+		self executeOpenFor: newsElement ]
+]
+
+{ #category : #actions }
+GtNewsItem >> executeOpenFor: anElement [
+	openAction cull: anElement.
+	self status: GtNewsItemViewedStatus new.
+	self statusRegistry markNewsViewedForId: self id
 ]
 
 { #category : #accessing }
@@ -31,6 +41,11 @@ GtNewsItem >> id: anId [
 ]
 
 { #category : #accessing }
+GtNewsItem >> openAction: aBlock [
+	openAction := aBlock
+]
+
+{ #category : #accessing }
 GtNewsItem >> status [
 	^ status
 ]
@@ -41,11 +56,11 @@ GtNewsItem >> status: anObject [
 ]
 
 { #category : #accessing }
-GtNewsItem >> trigger [
-	^ trigger
+GtNewsItem >> statusRegistry [
+	^ statusRegistry
 ]
 
 { #category : #accessing }
-GtNewsItem >> trigger: anObject [
-	trigger := anObject
+GtNewsItem >> statusRegistry: aStatusRegistry [
+	statusRegistry := aStatusRegistry
 ]
