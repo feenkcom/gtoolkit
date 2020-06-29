@@ -66,7 +66,7 @@ GtNewsItemsStatusRegistry >> createRegistryData [
 	registyData := OrderedCollection new.
 	newsStatusesById keysAndValuesDo: [ :newsId :newsStatus | 
 		registyData add: ( { 
-			'newsId' -> newsId.
+			'id' -> newsId.
 			'status' -> newsStatus registryValue
 		 } asDictionary ) ]. 
 	^ registyData asArray
@@ -103,14 +103,14 @@ GtNewsItemsStatusRegistry >> loadContent [
 	registryData := fileReference readStreamDo: [ :aReadStream |
 		STON fromStream: aReadStream ].
 	registryData
-		select: [ :newsItemData | newsItemData includesKey: 'newsId' ]
+		select: [ :newsItemData | newsItemData includesKey: 'id' ]
 		thenDo: [ :newsItemData | self loadNewsStatusFromData: newsItemData ]
 ]
 
 { #category : #'load and saving' }
 GtNewsItemsStatusRegistry >> loadNewsStatusFromData: newsItemData [ 
 	| newsId newsStatus |
-	newsId := newsItemData at: 'newsId'.
+	newsId := newsItemData at: 'id'.
 	newsStatus := self createStatusFrom: newsItemData.
 	newsStatusesById 
 		at: newsId
