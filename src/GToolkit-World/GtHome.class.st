@@ -43,6 +43,7 @@ GtHome >> createVersionLabel [
 			fontSize: 10);
 		margin: (BlInsets right: 5);
 		constraintsDo: [ :c | c linear horizontal alignRight ];
+		padding: (BlInsets top: 0 left: 0 bottom: self spaceGap right: self spaceGap);
 		when: BlClickEvent do: [ :e | 
 			GtInspector 
 				openOn: GtImage instance
@@ -95,32 +96,30 @@ GtHome >> initialize [
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
 		c vertical matchParent ].
-	self padding: (BlInsets all: self spaceGap).
 	self layout: BlLinearLayout vertical.
 	
 	contentHolder := BlElement new 
-		layout: BlLinearLayout horizontal;
-		constraintsDo: [ :c |
-			c horizontal matchParent.
-			c vertical matchParent ].
-	sectionsHolder := BlElement new 
 		layout: BlLinearLayout vertical;
 		constraintsDo: [ :c |
-			c linear weight: 0.7.
 			c horizontal matchParent.
 			c vertical matchParent ].
 	newsHolder := GtHomeNews new
 		constraintsDo: [ :c |
-			c linear weight: 0.3.
+			c horizontal matchParent.
+			c vertical fitContent ].
+	sectionsHolder := BlElement new 
+		padding: (BlInsets top: self spaceGap left: 0 bottom: 0 right: self spaceGap);
+		layout: BlLinearLayout vertical;
+		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical matchParent ].
 	
 	sectionsList := self createSectionsList.
 	sectionsHolder addChild: sectionsList.
 	
-	contentHolder addChild: sectionsHolder.
 	newsHolder hasNewsItems ifTrue: [ 
 		contentHolder addChild: newsHolder ].
+	contentHolder addChild: sectionsHolder.
 	
 	self addChild: contentHolder.
 	self addChild: self createVersionLabel.
@@ -130,6 +129,7 @@ GtHome >> initialize [
 
 { #category : #initialization }
 GtHome >> initializeSections [
+	sectionsList ifNil:  [ ^ self ].
 	sectionsList items: (self collectHomeSectionStencils collect: [ :eachStencil | eachStencil -> nil ])
 ]
 
