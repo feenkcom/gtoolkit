@@ -12,7 +12,7 @@ GtHomeNews >> hasNewsItems [
 { #category : #initialization }
 GtHomeNews >> initialize [
 	super initialize.
-	self layout: BlLinearLayout horizontal.
+	self layout: BlLinearLayout vertical.
  
 	self initializeNews.
 ]
@@ -50,7 +50,13 @@ GtHomeNews >> statusRegistry [
 { #category : #'instance creation' }
 GtHomeNews >> takeATourNews [
 	^ GtNewsItem new
-		id: 'slide/take-a-tour';
+		id: 'news/take-a-tour';
+		statusRegistry: self statusRegistry;
+		openAction: [ :cardElement |
+			self
+				showSpaceWithTitle: 'Tour'
+				with: GtTour new create makeArrowsVisible
+				from: cardElement ];
 		cardStencil: self takeATourStencil
 ]
 
@@ -59,11 +65,5 @@ GtHomeNews >> takeATourStencil [
 	^ GtNewsCardStencil new
 		headerText: 'New to Glamorous Toolkit?';
 		actionText: 'Take a tour';
-		tooltipText: 'Take an interactive tour through tools and engines';
-		action: [ :card |
-			self
-				showSpaceWithTitle: 'Tour'
-				with: GtTour new create makeArrowsVisible
-				from: card.
-			self statusRegistry markNewsViewedForId: 'slide/take-a-tour' ] 
+		tooltipText: 'Take an interactive tour through tools and engines'
 ]
