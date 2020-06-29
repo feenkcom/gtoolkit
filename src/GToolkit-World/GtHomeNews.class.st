@@ -21,7 +21,7 @@ GtHomeNews >> initialize [
 GtHomeNews >> initializeNews [
 	| availableNews |
 	availableNews := { 
-		self takeATourNews }.
+		"self takeATourNews" }.
 	availableNews do: [ :aNews |
 		aNews status: (self statusRegistry statusForNewsId: aNews id) ].
 	
