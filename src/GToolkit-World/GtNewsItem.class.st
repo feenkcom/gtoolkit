@@ -1,3 +1,6 @@
+"
+I model a news item
+"
 Class {
 	#name : #GtNewsItem,
 	#superclass : #Object,
@@ -5,8 +8,7 @@ Class {
 		'id',
 		'status',
 		'cardStencil',
-		'openAction',
-		'statusRegistry'
+		'openAction'
 	],
 	#category : #'GToolkit-World-News'
 }
@@ -51,16 +53,11 @@ GtNewsItem >> status [
 ]
 
 { #category : #accessing }
-GtNewsItem >> status: anObject [
-	status := anObject
+GtNewsItem >> status: aStatus [
+	status := aStatus
 ]
 
 { #category : #accessing }
 GtNewsItem >> statusRegistry [
-	^ statusRegistry
-]
-
-{ #category : #accessing }
-GtNewsItem >> statusRegistry: aStatusRegistry [
-	statusRegistry := aStatusRegistry
+	^ GtNewsItemsStatusRegistry defaultInstance
 ]
