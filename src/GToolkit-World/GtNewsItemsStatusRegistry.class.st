@@ -1,7 +1,7 @@
 "
-I provide support for marking cards in the home screen as viewed.
+I provide support for marking news in the home screen as viewed.
 
-I hold a list of status objects for cards and know how to persists it and read it from a STON preference file. For cards that are viewed I return a ${class:GtNewsItemViewedStatus}$. Otherwise if no status was saved for a card I return a status of type ${class:GtNewsItemNullStatus}$.
+I hold a list of status objects for neews and know how to persists it and read it from a STON preference file. For news that are viewed I return a ${class:GtNewsItemViewedStatus}$. Otherwise if no status was saved for a news I return a status of type ${class:GtNewsItemNullStatus}$.
 "
 Class {
 	#name : #GtNewsItemsStatusRegistry,
@@ -61,24 +61,24 @@ GtNewsItemsStatusRegistry class >> startUp: resuming [
 ]
 
 { #category : #'load and saving' }
-GtNewsItemsStatusRegistry >> createRegistryData [
-	| registyData |
-	registyData := OrderedCollection new.
+GtNewsItemsStatusRegistry >> asDictionaryForExport [
+	| statusesData |
+	
+	statusesData := OrderedCollection new.
 	newsStatusesById keysAndValuesDo: [ :newsId :newsStatus | 
-		registyData add: ( { 
+		statusesData add: ({ 
 			'id' -> newsId.
 			'status' -> newsStatus registryValue
-		 } asDictionary ) ]. 
-	^ registyData asArray
+		 } asDictionary) ]. 
+	
+	^ { 
+		'schema' -> self currentSchemaVersion.
+		'statuses' -> statusesData asArray } asDictionary
 ]
 
-{ #category : #'load and saving' }
-GtNewsItemsStatusRegistry >> createStatusFrom: newsItemData [
-	| statusValue |
-	statusValue := newsItemData at: 'status' ifAbsent: [ ^ GtNewsItemNullStatus new ].
-	^ (statusValue = 'viewed') 
-		ifTrue: [ GtNewsItemViewedStatus new ] 
-		ifFalse: [ GtNewsItemNullStatus new ] 
+{ #category : #accessing }
+GtNewsItemsStatusRegistry >> currentSchemaVersion [
+	^ 'v1'
 ]
 
 { #category : #ui }
@@ -96,13 +96,31 @@ GtNewsItemsStatusRegistry >> initialize [
 ]
 
 { #category : #'load and saving' }
+GtNewsItemsStatusRegistry >> instantiateStatusFrom: newsItemData [
+	| statusValue |
+	statusValue := newsItemData at: 'status' ifAbsent: [ ^ GtNewsItemNullStatus new ].
+	^ (statusValue = GtNewsItemViewedStatus registryValue) 
+		ifTrue: [ GtNewsItemViewedStatus new ] 
+		ifFalse: [ GtNewsItemNullStatus new ] 
+]
+
+{ #category : #testing }
+GtNewsItemsStatusRegistry >> isRegistryDataValidFor: aDictionary [
+	^ (aDictionary includesKey: 'statuses') and: [ 
+		(aDictionary at: 'statuses') isCollection and: [  
+		 	(aDictionary at: 'schema' ifAbsent: [nil]) = self currentSchemaVersion ] ]
+]
+
+{ #category : #'load and saving' }
 GtNewsItemsStatusRegistry >> loadContent [
 	| fileReference registryData |
 	fileReference := self registryFileReference.
 	fileReference exists ifFalse: [ ^ self ].
 	registryData := fileReference readStreamDo: [ :aReadStream |
 		STON fromStream: aReadStream ].
-	registryData
+	
+	(self isRegistryDataValidFor: registryData) ifFalse: [ ^ self ].
+	(registryData at: 'statuses')
 		select: [ :newsItemData | newsItemData includesKey: 'id' ]
 		thenDo: [ :newsItemData | self loadNewsStatusFromData: newsItemData ]
 ]
@@ -111,7 +129,7 @@ GtNewsItemsStatusRegistry >> loadContent [
 GtNewsItemsStatusRegistry >> loadNewsStatusFromData: newsItemData [ 
 	| newsId newsStatus |
 	newsId := newsItemData at: 'id'.
-	newsStatus := self createStatusFrom: newsItemData.
+	newsStatus := self instantiateStatusFrom: newsItemData.
 	newsStatusesById 
 		at: newsId
 		put: newsStatus
@@ -150,7 +168,7 @@ GtNewsItemsStatusRegistry >> saveContent [
 	fileReference parent ensureCreateDirectory.
 	fileReference writeStreamDo: [ :aPreferenceStream | 
 		self 
-			saveStonFor: self createRegistryData
+			saveStonFor: self asDictionaryForExport
 			into: aPreferenceStream ]
 ]
 

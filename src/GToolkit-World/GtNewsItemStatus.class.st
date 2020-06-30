@@ -1,11 +1,16 @@
 "
-I model a status for a card on the home screen. My subclasses provide concrete statuses. Curently only the ""viewed"" status is supported.
+I model a status for a news on the home screen. My subclasses provide concrete statuses. Curently only the ""viewed"" status is supported.
 "
 Class {
 	#name : #GtNewsItemStatus,
 	#superclass : #Object,
 	#category : #'GToolkit-World-News'
 }
+
+{ #category : #accessing }
+GtNewsItemStatus class >> registryValue [
+	self subclassResponsibility
+]
 
 { #category : #testing }
 GtNewsItemStatus >> isViewed [
@@ -14,5 +19,5 @@ GtNewsItemStatus >> isViewed [
 
 { #category : #accessing }
 GtNewsItemStatus >> registryValue [
-	self subclassResponsibility
+	^ self class registryValue
 ]
