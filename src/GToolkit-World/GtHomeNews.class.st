@@ -21,7 +21,7 @@ GtHomeNews >> initialize [
 GtHomeNews >> initializeNews [
 	| availableNews |
 	availableNews := { 
-		"self takeATourNews" }.
+		self takeATourNews }.
 	availableNews do: [ :aNews |
 		aNews status: (self statusRegistry statusForNewsId: aNews id) ].
 	
@@ -51,7 +51,6 @@ GtHomeNews >> statusRegistry [
 GtHomeNews >> takeATourNews [
 	^ GtNewsItem new
 		id: 'news/take-a-tour';
-		statusRegistry: self statusRegistry;
 		openAction: [ :cardElement |
 			self
 				showSpaceWithTitle: 'Tour'

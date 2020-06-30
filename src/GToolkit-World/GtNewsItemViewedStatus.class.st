@@ -1,5 +1,5 @@
 "
-I am status indicating that a card has been viewed by the user.
+I am status indicating that a news has been viewed by the user.
 "
 Class {
 	#name : #GtNewsItemViewedStatus,
@@ -7,12 +7,12 @@ Class {
 	#category : #'GToolkit-World-News'
 }
 
+{ #category : #accessing }
+GtNewsItemViewedStatus class >> registryValue [
+	^ 'viewed'
+]
+
 { #category : #testing }
 GtNewsItemViewedStatus >> isViewed [
 	^ true
-]
-
-{ #category : #accessing }
-GtNewsItemViewedStatus >> registryValue [
-	^ 'viewed'
 ]
