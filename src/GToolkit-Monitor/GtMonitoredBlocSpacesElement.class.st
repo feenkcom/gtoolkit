@@ -57,6 +57,20 @@ GtMonitoredBlocSpacesElement >> initialize [
 				look: BrGlamorousLabelLook;
 				text: isOpened;
 				hMatchParent ].
+	
+	spacesList column
+		title: 'Shutsdown GT';
+		stencil: [ :aMonitoredSpace |
+			| shouldShutdown |
+
+			shouldShutdown := aMonitoredSpace shouldShutdownOnClose
+				ifTrue: [ 'Shuts down on close' asRopedText bold ]
+				ifFalse: [ '' asRopedText ].
+			
+			BrLabel new
+				look: BrGlamorousLabelLook;
+				text: shouldShutdown;
+				hMatchParent ].
 		
 	self addChild: spacesList.
 	

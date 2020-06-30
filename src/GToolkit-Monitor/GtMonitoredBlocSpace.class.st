@@ -2,14 +2,106 @@ Class {
 	#name : #GtMonitoredBlocSpace,
 	#superclass : #Object,
 	#instVars : [
-		'space'
+		'space',
+		'announcer'
 	],
 	#category : #'GToolkit-Monitor-Bloc Spaces'
 }
 
+{ #category : #accessing }
+GtMonitoredBlocSpace >> announcer [
+	^ announcer ifNil: [ announcer := Announcer new ]
+]
+
+{ #category : #actions }
+GtMonitoredBlocSpace >> changed [
+	"Receiver changed in a general way; inform all the dependents by 
+	sending each dependent an update: message."
+
+	self announcer announce: Announcement new
+]
+
+{ #category : #actions }
+GtMonitoredBlocSpace >> close [
+	self space ifNotNil: [ :aSpace | aSpace close ].
+	self changed
+]
+
+{ #category : #actions }
+GtMonitoredBlocSpace >> disableShutdownOnClose [
+	self space ifNotNil: [ :aSpace | aSpace removeEventHandlersSuchThat: [ :h |  h isKindOf: BlSpaceShutdownOnCloseListener ] ].
+	self changed
+]
+
+{ #category : #actions }
+GtMonitoredBlocSpace >> enableShutdownOnClose [
+	self space ifNotNil: [ :aSpace | aSpace addEventHandler: BlSpaceShutdownOnCloseListener new ].
+	self changed
+]
+
 { #category : #testing }
 GtMonitoredBlocSpace >> exists [
 	^ self space isNotNil
+]
+
+{ #category : #'gt-extension' }
+GtMonitoredBlocSpace >> gtActionsFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'Actions';
+		priority: 1;
+		updateWhen: Announcement in: self announcer;
+		stencil: [
+			(BrVerticalPane new
+				vFitContent;
+				hMatchParent;
+				cellSpacing: 5;
+				addChild: (BrHorizontalPane new
+					vFitContent;
+					hMatchParent;
+					cellSpacing: 5;
+					alignCenterLeft;
+					addChildren: (self shouldShutdownOnClose
+						ifTrue: [ {
+							BrLabel new
+								look: BrGlamorousLabelLook new;
+								text: 'When closed I will shutdown GToolkit'.
+							BrButton new
+								look: BrGlamorousButtonWithLabelLook new;
+								label: 'Disable';
+								action: [ self disableShutdownOnClose ].
+						}]
+						ifFalse: [ { 
+							BrLabel new
+								look: BrGlamorousLabelLook new;
+								text: 'When closed I will not shutdown GToolkit'.
+							BrButton new
+								look: BrGlamorousButtonWithLabelLook new;
+								label: 'Enable';
+								action: [ self enableShutdownOnClose ]
+						 } ]));
+				addChild: (BrHorizontalPane new
+					vFitContent;
+					hMatchParent;
+					cellSpacing: 5;
+					alignCenterLeft;
+					addChildren: (self isRunning
+						ifTrue: [ {
+							BrLabel new
+								look: BrGlamorousLabelLook new;
+								text: 'The space is running'.
+							BrButton new
+								look: BrGlamorousButtonWithLabelLook new;
+								label: 'Close';
+								action: [ self close ].
+						}]
+						ifFalse: [ { 
+							BrLabel new
+								look: BrGlamorousLabelLook new;
+								text: 'The space is not running'.
+						 } ]))) asScrollableElement
+		]
 ]
 
 { #category : #'gt-extension' }
@@ -36,7 +128,7 @@ GtMonitoredBlocSpace >> gtPointersFor: aView [
 			item: [ :anObject | anObject gtDisplayText ]
 ]
 
-{ #category : #accessing }
+{ #category : #'gt-extension' }
 GtMonitoredBlocSpace >> gtPreviewFor: aView [
 	<gtView>
 	self space ifNil: [ ^ aView empty ].
@@ -50,7 +142,9 @@ GtMonitoredBlocSpace >> isDead [
 
 { #category : #testing }
 GtMonitoredBlocSpace >> isRunning [
-	^ self space isOpened
+	^ self space
+		ifNil: [ false ]
+		ifNotNil: [ :aSpace | aSpace isOpened ]
 ]
 
 { #category : #accessing }
@@ -69,6 +163,17 @@ GtMonitoredBlocSpace >> pointers [
 	^ self exists
 		ifTrue: [ self space pointersTo reject: [ :eachObject | eachObject isKindOf: WeakArray ] ]
 		ifFalse: [ {  } ]
+]
+
+{ #category : #testing }
+GtMonitoredBlocSpace >> shouldShutdownOnClose [
+	^ self space
+		ifNil: [ false ]
+		ifNotNil: [ :aSpace |
+			aSpace eventDispatcher handlersDo: [ :eachEventHandler |
+				(eachEventHandler isKindOf: BlSpaceShutdownOnCloseListener)
+					ifTrue: [ ^ true ] ].
+		false ]
 ]
 
 { #category : #accessing }
