@@ -2,10 +2,19 @@ Class {
 	#name : #GtHome,
 	#superclass : #BlElement,
 	#instVars : [
-		'sectionsList'
+		'sectionsList',
+		'sectionsHolder',
+		'feedHolder'
 	],
 	#category : #'GToolkit-World-UI'
 }
+
+{ #category : #accessing }
+GtHome >> collectFeedSectionStencils [
+	^ GtFeedSectionsCollector new
+		fromObject: self;
+		collect
+]
 
 { #category : #accessing }
 GtHome >> collectHomeSectionStencils [
@@ -15,23 +24,31 @@ GtHome >> collectHomeSectionStencils [
 ]
 
 { #category : #building }
-GtHome >> createSectionsList [
-	^ BrSimpleList new
-		matchParent;
-		items: #();
-		stencil: [ :eachAssociation |
-			eachAssociation value
-				ifNil: [ eachAssociation value: (BlLazyElement new
-					margin: (BlInsets all: self spaceGap);
-					layout: BlFrameLayout new;
-					withGlamorousPreview;
-					constraintsDo: [ :c |
-						c vertical exact: 100.
-						c horizontal matchParent ];
-					postAction: [ :theLazyElement | theLazyElement constraintsDo: [ :c | c vertical fitContent ] ];
-					elementBuilder: [ eachAssociation key asElement ]) ]
-				ifNotNil: [ eachAssociation value removeFromParent ].
-			eachAssociation value ]
+GtHome >> createFeedHolder [
+	^ BrVerticalPane new
+		hMatchParent;
+		vFitContent
+]
+
+{ #category : #building }
+GtHome >> createSectionWrapperFor: aSectionStencil [
+	^ BlLazyElement new
+			margin: (BlInsets all: self spaceGap);
+			layout: BlFrameLayout new;
+			withGlamorousPreview;
+			constraintsDo: [ :c |
+				c vertical exact: 100.
+				c horizontal matchParent ];
+			postAction: [ :theLazyElement | theLazyElement constraintsDo: [ :c | 
+				c vertical fitContent ] ];
+			elementBuilder: [ aSectionStencil asElement ]
+]
+
+{ #category : #building }
+GtHome >> createSectionsHolder [
+	^ BrVerticalPane new
+		hMatchParent;
+		vFitContent
 ]
 
 { #category : #building }
@@ -65,9 +82,9 @@ GtHome >> externalLinksSection [
 		priority: 30
 ]
 
-{ #category : #sections }
+{ #category : #feed }
 GtHome >> feenkBlogSection [
-	"<gtHomeSection>"
+	<gtFeedSection>
 	^ GtHomeFeenkBlogSection newDefault
 		priority: 18
 ]
@@ -80,7 +97,7 @@ GtHome >> gtViewHomeSectionsFor: aView [
 		items: [ self collectHomeSectionStencils ]
 ]
 
-{ #category : #accessing }
+{ #category : #sections }
 GtHome >> howToSection [
 	<gtHomeSection>
 	^ GtHomeHowToSection new
@@ -89,7 +106,7 @@ GtHome >> howToSection [
 
 { #category : #initialization }
 GtHome >> initialize [
-	| contentHolder sectionsHolder newsHolder |
+	| headerPane mainPane sectionsPane feedPane newsHolder |
 	super initialize.
 	
 	self background: Color white.
@@ -98,39 +115,52 @@ GtHome >> initialize [
 		c vertical matchParent ].
 	self layout: BlLinearLayout vertical.
 	
-	contentHolder := BlElement new 
-		layout: BlLinearLayout vertical;
+	headerPane := BlElement new 
+		layout: BlFrameLayout new;
 		constraintsDo: [ :c |
 			c horizontal matchParent.
-			c vertical matchParent ].
+			c vertical fitContent ].
 	newsHolder := GtHomeNews new
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ].
-	sectionsHolder := BlElement new 
-		padding: (BlInsets top: self spaceGap left: 0 bottom: 0 right: self spaceGap);
-		layout: BlLinearLayout vertical;
+	
+	mainPane := BlElement new 
+		layout: BlLinearLayout horizontal;
 		constraintsDo: [ :c |
 			c horizontal matchParent.
-			c vertical matchParent ].
+			c vertical fitContent ];
+		padding: (BlInsets top: self spaceGap left: 0 bottom: 0 right: self spaceGap).
+	sectionsPane := BlElement new 
+		layout: BlLinearLayout vertical;
+		constraintsDo: [ :c |
+			c linear weight: 0.7.
+			c horizontal matchParent.
+			c vertical fitContent ].
+	feedPane := BlElement new 
+		layout: BlLinearLayout vertical;
+		constraintsDo: [ :c |
+			c linear weight: 0.3.
+			c horizontal matchParent.
+			c vertical fitContent ].
 	
-	sectionsList := self createSectionsList.
-	sectionsHolder addChild: sectionsList.
+	sectionsHolder := self createSectionsHolder.
+	sectionsPane addChild: sectionsHolder.
+	feedHolder := self createFeedHolder.
+	feedPane addChild: feedHolder.
+	
+	mainPane addChild: sectionsPane.
+	mainPane addChild: feedPane.
 	
 	newsHolder hasNewsItems ifTrue: [ 
-		contentHolder addChild: newsHolder ].
-	contentHolder addChild: sectionsHolder.
+		headerPane addChild: newsHolder ].
 	
-	self addChild: contentHolder.
+	self addChild: headerPane.
+	self addChild: mainPane asScrollableElement.
 	self addChild: self createVersionLabel.
 	
-	self initializeSections
-]
-
-{ #category : #initialization }
-GtHome >> initializeSections [
-	sectionsList ifNil:  [ ^ self ].
-	sectionsList items: (self collectHomeSectionStencils collect: [ :eachStencil | eachStencil -> nil ])
+	self updateSections.
+	self updateFeed.
 ]
 
 { #category : #sections }
@@ -152,10 +182,30 @@ GtHome >> toolsSection [
 		priority: 10
 ]
 
-{ #category : #initialization }
+{ #category : #updating }
 GtHome >> update: anAnnouncement [
 	anAnnouncement classAffected == self class
 		ifFalse: [ ^ self ].
 
-	self initializeSections
+	self updateSections
+]
+
+{ #category : #updating }
+GtHome >> updateFeed [
+	| sections |
+	feedHolder ifNil:  [ ^ self ].
+	feedHolder removeChildren.
+	sections := self collectFeedSectionStencils collect: [ :eachStencil |
+		self createSectionWrapperFor: eachStencil ].
+	feedHolder addChildren: sections.
+]
+
+{ #category : #updating }
+GtHome >> updateSections [
+	| sections |
+	sectionsHolder ifNil:  [ ^ self ].
+	sectionsHolder removeChildren.
+	sections := self collectHomeSectionStencils collect: [ :eachStencil |
+		self createSectionWrapperFor: eachStencil ].
+	sectionsHolder addChildren: sections.
 ]
