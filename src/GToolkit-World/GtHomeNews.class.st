@@ -23,7 +23,7 @@ GtHomeNews >> initializeNews [
 	availableNews := { 
 		self takeATourNews }.
 	availableNews do: [ :aNews |
-		aNews status: (self statusRegistry statusForNewsId: aNews id) ].
+		aNews status: (self statusRegistry statusForId: aNews id) ].
 	
 	availableNews 
 		select: [ :aNews | aNews status isViewed not ]

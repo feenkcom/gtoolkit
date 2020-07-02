@@ -2,32 +2,18 @@ Class {
 	#name : #GtHome,
 	#superclass : #BlElement,
 	#instVars : [
-		'sectionsList',
 		'sectionsHolder',
-		'feedHolder'
+		'feedElement',
+		'mainPane'
 	],
 	#category : #'GToolkit-World-UI'
 }
-
-{ #category : #accessing }
-GtHome >> collectFeedSectionStencils [
-	^ GtFeedSectionsCollector new
-		fromObject: self;
-		collect
-]
 
 { #category : #accessing }
 GtHome >> collectHomeSectionStencils [
 	^ GtHomeSectionsCollector new
 		fromObject: self;
 		collect
-]
-
-{ #category : #building }
-GtHome >> createFeedHolder [
-	^ BrVerticalPane new
-		hMatchParent;
-		vFitContent
 ]
 
 { #category : #building }
@@ -82,13 +68,6 @@ GtHome >> externalLinksSection [
 		priority: 30
 ]
 
-{ #category : #feed }
-GtHome >> feenkBlogSection [
-	<gtFeedSection>
-	^ GtHomeFeenkBlogSection newDefault
-		priority: 18
-]
-
 { #category : #ui }
 GtHome >> gtViewHomeSectionsFor: aView [
 	<gtView>
@@ -106,7 +85,7 @@ GtHome >> howToSection [
 
 { #category : #initialization }
 GtHome >> initialize [
-	| headerPane mainPane sectionsPane feedPane newsHolder |
+	| headerPane sectionsPane newsHolder |
 	super initialize.
 	
 	self background: Color white.
@@ -137,20 +116,10 @@ GtHome >> initialize [
 			c linear weight: 0.7.
 			c horizontal matchParent.
 			c vertical fitContent ].
-	feedPane := BlElement new 
-		layout: BlLinearLayout vertical;
-		constraintsDo: [ :c |
-			c linear weight: 0.3.
-			c horizontal matchParent.
-			c vertical fitContent ].
 	
 	sectionsHolder := self createSectionsHolder.
 	sectionsPane addChild: sectionsHolder.
-	feedHolder := self createFeedHolder.
-	feedPane addChild: feedHolder.
-	
 	mainPane addChild: sectionsPane.
-	mainPane addChild: feedPane.
 	
 	newsHolder hasNewsItems ifTrue: [ 
 		headerPane addChild: newsHolder ].
@@ -159,8 +128,18 @@ GtHome >> initialize [
 	self addChild: mainPane asScrollableElement.
 	self addChild: self createVersionLabel.
 	
+	self initializeFeedPane.
+	
 	self updateSections.
 	self updateFeed.
+]
+
+{ #category : #initialization }
+GtHome >> initializeFeedPane [
+	feedElement := GtHomeFeed new.
+	feedElement constraintsDo: [ :c |
+			c linear weight: 0.3 ].
+	mainPane addChild: feedElement.
 ]
 
 { #category : #sections }
@@ -187,17 +166,13 @@ GtHome >> update: anAnnouncement [
 	anAnnouncement classAffected == self class
 		ifFalse: [ ^ self ].
 
-	self updateSections
+	self updateWidget.
 ]
 
 { #category : #updating }
 GtHome >> updateFeed [
-	| sections |
-	feedHolder ifNil:  [ ^ self ].
-	feedHolder removeChildren.
-	sections := self collectFeedSectionStencils collect: [ :eachStencil |
-		self createSectionWrapperFor: eachStencil ].
-	feedHolder addChildren: sections.
+	feedElement ifNotNil: [  
+		feedElement updateWidget ]
 ]
 
 { #category : #updating }
@@ -208,4 +183,10 @@ GtHome >> updateSections [
 	sections := self collectHomeSectionStencils collect: [ :eachStencil |
 		self createSectionWrapperFor: eachStencil ].
 	sectionsHolder addChildren: sections.
+]
+
+{ #category : #updating }
+GtHome >> updateWidget [
+	self updateSections.
+	self updateFeed
 ]
