@@ -173,8 +173,7 @@ GtWorldElement >> onRemovedFromSceneGraph [
 
 { #category : #'api - opening' }
 GtWorldElement >> showSpace: aSpace [
-	| aTab |
-	self showSpace: aSpace select: true.
+	self showSpace: aSpace select: true
 ]
 
 { #category : #accessing }
@@ -220,7 +219,7 @@ GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
 						action: [ :aButtonElement |
 							tabs viewModel removeTab: aButtonElement model ] } ]).
 	
-	shouldBeSelected ifTrue:[ aTab select].
+	aTab selected: shouldBeSelected.
 	tabs addTab: aTab
 ]
 
