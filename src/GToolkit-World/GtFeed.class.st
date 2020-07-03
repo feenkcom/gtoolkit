@@ -6,35 +6,12 @@ Class {
 		'feedSources',
 		'persistenceStrategy'
 	],
-	#classInstVars : [
-		'defaultInstance'
-	],
-	#category : #'GToolkit-World-News'
+	#category : #'GToolkit-World-Feed'
 }
 
 { #category : #accessing }
 GtFeed class >> currentSchemaVersion [
 	^ 'v1'
-]
-
-{ #category : #accessing }
-GtFeed class >> defaultInstance [
-	^ defaultInstance ifNil: [  
-		self initializeDefaultVersion.
-		defaultInstance ]
-]
-
-{ #category : #'class initialization' }
-GtFeed class >> initialize [
-	SessionManager default
-		register: (ClassSessionHandler forClassNamed: self name)
-		inCategory: SessionManager default guiCategory  
-		atPriority: SessionManager default defaultPriority
-]
-
-{ #category : #initialization }
-GtFeed class >> initializeDefaultVersion [ 
-	defaultInstance := self loadDefault
 ]
 
 { #category : #'instance creation' }
@@ -49,13 +26,6 @@ GtFeed class >> loadDefault [
 { #category : #accessing }
 GtFeed class >> registryFileName [
 	^ 'com.glamoroustoolkit.feeds-settings'
-]
-
-{ #category : #'system startup' }
-GtFeed class >> startUp: resuming [
-	resuming
-		ifFalse: [ ^ self ]. 
-	self initializeDefaultVersion.
 ]
 
 { #category : #actions }

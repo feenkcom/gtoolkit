@@ -14,24 +14,9 @@ GtNewsItemsStatusRegistry class >> currentSchemaVersion [
 	^ 'v1'
 ]
 
-{ #category : #'class initialization' }
-GtNewsItemsStatusRegistry class >> initialize [
-	SessionManager default
-		register: (ClassSessionHandler forClassNamed: self name)
-		inCategory: SessionManager default guiCategory  
-		atPriority: SessionManager default defaultPriority
-]
-
 { #category : #accessing }
 GtNewsItemsStatusRegistry class >> registryFileName [
 	^ 'com.glamoroustoolkit.news-items-statuses'
-]
-
-{ #category : #'system startup' }
-GtNewsItemsStatusRegistry class >> startUp: resuming [
-	resuming
-		ifFalse: [ ^ self ]. 
-	self initializeDefaultVersion.
 ]
 
 { #category : #accessing }

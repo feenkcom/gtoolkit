@@ -49,7 +49,7 @@ GtHomeFeed >> enableFeed [
 
 { #category : #accessing }
 GtHomeFeed >> feed [
-	^ GtFeed defaultInstance
+	^ GtFeed loadDefault
 ]
 
 { #category : #accessing }

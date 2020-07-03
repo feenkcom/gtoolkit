@@ -29,7 +29,9 @@ GtNewsItem >> cardStencil: aCardStencil [
 GtNewsItem >> executeOpenFor: anElement [
 	openAction cull: anElement.
 	self status: GtNewsItemViewedStatus new.
-	self statusRegistry markNewsViewedForId: self id
+	self statusRegistry 
+		markNewsViewedForId: self id;
+		saveContent
 ]
 
 { #category : #accessing }
@@ -59,5 +61,5 @@ GtNewsItem >> status: aStatus [
 
 { #category : #accessing }
 GtNewsItem >> statusRegistry [
-	^ GtNewsItemsStatusRegistry defaultInstance
+	^ GtNewsItemsStatusRegistry loadDefault
 ]

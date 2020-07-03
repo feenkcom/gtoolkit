@@ -5,27 +5,12 @@ Class {
 		'statusesById',
 		'persistenceStrategy'
 	],
-	#classInstVars : [
-		'defaultInstance'
-	],
 	#category : #'GToolkit-World-News'
 }
 
 { #category : #accessing }
 GtInteractiveNotificationStatusRegistry class >> currentSchemaVersion [
 	self subclassResponsibility
-]
-
-{ #category : #accessing }
-GtInteractiveNotificationStatusRegistry class >> defaultInstance [
-	^ defaultInstance ifNil: [  
-		self initializeDefaultVersion.
-		defaultInstance ]
-]
-
-{ #category : #initialization }
-GtInteractiveNotificationStatusRegistry class >> initializeDefaultVersion [ 
-	defaultInstance := self loadDefault
 ]
 
 { #category : #'instance creation' }
@@ -108,7 +93,6 @@ GtInteractiveNotificationStatusRegistry >> markNewsViewedForId: anId [
 	statusesById 
 		at: anId
 		put: GtNewsItemViewedStatus new.
-	self saveContent.
 ]
 
 { #category : #accessing }

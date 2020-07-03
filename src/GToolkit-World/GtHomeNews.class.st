@@ -19,11 +19,13 @@ GtHomeNews >> initialize [
 
 { #category : #initialization }
 GtHomeNews >> initializeNews [
-	| availableNews |
+	| availableNews statusRegistry |
 	availableNews := { 
 		self takeATourNews }.
+	
+	statusRegistry := self statusRegistry.
 	availableNews do: [ :aNews |
-		aNews status: (self statusRegistry statusForId: aNews id) ].
+		aNews status: (statusRegistry statusForId: aNews id) ].
 	
 	availableNews 
 		select: [ :aNews | aNews status isViewed not ]
@@ -44,7 +46,7 @@ GtHomeNews >> showSpaceWithTitle: aString with: anElement from: anotherElement [
 
 { #category : #accessing }
 GtHomeNews >> statusRegistry [
-	^ GtNewsItemsStatusRegistry defaultInstance
+	^ GtNewsItemsStatusRegistry loadDefault
 ]
 
 { #category : #'instance creation' }
