@@ -81,6 +81,8 @@ GtHomeFeed >> initialize [
 GtHomeFeed >> showFeedSections [
 	| sections  |
 	self removeChildren.
+	self visibility: BlVisibility visible.
+	
 	sections := self feedSectionStencils collect: [ :eachStencil |
 		self createSectionWrapperFor: eachStencil ].
 	
@@ -91,6 +93,7 @@ GtHomeFeed >> showFeedSections [
 GtHomeFeed >> showPermissionDialog [	
 	| buttonsContainer dialogContainer |
 	self removeChildren.
+	self visibility: BlVisibility visible.
 	
 	dialogContainer := BrVerticalPane new
 		hMatchParent;

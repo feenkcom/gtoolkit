@@ -13,13 +13,11 @@ GtHomeNews >> hasNewsItems [
 GtHomeNews >> initialize [
 	super initialize.
 	self layout: BlLinearLayout vertical.
- 
-	self initializeNews.
 ]
 
 { #category : #initialization }
 GtHomeNews >> initializeNews [
-	| availableNews statusRegistry |
+	| availableNews validNews statusRegistry |
 	availableNews := { 
 		self takeATourNews }.
 	
@@ -27,10 +25,14 @@ GtHomeNews >> initializeNews [
 	availableNews do: [ :aNews |
 		aNews status: (statusRegistry statusForId: aNews id) ].
 	
-	availableNews 
-		select: [ :aNews | aNews status isViewed not ]
-		thenDo:[ :aNews |
-			self addChild: aNews cardStencil create ]
+	validNews := availableNews reject: [ :aNews | 
+		aNews status isViewed ].
+	validNews 
+		ifEmpty: [
+			self visibility: BlVisibility gone ]
+		ifNotEmpty: [ validNews do: [ :aNews |
+			self visibility: BlVisibility visible.
+			self addChild: aNews cardStencil create ] ]
 ]
 
 { #category : #'instance creation' }
@@ -67,4 +69,10 @@ GtHomeNews >> takeATourStencil [
 		headerText: 'New to Glamorous Toolkit?';
 		actionText: 'Take a tour';
 		tooltipText: 'Take an interactive tour through tools and engines'
+]
+
+{ #category : #updating }
+GtHomeNews >> updateWidget [
+	self removeChildren.
+	self initializeNews.
 ]

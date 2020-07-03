@@ -3,7 +3,8 @@ Class {
 	#superclass : #BlElement,
 	#instVars : [
 		'sectionsHolder',
-		'feedElement'
+		'feedElement',
+		'newsElement'
 	],
 	#category : #'GToolkit-World-UI'
 }
@@ -84,7 +85,6 @@ GtHome >> howToSection [
 
 { #category : #initialization }
 GtHome >> initialize [
-	| mainPane headerPane sectionsPane newsHolder |
 	super initialize.
 	
 	self background: Color white.
@@ -93,12 +93,14 @@ GtHome >> initialize [
 		c vertical matchParent ].
 	self layout: BlLinearLayout vertical.
 	
-	headerPane := BlElement new 
-		layout: BlFrameLayout new;
-		constraintsDo: [ :c |
-			c horizontal matchParent.
-			c vertical fitContent ].
-	newsHolder := GtHomeNews new
+	self initializePanes.
+	self updateWidget
+]
+
+{ #category : #initialization }
+GtHome >> initializePanes [
+	| mainPane sectionsPane |
+	newsElement := GtHomeNews new
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ].
@@ -124,21 +126,17 @@ GtHome >> initialize [
 	mainPane addChild: sectionsPane.
 	mainPane addChild: feedElement.
 	
-	newsHolder hasNewsItems ifTrue: [ 
-		headerPane addChild: newsHolder ].
-	
-	self addChild: headerPane.
+	self addChild: newsElement.
 	self addChild: mainPane asScrollableElement.
 	self addChild: self createVersionLabel.
-	
-	self updateWidget
 ]
 
 { #category : #updating }
 GtHome >> refreshNotifications [
-	"Update the notifications and content of the home screen based on the 
-	local user preferences."
-	self updateFeed
+	"Update the notifications and content of the home screen that can potentially changed 
+	based on local user preferences."
+	self updateNews.
+	self updateFeed.
 ]
 
 { #category : #sections }
@@ -175,6 +173,12 @@ GtHome >> updateFeed [
 ]
 
 { #category : #updating }
+GtHome >> updateNews [
+	newsElement ifNotNil: [  
+		newsElement updateWidget ]
+]
+
+{ #category : #updating }
 GtHome >> updateSections [
 	| sections |
 	sectionsHolder ifNil:  [ ^ self ].
@@ -186,6 +190,7 @@ GtHome >> updateSections [
 
 { #category : #updating }
 GtHome >> updateWidget [
+	self updateNews.
 	self updateSections.
-	self updateFeed
+	self updateFeed.
 ]
