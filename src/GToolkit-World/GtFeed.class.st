@@ -25,12 +25,12 @@ GtFeed class >> loadDefault [
 
 { #category : #accessing }
 GtFeed class >> registryFileName [
-	^ 'com.glamoroustoolkit.feeds-settings'
+	^ 'com.glamoroustoolkit.feeds'
 ]
 
 { #category : #actions }
 GtFeed >> addFeenkBlog [
-	self addSourceUrl: 'blog.feenk.com'
+	self addSourceUrl: 'https://blog.feenk.com'
 ]
 
 { #category : #actions }

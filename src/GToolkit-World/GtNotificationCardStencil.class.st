@@ -1,5 +1,5 @@
 Class {
-	#name : #GtNewsCardStencil,
+	#name : #GtNotificationCardStencil,
 	#superclass : #BrStencil,
 	#instVars : [
 		'headerText',
@@ -7,21 +7,21 @@ Class {
 		'tooltipText',
 		'action'
 	],
-	#category : #'GToolkit-World-News'
+	#category : #'GToolkit-World-Notifications'
 }
 
 { #category : #accessing }
-GtNewsCardStencil >> action: anObject [
+GtNotificationCardStencil >> action: anObject [
 	action := anObject
 ]
 
 { #category : #accessing }
-GtNewsCardStencil >> actionText: anObject [
+GtNotificationCardStencil >> actionText: anObject [
 	actionText := anObject
 ]
 
 { #category : #'api - instantiation' }
-GtNewsCardStencil >> create [
+GtNotificationCardStencil >> create [
 	| container actionButton headerLabel |
 	container := BlElement new
 		background: BrGlamorousColors newsBackgroundColor;
@@ -55,11 +55,11 @@ GtNewsCardStencil >> create [
 ]
 
 { #category : #accessing }
-GtNewsCardStencil >> headerText: anObject [
+GtNotificationCardStencil >> headerText: anObject [
 	headerText := anObject
 ]
 
 { #category : #accessing }
-GtNewsCardStencil >> tooltipText: anObject [
+GtNotificationCardStencil >> tooltipText: anObject [
 	tooltipText := anObject
 ]

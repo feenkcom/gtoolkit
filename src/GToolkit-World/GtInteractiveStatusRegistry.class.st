@@ -1,20 +1,20 @@
 Class {
-	#name : #GtInteractiveNotificationStatusRegistry,
+	#name : #GtInteractiveStatusRegistry,
 	#superclass : #Object,
 	#instVars : [
 		'statusesById',
 		'persistenceStrategy'
 	],
-	#category : #'GToolkit-World-News'
+	#category : #'GToolkit-World-Notifications'
 }
 
 { #category : #accessing }
-GtInteractiveNotificationStatusRegistry class >> currentSchemaVersion [
+GtInteractiveStatusRegistry class >> currentSchemaVersion [
 	self subclassResponsibility
 ]
 
 { #category : #'instance creation' }
-GtInteractiveNotificationStatusRegistry class >> loadDefault [
+GtInteractiveStatusRegistry class >> loadDefault [
 	^ self new
 		persistenceStrategy: (GtLocalDataStorage 
 			forFileWithBasename: self registryFileName
@@ -23,12 +23,12 @@ GtInteractiveNotificationStatusRegistry class >> loadDefault [
 ]
 
 { #category : #accessing }
-GtInteractiveNotificationStatusRegistry class >> registryFileName [
+GtInteractiveStatusRegistry class >> registryFileName [
 	self subclassResponsibility
 ]
 
 { #category : #'load and saving' }
-GtInteractiveNotificationStatusRegistry >> asDictionaryForExport [
+GtInteractiveStatusRegistry >> asDictionaryForExport [
 	| statusesData |
 	statusesData := OrderedCollection new.
 	statusesById keysAndValuesDo: [ :id :status | 
@@ -40,7 +40,7 @@ GtInteractiveNotificationStatusRegistry >> asDictionaryForExport [
 ]
 
 { #category : #ui }
-GtInteractiveNotificationStatusRegistry >> gtViewStatusesFor: aView [
+GtInteractiveStatusRegistry >> gtViewStatusesFor: aView [
 	<gtView>
 	statusesById ifNil: [ ^ aView empty ].
 	^ (statusesById gtItemsFor: aView)
@@ -48,7 +48,7 @@ GtInteractiveNotificationStatusRegistry >> gtViewStatusesFor: aView [
 ]
 
 { #category : #'load and saving' }
-GtInteractiveNotificationStatusRegistry >> importDataFrom: aDictionary [
+GtInteractiveStatusRegistry >> importDataFrom: aDictionary [
 	(aDictionary at: 'statuses')
 		select: [ :statusData | statusData includesKey: 'id' ]
 		thenDo: [ :statusData | self loadStatusFromData: statusData ]
@@ -56,28 +56,28 @@ GtInteractiveNotificationStatusRegistry >> importDataFrom: aDictionary [
 ]
 
 { #category : #initialization }
-GtInteractiveNotificationStatusRegistry >> initialize [
+GtInteractiveStatusRegistry >> initialize [
 	super initialize.
 	statusesById := OrderedDictionary new.
 ]
 
 { #category : #'load and saving' }
-GtInteractiveNotificationStatusRegistry >> instantiateStatusFrom: newsItemData [
+GtInteractiveStatusRegistry >> instantiateStatusFrom: newsItemData [
 	| statusValue |
-	statusValue := newsItemData at: 'status' ifAbsent: [ ^ GtNewsItemNullStatus new ].
-	^ (statusValue = GtNewsItemViewedStatus registryValue) 
-		ifTrue: [ GtNewsItemViewedStatus new ] 
-		ifFalse: [ GtNewsItemNullStatus new ] 
+	statusValue := newsItemData at: 'status' ifAbsent: [ ^ GtNotificationNullStatus new ].
+	^ (statusValue = GtNotificationViewedStatus registryValue) 
+		ifTrue: [ GtNotificationViewedStatus new ] 
+		ifFalse: [ GtNotificationNullStatus new ] 
 ]
 
 { #category : #'load and saving' }
-GtInteractiveNotificationStatusRegistry >> loadContent [
+GtInteractiveStatusRegistry >> loadContent [
 	self persistenceStrategy readContentAndDo: [ :rawData | 
 		self importDataFrom: rawData ]
 ]
 
 { #category : #'load and saving' }
-GtInteractiveNotificationStatusRegistry >> loadStatusFromData: newsItemData [ 
+GtInteractiveStatusRegistry >> loadStatusFromData: newsItemData [ 
 	| newsId newsStatus |
 	newsId := newsItemData at: 'id'.
 	newsStatus := self instantiateStatusFrom: newsItemData.
@@ -87,32 +87,32 @@ GtInteractiveNotificationStatusRegistry >> loadStatusFromData: newsItemData [
 ]
 
 { #category : #actions }
-GtInteractiveNotificationStatusRegistry >> markNewsViewedForId: anId [
+GtInteractiveStatusRegistry >> markNewsViewedForId: anId [
 	(self statusForId: anId) isViewed ifTrue: [ ^ self ].
 	
 	statusesById 
 		at: anId
-		put: GtNewsItemViewedStatus new.
+		put: GtNotificationViewedStatus new.
 ]
 
 { #category : #accessing }
-GtInteractiveNotificationStatusRegistry >> persistenceStrategy [
+GtInteractiveStatusRegistry >> persistenceStrategy [
 	^ persistenceStrategy
 ]
 
 { #category : #accessing }
-GtInteractiveNotificationStatusRegistry >> persistenceStrategy: anObject [
+GtInteractiveStatusRegistry >> persistenceStrategy: anObject [
 	persistenceStrategy := anObject
 ]
 
 { #category : #'load and saving' }
-GtInteractiveNotificationStatusRegistry >> saveContent [
+GtInteractiveStatusRegistry >> saveContent [
 	self persistenceStrategy saveObject: self
 ]
 
 { #category : #actions }
-GtInteractiveNotificationStatusRegistry >> statusForId: anId [
+GtInteractiveStatusRegistry >> statusForId: anId [
 	^ statusesById 
 		at: anId
-		ifAbsent: [ GtNewsItemNullStatus new ]
+		ifAbsent: [ GtNotificationNullStatus new ]
 ]

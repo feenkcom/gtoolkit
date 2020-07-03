@@ -1,42 +1,42 @@
 Class {
-	#name : #GtHomeNews,
+	#name : #GtHomeNotifications,
 	#superclass : #BlElement,
 	#category : #'GToolkit-World-UI'
 }
 
 { #category : #testing }
-GtHomeNews >> hasNewsItems [
+GtHomeNotifications >> hasNotifications [
 	^ self hasChildren 
 ]
 
 { #category : #initialization }
-GtHomeNews >> initialize [
+GtHomeNotifications >> initialize [
 	super initialize.
 	self layout: BlLinearLayout vertical.
 ]
 
 { #category : #initialization }
-GtHomeNews >> initializeNews [
-	| availableNews validNews statusRegistry |
-	availableNews := { 
-		self takeATourNews }.
+GtHomeNotifications >> initializeNotifications [
+	| availableNotifications validNotifications statusRegistry |
+	availableNotifications := { 
+		self takeATourNotification }.
 	
 	statusRegistry := self statusRegistry.
-	availableNews do: [ :aNews |
+	availableNotifications do: [ :aNews |
 		aNews status: (statusRegistry statusForId: aNews id) ].
 	
-	validNews := availableNews reject: [ :aNews | 
+	validNotifications := availableNotifications reject: [ :aNews | 
 		aNews status isViewed ].
-	validNews 
+	validNotifications 
 		ifEmpty: [
 			self visibility: BlVisibility gone ]
-		ifNotEmpty: [ validNews do: [ :aNews |
+		ifNotEmpty: [ validNotifications do: [ :aNews |
 			self visibility: BlVisibility visible.
 			self addChild: aNews cardStencil create ] ]
 ]
 
 { #category : #'instance creation' }
-GtHomeNews >> showSpaceWithTitle: aString with: anElement from: anotherElement [
+GtHomeNotifications >> showSpaceWithTitle: aString with: anElement from: anotherElement [
 	| aSpace |
 	aSpace := BlSpace new.
 	aSpace title: aString.
@@ -47,14 +47,14 @@ GtHomeNews >> showSpaceWithTitle: aString with: anElement from: anotherElement [
 ]
 
 { #category : #accessing }
-GtHomeNews >> statusRegistry [
-	^ GtNewsItemsStatusRegistry loadDefault
+GtHomeNotifications >> statusRegistry [
+	^ GtNotificationStatusRegistry loadDefault
 ]
 
 { #category : #'instance creation' }
-GtHomeNews >> takeATourNews [
-	^ GtNewsItem new
-		id: 'news/take-a-tour';
+GtHomeNotifications >> takeATourNotification [
+	^ GtNotification new
+		id: 'notification/take-a-tour';
 		openAction: [ :cardElement |
 			self
 				showSpaceWithTitle: 'Tour'
@@ -65,15 +65,15 @@ GtHomeNews >> takeATourNews [
 ]
 
 { #category : #'instance creation' }
-GtHomeNews >> takeATourStencil [
-	^ GtNewsCardStencil new
+GtHomeNotifications >> takeATourStencil [
+	^ GtNotificationCardStencil new
 		headerText: 'New to Glamorous Toolkit?';
 		actionText: 'Take a tour';
 		tooltipText: 'Take an interactive tour through tools and engines'
 ]
 
 { #category : #updating }
-GtHomeNews >> updateWidget [
+GtHomeNotifications >> updateWidget [
 	self removeChildren.
-	self initializeNews.
+	self initializeNotifications.
 ]

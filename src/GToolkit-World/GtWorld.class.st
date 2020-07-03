@@ -58,6 +58,7 @@ GtWorld class >> open [
 
 { #category : #'instance creation' }
 GtWorld class >> openDefault [
+	"Open an instance with shutdown handlers and mark it as default."
 	<script: 'self openDefault'>
 	| aSpace |
 	aSpace := self buildWithShutdownListener.
@@ -90,6 +91,7 @@ GtWorld class >> openWithSpaces: aCollectionOfSpaces [
 
 { #category : #'class initialization' }
 GtWorld class >> startUp: resuming [
+	"Implement an update mechanism to update the saved world on open."
 	resuming
 		ifFalse: [ ^ self ]. 
 	self notifyDefaultInstance.

@@ -1,8 +1,8 @@
 "
-I model a news item
+I model a notification.
 "
 Class {
-	#name : #GtNewsItem,
+	#name : #GtNotification,
 	#superclass : #Object,
 	#instVars : [
 		'id',
@@ -11,67 +11,67 @@ Class {
 		'openAction',
 		'refreshAction'
 	],
-	#category : #'GToolkit-World-News'
+	#category : #'GToolkit-World-Notifications'
 }
 
 { #category : #accessing }
-GtNewsItem >> cardStencil [
+GtNotification >> cardStencil [
 	^ cardStencil
 ]
 
 { #category : #accessing }
-GtNewsItem >> cardStencil: aCardStencil [
+GtNotification >> cardStencil: aCardStencil [
 	cardStencil := aCardStencil.
 	cardStencil action: [ :newsElement|
 		self executeOpenFor: newsElement ]
 ]
 
 { #category : #actions }
-GtNewsItem >> executeOpenFor: anElement [
+GtNotification >> executeOpenFor: anElement [
 	openAction cull: anElement.
 	self markAsViewsAndSaveStatus.
 	refreshAction value.
 ]
 
 { #category : #accessing }
-GtNewsItem >> id [
+GtNotification >> id [
 	^ id
 ]
 
 { #category : #accessing }
-GtNewsItem >> id: anId [
+GtNotification >> id: anId [
 	id := anId
 ]
 
 { #category : #actions }
-GtNewsItem >> markAsViewsAndSaveStatus [
-	self status: GtNewsItemViewedStatus new.
+GtNotification >> markAsViewsAndSaveStatus [
+	self status: GtNotificationViewedStatus new.
 	self statusRegistry 
 		markNewsViewedForId: self id;
 		saveContent.
 ]
 
 { #category : #accessing }
-GtNewsItem >> openAction: aBlock [
+GtNotification >> openAction: aBlock [
 	openAction := aBlock
 ]
 
 { #category : #accessing }
-GtNewsItem >> refreshAction: aBlock [
+GtNotification >> refreshAction: aBlock [
 	refreshAction := aBlock
 ]
 
 { #category : #accessing }
-GtNewsItem >> status [
+GtNotification >> status [
 	^ status
 ]
 
 { #category : #accessing }
-GtNewsItem >> status: aStatus [
+GtNotification >> status: aStatus [
 	status := aStatus
 ]
 
 { #category : #accessing }
-GtNewsItem >> statusRegistry [
-	^ GtNewsItemsStatusRegistry loadDefault
+GtNotification >> statusRegistry [
+	^ GtNotificationStatusRegistry loadDefault
 ]

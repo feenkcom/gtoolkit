@@ -1,10 +1,15 @@
 Class {
 	#name : #GtFeedItemsStatusRegistry,
-	#superclass : #GtInteractiveNotificationStatusRegistry,
-	#category : #'GToolkit-World-News'
+	#superclass : #GtInteractiveStatusRegistry,
+	#category : #'GToolkit-World-Notifications'
 }
 
 { #category : #accessing }
-GtFeedItemsStatusRegistry >> currentSchemaVersion [
+GtFeedItemsStatusRegistry class >> currentSchemaVersion [
 	^ 'v1'
+]
+
+{ #category : #accessing }
+GtFeedItemsStatusRegistry class >> registryFileName [
+	^ 'com.glamoroustoolkit.feed-item-statuses'
 ]

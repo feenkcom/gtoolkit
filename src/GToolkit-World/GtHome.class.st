@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'sectionsHolder',
 		'feedElement',
-		'newsElement'
+		'notificationsElement'
 	],
 	#category : #'GToolkit-World-UI'
 }
@@ -100,7 +100,7 @@ GtHome >> initialize [
 { #category : #initialization }
 GtHome >> initializePanes [
 	| mainPane sectionsPane |
-	newsElement := GtHomeNews new
+	notificationsElement := GtHomeNotifications new
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ].
@@ -126,7 +126,7 @@ GtHome >> initializePanes [
 	mainPane addChild: sectionsPane.
 	mainPane addChild: feedElement.
 	
-	self addChild: newsElement.
+	self addChild: notificationsElement.
 	self addChild: mainPane asScrollableElement.
 	self addChild: self createVersionLabel.
 ]
@@ -135,7 +135,7 @@ GtHome >> initializePanes [
 GtHome >> refreshNotifications [
 	"Update the notifications and content of the home screen that can potentially changed 
 	based on local user preferences."
-	self updateNews.
+	self updateNotifications.
 	self updateFeed.
 ]
 
@@ -173,9 +173,9 @@ GtHome >> updateFeed [
 ]
 
 { #category : #updating }
-GtHome >> updateNews [
-	newsElement ifNotNil: [  
-		newsElement updateWidget ]
+GtHome >> updateNotifications [
+	notificationsElement ifNotNil: [  
+		notificationsElement updateWidget ]
 ]
 
 { #category : #updating }
@@ -190,7 +190,7 @@ GtHome >> updateSections [
 
 { #category : #updating }
 GtHome >> updateWidget [
-	self updateNews.
+	self updateNotifications.
 	self updateSections.
 	self updateFeed.
 ]
