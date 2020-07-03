@@ -74,8 +74,7 @@ GtHomeFeed >> initialize [
 	self layout: BlLinearLayout vertical.
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
-		c vertical fitContent ].
-	self padding: (BlInsets top: self spaceGap).
+		c vertical fitContent ]
 ]
 
 { #category : #initialization }
@@ -84,12 +83,6 @@ GtHomeFeed >> showFeedSections [
 	self removeChildren.
 	sections := self feedSectionStencils collect: [ :eachStencil |
 		self createSectionWrapperFor: eachStencil ].
-	
-	self addChild: (BrLabel new
-		text: 'Feed';
-		look: (BrGlamorousLabelLook new
-			foreground: Color gray);
-		margin: (BlInsets left: 3 * self spaceGap)).
 	
 	self addChildren: sections.
 ]
@@ -104,12 +97,6 @@ GtHomeFeed >> showPermissionDialog [
 		vFitContent;
 		padding: (BlInsets all: 10);
 		background: BrGlamorousColors newsBackgroundColor.
-		
-	"document := GtDocumenter forText: 'Would you like to get our posts from blog.feenk.com directly in your environment as executable documents?'.
-	document 
-		hMatchParent;
-		vFitContent.
-	dialogContainer addChild: document."
 
 	dialogContainer addChild: (BrEditor new
 		text: ('Would you like to get our posts from ' asRopedText attribute: self createLinkAttribute)
@@ -130,11 +117,6 @@ GtHomeFeed >> showPermissionDialog [
 	dialogContainer addChild: buttonsContainer.
 	self addChild: dialogContainer
 
-]
-
-{ #category : #accessing }
-GtHomeFeed >> spaceGap [
-	^ 10
 ]
 
 { #category : #updating }
