@@ -8,7 +8,8 @@ Class {
 		'id',
 		'status',
 		'cardStencil',
-		'openAction'
+		'openAction',
+		'refreshAction'
 	],
 	#category : #'GToolkit-World-News'
 }
@@ -28,10 +29,8 @@ GtNewsItem >> cardStencil: aCardStencil [
 { #category : #actions }
 GtNewsItem >> executeOpenFor: anElement [
 	openAction cull: anElement.
-	self status: GtNewsItemViewedStatus new.
-	self statusRegistry 
-		markNewsViewedForId: self id;
-		saveContent
+	self markAsViewsAndSaveStatus.
+	refreshAction value.
 ]
 
 { #category : #accessing }
@@ -44,9 +43,22 @@ GtNewsItem >> id: anId [
 	id := anId
 ]
 
+{ #category : #actions }
+GtNewsItem >> markAsViewsAndSaveStatus [
+	self status: GtNewsItemViewedStatus new.
+	self statusRegistry 
+		markNewsViewedForId: self id;
+		saveContent.
+]
+
 { #category : #accessing }
 GtNewsItem >> openAction: aBlock [
 	openAction := aBlock
+]
+
+{ #category : #accessing }
+GtNewsItem >> refreshAction: aBlock [
+	refreshAction := aBlock
 ]
 
 { #category : #accessing }

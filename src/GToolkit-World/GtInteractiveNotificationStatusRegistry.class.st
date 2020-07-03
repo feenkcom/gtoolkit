@@ -36,7 +36,7 @@ GtInteractiveNotificationStatusRegistry >> asDictionaryForExport [
 			'id' -> id.
 			'status' -> status registryValue
 		 } asDictionary) ].
-	^ statusesData asArray
+	^ {'statuses' -> statusesData asArray} asDictionary
 ]
 
 { #category : #ui }

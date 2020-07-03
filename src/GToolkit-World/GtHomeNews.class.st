@@ -60,6 +60,7 @@ GtHomeNews >> takeATourNews [
 				showSpaceWithTitle: 'Tour'
 				with: GtTour new create makeArrowsVisible
 				from: cardElement ];
+		refreshAction: [ self updateWidget ];
 		cardStencil: self takeATourStencil
 ]
 
