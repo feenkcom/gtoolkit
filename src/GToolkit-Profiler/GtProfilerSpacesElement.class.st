@@ -1,36 +1,36 @@
 "
-I display a list of opened ${class:BlSpace}$
+I display a list of running ${class:BlSpace}$ that can be profiled. I exclude the profiler space itself
 "
 Class {
-	#name : #GtMonitorOpenedSpacesElement,
+	#name : #GtProfilerSpacesElement,
 	#superclass : #BlElement,
 	#instVars : [
 		'spacesList'
 	],
-	#category : #'GToolkit-Monitor-Space Profiler'
+	#category : #'GToolkit-Profiler'
 }
 
 { #category : #'instance creation' }
-GtMonitorOpenedSpacesElement class >> open [
+GtProfilerSpacesElement class >> open [
 	<script: 'self open'>
 	GtInspector openOn: self new title: 'Monitor'
 ]
 
 { #category : #accessing }
-GtMonitorOpenedSpacesElement >> allOpenedSpaces [
+GtProfilerSpacesElement >> allOpenedSpaces [
 	| openedSpaces |
 
 	openedSpaces := BlSpace allSubInstances
-		select: [ :eachSpace | eachSpace isOpened ].
+		select: [ :eachSpace | eachSpace isOpened and: [ eachSpace ~~ self space ] ].
 
 	openedSpaces := openedSpaces sorted: [ :a :b | a title < b title ].
-	openedSpaces := openedSpaces collect: [ :eachSpace | GtMonitorOpenedSpace new space: eachSpace ].
+	openedSpaces := openedSpaces collect: [ :eachSpace | GtProfilerSpace new space: eachSpace ].
 	
 	^ openedSpaces
 ]
 
 { #category : #initialization }
-GtMonitorOpenedSpacesElement >> initialize [
+GtProfilerSpacesElement >> initialize [
 	super initialize.
 	
 	self constraintsDo: [ :c |
@@ -38,6 +38,7 @@ GtMonitorOpenedSpacesElement >> initialize [
 		c vertical matchParent ].
 	
 	spacesList := BrColumnedList new.
+	spacesList beInSingleCompositionLayer. 
 	spacesList addEventHandler: (GtInspectorListToSelectHandler new).
 	spacesList rowStencil: (BrListClickableRowStencilBuilder new
 		cellSpacing: 10;
@@ -76,7 +77,7 @@ GtMonitorOpenedSpacesElement >> initialize [
 ]
 
 { #category : #updating }
-GtMonitorOpenedSpacesElement >> updateList [
+GtProfilerSpacesElement >> updateList [
 	self
 		enqueueTask:
 			(BlEnqueuedTaskItAction new
@@ -86,6 +87,8 @@ GtMonitorOpenedSpacesElement >> updateList [
 				onFailureEnqueueAction: [ 'Failed to update Spaces list' traceCr ];
 				onSuccessEnqueueAction: [ :theSpaces | 
 					spacesList items: theSpaces.
+					spacesList selectedIndices
+						ifEmpty: [ spacesList selectOne: 1 ].
 					self
 						enqueueTask:
 							(BlDelayedTaskAction new

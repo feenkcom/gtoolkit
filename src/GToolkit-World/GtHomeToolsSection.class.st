@@ -18,6 +18,7 @@ GtHomeToolsSection >> create [
 	cardsContainer addChild: self newTranscriptButtonStencil create.
 	cardsContainer addChild: self newMorphicWorldButtonStencil create.
 	cardsContainer addChild: self newSpotterButtonStencil create.
+	cardsContainer addChild: self newProfilerButtonStencil create.
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
@@ -98,6 +99,15 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 				with: GtPlaygroundStencil new create
 				from: card ];
 		description: 'Play with code. Live.'
+]
+
+{ #category : #'api - instantiation' }
+GtHomeToolsSection >> newProfilerButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Profiler';
+		icon: BrGlamorousVectorIcons largePerformance;
+		action: [ GtProfiler open ];
+		description: 'Profile rendering performance'
 ]
 
 { #category : #'api - instantiation' }
