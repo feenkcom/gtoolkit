@@ -1,5 +1,8 @@
+"
+I show a barchart of where each bar represents a frame and how long it took it to complete
+"
 Class {
-	#name : #GtMonitorSpaceFramesChart,
+	#name : #GtProfilerPerformanceChart,
 	#superclass : #BrVerticalPane,
 	#instVars : [
 		'currentLogger',
@@ -10,11 +13,11 @@ Class {
 		'resetButton',
 		'isPaused'
 	],
-	#category : #'GToolkit-Monitor-Space Profiler'
+	#category : #'GToolkit-Profiler'
 }
 
-{ #category : #'as yet unclassified' }
-GtMonitorSpaceFramesChart >> computeIsRunning [
+{ #category : #'private - profiling' }
+GtProfilerPerformanceChart >> computeIsRunning [
 	^ profiledSpace notNil
 		and: [ profiledSpace space telemetry = BlNullTelemetry uniqueInstance
 			and: [ currentLogger notNil
@@ -22,7 +25,7 @@ GtMonitorSpaceFramesChart >> computeIsRunning [
 ]
 
 { #category : #initialization }
-GtMonitorSpaceFramesChart >> initialize [
+GtProfilerPerformanceChart >> initialize [
 	super initialize.
 	
 	self matchParent.
@@ -61,17 +64,17 @@ GtMonitorSpaceFramesChart >> initialize [
 ]
 
 { #category : #'private - profiling' }
-GtMonitorSpaceFramesChart >> instrumentSpace [
+GtProfilerPerformanceChart >> instrumentSpace [
 	profiledSpace ifNotNil: [ :anOpenedSpace | self instrumentSpace: anOpenedSpace space ]
 ]
 
 { #category : #'private - profiling' }
-GtMonitorSpaceFramesChart >> instrumentSpace: aSpace [
+GtProfilerPerformanceChart >> instrumentSpace: aSpace [
 	aSpace enqueueTask: (BlTaskAction new action: [ aSpace telemetry: BlMemoryTelemetry new ])
 ]
 
 { #category : #'hooks - children' }
-GtMonitorSpaceFramesChart >> onAddedToSceneGraph [
+GtProfilerPerformanceChart >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	
 	isPaused
@@ -82,7 +85,7 @@ GtMonitorSpaceFramesChart >> onAddedToSceneGraph [
 ]
 
 { #category : #'hooks - children' }
-GtMonitorSpaceFramesChart >> onRemovedFromSceneGraph [
+GtProfilerPerformanceChart >> onRemovedFromSceneGraph [
 	super onRemovedFromSceneGraph.
 	
 	isPaused := self computeIsRunning.
@@ -92,7 +95,7 @@ GtMonitorSpaceFramesChart >> onRemovedFromSceneGraph [
 ]
 
 { #category : #accessing }
-GtMonitorSpaceFramesChart >> profileSpace: anOpenedSpace [
+GtProfilerPerformanceChart >> profileSpace: anOpenedSpace [
 	profiledSpace = anOpenedSpace
 		ifTrue: [ ^ self ].
 
@@ -110,17 +113,17 @@ GtMonitorSpaceFramesChart >> profileSpace: anOpenedSpace [
 ]
 
 { #category : #'api - profiler' }
-GtMonitorSpaceFramesChart >> reset [
+GtProfilerPerformanceChart >> reset [
 	self resetLogger
 ]
 
 { #category : #'private - profiling' }
-GtMonitorSpaceFramesChart >> resetLogger [
+GtProfilerPerformanceChart >> resetLogger [
 	currentLogger ifNotNil: [ :aLogger | aLogger reset ].
 ]
 
 { #category : #'api - profiler' }
-GtMonitorSpaceFramesChart >> start [
+GtProfilerPerformanceChart >> start [
 	self
 		instrumentSpace;
 		startLogger.
@@ -131,12 +134,12 @@ GtMonitorSpaceFramesChart >> start [
 ]
 
 { #category : #'private - profiling' }
-GtMonitorSpaceFramesChart >> startLogger [
+GtProfilerPerformanceChart >> startLogger [
 	currentLogger ifNotNil: [ :aLogger | aLogger start ].
 ]
 
 { #category : #'api - profiler' }
-GtMonitorSpaceFramesChart >> stop [
+GtProfilerPerformanceChart >> stop [
 	self
 		stopLogger;
 		uninstrumentSpace.
@@ -147,17 +150,17 @@ GtMonitorSpaceFramesChart >> stop [
 ]
 
 { #category : #'private - profiling' }
-GtMonitorSpaceFramesChart >> stopLogger [
+GtProfilerPerformanceChart >> stopLogger [
 	currentLogger ifNotNil: [ :aLogger | aLogger stop ].
 ]
 
 { #category : #'private - profiling' }
-GtMonitorSpaceFramesChart >> uninstrumentSpace [
+GtProfilerPerformanceChart >> uninstrumentSpace [
 	profiledSpace ifNotNil: [ :anOpenedSpace | self uninstrumentSpace: anOpenedSpace space ]
 ]
 
 { #category : #'private - profiling' }
-GtMonitorSpaceFramesChart >> uninstrumentSpace: aSpace [
+GtProfilerPerformanceChart >> uninstrumentSpace: aSpace [
 	aSpace enqueueTask: (BlTaskAction new action: [
 		aSpace telemetry: BlNullTelemetry uniqueInstance ])
 ]

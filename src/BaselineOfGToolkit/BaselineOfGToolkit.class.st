@@ -122,7 +122,10 @@ BaselineOfGToolkit >> baseline: spec [
 		spec package: 'GToolkit-Extensions' with: [ 
 			spec requires: #( 'GToolkitVisualizerPhlow' ) ].
 		spec package: 'GToolkit-Docs'.
-		spec package: 'GToolkit-Monitor'.
+		spec package: 'GToolkit-Monitor' with: [
+			spec requires: #('GToolkitInspector') ].
+		spec package: 'GToolkit-Profiler' with: [
+			spec requires: #('GToolkitInspector') ].
 		spec package: 'GToolkit-Constraints' with: [ 
 			spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter') ].
 		spec package: 'GToolkit-World'.
