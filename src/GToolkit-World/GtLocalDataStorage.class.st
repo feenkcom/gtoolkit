@@ -6,7 +6,7 @@ Class {
 		'fileBaseName',
 		'storageFolderLocator'
 	],
-	#category : #'GToolkit-World-News'
+	#category : #'GToolkit-World-Storage'
 }
 
 { #category : #accessing }

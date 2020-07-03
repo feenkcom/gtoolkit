@@ -5,6 +5,18 @@ Class {
 }
 
 { #category : #initialization }
+GtHomeFeed >> createLinkAttribute [
+	^ GtButtonAttribute new
+		beAppend;
+		stencil: [ BrButton new 
+			look: BrGlamorousLinkSquaredButtonWithLabelLook new;
+			beSmall;
+			margin: (BlInsets top: -1 left: 0 bottom: 0 right: 0);
+			label: 'blog.feenk.com';
+			action: [ WebBrowser openOn: 'https://blog.feenk.com' ] ]
+]
+
+{ #category : #initialization }
 GtHomeFeed >> createSectionWrapperFor: aSectionStencil [
 	^ BlLazyElement new
 			margin: (BlInsets all: 10);
@@ -20,7 +32,7 @@ GtHomeFeed >> createSectionWrapperFor: aSectionStencil [
 
 { #category : #actions }
 GtHomeFeed >> disableFeed [
-	self feedSettings 
+	self feed 
 		markAsDisabled;
 		saveContent.
 	self hideFeed
@@ -28,7 +40,7 @@ GtHomeFeed >> disableFeed [
 
 { #category : #actions }
 GtHomeFeed >> enableFeed [
-	self feedSettings 
+	self feed 
 		markAsEnabled;
 		addFeenkBlog;
 		saveContent.
@@ -36,19 +48,18 @@ GtHomeFeed >> enableFeed [
 ]
 
 { #category : #accessing }
-GtHomeFeed >> feedSectionStencils [
-	^ { self feenkBlogSection }
+GtHomeFeed >> feed [
+	^ GtFeed defaultInstance
 ]
 
 { #category : #accessing }
-GtHomeFeed >> feedSettings [
-	^ GtFeed defaultInstance
+GtHomeFeed >> feedSectionStencils [
+	^ { self feenkBlogSection }
 ]
 
 { #category : #'sections-feed' }
 GtHomeFeed >> feenkBlogSection [
 	^ GtHomeFeenkBlogSection newDefault
-		priority: 18
 ]
 
 { #category : #initialization }
@@ -64,6 +75,7 @@ GtHomeFeed >> initialize [
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
 		c vertical fitContent ].
+	self padding: (BlInsets top: self spaceGap).
 ]
 
 { #category : #initialization }
@@ -76,7 +88,8 @@ GtHomeFeed >> showFeedSections [
 	self addChild: (BrLabel new
 		text: 'Feed';
 		look: (BrGlamorousLabelLook new
-			foreground: Color gray)).
+			foreground: Color gray);
+		margin: (BlInsets left: 3 * self spaceGap)).
 	
 	self addChildren: sections.
 ]
@@ -99,7 +112,8 @@ GtHomeFeed >> showPermissionDialog [
 	dialogContainer addChild: document."
 
 	dialogContainer addChild: (BrEditor new
-		text: 'Would you like to get our posts from blog.feenk.com directly in your environment as executable documents?';
+		text: ('Would you like to get our posts from ' asRopedText attribute: self createLinkAttribute)
+			, ' directly in your environment as executable documents?' asRopedText;
 		look: BrGlamorousRegularEditorLook ).
 	
 	buttonsContainer := BrHorizontalPane new
@@ -118,11 +132,18 @@ GtHomeFeed >> showPermissionDialog [
 
 ]
 
+{ #category : #accessing }
+GtHomeFeed >> spaceGap [
+	^ 10
+]
+
 { #category : #updating }
 GtHomeFeed >> updateWidget [
-	self feedSettings isNotConfigured
+	| aFeed |
+	aFeed := self feed.
+	aFeed isNotConfigured
 		ifTrue: [ ^ self showPermissionDialog ].
-	self feedSettings isEnabled 
+	aFeed isEnabled 
 		ifTrue: [ ^ self showFeedSections ].
 	self hideFeed
 ]
