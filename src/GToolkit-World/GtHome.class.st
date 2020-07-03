@@ -3,8 +3,7 @@ Class {
 	#superclass : #BlElement,
 	#instVars : [
 		'sectionsHolder',
-		'feedElement',
-		'mainPane'
+		'feedElement'
 	],
 	#category : #'GToolkit-World-UI'
 }
@@ -85,7 +84,7 @@ GtHome >> howToSection [
 
 { #category : #initialization }
 GtHome >> initialize [
-	| headerPane sectionsPane newsHolder |
+	| mainPane headerPane sectionsPane newsHolder |
 	super initialize.
 	
 	self background: Color white.
@@ -116,10 +115,14 @@ GtHome >> initialize [
 			c linear weight: 0.7.
 			c horizontal matchParent.
 			c vertical fitContent ].
+	feedElement := GtHomeFeed new.
+	feedElement constraintsDo: [ :c |
+			c linear weight: 0.3 ].
 	
 	sectionsHolder := self createSectionsHolder.
 	sectionsPane addChild: sectionsHolder.
 	mainPane addChild: sectionsPane.
+	mainPane addChild: feedElement.
 	
 	newsHolder hasNewsItems ifTrue: [ 
 		headerPane addChild: newsHolder ].
@@ -128,18 +131,14 @@ GtHome >> initialize [
 	self addChild: mainPane asScrollableElement.
 	self addChild: self createVersionLabel.
 	
-	self initializeFeedPane.
-	
-	self updateSections.
-	self updateFeed.
+	self updateWidget
 ]
 
-{ #category : #initialization }
-GtHome >> initializeFeedPane [
-	feedElement := GtHomeFeed new.
-	feedElement constraintsDo: [ :c |
-			c linear weight: 0.3 ].
-	mainPane addChild: feedElement.
+{ #category : #updating }
+GtHome >> refreshNotifications [
+	"Update the notifications and content of the home screen based on the 
+	local user preferences."
+	self updateFeed
 ]
 
 { #category : #sections }

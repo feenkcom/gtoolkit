@@ -171,6 +171,12 @@ GtWorldElement >> onRemovedFromSceneGraph [
 	SystemAnnouncer uniqueInstance unsubscribe: self home
 ]
 
+{ #category : #updating }
+GtWorldElement >> refreshContent [
+	"Refresh all notifications in the home screen."
+	home refreshNotifications
+]
+
 { #category : #'api - opening' }
 GtWorldElement >> showSpace: aSpace [
 	| aTab |
