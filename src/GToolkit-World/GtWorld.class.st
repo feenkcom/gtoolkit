@@ -7,6 +7,15 @@ Class {
 	#category : #'GToolkit-World-UI'
 }
 
+{ #category : #'instance creation' }
+GtWorld class >> buildWithShutdownListener [
+	| aSpace |
+	aSpace := GtWorld new.
+	aSpace title: 'Glamorous Toolkit'.
+	aSpace addEventHandler: BlSpaceShutdownOnCloseListener new.
+	^ aSpace
+]
+
 { #category : #accessing }
 GtWorld class >> defaultId [
 	^ defaultId
@@ -48,12 +57,20 @@ GtWorld class >> open [
 ]
 
 { #category : #'instance creation' }
+GtWorld class >> openDefault [
+	<script: 'self openDefault'>
+	| aSpace |
+	aSpace := self buildWithShutdownListener.
+	aSpace markAsDefault.
+	aSpace show.
+	^ aSpace
+]
+
+{ #category : #'instance creation' }
 GtWorld class >> openWithShutdownListener [
 	<script: 'self openWithShutdownListener'>
 	| aSpace |
-	aSpace := GtWorld new.
-	aSpace title: 'Glamorous Toolkit'.
-	aSpace addEventHandler: BlSpaceShutdownOnCloseListener new.
+	aSpace := self buildWithShutdownListener.
 	aSpace show.
 	^ aSpace
 ]
