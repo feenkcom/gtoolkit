@@ -15,7 +15,7 @@ Class {
 
 { #category : #accessing }
 GtWorldElement class >> worldSpotterSize [
-	^ WorldSpotterSize ifNil: [ WorldSpotterSize := 800@600 ]
+	^ WorldSpotterSize ifNil: [ WorldSpotterSize := 640@480 ]
 ]
 
 { #category : #accessing }
