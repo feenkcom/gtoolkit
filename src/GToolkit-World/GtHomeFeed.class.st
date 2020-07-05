@@ -4,6 +4,12 @@ Class {
 	#category : #'GToolkit-World-UI'
 }
 
+{ #category : #updating }
+GtHomeFeed >> clearContent [
+	self removeChildren.
+	self visibility: BlVisibility gone
+]
+
 { #category : #initialization }
 GtHomeFeed >> createLinkAttribute [
 	^ GtButtonAttribute new
@@ -130,5 +136,5 @@ GtHomeFeed >> updateWidget [
 		ifTrue: [ ^ self showPermissionDialog ].
 	aFeed isEnabled 
 		ifTrue: [ ^ self showFeedSections ].
-	self hideFeed
+	self clearContent
 ]

@@ -132,6 +132,12 @@ GtHome >> initializePanes [
 ]
 
 { #category : #updating }
+GtHome >> prepareForRelease [ 
+	notificationsElement clearContent.
+	feedElement clearContent
+]
+
+{ #category : #updating }
 GtHome >> refreshNotifications [
 	"Update the notifications and content of the home screen that can potentially changed 
 	based on local user preferences."

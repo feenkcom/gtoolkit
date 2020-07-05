@@ -172,6 +172,11 @@ GtWorldElement >> onRemovedFromSceneGraph [
 ]
 
 { #category : #updating }
+GtWorldElement >> prepareForRelease [
+	home prepareForRelease
+]
+
+{ #category : #updating }
 GtWorldElement >> refreshContent [
 	"Refresh all notifications in the home screen."
 	home refreshNotifications

@@ -4,6 +4,12 @@ Class {
 	#category : #'GToolkit-World-UI'
 }
 
+{ #category : #updating }
+GtHomeNotifications >> clearContent [
+	self removeChildren.
+	self visibility: BlVisibility gone
+]
+
 { #category : #testing }
 GtHomeNotifications >> hasNotifications [
 	^ self hasChildren 
@@ -13,26 +19,6 @@ GtHomeNotifications >> hasNotifications [
 GtHomeNotifications >> initialize [
 	super initialize.
 	self layout: BlLinearLayout vertical.
-]
-
-{ #category : #initialization }
-GtHomeNotifications >> initializeNotifications [
-	| availableNotifications validNotifications statusRegistry |
-	availableNotifications := { 
-		self takeATourNotification }.
-	
-	statusRegistry := self statusRegistry.
-	availableNotifications do: [ :aNews |
-		aNews status: (statusRegistry statusForId: aNews id) ].
-	
-	validNotifications := availableNotifications reject: [ :aNews | 
-		aNews status isViewed ].
-	validNotifications 
-		ifEmpty: [
-			self visibility: BlVisibility gone ]
-		ifNotEmpty: [ validNotifications do: [ :aNews |
-			self visibility: BlVisibility visible.
-			self addChild: aNews cardStencil create ] ]
 ]
 
 { #category : #'instance creation' }
@@ -73,7 +59,43 @@ GtHomeNotifications >> takeATourStencil [
 ]
 
 { #category : #updating }
+GtHomeNotifications >> updateNotifications [
+	| availableNotifications validNotifications statusRegistry |
+	availableNotifications := { 
+		self takeATourNotification }.
+	
+	statusRegistry := self statusRegistry.
+	availableNotifications do: [ :aNews |
+		aNews status: (statusRegistry statusForId: aNews id) ].
+	
+	validNotifications := availableNotifications reject: [ :aNews | 
+		aNews status isViewed ].
+	validNotifications 
+		ifEmpty: [
+			self visibility: BlVisibility gone ]
+		ifNotEmpty: [ validNotifications do: [ :aNews |
+			self visibility: BlVisibility visible.
+			self addChild: aNews cardStencil create ] ]
+]
+
+{ #category : #updating }
 GtHomeNotifications >> updateWidget [
+	| availableNotifications validNotifications statusRegistry |
+	availableNotifications := { 
+		self takeATourNotification }.
+	
+	statusRegistry := self statusRegistry.
+	availableNotifications do: [ :aNews |
+		aNews status: (statusRegistry statusForId: aNews id) ].
+	
+	validNotifications := availableNotifications reject: [ :aNews | 
+		aNews status isViewed ].
+	
 	self removeChildren.
-	self initializeNotifications.
+	validNotifications 
+		ifEmpty: [
+			self visibility: BlVisibility gone ]
+		ifNotEmpty: [ validNotifications do: [ :aNews |
+			self visibility: BlVisibility visible.
+			self addChild: aNews cardStencil create ] ]
 ]

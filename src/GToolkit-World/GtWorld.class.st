@@ -63,6 +63,7 @@ GtWorld class >> openDefault [
 	| aSpace |
 	aSpace := self buildWithShutdownListener.
 	aSpace markAsDefault.
+	aSpace prepareForRelease.
 	aSpace show.
 	^ aSpace
 ]
@@ -107,6 +108,12 @@ GtWorld >> markAsDefault [
 	"Mark this instance as being the one that is saved and automatically opened when
 	the image is opened. This instance will refresh it's content on start-up."
 	self class defaultId: self id
+]
+
+{ #category : #actions }
+GtWorld >> prepareForRelease [
+	"Prepare this space to be saved as part of the release process."
+	self root prepareForRelease
 ]
 
 { #category : #actions }
