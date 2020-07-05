@@ -42,9 +42,9 @@ GtFeed >> addSourceUrl: anUrl [
 { #category : #converting }
 GtFeed >> asDictionaryForExport [
 	^ { 
-		'status' -> status registryValue.
+		'status' -> status registryValue asString.
 		'sources' -> (feedSources asArray collect: [ :aFeedSource |
-			aFeedSource url ])
+			{'url'  -> aFeedSource url} asDictionary ])
 	} asDictionary
 ]
 
@@ -92,8 +92,9 @@ GtFeed >> loadContent [
 GtFeed >> loadSourcesFrom: rawData [
 	| sourcesValue |
 	sourcesValue := rawData at: 'sources' ifAbsent: [ ^ self ].
-	sourcesValue do: [ :anUrl |
-		self addSourceUrl: anUrl ]
+	sourcesValue do: [ :sourceRawData |
+		sourceRawData at: 'url' ifPresent: [ :anUrl |
+			self addSourceUrl: anUrl ] ]
 ]
 
 { #category : #'load and saving' }

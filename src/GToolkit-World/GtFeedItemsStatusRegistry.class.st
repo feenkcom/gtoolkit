@@ -1,7 +1,7 @@
 Class {
 	#name : #GtFeedItemsStatusRegistry,
 	#superclass : #GtInteractiveStatusRegistry,
-	#category : #'GToolkit-World-Notifications'
+	#category : #'GToolkit-World-Feed'
 }
 
 { #category : #accessing }

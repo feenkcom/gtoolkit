@@ -7,6 +7,15 @@ Class {
 	#category : #'GToolkit-World-Feed'
 }
 
+{ #category : #printing }
+GtFeedSource >> gtDisplayOn: aStream [
+	super gtDisplayOn: aStream.
+	aStream 
+		nextPutAll: ' (';
+		nextPutAll: self url;
+		nextPutAll: ')'
+]
+
 { #category : #accessing }
 GtFeedSource >> url [
 	^ url

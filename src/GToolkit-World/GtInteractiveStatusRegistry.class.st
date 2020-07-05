@@ -34,7 +34,7 @@ GtInteractiveStatusRegistry >> asDictionaryForExport [
 	statusesById keysAndValuesDo: [ :id :status | 
 		statusesData add: ({ 
 			'id' -> id.
-			'status' -> status registryValue
+			'status' -> status registryValue asString
 		 } asDictionary) ].
 	^ {'statuses' -> statusesData asArray} asDictionary
 ]
