@@ -4,6 +4,16 @@ Class {
 	#category : #'GToolkit-Monitor'
 }
 
+{ #category : #accessing }
+GtMonitor >> gtActionProfilerFor: anAction [
+	<gtAction>
+	^ anAction button 
+		icon: BrGlamorousVectorIcons performance;
+		priority: 1;
+		tooltip: 'Profiler';
+		action: [ GtProfiler open ]
+]
+
 { #category : #'gt-extension' }
 GtMonitor >> gtGlutinEventFor: aView [
 	<gtView>
