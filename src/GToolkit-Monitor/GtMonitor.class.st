@@ -30,7 +30,7 @@ GtMonitor >> gtKeyboardFor: aView [
 	^ aView explicit
 		title: 'Keyboard';
 		priority: 3.1;
-		stencil: [ BlDevKeyboard new ]
+		stencil: [ BlDevKeyboard new asScalableElement ]
 ]
 
 { #category : #'gt-extension' }

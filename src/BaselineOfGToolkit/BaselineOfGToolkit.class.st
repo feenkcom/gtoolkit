@@ -22,6 +22,8 @@ Learn about it in ${class:BaselineOfGToolkitPlayground}$.
 This very document is edited and rendered through ${class:BaselineOfGToolkitDocumenter}$.
 !!!Coder
 Coder offers a set of components that allow us to manipulate code. More details at: ${class:BaselineOfGToolkitCoder}$.
+!!Spotter
+Spotter is the universal search interface. Learn more at: ${class:BaselineOfGToolkitSpotter}$.
 !!!Examples and example-driven development
 Examples offer both a new way to organize the test code and a bridge between the testing effort and documentation.
 
