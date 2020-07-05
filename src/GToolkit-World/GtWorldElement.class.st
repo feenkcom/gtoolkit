@@ -15,7 +15,7 @@ Class {
 
 { #category : #accessing }
 GtWorldElement class >> worldSpotterSize [
-	^ WorldSpotterSize ifNil: [ WorldSpotterSize := 800@600 ]
+	^ WorldSpotterSize ifNil: [ WorldSpotterSize := 640@480 ]
 ]
 
 { #category : #accessing }
@@ -184,8 +184,7 @@ GtWorldElement >> refreshContent [
 
 { #category : #'api - opening' }
 GtWorldElement >> showSpace: aSpace [
-	| aTab |
-	self showSpace: aSpace select: true.
+	self showSpace: aSpace select: true
 ]
 
 { #category : #accessing }
@@ -231,7 +230,7 @@ GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
 						action: [ :aButtonElement |
 							tabs viewModel removeTab: aButtonElement model ] } ]).
 	
-	shouldBeSelected ifTrue:[ aTab select].
+	aTab selected: shouldBeSelected.
 	tabs addTab: aTab
 ]
 
