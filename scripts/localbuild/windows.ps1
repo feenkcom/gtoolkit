@@ -90,5 +90,5 @@ Move-Item .\GlamorousToolkit\Pharo8.0-SNAPSHOT-64bit-*.image .\GlamorousToolkit\
 Move-Item .\GlamorousToolkit\Pharo8.0-SNAPSHOT-64bit-*.changes .\GlamorousToolkit\Pharo.changes
 .\GlamorousToolkit\GlamorousToolkitConsole.exe .\GlamorousToolkit\Pharo.image st --quit .\loadgt.st
 .\GlamorousToolkit\GlamorousToolkitConsole.exe .\GlamorousToolkit\Pharo.image eval --save "ThreadedFFIMigration enableThreadedFFI." 
-.\GlamorousToolkit\GlamorousToolkitConsole.exe .\GlamorousToolkit\Pharo.image eval --interactive --no-quit 'GtWorld openWithShutdownListener. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true.'
+.\GlamorousToolkit\GlamorousToolkitConsole.exe .\GlamorousToolkit\Pharo.image eval --interactive --no-quit 'GtWorld openDefault. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true.'
 .\GlamorousToolkit\GlamorousToolkitConsole.exe .\GlamorousToolkit\Pharo.image --interactive --no-quit
