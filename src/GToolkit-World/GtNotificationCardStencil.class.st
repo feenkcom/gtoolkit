@@ -29,7 +29,9 @@ GtNotificationCardStencil >> create [
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ];
-		padding: (BlInsets top: 10 left: 30 bottom: 10 right: 10).
+		look: BrShadowLook;
+		margin: (BlInsets top: 10 left: 30 bottom: 10 right: 30);
+		padding: (BlInsets top: 10 left: 10 bottom: 10 right: 10).
 	
 	headerLabel := BrLabel new 
 		fitContent;

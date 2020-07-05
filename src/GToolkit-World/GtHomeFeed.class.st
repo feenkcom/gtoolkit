@@ -18,6 +18,7 @@ GtHomeFeed >> createLinkAttribute [
 			look: BrGlamorousLinkSquaredButtonWithLabelLook new;
 			beSmall;
 			margin: (BlInsets top: -1 left: 0 bottom: 0 right: 0);
+			padding: (BlInsets top: 3 left: 5 bottom: 3 right: 5);
 			label: 'blog.feenk.com';
 			action: [ WebBrowser openOn: 'https://blog.feenk.com' ] ]
 ]
@@ -105,7 +106,9 @@ GtHomeFeed >> showPermissionDialog [
 		hMatchParent;
 		vFitContent;
 		padding: (BlInsets all: 10);
-		background: BrGlamorousColors newsBackgroundColor.
+		margin: (BlInsets top: 10 left: 10 bottom: 10 right: 20);
+		background: BrGlamorousColors newsBackgroundColor;
+		look: BrShadowLook.
 
 	dialogContainer addChild: (BrEditor new
 		text: ('Would you like to get our posts from ' asRopedText attribute: self createLinkAttribute)
