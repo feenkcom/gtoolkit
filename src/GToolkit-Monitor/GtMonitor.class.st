@@ -24,6 +24,15 @@ GtMonitor >> gtGlutinEventFor: aView [
 		stencil: [ GtMonitorGlutinEventsElement new ]
 ]
 
+{ #category : #accessing }
+GtMonitor >> gtKeyboardFor: aView [
+	<gtView>
+	^ aView explicit
+		title: 'Keyboard';
+		priority: 3.1;
+		stencil: [ BlDevKeyboard new ]
+]
+
 { #category : #'gt-extension' }
 GtMonitor >> gtLoggersFor: aView [
 	<gtView>
@@ -86,7 +95,7 @@ GtMonitor >> gtSpacesFor: aView [
 	
 	^ aView explicit
 		title: 'Spaces';
-		priority: 3;
+		priority: 2;
 		stencil: [ GtMonitoredBlocSpacesElement new ];
 		actionStencil: [ 
 			BrButton new 
