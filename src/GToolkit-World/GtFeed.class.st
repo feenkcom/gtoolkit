@@ -53,6 +53,24 @@ GtFeed >> feedSources [
 	^ feedSources
 ]
 
+{ #category : #ui }
+GtFeed >> gtViewExportJSONFor: aView [
+	<gtView>
+	^ aView textEditor 
+		title: 'Export (JSON)';
+		priority: 50;
+		text: [ 
+			STONJSON toStringPretty: (self persistenceStrategy exportDictionaryForObject: self) ]
+]
+
+{ #category : #ui }
+GtFeed >> gtViewSourcesFor: aView [
+	<gtView>
+	^ aView list 
+		title: 'Sources';
+		items: [ self feedSources ]
+]
+
 { #category : #'load and saving' }
 GtFeed >> importDataFrom: rawData [
 	self loadStatusFrom: rawData.
