@@ -23,6 +23,14 @@ GtLocalDataStorage class >> forFileWithBasename: aFileName withSchema: schemaVer
 ]
 
 { #category : #accessing }
+GtLocalDataStorage >> exportDictionaryForObject: anObject [
+	^ { 
+		'schema' -> self schemaVersion.
+		'data' -> anObject asDictionaryForExport 
+	} asDictionary
+]
+
+{ #category : #accessing }
 GtLocalDataStorage >> fileBaseName [
 	^ fileBaseName
 ]
@@ -99,6 +107,13 @@ GtLocalDataStorage >> readContentAndDo: aBlock [
 		 aBlock value: (rawData at: 'data') ]
 ]
 
+{ #category : #'load and saving' }
+GtLocalDataStorage >> saveJsonFor: aValue into: aWriteStream [
+	STONJSON
+		put: aValue 
+		onStreamPretty: (ZnCharacterWriteStream on: aWriteStream encoding: 'utf8')
+]
+
 { #category : #actions }
 GtLocalDataStorage >> saveObject: anObject [
 	| fileReference |
@@ -106,20 +121,9 @@ GtLocalDataStorage >> saveObject: anObject [
 	fileReference ensureDelete.
 	fileReference parent ensureCreateDirectory.
 	fileReference writeStreamDo: [ :aPreferenceStream | 
-		| rawData |
-		rawData := { 
-			'schema' -> self schemaVersion.
-			'data' -> anObject asDictionaryForExport } asDictionary.
 		self 
-			saveStonFor: rawData
+			saveJsonFor: (self exportDictionaryForObject: anObject)
 			into: aPreferenceStream ]
-]
-
-{ #category : #'load and saving' }
-GtLocalDataStorage >> saveStonFor: aValue into: aWriteStream [
-	STON 
-		put: aValue 
-		onStreamPretty: (ZnCharacterWriteStream on: aWriteStream encoding: 'utf8')
 ]
 
 { #category : #accessing }
