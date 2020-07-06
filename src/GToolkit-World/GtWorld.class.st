@@ -12,6 +12,7 @@ GtWorld class >> buildWithShutdownListener [
 	| aSpace |
 	aSpace := GtWorld new.
 	aSpace title: 'Glamorous Toolkit'.
+	aSpace extent: (800*1.6)@800.
 	aSpace addEventHandler: BlSpaceShutdownOnCloseListener new.
 	^ aSpace
 ]
