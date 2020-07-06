@@ -142,6 +142,34 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: 
 ]
 
 { #category : #'instance creation' }
+GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription width: aWidth content: anElement action: aBlock [
+	| container headerContainer |
+
+	container := BrButton new
+		constraintsDo: [:c | 
+			c vertical fitContent.
+			c horizontal exact: aWidth ]; 
+		layout: BlLinearLayout vertical;
+		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new);
+		label: aDescription;
+		padding: (BlInsets all: 1);
+		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap right: 2 * self spaceGap);
+		geometry: (BlRectangle cornerRadius: 4);
+		action: aBlock.
+
+	headerContainer := BlElement new
+		constraintsDo: [:c | c horizontal matchParent. c vertical fitContent ];
+		layout: BlLinearLayout vertical;
+		background: BrGlamorousColors defaultButtonBorderColor;
+		addChild: (BrLabel new look: (BrGlamorousLabelLook new fontSize: 10);
+		text: aTitle).
+	
+	^ container
+		addChild: headerContainer preventMeAndChildrenMouseEvents; 
+		addChild: (anElement preventMeAndChildrenMouseEvents).
+]
+
+{ #category : #'instance creation' }
 GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook title: aTitle description: aDescription [
 	^ self
 		newHeaderCardWithTitle: 'Playground: ' , aTitle
