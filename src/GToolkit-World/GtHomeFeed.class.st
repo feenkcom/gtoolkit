@@ -24,6 +24,20 @@ GtHomeFeed >> createLinkAttribute [
 ]
 
 { #category : #initialization }
+GtHomeFeed >> createPrivacyPolicyLinkAttribute [
+	^ GtButtonAttribute new
+		beAppend;
+		stencil: [ BrButton new 
+			look: (BrGlamorousLinkSquaredButtonWithLabelLook new
+				fontSize: 12);
+			beSmall;
+			margin: (BlInsets top: -1 left: 0 bottom: 0 right: 0);
+			padding: (BlInsets top: 3 left: 5 bottom: 3 right: 5);
+			label: 'Privacy Policy';
+			action: [ WebBrowser openOn: 'https://feenk.com/privacy' ] ]
+]
+
+{ #category : #initialization }
 GtHomeFeed >> createSectionWrapperFor: aSectionStencil [
 	^ BlLazyElement new
 			margin: (BlInsets all: 10);
@@ -98,15 +112,16 @@ GtHomeFeed >> showFeedSections [
 
 { #category : #initialization }
 GtHomeFeed >> showPermissionDialog [	
-	| buttonsContainer dialogContainer |
+	| dialogContainer |
 	self removeChildren.
 	self visibility: BlVisibility visible.
 	
 	dialogContainer := BrVerticalPane new
+		clipChildren: false;
 		hMatchParent;
 		vFitContent;
 		padding: (BlInsets all: 10);
-		margin: (BlInsets top: 10 left: 10 bottom: 10 right: 20);
+		margin: (BlInsets top: 10 + 5 left: 10 bottom: 10 right: 20);
 		background: BrGlamorousColors newsBackgroundColor;
 		look: BrShadowLook.
 
@@ -115,18 +130,24 @@ GtHomeFeed >> showPermissionDialog [
 			, ' directly in your environment as executable documents?' asRopedText;
 		look: BrGlamorousRegularEditorLook ).
 	
-	buttonsContainer := BrHorizontalPane new
-		fitContent.
-	buttonsContainer addChild: (BrButton new 
-		label: 'Yes';
+	dialogContainer addChild: (BrButton new 
+		label: 'Yes, get those posts';
 		look: BrGlamorousButtonWithLabelLook;
 		margin: (BlInsets right: 10);
-		action: [ self enableFeed ]).
-	buttonsContainer addChild: (BrButton new 
-		label: 'No';
-		look: BrGlamorousButtonWithLabelLook;
-		action: [ self disableFeed ]).
-	dialogContainer addChild: buttonsContainer.
+		action: [ self enableFeed ]). 
+	dialogContainer addChild: (GtHomeCloseButtonStencil new 
+		closeAction: [ self disableFeed ];
+		create).
+		
+	dialogContainer addChild: (BrButton new 
+		look: (BrGlamorousLinkSquaredButtonWithLabelLook new
+			fontSize: 12);
+		beSmall;
+		margin: (BlInsets top: 10 left: 0 bottom: 0 right: 0);
+		padding: (BlInsets top: 3 left: 5 bottom: 3 right: 5);
+		label: 'Privacy Policy';
+		action: [ WebBrowser openOn: 'https://feenk.com/privacy' ] ).
+	
 	self addChild: dialogContainer
 
 ]

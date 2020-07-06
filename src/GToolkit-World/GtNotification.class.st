@@ -9,7 +9,8 @@ Class {
 		'status',
 		'cardStencil',
 		'openAction',
-		'refreshAction'
+		'refreshAction',
+		'closeAction'
 	],
 	#category : #'GToolkit-World-Notifications'
 }
@@ -22,8 +23,17 @@ GtNotification >> cardStencil [
 { #category : #accessing }
 GtNotification >> cardStencil: aCardStencil [
 	cardStencil := aCardStencil.
-	cardStencil action: [ :newsElement|
-		self executeOpenFor: newsElement ]
+	cardStencil 
+		openAction: [ :newsElement|
+			self executeOpenFor: newsElement ];
+		closeAction: [ :newsElement |
+			self executeCloseFor: newsElement]
+]
+
+{ #category : #actions }
+GtNotification >> executeCloseFor: anElement [
+	self markAsDismissedAndSaveStatus.
+	refreshAction value.
 ]
 
 { #category : #actions }
@@ -43,11 +53,19 @@ GtNotification >> id: anId [
 	id := anId
 ]
 
+{ #category : #accessing }
+GtNotification >> markAsDismissedAndSaveStatus [
+	self status: GtNotificationDismissedStatus new.
+	self statusRegistry 
+		updateStatusForNotification: self;
+		saveContent.
+]
+
 { #category : #actions }
 GtNotification >> markAsViewsAndSaveStatus [
 	self status: GtNotificationViewedStatus new.
 	self statusRegistry 
-		markNewsViewedForId: self id;
+		updateStatusForNotification: self;
 		saveContent.
 ]
 

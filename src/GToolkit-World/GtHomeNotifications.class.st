@@ -59,26 +59,6 @@ GtHomeNotifications >> takeATourStencil [
 ]
 
 { #category : #updating }
-GtHomeNotifications >> updateNotifications [
-	| availableNotifications validNotifications statusRegistry |
-	availableNotifications := { 
-		self takeATourNotification }.
-	
-	statusRegistry := self statusRegistry.
-	availableNotifications do: [ :aNews |
-		aNews status: (statusRegistry statusForId: aNews id) ].
-	
-	validNotifications := availableNotifications reject: [ :aNews | 
-		aNews status isViewed ].
-	validNotifications 
-		ifEmpty: [
-			self visibility: BlVisibility gone ]
-		ifNotEmpty: [ validNotifications do: [ :aNews |
-			self visibility: BlVisibility visible.
-			self addChild: aNews cardStencil create ] ]
-]
-
-{ #category : #updating }
 GtHomeNotifications >> updateWidget [
 	| availableNotifications validNotifications statusRegistry |
 	availableNotifications := { 
@@ -89,7 +69,8 @@ GtHomeNotifications >> updateWidget [
 		aNews status: (statusRegistry statusForId: aNews id) ].
 	
 	validNotifications := availableNotifications reject: [ :aNews | 
-		aNews status isViewed ].
+		aNews status isViewed or: [
+			aNews status isDismissed ] ].
 	
 	self removeChildren.
 	validNotifications 

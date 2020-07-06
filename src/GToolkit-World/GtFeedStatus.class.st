@@ -1,6 +1,8 @@
 Class {
 	#name : #GtFeedStatus,
 	#superclass : #Object,
+	#traits : 'TGtInteractiveStatusInstantiation',
+	#classTraits : 'TGtInteractiveStatusInstantiation classTrait',
 	#category : #'GToolkit-World-Feed'
 }
 

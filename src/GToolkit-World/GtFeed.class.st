@@ -119,13 +119,9 @@ GtFeed >> loadSourcesFrom: rawData [
 GtFeed >> loadStatusFrom: rawData [
 	| statusValue |
 	statusValue := rawData at: 'status' ifAbsent: [ ^ self ].
-	(statusValue = GtFeedEnabledStatus registryValue) 
-		ifTrue: [ status := GtFeedEnabledStatus new ].
-	(statusValue = GtFeedDisabledStatus registryValue) 
-		ifTrue: [ status := GtFeedDisabledStatus new ].
-	(statusValue = GtFeedNotConfiguredStatus registryValue) 
-		ifTrue: [ status := GtFeedNotConfiguredStatus new ].
-
+	status := GtFeedStatus 
+		statusFor: statusValue 
+		ifNone: [ GtFeedNotConfiguredStatus new ].
 ]
 
 { #category : #actions }

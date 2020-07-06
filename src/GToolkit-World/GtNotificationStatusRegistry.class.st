@@ -18,3 +18,20 @@ GtNotificationStatusRegistry class >> currentSchemaVersion [
 GtNotificationStatusRegistry class >> registryFileName [
 	^ 'com.glamoroustoolkit.notification-statuses'
 ]
+
+{ #category : #accessing }
+GtNotificationStatusRegistry >> defaultStatus [
+	^ GtNotificationNullStatus new
+]
+
+{ #category : #accessing }
+GtNotificationStatusRegistry >> rootStatusClass [
+	^ GtNotificationStatus
+]
+
+{ #category : #actions }
+GtNotificationStatusRegistry >> updateStatusForNotification: aNotification [
+	self 
+		updateStatus: aNotification status  
+		forId: aNotification id
+]

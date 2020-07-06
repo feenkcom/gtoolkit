@@ -39,6 +39,11 @@ GtInteractiveStatusRegistry >> asDictionaryForExport [
 	^ {'statuses' -> statusesData asArray} asDictionary
 ]
 
+{ #category : #accessing }
+GtInteractiveStatusRegistry >> defaultStatus [
+	self subclassResponsibility
+]
+
 { #category : #ui }
 GtInteractiveStatusRegistry >> gtViewStatusesFor: aView [
 	<gtView>
@@ -64,10 +69,9 @@ GtInteractiveStatusRegistry >> initialize [
 { #category : #'load and saving' }
 GtInteractiveStatusRegistry >> instantiateStatusFrom: newsItemData [
 	| statusValue |
-	statusValue := newsItemData at: 'status' ifAbsent: [ ^ GtNotificationNullStatus new ].
-	^ (statusValue = GtNotificationViewedStatus registryValue) 
-		ifTrue: [ GtNotificationViewedStatus new ] 
-		ifFalse: [ GtNotificationNullStatus new ] 
+	statusValue := newsItemData at: 'status' ifAbsent: [ ^ self defaultStatus ].
+	^ self rootStatusClass 
+		statusFor: statusValue ifNone: [ self defaultStatus ]
 ]
 
 { #category : #'load and saving' }
@@ -86,15 +90,6 @@ GtInteractiveStatusRegistry >> loadStatusFromData: newsItemData [
 		put: newsStatus
 ]
 
-{ #category : #actions }
-GtInteractiveStatusRegistry >> markNewsViewedForId: anId [
-	(self statusForId: anId) isViewed ifTrue: [ ^ self ].
-	
-	statusesById 
-		at: anId
-		put: GtNotificationViewedStatus new.
-]
-
 { #category : #accessing }
 GtInteractiveStatusRegistry >> persistenceStrategy [
 	^ persistenceStrategy
@@ -103,6 +98,11 @@ GtInteractiveStatusRegistry >> persistenceStrategy [
 { #category : #accessing }
 GtInteractiveStatusRegistry >> persistenceStrategy: anObject [
 	persistenceStrategy := anObject
+]
+
+{ #category : #accessing }
+GtInteractiveStatusRegistry >> rootStatusClass [
+	self subclassResponsibility
 ]
 
 { #category : #'load and saving' }
@@ -114,5 +114,12 @@ GtInteractiveStatusRegistry >> saveContent [
 GtInteractiveStatusRegistry >> statusForId: anId [
 	^ statusesById 
 		at: anId
-		ifAbsent: [ GtNotificationNullStatus new ]
+		ifAbsent: [ self defaultStatus ]
+]
+
+{ #category : #actions }
+GtInteractiveStatusRegistry >> updateStatus: aStatus forId: anId [
+	statusesById 
+		at: anId
+		put: aStatus.
 ]
