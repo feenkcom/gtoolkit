@@ -32,7 +32,7 @@ GtNotificationCardStencil >> create [
 			c horizontal matchParent.
 			c vertical fitContent ];
 		look: BrShadowLook;
-		margin: (BlInsets top: 10 left: 30 bottom: 10 right: 30);
+		margin: (BlInsets top: 10+5 left: 30 bottom: 10 right: 30);
 		padding: (BlInsets top: 10 left: 10 bottom: 10 right: 10).
 	
 	headerLabel := BrLabel new 
