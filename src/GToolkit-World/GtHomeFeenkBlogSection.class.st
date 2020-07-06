@@ -101,9 +101,11 @@ GtHomeFeenkBlogSection >> newExceptionLabelFor: anException [
 { #category : #'instance creation' }
 GtHomeFeenkBlogSection >> newPostCardContentFor: aXdFileInfo [
 	^ BrEditor new 
+		exact: 300 @ 400;
 		look: BrGlamorousRegularEditorLook;
 		beReadOnlyWithoutSelection;
-		text: (self newTextFor: aXdFileInfo)
+		text: (self newTextFor: aXdFileInfo);
+		asScalableElement
 ]
 
 { #category : #'instance creation' }
