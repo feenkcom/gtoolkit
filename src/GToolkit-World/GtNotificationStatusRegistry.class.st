@@ -18,3 +18,34 @@ GtNotificationStatusRegistry class >> currentSchemaVersion [
 GtNotificationStatusRegistry class >> registryFileName [
 	^ 'com.glamoroustoolkit.notification-statuses'
 ]
+
+{ #category : #accessing }
+GtNotificationStatusRegistry >> defaultStatus [
+	^ GtNotificationNullStatus new
+]
+
+{ #category : #'load and saving' }
+GtNotificationStatusRegistry >> instantiateStatusFrom: newsItemData [
+	| statusValue |
+	statusValue := newsItemData at: 'status' ifAbsent: [ ^ GtNotificationNullStatus new ].
+	^ GtNotificationStatus 
+		statusFor: statusValue ifNone: [ GtNotificationNullStatus new ]
+]
+
+{ #category : #accessing }
+GtNotificationStatusRegistry >> markNotificationDismissedForId: anId [
+	(self statusForId: anId) isDismissed ifTrue: [ ^ self ].
+	
+	statusesById 
+		at: anId
+		put: GtNotificationDismissedStatus new.
+]
+
+{ #category : #actions }
+GtNotificationStatusRegistry >> markNotificationViewedForId: anId [
+	(self statusForId: anId) isViewed ifTrue: [ ^ self ].
+	
+	statusesById 
+		at: anId
+		put: GtNotificationViewedStatus new.
+]

@@ -39,6 +39,11 @@ GtInteractiveStatusRegistry >> asDictionaryForExport [
 	^ {'statuses' -> statusesData asArray} asDictionary
 ]
 
+{ #category : #accessing }
+GtInteractiveStatusRegistry >> defaultStatus [
+	self subclassResponsibility
+]
+
 { #category : #ui }
 GtInteractiveStatusRegistry >> gtViewStatusesFor: aView [
 	<gtView>
@@ -64,10 +69,9 @@ GtInteractiveStatusRegistry >> initialize [
 { #category : #'load and saving' }
 GtInteractiveStatusRegistry >> instantiateStatusFrom: newsItemData [
 	| statusValue |
-	statusValue := newsItemData at: 'status' ifAbsent: [ ^ GtNotificationNullStatus new ].
-	^ (statusValue = GtNotificationViewedStatus registryValue) 
-		ifTrue: [ GtNotificationViewedStatus new ] 
-		ifFalse: [ GtNotificationNullStatus new ] 
+	statusValue := newsItemData at: 'status' ifAbsent: [ ^ self defaultStatus ].
+	^ GtNotificationStatus 
+		statusFor: statusValue ifNone: [ self defaultStatus ]
 ]
 
 { #category : #'load and saving' }
@@ -84,15 +88,6 @@ GtInteractiveStatusRegistry >> loadStatusFromData: newsItemData [
 	statusesById 
 		at: newsId
 		put: newsStatus
-]
-
-{ #category : #actions }
-GtInteractiveStatusRegistry >> markNewsViewedForId: anId [
-	(self statusForId: anId) isViewed ifTrue: [ ^ self ].
-	
-	statusesById 
-		at: anId
-		put: GtNotificationViewedStatus new.
 ]
 
 { #category : #accessing }
@@ -114,5 +109,5 @@ GtInteractiveStatusRegistry >> saveContent [
 GtInteractiveStatusRegistry >> statusForId: anId [
 	^ statusesById 
 		at: anId
-		ifAbsent: [ GtNotificationNullStatus new ]
+		ifAbsent: [ self defaultStatus ]
 ]

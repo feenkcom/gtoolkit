@@ -5,25 +5,27 @@ Class {
 		'headerText',
 		'actionText',
 		'tooltipText',
-		'action'
+		'openAction',
+		'closeAction'
 	],
 	#category : #'GToolkit-World-Notifications'
 }
-
-{ #category : #accessing }
-GtNotificationCardStencil >> action: anObject [
-	action := anObject
-]
 
 { #category : #accessing }
 GtNotificationCardStencil >> actionText: anObject [
 	actionText := anObject
 ]
 
+{ #category : #accessing }
+GtNotificationCardStencil >> closeAction: aBlock [
+	closeAction := aBlock
+]
+
 { #category : #'api - instantiation' }
 GtNotificationCardStencil >> create [
-	| container actionButton headerLabel |
+	| container actionButton headerLabel closeButton |
 	container := BlElement new
+		clipChildren: false;
 		background: BrGlamorousColors newsBackgroundColor;
 		layout: BlLinearLayout horizontal;
 		constraintsDo: [ :c |
@@ -48,17 +50,26 @@ GtNotificationCardStencil >> create [
 		margin: (BlInsets top: 0 left: 15 bottom: 0 right: 0);
 		constraintsDo: [ :c |
 			c linear vertical alignCenter ];
-		action: action.
+		action: openAction.
+	closeButton := GtHomeCloseButtonStencil new 
+		closeAction: closeAction;
+		create.
 	
 	container
 		addChild: headerLabel;
-		addChild: actionButton.
+		addChild: actionButton;
+		addChild: closeButton.
 	^ container
 ]
 
 { #category : #accessing }
 GtNotificationCardStencil >> headerText: anObject [
 	headerText := anObject
+]
+
+{ #category : #accessing }
+GtNotificationCardStencil >> openAction: anObject [
+	openAction := anObject
 ]
 
 { #category : #accessing }
