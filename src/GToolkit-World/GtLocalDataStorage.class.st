@@ -101,7 +101,7 @@ GtLocalDataStorage >> readContentAndDo: aBlock [
 	fileReference := self storageFileReference.
 	fileReference exists ifFalse: [ ^ self ].
 	rawData := fileReference readStreamDo: [ :aReadStream |
-		STON fromStream: aReadStream ].
+		STONJSON fromStream: aReadStream ].
 	
 	(self isRawDataValidFor: rawData) ifTrue: [
 		 aBlock value: (rawData at: 'data') ]
