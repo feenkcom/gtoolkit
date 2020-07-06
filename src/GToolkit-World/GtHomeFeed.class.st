@@ -33,7 +33,7 @@ GtHomeFeed >> createPrivacyPolicyLinkAttribute [
 			beSmall;
 			margin: (BlInsets top: -1 left: 0 bottom: 0 right: 0);
 			padding: (BlInsets top: 3 left: 5 bottom: 3 right: 5);
-			label: 'feenk.com/privacy';
+			label: 'Privacy Policy';
 			action: [ WebBrowser openOn: 'https://feenk.com/privacy' ] ]
 ]
 
@@ -139,11 +139,14 @@ GtHomeFeed >> showPermissionDialog [
 		closeAction: [ self disableFeed ];
 		create).
 		
-	dialogContainer addChild: (BrEditor new
-		margin: (BlInsets top: 10);
-		text: ('Privacy Policy ' asRopedText attribute: self createPrivacyPolicyLinkAttribute);
-		look: (BrGlamorousRegularEditorLook new
-			fontSize: 12) ).
+	dialogContainer addChild: (BrButton new 
+		look: (BrGlamorousLinkSquaredButtonWithLabelLook new
+			fontSize: 12);
+		beSmall;
+		margin: (BlInsets top: 10 left: 0 bottom: 0 right: 0);
+		padding: (BlInsets top: 3 left: 5 bottom: 3 right: 5);
+		label: 'Privacy Policy';
+		action: [ WebBrowser openOn: 'https://feenk.com/privacy' ] ).
 	
 	self addChild: dialogContainer
 
