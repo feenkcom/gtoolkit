@@ -70,7 +70,7 @@ GtInteractiveStatusRegistry >> initialize [
 GtInteractiveStatusRegistry >> instantiateStatusFrom: newsItemData [
 	| statusValue |
 	statusValue := newsItemData at: 'status' ifAbsent: [ ^ self defaultStatus ].
-	^ GtNotificationStatus 
+	^ self rootStatusClass 
 		statusFor: statusValue ifNone: [ self defaultStatus ]
 ]
 
@@ -100,6 +100,11 @@ GtInteractiveStatusRegistry >> persistenceStrategy: anObject [
 	persistenceStrategy := anObject
 ]
 
+{ #category : #accessing }
+GtInteractiveStatusRegistry >> rootStatusClass [
+	self subclassResponsibility
+]
+
 { #category : #'load and saving' }
 GtInteractiveStatusRegistry >> saveContent [
 	self persistenceStrategy saveObject: self
@@ -110,4 +115,11 @@ GtInteractiveStatusRegistry >> statusForId: anId [
 	^ statusesById 
 		at: anId
 		ifAbsent: [ self defaultStatus ]
+]
+
+{ #category : #actions }
+GtInteractiveStatusRegistry >> updateStatus: aStatus forId: anId [
+	statusesById 
+		at: anId
+		put: aStatus.
 ]

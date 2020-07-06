@@ -57,7 +57,7 @@ GtNotification >> id: anId [
 GtNotification >> markAsDismissedAndSaveStatus [
 	self status: GtNotificationDismissedStatus new.
 	self statusRegistry 
-		markNotificationDismissedForId: self id;
+		updateStatusForNotification: self;
 		saveContent.
 ]
 
@@ -65,7 +65,7 @@ GtNotification >> markAsDismissedAndSaveStatus [
 GtNotification >> markAsViewsAndSaveStatus [
 	self status: GtNotificationViewedStatus new.
 	self statusRegistry 
-		markNotificationViewedForId: self id;
+		updateStatusForNotification: self;
 		saveContent.
 ]
 
