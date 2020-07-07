@@ -17,7 +17,7 @@ GtHomeFeed >> createLinkAttribute [
 		stencil: [ BrButton new 
 			look: BrGlamorousLinkSquaredButtonWithLabelLook new;
 			beSmall;
-			margin: (BlInsets top: -1 left: 0 bottom: 0 right: 0);
+			margin: (BlInsets top: 1 left: 0 bottom: 0 right: 0);
 			padding: (BlInsets top: 3 left: 5 bottom: 3 right: 5);
 			label: 'blog.feenk.com';
 			action: [ WebBrowser openOn: 'https://blog.feenk.com' ] ]
@@ -128,7 +128,7 @@ GtHomeFeed >> showPermissionDialog [
 	dialogContainer addChild: (BrEditor new
 		text: ('Would you like to get our posts from ' asRopedText attribute: self createLinkAttribute)
 			, ' directly in your environment as executable documents?' asRopedText;
-		look: BrGlamorousRegularEditorLook ).
+		look: (BrGlamorousRegularEditorLook new lineSpacing: 5) ).
 	
 	dialogContainer addChild: (BrButton new 
 		label: 'Yes, get those posts';
