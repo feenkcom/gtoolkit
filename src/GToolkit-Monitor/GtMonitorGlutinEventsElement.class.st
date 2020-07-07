@@ -131,7 +131,7 @@ GtMonitorGlutinEventsElement >> initialize [
 		addChild: eventTypesList).
 	
 	eventsList := BrColumnedList new
-		addEventHandler: (GtInspectorListToSelectHandler new transformation: [ :aNode | aNode event ]);
+		addEventHandler: (GtPhlowListToSelectHandler new transformation: [ :aNode | aNode event ]);
 		matchParent.
 	eventsList column
 		title: 'Timestamp';
