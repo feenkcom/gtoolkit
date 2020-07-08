@@ -27,7 +27,7 @@ GtHomeFeenkBlogSection >> addChildren: aNewCards in: aCardsContainer [
 
 { #category : #defaults }
 GtHomeFeenkBlogSection >> cardSize [
-	^ 200 @ 280
+	^ 200 @ 100
 ]
 
 { #category : #accessing }
