@@ -17,7 +17,7 @@ GtMonitoredServicesElement >> initialize [
 	servicesList := BrColumnedList new.
 	servicesList
 		addEventHandler:
-			(GtInspectorListToSelectHandler new
+			(GtPhlowListToSelectHandler new
 				transformation: self onClickTransformation).
 	servicesList
 		rowStencil:

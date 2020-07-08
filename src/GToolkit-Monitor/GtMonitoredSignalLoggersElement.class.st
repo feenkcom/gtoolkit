@@ -22,7 +22,7 @@ GtMonitoredSignalLoggersElement >> initialize [
 		c vertical matchParent ].
 	
 	loggersList := BrColumnedList new.
-	loggersList addEventHandler: (GtInspectorListToSelectHandler new).
+	loggersList addEventHandler: (GtPhlowListToSelectHandler new).
 	loggersList rowStencil: (BrListClickableRowStencilBuilder new
 		cellSpacing: 10;
 		padding: (BlInsets top: 4 bottom: 4)).

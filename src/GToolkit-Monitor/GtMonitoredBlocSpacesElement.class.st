@@ -22,7 +22,7 @@ GtMonitoredBlocSpacesElement >> initialize [
 		c vertical matchParent ].
 	
 	spacesList := BrColumnedList new.
-	spacesList addEventHandler: (GtInspectorListToSelectHandler new).
+	spacesList addEventHandler: (GtPhlowListToSelectHandler new).
 	spacesList rowStencil: (BrListClickableRowStencilBuilder new
 		cellSpacing: 10;
 		padding: (BlInsets top: 4 bottom: 4)).
