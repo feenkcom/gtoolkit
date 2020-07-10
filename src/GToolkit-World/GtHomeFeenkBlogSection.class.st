@@ -103,7 +103,8 @@ GtHomeFeenkBlogSection >> newPostCardContentFor: aXdFileInfo [
 	| container |
 	container := BrVerticalPane new 
 		vFitContent;
-		hMatchParent.
+		hMatchParent;
+		padding: (BlInsets all: 5).
 	container 
 		addChild: (BrEditor new
 			look: BrGlamorousRegularEditorLook;
@@ -164,7 +165,7 @@ GtHomeFeenkBlogSection >> newTextFor: aXdFileInfo [
 	aTitle := aXdFileInfo title asString asRopedText.
 	aTitle bold.
 	aDescription := aXdFileInfo description asString asRopedText.
-	aText := aTitle append: (String cr, String cr) asRopedText.
+	aText := aTitle append: (String cr) asRopedText.
 	aText := aTitle append: aDescription.
 	^ aText
 ]
