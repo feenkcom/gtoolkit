@@ -123,7 +123,7 @@ pipeline {
                         }
                         stage('Linux Examples') {
                              steps {
-                                retry(3) {
+                                retry(4) {
                                     sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
                                     junit '*.xml'
                                 }
@@ -156,7 +156,7 @@ pipeline {
                         }
                         stage('MacOSX Examples') {
                              steps {
-                                retry(3) {
+                                retry(4) {
                                     sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
                                     sh 'rm -rf GToolkit-Releaser-*.xml'
                                     junit '*.xml'
@@ -208,7 +208,7 @@ pipeline {
                         }
                         stage('Windows Examples') {
                              steps {
-                                retry(3) {
+                                retry(4) {
                                     powershell './scripts/build/parallelsmoke/win_4_examples.ps1'
                                     junit '*.xml'
                                 }
