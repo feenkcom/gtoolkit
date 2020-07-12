@@ -4,6 +4,16 @@ Class {
 	#category : #'GToolkit-Monitor'
 }
 
+{ #category : #accessing }
+GtMonitor >> gtActionProfilerFor: anAction [
+	<gtAction>
+	^ anAction button 
+		icon: BrGlamorousVectorIcons performance;
+		priority: 1;
+		tooltip: 'Profiler';
+		action: [ GtProfiler open ]
+]
+
 { #category : #'gt-extension' }
 GtMonitor >> gtGlutinEventFor: aView [
 	<gtView>
@@ -12,6 +22,15 @@ GtMonitor >> gtGlutinEventFor: aView [
 		title: 'Events';
 		priority: 3;
 		stencil: [ GtMonitorGlutinEventsElement new ]
+]
+
+{ #category : #accessing }
+GtMonitor >> gtKeyboardFor: aView [
+	<gtView>
+	^ aView explicit
+		title: 'Keyboard';
+		priority: 3.1;
+		stencil: [ BlDevKeyboard new asScalableElement ]
 ]
 
 { #category : #'gt-extension' }
@@ -61,21 +80,6 @@ GtMonitor >> gtProcessesFor: aView [
 ]
 
 { #category : #'gt-extension' }
-GtMonitor >> gtProfilerFor: aView [
-	<gtView>
-	
-	^ aView explicit
-		title: 'Profiler';
-		priority: 3;
-		stencil: [ GtMonitorSpaceProfiler new ];
-		actionStencil: [
-			BrButton new 
-				look: BrGlamorousButtonWithIconLook;
-				icon: [ (BrGlamorousVectorIcons largeWindow asElement asScalableElement size: 16@16) ] asStencil;
-				action: [ GtMonitorSpaceProfiler open ] ]
-]
-
-{ #category : #'gt-extension' }
 GtMonitor >> gtSpaceRunnerFor: aView [
 	<gtView>
 	
@@ -91,7 +95,7 @@ GtMonitor >> gtSpacesFor: aView [
 	
 	^ aView explicit
 		title: 'Spaces';
-		priority: 3;
+		priority: 2;
 		stencil: [ GtMonitoredBlocSpacesElement new ];
 		actionStencil: [ 
 			BrButton new 

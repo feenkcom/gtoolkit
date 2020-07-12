@@ -67,7 +67,7 @@ ConfigurationOf class >> gtPackagesFor: aView [
 		stencil: [ 
 			| list |
 			list := BrColumnedList new display: [ self project version packages ].
-			list addEventHandler: GtInspectorListToSelectHandler new.
+			list addEventHandler: GtPhlowListToSelectHandler new.
 			list column
 				title: 'Packages';
 				stencil: [ :aNode :index |

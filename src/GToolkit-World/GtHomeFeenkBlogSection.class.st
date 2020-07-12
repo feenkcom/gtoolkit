@@ -27,7 +27,7 @@ GtHomeFeenkBlogSection >> addChildren: aNewCards in: aCardsContainer [
 
 { #category : #defaults }
 GtHomeFeenkBlogSection >> cardSize [
-	^ 150 @ 200
+	^ 200 @ 100
 ]
 
 { #category : #accessing }
@@ -100,24 +100,41 @@ GtHomeFeenkBlogSection >> newExceptionLabelFor: anException [
 
 { #category : #'instance creation' }
 GtHomeFeenkBlogSection >> newPostCardContentFor: aXdFileInfo [
-	^ BrEditor new 
-		look: BrGlamorousRegularEditorLook;
-		beReadOnlyWithoutSelection;
-		text: (self newTextFor: aXdFileInfo)
+	| container |
+	container := BrVerticalPane new 
+		vFitContent;
+		hMatchParent;
+		padding: (BlInsets all: 5).
+	container 
+		addChild: (BrEditor new
+			look: BrGlamorousRegularEditorLook;
+			vFitContent;
+			hMatchParent;
+			beReadOnlyWithoutSelection;
+			text: (self newTextFor: aXdFileInfo));
+		addChild: (BrLabel new
+			padding: (BlInsets left: 5);
+			look: (BrGlamorousLabelLook new foreground: Color gray); 
+			text: 'by ', aXdFileInfo author);
+		addChild: (BrLabel new
+			padding: (BlInsets left: 5);
+			look: (BrGlamorousLabelLook new foreground: Color gray); 
+			text: aXdFileInfo createdOn asLocalStringYMDHM).
+	^ container
 ]
 
 { #category : #'instance creation' }
 GtHomeFeenkBlogSection >> newPostCardFor: aXdFileInfo [
-	^ self 
+	^ (self 
 		newHeaderCardWithTitle: 'Post'
 		description: aXdFileInfo title
-		size: self cardSize 
+		width: 200
 		content: (self newPostCardContentFor: aXdFileInfo) 
 		action: [ :aCard | 
 			self
 				showSpaceWithTitle: aXdFileInfo title
 				with: (GtPager createWrappedOn: aXdFileInfo asElement)
-				from: aCard ]
+				from: aCard ])
 ]
 
 { #category : #'instance creation' }
@@ -148,7 +165,7 @@ GtHomeFeenkBlogSection >> newTextFor: aXdFileInfo [
 	aTitle := aXdFileInfo title asString asRopedText.
 	aTitle bold.
 	aDescription := aXdFileInfo description asString asRopedText.
-	aText := aTitle append: (String cr, String cr) asRopedText.
+	aText := aTitle append: (String cr) asRopedText.
 	aText := aTitle append: aDescription.
 	^ aText
 ]

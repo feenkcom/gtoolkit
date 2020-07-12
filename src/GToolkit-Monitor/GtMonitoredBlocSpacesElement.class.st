@@ -22,7 +22,7 @@ GtMonitoredBlocSpacesElement >> initialize [
 		c vertical matchParent ].
 	
 	spacesList := BrColumnedList new.
-	spacesList addEventHandler: (GtInspectorListToSelectHandler new).
+	spacesList addEventHandler: (GtPhlowListToSelectHandler new).
 	spacesList rowStencil: (BrListClickableRowStencilBuilder new
 		cellSpacing: 10;
 		padding: (BlInsets top: 4 bottom: 4)).
@@ -56,6 +56,20 @@ GtMonitoredBlocSpacesElement >> initialize [
 			BrLabel new
 				look: BrGlamorousLabelLook;
 				text: isOpened;
+				hMatchParent ].
+	
+	spacesList column
+		title: 'Shutsdown GT';
+		stencil: [ :aMonitoredSpace |
+			| shouldShutdown |
+
+			shouldShutdown := aMonitoredSpace shouldShutdownOnClose
+				ifTrue: [ 'Shuts down on close' asRopedText bold ]
+				ifFalse: [ '' asRopedText ].
+			
+			BrLabel new
+				look: BrGlamorousLabelLook;
+				text: shouldShutdown;
 				hMatchParent ].
 		
 	self addChild: spacesList.

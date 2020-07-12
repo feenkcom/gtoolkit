@@ -1,35 +1,39 @@
 Class {
-	#name : #GtNewsCardStencil,
+	#name : #GtNotificationCardStencil,
 	#superclass : #BrStencil,
 	#instVars : [
 		'headerText',
 		'actionText',
 		'tooltipText',
-		'action'
+		'openAction',
+		'closeAction'
 	],
-	#category : #'GToolkit-World-News'
+	#category : #'GToolkit-World-Notifications'
 }
 
 { #category : #accessing }
-GtNewsCardStencil >> action: anObject [
-	action := anObject
-]
-
-{ #category : #accessing }
-GtNewsCardStencil >> actionText: anObject [
+GtNotificationCardStencil >> actionText: anObject [
 	actionText := anObject
 ]
 
+{ #category : #accessing }
+GtNotificationCardStencil >> closeAction: aBlock [
+	closeAction := aBlock
+]
+
 { #category : #'api - instantiation' }
-GtNewsCardStencil >> create [
-	| container actionButton headerLabel |
+GtNotificationCardStencil >> create [
+	| container actionButton headerLabel closeButton |
 	container := BlElement new
+		clipChildren: false;
 		background: BrGlamorousColors newsBackgroundColor;
 		layout: BlLinearLayout horizontal;
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ];
-		padding: (BlInsets top: 10 left: 30 bottom: 10 right: 10).
+		look: BrShadowLook;
+		margin: (BlInsets top: 10+5 left: 30 bottom: 10 right: 30);
+		padding: (BlInsets top: 10 left: 10 bottom: 10 right: 10).
 	
 	headerLabel := BrLabel new 
 		fitContent;
@@ -46,20 +50,29 @@ GtNewsCardStencil >> create [
 		margin: (BlInsets top: 0 left: 15 bottom: 0 right: 0);
 		constraintsDo: [ :c |
 			c linear vertical alignCenter ];
-		action: action.
+		action: openAction.
+	closeButton := GtHomeCloseButtonStencil new 
+		closeAction: closeAction;
+		create.
 	
 	container
 		addChild: headerLabel;
-		addChild: actionButton.
+		addChild: actionButton;
+		addChild: closeButton.
 	^ container
 ]
 
 { #category : #accessing }
-GtNewsCardStencil >> headerText: anObject [
+GtNotificationCardStencil >> headerText: anObject [
 	headerText := anObject
 ]
 
 { #category : #accessing }
-GtNewsCardStencil >> tooltipText: anObject [
+GtNotificationCardStencil >> openAction: anObject [
+	openAction := anObject
+]
+
+{ #category : #accessing }
+GtNotificationCardStencil >> tooltipText: anObject [
 	tooltipText := anObject
 ]
