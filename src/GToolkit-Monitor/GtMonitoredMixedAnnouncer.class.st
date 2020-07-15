@@ -91,6 +91,12 @@ GtMonitoredMixedAnnouncer >> gtSubscriptionsFor: aView [
 						actionStencil: [ 
 							BrButton new 
 								look: BrGlamorousButtonWithIconLook;
+								icon: [ BrGlamorousVectorIcons largeSignal asElement asScalableElement size: 16@16 ] asStencil;
+								label: 'Make weak';
+								action:  [ self makeWeak ] ];
+						actionStencil: [ 
+							BrButton new 
+								look: BrGlamorousButtonWithIconLook;
 								icon: BrGlamorousIcons trash asElement;
 								label: 'Remove subscriptions';
 								action:  [ self removeSubscriptions ] ] ] ]
@@ -135,6 +141,16 @@ GtMonitoredMixedAnnouncer >> makeStrong [
 	self announcer ifNotNil: [ :anAnnouncer |
 		anAnnouncer subscriptions subscriptions asArray do: [ :each |
 			[ each makeStrong ] on: Error do: [  ] ] ]
+]
+
+{ #category : #accessing }
+GtMonitoredMixedAnnouncer >> makeWeak [
+	self isSystemAnnouncer
+		ifTrue: [ ^ self ].
+
+	self announcer ifNotNil: [ :anAnnouncer |
+		anAnnouncer subscriptions subscriptions asArray do: [ :each |
+			[ each makeWeak ] on: Error do: [  ] ] ]
 ]
 
 { #category : #accessing }

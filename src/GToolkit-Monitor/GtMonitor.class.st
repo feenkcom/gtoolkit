@@ -62,10 +62,18 @@ GtMonitor >> gtMixedAnnouncersFor: aView [
 		actionStencil: [ :aTab |
 			BrButton new 
 				look: BrGlamorousButtonWithIconLook;
-				icon: BrGlamorousIcons trash asElement;
+				icon: BrGlamorousIcons trash;
 				label: 'Reset all';
 				action:  [
 					GtMonitoredMixedAnnouncersElement allMixedAnnouncers do: [ :each | each makeStrong; removeSubscriptions ].
+					aTab viewContentElement children first updateList ] ];
+		actionStencil: [ :aTab |
+			BrButton new 
+				look: BrGlamorousButtonWithIconLook;
+				icon: [ BrGlamorousVectorIcons largeSignal asElement asScalableElement size: 16@16 ] asStencil;
+				label: 'Make weak all';
+				action:  [
+					GtMonitoredMixedAnnouncersElement allMixedAnnouncers do: [ :each | each makeWeak ].
 					aTab viewContentElement children first updateList ] ]
 ]
 
