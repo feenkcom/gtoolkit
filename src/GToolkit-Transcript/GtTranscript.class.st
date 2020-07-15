@@ -54,8 +54,7 @@ GtTranscript >> asElement [
 
 { #category : #streaming }
 GtTranscript >> clear [ 
-	self flag: 'todo'.
-	self notYetImplemented
+	self textDo: [ :aText | aText deleteAll ]
 ]
 
 { #category : #streaming }
