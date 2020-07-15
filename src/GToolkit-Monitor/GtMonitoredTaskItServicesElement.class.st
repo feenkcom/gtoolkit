@@ -15,6 +15,7 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 
 	servicesList column
 		title: 'Service';
+		weight: 1;
 		stencil: [ :aMonitoredService |
 			| aTitle |
 			
@@ -24,10 +25,11 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 			BrLabel new
 				look: BrGlamorousLabelLook;
 				text: aTitle;
-				hMatchParent ].
+				fitContent ].
 
 	servicesList column
 		title: 'Running';
+		width: 100;
 		stencil: [ :aMonitoredService |
 			| isOpened |
 
@@ -40,10 +42,11 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 			BrLabel new
 				look: BrGlamorousLabelLook;
 				text: isOpened;
-				hExact: 100 ].
+				fitContent ].
 			
 	servicesList column
 		title: 'Queue';
+		width: 30;
 		stencil: [ :aMonitoredService |
 			| aQueueSize |
 			aQueueSize := aMonitoredService queueSize.
@@ -54,10 +57,11 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 			BrLabel new
 				look: BrGlamorousLabelLook;
 				text: aQueueSize;
-				hExact: 100 ].
+				fitContent ].
 			
 	servicesList column
 		title: 'Errors';
+		width: 30;
 		stencil: [ :aMonitoredService |
 			| aNumberOfFailedTasks |
 			aNumberOfFailedTasks := aMonitoredService numberOfFailedTasks.
@@ -71,7 +75,7 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 			BrLabel new
 				look: BrGlamorousLabelLook;
 				text: aNumberOfFailedTasks;
-				hExact: 100 ].
+				fitContent ].
 ]
 
 { #category : #initialization }

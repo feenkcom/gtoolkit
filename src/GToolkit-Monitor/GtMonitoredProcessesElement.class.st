@@ -15,6 +15,7 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 
 	servicesList column
 		title: 'Priority';
+		width: 30;
 		stencil: [ :aMonitoredService |
 			| aPriority |
 			
@@ -26,10 +27,11 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 			BrLabel new
 				look: BrGlamorousLabelLook;
 				text: aPriority;
-				hExact: 30 ].
+				fitContent ].
 	
 	servicesList column
 		title: 'Processes';
+		weight: 1;
 		stencil: [ :aMonitoredService |
 			| aTitle |
 			
@@ -41,10 +43,11 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 			BrLabel new
 				look: BrGlamorousLabelLook;
 				text: aTitle;
-				hMatchParent ].
+				fitContent ].
 
 	servicesList column
 		title: 'State';
+		width: 100;
 		stencil: [ :aMonitoredService |
 			| isOpened |
 
@@ -57,7 +60,7 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 			BrLabel new
 				look: BrGlamorousLabelLook;
 				text: isOpened;
-				hExact: 100 ].
+				fitContent ].
 		
 	self updateList
 ]

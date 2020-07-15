@@ -133,10 +133,11 @@ GtMonitor >> gtTaskItServicesFor: aView [
 	^ aView explicit
 		title: 'Services';
 		priority: 4;
+		tooltip: 'TaskIt Services';
 		stencil: [ GtMonitoredTaskItServicesElement new ];
 		actionButtonIcon: BrGlamorousIcons trash 
+			tooltip: 'Remove not running services'
 			action: [ :aButton | TKTConfiguration serviceManager purge ]
-			
 ]
 
 { #category : #'gt-extension' }
