@@ -137,9 +137,11 @@ GtTranscriptNextBuilder >> showException: anException [
 
 	self 
 		expanding: [ 
-			| list card |
+			| button list card |
+			button := anException asDebuggableElement vFitContent.
 			list := (GtPhlowView empty list items: stack) asElementDo: #yourself.
 			card := list asVerticallyResizableDo: [ :aContainer |
+				aContainer addChild: button at: 1.
 				aContainer layout: BlLinearLayout vertical.
 				aContainer padding: (BlInsets all: 10).
 				aContainer constraintsDo: [ :c |
