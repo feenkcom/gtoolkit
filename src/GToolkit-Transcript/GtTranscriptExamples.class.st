@@ -79,6 +79,19 @@ GtTranscriptExamples >> characters [
 ]
 
 { #category : #examples }
+GtTranscriptExamples >> clear [
+	<gtExample>
+	| transcript isEmpty |
+	transcript := self completeAPI.
+	transcript textDo: [ :aText | isEmpty := aText isEmpty ].
+	self assert: isEmpty not.
+	transcript clear.
+	transcript textDo: [ :aText | isEmpty := aText isEmpty ].
+	self assert: isEmpty.
+	^ transcript 
+]
+
+{ #category : #examples }
 GtTranscriptExamples >> completeAPI [
 	<gtExample>
 	| transcript |
@@ -316,7 +329,7 @@ GtTranscriptExamples >> transcriptWitAnimation [
 						background: snapshot ];
 				putAll: 'Animation progress:';
 				space;
-				put: anEvent progress asString.
+				putAll: anEvent progress asString.
 			animation target asSpartaForm extent ];
 		onFinishedDo: [ space close ].
 	
