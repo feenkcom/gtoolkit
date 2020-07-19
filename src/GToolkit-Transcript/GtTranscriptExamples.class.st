@@ -269,8 +269,7 @@ GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI_AndDisplayTheUI [
 		aStep check
 			label: 'Check UI Transcript Content';
 			childrenCount: 9;
-			onChildOfClass: BrEditor;
-			onChildOfClass: BrTextEditorSegmentElement ].
+			onBreadthFirstChildOfClass: BrTextEditorSegmentElement ].
 	aScripter syncContinue.
 	^ aScripter
 ]
