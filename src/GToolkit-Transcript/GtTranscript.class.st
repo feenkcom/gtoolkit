@@ -36,29 +36,30 @@ GtTranscript class >> installDefault [
 	Smalltalk globals at: #Transcript put: self default.
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> << anObject [
 	self show: anObject
 ]
 
-{ #category : #accessing }
+{ #category : #'api - accessing' }
 GtTranscript >> announcer [
 	<return: #Announcer>
 	^ announcer
 ]
 
-{ #category : #ui }
+{ #category : #'api - ui' }
 GtTranscript >> asElement [
 	^ GtTranscriptElement new transcript: self
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> clear [ 
-	self flag: 'todo'.
-	self notYetImplemented
+	self textDo: [ :aText | 
+		aText deleteAll.
+		self announcer announce: GtTranscriptDeleteAllAnnouncement ]
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> cr [
 	self next cr
 ]
@@ -87,23 +88,23 @@ GtTranscript >> insertString: aString withAttributes: aCollection [
 			attributes: aCollection) ]
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> next [
 	"This is a utility method for enabling a fluent API"
 	^ GtTranscriptNextBuilder new transcript: self 
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> nextPut: aCharacter [
 	self next put: aCharacter
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> nextPutAll: aString [
 	self next putAll: aString
 ]
 
-{ #category : #ui }
+{ #category : #'api - ui' }
 GtTranscript >> open [
 	| aSpace |
 	aSpace := BlSpace new.
@@ -113,38 +114,38 @@ GtTranscript >> open [
 	aSpace show
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> print: anObject [
 	self next print: anObject
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> show: anObject [
 	self print: anObject
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> showException: anException [
 	self next showException: anException.
 	self cr
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> space [
 	self next space
 ]
 
-{ #category : #accessing }
+{ #category : #'api - accessing' }
 GtTranscript >> stepGlobal [
 	"do nothing. it's here for compatibility with the old Transcript"
 ]
 
-{ #category : #streaming }
+{ #category : #'api - streaming' }
 GtTranscript >> tab [
 	self next tab
 ]
 
-{ #category : #accessing }
+{ #category : #'api - accessing' }
 GtTranscript >> textDo: aBlock [
 	<return: #BlText>
 

@@ -23,17 +23,28 @@ Class {
 	#category : #'GToolkit-Transcript'
 }
 
+{ #category : #'private - actions' }
+GtTranscriptElement >> clear [
+	self transcriptDo: [ :aTranscript | aTranscript clear ]
+]
+
 { #category : #initialization }
 GtTranscriptElement >> defaultLayout [
 	^ BlFrameLayout new
 ]
 
-{ #category : #scrolling }
+{ #category : #'announcement handling' }
+GtTranscriptElement >> deleteAllAnnouncement: aGtTranscriptDeleteAllAnnouncement [
+	editorElement enqueueTask: (GtTranscriptDeleteAllTaskAction new
+		editor: editorElement editor)
+]
+
+{ #category : #'private - scrolling' }
 GtTranscriptElement >> disableAutoScroll [
 	self setAutoScroll: false
 ]
 
-{ #category : #scrolling }
+{ #category : #'private - scrolling' }
 GtTranscriptElement >> enableAutoScroll [
 	self setAutoScroll: true
 ]
@@ -55,6 +66,7 @@ GtTranscriptElement >> initialize [
 
 { #category : #initialization }
 GtTranscriptElement >> initializeElements [
+	| clearButtonElement toolbarElement |
 	editorElement := self newEditorElement.
 	editorElement matchParent.
 	
@@ -63,12 +75,19 @@ GtTranscriptElement >> initializeElements [
 		do: [ self updateScroll ].
 
 	scrollButtonElement := self newScrollButtonElement.
-	scrollButtonElement constraintsDo: [ :c |
-		c frame horizontal alignRight.
-		c padding: (BlInsets all: 10) ].
+	clearButtonElement := self newClearButtonElement.
+	toolbarElement := BlElement new
+		layout: (BlLinearLayout horizontal cellSpacing: 5; alignCenter);
+		addChild: clearButtonElement;
+		addChild: scrollButtonElement;
+		constraintsDo: [ :c |
+			c horizontal fitContent.
+			c vertical fitContent.
+			c frame horizontal alignRight.
+			c padding: (BlInsets all: 10) ].
 	self updateScrollButton.
 	
-	self addChildren: { editorElement . scrollButtonElement }
+	self addChildren: { editorElement . toolbarElement }
 ]
 
 { #category : #initialization }
@@ -89,30 +108,38 @@ GtTranscriptElement >> initializeListeners [
 { #category : #'announcement handling' }
 GtTranscriptElement >> insertStringAnnouncement: aGtTranscriptInsertStringAnnouncement [
 	editorElement enqueueTask: (GtTranscriptInsertStringTaskAction new
-		announcement: aGtTranscriptInsertStringAnnouncement;
 		editor: editorElement editor;
 		string: aGtTranscriptInsertStringAnnouncement string;
 		attributes: aGtTranscriptInsertStringAnnouncement attributes)
 ]
 
-{ #category : #testing }
+{ #category : #'private - scrolling' }
 GtTranscriptElement >> isAutoScrollEnabled [
 	^ isAutoScrollEnabled
 ]
 
-{ #category : #'instance creation' }
+{ #category : #'private - instance creation' }
+GtTranscriptElement >> newClearButtonElement [
+	^ BrButton new
+		look: BrIconLook + (BrGlamorousLabelTooltipLook new text: 'Clear Transcript');
+		icon: BrGlamorousIcons trash;
+		size: 16@16;
+		action: [ self clear ]
+]
+
+{ #category : #'private - instance creation' }
 GtTranscriptElement >> newEditorElement [
 	^ BrEditor new
 		look: BrGlamorousCodeEditorLook new
 ]
 
-{ #category : #'instance creation' }
+{ #category : #'private - instance creation' }
 GtTranscriptElement >> newScrollButtonElement [
 	^ BlElement new
+		look: (BrGlamorousLabelTooltipLook new text: 'Enable/Disable Automatic Transcript Scrolling');
 		geometry: BlEllipse new;
 		size: 10@10;
-		background: Color white;
-		yourself
+		background: Color white
 ]
 
 { #category : #'hooks - children' }
@@ -120,6 +147,8 @@ GtTranscriptElement >> onAddedToSceneGraph [
 	| aTranscript |
 	super onAddedToSceneGraph.
 
+	self unsubscribeFromTranscript.
+	
 	aTranscript := self transcript
 		ifNil: [ ^ self ].
 
@@ -129,6 +158,11 @@ GtTranscriptElement >> onAddedToSceneGraph [
 		aTranscript announcer
 			when: GtTranscriptInsertStringAnnouncement
 			send: #insertStringAnnouncement:
+			to: self.
+			
+		aTranscript announcer
+			when: GtTranscriptDeleteAllAnnouncement
+			send: #deleteAllAnnouncement:
 			to: self ].
 
 	self updateScroll
@@ -136,16 +170,12 @@ GtTranscriptElement >> onAddedToSceneGraph [
 
 { #category : #'hooks - children' }
 GtTranscriptElement >> onRemovedFromSceneGraph [
-	| aTranscript |
 	super onRemovedFromSceneGraph.
 
-	aTranscript := self transcript
-		ifNil: [ ^ self ].
-
-	aTranscript announcer unsubscribe: self
+	self unsubscribeFromTranscript.
 ]
 
-{ #category : #accessing }
+{ #category : #'private - scrolling' }
 GtTranscriptElement >> setAutoScroll: aBoolean [
 
 	isAutoScrollEnabled := aBoolean.
@@ -153,16 +183,33 @@ GtTranscriptElement >> setAutoScroll: aBoolean [
 	self updateScroll
 ]
 
-{ #category : #accessing }
+{ #category : #'private - accessing' }
 GtTranscriptElement >> transcript [
 	<return: #GtTranscript>
 	
 	^ transcript
 ]
 
-{ #category : #accessing }
+{ #category : #'api - accessing' }
 GtTranscriptElement >> transcript: aGtTranscript [
-	transcript := aGtTranscript
+	self 
+		assert: [ aGtTranscript isNotNil ] 
+		description: [ 'Transcript must be non-nil' ].
+	self 
+		assert: [ transcript isNil ] 
+		description: [ 'You can attach to a transcript only once' ].
+	transcript := aGtTranscript.
+]
+
+{ #category : #'private - accessing' }
+GtTranscriptElement >> transcriptDo: aBlock [
+	self transcript ifNotNil: aBlock
+]
+
+{ #category : #'private - subscriptions' }
+GtTranscriptElement >> unsubscribeFromTranscript [
+	self transcriptDo: [ :aTranscript |
+		aTranscript announcer unsubscribe: self ]
 ]
 
 { #category : #updating }
@@ -175,6 +222,10 @@ GtTranscriptElement >> updateScroll [
 GtTranscriptElement >> updateScrollButton [
 
 	self isAutoScrollEnabled
-		ifTrue: [ scrollButtonElement border: (BlBorder builder width: 5; paint: Color green twiceDarker; build) ]
-		ifFalse: [ scrollButtonElement border: (BlBorder builder width: 5; paint: Color lightGray; build) ]
+		ifTrue: [ 
+			scrollButtonElement border: (BlBorder builder width: 5; paint: Color green twiceDarker; build).
+			scrollButtonElement look text: 'Disable Automatic Transcript Scrolling' ]
+		ifFalse: [ 
+			scrollButtonElement border: (BlBorder builder width: 5; paint: Color lightGray; build).
+			scrollButtonElement look text: 'Enable Automatic Transcript Scrolling' ]
 ]

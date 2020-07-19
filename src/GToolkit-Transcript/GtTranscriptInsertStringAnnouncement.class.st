@@ -3,8 +3,7 @@ Class {
 	#superclass : #GtTranscriptAnnouncement,
 	#instVars : [
 		'string',
-		'attributes',
-		'executed'
+		'attributes'
 	],
 	#category : #'GToolkit-Transcript'
 }
@@ -19,17 +18,6 @@ GtTranscriptInsertStringAnnouncement >> attributes: anObject [
 	attributes := anObject
 ]
 
-{ #category : #state }
-GtTranscriptInsertStringAnnouncement >> beExecuted [
-	executed := true
-]
-
-{ #category : #initialization }
-GtTranscriptInsertStringAnnouncement >> initialize [
-	super initialize.
-	executed := false.
-]
-
 { #category : #accessing }
 GtTranscriptInsertStringAnnouncement >> string [
 	^ string
@@ -38,9 +26,4 @@ GtTranscriptInsertStringAnnouncement >> string [
 { #category : #accessing }
 GtTranscriptInsertStringAnnouncement >> string: anObject [
 	string := anObject
-]
-
-{ #category : #testing }
-GtTranscriptInsertStringAnnouncement >> wasExecuted [
-	^ executed
 ]
