@@ -68,7 +68,7 @@ GtTranscriptElement >> initialize [
 GtTranscriptElement >> initializeElements [
 	| clearButtonElement toolbarElement |
 	editorElement := self newEditorElement.
-	editorElement matchParent.
+	editorElement constraintsDo: [:c | c vertical matchParent. c horizontal matchParent].
 	
 	editorElement editor
 		when: BrTextEditorInsertedEvent
@@ -129,8 +129,9 @@ GtTranscriptElement >> newClearButtonElement [
 
 { #category : #'private - instance creation' }
 GtTranscriptElement >> newEditorElement [
-	^ BrEditor new
-		look: BrGlamorousCodeEditorLook new
+	^ BrEditorElement new
+		editor: BrTextEditor new
+		"look: BrGlamorousCodeEditorLook new"
 ]
 
 { #category : #'private - instance creation' }
@@ -153,7 +154,7 @@ GtTranscriptElement >> onAddedToSceneGraph [
 		ifNil: [ ^ self ].
 
 	aTranscript textDo: [ :aText |
-		editorElement text: aText copy.
+		editorElement editor text: aText copy.
 	
 		aTranscript announcer
 			when: GtTranscriptInsertStringAnnouncement
