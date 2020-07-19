@@ -92,7 +92,7 @@ GtTranscriptNextBuilder >> fontSize: aNumber [
 
 { #category : #initialize }
 GtTranscriptNextBuilder >> initialize [
-	attributes := OrderedCollection with: (BlFontFamilyAttribute named: 'Source Sans Pro')
+	attributes := OrderedCollection with: (BlFontFamilyAttribute named: 'Source Code Pro')
 ]
 
 { #category : #attributes }
