@@ -1,6 +1,6 @@
 #!/bin/sh
 set -o xtrace
-
+set -e
 export AWS=ubuntu@$AWSIP
 export GTfolder=/var/www/html/tentative/
 

@@ -1,5 +1,6 @@
 #/bin/sh!
 set -o xtrace
+set -e
 export RUST_BACKTRACE=full
 
 TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 | sort -t '/' -k 3 -V | tail -n1 |sed 's/.*\///; s/\^{}//')
