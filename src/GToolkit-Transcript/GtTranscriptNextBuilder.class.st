@@ -92,7 +92,7 @@ GtTranscriptNextBuilder >> fontSize: aNumber [
 
 { #category : #initialize }
 GtTranscriptNextBuilder >> initialize [
-	attributes := OrderedCollection with: (BlFontFamilyAttribute named: 'Source Sans Pro')
+	attributes := OrderedCollection with: (BlFontFamilyAttribute named: 'Source Code Pro')
 ]
 
 { #category : #attributes }
@@ -137,9 +137,11 @@ GtTranscriptNextBuilder >> showException: anException [
 
 	self 
 		expanding: [ 
-			| list card |
+			| button list card |
+			button := anException asDebuggableElement vFitContent.
 			list := (GtPhlowView empty list items: stack) asElementDo: #yourself.
 			card := list asVerticallyResizableDo: [ :aContainer |
+				aContainer addChild: button at: 1.
 				aContainer layout: BlLinearLayout vertical.
 				aContainer padding: (BlInsets all: 10).
 				aContainer constraintsDo: [ :c |

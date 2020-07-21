@@ -1,6 +1,8 @@
 #!/bin/sh
 set -o xtrace
+set -e
 ls -al
+
 
 echo $CERT > encoded
 base64 --decode encoded -o pipe.p12

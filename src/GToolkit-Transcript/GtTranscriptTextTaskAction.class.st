@@ -7,6 +7,11 @@ Class {
 	#category : #'GToolkit-Transcript'
 }
 
+{ #category : #testing }
+GtTranscriptTextTaskAction class >> isAbstract [
+	^ self name = #GtTranscriptTextTaskAction 
+]
+
 { #category : #accessing }
 GtTranscriptTextTaskAction >> editor [
 	^ editor

@@ -1,6 +1,6 @@
 #!/bin/sh
 set -o xtrace
-
+set -e
 #run smoke tests
 timeout 60 xvfb-run -a ./GlamorousToolkitLinux64*/glamoroustoolkit GlamorousToolkitLinux64*/GlamorousToolkit.image --interactive &
 sleep 50
