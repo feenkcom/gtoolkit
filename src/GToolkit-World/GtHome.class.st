@@ -127,7 +127,9 @@ GtHome >> initializePanes [
 	mainPane addChild: feedElement.
 	
 	self addChild: notificationsElement.
-	self addChild: mainPane asScrollableElement.
+	self addChild: (BrScrollPane new
+		look: BrScrollPaneLook + BrGlamorousWithVerticalScrollbarLook;
+		content: mainPane).
 	self addChild: self createVersionLabel.
 ]
 
