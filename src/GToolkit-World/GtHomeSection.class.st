@@ -170,6 +170,27 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription width:
 ]
 
 { #category : #'instance creation' }
+GtHomeSection >> newInspectorCardForObject: anObject [
+	^ self
+		newHeaderCardWithTitle: 'Inspector'
+		description: anObject gtDisplayString
+		size: 200 @ 150
+		content:
+			(((GtInspector newOn: anObject)
+				constraintsDo: [ :c |
+					c horizontal exact: 400.
+					c vertical exact: 300 ];
+				asScalableElement)
+					margin: (BlInsets top: 5))
+		action: [ :card | 
+			self
+				showSpaceWithTitle: anObject gtDisplayString
+				with: (GtPager createWrappedOn: (
+					GtInspector newOn: anObject))
+				from: card ]
+]
+
+{ #category : #'instance creation' }
 GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook title: aTitle description: aDescription [
 	^ self
 		newHeaderCardWithTitle: 'Playground: ' , aTitle
