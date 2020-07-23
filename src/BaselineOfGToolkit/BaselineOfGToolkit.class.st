@@ -39,7 +39,7 @@ This is a reimagining of the classic transcript by taking advantage of the text 
 !!!Releaser
 Releaser is the engine for releasing deeply nested projects spread over multiple repositories. We are using it to release Glamorous Toolkit with it. Learn more at ${class:BaselineOfGToolkitReleaser}$.
 !!A few words about the graphical stack
-The Glamorous Toolkit is based on the SpartaBloc/Brick graphical stack. This stack has a few properties that make it distinct:
+The Glamorous Toolkit is based on the Sparta/Bloc/Brick graphical stack. This stack has a few properties that make it distinct:
 - it relies on one rendering tree at all times.
 - it features moldable and scalable text editor is made out of elements. This means that we can embed text with graphics to obtain live editors.
 - graph layouts are regular layouts. The implication here is that any element can be part of a graph-based visualization.
