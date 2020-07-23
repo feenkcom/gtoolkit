@@ -201,6 +201,8 @@ GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
 			anActualSpace root hasParent
 				ifTrue: [ anActualSpace root removeFromParent ]
 				ifFalse: [ anActualSpace root dispatchRemovedFromSceneGraph ].
+			self enqueueTask: (GtWorldReEnqueueTasks new
+				previousSpace: anActualSpace).
 			anActualSpace root
 				constraintsDo: [ :c |
 					c horizontal matchParent.
