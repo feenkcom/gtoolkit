@@ -1,6 +1,6 @@
 pipeline {
     agent none
-    parameters { string(name: 'FORCED_TAG_NAME', defaultValue: '', description: 'params.FORCED_TAG_NAME env variable') }
+    parameters { string(name: 'FORCED_TAG_NAME', defaultValue: '', description: 'Environment variable used for increasing the minor or major version of Glamorous Toolkit. Example input `v0.8.0`. Can be left blank, in that case, the patch will be incremented.') }
     options { 
         buildDiscarder(logRotator(numToKeepStr: '50'))
         disableConcurrentBuilds() 
