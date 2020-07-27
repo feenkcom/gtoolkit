@@ -93,7 +93,7 @@ GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [
 		look: BrGlamorousRegularEditorLook new;
 		fitContent;
 		constraintsDo: [ :c | c maxWidth: 100 ];
-		geometry: (BlRectangle cornerRadius: 5);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 5);
 		padding: (BlInsets all: 5);
 		border: (BlBorder paint: Color gray width: 1);
 		background: (Color veryVeryLightGray);
