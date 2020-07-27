@@ -39,7 +39,7 @@ GtToolButtonStencil >> create [
 		padding: (BlInsets all: 10);
 		label: self description;
 		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new);
-		geometry: (BlRectangle cornerRadius: 4);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 		layout: BlLinearLayout vertical alignCenter;
 		addChild: iconElement;
 		addChild: labelElement.

@@ -181,7 +181,7 @@ GtMonitorGlutinEventsElement >> newButtonElement: aText [
 		layout: BlLinearLayout horizontal alignCenter;
 		look: (BrShadowLook new width: 1; offset: 0@0.5);
 		background: Color white;
-		geometry: (BlRectangle cornerRadius: 3);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 3);
 		margin: (BlInsets all: 3);
 		padding: (BlInsets all: 4);
 		constraintsDo: [ :c |
@@ -198,7 +198,7 @@ GtMonitorGlutinEventsElement >> newSquareButtonElement: aText [
 		layout: BlLinearLayout horizontal alignCenter;
 		look: (BrShadowLook new width: 1; offset: 0@0.5);
 		background: Color white;
-		geometry: (BlRectangle cornerRadius: 3);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 3);
 		margin: (BlInsets all: 3);
 		padding: (BlInsets all: 4);
 		constraintsDo: [ :c |

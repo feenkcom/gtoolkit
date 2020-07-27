@@ -47,7 +47,7 @@ GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anE
 			addChild: (anElementOrStencil asElement background: Color white; size: 300@300; asScalableElement);
 			margin: (BlInsets all: 10);
 			background: Color white;
-			geometry: (BlRectangle cornerRadius: 4);
+			geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 			look:" BrGlamorousButtonExteriorLook new + "BrShadowLook new;
 "			border: (BlBorder paint: BrGlamorousColors defaultButtonBorderColor); "
 			preventMeAndChildrenMouseEvents);
@@ -61,7 +61,7 @@ GtHomeSection >> newCardWithoutIcon [
 			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e padding: (BlInsets all: 10)]) +
 			(BrGlamorousButtonExteriorLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
 		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
-		geometry: (BlRectangle cornerRadius: 4);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 		constraintsDo: [ :c |
 			c horizontal exact: 250.
 			c vertical exact: 100 ];
@@ -126,7 +126,7 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: 
 		label: aDescription;
 		padding: (BlInsets all: 1);
 		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap right: 2 * self spaceGap);
-		geometry: (BlRectangle cornerRadius: 4);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 		action: aBlock.
 
 	headerContainer := BlElement new
@@ -154,7 +154,7 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription width:
 		label: aDescription;
 		padding: (BlInsets all: 1);
 		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap right: 2 * self spaceGap);
-		geometry: (BlRectangle cornerRadius: 4);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 		action: aBlock.
 
 	headerContainer := BlElement new
@@ -288,7 +288,7 @@ GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock de
 		padding: (BlInsets all: 10);
 		label: aDescriptionString;
 		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new);
-		geometry: (BlRectangle cornerRadius: 4);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 		layout: BlLinearLayout vertical alignCenter;
 		addChild: iconElement;
 		addChild: labelElement.
