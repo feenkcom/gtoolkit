@@ -197,7 +197,7 @@ GtTranscriptExamples >> randomElement [
 	<gtExample>
 	| geometries color size geometry |
 	
-	geometries := { BlEllipse . BlRoundedRectangleGeometry }.
+	geometries := { BlEllipse . BlRectangleGeometry }.
 	color := Color random paler.
 	size := (100 atRandom @ 100 atRandom) + (75 @ 50).
 	geometry := geometries atRandom new.
