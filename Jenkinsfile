@@ -186,36 +186,36 @@ pipeline {
                         }
                     }
                 }
-                stage('Windows') {
-                    agent {
-                        label "windows"
-                    }
-                    stages {
-                        stage('Cleanup') {
-                             steps {
-                                powershell './scripts/build/parallelsmoke/win_1_cleanup.ps1'
-                             }
-                        }
-                        stage('Download') {
-                             steps {
-                                powershell './scripts/build/parallelsmoke/win_2_download.ps1'
-                             }
-                        }
-                        stage('Unpack') {
-                             steps {
-                                powershell './scripts/build/parallelsmoke/win_3_unpack.ps1'
-                             }
-                        }
-                        stage('Windows Examples') {
-                             steps {
-                                retry(4) {
-                                    powershell './scripts/build/parallelsmoke/win_4_examples.ps1'
-                                    junit '*.xml'
-                                }
-                             }
-                        }
-                    }
-                }
+                // stage('Windows') {
+                //     agent {
+                //         label "windows"
+                //     }
+                //     stages {
+                //         stage('Cleanup') {
+                //              steps {
+                //                 powershell './scripts/build/parallelsmoke/win_1_cleanup.ps1'
+                //              }
+                //         }
+                //         stage('Download') {
+                //              steps {
+                //                 powershell './scripts/build/parallelsmoke/win_2_download.ps1'
+                //              }
+                //         }
+                //         stage('Unpack') {
+                //              steps {
+                //                 powershell './scripts/build/parallelsmoke/win_3_unpack.ps1'
+                //              }
+                //         }
+                //         stage('Windows Examples') {
+                //              steps {
+                //                 retry(4) {
+                //                     powershell './scripts/build/parallelsmoke/win_4_examples.ps1'
+                //                     junit '*.xml'
+                //                 }
+                //              }
+                //         }
+                //     }
+                // }
             }
         }
         stage('Deploy release') {
