@@ -1,3 +1,44 @@
+import hudson.tasks.test.AbstractTestResultAction
+import hudson.model.Actionable
+import hudson.tasks.junit.CaseResult
+
+@NonCPS
+def getFailedTests = { ->
+    def testResultAction = currentBuild.rawBuild.getAction(AbstractTestResultAction.class)
+    def failedTestsString = "```"
+
+    if (testResultAction != null) {
+        def failedTests = testResultAction.getFailedTests()
+
+        if (failedTests.size() > 9) {
+            failedTests = failedTests.subList(0, 8)
+        }
+
+        for(CaseResult cr : failedTests) {
+            failedTestsString = failedTestsString + "${cr.getFullDisplayName()}:\n${cr.getErrorDetails()}\n\n"
+        }
+        failedTestsString = failedTestsString + "```"
+    }
+    return failedTestsString
+}
+
+@NonCPS
+def getTestSummary = { ->
+    def testResultAction = currentBuild.rawBuild.getAction(AbstractTestResultAction.class)
+    def summary = ""
+
+    if (testResultAction != null) {
+        total = testResultAction.getTotalCount()
+        failed = testResultAction.getFailCount()
+
+        summary = "Passed: " + (total - failed)
+        summary = summary + (", Failed: " + failed)
+    } else {
+        summary = "No tests found"
+    }
+    return summary
+}
+
 pipeline {
     agent none
     parameters { string(name: 'FORCED_TAG_NAME', defaultValue: '', description: 'Environment variable used for increasing the minor or major version of Glamorous Toolkit. Example input `v0.8.0`. Can be left blank, in that case, the patch will be incremented.') }
@@ -253,7 +294,10 @@ pipeline {
     }
     post {
         success {
-            slackSend (color: '#00FF00', message: "Successful <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>" )   
+            script {
+                tsum = getTestSummary()
+                slackSend (color: '#00FF00', message: "Successful <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>\n$tsum" )
+            }
         }
 
         failure {
@@ -261,7 +305,11 @@ pipeline {
         }
 
         unstable {
-            slackSend (color: '#FFFF00', message:  "Unstable <${env.BUILD_URL}/testReport|${env.JOB_NAME} [${env.BUILD_NUMBER}]> ")
+            script {
+                tfailed = getFailedTests()
+                tsum = getTestSummary()
+                slackSend (color: '#FFFF00', message:  "Unstable <${env.BUILD_URL}/testReport|${env.JOB_NAME} [${env.BUILD_NUMBER}]>\nTest Summary: $tsum\n$tfailed")
+            }
         }
     }
 }
