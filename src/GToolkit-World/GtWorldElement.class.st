@@ -1,11 +1,9 @@
 Class {
 	#name : #GtWorldElement,
-	#superclass : #BlElement,
+	#superclass : #GtWorldTabElement,
 	#instVars : [
 		'spotterDropdown',
-		'subSpaceDropdown',
-		'tabs',
-		'home'
+		'subSpaceDropdown'
 	],
 	#classVars : [
 		'WorldSpotterSize'
@@ -23,26 +21,30 @@ GtWorldElement class >> worldSpotterSize: aPoint [
 	WorldSpotterSize := aPoint
 ]
 
-{ #category : #'instance creation' }
-GtWorldElement >> home [
-	^ home
+{ #category : #defaults }
+GtWorldElement >> defaultHomeElement [
+	^ GtHome new
 ]
 
 { #category : #initialization }
-GtWorldElement >> initialize [
-	super initialize.
-	tabs := BrTabGroup new.
-	tabs look: BrGlamorousSpaceTabGroupLook new.
-	tabs actionbarStencil: [ self newActionbar ].
-	home := GtHome new.
-	tabs
-		addTab:
-			(BrTab new
-				vExact: 36;
-				look: BrGlamorousSpaceTabWithIconLook;
-				icon: BrGlamorousVectorIcons gt;
-				label: 'Home';
-				stencil: [ home ]).
+GtWorldElement >> initializeListeners [
+	super initializeListeners.
+	
+	self
+		when: GtSpawnSpotter
+		do: [ :e | 
+			e consumed: true.
+			spotterDropdown
+				ifNotNil: [ spotterDropdown
+						dispatchEvent:
+							(BrDropdownShowWish new
+								anchor: spotterDropdown;
+								yourself) ] ].
+]
+
+{ #category : #initialization }
+GtWorldElement >> initializeShortcuts [
+	super initializeShortcuts.
 	self
 		addShortcut:
 			(BlShortcut new
@@ -65,36 +67,16 @@ GtWorldElement >> initialize [
 									(BrDropdownShowWish new
 										anchor: subSpaceDropdown;
 										yourself) ] ]).
-	self
-		when: GtSpawnSpotter
-		do: [ :e | 
-			e consumed: true.
-			spotterDropdown
-				ifNotNil: [ spotterDropdown
-						dispatchEvent:
-							(BrDropdownShowWish new
-								anchor: spotterDropdown;
-								yourself) ] ].
-	self addChild: tabs.
-	self
-		constraintsDo: [ :c | 
-			c horizontal matchParent.
-			c vertical matchParent ]
 ]
 
 { #category : #'private - instance creation' }
-GtWorldElement >> newActionbar [
-	| anActionbar |
-
-	anActionbar := BrToolbar new.
-	anActionbar look: BrGlamorousToolbarLook new.
+GtWorldElement >> newActionItemsInto: anActionbar [
+	super newActionItemsInto: anActionbar.
 	anActionbar addItem: self newSpotterButton.
 	anActionbar addItem: self newSubSpaceButton.
-
-	^ anActionbar
 ]
 
-{ #category : #initialization }
+{ #category : #'private - instance creation' }
 GtWorldElement >> newSpotterButton [
 	self 
 		assert: [ spotterDropdown isNil ]
@@ -113,7 +95,7 @@ GtWorldElement >> newSpotterButton [
 	^ spotterDropdown
 ]
 
-{ #category : #initialization }
+{ #category : #'private - instance creation' }
 GtWorldElement >> newSubSpaceButton [
 	self
 		assert: [ subSpaceDropdown isNil ]
@@ -141,7 +123,7 @@ GtWorldElement >> newSubSpaceButton [
 	^ subSpaceDropdown
 ]
 
-{ #category : #initialization }
+{ #category : #'hooks - children' }
 GtWorldElement >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 
@@ -156,7 +138,7 @@ GtWorldElement >> onAddedToSceneGraph [
 		to: self home. 
 ]
 
-{ #category : #initialization }
+{ #category : #'hooks - children' }
 GtWorldElement >> onRemovedFromSceneGraph [
 	super onRemovedFromSceneGraph.
 	SystemAnnouncer uniqueInstance unsubscribe: self home
@@ -164,70 +146,11 @@ GtWorldElement >> onRemovedFromSceneGraph [
 
 { #category : #updating }
 GtWorldElement >> prepareForRelease [
-	home prepareForRelease
+	self home prepareForRelease
 ]
 
 { #category : #updating }
 GtWorldElement >> refreshContent [
 	"Refresh all notifications in the home screen."
-	home refreshNotifications
-]
-
-{ #category : #'api - opening' }
-GtWorldElement >> showSpace: aSpace [
-	self showSpace: aSpace select: true
-]
-
-{ #category : #accessing }
-GtWorldElement >> showSpace: aSpace select: shouldBeSelected [
-	| aTab |
-	aTab := (BrTab new
-		vExact: 36;
-		model: aSpace;
-		look: BrGlamorousSpaceTabWithLabelLook new;
-		label: aSpace title;
-		stencil: [ :aTabModel |
-			| anActualSpace |
-			anActualSpace := aTabModel model.
-			anActualSpace root hasParent
-				ifTrue: [ anActualSpace root removeFromParent ]
-				ifFalse: [ anActualSpace root dispatchRemovedFromSceneGraph ].
-			self enqueueTask: (GtWorldReEnqueueTasks new
-				previousSpace: anActualSpace).
-			anActualSpace root
-				constraintsDo: [ :c |
-					c horizontal matchParent.
-					c vertical matchParent ] ];
-		actionbarStencil: [ :aTabModel |			
-			BrToolbar new
-				look: (BrGlamorousToolbarLook new spacing: 0);
-				margin: (BlInsets left: 6);
-				addItems: {
-					BrButton new
-						icon: BrGlamorousIcons maximize;
-						exact: 16@16;
-						opacity: 0.5;
-						look: GtWorldTabToolbarButtonLook;
-						model: aTabModel;
-						label: 'Open in a new window';
-						action: [ :aButtonElement |
-							tabs viewModel removeTab: aButtonElement model.
-							GtWorld openWithSpaces: { aButtonElement model model } ].
-					BrButton new
-						icon: BrGlamorousVectorIcons close;
-						exact: 16@16;
-						opacity: 0.5;
-						look: GtWorldTabToolbarButtonLook;
-						label: 'Close';
-						model: aTabModel;
-						action: [ :aButtonElement |
-							tabs viewModel removeTab: aButtonElement model ] } ]).
-	
-	aTab selected: shouldBeSelected.
-	tabs addTab: aTab
-]
-
-{ #category : #'children accessing' }
-GtWorldElement >> topMostParent [
-	^ self
+	self home refreshNotifications
 ]
