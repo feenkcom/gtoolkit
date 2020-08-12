@@ -25,9 +25,14 @@ GtWorldTabElement >> defaultHomeTab [
 	^ BrTab new
 		vExact: 36;
 		look: BrGlamorousSpaceTabWithIconLook;
-		icon: BrGlamorousVectorIcons gt;
+		icon: self defaultHomeTabIcon;
 		label: 'Home';
 		stencil: [ self home ]
+]
+
+{ #category : #defaults }
+GtWorldTabElement >> defaultHomeTabIcon [
+	^ BrGlamorousVectorIcons gt
 ]
 
 { #category : #'private - accessing' }
