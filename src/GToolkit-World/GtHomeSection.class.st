@@ -13,6 +13,28 @@ GtHomeSection class >> isAbstract [
 ]
 
 { #category : #'instance creation' }
+GtHomeSection >> newAddCardWithTooltip: aTooltip size: aPoint action: aBlock [
+	| anAddButton |
+		
+	anAddButton := BrButton new
+		look: BrGlamorousButtonWithIconCircularLook;
+		icon: (BrGlamorousVectorIcons add asElement 
+			background: BrGlamorousColors defaultButtonBorderColor);
+		label: aTooltip;
+		beHuge;
+		constraintsDo: [ :c | 
+			c frame horizontal alignCenter.
+			c frame vertical alignCenter ];
+		action: aBlock.
+	
+	^ 	BrFrame new
+			exact: aPoint;
+			padding: (BlInsets all: 1);
+			margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap right: 2 * self spaceGap);
+			addChild: anAddButton
+]
+
+{ #category : #'instance creation' }
 GtHomeSection >> newCard [
 	^ self newCardWithoutIcon
 		addLook: BrIconLook new;
@@ -129,12 +151,13 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: 
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 		action: aBlock.
 
-	headerContainer := BlElement new
-		constraintsDo: [:c | c horizontal matchParent. c vertical fitContent ];
-		layout: BlLinearLayout vertical;
+	headerContainer := BrVerticalPane new
+		hMatchParent;
+		vFitContent;
 		background: BrGlamorousColors defaultButtonBorderColor;
-		addChild: (BrLabel new look: (BrGlamorousLabelLook new fontSize: 10);
-		text: aTitle).
+		addChild: (BrLabel new 
+			look: (BrGlamorousLabelLook new fontSize: 10);
+			text: aTitle).
 	
 	^ container
 		addChild: headerContainer preventMeAndChildrenMouseEvents; 
