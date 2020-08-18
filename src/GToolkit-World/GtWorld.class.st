@@ -93,7 +93,13 @@ GtWorld class >> openWithSpaces: aCollectionOfSpaces [
 	aCollectionOfSpaces do: [ :eachSpace |
 		aSpace root showSpace: eachSpace ].
 
-	aSpace show
+	aSpace show.
+	^ aSpace
+]
+
+{ #category : #'instance creation' }
+GtWorld class >> openWithSpaces: aCollectionOfSpaces from: aSpace [
+	^ self openWithSpaces: aCollectionOfSpaces
 ]
 
 { #category : #'class initialization' }

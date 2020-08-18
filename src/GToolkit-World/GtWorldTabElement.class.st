@@ -156,7 +156,9 @@ GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 						label: 'Open in a new window';
 						action: [ :aButtonElement |
 							tabs viewModel removeTab: aButtonElement model.
-							self space class openWithSpaces: { aButtonElement model model } ].
+							self space class 
+								openWithSpaces: { aButtonElement model model }
+								from: self space ].
 					BrButton new
 						icon: BrGlamorousVectorIcons close;
 						exact: 16@16;
