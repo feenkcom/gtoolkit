@@ -10,9 +10,9 @@ Class {
 { #category : #'instance creation' }
 GtWorld class >> buildWithShutdownListener [
 	| aSpace |
-	aSpace := GtWorld new.
-	aSpace title: 'Glamorous Toolkit'.
-	aSpace extent: (800*1.6)@800.
+	aSpace := self new.
+	aSpace title: self defaultTitle.
+	aSpace extent: (800*1.6) @ 800.
 	aSpace addEventHandler: BlSpaceShutdownOnCloseListener new.
 	^ aSpace
 ]
@@ -26,6 +26,11 @@ GtWorld class >> defaultId [
 GtWorld class >> defaultId: anId [
 	"Set the id of the default space opened initially."
 	defaultId := anId
+]
+
+{ #category : #defaults }
+GtWorld class >> defaultTitle [
+	^ 'Glamorous Toolkit'
 ]
 
 { #category : #'class initialization' }
@@ -52,8 +57,8 @@ GtWorld class >> open [
 	<script: 'self open'>
 	| aSpace |
 	
-	aSpace := GtWorld new.
-	aSpace title: 'Glamorous Toolkit'.
+	aSpace := self new.
+	aSpace title: self defaultTitle.
 	aSpace show
 ]
 
@@ -82,8 +87,8 @@ GtWorld class >> openWithShutdownListener [
 GtWorld class >> openWithSpaces: aCollectionOfSpaces [
 	| aSpace |
 
-	aSpace := GtWorld new.
-	aSpace title: 'Glamorous Toolkit'.
+	aSpace := self new.
+	aSpace title: self defaultTitle.
 
 	aCollectionOfSpaces do: [ :eachSpace |
 		aSpace root showSpace: eachSpace ].
@@ -102,6 +107,11 @@ GtWorld class >> startUp: resuming [
 { #category : #initialization }
 GtWorld >> defaultRoot [
 	^ GtWorldElement new
+]
+
+{ #category : #initialization }
+GtWorld >> defaultTitle [
+	^ self class defaultTitle
 ]
 
 { #category : #actions }
