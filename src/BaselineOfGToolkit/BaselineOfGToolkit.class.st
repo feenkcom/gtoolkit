@@ -71,15 +71,15 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.8.0/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.8.42/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.8.43/src' ];
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.19/src' ];
 			baseline: 'GToolkitTranscript' with: [
 				spec
 					loads: #();
-					repository: 'github://feenkcom/gtoolkit:v0.8.52/src' ];
+					repository: 'github://feenkcom/gtoolkit:v0.8.53/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.31/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.32/src' ];
 			baseline: 'GToolkitInspector' with: [
 				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.8.36/src' ];
 			baseline: 'GToolkitDebugger' with: [
@@ -111,7 +111,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkit4XMLSupport' with: [
 				spec repository: 'github://feenkcom/gt4xmlsupport:v0.8.0/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
-				spec repository: 'github://feenkcom/gt4petitparser2:v0.8.1/src' ];
+				spec repository: 'github://feenkcom/gt4petitparser2:v0.8.2/src' ];
 			baseline: 'GToolkit4Famix3' with: [
 				spec repository: 'github://feenkcom/gt4famix3:v0.8.0/src' ];
 			baseline: 'GToolkitRemote' with: [
