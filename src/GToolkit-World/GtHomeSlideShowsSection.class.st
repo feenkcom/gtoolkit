@@ -38,6 +38,10 @@ GtHomeSlideShowsSection >> create [
 		newShowCardWithTitle: 'Spotter'
 		slideshow: [GtSpotterSlideshow new create ]
 		description: 'Spotter is the moldable search interface. Learn more about it.').
+	cardsContainer addChild: (self
+		newShowCardWithTitle: 'Playground and Inspector'
+		slideshow: [GtPlaygroundAndInspectorSlideshow new create ]
+		description: 'Playground and Inspector are the core tools that enable live exploration. Learn more about them.').
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
