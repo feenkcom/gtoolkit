@@ -104,6 +104,35 @@ GtWorldTabElement >> newActionbar [
 	^ anActionbar
 ]
 
+{ #category : #accessing }
+GtWorldTabElement >> newToolbarForTabModel: aTabModel [
+	^ BrToolbar new
+		look: (BrGlamorousToolbarLook new spacing: 0);
+		margin: (BlInsets left: 6);
+		addItems:
+			{(BrButton new
+				icon: BrGlamorousIcons maximize;
+				exact: 16 @ 16;
+				opacity: 0.5;
+				look: GtWorldTabToolbarButtonLook;
+				model: aTabModel;
+				label: 'Open in a new window';
+				action: [ :aButtonElement | 
+					tabs viewModel removeTab: aButtonElement model.
+					self space class
+						openWithSpaces: {aButtonElement model model}
+						from: self space ]).
+			(BrButton new
+				icon: BrGlamorousVectorIcons close;
+				exact: 16 @ 16;
+				opacity: 0.5;
+				look: GtWorldTabToolbarButtonLook;
+				label: 'Close';
+				model: aTabModel;
+				action:
+						[ :aButtonElement | tabs viewModel removeTab: aButtonElement model ])}
+]
+
 { #category : #releasing }
 GtWorldTabElement >> prepareForRelease [
 	"Space sends this message to be saved as part of a release process.
@@ -125,50 +154,27 @@ GtWorldTabElement >> showSpace: aSpace [
 { #category : #accessing }
 GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 	| aTab |
-	aTab := (BrTab new
+	aTab := BrTab new
 		vExact: 36;
 		model: aSpace;
 		look: BrGlamorousSpaceTabWithLabelLook new;
 		label: aSpace title;
-		stencil: [ :aTabModel |
+		stencil: [ :aTabModel | 
 			| anActualSpace |
 			anActualSpace := aTabModel model.
 			anActualSpace root hasParent
 				ifTrue: [ anActualSpace root removeFromParent ]
 				ifFalse: [ anActualSpace root dispatchRemovedFromSceneGraph ].
-			self enqueueTask: (GtWorldReEnqueueTasks new
-				previousSpace: anActualSpace).
+			self
+				enqueueTask: (GtWorldReEnqueueTasks new previousSpace: anActualSpace).
 			anActualSpace root
-				constraintsDo: [ :c |
+				constraintsDo: [ :c | 
 					c horizontal matchParent.
-					c vertical matchParent ] ];
-		actionbarStencil: [ :aTabModel |			
-			BrToolbar new
-				look: (BrGlamorousToolbarLook new spacing: 0);
-				margin: (BlInsets left: 6);
-				addItems: {
-					BrButton new
-						icon: BrGlamorousIcons maximize;
-						exact: 16@16;
-						opacity: 0.5;
-						look: GtWorldTabToolbarButtonLook;
-						model: aTabModel;
-						label: 'Open in a new window';
-						action: [ :aButtonElement |
-							tabs viewModel removeTab: aButtonElement model.
-							self space class 
-								openWithSpaces: { aButtonElement model model }
-								from: self space ].
-					BrButton new
-						icon: BrGlamorousVectorIcons close;
-						exact: 16@16;
-						opacity: 0.5;
-						look: GtWorldTabToolbarButtonLook;
-						label: 'Close';
-						model: aTabModel;
-						action: [ :aButtonElement |
-							tabs viewModel removeTab: aButtonElement model ] } ]).
-	
+					c vertical matchParent ];
+				when: GtWorldChangeTabAppearanceWish 
+				do: [ :anEvent | aTabModel widgetDo: [ :aWidget | anEvent applyOn: aWidget ] ] ];
+		actionbarStencil:
+				[ :aTabModel | self newToolbarForTabModel: aTabModel ].
 	aTab selected: shouldBeSelected.
 	tabs addTab: aTab
 ]
