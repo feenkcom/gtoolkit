@@ -34,6 +34,14 @@ GtHomeSlideShowsSection >> create [
 		newShowCardWithTitle: 'Working With a REST API'
 		slideshow: [GtWorkingWithARestApi new create ]
 		description: 'GT is a client side technology. Learn how to create exploratory tools for a remote API.').
+	cardsContainer addChild: (self
+		newShowCardWithTitle: 'Spotter'
+		slideshow: [GtSpotterSlideshow new create ]
+		description: 'Spotter is the moldable search interface. Learn more about it.').
+	cardsContainer addChild: (self
+		newShowCardWithTitle: 'Playground and Inspector'
+		slideshow: [GtPlaygroundAndInspectorSlideshow new create ]
+		description: 'Playground and Inspector are the core tools that enable live exploration. Learn more about them.').
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
