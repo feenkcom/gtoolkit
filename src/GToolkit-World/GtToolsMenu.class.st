@@ -82,13 +82,13 @@ GtToolsMenu >> initializeElements [
 				look: BrGlamorousButtonWithLabelLook new;
 				label: 'Save';
 				hMatchParent;
-				action: [ :aButton | aButton space universe snapshot: true andQuit: false ].
+				action: [ :aButton | self saveFrom: aButton ].
 				
 			BrButton new
 				look: (BrGlamorousButtonWithLabelLook new);
 				label: 'Quit';
 				hMatchParent;
-				action: [ :aButton | aButton space universe snapshot: false andQuit: true ] })
+				action: [ :aButton | self quitFrom: aButton ] })
 ]
 
 { #category : #'hooks - children' }
@@ -96,4 +96,22 @@ GtToolsMenu >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	
 	self initializeElements
+]
+
+{ #category : #'private - actions' }
+GtToolsMenu >> quitFrom: aButton [
+	aButton label: 'Quitting...'.
+	aButton space universe snapshot: false andQuit: true.
+	aButton space universe postpone: [
+		aButton enqueueTask: (BlTaskAction new action: [
+			aButton label: 'Quit' ]) ].
+]
+
+{ #category : #'private - actions' }
+GtToolsMenu >> saveFrom: aButton [
+	aButton label: 'Saving...'.
+	aButton space universe snapshot: true andQuit: false.
+	aButton space universe postpone: [
+		aButton enqueueTask: (BlTaskAction new action: [
+			aButton label: 'Save' ]) ].
 ]
