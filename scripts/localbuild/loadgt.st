@@ -6,10 +6,6 @@ SourceFileArray compile: 'deferFlushDuring: aBlock
 		self flushChangesFile ]'.
 
 EpMonitor disableDuring: [
-    Metacello new
-	githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
-	baseline: 'Iceberg';
-	load.
     Metacello new 
 	baseline: 'GToolkitReleaser'; 
 	githubUser: 'feenkcom' project: 'gtoolkit-releaser' commitish: 'master' path: ''; 
