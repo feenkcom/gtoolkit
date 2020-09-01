@@ -62,7 +62,7 @@ GtHomeToolsSection >> newGitButtonStencil [
 					(GtInspector
 						createOn: Gt4Git new allRepositoriesGroup) maximized
 				from: card ];
-		description: 'Units of tests and of documentation. In one.'
+		description: 'Manage git repositories.'
 ]
 
 { #category : #'api - instantiation' }
