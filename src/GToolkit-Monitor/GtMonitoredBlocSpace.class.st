@@ -9,6 +9,15 @@ Class {
 }
 
 { #category : #accessing }
+GtMonitoredBlocSpace >> allPathsTo [
+	Smalltalk garbageCollectMost.
+
+	^ self exists
+		ifTrue: [ (ReferenceFinder findAllPathsTo: self space) sorted: [ :a :b | a size < b size ] ]
+		ifFalse: [ {  } ]
+]
+
+{ #category : #accessing }
 GtMonitoredBlocSpace >> announcer [
 	^ announcer ifNil: [ announcer := Announcer new ]
 ]
@@ -102,6 +111,20 @@ GtMonitoredBlocSpace >> gtActionsFor: aView [
 								text: 'The space is not running'.
 						 } ]))) asScrollableElement
 		]
+]
+
+{ #category : #'gt-extension' }
+GtMonitoredBlocSpace >> gtAllPathsToFor: aView [
+	<gtView>
+	
+	^ aView columnedList
+		title: 'All paths';
+		priority: 12;
+		items: [ self allPathsTo ];
+		column: 'Paths from Smalltalk' 
+			item: [ :anObject | anObject gtDisplayText ];
+		column: 'Length' 
+			item: [ :anObject | anObject size ]
 ]
 
 { #category : #'gt-extension' }
