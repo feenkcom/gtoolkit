@@ -29,14 +29,14 @@ GtMonitoredMixedAnnouncer >> gtInstVarPointersFor: aView [
 	<gtView>
 	
 	^ aView columnedList
-		title: 'Inst.var holders';
+		title: 'Slot holders';
 		priority: 4;
 		items: [ self instVarPointers ];
 		column: 'Object' 
 			item: [ :eachAssoc | eachAssoc key gtDisplayText ];
 		column: 'Class' 
 			item: [ :eachAssoc | eachAssoc key class name ];
-		column: 'Inst.vars' 
+		column: 'Slots' 
 			item: [ :eachAssoc |
 				String streamContents: [ :aStream | 
 					eachAssoc value
