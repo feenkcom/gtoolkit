@@ -5,6 +5,13 @@ Class {
 }
 
 { #category : #updating }
+GtHomeNotifications >> availableNotifications [
+	^ { 
+		self takeATourNotification 
+	}
+]
+
+{ #category : #updating }
 GtHomeNotifications >> clearContent [
 	self removeChildren.
 	self visibility: BlVisibility gone
@@ -61,8 +68,7 @@ GtHomeNotifications >> takeATourStencil [
 { #category : #updating }
 GtHomeNotifications >> updateWidget [
 	| availableNotifications validNotifications statusRegistry |
-	availableNotifications := { 
-		self takeATourNotification }.
+	availableNotifications := self availableNotifications.
 	
 	statusRegistry := self statusRegistry.
 	availableNotifications do: [ :aNews |
