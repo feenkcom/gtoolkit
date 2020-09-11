@@ -29,7 +29,7 @@ Glamorous Toolkit is based on graphical stack made of:
 - [Bloc](https://github.com/feenkcom/Bloc): the graphical framework
 - [Brick](https://github.com/feenkcom/Brick): the widget set
 
-## How to install
+## How to install 
 
 Please download it via the instructions available at: https://gtoolkit.com/download.
 
