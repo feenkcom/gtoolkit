@@ -42,6 +42,10 @@ GtHomeSlideShowsSection >> create [
 		newShowCardWithTitle: 'Playground and Inspector'
 		slideshow: [GtPlaygroundAndInspectorSlideshow new create ]
 		description: 'Playground and Inspector are the core tools that enable live exploration. Learn more about them.').
+	cardsContainer addChild: (self
+		newShowCardWithTitle: 'Coder'
+		slideshow: [GtCoderSlideshow new create ]
+		description: 'Coder offers the means through which we manipulate static code.').
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
