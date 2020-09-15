@@ -2,7 +2,6 @@ Class {
 	#name : #GtWorldChangeTabIconWish,
 	#superclass : #GtWorldChangeTabAppearanceWish,
 	#instVars : [
-		'label',
 		'icon'
 	],
 	#category : #'GToolkit-World-Events'
