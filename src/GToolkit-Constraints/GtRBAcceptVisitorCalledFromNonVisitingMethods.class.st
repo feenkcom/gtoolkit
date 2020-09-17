@@ -20,10 +20,11 @@ GtRBAcceptVisitorCalledFromNonVisitingMethods >> issues [
 	| all |
 	all := (#acceptVisitor: gtReferences select: [:each | 
 		"to ignore the reference from this method"
-		each method ~= thisContext method and: [ 
-			(each selector beginsWith: 'visit') not and: [
-				(each methodClass name beginsWith: 'Br') or: [
-					(each methodClass name beginsWith: 'Gt') ]]] ]).
+		each isFromTrait not and: [ 
+			each method ~= thisContext method and: [ 
+				(each selector beginsWith: 'visit') not and: [
+					(each methodClass name beginsWith: 'Br') or: [
+						(each methodClass name beginsWith: 'Gt') ]]]]]).
 	^ (self ignoreIssuesInMethodsBasedOnPragmas: all) result
 ]
 
