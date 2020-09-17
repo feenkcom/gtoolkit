@@ -14,7 +14,7 @@ unzip build-artifacts/GlamorousToolkitVM-*-linux64-bin.zip
 time ./glamoroustoolkit Pharo.image st --quit loadgt.st 2>&1
 
 echo "ThreadedFFIMigration enableThreadedFFI. Smalltalk snapshot: true andQuit: true."  > tffi.st
-echo "GtWorld openDefault. 2 seconds wait. BlHost pickHost universe snapshot: true andQuit: true." > gtworld.st
+echo "GtWorld openDefault. 5 seconds wait. BlHost pickHost universe snapshot: true andQuit: true." > gtworld.st
 ./glamoroustoolkit Pharo.image st tffi.st
 ./glamoroustoolkit Pharo.image st gtworld.st --interactive --no-quit 
 echo "Setup process complete. To start GlamorousToolkit run \n ./glamoroustoolkit Pharo.image --no-quit --interactive"
