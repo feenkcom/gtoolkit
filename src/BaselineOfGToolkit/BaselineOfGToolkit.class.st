@@ -71,21 +71,21 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.8.3/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.8.108/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.8.109/src' ];
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.56/src' ];
 			baseline: 'GToolkitTranscript' with: [
 				spec
 					loads: #();
-					repository: 'github://feenkcom/gtoolkit:v0.8.131/src' ];
+					repository: 'github://feenkcom/gtoolkit:v0.8.132/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.86/src' ];
 			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.8.94/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.8.95/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.94/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.95/src' ];
 			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground:v0.8.89/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-playground:v0.8.90/src' ];
 			baseline: 'GToolkitCoder' with: [
 				spec repository: 'github://feenkcom/gtoolkit-coder:v0.8.88/src' ];
 			baseline: 'GToolkitSpotter' with: [
@@ -107,7 +107,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.8.2/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:v0.8.9/src' ];
+				spec repository: 'github://feenkcom/gt4smacc:v0.8.10/src' ];
 			baseline: 'GToolkit4XMLSupport' with: [
 				spec repository: 'github://feenkcom/gt4xmlsupport:v0.8.0/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
