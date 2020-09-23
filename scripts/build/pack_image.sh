@@ -20,6 +20,7 @@ xvfb-run -a  ./glamoroustoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}.image" eval --s
 
 echo "ThreadedFFIMigration enableThreadedFFI. Smalltalk snapshot: true andQuit: true."  > tffi.st
 xvfb-run -a  ./glamoroustoolkit "${ARTIFACT_DIR}/${PROJECT_NAME}.image"  st tffi.st
+rm -rf ${ARTIFACT_DIR}/pharo-local
 zip -qr "$build_zip" "$ARTIFACT_DIR"
 cp $build_zip GT.zip
 

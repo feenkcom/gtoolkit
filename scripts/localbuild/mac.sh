@@ -14,7 +14,7 @@ unzip build-artifacts/GlamorousToolkitVM-*-mac64-bin.zip
 time ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit Pharo.image st --quit loadgt.st 2>&1
 
 echo "ThreadedFFIMigration enableThreadedFFI. Smalltalk snapshot: true andQuit: true."  > tffi.st
-echo "GtWorld openDefault. 2 seconds wait. BlHost pickHost universe snapshot: true andQuit: true." > gtworld.st
+echo "GtWorld openDefault. 5 seconds wait. BlHost pickHost universe snapshot: true andQuit: true." > gtworld.st
 ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit Pharo.image st tffi.st
 ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit Pharo.image st gtworld.st --interactive --no-quit 
 echo "Setup process complete. To start GlamorousToolkit run \n ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit Pharo.image --no-quit --interactive"

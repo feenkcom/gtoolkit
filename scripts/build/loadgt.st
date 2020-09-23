@@ -32,10 +32,6 @@ Context compile: 'copyTo: aContext
 		copy privSender: (self sender copyTo: aContext)].
 	^ copy'.
 
-IceGitWorkingCopyUpdateVisitor compile: 'remoteFileReferenceInPath: anUndefinedObject 
-	
-	"I do not remove nothing from the file in the image"'.
-
 [ 
 	EpMonitor current disable.
 	Metacello new	
