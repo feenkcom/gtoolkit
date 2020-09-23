@@ -15,6 +15,22 @@ GtMonitor >> gtActionProfilerFor: anAction [
 ]
 
 { #category : #'gt-extension' }
+GtMonitor >> gtExternalResourcesFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'External resources';
+		priority: 8;
+		stencil: [ GtMonitoredExternalResourcesElement new ];
+		actionStencil: [ :aTab |
+			BrButton new 
+				look: BrGlamorousButtonWithIconLook;
+				icon: BrGlamorousVectorIcons refresh;
+				label: 'Refresh';
+				action:  [ aTab viewContentElement children first updateList ] ]
+]
+
+{ #category : #'gt-extension' }
 GtMonitor >> gtGlutinEventFor: aView [
 	<gtView>
 	
