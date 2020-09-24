@@ -176,7 +176,8 @@ GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 		actionbarStencil:
 				[ :aTabModel | self newToolbarForTabModel: aTabModel ].
 	aTab selected: shouldBeSelected.
-	tabs addTab: aTab
+	tabs addTab: aTab.
+	aTab := nil
 ]
 
 { #category : #'children accessing' }
