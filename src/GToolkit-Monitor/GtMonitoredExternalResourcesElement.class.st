@@ -38,7 +38,7 @@ GtMonitoredExternalResourcesElement >> initialize [
 	self padding: (BlInsets all: 5).
 	
 	resourcesTree := BrColumnedTree new.
-	resourcesTree addEventHandler: (GtPhlowListToSelectHandler new).
+	resourcesTree addEventHandler: (GtPhlowListToSelectHandler new transformation: GtPhlowSendTransformation default asTreeNodeTransformation).
 
 	resourcesTree column
 		title: 'Class';

@@ -25,6 +25,12 @@ GtMonitor >> gtExternalResourcesFor: aView [
 		actionStencil: [ :aTab |
 			BrButton new 
 				look: BrGlamorousButtonWithIconLook;
+				icon: BrGlamorousIcons trash;
+				label: 'Garbage collect';
+				action:  [ Smalltalk garbageCollect ] ];
+		actionStencil: [ :aTab |
+			BrButton new 
+				look: BrGlamorousButtonWithIconLook;
 				icon: BrGlamorousVectorIcons refresh;
 				label: 'Refresh';
 				action:  [ aTab viewContentElement children first updateList ] ]
