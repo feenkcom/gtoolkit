@@ -77,7 +77,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitTranscript' with: [
 				spec
 					loads: #();
-					repository: 'github://feenkcom/gtoolkit:v0.8.158/src' ];
+					repository: 'github://feenkcom/gtoolkit:v0.8.159/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.96/src' ];
 			baseline: 'GToolkitInspector' with: [
@@ -117,7 +117,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitRemote' with: [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.89/src' ];
 			baseline: 'GToolkit4Git' with: [
-				spec repository: 'github://feenkcom/gt4git:v0.8.12/src' ];
+				spec repository: 'github://feenkcom/gt4git:v0.8.13/src' ];
 			baseline: 'GToolkit4Jenkins' with: [
 				spec repository: 'github://feenkcom/gt4jenkins:v0.8.2/src' ];
 			baseline: 'Gt4PharoLink' with: [
