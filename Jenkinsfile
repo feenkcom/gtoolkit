@@ -113,7 +113,7 @@ pipeline {
                     }
                     steps {
                         sh 'scripts/build/package.sh'
-                        
+                        stash includes: 'tagname.txt' , name: 'release_prediction'
                         stash includes: 'GlamorousToolkitWin64*.zip', name: 'winbuild'
                         stash includes: 'lib*.zip', name: 'alllibs'
                         stash includes: 'GT.zip', name: 'gtimage'
@@ -270,7 +270,7 @@ pipeline {
             steps {
                 dir(MASTER_WORKSPACE) {
                     sh 'chmod +x scripts/build/*.sh'
-                    
+                    unstash 'release_prediction'
                     unstash 'winbuild'
                     unstash 'alllibs'
                     unstash 'gtimage'  
