@@ -17,7 +17,14 @@ Class {
 
 { #category : #'private - accessing' }
 GtWorldReEnqueueTasks >> actualSpace [
+	"Return a space to which the actual element is attached to."
+	<return: #BlSpace>
 	^ actualSpace
+]
+
+{ #category : #'private - accessing' }
+GtWorldReEnqueueTasks >> actualSpaceDo: aBlock [
+	self actualSpace ifNotNil: aBlock
 ]
 
 { #category : #hooks }
@@ -26,18 +33,31 @@ GtWorldReEnqueueTasks >> onEnqueued: aSpace [
 ]
 
 { #category : #'private - accessing' }
+GtWorldReEnqueueTasks >> previousAndActualSpaceDo: aBlock [
+	self previousSpaceDo: [ :aPreviousSpace |
+		self actualSpaceDo: [ :anActualSpace | 
+			aBlock cull: aPreviousSpace cull: anActualSpace ] ]
+]
+
+{ #category : #'private - accessing' }
 GtWorldReEnqueueTasks >> previousSpace [
-	^ previousSpace
+	"Return a space to which the actual element was attached to."
+	<return: #BlSpace>
+	^ previousSpace at: 1
 ]
 
 { #category : #'api - accessing' }
 GtWorldReEnqueueTasks >> previousSpace: aSpace [
-	previousSpace := aSpace
+	previousSpace := aSpace asWeakReference.
+]
+
+{ #category : #'private - accessing' }
+GtWorldReEnqueueTasks >> previousSpaceDo: aBlock [
+	self previousSpace ifNotNil: aBlock
 ]
 
 { #category : #'api - running' }
 GtWorldReEnqueueTasks >> run [
-	self actualSpace ifNil: [ ^ self ].
-	self previousSpace ifNil: [ ^ self ].
-	self actualSpace enqueueTasksFrom: self previousSpace taskQueue.
+	self previousAndActualSpaceDo: [ :aPreviousSpace :anActualSpace |
+		anActualSpace enqueueTasksFrom: aPreviousSpace taskQueue ].
 ]

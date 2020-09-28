@@ -180,6 +180,12 @@ GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 	aTab := nil
 ]
 
+{ #category : #'private - accessing' }
+GtWorldTabElement >> tabs [
+	<return: #BrTabGroup>
+	^ tabs
+]
+
 { #category : #'children accessing' }
 GtWorldTabElement >> topMostParent [
 	^ self
