@@ -11,8 +11,7 @@ export build_zip=GT.zip
 TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 | sort -t '/' -k 3 -V | tail -n1 |sed 's/.*\///; s/\^{}//')
 PREDICTED_TAG_NAME=$(cat tagname.txt)
 
-if [[ "$PREDICTED_TAG_NAME" != "$TAG_NAME" ]] 
-then
+if [ "$PREDICTED_TAG_NAME" != "$TAG_NAME" ]; then
 
 echo "Predicted tag name did not materialize. Most likely Releaser did not create a new release because of an accute lack of new commits. Exiting now, goodbye."
 exit 0
