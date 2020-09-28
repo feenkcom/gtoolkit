@@ -8,7 +8,15 @@ export ScriptsFolder=/var/www/html/scripts/
 export build_zip=GT.zip
 
 TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 | sort -t '/' -k 3 -V | tail -n1 |sed 's/.*\///; s/\^{}//')
-echo $TAG_NAME > tagname.txt
+PREDICTED_TAG_NAME=$(cat tagname.txt)
+
+if [[ "$s1" != "$s2" ]] 
+then
+
+echo "Predicted tag name did not materialize. Most likely Releaser did not create a new release because of an accute lack of new commits. Exiting now, goodbye."
+exit 0
+
+fi
 
 #download GlamorousToolkitOSX64 from tentative because the osx vm uploaded a notarized version of it 
 curl https://dl.feenk.com/tentative/GlamorousToolkitOSX64.zip -o GlamorousToolkitOSX64.zip
