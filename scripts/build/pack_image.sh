@@ -4,7 +4,6 @@ set -e
 export RUST_BACKTRACE=full
 
 export PROJECT_NAME="GlamorousToolkit"
-echo $PROJECT_NAME > projectversion.txt
 
 # customize the name of the build folder
 export ARTIFACT_DIR="${PROJECT_NAME}"
