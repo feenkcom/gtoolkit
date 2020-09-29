@@ -284,14 +284,14 @@ GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShowBlock descri
 		description: aDescription
 		size: 200@150
 		content:
-			(aSlideShowBlock value slides first create
+			(aSlideShowBlock value slides first asElement
 				size: 800@600;
 				padding: (BlInsets all: 10);
 				beInSingleCompositionLayer) asScalableElement
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aString
-				with: aSlideShowBlock value makeArrowsVisible
+				with: aSlideShowBlock value
 				from: card ]
 ]
 
@@ -359,12 +359,12 @@ GtHomeSection >> sectionPaddingLeftInsets [
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> showSpaceWithTitle: aString with: anElement from: anotherElement [
+GtHomeSection >> showSpaceWithTitle: aString with: aShow from: anotherElement [
 	| aSpace |
 	aSpace := BlSpace new.
 	aSpace title: aString.
 	aSpace extent: 1200@600.
-	aSpace addChild: anElement asElement.
+	aSpace addChild: aShow makeArrowsVisible asElement.
 	aSpace withHalos.
 	anotherElement showSpace: aSpace
 ]

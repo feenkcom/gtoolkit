@@ -12,39 +12,39 @@ GtHomeSlideShowsSection >> create [
 	cardsContainer := self newCardsContainer.
 	cardsContainer addChild: (self 
 		newShowCardWithTitle: 'Tour' 
-		slideshow: [ GtTour new create ]
+		slideshow: [ GtTour new ]
 		description: 'Take an interative tour through the tools and engines.').
 	cardsContainer addChild: (self 
 		newShowCardWithTitle: 'One rendering tree' 
-		slideshow: [ GtOneRenderingTree new create ]
+		slideshow: [ GtOneRenderingTree new ]
 		description: 'In Glamorous Toolkit, all rendering relies on a single tree at a time.').
 	cardsContainer addChild: (self 
 		newShowCardWithTitle: 'Inspector views' 
-		slideshow: [ GtInspectorViews new create ]
+		slideshow: [ GtInspectorViews new ]
 		description: 'Every object can define how it can be viewed in the inspector. Learn how this work.').
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Pharo 101'
-		slideshow: [ GtPharo101 new create ]
+		slideshow: [ GtPharo101 new ]
 		description: 'New to Pharo? Take an introductory tutorial.').
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Querying Code'
-		slideshow: [ GtQueries new create ]
+		slideshow: [ GtQueries new ]
 		description: 'Search is pervasive in Glamorous Toolkit. Learn more about queries and how to use them.').
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Working With a REST API'
-		slideshow: [GtWorkingWithARestApi new create ]
+		slideshow: [GtWorkingWithARestApi new ]
 		description: 'GT is a client side technology. Learn how to create exploratory tools for a remote API.').
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Spotter'
-		slideshow: [GtSpotterSlideshow new create ]
+		slideshow: [GtSpotterSlideshow new ]
 		description: 'Spotter is the moldable search interface. Learn more about it.').
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Playground and Inspector'
-		slideshow: [GtPlaygroundAndInspectorSlideshow new create ]
+		slideshow: [GtPlaygroundAndInspectorSlideshow new ]
 		description: 'Playground and Inspector are the core tools that enable live exploration. Learn more about them.').
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Coder'
-		slideshow: [GtCoderSlideshow new create ]
+		slideshow: [GtCoderSlideshow new ]
 		description: 'Coder offers the means through which we manipulate static code.').
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer

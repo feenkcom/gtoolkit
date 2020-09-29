@@ -51,7 +51,7 @@ GtHomeNotifications >> takeATourNotification [
 		openAction: [ :cardElement |
 			self
 				showSpaceWithTitle: 'Tour'
-				with: GtTour new create makeArrowsVisible
+				with: GtTour new makeArrowsVisible
 				from: cardElement ];
 		refreshAction: [ self updateWidget ];
 		cardStencil: self takeATourStencil
