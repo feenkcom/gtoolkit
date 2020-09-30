@@ -64,6 +64,13 @@ GtTranscript >> cr [
 	self next cr
 ]
 
+{ #category : #'api - streaming' }
+GtTranscript >> crShow: anObject [
+	self 
+		cr; 
+		show: anObject
+]
+
 { #category : #'gt-extension' }
 GtTranscript >> gtLiveFor: aView [
 	<gtView>
