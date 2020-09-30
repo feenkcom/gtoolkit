@@ -11,7 +11,11 @@ Class {
 GtWorldChangeTabLabelWish >> applyOn: aBrTab [
 	self label ifNotNil: [ :aLabel |
 		aBrTab enqueueTask: (BlTaskAction new action: [ 
-			aBrTab label: aLabel ])].
+			aBrTab label: aLabel.
+			"When a tab is opened in a new window, the space title is used,
+			we therefore update it too."
+			(aBrTab model isKindOf: BlSpace) ifTrue: [ 
+				aBrTab model title: aLabel asString ] ])].
 ]
 
 { #category : #'api - accessing' }
