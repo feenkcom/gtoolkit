@@ -59,7 +59,8 @@ GtWorld class >> open [
 	
 	aSpace := self new.
 	aSpace title: self defaultTitle.
-	aSpace show
+	aSpace show.
+	^ aSpace
 ]
 
 { #category : #'instance creation' }
