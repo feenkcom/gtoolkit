@@ -291,7 +291,7 @@ GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShowBlock descri
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aString
-				with: aSlideShowBlock value makeArrowsVisible
+				with: aSlideShowBlock value
 				from: card ]
 ]
 
