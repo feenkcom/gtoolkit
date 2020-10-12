@@ -18,6 +18,7 @@ GtClassWithCommentsContainingMissingReferences >> name [
 
 { #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
-	^ RPackage organizer packages select: [ :each | 
-		each name beginsWith: 'GToolkit' ]
+	^ RPackage organizer packages select: [ :aPackage | 
+		#('Bloc' . 'Brick' . 'GToolkit' ) anySatisfy: [ :prefix | 
+			aPackage name beginsWith: prefix ] ]
 ]

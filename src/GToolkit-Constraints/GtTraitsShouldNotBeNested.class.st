@@ -18,8 +18,9 @@ GtTraitsShouldNotBeNested >> initialize [
 { #category : #accessing }
 GtTraitsShouldNotBeNested >> issues [
 	^ Smalltalk image allTraits select: [ :eachTrait | 
-	eachTrait allTraits isNotEmpty and: [ 
-		#('Bloc' . 'Brick' . 'GToolkit' ) anySatisfy: [ :prefix | eachTrait package name beginsWith: prefix ]]].
+		eachTrait allTraits isNotEmpty and: [ 
+			#('Bloc' . 'Brick' . 'GToolkit' ) anySatisfy: [ :prefix | 
+				eachTrait package name beginsWith: prefix ]]].
 ]
 
 { #category : #accessing }
