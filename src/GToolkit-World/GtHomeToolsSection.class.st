@@ -6,24 +6,19 @@ Class {
 
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> create [
-	| sectionContainer cardsContainer |
+	| sectionContainer cardsContainer items |
 	sectionContainer := self newSectionContainer.
 	sectionContainer addChild: (self newSectionTitle: 'Tools').
 	cardsContainer := self newCardsContainer.
-	cardsContainer addChild: self newPlaygroundButtonStencil create.
-	cardsContainer addChild: self newCoderButtonStencil create.
-	cardsContainer addChild: self newGitButtonStencil create.
-	cardsContainer addChild: self newMonitorButtonStencil create.
-	cardsContainer addChild: self newExamplesButtonStencil create.
-	cardsContainer addChild: self newTranscriptButtonStencil create.
-	cardsContainer addChild: self newMorphicWorldButtonStencil create.
-	cardsContainer addChild: self newSpotterButtonStencil create.
+	items := self collectItemStencils collect: [ :e | e create ].
+	cardsContainer addChildren: items.
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
 
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> newCoderButtonStencil [
+	<gtSectionItem>
 	^ GtToolButtonStencil new 
 		title: 'Coder';
 		icon: BrGlamorousVectorIcons largeBook;
@@ -37,6 +32,7 @@ GtHomeToolsSection >> newCoderButtonStencil [
 
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> newExamplesButtonStencil [
+	<gtSectionItem>
 	^ GtToolButtonStencil new 
 		title: 'Examples Explorer';
 		icon: BrGlamorousVectorIcons largeEg;
@@ -52,6 +48,7 @@ GtHomeToolsSection >> newExamplesButtonStencil [
 
 { #category : #accessing }
 GtHomeToolsSection >> newGitButtonStencil [
+	<gtSectionItem>
 	^ GtToolButtonStencil new 
 		title: 'Git';
 		icon: BrGlamorousVectorIcons largebranching;
@@ -67,6 +64,7 @@ GtHomeToolsSection >> newGitButtonStencil [
 
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> newMonitorButtonStencil [
+	<gtSectionItem>
 	^ GtToolButtonStencil new 
 		title: 'Monitor';
 		icon: BrGlamorousVectorIcons largeSignal;
@@ -80,6 +78,7 @@ GtHomeToolsSection >> newMonitorButtonStencil [
 
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> newMorphicWorldButtonStencil [
+	<gtSectionItem>
 	^ GtToolButtonStencil new 
 		title: 'Morphic World';
 		icon: BrGlamorousVectorIcons largeWindow;
@@ -89,6 +88,7 @@ GtHomeToolsSection >> newMorphicWorldButtonStencil [
 
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> newPlaygroundButtonStencil [
+	<gtSectionItem>
 	^ GtToolButtonStencil new 
 		title: 'Playground';
 		icon: BrGlamorousVectorIcons largePlay;
@@ -102,6 +102,7 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> newSpotterButtonStencil [
+	<gtSectionItem>
 	^ GtToolButtonStencil new 
 		title: 'Spotter';
 		icon: BrGlamorousVectorIcons largeSearch;
@@ -111,6 +112,7 @@ GtHomeToolsSection >> newSpotterButtonStencil [
 
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> newTranscriptButtonStencil [
+	<gtSectionItem>
 	^ GtToolButtonStencil new 
 		title: 'Transcript';
 		icon: BrGlamorousVectorIcons largeTranscript;

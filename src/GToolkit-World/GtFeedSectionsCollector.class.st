@@ -1,10 +1,10 @@
 Class {
 	#name : #GtFeedSectionsCollector,
-	#superclass : #GtHomeSectionsCollector,
+	#superclass : #GtHomeCollector,
 	#category : #'GToolkit-World-Utilities'
 }
 
 { #category : #accessing }
-GtFeedSectionsCollector class >> defaultHomeSectionPragmaName [
+GtFeedSectionsCollector class >> defaultPragmaName [
 	^ #gtFeedSection
 ]

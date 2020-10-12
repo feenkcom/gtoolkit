@@ -1,10 +1,10 @@
 Class {
-	#name : #GtHomeSectionsCollector,
+	#name : #GtSectionItemsCollector,
 	#superclass : #GtHomeCollector,
 	#category : #'GToolkit-World-Utilities'
 }
 
 { #category : #accessing }
-GtHomeSectionsCollector class >> defaultPragmaName [
-	^ #gtHomeSection
+GtSectionItemsCollector class >> defaultPragmaName [
+	^ #gtSectionItem
 ]

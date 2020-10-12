@@ -12,6 +12,13 @@ GtHomeSection class >> isAbstract [
 	^ self name = #GtHomeSection 
 ]
 
+{ #category : #accessing }
+GtHomeSection >> collectItemStencils [
+	^ GtSectionItemsCollector new
+		fromObject: self;
+		collect
+]
+
 { #category : #'instance creation' }
 GtHomeSection >> newAddCardWithTooltip: aTooltip size: aPoint action: aBlock [
 	| anAddButton |
