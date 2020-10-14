@@ -57,6 +57,10 @@ export LD_LIBRARY_PATH=`pwd`/lib
 
 echo "Run: `date`"
 echo ""
+echo "glibc version:"
+echo ""
+ldd --version
+echo ""
 echo "Image directory:"
 echo ""
 ls -l
