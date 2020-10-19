@@ -15,11 +15,11 @@ GtPlaygroundStencil class >> defaultPlaygroundClass [
 { #category : #accessing }
 GtPlaygroundStencil class >> playgroundClass [
 	^ self playgroundClassName 
-		ifNil: [ self playgroundClassName ]
+		ifNil: [ self defaultPlaygroundClass ]
 		ifNotNil: [ :aClassName |
 			self environment 
 				at: aClassName 
-				ifAbsent: [ self playgroundClassName  ] ]
+				ifAbsent: [ self defaultPlaygroundClass ] ]
 ]
 
 { #category : #accessing }
