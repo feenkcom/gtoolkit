@@ -71,15 +71,15 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.8.3/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.8.192/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.8.193/src' ];
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.108/src' ];
 			baseline: 'GToolkitTranscript' with: [
 				spec
 					loads: #();
-					repository: 'github://feenkcom/gtoolkit:v0.8.256/src' ];
+					repository: 'github://feenkcom/gtoolkit:v0.8.257/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.127/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.128/src' ];
 			baseline: 'GToolkitInspector' with: [
 				spec repository: 'github://feenkcom/gtoolkit-inspector:v0.8.151/src' ];
 			baseline: 'GToolkitDebugger' with: [
