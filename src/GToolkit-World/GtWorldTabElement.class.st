@@ -165,14 +165,14 @@ GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 			anActualSpace root hasParent
 				ifTrue: [ anActualSpace root removeFromParent ]
 				ifFalse: [ anActualSpace root dispatchRemovedFromSceneGraph ].
-			self
-				enqueueTask: (GtWorldReEnqueueTasks new previousSpace: anActualSpace).
+
+			aTabModel widgetDo: [ :aWidget |
+				aWidget enqueueTask: (GtWorldReEnqueueTasks new previousSpace: anActualSpace).
+				anActualSpace addEventHandler: (GtWorldChangeTabAppearanceChangeHandler new tab: aWidget) ].
 			anActualSpace root
 				constraintsDo: [ :c | 
 					c horizontal matchParent.
-					c vertical matchParent ];
-				when: GtWorldChangeTabAppearanceWish 
-				do: [ :anEvent | aTabModel widgetDo: [ :aWidget | anEvent applyOn: aWidget ] ] ];
+					c vertical matchParent ] ];
 		actionbarStencil:
 				[ :aTabModel | self newToolbarForTabModel: aTabModel ].
 	aTab selected: shouldBeSelected.
