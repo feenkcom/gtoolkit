@@ -13,7 +13,7 @@ GtWorld class >> buildWithShutdownListener [
 	aSpace := self new.
 	aSpace title: self defaultTitle.
 	aSpace extent: (800*1.6) @ 800.
-	aSpace addEventHandler: BlSpaceShutdownOnCloseListener new.
+	aSpace addShutdownListener.
 	^ aSpace
 ]
 
@@ -111,6 +111,11 @@ GtWorld class >> startUp: resuming [
 	self notifyDefaultInstance.
 ]
 
+{ #category : #accessing }
+GtWorld >> addShutdownListener [
+	self addEventHandler: BlSpaceShutdownOnCloseListener new
+]
+
 { #category : #initialization }
 GtWorld >> defaultRoot [
 	^ GtWorldElement new
@@ -138,4 +143,9 @@ GtWorld >> prepareForRelease [
 GtWorld >> refreshContent [
 	"Refresh the content of the space. Is only called for the default instance on start-up."
 	self root refreshContent
+]
+
+{ #category : #accessing }
+GtWorld >> removeShutdownListener [
+	self removeEventHandlersSuchThat: [ :eachHandler | eachHandler isKindOf: BlSpaceShutdownOnCloseListener ]
 ]
