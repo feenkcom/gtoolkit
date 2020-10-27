@@ -66,7 +66,7 @@ GtCreateStandaloneAppHowToGuide >> helloWorldSceneInSpace [
 		title: 'Hello World';
 		show.
 
-	^ aSpace
+	^ aSpace show
 ]
 
 { #category : #accessing }
