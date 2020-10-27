@@ -1,6 +1,6 @@
 "
 !How to create a standalone app with GT
-To create a standalone app based on the Glamorous Toolkit it is required to open an application specific window with the graphical scene and close the rest of GT windows. This can be done in just a few steps.
+Creating a standalone app based on Glamorous Toolkit is as simple as opening an application specific window and closing the existing GT window. This can be achieved in just a few steps.
 !!!Open a basic space with a scene
 ${class:BlSpace}$ is responsible for displaying a scene in a separate window. Users can customise window's title or extent. To spawn a window send ${method:BlSpace>>#show}$ to an instance of the space.
 ${example:GtCreateStandaloneAppHowToGuide>>#helloWorldSceneInSpace}$
@@ -66,7 +66,7 @@ GtCreateStandaloneAppHowToGuide >> helloWorldSceneInSpace [
 		title: 'Hello World';
 		show.
 
-	^ aSpace
+	^ aSpace show
 ]
 
 { #category : #accessing }
