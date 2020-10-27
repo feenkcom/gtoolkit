@@ -63,8 +63,7 @@ GtCreateStandaloneAppHowToGuide >> helloWorldSceneInSpace [
 	aSpace := BlSpace new
 		addChild: self helloWorldScene;
 		extent: 800@600;
-		title: 'Hello World';
-		show.
+		title: 'Hello World'.
 
 	^ aSpace show
 ]
