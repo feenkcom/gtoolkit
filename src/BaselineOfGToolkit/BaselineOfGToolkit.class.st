@@ -73,11 +73,11 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitDocumenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.8.211/src' ];
 			baseline: 'GToolkitPresenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.116/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.117/src' ];
 			baseline: 'GToolkitTranscript' with: [
 				spec
 					loads: #();
-					repository: 'github://feenkcom/gtoolkit:v0.8.277/src' ];
+					repository: 'github://feenkcom/gtoolkit:v0.8.278/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.141/src' ];
 			baseline: 'GToolkitInspector' with: [
