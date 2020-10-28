@@ -17,7 +17,7 @@ GtTranscriptExamples >> blocAnimation [
 		
 	child := BlElement new
 		size: 10 @ 10;
-		geometry: BlEllipse new;
+		geometry: BlEllipseGeometry new;
 		background: Color white.
 	element addChild: child.
 
@@ -197,7 +197,7 @@ GtTranscriptExamples >> randomElement [
 	<gtExample>
 	| geometries color size geometry |
 	
-	geometries := { BlEllipse . BlRectangleGeometry }.
+	geometries := { BlEllipseGeometry . BlRectangleGeometry }.
 	color := Color random paler.
 	size := (100 atRandom @ 100 atRandom) + (75 @ 50).
 	geometry := geometries atRandom new.

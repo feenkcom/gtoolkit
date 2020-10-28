@@ -138,7 +138,7 @@ GtTranscriptElement >> newEditorElement [
 GtTranscriptElement >> newScrollButtonElement [
 	^ BlElement new
 		look: (BrGlamorousLabelTooltipLook new text: 'Enable/Disable Automatic Transcript Scrolling');
-		geometry: BlEllipse new;
+		geometry: BlEllipseGeometry new;
 		size: 10@10;
 		background: Color white
 ]
