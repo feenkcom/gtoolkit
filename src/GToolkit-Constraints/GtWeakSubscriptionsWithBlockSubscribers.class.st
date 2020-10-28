@@ -6,7 +6,7 @@ Class {
 
 { #category : #accessing }
 GtWeakSubscriptionsWithBlockSubscribers >> description [
-	^ 'Weak subscriptions should nor use #when:do: and register blocks as receivers. If blocks are used it will have the effect of not garbage-collecting the receiver.'
+	^ 'Weak subscriptions should not use #when:do: and register blocks as receivers. If blocks are used it will have the effect of not garbage-collecting the receiver.'
 ]
 
 { #category : #accessing }
