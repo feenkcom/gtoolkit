@@ -96,7 +96,8 @@ GtMonitor >> gtMixedAnnouncersFor: aView [
 				label: 'Make weak all';
 				action:  [
 					GtMonitoredMixedAnnouncersElement allMixedAnnouncers do: [ :each | each makeWeak ].
-					aTab viewContentElement children first updateList ] ]
+					aTab viewContentElement children first updateList ] ];
+		actionUpdateButtonTooltip: 'Update mixed announcers list'
 ]
 
 { #category : #'gt-extension' }
