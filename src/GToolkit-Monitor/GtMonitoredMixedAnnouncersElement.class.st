@@ -12,8 +12,8 @@ GtMonitoredMixedAnnouncersElement class >> allMixedAnnouncers [
 	| allMixedAnnouncers |
 	
 	allMixedAnnouncers := Announcer allSubInstances select: [ :eachAnnouncer |
-		(self hasMultipleSubscriptionTypes: eachAnnouncer) or: [ 
-			self hasWithSubscriptionWithBlockActionsTypes: eachAnnouncer  ] ].
+		(self hasMultipleSubscriptionTypesFor: eachAnnouncer) or: [ 
+			self hasSubscriptionWithNonWeakActionTypesFor: eachAnnouncer  ] ].
 	allMixedAnnouncers := allMixedAnnouncers sorted: [ :a :b | a numberOfSubscriptions > b numberOfSubscriptions ].
 
 	allMixedAnnouncers := allMixedAnnouncers
@@ -23,16 +23,16 @@ GtMonitoredMixedAnnouncersElement class >> allMixedAnnouncers [
 ]
 
 { #category : #private }
-GtMonitoredMixedAnnouncersElement class >> hasMultipleSubscriptionTypes: anAnnouncer [
+GtMonitoredMixedAnnouncersElement class >> hasMultipleSubscriptionTypesFor: anAnnouncer [
 	^ (anAnnouncer subscriptions 
 			subscriptions groupedBy: [ :each | each class ]) keys size > 1
 ]
 
 { #category : #private }
-GtMonitoredMixedAnnouncersElement class >> hasWithSubscriptionWithBlockActionsTypes: anAnnouncer [
+GtMonitoredMixedAnnouncersElement class >> hasSubscriptionWithNonWeakActionTypesFor: anAnnouncer [
 	^ (anAnnouncer subscriptions subscriptions select: [:each | 
 			(each isKindOf: WeakAnnouncementSubscription) and: [
-				each action isClosure ] ]) size > 0
+				(each action isKindOf: WeakMessageSend) not ] ]) size > 0
 ]
 
 { #category : #'instance creation' }
