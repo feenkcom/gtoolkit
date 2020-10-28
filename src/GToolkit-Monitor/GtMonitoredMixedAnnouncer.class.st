@@ -155,11 +155,7 @@ GtMonitoredMixedAnnouncer >> makeWeak [
 
 { #category : #accessing }
 GtMonitoredMixedAnnouncer >> numberOfStrongSubscriptions [
-	^ self announcer
-		ifNil: [ 0 ]
-		ifNotNil: [ :anAnnouncer |
-			(anAnnouncer subscriptions subscriptions
-				select: [ :eachSubscription | eachSubscription isKindOf: AnnouncementSubscription ]) size ]
+	^ self strongSubscriptions size
 ]
 
 { #category : #accessing }
@@ -171,11 +167,19 @@ GtMonitoredMixedAnnouncer >> numberOfSubscriptions [
 
 { #category : #accessing }
 GtMonitoredMixedAnnouncer >> numberOfWeakSubscriptions [
-	^ self announcer
-		ifNil: [ 0 ]
-		ifNotNil: [ :anAnnouncer |
-			(anAnnouncer subscriptions subscriptions
-				select: [ :eachSubscription | eachSubscription isKindOf: WeakAnnouncementSubscription ]) size ]
+	^ self weakSubscriptions size
+]
+
+{ #category : #accessing }
+GtMonitoredMixedAnnouncer >> numberOfWeakSubscriptionsWithBlockAction [
+	^ (self weakSubscriptions select: [ :aSubscription |
+		aSubscription action isClosure ]) size
+]
+
+{ #category : #accessing }
+GtMonitoredMixedAnnouncer >> numberOfWeakSubscriptionsWithWeakSendAction [
+	^ (self weakSubscriptions select: [ :aSubscription |
+		aSubscription action isKindOf: WeakMessageSend ]) size
 ]
 
 { #category : #accessing }
@@ -227,8 +231,26 @@ GtMonitoredMixedAnnouncer >> shouldIgnoreForInstVarsPointer: anObject [
 ]
 
 { #category : #accessing }
+GtMonitoredMixedAnnouncer >> strongSubscriptions [
+	^ self announcer
+		ifNil: [ #() ]
+		ifNotNil: [ :anAnnouncer |
+			(anAnnouncer subscriptions subscriptions
+				select: [ :eachSubscription | eachSubscription isKindOf: AnnouncementSubscription ]) ]
+]
+
+{ #category : #accessing }
 GtMonitoredMixedAnnouncer >> title [
 	^ self announcer
 		ifNil: [ '' ]
 		ifNotNil: [ :anAnnouncer | anAnnouncer class asString ]
+]
+
+{ #category : #accessing }
+GtMonitoredMixedAnnouncer >> weakSubscriptions [
+	^ self announcer
+		ifNil: [ #() ]
+		ifNotNil: [ :anAnnouncer |
+			(anAnnouncer subscriptions subscriptions
+				select: [ :eachSubscription | eachSubscription isKindOf: WeakAnnouncementSubscription ]) ]
 ]

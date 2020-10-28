@@ -12,13 +12,27 @@ GtMonitoredMixedAnnouncersElement class >> allMixedAnnouncers [
 	| allMixedAnnouncers |
 	
 	allMixedAnnouncers := Announcer allSubInstances select: [ :eachAnnouncer |
-		(eachAnnouncer subscriptions subscriptions groupedBy: [ :each | each class ]) keys size > 1 ].
+		(self hasMultipleSubscriptionTypes: eachAnnouncer) or: [ 
+			self hasWithSubscriptionWithBlockActionsTypes: eachAnnouncer  ] ].
 	allMixedAnnouncers := allMixedAnnouncers sorted: [ :a :b | a numberOfSubscriptions > b numberOfSubscriptions ].
 
 	allMixedAnnouncers := allMixedAnnouncers
 		collect: [ :eachAnnouncer | GtMonitoredMixedAnnouncer new announcer: eachAnnouncer ].
 	
 	^ allMixedAnnouncers
+]
+
+{ #category : #private }
+GtMonitoredMixedAnnouncersElement class >> hasMultipleSubscriptionTypes: anAnnouncer [
+	^ (anAnnouncer subscriptions 
+			subscriptions groupedBy: [ :each | each class ]) keys size > 1
+]
+
+{ #category : #private }
+GtMonitoredMixedAnnouncersElement class >> hasWithSubscriptionWithBlockActionsTypes: anAnnouncer [
+	^ (anAnnouncer subscriptions subscriptions select: [:each | 
+			(each isKindOf: WeakAnnouncementSubscription) and: [
+				each action isClosure ] ]) size > 0
 ]
 
 { #category : #'instance creation' }
@@ -57,12 +71,15 @@ GtMonitoredMixedAnnouncersElement >> initialize [
 	announcersList column
 		title: 'Subscriptions';
 		stencil: [ :aMonitoredAnnouncer |
+			
 			BrLabel new
 				look: BrGlamorousLabelLook;
 				text: (aMonitoredAnnouncer numberOfSubscriptions asRopedText bold
-					append: (' (strong: {1}; weak: {2})' format: {
+					append: (' strong: {1}; weak: {2} ({3} weak send; {4} block)' format: {
 						aMonitoredAnnouncer numberOfStrongSubscriptions.
-						aMonitoredAnnouncer numberOfWeakSubscriptions
+						aMonitoredAnnouncer numberOfWeakSubscriptions.
+						aMonitoredAnnouncer numberOfWeakSubscriptionsWithWeakSendAction.
+						aMonitoredAnnouncer numberOfWeakSubscriptionsWithBlockAction
 					}) asRopedText);
 				hMatchParent ].
 		
