@@ -36,6 +36,11 @@ GtNotificationsBadgeElement >> dropdownBadgeElement [
 	^ dropdownBadgeElement
 ]
 
+{ #category : #'api - visibility' }
+GtNotificationsBadgeElement >> hide [
+	^ self visibility: BlVisibility gone
+]
+
 { #category : #initialization }
 GtNotificationsBadgeElement >> initialize [
 	super initialize.
@@ -80,7 +85,7 @@ GtNotificationsBadgeElement >> listElement [
 GtNotificationsBadgeElement >> newBadge [
 	^ BrBadge new
 		look: BrGlamorousBadgeWithLabelLook + BrGlamorousBadgeCircularLook;
-		fitContent
+		exact: 16@16
 ]
 
 { #category : #'private - instance creation' }
@@ -113,8 +118,21 @@ GtNotificationsBadgeElement >> onNotificationsChanged [
 		action: [ self updateBadge ])
 ]
 
+{ #category : #'api - visibility' }
+GtNotificationsBadgeElement >> show [
+	^ self visibility: BlVisibility visible
+]
+
 { #category : #'private - updating' }
 GtNotificationsBadgeElement >> updateBadge [
 	self badgeElement label: self notificationsCount.
 	self dropdownBadgeElement label: self notificationsCount.
+	self updateVisibility
+]
+
+{ #category : #'private - updating' }
+GtNotificationsBadgeElement >> updateVisibility [
+	self notificationsCount isZero
+		ifTrue: [ self hide ]
+		ifFalse: [ self show ]
 ]
