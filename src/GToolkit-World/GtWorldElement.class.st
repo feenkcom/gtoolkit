@@ -3,7 +3,8 @@ Class {
 	#superclass : #GtWorldTabElement,
 	#instVars : [
 		'spotterDropdown',
-		'subSpaceDropdown'
+		'subSpaceDropdown',
+		'notificationsDropdown'
 	],
 	#classVars : [
 		'WorldSpotterSize'
@@ -72,8 +73,22 @@ GtWorldElement >> initializeShortcuts [
 { #category : #'private - instance creation' }
 GtWorldElement >> newActionItemsInto: anActionbar [
 	super newActionItemsInto: anActionbar.
+	anActionbar addItem: self newNotificationsBadge.
 	anActionbar addItem: self newSpotterButton.
 	anActionbar addItem: self newSubSpaceButton.
+]
+
+{ #category : #'private - instance creation' }
+GtWorldElement >> newNotificationsBadge [
+	self 
+		assert: [ notificationsDropdown isNil ]
+		description: [ 'Notifications dropdown is already created!' ].
+	
+	notificationsDropdown := GtNotificationsBadgeElement new
+		addLook: (BrGlamorousLabelTooltipLook new text: 'Notifications');
+		hide.
+	
+	^ notificationsDropdown
 ]
 
 { #category : #'private - instance creation' }
@@ -153,4 +168,10 @@ GtWorldElement >> prepareForRelease [
 GtWorldElement >> refreshContent [
 	"Refresh all notifications in the home screen."
 	self home refreshNotifications
+]
+
+{ #category : #'api - notification' }
+GtWorldElement >> showNotification: aNotification [
+	notificationsDropdown ifNotNil: [ :anElement | 
+		anElement notification: aNotification ]
 ]
