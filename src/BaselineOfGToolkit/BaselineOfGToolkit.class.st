@@ -130,7 +130,10 @@ BaselineOfGToolkit >> baseline: spec [
 			spec requires: #('GToolkitInspector') ].
 		spec package: 'GToolkit-Constraints' with: [ 
 			spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter') ].
-		spec package: 'GToolkit-World'.
+		spec package: 'GToolkit-Notifications' with: [ 
+			spec requires: #('GToolkitInspector') ].
+		spec package: 'GToolkit-World' with: [ 
+			spec requires: #('GToolkit-Notifications') ].
 		spec package: 'GToolkit-Setup' with: [ 
 			spec requires: #('GToolkitReleaser' 'GToolkitInspector' 'GToolkitDebugger' 'GToolkitPlayground') ].
 	]

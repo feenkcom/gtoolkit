@@ -3,7 +3,8 @@ Class {
 	#superclass : #GtWorldTabElement,
 	#instVars : [
 		'spotterDropdown',
-		'subSpaceDropdown'
+		'subSpaceDropdown',
+		'notificationsDropdown'
 	],
 	#classVars : [
 		'WorldSpotterSize'
@@ -72,8 +73,22 @@ GtWorldElement >> initializeShortcuts [
 { #category : #'private - instance creation' }
 GtWorldElement >> newActionItemsInto: anActionbar [
 	super newActionItemsInto: anActionbar.
+	anActionbar addItem: self newNotificationsBadge.
 	anActionbar addItem: self newSpotterButton.
 	anActionbar addItem: self newSubSpaceButton.
+]
+
+{ #category : #'private - instance creation' }
+GtWorldElement >> newNotificationsBadge [
+	self 
+		assert: [ notificationsDropdown isNil ]
+		description: [ 'Notifications dropdown is already created!' ].
+	
+	notificationsDropdown := GtNotificationsBadgeElement new
+		addLook: (BrGlamorousLabelTooltipLook new text: 'Notifications');
+		hide.
+	
+	^ notificationsDropdown
 ]
 
 { #category : #'private - instance creation' }
@@ -153,4 +168,23 @@ GtWorldElement >> prepareForRelease [
 GtWorldElement >> refreshContent [
 	"Refresh all notifications in the home screen."
 	self home refreshNotifications
+]
+
+{ #category : #'api - notification' }
+GtWorldElement >> showNotification: aNotification [
+
+	"We want to display notifications only in a default space ID (window)."
+	self space ifNotNil: [ :mySpace |
+		BlSpace
+			spaceWithId: GtWorld defaultId 
+			do: [ :aSpace | 
+				aSpace ~= mySpace ifTrue: [
+					aSpace showNotification: aNotification.
+					^ self ] ] ].
+
+	"I am a root element of the default space ID, I will display the notification."
+	notificationsDropdown ifNotNil: [ :anElement | 
+		"Notification may come from any process"
+		anElement enqueueTask: (BlTaskAction new action: [ 
+			anElement notification: aNotification ]) ]
 ]
