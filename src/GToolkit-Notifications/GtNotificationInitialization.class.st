@@ -1,0 +1,14 @@
+Class {
+	#name : #GtNotificationInitialization,
+	#superclass : #Object,
+	#category : #'GToolkit-Notifications-Initialization'
+}
+
+{ #category : #'class initialization' }
+GtNotificationInitialization class >> initialize [
+	"Handlers must return an object that understands #asElement message."
+	BlBlocUIManagerNotification notificationHandlers
+		at: #inform: 
+		put: [ :request :args :continuation |
+			GtNotificationMessageEvent message: args first ]
+]
