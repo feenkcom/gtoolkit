@@ -149,3 +149,11 @@ GtWorld >> refreshContent [
 GtWorld >> removeShutdownListener [
 	self removeEventHandlersSuchThat: [ :eachHandler | eachHandler isKindOf: BlSpaceShutdownOnCloseListener ]
 ]
+
+{ #category : #'api - notification' }
+GtWorld >> showNotification: anElement [
+
+	(self root respondsTo: #showNotification:) 
+		ifFalse: [ super showNotification: anElement ]
+		ifTrue: [ self root showNotification: anElement ]
+]
