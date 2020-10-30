@@ -151,9 +151,9 @@ GtWorld >> removeShutdownListener [
 ]
 
 { #category : #'api - notification' }
-GtWorld >> showNotification: anElement [
+GtWorld >> showNotification: aNotification [
 
 	(self root respondsTo: #showNotification:) 
-		ifFalse: [ super showNotification: anElement ]
-		ifTrue: [ self root showNotification: anElement ]
+		ifFalse: [ super showNotification: aNotification ]
+		ifTrue: [ self root showNotification: aNotification ]
 ]
