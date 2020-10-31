@@ -19,13 +19,8 @@ Context compile: 'copyTo: aContext
 	self == aContext ifTrue: [^ nil].
 
 	"Workaround for the regular VM crash that occurs when copying self below.
-	Accessing the pc seems to be enough to prevent the crash.
-	In the crashes we did see, the PC was < 0, which seems to be invalid"
-	self pc < 0 ifTrue: [ 
-		Stdio stdout
-			lf; lf;
-			<< ''****    copyTo:    ****'';
-			lf; lf; flush ].
+	Accessing the pc seems to be enough to prevent the crash."
+	self pc.
 
 	copy := self copy.
 	self sender ifNotNil: [
