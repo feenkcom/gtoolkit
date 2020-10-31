@@ -18,11 +18,14 @@ The current repository embodies the second generation of GT and it is comprised 
 - [Completer](https://github.com/feenkcom/gtoolkit-completer): the moldable completion engine.
 - [Phlow](https://github.com/feenkcom/gtoolkit-phlow): the browsing engine.
 - [Releaser](https://github.com/feenkcom/gtoolkit-releaser): the engine that allows us to manage and release deeply nested projects.
+- [Remote](https://github.com/feenkcom/gtoolkit-remote): the engine for interaction with remote runtimes.
+- [GlamorousToolkit4Git](https://github.com/feenkcom/gt4git): the environment for manipulating Git.
 - [GlamorousToolkit4Smacc](https://github.com/feenkcom/gt4smacc): the environment for creating, debugging and testing SmaCC-based parsers.
 - [GlamorousToolkit4PetitParser2](https://github.com/feenkcom/gt4petitparser2): the environment for creating, debugging and testing PetitParser2-based parsers.
 - [GlamorousToolkit4Famix3](https://github.com/feenkcom/gt4famix3): the environment and dedicated algorithms for source code analysis.
 - [GlamorousToolkit4XMLSupport](https://github.com/feenkcom/gt4xmlsupport): the extensions for manipulating and browsing XML.
 - [GlamorousToolkit4Jenkins](https://github.com/feenkcom/gt4jenkins): the extensions for browsing Jenkins.
+- [Demos](https://github.com/feenkcom/gtoolkit-demos): a set of demos for Glamorous Toolkit.
 
 Glamorous Toolkit is based on graphical stack made of:
 - [Sparta](https://github.com/feenkcom/Sparta): the graphical canvas
