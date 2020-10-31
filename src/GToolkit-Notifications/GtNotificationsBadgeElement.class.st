@@ -1,6 +1,6 @@
 Class {
 	#name : #GtNotificationsBadgeElement,
-	#superclass : #GtNotificationElement,
+	#superclass : #GtNotificationsElement,
 	#instVars : [
 		'listElement',
 		'badgeElement',
@@ -71,13 +71,14 @@ GtNotificationsBadgeElement >> initializeDropdownBadgeElement [
 
 { #category : #initialization }
 GtNotificationsBadgeElement >> initializeListElement [
-	listElement := GtNotificationsElement new
-		exact: 400@300
+	listElement := GtNotificationsListElement new
+		exact: 400@300;
+		notifications: self notifications.
 ]
 
 { #category : #'private - accessing' }
 GtNotificationsBadgeElement >> listElement [
-	<return: #GtNotificationsElement>
+	<return: #GtNotificationsListElement>
 	^ listElement.
 ]
 
@@ -100,22 +101,10 @@ GtNotificationsBadgeElement >> newDropdownContent [
 		removeFromParent
 ]
 
-{ #category : #'api - accessing' }
-GtNotificationsBadgeElement >> notification: aNotification [
-	self listElement notification: aNotification.
-	self onNotificationsChanged.
-]
-
-{ #category : #'api - accessing' }
-GtNotificationsBadgeElement >> notificationsCount [
-	<return: #Integer>
-	^ self listElement notificationsCount
-]
-
-{ #category : #'private - hooks' }
+{ #category : #accessing }
 GtNotificationsBadgeElement >> onNotificationsChanged [
-	self enqueueTask: (BlTaskAction new
-		action: [ self updateBadge ])
+	super onNotificationsChanged.
+	self listElement notifications: self notifications.
 ]
 
 { #category : #'api - visibility' }
@@ -124,7 +113,9 @@ GtNotificationsBadgeElement >> show [
 ]
 
 { #category : #'private - updating' }
-GtNotificationsBadgeElement >> updateBadge [
+GtNotificationsBadgeElement >> updateElement [
+	super updateElement.
+	self haltOnce.
 	self badgeElement label: self notificationsCount.
 	self dropdownBadgeElement label: self notificationsCount.
 	self updateVisibility

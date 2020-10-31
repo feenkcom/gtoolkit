@@ -40,3 +40,11 @@ GtNotificationMessageEvent >> message: aString [
 	self assertMessage: aString.
 	message := aString.
 ]
+
+{ #category : #printing }
+GtNotificationMessageEvent >> printOn: aStream [
+	self message ifNil: [ ^ super printOn: aStream ].
+	aStream 
+		nextPutAll: 'Notification: ';
+		print: self message
+]

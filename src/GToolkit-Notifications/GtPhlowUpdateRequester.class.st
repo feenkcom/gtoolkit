@@ -139,9 +139,9 @@ GtPhlowUpdateRequester >> onElementAddedTooSceneGraph [
 GtPhlowUpdateRequester >> postponeUpdate [
 	self elementDo: [ :anElement | 
 		self beUpdateRequestedIfDoneEarlierDo: [ ^ self ].
-		anElement isAttachedToSceneGraph ifFalse: [ ^ self ].
 		BlUseAsyncFeatures 
 			ifEnabledDo: [ 
+				anElement isAttachedToSceneGraph ifFalse: [ ^ self ].
 				BlTaskAtQueue default
 					schedule: [ self enqueueUpdate ]
 					at: self postponedTime ]

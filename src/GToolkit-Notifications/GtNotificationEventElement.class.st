@@ -24,6 +24,11 @@ GtNotificationEventElement >> defaultVercialResizerModel [
 	^ BrLayoutVerticalResizerModel fitContent
 ]
 
+{ #category : #'api - actions' }
+GtNotificationEventElement >> dismiss [
+	self fireEvent: (GtNotificationDismissWish new notification: self event)
+]
+
 { #category : #accessing }
 GtNotificationEventElement >> event [
 	<return: #GtNotificationEvent>

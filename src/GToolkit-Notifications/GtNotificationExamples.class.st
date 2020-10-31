@@ -20,6 +20,7 @@ GtNotificationExamples >> basicNotificationBadgeElement [
 	| anElement |
 	anElement := GtNotificationsBadgeElement new.
 	self assert: anElement notificationsCount equals: 0.
+	self assert: anElement listElement notifications == anElement notifications.
 	^ anElement
 ]
 
@@ -36,7 +37,7 @@ GtNotificationExamples >> basicNotificationEvent [
 GtNotificationExamples >> basicNotificationsElement [
 	<gtExample>
 	| anElement |
-	anElement := GtNotificationsElement new.
+	anElement := GtNotificationsListElement new.
 	self assert: anElement notifications size equals: 0.
 	self assert: anElement listElement items size equals: 0.
 	^ anElement
@@ -59,18 +60,20 @@ GtNotificationExamples >> notificationBadgeElement_OneNotification [
 	| anElement aNotification |
 	anElement := self basicNotificationBadgeElement.
 	aNotification := self messageEvent.
-	anElement notification: aNotification.
+	BlUseAsyncFeatures disableDuring: [
+		anElement notification: aNotification ].
 	self assert: anElement notificationsCount equals: 1.
 	^ anElement
 ]
 
 { #category : #'examples - list' }
-GtNotificationExamples >> notificationsElement_OneNotification [
+GtNotificationExamples >> notificationsListElement_OneNotification [
 	<gtExample>
 	| anElement aNotification |
 	anElement := self basicNotificationsElement.
 	aNotification := self messageEvent.
-	anElement notification: aNotification.
+	BlUseAsyncFeatures disableDuring: [
+		anElement notification: aNotification ].
 	self assert: anElement notifications size equals: 1.
 	self assert: anElement listElement items size equals: 1.
 	^ anElement

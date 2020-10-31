@@ -3,7 +3,8 @@ Class {
 	#superclass : #GtNotificationEventElement,
 	#instVars : [
 		'message',
-		'textEditor'
+		'textEditor',
+		'dismissButton'
 	],
 	#category : #'GToolkit-Notifications-UI'
 }
@@ -17,7 +18,7 @@ GtNotificationMessageElement >> assertMessage: aString [
 
 { #category : #initialization }
 GtNotificationMessageElement >> defaultLayout [
-	^ BlFrameLayout new
+	^ BlLinearLayout vertical alignCenterRight
 ]
 
 { #category : #defaults }
@@ -25,22 +26,42 @@ GtNotificationMessageElement >> defaultMessage [
 	^ 'empty message'
 ]
 
+{ #category : #'private - accessing' }
+GtNotificationMessageElement >> dismissButton [
+	<return: #BrButton>
+	^ dismissButton
+]
+
 { #category : #initialization }
 GtNotificationMessageElement >> initialize [
 	super initialize.
 	message := self defaultMessage.
 	self initializeTextEditor.
+	self initializeDismissButton.
 	
 	self addChild: self textEditor as: #textEditor.
+	self addChild: self dismissButton as: #dismissButton.
 	
 	self
 		padding: (BlInsets all: 5);
 		margin: (BlInsets all: 5).
 	
 	self addLook: BrGlamorousButtonExteriorLook. 
-	self addLook: (BrLayoutResizerLook inherit
-		vInherit: self textEditor;
-		vAnyToFitContent: self textEditor).
+	self addLook: (BrLayoutResizerLook new
+		hInherit: self;
+		vAnyToFitContent: self;
+		hInherit: self textEditor;
+		vAnyToFitContent: self textEditor;
+		anyToFitContent: self dismissButton).
+]
+
+{ #category : #initialization }
+GtNotificationMessageElement >> initializeDismissButton [
+	dismissButton := BrButton new
+		look: BrGlamorousButtonWithLabelLook;
+		beSmall;
+		label: 'Dismiss';
+		action: [ self dismiss ]
 ]
 
 { #category : #initialization }
