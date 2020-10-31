@@ -64,7 +64,6 @@ GtNotificationsElement >> removeNotification: aGtNotificationEvent [
 
 { #category : #'private - updating' }
 GtNotificationsElement >> requestUpdate [
-	self haltOnce.
 	self updateRequester requestUpdate.
 ]
 
