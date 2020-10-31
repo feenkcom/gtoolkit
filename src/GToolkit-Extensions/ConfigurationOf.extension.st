@@ -64,19 +64,22 @@ ConfigurationOf class >> gtPackagesFor: aView [
 	^ aView explicit
 		title: 'Packages';
 		priority: 50;
-		stencil: [ 
-			| list |
-			list := BrColumnedList new display: [ self project version packages ].
+		stencil: [ | list |
+			list := BrColumnedList new items: [ self project version packages ].
 			list addEventHandler: GtPhlowListToSelectHandler new.
 			list column
 				title: 'Packages';
-				stencil: [ :aNode :index |
+				stencil: [ :aNode :index | 
 					| text textElement |
-					text := [ aNode gtDisplayString asRopedText ] 
-						on: Error 
+					text := [ aNode gtDisplayString asRopedText ]
+						on: Error
 						do: [ aNode errorMessage asRopedText foreground: Color red ].
-					textElement := (BrColumnCellLabelStencil matchParent: text) asElement.
-					textElement constraintsDo: [ :c | c horizontal matchParent. c padding: (BlInsets left: 10) ] ].
+					textElement := (BrColumnCellLabelStencil matchParent: text)
+						asElement.
+					textElement
+						constraintsDo: [ :c | 
+							c horizontal matchParent.
+							c padding: (BlInsets left: 10) ] ].
 			list ]
 ]
 
