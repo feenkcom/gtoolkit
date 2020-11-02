@@ -60,7 +60,7 @@ GtHomeToolsSection >> newGitButtonStencil [
 				showSpaceWithTitle: 'Git'
 				with:
 					(GtInspector
-						createOn: Gt4Git new allRepositoriesGroup) maximized
+						createOn: Gt4Git new) maximized
 				from: card ];
 		description: 'Manage git repositories.'
 ]
