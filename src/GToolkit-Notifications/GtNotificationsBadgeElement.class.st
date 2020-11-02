@@ -115,7 +115,6 @@ GtNotificationsBadgeElement >> show [
 { #category : #'private - updating' }
 GtNotificationsBadgeElement >> updateElement [
 	super updateElement.
-	self haltOnce.
 	self badgeElement label: self notificationsCount.
 	self dropdownBadgeElement label: self notificationsCount.
 	self updateVisibility

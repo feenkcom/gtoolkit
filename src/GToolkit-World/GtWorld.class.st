@@ -119,6 +119,7 @@ GtWorld >> addShutdownListener [
 { #category : #initialization }
 GtWorld >> defaultRoot [
 	^ GtWorldElement new
+		addEventHandler: GtNotificationJobEventHandler new.
 ]
 
 { #category : #initialization }
