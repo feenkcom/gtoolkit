@@ -171,6 +171,12 @@ GtWorldElement >> refreshContent [
 ]
 
 { #category : #'api - notification' }
+GtWorldElement >> removeNotification: aNotification [
+	notificationsDropdown ifNotNil: [ :anElement | 
+		anElement removeNotification: aNotification ]
+]
+
+{ #category : #'api - notification' }
 GtWorldElement >> showNotification: aNotification [
 
 	"We want to display notifications only in a default space ID (window)."
@@ -184,7 +190,5 @@ GtWorldElement >> showNotification: aNotification [
 
 	"I am a root element of the default space ID, I will display the notification."
 	notificationsDropdown ifNotNil: [ :anElement | 
-		"Notification may come from any process"
-		anElement enqueueTask: (BlTaskAction new action: [ 
-			anElement notification: aNotification ]) ]
+		anElement notification: aNotification ]
 ]

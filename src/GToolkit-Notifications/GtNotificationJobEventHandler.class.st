@@ -8,6 +8,14 @@ Class {
 }
 
 { #category : #'private - accessing' }
+GtNotificationJobEventHandler >> defaultElementAndSpaceDo: aBlock [
+	self elementAndSpaceDo: [ :anElement :aSpace | 
+		"Proceed only if in a default space (world)"
+		aSpace id = GtWorld defaultId ifFalse: [ ^ self ].
+		aBlock cull: anElement cull: aSpace ]
+]
+
+{ #category : #'private - accessing' }
 GtNotificationJobEventHandler >> elementAndSpaceDo: aBlock [
 	self elementDo: [ :anElement | 
 		anElement space ifNotNil: [ :aSpace | 
@@ -40,12 +48,22 @@ GtNotificationJobEventHandler >> onInstalledIn: anObject [
 ]
 
 { #category : #'private - announcement handling' }
-GtNotificationJobEventHandler >> onJobStart: aJobStart [
-	self elementAndSpaceDo: [ :anElement :aSpace | 
+GtNotificationJobEventHandler >> onJobEnd: aJobStart [
+	"I remove the notification only in the default world (space)"
+	self defaultElementAndSpaceDo: [ :anElement :aSpace | 
 		| aNotification |
 		
-		"Show notification only in the default world (space)"
-		aSpace id = GtWorld defaultId ifFalse: [ ^ self ].
+		aNotification := GtNotificationJobEvent new 
+			job: aJobStart job.
+		anElement removeNotification: aNotification.
+	]
+]
+
+{ #category : #'private - announcement handling' }
+GtNotificationJobEventHandler >> onJobStart: aJobStart [
+	"I show the notification only in the default world (space)"
+	self defaultElementAndSpaceDo: [ :anElement :aSpace | 
+		| aNotification |
 		
 		aNotification := GtNotificationJobEvent new 
 			job: aJobStart job.
@@ -64,7 +82,10 @@ GtNotificationJobEventHandler >> subscribeToJobs [
 	Job jobAnnouncer
 		when: JobStart
 		send: #onJobStart:
-		to: self
+		to: self;
+		when: JobEnd
+		send: #onJobEnd:
+		to: self.
 ]
 
 { #category : #'private - subscriptions' }
