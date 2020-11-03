@@ -4,7 +4,7 @@ Class {
 	#category : #'GToolkit-Notifications-Examples'
 }
 
-{ #category : #'examples - events' }
+{ #category : #'examples - message notification' }
 GtNotificationExamples >> basicMessageEvent [
 	<gtExample>
 	| anEvent |
@@ -24,7 +24,7 @@ GtNotificationExamples >> basicNotificationBadgeElement [
 	^ anElement
 ]
 
-{ #category : #'examples - events' }
+{ #category : #'examples - message notification' }
 GtNotificationExamples >> basicNotificationEvent [
 	<gtExample>
 	| anEvent |
@@ -33,7 +33,7 @@ GtNotificationExamples >> basicNotificationEvent [
 	^ anEvent
 ]
 
-{ #category : #'examples - job' }
+{ #category : #'examples - job notification' }
 GtNotificationExamples >> basicNotificationJobElement [
 	<gtExample>
 	| anElement aCurrentJob |
@@ -44,7 +44,7 @@ GtNotificationExamples >> basicNotificationJobElement [
 	^ anElement
 ]
 
-{ #category : #'examples - job' }
+{ #category : #'examples - job notification' }
 GtNotificationExamples >> basicNotificationJobEvent [
 	<gtExample>
 	| anEvent |
@@ -52,6 +52,17 @@ GtNotificationExamples >> basicNotificationJobEvent [
 	self assert: anEvent job isNil.
 	self assert: (anEvent asElement isKindOf: BlElement).
 	^ anEvent
+]
+
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> basicNotificationJobWithChildrenElement [
+	<gtExample>
+	| anElement aCurrentJob |
+	anElement := GtNotificationJobWithChildrenElement new.
+	aCurrentJob := 42.
+	anElement jobDo: [ :aJob | aCurrentJob := aJob ].
+	self assert: aCurrentJob equals: 42.
+	^ anElement
 ]
 
 { #category : #'examples - list' }
@@ -64,7 +75,7 @@ GtNotificationExamples >> basicNotificationsElement [
 	^ anElement
 ]
 
-{ #category : #'examples - job' }
+{ #category : #'examples - job notification' }
 GtNotificationExamples >> job [
 	<gtExample>
 	| aJob aBlock |
@@ -73,7 +84,7 @@ GtNotificationExamples >> job [
 			theJob progress: aNumber ] ].
 	aJob := aBlock asJob.
 	aJob
-		title: 'Job Progress Example';
+		title: 'Job Progress';
 		min: 0;
 		max: 1.
 	self assert: aJob progress equals: 0.
@@ -84,7 +95,50 @@ GtNotificationExamples >> job [
 	^ aJob
 ]
 
-{ #category : #'examples - events' }
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> jobAt: theIntermittentNumbers do: anIntermittentBlock [
+	<gtExample>
+	| aJob aBlock |
+	aBlock := [ :theJob |
+		0 to: 1 by: 0.1 do: [ :aNumber | 
+			theJob progress: aNumber.
+			(theIntermittentNumbers includes: aNumber) ifTrue: [ 
+				anIntermittentBlock cull: aNumber ] ] ].
+	aJob := aBlock asJob.
+	aJob
+		title: 'Job Progress INterrmittent Example';
+		min: 0;
+		max: 1.
+	self assert: aJob progress equals: 0.
+	
+	^ aJob
+]
+
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> jobWithChild [
+	<gtExample>
+	| aParentJob aChildJob |
+	aParentJob := self job.
+	aChildJob := self job
+		title: 'Sub-Job One'.
+	aParentJob addChild: aChildJob.
+	
+	^ aParentJob
+]
+
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> jobWithTwoChildren [
+	<gtExample>
+	| aParentJob aChildJob |
+	aParentJob := self jobWithChild.
+	aChildJob := self job
+		title: 'Sub-Job Two'.
+	aParentJob addChild: aChildJob.
+	
+	^ aParentJob
+]
+
+{ #category : #'examples - message notification' }
 GtNotificationExamples >> messageEvent [
 	<gtExample>
 	| anEvent aMessage |
@@ -95,7 +149,7 @@ GtNotificationExamples >> messageEvent [
 	^ anEvent
 ]
 
-{ #category : #accessing }
+{ #category : #'examples - support' }
 GtNotificationExamples >> newSpace [
 	<gtExample>
 	| aSpace |
@@ -105,6 +159,18 @@ GtNotificationExamples >> newSpace [
 	aSpace extent: 600@400.
 	aSpace withHalos.
 	^ aSpace
+]
+
+{ #category : #'examples - badge' }
+GtNotificationExamples >> notificationBadgeElement_FourNotifications [
+	<gtExample>
+	| anElement aNotification |
+	anElement := self notificationBadgeElement_ThreeNotifications.
+	aNotification := self notificationJobWithTwoChildrenEvent.
+	BlUseAsyncFeatures disableDuring: [
+		anElement notification: aNotification ].
+	self assert: anElement notificationsCount equals: 4.
+	^ anElement
 ]
 
 { #category : #'examples - badge' }
@@ -133,13 +199,22 @@ GtNotificationExamples >> notificationBadgeElement_OneNotification [
 ]
 
 { #category : #'examples - badge' }
-GtNotificationExamples >> notificationBadgeElement_TwoNotification [
+GtNotificationExamples >> notificationBadgeElement_ThreeNotifications [
 	<gtExample>
 	| anElement aNotification |
-	anElement := self basicNotificationBadgeElement.
-	aNotification := self messageEvent.
+	anElement := self notificationBadgeElement_TwoNotifications.
+	aNotification := self notificationJobWithChildEvent.
 	BlUseAsyncFeatures disableDuring: [
 		anElement notification: aNotification ].
+	self assert: anElement notificationsCount equals: 3.
+	^ anElement
+]
+
+{ #category : #'examples - badge' }
+GtNotificationExamples >> notificationBadgeElement_TwoNotifications [
+	<gtExample>
+	| anElement aNotification |
+	anElement := self notificationBadgeElement_OneNotification.
 	aNotification := self notificationJobEvent.
 	BlUseAsyncFeatures disableDuring: [
 		anElement notification: aNotification ].
@@ -147,7 +222,7 @@ GtNotificationExamples >> notificationBadgeElement_TwoNotification [
 	^ anElement
 ]
 
-{ #category : #accessing }
+{ #category : #'examples - job notification' }
 GtNotificationExamples >> notificationJobElement [
 	<gtExample>
 	| anElement anEvent aCurrentJob |
@@ -162,7 +237,7 @@ GtNotificationExamples >> notificationJobElement [
 	^ anElement
 ]
 
-{ #category : #accessing }
+{ #category : #'examples - job notification' }
 GtNotificationExamples >> notificationJobElement_runningJob [
 	<gtExample>
 	| anElement aJob aSemaphore aSpace aTimeout anElementSubscriptions |
@@ -214,7 +289,7 @@ GtNotificationExamples >> notificationJobElement_runningJob [
 	^ anElement
 ]
 
-{ #category : #'examples - job' }
+{ #category : #'examples - job notification' }
 GtNotificationExamples >> notificationJobEvent [
 	<gtExample>
 	| anEvent aJob |
@@ -224,6 +299,75 @@ GtNotificationExamples >> notificationJobEvent [
 	self assert: anEvent job equals: aJob.
 	self assert: (anEvent asElement isKindOf: BlElement).
 	^ anEvent
+]
+
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> notificationJobWithChildEvent [
+	<gtExample>
+	| anEvent aJob |
+	anEvent := self basicNotificationJobEvent.
+	aJob := self jobWithChild.
+	anEvent job: aJob.
+	self assert: anEvent job equals: aJob.
+	self assert: (anEvent asElement isKindOf: BlElement).
+	^ anEvent
+]
+
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> notificationJobWithChildrenElement [
+	<gtExample>
+	| anElement anEvent aCurrentJob |
+	anElement := self basicNotificationJobWithChildrenElement.
+	anEvent := self notificationJobEvent.
+	anElement event: anEvent.
+	
+	aCurrentJob := 42.
+	anElement jobDo: [ :aJob | aCurrentJob := aJob ].
+	self assert: aCurrentJob equals: anEvent job.
+
+	^ anElement
+]
+
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> notificationJobWithChildrenElement_OneChild [
+	<gtExample>
+	| anElement anEvent aCurrentJob |
+	anElement := self basicNotificationJobWithChildrenElement.
+	anEvent := self notificationJobEvent.
+	anEvent job addChild: (self job
+		title: 'Sub-Job Progress').
+	anElement event: anEvent.
+	
+	aCurrentJob := 42.
+	anElement jobDo: [ :aJob | aCurrentJob := aJob ].
+	self assert: aCurrentJob equals: anEvent job.
+
+	^ anElement
+]
+
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> notificationJobWithTwoChildrenEvent [
+	<gtExample>
+	| anEvent aJob |
+	anEvent := self basicNotificationJobEvent.
+	aJob := self jobWithTwoChildren.
+	anEvent job: aJob.
+	self assert: anEvent job equals: aJob.
+	self assert: (anEvent asElement isKindOf: BlElement).
+	^ anEvent
+]
+
+{ #category : #'examples - list' }
+GtNotificationExamples >> notificationsListElement_FourNotifications [
+	<gtExample>
+	| anElement aNotification |
+	anElement := self notificationsListElement_ThreeNotifications.
+	aNotification := self notificationJobWithTwoChildrenEvent.
+	BlUseAsyncFeatures disableDuring: [
+		anElement notification: aNotification ].
+	self assert: anElement notifications size equals: 4.
+	self assert: anElement listElement items size equals: 4.
+	^ anElement
 ]
 
 { #category : #'examples - list' }
@@ -240,6 +384,19 @@ GtNotificationExamples >> notificationsListElement_OneNotification [
 ]
 
 { #category : #'examples - list' }
+GtNotificationExamples >> notificationsListElement_ThreeNotifications [
+	<gtExample>
+	| anElement aNotification |
+	anElement := self notificationsListElement_TwoNotifications.
+	aNotification := self notificationJobWithChildEvent.
+	BlUseAsyncFeatures disableDuring: [
+		anElement notification: aNotification ].
+	self assert: anElement notifications size equals: 3.
+	self assert: anElement listElement items size equals: 3.
+	^ anElement
+]
+
+{ #category : #'examples - list' }
 GtNotificationExamples >> notificationsListElement_TwoNotifications [
 	<gtExample>
 	| anElement aNotification |
@@ -250,4 +407,30 @@ GtNotificationExamples >> notificationsListElement_TwoNotifications [
 	self assert: anElement notifications size equals: 2.
 	self assert: anElement listElement items size equals: 2.
 	^ anElement
+]
+
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> parentJob [
+	<gtExample>
+	| aJob aBlock |
+	aBlock := [ :theJob |
+		0 to: 1 by: 0.1 do: [ :aNumber | 
+			theJob progress: aNumber.
+			300 milliSeconds wait.
+			"Run a child job"
+			aNumber = 0.5 ifTrue: [ 
+				self job run ] ] ].
+	
+	aJob := aBlock asJob.
+	aJob
+		title: 'Job Parent Progress Example';
+		min: 0;
+		max: 1.
+
+	self assert: aJob progress equals: 0.
+	
+	aJob progress: 0.3.
+	self assert: aJob progress equals: 0.3.
+	
+	^ aJob
 ]
