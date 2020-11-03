@@ -46,6 +46,10 @@ GtHomeSlideShowsSection >> create [
 		newShowCardWithTitle: 'Coder'
 		slideshow: [ GtLiveShow createWithArrowsVisible: GtCoderSlideshow new ]
 		description: 'Coder offers the means through which we manipulate static code.').
+	cardsContainer addChild: (self
+		newShowCardWithTitle: 'Moldable Analysis'
+		slideshow: [ GtLiveShow createWithArrowsVisible: GtMoldableAnalysisPresentation new ]
+		description: 'Moldable Analysis.').
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
