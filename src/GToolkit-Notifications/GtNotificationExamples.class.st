@@ -108,6 +108,19 @@ GtNotificationExamples >> newSpace [
 ]
 
 { #category : #'examples - badge' }
+GtNotificationExamples >> notificationBadgeElement_HudredNotification [
+	<gtExample>
+	| anElement aNotification |
+	anElement := self basicNotificationBadgeElement.
+	100 timesRepeat: [ 
+		aNotification := self messageEvent.
+		BlUseAsyncFeatures disableDuring: [
+			anElement notification: aNotification ] ].
+	self assert: anElement notificationsCount equals: 100.
+	^ anElement
+]
+
+{ #category : #'examples - badge' }
 GtNotificationExamples >> notificationBadgeElement_OneNotification [
 	<gtExample>
 	| anElement aNotification |
@@ -116,6 +129,21 @@ GtNotificationExamples >> notificationBadgeElement_OneNotification [
 	BlUseAsyncFeatures disableDuring: [
 		anElement notification: aNotification ].
 	self assert: anElement notificationsCount equals: 1.
+	^ anElement
+]
+
+{ #category : #'examples - badge' }
+GtNotificationExamples >> notificationBadgeElement_TwoNotification [
+	<gtExample>
+	| anElement aNotification |
+	anElement := self basicNotificationBadgeElement.
+	aNotification := self messageEvent.
+	BlUseAsyncFeatures disableDuring: [
+		anElement notification: aNotification ].
+	aNotification := self notificationJobEvent.
+	BlUseAsyncFeatures disableDuring: [
+		anElement notification: aNotification ].
+	self assert: anElement notificationsCount equals: 2.
 	^ anElement
 ]
 

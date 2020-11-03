@@ -37,7 +37,9 @@ GtNotificationJobElement >> initialize [
 GtNotificationJobElement >> initializeProgressElement [
 	progressElement := BrProgress new
 		fixedLabel: '';
-		look: BrGlamorousProgressWithLabelAndBarLook.
+		look: BrGlamorousProgressWithLabelAndBarLook;
+		layoutDo: [ :aLayout | 
+			aLayout alignCenterLeft ]
 ]
 
 { #category : #'private - accessing' }
