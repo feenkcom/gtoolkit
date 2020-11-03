@@ -5,5 +5,8 @@ echo $image
 .\GlamorousToolkitWin64-*\GlamorousToolkitConsole.exe $image dedicatedReleaseBranchExamples --junit-xml-output
 .\GlamorousToolkitWin64-*\GlamorousToolkitConsole.exe $image dedicatedReleaseBranchSlides --junit-xml-output
 
-# rm .\GToolkit-Releaser-*
-rm .\GToolkit-Documenter-XDoc-Examples.xml
+$FileName = ".\GToolkit-Documenter-XDoc-Examples.xml"
+if (Test-Path $FileName) 
+{
+  Remove-Item $FileName
+}
