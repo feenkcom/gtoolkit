@@ -41,6 +41,7 @@ GtNotificationJobEventHandler >> handleEvent: anEvent [
 
 { #category : #'private - testing' }
 GtNotificationJobEventHandler >> isRootJob: aJob [
+	(aJob isKindOf: Job) ifFalse: [ ^ true ].
 	^ aJob parent isNil
 ]
 
