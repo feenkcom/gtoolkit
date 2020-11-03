@@ -163,6 +163,12 @@ GtPhlowUpdateRequester >> postponeUpdate [
 				self updateNow ] ]
 ]
 
+{ #category : #'private - accessing' }
+GtPhlowUpdateRequester >> postponedDuration [
+	<return: #Duration>
+	^ postponedDuration ifNil: [ self defaultPostponedDuration ]
+]
+
 { #category : #'api - initialization' }
 GtPhlowUpdateRequester >> postponedDuration: aDuration [
 	self assertPostponedDuration: aDuration.
@@ -177,7 +183,7 @@ GtPhlowUpdateRequester >> postponedTime [
 			ifNotNil: [ :aSpace | aSpace time now ] 
 			ifNil: [ BlTime real now ] ].
 	aNow ifNil: [ aNow := BlTime real now ].
-	^ aNow + 300 milliSeconds.
+	^ aNow + self postponedDuration.
 ]
 
 { #category : #'api - updating' }
