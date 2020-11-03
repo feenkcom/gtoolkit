@@ -6,7 +6,8 @@ Class {
 
 { #category : #'api - converting' }
 GtNotificationEvent >> asElement [
-	^ self elementClass
+	^ GtNotificationDecoratingEventElement new
+		element: self elementClass new;
 		event: self
 ]
 

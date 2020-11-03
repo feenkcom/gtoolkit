@@ -1,6 +1,6 @@
 Class {
 	#name : #GtNotificationsBadgeElement,
-	#superclass : #GtNotificationElement,
+	#superclass : #GtNotificationsElement,
 	#instVars : [
 		'listElement',
 		'badgeElement',
@@ -38,7 +38,7 @@ GtNotificationsBadgeElement >> dropdownBadgeElement [
 
 { #category : #'api - visibility' }
 GtNotificationsBadgeElement >> hide [
-	^ self visibility: BlVisibility gone
+	^ self visibility: BlVisibility hidden
 ]
 
 { #category : #initialization }
@@ -71,13 +71,15 @@ GtNotificationsBadgeElement >> initializeDropdownBadgeElement [
 
 { #category : #initialization }
 GtNotificationsBadgeElement >> initializeListElement [
-	listElement := GtNotificationsElement new
-		exact: 400@300
+	listElement := GtNotificationsListElement new
+		exact: 400@300;
+		margin: (BlInsets top: 5 right: 0 bottom: 5 left: 0);
+		notifications: self notifications.
 ]
 
 { #category : #'private - accessing' }
 GtNotificationsBadgeElement >> listElement [
-	<return: #GtNotificationsElement>
+	<return: #GtNotificationsListElement>
 	^ listElement.
 ]
 
@@ -100,22 +102,10 @@ GtNotificationsBadgeElement >> newDropdownContent [
 		removeFromParent
 ]
 
-{ #category : #'api - accessing' }
-GtNotificationsBadgeElement >> notification: aNotification [
-	self listElement notification: aNotification.
-	self onNotificationsChanged.
-]
-
-{ #category : #'api - accessing' }
-GtNotificationsBadgeElement >> notificationsCount [
-	<return: #Integer>
-	^ self listElement notificationsCount
-]
-
-{ #category : #'private - hooks' }
+{ #category : #accessing }
 GtNotificationsBadgeElement >> onNotificationsChanged [
-	self enqueueTask: (BlTaskAction new
-		action: [ self updateBadge ])
+	super onNotificationsChanged.
+	self listElement notifications: self notifications.
 ]
 
 { #category : #'api - visibility' }
@@ -124,7 +114,8 @@ GtNotificationsBadgeElement >> show [
 ]
 
 { #category : #'private - updating' }
-GtNotificationsBadgeElement >> updateBadge [
+GtNotificationsBadgeElement >> updateElement [
+	super updateElement.
 	self badgeElement label: self notificationsCount.
 	self dropdownBadgeElement label: self notificationsCount.
 	self updateVisibility

@@ -3,61 +3,47 @@ Class {
 	#superclass : #GtNotificationElement,
 	#instVars : [
 		'notifications',
-		'listElement'
+		'updateRequester'
 	],
 	#category : #'GToolkit-Notifications-UI'
 }
 
-{ #category : #initialization }
-GtNotificationsElement >> defaultLayout [
-	^ BlFrameLayout new
-]
-
-{ #category : #defaults }
-GtNotificationsElement >> defaultNotifications [
-	^ LinkedList new
+{ #category : #'private - asserting' }
+GtNotificationsElement >> assertNotifications: aGtNotifications [ 
+	self 
+		assert: [ aGtNotifications isNotNil ] 
+		description: [ 'Notifications must be non-nil' ].
 ]
 
 { #category : #initialization }
 GtNotificationsElement >> initialize [
 	super initialize.
-	notifications := self defaultNotifications.
-	self initializeList.
-	
-	self addChild: self listElement as: #notifications.
-	
-	self addLook: (BrLayoutResizerLook inherit
-		inherit: self listElement).
+	notifications := GtNotifications new.
+	updateRequester := GtPhlowUpdateRequester new 
+		element: self selector: #updateElement.
+		
+	self subscribeToNotifications.
 ]
 
-{ #category : #initialization }
-GtNotificationsElement >> initializeList [
-	listElement := BrSimpleList new
-		itemType: [ :anItemTypeFactory :anItemObject :anItemIndex |
-			anItemObject elementClass ];
-		itemStencil: [ :anItemType :aListWidget |
-			anItemType new ];
-		itemDataBinder: [ :anItemElement :anItemObject :anItemIndex |
-			anItemElement event: anItemObject ];
-		items: self notifications.
-]
-
-{ #category : #'private - accessing' }
-GtNotificationsElement >> listElement [
-	<return: #BrSimpleList>
-	^ listElement
+{ #category : #'api - adding / removing' }
+GtNotificationsElement >> notification: aNotification [
+	self notifications addNotification: aNotification.
 ]
 
 { #category : #'api - accessing' }
-GtNotificationsElement >> notification: aNotification [
-	self notifications addFirst: aNotification.
-	self onNotificationsChanged.
+GtNotificationsElement >> notifications [
+	<return: #GtNotifications>
+	^ notifications
 ]
 
-{ #category : #'private - accessing' }
-GtNotificationsElement >> notifications [
-	<return: #SequenceableCollection of: #GtNotificationEvent>
-	^ notifications
+{ #category : #'api - accessing' }
+GtNotificationsElement >> notifications: aGtNotifications [
+	self assertNotifications: aGtNotifications.
+	notifications = aGtNotifications ifTrue: [ ^ self ].
+	self unsubscribeFromNotifications.
+	notifications := aGtNotifications.
+	self subscribeToNotifications.
+	self onNotificationsChanged.
 ]
 
 { #category : #'api - accessing' }
@@ -68,12 +54,40 @@ GtNotificationsElement >> notificationsCount [
 
 { #category : #'private - hooks' }
 GtNotificationsElement >> onNotificationsChanged [
-	self enqueueTask: (BlTaskAction new
-		action: [ self updateList ])
+	self updateElement.
+]
+
+{ #category : #'api - adding / removing' }
+GtNotificationsElement >> removeNotification: aGtNotificationEvent [ 
+	self notifications removeNotification: aGtNotificationEvent
 ]
 
 { #category : #'private - updating' }
-GtNotificationsElement >> updateList [
-	"I must be called in a UI process."
-	self listElement items: self notifications.
+GtNotificationsElement >> requestUpdate [
+	self updateRequester requestUpdate.
+]
+
+{ #category : #'private - subscriptions' }
+GtNotificationsElement >> subscribeToNotifications [
+	self notifications 
+		when: GtNotificationsChangedAnnouncement
+		send: #requestUpdate
+		to: self
+]
+
+{ #category : #'private - subscriptions' }
+GtNotificationsElement >> unsubscribeFromNotifications [
+	self notifications ifNotNil: [ :anAnnouncer | 
+		anAnnouncer unsubscribe: self ].
+]
+
+{ #category : #'private - updating' }
+GtNotificationsElement >> updateElement [
+	"Subclasses may update their widgets"
+]
+
+{ #category : #'private - accessing' }
+GtNotificationsElement >> updateRequester [
+	<return: #GtPhlowUpdateRequester>
+	^ updateRequester
 ]

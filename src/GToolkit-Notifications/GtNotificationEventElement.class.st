@@ -24,22 +24,44 @@ GtNotificationEventElement >> defaultVercialResizerModel [
 	^ BrLayoutVerticalResizerModel fitContent
 ]
 
-{ #category : #accessing }
+{ #category : #'api - actions' }
+GtNotificationEventElement >> dismiss [
+	self fireEvent: (GtNotificationDismissWish new notification: self event)
+]
+
+{ #category : #'api - accessing' }
 GtNotificationEventElement >> event [
 	<return: #GtNotificationEvent>
 	^ event
 ]
 
-{ #category : #accessing }
+{ #category : #'api - accessing' }
 GtNotificationEventElement >> event: aGtNotificationEvent [
 	self assertEvent: aGtNotificationEvent.
 	event = aGtNotificationEvent ifTrue: [ ^ self ].
+	self unsubscribeFromEvent.
 	event := aGtNotificationEvent.
+	self subscribeToEvent.
 	self onEventChanged.
 	
+]
+
+{ #category : #'private - accessing' }
+GtNotificationEventElement >> eventDo: aBlock [
+	self event ifNotNil: aBlock
 ]
 
 { #category : #'private - hooks' }
 GtNotificationEventElement >> onEventChanged [
 	"Subclasses may react to event instance variable changes"
+]
+
+{ #category : #'private - subscriptions' }
+GtNotificationEventElement >> subscribeToEvent [
+	"Subclasses may subscribe to events (announcements)"
+]
+
+{ #category : #'private - subscriptions' }
+GtNotificationEventElement >> unsubscribeFromEvent [
+	"Subclasses may unsubscribe from events (announcements)"
 ]

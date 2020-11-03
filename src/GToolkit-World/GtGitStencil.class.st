@@ -6,12 +6,12 @@ Class {
 
 { #category : #converting }
 GtGitStencil >> asPreviewElement [
-	^ GtInspector forObject: Gt4Git new allRepositoriesGroup
+	^ GtInspector forObject: Gt4Git new
 ]
 
 { #category : #'api - instantiation' }
 GtGitStencil >> create [
-	^ (GtInspector createOn: Gt4Git new allRepositoriesGroup) maximized.
+	^ (GtInspector createOn: Gt4Git new) maximized.
 ]
 
 { #category : #accessing }
