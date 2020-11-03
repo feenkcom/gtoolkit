@@ -50,7 +50,7 @@ pipeline {
         GITHUB_TOKEN = credentials('githubrelease')
         AWSIP = 'ec2-18-197-145-81.eu-central-1.compute.amazonaws.com'
         MASTER_WORKSPACE = ""
-        EXAMPLE_PACKAGES = "'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc' 'Bloc-.*' 'Sparta-.*'"
+        EXAMPLE_PACKAGES = "GToolkit-.* GT4SmaCC-.* DeepTraverser-.* Brick Brick-.* Bloc Bloc-.* Sparta-.*"
     }
     stages {
         stage ('Build pre release') {
