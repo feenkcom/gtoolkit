@@ -29,10 +29,11 @@ GtNotificationsListElement >> initializeList [
 	listElement := BrSimpleList new
 		itemType: [ :anItemTypeFactory :anItemObject :anItemIndex |
 			anItemObject elementClass ];
-		itemStencil: [ :anItemType :aListWidget |
-			anItemType new ];
-		itemDataBinder: [ :anItemElement :anItemObject :anItemIndex |
-			anItemElement event: anItemObject ];
+		itemStencil: [ :anEventElementClass :aListWidget |
+			GtNotificationDecoratingEventElement new
+				element: anEventElementClass new ];
+		itemDataBinder: [ :aNotificationElement :aNotificationEvent :anItemIndex |
+			aNotificationElement event: aNotificationEvent ];
 		items: self notifications asArray.
 ]
 

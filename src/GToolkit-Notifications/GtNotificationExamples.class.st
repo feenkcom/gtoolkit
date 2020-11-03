@@ -210,3 +210,16 @@ GtNotificationExamples >> notificationsListElement_OneNotification [
 	self assert: anElement listElement items size equals: 1.
 	^ anElement
 ]
+
+{ #category : #'examples - list' }
+GtNotificationExamples >> notificationsListElement_TwoNotifications [
+	<gtExample>
+	| anElement aNotification |
+	anElement := self notificationsListElement_OneNotification.
+	aNotification := self notificationJobEvent.
+	BlUseAsyncFeatures disableDuring: [
+		anElement notification: aNotification ].
+	self assert: anElement notifications size equals: 2.
+	self assert: anElement listElement items size equals: 2.
+	^ anElement
+]

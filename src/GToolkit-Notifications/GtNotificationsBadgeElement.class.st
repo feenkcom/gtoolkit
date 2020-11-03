@@ -38,7 +38,7 @@ GtNotificationsBadgeElement >> dropdownBadgeElement [
 
 { #category : #'api - visibility' }
 GtNotificationsBadgeElement >> hide [
-	^ self visibility: BlVisibility gone
+	^ self visibility: BlVisibility hidden
 ]
 
 { #category : #initialization }
@@ -73,6 +73,7 @@ GtNotificationsBadgeElement >> initializeDropdownBadgeElement [
 GtNotificationsBadgeElement >> initializeListElement [
 	listElement := GtNotificationsListElement new
 		exact: 400@300;
+		margin: (BlInsets top: 5 right: 0 bottom: 5 left: 0);
 		notifications: self notifications.
 ]
 

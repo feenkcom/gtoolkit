@@ -42,11 +42,6 @@ GtNotificationMessageElement >> initialize [
 	self addChild: self textEditor as: #textEditor.
 	self addChild: self dismissButton as: #dismissButton.
 	
-	self
-		padding: (BlInsets all: 5);
-		margin: (BlInsets all: 5).
-	
-	self addLook: BrGlamorousButtonExteriorLook. 
 	self addLook: (BrLayoutResizerLook new
 		hInherit: self;
 		vAnyToFitContent: self;

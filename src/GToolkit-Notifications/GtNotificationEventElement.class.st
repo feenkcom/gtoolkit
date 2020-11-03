@@ -29,13 +29,13 @@ GtNotificationEventElement >> dismiss [
 	self fireEvent: (GtNotificationDismissWish new notification: self event)
 ]
 
-{ #category : #accessing }
+{ #category : #'api - accessing' }
 GtNotificationEventElement >> event [
 	<return: #GtNotificationEvent>
 	^ event
 ]
 
-{ #category : #accessing }
+{ #category : #'api - accessing' }
 GtNotificationEventElement >> event: aGtNotificationEvent [
 	self assertEvent: aGtNotificationEvent.
 	event = aGtNotificationEvent ifTrue: [ ^ self ].
