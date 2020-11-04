@@ -111,7 +111,11 @@ GtNotificationJobElement >> unsubscribeFromJob [
 { #category : #'private - updating' }
 GtNotificationJobElement >> updateElement [
 	self jobDo: [ :aJob | 
+		| aProgress |
+		aProgress := aJob progress.
+		aProgress := aProgress max: 0.
+		aProgress := aProgress min: 1.
 		self progressElement
 			fixedLabel: aJob label;
-			fraction: aJob progress ]
+			fraction: aProgress ]
 ]
