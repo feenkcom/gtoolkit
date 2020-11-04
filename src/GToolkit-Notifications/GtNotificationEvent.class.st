@@ -1,7 +1,7 @@
 Class {
 	#name : #GtNotificationEvent,
 	#superclass : #BlEvent,
-	#category : #'GToolkit-Notifications-Events'
+	#category : #'GToolkit-Notifications-Notifications'
 }
 
 { #category : #'api - converting' }
