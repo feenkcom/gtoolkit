@@ -39,6 +39,12 @@ GtNotificationJobEventHandler >> handleEvent: anEvent [
 	anEvent accept: self.
 ]
 
+{ #category : #'private - testing' }
+GtNotificationJobEventHandler >> isRootJob: aJob [
+	(aJob isKindOf: Job) ifFalse: [ ^ true ].
+	^ aJob parent isNil
+]
+
 { #category : #'api - hooks' }
 GtNotificationJobEventHandler >> onInstalledIn: anObject [
 	super onInstalledIn: anObject.
@@ -48,13 +54,16 @@ GtNotificationJobEventHandler >> onInstalledIn: anObject [
 ]
 
 { #category : #'private - announcement handling' }
-GtNotificationJobEventHandler >> onJobEnd: aJobStart [
+GtNotificationJobEventHandler >> onJobEnd: aJobEnd [
 	"I remove the notification only in the default world (space)"
+
+	(self isRootJob: aJobEnd job) ifFalse: [ ^ self ].
+
 	self defaultElementAndSpaceDo: [ :anElement :aSpace | 
 		| aNotification |
 		
 		aNotification := GtNotificationJobEvent new 
-			job: aJobStart job.
+			job: aJobEnd job.
 		anElement removeNotification: aNotification.
 	]
 ]
@@ -62,6 +71,9 @@ GtNotificationJobEventHandler >> onJobEnd: aJobStart [
 { #category : #'private - announcement handling' }
 GtNotificationJobEventHandler >> onJobStart: aJobStart [
 	"I show the notification only in the default world (space)"
+
+	(self isRootJob: aJobStart job) ifFalse: [ ^ self ].
+
 	self defaultElementAndSpaceDo: [ :anElement :aSpace | 
 		| aNotification |
 		

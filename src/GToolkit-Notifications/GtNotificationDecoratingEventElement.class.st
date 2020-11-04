@@ -66,7 +66,7 @@ GtNotificationDecoratingEventElement >> initializeElement [
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 		border: (BlBorder paint: (Color gray alpha: 0.2) width: 1);
 		background: Color white;
-		padding: (BlInsets top: 5 right: 10 bottom: 5 left: 10);
+		padding: (BlInsets top: 5 right: 10 bottom: 10 left: 10);
 		margin: (BlInsets top: 5 right: 10 bottom: 5 left: 10).
 	
 ]
