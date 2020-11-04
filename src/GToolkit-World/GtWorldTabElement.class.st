@@ -8,6 +8,16 @@ Class {
 	#category : #'GToolkit-World-UI'
 }
 
+{ #category : #accessing }
+GtWorldTabElement class >> spaceCloseButtonName [
+	^ #'gt-world--space-close-button'
+]
+
+{ #category : #accessing }
+GtWorldTabElement class >> tabNameForSpaceId: aNumber [
+	^ #'gt-world--space-tab'
+]
+
 { #category : #defaults }
 GtWorldTabElement >> defaultHomeElement [
 	^ BrLabel new
@@ -129,8 +139,8 @@ GtWorldTabElement >> newToolbarForTabModel: aTabModel [
 				look: GtWorldTabToolbarButtonLook;
 				label: 'Close';
 				model: aTabModel;
-				action:
-						[ :aButtonElement | tabs viewModel removeTab: aButtonElement model ])}
+				containerName: self class spaceCloseButtonName;
+				action: [ :aButtonElement | tabs viewModel removeTab: aButtonElement model ])}
 ]
 
 { #category : #releasing }
@@ -159,6 +169,7 @@ GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 		model: aSpace;
 		look: BrGlamorousSpaceTabWithLabelLook new;
 		label: aSpace title;
+		containerName: (self class tabNameForSpaceId: aSpace id);
 		stencil: [ :aTabModel | 
 			| anActualSpace |
 			anActualSpace := aTabModel model.
