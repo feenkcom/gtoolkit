@@ -10,3 +10,9 @@ if (Test-Path $FileName)
 {
   Remove-Item $FileName
 }
+
+$FileName = ".\PharoLink-Examples.xml"
+if (Test-Path $FileName) 
+{
+  Remove-Item $FileName
+}
