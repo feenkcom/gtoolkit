@@ -8,7 +8,7 @@ Class {
 		'mutex',
 		'announcer'
 	],
-	#category : #'GToolkit-Notifications-Model'
+	#category : #'GToolkit-Notifications-Notifications'
 }
 
 { #category : #'api - adding / removing' }

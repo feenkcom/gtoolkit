@@ -1,6 +1,6 @@
 Class {
 	#name : #GtNotificationEvent,
-	#superclass : #BlEvent,
+	#superclass : #Object,
 	#category : #'GToolkit-Notifications-Notifications'
 }
 
