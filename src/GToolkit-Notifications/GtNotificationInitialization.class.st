@@ -9,6 +9,6 @@ GtNotificationInitialization class >> initialize [
 	"Handlers must return an object that understands #asElement message."
 	BlBlocUIManagerNotification notificationHandlers
 		at: #inform: 
-		put: [ :request :args :continuation |
+		put: [ :request :args |
 			GtNotificationMessageEvent message: args first ]
 ]
