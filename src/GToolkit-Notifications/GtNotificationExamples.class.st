@@ -4,6 +4,25 @@ Class {
 	#category : #'GToolkit-Notifications-Examples'
 }
 
+{ #category : #'examples - debug session' }
+GtNotificationExamples >> basicDebugSessionElement [
+	<gtExample>
+	| anElement |
+	anElement := GtNotificationDebugSessionElement new.
+	self assert: anElement event isNil.
+	^ anElement
+]
+
+{ #category : #'examples - debug session' }
+GtNotificationExamples >> basicDebugSessionEvent [
+	<gtExample>
+	| anEvent |
+	anEvent := GtNotificationDebugSessionEvent new.
+	self assert: anEvent debugSession isNil.
+	self assert: (anEvent asElement isKindOf: BlElement).
+	^ anEvent
+]
+
 { #category : #'examples - message notification' }
 GtNotificationExamples >> basicMessageEvent [
 	<gtExample>
@@ -73,6 +92,43 @@ GtNotificationExamples >> basicNotificationsElement [
 	self assert: anElement notifications size equals: 0.
 	self assert: anElement listElement items size equals: 0.
 	^ anElement
+]
+
+{ #category : #'examples - debug session' }
+GtNotificationExamples >> debugSession [
+	<gtExample>
+	| aContext aProcess aSession |
+	aContext := [ 1 + 1 ] asContext.
+	aProcess := Process 
+	    forContext: aContext 
+	    priority: Processor userInterruptPriority.
+	aSession := aProcess 
+		newDebugSessionNamed: 'Example session' 
+		startedAt: aContext.
+	^ aSession 
+]
+
+{ #category : #'examples - debug session' }
+GtNotificationExamples >> debugSessionElement [
+	<gtExample>
+	| anElement anEvent |
+	anElement := self basicDebugSessionElement.
+	anEvent := self debugSessionEvent.
+	anElement event: anEvent.
+	self assert: anElement event equals: anEvent.
+	^ anElement
+]
+
+{ #category : #'examples - debug session' }
+GtNotificationExamples >> debugSessionEvent [
+	<gtExample>
+	| anEvent aSession |
+	anEvent := self basicDebugSessionEvent.
+	aSession := self debugSession.
+	anEvent debugSession: aSession.
+	self assert: anEvent debugSession equals: aSession.
+	self assert: (anEvent asElement isKindOf: BlElement).
+	^ anEvent
 ]
 
 { #category : #'examples - job notification' }
@@ -159,6 +215,18 @@ GtNotificationExamples >> newSpace [
 	aSpace extent: 600@400.
 	aSpace withHalos.
 	^ aSpace
+]
+
+{ #category : #'examples - badge' }
+GtNotificationExamples >> notificationBadgeElement_FiveNotifications [
+	<gtExample>
+	| anElement aNotification |
+	anElement := self notificationBadgeElement_FourNotifications.
+	aNotification := self debugSessionEvent.
+	BlUseAsyncFeatures disableDuring: [
+		anElement notification: aNotification ].
+	self assert: anElement notificationsCount equals: 5.
+	^ anElement
 ]
 
 { #category : #'examples - badge' }
@@ -355,6 +423,19 @@ GtNotificationExamples >> notificationJobWithTwoChildrenEvent [
 	self assert: anEvent job equals: aJob.
 	self assert: (anEvent asElement isKindOf: BlElement).
 	^ anEvent
+]
+
+{ #category : #'examples - list' }
+GtNotificationExamples >> notificationsListElement_FiveNotifications [
+	<gtExample>
+	| anElement aNotification |
+	anElement := self notificationsListElement_FourNotifications.
+	aNotification := self debugSessionEvent.
+	BlUseAsyncFeatures disableDuring: [
+		anElement notification: aNotification ].
+	self assert: anElement notifications size equals: 5.
+	self assert: anElement listElement items size equals: 5.
+	^ anElement
 ]
 
 { #category : #'examples - list' }
