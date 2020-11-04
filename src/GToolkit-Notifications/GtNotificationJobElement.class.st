@@ -16,7 +16,12 @@ GtNotificationJobElement >> assertJob: aJob [
 
 { #category : #defaults }
 GtNotificationJobElement >> defaultLayout [
-	^ BlLinearLayout horizontal alignCenter
+	^ BlLinearLayout vertical alignCenterLeft
+]
+
+{ #category : #'api - actions' }
+GtNotificationJobElement >> dismiss [
+	self fireEvent: (GtNotificationJobDismissWish new notification: self event)
 ]
 
 { #category : #initialization }
@@ -37,7 +42,9 @@ GtNotificationJobElement >> initialize [
 GtNotificationJobElement >> initializeProgressElement [
 	progressElement := BrProgress new
 		fixedLabel: '';
-		look: BrGlamorousProgressWithLabelAndBarLook.
+		look: BrGlamorousProgressWithLabelAndBarLook;
+		layoutDo: [ :aLayout | 
+			aLayout alignCenterLeft ]
 ]
 
 { #category : #'private - accessing' }
@@ -70,7 +77,9 @@ GtNotificationJobElement >> onJobChange: aJobChange [
 GtNotificationJobElement >> onJobEnd: aJobEnd [
 	self jobDo: [ :aJob | 
 		aJob = aJobEnd job ifTrue: [
-			self unsubscribeFromEvent ] ].
+			self unsubscribeFromJob.
+			self enqueueTask: (BlTaskAction new 
+				action: [ self dismiss ]) ] ].
 ]
 
 { #category : #'hooks - children' }

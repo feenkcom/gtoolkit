@@ -2,8 +2,17 @@ $image=Get-Childitem -Include *.image -Recurse -Name
 
 echo $image
 
-.\GlamorousToolkitWin64-*\GlamorousToolkitConsole.exe $image examples --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc-*' 'Bloc' 
-.\GlamorousToolkitWin64-*\GlamorousToolkitConsole.exe $image slides --junit-xml-output 'GToolkit-.*' 'GT4SmaCC-.*' 'DeepTraverser-.*' 'Brick' 'Brick-.*' 'Bloc-*' 'Bloc' 
+.\GlamorousToolkitWin64-*\GlamorousToolkitConsole.exe $image dedicatedReleaseBranchExamples --junit-xml-output
+.\GlamorousToolkitWin64-*\GlamorousToolkitConsole.exe $image dedicatedReleaseBranchSlides --junit-xml-output
 
-# rm .\GToolkit-Releaser-*
-rm .\GToolkit-Documenter-XDoc-Examples.xml
+$FileName = ".\GToolkit-Documenter-XDoc-Examples.xml"
+if (Test-Path $FileName) 
+{
+  Remove-Item $FileName
+}
+
+$FileName = ".\PharoLink-Examples.xml"
+if (Test-Path $FileName) 
+{
+  Remove-Item $FileName
+}

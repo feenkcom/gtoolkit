@@ -72,9 +72,11 @@ GtNotificationsBadgeElement >> initializeDropdownBadgeElement [
 { #category : #initialization }
 GtNotificationsBadgeElement >> initializeListElement [
 	listElement := GtNotificationsListElement new
-		exact: 400@300;
-		margin: (BlInsets top: 5 right: 0 bottom: 5 left: 0);
-		notifications: self notifications.
+		hExact: 300;
+		vFitContentLimited;
+		padding: (BlInsets top: 5 right: 0 bottom: 5 left: 0);
+		notifications: self notifications;
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 4).
 ]
 
 { #category : #'private - accessing' }
@@ -86,8 +88,8 @@ GtNotificationsBadgeElement >> listElement [
 { #category : #'private - instance creation' }
 GtNotificationsBadgeElement >> newBadge [
 	^ BrBadge new
-		look: BrGlamorousBadgeWithLabelLook + BrGlamorousBadgeCircularLook;
-		exact: 16@16
+		look: BrGlamorousBadgeWithLabelLook;
+		exact: 21@21
 ]
 
 { #category : #'private - instance creation' }

@@ -21,12 +21,13 @@ Class {
 		'element',
 		'mutex',
 		'isUpdateRequested',
-		'action'
+		'action',
+		'postponedDuration'
 	],
 	#category : #'GToolkit-Notifications-UI'
 }
 
-{ #category : #accessing }
+{ #category : #'private - accessing' }
 GtPhlowUpdateRequester >> action [
 	"Return a valuable object that understands #cull:, receiving [ :anElement | ... ]"
 	^ action 
@@ -39,7 +40,7 @@ GtPhlowUpdateRequester >> action: anAction [
 	action := anAction.
 ]
 
-{ #category : #accessing }
+{ #category : #'private - asserting' }
 GtPhlowUpdateRequester >> assertAction: anAction [ 
 	self 
 		assert: [ anAction isNotNil ] 
@@ -56,6 +57,13 @@ GtPhlowUpdateRequester >> assertElement: anElement [
 		description: [ 'Element can be initialized only once' ].
 ]
 
+{ #category : #'private - asserting' }
+GtPhlowUpdateRequester >> assertPostponedDuration: aDuration [
+	self 
+		assert: [ aDuration isNotNil ] 
+		description: [ 'Posponed duration must be non-nil' ].
+]
+
 { #category : #'private - updating' }
 GtPhlowUpdateRequester >> beUpdateRequestedIfDoneEarlierDo: aBlock [
 	mutex critical: [ 
@@ -66,6 +74,11 @@ GtPhlowUpdateRequester >> beUpdateRequestedIfDoneEarlierDo: aBlock [
 { #category : #defaults }
 GtPhlowUpdateRequester >> defaultAction [
 	^ [ :anElement | "do nothing" ]
+]
+
+{ #category : #defaults }
+GtPhlowUpdateRequester >> defaultPostponedDuration [
+	^ 100 milliSeconds
 ]
 
 { #category : #'private - accessing' }
@@ -115,6 +128,7 @@ GtPhlowUpdateRequester >> initialize [
 	mutex := Mutex new.
 	isUpdateRequested := false.
 	action := self defaultAction.
+	postponedDuration := self defaultPostponedDuration.
 ]
 
 { #category : #'private - testing' }
@@ -149,6 +163,18 @@ GtPhlowUpdateRequester >> postponeUpdate [
 				self updateNow ] ]
 ]
 
+{ #category : #'private - accessing' }
+GtPhlowUpdateRequester >> postponedDuration [
+	<return: #Duration>
+	^ postponedDuration ifNil: [ self defaultPostponedDuration ]
+]
+
+{ #category : #'api - initialization' }
+GtPhlowUpdateRequester >> postponedDuration: aDuration [
+	self assertPostponedDuration: aDuration.
+	postponedDuration := aDuration.
+]
+
 { #category : #'private - updating' }
 GtPhlowUpdateRequester >> postponedTime [
 	| aNow |
@@ -157,7 +183,7 @@ GtPhlowUpdateRequester >> postponedTime [
 			ifNotNil: [ :aSpace | aSpace time now ] 
 			ifNil: [ BlTime real now ] ].
 	aNow ifNil: [ aNow := BlTime real now ].
-	^ aNow + 300 milliSeconds.
+	^ aNow + self postponedDuration.
 ]
 
 { #category : #'api - updating' }
