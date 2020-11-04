@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'job'
 	],
-	#category : #'GToolkit-Notifications-Events'
+	#category : #'GToolkit-Notifications-Notifications'
 }
 
 { #category : #comparing }
