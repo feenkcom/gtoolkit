@@ -11,7 +11,8 @@ Class {
 { #category : #'private - actions' }
 GtNotificationDebugSessionElement >> debug [
 	self debugSessionDo: [ :aSession |
-		
+		self switchToSystemDebugger.
+		self dismiss.
 	]
 ]
 
@@ -83,9 +84,19 @@ GtNotificationDebugSessionElement >> onEventChanged [
 ]
 
 { #category : #'private - actions' }
+GtNotificationDebugSessionElement >> switchToSystemDebugger [
+	self debugSessionDo: [ :aSession |
+		Smalltalk tools debugger 
+			openOn: aSession 
+			withFullView: true 
+			andNotification: nil. ]
+]
+
+{ #category : #'private - actions' }
 GtNotificationDebugSessionElement >> terminate [
 	self debugSessionDo: [ :aSession |
-		
+		aSession terminate.
+		self dismiss.
 	].
 ]
 
