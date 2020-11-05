@@ -4,6 +4,11 @@ Class {
 	#category : #'GToolkit-Notifications-Notifications'
 }
 
+{ #category : #'api - notification' }
+GtNotificationEvent >> addedTo: aGtNotifications [
+	"Notifications may react"
+]
+
 { #category : #'api - converting' }
 GtNotificationEvent >> asElement [
 	^ GtNotificationDecoratingEventElement new
