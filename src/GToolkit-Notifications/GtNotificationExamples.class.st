@@ -124,7 +124,7 @@ GtNotificationExamples >> debugSessionEvent [
 	<gtExample>
 	| anEvent aSession |
 	anEvent := self basicDebugSessionEvent.
-	aSession := self debugSession.
+	aSession := self sharedDebugSession.
 	anEvent debugSession: aSession.
 	self assert: anEvent debugSession equals: aSession.
 	self assert: (anEvent asElement isKindOf: BlElement).
@@ -514,4 +514,15 @@ GtNotificationExamples >> parentJob [
 	self assert: aJob progress equals: 0.3.
 	
 	^ aJob
+]
+
+{ #category : #'examples - debug session' }
+GtNotificationExamples >> sharedDebugSession [
+	<gtExample>
+	| aSharedSession aPharoSession |
+	aSharedSession := GtSharedDebugSession new.
+	aPharoSession := self debugSession.
+	aSharedSession session: aPharoSession.
+	self assert: aSharedSession session equals: aPharoSession.
+	^ aSharedSession
 ]

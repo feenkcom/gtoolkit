@@ -15,6 +15,7 @@ Class {
 GtNotifications >> addNotification: aNotification [
 	mutex critical: [ 
 		collection addFirst: aNotification ].
+	aNotification addedTo: self.
 	self notifyNotificationsChanged.
 ]
 

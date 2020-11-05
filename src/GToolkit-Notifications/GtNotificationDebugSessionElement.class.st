@@ -10,10 +10,9 @@ Class {
 
 { #category : #'private - actions' }
 GtNotificationDebugSessionElement >> debug [
-	self debugSessionDo: [ :aSession |
-		self switchToSystemDebugger.
-		self dismiss.
-	]
+	self debugSessionDo: [ :aSession | 
+		aSession debug.
+		self dismiss ]
 ]
 
 { #category : #'private - accessing' }
@@ -77,19 +76,35 @@ GtNotificationDebugSessionElement >> initializeToolbarElement [
 		addItem: aTerminateButton
 ]
 
+{ #category : #'private - announcement handling' }
+GtNotificationDebugSessionElement >> onDebugSessionDebugged: anAnnouncement [
+	self enqueueTask: (BlTaskAction new action: [ 
+		self dismiss ])
+]
+
+{ #category : #'private - announcement handling' }
+GtNotificationDebugSessionElement >> onDebugSessionTerminated: anAnnouncement [
+	self enqueueTask: (BlTaskAction new action: [ 
+		self dismiss ])
+]
+
 { #category : #'private - hooks' }
 GtNotificationDebugSessionElement >> onEventChanged [
 	super onEventChanged.
 	self updateElement.
 ]
 
-{ #category : #'private - actions' }
-GtNotificationDebugSessionElement >> switchToSystemDebugger [
-	self debugSessionDo: [ :aSession |
-		Smalltalk tools debugger 
-			openOn: aSession 
-			withFullView: true 
-			andNotification: nil. ]
+{ #category : #'private - subscriptions' }
+GtNotificationDebugSessionElement >> subscribeToEvent [
+	super subscribeToEvent.
+	self debugSessionDo: [ :aSession | 
+		aSession 
+			when: GtSharedDebugSessionDebuggedAnnouncement
+			send: #onDebugSessionDebugged:
+			to: self; 
+			when: GtSharedDebugSessionTerminatedAnnouncement
+			send: #onDebugSessionTerminated:
+			to: self ]
 ]
 
 { #category : #'private - actions' }
@@ -110,6 +125,13 @@ GtNotificationDebugSessionElement >> textEditor [
 GtNotificationDebugSessionElement >> toolbarElement [
 	<return: #BrToolbar>
 	^ toolbarElement
+]
+
+{ #category : #'private - subscriptions' }
+GtNotificationDebugSessionElement >> unsubscribeFromEvent [
+	super unsubscribeFromEvent.
+	self debugSessionDo: [ :aSession |
+		aSession unsubscribe: self ]
 ]
 
 { #category : #'private - updating' }
