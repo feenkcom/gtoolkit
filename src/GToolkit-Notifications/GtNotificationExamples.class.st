@@ -1,8 +1,16 @@
 Class {
 	#name : #GtNotificationExamples,
 	#superclass : #Object,
+	#instVars : [
+		'sessions'
+	],
 	#category : #'GToolkit-Notifications-Examples'
 }
+
+{ #category : #'private - support' }
+GtNotificationExamples >> addSession: aSession [
+	self sessions add: aSession.
+]
 
 { #category : #'examples - debug session' }
 GtNotificationExamples >> basicDebugSessionElement [
@@ -97,6 +105,7 @@ GtNotificationExamples >> basicNotificationsElement [
 { #category : #'examples - debug session' }
 GtNotificationExamples >> debugSession [
 	<gtExample>
+	<after: #terminateSessions>
 	| aContext aProcess aSession |
 	aContext := [ 1 + 1 ] asContext.
 	aProcess := Process 
@@ -105,6 +114,7 @@ GtNotificationExamples >> debugSession [
 	aSession := aProcess 
 		newDebugSessionNamed: 'Example session' 
 		startedAt: aContext.
+	self addSession: aSession.
 	^ aSession 
 ]
 
@@ -516,6 +526,11 @@ GtNotificationExamples >> parentJob [
 	^ aJob
 ]
 
+{ #category : #'private - support' }
+GtNotificationExamples >> sessions [
+	^ sessions ifNil: [ sessions := OrderedCollection new ]
+]
+
 { #category : #'examples - debug session' }
 GtNotificationExamples >> sharedDebugSession [
 	<gtExample>
@@ -525,4 +540,10 @@ GtNotificationExamples >> sharedDebugSession [
 	aSharedSession session: aPharoSession.
 	self assert: aSharedSession session equals: aPharoSession.
 	^ aSharedSession
+]
+
+{ #category : #'private - support' }
+GtNotificationExamples >> terminateSessions [
+	self sessions do: [ :eachSession | 
+		eachSession terminate ]
 ]
