@@ -10,7 +10,7 @@ GtNotificationDecoratingEventElement >> defaultLayout [
 ]
 
 { #category : #defaults }
-GtNotificationDecoratingEventElement >> defaultVercialResizerModel [
+GtNotificationDecoratingEventElement >> defaultVerticalResizerModel [
 	^ BrLayoutVerticalResizerModel fitContent
 ]
 

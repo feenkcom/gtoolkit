@@ -3,10 +3,17 @@ Class {
 	#superclass : #GtNotificationEventElement,
 	#instVars : [
 		'textEditor',
-		'toolbarElement'
+		'toolbarElement',
+		'borderElement'
 	],
 	#category : #'GToolkit-Notifications-UI'
 }
+
+{ #category : #'private - accessing' }
+GtNotificationDebugSessionElement >> borderElement [
+	<return: #GtNotificationBorderElement>
+	^ borderElement
+]
 
 { #category : #'private - actions' }
 GtNotificationDebugSessionElement >> debug [
@@ -29,18 +36,28 @@ GtNotificationDebugSessionElement >> defaultLayout [
 { #category : #initialization }
 GtNotificationDebugSessionElement >> initialize [
 	super initialize.
+	self initializeBorderElement.
 	self initializeTextEditor.
 	self initializeToolbarElement.
-	
-	self addChild: self textEditor as: #label.
-	self addChild: self toolbarElement as: #toolbar.
-	
+
+	self addChild: self borderElement as: #border.
+	self borderElement containerDo: [ :aContainer |
+		aContainer alignCenterRight.
+		aContainer addChild: self textEditor as: #label.
+		aContainer addChild: self toolbarElement as: #toolbar ].
+
 	self addLook: (BrLayoutResizerLook new
 		hInherit: self;
 		vAnyToFitContent: self;
 		hInherit: self textEditor;
 		vAnyToFitContent: self textEditor;
 		anyToFitContent: self toolbarElement).
+]
+
+{ #category : #initialization }
+GtNotificationDebugSessionElement >> initializeBorderElement [
+	borderElement := GtNotificationBorderElement new
+		withCloseButtonAction: [ self terminate ]
 ]
 
 { #category : #initialization }
@@ -54,26 +71,20 @@ GtNotificationDebugSessionElement >> initializeTextEditor [
 
 { #category : #initialization }
 GtNotificationDebugSessionElement >> initializeToolbarElement [
-	| aDebugButton aTerminateButton |
+	| aDebugButton |
 	toolbarElement := BrToolbar new
 		look: BrGlamorousToolbarLook;
 		fitContent.
 		
 	aDebugButton := BrButton new
-		look: BrGlamorousButtonWithLabelLook;
+		look: BrGlamorousButtonWithIconLook;
 		beSmall;
+		icon: BrGlamorousVectorIcons debug;
 		label: 'Debug';
 		action: [ self debug ].
 		
-	aTerminateButton := BrButton new
-		look: BrGlamorousButtonWithLabelLook;
-		beSmall;
-		label: 'Terminate';
-		action: [ self terminate ].
-		
 	self toolbarElement 
-		addItem: aDebugButton;
-		addItem: aTerminateButton
+		addItem: aDebugButton
 ]
 
 { #category : #'private - announcement handling' }
