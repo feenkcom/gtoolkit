@@ -57,6 +57,8 @@ GtNotificationDebugSessionElement >> initialize [
 { #category : #initialization }
 GtNotificationDebugSessionElement >> initializeBorderElement [
 	borderElement := GtNotificationBorderElement new
+		borderDo: [ :anElement | 
+			anElement border: (BlBorder paint: BrGlamorousColors errorBackgroundColor width: 1) ];
 		withCloseButtonAction: [ self terminate ]
 ]
 
@@ -85,6 +87,20 @@ GtNotificationDebugSessionElement >> initializeToolbarElement [
 		
 	self toolbarElement 
 		addItem: aDebugButton
+]
+
+{ #category : #'private - instance creation' }
+GtNotificationDebugSessionElement >> newTextDescribingSession: aSession [
+	^ String streamContents: [ :aStream |
+		aStream nextPutAll: aSession name asString.
+		aSession interruptedContext 
+			ifNotNil: [ :anInterruptedContext | 
+				| aStack aShortStack |
+				aStack := anInterruptedContext stack.
+				aShortStack := aStack first: (3 min: aStack size).
+				aShortStack do: [ :aContext | 
+					aStream cr.
+					aStream nextPutAll: aContext printString ] ] ]
 ]
 
 { #category : #'private - announcement handling' }
@@ -148,5 +164,7 @@ GtNotificationDebugSessionElement >> unsubscribeFromNotification [
 { #category : #'private - updating' }
 GtNotificationDebugSessionElement >> updateElement [
 	self debugSessionDo: [ :aSession |
-		self textEditor text: aSession name ]
+		| aText | 
+		aText := self newTextDescribingSession: aSession.
+		self textEditor text: aText ]
 ]
