@@ -44,7 +44,7 @@ GtNotificationDecoratingEventElement >> event [
 
 { #category : #'api - accessing' }
 GtNotificationDecoratingEventElement >> event: aGtNotificationEvent [
-	self element event: aGtNotificationEvent
+	self element notification: aGtNotificationEvent
 ]
 
 { #category : #initialization }

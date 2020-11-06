@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'message',
 		'textEditor',
-		'dismissButton'
+		'borderElement'
 	],
 	#category : #'GToolkit-Notifications-UI'
 }
@@ -14,6 +14,12 @@ GtNotificationMessageElement >> assertMessage: aString [
 	self 
 		assert: [ aString isNotNil ] 
 		description: [ 'Notification message must be non-nil' ].
+]
+
+{ #category : #'private - accessing' }
+GtNotificationMessageElement >> borderElement [
+	<return: #GtNotificationBorderElement>
+	^ borderElement
 ]
 
 { #category : #initialization }
@@ -26,37 +32,30 @@ GtNotificationMessageElement >> defaultMessage [
 	^ 'empty message'
 ]
 
-{ #category : #'private - accessing' }
-GtNotificationMessageElement >> dismissButton [
-	<return: #BrButton>
-	^ dismissButton
-]
-
 { #category : #initialization }
 GtNotificationMessageElement >> initialize [
 	super initialize.
 	message := self defaultMessage.
+	self initializeBorderElement.
 	self initializeTextEditor.
-	self initializeDismissButton.
 	
-	self addChild: self textEditor as: #textEditor.
-	self addChild: self dismissButton as: #dismissButton.
+	self addChild: self borderElement as: #border.
+	self borderElement containerDo: [ :aContainer |
+		aContainer addChild: self textEditor as: #textEditor ].
 	
 	self addLook: (BrLayoutResizerLook new
 		hInherit: self;
 		vAnyToFitContent: self;
+		hInherit: self borderElement;
+		vAnyToFitContent: self borderElement;
 		hInherit: self textEditor;
-		vAnyToFitContent: self textEditor;
-		anyToFitContent: self dismissButton).
+		vAnyToFitContent: self textEditor).
 ]
 
 { #category : #initialization }
-GtNotificationMessageElement >> initializeDismissButton [
-	dismissButton := BrButton new
-		look: BrGlamorousButtonWithLabelLook;
-		beSmall;
-		label: 'Dismiss';
-		action: [ self dismiss ]
+GtNotificationMessageElement >> initializeBorderElement [
+	borderElement := GtNotificationBorderElement new
+		withCloseButtonAction: [ self dismiss ]
 ]
 
 { #category : #initialization }
@@ -84,14 +83,14 @@ GtNotificationMessageElement >> message: aString [
 ]
 
 { #category : #'private - hooks' }
-GtNotificationMessageElement >> onEventChanged [
-	super onEventChanged.
-	self message: self event message.
+GtNotificationMessageElement >> onMessageChanged [
+	self updateTextEditor.
 ]
 
 { #category : #'private - hooks' }
-GtNotificationMessageElement >> onMessageChanged [
-	self updateTextEditor.
+GtNotificationMessageElement >> onNotificationChanged [
+	super onNotificationChanged.
+	self message: self event message.
 ]
 
 { #category : #'private - accessing' }
