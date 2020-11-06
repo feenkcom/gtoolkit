@@ -15,7 +15,7 @@ GtNotificationJobEvent >> = anObject [
 
 { #category : #'api - accessing' }
 GtNotificationJobEvent >> elementClass [
-	^ GtNotificationJobWithChildrenElement
+	^ GtNotificationRootJobElement
 ]
 
 { #category : #comparing }

@@ -17,8 +17,8 @@ GtNotificationDebugSessionElement >> debug [
 
 { #category : #'private - accessing' }
 GtNotificationDebugSessionElement >> debugSessionDo: aBlock [
-	self eventDo: [ :anEvent | 
-		anEvent debugSession ifNotNil: aBlock ]
+	self
+		notificationDo: [ :anEvent | anEvent debugSession ifNotNil: aBlock ]
 ]
 
 { #category : #initialization }

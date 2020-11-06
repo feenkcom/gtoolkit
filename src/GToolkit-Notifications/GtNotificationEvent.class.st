@@ -11,9 +11,7 @@ GtNotificationEvent >> addedTo: aGtNotifications [
 
 { #category : #'api - converting' }
 GtNotificationEvent >> asElement [
-	^ GtNotificationDecoratingEventElement new
-		element: self elementClass new;
-		event: self
+	^ self elementClass new notification: self
 ]
 
 { #category : #'api - accessing' }
