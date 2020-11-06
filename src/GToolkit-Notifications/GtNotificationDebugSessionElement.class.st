@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'textEditor',
 		'toolbarElement',
-		'borderElement'
+		'borderElement',
+		'stackListElement'
 	],
 	#category : #'GToolkit-Notifications-UI'
 }
@@ -38,12 +39,14 @@ GtNotificationDebugSessionElement >> initialize [
 	super initialize.
 	self initializeBorderElement.
 	self initializeTextEditor.
+	self initializeStackList.
 	self initializeToolbarElement.
 
 	self addChild: self borderElement as: #border.
 	self borderElement containerDo: [ :aContainer |
 		aContainer alignCenterRight.
 		aContainer addChild: self textEditor as: #label.
+		aContainer addChild: self stackListElement as: #stack.
 		aContainer addChild: self toolbarElement as: #toolbar ].
 
 	self addLook: (BrLayoutResizerLook new
@@ -51,6 +54,7 @@ GtNotificationDebugSessionElement >> initialize [
 		vAnyToFitContent: self;
 		hInherit: self textEditor;
 		vAnyToFitContent: self textEditor;
+		hInherit: self stackListElement;
 		anyToFitContent: self toolbarElement).
 ]
 
@@ -58,14 +62,38 @@ GtNotificationDebugSessionElement >> initialize [
 GtNotificationDebugSessionElement >> initializeBorderElement [
 	borderElement := GtNotificationBorderElement new
 		borderDo: [ :anElement | 
-			anElement border: (BlBorder paint: BrGlamorousColors errorBackgroundColor width: 1) ];
+			anElement 
+				border: (BlBorder paint: BrGlamorousColors errorBackgroundColor width: 1);
+				padding: (BlInsets all: 0) ];
 		withCloseButtonAction: [ self terminate ]
+]
+
+{ #category : #initialization }
+GtNotificationDebugSessionElement >> initializeStackList [
+	stackListElement := BrSimpleList new
+		hMatchParent;
+		vExact: 50;
+		padding: (BlInsets top: 5 right: 9 bottom: 10 left: 9);
+		itemType: [ :anItemTypeFactory :anItemObject :anItemIndex | DebugSession ];
+		itemStencil: [ :anEventElementClass :aListWidget | 
+			BrLabel new
+				look: (BrGlamorousLabelLook new
+					glamorousRegularFont;
+					glamorousRegularSmallSize);
+				hMatchParent;
+				vFitContent ];
+		itemDataBinder: [ :aLabel :aContext :anItemIndex | 
+				aLabel text: (self textForContext: aContext) ]
 ]
 
 { #category : #initialization }
 GtNotificationDebugSessionElement >> initializeTextEditor [
 	textEditor := BrEditor new
-		look: BrGlamorousRegularEditorLook;
+		look: (BrGlamorousRegularEditorLook new
+			glamorousRegularFont;
+			glamorousRegularSmallSize);
+		padding: (BlInsets top: 5 right: 10 bottom: 5 left: 10);
+		background: BrGlamorousColors errorBackgroundColor;
 		hMatchParent;
 		vFitContent;
 		beReadOnlyWithSelection.
@@ -76,6 +104,7 @@ GtNotificationDebugSessionElement >> initializeToolbarElement [
 	| aDebugButton |
 	toolbarElement := BrToolbar new
 		look: BrGlamorousToolbarLook;
+		padding: (BlInsets top: 5 right: 10 bottom: 10 left: 10);
 		fitContent.
 		
 	aDebugButton := BrButton new
@@ -92,15 +121,7 @@ GtNotificationDebugSessionElement >> initializeToolbarElement [
 { #category : #'private - instance creation' }
 GtNotificationDebugSessionElement >> newTextDescribingSession: aSession [
 	^ String streamContents: [ :aStream |
-		aStream nextPutAll: aSession name asString.
-		aSession interruptedContext 
-			ifNotNil: [ :anInterruptedContext | 
-				| aStack aShortStack |
-				aStack := anInterruptedContext stack.
-				aShortStack := aStack first: (3 min: aStack size).
-				aShortStack do: [ :aContext | 
-					aStream cr.
-					aStream nextPutAll: aContext printString ] ] ]
+		aStream nextPutAll: aSession name asString ]
 ]
 
 { #category : #'private - announcement handling' }
@@ -119,6 +140,12 @@ GtNotificationDebugSessionElement >> onDebugSessionTerminated: anAnnouncement [
 GtNotificationDebugSessionElement >> onNotificationChanged [
 	super onNotificationChanged.
 	self updateElement.
+]
+
+{ #category : #'private - accessing' }
+GtNotificationDebugSessionElement >> stackListElement [
+	<return: #BrSimpleList>
+	^ stackListElement
 ]
 
 { #category : #'private - subscriptions' }
@@ -148,6 +175,11 @@ GtNotificationDebugSessionElement >> textEditor [
 	^ textEditor
 ]
 
+{ #category : #'private - instance creation' }
+GtNotificationDebugSessionElement >> textForContext: aContext [
+	^ aContext printString
+]
+
 { #category : #'private - accessing' }
 GtNotificationDebugSessionElement >> toolbarElement [
 	<return: #BrToolbar>
@@ -163,6 +195,22 @@ GtNotificationDebugSessionElement >> unsubscribeFromNotification [
 
 { #category : #'private - updating' }
 GtNotificationDebugSessionElement >> updateElement [
+	self debugSessionDo: [ :aSession |
+		self updateTextEditor.
+		self updateStackList. ]
+]
+
+{ #category : #'private - updating' }
+GtNotificationDebugSessionElement >> updateStackList [
+	self debugSessionDo: [ :aSession |
+		aSession interruptedContext 
+			ifNotNil: [ :anInterruptedContext | 
+				anInterruptedContext stack ifNotNil: [ :aStack |
+					self stackListElement items: aStack ] ] ]
+]
+
+{ #category : #'private - updating' }
+GtNotificationDebugSessionElement >> updateTextEditor [
 	self debugSessionDo: [ :aSession |
 		| aText | 
 		aText := self newTextDescribingSession: aSession.
