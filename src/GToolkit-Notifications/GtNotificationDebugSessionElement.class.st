@@ -89,14 +89,14 @@ GtNotificationDebugSessionElement >> onDebugSessionTerminated: anAnnouncement [
 ]
 
 { #category : #'private - hooks' }
-GtNotificationDebugSessionElement >> onEventChanged [
-	super onEventChanged.
+GtNotificationDebugSessionElement >> onNotificationChanged [
+	super onNotificationChanged.
 	self updateElement.
 ]
 
 { #category : #'private - subscriptions' }
-GtNotificationDebugSessionElement >> subscribeToEvent [
-	super subscribeToEvent.
+GtNotificationDebugSessionElement >> subscribeToNotification [
+	super subscribeToNotification.
 	self debugSessionDo: [ :aSession | 
 		aSession 
 			when: GtSharedDebugSessionDebuggedAnnouncement
@@ -128,8 +128,8 @@ GtNotificationDebugSessionElement >> toolbarElement [
 ]
 
 { #category : #'private - subscriptions' }
-GtNotificationDebugSessionElement >> unsubscribeFromEvent [
-	super unsubscribeFromEvent.
+GtNotificationDebugSessionElement >> unsubscribeFromNotification [
+	super unsubscribeFromNotification.
 	self debugSessionDo: [ :aSession |
 		aSession unsubscribe: self ]
 ]

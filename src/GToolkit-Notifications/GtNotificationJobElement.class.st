@@ -49,19 +49,13 @@ GtNotificationJobElement >> initializeProgressElement [
 
 { #category : #'private - accessing' }
 GtNotificationJobElement >> jobDo: aBlock [
-	self eventDo: [ :anEvent | anEvent job ifNotNil: aBlock ]
+	self notificationDo: [ :anEvent | anEvent job ifNotNil: aBlock ]
 ]
 
 { #category : #'hooks - children' }
 GtNotificationJobElement >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	self subscribeToJob.
-	self updateElement.
-]
-
-{ #category : #'private - hooks' }
-GtNotificationJobElement >> onEventChanged [
-	super onEventChanged.
 	self updateElement.
 ]
 
@@ -80,6 +74,12 @@ GtNotificationJobElement >> onJobEnd: aJobEnd [
 			self unsubscribeFromJob.
 			self enqueueTask: (BlTaskAction new 
 				action: [ self dismiss ]) ] ].
+]
+
+{ #category : #'private - hooks' }
+GtNotificationJobElement >> onNotificationChanged [
+	super onNotificationChanged.
+	self updateElement.
 ]
 
 { #category : #'hooks - children' }

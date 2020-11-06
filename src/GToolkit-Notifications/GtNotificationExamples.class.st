@@ -32,6 +32,15 @@ GtNotificationExamples >> basicDebugSessionEvent [
 ]
 
 { #category : #'examples - message notification' }
+GtNotificationExamples >> basicMessageElement [
+	<gtExample>
+	| anElement |
+	anElement := GtNotificationMessageElement new.
+	self assert: anElement event isNil.
+	^ anElement
+]
+
+{ #category : #'examples - message notification' }
 GtNotificationExamples >> basicMessageEvent [
 	<gtExample>
 	| anEvent |
@@ -306,12 +315,10 @@ GtNotificationExamples >> notificationJobElement [
 	| anElement anEvent aCurrentJob |
 	anElement := self basicNotificationJobElement.
 	anEvent := self notificationJobEvent.
-	anElement event: anEvent.
-	
+	anElement notification: anEvent.
 	aCurrentJob := 42.
 	anElement jobDo: [ :aJob | aCurrentJob := aJob ].
 	self assert: aCurrentJob equals: anEvent job.
-
 	^ anElement
 ]
 
@@ -397,12 +404,10 @@ GtNotificationExamples >> notificationJobWithChildrenElement [
 	| anElement anEvent aCurrentJob |
 	anElement := self basicNotificationJobWithChildrenElement.
 	anEvent := self notificationJobEvent.
-	anElement event: anEvent.
-	
+	anElement notification: anEvent.
 	aCurrentJob := 42.
 	anElement jobDo: [ :aJob | aCurrentJob := aJob ].
 	self assert: aCurrentJob equals: anEvent job.
-
 	^ anElement
 ]
 

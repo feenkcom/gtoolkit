@@ -68,8 +68,10 @@ GtNotificationJobWithChildrenElement >> jobChildrenDo: aBlock [
 GtNotificationJobWithChildrenElement >> newJobEventFor: aJob [
 	| anElement anEvent |
 	anEvent := GtNotificationJobEvent new job: aJob.
-	anElement := GtNotificationJobWithChildrenElement new event: anEvent.
-	anElement margin: (anElement margin + (BlInsets left: 10) + (BlInsets top: 5)).
+	anElement := GtNotificationJobWithChildrenElement new
+		notification: anEvent.
+	anElement
+		margin: anElement margin + (BlInsets left: 10) + (BlInsets top: 5).
 	^ anElement
 ]
 
