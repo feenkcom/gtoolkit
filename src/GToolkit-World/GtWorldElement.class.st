@@ -48,7 +48,7 @@ GtWorldElement >> initializeShortcuts [
 	super initializeShortcuts.
 	self
 		addShortcut:
-			(BlShortcut new
+			(BlShortcutWithAction new
 				repeatable: false;
 				combination: BlKeyCombination shiftReturn;
 				action: [ spotterDropdown
@@ -59,7 +59,7 @@ GtWorldElement >> initializeShortcuts [
 										yourself) ] ]).
 	self
 		addShortcut:
-			(BlShortcut new
+			(BlShortcutWithAction new
 				repeatable: false;
 				combination: BlKeyCombination primaryT;
 				action: [ subSpaceDropdown
