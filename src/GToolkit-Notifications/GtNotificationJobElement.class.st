@@ -1,6 +1,6 @@
 Class {
 	#name : #GtNotificationJobElement,
-	#superclass : #GtNotificationEventElement,
+	#superclass : #GtNotificationAbstractJobElement,
 	#instVars : [
 		'progressElement'
 	],
@@ -21,7 +21,8 @@ GtNotificationJobElement >> defaultLayout [
 
 { #category : #'api - actions' }
 GtNotificationJobElement >> dismiss [
-	self fireEvent: (GtNotificationJobDismissWish new notification: self event)
+	self
+		fireEvent: (GtNotificationJobDismissWish new notification: self notification)
 ]
 
 { #category : #initialization }
@@ -45,11 +46,6 @@ GtNotificationJobElement >> initializeProgressElement [
 		look: BrGlamorousProgressWithLabelAndBarLook;
 		layoutDo: [ :aLayout | 
 			aLayout alignCenterLeft ]
-]
-
-{ #category : #'private - accessing' }
-GtNotificationJobElement >> jobDo: aBlock [
-	self notificationDo: [ :anEvent | anEvent job ifNotNil: aBlock ]
 ]
 
 { #category : #'hooks - children' }

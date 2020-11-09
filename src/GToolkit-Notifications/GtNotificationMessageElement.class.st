@@ -90,7 +90,7 @@ GtNotificationMessageElement >> onMessageChanged [
 { #category : #'private - hooks' }
 GtNotificationMessageElement >> onNotificationChanged [
 	super onNotificationChanged.
-	self message: self event message.
+	self message: self notification message
 ]
 
 { #category : #'private - accessing' }

@@ -12,7 +12,7 @@ GtNotificationElement >> defaultHorizontalResizerModel [
 ]
 
 { #category : #defaults }
-GtNotificationElement >> defaultVercialResizerModel [
+GtNotificationElement >> defaultVerticalResizerModel [
 	^ BrLayoutVerticalResizerModel matchParent
 ]
 
@@ -20,5 +20,5 @@ GtNotificationElement >> defaultVercialResizerModel [
 GtNotificationElement >> initialize [
 	super initialize.
 	self addInteractiveModelState: self defaultHorizontalResizerModel.
-	self addInteractiveModelState: self defaultVercialResizerModel
+	self addInteractiveModelState: self defaultVerticalResizerModel
 ]

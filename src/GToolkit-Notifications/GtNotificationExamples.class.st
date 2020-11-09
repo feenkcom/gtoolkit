@@ -17,7 +17,7 @@ GtNotificationExamples >> basicDebugSessionElement [
 	<gtExample>
 	| anElement |
 	anElement := GtNotificationDebugSessionElement new.
-	self assert: anElement event isNil.
+	self assert: anElement notification isNil.
 	^ anElement
 ]
 
@@ -36,7 +36,7 @@ GtNotificationExamples >> basicMessageElement [
 	<gtExample>
 	| anElement |
 	anElement := GtNotificationMessageElement new.
-	self assert: anElement event isNil.
+	self assert: anElement notification isNil.
 	^ anElement
 ]
 
@@ -101,6 +101,17 @@ GtNotificationExamples >> basicNotificationJobWithChildrenElement [
 	^ anElement
 ]
 
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> basicNotificationRootJobElement [
+	<gtExample>
+	| anElement aCurrentJob |
+	anElement := GtNotificationRootJobElement new.
+	aCurrentJob := 42.
+	anElement jobDo: [ :aJob | aCurrentJob := aJob ].
+	self assert: aCurrentJob equals: 42.
+	^ anElement
+]
+
 { #category : #'examples - list' }
 GtNotificationExamples >> basicNotificationsElement [
 	<gtExample>
@@ -133,8 +144,8 @@ GtNotificationExamples >> debugSessionElement [
 	| anElement anEvent |
 	anElement := self basicDebugSessionElement.
 	anEvent := self debugSessionEvent.
-	anElement event: anEvent.
-	self assert: anElement event equals: anEvent.
+	anElement notification: anEvent.
+	self assert: anElement notification equals: anEvent.
 	^ anElement
 ]
 
@@ -328,49 +339,35 @@ GtNotificationExamples >> notificationJobElement_runningJob [
 	| anElement aJob aSemaphore aSpace aTimeout anElementSubscriptions |
 	aSemaphore := Semaphore new.
 	anElement := self notificationJobElement.
-	aJob := anElement event job.
-
+	aJob := anElement notification job.
 	anElementSubscriptions := OrderedCollection new.
 	aJob announcer subscriptions
-		subscriptionsOf: anElement 
-		do: [ :aSubscription |
-			anElementSubscriptions add: aSubscription ].
+		subscriptionsOf: anElement
+		do: [ :aSubscription | anElementSubscriptions add: aSubscription ].
 	self assert: anElementSubscriptions size equals: 0.
-	
-	aSpace := self newSpace.	
+	aSpace := self newSpace.
 	aSpace addChild: anElement.
-
 	aJob announcer subscriptions
-		subscriptionsOf: anElement 
-		do: [ :aSubscription |
-			anElementSubscriptions add: aSubscription ].
+		subscriptionsOf: anElement
+		do: [ :aSubscription | anElementSubscriptions add: aSubscription ].
 	self assert: anElementSubscriptions size equals: 2.
-	
 	aJob run.
-
 	self assert: aJob isRunning not.
 	self assert: aJob progress > 0.99.
-
-	anElement enqueueTask: (BlTaskAction new 
-		action: [ aSemaphore signal ]).
+	anElement
+		enqueueTask: (BlTaskAction new action: [ aSemaphore signal ]).
 	aSpace pulse.
 	aTimeout := aSemaphore waitTimeoutSeconds: 5.
-	
-	self 
-		assert: aTimeout not 
-		description: [ 'Semaphore timeout' ].
-	self 
+	self assert: aTimeout not description: [ 'Semaphore timeout' ].
+	self
 		assert: anElement progressElement fraction > 0.99
-		description: [ 'Progress must be updated' ].	
-		
+		description: [ 'Progress must be updated' ].
 	anElement removeFromParent.
-
 	anElementSubscriptions := OrderedCollection new.
 	aJob announcer subscriptions
-		subscriptionsOf: anElement 
-		do: [ :aSubscription |
-			anElementSubscriptions add: aSubscription ].
-	self assert: anElementSubscriptions size equals: 0.	
+		subscriptionsOf: anElement
+		do: [ :aSubscription | anElementSubscriptions add: aSubscription ].
+	self assert: anElementSubscriptions size equals: 0.
 	^ anElement
 ]
 
@@ -417,14 +414,11 @@ GtNotificationExamples >> notificationJobWithChildrenElement_OneChild [
 	| anElement anEvent aCurrentJob |
 	anElement := self basicNotificationJobWithChildrenElement.
 	anEvent := self notificationJobEvent.
-	anEvent job addChild: (self job
-		title: 'Sub-Job Progress').
-	anElement event: anEvent.
-	
+	anEvent job addChild: (self job title: 'Sub-Job Progress').
+	anElement notification: anEvent.
 	aCurrentJob := 42.
 	anElement jobDo: [ :aJob | aCurrentJob := aJob ].
 	self assert: aCurrentJob equals: anEvent job.
-
 	^ anElement
 ]
 
@@ -438,6 +432,19 @@ GtNotificationExamples >> notificationJobWithTwoChildrenEvent [
 	self assert: anEvent job equals: aJob.
 	self assert: (anEvent asElement isKindOf: BlElement).
 	^ anEvent
+]
+
+{ #category : #'examples - job notification' }
+GtNotificationExamples >> notificationRootJobElement [
+	<gtExample>
+	| anElement anEvent aCurrentJob |
+	anElement := self basicNotificationRootJobElement.
+	anEvent := self notificationJobEvent.
+	anElement notification: anEvent.
+	aCurrentJob := 42.
+	anElement jobDo: [ :aJob | aCurrentJob := aJob ].
+	self assert: aCurrentJob equals: anEvent job.
+	^ anElement
 ]
 
 { #category : #'examples - list' }

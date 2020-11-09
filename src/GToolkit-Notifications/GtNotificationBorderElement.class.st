@@ -7,6 +7,12 @@ Class {
 	#category : #'GToolkit-Notifications-UI'
 }
 
+{ #category : #'api - accessing' }
+GtNotificationBorderElement >> borderDo: aBlock [
+	"Users can configure the border element"
+	self borderElement ifNotNil: aBlock
+]
+
 { #category : #'private - accessing' }
 GtNotificationBorderElement >> borderElement [
 	<return: #BrFrame>
@@ -55,7 +61,8 @@ GtNotificationBorderElement >> initializeBorderElement [
 GtNotificationBorderElement >> initializeElement [
 	self 
 		background: Color white;
-		padding: (BlInsets all: 5)
+		padding: (BlInsets top: 5 right: 5 bottom: 0 left: 5)
+
 ]
 
 { #category : #'api - initialization' }

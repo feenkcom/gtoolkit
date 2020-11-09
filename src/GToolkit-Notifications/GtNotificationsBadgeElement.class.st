@@ -26,7 +26,7 @@ GtNotificationsBadgeElement >> defaultLayout [
 ]
 
 { #category : #defaults }
-GtNotificationsBadgeElement >> defaultVercialResizerModel [
+GtNotificationsBadgeElement >> defaultVerticalResizerModel [
 	^ BrLayoutVerticalResizerModel fitContent
 ]
 

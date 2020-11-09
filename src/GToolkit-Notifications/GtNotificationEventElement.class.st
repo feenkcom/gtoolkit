@@ -28,14 +28,16 @@ GtNotificationEventElement >> assertNotification: aGtNotificationEvent [
 ]
 
 { #category : #defaults }
-GtNotificationEventElement >> defaultVercialResizerModel [
+GtNotificationEventElement >> defaultVerticalResizerModel [
 	^ BrLayoutVerticalResizerModel fitContent
 ]
 
 { #category : #'api - actions' }
 GtNotificationEventElement >> dismiss [
-	self eventDo: [ :aNotification | 
-		self fireEvent: (GtNotificationDismissWish new notification: aNotification) ]
+	self
+		notificationDo: [ :aNotification | 
+			self
+				fireEvent: (GtNotificationDismissWish new notification: aNotification) ]
 ]
 
 { #category : #'api - accessing' }
