@@ -103,6 +103,14 @@ GtWorld class >> openWithSpaces: aCollectionOfSpaces from: aSpace [
 	^ self openWithSpaces: aCollectionOfSpaces
 ]
 
+{ #category : #'api - notification' }
+GtWorld class >> showNotification: aNotification [
+	BlSpace
+		spaceWithId: GtWorld defaultId 
+		do: [ :aSpace | 
+			aSpace showNotification: aNotification ].
+]
+
 { #category : #'class initialization' }
 GtWorld class >> startUp: resuming [
 	"Implement an update mechanism to update the saved world on open."
@@ -154,7 +162,5 @@ GtWorld >> removeShutdownListener [
 { #category : #'api - notification' }
 GtWorld >> showNotification: aNotification [
 
-	(self root respondsTo: #showNotification:) 
-		ifFalse: [ super showNotification: aNotification ]
-		ifTrue: [ self root showNotification: aNotification ]
+	self root showNotification: aNotification
 ]
