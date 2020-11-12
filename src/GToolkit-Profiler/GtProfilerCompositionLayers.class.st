@@ -64,7 +64,7 @@ GtProfilerCompositionLayers >> profiledSpace: anObject [
 
 { #category : #private }
 GtProfilerCompositionLayers >> updateLayer [
-	self removeChildNamed: #compositionLayer.
+	self removeChildNamed: #compositionLayerContainer.
 	
 	updateButton disable.
 
@@ -74,7 +74,9 @@ GtProfilerCompositionLayers >> updateLayer [
 
 		(aLayer gtTreeFor: GtPhlowEmptyView new)
 			asElementDo: [ :anElement | self enqueueTask: (BlTaskAction new action: [
-				self addChild: anElement as: #compositionLayer.
-				anElement zoomStep: 0.05.
+				self addChild: anElement as: #compositionLayerContainer.
+				anElement children first
+					containerName: #compositionLayer;
+					zoomStep: 0.05.
 				updateButton enable ]) ] ]).
 ]
