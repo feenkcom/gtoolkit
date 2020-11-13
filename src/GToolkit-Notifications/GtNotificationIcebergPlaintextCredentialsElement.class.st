@@ -17,6 +17,7 @@ GtNotificationIcebergPlaintextCredentialsElement >> accept [
 	"Accept dialog values"
 	self storeCredentials.
 	self closeDialog.
+	self acceptCallbackDo: [ :aCallback | aCallback value ].
 ]
 
 { #category : #'private - accessing' }
@@ -33,8 +34,9 @@ GtNotificationIcebergPlaintextCredentialsElement >> borderElement [
 
 { #category : #'private - actions' }
 GtNotificationIcebergPlaintextCredentialsElement >> cancel [
-	"Accept dialog values"
-	self dismiss
+	"Cancel dialog values"
+	self dismiss.
+	self cancelCallbackDo: [ :aCallback | aCallback value ].
 ]
 
 { #category : #'private - actions' }
@@ -211,6 +213,9 @@ GtNotificationIcebergPlaintextCredentialsElement >> storeCredentials [
 	self credentialStoreDo: [ :aStore |
 		self credentialsDo: [ :aCredentials |
 			self hostDo: [ :aHost | 
+				aCredentials 
+					username: self usernameInputElement text asString;
+					password: self passwordInputElement text asString.
 				aStore 
 					storeCredential: aCredentials 
 					forHostname: aHost. ] ] ].

@@ -3,10 +3,32 @@ Class {
 	#superclass : #GtNotificationEvent,
 	#instVars : [
 		'credentials',
-		'credentialStore'
+		'credentialStore',
+		'acceptCallback',
+		'cancelCallback'
 	],
 	#category : #'GToolkit-Notifications-Iceberg'
 }
+
+{ #category : #accessing }
+GtNotificationIcebergCredentials >> acceptCallback [
+	^ acceptCallback
+]
+
+{ #category : #accessing }
+GtNotificationIcebergCredentials >> acceptCallback: anObject [
+	acceptCallback := anObject
+]
+
+{ #category : #accessing }
+GtNotificationIcebergCredentials >> cancelCallback [
+	^ cancelCallback
+]
+
+{ #category : #accessing }
+GtNotificationIcebergCredentials >> cancelCallback: anObject [
+	cancelCallback := anObject
+]
 
 { #category : #'api - accessing' }
 GtNotificationIcebergCredentials >> credentialStore [
@@ -39,4 +61,6 @@ GtNotificationIcebergCredentials >> defaultCredentials [
 GtNotificationIcebergCredentials >> initialize [
 	super initialize.
 	credentials := self defaultCredentials.
+	acceptCallback := [ "do nothing" ].
+	cancelCallback := [ "do nothing" ].
 ]
