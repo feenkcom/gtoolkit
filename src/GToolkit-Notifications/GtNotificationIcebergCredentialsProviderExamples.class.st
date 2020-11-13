@@ -8,6 +8,22 @@ Class {
 }
 
 { #category : #'examples - plain text element' }
+GtNotificationIcebergCredentialsProviderExamples >> acceptEditedPlaintextCredentialsElement [
+	<gtExample>
+	| anElement aStore anExistingSize |
+	anElement := self plaintextCredentialsElementWithUsernameAndPassword.
+	aStore := anElement notification credentialStore.
+	anExistingSize := aStore allCredentials size.
+	anElement usernameInputElement text: 'another username'.
+	anElement passwordInputElement text: 'another password'.
+	anElement accept.
+	self assert: aStore allCredentials size equals: anExistingSize + 1.
+	self assert: anElement notification credentials username equals: 'another username'.
+	self assert: anElement notification credentials password equals: 'another password'.
+	^ anElement
+]
+
+{ #category : #'examples - plain text element' }
 GtNotificationIcebergCredentialsProviderExamples >> acceptPlaintextCredentialsElement [
 	<gtExample>
 	| anElement aStore anExistingSize |
@@ -60,6 +76,31 @@ GtNotificationIcebergCredentialsProviderExamples >> basicPlaintextCredentialsNot
 	^ aNotification
 ]
 
+{ #category : #'examples - provider' }
+GtNotificationIcebergCredentialsProviderExamples >> basicProvider [
+	<gtExample>
+	| aProvider |
+	aProvider := GtNotificationIcebergCredentialsProvider new.
+	self assert: (aProvider instVarNamed: #remote) isNil.
+	^ aProvider
+]
+
+{ #category : #'examples - plain text element' }
+GtNotificationIcebergCredentialsProviderExamples >> cancelEditedPlaintextCredentialsElement [
+	<gtExample>
+	| anElement aStore anExistingSize |
+	anElement := self plaintextCredentialsElementWithUsernameAndPassword.
+	aStore := anElement notification credentialStore.
+	anExistingSize := aStore allCredentials size.
+	anElement usernameInputElement text: 'another username'.
+	anElement passwordInputElement text: 'another password'.
+	anElement cancel.
+	self assert: aStore allCredentials size equals: anExistingSize.
+	self assert: anElement notification credentials username equals: self username.
+	self assert: anElement notification credentials password equals: self password.
+	^ anElement
+]
+
 { #category : #'examples - credential store' }
 GtNotificationIcebergCredentialsProviderExamples >> credentialStore [
 	<gtExample>
@@ -92,6 +133,12 @@ GtNotificationIcebergCredentialsProviderExamples >> deleteFiles [
 { #category : #'private - support' }
 GtNotificationIcebergCredentialsProviderExamples >> files [
 	^ files ifNil: [ files := OrderedCollection new ]
+]
+
+{ #category : #'examples - plain text credentials' }
+GtNotificationIcebergCredentialsProviderExamples >> password [
+	<gtExample>
+	^ 'mypassword'
 ]
 
 { #category : #'examples - plain text credentials' }
@@ -162,9 +209,26 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsWithUser
 	<gtExample>
 	| aCredentials |
 	aCredentials := self plaintextCredentials.
-	aCredentials username: 'user'.
-	aCredentials password: 'mypassword'.
-	self assert: aCredentials username equals: 'user'.
-	self assert: aCredentials password equals: 'mypassword'.
+	aCredentials username: self username.
+	aCredentials password: self password.
+	self assert: aCredentials username equals: self username.
+	self assert: aCredentials password equals: self password.
 	^ aCredentials
+]
+
+{ #category : #'examples - provider' }
+GtNotificationIcebergCredentialsProviderExamples >> provider [
+	<gtExample>
+	| aProvider aRemote |
+	aProvider := self basicProvider.
+	aRemote := IceRemoteWithOnlyHostname for: 'example.com'.
+	aProvider remote: aRemote.
+	self assert: (aProvider instVarNamed: #remote) equals: aRemote.
+	^ aProvider
+]
+
+{ #category : #'examples - plain text credentials' }
+GtNotificationIcebergCredentialsProviderExamples >> username [
+	<gtExample>
+	^ 'user'
 ]

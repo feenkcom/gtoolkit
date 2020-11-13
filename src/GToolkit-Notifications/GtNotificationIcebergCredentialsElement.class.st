@@ -5,6 +5,18 @@ Class {
 }
 
 { #category : #'private - accessing' }
+GtNotificationIcebergCredentialsElement >> acceptCallbackDo: aBlock [
+	self notificationDo: [ :aNotification |
+		aNotification acceptCallback ifNotNil: aBlock ]
+]
+
+{ #category : #'private - accessing' }
+GtNotificationIcebergCredentialsElement >> cancelCallbackDo: aBlock [
+	self notificationDo: [ :aNotification |
+		aNotification cancelCallback ifNotNil: aBlock ]
+]
+
+{ #category : #'private - accessing' }
 GtNotificationIcebergCredentialsElement >> credentialStoreDo: aBlock [
 	self notificationDo: [ :aNotification |
 		aNotification credentialStore ifNotNil: aBlock ]

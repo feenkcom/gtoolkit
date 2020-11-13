@@ -5,6 +5,20 @@ Class {
 }
 
 { #category : #'private - testing' }
+GtNotificationIcebergCredentialsProvider >> isFromBloc [
+	^ BlParallelUniverse all
+			detect: [ :eachUniverse |
+				| aResult |
+				aResult := false.
+				eachUniverse hostClass
+					uiProcessDo: [ :eachUIProcess |
+						aResult := eachUIProcess = Processor activeProcess ].
+				aResult ]
+			ifFound: [ :aUniverse | true ]
+			ifNone: [ false ].
+]
+
+{ #category : #'private - testing' }
 GtNotificationIcebergCredentialsProvider >> isFromMorphic [
 	| context worldMorphClass |
 	worldMorphClass := Smalltalk 
@@ -22,8 +36,40 @@ GtNotificationIcebergCredentialsProvider >> isFromMorphic [
 GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentials: credentialsToReturn [
 
 	self isFromMorphic
-		ifTrue: [ self obtainPlaintextCredentialsInMorphic: credentialsToReturn ] 
-		ifFalse: [ self obtainPlaintextCredentialsInBloc: credentialsToReturn ]
+		ifTrue: [ 
+			self obtainPlaintextCredentialsInMorphic: credentialsToReturn.
+			^ self ].
+	self isFromBloc 
+		ifTrue: [ 
+			self obtainPlaintextCredentialsInBloc: credentialsToReturn.
+			^ self ].
+	self obtainPlaintextCredentialsForNonUIProcess: credentialsToReturn
+]
+
+{ #category : #private }
+GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentialsForNonUIProcess: credentialsToReturn [
+	
+	| aCredentials aNotification aSemaphore isAccepted |
+	isAccepted := false.
+	aSemaphore := Semaphore new.
+	aCredentials := IcePlaintextCredentials new.
+	aCredentials host: remote host.
+	aNotification := GtNotificationIcebergPlaintextCredentials new
+		credentials: aCredentials;
+		credentialStore: self credentialStore;
+		acceptCallback: [ 
+			isAccepted := true.
+			aSemaphore signal ];
+		cancelCallback: [ 
+			isAccepted := false.
+			aSemaphore signal ].
+	GtWorld showNotification: aNotification.
+
+	aSemaphore wait.
+
+	isAccepted 
+		ifTrue: [ credentialsToReturn readFrom: aCredentials ]
+		ifFalse: [ LGitNoCredentialsProvided signal ].
 ]
 
 { #category : #private }
