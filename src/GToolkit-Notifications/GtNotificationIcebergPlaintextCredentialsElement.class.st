@@ -172,6 +172,7 @@ GtNotificationIcebergPlaintextCredentialsElement >> newLabelWithText: aText [
 		look: (BrGlamorousLabelLook new
 			glamorousRegularFont;
 			glamorousRegularSmallSize);
+		padding: (BlInsets top: 2 right: 3 bottom: 3 left: 3);
 		fitContent
 ]
 
