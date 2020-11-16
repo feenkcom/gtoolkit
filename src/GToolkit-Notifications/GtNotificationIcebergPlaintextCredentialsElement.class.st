@@ -150,6 +150,16 @@ GtNotificationIcebergPlaintextCredentialsElement >> inputsArea [
 ]
 
 { #category : #'private - instance creation' }
+GtNotificationIcebergPlaintextCredentialsElement >> newCommonInputField [
+	^ BrEditor new
+		text: '';
+		padding: (BlInsets all: 3);
+		border: (BlBorder paint: (Color gray alpha: 0.2) width: 1);
+		hMatchParent;
+		vFitContent.
+]
+
+{ #category : #'private - instance creation' }
 GtNotificationIcebergPlaintextCredentialsElement >> newHeaderTextForHost: aHost [
 	<return: #String>
 	^ 'Please log in to ', aHost
@@ -162,32 +172,25 @@ GtNotificationIcebergPlaintextCredentialsElement >> newLabelWithText: aText [
 		look: (BrGlamorousLabelLook new
 			glamorousRegularFont;
 			glamorousRegularSmallSize);
+		padding: (BlInsets top: 2 right: 3 bottom: 3 left: 3);
 		fitContent
 ]
 
 { #category : #'private - instance creation' }
 GtNotificationIcebergPlaintextCredentialsElement >> newSecretInputField [ 
-	^ BrEditor new
-		text: '';
+	^ self newCommonInputField
 		look: (BrGlamorousRegularEditorLook new
 			glamorousRegularFont;
 			glamorousRegularSmallSize;
-			replacingText: $*);
-		padding: (BlInsets all: 0);
-		hMatchParent;
-		vFitContent.
+			replacingText: $*)
 ]
 
 { #category : #'private - instance creation' }
 GtNotificationIcebergPlaintextCredentialsElement >> newUserInput [
-	^ BrEditor new
-		text: '';
+	^ self newCommonInputField
 		look: (BrGlamorousRegularEditorLook new
 			glamorousRegularFont;
-			glamorousRegularSmallSize);
-		padding: (BlInsets all: 0);
-		hMatchParent;
-		vFitContent.
+			glamorousRegularSmallSize)
 ]
 
 { #category : #'private - hooks' }
