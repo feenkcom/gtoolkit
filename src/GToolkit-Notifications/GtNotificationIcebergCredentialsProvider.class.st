@@ -4,6 +4,11 @@ Class {
 	#category : #'GToolkit-Notifications-Iceberg'
 }
 
+{ #category : #'api - initialization' }
+GtNotificationIcebergCredentialsProvider class >> beDefaultProvider [
+	IceCredentialsProvider providerType: self
+]
+
 { #category : #'private - testing' }
 GtNotificationIcebergCredentialsProvider >> isFromBloc [
 	^ BlParallelUniverse all
@@ -34,16 +39,7 @@ GtNotificationIcebergCredentialsProvider >> isFromMorphic [
 
 { #category : #private }
 GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentials: credentialsToReturn [
-
-	self isFromMorphic
-		ifTrue: [ 
-			self obtainPlaintextCredentialsInMorphic: credentialsToReturn.
-			^ self ].
-	self isFromBloc 
-		ifTrue: [ 
-			self obtainPlaintextCredentialsInBloc: credentialsToReturn.
-			^ self ].
-	self obtainPlaintextCredentialsForNonUIProcess: credentialsToReturn
+	self obtainPlaintextCredentialsInBloc: credentialsToReturn.
 ]
 
 { #category : #private }
