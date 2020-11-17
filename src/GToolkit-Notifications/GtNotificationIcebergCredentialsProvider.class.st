@@ -9,6 +9,12 @@ GtNotificationIcebergCredentialsProvider class >> beDefaultProvider [
 	IceCredentialsProvider providerType: self
 ]
 
+{ #category : #'api - initialization' }
+GtNotificationIcebergCredentialsProvider class >> disableThisProvider [
+	IceCredentialsProvider providerType = self ifTrue: [ 
+		IceCredentialsProvider providerType: nil ]
+]
+
 { #category : #'private - testing' }
 GtNotificationIcebergCredentialsProvider >> isFromBloc [
 	^ BlParallelUniverse all
