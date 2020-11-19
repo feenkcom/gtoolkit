@@ -97,5 +97,13 @@ GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentialsInMorphic:
 
 { #category : #private }
 GtNotificationIcebergCredentialsProvider >> obtainSshCredentials: response [
+	| aCredentials aNotification |
+	aCredentials := IceSshCredentials new.
+	aCredentials host: remote host.
+	aNotification := GtNotificationIcebergSshCredentials new
+		credentials: aCredentials;
+		credentialStore: self credentialStore.
+	GtWorld showNotification: aNotification.
+
 	LGitNoCredentialsProvided signal.
 ]
