@@ -1,3 +1,6 @@
+"
+I exemplify ${class:GtNotificationIcebergCredentialsProvider}$, ${class:GtNotificationIcebergCredentialsElement}$, and ${class:GtNotificationIcebergCredentials}$.
+"
 Class {
 	#name : #GtNotificationIcebergCredentialsProviderExamples,
 	#superclass : #Object,
@@ -239,7 +242,7 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsNotifica
 	^ aNotification
 ]
 
-{ #category : #'examples - plain text credentials' }
+{ #category : #'examples - plain text notification' }
 GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsNotificationWithUsernameAndPassword [
 	<gtExample>
 	| aNotification aCredentials |

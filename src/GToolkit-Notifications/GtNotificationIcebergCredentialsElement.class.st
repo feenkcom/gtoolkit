@@ -1,3 +1,10 @@
+"
+I am an ${class:BlElement}$.
+I am an abstract class.
+Muy subclasses implement user notification dialogs to request user credentials. Those credentials are used to login in to *GitHub>https://github.com* and similar Git repositories.
+See my ${class:GtNotificationIcebergCredentialsElement|show=#gtSubclassesFor:|label=subclasses|expanded=true|height=150}$ for specific examples:
+
+"
 Class {
 	#name : #GtNotificationIcebergCredentialsElement,
 	#superclass : #GtNotificationEventElement,

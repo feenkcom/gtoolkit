@@ -1,3 +1,9 @@
+"
+I am a ${class:GtNotificationIcebergCredentials}$.
+I am used to notify that ${class:IcePlaintextCredentials|label=plaintext}$ credentials are requested. Those credentials are used to login in to *GitHub>https://github.com* and similar Git repositories.
+!! Example 
+${example:GtNotificationIcebergCredentialsProviderExamples>>#plaintextCredentialsNotificationWithUsernameAndPassword|codeExpanded=false|previewExpanded=true}$
+"
 Class {
 	#name : #GtNotificationIcebergPlaintextCredentials,
 	#superclass : #GtNotificationIcebergCredentials,
