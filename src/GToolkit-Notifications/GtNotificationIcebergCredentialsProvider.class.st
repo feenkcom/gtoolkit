@@ -57,6 +57,11 @@ GtNotificationIcebergCredentialsProvider >> isFromMorphic [
 
 { #category : #private }
 GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentials: credentialsToReturn [
+
+	GtNotificationIcebergCredentialsSignal 
+		mayEmitOnProvider: self 
+		credentials: credentialsToReturn.
+
 	self obtainPlaintextCredentialsInBloc: credentialsToReturn.
 ]
 
@@ -110,6 +115,11 @@ GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentialsInMorphic:
 { #category : #private }
 GtNotificationIcebergCredentialsProvider >> obtainSshCredentials: response [
 	| aCredentials aNotification |
+	
+	GtNotificationIcebergCredentialsSignal 
+		mayEmitOnProvider: self 
+		credentials: response.
+	
 	aCredentials := IceSshCredentials new.
 	aCredentials host: remote host.
 	aNotification := GtNotificationIcebergSshCredentials new
