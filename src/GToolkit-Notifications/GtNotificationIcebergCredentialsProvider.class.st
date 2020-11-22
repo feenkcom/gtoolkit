@@ -1,8 +1,31 @@
+"
+I am ${class:IceCredentialsProvider}$.
+I provide ${class:IcePlaintextCredentials}$ and ${class:IceSshCredentials}$.
+!! Public API
+- ${method:GtNotificationIcebergCredentialsProvider>>#obtainPlaintextCredentials:|label=#selector}$, and
+- ${method:GtNotificationIcebergCredentialsProvider>>#obtainSshCredentials:|label=#selector}$.
+!! Behavior
+I use ${class:GtNotificationIcebergCredentialsElement}$ to display user dialogs as a notification. Currently every credentials request is aborted by signaling ${class:LGitNoCredentialsProvided}$. The reason is that we cannot block Bloc UI process to wait for user inputs. As a consequence, a user have to re-execute a code snippet that requieres the credentials.
+!! Examples
+See ${class:GtNotificationIcebergCredentialsElement|show=#gtSubclassesFor:|expanded=true|height=150}$ subclasses for specific examples:
+
+"
 Class {
 	#name : #GtNotificationIcebergCredentialsProvider,
 	#superclass : #IceCredentialsProvider,
 	#category : #'GToolkit-Notifications-Iceberg'
 }
+
+{ #category : #'api - initialization' }
+GtNotificationIcebergCredentialsProvider class >> beDefaultProvider [
+	IceCredentialsProvider providerType: self
+]
+
+{ #category : #'api - initialization' }
+GtNotificationIcebergCredentialsProvider class >> disableThisProvider [
+	IceCredentialsProvider providerType = self ifTrue: [ 
+		IceCredentialsProvider providerType: nil ]
+]
 
 { #category : #'private - testing' }
 GtNotificationIcebergCredentialsProvider >> isFromBloc [
@@ -35,15 +58,11 @@ GtNotificationIcebergCredentialsProvider >> isFromMorphic [
 { #category : #private }
 GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentials: credentialsToReturn [
 
-	self isFromMorphic
-		ifTrue: [ 
-			self obtainPlaintextCredentialsInMorphic: credentialsToReturn.
-			^ self ].
-	self isFromBloc 
-		ifTrue: [ 
-			self obtainPlaintextCredentialsInBloc: credentialsToReturn.
-			^ self ].
-	self obtainPlaintextCredentialsForNonUIProcess: credentialsToReturn
+	GtNotificationIcebergCredentialsSignal 
+		mayEmitOnProvider: self 
+		credentials: credentialsToReturn.
+
+	self obtainPlaintextCredentialsInBloc: credentialsToReturn.
 ]
 
 { #category : #private }
@@ -95,5 +114,18 @@ GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentialsInMorphic:
 
 { #category : #private }
 GtNotificationIcebergCredentialsProvider >> obtainSshCredentials: response [
+	| aCredentials aNotification |
+	
+	GtNotificationIcebergCredentialsSignal 
+		mayEmitOnProvider: self 
+		credentials: response.
+	
+	aCredentials := IceSshCredentials new.
+	aCredentials host: remote host.
+	aNotification := GtNotificationIcebergSshCredentials new
+		credentials: aCredentials;
+		credentialStore: self credentialStore.
+	GtWorld showNotification: aNotification.
+
 	LGitNoCredentialsProvided signal.
 ]

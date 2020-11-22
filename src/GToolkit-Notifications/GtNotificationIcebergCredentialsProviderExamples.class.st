@@ -1,3 +1,6 @@
+"
+I exemplify ${class:GtNotificationIcebergCredentialsProvider}$, ${class:GtNotificationIcebergCredentialsElement}$, and ${class:GtNotificationIcebergCredentials}$.
+"
 Class {
 	#name : #GtNotificationIcebergCredentialsProviderExamples,
 	#superclass : #Object,
@@ -85,6 +88,33 @@ GtNotificationIcebergCredentialsProviderExamples >> basicProvider [
 	^ aProvider
 ]
 
+{ #category : #'examples - ssh credentials' }
+GtNotificationIcebergCredentialsProviderExamples >> basicSshCredentials [
+	<gtExample>
+	| aCredentials |
+	aCredentials := IceSshCredentials new.
+	^ aCredentials
+]
+
+{ #category : #'examples - ssh element' }
+GtNotificationIcebergCredentialsProviderExamples >> basicSshCredentialsElement [
+	<gtExample>
+	| anElement |
+	anElement := GtNotificationIcebergSshCredentialsElement new.
+	self assert: anElement notification isNil.
+	^ anElement
+]
+
+{ #category : #'examples - ssh notification' }
+GtNotificationIcebergCredentialsProviderExamples >> basicSshCredentialsNotification [
+	<gtExample>
+	| aNotification |
+	aNotification := GtNotificationIcebergSshCredentials new.
+	self assert: aNotification credentials isNotNil.
+	self assert: aNotification credentialStore isNil.
+	^ aNotification
+]
+
 { #category : #'examples - plain text element' }
 GtNotificationIcebergCredentialsProviderExamples >> cancelEditedPlaintextCredentialsElement [
 	<gtExample>
@@ -123,6 +153,14 @@ GtNotificationIcebergCredentialsProviderExamples >> credentialStoreFile [
 	^ aFile
 ]
 
+{ #category : #'examples - ssh credentials' }
+GtNotificationIcebergCredentialsProviderExamples >> defaultSshCredentials [
+	<gtExample>
+	| aStore |
+	aStore := self credentialStore.
+	^ aStore defaultSSHCredential.
+]
+
 { #category : #'private - support' }
 GtNotificationIcebergCredentialsProviderExamples >> deleteFiles [
 	files ifNotNil: [ :theFiles | 
@@ -136,6 +174,17 @@ GtNotificationIcebergCredentialsProviderExamples >> files [
 ]
 
 { #category : #'examples - plain text credentials' }
+GtNotificationIcebergCredentialsProviderExamples >> host [
+	^ 'github'
+]
+
+{ #category : #'examples - ssh credentials' }
+GtNotificationIcebergCredentialsProviderExamples >> keyPassphrase [
+	<gtExample>
+	^ 'pass phrase'
+]
+
+{ #category : #'examples - plain text credentials' }
 GtNotificationIcebergCredentialsProviderExamples >> password [
 	<gtExample>
 	^ 'mypassword'
@@ -146,8 +195,8 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentials [
 	<gtExample>
 	| aCredentials |
 	aCredentials := self basicPlaintextCredentials.
-	aCredentials host: 'github'.
-	self assert: aCredentials host equals: 'github'.
+	aCredentials host: self host.
+	self assert: aCredentials host equals: self host.
 	^ aCredentials
 ]
 
@@ -193,7 +242,7 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsNotifica
 	^ aNotification
 ]
 
-{ #category : #'examples - plain text credentials' }
+{ #category : #'examples - plain text notification' }
 GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsNotificationWithUsernameAndPassword [
 	<gtExample>
 	| aNotification aCredentials |
@@ -216,6 +265,12 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsWithUser
 	^ aCredentials
 ]
 
+{ #category : #'examples - ssh credentials' }
+GtNotificationIcebergCredentialsProviderExamples >> privateKey [
+	<gtExample>
+	^ '/keys/my_private_key'
+]
+
 { #category : #'examples - provider' }
 GtNotificationIcebergCredentialsProviderExamples >> provider [
 	<gtExample>
@@ -225,6 +280,99 @@ GtNotificationIcebergCredentialsProviderExamples >> provider [
 	aProvider remote: aRemote.
 	self assert: (aProvider instVarNamed: #remote) equals: aRemote.
 	^ aProvider
+]
+
+{ #category : #'examples - ssh credentials' }
+GtNotificationIcebergCredentialsProviderExamples >> publicKey [
+	<gtExample>
+	^ '/keys/my_public_key.pub'
+]
+
+{ #category : #'examples - ssh credentials' }
+GtNotificationIcebergCredentialsProviderExamples >> sshCredentials [
+	<gtExample>
+	| aCredentials |
+	aCredentials := self basicSshCredentials.
+	aCredentials host: self host.
+	self assert: aCredentials host equals: self host.	
+	^ aCredentials
+]
+
+{ #category : #'examples - ssh element' }
+GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsElement [
+	<gtExample>
+	| anElement aNotification |
+	anElement := GtNotificationIcebergSshCredentialsElement new.
+	aNotification := self sshCredentialsNotification.
+	anElement notification: aNotification.
+	self assert: anElement notification equals: aNotification.
+	self assert: (anElement headerElement text asString endsWith: aNotification credentials host).
+	self assert: anElement usernameInputElement text asString equals: aNotification credentials username.
+	self assert: anElement publicKeyInputElement text asString equals: aNotification credentials publicKey.
+	self assert: anElement privateKeyInputElement text asString equals: aNotification credentials privateKey.
+	self assert: anElement keyPassphraseInputElement text asString equals: aNotification credentials keyPassphrase.
+	^ anElement
+]
+
+{ #category : #'examples - ssh element' }
+GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsElementWithKeys [
+	<gtExample>
+	| anElement aNotification |
+	anElement := GtNotificationIcebergSshCredentialsElement new.
+	aNotification := self sshCredentialsNotificationWithKeys.
+	anElement notification: aNotification.
+	self assert: anElement notification equals: aNotification.
+	self assert: (anElement headerElement text asString endsWith: aNotification credentials host).
+	self assert: anElement usernameInputElement text asString equals: aNotification credentials username.
+	self assert: anElement publicKeyInputElement text asString equals: aNotification credentials publicKey.
+	self assert: anElement privateKeyInputElement text asString equals: aNotification credentials privateKey.
+	self assert: anElement keyPassphraseInputElement text asString equals: aNotification credentials keyPassphrase.
+	^ anElement
+]
+
+{ #category : #'examples - ssh notification' }
+GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsNotification [
+	<gtExample>
+	| aNotification aCredentials aStore |
+	aNotification := self basicSshCredentialsNotification.
+	aCredentials := self sshCredentials.
+	aStore := self credentialStore.
+	aNotification credentials: aCredentials.
+	aNotification credentialStore: aStore.
+	self assert: aNotification credentials equals: aCredentials.
+	self assert: aNotification credentialStore equals: aStore.
+	^ aNotification
+]
+
+{ #category : #'examples - ssh notification' }
+GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsNotificationWithKeys [
+	<gtExample>
+	| aNotification aCredentials aStore |
+	aNotification := self basicSshCredentialsNotification.
+	aCredentials := self sshCredentialsWithKeys.
+	aStore := self credentialStore.
+	aNotification credentials: aCredentials.
+	aNotification credentialStore: aStore.
+	self assert: aNotification credentials equals: aCredentials.
+	self assert: aNotification credentialStore equals: aStore.
+	^ aNotification
+]
+
+{ #category : #'examples - ssh credentials' }
+GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsWithKeys [
+	<gtExample>
+	| aCredentials |
+	aCredentials := self sshCredentials.
+	aCredentials username: self username.
+	aCredentials publicKey: self publicKey.
+	aCredentials privateKey: self privateKey.
+	aCredentials keyPassphrase: self keyPassphrase.
+
+	self assert: aCredentials username equals: self username.
+	self assert: aCredentials publicKey equals: self publicKey.
+	self assert: aCredentials privateKey equals: self privateKey.
+	self assert: aCredentials keyPassphrase equals: self keyPassphrase.
+	^ aCredentials
 ]
 
 { #category : #'examples - plain text credentials' }
