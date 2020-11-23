@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'containerElement'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Job'
 }
 
 { #category : #'private - updating' }

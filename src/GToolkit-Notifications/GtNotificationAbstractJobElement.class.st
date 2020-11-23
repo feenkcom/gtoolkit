@@ -1,7 +1,7 @@
 Class {
 	#name : #GtNotificationAbstractJobElement,
 	#superclass : #GtNotificationEventElement,
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Job'
 }
 
 { #category : #'private - accessing' }

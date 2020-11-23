@@ -5,7 +5,7 @@ Class {
 		'borderElement',
 		'jobElement'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Job'
 }
 
 { #category : #'private - accessing' }

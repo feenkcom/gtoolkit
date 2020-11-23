@@ -127,7 +127,6 @@ GtWorld >> addShutdownListener [
 { #category : #initialization }
 GtWorld >> defaultRoot [
 	^ GtWorldElement new
-		addEventHandler: GtNotificationJobEventHandler new.
 ]
 
 { #category : #initialization }
@@ -152,6 +151,12 @@ GtWorld >> prepareForRelease [
 GtWorld >> refreshContent [
 	"Refresh the content of the space. Is only called for the default instance on start-up."
 	self root refreshContent
+]
+
+{ #category : #'api - notification' }
+GtWorld >> removeNotification: aNotification [
+
+	self root removeNotification: aNotification
 ]
 
 { #category : #accessing }
