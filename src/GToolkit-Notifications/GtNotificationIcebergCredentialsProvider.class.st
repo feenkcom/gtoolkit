@@ -102,8 +102,7 @@ GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentialsInBloc: cr
 		credentials: aCredentials;
 		credentialStore: self credentialStore.
 
-	GtCoderExecutionContextVariable
-		showNotification: aNotification.
+	GtNotificationForwarder showNotification: aNotification.
 
 	LGitNoCredentialsProvided signal.
 ]
@@ -129,8 +128,7 @@ GtNotificationIcebergCredentialsProvider >> obtainSshCredentials: response [
 		credentials: aCredentials;
 		credentialStore: self credentialStore.
 		
-	GtCoderExecutionContextVariable
-		showNotification: aNotification.
+	GtNotificationForwarder showNotification: aNotification.
 
 	LGitNoCredentialsProvided signal.
 ]

@@ -11,6 +11,17 @@ GtNotificationJobObserver class >> initialize [
 	self default subscribeToJobs.
 ]
 
+{ #category : #'private - hooks' }
+GtNotificationJobObserver class >> onRemoveUniqueInstance: anInstance [
+	anInstance unsubscribeFromJobs
+]
+
+{ #category : #initialization }
+GtNotificationJobObserver class >> unload [
+	self cleanUniqueInstance.
+	super unload.
+]
+
 { #category : #'private - testing' }
 GtNotificationJobObserver >> isRootJob: aJob [
 	(aJob isKindOf: Job) ifFalse: [ ^ true ].
@@ -26,7 +37,7 @@ GtNotificationJobObserver >> onJobEnd: aJobEnd [
 	aNotification := GtNotificationJobEvent new 
 		job: aJobEnd job.
 	
-	GtCoderExecutionContextVariable removeNotification: aNotification.
+	GtNotificationForwarder removeNotification: aNotification.
 ]
 
 { #category : #'private - announcement handling' }
@@ -38,7 +49,7 @@ GtNotificationJobObserver >> onJobStart: aJobStart [
 	aNotification := GtNotificationJobEvent new 
 		job: aJobStart job.
 		
-	GtCoderExecutionContextVariable showNotification: aNotification.
+	GtNotificationForwarder showNotification: aNotification.
 ]
 
 { #category : #'private - subscriptions' }
