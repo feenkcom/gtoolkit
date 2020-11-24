@@ -1,6 +1,17 @@
 Extension { #name : #GtCoderExecutionContext }
 
 { #category : #'*GToolkit-Notifications' }
+GtCoderExecutionContext >> removeInAllSpaces: aNotification [
+	BlSpace allSubInstancesDo: [ :aSpace |
+		aSpace removeNotification: aNotification ].
+]
+
+{ #category : #'*GToolkit-Notifications' }
+GtCoderExecutionContext >> removeNotification: aNotification [
+	self removeInAllSpaces: aNotification
+]
+
+{ #category : #'*GToolkit-Notifications' }
 GtCoderExecutionContext >> showInFocusedSpace: aNotification [
 	"Such a space is closed, display it in a focused space".
 	BlSpace allSubInstancesDo: [ :aSpace | 

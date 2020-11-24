@@ -1,7 +1,7 @@
 Class {
 	#name : #GtNotificationJobDismissWish,
 	#superclass : #GtNotificationDismissWish,
-	#category : #'GToolkit-Notifications-Events'
+	#category : #'GToolkit-Notifications-Job'
 }
 
 { #category : #'api - accessing' }
