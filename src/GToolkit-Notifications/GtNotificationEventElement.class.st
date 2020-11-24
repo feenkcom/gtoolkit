@@ -35,18 +35,13 @@ GtNotificationEventElement >> defaultVerticalResizerModel [
 { #category : #'api - actions' }
 GtNotificationEventElement >> dismiss [
 	| theEvent |
+
 	self
 		notificationDo: [ :aNotification | 
 			self
-				fireEvent:
-					(theEvent := self dismissWishClass new notification: aNotification).
-			theEvent isConsumed
-				ifFalse: [ self removeFromParent ] ]
-]
-
-{ #category : #'private - accessing' }
-GtNotificationEventElement >> dismissWishClass [
-	^ GtNotificationDismissWish
+				fireEvent: (theEvent := GtNotificationDismissWish new notification: aNotification).
+			theEvent isConsumed ifFalse: 
+				[ self removeFromParent ] ].
 ]
 
 { #category : #'api - accessing' }
