@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'progressElement'
 	],
-	#category : #'GToolkit-Notifications-Job'
+	#category : #'GToolkit-Notifications-UI'
 }
 
 { #category : #'private - asserting' }
