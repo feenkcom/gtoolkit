@@ -19,10 +19,9 @@ GtNotificationJobElement >> defaultLayout [
 	^ BlLinearLayout vertical alignCenterLeft
 ]
 
-{ #category : #'api - actions' }
-GtNotificationJobElement >> dismiss [
-	self
-		fireEvent: (GtNotificationJobDismissWish new notification: self notification)
+{ #category : #'private - accessing' }
+GtNotificationJobElement >> dismissWishClass [
+	^ GtNotificationJobDismissWish
 ]
 
 { #category : #initialization }
