@@ -19,7 +19,7 @@ GtCoderExecutionContext >> showInFocusedSpace: aNotification [
 
 	"There is no a focused space, display it in any space"
 	BlSpace allSubInstancesDo: [ :aSpace | 
-		aSpace isOpened ifTrue: [ ^ aSpace showNotification: aNotification ] ].
+		aSpace isOpen ifTrue: [ ^ aSpace showNotification: aNotification ] ].
 
 ]
 
