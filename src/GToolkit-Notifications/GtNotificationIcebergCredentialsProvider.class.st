@@ -95,15 +95,12 @@ GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentialsForNonUIPr
 GtNotificationIcebergCredentialsProvider >> obtainPlaintextCredentialsInBloc: credentialsToReturn [
 	
 	| aCredentials aNotification |
-	
 	aCredentials := IcePlaintextCredentials new.
 	aCredentials host: remote host.
 	aNotification := GtNotificationIcebergPlaintextCredentials new 
 		credentials: aCredentials;
 		credentialStore: self credentialStore.
-
-	GtCoderExecutionContextVariable
-		showNotification: aNotification.
+	GtWorld showNotification: aNotification.
 
 	LGitNoCredentialsProvided signal.
 ]
@@ -128,9 +125,7 @@ GtNotificationIcebergCredentialsProvider >> obtainSshCredentials: response [
 	aNotification := GtNotificationIcebergSshCredentials new
 		credentials: aCredentials;
 		credentialStore: self credentialStore.
-		
-	GtCoderExecutionContextVariable
-		showNotification: aNotification.
+	GtWorld showNotification: aNotification.
 
 	LGitNoCredentialsProvided signal.
 ]
