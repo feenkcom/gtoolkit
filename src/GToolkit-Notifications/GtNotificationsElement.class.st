@@ -15,6 +15,16 @@ GtNotificationsElement >> assertNotifications: aGtNotifications [
 		description: [ 'Notifications must be non-nil' ].
 ]
 
+{ #category : #'gt-extensions' }
+GtNotificationsElement >> gtNotificationsFor: aView [
+	<gtView>
+	self notifications ifNil: [ ^ aView empty ].
+	^ aView forward
+		title: 'Notifications';
+		object: [ self notifications ];
+		view: #gtNotificationsFor:
+]
+
 { #category : #initialization }
 GtNotificationsElement >> initialize [
 	super initialize.

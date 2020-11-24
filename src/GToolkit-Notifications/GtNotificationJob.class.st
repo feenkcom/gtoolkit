@@ -1,5 +1,5 @@
 Class {
-	#name : #GtNotificationJobEvent,
+	#name : #GtNotificationJob,
 	#superclass : #GtNotificationEvent,
 	#instVars : [
 		'job'
@@ -8,28 +8,28 @@ Class {
 }
 
 { #category : #comparing }
-GtNotificationJobEvent >> = anObject [
+GtNotificationJob >> = anObject [
 	^ self class = anObject class and: [
 		self job = anObject job ]
 ]
 
 { #category : #'api - accessing' }
-GtNotificationJobEvent >> elementClass [
+GtNotificationJob >> elementClass [
 	^ GtNotificationRootJobElement
 ]
 
 { #category : #comparing }
-GtNotificationJobEvent >> hash [
+GtNotificationJob >> hash [
 	^ self class hash bitXor: self job hash
 ]
 
 { #category : #'api - accessing' }
-GtNotificationJobEvent >> job [
+GtNotificationJob >> job [
 	<return: #Job>
 	^ job
 ]
 
 { #category : #'api - accessing' }
-GtNotificationJobEvent >> job: aJob [
+GtNotificationJob >> job: aJob [
 	job := aJob.
 ]

@@ -34,7 +34,7 @@ GtNotificationJobObserver >> onJobEnd: aJobEnd [
 	
 	(self isRootJob: aJobEnd job) ifFalse: [ ^ self ].
 
-	aNotification := GtNotificationJobEvent new 
+	aNotification := GtNotificationJob new 
 		job: aJobEnd job.
 	
 	GtNotificationForwarder removeNotification: aNotification.
@@ -46,7 +46,7 @@ GtNotificationJobObserver >> onJobStart: aJobStart [
 
 	(self isRootJob: aJobStart job) ifFalse: [ ^ self ].
 
-	aNotification := GtNotificationJobEvent new 
+	aNotification := GtNotificationJob new 
 		job: aJobStart job.
 		
 	GtNotificationForwarder showNotification: aNotification.

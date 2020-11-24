@@ -14,5 +14,5 @@ GtNotificationInitialization class >> initialize [
 	BlBlocUIManagerNotification notificationHandlers
 		at: #inform: 
 		put: [ :request :args |
-			GtNotificationMessageEvent message: args first ]
+			GtNotificationMessage message: args first ]
 ]

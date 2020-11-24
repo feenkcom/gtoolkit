@@ -14,8 +14,9 @@ Class {
 { #category : #'api - adding / removing' }
 GtNotifications >> addNotification: aNotification [
 	mutex critical: [ 
-		collection addFirst: aNotification ].
-	aNotification addedTo: self.
+		collection addFirst: aNotification.
+		aNotification onRemovalRequestSend: #onRemovalRequest: to: self.
+		aNotification addedTo: self ].
 	self notifyNotificationsChanged.
 ]
 
@@ -54,12 +55,18 @@ GtNotifications >> notifyNotificationsChanged [
 	self announce: (GtNotificationsChangedAnnouncement new notifications: self)
 ]
 
+{ #category : #'private - announcement handling' }
+GtNotifications >> onRemovalRequest: anAnnouncement [
+	self removeNotification: anAnnouncement notification.
+]
+
 { #category : #'api - adding / removing' }
 GtNotifications >> removeNotification: aNotification [
 	mutex critical: [ 
 		collection 
 			remove: aNotification
-			ifAbsent: [ "ignore" ^ self ] ].
+			ifAbsent: [ "ignore" ^ self ].
+		aNotification unsubscribe: self ].
 	self notifyNotificationsChanged.
 ]
 

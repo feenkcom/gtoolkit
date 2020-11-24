@@ -111,6 +111,6 @@ GtNotificationJobElement >> updateElement [
 		aProgress := aProgress max: 0.
 		aProgress := aProgress min: 1.
 		self progressElement
-			fixedLabel: aJob label;
+			fixedLabel: aJob title;
 			fraction: aProgress ]
 ]

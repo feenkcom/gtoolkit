@@ -1,6 +1,6 @@
 Class {
 	#name : #GtNotificationEvent,
-	#superclass : #Object,
+	#superclass : #GtAnnouncingNotification,
 	#category : #'GToolkit-Notifications-Notifications'
 }
 
@@ -26,6 +26,7 @@ GtNotificationEvent >> gtLiveFor: aView [
 	<gtView>
 	^ aView explicit
 		title: 'Live';
+		priority: 5;
 		stencil: self
 ]
 
@@ -33,4 +34,17 @@ GtNotificationEvent >> gtLiveFor: aView [
 GtNotificationEvent >> message [
 	<return: #String>
 	^ self printString
+]
+
+{ #category : #'api - subscriptions' }
+GtNotificationEvent >> onRemovalRequestSend: aSelector to: aReceiver [
+	self announcer 
+		when: GtNotificationRemovalRequest
+		send: aSelector
+		to: aReceiver
+]
+
+{ #category : #'api - announcements' }
+GtNotificationEvent >> requestRemoval [
+	self announce: (GtNotificationRemovalRequest notification: self)
 ]

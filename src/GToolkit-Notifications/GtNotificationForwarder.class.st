@@ -18,6 +18,7 @@ GtNotificationForwarder class >> showNotification: aNotification [
 
 { #category : #'api - notification' }
 GtNotificationForwarder >> removeNotification: aNotification [
+	aNotification requestRemoval
 ]
 
 { #category : #'private - notification' }

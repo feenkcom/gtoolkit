@@ -67,7 +67,7 @@ GtNotificationJobWithChildrenElement >> jobChildrenDo: aBlock [
 { #category : #'private - instance creation' }
 GtNotificationJobWithChildrenElement >> newJobEventFor: aJob [
 	| anElement anEvent |
-	anEvent := GtNotificationJobEvent new job: aJob.
+	anEvent := GtNotificationJob new job: aJob.
 	anElement := GtNotificationJobWithChildrenElement new
 		notification: anEvent.
 	anElement

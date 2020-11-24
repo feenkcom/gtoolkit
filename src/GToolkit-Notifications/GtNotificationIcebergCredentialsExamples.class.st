@@ -2,7 +2,7 @@
 I exemplify ${class:GtNotificationIcebergCredentialsProvider}$, ${class:GtNotificationIcebergCredentialsElement}$, and ${class:GtNotificationIcebergCredentials}$.
 "
 Class {
-	#name : #GtNotificationIcebergCredentialsProviderExamples,
+	#name : #GtNotificationIcebergCredentialsExamples,
 	#superclass : #Object,
 	#instVars : [
 		'files'
@@ -11,7 +11,7 @@ Class {
 }
 
 { #category : #'examples - plain text element' }
-GtNotificationIcebergCredentialsProviderExamples >> acceptEditedPlaintextCredentialsElement [
+GtNotificationIcebergCredentialsExamples >> acceptEditedPlaintextCredentialsElement [
 	<gtExample>
 	| anElement aStore anExistingSize |
 	anElement := self plaintextCredentialsElementWithUsernameAndPassword.
@@ -27,7 +27,7 @@ GtNotificationIcebergCredentialsProviderExamples >> acceptEditedPlaintextCredent
 ]
 
 { #category : #'examples - plain text element' }
-GtNotificationIcebergCredentialsProviderExamples >> acceptPlaintextCredentialsElement [
+GtNotificationIcebergCredentialsExamples >> acceptPlaintextCredentialsElement [
 	<gtExample>
 	| anElement aStore anExistingSize |
 	anElement := self plaintextCredentialsElementWithUsernameAndPassword.
@@ -39,12 +39,12 @@ GtNotificationIcebergCredentialsProviderExamples >> acceptPlaintextCredentialsEl
 ]
 
 { #category : #'private - support' }
-GtNotificationIcebergCredentialsProviderExamples >> addFile: aFile [
+GtNotificationIcebergCredentialsExamples >> addFile: aFile [
 	self files add: aFile
 ]
 
 { #category : #'examples - credential store' }
-GtNotificationIcebergCredentialsProviderExamples >> basicCredentialStore [
+GtNotificationIcebergCredentialsExamples >> basicCredentialStore [
 	<gtExample>
 	| aStore |
 	aStore := IceCredentialStore new.
@@ -53,7 +53,7 @@ GtNotificationIcebergCredentialsProviderExamples >> basicCredentialStore [
 ]
 
 { #category : #'examples - plain text credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> basicPlaintextCredentials [
+GtNotificationIcebergCredentialsExamples >> basicPlaintextCredentials [
 	<gtExample>
 	| aCredentials |
 	aCredentials := IcePlaintextCredentials new.
@@ -61,7 +61,7 @@ GtNotificationIcebergCredentialsProviderExamples >> basicPlaintextCredentials [
 ]
 
 { #category : #'examples - plain text element' }
-GtNotificationIcebergCredentialsProviderExamples >> basicPlaintextCredentialsElement [
+GtNotificationIcebergCredentialsExamples >> basicPlaintextCredentialsElement [
 	<gtExample>
 	| anElement |
 	anElement := GtNotificationIcebergPlaintextCredentialsElement new.
@@ -70,7 +70,7 @@ GtNotificationIcebergCredentialsProviderExamples >> basicPlaintextCredentialsEle
 ]
 
 { #category : #'examples - plain text notification' }
-GtNotificationIcebergCredentialsProviderExamples >> basicPlaintextCredentialsNotification [
+GtNotificationIcebergCredentialsExamples >> basicPlaintextCredentialsNotification [
 	<gtExample>
 	| aNotification |
 	aNotification := GtNotificationIcebergPlaintextCredentials new.
@@ -80,7 +80,7 @@ GtNotificationIcebergCredentialsProviderExamples >> basicPlaintextCredentialsNot
 ]
 
 { #category : #'examples - provider' }
-GtNotificationIcebergCredentialsProviderExamples >> basicProvider [
+GtNotificationIcebergCredentialsExamples >> basicProvider [
 	<gtExample>
 	| aProvider |
 	aProvider := GtNotificationIcebergCredentialsProvider new.
@@ -89,7 +89,7 @@ GtNotificationIcebergCredentialsProviderExamples >> basicProvider [
 ]
 
 { #category : #'examples - ssh credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> basicSshCredentials [
+GtNotificationIcebergCredentialsExamples >> basicSshCredentials [
 	<gtExample>
 	| aCredentials |
 	aCredentials := IceSshCredentials new.
@@ -97,7 +97,7 @@ GtNotificationIcebergCredentialsProviderExamples >> basicSshCredentials [
 ]
 
 { #category : #'examples - ssh element' }
-GtNotificationIcebergCredentialsProviderExamples >> basicSshCredentialsElement [
+GtNotificationIcebergCredentialsExamples >> basicSshCredentialsElement [
 	<gtExample>
 	| anElement |
 	anElement := GtNotificationIcebergSshCredentialsElement new.
@@ -106,7 +106,7 @@ GtNotificationIcebergCredentialsProviderExamples >> basicSshCredentialsElement [
 ]
 
 { #category : #'examples - ssh notification' }
-GtNotificationIcebergCredentialsProviderExamples >> basicSshCredentialsNotification [
+GtNotificationIcebergCredentialsExamples >> basicSshCredentialsNotification [
 	<gtExample>
 	| aNotification |
 	aNotification := GtNotificationIcebergSshCredentials new.
@@ -116,7 +116,7 @@ GtNotificationIcebergCredentialsProviderExamples >> basicSshCredentialsNotificat
 ]
 
 { #category : #'examples - plain text element' }
-GtNotificationIcebergCredentialsProviderExamples >> cancelEditedPlaintextCredentialsElement [
+GtNotificationIcebergCredentialsExamples >> cancelEditedPlaintextCredentialsElement [
 	<gtExample>
 	| anElement aStore anExistingSize |
 	anElement := self plaintextCredentialsElementWithUsernameAndPassword.
@@ -132,7 +132,7 @@ GtNotificationIcebergCredentialsProviderExamples >> cancelEditedPlaintextCredent
 ]
 
 { #category : #'examples - credential store' }
-GtNotificationIcebergCredentialsProviderExamples >> credentialStore [
+GtNotificationIcebergCredentialsExamples >> credentialStore [
 	<gtExample>
 	| aStore aFile |
 	aStore := self basicCredentialStore.
@@ -143,7 +143,7 @@ GtNotificationIcebergCredentialsProviderExamples >> credentialStore [
 ]
 
 { #category : #'examples - credential store' }
-GtNotificationIcebergCredentialsProviderExamples >> credentialStoreFile [
+GtNotificationIcebergCredentialsExamples >> credentialStoreFile [
 	<gtExample>
 	<after: #deleteFiles>
 	| aFile |
@@ -154,7 +154,7 @@ GtNotificationIcebergCredentialsProviderExamples >> credentialStoreFile [
 ]
 
 { #category : #'examples - ssh credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> defaultSshCredentials [
+GtNotificationIcebergCredentialsExamples >> defaultSshCredentials [
 	<gtExample>
 	| aStore |
 	aStore := self credentialStore.
@@ -162,36 +162,36 @@ GtNotificationIcebergCredentialsProviderExamples >> defaultSshCredentials [
 ]
 
 { #category : #'private - support' }
-GtNotificationIcebergCredentialsProviderExamples >> deleteFiles [
+GtNotificationIcebergCredentialsExamples >> deleteFiles [
 	files ifNotNil: [ :theFiles | 
 		theFiles do: [ :eachFile | 
 			eachFile ensureDelete ] ]
 ]
 
 { #category : #'private - support' }
-GtNotificationIcebergCredentialsProviderExamples >> files [
+GtNotificationIcebergCredentialsExamples >> files [
 	^ files ifNil: [ files := OrderedCollection new ]
 ]
 
 { #category : #'examples - plain text credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> host [
+GtNotificationIcebergCredentialsExamples >> host [
 	^ 'github'
 ]
 
 { #category : #'examples - ssh credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> keyPassphrase [
+GtNotificationIcebergCredentialsExamples >> keyPassphrase [
 	<gtExample>
 	^ 'pass phrase'
 ]
 
 { #category : #'examples - plain text credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> password [
+GtNotificationIcebergCredentialsExamples >> password [
 	<gtExample>
 	^ 'mypassword'
 ]
 
 { #category : #'examples - plain text credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentials [
+GtNotificationIcebergCredentialsExamples >> plaintextCredentials [
 	<gtExample>
 	| aCredentials |
 	aCredentials := self basicPlaintextCredentials.
@@ -201,7 +201,7 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentials [
 ]
 
 { #category : #'examples - plain text element' }
-GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsElement [
+GtNotificationIcebergCredentialsExamples >> plaintextCredentialsElement [
 	<gtExample>
 	| anElement aNotification |
 	anElement := GtNotificationIcebergPlaintextCredentialsElement new.
@@ -215,7 +215,7 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsElement 
 ]
 
 { #category : #'examples - plain text element' }
-GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsElementWithUsernameAndPassword [
+GtNotificationIcebergCredentialsExamples >> plaintextCredentialsElementWithUsernameAndPassword [
 	<gtExample>
 	| anElement aNotification |
 	anElement := self basicPlaintextCredentialsElement.
@@ -229,7 +229,7 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsElementW
 ]
 
 { #category : #'examples - plain text notification' }
-GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsNotification [
+GtNotificationIcebergCredentialsExamples >> plaintextCredentialsNotification [
 	<gtExample>
 	| aNotification aCredentials aStore |
 	aNotification := self basicPlaintextCredentialsNotification.
@@ -243,7 +243,7 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsNotifica
 ]
 
 { #category : #'examples - plain text notification' }
-GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsNotificationWithUsernameAndPassword [
+GtNotificationIcebergCredentialsExamples >> plaintextCredentialsNotificationWithUsernameAndPassword [
 	<gtExample>
 	| aNotification aCredentials |
 	aNotification := self plaintextCredentialsNotification.
@@ -254,7 +254,7 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsNotifica
 ]
 
 { #category : #'examples - plain text credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsWithUsernameAndPassword [
+GtNotificationIcebergCredentialsExamples >> plaintextCredentialsWithUsernameAndPassword [
 	<gtExample>
 	| aCredentials |
 	aCredentials := self plaintextCredentials.
@@ -266,13 +266,13 @@ GtNotificationIcebergCredentialsProviderExamples >> plaintextCredentialsWithUser
 ]
 
 { #category : #'examples - ssh credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> privateKey [
+GtNotificationIcebergCredentialsExamples >> privateKey [
 	<gtExample>
 	^ '/keys/my_private_key'
 ]
 
 { #category : #'examples - provider' }
-GtNotificationIcebergCredentialsProviderExamples >> provider [
+GtNotificationIcebergCredentialsExamples >> provider [
 	<gtExample>
 	| aProvider aRemote |
 	aProvider := self basicProvider.
@@ -283,13 +283,13 @@ GtNotificationIcebergCredentialsProviderExamples >> provider [
 ]
 
 { #category : #'examples - ssh credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> publicKey [
+GtNotificationIcebergCredentialsExamples >> publicKey [
 	<gtExample>
 	^ '/keys/my_public_key.pub'
 ]
 
 { #category : #'examples - ssh credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> sshCredentials [
+GtNotificationIcebergCredentialsExamples >> sshCredentials [
 	<gtExample>
 	| aCredentials |
 	aCredentials := self basicSshCredentials.
@@ -299,7 +299,7 @@ GtNotificationIcebergCredentialsProviderExamples >> sshCredentials [
 ]
 
 { #category : #'examples - ssh element' }
-GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsElement [
+GtNotificationIcebergCredentialsExamples >> sshCredentialsElement [
 	<gtExample>
 	| anElement aNotification |
 	anElement := GtNotificationIcebergSshCredentialsElement new.
@@ -315,7 +315,7 @@ GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsElement [
 ]
 
 { #category : #'examples - ssh element' }
-GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsElementWithKeys [
+GtNotificationIcebergCredentialsExamples >> sshCredentialsElementWithKeys [
 	<gtExample>
 	| anElement aNotification |
 	anElement := GtNotificationIcebergSshCredentialsElement new.
@@ -331,7 +331,7 @@ GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsElementWithKey
 ]
 
 { #category : #'examples - ssh notification' }
-GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsNotification [
+GtNotificationIcebergCredentialsExamples >> sshCredentialsNotification [
 	<gtExample>
 	| aNotification aCredentials aStore |
 	aNotification := self basicSshCredentialsNotification.
@@ -345,7 +345,7 @@ GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsNotification [
 ]
 
 { #category : #'examples - ssh notification' }
-GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsNotificationWithKeys [
+GtNotificationIcebergCredentialsExamples >> sshCredentialsNotificationWithKeys [
 	<gtExample>
 	| aNotification aCredentials aStore |
 	aNotification := self basicSshCredentialsNotification.
@@ -359,7 +359,7 @@ GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsNotificationWi
 ]
 
 { #category : #'examples - ssh credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsWithKeys [
+GtNotificationIcebergCredentialsExamples >> sshCredentialsWithKeys [
 	<gtExample>
 	| aCredentials |
 	aCredentials := self sshCredentials.
@@ -376,7 +376,7 @@ GtNotificationIcebergCredentialsProviderExamples >> sshCredentialsWithKeys [
 ]
 
 { #category : #'examples - plain text credentials' }
-GtNotificationIcebergCredentialsProviderExamples >> username [
+GtNotificationIcebergCredentialsExamples >> username [
 	<gtExample>
 	^ 'user'
 ]
