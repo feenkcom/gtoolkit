@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'borderElement'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Basic'
 }
 
 { #category : #'api - accessing' }

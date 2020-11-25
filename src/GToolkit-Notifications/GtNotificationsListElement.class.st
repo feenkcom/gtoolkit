@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'listElement'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Badge'
 }
 
 { #category : #initialization }

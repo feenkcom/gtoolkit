@@ -24,7 +24,7 @@ Class {
 		'action',
 		'postponedDuration'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Basic'
 }
 
 { #category : #'private - accessing' }

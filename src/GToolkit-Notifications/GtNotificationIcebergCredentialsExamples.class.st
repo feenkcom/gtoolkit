@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'files'
 	],
-	#category : #'GToolkit-Notifications-Iceberg'
+	#category : #'GToolkit-Notifications-Examples'
 }
 
 { #category : #'examples - plain text element' }

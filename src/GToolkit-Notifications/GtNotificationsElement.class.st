@@ -5,7 +5,7 @@ Class {
 		'notifications',
 		'updateRequester'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Badge'
 }
 
 { #category : #'private - asserting' }

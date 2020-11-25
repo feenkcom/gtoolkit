@@ -1,7 +1,7 @@
 Class {
 	#name : #GtNotificationEvent,
 	#superclass : #GtAnnouncingNotification,
-	#category : #'GToolkit-Notifications-Notifications'
+	#category : #'GToolkit-Notifications-Basic'
 }
 
 { #category : #'api - notification' }

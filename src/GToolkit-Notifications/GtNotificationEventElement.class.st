@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'notification'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Basic'
 }
 
 { #category : #'api - instance creation' }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'action'
 	],
-	#category : #'GToolkit-Notifications-UI Support'
+	#category : #'GToolkit-Notifications-Basic'
 }
 
 { #category : #'api - accessing' }

@@ -6,7 +6,7 @@ Class {
 	#instVars : [
 		'announcer'
 	],
-	#category : #'GToolkit-Notifications-Notifications'
+	#category : #'GToolkit-Notifications-Basic'
 }
 
 { #category : #announcer }

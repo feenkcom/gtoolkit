@@ -13,13 +13,13 @@ GtNotificationsExamples >> emptyNotifications [
 	^ aCollection
 ]
 
-{ #category : #'examples - notifications' }
+{ #category : #'examples - job' }
 GtNotificationsExamples >> jobNotification [
 	<gtExample>
 	^ GtNotificationJobExamples new notificationJobWithTwoChildren
 ]
 
-{ #category : #'examples - notifications' }
+{ #category : #'examples - job' }
 GtNotificationsExamples >> notificationsWithJob [
 	<gtExample>
 	| aCollection aNotification |
@@ -32,7 +32,21 @@ GtNotificationsExamples >> notificationsWithJob [
 	^ aCollection
 ]
 
-{ #category : #'examples - notifications' }
+{ #category : #'examples - job' }
+GtNotificationsExamples >> notificationsWithJob_Run [
+	<gtExample>
+	| aNotifications aJobNotification aJob |
+	aNotifications := self notificationsWithJob.
+	aJobNotification := aNotifications asArray first.
+	aJob := aJobNotification job.
+	
+	aJob run.
+	
+	self assert: aNotifications asArray isEmpty.
+	^ aNotifications
+]
+
+{ #category : #'examples - job' }
 GtNotificationsExamples >> removeJobNotification [
 	<gtExample>
 	| aCollection aNotification |
@@ -44,7 +58,7 @@ GtNotificationsExamples >> removeJobNotification [
 	^ aCollection
 ]
 
-{ #category : #'examples - notifications' }
+{ #category : #'examples - job' }
 GtNotificationsExamples >> requestJobNotificationRemoval [
 	<gtExample>
 	| aCollection aNotification |

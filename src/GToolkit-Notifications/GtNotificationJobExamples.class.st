@@ -1,7 +1,7 @@
 Class {
 	#name : #GtNotificationJobExamples,
 	#superclass : #GtNotificationCommonExamples,
-	#category : #'GToolkit-Notifications-Job'
+	#category : #'GToolkit-Notifications-Examples'
 }
 
 { #category : #'examples - notification' }
@@ -261,6 +261,24 @@ GtNotificationJobExamples >> parentJob [
 	self assert: aJob progress equals: 0.3.
 	
 	^ aJob
+]
+
+{ #category : #'examples - notification' }
+GtNotificationJobExamples >> removalRequestAnnouncement [
+	<gtExample>
+	| aJobNotification aJob aCollection |
+	aJobNotification := self notificationJob.
+	aJob := aJobNotification job.
+
+	aCollection := OrderedCollection new.
+	aJobNotification onRemovalRequestSend: #add: to: aCollection.
+		
+	aJob run.
+	
+	self assert: aCollection size equals: 1.
+	self assert: aCollection anyOne notification equals: aJobNotification.
+
+	^ aJobNotification
 ]
 
 { #category : #'examples - notification' }

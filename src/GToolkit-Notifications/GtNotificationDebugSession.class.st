@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'debugSession'
 	],
-	#category : #'GToolkit-Notifications-Notifications'
+	#category : #'GToolkit-Notifications-DebugSession'
 }
 
 { #category : #'api - notification' }

@@ -30,14 +30,7 @@ GtNotificationJobObserver >> isRootJob: aJob [
 
 { #category : #'private - announcement handling' }
 GtNotificationJobObserver >> onJobEnd: aJobEnd [
-	| aNotification |
-	
-	(self isRootJob: aJobEnd job) ifFalse: [ ^ self ].
-
-	aNotification := GtNotificationJob new 
-		job: aJobEnd job.
-	
-	GtNotificationForwarder removeNotification: aNotification.
+	self flag: 'remove in the next build'
 ]
 
 { #category : #'private - announcement handling' }
@@ -58,10 +51,7 @@ GtNotificationJobObserver >> subscribeToJobs [
 	Job jobAnnouncer
 		when: JobStart
 		send: #onJobStart:
-		to: self;
-		when: JobEnd
-		send: #onJobEnd:
-		to: self.
+		to: self
 ]
 
 { #category : #'private - subscriptions' }

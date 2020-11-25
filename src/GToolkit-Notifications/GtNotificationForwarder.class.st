@@ -7,18 +7,8 @@ Class {
 }
 
 { #category : #'api - notification' }
-GtNotificationForwarder class >> removeNotification: aNotification [
-	self default removeNotification: aNotification
-]
-
-{ #category : #'api - notification' }
 GtNotificationForwarder class >> showNotification: aNotification [
 	self default showNotification: aNotification
-]
-
-{ #category : #'api - notification' }
-GtNotificationForwarder >> removeNotification: aNotification [
-	aNotification requestRemoval
 ]
 
 { #category : #'private - notification' }
