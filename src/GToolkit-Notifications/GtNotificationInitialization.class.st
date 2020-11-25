@@ -5,7 +5,7 @@ See ${method:GtNotificationInitialization class>>#initialize|expanded=true}$.
 Class {
 	#name : #GtNotificationInitialization,
 	#superclass : #Object,
-	#category : #'GToolkit-Notifications-Basic'
+	#category : #'GToolkit-Notifications-System Configuration'
 }
 
 { #category : #'class initialization' }

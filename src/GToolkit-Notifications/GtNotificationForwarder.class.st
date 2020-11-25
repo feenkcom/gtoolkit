@@ -11,22 +11,44 @@ GtNotificationForwarder class >> showNotification: aNotification [
 	self default showNotification: aNotification
 ]
 
-{ #category : #'private - notification' }
-GtNotificationForwarder >> showInFocusedSpace: aNotification [
-	"Such a space is closed, display it in a focused space".
-	BlSpace allSubInstancesDo: [ :aSpace | 
-		aSpace isFocused ifTrue: [ ^ aSpace showNotification: aNotification ] ].
+{ #category : #'api - space' }
+GtNotificationForwarder class >> spaceDo: aBlock [
+	self default spaceDo: aBlock
+]
 
-	"There is no a focused space, display it in any space"
-	BlSpace allSubInstancesDo: [ :aSpace | 
-		aSpace isOpened ifTrue: [ ^ aSpace showNotification: aNotification ] ].
+{ #category : #'api - space' }
+GtNotificationForwarder >> anotherSpaceDo: aBlock [
+	"Find a focused space"
+	self focusedSpaceDo: [ :aSpace | aBlock cull: aSpace ].
 
+	"There is no a focused space, find any opened space"
+	self openedSpaceDo: [ :aSpace | aBlock cull: aSpace ]
+]
+
+{ #category : #'api - space' }
+GtNotificationForwarder >> focusedSpaceDo: aBlock [
+	"Find a focused space"
+	BlSpace allSubInstancesDo: [ :aSpace | 
+		aSpace isFocused ifTrue: [ ^ aBlock cull: aSpace ] ].
+]
+
+{ #category : #'api - space' }
+GtNotificationForwarder >> openedSpaceDo: aBlock [
+	"Find any opened space"
+	BlSpace allSubInstancesDo: [ :aSpace | 
+		aSpace isOpened ifTrue: [ ^ aBlock cull: aSpace ] ].
 ]
 
 { #category : #'api - notification' }
 GtNotificationForwarder >> showNotification: aNotification [
+	self spaceDo: [ :aSpace | 
+		aSpace showNotification: aNotification ]
+]
+
+{ #category : #'api - space' }
+GtNotificationForwarder >> spaceDo: aBlock [
 	GtCoderExecutionContextVariable
 		spaceDo: [ :aSpace | 
-			aSpace showNotification: aNotification ]
-		ifClosed: [ self showInFocusedSpace: aNotification ].
+			aBlock cull: aSpace ]
+		ifClosed: [ self anotherSpaceDo: aBlock ].
 ]
