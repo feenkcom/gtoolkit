@@ -29,7 +29,9 @@ GtNotificationForwarder >> anotherSpaceDo: aBlock [
 GtNotificationForwarder >> focusedSpaceDo: aBlock [
 	"Find a focused space"
 	BlSpace allSubInstancesDo: [ :aSpace | 
-		aSpace isFocused ifTrue: [ ^ aBlock cull: aSpace ] ].
+		(aSpace isOpened and: [ 
+			aSpace isFocused ]) 
+				ifTrue: [ ^ aBlock cull: aSpace ] ].
 ]
 
 { #category : #'api - space' }
