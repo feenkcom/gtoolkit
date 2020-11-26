@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'progressElement'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Job'
 }
 
 { #category : #'private - asserting' }
@@ -19,10 +19,9 @@ GtNotificationJobElement >> defaultLayout [
 	^ BlLinearLayout vertical alignCenterLeft
 ]
 
-{ #category : #'api - actions' }
-GtNotificationJobElement >> dismiss [
-	self
-		fireEvent: (GtNotificationJobDismissWish new notification: self notification)
+{ #category : #'private - accessing' }
+GtNotificationJobElement >> dismissWishClass [
+	^ GtNotificationJobDismissWish
 ]
 
 { #category : #initialization }
@@ -112,6 +111,6 @@ GtNotificationJobElement >> updateElement [
 		aProgress := aProgress max: 0.
 		aProgress := aProgress min: 1.
 		self progressElement
-			fixedLabel: aJob label;
+			fixedLabel: aJob title;
 			fraction: aProgress ]
 ]

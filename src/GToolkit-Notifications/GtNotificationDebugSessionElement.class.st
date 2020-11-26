@@ -7,7 +7,7 @@ Class {
 		'borderElement',
 		'stackListElement'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-DebugSession'
 }
 
 { #category : #'private - accessing' }

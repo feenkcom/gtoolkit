@@ -6,7 +6,7 @@ Class {
 		'badgeElement',
 		'dropdownBadgeElement'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Badge'
 }
 
 { #category : #'private - accessing' }

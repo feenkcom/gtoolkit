@@ -6,7 +6,7 @@ Class {
 		'textEditor',
 		'borderElement'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Message'
 }
 
 { #category : #'private - asserting' }

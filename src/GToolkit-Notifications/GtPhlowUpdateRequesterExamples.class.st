@@ -1,7 +1,7 @@
 Class {
 	#name : #GtPhlowUpdateRequesterExamples,
 	#superclass : #Object,
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Examples'
 }
 
 { #category : #'examples - requester' }

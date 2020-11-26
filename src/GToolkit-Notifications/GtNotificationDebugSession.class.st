@@ -1,14 +1,14 @@
 Class {
-	#name : #GtNotificationDebugSessionEvent,
+	#name : #GtNotificationDebugSession,
 	#superclass : #GtNotificationEvent,
 	#instVars : [
 		'debugSession'
 	],
-	#category : #'GToolkit-Notifications-Notifications'
+	#category : #'GToolkit-Notifications-DebugSession'
 }
 
 { #category : #'api - notification' }
-GtNotificationDebugSessionEvent >> addedTo: aGtNotifications [
+GtNotificationDebugSession >> addedTo: aGtNotifications [
 	| aSubscription |
 	aSubscription := self debugSession
 		when: GtSharedDebugSessionAnnouncement
@@ -18,7 +18,7 @@ GtNotificationDebugSessionEvent >> addedTo: aGtNotifications [
 ]
 
 { #category : #'private - asserting' }
-GtNotificationDebugSessionEvent >> assertDebugSession: aDebugSession [
+GtNotificationDebugSession >> assertDebugSession: aDebugSession [
 	self 
 		assert: [ aDebugSession isNotNil ] 
 		description: [ 'Debug session must be non-nil' ].
@@ -30,23 +30,23 @@ GtNotificationDebugSessionEvent >> assertDebugSession: aDebugSession [
 ]
 
 { #category : #accessing }
-GtNotificationDebugSessionEvent >> debugSession [
+GtNotificationDebugSession >> debugSession [
 	<return: #GtSharedDebugSession>
 	^ debugSession
 ]
 
 { #category : #accessing }
-GtNotificationDebugSessionEvent >> debugSession: aDebugSession [
+GtNotificationDebugSession >> debugSession: aDebugSession [
 	self assertDebugSession: aDebugSession.
 	debugSession := aDebugSession
 ]
 
 { #category : #'api - accessing' }
-GtNotificationDebugSessionEvent >> elementClass [
+GtNotificationDebugSession >> elementClass [
 	^ GtNotificationDebugSessionElement
 ]
 
 { #category : #'private - adding / removing' }
-GtNotificationDebugSessionEvent >> removeFrom: aGtNotifications [
+GtNotificationDebugSession >> removeFrom: aGtNotifications [
 	aGtNotifications removeNotification: self
 ]

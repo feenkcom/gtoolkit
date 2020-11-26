@@ -1,48 +1,48 @@
 Class {
-	#name : #GtNotificationMessageEvent,
+	#name : #GtNotificationMessage,
 	#superclass : #GtNotificationEvent,
 	#instVars : [
 		'message'
 	],
-	#category : #'GToolkit-Notifications-Notifications'
+	#category : #'GToolkit-Notifications-Message'
 }
 
 { #category : #'api - instance creation' }
-GtNotificationMessageEvent class >> message: aString [
+GtNotificationMessage class >> message: aString [
 	^ self new message: aString
 ]
 
 { #category : #'private - asserting' }
-GtNotificationMessageEvent >> assertMessage: aString [
+GtNotificationMessage >> assertMessage: aString [
 	self 
 		assert: [ aString isNotNil ] 
 		description: [ 'Notification message must be non-nil' ].
 ]
 
 { #category : #defaults }
-GtNotificationMessageEvent >> defaultMessage [
+GtNotificationMessage >> defaultMessage [
 	^ ''
 ]
 
 { #category : #initialization }
-GtNotificationMessageEvent >> initialize [ 
+GtNotificationMessage >> initialize [ 
 	super initialize.
 	message := self defaultMessage.
 ]
 
 { #category : #'api - accessing' }
-GtNotificationMessageEvent >> message [
+GtNotificationMessage >> message [
 	^ message
 ]
 
 { #category : #'api - accessing' }
-GtNotificationMessageEvent >> message: aString [
+GtNotificationMessage >> message: aString [
 	self assertMessage: aString.
 	message := aString.
 ]
 
 { #category : #printing }
-GtNotificationMessageEvent >> printOn: aStream [
+GtNotificationMessage >> printOn: aStream [
 	self message ifNil: [ ^ super printOn: aStream ].
 	aStream 
 		nextPutAll: 'Notification: ';

@@ -5,7 +5,7 @@ See ${method:GtNotificationInitialization class>>#initialize|expanded=true}$.
 Class {
 	#name : #GtNotificationInitialization,
 	#superclass : #Object,
-	#category : #'GToolkit-Notifications-Initialization'
+	#category : #'GToolkit-Notifications-System Configuration'
 }
 
 { #category : #'class initialization' }
@@ -14,5 +14,5 @@ GtNotificationInitialization class >> initialize [
 	BlBlocUIManagerNotification notificationHandlers
 		at: #inform: 
 		put: [ :request :args |
-			GtNotificationMessageEvent message: args first ]
+			GtNotificationMessage message: args first ]
 ]

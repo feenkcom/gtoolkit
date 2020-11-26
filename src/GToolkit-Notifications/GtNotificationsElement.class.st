@@ -5,7 +5,7 @@ Class {
 		'notifications',
 		'updateRequester'
 	],
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Badge'
 }
 
 { #category : #'private - asserting' }
@@ -13,6 +13,16 @@ GtNotificationsElement >> assertNotifications: aGtNotifications [
 	self 
 		assert: [ aGtNotifications isNotNil ] 
 		description: [ 'Notifications must be non-nil' ].
+]
+
+{ #category : #'gt-extensions' }
+GtNotificationsElement >> gtNotificationsFor: aView [
+	<gtView>
+	self notifications ifNil: [ ^ aView empty ].
+	^ aView forward
+		title: 'Notifications';
+		object: [ self notifications ];
+		view: #gtNotificationsFor:
 ]
 
 { #category : #initialization }

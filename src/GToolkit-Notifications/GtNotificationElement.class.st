@@ -3,7 +3,7 @@ Class {
 	#superclass : #BlElement,
 	#traits : 'TBrLayoutResizable',
 	#classTraits : 'TBrLayoutResizable classTrait',
-	#category : #'GToolkit-Notifications-UI'
+	#category : #'GToolkit-Notifications-Basic'
 }
 
 { #category : #defaults }
