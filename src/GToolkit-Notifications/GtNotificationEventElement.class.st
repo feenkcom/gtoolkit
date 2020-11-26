@@ -37,6 +37,7 @@ GtNotificationEventElement >> dismiss [
 	| theEvent |
 	self
 		notificationDo: [ :aNotification | 
+			aNotification requestRemoval.
 			self
 				fireEvent:
 					(theEvent := self dismissWishClass new notification: aNotification).
