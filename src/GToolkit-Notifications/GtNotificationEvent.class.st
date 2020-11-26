@@ -4,6 +4,11 @@ Class {
 	#category : #'GToolkit-Notifications-Basic'
 }
 
+{ #category : #'api - accessing' }
+GtNotificationEvent class >> empty [
+	^ GtNotificationEmpty default
+]
+
 { #category : #'api - notification' }
 GtNotificationEvent >> addedTo: aGtNotifications [
 	"Notifications may react"

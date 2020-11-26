@@ -10,7 +10,7 @@ GtNotificationsListElementExamples >> basicNotificationsElement [
 	| anElement |
 	anElement := GtNotificationsListElement new.
 	self assert: anElement notifications size equals: 0.
-	self assert: anElement listElement items size equals: 0.
+	self assert: anElement listElement items size equals: 1.
 	^ anElement
 ]
 
