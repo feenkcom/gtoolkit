@@ -4,7 +4,7 @@ Class {
 	#category : #'GToolkit-Notifications-Examples'
 }
 
-{ #category : #accessing }
+{ #category : #'examples - actions' }
 GtNotificationBadgeByScripterExamples >> clickOnBadgeIn: aScripterOrStep do: aBlock [
 	<gtExample>
 		
@@ -24,7 +24,7 @@ GtNotificationBadgeByScripterExamples >> clickOnBadgeIn: aScripterOrStep do: aBl
 	^ aScripterOrStep
 ]
 
-{ #category : #accessing }
+{ #category : #'examples - targets' }
 GtNotificationBadgeByScripterExamples >> closeButtonTarget: aStep [
 	<gtExample>
 	aStep 
@@ -32,7 +32,7 @@ GtNotificationBadgeByScripterExamples >> closeButtonTarget: aStep [
 		onChildNamed: #closeButton
 ]
 
-{ #category : #accessing }
+{ #category : #'examples - inform message' }
 GtNotificationBadgeByScripterExamples >> closeInformNotification [
 	<gtExample>
 	| aScripter |
@@ -64,7 +64,7 @@ GtNotificationBadgeByScripterExamples >> closeInformNotification [
 	^ aScripter syncContinue
 ]
 
-{ #category : #accessing }
+{ #category : #'examples - inform message' }
 GtNotificationBadgeByScripterExamples >> displayInformNotification [
 	<gtExample>
 	| aScripter |
@@ -88,7 +88,7 @@ GtNotificationBadgeByScripterExamples >> displayInformNotification [
 	^ aScripter syncContinue
 ]
 
-{ #category : #accessing }
+{ #category : #'examples - inform message' }
 GtNotificationBadgeByScripterExamples >> dropdownBadgeElementTarget: aStep [
 	<gtExample>
 	aStep
@@ -98,7 +98,7 @@ GtNotificationBadgeByScripterExamples >> dropdownBadgeElementTarget: aStep [
 	^ aStep
 ]
 
-{ #category : #accessing }
+{ #category : #'examples - inform message' }
 GtNotificationBadgeByScripterExamples >> dropdownListElementTarget: aStep [
 	<gtExample>
 	aStep
@@ -108,7 +108,7 @@ GtNotificationBadgeByScripterExamples >> dropdownListElementTarget: aStep [
 	^ aStep
 ]
 
-{ #category : #accessing }
+{ #category : #'examples - inform message' }
 GtNotificationBadgeByScripterExamples >> dropdownListItemElementTarget: aStep itemClass: aClass [
 	<gtExample>
 	self dropdownListElementTarget: aStep.
@@ -123,7 +123,7 @@ GtNotificationBadgeByScripterExamples >> informCode [
 	^ 'self inform: ''Example information'''
 ]
 
-{ #category : #accessing }
+{ #category : #'examples - inform message' }
 GtNotificationBadgeByScripterExamples >> informInSpace [
 	<gtExample>
 	| aScripter |
