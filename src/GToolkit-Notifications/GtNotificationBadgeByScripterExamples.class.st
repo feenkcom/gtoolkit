@@ -55,7 +55,7 @@ GtNotificationBadgeByScripterExamples >> closeInformNotification [
 				label: 'Check empty list';
 				value: [ :aList | 
 					aList listElement items size ]
-				equals: 0;
+				equals: 1;
 				onTarget: [ :theCheck | 
 					self dropdownListElementTarget: theCheck ]
 			

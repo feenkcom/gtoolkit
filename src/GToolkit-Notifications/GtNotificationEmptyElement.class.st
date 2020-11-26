@@ -15,7 +15,7 @@ GtNotificationEmptyElement >> defaultLayout [
 { #category : #initialization }
 GtNotificationEmptyElement >> initialize [
 	super initialize.
-	self initializeTextEditor.
+	self initializeLabel.
 
 	self margin: (BlInsets all: 10).
 	self padding: (BlInsets all: 10).
@@ -29,11 +29,11 @@ GtNotificationEmptyElement >> initialize [
 ]
 
 { #category : #initialization }
-GtNotificationEmptyElement >> initializeTextEditor [
+GtNotificationEmptyElement >> initializeLabel [
 	labelElement := BrLabel new
 		look: (BrGlamorousLabelLook new
 			foreground: BrGlamorousColors disabledButtonTextColor);
-		text: 'without notifications';
+		text: 'no notifications';
 		constraintsDo: [ :c | 
 			c frame horizontal alignCenter.
 			c frame vertical alignCenter ]
