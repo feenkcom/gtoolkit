@@ -120,7 +120,14 @@ GtNotificationBadgeByScripterExamples >> dropdownListItemElementTarget: aStep it
 { #category : #'examples - inform message' }
 GtNotificationBadgeByScripterExamples >> informCode [
 	<gtExample>
-	^ 'self inform: ''Example information'''
+	^ '[ self inform: ''Example information'' ] 
+on: BlBlocUIManagerNotification 
+do: [ :aNotification | 
+	GtNotificationForwarder
+		spaceDo: [ :aSpace | 
+			aSpace root userData at: #exampleSpaceId put: aSpace id ].
+	aNotification pass.
+] '
 ]
 
 { #category : #'examples - inform message' }
@@ -129,6 +136,18 @@ GtNotificationBadgeByScripterExamples >> informInSpace [
 	| aScripter |
 	aScripter := self scripterForBlock: [
 		self snippetWithInformCode ].
+		
+	aScripter check
+		label: 'Check space height';
+		value: [ :aSpace | aSpace height ]
+		equals: 600;
+		onSpace.
+
+	aScripter check
+		label: 'Check space width';
+		value: [ :aSpace | aSpace width ]
+		equals: 800;
+		onSpace.
 		
 	aScripter 
 		substep: 'Play code snippet'
@@ -139,6 +158,13 @@ GtNotificationBadgeByScripterExamples >> informInSpace [
 				onGtPharoSnippetPlayButton.
 				
 			aStep wait forEmptySpaceTaskQueue.
+			
+			aStep check 
+				label: 'Check space ID stored in space root element';
+				value: [ :aSpace | 
+					aSpace root userData at: #exampleSpaceId ifAbsent: [ nil ] ]
+				equals: [ :aSpace | aSpace id ];
+				onSpace.
 			
 			aStep check
 				label: 'Check two elements in space';
