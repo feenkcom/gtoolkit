@@ -141,12 +141,17 @@ GtNotificationBadgeByScripterExamples >> informInSpace [
 			aStep wait forEmptySpaceTaskQueue.
 			
 			aStep check
-				label: 'Check notification badge existence';
-				satisfies: [ :aRootElement |
-					aRootElement children size = 2 and: [
-						(aRootElement childAt: 2) isKindOf: GtNotificationsBadgeElement ] ];
+				label: 'Check two elements in space';
+				value: [ :aRootElement | aRootElement children size ]
+				equals: 2;
 				onSpaceRoot.
-				
+
+			aStep check
+				label: 'Check notification badge existence';
+				value: [ :aRootElement | (aRootElement childAt: 2) class ]
+				equals: GtNotificationsBadgeElement;
+				onSpaceRoot.
+								
 			aStep check
 				label: 'Check notification badge label';
 				satisfies: [ :aBadgeElement |
