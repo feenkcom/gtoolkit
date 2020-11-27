@@ -120,14 +120,16 @@ GtNotificationBadgeByScripterExamples >> dropdownListItemElementTarget: aStep it
 { #category : #'examples - inform message' }
 GtNotificationBadgeByScripterExamples >> informCode [
 	<gtExample>
-	^ '[ self inform: ''Example information'' ] 
+	^ '[ BlBlocUIManagerNotification
+	requestOrNil: #inform:
+	with: { ''Example information'' } ] 
 on: BlBlocUIManagerNotification 
 do: [ :aNotification | 
 	GtNotificationForwarder
 		spaceDo: [ :aSpace | 
 			aSpace root userData at: #exampleSpaceId put: aSpace id ].
 	aNotification pass.
-] '
+]'
 ]
 
 { #category : #'examples - inform message' }
