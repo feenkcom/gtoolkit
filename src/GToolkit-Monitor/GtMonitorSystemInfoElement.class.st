@@ -12,10 +12,10 @@ GtMonitorSystemInfoElement >> buildGlutinEventLoopInfo [
 		ifFalse: [ ^ BlElement new size: 0@0 ].
 
 	self class environment
-		at: #GlutinEventsFetcher
+		at: #GlutinEventFetcher
 		ifAbsent: [ ^ BlElement new size: 0@0 ].
 
-	anEventLoop := (self class environment at: #GlutinEventsFetcher) default eventLoop.
+	anEventLoop := (self class environment at: #GlutinEventFetcher) default eventLoop.
 
 	^ BlElement new
 		layout: (BlGridLayout horizontal columnCount: 2; cellSpacing: 10);
