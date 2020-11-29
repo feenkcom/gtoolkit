@@ -2,7 +2,8 @@ Class {
 	#name : #GtNotificationJob,
 	#superclass : #GtNotificationEvent,
 	#instVars : [
-		'job'
+		'job',
+		'state'
 	],
 	#category : #'GToolkit-Notifications-Job'
 }
@@ -11,6 +12,12 @@ Class {
 GtNotificationJob >> = anObject [
 	^ self class = anObject class and: [
 		self job = anObject job ]
+]
+
+{ #category : #accessing }
+GtNotificationJob >> addedTo: aGtNotifications [
+	super addedTo: aGtNotifications.
+	self state job: self addedTo: aGtNotifications.
 ]
 
 { #category : #'private - asserting' }
@@ -33,6 +40,12 @@ GtNotificationJob >> hash [
 	^ self class hash bitXor: self job hash
 ]
 
+{ #category : #initialization }
+GtNotificationJob >> initialize [
+	super initialize.
+	state := GtNotificationJobState running.
+]
+
 { #category : #'api - accessing' }
 GtNotificationJob >> job [
 	<return: #Job>
@@ -41,6 +54,8 @@ GtNotificationJob >> job [
 
 { #category : #'api - accessing' }
 GtNotificationJob >> job: aJob [
+	"I must be initialized in the same process as the job,
+	otherwise the job may finish before I subscribe to its changes."
 	self assertJob: aJob.
 	job := aJob.
 	self subscribeToJob.
@@ -49,8 +64,15 @@ GtNotificationJob >> job: aJob [
 { #category : #'private - announcement handling' }
 GtNotificationJob >> onJobEnd: aJobEnd [
 	self job = aJobEnd job ifFalse: [ ^ self ].
+	state := GtNotificationJobState finished.
 	self unsubscribeFromJob.
 	self requestRemoval.
+]
+
+{ #category : #'private - accessing' }
+GtNotificationJob >> state [
+	<return: #GtNotificationJobState>
+	^ state
 ]
 
 { #category : #'private - subscriptions' }

@@ -133,7 +133,7 @@ BaselineOfGToolkit >> baseline: spec [
 		spec package: 'GToolkit-Constraints' with: [ 
 			spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter') ].
 		spec package: 'GToolkit-Notifications' with: [ 
-			spec requires: #('GToolkitInspector') ].
+			spec requires: #('GToolkitInspector' 'GToolkitDebugger' 'GToolkitCoder' ) ].
 		spec package: 'GToolkit-World' with: [ 
 			spec requires: #('GToolkit-Notifications') ].
 		spec package: 'GToolkit-Setup' with: [ 
@@ -165,6 +165,9 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		self fixCommandLineHandlerForPharo7 ].
 	SystemVersion current major = 8 ifTrue: [ 
 		self fixCommandLineHandlerForPharo8 ].
+		
+	GtNotificationBadgePublisher beActivated.
+	GtNotificationIcebergCredentialsProvider beDefaultProvider.
 ]
 
 { #category : #'post load' }

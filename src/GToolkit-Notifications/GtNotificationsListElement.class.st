@@ -32,7 +32,7 @@ GtNotificationsListElement >> initializeList [
 		itemStencil: [ :anEventElementClass :aListWidget | anEventElementClass new ];
 		itemDataBinder:
 				[ :aNotificationElement :aNotificationEvent :anItemIndex | aNotificationElement notification: aNotificationEvent ];
-		items: self notifications asArray
+		items: self listItems
 ]
 
 { #category : #initialization }
@@ -49,6 +49,11 @@ GtNotificationsListElement >> listElement [
 	^ listElement
 ]
 
+{ #category : #'private - accessing' }
+GtNotificationsListElement >> listItems [
+	^ self notifications asArray ifEmpty: [ { GtNotificationEvent empty } ]
+]
+
 { #category : #'private - event handling' }
 GtNotificationsListElement >> onNotificationDismissWish: aGtNotificationEvent [ 
 	self removeNotification: aGtNotificationEvent
@@ -58,5 +63,5 @@ GtNotificationsListElement >> onNotificationDismissWish: aGtNotificationEvent [
 GtNotificationsListElement >> updateElement [
 	"I must be called in a UI process."
 	super updateElement.
-	self listElement items: self notifications asArray.
+	self listElement items: self listItems.
 ]
