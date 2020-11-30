@@ -1,14 +1,34 @@
 Class {
 	#name : #GtNotificationBadgePublisher,
 	#superclass : #BlBlocUINotificationPublisher,
+	#classVars : [
+		'IsActivated'
+	],
 	#category : #'GToolkit-Notifications-System Configuration'
 }
+
+{ #category : #'api - configuration' }
+GtNotificationBadgePublisher class >> beActivated [
+	IsActivated := true
+]
+
+{ #category : #'api - configuration' }
+GtNotificationBadgePublisher class >> beDesactivated [
+	IsActivated := false
+]
+
+{ #category : #'private - testing' }
+GtNotificationBadgePublisher class >> isActivated [
+	^ IsActivated ifNil: [ false ]
+]
 
 { #category : #'api - accessing' }
 GtNotificationBadgePublisher class >> priority [
 	<return: #Number>
 	"Higher number, higher priority"
-	^ 10
+	^ self isActivated
+		ifTrue: [ 10 ]
+		ifFalse: [ -10 ]
 ]
 
 { #category : #'private - displaying' }
