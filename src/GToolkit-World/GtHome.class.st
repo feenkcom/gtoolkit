@@ -191,7 +191,7 @@ GtHome >> updateSections [
 	| sectionElements sectionStencils |
 	sectionsHolder ifNil:  [ ^ self ].
 	sectionsHolder removeChildren.
-	sectionStencils := self collectHomeSectionStencils flatCollect: #sections.
+	sectionStencils := self collectHomeSectionStencils.
 	sectionElements := sectionStencils collect: [ :eachStencil |
 		self createSectionWrapperFor: eachStencil ].
 	sectionsHolder addChildren: sectionElements.
