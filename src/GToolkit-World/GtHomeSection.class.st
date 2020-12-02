@@ -358,6 +358,13 @@ GtHomeSection >> sectionPaddingLeftInsets [
 	^ self spaceGap * 2
 ]
 
+{ #category : #'api - accessing' }
+GtHomeSection >> sections [
+	"One ${class:GtHomeSection}$ can return several ${class:GtHomeSection}$ instances.
+	By default, it returns itself."
+	^ Array with: self
+]
+
 { #category : #'instance creation' }
 GtHomeSection >> showSpaceWithTitle: aString with: aStencil from: anotherElement [
 	| aSpace |
