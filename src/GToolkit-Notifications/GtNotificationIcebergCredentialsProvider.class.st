@@ -27,6 +27,13 @@ GtNotificationIcebergCredentialsProvider class >> disableThisProvider [
 		IceCredentialsProvider providerType: nil ]
 ]
 
+{ #category : #'api - accessing' }
+GtNotificationIcebergCredentialsProvider class >> threadedFFIPriority [
+	"The higher number, the higher preference (importance)"
+	<return: #Number>
+	^ 10
+]
+
 { #category : #'private - testing' }
 GtNotificationIcebergCredentialsProvider >> isFromBloc [
 	^ BlParallelUniverse all
