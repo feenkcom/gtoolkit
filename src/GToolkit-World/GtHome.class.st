@@ -188,12 +188,13 @@ GtHome >> updateNotifications [
 
 { #category : #updating }
 GtHome >> updateSections [
-	| sections |
+	| sectionElements sectionStencils |
 	sectionsHolder ifNil:  [ ^ self ].
 	sectionsHolder removeChildren.
-	sections := self collectHomeSectionStencils collect: [ :eachStencil |
+	sectionStencils := self collectHomeSectionStencils.
+	sectionElements := sectionStencils collect: [ :eachStencil |
 		self createSectionWrapperFor: eachStencil ].
-	sectionsHolder addChildren: sections.
+	sectionsHolder addChildren: sectionElements.
 ]
 
 { #category : #updating }

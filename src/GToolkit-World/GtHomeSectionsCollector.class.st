@@ -15,13 +15,13 @@ GtHomeSectionsCollector >> collect [
 	<gtCollector>
 	| sectionStencils |
 	sectionStencils := self collectPragmas
-		collect: [ :eachPragma | 
+		flatCollect: [ :eachPragma | 
 			"Add error handling"
-			thisContext
+			(thisContext
 				object: self object
 				perform: eachPragma methodSelector
 				withArguments: {}
-				inClass: self object class ].
+				inClass: self object class) asCollection ].
 	self sortByPriority: sectionStencils.
 	^ sectionStencils
 ]
