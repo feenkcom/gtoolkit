@@ -28,7 +28,7 @@ GtProfiler >> initialize [
 	openedSpaces := GtProfilerSpacesElement new.
 	framesChart := GtProfilerPerformanceChart new.
 	layersGraph := GtProfilerCompositionLayers new.
-	
+
 	self addPage: (BlElement new
 		viewModel: BrPagerPageModel new;
 		constraintsDo: [ :c |

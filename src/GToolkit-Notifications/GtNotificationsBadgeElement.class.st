@@ -15,19 +15,9 @@ GtNotificationsBadgeElement >> badgeElement [
 	^ badgeElement
 ]
 
-{ #category : #defaults }
-GtNotificationsBadgeElement >> defaultHorizontalResizerModel [
-	^ BrLayoutHorizontalResizerModel fitContent
-]
-
 { #category : #initialization }
 GtNotificationsBadgeElement >> defaultLayout [
 	^ BlFrameLayout new
-]
-
-{ #category : #defaults }
-GtNotificationsBadgeElement >> defaultVerticalResizerModel [
-	^ BrLayoutVerticalResizerModel fitContent
 ]
 
 { #category : #'private - accessing' }
@@ -44,14 +34,16 @@ GtNotificationsBadgeElement >> hide [
 { #category : #initialization }
 GtNotificationsBadgeElement >> initialize [
 	super initialize.
+	
+	self fitContent.
+	
 	self initializeListElement.
 	self initializeDropdownBadgeElement.
 	self initializeBadgeElement.
 	
 	self addChild: self badgeElement as: #badge.
 	
-	self addLook: (BrLayoutResizerLook new
-		anyToFitContent: self).
+	self addLook: (BrLayoutResizerLook new anyToFitContent: self).
 ]
 
 { #category : #initialization }

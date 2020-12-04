@@ -20,8 +20,7 @@ GtNotificationsListElement >> initialize [
 	
 	self addChild: self listElement as: #notifications.
 	
-	self addLook: (BrLayoutResizerLook inherit
-		inherit: self listElement).
+	self addLook: (BrLayoutResizerLook inherit inherit: self listElement).
 ]
 
 { #category : #initialization }
