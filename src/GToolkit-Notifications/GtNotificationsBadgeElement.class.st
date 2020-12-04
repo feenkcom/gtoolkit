@@ -35,6 +35,7 @@ GtNotificationsBadgeElement >> hide [
 GtNotificationsBadgeElement >> initialize [
 	super initialize.
 	
+	self viewModel: BrWidgetModel new.
 	self fitContent.
 	
 	self initializeListElement.
