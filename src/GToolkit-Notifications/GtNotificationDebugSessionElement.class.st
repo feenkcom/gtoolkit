@@ -109,7 +109,7 @@ GtNotificationDebugSessionElement >> initializeToolbarElement [
 		
 	aDebugButton := BrButton new
 		look: BrGlamorousButtonWithIconLook;
-		beSmall;
+		beSmallSize;
 		icon: BrGlamorousVectorIcons debug;
 		label: 'Debug';
 		action: [ self debug ].

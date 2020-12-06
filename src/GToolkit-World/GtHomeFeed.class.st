@@ -16,7 +16,7 @@ GtHomeFeed >> createLinkAttribute [
 		beAppend;
 		stencil: [ BrButton new 
 			look: BrGlamorousLinkSquaredButtonWithLabelLook new;
-			beSmall;
+			beSmallSize;
 			margin: (BlInsets top: 1 left: 0 bottom: 0 right: 0);
 			padding: (BlInsets top: 3 left: 5 bottom: 3 right: 5);
 			label: 'blog.feenk.com';
@@ -28,9 +28,8 @@ GtHomeFeed >> createPrivacyPolicyLinkAttribute [
 	^ GtButtonAttribute new
 		beAppend;
 		stencil: [ BrButton new 
-			look: (BrGlamorousLinkSquaredButtonWithLabelLook new
-				fontSize: 12);
-			beSmall;
+			look: (BrGlamorousLinkSquaredButtonWithLabelLook new fontSize: 12);
+			beSmallSize;
 			margin: (BlInsets top: -1 left: 0 bottom: 0 right: 0);
 			padding: (BlInsets top: 3 left: 5 bottom: 3 right: 5);
 			label: 'Privacy Policy';
@@ -140,9 +139,8 @@ GtHomeFeed >> showPermissionDialog [
 		create).
 		
 	dialogContainer addChild: (BrButton new 
-		look: (BrGlamorousLinkSquaredButtonWithLabelLook new
-			fontSize: 12);
-		beSmall;
+		look: (BrGlamorousLinkSquaredButtonWithLabelLook new fontSize: 12);
+		beSmallSize;
 		margin: (BlInsets top: 10 left: 0 bottom: 0 right: 0);
 		padding: (BlInsets top: 3 left: 5 bottom: 3 right: 5);
 		label: 'Privacy Policy';
