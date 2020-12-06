@@ -126,7 +126,7 @@ GtWorld >> addShutdownListener [
 
 { #category : #initialization }
 GtWorld >> defaultRoot [
-	^ GtWorldElement new
+	^ GtWorldElement new beInSeparateCompositionLayer
 ]
 
 { #category : #initialization }
