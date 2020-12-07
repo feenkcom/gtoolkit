@@ -50,8 +50,8 @@ GtNotificationDebugSessionElement >> initialize [
 		aContainer addChild: self toolbarElement as: #toolbar ].
 
 	self addLook: (BrLayoutResizerLook new
-		hInherit: self;
-		vAnyToFitContent: self;
+		hInherit;
+		vAnyToFitContent;
 		hInherit: self textEditor;
 		vAnyToFitContent: self textEditor;
 		hInherit: self stackListElement;

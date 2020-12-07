@@ -44,7 +44,7 @@ GtNotificationsBadgeElement >> initialize [
 	
 	self addChild: self badgeElement as: #badge.
 	
-	self addLook: (BrLayoutResizerLook new anyToFitContent: self).
+	self addLook: (BrLayoutResizerLook new anyToFitContent).
 ]
 
 { #category : #initialization }

@@ -23,8 +23,8 @@ GtNotificationEmptyElement >> initialize [
 	self addChild: self labelElement as: #labelElement.
 	
 	self addLook: (BrLayoutResizerLook new
-		hInherit: self;
-		vAnyToFitContent: self;
+		hInherit;
+		vAnyToFitContent;
 		anyToFitContent: self labelElement).
 ]
 
