@@ -30,8 +30,8 @@ GtNotificationRootJobElement >> initialize [
 		aContainer addChild: self jobElement as: #job ].
 	
 	self addLook: (BrLayoutResizerLook new
-		hInherit: self;
-		vAnyToFitContent: self;
+		hInherit;
+		vAnyToFitContent;
 		hInherit: self borderElement;
 		vAnyToFitContent: self borderElement;
 		hInherit: self jobElement;

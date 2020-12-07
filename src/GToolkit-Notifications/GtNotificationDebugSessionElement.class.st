@@ -43,6 +43,7 @@ GtNotificationDebugSessionElement >> initialize [
 	self initializeToolbarElement.
 
 	self addChild: self borderElement as: #border.
+		
 	self borderElement containerDo: [ :aContainer |
 		aContainer alignCenterRight.
 		aContainer addChild: self textEditor as: #label.
@@ -52,6 +53,10 @@ GtNotificationDebugSessionElement >> initialize [
 	self addLook: (BrLayoutResizerLook new
 		hInherit;
 		vAnyToFitContent;
+		hInherit: self borderElement;
+		vAnyToFitContent: self borderElement).
+
+	self borderElement addLook: (BrLayoutResizerLook new
 		hInherit: self textEditor;
 		vAnyToFitContent: self textEditor;
 		hInherit: self stackListElement;

@@ -29,8 +29,8 @@ GtNotificationIcebergSshCredentialsElement >> initialize [
 		 ].
 	
 	self addLook: (BrLayoutResizerLook new
-			hInherit: self;
-			vAnyToFitContent: self;
+			hInherit;
+			vAnyToFitContent;
 			hInherit: self headerElement;
 			vAnyToFitContent: self headerElement;
 			hInherit: self inputsArea;

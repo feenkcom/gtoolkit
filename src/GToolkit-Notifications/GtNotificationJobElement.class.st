@@ -32,8 +32,8 @@ GtNotificationJobElement >> initialize [
 	self addChild: self progressElement as: #progress.
 	
 	self addLook: (BrLayoutResizerLook new
-		hInherit: self;
-		vAnyToFitContent: self;
+		hInherit;
+		vAnyToFitContent;
 		hInherit: self progressElement;
 		vAnyToFitContent: self progressElement).
 ]
