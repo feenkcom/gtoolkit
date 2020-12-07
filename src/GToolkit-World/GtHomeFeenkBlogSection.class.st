@@ -153,7 +153,7 @@ GtHomeFeenkBlogSection >> newSectionTitleWithUpdatesIn: aCardsContainer [
 	aButton margin: (BlInsets left: 5).
 	aButton label: 'Update blog feed'.
 	aButton action: [ :card | self documentsInto: aCardsContainer ].
-	aButton beSmall.
+	aButton beSmallSize.
 	aContainer := self newSectionTitleContainer.
 	^ aContainer addChild: aLabel; addChild: aButton
 ]

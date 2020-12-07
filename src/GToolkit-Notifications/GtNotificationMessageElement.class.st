@@ -44,8 +44,8 @@ GtNotificationMessageElement >> initialize [
 		aContainer addChild: self textEditor as: #textEditor ].
 	
 	self addLook: (BrLayoutResizerLook new
-		hInherit: self;
-		vAnyToFitContent: self;
+		hInherit;
+		vAnyToFitContent;
 		hInherit: self borderElement;
 		vAnyToFitContent: self borderElement;
 		hInherit: self textEditor;

@@ -154,20 +154,20 @@ GtMonitorSpaceRunner >> initialize [
 	
 	startButton := BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
-		beSmall;
+		beSmallSize;
 		label: 'Start';
 		action: [ :aButton | self start ].
 
 	stopButton := BrButton new
 		disable;
-		beSmall;
+		beSmallSize;
 		look: BrGlamorousButtonWithLabelLook new;
 		label: 'Stop';
 		action: [ self stop ].
 		
 	resetButton := BrButton new
 		look: BrGlamorousButtonWithLabelLook new;
-		beSmall;
+		beSmallSize;
 		label: 'Reset';
 		action: [ self reset ].
 

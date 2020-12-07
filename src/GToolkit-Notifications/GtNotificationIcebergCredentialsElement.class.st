@@ -107,7 +107,7 @@ GtNotificationIcebergCredentialsElement >> initialize [
 GtNotificationIcebergCredentialsElement >> initializeAcceptButton [
 	acceptButton := BrButton new
 		look: BrGlamorousButtonWithIconLook;
-		beSmall;
+		beSmallSize;
 		icon: BrGlamorousVectorIcons accept;
 		label: 'Accept';
 		margin: (BlInsets top: 5 right: 10 bottom: 10 left: 10);
