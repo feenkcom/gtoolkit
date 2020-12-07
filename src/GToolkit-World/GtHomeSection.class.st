@@ -360,13 +360,10 @@ GtHomeSection >> sectionPaddingLeftInsets [
 
 { #category : #'instance creation' }
 GtHomeSection >> showSpaceWithTitle: aString with: aStencil from: anotherElement [
-	| aSpace |
-	aSpace := BlSpace new.
-	aSpace title: aString.
-	aSpace extent: 1200@600.
-	aSpace addChild: aStencil asElement.
-	aSpace withHalos.
-	anotherElement showSpace: aSpace
+	^ GtWorldUtility 
+		showSpaceWithTitle: aString 
+		with: aStencil 
+		from: anotherElement
 ]
 
 { #category : #accessing }
