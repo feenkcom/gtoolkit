@@ -43,6 +43,7 @@ GtNotificationDebugSessionElement >> initialize [
 	self initializeToolbarElement.
 
 	self addChild: self borderElement as: #border.
+		
 	self borderElement containerDo: [ :aContainer |
 		aContainer alignCenterRight.
 		aContainer addChild: self textEditor as: #label.
@@ -50,8 +51,12 @@ GtNotificationDebugSessionElement >> initialize [
 		aContainer addChild: self toolbarElement as: #toolbar ].
 
 	self addLook: (BrLayoutResizerLook new
-		hInherit: self;
-		vAnyToFitContent: self;
+		hInherit;
+		vAnyToFitContent;
+		hInherit: self borderElement;
+		vAnyToFitContent: self borderElement).
+
+	self borderElement addLook: (BrLayoutResizerLook new
 		hInherit: self textEditor;
 		vAnyToFitContent: self textEditor;
 		hInherit: self stackListElement;
@@ -109,7 +114,7 @@ GtNotificationDebugSessionElement >> initializeToolbarElement [
 		
 	aDebugButton := BrButton new
 		look: BrGlamorousButtonWithIconLook;
-		beSmall;
+		beSmallSize;
 		icon: BrGlamorousVectorIcons debug;
 		label: 'Debug';
 		action: [ self debug ].

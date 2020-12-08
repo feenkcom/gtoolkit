@@ -33,7 +33,7 @@ GtProfilerCompositionLayers >> initialize [
 	updateButton := BrButton new
 		disable;
 		look: BrGlamorousButtonWithLabelLook new;
-		beSmall;
+		beSmallSize;
 		label: 'Render';
 		action: [ :aButton | self updateLayer ].
 		

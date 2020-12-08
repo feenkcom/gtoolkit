@@ -27,11 +27,6 @@ GtNotificationEventElement >> assertNotification: aGtNotificationEvent [
 		description: [ 'Notification event must be non-nil' ].
 ]
 
-{ #category : #defaults }
-GtNotificationEventElement >> defaultVerticalResizerModel [
-	^ BrLayoutVerticalResizerModel fitContent
-]
-
 { #category : #'api - actions' }
 GtNotificationEventElement >> dismiss [
 	| theEvent |
@@ -73,6 +68,13 @@ GtNotificationEventElement >> eventDo: aBlock [
 		deprecated: 'Use #notificationDo: instead.' 
 		transformWith: '`@receiver eventDo: `@arg' -> '`@receiver notificationDo: `@arg'.
 	self notificationDo: aBlock
+]
+
+{ #category : #initialization }
+GtNotificationEventElement >> initialize [
+	super initialize.
+	
+	self vFitContent
 ]
 
 { #category : #'api - accessing' }

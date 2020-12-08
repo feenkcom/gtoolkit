@@ -88,7 +88,7 @@ GtProfilerSpacesElement >> updateList [
 				onSuccessEnqueueAction: [ :theSpaces | 
 					spacesList items: theSpaces.
 					spacesList selectedIndices
-						ifEmpty: [ spacesList selectOne: 1 ].
+						ifEmpty: [ theSpaces ifNotEmpty: [ spacesList selectOne: 1 ] ].
 					self
 						enqueueTask:
 							(BlDelayedTaskAction new
