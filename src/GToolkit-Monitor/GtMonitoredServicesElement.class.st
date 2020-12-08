@@ -21,7 +21,7 @@ GtMonitoredServicesElement >> initialize [
 				transformation: self onClickTransformation).
 	servicesList
 		rowStencil:
-			(BrListClickableRowStencilBuilder new
+			(BrGlamorousColumnedListSelectableRowElementStencilBuilder new
 				cellSpacing: 10;
 				padding: (BlInsets top: 4 bottom: 4)).
 	self addChild: servicesList.

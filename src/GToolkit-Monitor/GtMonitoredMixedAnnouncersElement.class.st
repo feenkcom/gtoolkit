@@ -51,7 +51,7 @@ GtMonitoredMixedAnnouncersElement >> initialize [
 	
 	announcersList := BrColumnedList new.
 	announcersList addEventHandler: (GtPhlowListToSelectHandler new).
-	announcersList rowStencil: (BrListClickableRowStencilBuilder new
+	announcersList rowStencil: (BrGlamorousColumnedListSelectableRowElementStencilBuilder new
 		cellSpacing: 10;
 		padding: (BlInsets top: 4 bottom: 4)).
 
