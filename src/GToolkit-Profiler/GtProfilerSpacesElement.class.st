@@ -40,7 +40,7 @@ GtProfilerSpacesElement >> initialize [
 	spacesList := BrColumnedList new.
 	spacesList beInSingleCompositionLayer. 
 	spacesList addEventHandler: (GtPhlowListToSelectHandler new).
-	spacesList rowStencil: (BrListClickableRowStencilBuilder new
+	spacesList rowStencil: (BrGlamorousColumnedListSelectableRowElementStencilBuilder new
 		cellSpacing: 10;
 		padding: (BlInsets top: 4 bottom: 4)).
 

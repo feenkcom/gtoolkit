@@ -23,7 +23,7 @@ GtMonitoredSignalLoggersElement >> initialize [
 	
 	loggersList := BrColumnedList new.
 	loggersList addEventHandler: (GtPhlowListToSelectHandler new).
-	loggersList rowStencil: (BrListClickableRowStencilBuilder new
+	loggersList rowStencil: (BrGlamorousColumnedListSelectableRowElementStencilBuilder new
 		cellSpacing: 10;
 		padding: (BlInsets top: 4 bottom: 4)).
 
