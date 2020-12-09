@@ -12,7 +12,7 @@ GtWorldUtility class >> showSpaceWithTitle: aString inPagerWith: aStencil from: 
 	anElement := aStencil asElement.
 	aPager := GtPager createWrappedOn: anElement.
 	aPager maximized.
-	^ self showSpaceWithTitle: aString with: aPager from: anElement.
+	^ self showSpaceWithTitle: aString with: aPager from: anotherElement.
 ]
 
 { #category : #'instance creation' }
