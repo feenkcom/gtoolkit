@@ -198,7 +198,7 @@ pipeline {
                         }
                         stage('MacOSX Examples') {
                              steps {
-                                retry(2) {
+                                sshagent([]) {
                                     sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
                                     sh 'rm -rf GToolkit-Releaser-*.xml'
                                     junit '*.xml'

@@ -85,7 +85,7 @@ GtWorldElement >> newNotificationsBadge [
 		description: [ 'Notifications dropdown is already created!' ].
 	
 	notificationsDropdown := GtNotificationsBadgeElement new
-		addLook: (BrGlamorousLabelTooltipLook new text: 'Notifications');
+		addLook: (BrGlamorousWithLabelTooltipLook new text: 'Notifications');
 		hide.
 	
 	^ notificationsDropdown
