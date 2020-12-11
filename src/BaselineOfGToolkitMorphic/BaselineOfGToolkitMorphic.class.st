@@ -20,5 +20,5 @@ BaselineOfGToolkitMorphic >> baseline: spec [
 		
 		"some glue code that connects the pieces"
 		spec
-			package: #'GToolkit-Morphic' with: [ spec requires: [ #(BlocMorphic) ] ] ]
+			package: #'GToolkit-Morphic' with: [ spec requires: #(BlocMorphic GlutinMorphic) ] ]
 ]
