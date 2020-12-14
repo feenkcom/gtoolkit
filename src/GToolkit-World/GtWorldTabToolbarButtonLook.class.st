@@ -1,6 +1,6 @@
 Class {
 	#name : #GtWorldTabToolbarButtonLook,
-	#superclass : #BrInteractiveCommonLook,
+	#superclass : #BrStyleCommonLook,
 	#category : #'GToolkit-World-UI'
 }
 
@@ -15,10 +15,10 @@ GtWorldTabToolbarButtonLook >> initialize [
 		BrLayoutAlignmentLook forHorizontalLinearLayout }.
 
 	self
-		default: [ :aWidget |
-			aWidget geometry: BlCircle new.
-			aWidget layout: BlLinearLayout horizontal alignCenter.
-			aWidget background: (Color transparent) ];
-		hovered: [ :aWidget | aWidget background: (Color gray alpha: 0.2) ];
-		pressed: [ :aWidget | aWidget background: (Color gray alpha: 0.4) ]
+		default: [ :aStyle |
+			aStyle geometry: BlCircle new.
+			aStyle layout: BlLinearLayout horizontal alignCenter.
+			aStyle background: (Color transparent) ];
+		hovered: [ :aStyle | aStyle background: (Color gray alpha: 0.2) ];
+		pressed: [ :aStyle | aStyle background: (Color gray alpha: 0.4) ]
 ]

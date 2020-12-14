@@ -4,6 +4,66 @@ Class {
 	#category : #'GToolkit-Monitor'
 }
 
+{ #category : #printing }
+GtMonitor class >> printExternalResourcesOn: aTranscript [
+	| allExternalResources |
+	
+	aTranscript
+		nextPutAll: '========================='; cr;
+		nextPutAll: '   External resources'; cr;
+		nextPutAll: '========================='; cr.
+	allExternalResources := GtMonitoredExternalResourcesElement allExternalResources.
+	allExternalResources do: [ :eachExternalResouce |
+		aTranscript nextPutAll: eachExternalResouce name; cr ].
+]
+
+{ #category : #printing }
+GtMonitor class >> printProcessesOn: aTranscript [
+	| allProcesses |
+	
+	aTranscript
+		nextPutAll: '========================='; cr;
+		nextPutAll: '        Processes'; cr;
+		nextPutAll: '========================='; cr.
+
+	allProcesses := Process allSubInstances sorted: [ :a :b | a priority > b priority ].
+	allProcesses do: [ :eachProcess |
+		aTranscript
+			nextPutAll: ('Process ({1}) named ' format: { eachProcess priority });
+			nextPutAll: eachProcess gtName asString printString;
+			cr ].
+]
+
+{ #category : #printing }
+GtMonitor class >> printRuntimeInfo [
+	| aTranscript |
+	
+	aTranscript := NonInteractiveTranscript stdout.
+	self printExternalResourcesOn: aTranscript.
+	self printSpacesOn: aTranscript.
+	self printProcessesOn: aTranscript
+]
+
+{ #category : #printing }
+GtMonitor class >> printSpacesOn: aTranscript [
+	| allSpaces |
+	
+	aTranscript
+		nextPutAll: '========================='; cr;
+		nextPutAll: '         Spaces'; cr;
+		nextPutAll: '========================='; cr.
+
+	allSpaces := BlSpace allSubInstances sorted: [ :a :b | a id < b id ].
+	allSpaces do: [ :eachSpace |
+		aTranscript
+			nextPutAll: eachSpace class name;
+			nextPutAll: ' titled ';
+			nextPutAll: eachSpace title printString;
+			nextPutAll: ' with id ';
+			nextPutAll: eachSpace id printString;
+			cr ].
+]
+
 { #category : #accessing }
 GtMonitor >> gtActionProfilerFor: anAction [
 	<gtAction>
