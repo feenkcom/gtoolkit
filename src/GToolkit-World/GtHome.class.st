@@ -150,7 +150,7 @@ GtHome >> refreshNotifications [
 { #category : #sections }
 GtHome >> slideShowsSection [
 	<gtHomeSection>
-	^ GtHomeSlideShowsSection new
+	^ GtHomeSlideShowsSection new 
 		priority: 15
 ]
 

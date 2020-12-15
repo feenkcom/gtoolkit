@@ -15,6 +15,10 @@ GtHomeSlideShowsSection >> create [
 		slideshow: [ GtLiveShow createWithArrowsVisible: GtTour new ]
 		description: 'Take an interative tour through the tools and engines.').
 	cardsContainer addChild: (self 
+		newShowCardWithTitle: 'Tour' 
+		slideshow: [ GtLiveShow createWithArrowsVisible: GtMoldableDevelopmentSlideshow new ]
+		description: 'A tour through the moldable development concepts.').
+	cardsContainer addChild: (self 
 		newShowCardWithTitle: 'One rendering tree' 
 		slideshow: [ GtLiveShow createWithArrowsVisible: GtOneRenderingTree new ]
 		description: 'In Glamorous Toolkit, all rendering relies on a single tree at a time.').
