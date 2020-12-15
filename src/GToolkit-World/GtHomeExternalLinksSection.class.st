@@ -17,18 +17,6 @@ GtHomeExternalLinksSection >> create [
 	cardsContainer
 		addChild:
 			(self
-				newUrlCardWithTitle: 'feenkcom/gtoolkit on GitHub'
-				description: 'Browse the code. Open issues. Engage.'
-				url: 'https://github.com/feenkcom/gtoolkit').
-	cardsContainer
-		addChild:
-			(self
-				newUrlCardWithTitle: 'spectrum.chat/gtoolkit'
-				description: 'Join our online community.'
-				url: 'https://spectrum.chat/gtoolkit').
-	cardsContainer
-		addChild:
-			(self
 				newUrlCardWithTitle: 'feenk.com'
 				description: 'Our team.'
 				url: 'https://feenk.com').
