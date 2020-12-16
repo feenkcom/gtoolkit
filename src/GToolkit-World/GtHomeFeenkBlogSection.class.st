@@ -58,7 +58,12 @@ GtHomeFeenkBlogSection >> defaultClient [
 
 { #category : #blog }
 GtHomeFeenkBlogSection >> documentsInto: aCardsContainer [
-	self client async 
+	| aClient |
+	self flag: 'XdClient does not understand onSuccessDo: and onFailureDo:, we should implement it'.
+	aClient := BlUseAsyncFeatures 
+		ifEnabledDo: [ self client async ]
+		otherwise: [ self client async ].
+	aClient		 
 		onSuccessDo: [ :aResult | self onPosts: aResult in: aCardsContainer ];
 		onFailureDo: [ :anException | self onFailure: anException in: aCardsContainer ];
 		documents
@@ -181,6 +186,7 @@ GtHomeFeenkBlogSection >> newUpdateDocsContent [
 { #category : #hooks }
 GtHomeFeenkBlogSection >> onFailure: anException in: aCardsContainer [
 	| aCard |
+	self halt.
 	aCard := self newExceptionLabelFor: anException.
 	self addChildren: { aCard } in: aCardsContainer.
 ]
@@ -188,6 +194,7 @@ GtHomeFeenkBlogSection >> onFailure: anException in: aCardsContainer [
 { #category : #hooks }
 GtHomeFeenkBlogSection >> onPosts: aCollectionOfPosts in: aCardsContainer [
 	| newCards |
+	self halt.
 	newCards := OrderedCollection 
 		streamContents: [ :aStream |
 			self newPostCardsFor: aCollectionOfPosts into: aStream ]
