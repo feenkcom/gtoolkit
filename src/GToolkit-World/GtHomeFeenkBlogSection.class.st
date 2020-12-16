@@ -186,7 +186,6 @@ GtHomeFeenkBlogSection >> newUpdateDocsContent [
 { #category : #hooks }
 GtHomeFeenkBlogSection >> onFailure: anException in: aCardsContainer [
 	| aCard |
-	self halt.
 	aCard := self newExceptionLabelFor: anException.
 	self addChildren: { aCard } in: aCardsContainer.
 ]
@@ -194,7 +193,6 @@ GtHomeFeenkBlogSection >> onFailure: anException in: aCardsContainer [
 { #category : #hooks }
 GtHomeFeenkBlogSection >> onPosts: aCollectionOfPosts in: aCardsContainer [
 	| newCards |
-	self halt.
 	newCards := OrderedCollection 
 		streamContents: [ :aStream |
 			self newPostCardsFor: aCollectionOfPosts into: aStream ]
