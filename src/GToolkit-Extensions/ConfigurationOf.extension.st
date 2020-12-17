@@ -86,6 +86,7 @@ ConfigurationOf class >> gtPackagesFor: aView [
 { #category : #'*GToolkit-Extensions' }
 ConfigurationOf class >> gtPackagesMapFor: aView [
 	<gtView>
+	<gtClassView>
 	^ aView mondrian
 		title: 'Packages map';
 		priority: 11;

@@ -9,12 +9,13 @@ Class {
 
 { #category : #'api - accessing' }
 GtWorldChangeTabAppearanceChangeHandler >> eventsToHandle [
-	^ { GtWorldChangeTabAppearanceWish }
+	^ { GtPhlowChangeDescriptionWish }
 ]
 
 { #category : #'api - event managing' }
 GtWorldChangeTabAppearanceChangeHandler >> handleEvent: aGtWorldChangeTabAppearanceWish [
-	self tab ifNotNil: [ :aTab | aGtWorldChangeTabAppearanceWish applyOn: aTab ]
+	aGtWorldChangeTabAppearanceWish accept: self.
+	aGtWorldChangeTabAppearanceWish consumed: true.
 ]
 
 { #category : #accessing }
@@ -25,4 +26,26 @@ GtWorldChangeTabAppearanceChangeHandler >> tab [
 { #category : #accessing }
 GtWorldChangeTabAppearanceChangeHandler >> tab: aBrTab [
 	tabReference := aBrTab asWeakReference
+]
+
+{ #category : #visiting }
+GtWorldChangeTabAppearanceChangeHandler >> visitGtPhlowChangeDescriptionIconWish: aWish [
+	| aBrTab |
+	aBrTab := self tab ifNil: [ ^ self ].
+	aWish iconDo: [ :anIcon |
+		aBrTab enqueueTask: (BlTaskAction new action: [ 
+			aBrTab icon: anIcon ])].
+]
+
+{ #category : #visiting }
+GtWorldChangeTabAppearanceChangeHandler >> visitGtPhlowChangeDescriptionLabelWish: aWish [
+	| aBrTab |
+	aBrTab := self tab ifNil: [ ^ self ].
+	aWish labelDo: [ :aLabel |
+		aBrTab enqueueTask: (BlTaskAction new action: [ 
+			aBrTab label: aLabel.
+			"When a tab is opened in a new window, the space title is used,
+			we therefore update it too."
+			(aBrTab model isKindOf: BlSpace) ifTrue: [ 
+				aBrTab model title: aLabel asString ] ])].
 ]

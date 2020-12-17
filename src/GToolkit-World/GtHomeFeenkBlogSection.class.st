@@ -58,7 +58,12 @@ GtHomeFeenkBlogSection >> defaultClient [
 
 { #category : #blog }
 GtHomeFeenkBlogSection >> documentsInto: aCardsContainer [
-	self client async 
+	| aClient |
+	self flag: 'XdClient does not understand onSuccessDo: and onFailureDo:, we should implement it'.
+	aClient := BlUseAsyncFeatures 
+		ifEnabledDo: [ self client async ]
+		otherwise: [ self client async ].
+	aClient		 
 		onSuccessDo: [ :aResult | self onPosts: aResult in: aCardsContainer ];
 		onFailureDo: [ :anException | self onFailure: anException in: aCardsContainer ];
 		documents
