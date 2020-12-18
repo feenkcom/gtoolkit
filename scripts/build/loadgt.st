@@ -40,6 +40,7 @@ Context compile: 'copyTo: aContext
 	Metacello new 
 		baseline: 'GToolkit'; 
 		repository: 'github://feenkcom/gtoolkit/src';
+		silently;
 		onConflictUseIncoming;
 		load.
 	"GtRlRepositoriesCloner loadProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'."
