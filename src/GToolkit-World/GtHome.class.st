@@ -39,19 +39,17 @@ GtHome >> createSectionsHolder [
 
 { #category : #building }
 GtHome >> createVersionLabel [
-	^ BrLabel new 
-		text: 'Glamorous Toolkit ', GtImage instance version versionString; 
-		look: (BrGlamorousLabelLook new 
-			foreground: Color gray; 
-			fontSize: 10);
-		margin: (BlInsets right: 5);
+	^ BrButton new 
+		label: 'Glamorous Toolkit ', GtImage instance version versionString; 
+		beSmallSize;
+		look: (BrGlamorousButtonWithLabelLook new + (BrGlamorousButtonExteriorLook new borderPaint: Color transparent; backgroundPaint: Color transparent));
+		margin: (BlInsets all: 5);
 		constraintsDo: [ :c | c linear horizontal alignRight ];
-		padding: (BlInsets top: 0 left: 0 bottom: self spaceGap right: self spaceGap);
-		when: BlClickEvent do: [ :e | 
+		action: [ :button | 
 			GtInspector 
 				openOn: GtImage instance
 				title: 'Glamorous Toolkit'
-				from: e target ]
+				from: button ]
 ]
 
 { #category : #sections }
@@ -87,7 +85,7 @@ GtHome >> howToSection [
 GtHome >> initialize [
 	super initialize.
 	
-	self background: Color white.
+	self background: (Color r: 240 g: 240 b: 240 range: 255).
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
 		c vertical matchParent ].
@@ -110,23 +108,25 @@ GtHome >> initializePanes [
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ];
-		padding: (BlInsets top: self spaceGap left: 0 bottom: 0 right: self spaceGap).
+		padding: (BlInsets top: 0 left: 0 bottom: 0 right: self spaceGap).
 	sectionsPane := BlElement new 
 		layout: BlLinearLayout vertical;
 		constraintsDo: [ :c |
-			c linear weight: 0.7.
 			c horizontal matchParent.
 			c vertical fitContent ].
+
 	feedElement := GtHomeFeed new.
 	feedElement constraintsDo: [ :c |
-			c linear weight: 0.3 ].
+			c horizontal fitContent.
+			c vertical fitContent ].
 	
 	sectionsHolder := self createSectionsHolder.
+	sectionsPane addChild: notificationsElement.
 	sectionsPane addChild: sectionsHolder.
+	mainPane addChild: (self toolsSection create margin: (BlInsets top: 0 left: 0 bottom: self spaceGap * 2 right: self spaceGap * 2)).
 	mainPane addChild: sectionsPane.
 	mainPane addChild: feedElement.
 	
-	self addChild: notificationsElement.
 	self addChild: (BrScrollPane new
 		look: BrScrollPaneLook + BrGlamorousWithVerticalScrollbarLook;
 		content: mainPane).
@@ -161,7 +161,7 @@ GtHome >> spaceGap [
 
 { #category : #sections }
 GtHome >> toolsSection [
-	<gtHomeSection>
+"	<gtHomeSection>"
 	^ GtHomeToolsSection new
 		priority: 10
 ]
