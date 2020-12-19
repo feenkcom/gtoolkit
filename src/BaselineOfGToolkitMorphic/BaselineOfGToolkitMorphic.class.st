@@ -10,7 +10,7 @@ BaselineOfGToolkitMorphic >> baseline: spec [
 	spec for: #'common' do: [
 		"Morphic host to be able to render Bloc in morphic windows"
 		spec 
-			baseline: 'BlocMorphic' with: [
+			baseline: 'Bloc' with: [
 				spec repository: 'github://feenkcom/Bloc/src' ].
 
 		"Being able to render Morphic world in a glutin window"
@@ -20,5 +20,5 @@ BaselineOfGToolkitMorphic >> baseline: spec [
 		
 		"some glue code that connects the pieces"
 		spec
-			package: #'GToolkit-Morphic' with: [ spec requires: #(BlocMorphic GlutinMorphic) ] ]
+			package: #'GToolkit-Morphic' with: [ spec requires: #(Bloc GlutinMorphic) ] ]
 ]
