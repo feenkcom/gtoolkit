@@ -38,12 +38,12 @@ Context compile: 'copyTo: aContext
 		repository: 'github://feenkcom/gtoolkit-utility/src';
 		load.
 	Metacello new 
-		baseline: 'GToolkit'; 
-		repository: 'github://feenkcom/gtoolkit/src';
+		baseline: 'GToolkitReleaser'; 
+		repository: 'github://feenkcom/gtoolkit-releaser/src';
 		silently;
 		onConflictUseIncoming;
 		load.
-	"GtRlRepositoriesCloner loadProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'."
+	GtRlRepositoriesCloner loadProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'.
 ] ensure: [ EpMonitor current enable ].
 
 #GtImageSetup asClass performSetupForRelease.
