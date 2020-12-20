@@ -251,7 +251,7 @@ pipeline {
                         stage('Windows Examples') {
                              steps {
                                 retry(2) {
-                                    powershell './scripts/build/parallelsmoke/win_4_examples.ps1'
+                                    powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
                                     junit '*.xml'
                                 }
                              }
