@@ -7,9 +7,22 @@ Class {
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> create [
 	| sectionContainer cardsContainer |
-	sectionContainer := self newSectionContainer.
-	sectionContainer addChild: (self newSectionTitle: 'Tools').
-	cardsContainer := self newCardsContainer.
+	sectionContainer := BlElement new
+		layout: BlLinearLayout vertical;
+		constraintsDo: [ :c |
+			c horizontal fitContent.
+			c vertical fitContent ];
+		 background: Color white; 
+		look: (BrShadowLook new width: 8; offset: 0@4; 
+		color: (Color r: 200 g: 200 b: 200 range: 255));
+		padding: (BlInsets top: 10 left: 0 bottom: 10 right: 0).
+	"sectionContainer addChild: (self newSectionTitle: 'Tools')."
+	cardsContainer := BlElement new
+		layout: BlLinearLayout vertical;
+		constraintsDo: [ :c |
+			c horizontal fitContent.
+			c vertical fitContent ];
+		padding: (BlInsets all: 0).
 	cardsContainer addChild: self newPlaygroundButtonStencil create.
 	cardsContainer addChild: self newCoderButtonStencil create.
 	cardsContainer addChild: self newGitButtonStencil create.
@@ -38,11 +51,11 @@ GtHomeToolsSection >> newCoderButtonStencil [
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> newExamplesButtonStencil [
 	^ GtToolButtonStencil new 
-		title: 'Examples Explorer';
+		title: 'Exemplifier';
 		icon: BrGlamorousVectorIcons largeEg;
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Examples Explorer'
+				showSpaceWithTitle: 'Exemplifier'
 				with:
 					(GtInspector
 						createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject) maximized

@@ -44,7 +44,7 @@ GtHomeFeed >> createSectionWrapperFor: aSectionStencil [
 			withGlamorousPreview;
 			constraintsDo: [ :c |
 				c vertical exact: 100.
-				c horizontal matchParent ];
+				c horizontal fitContent ];
 			postAction: [ :theLazyElement | theLazyElement constraintsDo: [ :c | 
 				c vertical fitContent ] ];
 			elementBuilder: [ aSectionStencil asElement ]
@@ -91,7 +91,7 @@ GtHomeFeed >> hideFeed [
 { #category : #initialization }
 GtHomeFeed >> initialize [
 	super initialize.
-	self layout: BlLinearLayout vertical.
+	self layout: BlFlowLayout new.
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
 		c vertical fitContent ]
@@ -115,10 +115,10 @@ GtHomeFeed >> showPermissionDialog [
 	self removeChildren.
 	self visibility: BlVisibility visible.
 	
-	dialogContainer := BrVerticalPane new
+	dialogContainer := BlElement new
 		clipChildren: false;
-		hMatchParent;
-		vFitContent;
+		constraintsDo: [:c | c vertical fitContent. c horizontal exact: 200 ];
+		layout: BlLinearLayout vertical;
 		padding: (BlInsets all: 10);
 		margin: (BlInsets top: 10 + 5 left: 10 bottom: 10 right: 20);
 		background: BrGlamorousColors newsBackgroundColor;
