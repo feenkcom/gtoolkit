@@ -42,9 +42,9 @@ GtWorldByScripterExamples >> selectPackageInCoder [
 	| aScripter |
 	aScripter := self clickOnWorldHomeCoderIcon.
 
-	aScripter substep: 'Click on package' do: [ :aStep |
+	aScripter substep: 'Select package' do: [ :aStep |
 		aStep click
-			label: 'Click on Coder button';
+			label: 'Click on a package item';
 			id: GtWorldTabGroupId;
 			onBreadthFirstChildOfClass: GtPackagesCoderElement;
 			onBreadthFirstChildOfClass: BrSimpleList;
@@ -52,15 +52,15 @@ GtWorldByScripterExamples >> selectPackageInCoder [
 			onChildAt: 1.
 			
 		aStep do
-			label: 'Store package name';
-			block: [ :anElement | aScripter model: anElement packageCoder package name asString ];
+			label: 'Store expected package name';
+			block: [ :anElement | aScripter model: anElement shortTitle asString ];
 			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPackageCoderElement.
+			onBreadthFirstChildOfClass: GtCoder.
 						
 		aStep check
-			label: 'Check World Tab label';
+			label: 'Check World tab label';
 			value: [ :anElement | anElement tabs tabs second widget label asString ]
-			equals: [ 'Coder: ', aScripter model ]
+			equals: [ aScripter model ]
 	].
 
 	^ aScripter syncContinue
