@@ -147,7 +147,9 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: 
 	container := BrButton new
 		size: aPoint;
 		layout: BlLinearLayout vertical;
-		look: ((BrGlamorousButtonExteriorLook new borderPaint: (Color transparent)) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new beLarge));
+		look: ((BrGlamorousButtonExteriorLook new 
+			backgroundPaint: Color white;
+			borderPaint: (Color transparent)) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new beLarge));
 		label: aDescription;
 		padding: (BlInsets all: 1);
 		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: 2 * self spaceGap right: 2 * self spaceGap);
@@ -167,7 +169,10 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription width:
 			c vertical fitContent.
 			c horizontal exact: aWidth ]; 
 		layout: BlLinearLayout vertical;
-		look: ((BrGlamorousButtonExteriorLook new borderPaint: Color transparent) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new beLarge));
+		background: Color red;
+		look: ((BrGlamorousButtonExteriorLook new
+			backgroundPaint: Color white; 
+			borderPaint: Color transparent) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new beLarge));
 		label: aDescription;
 		padding: (BlInsets all: 1);
 		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap * 2 right: 2 * self spaceGap);

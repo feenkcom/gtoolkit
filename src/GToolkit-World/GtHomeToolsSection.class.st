@@ -12,7 +12,7 @@ GtHomeToolsSection >> create [
 		constraintsDo: [ :c |
 			c horizontal fitContent.
 			c vertical fitContent ];
-		 background: Color white; 
+		background: Color white; 
 		look: (BrShadowLook new beLarge);
 		padding: (BlInsets top: 10 left: 0 bottom: 10 right: 0).
 	cardsContainer := BlElement new
