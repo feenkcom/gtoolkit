@@ -60,7 +60,7 @@ GtWorldByScripterExamples >> selectPackageInCoder [
 		aStep check
 			label: 'Check World Tab label';
 			value: [ :anElement | anElement tabs tabs second widget label asString ]
-			equals: [ aScripter model ]
+			equals: [ 'Coder: ', aScripter model ]
 	].
 
 	^ aScripter syncContinue

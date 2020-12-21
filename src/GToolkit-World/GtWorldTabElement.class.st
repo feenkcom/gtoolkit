@@ -179,7 +179,7 @@ GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 
 			aTabModel widgetDo: [ :aWidget |
 				aWidget enqueueTask: (GtWorldReEnqueueTasks new previousSpace: anActualSpace).
-				anActualSpace addEventHandler: (GtWorldChangeTabAppearanceChangeHandler new tab: aWidget) ].
+				anActualSpace root addEventHandler: (GtWorldChangeTabAppearanceChangeHandler new tab: aWidget) ].
 			anActualSpace root
 				constraintsDo: [ :c | 
 					c horizontal matchParent.
