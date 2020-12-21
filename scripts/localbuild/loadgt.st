@@ -26,10 +26,10 @@ EpMonitor disableDuring: [
 		githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';	
 		baseline: 'Iceberg';	
 		load.
-	"Metacello new
+	Metacello new
 		baseline: 'GToolkitBaselineOfUtility';
 		repository: 'github://feenkcom/gtoolkit-utility/src';
-		load."
+		load.
     "Metacello new 
 		baseline: 'GToolkitReleaser'; 
 		githubUser: 'feenkcom' project: 'gtoolkit-releaser' commitish: 'master' path: ''; 
