@@ -21,6 +21,7 @@ GtWorldUtility class >> showSpaceWithTitle: aString with: aStencil from: another
 	aSpace := BlSpace new.
 	aSpace title: aString.
 	aSpace extent: 1200@600.
+	aSpace root background: Color transparent.
 	aSpace addChild: aStencil asElement.
 	aSpace withHalos.
 	anotherElement showSpace: aSpace.

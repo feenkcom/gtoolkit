@@ -123,7 +123,7 @@ GtHome >> initializePanes [
 	sectionsHolder := self createSectionsHolder.
 	sectionsPane addChild: notificationsElement.
 	sectionsPane addChild: sectionsHolder.
-	mainPane addChild: (self toolsSection create margin: (BlInsets top: 0 left: 0 bottom: self spaceGap * 2 right: self spaceGap * 2)).
+	mainPane addChild: (self toolsSection create margin: (BlInsets top: self spaceGap left: self spaceGap bottom: self spaceGap * 2 right: self spaceGap * 2)).
 	mainPane addChild: sectionsPane.
 	mainPane addChild: feedElement.
 	

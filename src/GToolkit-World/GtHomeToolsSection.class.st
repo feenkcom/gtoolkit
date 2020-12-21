@@ -13,10 +13,8 @@ GtHomeToolsSection >> create [
 			c horizontal fitContent.
 			c vertical fitContent ];
 		 background: Color white; 
-		look: (BrShadowLook new width: 8; offset: 0@4; 
-		color: (Color r: 200 g: 200 b: 200 range: 255));
+		look: (BrShadowLook new beLarge);
 		padding: (BlInsets top: 10 left: 0 bottom: 10 right: 0).
-	"sectionContainer addChild: (self newSectionTitle: 'Tools')."
 	cardsContainer := BlElement new
 		layout: BlLinearLayout vertical;
 		constraintsDo: [ :c |
@@ -43,7 +41,7 @@ GtHomeToolsSection >> newCoderButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Coder'
-				with: GtCoderStencil new create
+				with: GtCoderStencil new
 				from: card ];
 		description: 'Browse and manipulate code.'
 ]
@@ -108,7 +106,7 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Playground'
-				with: GtPlaygroundStencil new create
+				with: GtPlaygroundStencil new
 				from: card ];
 		description: 'Play with code. Live.'
 ]
@@ -130,7 +128,7 @@ GtHomeToolsSection >> newTranscriptButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Transcript'
-				with: GtTranscriptStencil new create
+				with: GtTranscriptStencil new
 				from: card ];
 		description: 'Transcript is the place to see logs.'
 ]

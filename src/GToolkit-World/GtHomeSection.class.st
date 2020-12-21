@@ -82,7 +82,7 @@ GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anE
 { #category : #'instance creation' }
 GtHomeSection >> newCardWithoutIcon [
 	^ BrCard new
-		look: (BrShadowLook new width: 6; offset: 0@4; color: (Color r: 200 g: 200 b: 200 range: 255))+
+		look: (BrShadowLook new beLarge)+
 			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e padding: (BlInsets all: 10)]) +
 			(BrGlamorousButtonExteriorLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
 		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
@@ -147,7 +147,7 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: 
 	container := BrButton new
 		size: aPoint;
 		layout: BlLinearLayout vertical;
-		look: ((BrGlamorousButtonExteriorLook new borderPaint: (Color transparent)) + BrGlamorousButtonWithLabelTooltipLook new +(BrShadowLook new width: 6; offset: 0@3; color: (Color r: 200 g: 200 b: 200 range: 255)));
+		look: ((BrGlamorousButtonExteriorLook new borderPaint: (Color transparent)) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new beLarge));
 		label: aDescription;
 		padding: (BlInsets all: 1);
 		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: 2 * self spaceGap right: 2 * self spaceGap);
@@ -167,7 +167,7 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription width:
 			c vertical fitContent.
 			c horizontal exact: aWidth ]; 
 		layout: BlLinearLayout vertical;
-		look: ((BrGlamorousButtonExteriorLook new borderPaint: Color transparent) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new width: 6; offset: 0@3; color: (Color r: 200 g: 200 b: 200 range: 255)));
+		look: ((BrGlamorousButtonExteriorLook new borderPaint: Color transparent) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new beLarge));
 		label: aDescription;
 		padding: (BlInsets all: 1);
 		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap * 2 right: 2 * self spaceGap);
@@ -356,7 +356,7 @@ GtHomeSection >> sectionPaddingLeftInsets [
 GtHomeSection >> showSpaceWithTitle: aString with: aStencil from: anotherElement [
 	^ GtWorldUtility 
 		showSpaceWithTitle: aString 
-		with: aStencil 
+		with: aStencil
 		from: anotherElement
 ]
 
