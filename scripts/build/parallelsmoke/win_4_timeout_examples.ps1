@@ -9,7 +9,7 @@ echo $image
 Rename-Item $gtfolder .\GlamorousToolkitWin
 
 
-$maximumRuntimeSeconds = 1200
+$maximumRuntimeSeconds = 1800
 
 $process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchExamples --junit-xml-output' -PassThru
 
@@ -22,6 +22,7 @@ catch
 {
     Write-Warning -Message 'Process exceeded timeout, will be killed now.'
     $process | Stop-Process -Force
+    exit 1
 }
 
 
@@ -38,6 +39,7 @@ catch
 {
     Write-Warning -Message 'Process exceeded timeout, will be killed now.'
     $process | Stop-Process -Force
+    exit 1
 }
 
 

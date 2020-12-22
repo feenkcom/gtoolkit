@@ -8,11 +8,11 @@ Class {
 }
 
 { #category : #dependencies }
-GtDependencyAnalyzerPackageBaselineRequirement >> explicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
+GtDependencyAnalyzerPackageBaselineRequirement >> directlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
 	<return: #Array of: #GtDependencyAnalyzerForPackageFromBaseline>
 	| explicitlyRequiredPackages |
 
-	explicitlyRequiredPackages := requirementBaselineAnalyzer explicitlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext.
+	explicitlyRequiredPackages := requirementBaselineAnalyzer directlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext.
 	
 	self
 		assert: [ (explicitlyRequiredPackages includes: packageFromBaseline) not ]
@@ -22,11 +22,11 @@ GtDependencyAnalyzerPackageBaselineRequirement >> explicitlyRequiredPackagesWith
 ]
 
 { #category : #dependencies }
-GtDependencyAnalyzerPackageBaselineRequirement >> implicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
+GtDependencyAnalyzerPackageBaselineRequirement >> indirectlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
 	<return: #Array of: #GtDependencyAnalyzerForPackageFromBaseline>
 	| implicitlyRequiredPackages |
 	
-	implicitlyRequiredPackages := requirementBaselineAnalyzer implicitlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext.
+	implicitlyRequiredPackages := requirementBaselineAnalyzer indirectlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext.
 	
 	self
 		assert: [ (implicitlyRequiredPackages includes: packageFromBaseline) not ]
@@ -38,6 +38,13 @@ GtDependencyAnalyzerPackageBaselineRequirement >> implicitlyRequiredPackagesWith
 { #category : #printing }
 GtDependencyAnalyzerPackageBaselineRequirement >> printOn: aStream [
 	aStream print: self requirementBaselineAnalyzer
+]
+
+{ #category : #'as yet unclassified' }
+GtDependencyAnalyzerPackageBaselineRequirement >> requiredBaseline [
+	<return: #GtDependencyAnalyzerForBaseline>
+	
+	^ self requirementBaselineAnalyzer
 ]
 
 { #category : #accessing }
