@@ -30,6 +30,31 @@ GtWorldByScripterExamples >> browsePackageInSecondPane [
 ]
 
 { #category : #'examples - coder' }
+GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
+	<gtExample>
+	| aScripter |
+	aScripter := self selectClassInSecondPane.
+
+	aScripter substep: 'Select the first pane with package' do: [ :aStep |
+		aStep click
+			label: 'Click on a package editable name';
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
+			id: GtPackageCoderPackageNameId.
+		
+		aStep check
+			label: 'Check World tab label with package name';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: [ aScripter userData at: #tabLabel ].
+
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickOnPackageEditableName [
 	<gtExample>
 	| aScripter |
