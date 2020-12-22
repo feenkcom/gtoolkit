@@ -45,3 +45,10 @@ GtDependencyAnalyzerPackageRequirement >> packageFromBaseline [
 GtDependencyAnalyzerPackageRequirement >> packageFromBaseline: aGtDependencyAnalyzerForPackageFromBaseline [
 	packageFromBaseline := aGtDependencyAnalyzerForPackageFromBaseline
 ]
+
+{ #category : #'as yet unclassified' }
+GtDependencyAnalyzerPackageRequirement >> requiredBaseline [
+	<return: #GtDependencyAnalyzerForBaseline>
+
+	^ self subclassResponsibility
+]

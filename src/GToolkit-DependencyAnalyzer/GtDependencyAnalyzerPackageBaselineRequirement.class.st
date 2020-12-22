@@ -40,6 +40,13 @@ GtDependencyAnalyzerPackageBaselineRequirement >> printOn: aStream [
 	aStream print: self requirementBaselineAnalyzer
 ]
 
+{ #category : #'as yet unclassified' }
+GtDependencyAnalyzerPackageBaselineRequirement >> requiredBaseline [
+	<return: #GtDependencyAnalyzerForBaseline>
+	
+	^ self requirementBaselineAnalyzer
+]
+
 { #category : #accessing }
 GtDependencyAnalyzerPackageBaselineRequirement >> requirementBaselineAnalyzer [
 	^ requirementBaselineAnalyzer

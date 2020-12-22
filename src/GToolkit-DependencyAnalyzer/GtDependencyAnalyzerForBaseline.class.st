@@ -110,22 +110,37 @@ GtDependencyAnalyzerForBaseline >> hash [
 { #category : #dependencies }
 GtDependencyAnalyzerForBaseline >> indirectlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext [
 	<return: #Array of: #GtDependencyAnalyzerForPackageFromBaseline>
-	| theDefinedPackages |
+	| theDirectlyDefinedPackages theIndirectlyDefinedPackages |
 	
 	cachedIndirectlyDefinedPackages
 		ifNotNil: [ ^ self ].
 	
-	theDefinedPackages := (self directlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext) asSet.
+	theDirectlyDefinedPackages := (self directlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext) asSet.
+	theIndirectlyDefinedPackages := Set new.
+	theIndirectlyDefinedPackages addAll: theDirectlyDefinedPackages.
 
 	aGtDependencyAnalyzerContext
 		visitBaseline: self
 		during: [
-			theDefinedPackages copy do: [ :eachPackage |
-				theDefinedPackages addAll: (eachPackage indirectlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext) ]. ].
+			theDirectlyDefinedPackages do: [ :eachPackage |
+				theIndirectlyDefinedPackages addAll: (eachPackage indirectlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext) ]. ].
+		
+	aGtDependencyAnalyzerContext
+		visitBaseline: self
+		during: [
+			self baseline project version projects
+				reject: [ :eachProjectSpec | theDirectlyDefinedPackages anySatisfy: [ :eachPackage | eachPackage packageRequirements anySatisfy: [ :eachPackageRequirement | eachPackageRequirement requiredBaseline name = eachProjectSpec className ] ] ]
+				thenDo: [ :eachProjectSpec |
+					(self class environment includesKey: eachProjectSpec className asSymbol)
+						ifTrue: [
+							theIndirectlyDefinedPackages addAll: (GtDependencyAnalyzerForBaselineOfProject new
+								baseline: (self class environment at: eachProjectSpec className asSymbol);
+								baselineOfProject: eachProjectSpec;
+								indirectlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext) ] ] ].
 
-	theDefinedPackages do: [ :eachPackageFromBaseline | eachPackageFromBaseline preloadedBaselines: self preloadedBaselines ].
+	theIndirectlyDefinedPackages do: [ :eachPackageFromBaseline | eachPackageFromBaseline preloadedBaselines: self preloadedBaselines ].
 
-	^ cachedIndirectlyDefinedPackages := theDefinedPackages asArray
+	^ cachedIndirectlyDefinedPackages := theIndirectlyDefinedPackages asArray
 ]
 
 { #category : #initialization }
