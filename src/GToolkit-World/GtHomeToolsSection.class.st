@@ -22,7 +22,7 @@ GtHomeToolsSection >> create [
 			c vertical fitContent ];
 		padding: (BlInsets all: 0).
 	cardsContainer addChild: self newPlaygroundButtonStencil create.
-	cardsContainer addChild: self newCoderButtonStencil create.
+	cardsContainer addChild: self newCoderButtonStencil create as: GtHomeCoderButtonId.
 	cardsContainer addChild: self newGitButtonStencil create.
 	cardsContainer addChild: self newMonitorButtonStencil create.
 	cardsContainer addChild: self newExamplesButtonStencil create.

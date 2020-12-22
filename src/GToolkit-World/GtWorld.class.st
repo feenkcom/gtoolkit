@@ -106,7 +106,7 @@ GtWorld class >> openWithSpaces: aCollectionOfSpaces from: aSpace [
 { #category : #'api - notification' }
 GtWorld class >> showNotification: aNotification [
 	BlSpace
-		spaceWithId: GtWorld defaultId 
+		spaceWithId: self defaultId 
 		do: [ :aSpace | 
 			aSpace showNotification: aNotification ].
 ]
@@ -162,10 +162,4 @@ GtWorld >> removeNotification: aNotification [
 { #category : #accessing }
 GtWorld >> removeShutdownListener [
 	self removeEventHandlersSuchThat: [ :eachHandler | eachHandler isKindOf: BlSpaceShutdownOnCloseListener ]
-]
-
-{ #category : #'api - notification' }
-GtWorld >> showNotification: aNotification [
-
-	self root showNotification: aNotification
 ]

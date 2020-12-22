@@ -51,6 +51,9 @@ GtDependencyAnalyzerForPackageFromBaseline >> computePackageRequirements [
 
 	aVersion := self baseline project version.
 	thePackageSpec := aVersion packageNamed: self package name.
+	thePackageSpec
+		ifNil: [ ^ #() ].
+
 	^ thePackageSpec requires collect: [ :eachRequire |
 		aVersion packages
 			detect: [ :eachPackage | eachPackage name = eachRequire ]
@@ -72,17 +75,21 @@ GtDependencyAnalyzerForPackageFromBaseline >> computePackageRequirements [
 ]
 
 { #category : #dependencies }
-GtDependencyAnalyzerForPackageFromBaseline >> explicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
+GtDependencyAnalyzerForPackageFromBaseline >> directlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
 	<return: #Array of: #GtDependencyAnalyzerForPackageFromBaseline>
 	
 	cachedExplicitlyRequiredPackages
 		ifNotNil: [ ^ cachedExplicitlyRequiredPackages ].
 	
-	^ cachedExplicitlyRequiredPackages := aGtDependencyAnalyzerContext
+	cachedExplicitlyRequiredPackages := aGtDependencyAnalyzerContext
 		visitPackage: packageAnalyzer
 		during: [
 			(self packageRequirements
-				flatCollect: [ :eachRequirement | eachRequirement explicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext ] as: Set) asArray ]
+				flatCollect: [ :eachRequirement | eachRequirement directlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext ] as: Set) asArray ].
+
+	cachedExplicitlyRequiredPackages do: [ :eachPackage | eachPackage preloadedBaselines: self preloadedBaselines ].
+
+	^ cachedExplicitlyRequiredPackages 
 ]
 
 { #category : #accessing }
@@ -92,13 +99,24 @@ GtDependencyAnalyzerForPackageFromBaseline >> forBaseline: aGtDependencyAnalyzer
 ]
 
 { #category : #'gt-extensions' }
+GtDependencyAnalyzerForPackageFromBaseline >> gtBaselineFor: aView [
+	<gtView>
+
+	^ aView forward
+		title: 'Baseline';
+		priority: 15;
+		object: [ self baselineAnalyzer ];
+		view: #gtBaselineFor:
+]
+
+{ #category : #'gt-extensions' }
 GtDependencyAnalyzerForPackageFromBaseline >> gtExplicitlyRequiredPackagesFor: aView [
 	<gtView>
 	
 	^ aView list
 		title: 'Explicitly required packages';
 		priority: 11;
-		items: [ (self explicitlyRequiredPackagesWithContext: GtDependencyAnalyzerContext new)
+		items: [ (self directlyRequiredPackagesWithContext: GtDependencyAnalyzerContext new)
 			sorted: [ :a :b | a name < b name ] ]
 ]
 
@@ -109,7 +127,7 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtImplicitlyRequiredPackagesFor: a
 	^ aView list
 		title: 'Implicitly required packages';
 		priority: 12;
-		items: [ (self implicitlyRequiredPackagesWithContext: GtDependencyAnalyzerContext new)
+		items: [ (self indirectlyRequiredPackagesWithContext: GtDependencyAnalyzerContext new)
 			sorted: [ :a :b | a name < b name ] ]
 ]
 
@@ -120,28 +138,28 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtPackageDependenciesFor: aView [
 	
 	aContext := GtDependencyAnalyzerContext new.
 	
-	allExplicitlyRequiredPackages := ((self explicitlyRequiredPackagesWithContext: aContext)
-		collect: [ :eachPackage | eachPackage name -> eachPackage ]) as: Dictionary.
+	allExplicitlyRequiredPackages := GtDependencyAnalyzerPackageFromBaselineNameMap
+		withPackages: (self directlyRequiredPackagesWithContext: aContext).
 
-	allImplicitlyRequiredPackages := ((self implicitlyRequiredPackagesWithContext: aContext)
-		collect: [ :eachPackage | eachPackage name -> eachPackage ]) as: Dictionary.
-		
-	allPreloadedPackages := ((self preloadedPackagesWithContext: aContext)
-		collect: [ :eachPackage | eachPackage name -> eachPackage ]) as: Dictionary.
-	
+	allImplicitlyRequiredPackages := GtDependencyAnalyzerPackageFromBaselineNameMap
+		withPackages: (self indirectlyRequiredPackagesWithContext: aContext).
+
+	allPreloadedPackages := GtDependencyAnalyzerPackageFromBaselineNameMap
+		withPackages: (self preloadedPackagesWithContext: aContext).
+
 	^ aView columnedList
 		title: 'Package dependencies';
 		priority: 10;
 		items: [ (self packageDependencies sorted: [ :a :b | a package name < b package name ])
 			collect: [ :each |
-				(allExplicitlyRequiredPackages includesKey: each package name)
-					ifTrue: [ { each . allExplicitlyRequiredPackages at: each package name } -> { Color green muchDarker . 'explictly defined' } ]
+				(allExplicitlyRequiredPackages hasPackageNamed: each package name)
+					ifTrue: [ { each . allExplicitlyRequiredPackages sortedPackagesNamed: each package name } -> { Color green muchDarker . 'directly defined' } ]
 					ifFalse: [
-						(allImplicitlyRequiredPackages includesKey: each package name)
-							ifTrue: [ { each . allImplicitlyRequiredPackages at: each package name }-> { Color yellow muchDarker . 'implicitly defined' } ]
-							ifFalse: [ (allPreloadedPackages includesKey: each package name)
-								ifTrue: [ { each . allPreloadedPackages at: each package name }-> { Color gray . 'preloaded' } ]
-								ifFalse: [ { each . nil } -> { Color red darker. 'undefined' } ] ] ] ]	 ];
+						(allImplicitlyRequiredPackages hasPackageNamed: each package name)
+							ifTrue: [ { each . allImplicitlyRequiredPackages sortedPackagesNamed: each package name }-> { Color yellow muchDarker . 'indirectly defined' } ]
+							ifFalse: [ (allPreloadedPackages hasPackageNamed: each package name)
+								ifTrue: [ { each . allPreloadedPackages sortedPackagesNamed: each package name } -> { Color gray . 'preloaded' } ]
+								ifFalse: [ { each . #() } -> { Color red darker. 'undefined' } ] ] ] ]	 ];
 		column: 'Package' text: [ :each |
 			each key first package name asRopedText foreground: each value first ];
 		column: 'Dependency' do: [ :column |
@@ -157,15 +175,23 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtPackageDependenciesFor: aView [
 					
 					eachText := each value second asRopedText glamorousRegularFont.
 					each key second
-						ifNotNil: [ eachText, ' in ' asRopedText glamorousRegularFont, each key second baseline printString asRopedText glamorousCodeFont glamorousRoundedBackground ].
+						ifNotEmpty: [ eachText append:' in ' asRopedText glamorousRegularFont ].
+					each key second
+						do: [ :eachPackageFromBaseline |
+							eachText append: eachPackageFromBaseline baseline printString asRopedText glamorousCodeFont glamorousCodeSmallSize glamorousRoundedBackground.
+							
+							((allExplicitlyRequiredPackages hasPackageNamed: eachPackageFromBaseline name)
+								and: [ eachPackageFromBaseline baseline ~= self baseline ])
+									ifTrue: [ eachText, ' from ' asRopedText glamorousRegularFont, self baseline printString asRopedText glamorousCodeSmallSize glamorousCodeFont glamorousRoundedBackground ] ]
+						separatedBy: [ eachText append: ' and ' asRopedText glamorousRegularFont ].
 					
-					allExplicitlyRequiredPackages
-						at: each key first package name	
-						ifPresent: [ :package |
-							package baseline = self baseline
-								ifFalse: [ eachText, ' from ' asRopedText glamorousRegularFont, self baseline printString asRopedText glamorousCodeFont glamorousRoundedBackground ] ].
-					
-					element text: eachText ] ]
+					element text: eachText ] ];
+		send: [ :each |
+			each key second
+				ifEmpty: [ each key first ]
+				ifNotEmpty: [ each key second size = 1
+					ifTrue: [ each key second anyOne ]
+					ifFalse: [ each key second ] ]  ]
 ]
 
 { #category : #'gt-extensions' }
@@ -186,17 +212,21 @@ GtDependencyAnalyzerForPackageFromBaseline >> hash [
 ]
 
 { #category : #dependencies }
-GtDependencyAnalyzerForPackageFromBaseline >> implicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
+GtDependencyAnalyzerForPackageFromBaseline >> indirectlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
 	<return: #Array of: #GtDependencyAnalyzerForPackageFromBaseline>
 	
 	cachedImplicitlyRequiredPackages
 		ifNotNil: [ ^ cachedImplicitlyRequiredPackages ].
 
-	^ cachedImplicitlyRequiredPackages := aGtDependencyAnalyzerContext
+	cachedImplicitlyRequiredPackages := aGtDependencyAnalyzerContext
 		visitPackage: packageAnalyzer
 		during: [
 			(self packageRequirements
-				flatCollect: [ :eachRequirement | eachRequirement implicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext ] as: Set) asArray ]
+				flatCollect: [ :eachRequirement | eachRequirement indirectlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext ] as: Set) asArray ].
+	
+	cachedImplicitlyRequiredPackages do: [ :eachPackage | eachPackage preloadedBaselines: self preloadedBaselines ].
+	
+	^ cachedImplicitlyRequiredPackages
 ]
 
 { #category : #initialization }
@@ -204,6 +234,15 @@ GtDependencyAnalyzerForPackageFromBaseline >> initialize [
 	super initialize.
 	
 	preloadedBaselines := #()
+]
+
+{ #category : #dependencies }
+GtDependencyAnalyzerForPackageFromBaseline >> issuesWithContext: aContext [
+	^ ((self undefinedDependenciesWithContext: aContext) sorted: [ :a :b | a name < b name ])
+		collect: [ :eachDependency | 
+			GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue new
+				package: self;
+				undefinedDependency: eachDependency ]
 ]
 
 { #category : #accessing }
@@ -227,6 +266,8 @@ GtDependencyAnalyzerForPackageFromBaseline >> packageAnalyzer [
 
 { #category : #dependencies }
 GtDependencyAnalyzerForPackageFromBaseline >> packageDependencies [
+	"Code dependencies such as class references, trait usages"
+
 	^ packageAnalyzer packageDependencies
 ]
 
@@ -253,7 +294,9 @@ GtDependencyAnalyzerForPackageFromBaseline >> preloadedPackagesWithContext: aGtD
 	thePreloadedPackages := Set new.
 	self preloadedBaselines do: [ :eachClass |
 		thePreloadedPackages addAll: ((GtDependencyAnalyzerForBaseline new baseline: eachClass)
-			implicitlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext) ].
+			indirectlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext) ].
+
+	thePreloadedPackages do: [ :eachPackage | eachPackage preloadedBaselines: self preloadedBaselines ].
 
 	^ thePreloadedPackages asArray
 ]
@@ -264,4 +307,18 @@ GtDependencyAnalyzerForPackageFromBaseline >> printOn: aStream [
 		print: self package name;
 		nextPutAll: ' from ';
 		print: self baseline
+]
+
+{ #category : #dependencies }
+GtDependencyAnalyzerForPackageFromBaseline >> undefinedDependenciesWithContext: aContext [
+	| allRequiredPackages |
+		
+	allRequiredPackages := GtDependencyAnalyzerPackageFromBaselineNameMap new
+		addPackages: (self directlyRequiredPackagesWithContext: aContext);
+		addPackages: (self indirectlyRequiredPackagesWithContext: aContext);
+		addPackages: (self preloadedPackagesWithContext: aContext);
+		yourself.
+		
+	^ self packageDependencies reject: [ :eachDependency |
+		allRequiredPackages hasPackageNamed: eachDependency name ]
 ]

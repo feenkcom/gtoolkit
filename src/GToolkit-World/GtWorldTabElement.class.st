@@ -15,7 +15,7 @@ GtWorldTabElement class >> spaceCloseButtonName [
 
 { #category : #accessing }
 GtWorldTabElement class >> tabNameForSpaceId: aNumber [
-	^ #'gt-world--space-tab'
+	^ GtWorldSpaceTabId spaceId: aNumber
 ]
 
 { #category : #defaults }
@@ -63,7 +63,7 @@ GtWorldTabElement >> initialize [
 
 { #category : #initialization }
 GtWorldTabElement >> initializeElement [
-	self addChild: tabs as: #tabs.
+	self addChild: tabs as: GtWorldTabGroupId.
 	self
 		constraintsDo: [ :c | 
 			c horizontal matchParent.
@@ -179,7 +179,7 @@ GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 
 			aTabModel widgetDo: [ :aWidget |
 				aWidget enqueueTask: (GtWorldReEnqueueTasks new previousSpace: anActualSpace).
-				anActualSpace addEventHandler: (GtWorldChangeTabAppearanceChangeHandler new tab: aWidget) ].
+				anActualSpace root addEventHandler: (GtWorldChangeTabAppearanceChangeHandler new tab: aWidget) ].
 			anActualSpace root
 				constraintsDo: [ :c | 
 					c horizontal matchParent.
