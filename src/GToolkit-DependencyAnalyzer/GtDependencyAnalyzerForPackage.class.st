@@ -87,7 +87,8 @@ GtDependencyAnalyzerForPackage >> gtIssuesFor: aView [
 	^ aView list
 		title: 'Issues';
 		priority: 5;
-		items: [ self issuesWithContext: GtDependencyAnalyzerContext new ]
+		items: [ self issuesWithContext: GtDependencyAnalyzerContext new ];
+		itemText: [ :each | each gtDisplayString ]
 ]
 
 { #category : #'gt-extensions' }

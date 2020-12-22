@@ -238,13 +238,11 @@ GtDependencyAnalyzerForPackageFromBaseline >> initialize [
 
 { #category : #dependencies }
 GtDependencyAnalyzerForPackageFromBaseline >> issuesWithContext: aContext [
-	(self undefinedDependenciesWithContext: aContext)
-		ifNotEmpty: [ :theUndefinedDependencies |
-			^ {
-				GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue new
-					package: self;
-					undefinedDependencies: theUndefinedDependencies } ].
-	^ {  }
+	^ ((self undefinedDependenciesWithContext: aContext) sorted: [ :a :b | a name < b name ])
+		collect: [ :eachDependency | 
+			GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue new
+				package: self;
+				undefinedDependency: eachDependency ]
 ]
 
 { #category : #accessing }

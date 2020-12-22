@@ -20,6 +20,19 @@ GtDependencyAnalyzerForPackages class >> prefixed: aPrefixStringOrArray [
 ]
 
 { #category : #'gt-extensions' }
+GtDependencyAnalyzerForPackages >> gtIssuesFor: aView [
+	<gtView>
+	
+	^ aView list
+		title: 'Issues';
+		priority: 5;
+		items: [
+			(self issuesWithContext: GtDependencyAnalyzerContext new)
+				sorted: [ :a :b | a package name < b package name ] ];
+		itemText: [ :each | each printString ]
+]
+
+{ #category : #'gt-extensions' }
 GtDependencyAnalyzerForPackages >> gtPackagesFor: aView [
 	<gtView>
 	
@@ -48,6 +61,11 @@ GtDependencyAnalyzerForPackages >> initialize [
 	super initialize.
 	
 	preloadedBaselines := #()
+]
+
+{ #category : #dependencies }
+GtDependencyAnalyzerForPackages >> issuesWithContext: aContext [
+	^ self packages flatCollect: [ :eachPackage | eachPackage issuesWithContext: aContext ]
 ]
 
 { #category : #accessing }

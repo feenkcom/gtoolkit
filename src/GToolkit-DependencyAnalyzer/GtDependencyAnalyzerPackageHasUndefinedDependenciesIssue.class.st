@@ -2,36 +2,33 @@ Class {
 	#name : #GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue,
 	#superclass : #GtDependencyAnalyzerPackageFromBaselineIssue,
 	#instVars : [
-		'undefinedDependencies'
+		'undefinedDependency'
 	],
 	#category : #'GToolkit-DependencyAnalyzer'
 }
 
-{ #category : #'gt-extensions' }
-GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue >> gtUndefinedDependenciesFor: aView [
-	<gtView>
-	
-	^ aView list
-		title: 'Undefined dependencies';
-		priority: 10;
-		items: [ self undefinedDependencies sorted: [ :a :b | a name < b name ] ];
-		itemText: [ :each | each name ]
+{ #category : #printing }
+GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue >> gtDisplayOn: aStream [
+	aStream
+		print: undefinedDependency name;
+		nextPutAll: 'is undefined'
 ]
 
 { #category : #printing }
 GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue >> printOn: aStream [
 	aStream
-		nextPutAll: 'Package has ';
-		print: undefinedDependencies size;
-		nextPutAll: ' undefined dependencies'
+		nextPutAll: 'Package ';
+		print: self package;
+		nextPutAll: ' has undefined dependency to ';
+		print: undefinedDependency name
 ]
 
 { #category : #accessing }
-GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue >> undefinedDependencies [
-	^ undefinedDependencies
+GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue >> undefinedDependency [
+	^ undefinedDependency
 ]
 
 { #category : #accessing }
-GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue >> undefinedDependencies: anObject [
-	undefinedDependencies := anObject
+GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue >> undefinedDependency: anObject [
+	undefinedDependency := anObject
 ]
