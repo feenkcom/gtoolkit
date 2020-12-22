@@ -8,12 +8,12 @@ Class {
 }
 
 { #category : #dependencies }
-GtDependencyAnalyzerPackagePackageRequirement >> explicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
+GtDependencyAnalyzerPackagePackageRequirement >> directlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
 	<return: #Array of: #GtDependencyAnalyzerForPackageFromBaseline>
 	| explicitlyRequiredPackages |
 	
 	explicitlyRequiredPackages := (requiredPackageFromBaselineAnalyzer baselineAnalyzer = packageFromBaseline baselineAnalyzer
-		ifTrue: [ requiredPackageFromBaselineAnalyzer explicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext ]
+		ifTrue: [ requiredPackageFromBaselineAnalyzer directlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext ]
 		ifFalse: [ { } ]) asSet.
 
 	explicitlyRequiredPackages add: requiredPackageFromBaselineAnalyzer.
@@ -26,14 +26,14 @@ GtDependencyAnalyzerPackagePackageRequirement >> explicitlyRequiredPackagesWithC
 ]
 
 { #category : #dependencies }
-GtDependencyAnalyzerPackagePackageRequirement >> implicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
+GtDependencyAnalyzerPackagePackageRequirement >> indirectlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
 	<return: #Array of: #GtDependencyAnalyzerForPackageFromBaseline>
 	| implicitlyRequiredPackages |
 	
 	implicitlyRequiredPackages := Set new.
-	(self explicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext) do: [ :eachPackage |
+	(self directlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext) do: [ :eachPackage |
 		implicitlyRequiredPackages add: eachPackage.
-		implicitlyRequiredPackages addAll: (eachPackage implicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext) ].
+		implicitlyRequiredPackages addAll: (eachPackage indirectlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext) ].
 
 	self
 		assert: [ (implicitlyRequiredPackages includes: packageFromBaseline) not ]

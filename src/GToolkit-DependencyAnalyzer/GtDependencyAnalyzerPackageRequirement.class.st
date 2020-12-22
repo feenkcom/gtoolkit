@@ -8,14 +8,14 @@ Class {
 }
 
 { #category : #dependencies }
-GtDependencyAnalyzerPackageRequirement >> explicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
+GtDependencyAnalyzerPackageRequirement >> directlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
 	<return: #Array of: #GtDependencyAnalyzerForPackageFromBaseline>
 
 	^ self subclassResponsibility
 ]
 
 { #category : #'gt-extensions' }
-GtDependencyAnalyzerPackageRequirement >> gtPackageExplicitRequirementsFor: aView [
+GtDependencyAnalyzerPackageRequirement >> gtDirectlyDefinedPackagesFor: aView [
 	<gtView>
 	
 	^ aView list
@@ -25,12 +25,12 @@ GtDependencyAnalyzerPackageRequirement >> gtPackageExplicitRequirementsFor: aVie
 			GtDependencyAnalyzerContext new
 				visitPackage: packageFromBaseline
 				during: [
-					(self explicitlyRequiredPackagesWithContext: GtDependencyAnalyzerContext new)
+					(self directlyRequiredPackagesWithContext: GtDependencyAnalyzerContext new)
 						sorted: [ :a :b | a name < b name ] ] ]
 ]
 
 { #category : #dependencies }
-GtDependencyAnalyzerPackageRequirement >> implicitlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
+GtDependencyAnalyzerPackageRequirement >> indirectlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext [
 	^ self subclassResponsibility
 ]
 
