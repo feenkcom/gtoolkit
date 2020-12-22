@@ -30,11 +30,17 @@ EpMonitor disableDuring: [
 		baseline: 'GToolkitBaselineOfUtility';
 		repository: 'github://feenkcom/gtoolkit-utility/src';
 		load.
-    Metacello new 
+    "Metacello new 
 		baseline: 'GToolkitReleaser'; 
 		githubUser: 'feenkcom' project: 'gtoolkit-releaser' commitish: 'master' path: ''; 
 		load.
-    GtRlRepositoriesCloner loadProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'.
+    GtRlRepositoriesCloner loadProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'."
+	Metacello new 
+		baseline: 'GToolkit'; 
+		repository: 'github://feenkcom/gtoolkit/src';
+		silently;
+		onConflictUseIncoming;
+		load.
 ].
 
 
