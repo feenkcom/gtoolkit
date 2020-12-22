@@ -7,11 +7,22 @@ Class {
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> create [
 	| sectionContainer cardsContainer |
-	sectionContainer := self newSectionContainer.
-	sectionContainer addChild: (self newSectionTitle: 'Tools').
-	cardsContainer := self newCardsContainer.
+	sectionContainer := BlElement new
+		layout: BlLinearLayout vertical;
+		constraintsDo: [ :c |
+			c horizontal fitContent.
+			c vertical fitContent ];
+		background: Color white; 
+		look: (BrShadowLook new beLarge);
+		padding: (BlInsets top: 10 left: 0 bottom: 10 right: 0).
+	cardsContainer := BlElement new
+		layout: BlLinearLayout vertical;
+		constraintsDo: [ :c |
+			c horizontal fitContent.
+			c vertical fitContent ];
+		padding: (BlInsets all: 0).
 	cardsContainer addChild: self newPlaygroundButtonStencil create.
-	cardsContainer addChild: self newCoderButtonStencil create.
+	cardsContainer addChild: self newCoderButtonStencil create as: GtHomeCoderButtonId.
 	cardsContainer addChild: self newGitButtonStencil create.
 	cardsContainer addChild: self newMonitorButtonStencil create.
 	cardsContainer addChild: self newExamplesButtonStencil create.
@@ -30,7 +41,7 @@ GtHomeToolsSection >> newCoderButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Coder'
-				with: GtCoderStencil new create
+				with: GtCoderStencil new
 				from: card ];
 		description: 'Browse and manipulate code.'
 ]
@@ -38,11 +49,11 @@ GtHomeToolsSection >> newCoderButtonStencil [
 { #category : #'api - instantiation' }
 GtHomeToolsSection >> newExamplesButtonStencil [
 	^ GtToolButtonStencil new 
-		title: 'Examples Explorer';
+		title: 'Exemplifier';
 		icon: BrGlamorousVectorIcons largeEg;
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Examples Explorer'
+				showSpaceWithTitle: 'Exemplifier'
 				with:
 					(GtInspector
 						createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject) maximized
@@ -95,7 +106,7 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Playground'
-				with: GtPlaygroundStencil new create
+				with: GtPlaygroundStencil new
 				from: card ];
 		description: 'Play with code. Live.'
 ]
@@ -117,7 +128,7 @@ GtHomeToolsSection >> newTranscriptButtonStencil [
 		action: [ :card | 
 			self
 				showSpaceWithTitle: 'Transcript'
-				with: GtTranscriptStencil new create
+				with: GtTranscriptStencil new
 				from: card ];
 		description: 'Transcript is the place to see logs.'
 ]

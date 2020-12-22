@@ -43,8 +43,8 @@ GtHomeFeenkBlogSection >> client: anObject [
 { #category : #'api - instantiation' }
 GtHomeFeenkBlogSection >> create [
 	| sectionContainer cardsContainer |
-	sectionContainer := self newSectionContainer.
-	cardsContainer := self newCardsContainer.
+	sectionContainer := BrVerticalPane new fitContent.
+	cardsContainer := BrVerticalPane new fitContent.
 	sectionContainer addChild: (self newSectionTitleWithUpdatesIn: cardsContainer).
 	self documentsInto: cardsContainer.
 	sectionContainer addChild: cardsContainer.

@@ -36,14 +36,16 @@ GtHomeSection >> newAddCardWithTooltip: aTooltip size: aPoint action: aBlock [
 
 { #category : #'instance creation' }
 GtHomeSection >> newCard [
+	self deprecated: 'not used'.
 	^ self newCardWithoutIcon
-		addLook: BrIconLook new;
+		addLook: BrIconLook new +(BrShadowLook new width: 8; offset: 1@1; color: (Color r: 200 g: 200 b: 200 range: 255));
 		yourself
 ]
 
 { #category : #'instance creation' }
 GtHomeSection >> newCardWithTitle: aTitle description: aDescription action: aBlock [ 
 	| cardElement |	
+	self deprecated: 'not used'.
 	cardElement := self newCardWithoutIcon
 		title: aTitle;
 		description: ((aTitle asRopedText fontSize: 16) 
@@ -55,7 +57,8 @@ GtHomeSection >> newCardWithTitle: aTitle description: aDescription action: aBlo
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anElementOrStencil action: aBlock [ 	
+GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anElementOrStencil action: aBlock [ 
+	self deprecated: 'not used'.
 	^ self newCard
 		title: aTitle;
 		description: ((aTitle asRopedText fontSize: 18) 
@@ -79,11 +82,11 @@ GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anE
 { #category : #'instance creation' }
 GtHomeSection >> newCardWithoutIcon [
 	^ BrCard new
-		look: "(BrShadowLook new) +"
+		look: (BrShadowLook new beLarge)+
 			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e padding: (BlInsets all: 10)]) +
 			(BrGlamorousButtonExteriorLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
 		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
-		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 2);
 		constraintsDo: [ :c |
 			c horizontal exact: 250.
 			c vertical exact: 100 ];
@@ -144,23 +147,16 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: 
 	container := BrButton new
 		size: aPoint;
 		layout: BlLinearLayout vertical;
-		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new);
+		look: ((BrGlamorousButtonExteriorLook new 
+			backgroundPaint: Color white;
+			borderPaint: (Color transparent)) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new beLarge));
 		label: aDescription;
 		padding: (BlInsets all: 1);
-		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap right: 2 * self spaceGap);
-		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
+		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: 2 * self spaceGap right: 2 * self spaceGap);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 2);
 		action: aBlock.
 
-	headerContainer := BrVerticalPane new
-		hMatchParent;
-		vFitContent;
-		background: BrGlamorousColors defaultButtonBorderColor;
-		addChild: (BrLabel new 
-			look: (BrGlamorousLabelLook new fontSize: 10);
-			text: aTitle).
-	
 	^ container
-		addChild: headerContainer preventMeAndChildrenMouseEvents; 
 		addChild: (anElement preventMeAndChildrenMouseEvents).
 ]
 
@@ -173,22 +169,25 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription width:
 			c vertical fitContent.
 			c horizontal exact: aWidth ]; 
 		layout: BlLinearLayout vertical;
-		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new);
+		background: Color red;
+		look: ((BrGlamorousButtonExteriorLook new
+			backgroundPaint: Color white; 
+			borderPaint: Color transparent) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new beLarge));
 		label: aDescription;
 		padding: (BlInsets all: 1);
-		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap right: 2 * self spaceGap);
-		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
+		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap * 2 right: 2 * self spaceGap);
+		geometry: (BlRoundedRectangleGeometry cornerRadius: 2);
 		action: aBlock.
 
 	headerContainer := BlElement new
-		constraintsDo: [:c | c horizontal matchParent. c vertical fitContent ];
+		constraintsDo: [:c | c horizontal fitContent. c vertical fitContent ];
 		layout: BlLinearLayout vertical;
 		background: BrGlamorousColors defaultButtonBorderColor;
 		addChild: (BrLabel new look: (BrGlamorousLabelLook new fontSize: 10);
 		text: aTitle).
 	
-	^ container
-		addChild: headerContainer preventMeAndChildrenMouseEvents; 
+	^ container"
+		addChild: headerContainer preventMeAndChildrenMouseEvents; "
 		addChild: (anElement preventMeAndChildrenMouseEvents).
 ]
 
@@ -269,7 +268,7 @@ GtHomeSection >> newSectionTitle: aString [
 GtHomeSection >> newSectionTitleContainer [
 	^ BrHorizontalPane new
 		vFitContent;
-		hMatchParent.
+		hFitContent.
 ]
 
 { #category : #'instance creation' }
@@ -310,7 +309,7 @@ GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock de
 		action: aBlock;
 		padding: (BlInsets all: 10);
 		label: aDescriptionString;
-		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new);
+		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new +(BrShadowLook new width: 8; offset: 1@1; color: (Color r: 200 g: 200 b: 200 range: 255)));
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 		layout: BlLinearLayout vertical alignCenter;
 		addChild: iconElement;
@@ -362,7 +361,7 @@ GtHomeSection >> sectionPaddingLeftInsets [
 GtHomeSection >> showSpaceWithTitle: aString with: aStencil from: anotherElement [
 	^ GtWorldUtility 
 		showSpaceWithTitle: aString 
-		with: aStencil 
+		with: aStencil
 		from: anotherElement
 ]
 

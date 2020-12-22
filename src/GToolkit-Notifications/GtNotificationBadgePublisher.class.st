@@ -44,13 +44,13 @@ GtNotificationBadgePublisher >> ensureBadge [
 	aBadge := self findBadge.
 	aBadge ifNil: [ 
 		aBadge := self newBadge.
-		self space addChild: aBadge ].
+		self element addChild: aBadge ].
 	^ aBadge
 ]
 
 { #category : #'private - displaying' }
 GtNotificationBadgePublisher >> findBadge [
-	self space root childrenDo: [ :aChild | 
+	self element childrenDo: [ :aChild | 
 		(aChild isKindOf: GtNotificationsBadgeElement)
 			ifTrue: [ ^ aChild ] ].
 	^ nil
@@ -63,10 +63,4 @@ GtNotificationBadgePublisher >> newBadge [
 			c ignoreByLayout.
 			c ignored horizontal alignRight.
 			c ignored vertical alignTop ]
-]
-
-{ #category : #'api - displaying' }
-GtNotificationBadgePublisher >> show [
-	self enqueueTaskAction: [ 
-		self addNotification ] 
 ]
