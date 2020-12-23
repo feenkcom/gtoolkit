@@ -42,11 +42,6 @@ Context compile: 'copyTo: aContext
 		repository: 'github://feenkcom/gtoolkit/src';
 		silently;
 		load.
-	Metacello new
-		baseline: 'BlocExtensions';
-		repository: 'github://feenkcom/Bloc/src';
-		silently;
-		load.
 	"GtRlRepositoriesCloner loadProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'."
 ] ensure: [ EpMonitor current enable ].
 
