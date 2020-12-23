@@ -41,11 +41,6 @@ EpMonitor disableDuring: [
 		silently;
 		onConflictUseIncoming;
 		load.
-	Metacello new
-		baseline: 'BlocExtensions';
-		repository: 'github://feenkcom/Bloc/src';
-		silently;
-		load.
 ].
 
 
