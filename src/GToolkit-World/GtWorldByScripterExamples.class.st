@@ -43,6 +43,8 @@ GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
 			onChildFromBlock: [ :aPager | aPager pages first widget ];
 			onBreadthFirstChildOfClass: GtPackageCoderElement;
 			id: GtPackageCoderPackageNameId.
+			
+		aStep do pulse.
 		
 		aStep check
 			label: 'Check World tab label with package name';

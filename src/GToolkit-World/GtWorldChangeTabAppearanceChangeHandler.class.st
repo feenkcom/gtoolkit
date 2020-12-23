@@ -9,7 +9,7 @@ Class {
 
 { #category : #'api - accessing' }
 GtWorldChangeTabAppearanceChangeHandler >> eventsToHandle [
-	^ { GtPhlowChangeDescriptionWish }
+	^ { GtPhlowChangeTitleWish }
 ]
 
 { #category : #'api - event managing' }
