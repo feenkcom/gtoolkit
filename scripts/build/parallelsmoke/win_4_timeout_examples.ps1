@@ -22,7 +22,7 @@ catch
 {
     Write-Warning -Message 'Process exceeded timeout, will be killed now.'
     $process | Stop-Process -Force
-    # exit 1
+    exit 1
 }
 
 
@@ -39,7 +39,7 @@ catch
 {
     Write-Warning -Message 'Process exceeded timeout, will be killed now.'
     $process | Stop-Process -Force
-    # exit 1
+    exit 1
 }
 
 

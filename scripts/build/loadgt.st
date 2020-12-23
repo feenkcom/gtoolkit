@@ -33,10 +33,6 @@ Context compile: 'copyTo: aContext
 		githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';	
 		baseline: 'Iceberg';	
 		load.
-	Metacello new
-		baseline: 'GToolkitBaselineOfUtility';
-		repository: 'github://feenkcom/gtoolkit-utility/src';
-		load.
 	Metacello new 
 		baseline: 'GToolkit'; 
 		repository: 'github://feenkcom/gtoolkit/src';
