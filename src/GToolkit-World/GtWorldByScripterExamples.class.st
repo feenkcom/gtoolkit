@@ -32,6 +32,7 @@ GtWorldByScripterExamples >> browsePackageInSecondPane [
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
 	<gtExample>
+	<noTest>
 	| aScripter |
 	aScripter := self selectClassInSecondPane.
 
