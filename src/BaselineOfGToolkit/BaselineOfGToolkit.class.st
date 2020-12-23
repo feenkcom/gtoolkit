@@ -124,7 +124,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'Gt4PharoLink' with: [
 				spec repository: 'github://feenkcom/gtoolkit-remote/src' ];
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit/src' ].
+				spec repository: 'github://feenkcom/gtoolkit/src' ];
+			baseline: 'BlocExtensions' with: [
+				spec repository: 'github://feenkcom/Bloc/src' ].
 		spec package: 'GToolkit-Extensions' with: [ 
 			spec requires: #( 'GToolkitVisualizerPhlow' ) ].
 		spec package: 'GToolkit-Docs'.
