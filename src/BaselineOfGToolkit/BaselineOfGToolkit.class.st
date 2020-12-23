@@ -140,6 +140,7 @@ BaselineOfGToolkit >> baseline: spec [
 			spec requires: #('GToolkit-Notifications') ].
 		spec package: 'GToolkit-Setup' with: [ 
 			spec requires: #('GToolkitReleaser' 'GToolkitInspector' 'GToolkitDebugger' 'GToolkitPlayground') ].
+		spec package: 'GToolkit-DependencyAnalyzer'.
 	]
 ]
 
