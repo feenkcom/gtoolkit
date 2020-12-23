@@ -94,10 +94,23 @@ GtDependencyAnalyzerForBaseline >> gtIndirectlyDefinedPackagesFor: aView [
 	
 	^ aView list
 		title: 'Idirectly defined packages';
-		priority: 11;
+		priority: 12;
 		items: [
 			(self indirectlyDefinedPackagesWithContext: GtDependencyAnalyzerContext new)
 				sorted: [ :a :b | a name < b name ] ]
+]
+
+{ #category : #'gt-extensions' }
+GtDependencyAnalyzerForBaseline >> gtIssuesFor: aView [
+	<gtView>
+	
+	^ aView list
+		title: 'Issues';
+		priority: 11;
+		items: [
+			(self issuesWithContext: GtDependencyAnalyzerContext new)
+				sorted: [ :a :b | a package name < b package name ] ];
+		itemText: [ :each | each printString ]
 ]
 
 { #category : #comparing }
@@ -148,6 +161,12 @@ GtDependencyAnalyzerForBaseline >> initialize [
 	super initialize.
 	
 	preloadedBaselines := #()
+]
+
+{ #category : #dependencies }
+GtDependencyAnalyzerForBaseline >> issuesWithContext: aContext [
+	^ (self directlyDefinedPackagesWithContext: aContext)
+		flatCollect: [ :eachPackage | eachPackage issuesWithContext: aContext ]
 ]
 
 { #category : #accessing }
