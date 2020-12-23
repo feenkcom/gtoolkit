@@ -358,6 +358,15 @@ GtHomeSection >> sectionPaddingLeftInsets [
 ]
 
 { #category : #'instance creation' }
+GtHomeSection >> showSpaceWithIcon: anIcon title: aString with: aStencil from: anotherElement [
+	^ GtWorldUtility 
+		showSpaceWithIcon: anIcon 
+		title: aString 
+		with: aStencil
+		from: anotherElement
+]
+
+{ #category : #'instance creation' }
 GtHomeSection >> showSpaceWithTitle: aString with: aStencil from: anotherElement [
 	^ GtWorldUtility 
 		showSpaceWithTitle: aString 

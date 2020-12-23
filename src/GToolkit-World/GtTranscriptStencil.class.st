@@ -15,6 +15,11 @@ GtTranscriptStencil >> create [
 ]
 
 { #category : #accessing }
+GtTranscriptStencil >> icon [
+	^ BrGlamorousVectorIcons emphasizedInspect
+]
+
+{ #category : #accessing }
 GtTranscriptStencil >> name [
 	^ 'Transcript'
 ]
