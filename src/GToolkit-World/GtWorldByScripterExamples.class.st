@@ -7,6 +7,80 @@ Class {
 }
 
 { #category : #'examples - coder' }
+GtWorldByScripterExamples >> browsePackageInSecondPane [
+	<gtExample>
+	| aScripter |
+	aScripter := self clickOnPackageEditableName.
+
+	aScripter substep: 'Browse package from editable name' do: [ :aStep |
+		aStep shortcut
+			combination: BlKeyCombination primaryB;
+			id: GtPackageCoderPackageNameId.
+		
+		aStep check
+			label: 'Check we have two tools';
+			value: [ :anElement | anElement pages size ]
+			equals: [ 2 ];
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager.
+
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - coder' }
+GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
+	<gtExample>
+	| aScripter |
+	aScripter := self selectClassInSecondPane.
+
+	aScripter substep: 'Select the first pane with package' do: [ :aStep |
+		aStep click
+			label: 'Click on a package editable name';
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
+			id: GtPackageCoderPackageNameId.
+		
+		aStep check
+			label: 'Check World tab label with package name';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: [ aScripter userData at: #tabLabel ].
+
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - coder' }
+GtWorldByScripterExamples >> clickOnPackageEditableName [
+	<gtExample>
+	| aScripter |
+	aScripter := self selectPackageInCoder.
+
+	aScripter substep: 'Select package editable name' do: [ :aStep |
+		aStep click
+			label: 'Click on a package editable name';
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
+			id: GtPackageCoderPackageNameId.
+		
+		aStep check
+			label: 'Check World tab label';
+			value: [ :anElement | anElement text asString ]
+			equals: [ aScripter model name ];
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
+			id: GtPackageCoderPackageNameId.
+
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickOnWorldHomeCoderIcon [
 	<gtExample>
 	| aScripter |
@@ -37,6 +111,48 @@ GtWorldByScripterExamples >> clickOnWorldHomeCoderIcon [
 ]
 
 { #category : #'examples - coder' }
+GtWorldByScripterExamples >> selectClassInSecondPane [
+	<gtExample>
+	| aScripter |
+	aScripter := self browsePackageInSecondPane.
+
+	aScripter substep: 'Select class in second pane' do: [ :aStep |
+		aStep click
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages second widget ];
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
+			onBreadthFirstChildOfClass: GtClassesElement;
+			onChildOfClass: BrSimpleList;
+			onChildOfClass: BrInfiniteListElement;
+			onChildAt: 1.
+		
+		aStep do
+			label: 'Store expected class name';
+			block: [ :anElement | 
+				| aClass |
+				anElement navigationModel selectedClassDo: [ :theClass | 
+					aClass := theClass ].
+				self 
+					assert: aClass isNotNil
+					description: 'Second pane must have a class selected'.
+				aScripter userData at: #secondPaneModel put: aClass.
+				aScripter userData at: #secondPaneTabLabel put: anElement shortTitle asString ];
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages second widget ];
+			onBreadthFirstChildOfClass: GtCoder.
+
+		aStep check
+			label: 'Check World tab label with class name';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: [ aScripter userData at: #secondPaneTabLabel ]
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> selectPackageInCoder [
 	<gtExample>
 	| aScripter |
@@ -53,14 +169,20 @@ GtWorldByScripterExamples >> selectPackageInCoder [
 			
 		aStep do
 			label: 'Store expected package name';
-			block: [ :anElement | aScripter model: anElement shortTitle asString ];
+			block: [ :anElement | 
+				anElement navigationModel selectedPackageDo: [ :aPackage | 
+					aScripter model: aPackage ].
+				self 
+					assert: aScripter model isNotNil 
+					description: 'Scripter model must be a package, but is nil'.
+				aScripter userData at: #tabLabel put: anElement shortTitle asString ];
 			id: GtWorldTabGroupId;
 			onBreadthFirstChildOfClass: GtCoder.
 						
 		aStep check
 			label: 'Check World tab label';
 			value: [ :anElement | anElement tabs tabs second widget label asString ]
-			equals: [ aScripter model ]
+			equals: [ aScripter userData at: #tabLabel ]
 	].
 
 	^ aScripter syncContinue
