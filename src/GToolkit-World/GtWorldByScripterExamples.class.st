@@ -7,7 +7,7 @@ Class {
 }
 
 { #category : #'examples - coder' }
-GtWorldByScripterExamples >> browsePackage [
+GtWorldByScripterExamples >> browsePackageInSecondPane [
 	<gtExample>
 	| aScripter |
 	aScripter := self clickOnPackageEditableName.
@@ -23,6 +23,34 @@ GtWorldByScripterExamples >> browsePackage [
 			equals: [ 2 ];
 			id: GtWorldTabGroupId;
 			onBreadthFirstChildOfClass: GtPager.
+
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - coder' }
+GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
+	<gtExample>
+	<noTest>
+	| aScripter |
+	aScripter := self selectClassInSecondPane.
+
+	aScripter substep: 'Select the first pane with package' do: [ :aStep |
+		aStep click
+			label: 'Click on a package editable name';
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
+			id: GtPackageCoderPackageNameId.
+			
+		aStep do pulse.
+		
+		aStep check
+			label: 'Check World tab label with package name';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: [ aScripter userData at: #tabLabel ].
 
 	].
 
@@ -80,6 +108,48 @@ GtWorldByScripterExamples >> clickOnWorldHomeCoderIcon [
 			label: 'Check Coder tab selection';
 			satisfies: [ :anElement | anElement tabs tabs second isSelected ]
 			description: [ 'Coder tab must be selected' ].
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - coder' }
+GtWorldByScripterExamples >> selectClassInSecondPane [
+	<gtExample>
+	| aScripter |
+	aScripter := self browsePackageInSecondPane.
+
+	aScripter substep: 'Select class in second pane' do: [ :aStep |
+		aStep click
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages second widget ];
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
+			onBreadthFirstChildOfClass: GtClassesElement;
+			onChildOfClass: BrSimpleList;
+			onChildOfClass: BrInfiniteListElement;
+			onChildAt: 1.
+		
+		aStep do
+			label: 'Store expected class name';
+			block: [ :anElement | 
+				| aClass |
+				anElement navigationModel selectedClassDo: [ :theClass | 
+					aClass := theClass ].
+				self 
+					assert: aClass isNotNil
+					description: 'Second pane must have a class selected'.
+				aScripter userData at: #secondPaneModel put: aClass.
+				aScripter userData at: #secondPaneTabLabel put: anElement shortTitle asString ];
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages second widget ];
+			onBreadthFirstChildOfClass: GtCoder.
+
+		aStep check
+			label: 'Check World tab label with class name';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: [ aScripter userData at: #secondPaneTabLabel ]
 	].
 
 	^ aScripter syncContinue
