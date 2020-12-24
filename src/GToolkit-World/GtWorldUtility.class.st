@@ -7,6 +7,20 @@ Class {
 }
 
 { #category : #'instance creation' }
+GtWorldUtility class >> showSpaceWithIcon: anIcon title: aString with: aStencil from: anotherElement [
+	| aSpace |
+	aSpace := BlSpace new.
+	aSpace title: aString.
+	aSpace icon: anIcon.
+	aSpace extent: 1200@600.
+	aSpace root background: Color transparent.
+	aSpace addChild: aStencil asElement.
+	aSpace withHalos.
+	anotherElement showSpace: aSpace.
+	^ aSpace
+]
+
+{ #category : #'instance creation' }
 GtWorldUtility class >> showSpaceWithTitle: aString inPagerWith: aStencil from: anotherElement [
 	| anElement aPager |
 	anElement := aStencil asElement.

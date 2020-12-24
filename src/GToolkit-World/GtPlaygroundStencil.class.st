@@ -48,6 +48,11 @@ GtPlaygroundStencil >> createWithSnippets: snippets [
 ]
 
 { #category : #accessing }
+GtPlaygroundStencil >> icon [
+	^ BrGlamorousVectorIcons emphasizedPlay
+]
+
+{ #category : #accessing }
 GtPlaygroundStencil >> name [
 	^ 'Playground'
 ]

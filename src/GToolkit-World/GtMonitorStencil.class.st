@@ -15,6 +15,11 @@ GtMonitorStencil >> create [
 ]
 
 { #category : #accessing }
+GtMonitorStencil >> icon [
+	^ BrGlamorousVectorIcons emphasizedInspect
+]
+
+{ #category : #accessing }
 GtMonitorStencil >> name [
 	^ 'Monitor'
 ]

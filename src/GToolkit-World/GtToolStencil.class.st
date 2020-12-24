@@ -26,10 +26,16 @@ GtToolStencil >> gtSpotterActDefaultFrom: aSpotterElement [
 
 	aSpace := BlSpace new.
 	aSpace title: self name.
+	aSpace icon: self icon.
 	aSpace extent: 1200@600.
 	aSpace addChild: self asElement.
 	aSpace withHalos.
 	aSpotterElement showSpace: aSpace
+]
+
+{ #category : #accessing }
+GtToolStencil >> icon [
+	^ self subclassResponsibility
 ]
 
 { #category : #accessing }

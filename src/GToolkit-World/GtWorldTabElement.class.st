@@ -167,8 +167,9 @@ GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 	aTab := BrTab new
 		vExact: 36;
 		model: aSpace;
-		look: BrGlamorousSpaceTabWithLabelLook new;
+		look: BrGlamorousSpaceTabWithIconAndLabelLook new;
 		label: aSpace title;
+		icon: (aSpace icon ifNil: [ BrGlamorousVectorIcons noIcon ]);
 		containerName: (self class tabNameForSpaceId: aSpace id);
 		stencil: [ :aTabModel | 
 			| anActualSpace |
