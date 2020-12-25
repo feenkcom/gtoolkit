@@ -15,6 +15,11 @@ GtGitStencil >> create [
 ]
 
 { #category : #accessing }
+GtGitStencil >> icon [
+	^ BrGlamorousVectorIcons emphasizedInspect
+]
+
+{ #category : #accessing }
 GtGitStencil >> name [
 	^ 'Git'
 ]

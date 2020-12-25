@@ -19,5 +19,6 @@ GtGtoolkitArchitecturalReport >> build: aComposite [
 		addConstraint: GtBlocEventsShouldHaveDispatchMethodSimilarToClass new;
 		addConstraint: GtSubscriptionsShouldNotUseDeliveryConditionWhere new;
 		addConstraint: GtTraitsShouldNotBeNested new;
-		addConstraint: GtWeakSubscriptionsWithBlockSubscribers new
+		addConstraint: GtWeakSubscriptionsWithBlockSubscribers new;
+		addConstraint: GtBaselinesShouldProperlySpecifyDependencies new
 ]

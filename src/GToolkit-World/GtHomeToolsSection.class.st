@@ -41,7 +41,8 @@ GtHomeToolsSection >> newCoderButtonStencil [
 		icon: BrGlamorousVectorIcons largeBook;
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Coder'
+				showSpaceWithIcon: BrGlamorousVectorIcons emphasizedBrowse
+				title: 'Coder'
 				with: GtCoderStencil new
 				from: card ];
 		description: 'Browse and manipulate code.'
@@ -54,7 +55,8 @@ GtHomeToolsSection >> newExamplesButtonStencil [
 		icon: BrGlamorousVectorIcons largeEg;
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Exemplifier'
+				showSpaceWithIcon: BrGlamorousVectorIcons emphasizedInspect
+				title: 'Exemplifier'
 				with:
 					(GtInspector
 						createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject) maximized
@@ -69,7 +71,8 @@ GtHomeToolsSection >> newGitButtonStencil [
 		icon: BrGlamorousVectorIcons largebranching;
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Git'
+				showSpaceWithIcon: BrGlamorousVectorIcons emphasizedInspect
+				title: 'Git'
 				with:
 					(GtInspector
 						createOn: Gt4Git new) maximized
@@ -84,7 +87,8 @@ GtHomeToolsSection >> newMonitorButtonStencil [
 		icon: BrGlamorousVectorIcons largeSignal;
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Monitor'
+				showSpaceWithIcon: BrGlamorousVectorIcons emphasizedInspect
+				title: 'Monitor'
 				with: (GtInspector createOn: GtMonitor new) maximized
 				from: card ];
 		description: 'Monitor processes and high level tasks.'
@@ -106,7 +110,8 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 		icon: BrGlamorousVectorIcons largePlay;
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Playground'
+				showSpaceWithIcon: BrGlamorousVectorIcons emphasizedPlay
+				title: 'Playground'
 				with: GtPlaygroundStencil new
 				from: card ];
 		description: 'Play with code. Live.'
@@ -128,7 +133,8 @@ GtHomeToolsSection >> newTranscriptButtonStencil [
 		icon: BrGlamorousVectorIcons largeTranscript;
 		action: [ :card | 
 			self
-				showSpaceWithTitle: 'Transcript'
+				showSpaceWithIcon: BrGlamorousVectorIcons emphasizedInspect
+				title: 'Transcript'
 				with: GtTranscriptStencil new
 				from: card ];
 		description: 'Transcript is the place to see logs.'
