@@ -1,14 +1,5 @@
 #requires -Version 2
 
-$image=Get-Childitem -Include *.image -Recurse -Name
-$gtfolder=Get-Childitem -Include GlamorousToolkitWin64-* -Name
-
-echo $image
-
-
-Rename-Item $gtfolder .\GlamorousToolkitWin
-
-
 $maximumRuntimeSeconds = 1800
 
 $process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchExamples --junit-xml-output' -PassThru
