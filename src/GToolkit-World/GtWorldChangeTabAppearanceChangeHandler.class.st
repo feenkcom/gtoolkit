@@ -52,3 +52,9 @@ GtWorldChangeTabAppearanceChangeHandler >> visitGtPhlowChangeDescriptionLabelWis
 				(aBrTab model isKindOf: BlSpace) ifTrue: [ 
 					aBrTab model title: aLabel asString ] ])]].
 ]
+
+{ #category : #visiting }
+GtWorldChangeTabAppearanceChangeHandler >> visitGtPhlowChangeTitleIconAndlabelWish: aWish [
+	self visitGtPhlowChangeDescriptionIconWish: aWish.
+	self visitGtPhlowChangeDescriptionLabelWish: aWish.
+]

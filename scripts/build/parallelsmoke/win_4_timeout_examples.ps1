@@ -1,14 +1,5 @@
 #requires -Version 2
 
-$image=Get-Childitem -Include *.image -Recurse -Name
-$gtfolder=Get-Childitem -Include GlamorousToolkitWin64-* -Name
-
-echo $image
-
-
-Rename-Item $gtfolder .\GlamorousToolkitWin
-
-
 $maximumRuntimeSeconds = 1800
 
 $process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchExamples --junit-xml-output' -PassThru
@@ -22,7 +13,7 @@ catch
 {
     Write-Warning -Message 'Process exceeded timeout, will be killed now.'
     $process | Stop-Process -Force
-    # exit 1
+    exit 1
 }
 
 
@@ -39,7 +30,7 @@ catch
 {
     Write-Warning -Message 'Process exceeded timeout, will be killed now.'
     $process | Stop-Process -Force
-    # exit 1
+    exit 1
 }
 
 

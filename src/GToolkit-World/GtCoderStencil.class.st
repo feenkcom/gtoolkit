@@ -15,6 +15,11 @@ GtCoderStencil >> create [
 ]
 
 { #category : #accessing }
+GtCoderStencil >> icon [
+	^ BrGlamorousVectorIcons emphasizedBrowse
+]
+
+{ #category : #accessing }
 GtCoderStencil >> name [
 	^ 'Coder'
 ]
