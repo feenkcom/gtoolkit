@@ -7,6 +7,43 @@ Class {
 }
 
 { #category : #'examples - coder' }
+GtWorldByScripterExamples >> addCoderIntoTabElement [
+	<gtExample>
+	| aScripter |
+	aScripter := self tabElementInScripter.
+
+	aScripter substep: 'Add Coder as a World tab' do: [ :aStep |
+		aStep do
+			label: 'Show Coder space';
+			block: [ :aTabElement | 
+				| aStencil |
+				aStencil := self coderStencil.
+				GtWorldUtility 
+					showSpaceWithIcon: aStencil icon 
+					title: aStencil name 
+					with: aStencil 
+					from: aTabElement ].
+			
+		aStep check
+			label: 'Check Coder in a new tab';
+			value: [ :anElement | anElement tabs tabs size ]
+			equals: 2.
+			
+		aStep check 
+			label: 'Check Coder tab label';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: 'Coder'.
+
+		aStep check 
+			label: 'Check Coder tab selection';
+			satisfies: [ :anElement | anElement tabs tabs second isSelected ]
+			description: [ 'Coder tab must be selected' ].
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> browsePackageInSecondPane [
 	<gtExample>
 	| aScripter |
@@ -112,6 +149,12 @@ GtWorldByScripterExamples >> clickOnWorldHomeCoderIcon [
 	^ aScripter syncContinue
 ]
 
+{ #category : #'examples - world' }
+GtWorldByScripterExamples >> coderStencil [
+	<gtExample>
+	^ GtCoderStencil new
+]
+
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> selectClassInSecondPane [
 	<gtExample>
@@ -171,7 +214,7 @@ GtWorldByScripterExamples >> selectClassInSecondPane [
 GtWorldByScripterExamples >> selectPackageInCoder [
 	<gtExample>
 	| aScripter |
-	aScripter := self clickOnWorldHomeCoderIcon.
+	aScripter := self addCoderIntoTabElement.
 
 	aScripter substep: 'Select package' do: [ :aStep |
 		aStep click
@@ -200,6 +243,16 @@ GtWorldByScripterExamples >> selectPackageInCoder [
 			equals: [ aScripter userData at: #tabLabel ]
 	].
 
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - world' }
+GtWorldByScripterExamples >> tabElementInScripter [
+	<gtExample>
+	| aScripter |
+	aScripter := self scripter.
+	aScripter element: GtWorldTabElement new.
+	aScripter wait forEmptySpaceTaskQueue.
 	^ aScripter syncContinue
 ]
 
