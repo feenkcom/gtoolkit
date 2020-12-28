@@ -77,18 +77,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter/src' ];
 			baseline: 'GToolkitTranscript' with: [
 				spec repository: 'github://feenkcom/gtoolkit/src' ];
-			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer/src' ];
-			baseline: 'GToolkitInspector' with: [
-				spec repository: 'github://feenkcom/gtoolkit-inspector/src' ];
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger/src' ];
-			baseline: 'GToolkitPlayground' with: [
-				spec repository: 'github://feenkcom/gtoolkit-playground/src' ];
-			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder/src' ];
-			baseline: 'GToolkitSpotter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-spotter/src' ];
 			baseline: 'GToolkitCognitiveServiceDemo' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
 			baseline: 'GToolkitObjectNeuralNetworkDemo' with: [
@@ -128,20 +118,20 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc/src' ].
 		spec package: 'GToolkit-Extensions' with: [ 
-			spec requires: #( 'GToolkitVisualizerPhlow' ) ].
+			spec requires: #( 'GToolkitDocumenter' ) ].
 		spec package: 'GToolkit-Docs'.
 		spec package: 'GToolkit-Monitor' with: [
-			spec requires: #('GToolkitInspector') ].
+			spec requires: #('GToolkitDocumenter') ].
 		spec package: 'GToolkit-Profiler' with: [
-			spec requires: #('GToolkitInspector') ].
+			spec requires: #('GToolkitDocumenter') ].
 		spec package: 'GToolkit-Constraints' with: [ 
 			spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter') ].
 		spec package: 'GToolkit-Notifications' with: [ 
-			spec requires: #('GToolkitInspector' 'GToolkitDebugger' 'GToolkitCoder' ) ].
+			spec requires: #('GToolkitDocumenter' 'GToolkitDebugger' ) ].
 		spec package: 'GToolkit-World' with: [ 
 			spec requires: #('GToolkit-Notifications') ].
 		spec package: 'GToolkit-Setup' with: [ 
-			spec requires: #('GToolkitReleaser' 'GToolkitInspector' 'GToolkitDebugger' 'GToolkitPlayground') ].
+			spec requires: #('GToolkitReleaser' 'GToolkitDocumenter' 'GToolkitDebugger') ].
 		spec package: 'GToolkit-DependencyAnalyzer'.
 	]
 ]
