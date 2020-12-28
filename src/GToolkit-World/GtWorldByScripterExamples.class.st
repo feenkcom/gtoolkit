@@ -195,6 +195,33 @@ GtWorldByScripterExamples >> coderStencil [
 ]
 
 { #category : #'examples - playground' }
+GtWorldByScripterExamples >> executePlaygroundSnippet [
+	<gtExample>
+	| aScripter |
+	aScripter := self typeSnippetInPlayground.
+
+	aScripter substep: 'Execute Playground snippet' do: [ :aStep |
+			
+		aStep shortcut
+			combination: BlKeyCombination primaryG;
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.	
+		
+		aStep check
+			label: 'Check we have two tools';
+			value: [ :anElement | anElement pages size ]
+			equals: [ 2 ];
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager.
+	
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - playground' }
 GtWorldByScripterExamples >> playgroundStencil [
 	<gtExample>
 	^ GtPlaygroundStencil new 
