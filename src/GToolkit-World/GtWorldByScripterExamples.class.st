@@ -32,7 +32,6 @@ GtWorldByScripterExamples >> browsePackageInSecondPane [
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
 	<gtExample>
-	<noTest>
 	| aScripter |
 	aScripter := self selectClassInSecondPane.
 
@@ -145,6 +144,19 @@ GtWorldByScripterExamples >> selectClassInSecondPane [
 			onBreadthFirstChildOfClass: GtPager;
 			onChildFromBlock: [ :aPager | aPager pages second widget ];
 			onBreadthFirstChildOfClass: GtCoder.
+
+		aStep check
+			label: 'Check World tab label with class name';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: [ aScripter userData at: #secondPaneTabLabel ].
+			
+		aStep click
+			label: 'Click on the second Coder';
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages second widget ];
+			onBreadthFirstChildOfClass: GtBehaviorCoderElement;
+			id: GtBehaviorCoderBehaviorNameId.
 
 		aStep check
 			label: 'Check World tab label with class name';
