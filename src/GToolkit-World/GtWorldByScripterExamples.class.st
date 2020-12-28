@@ -43,6 +43,45 @@ GtWorldByScripterExamples >> addCoderIntoTabElement [
 	^ aScripter syncContinue
 ]
 
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> addPlaygroundIntoTabElement [
+	<gtExample>
+	| aScripter |
+	aScripter := self tabElementInScripter.
+
+	aScripter substep: 'Add Playground into a World tab' do: [ :aStep |
+		aStep do
+			label: 'Show Playground space';
+			block: [ :aTabElement | 
+				| aStencil |
+				aStencil := self playgroundStencil.
+				GtWorldUtility 
+					showSpaceWithIcon: aStencil icon 
+					title: aStencil name 
+					with: aStencil 
+					from: aTabElement ].
+			
+		aStep wait forEmptySpaceTaskQueue.
+					
+		aStep check
+			label: 'Check Playground in a new tab';
+			value: [ :anElement | anElement tabs tabs size ]
+			equals: 2.
+			
+		aStep check 
+			label: 'Check Playground tab label';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: 'Playground'.
+
+		aStep check 
+			label: 'Check Playground tab selection';
+			satisfies: [ :anElement | anElement tabs tabs second isSelected ]
+			description: [ 'Playground tab must be selected' ].
+	].
+
+	^ aScripter syncContinue
+]
+
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> browsePackageInSecondPane [
 	<gtExample>
@@ -155,6 +194,12 @@ GtWorldByScripterExamples >> coderStencil [
 	^ GtCoderStencil new
 ]
 
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> playgroundStencil [
+	<gtExample>
+	^ GtPlaygroundStencil new 
+]
+
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> selectClassInSecondPane [
 	<gtExample>
@@ -253,6 +298,40 @@ GtWorldByScripterExamples >> tabElementInScripter [
 	aScripter := self scripter.
 	aScripter element: GtWorldTabElement new.
 	aScripter wait forEmptySpaceTaskQueue.
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> typeSnippetInPlayground [
+	<gtExample>
+	| aScripter |
+	aScripter := self addPlaygroundIntoTabElement.
+
+	aScripter substep: 'Type Playground snippet' do: [ :aStep |
+			
+		aStep click
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
+			
+		aStep type
+			text: '42';
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
+			
+		aStep check 
+			label: 'Check Playground content';
+			value: [ :anElement | anElement text asString ]
+			equals: '42';
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
+			
+	].
+
 	^ aScripter syncContinue
 ]
 
