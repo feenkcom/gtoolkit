@@ -7,7 +7,7 @@ Class {
 { #category : #accessing }
 GtBaselinesShouldProperlySpecifyDependencies >> issues [
 	| gtProject allDependencies analyzers |
-	gtProject := BaselineOfBloc gtRlProjectWithRepository: 'github://feenkcom/Bloc/src'.
+	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit/src'.
 	allDependencies := gtProject withAllChildProjects.
 
 	analyzers := allDependencies collect: [:aProject |
