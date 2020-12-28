@@ -110,10 +110,7 @@ GtHomeSection >> newDocCardForClass: aClass [
 		description: aClass name
 		size: 150 @ 200
 		content:
-			((GtDocumenter forClass: aClass)
-				exact: 300 @ 400;
-				beInSingleCompositionLayer;
-				asScalableElement)
+			((GtHomeDocumentCardElement forClass: aClass) matchParent)
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aClass name
@@ -129,9 +126,7 @@ GtHomeSection >> newDocCardForFile: aReference [
 		description: aReference fullName
 		size: 150 @ 200
 		content:
-			((GtDocumenter forFile: aReference fileReference)
-				exact: 300 @ 400;
-				asScalableElement)
+			((GtHomeDocumentCardElement forFile: aReference fileReference) matchParent)
 		action: [ :card | 
 			self
 				showSpaceWithTitle: aReference fileReference basename
