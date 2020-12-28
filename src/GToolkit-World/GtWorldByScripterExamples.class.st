@@ -132,6 +132,51 @@ GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
 	^ aScripter syncContinue
 ]
 
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> clickBackOnPlaygroundInTheFirstPane [
+	<gtExample>
+	<noTest>
+	| aScripter |
+	aScripter := self clickOnInspectorInTheSecondPane.
+
+	aScripter substep: 'Click on Playground' do: [ :aStep |
+			
+		aStep click
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
+		
+		aStep check 
+			label: 'Check Playground tab label';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: 'Playground'.
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> clickOnInspectorInTheSecondPane [
+	<gtExample>
+	| aScripter |
+	aScripter := self executePlaygroundSnippet.
+
+	aScripter substep: 'Click on Inspector' do: [ :aStep |
+			
+		aStep click
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages second widget ];
+			onBreadthFirstChildOfClass: GtInspector.	
+		
+		aStep check 
+			label: 'Check Inspector tab label';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: [ GtPhlowLabelBuilder new object: 42; build ].	
+	].
+
+	^ aScripter syncContinue
+]
+
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickOnPackageEditableName [
 	<gtExample>
