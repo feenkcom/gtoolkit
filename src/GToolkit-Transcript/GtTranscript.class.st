@@ -71,6 +71,10 @@ GtTranscript >> crShow: anObject [
 		show: anObject
 ]
 
+{ #category : #accessing }
+GtTranscript >> flush [
+]
+
 { #category : #'gt-extension' }
 GtTranscript >> gtLiveFor: aView [
 	<gtView>
