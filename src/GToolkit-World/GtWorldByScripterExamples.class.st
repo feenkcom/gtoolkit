@@ -7,6 +7,82 @@ Class {
 }
 
 { #category : #'examples - coder' }
+GtWorldByScripterExamples >> addCoderIntoTabElement [
+	<gtExample>
+	| aScripter |
+	aScripter := self tabElementInScripter.
+
+	aScripter substep: 'Add Coder as a World tab' do: [ :aStep |
+		aStep do
+			label: 'Show Coder space';
+			block: [ :aTabElement | 
+				| aStencil |
+				aStencil := self coderStencil.
+				GtWorldUtility 
+					showSpaceWithIcon: aStencil icon 
+					title: aStencil name 
+					with: aStencil 
+					from: aTabElement ].
+			
+		aStep check
+			label: 'Check Coder in a new tab';
+			value: [ :anElement | anElement tabs tabs size ]
+			equals: 2.
+			
+		aStep check 
+			label: 'Check Coder tab label';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: 'Coder'.
+
+		aStep check 
+			label: 'Check Coder tab selection';
+			satisfies: [ :anElement | anElement tabs tabs second isSelected ]
+			description: [ 'Coder tab must be selected' ].
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> addPlaygroundIntoTabElement [
+	<gtExample>
+	| aScripter |
+	aScripter := self tabElementInScripter.
+
+	aScripter substep: 'Add Playground into a World tab' do: [ :aStep |
+		aStep do
+			label: 'Show Playground space';
+			block: [ :aTabElement | 
+				| aStencil |
+				aStencil := self playgroundStencil.
+				GtWorldUtility 
+					showSpaceWithIcon: aStencil icon 
+					title: aStencil name 
+					with: aStencil 
+					from: aTabElement ].
+			
+		aStep wait forEmptySpaceTaskQueue.
+					
+		aStep check
+			label: 'Check Playground in a new tab';
+			value: [ :anElement | anElement tabs tabs size ]
+			equals: 2.
+			
+		aStep check 
+			label: 'Check Playground tab label';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: 'Playground'.
+
+		aStep check 
+			label: 'Check Playground tab selection';
+			satisfies: [ :anElement | anElement tabs tabs second isSelected ]
+			description: [ 'Playground tab must be selected' ].
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> browsePackageInSecondPane [
 	<gtExample>
 	| aScripter |
@@ -51,6 +127,51 @@ GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
 			value: [ :anElement | anElement tabs tabs second widget label asString ]
 			equals: [ aScripter userData at: #tabLabel ].
 
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> clickBackOnPlaygroundInTheFirstPane [
+	<gtExample>
+	<noTest>
+	| aScripter |
+	aScripter := self clickOnInspectorInTheSecondPane.
+
+	aScripter substep: 'Click on Playground' do: [ :aStep |
+			
+		aStep click
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
+		
+		aStep check 
+			label: 'Check Playground tab label';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: 'Playground'.
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> clickOnInspectorInTheSecondPane [
+	<gtExample>
+	| aScripter |
+	aScripter := self executePlaygroundSnippet.
+
+	aScripter substep: 'Click on Inspector' do: [ :aStep |
+			
+		aStep click
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages second widget ];
+			onBreadthFirstChildOfClass: GtInspector.	
+		
+		aStep check 
+			label: 'Check Inspector tab label';
+			value: [ :anElement | anElement tabs tabs second widget label asString ]
+			equals: [ GtPhlowLabelBuilder new object: 42; build ].	
 	].
 
 	^ aScripter syncContinue
@@ -112,6 +233,45 @@ GtWorldByScripterExamples >> clickOnWorldHomeCoderIcon [
 	^ aScripter syncContinue
 ]
 
+{ #category : #'examples - world' }
+GtWorldByScripterExamples >> coderStencil [
+	<gtExample>
+	^ GtCoderStencil new
+]
+
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> executePlaygroundSnippet [
+	<gtExample>
+	| aScripter |
+	aScripter := self typeSnippetInPlayground.
+
+	aScripter substep: 'Execute Playground snippet' do: [ :aStep |
+			
+		aStep shortcut
+			combination: BlKeyCombination primaryG;
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.	
+		
+		aStep check
+			label: 'Check we have two tools';
+			value: [ :anElement | anElement pages size ]
+			equals: [ 2 ];
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager.
+	
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> playgroundStencil [
+	<gtExample>
+	^ GtPlaygroundStencil new 
+]
+
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> selectClassInSecondPane [
 	<gtExample>
@@ -171,7 +331,7 @@ GtWorldByScripterExamples >> selectClassInSecondPane [
 GtWorldByScripterExamples >> selectPackageInCoder [
 	<gtExample>
 	| aScripter |
-	aScripter := self clickOnWorldHomeCoderIcon.
+	aScripter := self addCoderIntoTabElement.
 
 	aScripter substep: 'Select package' do: [ :aStep |
 		aStep click
@@ -198,6 +358,50 @@ GtWorldByScripterExamples >> selectPackageInCoder [
 			label: 'Check World tab label';
 			value: [ :anElement | anElement tabs tabs second widget label asString ]
 			equals: [ aScripter userData at: #tabLabel ]
+	].
+
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - world' }
+GtWorldByScripterExamples >> tabElementInScripter [
+	<gtExample>
+	| aScripter |
+	aScripter := self scripter.
+	aScripter element: GtWorldTabElement new.
+	aScripter wait forEmptySpaceTaskQueue.
+	^ aScripter syncContinue
+]
+
+{ #category : #'examples - playground' }
+GtWorldByScripterExamples >> typeSnippetInPlayground [
+	<gtExample>
+	| aScripter |
+	aScripter := self addPlaygroundIntoTabElement.
+
+	aScripter substep: 'Type Playground snippet' do: [ :aStep |
+			
+		aStep click
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
+			
+		aStep type
+			text: '42';
+			id: GtWorldTabGroupId;
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
+			
+		aStep check 
+			label: 'Check Playground content';
+			value: [ :anElement | anElement text asString ]
+			equals: '42';
+			onBreadthFirstChildOfClass: GtPager;
+			onChildFromBlock: [ :aPager | aPager pages first widget ];
+			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
+			
 	].
 
 	^ aScripter syncContinue

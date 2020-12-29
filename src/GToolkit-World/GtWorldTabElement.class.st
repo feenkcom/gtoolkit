@@ -161,7 +161,7 @@ GtWorldTabElement >> showSpace: aSpace [
 	self showSpace: aSpace select: true
 ]
 
-{ #category : #accessing }
+{ #category : #'api - opening' }
 GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 	| aTab |
 	aTab := BrTab new
