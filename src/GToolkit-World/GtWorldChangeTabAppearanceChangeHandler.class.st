@@ -7,6 +7,12 @@ Class {
 	#category : #'GToolkit-World-UI'
 }
 
+{ #category : #visiting }
+GtWorldChangeTabAppearanceChangeHandler >> changeTitleWish: aWish [
+	self updateTitleIconFromWish: aWish.
+	self updateTitleLabelFromWish: aWish.
+]
+
 { #category : #'api - accessing' }
 GtWorldChangeTabAppearanceChangeHandler >> eventsToHandle [
 	^ { GtPhlowChangeTitleWish }
@@ -14,7 +20,7 @@ GtWorldChangeTabAppearanceChangeHandler >> eventsToHandle [
 
 { #category : #'api - event managing' }
 GtWorldChangeTabAppearanceChangeHandler >> handleEvent: aGtWorldChangeTabAppearanceWish [
-	aGtWorldChangeTabAppearanceWish accept: self.
+	aGtWorldChangeTabAppearanceWish sendTo: self.
 	aGtWorldChangeTabAppearanceWish consumed: true.
 ]
 
@@ -33,16 +39,16 @@ GtWorldChangeTabAppearanceChangeHandler >> tabDo: aBlock [
 	self tab ifNotNil: aBlock
 ]
 
-{ #category : #visiting }
-GtWorldChangeTabAppearanceChangeHandler >> visitGtPhlowChangeDescriptionIconWish: aWish [
+{ #category : #'private - updating' }
+GtWorldChangeTabAppearanceChangeHandler >> updateTitleIconFromWish: aWish [
 	self tabDo: [ :aBrTab |
 		aWish iconDo: [ :anIcon |
 			aBrTab enqueueTask: (BlTaskAction new action: [ 
 				aBrTab icon: anIcon ])]].
 ]
 
-{ #category : #visiting }
-GtWorldChangeTabAppearanceChangeHandler >> visitGtPhlowChangeDescriptionLabelWish: aWish [
+{ #category : #'private - updating' }
+GtWorldChangeTabAppearanceChangeHandler >> updateTitleLabelFromWish: aWish [
 	self tabDo: [ :aBrTab |
 		aWish labelDo: [ :aLabel |
 			aBrTab enqueueTask: (BlTaskAction new action: [ 
@@ -51,10 +57,4 @@ GtWorldChangeTabAppearanceChangeHandler >> visitGtPhlowChangeDescriptionLabelWis
 				we therefore update it too."
 				(aBrTab model isKindOf: BlSpace) ifTrue: [ 
 					aBrTab model title: aLabel asString ] ])]].
-]
-
-{ #category : #visiting }
-GtWorldChangeTabAppearanceChangeHandler >> visitGtPhlowChangeTitleIconAndlabelWish: aWish [
-	self visitGtPhlowChangeDescriptionIconWish: aWish.
-	self visitGtPhlowChangeDescriptionLabelWish: aWish.
 ]
