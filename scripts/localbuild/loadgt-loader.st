@@ -49,7 +49,7 @@ RPackageOrganizer compile: 'hasPackageMatchingExtensionName: anExtensionName
 		(anExtensionName beginsWithEmpty: aSymbol, ''-'' caseSensitive: false)
 			ifTrue: [ ^ true]].
 	^ false
-	'
+	'.
 
 SystemAnnouncer uniqueInstance unsubscribe: MenubarMorph.
 
