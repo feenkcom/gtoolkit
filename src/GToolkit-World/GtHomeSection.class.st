@@ -113,9 +113,11 @@ GtHomeSection >> newDocCardForClass: aClass [
 			((GtHomeDocumentCardElement forClass: aClass) matchParent)
 		action: [ :card | 
 			self
-				showSpaceWithTitle: aClass name
+				showSpaceWithIcon: BrGlamorousIcons file
+				title: aClass name
 				with: (GtPager createWrappedOn: (
-					GtDocumenter forClass: aClass) withDefaultToolbar)
+					(GtDocumenter forClass: aClass) 
+						withDefaultToolbar))
 				from: card ]
 ]
 
@@ -129,9 +131,11 @@ GtHomeSection >> newDocCardForFile: aReference [
 			((GtHomeDocumentCardElement forFile: aReference fileReference) matchParent)
 		action: [ :card | 
 			self
-				showSpaceWithTitle: aReference fileReference basename
+				showSpaceWithIcon: BrGlamorousIcons file
+				title: aReference fileReference basename
 				with: (GtPager createWrappedOn: (
-					GtDocumenter forFile: aReference fileReference) withDefaultToolbar)
+					(GtDocumenter forFile: aReference fileReference) 
+						withDefaultToolbar))
 				from: card ]
 ]
 

@@ -1,8 +1,15 @@
-
-IceCredentialsProvider useCustomSsh: true.
-IceCredentialsProvider sshCredentials
-	publicKey: '/data/jenkins/.ssh/id_rsa.pub';
-	privateKey: '/data/jenkins/.ssh/id_rsa'.
+Context compile: 'copyTo: aContext
+	"Copy self and my sender chain down to, but not including, aContext.  
+	End of copied chain will have nil sender."
+	| copy |
+	self == aContext ifTrue: [^ nil].
+	"Workaround for the regular VM crash that occurs when copying self below.
+	Accessing the pc seems to be enough to prevent the crash."
+	self pc.
+	copy := self copy.
+	self sender ifNotNil: [
+		copy privSender: (self sender copyTo: aContext)].
+	^ copy'.
 
 SourceFileArray compile: 'deferFlushDuring: aBlock	
 	flushChanges ifFalse: [ ^ aBlock value ].
@@ -10,23 +17,7 @@ SourceFileArray compile: 'deferFlushDuring: aBlock
 	^ [ aBlock value ] ensure: [
 		flushChanges := true.
 		self flushChangesFile ]'.
-
-Context compile: 'copyTo: aContext
-	"Copy self and my sender chain down to, but not including, aContext.  
-	End of copied chain will have nil sender."
-
-	| copy |
-	self == aContext ifTrue: [^ nil].
-
-	"Workaround for the regular VM crash that occurs when copying self below.
-	Accessing the pc seems to be enough to prevent the crash."
-	self pc.
-
-	copy := self copy.
-	self sender ifNotNil: [
-		copy privSender: (self sender copyTo: aContext)].
-	^ copy'.
-	
+    
 RPackageOrganizer compile: 'packageMatchingExtensionName: anExtensionName
 
 	"return nil if no package is not found"
@@ -60,22 +51,27 @@ RPackageOrganizer compile: 'hasPackageMatchingExtensionName: anExtensionName
 	^ false
 	'.
 
-[ 
-	EpMonitor current disable.
+SystemAnnouncer uniqueInstance unsubscribe: MenubarMorph.
+
+EpMonitor disableDuring: [
 	Metacello new	
 		githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';	
 		baseline: 'Iceberg';	
 		load.
-	Metacello new 
-		baseline: 'GToolkit'; 
-		repository: 'github://feenkcom/gtoolkit/src';
-		silently;
+  Metacello new 
+		baseline: 'GToolkitReleaser'; 
+		githubUser: 'feenkcom' project: 'gtoolkit-releaser' commitish: 'master' path: ''; 
 		load.
-	"GtRlRepositoriesCloner loadProject: 'GToolkit' fromRepository: 'github://feenkcom/gtoolkit/src'."
-] ensure: [ EpMonitor current enable ].
+    
+	GtRlProjectsLoader new
+		loadBaseline: 'GToolkit' 
+		fromRepository: 'github://feenkcom/gtoolkit/src'.
+].
 
-#GtImageSetup asClass performSetupForRelease.
+MenubarMorph install.
+MenubarMorph reset.
 
+PharoLightTheme beCurrent.
+#GtImageSetup asClass performLocalSetup.
 World closeAllWindowsDiscardingChanges.
-
 Smalltalk snapshot: true andQuit: false.
