@@ -59,6 +59,11 @@ RPackageOrganizer compile: 'hasPackageMatchingExtensionName: anExtensionName
 			ifTrue: [ ^ true]].
 	^ false
 	'.
+	
+MCPackageLoader compile: 'tryToLoad: aDefinition
+	aDefinition isClassDefinition ifTrue: [ ^ false ].
+		
+	[aDefinition addMethodAdditionTo: methodAdditions] on: Error do: [errorDefinitions add: aDefinition].'.
 
 [ 
 	EpMonitor current disable.
