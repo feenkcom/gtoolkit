@@ -51,9 +51,10 @@ GtNotificationsBadgeElement >> initialize [
 GtNotificationsBadgeElement >> initializeBadgeElement [
 	badgeElement := self newBadge
 		label: '0';
-		addLook: (BrGlamorousWithDropdownLook
+		addLook: ((BrGlamorousWithDropdownLook
 			handle: [ self newDropdownBadge ]
 			content: [ self newDropdownContent ])
+				preferredExtent: 600@600)
 ]
 
 { #category : #initialization }
