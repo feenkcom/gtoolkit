@@ -148,9 +148,9 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		self fixCommandLineHandlerForPharo7 ].
 	SystemVersion current major = 8 ifTrue: [ 
 		self fixCommandLineHandlerForPharo8 ].
-		
-	#GtNotificationBadgePublisher asClass beActivated.
-	#GtNotificationIcebergCredentialsProvider asClass beDefaultProvider.
+	
+	(self class environment at: #GtNotificationBadgePublisher) beActivated.
+	(self class environment at: #GtNotificationIcebergCredentialsProvider) beDefaultProvider.
 ]
 
 { #category : #'post load' }
