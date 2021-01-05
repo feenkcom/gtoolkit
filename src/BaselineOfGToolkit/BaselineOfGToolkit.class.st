@@ -148,9 +148,9 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		self fixCommandLineHandlerForPharo7 ].
 	SystemVersion current major = 8 ifTrue: [ 
 		self fixCommandLineHandlerForPharo8 ].
-		
-	GtNotificationBadgePublisher beActivated.
-	GtNotificationIcebergCredentialsProvider beDefaultProvider.
+	
+	(self class environment at: #GtNotificationBadgePublisher) beActivated.
+	(self class environment at: #GtNotificationIcebergCredentialsProvider) beDefaultProvider.
 ]
 
 { #category : #'post load' }
@@ -161,28 +161,4 @@ BaselineOfGToolkit >> preLoadGToolkit: spec [
 	PreLoaded := true.
 	
 	Author fullName: 'GlamorousAuthor'.
-	
-	"Debug code"
-	aLink := MetaLink new 
-		metaObject: [ :aValue | self transcriptIcebergProvider: aValue ];
-		selector: #value:;
-		arguments: #(arguments).
-	(IceCredentialsProvider class >> #providerType:) ast link: aLink.
-]
-
-{ #category : #debug }
-BaselineOfGToolkit >> transcriptIcebergProvider: aValue [
-	NonInteractiveTranscript stdout
-		cr;
-		show: IceCredentialsProvider class >> #providerType:;
-		space;
-		show: aValue;
-		cr;
-		show: ' ...in stack:'; cr.
-			
-	thisContext stack in: [ :aStack | 
-		(aStack first: (aStack size min: 5)) do: [ :aContext | 
-			NonInteractiveTranscript stdout show: aContext; cr ] ].
-			
-	NonInteractiveTranscript stdout cr.
 ]
