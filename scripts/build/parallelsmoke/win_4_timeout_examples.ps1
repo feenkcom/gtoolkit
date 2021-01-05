@@ -1,6 +1,6 @@
 #requires -Version 2
 
-$maximumRuntimeSeconds = 1800
+$maximumRuntimeSeconds = 1200
 
 $process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchExamples --junit-xml-output' -PassThru
 
