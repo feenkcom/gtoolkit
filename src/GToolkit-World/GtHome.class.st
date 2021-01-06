@@ -85,7 +85,7 @@ GtHome >> howToSection [
 GtHome >> initialize [
 	super initialize.
 	
-	self background: (Color r: 240 g: 240 b: 240 range: 255).
+	self background: BrGlamorousColors backdropColor.
 	self constraintsDo: [ :c |
 		c horizontal matchParent.
 		c vertical matchParent ].
