@@ -22,3 +22,8 @@ GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
 		#('Bloc' . 'Brick' . 'GToolkit' ) anySatisfy: [ :prefix | 
 			aPackage name beginsWith: prefix ] ]
 ]
+
+{ #category : #accessing }
+GtClassWithCommentsContainingMissingReferences >> status [ 
+	^ GtNeutralConstraintStatus new
+]
