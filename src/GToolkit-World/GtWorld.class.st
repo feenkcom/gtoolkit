@@ -142,7 +142,7 @@ GtWorld >> initialize [
 		c horizontal matchParent ].
 	
 	self root addChild: worldElement.
-	self root addEventHandler: GtSceneDrillerEventHandler new
+"	self root addEventHandler: GtSceneDrillerEventHandler new"
 ]
 
 { #category : #actions }
