@@ -133,16 +133,20 @@ GtWorld >> defaultTitle [
 ]
 
 { #category : #initialization }
+GtWorld >> defaultWorldElement [
+	^ GtWorldElement new
+]
+
+{ #category : #initialization }
 GtWorld >> initialize [
 	super initialize.
-	
-	worldElement := GtWorldElement new beInSeparateCompositionLayer.
-	worldElement constraintsDo: [ :c |
-		c vertical matchParent.
-		c horizontal matchParent ].
-	
-	self root addChild: worldElement.
-"	self root addEventHandler: GtSceneDrillerEventHandler new"
+	worldElement := self defaultWorldElement beInSeparateCompositionLayer.
+	worldElement
+		constraintsDo: [ :c | 
+			c vertical matchParent.
+			c horizontal matchParent ].
+	self root addChild: worldElement
+	"	self root addEventHandler: GtSceneDrillerEventHandler new"
 ]
 
 { #category : #actions }
