@@ -1,6 +1,9 @@
 Class {
 	#name : #GtWorld,
 	#superclass : #BlSpace,
+	#instVars : [
+		'worldElement'
+	],
 	#classInstVars : [
 		'defaultId'
 	],
@@ -125,13 +128,21 @@ GtWorld >> addShutdownListener [
 ]
 
 { #category : #initialization }
-GtWorld >> defaultRoot [
-	^ GtWorldElement new beInSeparateCompositionLayer
+GtWorld >> defaultTitle [
+	^ self class defaultTitle
 ]
 
 { #category : #initialization }
-GtWorld >> defaultTitle [
-	^ self class defaultTitle
+GtWorld >> initialize [
+	super initialize.
+	
+	worldElement := GtWorldElement new beInSeparateCompositionLayer.
+	worldElement constraintsDo: [ :c |
+		c vertical matchParent.
+		c horizontal matchParent ].
+	
+	self root addChild: worldElement.
+"	self root addEventHandler: GtSceneDrillerEventHandler new"
 ]
 
 { #category : #actions }
@@ -144,19 +155,13 @@ GtWorld >> markAsDefault [
 { #category : #actions }
 GtWorld >> prepareForRelease [
 	"Prepare this space to be saved as part of the release process."
-	self root prepareForRelease
+	worldElement prepareForRelease
 ]
 
 { #category : #actions }
 GtWorld >> refreshContent [
 	"Refresh the content of the space. Is only called for the default instance on start-up."
-	self root refreshContent
-]
-
-{ #category : #'api - notification' }
-GtWorld >> removeNotification: aNotification [
-
-	self root removeNotification: aNotification
+	worldElement refreshContent
 ]
 
 { #category : #accessing }
