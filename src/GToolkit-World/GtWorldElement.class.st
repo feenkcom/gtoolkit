@@ -74,7 +74,6 @@ GtWorldElement >> initializeShortcuts [
 GtWorldElement >> newActionItemsInto: anActionbar [
 	super newActionItemsInto: anActionbar.
 	anActionbar addItem: self newNotificationsBadge.
-	anActionbar addItem: self newSceneDrillerButton.
 	anActionbar addItem: self newSpotterButton.
 	anActionbar addItem: self newSubSpaceButton.
 ]
@@ -90,17 +89,6 @@ GtWorldElement >> newNotificationsBadge [
 		hide.
 	
 	^ notificationsDropdown
-]
-
-{ #category : #'private - instance creation' }
-GtWorldElement >> newSceneDrillerButton [
-	
-	^ BrButton new
-		look: BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook;
-		icon: BrGlamorousVectorIcons driller;
-		label: 'Scene Driller';
-		action: [ :aButtonElement | aButtonElement fireEvent: GtSceneDrillerShowWish new ]
-		yourself
 ]
 
 { #category : #'private - instance creation' }
