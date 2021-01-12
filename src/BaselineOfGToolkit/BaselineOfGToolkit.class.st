@@ -116,8 +116,9 @@ BaselineOfGToolkit >> baseline: spec [
 			spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter') ].
 		spec package: 'GToolkit-Notifications' with: [ 
 			spec requires: #('GToolkitDocumenter' 'GToolkitDebugger' ) ].
+		spec package: 'GToolkit-SceneDriller'.
 		spec package: 'GToolkit-World' with: [ 
-			spec requires: #('GToolkit-Notifications') ].
+			spec requires: #('GToolkit-Notifications' 'GToolkit-SceneDriller') ].
 		spec package: 'GToolkit-Setup' with: [ 
 			spec requires: #('GToolkitReleaser' 'GToolkitDocumenter' 'GToolkitDebugger') ].
 		spec package: 'GToolkit-DependencyAnalyzer'.
