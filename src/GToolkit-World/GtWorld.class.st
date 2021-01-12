@@ -172,3 +172,8 @@ GtWorld >> refreshContent [
 GtWorld >> removeShutdownListener [
 	self removeEventHandlersSuchThat: [ :eachHandler | eachHandler isKindOf: BlSpaceShutdownOnCloseListener ]
 ]
+
+{ #category : #initialization }
+GtWorld >> showSpace: aSpace [
+	worldElement showSpace: aSpace
+]
