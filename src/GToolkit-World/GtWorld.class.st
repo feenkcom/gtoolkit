@@ -149,6 +149,12 @@ GtWorld >> initialize [
 	"	self root addEventHandler: GtSceneDrillerEventHandler new"
 ]
 
+{ #category : #'focus managing' }
+GtWorld >> initializeFocus [
+	worldElement isFocusable
+		ifTrue: [ worldElement requestFocus ]
+]
+
 { #category : #actions }
 GtWorld >> markAsDefault [
 	"Mark this instance as being the one that is saved and automatically opened when

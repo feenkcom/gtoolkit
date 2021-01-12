@@ -30,17 +30,12 @@ GtWorldElement >> defaultHomeElement [
 { #category : #initialization }
 GtWorldElement >> initializeListeners [
 	super initializeListeners.
-	
+
 	self
 		when: GtSpawnSpotter
-		do: [ :e | 
-			e consumed: true.
-			spotterDropdown
-				ifNotNil: [ spotterDropdown
-						dispatchEvent:
-							(BrDropdownShowWish new
-								anchor: spotterDropdown;
-								yourself) ] ].
+		do: [ :anEvent |
+			anEvent consumed: true.
+			spotterDropdown dispatchEvent: BrDropdownShowWish new ]
 ]
 
 { #category : #initialization }
@@ -51,12 +46,7 @@ GtWorldElement >> initializeShortcuts [
 			(BlShortcutWithAction new
 				repeatable: false;
 				combination: BlKeyCombination shiftReturn;
-				action: [ spotterDropdown
-						ifNotNil: [ spotterDropdown
-								dispatchEvent:
-									(BrDropdownShowWish new
-										anchor: spotterDropdown;
-										yourself) ] ]).
+				action: [ self dispatchEvent: GtSpawnSpotter new ]).
 	self
 		addShortcut:
 			(BlShortcutWithAction new
@@ -67,7 +57,7 @@ GtWorldElement >> initializeShortcuts [
 								dispatchEvent:
 									(BrDropdownShowWish new
 										anchor: subSpaceDropdown;
-										yourself) ] ]).
+										yourself) ] ])
 ]
 
 { #category : #'private - instance creation' }
