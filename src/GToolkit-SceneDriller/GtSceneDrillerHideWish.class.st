@@ -1,10 +1,10 @@
 Class {
 	#name : #GtSceneDrillerHideWish,
 	#superclass : #BlEvent,
-	#category : #'GToolkit-SceneDriller'
+	#category : #'GToolkit-SceneDriller-Events'
 }
 
 { #category : #sending }
 GtSceneDrillerHideWish >> sendTo: anObject [
-	anObject hideHalo: self
+	anObject hideDrillerEvent: self
 ]

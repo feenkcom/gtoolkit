@@ -1,10 +1,13 @@
 Class {
 	#name : #GtSceneDriller,
-	#superclass : #BrHorizontalPane,
+	#superclass : #BrPager,
 	#instVars : [
-		'targetContainer'
+		'targetContainer',
+		'selectedElement',
+		'inspector',
+		'elementsTree'
 	],
-	#category : #'GToolkit-SceneDriller'
+	#category : #'GToolkit-SceneDriller-UI'
 }
 
 { #category : #initialization }
@@ -13,91 +16,171 @@ GtSceneDriller >> initialize [
 	
 	self
 		matchParent;
-		padding: (BlInsets top: 20 bottom: 20);
-		weightSum: 3;
-		cellSpacing: 20.
+		background: BrGlamorousColors defaultHeaderBackgroundColor;
+		look: BrProportionalPagerLook new
 ]
 
 { #category : #initialization }
 GtSceneDriller >> initializeWith: aTargetContainer [
 	targetContainer := aTargetContainer.
 
+	self addPage: (BlElement new
+		viewModel: BrPagerPageModel new;
+		layout: BlLinearLayout vertical alignCenter;
+		constraintsDo: [ :c |
+			c horizontal matchParent.
+			c vertical matchParent.
+			c linear weight: 0.4 ];
+		addChild: (self newSceneContainerFor: aTargetContainer)).
+		
+	self addPage: (BlElement new
+		viewModel: BrPagerPageModel new;
+		constraintsDo: [ :c |
+			c horizontal matchParent.
+			c vertical matchParent.
+			c linear weight: 0.6 ];
+		addChild: (self newPagerFor: aTargetContainer)).
+
 	self addChildren: { 
-			self newSceneContainerFor: aTargetContainer.
-			self newElementsTreeFor: aTargetContainer.
-			self newElementInspectorFor: aTargetContainer.
-			self newCloseButtonFor: aTargetContainer }
+		self newCloseButtonFor: aTargetContainer }
+]
+
+{ #category : #accessing }
+GtSceneDriller >> inspectElement: anElement [
+	selectedElement == anElement
+		ifTrue: [ ^ self ].
+
+	selectedElement := anElement.
+	elementsTree phlow spawnObject: selectedElement
 ]
 
 { #category : #'instance creation' }
 GtSceneDriller >> newCloseButtonFor: aTargetContainer [
-	^ GtInspectorRoundButtonStencil new asElement
-		icon: (GtInspectorPlusIconStencil close asElement);
+	^ BrButton new
+		look: BrGlamorousButtonCircularLook + BrGlamorousButtonIconLook + BrGlamorousButtonFlatExteriorLook + BrGlamorousButtonLayoutLook;
+		icon: [ (BrGlamorousVectorIcons close asElement
+				outskirts: BlOutskirts centered;
+				background: Color gray;
+				border: (BlBorder paint: Color transparent width: 0.8)) ] asStencil;
+		beLargeSize;
 		constraintsDo: [ :c |
 			c ignoreByLayout.
-			c margin: (BlInsets top: 5 left: 0 bottom: 0 right: 5).
 			c ignored horizontal alignRight.
-			c ignored vertical alignTop ];
+			c ignored vertical alignTop.
+			c margin: (BlInsets top: 5) ];
 		action: [ :e | e fireEvent: GtSceneDrillerHideWish new ]
 ]
 
 { #category : #'instance creation' }
-GtSceneDriller >> newElementInspectorFor: aTargetContainer [
-	^ BrVerticalPane new
+GtSceneDriller >> newElementsTree [	
+	^ BrSimpleTree new
 		matchParent;
-		constraintsDo: [ :c | c linear weight: 1.25 ];
-		addChildren: { 
+		padding: (BlInsets top: 5);
+		rowStencil: (GtSceneDrillerTreeRowStencilBuilder new
+			whenHovered: [ :anEvent |
+				| thisRow thisRowValue |
+				
+				thisRow := anEvent currentTarget.
+				thisRowValue := (elementsTree nodeAt: thisRow constraints infinite holder dataSourcePosition) value.
+				thisRow fireEvent: (GtSceneDrillerHighlightElementWish new element: thisRowValue) ];
+			whenUnhovered: [ :anEvent | anEvent currentTarget fireEvent: (GtSceneDrillerHideHighlightWish new) ]);
+		addEventHandler: (GtPhlowListToSelectHandler new transformation: (GtPhlowSendTransformation object: [ :aTreeNode | aTreeNode value ]));
+		when: GtPhlowObjectEvent do: [ :anEvent | self fireEvent: (GtSceneDrillerSelectElementWish new element: anEvent object) ];
+	  nodeStencil: [
 			BrLabel new
-				look: (BrGlamorousLabelLook new foreground: Color gray);
-				text: 'Inspector'.
-		
-			(GtInspector newOn: aTargetContainer withAllChildrenBreadthFirst atRandom)
-				margin: (BlInsets all: 5);
-				addLook: BrShadowLook new;
-				background: Color white
-		}
+				beSmallSize;
+				look: BrGlamorousLabelLook new ];
+		nodeDataBinder: [ :eachLabel :eachElement |
+			| aLabelText |
+			
+			aLabelText := eachElement class name asRopedText.
+			eachElement id = BlElementId noId
+				ifFalse: [ aLabelText, '   ' asRopedText,
+					(eachElement id asRopedText
+						foreground: Color veryDarkGray;
+						background: (Color gray alpha: 0.1)) ].
+
+			aLabelText, '   ' asRopedText,
+				(('w: ' asRopedText, eachElement constraints horizontal resizer asString asLowercase asRopedText) foreground: Color darkGray).
+			aLabelText, '   ' asRopedText,
+				(('h: ' asRopedText, eachElement constraints vertical resizer asString asLowercase asRopedText) foreground: Color darkGray).
+
+			eachLabel text: aLabelText.
+			eachLabel ];
+		yourself
 ]
 
 { #category : #'instance creation' }
-GtSceneDriller >> newElementsTreeFor: aTargetContainer [
+GtSceneDriller >> newPagerFor: aTargetContainer [	
 	^ BrVerticalPane new
 		matchParent;
-		constraintsDo: [ :c | c linear weight: 0.75 ];
-		addChildren: { 
-			BrLabel new
-				look: (BrGlamorousLabelLook new foreground: Color gray);
-				text: 'Elements'.
-		
-			BrSimpleTree new
+		constraintsDo: [ :c | c linear weight: 0.7 ];
+		padding: (BlInsets top: 10 left: 10 bottom: 10 right: 0);
+		addLook: BrShadowLook new beLarge;
+		background: BrGlamorousColors backdropColor;
+		addChildren: {
+			self newSectionLabel text: 'Details'.
+			(GtPager createWrappedOn: (BrVerticalPane new
 				matchParent;
-				margin: (BlInsets all: 5);
-				addLook: BrShadowLook;
-				background: Color white;
-				nodeStencil: [ BrLabel new look: BrGlamorousLabelLook new ];
-				nodeDataBinder: [ :eachLabel :eachElement | eachLabel text: eachElement printString ];
-				items: aTargetContainer children lazy: [ :each | each children ];
-				expandAll
+				addChild: (BrLabel new
+					look: BrGlamorousLabelLook;
+					hMatchParent;
+					padding: (BlInsets top: 10.0 right: 12.0 bottom: 10.0 left: 12.0);
+					background: BrGlamorousColors defaultHeaderBackgroundColor;
+					text: 'Elements');
+				addChild: (elementsTree := self newElementsTree))) id: '#gtoolkit-driller--pager'
 		}
 ]
 
 { #category : #'instance creation' }
 GtSceneDriller >> newSceneContainerFor: aTargetContainer [
+
 	^ BrVerticalPane new
-		matchParent;
+		hMatchParent;
+		vFitContent;
+		constraintsDo: [ :c | c linear weight: 0.3 ];
+		padding: (BlInsets all: 20);
 		addChildren: { 
-			BrLabel new
-				look: (BrGlamorousLabelLook new foreground: Color gray);
-				text: 'Scene'.
-		
-			BlZoomableElement new
+			self newSectionLabel text: 'Scene'.
+			BlElement new height: 10; width: 0.
+
+			BlScalableElement new
+				fitWidth;
 				constraintsDo: [ :c |
 					c horizontal matchParent.
-					c vertical matchParent ];
-				addChild: aTargetContainer;
-				effect: BrGlamorousShadowEffect new;
-				margin: (BlInsets all: 5);
-				zoomLevel: 0.5
+					c vertical fitContent ];
+				addLook: (BrShadowLook new beLarge color: BrGlamorousColors defaultShadowColor darker);
+				background: Color white;
+				addChild: aTargetContainer
 		}
+]
+
+{ #category : #'instance creation' }
+GtSceneDriller >> newSectionLabel [
+	^ BrLabel new
+		look: (BrGlamorousLabelLook new foreground: Color darkGray)
+]
+
+{ #category : #accessing }
+GtSceneDriller >> selectElement: anElement [
+	| wasNil |
+	selectedElement == anElement
+		ifTrue: [ ^ self ].
+	
+	wasNil := selectedElement isNil.
+	selectedElement := anElement.
+	
+	elementsTree items: targetContainer children lazy: [ :each | each children ].
+	elementsTree expandSuchThat: [ :aTreeNode | (selectedElement hasParent: aTreeNode value) or: [ selectedElement == aTreeNode value ] ].
+	elementsTree selectAndScrollTo: selectedElement.
+	elementsTree phlow spawnObject: selectedElement.
+	
+	wasNil ifTrue: [
+		self
+			childWithId: '#gtoolkit-driller--pager'
+			ifFound: [ :aPager |
+				aPager maximizePageContentIn: aPager pages first contentElement ]
+			ifNone: [  ] ]
 ]
 
 { #category : #accessing }
