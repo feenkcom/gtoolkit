@@ -145,8 +145,9 @@ GtWorld >> initialize [
 		constraintsDo: [ :c | 
 			c vertical matchParent.
 			c horizontal matchParent ].
-	self root addChild: worldElement
-	"	self root addEventHandler: GtSceneDrillerEventHandler new"
+	self root addChild: worldElement.
+
+	self withSceneDriller
 ]
 
 { #category : #'focus managing' }

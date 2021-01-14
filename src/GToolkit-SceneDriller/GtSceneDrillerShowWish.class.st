@@ -4,10 +4,10 @@ Fire the ""scene driller show wish"" from withing the graphical scene whose root
 Class {
 	#name : #GtSceneDrillerShowWish,
 	#superclass : #BlEvent,
-	#category : #'GToolkit-SceneDriller'
+	#category : #'GToolkit-SceneDriller-Events'
 }
 
 { #category : #sending }
 GtSceneDrillerShowWish >> sendTo: anObject [
-	anObject showHalo: self
+	anObject showDrillerEvent: self
 ]
