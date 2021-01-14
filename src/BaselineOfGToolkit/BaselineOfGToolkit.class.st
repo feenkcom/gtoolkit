@@ -71,15 +71,15 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.8.10/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.8.322/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.8.323/src' ];
 			baseline: 'GToolkitPresenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.183/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.184/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.411/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.412/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.264/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.265/src' ];
 			baseline: 'GToolkitDemos' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.8.219/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.8.220/src' ];
 			baseline: 'GToolkitReleaser' with: [
 				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.8.36/src' ];
 			baseline: 'GToolkitConstrainer' with: [
@@ -93,17 +93,17 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkit4Famix3' with: [
 				spec repository: 'github://feenkcom/gt4famix3:v0.8.9/src' ];
 			baseline: 'GToolkitRemote' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.212/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.213/src' ];
 			baseline: 'GToolkit4Git' with: [
 				spec repository: 'github://feenkcom/gt4git:v0.8.30/src' ];
 			baseline: 'GToolkit4Jenkins' with: [
 				spec repository: 'github://feenkcom/gt4jenkins:v0.8.8/src' ];
 			baseline: 'Gt4PharoLink' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.212/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.213/src' ];
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.411/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.412/src' ];
 			baseline: 'BlocExtensions' with: [
-				spec repository: 'github://feenkcom/Bloc:v0.8.144/src' ].
+				spec repository: 'github://feenkcom/Bloc:v0.8.145/src' ].
 		spec 
 			package: 'GToolkit-Extensions' with: [
 				spec requires: #('GToolkitDocumenter' ). ];
