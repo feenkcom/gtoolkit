@@ -101,9 +101,9 @@ GtSceneDriller >> newElementsTree [
 						background: (Color gray alpha: 0.1)) ].
 
 			aLabelText, '   ' asRopedText,
-				(('w: ' asRopedText, eachElement constraints horizontal resizer asString asLowercase asRopedText) foreground: Color darkGray).
+				(('h: ' asRopedText, eachElement constraints horizontal resizer asString asLowercase asRopedText) foreground: Color darkGray).
 			aLabelText, '   ' asRopedText,
-				(('h: ' asRopedText, eachElement constraints vertical resizer asString asLowercase asRopedText) foreground: Color darkGray).
+				(('v: ' asRopedText, eachElement constraints vertical resizer asString asLowercase asRopedText) foreground: Color darkGray).
 
 			eachLabel text: aLabelText.
 			eachLabel ];
