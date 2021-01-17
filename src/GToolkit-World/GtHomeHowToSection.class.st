@@ -13,6 +13,7 @@ GtHomeHowToSection >> create [
 	cardsContainer addChild: (self newDocCardForClass: GtWorkWithGitHubIcebergMetacelloHowToGuide).
 	cardsContainer addChild: (self newDocCardForClass: GtWorkWithQueriesHowToGuide).
 	cardsContainer addChild: (self newDocCardForClass: GtCreateStandaloneAppHowToGuide).
+	cardsContainer addChild: (self newDocCardForClass: GtScaleUIHowToGuide).
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
