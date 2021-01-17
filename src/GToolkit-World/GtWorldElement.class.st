@@ -89,11 +89,11 @@ GtWorldElement >> newSpotterButton [
 	
 	spotterDropdown :=  GtSpotterDropdownButtonStencil new
 		tooltip: 'Search';
-		extent: self class worldSpotterSize;
+		extent: [ self class worldSpotterSize ];
 		spotterElementDo: [ :aSpotterElement |
 			aSpotterElement 
 				when: GtSpotterResizedEvent 
-				do: [ :e | self class worldSpotterSize: e target size ] ];
+				do: [ :anEvent | self class worldSpotterSize: anEvent target extent ] ];
 		asElement.
 	spotterDropdown look - BrGlamorousButtonExteriorLook.
 		
