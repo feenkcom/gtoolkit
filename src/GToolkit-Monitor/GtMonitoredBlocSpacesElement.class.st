@@ -50,14 +50,17 @@ GtMonitoredBlocSpacesElement >> initialize [
 			isOpened := aMonitoredSpace exists
 				ifTrue: [ aMonitoredSpace isRunning
 					ifTrue: [ 'Running' asRopedText bold ]
-					ifFalse: [ 'Dead' asRopedText foreground: Color red darker; bold ] ]
+					ifFalse: [
+						aMonitoredSpace isRunningAsSubSpace
+							ifTrue: [ 'Running' asRopedText bold, ' (sub-space)' asRopedText ]
+							ifFalse: [ 'Dead' asRopedText foreground: Color red darker; bold ] ] ]
 				ifFalse: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
-			
+
 			BrLabel new
 				look: BrGlamorousLabelLook;
 				text: isOpened;
 				hMatchParent ].
-	
+
 	spacesList column
 		title: 'Shutsdown GT';
 		stencil: [ :aMonitoredSpace |
