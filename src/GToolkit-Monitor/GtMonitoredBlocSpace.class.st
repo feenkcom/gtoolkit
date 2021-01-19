@@ -164,10 +164,30 @@ GtMonitoredBlocSpace >> isDead [
 ]
 
 { #category : #testing }
+GtMonitoredBlocSpace >> isPausedAsSubSpace [
+	^ self space
+		ifNil: [ false ]
+		ifNotNil: [ :aSpace |
+			aSpace isOpened not
+				and: [ aSpace root isAttachedToSceneGraph not ] ]
+]
+
+{ #category : #testing }
 GtMonitoredBlocSpace >> isRunning [
 	^ self space
 		ifNil: [ false ]
 		ifNotNil: [ :aSpace | aSpace isOpened ]
+]
+
+{ #category : #testing }
+GtMonitoredBlocSpace >> isRunningAsSubSpace [
+	^ self space
+		ifNil: [ false ]
+		ifNotNil: [ :aSpace |
+			aSpace isOpened not
+				and: [ aSpace root isAttachedToSceneGraph
+					and: [ aSpace root space isOpened
+						and: [ aSpace root space ~~ aSpace ] ] ] ]
 ]
 
 { #category : #accessing }

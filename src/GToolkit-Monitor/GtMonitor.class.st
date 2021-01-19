@@ -188,10 +188,19 @@ GtMonitor >> gtSpacesFor: aView [
 		title: 'Spaces';
 		priority: 2;
 		stencil: [ GtMonitoredBlocSpacesElement new ];
+		actionStencil: [ :aTab |
+			BrButton new 
+				look: BrGlamorousButtonWithIconLook;
+				icon: BrGlamorousVectorIcons refresh asElement;
+				label: 'Refresh';
+				action:  [
+					Smalltalk garbageCollect.
+					aTab viewContentElement children first updateList ] ];
 		actionStencil: [ 
 			BrButton new 
 				look: BrGlamorousButtonWithIconLook;
 				icon: BrGlamorousIcons trash asElement;
+				label: 'Close all spaces';
 				action:  [ :aButton |
 					(BlSpace allSubInstances copyWithout: aButton space) do: [ :eachSpace |
 						eachSpace isOpened
@@ -206,7 +215,15 @@ GtMonitor >> gtSystemInfoFor: aView [
 	^ aView explicit
 		title: 'System';
 		priority: 1;
-		stencil: [ GtMonitorSystemInfoElement new ]
+		stencil: [ GtMonitorSystemInfoElement new ];
+		actionStencil: [ :aTab |
+			BrButton new 
+				look: BrGlamorousButtonWithIconLook;
+				icon: BrGlamorousVectorIcons refresh asElement;
+				label: 'Refresh';
+				action:  [
+					Smalltalk garbageCollect.
+					aTab viewContentElement children first updateSystemInfo ] ]
 ]
 
 { #category : #'gt-extension' }
