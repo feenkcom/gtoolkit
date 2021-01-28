@@ -155,12 +155,29 @@ GtPhlowUpdateRequester >> postponeUpdate [
 		self beUpdateRequestedIfDoneEarlierDo: [ ^ self ].
 		BlUseAsyncFeatures 
 			ifEnabledDo: [ 
-				anElement isAttachedToSceneGraph ifFalse: [ ^ self ].
-				BlTaskAtQueue default
-					schedule: [ self enqueueUpdate ]
-					at: self postponedTime ]
-			otherwise: [ 
-				self updateNow ] ]
+				anElement isAttachedToSceneGraph
+					ifFalse: [ ^ self ].
+				
+				"Update requester should perform an update as soon as possible, especially if
+				postponed delay (duration) is zero. It means that there should be no unnecessary skipped frames.
+				What does it mean? Let's take a look at the phrame phase order, roughly:
+					- handle events
+					- run tasks
+					- redraw
+				From usability and smoothness perspective all zero delay updates that are scheduled during event processing phase
+				must be handled during tasks phase so that UI related changes appear on the screen within the same frame, without delays.
+				If even one frame is skipped users would notice UI jumping/jiggling/flickering.
+
+				We explicitly handle zero delay case by instantly enqueuing an update task to the element so that it can be processed
+				as soon as possible. If there is a non-zero delay we schedule an update with the help of a TaskAt queue which may skip
+				an undefined amount of frames."
+				self postponedDuration isZero
+					ifTrue: [ self enqueueUpdate ]
+					ifFalse: [
+						BlTaskAtQueue default
+							schedule: [ self enqueueUpdate ]
+							at: self postponedTime ] ]
+			otherwise: [ self updateNow ] ]
 ]
 
 { #category : #'private - accessing' }
