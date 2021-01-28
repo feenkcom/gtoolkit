@@ -160,7 +160,7 @@ GtPhlowUpdateRequester >> postponeUpdate [
 				
 				"Update requester should perform an update as soon as possible, especially if
 				postponed delay (duration) is zero. It means that there should be no unnecessary skipped frames.
-				What does it mean? Let's take a look at the phrame phase order, roughly:
+				What does it mean? Let's take a look at the frame phase order, roughly:
 					- handle events
 					- run tasks
 					- redraw
