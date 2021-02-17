@@ -50,9 +50,11 @@ GtNotificationBadgePublisher >> ensureBadge [
 
 { #category : #'private - displaying' }
 GtNotificationBadgePublisher >> findBadge [
-	self element childrenDo: [ :aChild | 
-		(aChild isKindOf: GtNotificationsBadgeElement)
-			ifTrue: [ ^ aChild ] ].
+	| aQuery |
+	aQuery := self element query // GtNotificationsBadgeElement.
+	aQuery result size isZero ifFalse: [ 
+		^ aQuery result first ].
+	
 	^ nil
 ]
 
