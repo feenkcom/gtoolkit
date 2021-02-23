@@ -161,7 +161,7 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtPackageDependenciesFor: aView [
 								ifTrue: [ { each . allPreloadedPackages sortedPackagesNamed: each package name } -> { Color gray . 'preloaded' } ]
 								ifFalse: [ { each . #() } -> { Color red darker. 'undefined' } ] ] ] ]	 ];
 		column: 'Package' text: [ :each |
-			each key first package name asRopedText foreground: each value first ];
+			each key first package name asRopedText foreground: each value first ] weight: 0.5;
 		column: 'Dependency' do: [ :column |
 			column
 				cellStencil: [
