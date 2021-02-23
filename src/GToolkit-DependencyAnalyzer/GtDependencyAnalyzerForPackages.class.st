@@ -56,6 +56,15 @@ GtDependencyAnalyzerForPackages >> gtPackagesFor: aView [
 		send: [ :each | each key ]
 ]
 
+{ #category : #'gt-extensions' }
+GtDependencyAnalyzerForPackages >> gtPreloadedBaselinesFor: aView [
+	<gtView>
+	preloadedBaselines ifNil: [ ^ aView empty ].
+	^ aView list
+		title: 'Preloaded baselines';
+		items: [ self preloadedBaselines asOrderedCollection ]
+]
+
 { #category : #initialization }
 GtDependencyAnalyzerForPackages >> initialize [
 	super initialize.
