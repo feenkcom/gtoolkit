@@ -12,12 +12,8 @@ GtBaselinesShouldProperlySpecifyDependencies >> issues [
 
 	analyzers := allDependencies collect: [:aProject |
 		(GtDependencyAnalyzerForBaseline new baseline: aProject baselineClass)
-			preloadedBaselines: { 
-				BaselineOfPharoBootstrap . 
-				BaselineOfMorphic . 
-				BaselineOfMetacello . 
-				BaselineOfMonticello }.].
-	
+			preloadedBaselines: aProject baselineClass gtDependencyAnalysisPreloadedBaselines ].
+
 	^ analyzers select: [ :aBaselineAnalizer | 
 		(aBaselineAnalizer issuesWithContext: GtDependencyAnalyzerContext new) size > 0 ]
 	
