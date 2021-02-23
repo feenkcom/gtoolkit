@@ -12,8 +12,7 @@ GtDependencyAnalyzerEasy class >> analyzeBaseline: aBaselineClass [
 
 	^ GtDependencyAnalyzerForBaseline new
 		baseline: aBaselineClass;
-		preloadedBaselines: (aBaselineClass gtDependencyAnalysisPreloadedBaselines 
-			ifNil: [ self preloadedBaselines ])
+		preloadedBaselines: (aBaselineClass gtDependencyAnalysisPreloadedBaselines)
 ]
 
 { #category : #baselines }
@@ -27,10 +26,14 @@ GtDependencyAnalyzerEasy class >> analyzePackageNamed: aPackageNamed [
 		ifNotEmpty: [ (GtDependencyAnalyzerForPackageFromBaseline
 			package: aPackageNamed
 			baseline: aBaselineCollection anyOne)
-				preloadedBaselines: self preloadedBaselines ]
+				preloadedBaselines: aBaselineCollection anyOne gtDependencyAnalysisPreloadedBaselines ]
 ]
 
 { #category : #baselines }
 GtDependencyAnalyzerEasy class >> preloadedBaselines [
-	^ { BaselineOfPharoBootstrap . BaselineOfMorphic . BaselineOfMetacello . BaselineOfMonticello }
+	^ { BaselineOfPharoBootstrap . 
+		BaselineOfMorphic . 
+		BaselineOfMetacello . 
+		BaselineOfMonticello . 
+		BaselineOfIceberg }
 ]
