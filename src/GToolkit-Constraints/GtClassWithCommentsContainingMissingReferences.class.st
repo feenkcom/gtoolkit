@@ -18,9 +18,12 @@ GtClassWithCommentsContainingMissingReferences >> name [
 
 { #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
-	^ RPackage organizer packages select: [ :aPackage | 
-		#('Bloc' . 'Brick' . 'GToolkit' ) anySatisfy: [ :prefix | 
-			aPackage name beginsWith: prefix ] ]
+	| gtProject |
+	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit/src'.
+	^ gtProject allPPackages
+			reject: [ :aPackage | 
+				"To avoid changing class comments in ThreadedFFI"
+				aPackage name = 'ThreadedFFI' ]
 ]
 
 { #category : #accessing }
