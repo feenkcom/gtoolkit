@@ -48,7 +48,12 @@ GtSubscriptionSubscriber >> gtSubscriberFor: aView [
 		title: 'Subscriber';
 		priority: 2;
 		object: [ self subscriber ];
-		view: #gtLiveFor: 
+		view: #gtLiveFor:;
+		actionButtonIcon: BrGlamorousVectorIcons inspect 
+			label: 'Subscriber' 
+			tooltip: 'Inspect subscriber' 
+			action: [ :aButton |
+				aButton phlow spawnObject: self subscriber ]
 ]
 
 { #category : #'gt - extensions' }
