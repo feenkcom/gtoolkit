@@ -102,6 +102,15 @@ GtDependencyAnalyzerForPackage >> gtPackageDependenciesFor: aView [
 		itemText: [ :each | each package name ]
 ]
 
+{ #category : #'gt-extensions' }
+GtDependencyAnalyzerForPackage >> gtPreloadedBaselinesFor: aView [
+	<gtView>
+	preloadedBaselines ifNil: [ ^ aView empty ].
+	^ aView list
+		title: 'Preloaded baselines';
+		items: [ self preloadedBaselines asOrderedCollection ]
+]
+
 { #category : #comparing }
 GtDependencyAnalyzerForPackage >> hash [
 	"Answer an integer value that is related to the identity of the receiver."
