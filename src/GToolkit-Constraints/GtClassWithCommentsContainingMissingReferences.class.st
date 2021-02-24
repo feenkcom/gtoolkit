@@ -18,9 +18,17 @@ GtClassWithCommentsContainingMissingReferences >> name [
 
 { #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
-	| gtProject |
+	| gtProject allPackages |
 	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit/src'.
-	^ gtProject allPPackages
+	allPackages := gtProject allPPackages.
+	
+	NonInteractiveTranscript stdout 
+		nextPutAll: gtProject asString; cr.
+	NonInteractiveTranscript stdout 
+		nextPutAll: allPackages asString; cr.
+	
+	^ (allPackages
+			reject:  [ :aPackage | aPackage isNil ])
 			reject: [ :aPackage | 
 				"To avoid changing class comments in ThreadedFFI"
 				aPackage name = 'ThreadedFFI' ]
