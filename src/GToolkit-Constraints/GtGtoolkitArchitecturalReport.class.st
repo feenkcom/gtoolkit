@@ -1,11 +1,17 @@
 "
-!Architectural report for Glamorous Toolkit
+Architectural report for Glamorous Toolkit.
 "
 Class {
 	#name : #GtGtoolkitArchitecturalReport,
 	#superclass : #GtConstrainerReport,
 	#category : #'GToolkit-Constraints'
 }
+
+{ #category : #accessing }
+GtGtoolkitArchitecturalReport class >> yourself [
+	<gtExample>
+	^ self new
+]
 
 { #category : #building }
 GtGtoolkitArchitecturalReport >> build: aComposite [
