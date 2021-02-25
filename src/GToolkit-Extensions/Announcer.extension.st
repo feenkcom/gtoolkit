@@ -24,5 +24,9 @@ Announcer >> gtSubscriptionsPerSubscriberFor: aView [
 		column: 'Kind' item: [ :aSubscription | 
 			(aSubscription isKindOf: GtSubscriptionSubscriber)
 				ifTrue: [ '' ]
-				ifFalse: [ aSubscription class ] ]
+				ifFalse: [ aSubscription class ] ];
+		send: [ :aSubscription | 
+			(aSubscription isKindOf: GtSubscriptionSubscriber)
+				ifTrue: [ aSubscription subscriber ]
+				ifFalse: [ aSubscription ] ]
 ]
