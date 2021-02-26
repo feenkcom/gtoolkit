@@ -75,11 +75,11 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.217/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.510/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.511/src' ];
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.346/src' ];
 			baseline: 'GToolkitDemos' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.8.286/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.8.287/src' ];
 			baseline: 'GToolkitReleaser' with: [
 				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.8.42/src' ];
 			baseline: 'GToolkitConstrainer' with: [
@@ -101,7 +101,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'Gt4PharoLink' with: [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.332/src' ];
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.510/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.511/src' ];
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.177/src' ].
 		spec 
