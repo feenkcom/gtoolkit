@@ -7,10 +7,21 @@ Class {
 		'notificationsDropdown'
 	],
 	#classVars : [
+		'IsWorldSpotterPreviewDisplayed',
 		'WorldSpotterSize'
 	],
 	#category : #'GToolkit-World-UI'
 }
+
+{ #category : #accessing }
+GtWorldElement class >> isWorldSpotterPreviewDisplayed [
+	^ IsWorldSpotterPreviewDisplayed ifNil: [ IsWorldSpotterPreviewDisplayed := true ]
+]
+
+{ #category : #accessing }
+GtWorldElement class >> showWorldSpotterPreview: aBoolean [
+	IsWorldSpotterPreviewDisplayed := aBoolean
+]
 
 { #category : #accessing }
 GtWorldElement class >> worldSpotterSize [
@@ -87,9 +98,12 @@ GtWorldElement >> newSpotterButton [
 		assert: [ spotterDropdown isNil ]
 		description: [ 'Spotter dropdown is already created!' ].
 	
-	spotterDropdown :=  GtSpotterDropdownButtonStencil new
+	spotterDropdown := GtSpotterDropdownButtonStencil new
 		tooltip: 'Search';
 		extent: [ self class worldSpotterSize ];
+		showPreview: [ self class isWorldSpotterPreviewDisplayed ];
+		onPreviewChangedDo: [ :isDisplayed | 
+			self class showWorldSpotterPreview: isDisplayed ];
 		spotterElementDo: [ :aSpotterElement |
 			aSpotterElement 
 				when: GtSpotterResizedEvent 
