@@ -15,7 +15,7 @@ GtHomeSlideShowsSection >> create [
 		slideshow: [ GtLiveShow createWithArrowsVisible: GtTour new ]
 		description: 'Take an interative tour through the tools and engines.').
 	cardsContainer addChild: (self 
-		newShowCardWithTitle: 'Tour' 
+		newShowCardWithTitle: 'Moldable Development' 
 		slideshow: [ GtLiveShow createWithArrowsVisible: GtMoldableDevelopmentSlideshow new ]
 		description: 'A tour through the moldable development concepts.').
 	cardsContainer addChild: (self 
