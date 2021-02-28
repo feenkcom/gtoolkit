@@ -28,6 +28,7 @@ GtHomeToolsSection >> create [
 	cardsContainer addChild: self newMonitorButtonStencil create.
 	cardsContainer addChild: self newExamplesButtonStencil create.
 	cardsContainer addChild: self newTranscriptButtonStencil create.
+	cardsContainer addChild: self newFileSystemButtonStencil create.
 	cardsContainer addChild: self newMorphicWorldButtonStencil create.
 	cardsContainer addChild: self newSpotterButtonStencil create.
 	sectionContainer addChild: cardsContainer.
@@ -62,6 +63,21 @@ GtHomeToolsSection >> newExamplesButtonStencil [
 						createOn: GtRlGToolkitExamplesExplorer buildForGToolkitProject) maximized
 				from: card ];
 		description: 'Units of tests and of documentation. In one.'
+]
+
+{ #category : #'api - instantiation' }
+GtHomeToolsSection >> newFileSystemButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'File system';
+		icon: BrGlamorousVectorIcons folder;
+		action: [ :card | 
+			self
+				showSpaceWithIcon: BrGlamorousVectorIcons folder
+				title: 'File system'
+				with: ((GtInspector 
+					createOn: FileLocator imageDirectory asFileReference) maximized)
+				from: card ];
+		description: 'Browse the file system.'
 ]
 
 { #category : #accessing }
