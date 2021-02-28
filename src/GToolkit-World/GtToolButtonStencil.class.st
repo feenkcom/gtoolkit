@@ -32,8 +32,8 @@ GtToolButtonStencil >> create [
 	    look: (BrGlamorousLabelLook new fontSize: 10).
 	^ BrButton new
 		constraintsDo:[ :c | 
-	        c horizontal exact: 90.
-	        c vertical exact: 90 ];
+	        c horizontal exact: 74.
+	        c vertical exact: 74 ];
 		margin: (BlInsets top: 10 left: 20 bottom: 10 right: 20);
 		action: self action;
 		padding: (BlInsets all: 10);
@@ -81,7 +81,7 @@ GtToolButtonStencil >> initialize [
 	description := 'Some tool'.
 	title := 'Some tool'.
 	action := [  ].
-	iconSize := 48@48.
+	iconSize := 32@32.
 	icon := BlElement new size: iconSize.
 ]
 
