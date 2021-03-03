@@ -16,10 +16,28 @@ unzip build-artifacts/GlamorousToolkitVM-*-mac64-bin.zip
 
 time ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st --quit loadgt.st 2>&1
 
+EXEC_STATUS="$?"
+if [ "$EXEC_STATUS" -ne 0 ]; then
+  exit "$EXEC_STATUS"
+fi
+
 echo "ThreadedFFIMigration enableThreadedFFI. Smalltalk snapshot: true andQuit: true."  > tffi.st
 echo "GtWorld openDefault. 5 seconds wait. BlHost pickHost universe snapshot: true andQuit: true." > gtworld.st
+
 ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st tffi.st
-./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st gtworld.st --interactive --no-quit 
+
+EXEC_STATUS="$?"
+if [ "$EXEC_STATUS" -ne 0 ]; then
+  exit "$EXEC_STATUS"
+fi
+
+./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st gtworld.st --interactive --no-quit
+
+EXEC_STATUS="$?"
+if [ "$EXEC_STATUS" -ne 0 ]; then
+  exit "$EXEC_STATUS"
+fi
+
 echo "Setup process complete. To start GlamorousToolkit run \n ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image --no-quit --interactive"
 
 exit 0
