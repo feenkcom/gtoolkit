@@ -3,17 +3,18 @@ set -o xtrace
 
 # find . ! -name '*.st' ! -name '*.sh' ! -name '.' -exec rm -rf {} +
 
-curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -o loadgt.st
+# curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -o loadgt.st
 
 curl https://get.pharo.org/64/80 | bash
-
-mv Pharo.image GlamorousToolkit.image
-mv Pharo.changes GlamorousToolkit.changes
 
 curl -L https://github.com/feenkcom/opensmalltalk-vm/releases/latest/download/build-artifacts.zip -o build-artifacts.zip
 unzip build-artifacts.zip
 unzip build-artifacts/GlamorousToolkitVM-*-mac64-bin.zip
 
+mv Pharo.image GlamorousToolkit.image
+mv Pharo.changes GlamorousToolkit.changes
+
+time ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st --quit loadice.st 2>&1
 time ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st --quit loadgt.st 2>&1
 
 echo "ThreadedFFIMigration enableThreadedFFI. Smalltalk snapshot: true andQuit: true."  > tffi.st
