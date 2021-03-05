@@ -11,7 +11,7 @@ Class {
 GtDependencyAnalyzerPackageHasUndefinedDependenciesIssue >> gtDisplayOn: aStream [
 	aStream
 		print: undefinedDependency name;
-		nextPutAll: 'is undefined'
+		nextPutAll: ' is undefined'
 ]
 
 { #category : #printing }

@@ -4,6 +4,19 @@ Class {
 	#category : #'GToolkit-Constraints'
 }
 
+{ #category : #example }
+GtBaselinesShouldProperlySpecifyDependencies class >> blocSpartaPackageAnalysisExample [
+	<gtExample>
+	| analyzer packageAnalyzers blocSpartaPackageAnaluser |
+	analyzer :=GtDependencyAnalyzerEasy analyzeBaseline: BaselineOfBloc.
+
+	packageAnalyzers := analyzer directlyDefinedPackagesWithContext: GtDependencyAnalyzerContext new.
+
+	blocSpartaPackageAnaluser := packageAnalyzers detect: [ :aPackageAnalyser | aPackageAnalyser name = 'Bloc-Sparta' ].
+	
+	^ blocSpartaPackageAnaluser
+]
+
 { #category : #accessing }
 GtBaselinesShouldProperlySpecifyDependencies >> issues [
 	| gtProject allDependencies analyzers |
@@ -12,12 +25,8 @@ GtBaselinesShouldProperlySpecifyDependencies >> issues [
 
 	analyzers := allDependencies collect: [:aProject |
 		(GtDependencyAnalyzerForBaseline new baseline: aProject baselineClass)
-			preloadedBaselines: { 
-				BaselineOfPharoBootstrap . 
-				BaselineOfMorphic . 
-				BaselineOfMetacello . 
-				BaselineOfMonticello }.].
-	
+			preloadedBaselines: aProject baselineClass gtDependencyAnalysisPreloadedBaselines ].
+
 	^ analyzers select: [ :aBaselineAnalizer | 
 		(aBaselineAnalizer issuesWithContext: GtDependencyAnalyzerContext new) size > 0 ]
 	

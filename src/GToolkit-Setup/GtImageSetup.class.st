@@ -69,6 +69,7 @@ GtImageSetup class >> performSetupForRelease [
 { #category : #actions }
 GtImageSetup class >> registerTools [
 	GtMoldableDebugger register.
+	GtExpandableDebuggerElement register.
 	GtEmergencyDebugger register.
 	GtInspectorToolRegistryAdaptor register.
 	GtPlaygroundToolRegistryAdaptor register.
