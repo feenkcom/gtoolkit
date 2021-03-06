@@ -14,6 +14,7 @@ curl -L https://github.com/feenkcom/opensmalltalk-vm/releases/latest/download/bu
 unzip build-artifacts.zip
 unzip build-artifacts/GlamorousToolkitVM-*-linux64-bin.zip
 
+time ./glamoroustoolkit GlamorousToolkit.image st --quit loadice.st 2>&1
 time ./glamoroustoolkit GlamorousToolkit.image st --quit loadgt.st 2>&1
 
 echo "ThreadedFFIMigration enableThreadedFFI. Smalltalk snapshot: true andQuit: true."  > tffi.st
