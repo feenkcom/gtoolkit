@@ -78,6 +78,10 @@ $url = "https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/local
 $output = "$pwd\loadgt.st"
 Get-FileFromURL $url $output
 
+$url = "https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadice.st"
+$output = "$pwd\loadice.st"
+Get-FileFromURL $url $output
+
 
 $url = "https://files.pharo.org/get-files/80/pharo64.zip"
 $output = "$pwd\pharo64.zip"
@@ -88,6 +92,7 @@ Expand-Archive build-artifacts\GlamorousToolkitVM-*-win64-bin.zip  -DestinationP
 Expand-Archive pharo64.zip -DestinationPath GlamorousToolkit 
 Move-Item .\GlamorousToolkit\Pharo8.0-SNAPSHOT-64bit-*.image .\GlamorousToolkit\Pharo.image
 Move-Item .\GlamorousToolkit\Pharo8.0-SNAPSHOT-64bit-*.changes .\GlamorousToolkit\Pharo.changes
+.\GlamorousToolkit\GlamorousToolkitConsole.exe .\GlamorousToolkit\Pharo.image st --quit .\loadice.st
 .\GlamorousToolkit\GlamorousToolkitConsole.exe .\GlamorousToolkit\Pharo.image st --quit .\loadgt.st
 .\GlamorousToolkit\GlamorousToolkitConsole.exe .\GlamorousToolkit\Pharo.image eval --save "ThreadedFFIMigration enableThreadedFFI." 
 .\GlamorousToolkit\GlamorousToolkitConsole.exe .\GlamorousToolkit\Pharo.image eval --interactive --no-quit 'GtWorld openDefault. 30 seconds wait. BlHost pickHost universe snapshot: true andQuit: true.'

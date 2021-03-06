@@ -4,6 +4,7 @@ set -o xtrace
 # find . ! -name '*.st' ! -name '*.sh' ! -name '.' -exec rm -rf {} +
 
 curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -o loadgt.st
+curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadice.st -o loadice.st
 
 curl https://get.pharo.org/64/80 | bash
 
