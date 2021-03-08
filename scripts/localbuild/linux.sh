@@ -4,6 +4,7 @@ set -o xtrace
 # find . ! -name '*.st' ! -name '*.sh' ! -name '.' -exec rm -rf {} +
 
 curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -o loadgt.st
+curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadice.st -o loadice.st
 
 curl https://get.pharo.org/64/80 | bash
 
@@ -14,6 +15,7 @@ curl -L https://github.com/feenkcom/opensmalltalk-vm/releases/latest/download/bu
 unzip build-artifacts.zip
 unzip build-artifacts/GlamorousToolkitVM-*-linux64-bin.zip
 
+time ./glamoroustoolkit GlamorousToolkit.image st --quit loadice.st 2>&1
 time ./glamoroustoolkit GlamorousToolkit.image st --quit loadgt.st 2>&1
 
 echo "ThreadedFFIMigration enableThreadedFFI. Smalltalk snapshot: true andQuit: true."  > tffi.st
