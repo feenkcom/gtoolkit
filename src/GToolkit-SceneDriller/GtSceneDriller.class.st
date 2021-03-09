@@ -17,7 +17,7 @@ GtSceneDriller >> initialize [
 	self
 		matchParent;
 		background: BrGlamorousColors defaultHeaderBackgroundColor;
-		look: BrProportionalPagerLook new
+		look: BrProportionalHorizontalPagerLook new
 ]
 
 { #category : #initialization }
