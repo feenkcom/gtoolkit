@@ -147,7 +147,8 @@ GtWorld >> initialize [
 			c horizontal matchParent ].
 	self root addChild: worldElement.
 
-	self withSceneDriller
+	self withSceneDriller.
+	self withGlamorousFullscreenMaxizimerHost
 ]
 
 { #category : #'focus managing' }

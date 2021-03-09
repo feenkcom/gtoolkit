@@ -23,7 +23,7 @@ GtProfiler >> initialize [
 	super initialize.
 		
 	self matchParent.
-	self look: BrProportionalPagerLook new.
+	self look: BrProportionalHorizontalPagerLook new.
 	
 	openedSpaces := GtProfilerSpacesElement new.
 	framesChart := GtProfilerPerformanceChart new.
