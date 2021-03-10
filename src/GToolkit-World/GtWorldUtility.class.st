@@ -21,12 +21,22 @@ GtWorldUtility class >> showSpaceWithIcon: anIcon title: aString with: aStencil 
 ]
 
 { #category : #'instance creation' }
-GtWorldUtility class >> showSpaceWithTitle: aString inPagerWith: aStencil from: anotherElement [
+GtWorldUtility class >> showSpaceWithTitle: aString inPager: aPagerConfiguration with: aStencil from: anotherElement [
 	| anElement aPager |
 	anElement := aStencil asElement.
 	aPager := GtPager createWrappedOn: anElement.
 	aPager maximized.
+	aPagerConfiguration applyOn: aPager.
 	^ self showSpaceWithTitle: aString with: aPager from: anotherElement.
+]
+
+{ #category : #'instance creation' }
+GtWorldUtility class >> showSpaceWithTitle: aString inPagerWith: aStencil from: anotherElement [
+	^ self 
+		showSpaceWithTitle: aString 
+		inPager: GtWorldPagerConfiguration new
+		with: aStencil 
+		from: anotherElement
 ]
 
 { #category : #'instance creation' }
