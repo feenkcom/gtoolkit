@@ -160,5 +160,10 @@ GtTranscript >> tab [
 GtTranscript >> textDo: aBlock [
 	<return: #BlText>
 
-	^ mutex critical: [ aBlock value: text ]
+	^ mutex critical: [ [ aBlock value: text] on: Error do: [ :anError |
+			anError emit.
+
+			NonInteractiveTranscript stderr
+				print: anError;
+				cr ] ]
 ]
