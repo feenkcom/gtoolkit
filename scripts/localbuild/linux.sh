@@ -1,7 +1,16 @@
 #/bin/sh!
-set -o xtrace
 
+DIR=glamoroustoolkit
 # find . ! -name '*.st' ! -name '*.sh' ! -name '.' -exec rm -rf {} +
+
+if [ -d "$DIR" ]; then
+  echo "The folder $DIR is present in the current directory, perhaps it is already installed?"
+  exit 1
+fi
+
+set -o xtrace
+mkdir $DIR
+cd $DIR
 
 curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -o loadgt.st
 curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadice.st -o loadice.st
@@ -24,5 +33,6 @@ echo "GtWorld openDefault. 5 seconds wait. BlHost pickHost universe snapshot: tr
 ./glamoroustoolkit GlamorousToolkit.image st gtworld.st --interactive --no-quit 
 echo "Setup process complete. To start GlamorousToolkit run \n ./glamoroustoolkit GlamorousToolkit.image --no-quit --interactive"
 
+cd ..
 
 exit 0
