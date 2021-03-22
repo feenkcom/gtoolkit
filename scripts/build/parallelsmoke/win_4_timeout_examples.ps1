@@ -2,7 +2,7 @@
 
 $maximumRuntimeSeconds = 1200
 
-$process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchExamples --junit-xml-output' -PassThru
+$process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchExamples --junit-xml-output --verbose' -PassThru
 
 try
 {
