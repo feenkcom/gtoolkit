@@ -10,6 +10,42 @@ Class {
 	#category : #'GToolkit-SceneDriller-UI'
 }
 
+{ #category : #'private - tree' }
+GtSceneDriller >> bindElementTreeValue: eachElement toRowElement: aRowElement [	
+	aRowElement
+		childWithId: #elementLabel
+		ifFound: [ :anElementLabel | anElementLabel text: eachElement class name ]
+		ifNone: [  ].
+		
+	aRowElement
+		childWithId: #elementId
+		ifFound: [ :anElementIdButton |
+			eachElement id = BlElementId noId
+				ifTrue: [
+					anElementIdButton model: nil.
+					anElementIdButton label: ''.
+					anElementIdButton visibility: BlVisibility gone ]
+				ifFalse: [
+					anElementIdButton model: eachElement id.
+					anElementIdButton label: eachElement id asSymbol printString.
+					anElementIdButton visibility: BlVisibility visible
+				] ]
+		ifNone: [  ].
+		
+	aRowElement
+		childWithId: #elementResizers
+		ifFound: [ :anElementResizersLabel |
+			anElementResizersLabel text: (String streamContents: [ :aStream |
+				aStream
+					nextPutAll: 'h: ';
+					nextPutAll: eachElement constraints horizontal resizer asString asLowercase;
+					nextPutAll: '   ';
+					nextPutAll: 'v: ';
+					nextPutAll: eachElement constraints vertical resizer asString asLowercase
+			]) ]
+		ifNone: [  ]
+]
+
 { #category : #initialization }
 GtSceneDriller >> initialize [
 	super initialize.
@@ -85,28 +121,12 @@ GtSceneDriller >> newElementsTree [
 				thisRow fireEvent: (GtSceneDrillerHighlightElementWish new element: thisRowValue) ];
 			whenUnhovered: [ :anEvent | anEvent currentTarget fireEvent: (GtSceneDrillerHideHighlightWish new) ]);
 		addEventHandler: (GtPhlowListToSelectHandler new transformation: (GtPhlowSendTransformation object: [ :aTreeNode | aTreeNode value ]));
-		when: GtPhlowObjectEvent do: [ :anEvent | self fireEvent: (GtSceneDrillerSelectElementWish new element: anEvent object) ];
-	  nodeStencil: [
-			BrLabel new
-				beSmallSize;
-				look: BrGlamorousLabelLook new ];
-		nodeDataBinder: [ :eachLabel :eachElement |
-			| aLabelText |
-			
-			aLabelText := eachElement class name asRopedText.
-			eachElement id = BlElementId noId
-				ifFalse: [ aLabelText, '   ' asRopedText,
-					(eachElement id asRopedText
-						foreground: Color veryDarkGray;
-						background: (Color gray alpha: 0.1)) ].
-
-			aLabelText, '   ' asRopedText,
-				(('h: ' asRopedText, eachElement constraints horizontal resizer asString asLowercase asRopedText) foreground: Color darkGray).
-			aLabelText, '   ' asRopedText,
-				(('v: ' asRopedText, eachElement constraints vertical resizer asString asLowercase asRopedText) foreground: Color darkGray).
-
-			eachLabel text: aLabelText.
-			eachLabel ];
+		when: GtPhlowObjectEvent do: [ :anEvent |
+			"only visual elements can be selected in a driller"
+			(anEvent object isKindOf: BlElement)
+				ifTrue: [ self fireEvent: (GtSceneDrillerSelectElementWish new element: anEvent object) ] ];
+		nodeStencil: [ self newTreeRowElement ];
+		nodeDataBinder: [ :eachLabel :eachElement | self bindElementTreeValue: eachElement toRowElement: eachLabel ];
 		yourself
 ]
 
@@ -159,6 +179,38 @@ GtSceneDriller >> newSceneContainerFor: aTargetContainer [
 GtSceneDriller >> newSectionLabel [
 	^ BrLabel new
 		look: (BrGlamorousLabelLook new foreground: Color darkGray)
+]
+
+{ #category : #'private - tree' }
+GtSceneDriller >> newTreeRowElement [
+	^ BrHorizontalPane new
+		hMatchParent;
+		vFitContent;
+		alignCenterLeft;
+		addChildren: {
+			BrLabel new
+				beSmallSize;
+				id: #elementLabel;
+				look: BrGlamorousLabelLook new.
+			BrButton new
+				beTinySize;
+				id: #elementId;
+				look: (BrGlamorousButtonLabelLook new
+							hoveredColor: Color black;
+							pressedColor: Color black) +
+						(BrGlamorousButtonRectangularLook
+							paddingScale: 0.8
+							heightScale: 0.85
+							cornerRadius: 3) + (BrStyleCommonLook new
+					default: [ :s | s background: (Color gray alpha: 0.1) ];
+					hovered: [ :s | s background: (Color gray alpha: 0.2) ];
+					pressed: [ :s | s background: (Color gray alpha: 0.3) ]
+				);
+				action: [ :aButtonElement | aButtonElement phlow spawnObject: aButtonElement model ].
+			BrLabel new
+				beSmallSize;
+				id: #elementResizers;
+				look: (BrGlamorousLabelLook new foreground: Color darkGray) }
 ]
 
 { #category : #accessing }

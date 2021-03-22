@@ -30,7 +30,7 @@ Class {
 GtSceneDrillerEventHandler class >> initialize [
 	DrillerId := #'gtoolkit-driller'.
 	DrillerOverlayId := BlElementId named: #'gtoolkit-driller--preview'.
-	KeyCombination := BlKeyCombination builder dnf alt shift build
+	KeyCombination := BlKeyCombination builder dnf control alt shift build
 ]
 
 { #category : #'private - accessing' }
