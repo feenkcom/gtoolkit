@@ -165,10 +165,8 @@ pipeline {
                         }
                         stage('Linux Examples') {
                              steps {
-                                retry(2) {
-                                    sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
-                                    junit '*.xml'
-                                }
+                                sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
+                                junit '*.xml'
                              } 
                         }
                         stage('Smoke Test') {
