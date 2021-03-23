@@ -2,6 +2,16 @@
 set -o xtrace
 
 # find . ! -name '*.st' ! -name '*.sh' ! -name '.' -exec rm -rf {} +
+DIR=glamoroustoolkit
+
+if [ -d "$DIR" ]; then
+  echo "The folder $DIR is present in the current directory, perhaps it is already installed?"
+  exit 1
+fi
+
+set -o xtrace
+mkdir $DIR
+cd $DIR
 
 curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadice.st -o loadice.st
 curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -o loadgt.st
@@ -41,5 +51,5 @@ if [ "$EXEC_STATUS" -ne 0 ]; then
 fi
 
 echo "Setup process complete. To start GlamorousToolkit run \n ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image --no-quit --interactive"
-
+cd ..
 exit 0

@@ -2,7 +2,7 @@
 
 $maximumRuntimeSeconds = 1200
 
-$process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchExamples --junit-xml-output' -PassThru
+$process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchExamples --junit-xml-output --verbose' -PassThru
 
 try
 {
@@ -34,7 +34,7 @@ catch
 }
 
 
-$FileName = ".\GToolkit-Documenter-XDoc-Examples.xml"
+$FileName = ".\GToolkit-Documenter-XDoc-XdDocumentExamples-Examples.xml"
 if (Test-Path $FileName) 
 {
   Remove-Item $FileName
