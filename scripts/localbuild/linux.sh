@@ -24,6 +24,12 @@ curl -L https://github.com/feenkcom/opensmalltalk-vm/releases/latest/download/bu
 unzip build-artifacts.zip
 unzip build-artifacts/GlamorousToolkitVM-*-linux64-bin.zip
 
+if [ $# -eq 1 ] && [ $1 == "https" ]
+then
+  echo "Iceberg remoteTypeSelector: #httpsUrl. Smalltalk snapshot: true andQuit: true."  > icehttps.st
+  ./glamoroustoolkit GlamorousToolkit.image st icehttps.st
+fi
+
 time ./glamoroustoolkit GlamorousToolkit.image st --quit loadice.st 2>&1
 time ./glamoroustoolkit GlamorousToolkit.image st --quit loadgt.st 2>&1
 
