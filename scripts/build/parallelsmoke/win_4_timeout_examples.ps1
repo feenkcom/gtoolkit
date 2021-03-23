@@ -34,7 +34,7 @@ catch
 }
 
 
-$FileName = ".\GToolkit-Documenter-XDoc-Examples.xml"
+$FileName = ".\GToolkit-Documenter-XDoc-XdDocumentExamples-Examples.xml"
 if (Test-Path $FileName) 
 {
   Remove-Item $FileName
