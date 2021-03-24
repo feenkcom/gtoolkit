@@ -25,6 +25,12 @@ unzip build-artifacts/GlamorousToolkitVM-*-mac64-bin.zip
 mv Pharo.image GlamorousToolkit.image
 mv Pharo.changes GlamorousToolkit.changes
 
+if [ $# -eq 1 ] && [ $1 == "https" ]
+then
+  echo "Iceberg remoteTypeSelector: #httpsUrl. Smalltalk snapshot: true andQuit: true."  > icehttps.st
+  ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st icehttps.st
+fi
+
 time ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st --quit loadice.st 2>&1
 time ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st --quit loadgt.st 2>&1
 
