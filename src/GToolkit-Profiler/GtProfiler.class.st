@@ -23,7 +23,7 @@ GtProfiler >> initialize [
 	super initialize.
 		
 	self matchParent.
-	self look: BrProportionalHorizontalPagerLook new.
+	self aptitude: BrProportionalHorizontalPagerAptitude new.
 	
 	openedSpaces := GtProfilerSpacesElement new.
 	framesChart := GtProfilerPerformanceChart new.
@@ -43,15 +43,15 @@ GtProfiler >> initialize [
 			c horizontal matchParent.
 			c vertical matchParent ];
 		addChild: (BrTabGroup new
-			look: BrGlamorousTabGroupLook new;
+			aptitude: BrGlamorousTabGroupAptitude new;
 			addTab: (BrTab new
 				label: 'Performance';
 				stencil: [ framesChart ];
-				look: BrGlamorousTabLook new);
+				aptitude: BrGlamorousTabAptitude new);
 			addTab: (BrTab new
 				label: 'Layers';
 				stencil: [ layersGraph ];
-				look: BrGlamorousTabLook new)
+				aptitude: BrGlamorousTabAptitude new)
 		)).
 	
 	self

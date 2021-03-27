@@ -17,7 +17,7 @@ GtHomeSection >> newAddCardWithTooltip: aTooltip size: aPoint action: aBlock [
 	| anAddButton |
 		
 	anAddButton := BrButton new
-		look: BrGlamorousButtonWithIconCircularLook;
+		aptitude: BrGlamorousButtonWithIconCircularAptitude;
 		icon: (BrGlamorousVectorIcons add asElement 
 			background: BrGlamorousColors defaultButtonBorderColor);
 		label: aTooltip;
@@ -38,7 +38,7 @@ GtHomeSection >> newAddCardWithTooltip: aTooltip size: aPoint action: aBlock [
 GtHomeSection >> newCard [
 	self deprecated: 'not used'.
 	^ self newCardWithoutIcon
-		addLook: BrIconLook new +(BrShadowLook new width: 8; offset: 1@1; color: (Color r: 200 g: 200 b: 200 range: 255));
+		addAptitude: BrIconAptitude new +(BrShadowAptitude new width: 8; offset: 1@1; color: (Color r: 200 g: 200 b: 200 range: 255));
 		yourself
 ]
 
@@ -73,7 +73,7 @@ GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anE
 			margin: (BlInsets all: 10);
 			background: Color white;
 			geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
-			look:" BrGlamorousButtonExteriorLook new + "BrShadowLook new;
+			aptitude:" BrGlamorousButtonExteriorLook new + "BrShadowAptitude new;
 "			border: (BlBorder paint: BrGlamorousColors defaultButtonBorderColor); "
 			preventMeAndChildrenMouseEvents);
 		action: aBlock
@@ -82,9 +82,9 @@ GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anE
 { #category : #'instance creation' }
 GtHomeSection >> newCardWithoutIcon [
 	^ BrCard new
-		look: (BrShadowLook new beLarge)+
-			(BrDescriptionLook new readonly glamorousRegularFont descriptionDo: [:e | e padding: (BlInsets all: 10)]) +
-			(BrGlamorousButtonExteriorLook new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
+		aptitude: (BrShadowAptitude new beLarge)+
+			(BrDescriptionAptitude new readonly glamorousRegularFont descriptionDo: [:e | e padding: (BlInsets all: 10)]) +
+			(BrGlamorousButtonExteriorAptitude new backgroundPaint: BrGlamorousColors secondaryHeaderBackgroundColor);
 		layout: (BlLinearLayout horizontal alignCenter cellSpacing: 0);
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 2);
 		constraintsDo: [ :c |
@@ -146,9 +146,9 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: 
 	container := BrButton new
 		size: aPoint;
 		layout: BlLinearLayout vertical;
-		look: ((BrGlamorousButtonExteriorLook new 
+		aptitude: ((BrGlamorousButtonExteriorAptitude new 
 			backgroundPaint: Color white;
-			borderPaint: (Color transparent)) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new beLarge));
+			borderPaint: (Color transparent)) + BrGlamorousButtonWithLabelTooltipAptitude new + (BrShadowAptitude new beLarge));
 		label: aDescription;
 		padding: (BlInsets all: 1);
 		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: 2 * self spaceGap right: 2 * self spaceGap);
@@ -169,9 +169,9 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription width:
 			c horizontal exact: aWidth ]; 
 		layout: BlLinearLayout vertical;
 		background: Color red;
-		look: ((BrGlamorousButtonExteriorLook new
+		aptitude: ((BrGlamorousButtonExteriorAptitude new
 			backgroundPaint: Color white; 
-			borderPaint: Color transparent) + BrGlamorousButtonWithLabelTooltipLook new + (BrShadowLook new beLarge));
+			borderPaint: Color transparent) + BrGlamorousButtonWithLabelTooltipAptitude new + (BrShadowAptitude new beLarge));
 		label: aDescription;
 		padding: (BlInsets all: 1);
 		margin: (BlInsets top: self spaceGap left: 2 * self spaceGap bottom: self spaceGap * 2 right: 2 * self spaceGap);
@@ -182,7 +182,7 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription width:
 		constraintsDo: [:c | c horizontal fitContent. c vertical fitContent ];
 		layout: BlLinearLayout vertical;
 		background: BrGlamorousColors defaultButtonBorderColor;
-		addChild: (BrLabel new look: (BrGlamorousLabelLook new fontSize: 10);
+		addChild: (BrLabel new aptitude: (BrGlamorousLabelAptitude new fontSize: 10);
 		text: aTitle).
 	
 	^ container"
@@ -239,7 +239,7 @@ GtHomeSection >> newSectionButton [
 GtHomeSection >> newSectionButtonWithIcon: anIcon [
 
 	^ self newSectionButton 
-		look: BrGlamorousButtonWithIconLook;
+		aptitude: BrGlamorousButtonWithIconAptitude;
 		icon: anIcon asElement
 ]
 
@@ -255,8 +255,8 @@ GtHomeSection >> newSectionContainer [
 { #category : #'instance creation' }
 GtHomeSection >> newSectionTitle: aString [
 	^ BrLabel new
-		look:
-			(BrGlamorousLabelLook new
+		aptitude:
+			(BrGlamorousLabelAptitude new
 				foreground: Color gray;
 				fontSize: 14);
 		padding: self newSectionTitlePaddingInsets;
@@ -299,7 +299,7 @@ GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock de
 	iconElement := anElement margin: (BlInsets bottom: 5).
 	labelElement := BrLabel new 
 	    text: aString;
-	    look: (BrGlamorousLabelLook new fontSize: 14).
+	    aptitude: (BrGlamorousLabelAptitude new fontSize: 14).
 	^ BrButton new
 		constraintsDo:[ :c | 
 	        c horizontal exact: 120.
@@ -308,7 +308,7 @@ GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock de
 		action: aBlock;
 		padding: (BlInsets all: 10);
 		label: aDescriptionString;
-		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new +(BrShadowLook new width: 8; offset: 1@1; color: (Color r: 200 g: 200 b: 200 range: 255)));
+		aptitude: (BrGlamorousButtonExteriorAptitude new + BrGlamorousButtonWithLabelTooltipAptitude new +(BrShadowAptitude new width: 8; offset: 1@1; color: (Color r: 200 g: 200 b: 200 range: 255)));
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 		layout: BlLinearLayout vertical alignCenter;
 		addChild: iconElement;
@@ -330,12 +330,12 @@ GtHomeSection >> newUrlCardWithTitle: aTitle description: aDescription url: aUrl
 				addChild:
 					(BrLabel new
 						text: aTitle;
-						look: BrGlamorousLabelLook);
+						aptitude: BrGlamorousLabelAptitude);
 				addChild:
 					(BrLabel new
 						text: aDescription;
-						look:
-							(BrGlamorousLabelLook new
+						aptitude:
+							(BrGlamorousLabelAptitude new
 								fontSize: 10;
 								foreground: Color gray)))
 		action: [ :card | WebBrowser openOn: aUrl ]

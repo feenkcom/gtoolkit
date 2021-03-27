@@ -23,7 +23,7 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 			aTitle ifEmpty: [ aTitle := '[No name]' asRopedText italic ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: aTitle;
 				fitContent ].
 
@@ -40,7 +40,7 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 				ifFalse: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: isOpened;
 				fitContent ].
 			
@@ -55,7 +55,7 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 				ifFalse: [ aQueueSize asString asRopedText ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: aQueueSize;
 				fitContent ].
 			
@@ -73,7 +73,7 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 					 		asRopedText foreground: Color red ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: aNumberOfFailedTasks;
 				fitContent ].
 ]

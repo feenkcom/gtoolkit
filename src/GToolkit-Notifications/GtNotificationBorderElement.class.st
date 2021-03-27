@@ -38,7 +38,7 @@ GtNotificationBorderElement >> initialize [
 
 	self addChild: self borderElement as: #border.
 	
-	self addLook: (BrLayoutResizerLook new
+	self addAptitude: (BrLayoutResizerAptitude new
 		hInherit;
 		vAnyToFitContent;
 		hInherit: self borderElement;

@@ -29,7 +29,7 @@ GtToolButtonStencil >> create [
 	iconElement := (self icon asElement asScalableElement) size: self iconSize; margin: (BlInsets bottom: 5).
 	labelElement := BrLabel new 
 	    text: self title;
-	    look: (BrGlamorousLabelLook new fontSize: 10).
+	    aptitude: (BrGlamorousLabelAptitude new fontSize: 10).
 	^ BrButton new
 		constraintsDo:[ :c | 
 	        c horizontal exact: 74.
@@ -38,7 +38,7 @@ GtToolButtonStencil >> create [
 		action: self action;
 		padding: (BlInsets all: 10);
 		label: self description;
-		look: (BrGlamorousButtonExteriorLook new + BrGlamorousButtonWithLabelTooltipLook new);
+		aptitude: (BrGlamorousButtonExteriorAptitude new + BrGlamorousButtonWithLabelTooltipAptitude new);
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
 		layout: BlLinearLayout vertical alignCenter;
 		addChild: iconElement;

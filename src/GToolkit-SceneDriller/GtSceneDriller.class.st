@@ -53,7 +53,7 @@ GtSceneDriller >> initialize [
 	self
 		matchParent;
 		background: BrGlamorousColors defaultHeaderBackgroundColor;
-		look: BrProportionalHorizontalPagerLook new
+		aptitude: BrProportionalHorizontalPagerAptitude new
 ]
 
 { #category : #initialization }
@@ -93,7 +93,7 @@ GtSceneDriller >> inspectElement: anElement [
 { #category : #'instance creation' }
 GtSceneDriller >> newCloseButtonFor: aTargetContainer [
 	^ BrButton new
-		look: BrGlamorousButtonCircularLook + BrGlamorousButtonIconLook + BrGlamorousButtonFlatExteriorLook + BrGlamorousButtonLayoutLook;
+		aptitude: BrGlamorousButtonCircularAptitude + BrGlamorousButtonIconAptitude + BrGlamorousButtonFlatExteriorAptitude + BrGlamorousButtonLayoutAptitude;
 		icon: [ (BrGlamorousVectorIcons close asElement
 				outskirts: BlOutskirts centered;
 				background: Color gray;
@@ -136,14 +136,14 @@ GtSceneDriller >> newPagerFor: aTargetContainer [
 		matchParent;
 		constraintsDo: [ :c | c linear weight: 0.7 ];
 		padding: (BlInsets top: 10 left: 10 bottom: 10 right: 0);
-		addLook: BrShadowLook new beLarge;
+		addAptitude: BrShadowAptitude new beLarge;
 		background: BrGlamorousColors backdropColor;
 		addChildren: {
 			self newSectionLabel text: 'Details'.
 			(GtPager createWrappedOn: (BrVerticalPane new
 				matchParent;
 				addChild: (BrLabel new
-					look: BrGlamorousLabelLook;
+					aptitude: BrGlamorousLabelAptitude;
 					hMatchParent;
 					padding: (BlInsets top: 10.0 right: 12.0 bottom: 10.0 left: 12.0);
 					background: BrGlamorousColors defaultHeaderBackgroundColor;
@@ -169,7 +169,7 @@ GtSceneDriller >> newSceneContainerFor: aTargetContainer [
 				constraintsDo: [ :c |
 					c horizontal matchParent.
 					c vertical fitContent ];
-				addLook: (BrShadowLook new beLarge color: BrGlamorousColors defaultShadowColor darker);
+				addAptitude: (BrShadowAptitude new beLarge color: BrGlamorousColors defaultShadowColor darker);
 				background: Color white;
 				addChild: aTargetContainer
 		}
@@ -178,7 +178,7 @@ GtSceneDriller >> newSceneContainerFor: aTargetContainer [
 { #category : #'instance creation' }
 GtSceneDriller >> newSectionLabel [
 	^ BrLabel new
-		look: (BrGlamorousLabelLook new foreground: Color darkGray)
+		aptitude: (BrGlamorousLabelAptitude new foreground: Color darkGray)
 ]
 
 { #category : #'private - tree' }
@@ -191,17 +191,17 @@ GtSceneDriller >> newTreeRowElement [
 			BrLabel new
 				beSmallSize;
 				id: #elementLabel;
-				look: BrGlamorousLabelLook new.
+				aptitude: BrGlamorousLabelAptitude new.
 			BrButton new
 				beTinySize;
 				id: #elementId;
-				look: (BrGlamorousButtonLabelLook new
+				aptitude: (BrGlamorousButtonLabelAptitude new
 							hoveredColor: Color black;
 							pressedColor: Color black) +
-						(BrGlamorousButtonRectangularLook
+						(BrGlamorousButtonRectangularAptitude
 							paddingScale: 0.8
 							heightScale: 0.85
-							cornerRadius: 3) + (BrStyleCommonLook new
+							cornerRadius: 3) + (BrStyleCommonAptitude new
 					default: [ :s | s background: (Color gray alpha: 0.1) ];
 					hovered: [ :s | s background: (Color gray alpha: 0.2) ];
 					pressed: [ :s | s background: (Color gray alpha: 0.3) ]
@@ -210,7 +210,7 @@ GtSceneDriller >> newTreeRowElement [
 			BrLabel new
 				beSmallSize;
 				id: #elementResizers;
-				look: (BrGlamorousLabelLook new foreground: Color darkGray) }
+				aptitude: (BrGlamorousLabelAptitude new foreground: Color darkGray) }
 ]
 
 { #category : #accessing }

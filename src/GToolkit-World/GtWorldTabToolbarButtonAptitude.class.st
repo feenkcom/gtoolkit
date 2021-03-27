@@ -1,18 +1,18 @@
 Class {
-	#name : #GtWorldTabToolbarButtonLook,
-	#superclass : #BrStyleCommonLook,
+	#name : #GtWorldTabToolbarButtonAptitude,
+	#superclass : #BrStyleCommonAptitude,
 	#category : #'GToolkit-World-UI'
 }
 
 { #category : #initialization }
-GtWorldTabToolbarButtonLook >> initialize [
+GtWorldTabToolbarButtonAptitude >> initialize [
 	super initialize.
 	
 	self addAll: { 
-		BrGlamorousButtonIconLook new.
-		BrGlamorousButtonWithLabelTooltipLook new.
-		BrLayoutResizerLook inherit.
-		BrLayoutAlignmentLook forHorizontalLinearLayout }.
+		BrGlamorousButtonIconAptitude new.
+		BrGlamorousButtonWithLabelTooltipAptitude new.
+		BrLayoutResizerAptitude inherit.
+		BrLayoutAlignmentAptitude forHorizontalLinearLayout }.
 
 	self
 		default: [ :aStyle |

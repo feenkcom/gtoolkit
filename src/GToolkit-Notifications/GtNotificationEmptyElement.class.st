@@ -22,7 +22,7 @@ GtNotificationEmptyElement >> initialize [
 	
 	self addChild: self labelElement as: #labelElement.
 	
-	self addLook: (BrLayoutResizerLook new
+	self addAptitude: (BrLayoutResizerAptitude new
 		hInherit;
 		vAnyToFitContent;
 		anyToFitContent: self labelElement).
@@ -31,7 +31,7 @@ GtNotificationEmptyElement >> initialize [
 { #category : #initialization }
 GtNotificationEmptyElement >> initializeLabel [
 	labelElement := BrLabel new
-		look: (BrGlamorousLabelLook new
+		aptitude: (BrGlamorousLabelAptitude new
 			foreground: BrGlamorousColors disabledButtonTextColor);
 		text: 'no notifications';
 		constraintsDo: [ :c | 

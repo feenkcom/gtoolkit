@@ -46,7 +46,7 @@ GtNotificationJobWithChildrenElement >> initialize [
 		when: GtNotificationJobDismissWish
 		do: [ :anEvent | self onDismissWish: anEvent ].
 		
-	self addLook: (BrLayoutResizerLook new
+	self addAptitude: (BrLayoutResizerAptitude new
 		hInherit: self containerElement;
 		vAnyToFitContent: self containerElement).
 ]

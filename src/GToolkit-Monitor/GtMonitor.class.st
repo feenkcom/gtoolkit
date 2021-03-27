@@ -84,13 +84,13 @@ GtMonitor >> gtExternalResourcesFor: aView [
 		stencil: [ GtMonitoredExternalResourcesElement new ];
 		actionStencil: [ :aTab |
 			BrButton new 
-				look: BrGlamorousButtonWithIconLook;
+				aptitude: BrGlamorousButtonWithIconAptitude;
 				icon: BrGlamorousIcons trash;
 				label: 'Garbage collect';
 				action:  [ Smalltalk garbageCollect ] ];
 		actionStencil: [ :aTab |
 			BrButton new 
-				look: BrGlamorousButtonWithIconLook;
+				aptitude: BrGlamorousButtonWithIconAptitude;
 				icon: BrGlamorousVectorIcons refresh;
 				label: 'Refresh';
 				action:  [ aTab viewContentElement children first updateList ] ]
@@ -125,7 +125,7 @@ GtMonitor >> gtLoggersFor: aView [
 		stencil: [ GtMonitoredSignalLoggersElement new ];
 		actionStencil: [ 
 			BrButton new 
-				look: BrGlamorousButtonWithIconLook;
+				aptitude: BrGlamorousButtonWithIconAptitude;
 				icon: BrGlamorousIcons trash asElement;
 				action:  [ :aButton |
 					SignalLogger allSubInstances
@@ -143,7 +143,7 @@ GtMonitor >> gtMixedAnnouncersFor: aView [
 		stencil: [ GtMonitoredMixedAnnouncersElement new ];
 		actionStencil: [ :aTab |
 			BrButton new 
-				look: BrGlamorousButtonWithIconLook;
+				aptitude: BrGlamorousButtonWithIconAptitude;
 				icon: BrGlamorousIcons trash;
 				label: 'Reset all';
 				action:  [
@@ -151,7 +151,7 @@ GtMonitor >> gtMixedAnnouncersFor: aView [
 					aTab viewContentElement children first updateList ] ];
 		actionStencil: [ :aTab |
 			BrButton new 
-				look: BrGlamorousButtonWithIconLook;
+				aptitude: BrGlamorousButtonWithIconAptitude;
 				icon: [ BrGlamorousVectorIcons largeSignal asElement asScalableElement size: 16@16 ] asStencil;
 				label: 'Make weak all';
 				action:  [
@@ -190,7 +190,7 @@ GtMonitor >> gtSpacesFor: aView [
 		stencil: [ GtMonitoredBlocSpacesElement new ];
 		actionStencil: [ :aTab |
 			BrButton new 
-				look: BrGlamorousButtonWithIconLook;
+				aptitude: BrGlamorousButtonWithIconAptitude;
 				icon: BrGlamorousVectorIcons refresh asElement;
 				label: 'Refresh';
 				action:  [
@@ -198,7 +198,7 @@ GtMonitor >> gtSpacesFor: aView [
 					aTab viewContentElement children first updateList ] ];
 		actionStencil: [ 
 			BrButton new 
-				look: BrGlamorousButtonWithIconLook;
+				aptitude: BrGlamorousButtonWithIconAptitude;
 				icon: BrGlamorousIcons trash asElement;
 				label: 'Close all spaces';
 				action:  [ :aButton |
@@ -218,7 +218,7 @@ GtMonitor >> gtSystemInfoFor: aView [
 		stencil: [ GtMonitorSystemInfoElement new ];
 		actionStencil: [ :aTab |
 			BrButton new 
-				look: BrGlamorousButtonWithIconLook;
+				aptitude: BrGlamorousButtonWithIconAptitude;
 				icon: BrGlamorousVectorIcons refresh asElement;
 				label: 'Refresh';
 				action:  [
