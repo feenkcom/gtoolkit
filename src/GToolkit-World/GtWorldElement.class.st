@@ -120,7 +120,7 @@ GtWorldElement >> newSubSpaceButton [
 		assert: [ subSpaceDropdown isNil ]
 		description: [ 'Sub-space dropdown is already created!' ].
 	subSpaceDropdown := BrButton new
-		look:
+		aptitude:
 			BrGlamorousButtonWithIconAptitude - BrGlamorousButtonExteriorAptitude
 				+
 					(BrGlamorousWithDropdownAptitude
