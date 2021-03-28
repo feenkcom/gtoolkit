@@ -86,7 +86,7 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer/src' ];
 			baseline: 'GToolkit4Pharo' with: [
-				spec repository: 'github://feenkcom/gt4pharo/src' ];
+				spec repository: 'github://feenkcom/gt4pharo/src:main' ];
 			baseline: 'GToolkit4SmaCC' with: [
 				spec repository: 'github://feenkcom/gt4smacc/src' ];
 			baseline: 'GToolkit4XMLSupport' with: [
