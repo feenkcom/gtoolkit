@@ -117,7 +117,7 @@ GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
 			id: GtWorldTabGroupId;
 			onBreadthFirstChildOfClass: GtPager;
 			onChildFromBlock: [ :aPager | aPager pages first widget ];
-			onBreadthFirstChildOfClass: GtPharoPackageCoderElement;
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
 			id: GtPackageCoderPackageNameId.
 			
 		aStep do pulse.
@@ -186,7 +186,7 @@ GtWorldByScripterExamples >> clickOnPackageEditableName [
 		aStep click
 			label: 'Click on a package editable name';
 			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPharoPackageCoderElement;
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
 			id: GtPackageCoderPackageNameId.
 		
 		aStep check
@@ -194,7 +194,7 @@ GtWorldByScripterExamples >> clickOnPackageEditableName [
 			value: [ :anElement | anElement text asString ]
 			equals: [ aScripter model name ];
 			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPharoPackageCoderElement;
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
 			id: GtPackageCoderPackageNameId.
 
 	].
@@ -214,7 +214,7 @@ GtWorldByScripterExamples >> clickOnPackageEditableNameInSecondPane [
 			id: GtWorldTabGroupId;
 			onBreadthFirstChildOfClass: GtPager;
 			onChildFromBlock: [ :aPager | aPager pages second widget ];
-			onBreadthFirstChildOfClass: GtPharoPackageCoderElement;
+			onBreadthFirstChildOfClass: GtPackageCoderElement;
 			id: GtPackageCoderPackageNameId.
 		
 		self 
