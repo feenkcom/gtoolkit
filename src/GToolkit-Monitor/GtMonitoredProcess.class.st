@@ -36,7 +36,7 @@ GtMonitoredProcess >> gtStackFor: aView [
 	^ aView explicit
 		title: 'Stack';
 		priority: 1;
-		stencil: [ GtMethodsCoder forItems: self stack ]
+		stencil: [ GtPharoMethodsCoder forItems: self stack ]
 ]
 
 { #category : #'gt-extension' }

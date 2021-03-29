@@ -355,7 +355,7 @@ GtWorldByScripterExamples >> selectClassInSecondPane [
 			id: GtWorldTabGroupId;
 			onBreadthFirstChildOfClass: GtPager;
 			onChildFromBlock: [ :aPager | aPager pages second widget ];
-			onBreadthFirstChildOfClass: GtBehaviorCoderElement;
+			onBreadthFirstChildOfClass: GtPharoBehaviorCoderElement;
 			id: GtBehaviorCoderBehaviorNameId.
 
 		aStep check
