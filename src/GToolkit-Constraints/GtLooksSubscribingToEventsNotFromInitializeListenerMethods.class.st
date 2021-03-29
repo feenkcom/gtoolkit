@@ -8,7 +8,7 @@ Class {
 GtLooksSubscribingToEventsNotFromInitializeListenerMethods class >> lookMethodWithEvents [
 	<gtExample>
 	^ Array streamContents: [ :aStream |
-		BrLook withAllSubclassesDo: [ :eachLookClass |			
+		BrAptitude withAllSubclassesDo: [ :eachLookClass |			
 			eachLookClass methodsDo: [ :eachMethod |
 				| referencedEvents |
 				referencedEvents := eachMethod referencedClasses select: [ :each | each inheritsFrom: BlEvent ].
@@ -26,7 +26,7 @@ GtLooksSubscribingToEventsNotFromInitializeListenerMethods class >> lookMethodWi
 	 } asSet.
 
 	^ Array streamContents: [ :aStream |
-		BrLook withAllSubclassesDo: [ :eachLookClass |
+		BrAptitude withAllSubclassesDo: [ :eachLookClass |
 			
 			eachLookClass methodsDo: [ :eachMethod |
 				| referencedEvents |
@@ -56,7 +56,7 @@ GtLooksSubscribingToEventsNotFromInitializeListenerMethods >> issues [
 	 } asSet.
 
 	^ Array streamContents: [ :aStream |
-		BrLook withAllSubclassesDo: [ :eachLookClass |
+		BrAptitude withAllSubclassesDo: [ :eachLookClass |
 			
 			eachLookClass methodsDo: [ :eachMethod |
 				| referencedEvents |

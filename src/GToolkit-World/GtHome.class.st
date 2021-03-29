@@ -42,7 +42,7 @@ GtHome >> createVersionLabel [
 	^ BrButton new 
 		label: 'Glamorous Toolkit ', GtImage instance version versionString; 
 		beSmallSize;
-		look: (BrGlamorousButtonWithLabelLook new + (BrGlamorousButtonExteriorLook new borderPaint: Color transparent; backgroundPaint: Color transparent));
+		aptitude: (BrGlamorousButtonWithLabelAptitude new + (BrGlamorousButtonExteriorAptitude new borderPaint: Color transparent; backgroundPaint: Color transparent));
 		margin: (BlInsets all: 5);
 		constraintsDo: [ :c | c linear horizontal alignRight ];
 		action: [ :button | 
@@ -128,7 +128,7 @@ GtHome >> initializePanes [
 	mainPane addChild: feedElement.
 	
 	self addChild: (BrScrollPane new
-		look: BrScrollPaneLook + BrGlamorousWithVerticalScrollbarLook;
+		aptitude: BrScrollPaneAptitude + BrGlamorousWithVerticalScrollbarAptitude;
 		content: mainPane).
 	self addChild: self createVersionLabel.
 ]

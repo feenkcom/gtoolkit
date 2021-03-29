@@ -44,14 +44,14 @@ GtNotificationsBadgeElement >> initialize [
 	
 	self addChild: self badgeElement as: #badge.
 	
-	self addLook: (BrLayoutResizerLook new anyToFitContent).
+	self addAptitude: (BrLayoutResizerAptitude new anyToFitContent).
 ]
 
 { #category : #initialization }
 GtNotificationsBadgeElement >> initializeBadgeElement [
 	badgeElement := self newBadge
 		label: '0';
-		addLook: ((BrGlamorousWithDropdownLook
+		addAptitude: ((BrGlamorousWithDropdownAptitude
 			handle: [ self newDropdownBadge ]
 			content: [ self newDropdownContent ])
 				preferredExtent: 600@600)
@@ -82,7 +82,7 @@ GtNotificationsBadgeElement >> listElement [
 { #category : #'private - instance creation' }
 GtNotificationsBadgeElement >> newBadge [
 	^ BrBadge new
-		look: BrGlamorousBadgeWithLabelLook;
+		aptitude: BrGlamorousBadgeWithLabelAptitude;
 		exact: 21@21
 ]
 

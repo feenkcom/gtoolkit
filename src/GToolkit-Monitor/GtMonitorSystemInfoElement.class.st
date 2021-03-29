@@ -32,7 +32,7 @@ GtMonitorSystemInfoElement >> buildPropertyButtonNamed: aName spawn: aSpawnBlock
 	^ BrButton new
 		beSmallSize;
 		background: BrGlamorousColors neutralBackgroundColor;
-		look: BrGlamorousButtonRectangularLook + BrGlamorousButtonLabelLook;
+		aptitude: BrGlamorousButtonRectangularAptitude + BrGlamorousButtonLabelAptitude;
 		label: aName;
 		hMatchParent;
 		action: aSpawnBlock
@@ -49,7 +49,7 @@ GtMonitorSystemInfoElement >> buildSectionContainer [
 { #category : #'private - instance creation' }
 GtMonitorSystemInfoElement >> buildSectionLabelNamed: aString [
 	^ BrLabel new
-		look: (BrGlamorousLabelLook new foreground: Color gray; fontSize: 12);
+		aptitude: (BrGlamorousLabelAptitude new foreground: Color gray; fontSize: 12);
 		hMatchParent;
 		text: aString
 ]

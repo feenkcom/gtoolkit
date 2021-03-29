@@ -80,13 +80,13 @@ GtToolsMenu >> initializeElements [
 			c vertical fitContent ];
 		addChildren: {
 			BrButton new
-				look: BrGlamorousButtonWithLabelLook new;
+				aptitude: BrGlamorousButtonWithLabelAptitude new;
 				label: 'Save';
 				hMatchParent;
 				action: [ :aButton | self saveFrom: aButton ].
 				
 			BrButton new
-				look: (BrGlamorousButtonWithLabelLook new);
+				aptitude: (BrGlamorousButtonWithLabelAptitude new);
 				label: 'Quit';
 				hMatchParent;
 				action: [ :aButton | self quitFrom: aButton ] })

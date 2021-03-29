@@ -48,7 +48,7 @@ GtCreateStandaloneAppHowToGuide >> helloWorldScene [
 		alignCenter.
 		
 	aContainer addChild: (BrLabel new
-		look: (BrGlamorousLabelLook new fontSize: 30);
+		aptitude: (BrGlamorousLabelAptitude new fontSize: 30);
 		text: 'Hello world!').
 		
 	^ aContainer

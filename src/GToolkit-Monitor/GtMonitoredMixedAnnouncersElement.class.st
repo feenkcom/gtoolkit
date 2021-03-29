@@ -64,7 +64,7 @@ GtMonitoredMixedAnnouncersElement >> initialize [
 				ifEmpty: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: aTitle;
 				hMatchParent ].
 
@@ -73,7 +73,7 @@ GtMonitoredMixedAnnouncersElement >> initialize [
 		stencil: [ :aMonitoredAnnouncer |
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: (aMonitoredAnnouncer numberOfSubscriptions asRopedText bold
 					append: (' strong: {1}; weak: {2} ({3} weak send; {4} block)' format: {
 						aMonitoredAnnouncer numberOfStrongSubscriptions.

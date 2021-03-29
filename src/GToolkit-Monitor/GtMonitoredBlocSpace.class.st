@@ -74,19 +74,19 @@ GtMonitoredBlocSpace >> gtActionsFor: aView [
 					addChildren: (self shouldShutdownOnClose
 						ifTrue: [ {
 							BrLabel new
-								look: BrGlamorousLabelLook new;
+								aptitude: BrGlamorousLabelAptitude new;
 								text: 'When closed I will shutdown GToolkit'.
 							BrButton new
-								look: BrGlamorousButtonWithLabelLook new;
+								aptitude: BrGlamorousButtonWithLabelAptitude new;
 								label: 'Disable';
 								action: [ self disableShutdownOnClose ].
 						}]
 						ifFalse: [ { 
 							BrLabel new
-								look: BrGlamorousLabelLook new;
+								aptitude: BrGlamorousLabelAptitude new;
 								text: 'When closed I will not shutdown GToolkit'.
 							BrButton new
-								look: BrGlamorousButtonWithLabelLook new;
+								aptitude: BrGlamorousButtonWithLabelAptitude new;
 								label: 'Enable';
 								action: [ self enableShutdownOnClose ]
 						 } ]));
@@ -98,16 +98,16 @@ GtMonitoredBlocSpace >> gtActionsFor: aView [
 					addChildren: (self isRunning
 						ifTrue: [ {
 							BrLabel new
-								look: BrGlamorousLabelLook new;
+								aptitude: BrGlamorousLabelAptitude new;
 								text: 'The space is running'.
 							BrButton new
-								look: BrGlamorousButtonWithLabelLook new;
+								aptitude: BrGlamorousButtonWithLabelAptitude new;
 								label: 'Close';
 								action: [ self close ].
 						}]
 						ifFalse: [ { 
 							BrLabel new
-								look: BrGlamorousLabelLook new;
+								aptitude: BrGlamorousLabelAptitude new;
 								text: 'The space is not running'.
 						 } ]))) asScrollableElement
 		]

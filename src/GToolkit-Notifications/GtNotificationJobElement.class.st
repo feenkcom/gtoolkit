@@ -31,7 +31,7 @@ GtNotificationJobElement >> initialize [
 	
 	self addChild: self progressElement as: #progress.
 	
-	self addLook: (BrLayoutResizerLook new
+	self addAptitude: (BrLayoutResizerAptitude new
 		hInherit;
 		vAnyToFitContent;
 		hInherit: self progressElement;
@@ -42,7 +42,7 @@ GtNotificationJobElement >> initialize [
 GtNotificationJobElement >> initializeProgressElement [
 	progressElement := BrProgress new
 		fixedLabel: '';
-		look: BrGlamorousProgressWithLabelAndBarLook;
+		aptitude: BrGlamorousProgressWithLabelAndBarAptitude;
 		layoutDo: [ :aLayout | 
 			aLayout alignCenterLeft ]
 ]

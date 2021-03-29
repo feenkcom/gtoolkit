@@ -57,7 +57,7 @@ GtHomeDocumentCardElement >> initialize [
 	self addChild: self titleElement as: #title.
 	self addChild: self descriptionElement as: #description.
 	
-	self addLook: (BrLayoutResizerLook new
+	self addAptitude: (BrLayoutResizerAptitude new
 		hInherit: self titleElement;
 		vAnyToFitContent: self titleElement;
 		inherit: self descriptionElement).
@@ -66,7 +66,7 @@ GtHomeDocumentCardElement >> initialize [
 { #category : #initialization }
 GtHomeDocumentCardElement >> initializeDescriptionElement [
 	descriptionElement := BrEditor new
-		look: (BrGlamorousEditorLook new 
+		aptitude: (BrGlamorousEditorAptitude new 
 			glamorousRegularFont; 
 			fontSize: 9);
 		matchParent;
@@ -76,7 +76,7 @@ GtHomeDocumentCardElement >> initializeDescriptionElement [
 { #category : #initialization }
 GtHomeDocumentCardElement >> initializeTitleElement [
 	titleElement := BrEditor new
-		look: (BrGlamorousEditorLook new 
+		aptitude: (BrGlamorousEditorAptitude new 
 			glamorousRegularFont;
 			bold;
 			fontSize: 12);

@@ -84,19 +84,19 @@ GtMonitoredMixedAnnouncer >> gtSubscriptionsFor: aView [
 					aForwardView
 						actionStencil: [ 
 							BrButton new 
-								look: BrGlamorousButtonWithIconLook;
+								aptitude: BrGlamorousButtonWithIconAptitude;
 								icon: BrGlamorousVectorIcons debug;
 								label: 'Make strong';
 								action:  [ self makeStrong ] ];
 						actionStencil: [ 
 							BrButton new 
-								look: BrGlamorousButtonWithIconLook;
+								aptitude: BrGlamorousButtonWithIconAptitude;
 								icon: [ BrGlamorousVectorIcons largeSignal asElement asScalableElement size: 16@16 ] asStencil;
 								label: 'Make weak';
 								action:  [ self makeWeak ] ];
 						actionStencil: [ 
 							BrButton new 
-								look: BrGlamorousButtonWithIconLook;
+								aptitude: BrGlamorousButtonWithIconAptitude;
 								icon: BrGlamorousIcons trash asElement;
 								label: 'Remove subscriptions';
 								action:  [ self removeSubscriptions ] ] ] ]

@@ -28,7 +28,7 @@ GtNotificationIcebergSshCredentialsElement >> initialize [
 		aContainer addChild: self acceptButton as: #accept
 		 ].
 	
-	self addLook: (BrLayoutResizerLook new
+	self addAptitude: (BrLayoutResizerAptitude new
 			hInherit;
 			vAnyToFitContent;
 			hInherit: self headerElement;

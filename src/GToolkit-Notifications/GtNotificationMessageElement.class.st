@@ -43,7 +43,7 @@ GtNotificationMessageElement >> initialize [
 	self borderElement containerDo: [ :aContainer |
 		aContainer addChild: self textEditor as: #textEditor ].
 	
-	self addLook: (BrLayoutResizerLook new
+	self addAptitude: (BrLayoutResizerAptitude new
 		hInherit;
 		vAnyToFitContent;
 		hInherit: self borderElement;
@@ -61,7 +61,7 @@ GtNotificationMessageElement >> initializeBorderElement [
 { #category : #initialization }
 GtNotificationMessageElement >> initializeTextEditor [
 	textEditor := BrEditor new
-		look: BrGlamorousRegularEditorLook;
+		aptitude: BrGlamorousRegularEditorAptitude;
 		hMatchParent;
 		vFitContent;
 		beReadOnlyWithSelection;

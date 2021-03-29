@@ -11,7 +11,7 @@ GtMonitoredUniversesElement >> createUniverseCard: aUniverse [
 	aContainer := BlElement new
 		layout: BlLinearLayout vertical.
 	aContainer viewModel: (BrInteractiveModel new addState: (BrHoverModel new)).
-	aContainer addLook: (BrInteractiveCommonLook new
+	aContainer addAptitude: (BrInteractiveCommonAptitude new
 		default: [ :w | w border: (BlBorder paint: Color veryVeryLightGray width: 1) ];
 		hovered: [ :w | w border: (BlBorder paint: BrGlamorousColors hoveredButtonBorderColor width: 1) ]).
 	
@@ -22,7 +22,7 @@ GtMonitoredUniversesElement >> createUniverseCard: aUniverse [
 		background: Color white;
 		margin: (BlInsets all: 7);
 		padding: (BlInsets all: 1);
-		addLook: (BrShadowLook new).
+		addAptitude: (BrShadowAptitude new).
 
 	aContainer when: BlClickEvent do: [ :anEvent |
 		anEvent consumed: true.
@@ -41,7 +41,7 @@ GtMonitoredUniversesElement >> createUniverseName: aUniverse [
 
 	aNameLabel := BrLabel new
 		padding: (BlInsets all: 4);
-		look: BrGlamorousLabelLook;
+		aptitude: BrGlamorousLabelAptitude;
 		text: aUniverse hostClass label;
 		asScalableElement.
 	
@@ -59,7 +59,7 @@ GtMonitoredUniversesElement >> createUniverseRunning: aUniverse [
 
 	aNameLabel := BrLabel new
 		padding: (BlInsets left: 5 right: 5);
-		look: BrGlamorousLabelLook;
+		aptitude: BrGlamorousLabelAptitude;
 		text: 'Running: ', aUniverse hostClass isRunning asString.
 
 	^ aNameLabel
@@ -71,7 +71,7 @@ GtMonitoredUniversesElement >> createUniverseSpaces: aUniverse [
 
 	aNameLabel := BrLabel new
 		padding: (BlInsets left: 5 right: 5);
-		look: BrGlamorousLabelLook;
+		aptitude: BrGlamorousLabelAptitude;
 		text: 'Spaces: ', aUniverse spaces size asString.
 
 	^ aNameLabel

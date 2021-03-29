@@ -35,11 +35,11 @@ GtProfilerPerformanceChart >> initialize [
 	isPaused := false.
 	
 	toolbar := BrToolbar new
-		look: BrGlamorousToolbarLook new.
+		aptitude: BrGlamorousToolbarAptitude new.
 	
 	startButton := BrButton new
 		disable;
-		look: BrGlamorousButtonWithLabelLook new;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
 		beSmallSize;
 		label: 'Start';
 		action: [ :aButton | self start ].
@@ -47,13 +47,13 @@ GtProfilerPerformanceChart >> initialize [
 	stopButton := BrButton new
 		disable;
 		beSmallSize;
-		look: BrGlamorousButtonWithLabelLook new;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
 		label: 'Stop';
 		action: [ self stop ].
 		
 	resetButton := BrButton new
 		disable;
-		look: BrGlamorousButtonWithLabelLook new;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
 		beSmallSize;
 		label: 'Reset';
 		action: [ self reset ].

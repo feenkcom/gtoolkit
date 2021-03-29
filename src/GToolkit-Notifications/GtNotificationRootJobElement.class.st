@@ -29,7 +29,7 @@ GtNotificationRootJobElement >> initialize [
 	self borderElement containerDo: [ :aContainer |
 		aContainer addChild: self jobElement as: #job ].
 	
-	self addLook: (BrLayoutResizerLook new
+	self addAptitude: (BrLayoutResizerAptitude new
 		hInherit;
 		vAnyToFitContent;
 		hInherit: self borderElement;
