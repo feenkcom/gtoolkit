@@ -19,6 +19,9 @@ catch
 
 $maximumRuntimeSeconds = 1200
 
+# Disable windows tests temporarily
+
+if (1 -eq 2) {
 $process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchSlides --junit-xml-output' -PassThru
 
 try
@@ -31,6 +34,9 @@ catch
     Write-Warning -Message 'Process exceeded timeout, will be killed now.'
     $process | Stop-Process -Force
     exit 1
+}
+
+# End disable
 }
 
 
