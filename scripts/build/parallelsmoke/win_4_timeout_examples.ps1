@@ -1,5 +1,9 @@
 #requires -Version 2
 
+# Disable windows tests temporarily
+
+Write-Warning -Message '*** Skipping Windows tests ***'
+if (1 -eq 2) {
 $maximumRuntimeSeconds = 1200
 
 $process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchExamples --junit-xml-output --verbose' -PassThru
@@ -19,9 +23,6 @@ catch
 
 $maximumRuntimeSeconds = 1200
 
-# Disable windows tests temporarily
-
-if (1 -eq 2) {
 $process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchSlides --junit-xml-output' -PassThru
 
 try
