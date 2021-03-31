@@ -53,7 +53,7 @@ GtProfilerSpacesElement >> initialize [
 			aTitle ifEmpty: [ aTitle := '[No name]' asRopedText italic ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: aTitle;
 				hMatchParent ].
 
@@ -67,7 +67,7 @@ GtProfilerSpacesElement >> initialize [
 				ifFalse: [ 'Dead' asRopedText foreground: Color red darker; bold ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: isOpened;
 				hMatchParent ].
 		

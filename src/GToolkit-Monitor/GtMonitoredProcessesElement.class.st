@@ -25,7 +25,7 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 				ifFalse: [ aPriority := aPriority asRopedText ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: aPriority;
 				fitContent ].
 	
@@ -41,7 +41,7 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 			aTitle isEmpty ifTrue: [ aTitle := '[No name]' asRopedText italic ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: aTitle;
 				fitContent ].
 
@@ -58,7 +58,7 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 				ifFalse: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: isOpened;
 				fitContent ].
 		

@@ -86,7 +86,7 @@ GtWorldElement >> newNotificationsBadge [
 		description: [ 'Notifications dropdown is already created!' ].
 	
 	notificationsDropdown := GtNotificationsBadgeElement new
-		addLook: (BrGlamorousWithLabelTooltipLook new text: 'Notifications');
+		addAptitude: (BrGlamorousWithLabelTooltipAptitude new text: 'Notifications');
 		hide.
 	
 	^ notificationsDropdown
@@ -109,7 +109,7 @@ GtWorldElement >> newSpotterButton [
 				when: GtSpotterResizedEvent 
 				do: [ :anEvent | self class worldSpotterSize: anEvent target extent ] ];
 		asElement.
-	spotterDropdown look - BrGlamorousButtonExteriorLook.
+	spotterDropdown aptitude - BrGlamorousButtonExteriorAptitude.
 		
 	^ spotterDropdown
 ]
@@ -120,14 +120,15 @@ GtWorldElement >> newSubSpaceButton [
 		assert: [ subSpaceDropdown isNil ]
 		description: [ 'Sub-space dropdown is already created!' ].
 	subSpaceDropdown := BrButton new
-		look:
-			BrGlamorousButtonWithIconLook - BrGlamorousButtonExteriorLook
+		aptitude:
+			BrGlamorousButtonWithIconAptitude - BrGlamorousButtonExteriorAptitude
 				+
-					(BrGlamorousWithDropdownLook
+					(BrGlamorousWithDropdownAptitude
 						handle: [ BrButton new
-								look:
-									BrGlamorousButtonWithIconLook - BrGlamorousButtonWithLabelTooltipLook
-										- BrGlamorousButtonExteriorLook;
+								aptitude:
+									BrGlamorousButtonWithIconAptitude
+										- BrGlamorousButtonWithLabelTooltipAptitude
+										- BrGlamorousButtonExteriorAptitude;
 								icon: BrGlamorousIcons hamburger;
 								label: 'Menu';
 								yourself ]

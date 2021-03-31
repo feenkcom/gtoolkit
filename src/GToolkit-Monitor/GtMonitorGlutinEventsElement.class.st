@@ -76,7 +76,7 @@ GtMonitorGlutinEventsElement >> initialize [
 	
 	startButton := BrButton new
 		disable;
-		look: BrGlamorousButtonWithLabelLook new;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
 		beSmallSize;
 		label: 'Start';
 		action: [ :aButton | self start ].
@@ -84,13 +84,13 @@ GtMonitorGlutinEventsElement >> initialize [
 	stopButton := BrButton new
 		disable;
 		beSmallSize;
-		look: BrGlamorousButtonWithLabelLook new;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
 		label: 'Stop';
 		action: [ self stop ].
 		
 	resetButton := BrButton new
 		disable;
-		look: BrGlamorousButtonWithLabelLook new;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
 		beSmallSize;
 		label: 'Reset';
 		action: [ self reset ].
@@ -106,13 +106,13 @@ GtMonitorGlutinEventsElement >> initialize [
 				cellSpacing: 10;
 				addChildren: {
 					BrCheckbox new
-						look: BrGlamorousCheckboxLook;
+						aptitude: BrGlamorousCheckboxAptitude;
 						checked: anAssociation value;
 						whenCheckedDo: [ self enableEventType: anAssociation key ];
 						whenUncheckedDo: [ self disableEventType: anAssociation key ].
  
 					BrLabel new
-						look: (BrGlamorousLabelLook new foreground: (
+						aptitude: (BrGlamorousLabelAptitude new foreground: (
 							anAssociation value
 								ifTrue: [ Color black ]
 								ifFalse: [ Color gray ]
@@ -125,7 +125,7 @@ GtMonitorGlutinEventsElement >> initialize [
 		cellSpacing: 5;
 		addChild: (BrLabel new
 			margin: (BlInsets left: 10);
-			look: (BrGlamorousLabelLook new foreground: Color gray);
+			aptitude: (BrGlamorousLabelAptitude new foreground: Color gray);
 			text: 'Pick event types to log:'
 		);
 		addChild: eventTypesList).
@@ -138,7 +138,7 @@ GtMonitorGlutinEventsElement >> initialize [
 		width: 100;
 		stencil: [ :aGlutinEventSignal |
 			BrLabel new
-				look: (BrGlamorousLabelLook new glamorousRegularSmallSize foreground: Color gray);
+				aptitude: (BrGlamorousLabelAptitude new glamorousRegularSmallSize foreground: Color gray);
 				text: (String streamContents: [ :aStream | aGlutinEventSignal timestamp asTime print24: true showSeconds: true on: aStream ])].
 	eventsList column
 		title: 'Event';
@@ -149,7 +149,7 @@ GtMonitorGlutinEventsElement >> initialize [
 			anEventElement == self
 				ifTrue: [
 					BrLabel new
-						look: BrGlamorousLabelLook new;
+						aptitude: BrGlamorousLabelAptitude new;
 						text: aGlutinEventSignal event printString ]
 				ifFalse: [ anEventElement ] ].
 	
@@ -179,7 +179,7 @@ GtMonitorGlutinEventsElement >> initialize [
 GtMonitorGlutinEventsElement >> newButtonElement: aText [
 	^ BlElement new
 		layout: BlLinearLayout horizontal alignCenter;
-		look: (BrShadowLook new width: 1; offset: 0@0.5);
+		aptitude: (BrShadowAptitude new width: 1; offset: 0@0.5);
 		background: Color white;
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 3);
 		margin: (BlInsets all: 3);
@@ -188,7 +188,7 @@ GtMonitorGlutinEventsElement >> newButtonElement: aText [
 			c horizontal fitContent.
 			c vertical fitContent ];
 		addChild: (BrLabel new
-			look: (BrGlamorousLabelLook new glamorousCodeFont glamorousCodeTinySize tightMeasurement foreground: Color darkGray);
+			aptitude: (BrGlamorousLabelAptitude new glamorousCodeFont glamorousCodeTinySize tightMeasurement foreground: Color darkGray);
 			text: aText)
 ]
 
@@ -196,7 +196,7 @@ GtMonitorGlutinEventsElement >> newButtonElement: aText [
 GtMonitorGlutinEventsElement >> newSquareButtonElement: aText [
 	^ BlElement new
 		layout: BlLinearLayout horizontal alignCenter;
-		look: (BrShadowLook new width: 1; offset: 0@0.5);
+		aptitude: (BrShadowAptitude new width: 1; offset: 0@0.5);
 		background: Color white;
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 3);
 		margin: (BlInsets all: 3);
@@ -205,7 +205,7 @@ GtMonitorGlutinEventsElement >> newSquareButtonElement: aText [
 			c horizontal fitContent.
 			c vertical fitContent ];
 		addChild: (BrLabel new
-			look: (BrGlamorousLabelLook new glamorousCodeFont tightMeasurement foreground: Color darkGray);
+			aptitude: (BrGlamorousLabelAptitude new glamorousCodeFont tightMeasurement foreground: Color darkGray);
 			text: aText)
 ]
 
@@ -281,7 +281,7 @@ GtMonitorGlutinEventsElement >> visitCharacterReceivedEvent: anEvent [
 		alignCenterLeft;
 		addChildren: { 
 			BrLabel new
-				look: BrGlamorousLabelLook new;
+				aptitude: BrGlamorousLabelAptitude new;
 				text: 'Character recevied'.
 			BlElement new
 				width: 2;
@@ -298,7 +298,7 @@ GtMonitorGlutinEventsElement >> visitKeyboardInputEvent: anEvent [
 		alignCenterLeft;
 		addChildren: { 
 			BrLabel new
-				look: BrGlamorousLabelLook new;
+				aptitude: BrGlamorousLabelAptitude new;
 				text: ('Key {1}' format: {
 					anEvent state = GlutinEventInputElementState Pressed
 						ifTrue: [ 'pressed' ]
@@ -324,7 +324,7 @@ GtMonitorGlutinEventsElement >> visitModifiersChanged: anEvent [
 		alignCenterLeft;
 		addChildren: ({ 
 			BrLabel new
-				look: BrGlamorousLabelLook new;
+				aptitude: BrGlamorousLabelAptitude new;
 				text: 'Modifiers changed'.
 			
 			anEvent shift
@@ -350,7 +350,7 @@ GtMonitorGlutinEventsElement >> visitMouseInputEvent: anEvent [
 		alignCenterLeft;
 		addChildren: { 
 			BrLabel new
-				look: BrGlamorousLabelLook new;
+				aptitude: BrGlamorousLabelAptitude new;
 				text: ('Mouse {1}' format: {
 					anEvent state = GlutinEventInputElementState Pressed
 						ifTrue: [ 'pressed' ]

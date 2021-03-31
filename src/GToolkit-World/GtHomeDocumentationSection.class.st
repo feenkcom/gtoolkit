@@ -37,7 +37,7 @@ GtHomeDocumentationSection >> newDocsExplorer [
 		content:
 			(BrLabel new
 				text: 'More docs ...';
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				padding: (BlInsets all: 20)) asScalableElement
 		action: [ :card | 
 			self

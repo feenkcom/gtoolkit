@@ -22,7 +22,7 @@ GtWorldTabElement class >> tabNameForSpaceId: aNumber [
 GtWorldTabElement >> defaultHomeElement [
 	^ BrLabel new
 		text: 'Home';
-		look: (BrGlamorousLabelLook new 
+		aptitude: (BrGlamorousLabelAptitude new 
 			fontSize: 42; 
 			foreground: BrGlamorousColors disabledButtonTextColor);
 		matchParent;
@@ -34,7 +34,7 @@ GtWorldTabElement >> defaultHomeElement [
 GtWorldTabElement >> defaultHomeTab [
 	^ BrTab new
 		vExact: 36;
-		look: BrGlamorousSpaceTabWithIconLook;
+		aptitude: BrGlamorousSpaceTabWithIconAptitude;
 		icon: self defaultHomeTabIcon;
 		label: 'Home';
 		stencil: [ self home ]
@@ -88,7 +88,7 @@ GtWorldTabElement >> initializeShortcuts [
 { #category : #initialization }
 GtWorldTabElement >> initializeTabGroup [
 	tabs := BrTabGroup new.
-	tabs look: BrGlamorousSpaceTabGroupLook new.
+	tabs aptitude: BrGlamorousSpaceTabGroupAptitude new.
 	tabs actionbarStencil: [ self newActionbar ].
 ]
 
@@ -107,7 +107,7 @@ GtWorldTabElement >> newActionbar [
 	| anActionbar |
 
 	anActionbar := BrToolbar new.
-	anActionbar look: BrGlamorousToolbarLook new.
+	anActionbar aptitude: BrGlamorousToolbarAptitude new.
 	
 	self newActionItemsInto: anActionbar.
 
@@ -117,14 +117,14 @@ GtWorldTabElement >> newActionbar [
 { #category : #accessing }
 GtWorldTabElement >> newToolbarForTabModel: aTabModel [
 	^ BrToolbar new
-		look: (BrGlamorousToolbarLook new spacing: 0);
+		aptitude: (BrGlamorousToolbarAptitude new spacing: 0);
 		margin: (BlInsets left: 6);
 		addItems:
 			{(BrButton new
 				icon: BrGlamorousIcons maximize;
 				exact: 16 @ 16;
 				opacity: 0.5;
-				look: GtWorldTabToolbarButtonLook;
+				aptitude: GtWorldTabToolbarButtonAptitude;
 				model: aTabModel;
 				label: 'Open in a new window';
 				action: [ :aButtonElement | 
@@ -136,7 +136,7 @@ GtWorldTabElement >> newToolbarForTabModel: aTabModel [
 				icon: BrGlamorousVectorIcons close;
 				exact: 16 @ 16;
 				opacity: 0.5;
-				look: GtWorldTabToolbarButtonLook;
+				aptitude: GtWorldTabToolbarButtonAptitude;
 				label: 'Close';
 				model: aTabModel;
 				containerName: self class spaceCloseButtonName;
@@ -167,7 +167,7 @@ GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 	aTab := BrTab new
 		vExact: 36;
 		model: aSpace;
-		look: BrGlamorousSpaceTabWithIconAndLabelLook new;
+		aptitude: BrGlamorousSpaceTabWithIconAndLabelAptitude new;
 		label: aSpace title;
 		icon: (aSpace icon ifNil: [ BrGlamorousVectorIcons noIcon ]);
 		containerName: (self class tabNameForSpaceId: aSpace id);

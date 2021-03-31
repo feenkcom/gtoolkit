@@ -38,7 +38,7 @@ GtMonitoredBlocSpacesElement >> initialize [
 			aTitle size isZero ifTrue: [ aTitle := '[No name]' asRopedText italic ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: aTitle;
 				hMatchParent ].
 
@@ -57,7 +57,7 @@ GtMonitoredBlocSpacesElement >> initialize [
 				ifFalse: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
 
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: isOpened;
 				hMatchParent ].
 
@@ -71,7 +71,7 @@ GtMonitoredBlocSpacesElement >> initialize [
 				ifFalse: [ '' asRopedText ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: shouldShutdown;
 				hMatchParent ].
 		

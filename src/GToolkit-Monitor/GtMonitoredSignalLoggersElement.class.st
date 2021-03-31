@@ -38,7 +38,7 @@ GtMonitoredSignalLoggersElement >> initialize [
 			aTitle ifEmpty: [ aTitle := '[No name]' asRopedText italic ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: aTitle;
 				hMatchParent ].
 
@@ -54,7 +54,7 @@ GtMonitoredSignalLoggersElement >> initialize [
 				ifFalse: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
 			
 			BrLabel new
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				text: currentState;
 				hMatchParent ].
 		

@@ -44,7 +44,7 @@ GtMonitoredExternalResourcesElement >> initialize [
 		title: 'Class';
 		cellStencil: [ 
 			BrLabel new 
-				look: BrGlamorousLabelLook new ];
+				aptitude: BrGlamorousLabelAptitude new ];
 		dataBinder: [  :eachLabel :eachItem | eachLabel text: eachItem name ].
 
 	self addChild: resourcesTree.

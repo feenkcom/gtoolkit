@@ -167,7 +167,7 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtPackageDependenciesFor: aView [
 				cellStencil: [
 					BrEditor new
 						fitContent;
-						look: BrGlamorousEditorLook;
+						aptitude: BrGlamorousEditorAptitude;
 						beReadOnlyWithSelection;
 						padding: BlInsets empty ];
 				dataBinder: [ :element :each |

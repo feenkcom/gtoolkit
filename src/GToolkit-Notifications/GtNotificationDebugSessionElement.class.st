@@ -50,13 +50,13 @@ GtNotificationDebugSessionElement >> initialize [
 		aContainer addChild: self stackListElement as: #stack.
 		aContainer addChild: self toolbarElement as: #toolbar ].
 
-	self addLook: (BrLayoutResizerLook new
+	self addAptitude: (BrLayoutResizerAptitude new
 		hInherit;
 		vAnyToFitContent;
 		hInherit: self borderElement;
 		vAnyToFitContent: self borderElement).
 
-	self borderElement addLook: (BrLayoutResizerLook new
+	self borderElement addAptitude: (BrLayoutResizerAptitude new
 		hInherit: self textEditor;
 		vAnyToFitContent: self textEditor;
 		hInherit: self stackListElement;
@@ -82,7 +82,7 @@ GtNotificationDebugSessionElement >> initializeStackList [
 		itemType: [ :anItemTypeFactory :anItemObject :anItemIndex | DebugSession ];
 		itemStencil: [ :anEventElementClass :aListWidget | 
 			BrLabel new
-				look: (BrGlamorousLabelLook new
+				aptitude: (BrGlamorousLabelAptitude new
 					glamorousRegularFont;
 					glamorousRegularSmallSize);
 				hMatchParent;
@@ -94,7 +94,7 @@ GtNotificationDebugSessionElement >> initializeStackList [
 { #category : #initialization }
 GtNotificationDebugSessionElement >> initializeTextEditor [
 	textEditor := BrEditor new
-		look: (BrGlamorousRegularEditorLook new
+		aptitude: (BrGlamorousRegularEditorAptitude new
 			glamorousRegularFont;
 			glamorousRegularSmallSize);
 		padding: (BlInsets top: 5 right: 10 bottom: 5 left: 10);
@@ -108,12 +108,12 @@ GtNotificationDebugSessionElement >> initializeTextEditor [
 GtNotificationDebugSessionElement >> initializeToolbarElement [
 	| aDebugButton |
 	toolbarElement := BrToolbar new
-		look: BrGlamorousToolbarLook;
+		aptitude: BrGlamorousToolbarAptitude;
 		padding: (BlInsets top: 5 right: 10 bottom: 10 left: 10);
 		fitContent.
 		
 	aDebugButton := BrButton new
-		look: BrGlamorousButtonWithIconLook;
+		aptitude: BrGlamorousButtonWithIconAptitude;
 		beSmallSize;
 		icon: BrGlamorousVectorIcons debug;
 		label: 'Debug';

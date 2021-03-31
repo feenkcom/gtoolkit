@@ -14,7 +14,7 @@ GtHomeToolsSection >> create [
 			c vertical fitContent ];
 		background: Color white; 
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 4);
-		look: (BrShadowLook new beLarge);
+		aptitude: (BrShadowAptitude new beLarge);
 		padding: (BlInsets top: 10 left: 0 bottom: 10 right: 0).
 	cardsContainer := BlElement new
 		layout: BlLinearLayout vertical;

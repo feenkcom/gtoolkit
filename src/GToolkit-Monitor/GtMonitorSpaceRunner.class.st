@@ -90,7 +90,7 @@ GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [
 	aContainer := BrHorizontalPane new fitContent.
 	
 	aNode := BrEditor new
-		look: BrGlamorousRegularEditorLook new;
+		aptitude: BrGlamorousRegularEditorAptitude new;
 		fitContent;
 		constraintsDo: [ :c | c maxWidth: 100 ];
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 5);
@@ -129,7 +129,7 @@ GtMonitorSpaceRunner >> createSpace [
 	aSpace extent: 100@75.
 	aSpace title: 'Test Space'.
 	aSpace addChild: (BrLabel new
-		look: (BrGlamorousLabelLook new fontSize: 50);
+		aptitude: (BrGlamorousLabelAptitude new fontSize: 50);
 		text: 'Test Space') asScalableElement.
 
 	^ aSpace
@@ -150,10 +150,10 @@ GtMonitorSpaceRunner >> initialize [
 	logger := self createLogger.
 	
 	toolbar := BrToolbar new
-		look: BrGlamorousToolbarLook new.
+		aptitude: BrGlamorousToolbarAptitude new.
 	
 	startButton := BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
 		beSmallSize;
 		label: 'Start';
 		action: [ :aButton | self start ].
@@ -161,12 +161,12 @@ GtMonitorSpaceRunner >> initialize [
 	stopButton := BrButton new
 		disable;
 		beSmallSize;
-		look: BrGlamorousButtonWithLabelLook new;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
 		label: 'Stop';
 		action: [ self stop ].
 		
 	resetButton := BrButton new
-		look: BrGlamorousButtonWithLabelLook new;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
 		beSmallSize;
 		label: 'Reset';
 		action: [ self reset ].

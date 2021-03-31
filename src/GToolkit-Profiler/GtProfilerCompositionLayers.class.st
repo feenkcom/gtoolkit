@@ -28,11 +28,11 @@ GtProfilerCompositionLayers >> initialize [
 			ifNone: [  ] ].
 	
 	toolbar := BrToolbar new
-		look: BrGlamorousToolbarLook new.
+		aptitude: BrGlamorousToolbarAptitude new.
 	
 	updateButton := BrButton new
 		disable;
-		look: BrGlamorousButtonWithLabelLook new;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
 		beSmallSize;
 		label: 'Render';
 		action: [ :aButton | self updateLayer ].

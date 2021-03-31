@@ -84,7 +84,7 @@ GtHomeFeenkBlogSection >> newDocsExplorerWith: aCollectionOfPosts [
 		content:
 			(BrLabel new
 				text: 'More posts ...';
-				look: BrGlamorousLabelLook;
+				aptitude: BrGlamorousLabelAptitude;
 				padding: (BlInsets all: 20)) asScalableElement
 		action: [ :card | 
 			self
@@ -96,7 +96,7 @@ GtHomeFeenkBlogSection >> newDocsExplorerWith: aCollectionOfPosts [
 { #category : #'instance creation' }
 GtHomeFeenkBlogSection >> newExceptionLabelFor: anException [
 	^ BrLabel new
-		look: (BrGlamorousLabelLook new
+		aptitude: (BrGlamorousLabelAptitude new
 			foreground: BrGlamorousColors linkWithErrorColor;
 			fontSize: 14);
 		padding: self newSectionTitlePaddingInsets;
@@ -112,18 +112,18 @@ GtHomeFeenkBlogSection >> newPostCardContentFor: aXdFileInfo [
 		padding: (BlInsets all: 5).
 	container 
 		addChild: (BrEditor new
-			look: BrGlamorousRegularEditorLook;
+			aptitude: BrGlamorousRegularEditorAptitude;
 			vFitContent;
 			hMatchParent;
 			beReadOnlyWithoutSelection;
 			text: (self newTextFor: aXdFileInfo));
 		addChild: (BrLabel new
 			padding: (BlInsets left: 5);
-			look: (BrGlamorousLabelLook new foreground: Color gray); 
+			aptitude: (BrGlamorousLabelAptitude new foreground: Color gray); 
 			text: 'by ', aXdFileInfo author);
 		addChild: (BrLabel new
 			padding: (BlInsets left: 5);
-			look: (BrGlamorousLabelLook new foreground: Color gray); 
+			aptitude: (BrGlamorousLabelAptitude new foreground: Color gray); 
 			text: aXdFileInfo createdOn asLocalStringYMDHM).
 	^ container
 ]
@@ -179,7 +179,7 @@ GtHomeFeenkBlogSection >> newTextFor: aXdFileInfo [
 GtHomeFeenkBlogSection >> newUpdateDocsContent [
 	^ BrLabel new
 		text: 'Update ...';
-		look: BrGlamorousLabelLook;
+		aptitude: BrGlamorousLabelAptitude;
 		padding: (BlInsets all: 20)
 ]
 

@@ -106,7 +106,7 @@ GtNotificationIcebergCredentialsElement >> initialize [
 { #category : #initialization }
 GtNotificationIcebergCredentialsElement >> initializeAcceptButton [
 	acceptButton := BrButton new
-		look: BrGlamorousButtonWithIconLook;
+		aptitude: BrGlamorousButtonWithIconAptitude;
 		beSmallSize;
 		icon: BrGlamorousVectorIcons accept;
 		label: 'Accept';
@@ -128,7 +128,7 @@ GtNotificationIcebergCredentialsElement >> initializeBorderElement [
 GtNotificationIcebergCredentialsElement >> initializeHeaderElement [
 	headerElement := BrLabel new
 		text: (self newHeaderTextForHost: '');
-		look: (BrGlamorousLabelLook new
+		aptitude: (BrGlamorousLabelAptitude new
 			glamorousRegularFont;
 			glamorousRegularSmallSize);
 		padding: (BlInsets top: 5 right: 10 bottom: 5 left: 10);
@@ -178,7 +178,7 @@ GtNotificationIcebergCredentialsElement >> newHeaderTextForHost: aHost [
 GtNotificationIcebergCredentialsElement >> newLabelWithText: aText [
 	^ BrLabel new
 		text: aText;
-		look: (BrGlamorousLabelLook new
+		aptitude: (BrGlamorousLabelAptitude new
 			glamorousRegularFont;
 			glamorousRegularSmallSize);
 		padding: (BlInsets top: 2 right: 3 bottom: 3 left: 3);
@@ -188,7 +188,7 @@ GtNotificationIcebergCredentialsElement >> newLabelWithText: aText [
 { #category : #'private - instance creation' }
 GtNotificationIcebergCredentialsElement >> newSecretInputField [ 
 	^ self newCommonInputField
-		look: (BrGlamorousRegularEditorLook new
+		aptitude: (BrGlamorousRegularEditorAptitude new
 			glamorousRegularFont;
 			glamorousRegularSmallSize;
 			replacingText: $*)
@@ -197,7 +197,7 @@ GtNotificationIcebergCredentialsElement >> newSecretInputField [
 { #category : #'private - instance creation' }
 GtNotificationIcebergCredentialsElement >> newUserInput [
 	^ self newCommonInputField
-		look: (BrGlamorousRegularEditorLook new
+		aptitude: (BrGlamorousRegularEditorAptitude new
 			glamorousRegularFont;
 			glamorousRegularSmallSize)
 ]
