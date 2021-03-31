@@ -88,7 +88,7 @@ GtNotificationIcebergCredentialsSignal >> gtStackFor: aView [
 	^ aView explicit
 		title: 'Stack';
 		priority: 10;
-		stencil: [ (GtMethodsCoder forItems: (self context collect: #method)) ]
+		stencil: [ (GtPharoMethodsCoder forItems: (self context collect: #method)) ]
 ]
 
 { #category : #'gt-extensions' }

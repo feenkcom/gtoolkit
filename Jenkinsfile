@@ -246,14 +246,14 @@ pipeline {
                                 powershell './scripts/build/parallelsmoke/win_3_unpack.ps1'
                              }
                         }
+/*****
                         stage('Windows Examples') {
                              steps {
-                                retry(2) {
-                                    powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
-                                    junit '*.xml'
-                                }
+                                powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
+                                junit '*.xml'
                              }
                         }
+*****/
                     }
                 }
             }

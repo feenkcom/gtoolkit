@@ -1,16 +1,30 @@
 #/bin/sh!
-
+#
+# Install Glamorous Toolkit
+#
+# By default Gt is installed in to a subdirectory named glamoroustoolkit.
+# Defining GT_INSTALL_HERE=1 tells the install to be in the current 
+# directory, which must be empty.
+#
 DIR=glamoroustoolkit
 # find . ! -name '*.st' ! -name '*.sh' ! -name '.' -exec rm -rf {} +
 
-if [ -d "$DIR" ]; then
-  echo "The folder $DIR is present in the current directory, perhaps it is already installed?"
-  exit 1
+if [ ${GT_INSTALL_HERE}0 -ne 10 ]; then
+  if [ -d "$DIR" ]; then
+    echo "The folder $DIR is present in the current directory, perhaps it is already installed?"
+    exit 1
+  fi
+  mkdir $DIR
+  cd $DIR
+else
+  if [ -n "$(ls -A)" ]; then
+      echo "Current directory isn't empty"
+      exit 1
+  fi
 fi
 
+set -e
 set -o xtrace
-mkdir $DIR
-cd $DIR
 
 curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st -o loadgt.st
 curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadice.st -o loadice.st
