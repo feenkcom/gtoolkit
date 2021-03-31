@@ -71,13 +71,17 @@ MCPackageLoader compile: 'tryToLoad: aDefinition
 		githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';	
 		baseline: 'Iceberg';	
 		load.
-    Metacello new 
+"    Metacello new 
 		baseline: 'GToolkitReleaser'; 
 		githubUser: 'feenkcom' project: 'gtoolkit-releaser' commitish: 'master' path: ''; 
+		load."
+	 Metacello new 
+		baseline: 'GToolkit'; 
+		githubUser: 'feenkcom' project: 'gtoolkit' commitish: 'master' path: ''; 
 		load.
-	GtRlProjectsLoader new
+	" GtRlProjectsLoader new
 		loadBaseline: 'GToolkit' 
-		fromRepository: 'github://feenkcom/gtoolkit/src'.
+		fromRepository: 'github://feenkcom/gtoolkit/src'. "
 ] ensure: [ EpMonitor current enable ].
 
 #GtImageSetup asClass performSetupForRelease.
