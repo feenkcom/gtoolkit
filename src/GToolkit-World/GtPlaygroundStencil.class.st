@@ -48,6 +48,18 @@ GtPlaygroundStencil >> createWithSnippets: snippets [
 ]
 
 { #category : #accessing }
+GtPlaygroundStencil >> gtSpotterForEmptyPlayBookFor: aStep [
+	<gtSearch>
+	^ XdPlaygroundSpotterStart new gtSpotterForEmptyPlayBookFor: aStep
+]
+
+{ #category : #accessing }
+GtPlaygroundStencil >> gtSpotterForXDocPlayBooksFor: aStep [
+	<gtSearch>
+	^ XdPlaygroundSpotterStart new gtSpotterForXDocPlayBooksFor: aStep
+]
+
+{ #category : #accessing }
 GtPlaygroundStencil >> icon [
 	^ BrGlamorousVectorIcons emphasizedPlay
 ]
