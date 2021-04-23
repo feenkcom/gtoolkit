@@ -36,7 +36,7 @@ GtHomeSlideShowsSection >> create [
 		description: 'Search is pervasive in Glamorous Toolkit. Learn more about queries and how to use them.').
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Working With a REST API'
-		slideshow: [ GtLiveShow createWithArrowsVisible: GtWorkingWithARestApi new ]
+		slideshow: [ GtLiveShow createWithArrowsVisible: GtWorkingWithTheGitHubRestApi new ]
 		description: 'GT is a client side technology. Learn how to create exploratory tools for a remote API.').
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Spotter'
