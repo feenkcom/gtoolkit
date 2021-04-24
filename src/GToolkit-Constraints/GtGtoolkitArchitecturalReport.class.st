@@ -26,5 +26,6 @@ GtGtoolkitArchitecturalReport >> build: aComposite [
 		addConstraint: GtSubscriptionsShouldNotUseDeliveryConditionWhere new;
 		addConstraint: GtTraitsShouldNotBeNested new;
 		addConstraint: GtWeakSubscriptionsWithBlockSubscribers new;
-		addConstraint: GtBaselinesShouldProperlySpecifyDependencies new
+		addConstraint: GtBaselinesShouldProperlySpecifyDependencies new";
+		addConstraint: GtGitRepositoryWithoutJenkinsFile new"
 ]
