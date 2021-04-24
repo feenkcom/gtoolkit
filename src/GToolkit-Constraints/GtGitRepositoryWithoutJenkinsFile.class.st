@@ -15,7 +15,7 @@ GtGitRepositoryWithoutJenkinsFile >> issues [
 	project := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit/src'.
 	feenkRepositories := project withAllRepositories select: [ :aRepository |
 		aRepository ownerName = 'feenkcom' and: [
-			(#('pillar' 'XPath' 'XMLWriter' 'Chrysal' 'mustache' 'XMLParser' 'OSSubprocess' 'Containers-PropertyEnvironment' 'tffi-dev' 'taskit' 'pharo-unicode') includes: aRepository icebergRepository name) not
+			(#('pillar' 'XPath' 'XMLWriter' 'Chrysal' 'mustache' 'XMLParser' 'OSSubprocess' 'Containers-PropertyEnvironment' 'tffi-dev' 'taskit' 'pharo-unicode') includes: aRepository icebergRepository workingCopy fileSystem basename) not
 			] ].
 	directories := feenkRepositories collect: [ :aRepository | 
 		aRepository icebergRepository workingCopy fileSystem ].
