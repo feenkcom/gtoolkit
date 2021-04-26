@@ -8,7 +8,7 @@ Class {
 GtHomeSlideShowsSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := self newSectionContainer.
-	sectionContainer addChild: (self newSectionTitle: 'Slideshows').
+	sectionContainer addChild: (self newSectionTitle: 'Introduction').
 	cardsContainer := self newCardsContainer.
 	cardsContainer addChild: (self 
 		newShowCardWithTitle: 'Tour' 
@@ -35,10 +35,6 @@ GtHomeSlideShowsSection >> create [
 		slideshow: [ GtLiveShow createWithArrowsVisible: GtQueries new ]
 		description: 'Search is pervasive in Glamorous Toolkit. Learn more about queries and how to use them.').
 	cardsContainer addChild: (self
-		newShowCardWithTitle: 'Working With a REST API'
-		slideshow: [ GtLiveShow createWithArrowsVisible: GtWorkingWithTheGitHubRestApi new ]
-		description: 'GT is a client side technology. Learn how to create exploratory tools for a remote API.').
-	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Spotter'
 		slideshow: [ GtLiveShow createWithArrowsVisible: GtSpotterSlideshow new ]
 		description: 'Spotter is the moldable search interface. Learn more about it.').
@@ -50,10 +46,6 @@ GtHomeSlideShowsSection >> create [
 		newShowCardWithTitle: 'Coder'
 		slideshow: [ GtLiveShow createWithArrowsVisible: GtCoderSlideshow new ]
 		description: 'Coder offers the means through which we manipulate static code.').
-	cardsContainer addChild: (self
-		newShowCardWithTitle: 'Moldable Analysis'
-		slideshow: [ GtLiveShow createWithArrowsVisible: GtMoldableAnalysisPresentation new ]
-		description: 'Moldable Analysis.').
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
