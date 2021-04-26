@@ -1,14 +1,14 @@
 Class {
-	#name : #GtHomeSlideShowsSection,
+	#name : #GtHomeGetStartedSection,
 	#superclass : #GtHomeSection,
 	#category : #'GToolkit-World-Sections'
 }
 
 { #category : #accessing }
-GtHomeSlideShowsSection >> create [
+GtHomeGetStartedSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := self newSectionContainer.
-	sectionContainer addChild: (self newSectionTitle: 'Introduction').
+	sectionContainer addChild: (self newSectionTitle: 'Get started').
 	cardsContainer := self newCardsContainer.
 	cardsContainer addChild: (self 
 		newShowCardWithTitle: 'Tour' 
