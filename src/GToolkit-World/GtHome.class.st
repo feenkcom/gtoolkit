@@ -81,6 +81,13 @@ GtHome >> howToSection [
 		priority: 19
 ]
 
+{ #category : #sections }
+GtHome >> howToShowsSection [
+	<gtHomeSection>
+	^ GtHomeUseCaseShowsSection new 
+		priority: 16
+]
+
 { #category : #initialization }
 GtHome >> initialize [
 	super initialize.
