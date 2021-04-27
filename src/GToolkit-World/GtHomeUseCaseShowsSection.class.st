@@ -18,6 +18,10 @@ GtHomeUseCaseShowsSection >> create [
 		newShowCardWithTitle: 'Analyzing Java systems'
 		slideshow: [ GtLiveShow createWithArrowsVisible: GtAnalyzingJavaSystemsShow new ]
 		description: 'Analyzing Java systems').
+	cardsContainer addChild: (self
+		newShowCardWithTitle: 'Querying Pharo code'
+		slideshow: [ GtLiveShow createWithArrowsVisible: GtQueryingCodeShow new ]
+		description: 'Search is pervasive in Glamorous Toolkit. Learn more about queries and how to use them.').
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
