@@ -8,7 +8,7 @@ Class {
 GtHomeToolDocsSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := self newSectionContainer.
-	sectionContainer addChild: (self newSectionTitle: 'Tools').
+	sectionContainer addChild: (self newSectionTitle: 'About tools').
 	cardsContainer := self newCardsContainer.
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Playground and Inspector'
