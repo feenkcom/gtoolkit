@@ -13,7 +13,7 @@ ${example:GtCreateStandaloneAppHowToGuide>>#disableGtWorldShutdownHadler}$
 To close an opened window, it is enough to just send ${method:BlSpace>>#close}$ to an intended space.
 ${example:GtCreateStandaloneAppHowToGuide>>#closeGtWorlds}$
 !!Save the image
-Once the indended appliocation window is opened and there are no more GT windows we can save the image (without quitting):
+Once the intended application window is opened and there are no more GT windows we can save the image (without quitting):
 ${example:GtCreateStandaloneAppHowToGuide>>#saveTheImage}$
 "
 Class {
