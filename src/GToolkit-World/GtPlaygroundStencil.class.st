@@ -48,6 +48,36 @@ GtPlaygroundStencil >> createWithSnippets: snippets [
 ]
 
 { #category : #accessing }
+GtPlaygroundStencil >> gtSpotterForEmptyPlayBookFor: aStep [
+	<gtSearch>
+	aStep listProcessor
+		priority: 10;
+		title: 'Empty Playground';
+		items: [ { self } ];
+		itemsLimit: Float infinity;
+		itemName: [ :eachGtPlayBook | XdPlaygroundSpotterStart new emptyPlaygroundName ];
+		previewElement: [ :aStencil | aStencil asPreviewElement asElement ];
+		filter: GtFilterSubstring
+]
+
+{ #category : #accessing }
+GtPlaygroundStencil >> gtSpotterForXDocPlayBooksFor: aStep [
+	<gtSearch>
+	aStep listProcessor
+		priority: 0;
+		title: 'Playgrounds';
+		items: [ XdPlaygroundSettings xdocFiles ];
+		itemName: [ :anXdFile | anXdFile manifest title ];
+		previewObject: [ :anXdFile | GtPlayBook fromXdFile: anXdFile ];
+		previewElement: [ :aGtPlayBook | GtPlayground createOn: aGtPlayBook ];
+		itemsLimit: Float infinity;
+		actLogic: [ :anXdFile :theStep :theSpotterElement |
+			GtPlayground openOn: (GtPlayBook fromXdFile: anXdFile) from: theSpotterElement.
+			theStep exit ];
+		filter: XdPlayBookFilter
+]
+
+{ #category : #accessing }
 GtPlaygroundStencil >> icon [
 	^ BrGlamorousVectorIcons emphasizedPlay
 ]
