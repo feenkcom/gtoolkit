@@ -15,7 +15,6 @@ catch
 {
     Write-Warning -Message 'Process exceeded timeout, will be killed now.'
     $process | Stop-Process -Force
-    exit 1
 }
 
 
