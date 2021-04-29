@@ -8,7 +8,7 @@ ${example:GtCreateStandaloneAppHowToGuide>>#helloWorldSceneInSpace}$
 The Glamorous Toolkit comes with a ${class:GtWorld}$ opened by default. When creating a standalone app based on GT we should close that window, which can be done in two steps.
 !!!Disable shutdown-on-close listener
 In order to shutdown the process when a window is closed, we add a ${class:BlSpaceShutdownOnCloseListener}$ as an event handler to a ${class:BlSpace}$. It should be removed before we close such spaces.
-${example:GtCreateStandaloneAppHowToGuide>>#disableGtWorldShutdownHadler}$
+${example:GtCreateStandaloneAppHowToGuide>>#disableGtWorldShutdownHandler}$
 !!!Closing an existing GtWorld
 To close an opened window, it is enough to just send ${method:BlSpace>>#close}$ to an intended space.
 ${example:GtCreateStandaloneAppHowToGuide>>#closeGtWorlds}$
