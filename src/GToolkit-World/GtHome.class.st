@@ -9,6 +9,13 @@ Class {
 	#category : #'GToolkit-World-UI'
 }
 
+{ #category : #sections }
+GtHome >> caseStudyShowsSection [
+	<gtHomeSection>
+	^ GtHomeUseCaseShowsSection new 
+		priority: 17
+]
+
 { #category : #accessing }
 GtHome >> collectHomeSectionStencils [
 	^ GtHomeSectionsCollector new
@@ -63,7 +70,14 @@ GtHome >> documentationSection [
 GtHome >> externalLinksSection [
 	<gtHomeSection>
 	^ GtHomeExternalLinksSection new
-		priority: 30
+		priority: 200
+]
+
+{ #category : #sections }
+GtHome >> getStartedSection [
+	<gtHomeSection>
+	^ GtHomeGetStartedSection new 
+		priority: 15
 ]
 
 { #category : #ui }
@@ -147,16 +161,16 @@ GtHome >> refreshNotifications [
 	self updateFeed.
 ]
 
-{ #category : #sections }
-GtHome >> slideShowsSection [
-	<gtHomeSection>
-	^ GtHomeSlideShowsSection new 
-		priority: 15
-]
-
 { #category : #accessing }
 GtHome >> spaceGap [
 	^ 10
+]
+
+{ #category : #accessing }
+GtHome >> toolShowsSection [
+	<gtHomeSection>
+	^ GtHomeToolDocsSection new 
+		priority: 16
 ]
 
 { #category : #sections }
