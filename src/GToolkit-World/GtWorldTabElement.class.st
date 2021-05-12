@@ -22,9 +22,10 @@ GtWorldTabElement class >> tabNameForSpaceId: aNumber [
 GtWorldTabElement >> defaultHomeElement [
 	^ BrLabel new
 		text: 'Home';
-		aptitude: (BrGlamorousLabelAptitude new 
-			fontSize: 42; 
-			foreground: BrGlamorousColors disabledButtonTextColor);
+		aptitude:
+			(BrGlamorousLabelAptitude new
+				fontSize: 42;
+				foreground: self theme button disabledTextColor);
 		matchParent;
 		alignCenter;
 		background: Color white

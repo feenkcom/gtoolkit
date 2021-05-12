@@ -98,13 +98,12 @@ GtHome >> howToSection [
 { #category : #initialization }
 GtHome >> initialize [
 	super initialize.
-	
-	self background: BrGlamorousColors backdropColor.
-	self constraintsDo: [ :c |
-		c horizontal matchParent.
-		c vertical matchParent ].
+	self background: self theme default backdropColor.
+	self
+		constraintsDo: [ :c | 
+			c horizontal matchParent.
+			c vertical matchParent ].
 	self layout: BlLinearLayout vertical.
-	
 	self initializePanes.
 	self updateWidget
 ]

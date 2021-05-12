@@ -46,21 +46,24 @@ GtSceneDrillerOverlay >> highlightElement: anElementOrNil [
 { #category : #initialization }
 GtSceneDrillerOverlay >> initialize [
 	super initialize.
-	
-	self constraintsDo: [ :c |
-		c ignoreByLayout.
-		c horizontal matchParent.
-		c vertical matchParent ].
+	self
+		constraintsDo: [ :c | 
+			c ignoreByLayout.
+			c horizontal matchParent.
+			c vertical matchParent ].
 	self beInSeparateCompositionLayer.
-	
 	eventHandler := GtSceneDrillerOverlayEventHandler new overlay: self.
-	
-	highlight := BlPolygonElement new background: (Color r: 1.0 g: 0.8396871945259042 b: 0.3998044965786901 alpha: 0.2).
+	highlight := BlPolygonElement new
+		background:
+			(Color
+				r: 1.0
+				g: 0.8396871945259042
+				b: 0.3998044965786901
+				alpha: 0.2).
 	highlight visibility: BlVisibility gone.
-	
-	selection := BlPolygonElement new background: BrGlamorousColors selectedListItemColor.
+	selection := BlPolygonElement new
+		background: self theme item selectedColor.
 	selection visibility: BlVisibility gone.
-
 	self addChild: highlight.
 	self addChild: selection
 ]

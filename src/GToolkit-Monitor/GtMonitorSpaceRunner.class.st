@@ -84,11 +84,9 @@ GtMonitorSpaceRunner >> createSignalTree: aLogger [
 ]
 
 { #category : #'instance creation' }
-GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [ 
+GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [
 	| aContainer aNode theSignals |
-	
 	aContainer := BrHorizontalPane new fitContent.
-	
 	aNode := BrEditor new
 		aptitude: BrGlamorousRegularEditorAptitude new;
 		fitContent;
@@ -96,28 +94,26 @@ GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 5);
 		padding: (BlInsets all: 5);
 		border: (BlBorder paint: Color gray width: 1);
-		background: (Color veryVeryLightGray);
+		background: Color veryVeryLightGray;
 		text: aSignalClass label;
 		preventMeAndChildrenMouseEvents.
-
 	theSignals := OrderedCollection new.
-	
-	aLogger announcer when: aSignalClass do: [ :aSignal |
-		theSignals add: aSignal.
-		aNode background: BrGlamorousColors successBackgroundColor.
-		aNode border: (BlBorder paint: BrGlamorousColors successBorderColor width: 1) ].
-	
-	aContainer when: BlClickEvent do: [ :anEvent |
-		anEvent consumed: true.
-		
-		theSignals isNotEmpty
-			ifTrue: [
-				theSignals size > 1
-					ifTrue: [ anEvent currentTarget phlow spawnObject: theSignals ]
-					ifFalse: [ anEvent currentTarget phlow spawnObject: theSignals anyOne ] ] ].
-			
+	aLogger announcer
+		when: aSignalClass
+		do: [ :aSignal | 
+			theSignals add: aSignal.
+			aNode background: self theme status successBackgroundColor.
+			aNode
+				border: (BlBorder paint: self theme status successBorderColor width: 1) ].
+	aContainer
+		when: BlClickEvent
+		do: [ :anEvent | 
+			anEvent consumed: true.
+			theSignals isNotEmpty
+				ifTrue: [ theSignals size > 1
+						ifTrue: [ anEvent currentTarget phlow spawnObject: theSignals ]
+						ifFalse: [ anEvent currentTarget phlow spawnObject: theSignals anyOne ] ] ].
 	aContainer addChild: aNode.
-
 	^ aContainer
 ]
 

@@ -67,8 +67,8 @@ GtNotificationDebugSessionElement >> initialize [
 GtNotificationDebugSessionElement >> initializeBorderElement [
 	borderElement := GtNotificationBorderElement new
 		borderDo: [ :anElement | 
-			anElement 
-				border: (BlBorder paint: BrGlamorousColors errorBackgroundColor width: 1);
+			anElement
+				border: (BlBorder paint: self theme status errorBackgroundColor width: 1);
 				padding: (BlInsets all: 0) ];
 		withCloseButtonAction: [ self terminate ]
 ]
@@ -94,14 +94,20 @@ GtNotificationDebugSessionElement >> initializeStackList [
 { #category : #initialization }
 GtNotificationDebugSessionElement >> initializeTextEditor [
 	textEditor := BrEditor new
-		aptitude: (BrGlamorousRegularEditorAptitude new
-			glamorousRegularFont;
-			glamorousRegularSmallSize);
-		padding: (BlInsets top: 5 right: 10 bottom: 5 left: 10);
-		background: BrGlamorousColors errorBackgroundColor;
+		aptitude:
+			(BrGlamorousRegularEditorAptitude new
+				glamorousRegularFont;
+				glamorousRegularSmallSize);
+		padding:
+			(BlInsets
+				top: 5
+				right: 10
+				bottom: 5
+				left: 10);
+		background: self theme status errorBackgroundColor;
 		hMatchParent;
 		vFitContent;
-		beReadOnlyWithSelection.
+		beReadOnlyWithSelection
 ]
 
 { #category : #initialization }

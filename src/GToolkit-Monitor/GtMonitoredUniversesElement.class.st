@@ -7,31 +7,32 @@ Class {
 { #category : #initialization }
 GtMonitoredUniversesElement >> createUniverseCard: aUniverse [
 	| aContainer |
-	
-	aContainer := BlElement new
-		layout: BlLinearLayout vertical.
-	aContainer viewModel: (BrInteractiveModel new addState: (BrHoverModel new)).
-	aContainer addAptitude: (BrInteractiveCommonAptitude new
-		default: [ :w | w border: (BlBorder paint: Color veryVeryLightGray width: 1) ];
-		hovered: [ :w | w border: (BlBorder paint: BrGlamorousColors hoveredButtonBorderColor width: 1) ]).
-	
+	aContainer := BlElement new layout: BlLinearLayout vertical.
 	aContainer
-		constraintsDo: [ :c |
+		viewModel: (BrInteractiveModel new addState: BrHoverModel new).
+	aContainer
+		addAptitude:
+			(BrInteractiveCommonAptitude new
+				default: [ :w | w border: (BlBorder paint: Color veryVeryLightGray width: 1) ];
+				hovered: [ :w | 
+					w
+						border: (BlBorder paint: self theme button hoveredBorderColor width: 1) ]).
+	aContainer
+		constraintsDo: [ :c | 
 			c horizontal exact: 150.
 			c vertical exact: 100 ];
 		background: Color white;
 		margin: (BlInsets all: 7);
 		padding: (BlInsets all: 1);
-		addAptitude: (BrShadowAptitude new).
-
-	aContainer when: BlClickEvent do: [ :anEvent |
-		anEvent consumed: true.
-		anEvent currentTarget phlow spawnObject: aUniverse ].
-
+		addAptitude: BrShadowAptitude new.
+	aContainer
+		when: BlClickEvent
+		do: [ :anEvent | 
+			anEvent consumed: true.
+			anEvent currentTarget phlow spawnObject: aUniverse ].
 	aContainer addChild: (self createUniverseName: aUniverse).
 	aContainer addChild: (self createUniverseRunning: aUniverse).
 	aContainer addChild: (self createUniverseSpaces: aUniverse).
-
 	^ aContainer
 ]
 
