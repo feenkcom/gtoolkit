@@ -118,8 +118,8 @@ GtNotificationIcebergCredentialsElement >> initializeAcceptButton [
 GtNotificationIcebergCredentialsElement >> initializeBorderElement [
 	borderElement := GtNotificationBorderElement new
 		borderDo: [ :anElement | 
-			anElement 
-				border: (BlBorder paint: BrGlamorousColors failureBackgroundColor width: 1);
+			anElement
+				border: (BlBorder paint: self theme status failureBackgroundColor width: 1);
 				padding: (BlInsets all: 0) ];
 		withCloseButtonAction: [ self cancel ]
 ]
@@ -128,13 +128,19 @@ GtNotificationIcebergCredentialsElement >> initializeBorderElement [
 GtNotificationIcebergCredentialsElement >> initializeHeaderElement [
 	headerElement := BrLabel new
 		text: (self newHeaderTextForHost: '');
-		aptitude: (BrGlamorousLabelAptitude new
-			glamorousRegularFont;
-			glamorousRegularSmallSize);
-		padding: (BlInsets top: 5 right: 10 bottom: 5 left: 10);
-		background: BrGlamorousColors failureBackgroundColor;
+		aptitude:
+			(BrGlamorousLabelAptitude new
+				glamorousRegularFont;
+				glamorousRegularSmallSize);
+		padding:
+			(BlInsets
+				top: 5
+				right: 10
+				bottom: 5
+				left: 10);
+		background: self theme status failureBackgroundColor;
 		hMatchParent;
-		vFitContent.
+		vFitContent
 ]
 
 { #category : #initialization }

@@ -31,8 +31,9 @@ GtNotificationEmptyElement >> initialize [
 { #category : #initialization }
 GtNotificationEmptyElement >> initializeLabel [
 	labelElement := BrLabel new
-		aptitude: (BrGlamorousLabelAptitude new
-			foreground: BrGlamorousColors disabledButtonTextColor);
+		aptitude:
+			(BrGlamorousLabelAptitude new
+				foreground: self theme button disabledTextColor);
 		text: 'no notifications';
 		constraintsDo: [ :c | 
 			c frame horizontal alignCenter.

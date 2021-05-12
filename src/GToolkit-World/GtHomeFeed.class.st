@@ -110,44 +110,65 @@ GtHomeFeed >> showFeedSections [
 ]
 
 { #category : #initialization }
-GtHomeFeed >> showPermissionDialog [	
+GtHomeFeed >> showPermissionDialog [
 	| dialogContainer |
 	self removeChildren.
 	self visibility: BlVisibility visible.
-	
 	dialogContainer := BlElement new
 		clipChildren: false;
-		constraintsDo: [:c | c vertical fitContent. c horizontal exact: 200 ];
+		constraintsDo: [ :c | 
+			c vertical fitContent.
+			c horizontal exact: 200 ];
 		layout: BlLinearLayout vertical;
 		padding: (BlInsets all: 10);
-		margin: (BlInsets top: 10 + 5 left: 10 bottom: 10 right: 20);
-		background: BrGlamorousColors newsBackgroundColor;
+		margin:
+			(BlInsets
+				top: 10 + 5
+				left: 10
+				bottom: 10
+				right: 20);
+		background: self theme default newsBackgroundColor;
 		aptitude: BrShadowAptitude.
-
-	dialogContainer addChild: (BrEditor new
-		text: ('Would you like to get our posts from ' asRopedText attribute: self createLinkAttribute)
-			, ' directly in your environment as executable documents?' asRopedText;
-		aptitude: (BrGlamorousRegularEditorAptitude new lineSpacing: 5) ).
-	
-	dialogContainer addChild: (BrButton new 
-		label: 'Yes, get those posts';
-		aptitude: BrGlamorousButtonWithLabelAptitude;
-		margin: (BlInsets right: 10);
-		action: [ self enableFeed ]). 
-	dialogContainer addChild: (GtHomeCloseButtonStencil new 
-		closeAction: [ self disableFeed ];
-		create).
-		
-	dialogContainer addChild: (BrButton new 
-		aptitude: (BrGlamorousLinkSquaredButtonWithLabelAptitude new fontSize: 12);
-		beSmallSize;
-		margin: (BlInsets top: 10 left: 0 bottom: 0 right: 0);
-		padding: (BlInsets top: 3 left: 5 bottom: 3 right: 5);
-		label: 'Privacy Policy';
-		action: [ WebBrowser openOn: 'https://feenk.com/privacy' ] ).
-	
+	dialogContainer
+		addChild:
+			(BrEditor new
+				text:
+					('Would you like to get our posts from ' asRopedText
+						attribute: self createLinkAttribute)
+						, ' directly in your environment as executable documents?' asRopedText;
+				aptitude: (BrGlamorousRegularEditorAptitude new lineSpacing: 5)).
+	dialogContainer
+		addChild:
+			(BrButton new
+				label: 'Yes, get those posts';
+				aptitude: BrGlamorousButtonWithLabelAptitude;
+				margin: (BlInsets right: 10);
+				action: [ self enableFeed ]).
+	dialogContainer
+		addChild:
+			(GtHomeCloseButtonStencil new
+				closeAction: [ self disableFeed ];
+				create).
+	dialogContainer
+		addChild:
+			(BrButton new
+				aptitude: (BrGlamorousLinkSquaredButtonWithLabelAptitude new fontSize: 12);
+				beSmallSize;
+				margin:
+					(BlInsets
+						top: 10
+						left: 0
+						bottom: 0
+						right: 0);
+				padding:
+					(BlInsets
+						top: 3
+						left: 5
+						bottom: 3
+						right: 5);
+				label: 'Privacy Policy';
+				action: [ WebBrowser openOn: 'https://feenk.com/privacy' ]).
 	self addChild: dialogContainer
-
 ]
 
 { #category : #updating }

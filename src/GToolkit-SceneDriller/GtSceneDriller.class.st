@@ -49,10 +49,9 @@ GtSceneDriller >> bindElementTreeValue: eachElement toRowElement: aRowElement [
 { #category : #initialization }
 GtSceneDriller >> initialize [
 	super initialize.
-	
 	self
 		matchParent;
-		background: BrGlamorousColors defaultHeaderBackgroundColor;
+		background: self theme header defaultBackgroundColor;
 		aptitude: BrProportionalHorizontalPagerAptitude new
 ]
 
@@ -131,48 +130,63 @@ GtSceneDriller >> newElementsTree [
 ]
 
 { #category : #'instance creation' }
-GtSceneDriller >> newPagerFor: aTargetContainer [	
+GtSceneDriller >> newPagerFor: aTargetContainer [
 	^ BrVerticalPane new
 		matchParent;
 		constraintsDo: [ :c | c linear weight: 0.7 ];
-		padding: (BlInsets top: 10 left: 10 bottom: 10 right: 0);
+		padding:
+			(BlInsets
+				top: 10
+				left: 10
+				bottom: 10
+				right: 0);
 		addAptitude: BrShadowAptitude new beLarge;
-		background: BrGlamorousColors backdropColor;
-		addChildren: {
-			self newSectionLabel text: 'Details'.
-			(GtPager createWrappedOn: (BrVerticalPane new
-				matchParent;
-				addChild: (BrLabel new
-					aptitude: BrGlamorousLabelAptitude;
-					hMatchParent;
-					padding: (BlInsets top: 10.0 right: 12.0 bottom: 10.0 left: 12.0);
-					background: BrGlamorousColors defaultHeaderBackgroundColor;
-					text: 'Elements');
-				addChild: (elementsTree := self newElementsTree))) id: '#gtoolkit-driller--pager'
-		}
+		background: self theme default backdropColor;
+		addChildren:
+			{(self newSectionLabel text: 'Details').
+			((GtPager
+				createWrappedOn:
+					(BrVerticalPane new
+						matchParent;
+						addChild:
+							(BrLabel new
+								aptitude: BrGlamorousLabelAptitude;
+								hMatchParent;
+								padding:
+									(BlInsets
+										top: 10.0
+										right: 12.0
+										bottom: 10.0
+										left: 12.0);
+								background: self theme header defaultBackgroundColor;
+								text: 'Elements');
+						addChild: (elementsTree := self newElementsTree)))
+				id: '#gtoolkit-driller--pager')}
 ]
 
 { #category : #'instance creation' }
 GtSceneDriller >> newSceneContainerFor: aTargetContainer [
-
 	^ BrVerticalPane new
 		hMatchParent;
 		vFitContent;
 		constraintsDo: [ :c | c linear weight: 0.3 ];
 		padding: (BlInsets all: 20);
-		addChildren: { 
-			self newSectionLabel text: 'Scene'.
-			BlElement new height: 10; width: 0.
-
-			BlScalableElement new
+		addChildren:
+			{(self newSectionLabel text: 'Scene').
+			(BlElement new
+				height: 10;
+				width: 0).
+			(BlScalableElement new
 				fitWidth;
-				constraintsDo: [ :c |
+				constraintsDo: [ :c | 
 					c horizontal matchParent.
 					c vertical fitContent ];
-				addAptitude: (BrShadowAptitude new beLarge color: BrGlamorousColors defaultShadowColor darker);
+				addAptitude:
+					(BrShadowAptitude new beLarge
+						color:
+							self theme default defaultShadowColor darker);
 				background: Color white;
-				addChild: aTargetContainer
-		}
+				addChild: aTargetContainer)}
 ]
 
 { #category : #'instance creation' }

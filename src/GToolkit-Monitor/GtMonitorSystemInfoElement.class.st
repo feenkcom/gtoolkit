@@ -31,7 +31,7 @@ GtMonitorSystemInfoElement >> buildGlutinEventLoopInfo [
 GtMonitorSystemInfoElement >> buildPropertyButtonNamed: aName spawn: aSpawnBlock [
 	^ BrButton new
 		beSmallSize;
-		background: BrGlamorousColors neutralBackgroundColor;
+		background: self theme status neutralBackgroundColor;
 		aptitude: BrGlamorousButtonRectangularAptitude + BrGlamorousButtonLabelAptitude;
 		label: aName;
 		hMatchParent;
