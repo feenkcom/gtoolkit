@@ -79,6 +79,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit/src' ];
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger/src' ];
+			baseline: 'GToolkitFileBrowser' with: [
+				spec repository: 'github://feenkcom/gtoolkit-filebrowser:main/src' ];
 			baseline: 'GToolkitDemos' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos/src' ];
 			baseline: 'GToolkitReleaser' with: [
@@ -120,7 +122,7 @@ BaselineOfGToolkit >> baseline: spec [
 			spec requires: #('GToolkitDocumenter' 'GToolkitDebugger' ) ].
 		spec package: 'GToolkit-SceneDriller'.
 		spec package: 'GToolkit-World' with: [ 
-			spec requires: #('GToolkit-Notifications' 'GToolkit-SceneDriller') ].
+			spec requires: #('GToolkit-Notifications' 'GToolkit-SceneDriller' 'GToolkitFileBrowser') ].
 		spec package: 'GToolkit-Setup' with: [ 
 			spec requires: #('GToolkitReleaser' 'GToolkitDocumenter' 'GToolkitDebugger') ].
 		spec package: 'GToolkit-DependencyAnalyzer'.

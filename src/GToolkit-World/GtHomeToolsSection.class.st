@@ -71,12 +71,15 @@ GtHomeToolsSection >> newFileSystemButtonStencil [
 		title: 'File system';
 		icon: BrGlamorousVectorIcons folder;
 		action: [ :card | 
-			self
-				showSpaceWithIcon: BrGlamorousVectorIcons folder
-				title: 'File system'
-				with: ((GtInspector 
-					createOn: FileLocator imageDirectory asFileReference) maximized)
-				from: card ];
+			(GtPhlowCompositeTool new
+				addTool: (GtFileBrowserFolderTool forFolder: '.');
+				addTool: (GtInspectorTool forObject: '.' asFileReference))
+					asElementDo: [ :anElement |
+						self
+							showSpaceWithIcon: BrGlamorousVectorIcons folder
+							title: 'File system'
+							with: (GtPager createWrappedOn: anElement) maximized
+							from: card ] ];
 		description: 'Browse the file system.'
 ]
 
