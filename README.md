@@ -43,7 +43,9 @@ Please download it via the instructions available at: https://gtoolkit.com/downl
 
 ## Contact us
 
-We'd love to hear from you: https://gtoolkit.com/contact
+Follow us on Twitter: https://twitter.com/feenkcom
+Chat with us: https://discord.gg/FTJr9gP
+Watch our videos: https://www.youtube.com/channel/UClLZHVq_-2D2-iI4rA2O8Ug
 
 ## License
 
