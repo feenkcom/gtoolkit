@@ -13,6 +13,7 @@ The current repository embodies the second generation of GT and it is comprised 
 - [Debugger](https://github.com/feenkcom/gtoolkit-debugger): the moldable debugger for Pharo.
 - [Coder](https://github.com/feenkcom/gtoolkit-coder): the moldable coder for Pharo.
 - Transcript: a rethinking of the classic Transcript taking advantage of the moldable text editor from Bloc.
+- [FileBrowser](https://github.com/feenkcom/gtoolkit-filebrowser): the file browser.
 - [Visualizer](https://github.com/feenkcom/gtoolkit-visualizer): a set of visualization engines on top of Bloc.
 - [Examples](https://github.com/feenkcom/gtoolkit-examples): the engine for example-driven development.
 - [Completer](https://github.com/feenkcom/gtoolkit-completer): the moldable completion engine.
