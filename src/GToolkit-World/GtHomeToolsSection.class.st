@@ -35,7 +35,7 @@ GtHomeToolsSection >> create [
 	^ sectionContainer
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newCoderButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Coder';
@@ -49,7 +49,7 @@ GtHomeToolsSection >> newCoderButtonStencil [
 		description: 'Browse and manipulate code.'
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newExamplesButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Exemplifier';
@@ -65,7 +65,7 @@ GtHomeToolsSection >> newExamplesButtonStencil [
 		description: 'Units of tests and of documentation. In one.'
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newFileSystemButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'File system';
@@ -83,7 +83,7 @@ GtHomeToolsSection >> newFileSystemButtonStencil [
 		description: 'Browse the file system.'
 ]
 
-{ #category : #accessing }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newGitButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Git';
@@ -99,7 +99,7 @@ GtHomeToolsSection >> newGitButtonStencil [
 		description: 'Manage git repositories.'
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newMonitorButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Monitor';
@@ -113,7 +113,7 @@ GtHomeToolsSection >> newMonitorButtonStencil [
 		description: 'Monitor processes and high level tasks.'
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newMorphicWorldButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Morphic World';
@@ -122,7 +122,7 @@ GtHomeToolsSection >> newMorphicWorldButtonStencil [
 		description: 'The legacy Morphic World interface and tools.'
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newPlaygroundButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Playground';
@@ -136,7 +136,7 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 		description: 'Play with code. Live.'
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newSpotterButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Spotter';
@@ -145,7 +145,7 @@ GtHomeToolsSection >> newSpotterButtonStencil [
 		description: 'Search anything. Really anything.'
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newTranscriptButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Transcript';
