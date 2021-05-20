@@ -23,6 +23,12 @@ GtHomeToolsSection >> create [
 			c vertical fitContent ];
 		padding: (BlInsets all: 0).
 	cardsContainer addChild: self newPlaygroundButtonStencil create.
+	
+	(RPackageOrganizer default includesPackageNamed: 'Lepiter-Tool')
+		ifTrue: [ 
+			cardsContainer addChild: self newNotesButtonStencil create.
+			cardsContainer addChild: self newLepiterButtonStencil create ].
+		
 	cardsContainer addChild: self newCoderButtonStencil create as: GtHomeCoderButtonId.
 	cardsContainer addChild: self newGitButtonStencil create.
 	cardsContainer addChild: self newMonitorButtonStencil create.
@@ -100,6 +106,20 @@ GtHomeToolsSection >> newGitButtonStencil [
 ]
 
 { #category : #'tools creation' }
+GtHomeToolsSection >> newLepiterButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Lepiter';
+		icon: LeIcons lepiterIcon;
+		action: [ :card | 
+			self
+				showSpaceWithIcon: LeIcons lepiterIcon
+				title: 'Lepiter'
+				with: LeLepiterToolStencil new
+				from: card ];
+		description: 'Lepiter'
+]
+
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newMonitorButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Monitor';
@@ -123,13 +143,27 @@ GtHomeToolsSection >> newMorphicWorldButtonStencil [
 ]
 
 { #category : #'tools creation' }
+GtHomeToolsSection >> newNotesButtonStencil [
+	^ GtToolButtonStencil new 
+		title: 'Note';
+		icon: BrGlamorousVectorIcons note;
+		action: [ :card | 
+			self
+				showSpaceWithIcon: BrGlamorousVectorIcons note
+				title: 'Note'
+				with: LeNotePlaygroundStencil new
+				from: card ];
+		description: 'Take notes. Live.'
+]
+
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newPlaygroundButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Playground';
-		icon: BrGlamorousVectorIcons largePlay;
+		icon: BrGlamorousVectorIcons playground;
 		action: [ :card | 
 			self
-				showSpaceWithIcon: BrGlamorousVectorIcons emphasizedPlay
+				showSpaceWithIcon: BrGlamorousVectorIcons playground
 				title: 'Playground'
 				with: GtPlaygroundStencil new
 				from: card ];
