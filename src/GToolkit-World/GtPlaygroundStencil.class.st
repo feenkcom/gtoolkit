@@ -79,7 +79,7 @@ GtPlaygroundStencil >> gtSpotterForXDocPlayBooksFor: aStep [
 
 { #category : #accessing }
 GtPlaygroundStencil >> icon [
-	^ BrGlamorousVectorIcons playground
+	^ self class playgroundClass defaultIcon
 ]
 
 { #category : #accessing }

@@ -149,7 +149,7 @@ GtHomeToolsSection >> newNotesButtonStencil [
 		icon: BrGlamorousVectorIcons note;
 		action: [ :card | 
 			self
-				showSpaceWithIcon: BrGlamorousVectorIcons note
+				showSpaceWithIcon: LeIcons lepiterIcon
 				title: 'Note'
 				with: LeNotePlaygroundStencil new
 				from: card ];
@@ -163,7 +163,7 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 		icon: BrGlamorousVectorIcons playground;
 		action: [ :card | 
 			self
-				showSpaceWithIcon: BrGlamorousVectorIcons playground
+				showSpaceWithIcon: GtPlaygroundStencil playgroundClass defaultIcon
 				title: 'Playground'
 				with: GtPlaygroundStencil new
 				from: card ];
