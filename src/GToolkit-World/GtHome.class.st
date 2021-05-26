@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'sectionsHolder',
 		'feedElement',
-		'notificationsElement'
+		'notificationsElement',
+		'knowledgeBase'
 	],
 	#category : #'GToolkit-World-UI'
 }
@@ -144,6 +145,16 @@ GtHome >> initializePanes [
 		aptitude: BrScrollPaneAptitude + BrGlamorousWithVerticalScrollbarAptitude;
 		content: mainPane).
 	self addChild: self createVersionLabel.
+]
+
+{ #category : #accessing }
+GtHome >> knowledgeBase [
+	^ knowledgeBase
+]
+
+{ #category : #accessing }
+GtHome >> knowledgeBase: aKnowledgeBase [
+	knowledgeBase := aKnowledgeBase
 ]
 
 { #category : #updating }
