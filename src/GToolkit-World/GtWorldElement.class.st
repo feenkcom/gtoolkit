@@ -135,6 +135,8 @@ GtWorldElement >> newSpotterButton [
 	
 	spotterDropdown := GtSpotterDropdownButtonStencil new
 		tooltip: 'Search';
+		valuable: [ GtWorldSpotterSearchStart new
+			knowledgeBase: self knowledgeBase ];
 		extent: [ self class worldSpotterSize ];
 		showPreview: [ self class isWorldSpotterPreviewDisplayed ];
 		onPreviewChangedDo: [ :isDisplayed | 
