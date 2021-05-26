@@ -10,7 +10,9 @@ Class {
 { #category : #'gt-extensions' }
 GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aStep [
 	<gtSearch>
-	self hasChildren ifNil: [ ^ self ].
+	self hasKnowledgeBase ifFalse: [ ^ self ].
+	self hasChildren ifFalse: [ ^ self ].
+	
 	aStep listProcessor
 		priority: 23;
 		title: 'Pages';
@@ -26,6 +28,7 @@ GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aStep [
 GtWorldSpotterSearchStart >> gtSpotterNewPageFor: aStep [
 	"A new page is added in ${method:LeWorldElement>>#newSpotterButton}$"
 	<gtSearch>
+	self hasKnowledgeBase ifFalse: [ ^ self ].
 	aStep listProcessor
 		title: 'New Page';
 		priority: 50;
@@ -45,7 +48,9 @@ GtWorldSpotterSearchStart >> gtSpotterNewPageFor: aStep [
 { #category : #'gt-extensions' }
 GtWorldSpotterSearchStart >> gtSpotterPageTitlesFor: aStep [
 	<gtSearch>
+	self hasKnowledgeBase ifFalse: [ ^ self ].
 	self hasChildren ifFalse: [ ^ self ].
+	
 	aStep listProcessor
 		title: 'Page Names';
 		priority: 30;
@@ -58,7 +63,13 @@ GtWorldSpotterSearchStart >> gtSpotterPageTitlesFor: aStep [
 
 { #category : #testing }
 GtWorldSpotterSearchStart >> hasChildren [
+	self knowledgeBase ifNil: [ ^ false ].
 	^ self knowledgeBase hasChildren
+]
+
+{ #category : #testing }
+GtWorldSpotterSearchStart >> hasKnowledgeBase [
+	^ self knowledgeBase notNil
 ]
 
 { #category : #accessing }
