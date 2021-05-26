@@ -127,6 +127,11 @@ GtWorld >> addShutdownListener [
 	self addEventHandler: BlSpaceShutdownOnCloseListener new
 ]
 
+{ #category : #accessing }
+GtWorld >> database [
+	^ self knowledgeBase
+]
+
 { #category : #initialization }
 GtWorld >> defaultTitle [
 	^ self class defaultTitle
@@ -155,6 +160,16 @@ GtWorld >> initialize [
 GtWorld >> initializeFocus [
 	worldElement isFocusable
 		ifTrue: [ worldElement requestFocus ]
+]
+
+{ #category : #accessing }
+GtWorld >> knowledgeBase [
+	^ worldElement knowledgeBase
+]
+
+{ #category : #accessing }
+GtWorld >> knowledgeBase: aKnowledgeBase [
+	worldElement knowledgeBase: aKnowledgeBase.
 ]
 
 { #category : #actions }

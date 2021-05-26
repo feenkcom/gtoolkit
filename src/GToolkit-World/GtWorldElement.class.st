@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'spotterDropdown',
 		'subSpaceDropdown',
-		'notificationsDropdown'
+		'notificationsDropdown',
+		'announcer'
 	],
 	#classVars : [
 		'IsWorldSpotterPreviewDisplayed',
@@ -33,9 +34,27 @@ GtWorldElement class >> worldSpotterSize: aPoint [
 	WorldSpotterSize := aPoint
 ]
 
+{ #category : #accessing }
+GtWorldElement >> announcer [
+	^ announcer
+]
+
+{ #category : #accessing }
+GtWorldElement >> database [
+	^ self knowledgeBase
+]
+
 { #category : #defaults }
 GtWorldElement >> defaultHomeElement [
 	^ GtHome new
+]
+
+{ #category : #initialization }
+GtWorldElement >> initialize [ 
+
+	announcer := Announcer new.
+	super initialize.
+
 ]
 
 { #category : #initialization }
@@ -71,12 +90,28 @@ GtWorldElement >> initializeShortcuts [
 										yourself) ] ])
 ]
 
+{ #category : #accessing }
+GtWorldElement >> knowledgeBase [
+	^ self home knowledgeBase
+]
+
+{ #category : #accessing }
+GtWorldElement >> knowledgeBase: aKnowledgeBase [
+	self home knowledgeBase:  aKnowledgeBase.
+	self announcer announce: (LeWorldElementDatabaseChanged new
+		database: aKnowledgeBase;
+		source: self)
+]
+
 { #category : #'private - instance creation' }
 GtWorldElement >> newActionItemsInto: anActionbar [
 	super newActionItemsInto: anActionbar.
 	anActionbar addItem: self newNotificationsBadge.
 	anActionbar addItem: self newSpotterButton.
 	anActionbar addItem: self newSubSpaceButton.
+	
+	(RPackageOrganizer default includesPackageNamed: 'Lepiter-Tool') ifTrue: [
+		anActionbar addItem: self newStatusButton ]
 ]
 
 { #category : #'private - instance creation' }
@@ -112,6 +147,14 @@ GtWorldElement >> newSpotterButton [
 	spotterDropdown aptitude - BrGlamorousButtonExteriorAptitude.
 		
 	^ spotterDropdown
+]
+
+{ #category : #'instance creation' }
+GtWorldElement >> newStatusButton [
+	"Answer a dropdown button for the  status of knowledge base associated with the current world"
+
+	^ LeWorldStatusDropdown new
+		leWorldElement: self
 ]
 
 { #category : #'private - instance creation' }
