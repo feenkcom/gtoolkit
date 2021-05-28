@@ -8,11 +8,11 @@ GtSpotterStart >> gtSpotterForToolsFor: aStep [
 		allCandidates: [ 
 			{
 				GtPlaygroundStencil new 
-			}, ((RPackageOrganizer default includesPackageNamed: 'Lepiter-Tool')
-				ifTrue: [ {
-					LeNotePlaygroundStencil new.
-					LeLepiterToolStencil new }]
-				ifFalse: [ {} ]),
+			}, (GtImage isLepiterEnabled 
+					ifTrue: [ {
+						LeNotePlaygroundStencil new.
+						LeLepiterToolStencil new } ]
+					ifFalse: [ {} ]),
 			{
 				GtCoderStencil new . 
 				GtMonitorStencil new . 

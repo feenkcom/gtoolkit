@@ -65,10 +65,9 @@ GtToolsMenu >> initializeElements [
 
 	self addChild: (GtHomeToolsSection new newPlaygroundButtonStencil smallIcon create size: 100@100).
 	
-	(RPackageOrganizer default includesPackageNamed: 'Lepiter-Tool')
-		ifTrue: [ 
-			self addChild: (GtHomeToolsSection new newNotesButtonStencil smallIcon create size: 100@100).
-			self addChild: (GtHomeToolsSection new newLepiterButtonStencil smallIcon create size: 100@100) ].
+	GtImage isLepiterEnabled ifTrue: [ 
+		self addChild: (GtHomeToolsSection new newNotesButtonStencil smallIcon create size: 100@100).
+		self addChild: (GtHomeToolsSection new newLepiterButtonStencil smallIcon create size: 100@100) ].
 	
 	self addChild: (GtHomeToolsSection new newCoderButtonStencil smallIcon create  size: 100@100).
 	self addChild: (GtHomeToolsSection new newGitButtonStencil smallIcon create  size: 100@100).

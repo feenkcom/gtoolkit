@@ -108,7 +108,7 @@ GtWorldElement >> newActionItemsInto: anActionbar [
 	super newActionItemsInto: anActionbar.
 	anActionbar addItem: self newNotificationsBadge.
 	anActionbar addItem: self newSpotterButton.
-	(RPackageOrganizer default includesPackageNamed: 'Lepiter-Tool') ifTrue: [
+	GtImage isLepiterEnabled ifTrue: [
 		anActionbar addItem: self newStatusButton ].
 	anActionbar addItem: self newSubSpaceButton.
 ]

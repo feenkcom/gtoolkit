@@ -24,10 +24,9 @@ GtHomeToolsSection >> create [
 		padding: (BlInsets all: 0).
 	cardsContainer addChild: self newPlaygroundButtonStencil create.
 	
-	(RPackageOrganizer default includesPackageNamed: 'Lepiter-Tool')
-		ifTrue: [ 
-			cardsContainer addChild: self newNotesButtonStencil create.
-			cardsContainer addChild: self newLepiterButtonStencil create ].
+	GtImage isLepiterEnabled ifTrue: [ 
+		cardsContainer addChild: self newNotesButtonStencil create.
+		cardsContainer addChild: self newLepiterButtonStencil create ].
 		
 	cardsContainer addChild: self newCoderButtonStencil create as: GtHomeCoderButtonId.
 	cardsContainer addChild: self newGitButtonStencil create.
