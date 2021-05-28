@@ -109,7 +109,7 @@ GtHomeToolsSection >> newGitButtonStencil [
 GtHomeToolsSection >> newLepiterButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Lepiter';
-		icon: LeIcons lepiterIcon;
+		icon: LeIcons lepiterDatabase;
 		action: [ :card | 
 			self
 				showSpaceWithIcon: LeIcons lepiterIcon
@@ -146,7 +146,7 @@ GtHomeToolsSection >> newMorphicWorldButtonStencil [
 GtHomeToolsSection >> newNotesButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Note';
-		icon: BrGlamorousVectorIcons note;
+		icon: LeIcons lepiterPage;
 		action: [ :card | 
 			self
 				showSpaceWithIcon: LeIcons lepiterIcon
