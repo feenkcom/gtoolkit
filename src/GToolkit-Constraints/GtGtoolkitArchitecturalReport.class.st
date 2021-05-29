@@ -17,7 +17,7 @@ GtGtoolkitArchitecturalReport class >> yourself [
 GtGtoolkitArchitecturalReport >> build: aComposite [
 	aComposite name: 'GToolkit Architectural Report'.
 	aComposite
-		addConstraint: GtClassWithCommentsContainingMissingReferences new;
+		"addConstraint: GtClassWithCommentsContainingMissingReferences new;"
 		addConstraint: GtReturnPragmasShouldPointToExistingClasses new;
 		addConstraint: GtRBAcceptVisitorCalledFromNonVisitingMethods  new;
 		addConstraint: GtButtonsDefiningActionsThroughModels new;
