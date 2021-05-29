@@ -7,6 +7,7 @@ export PROJECT_NAME="GlamorousToolkit"
 
 # customize the name of the build folder
 export ARTIFACT_DIR="${PROJECT_NAME}"
+rm -rf "$ARTIFACT_DIR"
 mkdir "$ARTIFACT_DIR"
 cp Pharo.image "${ARTIFACT_DIR}/${PROJECT_NAME}.image"
 cp Pharo.changes "${ARTIFACT_DIR}/${PROJECT_NAME}.changes"
