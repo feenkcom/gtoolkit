@@ -45,7 +45,42 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-26T15:33:17.56342+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-26T15:37:36.15696+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "N/pE4ZOG"
+							},
+							"code" : "\"Set JS server debug mode\"\nthisSnippet database properties jsLinkSettings serverDebugMode: true."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -60,13 +95,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:33:14.650122+01:00"
+						"dateAndTimeString" : "2021-05-29T20:03:08.147417+02:00"
 					}
 				},
 				"uid" : {
@@ -76,47 +111,48 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To get the debugger the debug mode should be enabled"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:33:17.56342+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:37:36.15696+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "N/pE4ZOG"
-				},
-				"code" : "\"Set JS server debug mode\"\nthisSnippet database properties jsLinkSettings serverDebugMode: true."
+				"string" : "To get the debugger you need to enable the debug mode like this:"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-26T15:34:33.630591+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-26T15:34:35.119529+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "EFv8Gvv3"
+							},
+							"code" : "JSLinkApplication stop."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -131,13 +167,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:34:31.483672+01:00"
+						"dateAndTimeString" : "2021-05-29T20:03:19.294034+02:00"
 					}
 				},
 				"uid" : {
@@ -147,47 +183,120 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If there are error it can be useful to stop the javascript link"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:34:33.630591+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:34:35.119529+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "EFv8Gvv3"
-				},
-				"code" : "JSLinkApplication stop."
+				"string" : "If there are errors, it can be useful to stop the current link:"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "javascriptSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-05-29T20:04:14.032398+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-05-29T20:04:35.932491+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+dd8j9kD"
+							},
+							"code" : "var cwd = process.cwd();\ncwd;"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-05-29T20:04:18.748387+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-05-29T20:04:25.483627+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DAPQzUY5"
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To check that the node process is running in the right folder, take a look at this command:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "javascriptSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-26T15:35:48.620763+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-26T15:36:01.160475+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "NuV47GzV"
+							},
+							"code" : "let aVariable = 1;\raVariable + 40 + 1"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -221,44 +330,82 @@
 				"string" : "Consider this simple execution. Please inspect it:"
 			},
 			{
-				"__type" : "javascriptSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:35:48.620763+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:36:01.160475+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "NuV47GzV"
-				},
-				"code" : "let aVariable = 1;\raVariable + 40 + 1"
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "javascriptSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-26T15:36:35.101884+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-26T15:36:43.611417+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "TYHOG+d6"
+							},
+							"code" : "let aVariable = 1;\rdebugger;\raVariable + 40 + 1"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-05-29T19:48:56.491143+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-05-29T19:52:38.670794+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Rpc3jOFd"
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "You get a debugger window that shows you the python code. You can step over or run and the execution will continue and still produce the result."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -292,81 +439,45 @@
 				"string" : "And now inspect the same code with a breakpoint in the script:"
 			},
 			{
-				"__type" : "javascriptSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:36:35.101884+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:36:43.611417+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "TYHOG+d6"
-				},
-				"code" : "let aVariable = 1;\rdebugger;\raVariable + 40 + 1"
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T19:48:56.491143+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T19:52:38.670794+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Rpc3jOFd"
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "You get a debugger window that shows you the python code. You can step over or run and the execution will continue and still produce the result."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "javascriptSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-26T15:39:04.013477+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-26T15:39:05.178354+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "o8lX9Uvr"
+							},
+							"code" : "let TestClass = require('../gtoolkit/testclass');\nlet testObject = new TestClass();\ndebugger;\ntestObject.factorial(3);"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -398,40 +509,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Now take a look at this slightly more complicated script that relies on an external file that also happens to contain a breakpoint:"
-			},
-			{
-				"__type" : "javascriptSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:39:04.013477+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-26T15:39:05.178354+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "o8lX9Uvr"
-				},
-				"code" : "let TestClass = require('../gtoolkit/testclass');\nlet testObject = new TestClass();\ndebugger;\ntestObject.factorial(3);"
 			},
 			{
 				"__type" : "textSnippet",
