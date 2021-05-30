@@ -13,6 +13,8 @@ sh scripts/build/downloadLatestVM.sh
 unzip build-artifacts.zip
 unzip build-artifacts/GlamorousToolkitVM-*-linux64-bin.zip
 
+rm -rf gt-extra
+
 xvfb-run -a -e /dev/stdout ./glamoroustoolkit --version 2>&1
 xvfb-run -a -e /dev/stdout ./glamoroustoolkit Pharo.image st --quit scripts/build/loadgt.st  2>&1
 rm -f newcommits*
