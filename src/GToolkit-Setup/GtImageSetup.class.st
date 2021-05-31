@@ -26,6 +26,8 @@ GtImageSetup class >> copyDataAndDocsFolders [
 	docFolders := OrderedCollection new
 		addAll: (gtoolkitRepoFolders allChildrenMatching: 'doc');
 		addAll: (gtoolkitRepoFolders allChildrenMatching: 'data');
+		add: (gtoolkitRepoFolders asFileReference / 'gtoolkit' / 'lepiter');
+		add: (gtoolkitRepoFolders asFileReference / 'lepiter' / 'test-data');
 		yourself.
 
 	docFolders do: [ :each |

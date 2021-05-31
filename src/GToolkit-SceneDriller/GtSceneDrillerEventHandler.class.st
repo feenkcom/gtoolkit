@@ -2,9 +2,20 @@
 ! Scene Driller Event Handler
 Is used to add support of the ==Scene Driller== to arbitrary elements. For the best result the element to which ==Scene Driller= is added should have a ${class:BlBasicLayout}$ and have ==matchParent== or ==exact== layout resizing strategy.
 !! Usage
-Press ==shift+alt== to enable element highlight mode and then click on the highlighted element to select it in the ==Scene Driller==
+Press ==shift+ctrl+alt== to enable element highlight mode and then click on the highlighted element to select it in the ==Scene Driller==
 !! More
 See ${class:GtSceneDriller}$ for the main UI of the ==Scene Driller== and ${class:GtSceneDrillerOverlay}$ for an overlay over the scene that shows highlighted and selected elements.
+
+A script to create an element with a scene driller opened and a selected child element:
+[[[
+world := GtWorldElement new
+	addEventHandler: GtSceneDrillerEventHandler new.
+
+world fireEvent: (GtSceneDrillerShowWish new
+	elementToSelect: world children first children first;
+	sceneExtent: 800@600).
+world
+]]]
 "
 Class {
 	#name : #GtSceneDrillerEventHandler,
@@ -332,10 +343,19 @@ GtSceneDrillerEventHandler >> showDriller: aRootElement [
 ]
 
 { #category : #'event handling' }
-GtSceneDrillerEventHandler >> showDrillerEvent: aShowHaloEvent [
-	aShowHaloEvent consumed: true.
+GtSceneDrillerEventHandler >> showDrillerEvent: aShowDrillerEvent [
+	aShowDrillerEvent consumed: true.
 
-	self showDriller: aShowHaloEvent currentTarget
+	self showDriller: aShowDrillerEvent currentTarget.
+	self
+		drillerIn: aShowDrillerEvent currentTarget
+		do: [ :aSceneDriller |
+			aShowDrillerEvent elementToSelect
+				ifNotNil: [
+					aSceneDriller selectElement: aShowDrillerEvent elementToSelect.
+					self showOverlayIn: aShowDrillerEvent currentTarget ].
+			aShowDrillerEvent sceneExtent
+				ifNotNil: [ aSceneDriller targetContainer size: aShowDrillerEvent sceneExtent ] ]
 ]
 
 { #category : #'api - overlay' }
@@ -351,8 +371,11 @@ GtSceneDrillerEventHandler >> showOverlayIn: aRootElement [
 	hasOverlay := true.
 
 	(self drillerTargetIn: aRootElement)
-		addChild: (GtSceneDrillerOverlay new highlightElement: elementToHighlight; selectElement: elementToSelect; allowMeAndChildrenMouseEvents)
-		as: DrillerOverlayId.
+		addChild: (GtSceneDrillerOverlay new
+			id: DrillerOverlayId;
+			highlightElement: elementToHighlight;
+			selectElement: elementToSelect;
+			allowMeAndChildrenMouseEvents).
 
 	(elementToHighlight isNil and: [ mousePosition notNil ])
 		ifTrue: [ self highlightElementAt: mousePosition in: aRootElement ]
