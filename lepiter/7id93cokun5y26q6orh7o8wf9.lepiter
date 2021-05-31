@@ -1,5 +1,5 @@
 {
-	"__schema" : "4.0",
+	"__schema" : "4.1",
 	"__type" : "page",
 	"children" : {
 		"__type" : "snippets",
@@ -34,7 +34,7 @@
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MznBxUbW"
+					"uidString" : "MznBxUbWAAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -71,7 +71,7 @@
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "pZaNcBD4"
+					"uidString" : "pZaNcBD4AAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -113,7 +113,7 @@
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "abSJ+QDR"
+								"uidString" : "abSJ+QDRAAAAAAAAAAAAAA=="
 							},
 							"code" : "pharoArray := (thisSnippet database pages collect: [:each | each children size]) asArray"
 						}
@@ -132,23 +132,23 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-01-31T22:32:41.256521+01:00"
+						"dateAndTimeString" : "2021-05-29T20:20:10.024013+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WQwopWEe"
+					"uidString" : "WQwopWEeAAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We take all pages from the current database using a [[Pharo]] snippet:"
+				"string" : "We take all pages from the current database using a Pharo snippet:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -185,7 +185,7 @@
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "8beeep2p"
+								"uidString" : "8beeep2pAAAAAAAAAAAAAA=="
 							},
 							"code" : "var array; \narray = pharoArray;\nvar ss = require('simple-statistics');\nvar result = ss.variance(array); \nresult"
 						}
@@ -204,23 +204,23 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-01-31T22:47:34.381946+01:00"
+						"dateAndTimeString" : "2021-05-29T20:20:18.714284+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wHhRQCl9"
+					"uidString" : "wHhRQCl9AAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "And then we compute the variance of the mean amount of top snippets in the pages in [[JavaScript]]: "
+				"string" : "And then we compute the variance of the mean amount of top snippets in the pages in JavaScript: "
 			},
 			{
 				"__type" : "textSnippet",
@@ -231,119 +231,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "tudor@tudorgirba.com"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-01-31T22:48:36.447118+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "tudor@tudorgirba.com"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-01-31T22:48:36.447118+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "ThZzmBCC"
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "we can execute code in Pharo and JavaScript"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "tudor@tudorgirba.com"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-01-31T22:48:41.137105+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "tudor@tudorgirba.com"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-01-31T22:48:41.137105+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "qnitnBJT"
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "we can move objects from one to another"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "tudor@tudorgirba.com"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-01-31T22:48:45.900756+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "tudor@tudorgirba.com"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-01-31T22:48:45.900756+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "OeoniLud"
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "we can embed the results in the environment"
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -353,7 +241,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-01-31T22:48:26.832981+01:00"
+									"dateAndTimeString" : "2021-01-31T22:48:36.447118+01:00"
 								}
 							},
 							"editEmail" : {
@@ -364,17 +252,91 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-01-31T22:48:28.828121+01:00"
+									"dateAndTimeString" : "2021-01-31T22:48:36.447118+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "U4bPnrBh"
+								"uidString" : "ThZzmBCCAAAAAAAAAAAAAA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This shows that:"
+							"string" : "we can execute code in Pharo and JavaScript"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "tudor@tudorgirba.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-01-31T22:48:41.137105+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "tudor@tudorgirba.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-01-31T22:48:41.137105+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qnitnBJTAAAAAAAAAAAAAA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "we can move objects from one to another"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "tudor@tudorgirba.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-01-31T22:48:45.900756+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "tudor@tudorgirba.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-01-31T22:48:45.900756+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OeoniLudAAAAAAAAAAAAAA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "we can embed the results in the environment"
 						}
 					]
 				},
@@ -391,23 +353,23 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-01-31T22:48:18.946171+01:00"
+						"dateAndTimeString" : "2021-05-29T20:19:22.615126+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AN+y0YkW"
+					"uidString" : "AN+y0YkWAAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# # Summary"
+				"string" : "This shows that:"
 			}
 		]
 	},
