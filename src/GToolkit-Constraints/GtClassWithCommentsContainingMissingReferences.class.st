@@ -30,8 +30,9 @@ GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
 	^ (allPackages
 			reject:  [ :aPackage | aPackage isNil ])
 			reject: [ :aPackage | 
-				"To avoid changing class comments in ThreadedFFI"
-				aPackage name = 'ThreadedFFI' ]
+				"To avoid changing class comments in ThreadedFFI and Python3Generator"
+				aPackage name = 'ThreadedFFI' or: [
+					aPackage name = 'Python3Generator' ] ]
 ]
 
 { #category : #accessing }
