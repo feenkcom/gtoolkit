@@ -1,5 +1,5 @@
 {
-	"__schema" : "4.0",
+	"__schema" : "4.1",
 	"__type" : "page",
 	"children" : {
 		"__type" : "snippets",
@@ -34,7 +34,7 @@
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uQVaXguF"
+					"uidString" : "uQVaXguFAAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -71,7 +71,7 @@
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "pq277F9/"
+					"uidString" : "pq277F9/AAAAAAAAAAAAAA=="
 				},
 				"code" : "| credentials store |\rcredentials := IceSshCredentials new\r\thost:  #'*';\r\tusername: 'git';\r\tpublicKey: 'PATH/TO/id_rsa.pub';\r\tprivateKey: 'PATH/TO/id_rsa';\"\r\tkeyPassphrase: 'potential rsa passphrase';\"\r\tyourself.\rstore := IceCredentialStore current.\rstore storeSshCredential: credentials forHostname: credentials host.\rIceCredentialsProvider useCustomSsh: true."
 			},
@@ -105,7 +105,7 @@
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uxyVsQlC"
+					"uidString" : "uxyVsQlCAAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -142,7 +142,7 @@
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "xy1HhiKb"
+					"uidString" : "xy1HhiKbAAAAAAAAAAAAAA=="
 				},
 				"code" : "Metacello new\r\tbaseline: 'Faker';\r\trepository: 'github://feenkcom/faker/src';\r\tload."
 			},
@@ -176,7 +176,7 @@
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mF2TV3at"
+					"uidString" : "mF2TV3atAAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -213,7 +213,7 @@
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "yh/PFoEg"
+					"uidString" : "yh/PFoEgAAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
