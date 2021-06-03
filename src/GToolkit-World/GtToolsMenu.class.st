@@ -1,6 +1,9 @@
 Class {
 	#name : #GtToolsMenu,
 	#superclass : #BlElement,
+	#instVars : [
+		'knowledgeBase'
+	],
 	#classInstVars : [
 		'world'
 	],
@@ -95,6 +98,16 @@ GtToolsMenu >> initializeElements [
 				label: 'Quit';
 				hMatchParent;
 				action: [ :aButton | self quitFrom: aButton ] })
+]
+
+{ #category : #accessing }
+GtToolsMenu >> knowledgeBase [
+	^ knowledgeBase
+]
+
+{ #category : #accessing }
+GtToolsMenu >> knowledgeBase: aKnowledgeBase [
+	knowledgeBase := aKnowledgeBase
 ]
 
 { #category : #'hooks - children' }
