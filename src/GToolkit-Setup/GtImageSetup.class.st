@@ -28,6 +28,7 @@ GtImageSetup class >> copyDataAndDocsFolders [
 		addAll: (gtoolkitRepoFolders allChildrenMatching: 'data');
 		add: (gtoolkitRepoFolders asFileReference / 'gtoolkit' / 'lepiter');
 		add: (gtoolkitRepoFolders asFileReference / 'lepiter' / 'test-data');
+		add: (gtoolkitRepoFolders asFileReference / 'JSLink' / 'js');
 		yourself.
 
 	docFolders do: [ :each |
