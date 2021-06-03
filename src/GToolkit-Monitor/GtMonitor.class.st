@@ -69,9 +69,19 @@ GtMonitor >> gtActionProfilerFor: anAction [
 	<gtAction>
 	^ anAction button 
 		icon: BrGlamorousVectorIcons performance;
-		priority: 1;
+		priority: 2;
 		tooltip: 'Profiler';
 		action: [ GtProfiler open ]
+]
+
+{ #category : #accessing }
+GtMonitor >> gtActionTelemetryFor: anAction [
+	<gtAction>
+	^ anAction button 
+		icon: [ (BrGlamorousVectorIcons largeSignal asElement asScalableElement size: 16@16) ] asStencil;
+		priority: 1;
+		tooltip: 'Telemetry';
+		action: [ :aButton | aButton phlow spawnTool: GtProfilerProcessTelemetriesTool new ]
 ]
 
 { #category : #'gt-extension' }
