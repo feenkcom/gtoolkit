@@ -212,7 +212,8 @@ GtWorldElement >> onRemovedFromSceneGraph [
 
 { #category : #updating }
 GtWorldElement >> prepareForRelease [
-	self home prepareForRelease
+	self home prepareForRelease.
+	self home clearKnowledgeBase.
 ]
 
 { #category : #updating }
