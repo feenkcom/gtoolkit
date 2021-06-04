@@ -192,7 +192,8 @@ GtHome >> toolShowsSection [
 GtHome >> toolsSection [
 "	<gtHomeSection>"
 	^ GtHomeToolsSection new
-		priority: 10
+		priority: 10;
+		knowledgeBaseComputation: [ self knowledgeBase ]
 ]
 
 { #category : #updating }

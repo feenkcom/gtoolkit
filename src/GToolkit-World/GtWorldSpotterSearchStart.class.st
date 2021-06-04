@@ -32,9 +32,11 @@ GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
 		allCandidates: [ 
 			{
 				GtPlaygroundStencil new 
+					knowledgeBase: self knowledgeBase
 			}, (GtImage isLepiterEnabled 
 					ifTrue: [ {
-						LeNotePlaygroundStencil new.
+						LeNotePlaygroundStencil new
+							knowledgeBase: self knowledgeBase.
 						(LeLepiterToolStencil new
 							knowledgeBase: self knowledgeBase) } ]
 					ifFalse: [ {} ]),

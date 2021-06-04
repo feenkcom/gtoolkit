@@ -146,7 +146,7 @@ GtWorldElement >> newSpotterButton [
 				do: [ :anEvent | self class worldSpotterSize: anEvent target extent ] ];
 		asElement.
 	spotterDropdown aptitude - BrGlamorousButtonExteriorAptitude.
-		
+	
 	^ spotterDropdown
 ]
 
