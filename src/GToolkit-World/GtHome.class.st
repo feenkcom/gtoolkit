@@ -17,6 +17,11 @@ GtHome >> caseStudyShowsSection [
 		priority: 17
 ]
 
+{ #category : #updating }
+GtHome >> clearKnowledgeBase [
+	knowledgeBase := nil
+]
+
 { #category : #accessing }
 GtHome >> collectHomeSectionStencils [
 	^ GtHomeSectionsCollector new
@@ -62,9 +67,9 @@ GtHome >> createVersionLabel [
 
 { #category : #sections }
 GtHome >> documentationSection [
-	<gtHomeSection>
+"	<gtHomeSection>"
 	^ GtHomeDocumentationSection new
-		priority: 20
+		priority: 20  
 ]
 
 { #category : #sections }
@@ -91,7 +96,7 @@ GtHome >> gtViewHomeSectionsFor: aView [
 
 { #category : #sections }
 GtHome >> howToSection [
-	<gtHomeSection>
+	"<gtHomeSection>"
 	^ GtHomeHowToSection new
 		priority: 19
 ]
@@ -176,9 +181,9 @@ GtHome >> spaceGap [
 	^ 10
 ]
 
-{ #category : #accessing }
+{ #category : #sections }
 GtHome >> toolShowsSection [
-	<gtHomeSection>
+	"<gtHomeSection>"
 	^ GtHomeToolDocsSection new 
 		priority: 16
 ]
@@ -187,7 +192,8 @@ GtHome >> toolShowsSection [
 GtHome >> toolsSection [
 "	<gtHomeSection>"
 	^ GtHomeToolsSection new
-		priority: 10
+		priority: 10;
+		knowledgeBaseComputation: [ self knowledgeBase ]
 ]
 
 { #category : #updating }

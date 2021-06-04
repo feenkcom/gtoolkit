@@ -1,6 +1,7 @@
 "
-I initialize ${class:BlBlocUIManagerNotification}$.
-See ${method:GtNotificationInitialization class>>#initialize|expanded=true}$.
+I initialize {{gtClass:BlBlocUIManagerNotification}}.
+See {{gtMethod:GtNotificationInitialization class>>#initialize|expanded=true}}.
+
 "
 Class {
 	#name : #GtNotificationInitialization,

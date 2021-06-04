@@ -1,6 +1,9 @@
 Class {
 	#name : #GtPlaygroundStencil,
 	#superclass : #GtToolStencil,
+	#instVars : [
+		'knowledgeBase'
+	],
 	#classInstVars : [
 		'playgroundClassName'
 	],
@@ -34,17 +37,32 @@ GtPlaygroundStencil class >> playgroundClassName: aClassName [
 
 { #category : #converting }
 GtPlaygroundStencil >> asPreviewElement [
-	^ GtPlayBook newDefault asElement
+	^ GtImage isLepiterEnabled 
+		ifTrue: [  
+			(LePlayground newOn: LePlayground newBasicNotePage)
+				padding: (BlInsets all: 10) ] 
+		ifFalse: [ GtPlayBook newDefault asElement ]
 ]
 
 { #category : #'api - instantiation' }
 GtPlaygroundStencil >> create [
-	^ self class playgroundClass create
+	"Very ugly check for now until Lepiter is enabled by default."
+	^ self class playgroundClass = LePlayground 
+		ifTrue: [ self class playgroundClass 
+			createWithPlaygroundPageInKnowledgeBase: self currentKnowledgeBase ]
+		ifFalse: [ self class playgroundClass create ]
+	
 ]
 
 { #category : #'api - instantiation' }
 GtPlaygroundStencil >> createWithSnippets: snippets [
 	^ self class playgroundClass newWithSnippets: snippets
+]
+
+{ #category : #accessing }
+GtPlaygroundStencil >> currentKnowledgeBase [
+	^ self knowledgeBase ifNil: [
+		LeDatabasesRegistry uniqueInstance currentLoadedDefaultLogicalDatabase ]
 ]
 
 { #category : #accessing }
@@ -80,6 +98,16 @@ GtPlaygroundStencil >> gtSpotterForXDocPlayBooksFor: aStep [
 { #category : #accessing }
 GtPlaygroundStencil >> icon [
 	^ self class playgroundClass defaultIcon
+]
+
+{ #category : #accessing }
+GtPlaygroundStencil >> knowledgeBase [
+	^ knowledgeBase
+]
+
+{ #category : #accessing }
+GtPlaygroundStencil >> knowledgeBase: aKnowledgeBase [
+	knowledgeBase := aKnowledgeBase
 ]
 
 { #category : #accessing }

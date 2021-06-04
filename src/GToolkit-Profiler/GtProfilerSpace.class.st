@@ -1,5 +1,6 @@
 "
 I represent a profiled space
+
 "
 Class {
 	#name : #GtProfilerSpace,

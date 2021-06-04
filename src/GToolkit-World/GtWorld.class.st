@@ -62,6 +62,8 @@ GtWorld class >> open [
 	
 	aSpace := self new.
 	aSpace title: self defaultTitle.
+	aSpace knowledgeBase: LeDatabasesRegistry uniqueInstance 
+		currentLoadedDefaultLogicalDatabase.
 	aSpace show.
 	^ aSpace
 ]
@@ -72,6 +74,8 @@ GtWorld class >> openDefault [
 	<script: 'self openDefault'>
 	| aSpace |
 	aSpace := self buildWithShutdownListener.
+	aSpace knowledgeBase: LeDatabasesRegistry uniqueInstance 
+		setupForGlamorousToolkit.
 	aSpace markAsDefault.
 	aSpace prepareForRelease.
 	aSpace show.
@@ -103,7 +107,11 @@ GtWorld class >> openWithSpaces: aCollectionOfSpaces [
 
 { #category : #'instance creation' }
 GtWorld class >> openWithSpaces: aCollectionOfSpaces from: aSpace [
-	^ self openWithSpaces: aCollectionOfSpaces
+	| aNewSpace |
+	aNewSpace := self openWithSpaces: aCollectionOfSpaces.
+	aSpace class = self ifTrue: [ 
+		aNewSpace knowledgeBase: aSpace knowledgeBase ].
+	^ aNewSpace
 ]
 
 { #category : #'api - notification' }
