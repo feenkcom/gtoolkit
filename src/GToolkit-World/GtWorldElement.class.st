@@ -39,6 +39,17 @@ GtWorldElement >> announcer [
 	^ announcer
 ]
 
+{ #category : #updating }
+GtWorldElement >> clearKnowledgeBase [
+	| currentKnowledgeBase |
+	currentKnowledgeBase := self home knowledgeBase.
+	currentKnowledgeBase ifNotNil: [ :aKnowledgeBase | 
+		self home clearKnowledgeBase.
+		self announcer announce: (LeWorldElementDatabaseRemoved new
+			database: aKnowledgeBase;
+			source: self) ]
+]
+
 { #category : #accessing }
 GtWorldElement >> database [
 	^ self knowledgeBase
@@ -213,7 +224,6 @@ GtWorldElement >> onRemovedFromSceneGraph [
 { #category : #updating }
 GtWorldElement >> prepareForRelease [
 	self home prepareForRelease.
-	self home clearKnowledgeBase.
 ]
 
 { #category : #updating }
