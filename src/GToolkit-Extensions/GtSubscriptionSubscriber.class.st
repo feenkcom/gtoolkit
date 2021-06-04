@@ -1,6 +1,7 @@
 "
-I am used to display ${class:Announcer}$ subscriptions per subscribers. 
-See ${method:Announcer>>#gtSubscriptionsPerSubscriberFor:}$.
+I am used to display {{gtClass:Announcer}} subscriptions per subscribers. 
+See {{gtMethod:Announcer>>#gtSubscriptionsPerSubscriberFor:}}.
+
 "
 Class {
 	#name : #GtSubscriptionSubscriber,

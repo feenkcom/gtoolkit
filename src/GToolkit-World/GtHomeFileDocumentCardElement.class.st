@@ -1,13 +1,14 @@
 "
-I am an ${class:BlElement}$.
-I summarize a file content for a given ${method:GtHomeFileDocumentCardElement>>#file:|label=file}$.
-!! Examples
-!!! Existing file
-${example:GtHomeFileDocumentCardElementExamples>>#elementWithFilledFile|codeExpanded=false|previewExpanded=true}$
-!!! Existing empty file
-${example:GtHomeFileDocumentCardElementExamples>>#elementWithEmptyFile|codeExpanded=false|previewExpanded=true}$
-!!! Inexistent file
-${example:GtHomeFileDocumentCardElementExamples>>#elementWithInexistentFile|codeExpanded=false|previewExpanded=true}$
+I am an {{gtClass:BlElement}}.
+I summarize a file content for a given {{gtMethod:GtHomeFileDocumentCardElement>>#file:|label=file}}.
+## Examples
+### Existing file
+{{gtExample:GtHomeFileDocumentCardElementExamples>>#elementWithFilledFile|codeExpanded=false|previewExpanded=true}}
+### Existing empty file
+{{gtExample:GtHomeFileDocumentCardElementExamples>>#elementWithEmptyFile|codeExpanded=false|previewExpanded=true}}
+### Inexistent file
+{{gtExample:GtHomeFileDocumentCardElementExamples>>#elementWithInexistentFile|codeExpanded=false|previewExpanded=true}}
+
 
 "
 Class {

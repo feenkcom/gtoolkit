@@ -1,5 +1,6 @@
 "
-I exemplify ${class:GtHomeFileDocumentCardElement}$.
+I exemplify {{gtClass:GtHomeFileDocumentCardElement}}.
+
 "
 Class {
 	#name : #GtHomeFileDocumentCardElementExamples,

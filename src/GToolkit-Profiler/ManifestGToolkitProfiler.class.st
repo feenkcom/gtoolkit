@@ -1,5 +1,6 @@
 "
 A set of utilities to profile performance
+
 "
 Class {
 	#name : #ManifestGToolkitProfiler,
