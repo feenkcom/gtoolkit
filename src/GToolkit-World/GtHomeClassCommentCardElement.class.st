@@ -1,11 +1,12 @@
 "
-I am an ${class:BlElement}$.
-I summarize a class comment for a given ${method:GtHomeClassCommentCardElement>>#documentClass:|label=class}$.
-!! Examples
-!!! Existing class comment
-${example:GtHomeClassCommentCardElementExamples>>#elementWithClassWithComment|codeExpanded=false|previewExpanded=true}$
-!!! Empty class comment
-${example:GtHomeClassCommentCardElementExamples>>#elementWithClassWithoutComment|codeExpanded=false|previewExpanded=true}$
+I am an {{gtClass:BlElement}}.
+I summarize a class comment for a given {{gtMethod:GtHomeClassCommentCardElement>>#documentClass:|label=class}}.
+## Examples
+### Existing class comment
+{{gtExample:GtHomeClassCommentCardElementExamples>>#elementWithClassWithComment|codeExpanded=false|previewExpanded=true}}
+### Empty class comment
+{{gtExample:GtHomeClassCommentCardElementExamples>>#elementWithClassWithoutComment|codeExpanded=false|previewExpanded=true}}
+
 
 "
 Class {

@@ -1,5 +1,6 @@
 "
-I exemplify ${class:GtWorldTabElement}$.
+I exemplify {{gtClass:GtWorldTabElement}}.
+
 "
 Class {
 	#name : #GtWorldTabElementExamples,

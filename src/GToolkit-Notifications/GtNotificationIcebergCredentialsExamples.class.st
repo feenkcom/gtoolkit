@@ -1,5 +1,6 @@
 "
-I exemplify ${class:GtNotificationIcebergCredentialsProvider}$, ${class:GtNotificationIcebergCredentialsElement}$, and ${class:GtNotificationIcebergCredentials}$.
+I exemplify {{gtClass:GtNotificationIcebergCredentialsProvider}}, {{gtClass:GtNotificationIcebergCredentialsElement}}, and {{gtClass:GtNotificationIcebergCredentials}}.
+
 "
 Class {
 	#name : #GtNotificationIcebergCredentialsExamples,

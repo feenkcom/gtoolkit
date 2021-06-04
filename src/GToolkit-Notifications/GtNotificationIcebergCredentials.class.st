@@ -1,14 +1,15 @@
 "
-I am a ${class:GtNotificationEvent}$.
+I am a {{gtClass:GtNotificationEvent}}.
 I am an abstract class.
-Muy subclasses implement user notifications to request user credentials. Those credentials are used to login in to *GitHub>https://github.com* and similar Git repositories.
-!! Common API
-- ${method:GtNotificationIcebergCredentials>>#credentials|label=#selector}$,
-- ${method:GtNotificationIcebergCredentials>>#credentialStore|label=#selector}$,
-- ${method:GtNotificationIcebergCredentials>>#acceptCallback|label=#selector}$, and
-- ${method:GtNotificationIcebergCredentials>>#cancelCallback|label=#selector}$.
-!! Concrete Implementations
-See my ${class:GtNotificationIcebergCredentials|show=#gtSubclassesFor:|label=subclasses|expanded=true|height=150}$ for specific examples:
+Muy subclasses implement user notifications to request user credentials. Those credentials are used to login in to [GitHub](https://github.com) and similar Git repositories.
+## Common API
+- {{gtMethod:GtNotificationIcebergCredentials>>#credentials|label=#selector}},
+- {{gtMethod:GtNotificationIcebergCredentials>>#credentialStore|label=#selector}},
+- {{gtMethod:GtNotificationIcebergCredentials>>#acceptCallback|label=#selector}}, and
+- {{gtMethod:GtNotificationIcebergCredentials>>#cancelCallback|label=#selector}}.
+## Concrete Implementations
+See my {{gtClass:GtNotificationIcebergCredentials|show=#gtSubclassesFor:|label=subclasses|expanded=true|height=150}} for specific examples:
+
 
 "
 Class {
