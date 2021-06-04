@@ -171,6 +171,8 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 	
 	(self class environment at: #GtNotificationBadgePublisher) beActivated.
 	(self class environment at: #GtNotificationIcebergCredentialsProvider) beDefaultProvider.
+	
+	(self class environment at: #GtImage) setupLepiterIntegration.
 ]
 
 { #category : #'post load' }
