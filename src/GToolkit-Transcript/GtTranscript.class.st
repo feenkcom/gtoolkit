@@ -1,9 +1,12 @@
 "
 I am a transcript that can handle both strings and adornments.
 
-!!Examples
+1. # Examples
 
-See ${class:GtTranscriptExamples}$.
+
+See {{gtClass:GtTranscriptExamples}}.
+
+
 "
 Class {
 	#name : #GtTranscript,

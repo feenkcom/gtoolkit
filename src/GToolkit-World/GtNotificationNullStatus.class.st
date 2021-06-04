@@ -1,5 +1,7 @@
 "
 I am a null status, indicating that a notification does not have a status. I am the default status of a notification. 
+
+
 "
 Class {
 	#name : #GtNotificationNullStatus,

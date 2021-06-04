@@ -1,8 +1,11 @@
 "
-I am an ${class:BlElement}$.
-I implement user notification dialog to request ${class:IcePlaintextCredentials|label=plaintext}$ credentials from a user. Those credentials are used to login in to *GitHub>https://github.com* and similar Git repositories. When the user dialog is accepted, I store credentials to a ${class:IceCredentialStore}$.
-!! Example 
-${example:GtNotificationIcebergCredentialsExamples>>#plaintextCredentialsElementWithUsernameAndPassword|codeExpanded=false|previewExpanded=true}$
+I am an {{gtClass:BlElement}}.
+I implement user notification dialog to request {{gtClass:IcePlaintextCredentials|label=plaintext}} credentials from a user. Those credentials are used to login in to [GitHub](https://github.com) and similar Git repositories. When the user dialog is accepted, I store credentials to a {{gtClass:IceCredentialStore}}.
+1. # Example 
+
+{{gtExample:GtNotificationIcebergCredentialsExamples>>#plaintextCredentialsElementWithUsernameAndPassword|codeExpanded=false|previewExpanded=true}}
+
+
 "
 Class {
 	#name : #GtNotificationIcebergPlaintextCredentialsElement,

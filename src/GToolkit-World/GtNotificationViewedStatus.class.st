@@ -1,5 +1,7 @@
 "
 I am status indicating that a notification has been viewed by the user.
+
+
 "
 Class {
 	#name : #GtNotificationViewedStatus,

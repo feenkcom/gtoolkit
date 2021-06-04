@@ -1,5 +1,7 @@
 "
-I exemplify ${class:GtHomeClassCommentCardElement}$.
+I exemplify {{gtClass:GtHomeClassCommentCardElement}}.
+
+
 "
 Class {
 	#name : #GtHomeClassCommentCardElementExamples,

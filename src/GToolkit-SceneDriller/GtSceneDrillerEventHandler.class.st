@@ -1,13 +1,13 @@
 "
-! Scene Driller Event Handler
-Is used to add support of the ==Scene Driller== to arbitrary elements. For the best result the element to which ==Scene Driller= is added should have a ${class:BlBasicLayout}$ and have ==matchParent== or ==exact== layout resizing strategy.
-!! Usage
-Press ==shift+ctrl+alt== to enable element highlight mode and then click on the highlighted element to select it in the ==Scene Driller==
-!! More
-See ${class:GtSceneDriller}$ for the main UI of the ==Scene Driller== and ${class:GtSceneDrillerOverlay}$ for an overlay over the scene that shows highlighted and selected elements.
+1. Scene Driller Event Handler
+Is used to add support of the `Scene Driller` to arbitrary elements. For the best result the element to which `Scene Driller= is added should have a {{gtClass:BlBasicLayout}} and have `matchParent` or `exact` layout resizing strategy.
+## Usage
+Press `shift+ctrl+alt` to enable element highlight mode and then click on the highlighted element to select it in the `Scene Driller`
+## More
+See {{gtClass:GtSceneDriller}} for the main UI of the `Scene Driller== and {{gtClass:GtSceneDrillerOverlay}} for an overlay over the scene that shows highlighted and selected elements.
 
 A script to create an element with a scene driller opened and a selected child element:
-[[[
+```
 world := GtWorldElement new
 	addEventHandler: GtSceneDrillerEventHandler new.
 
@@ -15,7 +15,9 @@ world fireEvent: (GtSceneDrillerShowWish new
 	elementToSelect: world children first children first;
 	sceneExtent: 800@600).
 world
-]]]
+```
+
+
 "
 Class {
 	#name : #GtSceneDrillerEventHandler,
