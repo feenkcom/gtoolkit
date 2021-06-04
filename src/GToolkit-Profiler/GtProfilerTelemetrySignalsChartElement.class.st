@@ -89,6 +89,25 @@ GtProfilerTelemetrySignalsChartElement >> updateChart [
 		barWidthScale: (GtPlotterLinearScale new domainFrom: 0 to: 100.0);
 		barHeightScale: (GtPlotterConstantScale new constant: 8);
 		tickLabelFormat: [ :eachDuration | eachDuration asString, ' ms' ];
+		barElement: [ :aGtPlotterScaleContext |
+			| aTaskDuration aGcPart |
+			
+			aTaskDuration := aGtPlotterScaleContext originalValue durationInMilliseconds.
+			aGcPart := aTaskDuration isZero
+				ifTrue: [ 0 ]
+				ifFalse: [ (aGtPlotterScaleContext originalValue gcDurationInMilliseconds / aTaskDuration) asFloat ].
+			
+			BlElement new
+				addChild: (BlElement new
+					background: Color black;
+					constraintsDo: [ :c |
+						c ignoreByLayout.
+						c vertical exact: 2.
+						c horizontal matchParent.
+						c ignored horizontal weight: aGcPart.
+						c ignored vertical alignCenter
+					]
+				) ];
 		asElement.
 		
 	aBarChart
