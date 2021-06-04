@@ -105,7 +105,11 @@ GtWorld class >> openWithSpaces: aCollectionOfSpaces [
 
 { #category : #'instance creation' }
 GtWorld class >> openWithSpaces: aCollectionOfSpaces from: aSpace [
-	^ self openWithSpaces: aCollectionOfSpaces
+	| aNewSpace |
+	aNewSpace := self openWithSpaces: aCollectionOfSpaces.
+	aSpace class = self ifTrue: [ 
+		aNewSpace knowledgeBase: aSpace knowledgeBase ].
+	^ aNewSpace
 ]
 
 { #category : #'api - notification' }
