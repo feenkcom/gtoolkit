@@ -37,7 +37,11 @@ GtPlaygroundStencil class >> playgroundClassName: aClassName [
 
 { #category : #converting }
 GtPlaygroundStencil >> asPreviewElement [
-	^ GtPlayBook newDefault asElement
+	^ GtImage isLepiterEnabled 
+		ifTrue: [  
+			(LePlayground newOn: LePlayground newBasicNotePage)
+				padding: (BlInsets all: 10) ] 
+		ifFalse: [ GtPlayBook newDefault asElement ]
 ]
 
 { #category : #'api - instantiation' }
