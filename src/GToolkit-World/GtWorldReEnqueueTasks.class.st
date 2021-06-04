@@ -1,7 +1,7 @@
 "
-{{gtClass:BlSpace}} moves {{gtClass:BlTask}} instances from {{gtClass:BlElement}} instances when they are attached to a {{gtClass:BlSpace}}. 
-Those spaces might not be displayed if {{gtMethod:GtWorldTabElement>>#showSpace:}} is called.  For that reason we need to move such enqueued tasks from a not shown space to a new space in which elements are actually displayed. This is my job.
-I am used by {{gtClass:GtWorldElement}}.
+${class:BlSpace}$ moves ${class:BlTask}$ instances from ${class:BlElement}$ instances when they are attached to a ${class:BlSpace}$. 
+Those spaces might not be displayed if ${method:GtWorldTabElement>>#showSpace:}$ is called.  For that reason we need to move such enqueued tasks from a not shown space to a new space in which elements are actually displayed. This is my job.
+I am used by ${class:GtWorldElement}$.
 
 
 "

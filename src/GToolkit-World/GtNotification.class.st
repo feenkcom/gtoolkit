@@ -1,7 +1,5 @@
 "
 I model a notification.
-
-
 "
 Class {
 	#name : #GtNotification,

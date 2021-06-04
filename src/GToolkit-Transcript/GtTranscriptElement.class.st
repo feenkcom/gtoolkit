@@ -1,18 +1,15 @@
 "
 I am a transcript element with support of auto scroll
 
-1. # Example
+!! Example
 
-
-```
+[[[
 	| transcript transcriptElement |
 	
 	transcript := GtTranscript new.
 	transcriptElement := GtTranscriptElement new.
 	transcriptElement transcript: transcript
-```
-
-
+]]]
 "
 Class {
 	#name : #GtTranscriptElement,

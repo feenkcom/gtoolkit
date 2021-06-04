@@ -1,9 +1,7 @@
 "
 I provide support for marking news in the home screen as viewed.
 
-I hold a list of status objects for neews and know how to persists it and read it from a STON preference file. For news that are viewed I return a {{gtClass:GtNotificationViewedStatus}}. Otherwise if no status was saved for a news I return a status of type {{gtClass:GtNotificationNullStatus}}.
-
-
+I hold a list of status objects for neews and know how to persists it and read it from a STON preference file. For news that are viewed I return a ${class:GtNotificationViewedStatus}$. Otherwise if no status was saved for a news I return a status of type ${class:GtNotificationNullStatus}$.
 "
 Class {
 	#name : #GtNotificationStatusRegistry,

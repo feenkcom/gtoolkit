@@ -1,7 +1,5 @@
 "
 I model a status for a notifications. My subclasses provide concrete statuses. Curently only the ""viewed"" status is supported.
-
-
 "
 Class {
 	#name : #GtNotificationStatus,

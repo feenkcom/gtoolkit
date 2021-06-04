@@ -1,7 +1,5 @@
 "
 I show a barchart of where each bar represents a frame and how long it took it to complete
-
-
 "
 Class {
 	#name : #GtProfilerPerformanceChart,

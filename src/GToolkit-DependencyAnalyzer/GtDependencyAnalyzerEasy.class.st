@@ -1,7 +1,5 @@
 "
 I provide a simple API to analyze code.
-
-
 "
 Class {
 	#name : #GtDependencyAnalyzerEasy,

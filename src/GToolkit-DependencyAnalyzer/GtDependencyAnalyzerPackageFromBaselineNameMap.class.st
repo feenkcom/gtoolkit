@@ -2,8 +2,6 @@
 Allows to quickly find a package-from-baseline based on its name.
 
 It is possible that multiple baselines define the same package, thefore we map a set of packages from baselines to a name
-
-
 "
 Class {
 	#name : #GtDependencyAnalyzerPackageFromBaselineNameMap,

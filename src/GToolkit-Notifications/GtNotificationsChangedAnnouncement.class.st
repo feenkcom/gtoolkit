@@ -1,7 +1,6 @@
 "
-I am an {{gtClass:Announcement}}.
-I am announced by {{gtClass:GtNotifications}} when a {{gtClass:GtNotificationEvent}} is added.
-
+I am an ${class:Announcement}$.
+I am announced by ${class:GtNotifications}$ when a ${class:GtNotificationEvent}$ is added.
 
 "
 Class {

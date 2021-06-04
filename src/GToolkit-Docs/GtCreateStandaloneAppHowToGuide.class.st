@@ -1,27 +1,20 @@
 "
-1. How to create a standalone app with GT
+!How to create a standalone app with GT
 Creating a standalone app based on Glamorous Toolkit is as simple as opening an application specific window and closing the existing GT window. This can be achieved in just a few steps.
-1. ## Open a basic space with a scene
-
-{{gtClass:BlSpace}} is responsible for displaying a scene in a separate window. Users can customise window's title or extent. To spawn a window send {{gtMethod:BlSpace>>#show}} to an instance of the space.
-{{gtExample:GtCreateStandaloneAppHowToGuide>>#helloWorldSceneInSpace}}
-1. # Cleaning up the existing windows
-
-The Glamorous Toolkit comes with a {{gtClass:GtWorld}} opened by default. When creating a standalone app based on GT we should close that window, which can be done in two steps.
-1. ## Disable shutdown-on-close listener
-
-In order to shutdown the process when a window is closed, we add a {{gtClass:BlSpaceShutdownOnCloseListener}} as an event handler to a {{gtClass:BlSpace}}. It should be removed before we close such spaces.
-{{gtExample:GtCreateStandaloneAppHowToGuide>>#disableGtWorldShutdownHadler}}
-1. ## Closing an existing GtWorld
-
-To close an opened window, it is enough to just send {{gtMethod:BlSpace>>#close}} to an intended space.
-{{gtExample:GtCreateStandaloneAppHowToGuide>>#closeGtWorlds}}
-1. # Save the image
-
+!!!Open a basic space with a scene
+${class:BlSpace}$ is responsible for displaying a scene in a separate window. Users can customise window's title or extent. To spawn a window send ${method:BlSpace>>#show}$ to an instance of the space.
+${example:GtCreateStandaloneAppHowToGuide>>#helloWorldSceneInSpace}$
+!!Cleaning up the existing windows
+The Glamorous Toolkit comes with a ${class:GtWorld}$ opened by default. When creating a standalone app based on GT we should close that window, which can be done in two steps.
+!!!Disable shutdown-on-close listener
+In order to shutdown the process when a window is closed, we add a ${class:BlSpaceShutdownOnCloseListener}$ as an event handler to a ${class:BlSpace}$. It should be removed before we close such spaces.
+${example:GtCreateStandaloneAppHowToGuide>>#disableGtWorldShutdownHadler}$
+!!!Closing an existing GtWorld
+To close an opened window, it is enough to just send ${method:BlSpace>>#close}$ to an intended space.
+${example:GtCreateStandaloneAppHowToGuide>>#closeGtWorlds}$
+!!Save the image
 Once the intended application window is opened and there are no more GT windows we can save the image (without quitting):
-{{gtExample:GtCreateStandaloneAppHowToGuide>>#saveTheImage}}
-
-
+${example:GtCreateStandaloneAppHowToGuide>>#saveTheImage}$
 "
 Class {
 	#name : #GtCreateStandaloneAppHowToGuide,
