@@ -72,6 +72,8 @@ GtWorld class >> openDefault [
 	<script: 'self openDefault'>
 	| aSpace |
 	aSpace := self buildWithShutdownListener.
+	aSpace database: LeDatabasesRegistry uniqueInstance 
+		setupForGlamorousToolkit.
 	aSpace markAsDefault.
 	aSpace prepareForRelease.
 	aSpace show.
