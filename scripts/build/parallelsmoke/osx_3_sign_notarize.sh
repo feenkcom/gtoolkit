@@ -11,6 +11,8 @@ MY_KEYCHAIN_PASSWORD="temporaryPassword"
 CERT="pipe.p12"
 CERT_PASSWORD=""
 
+security delete-keychain "$MY_KEYCHAIN" "Delete also initially"
+
 security create-keychain -p "$MY_KEYCHAIN_PASSWORD" "$MY_KEYCHAIN" # Create temp keychain
 security list-keychains -d user -s "$MY_KEYCHAIN" $(security list-keychains -d user | sed s/\"//g) # Append temp keychain to the user domain
 security set-keychain-settings "$MY_KEYCHAIN" # Remove relock timeout
