@@ -17,6 +17,11 @@ GtHome >> caseStudyShowsSection [
 		priority: 17
 ]
 
+{ #category : #updating }
+GtHome >> clearKnowledgeBase [
+	knowledgeBase := nil
+]
+
 { #category : #accessing }
 GtHome >> collectHomeSectionStencils [
 	^ GtHomeSectionsCollector new
@@ -187,7 +192,8 @@ GtHome >> toolShowsSection [
 GtHome >> toolsSection [
 "	<gtHomeSection>"
 	^ GtHomeToolsSection new
-		priority: 10
+		priority: 10;
+		knowledgeBaseComputation: [ self knowledgeBase ]
 ]
 
 { #category : #updating }

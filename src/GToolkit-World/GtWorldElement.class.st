@@ -146,7 +146,7 @@ GtWorldElement >> newSpotterButton [
 				do: [ :anEvent | self class worldSpotterSize: anEvent target extent ] ];
 		asElement.
 	spotterDropdown aptitude - BrGlamorousButtonExteriorAptitude.
-		
+	
 	^ spotterDropdown
 ]
 
@@ -176,7 +176,9 @@ GtWorldElement >> newSubSpaceButton [
 								icon: BrGlamorousIcons hamburger;
 								label: 'Menu';
 								yourself ]
-						content: [ GtToolsMenu new
+						content: [ 
+							GtToolsMenu new
+								knowledgeBase: self knowledgeBase;
 								constraintsDo: [ :c | 
 									c vertical fitContent.
 									c horizontal exact: 420 ];
@@ -210,7 +212,8 @@ GtWorldElement >> onRemovedFromSceneGraph [
 
 { #category : #updating }
 GtWorldElement >> prepareForRelease [
-	self home prepareForRelease
+	self home prepareForRelease.
+	self home clearKnowledgeBase.
 ]
 
 { #category : #updating }

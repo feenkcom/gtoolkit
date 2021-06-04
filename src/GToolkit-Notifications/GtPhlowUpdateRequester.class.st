@@ -1,16 +1,19 @@
 "
-I handle asynchronous ${class:BlElement}$ update requests.
-When ${method:GtPhlowUpdateRequester>>#requestUpdate|label=#selector}$ is called, I ${method:GtPhlowUpdateRequester>>#postponeUpdate|label=schedule}$ an update and execute an ${method:GtPhlowUpdateRequester>>#action|label=#selector}$, when the ${class:BlElement}$ is  ${method:BlElement>>#isAttachedToSceneGraph|label=attached to a scene graph}$.
-! Public API
-- ${method:GtPhlowUpdateRequester>>#element:|label=#selector}$ a ${class:BlElement}$ on which updates are performed,
-- ${method:GtPhlowUpdateRequester>>#action:|label=#selector}$ a valuable which is evaluated when it is time to update the ${class:BlElement}$,
-- ${method:GtPhlowUpdateRequester>>#element:selector:|label=#selector}$ an utility method that combines the above two methods,
-- ${method:GtPhlowUpdateRequester>>#requestUpdate|label=#selector}$ schedules the ${class:BlElement}$ update.
-! Example
-!!! Requester Initialization
-The following example indicates how I can be initialized, having a ${class:BlElement}$ with a given background: ${example:GtPhlowUpdateRequesterExamples>>#requesterWithElementAndAction|codeExpanded=false|previewExpanded=true}$
-!! Requesting Update
-The background is updated on the ${method:GtPhlowUpdateRequester>>#requestUpdate|label=request}$ when the ${class:BlElement}$ is attached to a scene graph: ${example:GtPhlowUpdateRequesterExamples>>#updateRequest_AfterElementAddedInSceneGraph|codeExpanded=false|previewExpanded=true}$  
+I handle asynchronous {{gtClass:BlElement}} update requests.
+When {{gtMethod:GtPhlowUpdateRequester>>#requestUpdate|label=#selector}} is called, I {{gtMethod:GtPhlowUpdateRequester>>#postponeUpdate|label=schedule}} an update and execute an {{gtMethod:GtPhlowUpdateRequester>>#action|label=#selector}}, when the {{gtClass:BlElement}} is  {{gtMethod:BlElement>>#isAttachedToSceneGraph|label=attached to a scene graph}}.
+1. Public API
+- {{gtMethod:GtPhlowUpdateRequester>>#element:|label=#selector}} a {{gtClass:BlElement}} on which updates are performed,
+- {{gtMethod:GtPhlowUpdateRequester>>#action:|label=#selector}} a valuable which is evaluated when it is time to update the {{gtClass:BlElement}},
+- {{gtMethod:GtPhlowUpdateRequester>>#element:selector:|label=#selector}} an utility method that combines the above two methods,
+- {{gtMethod:GtPhlowUpdateRequester>>#requestUpdate|label=#selector}} schedules the {{gtClass:BlElement}} update.
+1. Example## Requester Initialization
+
+The following example indicates how I can be initialized, having a {{gtClass:BlElement}} with a given background: {{gtExample:GtPhlowUpdateRequesterExamples>>#requesterWithElementAndAction|codeExpanded=false|previewExpanded=true}}
+1. # Requesting Update
+
+The background is updated on the {{gtMethod:GtPhlowUpdateRequester>>#requestUpdate|label=request}} when the {{gtClass:BlElement}} is attached to a scene graph: {{gtExample:GtPhlowUpdateRequesterExamples>>#updateRequest_AfterElementAddedInSceneGraph|codeExpanded=false|previewExpanded=true}}  
+
+
 "
 Class {
 	#name : #GtPhlowUpdateRequester,

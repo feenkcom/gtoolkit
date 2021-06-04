@@ -1,6 +1,9 @@
 Class {
 	#name : #GtHomeToolsSection,
 	#superclass : #GtHomeSection,
+	#instVars : [
+		'knowledgeBaseComputation'
+	],
 	#category : #'GToolkit-World-Sections'
 }
 
@@ -38,6 +41,16 @@ GtHomeToolsSection >> create [
 	cardsContainer addChild: self newSpotterButtonStencil create.
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
+]
+
+{ #category : #accessing }
+GtHomeToolsSection >> knowledgeBase [
+	^ knowledgeBaseComputation ifNotNil: [ :aValuable | aValuable value ]
+]
+
+{ #category : #accessing }
+GtHomeToolsSection >> knowledgeBaseComputation: aValuable [
+	knowledgeBaseComputation := aValuable
 ]
 
 { #category : #'tools creation' }
@@ -113,7 +126,8 @@ GtHomeToolsSection >> newLepiterButtonStencil [
 			self
 				showSpaceWithIcon: LeIcons lepiterDatabase
 				title: 'Lepiter'
-				with: LeLepiterToolStencil new
+				with: (LeLepiterToolStencil new
+					knowledgeBase: self knowledgeBase)
 				from: card ];
 		description: 'Lepiter'
 ]
@@ -150,7 +164,8 @@ GtHomeToolsSection >> newNotesButtonStencil [
 			self
 				showSpaceWithIcon: LeIcons lepiterPage
 				title: 'Note'
-				with: LeNotePlaygroundStencil new
+				with: (LeNotePlaygroundStencil new
+					knowledgeBase: self knowledgeBase)
 				from: card ];
 		description: 'Take notes. Live.'
 ]
@@ -164,7 +179,8 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 			self
 				showSpaceWithIcon: GtPlaygroundStencil playgroundClass defaultIcon
 				title: 'Playground'
-				with: GtPlaygroundStencil new
+				with: (GtPlaygroundStencil new
+					knowledgeBase: self knowledgeBase)
 				from: card ];
 		description: 'Play with code. Live.'
 ]

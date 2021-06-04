@@ -1,17 +1,20 @@
-Extension { #name : #GtSpotterStart }
+Extension { #name : #GtWorldSpotterSearchStart }
 
 { #category : #'*GToolkit-World' }
-GtSpotterStart >> gtSpotterForToolsFor: aStep [
+GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
 	<gtSearch>
 	aStep listProcessor
 		priority: 1;
 		allCandidates: [ 
 			{
 				GtPlaygroundStencil new 
+					knowledgeBase: self knowledgeBase
 			}, (GtImage isLepiterEnabled 
 					ifTrue: [ {
-						LeNotePlaygroundStencil new.
-						LeLepiterToolStencil new } ]
+						LeNotePlaygroundStencil new
+							knowledgeBase: self knowledgeBase.
+						(LeLepiterToolStencil new
+							knowledgeBase: self knowledgeBase) } ]
 					ifFalse: [ {} ]),
 			{
 				GtCoderStencil new . 

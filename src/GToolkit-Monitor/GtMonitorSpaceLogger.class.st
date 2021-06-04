@@ -1,5 +1,7 @@
 "
 I log space and universe related events
+
+
 "
 Class {
 	#name : #GtMonitorSpaceLogger,
