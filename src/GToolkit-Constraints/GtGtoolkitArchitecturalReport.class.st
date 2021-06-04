@@ -1,5 +1,7 @@
 "
 Architectural report for Glamorous Toolkit.
+
+
 "
 Class {
 	#name : #GtGtoolkitArchitecturalReport,

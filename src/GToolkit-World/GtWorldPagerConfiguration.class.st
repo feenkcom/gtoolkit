@@ -1,5 +1,7 @@
 "
-I initialize ${class:GtPager}$ when opened using ${method:GtWorldUtility class>>#showSpaceWithTitle:inPager:with:from:}$.
+I initialize {{gtClass:GtPager}} when opened using {{gtMethod:GtWorldUtility class>>#showSpaceWithTitle:inPager:with:from:}}.
+
+
 "
 Class {
 	#name : #GtWorldPagerConfiguration,

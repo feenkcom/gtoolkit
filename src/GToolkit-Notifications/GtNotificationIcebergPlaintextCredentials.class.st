@@ -1,8 +1,11 @@
 "
-I am a ${class:GtNotificationIcebergCredentials}$.
-I am used to notify that ${class:IcePlaintextCredentials|label=plaintext}$ credentials are requested. Those credentials are used to login in to *GitHub>https://github.com* and similar Git repositories.
-!! Example 
-${example:GtNotificationIcebergCredentialsExamples>>#plaintextCredentialsNotificationWithUsernameAndPassword|codeExpanded=false|previewExpanded=true}$
+I am a {{gtClass:GtNotificationIcebergCredentials}}.
+I am used to notify that {{gtClass:IcePlaintextCredentials|label=plaintext}} credentials are requested. Those credentials are used to login in to [GitHub](https://github.com) and similar Git repositories.
+1. # Example 
+
+{{gtExample:GtNotificationIcebergCredentialsExamples>>#plaintextCredentialsNotificationWithUsernameAndPassword|codeExpanded=false|previewExpanded=true}}
+
+
 "
 Class {
 	#name : #GtNotificationIcebergPlaintextCredentials,
