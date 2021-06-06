@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T19:55:38.505794+02:00"
+						"dateAndTimeString" : "2021-06-05T16:24:13.058143+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T19:55:46.630753+02:00"
+						"dateAndTimeString" : "2021-06-05T16:24:39.226943+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "svxih1iADQCq9Bh3CHfMWA=="
+					"uidString" : "9H3xS2eADQCsaeFGCHfMWA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A slideshow about querying Pharo code:"
+				"string" : "Every [[Pharo Snippet]] is populated with "
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:46:58.795888+02:00"
+						"dateAndTimeString" : "2021-06-05T16:24:06.122303+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:47:12.416564+02:00"
+						"dateAndTimeString" : "2021-06-05T16:24:06.585079+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mjmqh1iADQCq+KxuCHfMWA=="
+					"uidString" : "aWs6TGeADQCsa3YTCHfMWA=="
 				},
-				"code" : "(GtLiveShow create: GtQueryingCodeShow new) makeArrowsVisible",
-				"elementHeight" : 527,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"code" : "pages := thisSnippet database pages"
 			}
 		]
 	},
@@ -88,7 +85,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-06-04T22:46:54.087933+02:00"
+			"dateAndTimeString" : "2021-06-05T16:24:01.30212+02:00"
 		}
 	},
 	"editEmail" : {
@@ -99,15 +96,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-06-04T22:46:54.087933+02:00"
+			"dateAndTimeString" : "2021-06-05T16:24:01.30212+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Querying Pharo code show"
+		"title" : "How to visualize the current database"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "b6626287-5880-0d00-aaf3-85100877cc58"
+		"uuid" : "1cdef04b-6780-0d00-ac68-1d780877cc58"
 	}
 }

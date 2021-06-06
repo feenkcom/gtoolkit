@@ -1,0 +1,968 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:08:13.158955+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:22:21.336255+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lHXAbGqADQCvQVW0CHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This [[Wardley Map]] provides an overview of the key elements of how [[Moldable Development]]supports decision making at both technical and business level. "
+			},
+			{
+				"__type" : "wardleyMap",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:10:50.96617+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:10:50.96617+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0Nwjd2qADQCvSHBuCHfMWA=="
+				},
+				"wardleyMapDictionary" : {
+					"edges" : [
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "1db0e27a-6a80-0d00-af4d-82110877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "afe4927b-6a80-0d00-af4f-68b10877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "afe4927b-6a80-0d00-af4f-68b10877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "56af4d7b-6a80-0d00-af4e-56010877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "afe4927b-6a80-0d00-af4f-68b10877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "20293a7d-6a80-0d00-af50-6a320877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "afe4927b-6a80-0d00-af4f-68b10877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "5b6ca17d-6a80-0d00-af51-10000877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "20293a7d-6a80-0d00-af50-6a320877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "5b6ca17d-6a80-0d00-af51-10000877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "5b6ca17d-6a80-0d00-af51-10000877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "f5f4e880-6a80-0d00-af52-aa280877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "f5f4e880-6a80-0d00-af52-aa280877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "b75d9681-6a80-0d00-af53-59810877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.624633431085044,
+								"green" : 0.624633431085044,
+								"red" : 0.624633431085044
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "b3a29b83-6a80-0d00-af54-522e0877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "20293a7d-6a80-0d00-af50-6a320877cc58"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.624633431085044,
+								"green" : 0.624633431085044,
+								"red" : 0.624633431085044
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "f68dcc84-6a80-0d00-af55-59850877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "b3a29b83-6a80-0d00-af54-522e0877cc58"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "20293a7d-6a80-0d00-af50-6a320877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "ff86ec85-6a80-0d00-af56-535e0877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "ff86ec85-6a80-0d00-af56-535e0877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "f5f4e880-6a80-0d00-af52-aa280877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "ff86ec85-6a80-0d00-af56-535e0877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "b75d9681-6a80-0d00-af53-59810877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : true,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 1.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "b3a29b83-6a80-0d00-af54-522e0877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "f5f4e880-6a80-0d00-af52-aa280877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : true,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 1.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "f68dcc84-6a80-0d00-af55-59850877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "ff86ec85-6a80-0d00-af56-535e0877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : true,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 1.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "9a2e5387-6a80-0d00-af57-76000877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "b75d9681-6a80-0d00-af53-59810877cc58"
+							},
+							"width" : 2.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.624633431085044,
+								"green" : 0.624633431085044,
+								"red" : 0.624633431085044
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "f68dcc84-6a80-0d00-af55-59850877cc58"
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "9a2e5387-6a80-0d00-af57-76000877cc58"
+							},
+							"width" : 1.0
+						}
+					],
+					"nodes" : [
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "1db0e27a-6a80-0d00-af4d-82110877cc58"
+							},
+							"label" : {
+								"text" : "developers",
+								"x" : -0.08333333333333333,
+								"y" : -1.0833333333333333
+							},
+							"width" : 12,
+							"x" : 0.37580092176258995,
+							"y" : 0.0840559275136829
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "56af4d7b-6a80-0d00-af4e-56010877cc58"
+							},
+							"label" : {
+								"text" : "business",
+								"x" : 0.5,
+								"y" : -0.9166666666666666
+							},
+							"width" : 12,
+							"x" : 0.5030034566097122,
+							"y" : 0.08238602402969045
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "afe4927b-6a80-0d00-af4f-68b10877cc58"
+							},
+							"label" : {
+								"text" : "challenge",
+								"x" : 1.5,
+								"y" : 2.3333333333333335
+							},
+							"width" : 12,
+							"x" : 0.42297099820143885,
+							"y" : 0.20127285312573565
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "20293a7d-6a80-0d00-af50-6a320877cc58"
+							},
+							"label" : {
+								"text" : "specific problem",
+								"x" : 5.75,
+								"y" : 1.5833333333333333
+							},
+							"width" : 12,
+							"x" : 0.3498201438848921,
+							"y" : 0.3352165725047081
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "5b6ca17d-6a80-0d00-af51-10000877cc58"
+							},
+							"label" : {
+								"text" : "decision",
+								"x" : 0.5,
+								"y" : 2.0
+							},
+							"width" : 12,
+							"x" : 0.57892592176259,
+							"y" : 0.3029677683799729
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "f5f4e880-6a80-0d00-af52-aa280877cc58"
+							},
+							"label" : {
+								"text" : "generated views",
+								"x" : 4.333333333333333,
+								"y" : 2.0833333333333335
+							},
+							"width" : 12,
+							"x" : 0.7768062893435251,
+							"y" : 0.4682367184741349
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "b75d9681-6a80-0d00-af53-59810877cc58"
+							},
+							"label" : {
+								"text" : "moldable tools",
+								"x" : 0.5,
+								"y" : 2.0
+							},
+							"width" : 12,
+							"x" : 0.7061214309802158,
+							"y" : 0.8666742184741348
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.624633431085044,
+								"green" : 0.624633431085044,
+								"red" : 0.624633431085044
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "b3a29b83-6a80-0d00-af54-522e0877cc58"
+							},
+							"label" : {
+								"text" : "manual views",
+								"x" : 0.5,
+								"y" : 2.0
+							},
+							"width" : 12,
+							"x" : 0.3106030800359712,
+							"y" : 0.4650808215814795
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.624633431085044,
+								"green" : 0.624633431085044,
+								"red" : 0.624633431085044
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "f68dcc84-6a80-0d00-af55-59850877cc58"
+							},
+							"label" : {
+								"text" : "manual inspection",
+								"x" : 0.5,
+								"y" : 2.0
+							},
+							"width" : 12,
+							"x" : 0.17290776753597123,
+							"y" : 0.6322845056681087
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "ff86ec85-6a80-0d00-af56-535e0877cc58"
+							},
+							"label" : {
+								"text" : "specific coding",
+								"x" : -0.5833333333333334,
+								"y" : 2.5833333333333335
+							},
+							"width" : 12,
+							"x" : 0.4387048954586331,
+							"y" : 0.6350578696040784
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.624633431085044,
+								"green" : 0.624633431085044,
+								"red" : 0.624633431085044
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "9a2e5387-6a80-0d00-af57-76000877cc58"
+							},
+							"label" : {
+								"text" : "rigid tools",
+								"x" : 0.5,
+								"y" : 2.0
+							},
+							"width" : 12,
+							"x" : 0.5369899392985612,
+							"y" : 0.861929338530632
+						}
+					]
+				},
+				"snippetHeight" : 444
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:19:14.429533+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:19:14.429533+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "z5kdlWqADQCwVIrMCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "All decisions relate to a challenge that relates to a specific problem. Any such problem about the system requires information about the system."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:19:22.398036+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:19:22.398036+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "u647lWqADQCwVkeACHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "As systems are highly contextual, assessing the problem requires custom views. Presently, people often create these views manually. This is a problem as systems are too large and change too quickly to be grasped manually."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:19:35.564639+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:19:41.875152+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cHpllmqADQCwWCGNCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "So, we guide decision making through custom views that are generated. They are custom in that we literally create them for every problem. We say that it’s the system’s responsibility to present itself in a way humans can reason about."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:19:52.464604+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:19:54.4945+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jLMLl2qADQCwWiSkCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Most of the development effort consists of people trying to figure the system out by reading their way through it. This is directly linked to the nature of tools."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:19:58.508225+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:19:59.552163+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dVyTl2qADQCwXBbhCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Typically, tools offer only generic out-of-the-box presentations. So, people read because that can be adapted."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:20:05.599469+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:20:41.41828+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "hXUsmGqADQCwXhmzCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We replace manual inspection through code that is specifically crafted for the problem. This is made practical by a new bread of moldable tools, such as Glamorous Toolkit."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:20:47.223219+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:20:48.754013+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pO9lmmqADQCwY8hICHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Like this, generated custom views become a commodity that enable new strategies for decision making."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:20:53.174231+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:20:54.98283+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TA8Fm2qADQCwZUyfCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This implies new skills that are necessary to have in-house. And you want to rethink processes, too, because you just got a new feedback loop."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:20:58.472346+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T20:21:00.119148+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "y4JWm2qADQCwZ5aNCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "It’s a leap, much like testing or continuous delivery were. When tools become code, legacy needs not be an impediment anymore. It can become an opportunity."
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-06-05T20:07:56.634172+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-06-05T20:07:56.634172+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Mapping Moldable Development"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "b9c3bf6c-6a80-0d00-af40-4dcf0877cc58"
+	}
+}
