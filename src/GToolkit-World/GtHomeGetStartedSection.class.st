@@ -28,7 +28,7 @@ GtHomeGetStartedSection >> create [
 		action: [ :card | 
 			| database startPage |
 			database := LeDatabasesRegistry default currentLoadedDefaultLogicalDatabase 
-				databaseNamed: 'feenkcom/gtoolkit/lepiter'.
+				databaseNamed: 'Glamorous Toolkit Book'.
 			startPage := database pageNamed: 'About Glamorous Toolkit'.
 			GtWorldUtility 
 				showSpaceWithTitle: startPage title
