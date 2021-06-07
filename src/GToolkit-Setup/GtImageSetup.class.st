@@ -56,6 +56,7 @@ GtImageSetup class >> performLocalSetup [
 	self installLogo.
 	self registerTools.
 	self updateLocalVersion.
+	self updateDocumentationDirectoryForLocalDevelopment.
 ]
 
 { #category : #api }
@@ -76,6 +77,13 @@ GtImageSetup class >> registerTools [
 	GtEmergencyDebugger register.
 	GtInspectorToolRegistryAdaptor register.
 	GtPlaygroundToolRegistryAdaptor register.
+]
+
+{ #category : #api }
+GtImageSetup class >> updateDocumentationDirectoryForLocalDevelopment [
+	LepiterCoreDefaults defaultDocumentationDirectory: FileLocator imageDirectory 
+		/ 'pharo-local'
+		/ 'iceberg'
 ]
 
 { #category : #actions }
