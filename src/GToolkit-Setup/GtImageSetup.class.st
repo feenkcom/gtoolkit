@@ -29,6 +29,7 @@ GtImageSetup class >> copyDataAndDocsFolders [
 		add: (gtoolkitRepoFolders asFileReference / 'gtoolkit' / 'lepiter');
 		add: (gtoolkitRepoFolders asFileReference / 'lepiter' / 'test-data');
 		add: (gtoolkitRepoFolders asFileReference / 'JSLink' / 'js');
+		add: (gtoolkitRepoFolders asFileReference / 'PythonBridge' / 'PythonBridgeRuntime');
 		yourself.
 
 	docFolders do: [ :each |
@@ -42,6 +43,9 @@ GtImageSetup class >> copyDataAndDocsFolders [
 		[each copyAllTo: (GtResourcesUtilityConstants localGtDirectory asFileReference / localPath) ] 
 			on: FileExists 
 			do: [ :e | e printString traceCr ]].
+
+	"PythonBridge needs to be told where to find its runtime files"
+	PBPharoPlatform runtimeSourceDirectory: GtResourcesUtilityConstants localGtDirectory / 'feenkcom/PythonBridge/PythonBridgeRuntime'.
 ]
 
 { #category : #actions }
