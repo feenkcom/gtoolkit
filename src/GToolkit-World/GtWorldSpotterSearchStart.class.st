@@ -56,15 +56,13 @@ GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
 
 { #category : #'gt-extensions' }
 GtWorldSpotterSearchStart >> gtSpotterNewPageFor: aStep [
-	"A new page is added in ${method:LeWorldElement>>#newSpotterButton}$"
 	<gtSearch>
 	self hasKnowledgeBase ifFalse: [ ^ self ].
 	aStep listProcessor
 		title: 'New Page';
 		priority: 50;
 		itemName: [ :aPageTitle | 'Create new page: ', aPageTitle ];
-		previewObject: [ :aPageTitle | 
-			self knowledgeBase pageBuilder title: aPageTitle; build ];
+		previewObject: [ :aPageTitle | LePage named: aPageTitle ];
 		wantsToDisplayOnEmptyQuery: false;
 		filter: GtNullFilter
 			item: [ :filter :context | 
@@ -72,7 +70,8 @@ GtWorldSpotterSearchStart >> gtSpotterNewPageFor: aStep [
 				isExistingPage := self knowledgeBase pagesByName anySatisfy: [ :eachPage | 
 					eachPage title = context textTrimmed ].
 				isExistingPage ifFalse: [ 
-					filter value: context textTrimmed ] ]
+					filter value: context textTrimmed ] ];
+		send: [ :aPageTitle :spotterStep | self knowledgeBase addPage: (LePage named: aPageTitle) ]
 ]
 
 { #category : #'gt-extensions' }
