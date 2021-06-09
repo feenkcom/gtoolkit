@@ -44,7 +44,8 @@ GtImageSetup class >> copyDataAndDocsFolders [
 			on: FileExists 
 			do: [ :e | e printString traceCr ]].
 
-	"PythonBridge needs to be told where to find its runtime files"
+	"PythonBridge needs to be told where to find its runtime files.
+	This should be a FileLocator so that it uses the local location, not the CI's"
 	PBPharoPlatform runtimeSourceDirectory: GtResourcesUtilityConstants localGtDirectory / 'feenkcom/PythonBridge/PythonBridgeRuntime'.
 ]
 
