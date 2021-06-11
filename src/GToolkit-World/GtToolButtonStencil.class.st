@@ -6,7 +6,8 @@ Class {
 		'title',
 		'description',
 		'action',
-		'iconSize'
+		'iconSize',
+		'margin'
 	],
 	#category : #'GToolkit-World-Stencils'
 }
@@ -34,7 +35,7 @@ GtToolButtonStencil >> create [
 		constraintsDo:[ :c | 
 	        c horizontal exact: 74.
 	        c vertical exact: 74 ];
-		margin: (BlInsets top: 10 left: 20 bottom: 10 right: 20);
+		margin: self margin;
 		action: self action;
 		padding: (BlInsets all: 10);
 		label: self description;
@@ -81,13 +82,31 @@ GtToolButtonStencil >> initialize [
 	description := 'Some tool'.
 	title := 'Some tool'.
 	action := [  ].
+
 	iconSize := 32@32.
+	margin := BlInsets top: 10 left: 20 bottom: 10 right: 20.
+	
 	icon := BlElement new size: iconSize.
+]
+
+{ #category : #accessing }
+GtToolButtonStencil >> margin [
+	^ margin
+]
+
+{ #category : #accessing }
+GtToolButtonStencil >> margin: anObject [
+	margin := anObject
 ]
 
 { #category : #accessing }
 GtToolButtonStencil >> smallIcon [
 	self iconSize: 32@32
+]
+
+{ #category : #accessing }
+GtToolButtonStencil >> smallMargin [
+	self margin: (BlInsets top: 10 left: 10 bottom: 10 right: 10)
 ]
 
 { #category : #accessing }
