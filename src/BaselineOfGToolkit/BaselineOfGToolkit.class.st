@@ -164,7 +164,7 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 
 { #category : #'post load' }
 BaselineOfGToolkit >> preLoadGToolkit: spec [
-	| aLink |
+
 	(PreLoaded isNotNil and: [ PreLoaded ])
 		ifTrue: [ ^ self ].
 	PreLoaded := true.
