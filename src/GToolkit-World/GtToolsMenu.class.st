@@ -52,13 +52,18 @@ GtToolsMenu class >> openPlaygroundFrom: anElement [
 ]
 
 { #category : #initialization }
+GtToolsMenu >> iconSize [
+	^ 75 asPoint
+]
+
+{ #category : #initialization }
 GtToolsMenu >> initialize [
 	super initialize.
 	
 	self layout: BlFlowLayout new.
 	self hMatchParent.
 	self vFitContent.
-	self padding: (BlInsets top: 10 bottom: 10).
+	self padding: (BlInsets all: 10).
 	self initializeElements
 ]
 
@@ -68,25 +73,25 @@ GtToolsMenu >> initializeElements [
 	self removeChildren.
 
 	self addChild: ((GtHomeToolsSection new knowledgeBaseComputation: [ self knowledgeBase ])
-		newPlaygroundButtonStencil smallIcon create size: 100@100).
+		newPlaygroundButtonStencil smallIcon smallMargin create size: self iconSize).
 	
 	GtImage isLepiterEnabled ifTrue: [ 
 		self addChild: ((GtHomeToolsSection new knowledgeBaseComputation: [ self knowledgeBase ])
-			newNotesButtonStencil smallIcon create size: 100@100).
+			newNotesButtonStencil smallIcon smallMargin create size: self iconSize).
 		self addChild: ((GtHomeToolsSection new knowledgeBaseComputation: [ self knowledgeBase ]) 
-			newLepiterButtonStencil smallIcon create size: 100@100) ].
+			newLepiterButtonStencil smallIcon smallMargin create size: self iconSize) ].
 	
-	self addChild: (GtHomeToolsSection new newCoderButtonStencil smallIcon create  size: 100@100).
-	self addChild: (GtHomeToolsSection new newGitButtonStencil smallIcon create  size: 100@100).
-	self addChild: (GtHomeToolsSection new newMonitorButtonStencil smallIcon create  size: 100@100).
-	self addChild: (GtHomeToolsSection new newExamplesButtonStencil smallIcon create  size: 100@100).
-	self addChild: (GtHomeToolsSection new newTranscriptButtonStencil smallIcon create  size: 100@100).
-	self addChild: (GtHomeToolsSection new newFileSystemButtonStencil smallIcon create  size: 100@100).
-	self addChild: (GtHomeToolsSection new newMorphicWorldButtonStencil smallIcon create  size: 100@100).
+	self addChild: (GtHomeToolsSection new newCoderButtonStencil smallIcon smallMargin create size: self iconSize).
+	self addChild: (GtHomeToolsSection new newGitButtonStencil smallIcon smallMargin create size: self iconSize).
+	self addChild: (GtHomeToolsSection new newMonitorButtonStencil smallIcon smallMargin create size: self iconSize).
+	self addChild: (GtHomeToolsSection new newExamplesButtonStencil smallIcon smallMargin create size: self iconSize).
+	self addChild: (GtHomeToolsSection new newTranscriptButtonStencil smallIcon smallMargin create size: self iconSize).
+	self addChild: (GtHomeToolsSection new newFileSystemButtonStencil smallIcon smallMargin create size: self iconSize).
+	self addChild: (GtHomeToolsSection new newMorphicWorldButtonStencil smallIcon smallMargin create size: self iconSize).
 		
 	self addChild: (BlElement new
 		layout: (BlLinearLayout horizontal cellSpacing: 10);
-		margin: (BlInsets top: 25 left: 10 bottom: 5 right: 10);
+		margin: (BlInsets top: 25 left: 0 bottom: 5 right: 0);
 		constraintsDo: [ :c |
 			c horizontal matchParent.
 			c vertical fitContent ];
