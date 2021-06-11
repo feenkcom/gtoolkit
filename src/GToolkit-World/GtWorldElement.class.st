@@ -177,12 +177,13 @@ GtWorldElement >> newSubSpaceButton [
 								label: 'Menu';
 								yourself ]
 						content: [ 
-							GtToolsMenu new
-								knowledgeBase: self knowledgeBase;
-								constraintsDo: [ :c | 
-									c vertical fitContent.
-									c horizontal exact: 420 ];
-								yourself ]);
+							BrScrollPane new
+								aptitude: BrScrollPaneAptitude + BrGlamorousWithVerticalScrollbarAptitude;
+								hExact: 420;
+								vMatchParent;
+								content: (GtToolsMenu new
+									knowledgeBase: self knowledgeBase;
+									yourself) ]);
 		icon: BrGlamorousIcons hamburger;
 		label: 'Menu';
 		yourself.

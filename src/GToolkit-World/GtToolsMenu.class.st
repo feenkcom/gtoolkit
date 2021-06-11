@@ -1,6 +1,8 @@
 Class {
 	#name : #GtToolsMenu,
 	#superclass : #BlElement,
+	#traits : 'TBrLayoutResizable',
+	#classTraits : 'TBrLayoutResizable classTrait',
 	#instVars : [
 		'knowledgeBase'
 	],
@@ -54,9 +56,8 @@ GtToolsMenu >> initialize [
 	super initialize.
 	
 	self layout: BlFlowLayout new.
-	self constraintsDo: [ :c |
-		c horizontal matchParent.
-		c vertical matchParent ].
+	self hMatchParent.
+	self vFitContent.
 	self padding: (BlInsets top: 10 bottom: 10).
 	self initializeElements
 ]
