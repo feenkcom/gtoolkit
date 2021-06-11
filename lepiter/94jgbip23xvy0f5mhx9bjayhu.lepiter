@@ -12,6 +12,43 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-11T08:23:39.030799+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-11T08:24:16.75273+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gNYBSdmADQCtsE8CAdeF3Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The JavaScript snippet allows you to write, execute and inspect JavaScript code. It currently is supported on Mac and Linux. Windows is not yet supported."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "akgrant@gmail.com"
 				},
 				"createTime" : {
@@ -29,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-07T08:23:53.04275+02:00"
+						"dateAndTimeString" : "2021-06-11T08:23:32.7905+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The JavaScript snippet uses the [[JSLink]] library to communicate with a NodeJS server via HTTP over TCP/IP."
+				"string" : "The JavaScript snippet relies on the [[JSLink]] library to communicate with a NodeJS server via HTTP over TCP/IP."
 			},
 			{
 				"__type" : "textSnippet",
