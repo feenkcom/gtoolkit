@@ -1,7 +1,6 @@
 "
 I display a list of running {{gtClass:BlSpace}} that can be profiled. I exclude the profiler space itself
 
-
 "
 Class {
 	#name : #GtProfilerSpacesElement,

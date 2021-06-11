@@ -67,9 +67,9 @@ GtHome >> createVersionLabel [
 
 { #category : #sections }
 GtHome >> documentationSection [
-	<gtHomeSection>
+"	<gtHomeSection>"
 	^ GtHomeDocumentationSection new
-		priority: 20
+		priority: 20  
 ]
 
 { #category : #sections }
@@ -96,7 +96,7 @@ GtHome >> gtViewHomeSectionsFor: aView [
 
 { #category : #sections }
 GtHome >> howToSection [
-	<gtHomeSection>
+	"<gtHomeSection>"
 	^ GtHomeHowToSection new
 		priority: 19
 ]
@@ -181,9 +181,9 @@ GtHome >> spaceGap [
 	^ 10
 ]
 
-{ #category : #accessing }
+{ #category : #sections }
 GtHome >> toolShowsSection [
-	<gtHomeSection>
+	"<gtHomeSection>"
 	^ GtHomeToolDocsSection new 
 		priority: 16
 ]

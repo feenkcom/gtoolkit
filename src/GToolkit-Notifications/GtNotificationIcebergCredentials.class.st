@@ -2,14 +2,12 @@
 I am a {{gtClass:GtNotificationEvent}}.
 I am an abstract class.
 Muy subclasses implement user notifications to request user credentials. Those credentials are used to login in to [GitHub](https://github.com) and similar Git repositories.
-1. # Common API
-
+## Common API
 - {{gtMethod:GtNotificationIcebergCredentials>>#credentials|label=#selector}},
 - {{gtMethod:GtNotificationIcebergCredentials>>#credentialStore|label=#selector}},
 - {{gtMethod:GtNotificationIcebergCredentials>>#acceptCallback|label=#selector}}, and
 - {{gtMethod:GtNotificationIcebergCredentials>>#cancelCallback|label=#selector}}.
-1. # Concrete Implementations
-
+## Concrete Implementations
 See my {{gtClass:GtNotificationIcebergCredentials|show=#gtSubclassesFor:|label=subclasses|expanded=true|height=150}} for specific examples:
 
 

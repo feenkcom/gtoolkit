@@ -37,7 +37,13 @@ GtPlaygroundStencil class >> playgroundClassName: aClassName [
 
 { #category : #converting }
 GtPlaygroundStencil >> asPreviewElement [
-	^ GtPlayBook newDefault asElement
+	| notePage toolElement |
+	notePage := LePlayground newBasicPharoCodePage.
+	toolElement := notePage asLepiterPagePhlowToolWithoutFocus 
+		asElementDo: [ :e | e ].
+	
+	^ toolElement
+		padding: (BlInsets all: 10)
 ]
 
 { #category : #'api - instantiation' }
@@ -45,7 +51,7 @@ GtPlaygroundStencil >> create [
 	"Very ugly check for now until Lepiter is enabled by default."
 	^ self class playgroundClass = LePlayground 
 		ifTrue: [ self class playgroundClass 
-			createWithPlaygroundPageInKnowledgeBase: self currentKnowledgeBase ]
+			createWithPharoCodPageInKnowledgeBase: self currentKnowledgeBase ]
 		ifFalse: [ self class playgroundClass create ]
 	
 ]

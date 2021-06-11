@@ -1,15 +1,12 @@
 "
 I am {{gtClass:IceCredentialsProvider}}.
 I provide {{gtClass:IcePlaintextCredentials}} and {{gtClass:IceSshCredentials}}.
-1. # Public API
-
+## Public API
 - {{gtMethod:GtNotificationIcebergCredentialsProvider>>#obtainPlaintextCredentials:|label=#selector}}, and
 - {{gtMethod:GtNotificationIcebergCredentialsProvider>>#obtainSshCredentials:|label=#selector}}.
-1. # Behavior
-
+## Behavior
 I use {{gtClass:GtNotificationIcebergCredentialsElement}} to display user dialogs as a notification. Currently every credentials request is aborted by signaling {{gtClass:LGitNoCredentialsProvided}}. The reason is that we cannot block Bloc UI process to wait for user inputs. As a consequence, a user have to re-execute a code snippet that requieres the credentials.
-1. # Examples
-
+## Examples
 See {{gtClass:GtNotificationIcebergCredentialsElement|show=#gtSubclassesFor:|expanded=true|height=150}} subclasses for specific examples:
 
 

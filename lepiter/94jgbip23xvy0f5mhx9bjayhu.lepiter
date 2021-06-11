@@ -12,6 +12,43 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-11T08:23:39.030799+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-11T08:24:16.75273+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gNYBSdmADQCtsE8CAdeF3Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The JavaScript snippet allows you to write, execute and inspect JavaScript code. It currently is supported on Mac and Linux. Windows is not yet supported."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "akgrant@gmail.com"
 				},
 				"createTime" : {
@@ -23,13 +60,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "akgrant@gmail.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-08T15:52:29.755169+01:00"
+						"dateAndTimeString" : "2021-06-11T08:23:32.7905+02:00"
 					}
 				},
 				"uid" : {
@@ -39,13 +76,232 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The JavaScript snippet uses the [JSLink](https://github.com/feenkcom/jslink) library to communicate with a NodeJS server via HTTP over TCP/IP."
+				"string" : "The JavaScript snippet relies on the [[JSLink]] library to communicate with a NodeJS server via HTTP over TCP/IP."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "akgrant@gmail.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-02-08T15:53:54.424635+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "akgrant@gmail.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-02-08T15:54:27.028813+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "YxKwlelRAAAAAAAAAAAAAA=="
+										},
+										"code" : "\"Set the location of the nodejs executable\"\rthisSnippet database properties jsLinkSettings \r\tnodejsPath: '/usr/bin/node' asFileReference"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-07T08:25:11.982893+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-07T08:35:37.907984+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "V+TS1oiADQCYzkq1AdDofA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Presently, the execution depends on a NodeJS instance being installed locally. The location of node / NodeJS may be configured with:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "akgrant@gmail.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-02-09T10:29:08.918659+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "akgrant@gmail.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-02-09T10:30:07.66039+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "7MNMVoW/AAAAAAAAAAAAAA=="
+										},
+										"code" : "\"Set the JavaScript runtime directory\"\rthisSnippet database properties jsLinkSettings \r\tdirectory: '{dbParentDirectory}/js' asFileReference"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-07T08:35:43.343114+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-07T08:36:00.009462+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "s5XJ/IiADQCY45+NAdDofA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "At the same time, the JSLink runtime can be configured like this:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "akgrant@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-08T15:56:10.890371+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-07T08:26:05.889706+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "iI1YmyqxAAAAAAAAAAAAAA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "After changing the configuration Lepiter needs to be restarted to pick up the new configuration."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "akgrant@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-08T15:52:52.175016+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-07T08:24:50.542064+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ydhTDhjxAAAAAAAAAAAAAA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Currently, the execution relies on a global instance of {{gtClass:JSLinkApplication}}."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -55,44 +311,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-08T15:52:40.771433+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "akgrant@gmail.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-08T15:52:43.421415+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "g61lsDd4AAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Variables defined in other code snippets, e.g. Pharo and Python, that can be JSON encoded will be shared between snippets within a page."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "akgrant@gmail.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-08T15:52:52.175016+01:00"
+						"dateAndTimeString" : "2021-02-08T15:53:12.814617+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +322,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-27T21:11:05.42164+02:00"
+						"dateAndTimeString" : "2021-05-27T21:10:40.000553+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ydhTDhjxAAAAAAAAAAAAAA=="
+					"uidString" : "v/3RwHqdAAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Currently the global instance of {{gtClass:JSLinkApplication}} is always used."
+				"string" : "# Configuration"
 			},
 			{
 				"__type" : "textSnippet",
@@ -225,151 +444,7 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "akgrant@gmail.com"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-02-09T10:29:08.918659+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "akgrant@gmail.com"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-02-09T10:30:07.66039+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "7MNMVoW/AAAAAAAAAAAAAA=="
-										},
-										"code" : "\"Set the JavaScript runtime directory\"\rthisSnippet database properties jsLinkSettings \r\tdirectory: '{dbParentDirectory}/js' asFileReference"
-									},
-									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "akgrant@gmail.com"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-02-08T15:53:54.424635+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "akgrant@gmail.com"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-02-08T15:54:27.028813+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "YxKwlelRAAAAAAAAAAAAAA=="
-										},
-										"code" : "\"Set the location of the nodejs executable\"\rthisSnippet database properties jsLinkSettings \r\tnodejsPath: '/usr/bin/node' asFileReference"
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "akgrant@gmail.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-02-08T15:53:23.027686+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "akgrant@gmail.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-02-08T15:53:35.608797+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "RzIFomSHAAAAAAAAAAAAAA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "The location of node / nodejs and the JSLink runtime may be configured with:"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "akgrant@gmail.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-02-08T15:56:10.890371+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "akgrant@gmail.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-02-08T15:56:10.890371+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "iI1YmyqxAAAAAAAAAAAAAA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "After changing the configuration Lepiter will need to be restarted to pick up the new configuration."
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -379,7 +454,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-08T15:53:12.814617+01:00"
+						"dateAndTimeString" : "2021-02-08T15:52:40.771433+01:00"
 					}
 				},
 				"editEmail" : {
@@ -390,17 +465,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-27T21:10:40.000553+02:00"
+						"dateAndTimeString" : "2021-06-07T08:24:29.690952+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "v/3RwHqdAAAAAAAAAAAAAA=="
+					"uidString" : "g61lsDd4AAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Configuration"
+				"string" : "Variables defined in other code snippets, e.g. [[Pharo Snippet]] and [[Python Snippet]], that can be JSON encoded will be shared between snippets within a page."
 			},
 			{
 				"__type" : "textSnippet",

@@ -18,6 +18,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-11T08:24:26.014491+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-11T08:24:43.551275+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cPvLS9mADQCttLAWAdeF3Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The Python snippet allows you to write, execute and inspect Pyhton code. It currently is supported on Mac and Linux. Windows is not yet supported."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2021-05-27T21:12:04.603294+02:00"
 					}
 				},
@@ -29,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-27T21:12:04.603294+02:00"
+						"dateAndTimeString" : "2021-06-11T08:24:35.302136+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The Python Snippet uses the [PythonBridge](https://github.com/feenkcom/PythonBridge) library to communicate with a Python server via HTTP over TCP/IP."
+				"string" : "The Python Snippet uses the [[PythonBridge]] library to communicate with a Python server via HTTP over TCP/IP."
 			},
 			{
 				"__type" : "textSnippet",

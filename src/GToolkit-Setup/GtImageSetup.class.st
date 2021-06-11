@@ -29,6 +29,7 @@ GtImageSetup class >> copyDataAndDocsFolders [
 		add: (gtoolkitRepoFolders asFileReference / 'gtoolkit' / 'lepiter');
 		add: (gtoolkitRepoFolders asFileReference / 'lepiter' / 'test-data');
 		add: (gtoolkitRepoFolders asFileReference / 'JSLink' / 'js');
+		add: (gtoolkitRepoFolders asFileReference / 'PythonBridge' / 'PythonBridgeRuntime');
 		yourself.
 
 	docFolders do: [ :each |
@@ -42,6 +43,12 @@ GtImageSetup class >> copyDataAndDocsFolders [
 		[each copyAllTo: (GtResourcesUtilityConstants localGtDirectory asFileReference / localPath) ] 
 			on: FileExists 
 			do: [ :e | e printString traceCr ]].
+
+	"PythonBridge and JSLink need to be told where to find their runtime files.
+	This should be a FileLocator so that it uses the local location, not the CI's"
+	PBPharoPlatform runtimeSourceDirectory: GtResourcesUtilityConstants localGtDirectory / 'feenkcom/PythonBridge/PythonBridgeRuntime'.
+	JSLinkPharoPlatform runtimeSourceDirectory: GtResourcesUtilityConstants localGtDirectory / 'feenkcom/JSLink/js'.
+
 ]
 
 { #category : #actions }
@@ -56,6 +63,7 @@ GtImageSetup class >> performLocalSetup [
 	self installLogo.
 	self registerTools.
 	self updateLocalVersion.
+	self updateDocumentationDirectoryForLocalDevelopment.
 ]
 
 { #category : #api }
@@ -76,6 +84,13 @@ GtImageSetup class >> registerTools [
 	GtEmergencyDebugger register.
 	GtInspectorToolRegistryAdaptor register.
 	GtPlaygroundToolRegistryAdaptor register.
+]
+
+{ #category : #api }
+GtImageSetup class >> updateDocumentationDirectoryForLocalDevelopment [
+	LepiterCoreDefaults defaultDocumentationDirectory: FileLocator imageDirectory 
+		/ 'pharo-local'
+		/ 'iceberg'
 ]
 
 { #category : #actions }

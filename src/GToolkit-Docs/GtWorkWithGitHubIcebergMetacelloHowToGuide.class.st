@@ -1,9 +1,10 @@
 "
-1. How to work with GitHub and Metacello
+# How to work with GitHub and Metacello
 Before being able to work with GitHub, you first need to setup the credentials for GitHub.
 
 ```
-credentials storecredentials := IceSshCredentials new
+| credentials store |
+credentials := IceSshCredentials new
 	host:  #'*';
 	username: 'git';
 	publicKey: 'PATH/TO/id_rsa.pub';

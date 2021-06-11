@@ -1,7 +1,6 @@
 "
 I exemplify {{gtClass:GtHomeClassCommentCardElement}}.
 
-
 "
 Class {
 	#name : #GtHomeClassCommentCardElementExamples,

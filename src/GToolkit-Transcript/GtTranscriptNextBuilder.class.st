@@ -3,8 +3,7 @@ I am a utility class useful for scripting more complicated transcript instructio
 
 Please note that it is mandatory to end the cascade with either `#put:-` or `#putAll:`.
 
-1. # Example
-
+## Example
 
 ```
 	transcript next put: $a.

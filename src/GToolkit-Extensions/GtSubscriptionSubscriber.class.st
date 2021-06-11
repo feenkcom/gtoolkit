@@ -2,7 +2,6 @@
 I am used to display {{gtClass:Announcer}} subscriptions per subscribers. 
 See {{gtMethod:Announcer>>#gtSubscriptionsPerSubscriberFor:}}.
 
-
 "
 Class {
 	#name : #GtSubscriptionSubscriber,

@@ -10,20 +10,16 @@ GtHomeDocumentationSection >> create [
 	sectionContainer := self newSectionContainer.
 	sectionContainer addChild: (self newSectionTitle: 'Docs').
 	cardsContainer := self newCardsContainer.
-	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkit).
+	
+	"cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkit).
 	cardsContainer addChild: (self newDocCardForClass: GtAndPharoExplanation).
 	cardsContainer addChild: (self newDocCardForClass: GtMoldableDevelopmentExplanation).
 	cardsContainer addChild: (self newDocCardForClass: GtWhatMakesBlocSpecialExplanation).
 	cardsContainer addChild: (self newDocCardForFile: (GtResourceReference path: Path * 'feenkcom' / 'gtoolkit-examples' / 'doc' / 'tutorial' / 'examples-tutorial.pillar')).
-	cardsContainer addChild: (self newDocCardForClass: BaselineOfBrick).
-"	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitInspector).
-	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitPlayground).
-	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitCoder).
-	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitDocumenter).
-	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitVisualizer).
-	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitSpotter).
-	cardsContainer addChild: (self newDocCardForClass: BaselineOfGToolkitReleaser)."
+	cardsContainer addChild: (self newDocCardForClass: BaselineOfBrick)."
+	
 	cardsContainer addChild: (self newDocsExplorer).
+	
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]
@@ -31,13 +27,14 @@ GtHomeDocumentationSection >> create [
 { #category : #'api - instantiation' }
 GtHomeDocumentationSection >> newDocsExplorer [
 	^ self
-		newHeaderCardWithTitle: 'Doc'
-		description: 'Browse all docs in the system.'
+		newHeaderCardWithTitle: 'Glamorous Toolkit'
+		description: 'Read the Glamorous Toolkit book.'
 		size: 150 @ 200
 		content:
 			(BrLabel new
-				text: 'More docs ...';
-				aptitude: BrGlamorousLabelAptitude;
+				text: 'Glamorous Toolkit Book';
+				aptitude: BrGlamorousLabelAptitude new
+					bold;
 				padding: (BlInsets all: 20)) asScalableElement
 		action: [ :card | 
 			self

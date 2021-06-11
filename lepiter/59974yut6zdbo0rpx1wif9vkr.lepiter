@@ -1,0 +1,227 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T16:34:44.04872+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T16:34:49.564964+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qPO8cWeADQCtOp3yCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Currently, the GT code is loaded on top of a full Pharo distribution. Pharo ships with {{gtExample:GtAndPharoExplanation>>#basePharoLinesOfCode|label=#asString}} lines of code. GT adds {{gtExample:GtAndPharoExplanation>>#gtLinesOfCode|label=#asString}}. This is a significant amount of code. Let's look closer at it."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T16:34:58.332433+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T16:34:58.332433+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "drbAcmeADQCtPMoTCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "GT comes with a whole new graphical stack, and tools that completely replace the default tools of Pharo. Specifically, there are {{gtExample:GtAndPharoExplanation>>#pharoToReplaceProjects|label=#size}} projects from Pharo totalling {{gtExample:GtAndPharoExplanation>>#pharoToReplaceLinesOfCode|label=#asString}} lines of code that are not needed in GT. Still, we ship the complete Pharo code because we are in a transition period, and for the time being we want people to be able to easily access the default Pharo tools."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T16:35:04.601603+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T16:35:04.601603+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CY8rc2eADQCtPqruCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Now, if we take a closer look at the code from GT, there are a number of abilities that are not present in Pharo. For example, GT includes {{gtExample:GtAndPharoExplanation>>#smaccParsersPackages|label=#size}} parsers for other languages. These alone total {{gtExample:GtAndPharoExplanation>>#smaccParsersLinesOfCode|label=#asString}} lines of code. It includes  {{gtExample:GtAndPharoExplanation>>#famix3LinesOfCode|label=#asString}} lines of code to support code analysis of systems written in other languages. On top of that, we complement the already existing JSON support from Pharo with support for XML which adds another {{gtExample:GtAndPharoExplanation>>#xmlSupportLinesOfCode|label=#asString}} lines of code. We do that because we believe that a development environment should offer convenient support for various data formats."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T16:35:15.232095+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T16:35:15.232095+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gzkcdGeADQCtQrMUCHfMWA=="
+				},
+				"exampleSelector" : "default",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtMapFor:",
+				"exampleBehaviorName" : "GtMetrics class",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T16:35:28.437104+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-05T16:35:28.437104+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "7iqBc2eADQCtQBSYCHfMWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "All in all, we ship the extra libraries to support other languages and technologies out of the box. But, the size of the core of GT plus the size of the Pharo code we do rely on is about the same size as the size of the standard Pharo distribution."
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-06-05T16:34:35.387761+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-06-05T16:34:35.387761+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "A code size analysis"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "1b3fbc71-6780-0d00-ad39-05280877cc58"
+	}
+}

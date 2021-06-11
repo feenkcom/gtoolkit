@@ -14,10 +14,28 @@ GtHomeGetStartedSection >> create [
 		newShowCardWithTitle: 'Tour' 
 		slideshow: [ GtLiveShow createWithArrowsVisible: GtTour new ]
 		description: 'Take an interative tour through the tools and engines.').
-	cardsContainer addChild: (self 
-		newShowCardWithTitle: 'Moldable Development' 
-		slideshow: [ GtLiveShow createWithArrowsVisible: GtMoldableDevelopmentSlideshow new ]
-		description: 'A tour through the moldable development concepts.').
+		
+	cardsContainer addChild: (self
+		newHeaderCardWithTitle: 'Glamorour Toolkit'
+		description: 'Read the Glamorour Toolkit book'
+		size: 200@150
+		content:
+			(BrLabel new
+				text: 'Glamorous Toolkit Book';
+				aptitude: BrGlamorousLabelAptitude new
+					bold;
+				padding: (BlInsets all: 20)) asScalableElement
+		action: [ :card | 
+			| database startPage |
+			database := LeDatabasesRegistry default currentLoadedDefaultLogicalDatabase 
+				databaseNamed: 'Glamorous Toolkit Book'.
+			startPage := database pageNamed: 'About Glamorous Toolkit'.
+			GtWorldUtility 
+				showSpaceWithTitle: startPage title
+				inPagerWith: [ startPage
+					asLepiterPagePhlowTool asElementDo: [ :e | e ] ] asStencil
+				from: card ]).
+			
 	sectionContainer addChild: cardsContainer.
 	^ sectionContainer
 ]

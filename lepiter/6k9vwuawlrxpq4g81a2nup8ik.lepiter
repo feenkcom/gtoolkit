@@ -1,150 +1,147 @@
 {
-	"__type" : "page",
 	"__schema" : "4.1",
-	"pageType" : {
-		"title" : "Debugger",
-		"__type" : "namedPage"
-	},
-	"editEmail" : {
-		"__type" : "email",
-		"emailString" : "chisvasileandrei@gmail.com"
-	},
-	"createTime" : {
-		"time" : {
-			"dateAndTimeString" : "2021-02-24T14:57:19.943103+01:00",
-			"__type" : "dateAndTime"
-		},
-		"__type" : "time"
-	},
-	"uid" : {
-		"uuid" : "5c318526-7778-0d00-9d16-d5ed092ddc6e",
-		"__type" : "uuid"
-	},
+	"__type" : "page",
 	"children" : {
+		"__type" : "snippets",
 		"items" : [
 			{
 				"__type" : "textSnippet",
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The Debugger is a ... debugger. Go figure.",
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"time" : {
-						"dateAndTimeString" : "2021-03-05T00:39:10.475322+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				},
-				"uid" : {
-					"uidString" : "hog2YXIPAAAAAAAAAAAAAA==",
-					"__type" : "uid"
-				},
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "tudor@tudorgirba.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-03-05T00:39:10.475322+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-03-05T00:39:10.475322+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "tudor@tudorgirba.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-03-05T00:39:10.475322+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "hog2YXIPAAAAAAAAAAAAAA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The Debugger is a ... debugger. Go figure."
 			},
 			{
 				"__type" : "textSnippet",
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Take a look example with an exception:",
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"time" : {
-						"dateAndTimeString" : "2021-03-05T00:39:13.000405+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				},
-				"uid" : {
-					"uidString" : "8VbosyiUAAAAAAAAAAAAAA==",
-					"__type" : "uid"
-				},
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "tudor@tudorgirba.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-03-05T00:39:13.000405+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-03-05T00:39:13.000405+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-10T18:59:45.219738+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8VbosyiUAAAAAAAAAAAAAA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Take a look example with an exception:"
 			},
 			{
-				"__type" : "textSnippet",
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtExample:GtDummyExamplesWithExceptions class>>#j|previewHeight=100|previewExpanded=}}",
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"time" : {
-						"dateAndTimeString" : "2021-03-05T00:39:07.852251+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				},
-				"uid" : {
-					"uidString" : "iZPplC2RAAAAAAAAAAAAAA==",
-					"__type" : "uid"
-				},
+				"__type" : "pharoSnippet",
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-10T18:59:47.901006+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-03-05T00:39:32.613291+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-10T18:59:48.717702+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "d4Y/Ds6ADQCtMuhhAdeF3Q=="
+				},
+				"code" : "1/0"
 			}
-		],
-		"__type" : "snippets"
+		]
 	},
 	"createEmail" : {
 		"__type" : "email",
 		"emailString" : "chisvasileandrei@gmail.com"
 	},
-	"editTime" : {
+	"createTime" : {
+		"__type" : "time",
 		"time" : {
-			"dateAndTimeString" : "2021-02-24T14:57:19.943103+01:00",
-			"__type" : "dateAndTime"
-		},
-		"__type" : "time"
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-02-24T14:57:19.943103+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "chisvasileandrei@gmail.com"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-02-24T14:57:19.943103+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Debugger"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "5c318526-7778-0d00-9d16-d5ed092ddc6e"
 	}
 }

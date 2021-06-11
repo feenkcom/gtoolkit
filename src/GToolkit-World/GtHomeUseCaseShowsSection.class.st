@@ -8,7 +8,7 @@ Class {
 GtHomeUseCaseShowsSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := self newSectionContainer.
-	sectionContainer addChild: (self newSectionTitle: 'About use cases').
+	sectionContainer addChild: (self newSectionTitle: 'Use cases').
 	cardsContainer := self newCardsContainer.
 	cardsContainer addChild: (self
 		newShowCardWithTitle: 'Working With a REST API'

@@ -1,5 +1,5 @@
 "
-1. Welcome to the space runner!
+# Welcome to the space runner!
 
 Here you will learn what happens when ask to `show` a {{gtClass:BlSpace}}. On the right is a flow diagram of the important actions that should happen in order for a space to appear. By default all nodes in the diagram are gray, meaning that those actions didn't happen yet.
 
@@ -9,7 +9,6 @@ If everything worked correctly a new space should have appeared and most of the 
 
 Congratulations! Your Space is alive! Feel free to play with it :)
 When done press the `Stop` button to safely close the space. Or press the `Reset` button to put everything back, just like it was before.
-
 
 "
 Class {

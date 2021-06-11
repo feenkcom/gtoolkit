@@ -1,7 +1,6 @@
 "
 I exemplify {{gtClass:GtHomeDocumentCardElement}}.
 
-
 "
 Class {
 	#name : #GtHomeDocumentCardElementExamples,

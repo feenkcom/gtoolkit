@@ -1,15 +1,12 @@
 "
 I am an {{gtClass:BlElement}}.
 I summarize a file content for a given {{gtMethod:GtHomeFileDocumentCardElement>>#file:|label=file}}.
-1. # Examples
-## Existing file
-
+## Examples
+### Existing file
 {{gtExample:GtHomeFileDocumentCardElementExamples>>#elementWithFilledFile|codeExpanded=false|previewExpanded=true}}
-1. ## Existing empty file
-
+### Existing empty file
 {{gtExample:GtHomeFileDocumentCardElementExamples>>#elementWithEmptyFile|codeExpanded=false|previewExpanded=true}}
-1. ## Inexistent file
-
+### Inexistent file
 {{gtExample:GtHomeFileDocumentCardElementExamples>>#elementWithInexistentFile|codeExpanded=false|previewExpanded=true}}
 
 
