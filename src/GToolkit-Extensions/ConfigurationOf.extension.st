@@ -39,9 +39,7 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 						zIndex: 1; 
 						when: BlClickEvent do: [ :e | 
 							e consumed: true. 
-							element phlow spawnTool: (GtPhlowCompositeTool new
-						addTool: (GtDocumenterTool forClass: each spec project configuration class realClass);
-						addTool: (GtClassCoderTool forClass: each spec project configuration class realClass)) ] ];
+							element phlow spawnTool: (GtClassCoderTool forClass: each spec project configuration class realClass) ] ];
 				with: projects.
 			mondrian edges
 				shape: [ :each |
