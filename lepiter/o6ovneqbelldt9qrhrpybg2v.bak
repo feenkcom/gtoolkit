@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-14T14:41:10.72335+02:00"
+						"dateAndTimeString" : "2021-06-14T14:41:16.50686+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,41 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Every {{gtClass:LeLogicalDatabase}} can compute a status object that indicates the status of syncronizing the content of that dabase to "
+				"string" : "Every {{gtClass:LeLogicalDatabase}} can compute a status object that indicates the status of syncronizing the content of that dabase to disk."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-14T14:41:23.026556+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-14T14:41:23.410201+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rWpz6RqBDQCFzCIJDhdZCw=="
+				},
+				"code" : "LeDatabasesRegistry defaultLogicalDatabase localSyncMonitorStatus"
 			}
 		]
 	},
