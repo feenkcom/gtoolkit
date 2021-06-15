@@ -12,13 +12,13 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-03-05T01:20:30.605652+01:00"
+						"dateAndTimeString" : "2021-06-14T14:37:33.768399+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-14T23:22:59.374601+02:00"
+						"dateAndTimeString" : "2021-06-14T14:41:16.50686+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "9dA+vxcKAAAAAAAAAAAAAA=="
+					"uidString" : "NTLG2hqBDQCFyWbJDhdZCw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Every {{gtClass:LeLogicalDatabase}} can compute a status object that indicates the status of syncronizing the content of that dabase to disk."
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-14T23:23:04.372927+02:00"
+						"dateAndTimeString" : "2021-06-14T14:41:23.026556+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,51 +66,45 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-14T23:23:04.372927+02:00"
+						"dateAndTimeString" : "2021-06-14T14:41:23.410201+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "3w4oMyKBDQCfwN1UAnIwMQ=="
+					"uidString" : "rWpz6RqBDQCFzCIJDhdZCw=="
 				},
-				"exampleSelector" : "squarifyWithSevenNodes",
-				"previewHeight" : 400,
-				"previewShowSelector" : "gtPreviewFor:",
-				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
-				"codeExpanded" : false,
-				"previewExpanded" : true,
-				"noCode" : false
+				"code" : "LeDatabasesRegistry defaultLogicalDatabase localSyncMonitorStatus"
 			}
 		]
 	},
 	"createEmail" : {
 		"__type" : "email",
-		"emailString" : "tudor@tudorgirba.com"
+		"emailString" : "<unknown>"
 	},
 	"createTime" : {
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-03-05T01:01:38.072209+01:00"
+			"dateAndTimeString" : "2021-06-14T14:37:16.746883+02:00"
 		}
 	},
 	"editEmail" : {
 		"__type" : "email",
-		"emailString" : "tudor@tudorgirba.com"
+		"emailString" : "<unknown>"
 	},
 	"editTime" : {
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-03-05T01:01:38.072209+01:00"
+			"dateAndTimeString" : "2021-06-14T15:07:58.082425+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "TreeMap"
+		"title" : "How to compute the local sync database status for the default database"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "0e566786-2079-0d00-8e27-b0f00730a0bd"
+		"uuid" : "277cc5da-1a81-0d00-85c8-bfcd0e17590b"
 	}
 }
