@@ -8,7 +8,42 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-05T16:24:06.122303+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-09T22:08:08.457272+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aWs6TGeADQCsa3YTCHfMWA=="
+							},
+							"code" : "pages := thisSnippet database pages"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -42,44 +77,45 @@
 				"string" : "Every [[Pharo Snippet]] is populated with a `thisSnippet` variable. Through that, we can just get access to the entire database and the registered pages."
 			},
 			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:24:06.122303+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-09T22:08:08.457272+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "aWs6TGeADQCsa3YTCHfMWA=="
-				},
-				"code" : "pages := thisSnippet database pages"
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-09T22:08:24.837474+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-14T23:38:55.320911+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "leXykryADQCnVc9HDiSrtQ=="
+							},
+							"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [:each | \r\t\tBlElement new \r\t\t\tbackground: Color black;\r\t\t\tsize: 5@5;\r\t\t\twhen: BlClickEvent do: [:e | \r\t\t\t\te currentTarget phlow spawnTool: each asPhlowTool] ];\r\twith: pages.\rm edges connectToAll: [:page | page allOutgoingTextualLinks collect: #target].\rm layout force nbIterations: 30.\rm asElement"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -113,44 +149,45 @@
 				"string" : "All pages are connected to one another. Let's visualize that graph:"
 			},
 			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-09T22:08:24.837474+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-09T22:15:28.35543+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "leXykryADQCnVc9HDiSrtQ=="
-				},
-				"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [:each | \r\t\tBlElement new \r\t\t\tbackground: Color black;\r\t\t\tsize: 5@5;\r\t\t\twhen: BlClickEvent do: [:e | e currentTarget phlow spawnObject: each] ];\r\twith: pages.\rm edges connectToAll: [:page | page allOutgoingTextualLinks collect: #target].\rm layout force nbIterations: 30.\rm asElement"
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-09T22:15:24.498635+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-14T21:58:32.723842+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8Gr2q7yADQCoJJs2DiSrtQ=="
+							},
+							"code" : "pages := thisSnippet database pages reject: [:each | \r\teach title = 'Glamorous Toolkit Book']"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -184,44 +221,45 @@
 				"string" : "Ah, that graph is a little too crowded because [[Glamorous Toolkit Book]] is linked to all pages in the database. So, let's take that page out."
 			},
 			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-09T22:15:24.498635+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-09T22:15:25.027327+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "8Gr2q7yADQCoJJs2DiSrtQ=="
-				},
-				"code" : "pages := thisSnippet database pages reject: [:each | each title = 'Glamorous Toolkit Book']"
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-09T22:08:40.017164+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-14T21:58:51.538637+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "M4Xak7yADQCnWSLhDiSrtQ=="
+							},
+							"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [:each |\r\t\tBlElement new \r\t\t\tbackground: ((each title includesSubstring: 'Lepiter') \r\t\t\t\tifTrue: [Color red]\r\t\t\t\tifFalse:  [Color black]);\r\t\t\tsize: 5@5;\r\t\t\twhen: BlClickEvent do: [:e | \r\t\t\t\te currentTarget phlow spawnTool: each asPhlowTool] ];\r\twith: pages.\rm edges connectToAll: [:page | page allOutgoingTextualLinks collect: #target].\rm layout force nbIterations: 30.\rm asElement"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -253,40 +291,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "That's better, but still not particularly valuable. That's because the visualization it's generic.  Value is always specific. So, in true[[Moldable Development]] fashion, let's enhance our visualization with a contextual mapping. For example, highlighting where `Lepiter` is found in titles."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-09T22:08:40.017164+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-09T22:15:36.34393+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "M4Xak7yADQCnWSLhDiSrtQ=="
-				},
-				"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [:each |\r\t\tBlElement new \r\t\t\tbackground: ((each title includesSubstring: 'Lepiter') \r\t\t\t\tifTrue: [Color red]\r\t\t\t\tifFalse:  [Color black]);\r\t\t\tsize: 5@5;\r\t\t\twhen: BlClickEvent do: [:e | e currentTarget phlow spawnTool: each asPhlowTool] ];\r\twith: pages.\rm edges connectToAll: [:page | page allOutgoingTextualLinks collect: #target].\rm layout force nbIterations: 30.\rm asElement"
 			},
 			{
 				"__type" : "textSnippet",
