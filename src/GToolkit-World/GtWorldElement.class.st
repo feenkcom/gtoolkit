@@ -120,7 +120,9 @@ GtWorldElement >> newActionItemsInto: anActionbar [
 	anActionbar addItem: self newNotificationsBadge.
 	anActionbar addItem: self newSpotterButton.
 	GtImage isLepiterEnabled ifTrue: [
-		anActionbar addItem: self newStatusButton ].
+		anActionbar addItem: self newStatusButton].
+	GtImage isSyncEnabled ifTrue: [
+		anActionbar addItem: self newSynchronizeButton].
 	anActionbar addItem: self newSubSpaceButton.
 ]
 
@@ -199,6 +201,14 @@ GtWorldElement >> newSubSpaceButton [
 		label: 'Menu';
 		yourself.
 	^ subSpaceDropdown
+]
+
+{ #category : #accessing }
+GtWorldElement >> newSynchronizeButton [
+	"Answer a dropdown button for syncronizing databases"
+
+	^ LeSyncClientAccountSyncBadge new
+		leWorldElement: self
 ]
 
 { #category : #'hooks - children' }

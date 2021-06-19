@@ -252,14 +252,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-14T14:58:36.212061+02:00"
+						"dateAndTimeString" : "2021-06-18T10:34:53.435832+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "YoBfJBuBDQCGBix6DhdZCw=="
 				},
-				"code" : "currentDatabase := LeDatabasesRegistry default defaultLogicalDatabase.\ncurrentDatabase saveProperties.\ndatabaseProperties := database properties.\r\nLeDatabasesRegistry default stopMonitoring.\nLeDatabasesRegistry default \r\tdefaultLogicalDatabase: databaseProperties logicalDatabase."
+				"code" : "currentDatabase := LeDatabasesRegistry default defaultLogicalDatabase.\ncurrentDatabase saveProperties.\ndatabaseProperties := currentDatabase properties.\r\nLeDatabasesRegistry default stopMonitoring.\nLeDatabasesRegistry default \r\tdefaultLogicalDatabase: databaseProperties logicalDatabase."
 			},
 			{
 				"__type" : "textSnippet",
