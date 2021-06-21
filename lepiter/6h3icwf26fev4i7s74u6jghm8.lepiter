@@ -71,14 +71,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-29T19:41:09.839539+02:00"
+									"dateAndTimeString" : "2021-06-21T09:04:20.027722+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "qFBbNRdgAAAAAAAAAAAAAA=="
 							},
-							"code" : "thisSnippet database properties pythonBridgeSettings serverDebugMode: true"
+							"code" : "thisSnippet database properties pythonBridgeSettings serverDebugMode: true.\r\"After setting this, the server will need to be restarted\"\rPBApplication stop."
 						}
 					]
 				},
@@ -173,7 +173,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T19:41:16.929081+02:00"
+						"dateAndTimeString" : "2021-06-21T09:04:29.190527+02:00"
 					}
 				},
 				"uid" : {
@@ -183,7 +183,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If there are error it can be useful to stop the Python server link:"
+				"string" : "If there are errors it can be useful to stop the Python server link:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -245,7 +245,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T19:41:32.887617+02:00"
+						"dateAndTimeString" : "2021-06-21T09:04:39.441743+02:00"
 					}
 				},
 				"uid" : {
@@ -255,7 +255,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To check that the node process is running in the right folder."
+				"string" : "To check that the python process is running in the right folder."
 			},
 			{
 				"__type" : "textSnippet",
@@ -354,7 +354,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T19:44:11.369267+02:00"
+						"dateAndTimeString" : "2021-06-21T09:07:27.963241+02:00"
 					}
 				},
 				"uid" : {
@@ -364,7 +364,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Inserting a breakpoint in the script only works like this:"
+				"string" : "PythonBridge uses the python `exec()` function to evaluate snippets.  Breakpoints aren't supported directly in the `exec()` script, so must be placed in a function, e.g.:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -468,14 +468,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-29T19:56:17.090956+02:00"
+									"dateAndTimeString" : "2021-06-21T09:09:17.289747+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "cmjlSJYeAAAAAAAAAAAAAA=="
 							},
-							"code" : "GtResourcesUtility default resourceAtPath: Path * 'feenkcom'/ 'PythonBridge' / 'tfactorial.py'"
+							"code" : "GtResourcesUtility default resourceAtPath: Path * 'feenkcom'/ 'PythonBridge' / 'PythonBridgeRuntime' / 'PythonBridge' / 'tfactorial.py'"
 						}
 					]
 				},

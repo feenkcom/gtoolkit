@@ -18,7 +18,7 @@ catch
 }
 
 
-$maximumRuntimeSeconds = 1200
+$maximumRuntimeSeconds = 1800
 
 $process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchExamples --junit-xml-output --verbose' -PassThru
 
@@ -35,7 +35,7 @@ catch
 }
 
 
-$maximumRuntimeSeconds = 1200
+$maximumRuntimeSeconds = 1800
 
 $process = Start-Process -FilePath .\GlamorousToolkitWin\GlamorousToolkitConsole.exe -ArgumentList ' .\GlamorousToolkitWin\GlamorousToolkit.image dedicatedReleaseBranchSlides --junit-xml-output' -PassThru
 
