@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-11T08:24:43.551275+02:00"
+						"dateAndTimeString" : "2021-06-21T08:51:00.755126+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The Python snippet allows you to write, execute and inspect Pyhton code. It currently is supported on Mac and Linux. Windows is not yet supported."
+				"string" : "The Python snippet allows you to write, execute and inspect Python code. It is currently supported on Mac and Linux. Windows is not yet supported."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-11T08:24:35.302136+02:00"
+						"dateAndTimeString" : "2021-06-21T08:57:19.873402+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The Python Snippet uses the [[PythonBridge]] library to communicate with a Python server via HTTP over TCP/IP."
+				"string" : "The Python Snippet uses the [[PythonBridge]] library to communicate with a Python server via [msgpack](https://github.com/msgpack/msgpack-smalltalk) or HTTP over TCP/IP."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-27T21:12:15.431664+02:00"
+						"dateAndTimeString" : "2021-06-21T08:57:40.130833+02:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Currently the global instance of {{gtClass:PBApplication}} is always used."
+				"string" : "Currently the global instance of  {{gtClass:PBApplication}} is always used."
 			},
 			{
 				"__type" : "textSnippet",
@@ -212,7 +212,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-27T21:13:40.823841+02:00"
+						"dateAndTimeString" : "2021-06-21T09:01:08.894638+02:00"
 					}
 				},
 				"uid" : {
@@ -222,7 +222,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Examples"
+				"string" : "# Examples"
 			},
 			{
 				"__type" : "textSnippet",
@@ -291,14 +291,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-27T21:12:36.101851+02:00"
+									"dateAndTimeString" : "2021-06-21T08:58:06.848061+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "C6XP+zryAAAAAAAAAAAAAA=="
 							},
-							"code" : "\"Set the Python runtime directory\"\rthisSnippet database properties pythonBridgeSettings \r\tdirectory: '../PythonBridge' asFileReference"
+							"code" : "\"Set the Python runtime directory\"\rthisSnippet database properties pythonBridgeSettings \r\tdirectory: '{imageDirectory}/PythonBridge' asFileReference"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -370,6 +370,78 @@
 								"__type" : "textStyle"
 							},
 							"string" : "After changing the configuration Lepiter will need to be restarted to pick up the new configuration."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-21T08:59:18.623739+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-21T08:59:57.767707+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "1oP98qKBDQC0xDHOBQ3kXA=="
+										},
+										"code" : "FileLocator supportedOrigins sorted"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-21T08:58:34.664238+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-21T08:59:15.568589+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UTzy76KBDQC0wrvQBQ3kXA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Path segments in curly-braces, e.g. `{imageDirectory}` are {{gtClass:FileLocator}} known origins.  For a full list see:"
 						}
 					]
 				},
@@ -392,7 +464,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-27T21:13:13.459522+02:00"
+						"dateAndTimeString" : "2021-06-21T09:01:05.138378+02:00"
 					}
 				},
 				"uid" : {
@@ -402,7 +474,82 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Configuration"
+				"string" : "# Configuration"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-21T09:02:02.740191+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-21T09:03:44.201589+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wYE7+6KBDQC0zTM4BQ3kXA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If PythonBridge is configured  {{gtMethod:LePythonBridgeSettings>>#serverDebugMode:}} with `true`, a python debugger will be opened in Gt.  See [[Python Debugger Setup & Example]] for details."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-21T09:01:31.345051+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-21T09:01:35.947285+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ntfM+qKBDQC0yw6WBQ3kXA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Debugger Integration"
 			},
 			{
 				"__type" : "textSnippet",
@@ -467,7 +614,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-27T21:13:02.830692+02:00"
+						"dateAndTimeString" : "2021-06-21T09:00:57.218852+02:00"
 					}
 				},
 				"uid" : {
@@ -477,7 +624,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Tips"
+				"string" : "# Tips"
 			}
 		]
 	},

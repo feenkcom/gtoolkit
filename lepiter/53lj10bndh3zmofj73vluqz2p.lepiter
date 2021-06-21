@@ -1,0 +1,964 @@
+{
+	"__type" : "page",
+	"__schema" : "4.1",
+	"pageType" : {
+		"title" : "Geometry, Visual, and Layout Bounds Explained",
+		"__type" : "namedPage"
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "contact@feenk.com"
+	},
+	"createTime" : {
+		"time" : {
+			"dateAndTimeString" : "2020-12-18T17:32:57.82267+01:00",
+			"__type" : "dateAndTime"
+		},
+		"__type" : "time"
+	},
+	"uid" : {
+		"uuid" : "1136e465-2173-0d00-a23b-066402ea2456",
+		"__type" : "uuid"
+	},
+	"editTime" : {
+		"time" : {
+			"dateAndTimeString" : "2020-12-18T17:32:57.82267+01:00",
+			"__type" : "dateAndTime"
+		},
+		"__type" : "time"
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "contact@feenk.com"
+	},
+	"children" : {
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"string" : "A bound is a territorial limit, a boundary. In terms of a graphical element, it is a space in which the graphical element is rendered. For simplicity, bounds are rectangular areas. Bloc defines three different bounds (layout, geometry, and visual) that we will explain using the following example:",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822308+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "6s6cXwSaAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822308+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#centeredOutskirts|previewExpanded}}",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822488+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "mQKCiZ43AAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822488+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "\"Layout\" bounds are drawn with gray dashed rectangles in the figure above. They are of this size in this particula example, because each element defines its size explicitly using `size:` method. Layout bounds are considered by layout algorithms to define mutual locations for all considered elements.",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822556+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "fHVwo0PhAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822556+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "\"Geometry\" bounds are drawn with red dashed rectangles in the figure above. The area is defined by minimum and maximum values of a polygon vertices. In case of rectangle, geometry bounds are defined by the following polygon:",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822566+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "5IAqA51eAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822566+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#rectanglePolygon}}",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822571+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "9ppqSCXJAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822571+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "\"Visual\" bounds are drawn with blue rectangles in the figure above. It is an exact area occupied by an element. Computing visual bounds is the most expensive computation as it takes strokes and rendering into account.",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822575+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "XrcjrJrTAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822575+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "## Different Bounds Setups",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822579+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "NO59X9dkAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822579+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "The first figure above draws all strokes centered around the defined vertices. For that reason, the geometry bounds are in the middle. The following example draws strokes outside:",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822584+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "J9Eaeu9pAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822584+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#outsideOutskirts|previewExpanded}}",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822588+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "SOtthrGKAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822588+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "In case of the rectangle, you can notice that its stroke is inside of the visual (blue, outside) and the geometry (red, inside) bounds. If the strokes are drawn inside, then visual and geometry bounds are equal:",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822592+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "ti5rChufAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822592+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#insideOutskirts|previewExpanded}}",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822596+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "gM+iYnh9AAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822596+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "# Debugging Bounds",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.8226+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "Anly6dLPAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.8226+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "Being able to display those three bounds helps when elements are not visually aligned as expected. Consider the following example:",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822604+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "hmYa1pD+AAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822604+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#misalignedIcon|previewExpanded}}",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822609+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "0Cf7OaYUAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822609+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "The triangle (icon) and text are not vertically centered despide the fact that we have `BlLinearLayout horizontal alignCenter` in the code. To understand why it happens, `aTriangleElement debug: true` can be added to the code with the following result:",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822613+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "P9DDyDPXAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822613+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#debuggingMisalignedIcon|previewExpanded}}",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822617+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "POf7we9zAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822617+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "As we can see the layout bounds (gray dashed rectangle) consider larger area then expected. Looking at the definition of the triangle polygon, we can spot that the polygon starts at `0@3` instead of `0@0`:",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.82263+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "MuvNltmWAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.82263+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#misalignedTrianglePolygon}}",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822635+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "YY9JsToqAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822635+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "If we fix it to:",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822639+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "W5LTbpTWAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822639+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#trianglePolygon}}",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822643+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "d3vcX7RCAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822643+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "The icon and text are aligned as expected:",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822647+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "BgmtK1DEAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822647+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#debuggingAlignedIcon|previewExpanded}}",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822651+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "EnkyGcEdAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822651+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "And we can disactivate the debug mode:",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822655+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "sPzamKx9AAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822655+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#alignedIcon|previewExpanded}}",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.82266+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "HnEKgEX/AAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.82266+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			},
+			{
+				"__type" : "textSnippet",
+				"string" : "The debugging mode is also possible to activate in the GT-Inspector's menu, next to the tabs.",
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822664+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"uid" : {
+					"uidString" : "hudrvmkXAAAAAAAAAAAAAA==",
+					"__type" : "uid"
+				},
+				"editTime" : {
+					"time" : {
+						"dateAndTimeString" : "2020-12-18T17:32:57.822664+01:00",
+						"__type" : "dateAndTime"
+					},
+					"__type" : "time"
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"children" : {
+					"items" : [ ],
+					"__type" : "snippets"
+				}
+			}
+		],
+		"__type" : "snippets"
+	}
+}
