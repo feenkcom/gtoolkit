@@ -12,34 +12,34 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "contact@feenk.com"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T07:57:32.460465+02:00"
+						"dateAndTimeString" : "2020-12-18T17:32:58.111371+01:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "contact@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T08:17:38.647544+02:00"
+						"dateAndTimeString" : "2020-12-18T17:32:58.111371+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "p+0VFqKBDQCH8GQ7B345NA=="
+					"uidString" : "OTwpdFfYAAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For various debugging reasons, we might need to learn about where a Lepiter knowledge base is stored on disk. "
+				"string" : "In this tutorial we will build a memory game. In a memory game players need to find pairs of similar cards. In each round a player turns over two cards at a time. If the two cards show the same symbol they are removed and the player gets a point. If not, they are both flipped."
 			},
 			{
 				"__type" : "textSnippet",
@@ -49,68 +49,34 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "contact@feenk.com"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T07:57:00.572824+02:00"
+						"dateAndTimeString" : "2020-12-18T17:32:58.111378+01:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "contact@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T08:17:57.945501+02:00"
+						"dateAndTimeString" : "2020-12-18T17:32:58.111378+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2Q3AE6KBDQCH7+QOB345NA=="
+					"uidString" : "l3p2n5OxAAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Every knowledge base that is stored on disk has a `monitor` that keeps track of changes and synchronizes them with the disk. Naturally, this object also knows where the root directory is, too. You can get to it like this:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T07:19:03.401673+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T07:51:03.988352+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "84B0jKGBDQCH5PHcB345NA=="
-				},
-				"code" : "thisSnippet database monitor localRoot"
+				"string" : "The following figure shows the game after the first selection of two cards. Faced-down cards are represented with a cross and turned cards with their number: ![](file://attachments/53lj10b11sa32u43jn7ylsxrl/memoryExample0.png)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -120,13 +86,50 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "contact@feenk.com"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T07:54:17.697672+02:00"
+						"dateAndTimeString" : "2020-12-18T17:32:58.111383+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2020-12-18T17:32:58.111383+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6B8qx5hdAAAAAAAAAAAAAA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The following figure shows the same game after a few rounds. While this game can be played by multiple players, in this tutorial we will build a game with just one player: ![](file://attachments/53lj10fznqo2indw073wbzq96/memoryExample1.png)"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "contact@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2020-12-18T17:32:58.111387+01:00"
 					}
 				},
 				"editEmail" : {
@@ -137,48 +140,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T07:56:21.085556+02:00"
+						"dateAndTimeString" : "2021-06-21T09:46:12.419964+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6i+zB6KBDQCH6gMgB345NA=="
+					"uidString" : "f21TTfN7AAAAAAAAAAAAAA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This makes use of the `thisSnippet` variable from a Pharo snippet from which we can get to the current database."
+				"string" : "First, we implement the game model: [[Implementing the Memory Game Model]]"
 			}
 		]
 	},
 	"createEmail" : {
 		"__type" : "email",
-		"emailString" : "<unknown>"
+		"emailString" : "contact@feenk.com"
 	},
 	"createTime" : {
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-06-21T07:17:03.186101+02:00"
+			"dateAndTimeString" : "2020-12-18T17:32:58.111391+01:00"
 		}
 	},
 	"editEmail" : {
 		"__type" : "email",
-		"emailString" : "<unknown>"
+		"emailString" : "contact@feenk.com"
 	},
 	"editTime" : {
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-06-21T07:59:51.328489+02:00"
+			"dateAndTimeString" : "2020-12-18T17:32:58.111391+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to find where a database is stored on disk"
+		"title" : "Memory Game"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "51254a85-a181-0d00-87dc-5677077e3934"
+		"uuid" : "f9cce865-2173-0d00-a259-cfca02ea2456"
 	}
 }
