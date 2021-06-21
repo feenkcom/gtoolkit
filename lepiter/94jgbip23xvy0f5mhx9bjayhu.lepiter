@@ -268,6 +268,78 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-21T11:42:26.049627+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-21T11:42:30.785322+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "6sZdOqWBDQC01ltkBQ3kXA=="
+										},
+										"code" : "FileLocator supportedOrigins sorted"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-21T11:42:21.417454+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-21T11:42:21.417454+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4W4OOqWBDQC01d+jBQ3kXA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Path segments in curly-braces, e.g. `{imageDirectory}` are {{gtClass:FileLocator}} known origins.  For a full list see:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
 								"items" : [ ]
 							},
 							"createEmail" : {
@@ -406,6 +478,43 @@
 								"uidString" : "xbJUGbscAAAAAAAAAAAAAA=="
 							},
 							"code" : "var cwd = process.cwd();\ncwd;"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "akgrant@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-08T15:52:40.771433+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-07T08:24:29.690952+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "g61lsDd4AAAAAAAAAAAAAA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Variables defined in other code snippets, e.g. [[Pharo Snippet]] and [[Python Snippet]], that can be JSON encoded will be shared between snippets within a page."
 						}
 					]
 				},
@@ -444,17 +553,55 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-21T11:43:39.747849+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-21T11:45:42.553474+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "N8hhPqWBDQC04sPSBQ3kXA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If  {{gtMethod:LeJSLinkSettings>>#serverDebugMode:}} is configured `true`, a javascript debugger will be opened in Gt.  See [[JavaScript Debugger Setup & Example]] for details."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "akgrant@gmail.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-02-08T15:52:40.771433+01:00"
+						"dateAndTimeString" : "2021-06-21T11:43:29.251765+02:00"
 					}
 				},
 				"editEmail" : {
@@ -465,17 +612,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-07T08:24:29.690952+02:00"
+						"dateAndTimeString" : "2021-06-21T11:43:32.348916+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "g61lsDd4AAAAAAAAAAAAAA=="
+					"uidString" : "1RUEPqWBDQC04OQSBQ3kXA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Variables defined in other code snippets, e.g. [[Pharo Snippet]] and [[Python Snippet]], that can be JSON encoded will be shared between snippets within a page."
+				"string" : "# Debugger Integration"
 			},
 			{
 				"__type" : "textSnippet",
