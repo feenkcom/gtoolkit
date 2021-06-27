@@ -73,13 +73,6 @@ GtHome >> documentationSection [
 ]
 
 { #category : #sections }
-GtHome >> externalLinksSection [
-	<gtHomeSection>
-	^ GtHomeExternalLinksSection new
-		priority: 200
-]
-
-{ #category : #sections }
 GtHome >> getStartedSection [
 	<gtHomeSection>
 	^ GtHomeGetStartedSection new 
