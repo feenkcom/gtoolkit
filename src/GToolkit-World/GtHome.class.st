@@ -59,9 +59,14 @@ GtHome >> createVersionLabel [
 		margin: (BlInsets all: 5);
 		constraintsDo: [ :c | c linear horizontal alignRight ];
 		action: [ :button | 
-			GtInspector 
-				openOn: GtImage instance
-				title: 'Glamorous Toolkit'
+			| database startPage |
+			database := LeDatabasesRegistry default currentLoadedDefaultLogicalDatabase 
+				databaseNamed: 'Glamorous Toolkit Book'.
+			startPage := database pageNamed: 'About this Version of Glamorous Toolkit'.
+			GtWorldUtility 
+				showSpaceWithTitle: startPage title
+				inPagerWith: [ startPage
+					asLepiterPagePhlowTool asElementDo: [ :e | e ] ] asStencil
 				from: button ]
 ]
 
