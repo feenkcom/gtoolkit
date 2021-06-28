@@ -558,6 +558,188 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-28T08:44:01.570803+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-28T08:44:41.278794+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "hAQ4jS+CDQCGT9HEAJbZxQ=="
+										},
+										"code" : "JSLinkApplication uniqueInstance installModule: 'MyModule'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-28T08:43:55.555825+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-28T08:43:55.555825+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "awtVjC+CDQCGToAcAJbZxQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If you have a script that you want to keep standalone and doesn't require detailed module management, individual modules may be installed using `#installModule:`, e.g.:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-28T08:45:17.721968+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-28T08:47:04.777581+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "1P3BkS+CDQCGUVqiAJbZxQ=="
+										},
+										"code" : "JSLinkApplication uniqueInstance settings workingDirectory / 'package.json'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-28T08:43:17.29102+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-28T08:50:39.230764+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mZpoii+CDQCGTaToAJbZxQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Lepiter uses `NodeJS` to provide the JS environment, which in turn uses `npm`.  If you want to manage the modules, e.g. update or specify versions, the environment's `package.json` file should be edited directly:"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-28T08:42:54.22467+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-28T08:43:02.301507+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2Q0TiS+CDQCGSvLJAJbZxQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Installing JavaScript modules"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
 								"items" : [ ]
 							},
 							"createEmail" : {

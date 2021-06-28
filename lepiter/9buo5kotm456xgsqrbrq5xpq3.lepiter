@@ -338,7 +338,42 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-28T08:25:40.153522+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-28T08:25:45.170374+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "QLmRSy+CDQCGLLtCAJbZxQ=="
+										},
+										"code" : "PBApplication stop."
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -359,7 +394,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-27T21:12:52.730933+02:00"
+									"dateAndTimeString" : "2021-06-28T08:25:38.038386+02:00"
 								}
 							},
 							"uid" : {
@@ -369,7 +404,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "After changing the configuration Lepiter will need to be restarted to pick up the new configuration."
+							"string" : "After changing the configuration the python server will need to be restarted to pick up the new configuration:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -475,6 +510,188 @@
 					"__type" : "textStyle"
 				},
 				"string" : "# Configuration"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-28T08:27:28.54459+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-28T08:39:52.174047+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "eaMHUi+CDQCGNNHwAJbZxQ=="
+										},
+										"code" : "PBApplication uniqueInstance installModule: 'MyModule'"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "pharoSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2021-06-28T08:41:03.236353+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2021-06-28T08:41:55.360808+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "HtmWgi+CDQCGOqg8AJbZxQ=="
+													},
+													"code" : "PBApplication uniqueInstance workingDirectory / 'Pipfile'"
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-28T08:40:12.181472+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2021-06-28T08:41:47.372883+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "HrXEfS+CDQCGOMLHAJbZxQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "If you want to manage the modules, e.g. update or specify versions, the environment's `Pipfile` file should be edited directly:"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-28T08:26:51.842521+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-06-28T08:27:24.927025+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "LL35TS+CDQCGM/JCAJbZxQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If you have a script that you want to keep standalone and doesn't require detailed module management, individual modules may be installed using `#installModule:`, e.g.:"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-28T08:26:13.458197+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-28T08:43:09.973482+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/ERETS+CDQCGL5+mAJbZxQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Installing Python modules"
 			},
 			{
 				"__type" : "textSnippet",
