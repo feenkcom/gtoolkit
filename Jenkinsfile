@@ -196,10 +196,12 @@ pipeline {
                         }
                         stage('MacOSX Examples') {
                              steps {
-                                sshagent([]) {
-                                    sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
-                                    sh 'rm -rf GToolkit-Releaser-*.xml'
-                                    junit '*.xml'
+                                retry(5) {
+                                    sshagent([]) {
+                                        sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
+                                        sh 'rm -rf GToolkit-Releaser-*.xml'
+                                        junit '*.xml'
+                                    }
                                 }
                              }
                         }
