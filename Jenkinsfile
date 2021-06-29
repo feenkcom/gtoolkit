@@ -165,8 +165,10 @@ pipeline {
                         }
                         stage('Linux Examples') {
                              steps {
-                                sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
-                                junit '*.xml'
+                                retry(5) {
+                                    sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
+                                    junit '*.xml'
+                                }
                              } 
                         }
                         stage('Smoke Test') {
@@ -178,11 +180,11 @@ pipeline {
                 }
                 stage ('MacOSX') {
                     agent {
-                        label "macosx"
+                        label "aarch64-apple-darwin"
                     }
                     environment {
                         CERT = credentials('devcertificate')
-                        SUDO = credentials('sudo')
+                        SUDO = credentials('m1_sudo')
                         APPLEPASSWORD = credentials('notarizepassword')
                         SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
                     } 
@@ -196,10 +198,12 @@ pipeline {
                         }
                         stage('MacOSX Examples') {
                              steps {
-                                sshagent([]) {
-                                    sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
-                                    sh 'rm -rf GToolkit-Releaser-*.xml'
-                                    junit '*.xml'
+                                retry(5) {
+                                    sshagent([]) {
+                                        sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
+                                        sh 'rm -rf GToolkit-Releaser-*.xml'
+                                        junit '*.xml'
+                                    }
                                 }
                              }
                         }
@@ -249,8 +253,10 @@ pipeline {
 
                         stage('Windows Examples') {
                              steps {
-                                powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
-                                junit '*.xml'
+                                retry(5) {
+                                    powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
+                                    junit '*.xml'
+                                }
                              }
                         }
 
