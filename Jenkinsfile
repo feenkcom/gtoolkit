@@ -165,8 +165,10 @@ pipeline {
                         }
                         stage('Linux Examples') {
                              steps {
-                                sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
-                                junit '*.xml'
+                                retry(5) {
+                                    sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
+                                    junit '*.xml'
+                                }
                              } 
                         }
                         stage('Smoke Test') {
@@ -251,8 +253,10 @@ pipeline {
 
                         stage('Windows Examples') {
                              steps {
-                                powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
-                                junit '*.xml'
+                                retry(5) {
+                                    powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
+                                    junit '*.xml'
+                                }
                              }
                         }
 
