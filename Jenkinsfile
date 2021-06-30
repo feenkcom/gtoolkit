@@ -180,7 +180,7 @@ pipeline {
                 }
                 stage ('MacOSX') {
                     agent {
-                        label "x86_64-apple-darwin"
+                        label "aarch64-apple-darwin"
                     }
                     environment {
                         CERT = credentials('devcertificate')
