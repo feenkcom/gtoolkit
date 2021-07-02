@@ -88,11 +88,11 @@ then
   $PHARO_VM_EXECUTABLE GlamorousToolkit.image st icehttps.st
 fi
 
-time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_FFI_BACKPORT" 2>&1
-time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_TFFI_MIGRATION" 2>&1
-
 time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_ICEBERG" 2>&1
 time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_GT" 2>&1
+
+time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_FFI_BACKPORT" 2>&1
+time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_TFFI_MIGRATION" 2>&1
 
 #time $GTOOLKIT_APP_EXECUTABLE GlamorousToolkit.image st --quit "../load-sparta.st" 2>&1
 
