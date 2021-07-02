@@ -180,11 +180,11 @@ pipeline {
                 }
                 stage ('MacOSX') {
                     agent {
-                        label "aarch64-apple-darwin"
+                        label "x86_64-apple-darwin"
                     }
                     environment {
                         CERT = credentials('devcertificate')
-                        SUDO = credentials('m1_sudo')
+                        SUDO = credentials('sudo')
                         APPLEPASSWORD = credentials('notarizepassword')
                         SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
                     } 
