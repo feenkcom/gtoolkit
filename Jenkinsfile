@@ -49,7 +49,7 @@ pipeline {
     environment {
         GITHUB_TOKEN = credentials('githubrelease')
         AWSIP = 'ec2-18-197-145-81.eu-central-1.compute.amazonaws.com'
-        MASTER_WORKSPACE = ""
+        // MASTER_WORKSPACE = ""
         EXAMPLE_PACKAGES = "GToolkit-.* GT4SmaCC-.* DeepTraverser-.* Brick Brick-.* Bloc Bloc-.* Sparta-.*"
     }
     stages {
@@ -64,9 +64,9 @@ pipeline {
                         }
                     }
                     steps {
-                        script {
-                            MASTER_WORKSPACE = WORKSPACE
-                        }
+                        // script {
+                        //     MASTER_WORKSPACE = WORKSPACE
+                        // }
                         sh 'git clean -fdx'
                         sh 'chmod +x scripts/build/*.sh'
                         sh 'rm -rf pharo-local/iceberg'
@@ -165,8 +165,10 @@ pipeline {
                         }
                         stage('Linux Examples') {
                              steps {
-                                sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
-                                junit '*.xml'
+                                retry(5) {
+                                    sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
+                                    junit '*.xml'
+                                }
                              } 
                         }
                         stage('Smoke Test') {
@@ -178,7 +180,7 @@ pipeline {
                 }
                 stage ('MacOSX') {
                     agent {
-                        label "macosx"
+                        label "x86_64-apple-darwin"
                     }
                     environment {
                         CERT = credentials('devcertificate')
@@ -196,10 +198,12 @@ pipeline {
                         }
                         stage('MacOSX Examples') {
                              steps {
-                                sshagent([]) {
-                                    sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
-                                    sh 'rm -rf GToolkit-Releaser-*.xml'
-                                    junit '*.xml'
+                                retry(5) {
+                                    sshagent([]) {
+                                        sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
+                                        sh 'rm -rf GToolkit-Releaser-*.xml'
+                                        junit '*.xml'
+                                    }
                                 }
                              }
                         }
@@ -249,8 +253,10 @@ pipeline {
 
                         stage('Windows Examples') {
                              steps {
-                                powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
-                                junit '*.xml'
+                                retry(5) {
+                                    powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
+                                    junit '*.xml'
+                                }
                              }
                         }
 
@@ -267,7 +273,7 @@ pipeline {
                 }
             }
             steps {
-                dir(MASTER_WORKSPACE) {
+                // dir(MASTER_WORKSPACE) {
                     sh 'chmod +x scripts/build/*.sh'
                     unstash 'release_prediction'
                     unstash 'winbuild'
@@ -287,7 +293,7 @@ pipeline {
                                 sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
                         }
                     }
-                }
+                // }
             }
         }
     }

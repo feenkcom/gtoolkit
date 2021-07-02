@@ -36,7 +36,16 @@ GtMonitoredProcess >> gtStackFor: aView [
 	^ aView explicit
 		title: 'Stack';
 		priority: 1;
-		stencil: [ GtPharoMethodsCoder forItems: self stack ]
+		stencil: [ GtPharoMethodsCoder forItems: self stackMethods ]
+]
+
+{ #category : #accessing }
+GtMonitoredProcess >> gtTerminateActionFor: anAction [
+	<gtAction>
+	^ anAction button
+		icon: BrGlamorousVectorIcons close;
+		tooltip: 'Terminate process';
+		action: [ :aButton | self terminate ]
 ]
 
 { #category : #'gt-extension' }
@@ -74,6 +83,11 @@ GtMonitoredProcess >> stack [
 ]
 
 { #category : #accessing }
+GtMonitoredProcess >> stackMethods [
+	^ self stack collect: #method
+]
+
+{ #category : #accessing }
 GtMonitoredProcess >> stackOfSize: aStackDepth [
 	<return: #Array or: #Context>
 	| aProcess |
@@ -88,6 +102,11 @@ GtMonitoredProcess >> stackOfSize: aStackDepth [
 GtMonitoredProcess >> suspendedContext [
 	<return: #Context or: nil>
 	^ self service ifNotNil: [ :aService | aService suspendedContext ]
+]
+
+{ #category : #actions }
+GtMonitoredProcess >> terminate [
+	^ self service ifNotNil: #terminate
 ]
 
 { #category : #accessing }

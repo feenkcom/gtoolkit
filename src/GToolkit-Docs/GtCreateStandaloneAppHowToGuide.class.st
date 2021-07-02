@@ -16,7 +16,7 @@ GtCreateStandaloneAppHowToGuide >> closeGtWorlds [
 ]
 
 { #category : #accessing }
-GtCreateStandaloneAppHowToGuide >> disableGtWorldShutdownHadler [
+GtCreateStandaloneAppHowToGuide >> disableGtWorldShutdownHandler [
 	<gtExample>
 	<noTest>
 	
