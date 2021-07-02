@@ -10,9 +10,9 @@ BaselineOfGToolkitMorphic >> baseline: spec [
 	spec for: #'common' do: [
 		spec 
 			baseline: 'Bloc' with: [
-				spec repository: 'github://feenkcom/Bloc:v0.8.210/src' ];
+				spec repository: 'github://feenkcom/Bloc:v0.8.211/src' ];
 			baseline: 'GlutinMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit-glutin:v0.8.44/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-glutin:v0.8.45/src' ].
 		spec package: #'GToolkit-Morphic' with: [
 				spec requires: #('Bloc' 'GlutinMorphic' ). ]. ].
 
