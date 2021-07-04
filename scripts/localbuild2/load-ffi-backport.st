@@ -1,91 +1,7 @@
-| packagesToDelete extensionMethods |
-
-BlockClosure compile: 'onErrorDo: errorHandlerBlock
-	"Evaluate the block represented by the receiver, and normally return it''s value.  If an error occurs, the errorHandlerBlock is evaluated, and it''s value is instead returned.  The errorHandlerBlock must accept zero or one parameter (the error object)."
-	"Examples:
-		[1 whatsUpDoc] onErrorDo: [:err | ''huh?''].
-		[1 / 0] onErrorDo: [:err |
-			ZeroDivide = err class
-				ifTrue: [Float infinity]
-				ifFalse: [self error: err]]
-"
-	^ self on: Error do: [:ex | errorHandlerBlock cull: ex]'.
-
-  NonInteractiveTranscript stdout
-    nextPutAll: 'Compiled BlockClosure>>#onErrorDo:';
-    cr.
-
-Pragma class compile: 'allNamed: aSymbol
-
-^ Array streamContents: [ :aStream |
-		SystemNavigation default allMethods
-			do: [ :eachMethod |
-				(eachMethod pragmaAt: aSymbol)
-					ifNotNil: [ :aPragma | aStream nextPut: aPragma ] ] ]'.
-  
-  NonInteractiveTranscript stdout
-    nextPutAll: 'Compiled Pragma class >> #allNamed:';
-    cr.
-  
-Class compile: 'classVariableNamed: aString ifAbsent: absentBlock
-	"Answer the Class Variable"
-
-	^self classPool associationAt: aString asSymbol ifAbsent: absentBlock'.
-
-NonInteractiveTranscript stdout
-  nextPutAll: 'Compiled Class >> #classVariableNamed:ifAbsent:';
-  cr.
-
-  Context compile: 'compiledCode
-
-	^method'.
-
-  NonInteractiveTranscript stdout
-    nextPutAll: 'Context >> #compiledCode';
-    cr.
-
-
-OSSDL2ExternalForm
-compile: 'oldPrimCreateManualSurfaceWidth: aWidth height: aHeight rowPitch: rowPitch depth: aDepth isMSB: isMSB
-    <primitive: ''primitiveCreateManualSurface'' module: ''SqueakFFIPrims''>
-    self primitiveFailed'
-classified: 'old - ffi backend support'.
-
-OSSDL2ExternalForm
-compile: 'oldPrimDestroyManualSurface: surfaceID
-    <primitive: ''primitiveDestroyManualSurface'' module: ''SqueakFFIPrims''>
-    self primitiveFailed'
-classified: 'old - ffi backend support'.
-
-OSSDL2ExternalForm
-compile: 'oldPrimManualSurface: surfaceID setPointer: aPointer
-    <primitive: ''primitiveSetManualSurfacePointer'' module: ''SqueakFFIPrims''>
-    self primitiveFailed'
-classified: 'old - ffi backend support'.
-
-OSSDL2ExternalForm
-compile: 'primCreateManualSurfaceWidth: aWidth height: aHeight rowPitch: rowPitch depth: aDepth isMSB: isMSB
-    <primitive: ''primitiveCreateManualSurface'' module: ''SurfacePlugin''>
-    ^ self oldPrimCreateManualSurfaceWidth: aWidth height: aHeight rowPitch: rowPitch depth: aDepth isMSB: isMSB'
-classified: 'primitives'.
-
-OSSDL2ExternalForm
-compile: 'primDestroyManualSurface: surfaceID
-    <primitive: ''primitiveDestroyManualSurface'' module: ''SurfacePlugin''>
-    ^ self oldPrimDestroyManualSurface: surfaceID'
-classified: 'primitives'.
-
-OSSDL2ExternalForm
-compile: 'primManualSurface: surfaceID setPointer: aPointer
-    <primitive: ''primitiveSetManualSurfacePointer'' module: ''SurfacePlugin''>
-    ^ self oldPrimManualSurface: surfaceID setPointer: aPointer'
-classified: 'primitives'.
-
 LGitLibrary compile: 'preMethodBuildContext: sender builder: builder spec: functionSpec'.
 LGitLibrary compile: 'postMethodBuildContext: sender builder: builder spec: functionSpec'.
 
-EpMonitor disableDuring: [
-
+EpMonitor current disable.
 Iceberg enableMetacelloIntegration: false.
 
 #ExternalAddress asClass startUp: true.
@@ -96,7 +12,8 @@ Iceberg enableMetacelloIntegration: false.
 
 #FFICompilerPlugin asClass uninstall.
 
-packagesToDelete := {
+PharoPatcher updatePackages:
+{
     #'Alien-Core'.
     #'UnifiedFFI-Tests'.
     #'UnifiedFFI-Legacy'.
@@ -104,84 +21,39 @@ packagesToDelete := {
     #'BaselineOfUnifiedFFI'.
     #'FFI-Kernel'.
     #'FFI-Pools'.
-} collect: [ :each | each asPackage ].
-
-extensionMethods := [
-    | classesToRemove methods |
-
-    classesToRemove := packagesToDelete flatCollect: [ :eachPackage | eachPackage definedClasses ].
-
-    methods := classesToRemove flatCollect: [ :eachClass |
-        eachClass extensionSelectors collect: [ :eachSelector |
-            eachClass >> eachSelector ] ].
-    methods := methods reject: [ :each | packagesToDelete includes: each package ].
-
-    NonInteractiveTranscript stdout
-         nextPutAll: 'Found ';
-         nextPutAll: methods size asString;
-         nextPutAll: ' extension methods.';
-         cr.
-    methods do: [ :eachMethod |
-        NonInteractiveTranscript stdout
-            nextPutAll: eachMethod methodClass name;
-            nextPutAll: ' >> #';
-            nextPutAll: eachMethod selector;
-            nextPutAll: ' defined in ';
-            nextPutAll: eachMethod package name;
-            cr ].
-    methods collect: [ :eachMethod |
-        Dictionary new
-            at: #class put: eachMethod methodClass name;
-            at: #package put: eachMethod package name;
-            at: #sourceCode put: eachMethod sourceCode;
-            yourself ] ] value.
-
-packagesToDelete do: [ :eachPackage | eachPackage removeFromSystem ].
+} during: [
 
 Metacello new	
-		githubUser: 'syrel' project: 'pharo9-ffi-backport' commitish: 'main' path: '';	
-		baseline: 'FFI';	
-        onConflictUseIncoming;
-		load.
+    githubUser: 'syrel' project: 'pharo9-ffi-backport' commitish: 'main' path: '';
+    baseline: 'FFI';
+    onConflictUseIncoming;
+    load.
 
 NonInteractiveTranscript stdout
-  nextPutAll: 'Loaded FFI';
-  cr.
+    nextPutAll: 'Loaded FFI';
+    cr.
 
-	Metacello new	
-		githubUser: 'pharo-project' project: 'pharo' commitish: 'Pharo9.0' path: 'src';	
-		baseline: 'UnifiedFFI';	
+Metacello new
+    githubUser: 'pharo-project' project: 'pharo' commitish: 'Pharo9.0' path: 'src';
+    baseline: 'UnifiedFFI';
     onConflictUseIncoming;
-		load.
+    load.
 
-    NonInteractiveTranscript stdout
-      nextPutAll: 'Loaded UnifiedFFI';
-      cr.
+NonInteractiveTranscript stdout
+    nextPutAll: 'Loaded UnifiedFFI';
+    cr.
+
+Metacello new
+    githubUser: 'pharo-project' project: 'threadedFFI-Plugin' commitish: 'master' path: 'src';
+    baseline: 'ThreadedFFI';
+    onConflictUseIncoming;
+    load.
+
+NonInteractiveTranscript stdout
+    nextPutAll: 'Loaded threadedFFI-Plugin';
+    cr.
+
 ].
-
-
-EpMonitor disableDuring: [
-
-Iceberg enableMetacelloIntegration: false.
-
-Metacello new	
-	githubUser: 'pharo-project' project: 'threadedFFI-Plugin' commitish: 'master' path: 'src';	
-	baseline: 'ThreadedFFI';	
-  onConflictUseIncoming;
-	load.
- Iceberg enableMetacelloIntegration: true.
-    NonInteractiveTranscript stdout
-      nextPutAll: 'Loaded threadedFFI-Plugin';
-      cr ].
-
-(Smalltalk image allClasses
-	select: [ :each | each isTrait not and: [ each superclass notNil ] ])
-	select: [ :each | each superclass name beginsWith: 'AnObsolete' ]
-	thenDo: [ :each |
-		| realSuperClass |
-
-		realSuperClass := (each superclass name copyReplaceAll:  'AnObsolete' with: '' ) asSymbol asClass.
-		each superclass: realSuperClass ].
 
 #FFICompilerPlugin asClass install.
 #ExternalAddress asClass startUp: true.
@@ -191,33 +63,22 @@ Metacello new
 #FFIMethodRegistry asClass startUp: true.
 #FT2Handle asClass startUp: true.
 
-extensionMethods do: [ :eachMethodDictionary |
-    (eachMethodDictionary at: #class) asClass
-        compile: (eachMethodDictionary at: #sourceCode)
-        classified: '*', (eachMethodDictionary at: #package) ].
-
-#ExternalAddress asClass compile: 'address
+PharoPatcher patch: #ExternalAddress asClass source:
+'address
     "Answer the receiver''s integer address"
 
     ^ self asInteger'
-    classified: 'converting'.
-NonInteractiveTranscript stdout
-  nextPutAll: 'Compiled ExternalAddress>>#address';
-  cr.
+classified: 'converting'.
 
-#ExternalObject asClass compile: 'asExternalAddress
+PharoPatcher patch: #ExternalObject asClass source:
+'asExternalAddress
     ^ handle asExternalAddress'
-    classified: 'converting'.
-NonInteractiveTranscript stdout
-  nextPutAll: 'Compiled ExternalObject>>#asExternalAddress';
-  cr.
+classified: 'converting'.
 
-#FFICallback asClass compile: 'beNull
+PharoPatcher patch: #FFICallback asClass source:
+'beNull
     backendCallback ifNotNil: [ :aBackendCallback | aBackendCallback beNull ]'
-    classified: 'accessing'.
-NonInteractiveTranscript stdout
-  nextPutAll: 'Compiled FFICallback>>#beNull';
-  cr.
+classified: 'accessing'.
 
 "===================================
  Re-initialize FFIExternalStructure
@@ -271,11 +132,10 @@ SystemNavigation default allObjectsDo: [ :eachObject |
 "===================================
             Clean-up
 ==================================="
-packagesToDelete := nil.
-extensionMethods := nil.
-
 Smalltalk garbageCollect.
 
+EpMonitor current enable.
+Iceberg enableMetacelloIntegration: true.
 "===================================
             Save an quit
 ==================================="
