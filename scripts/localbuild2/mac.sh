@@ -10,7 +10,7 @@ GTOOLKIT_APP_EXECUTABLE="./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit-
 LOAD_PATCHES_SCRIPT="load-patches.st"
 LOAD_FFI_BACKPORT_SCRIPT="load-ffi-backport.st"
 LOAD_ICEBERG_SCRIPT="load-iceberg.st"
-LOAD_GT_SCRIPT="loadgt.st"
+LOAD_GT_SCRIPT="load-gt.st"
 
 if [ -d "$DIR" ]; then
   echo "The folder $DIR is present in the current directory, perhaps it is already installed?"
