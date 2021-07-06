@@ -1,69 +1,47 @@
-Context compile: 'copyTo: aContext
-	"Copy self and my sender chain down to, but not including, aContext.  
-	End of copied chain will have nil sender."
-	| copy |
-	self == aContext ifTrue: [^ nil].
-	"Workaround for the regular VM crash that occurs when copying self below.
-	Accessing the pc seems to be enough to prevent the crash."
-	self pc.
-	copy := self copy.
-	self sender ifNotNil: [
-		copy privSender: (self sender copyTo: aContext)].
-	^ copy'.
+| packagesToDelete extensionMethods |
+EpMonitor current disable.
+Iceberg enableMetacelloIntegration: false.
 
-SourceFileArray compile: 'deferFlushDuring: aBlock	
-	flushChanges ifFalse: [ ^ aBlock value ].
-	"flushChanges := false."
-	^ [ aBlock value ] ensure: [
-		flushChanges := true.
-		self flushChangesFile ]'.
-    
-RPackageOrganizer compile: 'packageMatchingExtensionName: anExtensionName
-	"return nil if no package is not found"
-	| tmpPackageName |
-	
-	"we first look if their is a package matching exactly the name specified"
-	(self packageExactlyMatchingExtensionName: anExtensionName)
-		ifNotNil: [ :package | ^ package ].
-	
-	"if no package was found, we try to find one matching the begining of the name specified"
-	tmpPackageName := ''''.
-	packages keysDo: [:aSymbol |
-		(anExtensionName beginsWithEmpty: (aSymbol asString, ''-'') caseSensitive: false)
-			ifTrue: [
-				"we keep the longest package name found"
-				(aSymbol size > tmpPackageName size) 
-					ifTrue: [ tmpPackageName := aSymbol ]]].
-	
-	^ tmpPackageName = ''''
-		ifTrue: [ nil ] 
-		ifFalse: [ self packageNamed: tmpPackageName ]'.
-		
-RPackageOrganizer compile: 'hasPackageMatchingExtensionName: anExtensionName
-	(self hasPackageExactlyMatchingExtensionName: anExtensionName)
-		ifTrue: [ ^true ].
-		
-	packages keysDo: [ :aSymbol | 
-		(anExtensionName beginsWithEmpty: (aSymbol asString, ''-'') caseSensitive: false)
-			ifTrue: [ ^ true]].
-	^ false
-	'.
-	
-MCPackageLoader compile: 'tryToLoad: aDefinition
-	aDefinition isClassDefinition ifTrue: [ ^ false ].
-		
-	[aDefinition addMethodAdditionTo: methodAdditions] on: Error do: [errorDefinitions add: aDefinition].'.
+LGitLibrary shutDown: true.
 
+PharoPatcher updatePackages:
+{
+    #'LibGit-Core'.
+    #'LibGit-FileSystem'.
+    #'BaselineOfLibGit'.
+    #'BaselineOfIceberg'.
+}, (RPackage organizer packages select: [ :each | each name beginsWith: 'Iceberg' ] thenCollect: [ :each | each name ])
+during: [
 
-EpMonitor disableDuring: [
-    Iceberg enableMetacelloIntegration: false.
+Metacello new
+    githubUser: 'pharo-vcs' project: 'libgit2-pharo-bindings' commitish: 'v2.1.6' path: '';
+    baseline: 'LibGit';
+    load.
 
-	"Metacello new
-		githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.6' path: '';
-		baseline: 'Iceberg';
-		load."
+NonInteractiveTranscript stdout
+    nextPutAll: 'Loaded libgit2-pharo-bindings';
+    cr.
 
-	Iceberg enableMetacelloIntegration: true.
+Metacello new
+    githubUser: 'pharo-vcs' project: 'Iceberg' commitish: 'dev-1.8' path: '';
+    baseline: 'Iceberg';
+    load.
+
+NonInteractiveTranscript stdout
+    nextPutAll: 'Loaded Iceberg';
+    cr.
 ].
+
+"===================================
+        Patch Library names
+==================================="
+PharoPatcher patch: #LGitLibrary asClass source:
+'macLibraryName
+
+ 	^ FFIMacLibraryFinder findAnyLibrary: #(''libgit2.dylib'' ''libgit2.1.0.1.dylib'' ''libgit2.1.0.0.dylib'' ''libgit2.0.25.1.dylib'')'
+classified: 'accessing - platform'.
+
+#Iceberg asClass enableMetacelloIntegration: true.
+EpMonitor current enable.
 
 Smalltalk snapshot: true andQuit: false.

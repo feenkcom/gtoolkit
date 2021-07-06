@@ -7,10 +7,10 @@ PHARO_VM_DIR="pharo8-vm"
 PHARO_VM_EXECUTABLE="./pharo8-vm/pharo"
 GTOOLKIT_APP_EXECUTABLE="./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit-cli"
 
-LOAD_ICEBERG_SCRIPT="load-iceberg.st"
+LOAD_PATCHES_SCRIPT="load-patches.st"
 LOAD_FFI_BACKPORT_SCRIPT="load-ffi-backport.st"
-LOAD_TFFI_MIGRATION_SCRIPT="load-tffi-migration.st"
-LOAD_GT_SCRIPT="loadgt.st"
+LOAD_ICEBERG_SCRIPT="load-iceberg.st"
+LOAD_GT_SCRIPT="load-gt.st"
 
 if [ -d "$DIR" ]; then
   echo "The folder $DIR is present in the current directory, perhaps it is already installed?"
@@ -20,11 +20,11 @@ fi
 mkdir $DIR
 cd $DIR || exit
 
-LOAD_ICEBERG="../$LOAD_ICEBERG_SCRIPT"
-if [ ! -f "$LOAD_ICEBERG" ]; then
-    LOAD_ICEBERG="./$LOAD_ICEBERG_SCRIPT"
-    if [ ! -f "$LOAD_ICEBERG" ]; then
-      curl -L "$REMOTE_SCRIPTS_DIR/$LOAD_ICEBERG_SCRIPT" -o "$LOAD_ICEBERG_SCRIPT"
+LOAD_PATCHES="../$LOAD_PATCHES_SCRIPT"
+if [ ! -f "$LOAD_PATCHES" ]; then
+    LOAD_PATCHES="./$LOAD_PATCHES_SCRIPT"
+    if [ ! -f "$LOAD_PATCHES" ]; then
+      curl -L "$REMOTE_SCRIPTS_DIR/$LOAD_PATCHES_SCRIPT" -o "$LOAD_PATCHES_SCRIPT"
     fi
 fi
 
@@ -36,11 +36,11 @@ if [ ! -f "$LOAD_FFI_BACKPORT" ]; then
     fi
 fi
 
-LOAD_TFFI_MIGRATION="../$LOAD_TFFI_MIGRATION_SCRIPT"
-if [ ! -f "$LOAD_TFFI_MIGRATION" ]; then
-    LOAD_TFFI_MIGRATION="./$LOAD_TFFI_MIGRATION_SCRIPT"
-    if [ ! -f "$LOAD_TFFI_MIGRATION" ]; then
-      curl -L "$REMOTE_SCRIPTS_DIR/$LOAD_TFFI_MIGRATION_SCRIPT" -o "$LOAD_TFFI_MIGRATION_SCRIPT"
+LOAD_ICEBERG="../$LOAD_ICEBERG_SCRIPT"
+if [ ! -f "$LOAD_ICEBERG" ]; then
+    LOAD_ICEBERG="./$LOAD_ICEBERG_SCRIPT"
+    if [ ! -f "$LOAD_ICEBERG" ]; then
+      curl -L "$REMOTE_SCRIPTS_DIR/$LOAD_ICEBERG_SCRIPT" -o "$LOAD_ICEBERG_SCRIPT"
     fi
 fi
 
@@ -82,42 +82,37 @@ cd $PHARO_VM_DIR || exit
 curl https://get.pharo.org/64/vm80 | bash
 cd .. || exit
 
+# The following prepares Pharo8 image to work on our VM by updating FFI, UFFI, TFFI, Iceberg
+time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_PATCHES" 2>&1 || exit
+time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_FFI_BACKPORT" 2>&1 || exit
+time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_ICEBERG" 2>&1 || exit
+
 if [ $# -eq 1 ] && [ "$1" = "https" ]
 then
   echo "Iceberg remoteTypeSelector: #httpsUrl. Smalltalk snapshot: true andQuit: true."  > icehttps.st
   $PHARO_VM_EXECUTABLE GlamorousToolkit.image st icehttps.st
 fi
 
-time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_ICEBERG" 2>&1
-time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_GT" 2>&1
-
-time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_FFI_BACKPORT" 2>&1
-time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_TFFI_MIGRATION" 2>&1
-
-#time $GTOOLKIT_APP_EXECUTABLE GlamorousToolkit.image st --quit "../load-sparta.st" 2>&1
+time $GTOOLKIT_APP_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_GT" 2>&1 || exit
 
 EXEC_STATUS="$?"
 if [ "$EXEC_STATUS" -ne 0 ]; then
   exit "$EXEC_STATUS"
 fi
-#
-#echo "ThreadedFFIMigration enableThreadedFFI. Smalltalk snapshot: true andQuit: true."  > load-tffi-migration.st
-#echo "GtWorld openDefault. 5 seconds wait. BlHost pickHost universe snapshot: true andQuit: true." > gtworld.st
-#
-#./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st load-tffi-migration.st
-#
-#EXEC_STATUS="$?"
-#if [ "$EXEC_STATUS" -ne 0 ]; then
-#  exit "$EXEC_STATUS"
-#fi
-#
-#./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image st gtworld.st --interactive --no-quit
-#
-#EXEC_STATUS="$?"
-#if [ "$EXEC_STATUS" -ne 0 ]; then
-#  exit "$EXEC_STATUS"
-#fi
 
-echo "Setup process complete. To start GlamorousToolkit run \n ./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit GlamorousToolkit.image --no-quit --interactive"
-cd ..
+echo "GtWorld openDefault. 5 seconds wait. BlHost pickHost universe snapshot: true andQuit: true." > gtworld.st
+
+EXEC_STATUS="$?"
+if [ "$EXEC_STATUS" -ne 0 ]; then
+  exit "$EXEC_STATUS"
+fi
+
+time $GTOOLKIT_APP_EXECUTABLE GlamorousToolkit.image st gtworld.st --no-quit
+
+EXEC_STATUS="$?"
+if [ "$EXEC_STATUS" -ne 0 ]; then
+  exit "$EXEC_STATUS"
+fi
+
+printf "Setup process complete. To start GlamorousToolkit run \n./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit\n"
 exit 0
