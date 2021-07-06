@@ -44,7 +44,7 @@ NonInteractiveTranscript stdout
     cr.
 
 Metacello new
-    githubUser: 'pharo-project' project: 'threadedFFI-Plugin' commitish: 'master' path: 'src';
+    githubUser: 'pharo-project' project: 'pharo' commitish: 'Pharo9.0' path: 'src';
     baseline: 'ThreadedFFI';
     onConflictUseIncoming;
     load.
@@ -52,7 +52,6 @@ Metacello new
 NonInteractiveTranscript stdout
     nextPutAll: 'Loaded threadedFFI-Plugin';
     cr.
-
 ].
 
 #FFICompilerPlugin asClass install.
