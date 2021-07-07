@@ -99,7 +99,8 @@ GtMonitoredMixedAnnouncer >> gtSubscriptionsFor: aView [
 								aptitude: BrGlamorousButtonWithIconAptitude;
 								icon: BrGlamorousIcons trash asElement;
 								label: 'Remove subscriptions';
-								action:  [ self removeSubscriptions ] ] ] ]
+								action:  [ self removeSubscriptions ] ] ] ];
+		yourself.
 ]
 
 { #category : #accessing }
