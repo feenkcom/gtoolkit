@@ -1,15 +1,14 @@
 #!/bin/sh
 
 DIR="glamoroustoolkit"
-REMOTE_SCRIPTS_DIR="https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild2"
+REMOTE_SCRIPTS_DIR="https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild-pharo9"
 GTOOLKIT_APP_URL="https://github.com/feenkcom/gtoolkit-vm/releases/latest/download"
-PHARO_VM_DIR="pharo8-vm"
-PHARO_VM_EXECUTABLE="./pharo8-vm/pharo"
+PHARO_VM_DIR="pharo9-vm"
+PHARO_VM_EXECUTABLE="./pharo9-vm/pharo"
 GTOOLKIT_APP_EXECUTABLE="./GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit-cli"
 
 LOAD_PATCHES_SCRIPT="load-patches.st"
-LOAD_FFI_BACKPORT_SCRIPT="load-ffi-backport.st"
-LOAD_ICEBERG_SCRIPT="load-iceberg.st"
+LOAD_TASKIT_SCRIPT="load-taskit.st"
 LOAD_GT_SCRIPT="load-gt.st"
 
 if [ -d "$DIR" ]; then
@@ -28,19 +27,11 @@ if [ ! -f "$LOAD_PATCHES" ]; then
     fi
 fi
 
-LOAD_FFI_BACKPORT="../$LOAD_FFI_BACKPORT_SCRIPT"
-if [ ! -f "$LOAD_FFI_BACKPORT" ]; then
-    LOAD_FFI_BACKPORT="./$LOAD_FFI_BACKPORT_SCRIPT"
-    if [ ! -f "$LOAD_FFI_BACKPORT" ]; then
-      curl -L "$REMOTE_SCRIPTS_DIR/$LOAD_FFI_BACKPORT_SCRIPT" -o "$LOAD_FFI_BACKPORT_SCRIPT"
-    fi
-fi
-
-LOAD_ICEBERG="../$LOAD_ICEBERG_SCRIPT"
-if [ ! -f "$LOAD_ICEBERG" ]; then
-    LOAD_ICEBERG="./$LOAD_ICEBERG_SCRIPT"
-    if [ ! -f "$LOAD_ICEBERG" ]; then
-      curl -L "$REMOTE_SCRIPTS_DIR/$LOAD_ICEBERG_SCRIPT" -o "$LOAD_ICEBERG_SCRIPT"
+LOAD_TASKIT="../$LOAD_TASKIT_SCRIPT"
+if [ ! -f "$LOAD_TASKIT" ]; then
+    LOAD_TASKIT="./$LOAD_TASKIT_SCRIPT"
+    if [ ! -f "$LOAD_TASKIT" ]; then
+      curl -L "$REMOTE_SCRIPTS_DIR/$LOAD_TASKIT_SCRIPT" -o "$LOAD_TASKIT_SCRIPT"
     fi
 fi
 
@@ -73,19 +64,17 @@ fi
 
 unzip GlamorousToolkit.app.zip
 
-curl https://get.pharo.org/64/80  | bash
+curl https://get.pharo.org/64/90  | bash
 mv Pharo.image GlamorousToolkit.image
 mv Pharo.changes GlamorousToolkit.changes
 
 mkdir $PHARO_VM_DIR
 cd $PHARO_VM_DIR || exit
-curl https://get.pharo.org/64/vm80 | bash
+curl https://get.pharo.org/64/vm90 | bash
 cd .. || exit
 
-# The following prepares Pharo8 image to work on our VM by updating FFI, UFFI, TFFI, Iceberg
 time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_PATCHES" 2>&1 || exit
-time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_FFI_BACKPORT" 2>&1 || exit
-time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_ICEBERG" 2>&1 || exit
+time $PHARO_VM_EXECUTABLE GlamorousToolkit.image st --quit "$LOAD_TASKIT" 2>&1 || exit
 
 if [ $# -eq 1 ] && [ "$1" = "https" ]
 then
