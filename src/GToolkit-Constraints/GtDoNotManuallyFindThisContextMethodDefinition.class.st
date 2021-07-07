@@ -11,14 +11,8 @@ GtDoNotManuallyFindThisContextMethodDefinition >> description [
 
 { #category : #accessing }
 GtDoNotManuallyFindThisContextMethodDefinition >> issues [
-	^ #asRingDefinition senders select: [ :each |
-		(RBParseTreeSearcher
-			treeMatching: 'thisContext ``@messages'
-			in: each ast)
-				ifNil: [ false ]
-				ifNotNil: [ :thisContextNode |
-					(thisContextNode parents anySatisfy: [ :eachParent |
-						eachParent isMessage and: [ eachParent selector = #asRingDefinition ] ])
-							and: [ thisContextNode parents anySatisfy: [ :eachParent |
-						eachParent isMessage and: [ eachParent selector = #method ] ] ] ] ]
+	^ ('`{:node | | found | found := false. node nodesDo: [:each | found := found or: [each isKindOf: RBThisContextNode]]. found} asRingDefinition' gtASTMatches result collect: #yourself)
+		select: [ :eachMethod |
+			#('Bloc' . 'Brick' . 'GToolkit' ) anySatisfy: [ :prefix | 
+				eachMethod package name beginsWith: prefix ] ]
 ]
