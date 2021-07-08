@@ -65,6 +65,12 @@ MCPackageLoader compile: 'tryToLoad: aDefinition
 		
 	[aDefinition addMethodAdditionTo: methodAdditions] on: Error do: [errorDefinitions add: aDefinition].'.
 
+
+"try to fix an iceberg bug which causes Releaser to fail when merging a change that includes a delete"
+IceGitWorkingCopyUpdateVisitor compile: 'remoteFileReferenceInPath: aPath
+	aPath
+		ifNotNil: [ (repository location resolvePath: aPath) ensureDelete ]'.
+
 [ 
 	EpMonitor current disable.
 	Metacello new	
