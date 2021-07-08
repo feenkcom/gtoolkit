@@ -17,11 +17,10 @@ AbstractWorldRenderer class >> openMorphicWorld [
 	
 	aRenderer := self forWorld: aWorld.
 	
-	aWorld isMainWorld 
+	World == aWorld
 		ifTrue:[ MainWorldRenderer := aRenderer ].
 	
 	aWorld worldState worldRenderer: aRenderer.
-	Cursor currentCursor: Cursor currentCursor.
 		
 	WorldMorph currentWorld ifNotNil: [:world | world restoreMorphicDisplay].
 	WorldMorph extraWorldList do: #restoreMorphicDisplay.
