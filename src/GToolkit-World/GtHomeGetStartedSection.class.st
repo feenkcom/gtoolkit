@@ -16,8 +16,8 @@ GtHomeGetStartedSection >> create [
 		description: 'Take an interactive tour through the environment.').
 		
 	cardsContainer addChild: (self
-		newHeaderCardWithTitle: 'Glamorour Toolkit'
-		description: 'Read the Glamorour Toolkit book'
+		newHeaderCardWithTitle: 'Glamorous Toolkit'
+		description: 'Read the Glamorous Toolkit book'
 		size: 200@150
 		content:
 			(BrLabel new
