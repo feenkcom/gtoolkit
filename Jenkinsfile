@@ -48,7 +48,7 @@ pipeline {
     }
     environment {
         GITHUB_TOKEN = credentials('githubrelease')
-        AWSIP = 'ec2-18-197-145-81.eu-central-1.compute.amazonaws.com'
+        AWSIP = 'sftp.feenk.com'
         // MASTER_WORKSPACE = ""
         EXAMPLE_PACKAGES = "GToolkit-.* GT4SmaCC-.* DeepTraverser-.* Brick Brick-.* Bloc Bloc-.* Sparta-.*"
     }
