@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-12T23:40:08.26005+02:00"
+						"dateAndTimeString" : "2021-07-11T11:53:26.871146+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "*Note: In case the JavaScript snippet is not working view, please check [[JavaScript Snippet]] to debug.*"
+				"string" : "*Note: In case the JavaScript snippet is not working view, please check [[JavaScript Snippet]].*"
 			},
 			{
 				"__type" : "textSnippet",
@@ -470,20 +470,20 @@
 										},
 										"editEmail" : {
 											"__type" : "email",
-											"emailString" : "chisvasileandrei@gmail.com"
+											"emailString" : "<unknown>"
 										},
 										"editTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-03-01T19:18:09.428626+01:00"
+												"dateAndTimeString" : "2021-07-11T11:52:44.323757+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "G/YHZIKxAAAAAAAAAAAAAA=="
 										},
-										"code" : "projectIds := OrderedCollection new.\redges := OrderedCollection new.\r\rlockFileData associations collect: [ :assoc | \r\t| projectName versionName projectId |\r\tprojectName := assoc key \r\t\tcopyFrom: 1 to: (assoc key indexOf: $@ startingAt: 2) - 1.\r\tversionName := assoc value at: 'version'.\r\tprojectId := projectName,'@', versionName.\r\t(projectIds includes: projectId) ifFalse: [\r\t\tprojectIds add: projectId ].\r\t\r\t(assoc value includesKey: 'dependencies') ifTrue: [ \r\t\t(assoc value at: 'dependencies') \r\t\t\tkeysAndValuesDo: [ :dependencyName :dependencyValue |\r\t\t\t\t| targetNodeId edge |\r\t\t\t\t\r\t\t\t\ttargetNodeId := lockFileData \r\t\t\t\t\tat: dependencyName, '@', dependencyValue\r\t\t\t\t\tifPresent: [ :aTargetNode |\r\t\t\t\t\t\tdependencyName, '@', (aTargetNode at: #version) ]\r\t\t\t\t\tifAbsent: [\r\t\t\t\t\t\tdependencyName, '@', dependencyValue ].\r\t\t\t\t\t\r\t\t\t\tedge := projectId -> targetNodeId.\r\t\t\t\t(edges includes: edge) ifFalse: [\r\t\t\t\t\tedges add: edge ] ] ] ].\r{projectIds. edges} "
+										"code" : "projectIds := OrderedCollection new.\redges := OrderedCollection new.\r\rlockFileData associations collect: [ :assoc | \r\t| projectName versionName projectId |\r\tprojectName := assoc key \r\t\tcopyFrom: 1 to: (assoc key indexOf: $@ startingAt: 2) - 1.\r\tversionName := assoc value at: 'version'.\r\tprojectId := projectName,'@', versionName.\r\t(projectIds includes: projectId) ifFalse: [\r\t\tprojectIds add: projectId ].\r\t\r\t(assoc value includesKey: 'dependencies') ifTrue: [ \r\t\t(assoc value at: 'dependencies') \r\t\t\tkeysAndValuesDo: [ :dependencyName :dependencyValue |\r\t\t\t\t| targetNodeId edge |\r\t\t\t\t\r\t\t\t\ttargetNodeId := lockFileData \r\t\t\t\t\tat: dependencyName, '@', dependencyValue\r\t\t\t\t\tifPresent: [ :aTargetNode |\r\t\t\t\t\t\tdependencyName, '@', (aTargetNode at: #version) ]\r\t\t\t\t\tifAbsent: [\r\t\t\t\t\t\tdependencyName, '@', dependencyValue ].\r\t\t\t\t\t\r\t\t\t\tedge := projectId -> targetNodeId.\r\t\t\t\t(edges includes: edge) ifFalse: [\r\t\t\t\t\tedges add: edge ] ] ] ].\rmainProjectName := 'd3'.\rrootProjectIds := projectIds copy.\redges do: [ :anEdge |\r\trootProjectIds remove: anEdge value ifAbsent: [] ].\r\rrootProjectIds do: [ :aRootProjectId | \r\tedges add: mainProjectName -> aRootProjectId ].\r\rprojectIds add: mainProjectName.\r\t\r{projectIds. edges} "
 									}
 								]
 							},
@@ -500,13 +500,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "chisvasileandrei@gmail.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-03-01T17:30:34.450978+01:00"
+									"dateAndTimeString" : "2021-07-11T11:53:11.661873+02:00"
 								}
 							},
 							"uid" : {
@@ -516,79 +516,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Create a list of nodes and edges."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "chisvasileandrei@gmail.com"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-03-01T17:31:26.909655+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-06-12T23:40:27.196281+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "8pjl+yVmAAAAAAAAAAAAAA=="
-										},
-										"code" : "mainProjectName := 'd3'.\rrootProjectIds := projectIds copy.\redges do: [ :anEdge |\r\trootProjectIds remove: anEdge value ifAbsent: [] ].\r\rrootProjectIds do: [ :aRootProjectId | \r\tedges add: mainProjectName -> aRootProjectId ].\r\rprojectIds add: mainProjectName.\r\t\r{projectIds. edges} "
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "chisvasileandrei@gmail.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-03-01T17:31:23.779912+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "chisvasileandrei@gmail.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-03-01T17:31:23.779912+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "GdHFdCqSAAAAAAAAAAAAAA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Add edges to the root node."
+							"string" : "Create a list of nodes and connect them with edges."
 						},
 						{
 							"__type" : "textSnippet",
