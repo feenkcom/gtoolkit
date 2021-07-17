@@ -110,7 +110,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc/src' ];
 			baseline: 'LepiterEngine' with: [
-				spec repository: 'github://feenkcom/lepiter:main/src' ].
+				spec repository: 'github://feenkcom/lepiter:main/src' ];
+			baseline: 'GToolkitRobocoder' with: [
+				spec repository: 'github://feenkcom/gtoolkit-robocoder:main/src'].
 		spec package: 'GToolkit-Extensions' with: [ 
 			spec requires: #( 'GToolkitDocumenter' ) ].
 		spec package: 'GToolkit-Docs'.
