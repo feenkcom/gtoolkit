@@ -83,6 +83,7 @@ GtToolsMenu >> initializeElements [
 	
 	self addChild: (GtHomeToolsSection new newCoderButtonStencil smallIcon smallMargin create size: self iconSize).
 	self addChild: (GtHomeToolsSection new newGitButtonStencil smallIcon smallMargin create size: self iconSize).
+	self addChild: (GtHomeToolsSection new newCodeChangesButtonStencil smallIcon smallMargin create size: self iconSize).
 	self addChild: (GtHomeToolsSection new newMonitorButtonStencil smallIcon smallMargin create size: self iconSize).
 	self addChild: (GtHomeToolsSection new newExamplesButtonStencil smallIcon smallMargin create size: self iconSize).
 	self addChild: (GtHomeToolsSection new newTranscriptButtonStencil smallIcon smallMargin create size: self iconSize).
