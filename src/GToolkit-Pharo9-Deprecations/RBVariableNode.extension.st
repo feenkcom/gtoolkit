@@ -7,3 +7,8 @@ RBVariableNode >> isGlobal [
 
 	^self isLiteralVariable
 ]
+
+{ #category : #'*GToolkit-Pharo9-Deprecations' }
+RBVariableNode >> isTemp [
+	^ self isTempVariable
+]
