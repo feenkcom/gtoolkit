@@ -33,6 +33,7 @@ GtHomeToolsSection >> create [
 		
 	cardsContainer addChild: self newCoderButtonStencil create as: GtHomeCoderButtonId.
 	cardsContainer addChild: self newGitButtonStencil create.
+	cardsContainer addChild: self newCodeChangesButtonStencil create.
 	cardsContainer addChild: self newMonitorButtonStencil create.
 	cardsContainer addChild: self newExamplesButtonStencil create.
 	cardsContainer addChild: self newTranscriptButtonStencil create.
@@ -51,6 +52,21 @@ GtHomeToolsSection >> knowledgeBase [
 { #category : #accessing }
 GtHomeToolsSection >> knowledgeBaseComputation: aValuable [
 	knowledgeBaseComputation := aValuable
+]
+
+{ #category : #accessing }
+GtHomeToolsSection >> newCodeChangesButtonStencil [
+	^ GtToolButtonStencil new
+		title: 'Code Changes';
+		icon: BrGlamorousVectorIcons largebranching;
+		action: [ :card | 
+			self
+				showSpaceWithIcon: BrGlamorousVectorIcons emphasizedInspect
+				title: 'Code Changes'
+					with: (GtInspector createOn: GtEpicea allInSessionStore) maximized
+					from: card ];
+		description:
+			'Browse the local code changes from the current and previous sessions.'
 ]
 
 { #category : #'tools creation' }
