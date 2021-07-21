@@ -230,38 +230,38 @@ pipeline {
                         }
                     }
                 }
-                // stage('Windows') {
-                //     agent {
-                //         label "windows"
-                //     }
-                //     stages {
-                //         stage('Cleanup') {
-                //              steps {
-                //                 powershell './scripts/build/parallelsmoke/win_1_cleanup.ps1'
-                //              }
-                //         }
-                //         stage('Download') {
-                //              steps {
-                //                 powershell './scripts/build/parallelsmoke/win_2_download.ps1'
-                //              }
-                //         }
-                //         stage('Unpack') {
-                //              steps {
-                //                 powershell './scripts/build/parallelsmoke/win_3_unpack.ps1'
-                //              }
-                //         }
+                stage('Windows') {
+                    agent {
+                        label "windows"
+                    }
+                    stages {
+                        stage('Cleanup') {
+                             steps {
+                                powershell './scripts/build/parallelsmoke/win_1_cleanup.ps1'
+                             }
+                        }
+                        stage('Download') {
+                             steps {
+                                powershell './scripts/build/parallelsmoke/win_2_download.ps1'
+                             }
+                        }
+                        stage('Unpack') {
+                             steps {
+                                powershell './scripts/build/parallelsmoke/win_3_unpack.ps1'
+                             }
+                        }
 
-                //         stage('Windows Examples') {
-                //              steps {
-                //                 retry(5) {
-                //                     powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
-                //                     junit '*.xml'
-                //                 }
-                //              }
-                //         }
+                        stage('Windows Examples') {
+                             steps {
+                                retry(5) {
+                                    powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
+                                    junit '*.xml'
+                                }
+                             }
+                        }
 
-                //     }
-                // }
+                    }
+                }
             }
         }
         stage('Deploy release') {
@@ -286,7 +286,7 @@ pipeline {
                         withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
                                 def remote = [:]
                                 remote.name = 'deploy'
-                                remote.host = 'ec2-18-197-145-81.eu-central-1.compute.amazonaws.com'
+                                remote.host = 'sftp.feenk.com'
                                 remote.user = userName
                                 remote.identityFile = identity
                                 remote.allowAnyHosts = true
