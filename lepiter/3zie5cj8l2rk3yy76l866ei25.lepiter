@@ -325,13 +325,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-24T22:52:23.864096+02:00"
+						"dateAndTimeString" : "2021-07-23T17:04:09.459735+02:00"
 					}
 				},
 				"uid" : {
@@ -341,7 +341,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To learn from similar methods, you can ${class:GtWorkWithQueriesHowToGuide|label='query the code'}$ :"
+				"string" : "To learn from similar methods, you can look at [[Querying Pharo code]]:"
 			},
 			{
 				"__type" : "pharoSnippet",
