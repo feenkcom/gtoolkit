@@ -1,7 +1,7 @@
 Class {
 	#name : #GtRBAcceptVisitorCalledFromNonVisitingMethods,
 	#superclass : #GtPharoConstraint,
-	#category : #'GToolkit-Constraints'
+	#category : 'GToolkit-Constraints'
 }
 
 { #category : #accessing }
@@ -21,7 +21,7 @@ GtRBAcceptVisitorCalledFromNonVisitingMethods >> issues [
 	all := (#acceptVisitor: gtReferences select: [:each | 
 		"to ignore the reference from this method"
 		each isFromTrait not and: [ 
-			each method ~= thisContext method and: [ 
+			each method ~= (GtRBAcceptVisitorCalledFromNonVisitingMethods>>#issues) and: [ 
 				(each selector beginsWith: 'visit') not and: [
 					(each methodClass name beginsWith: 'Br') or: [
 						(each methodClass name beginsWith: 'Gt') ]]]]]).
