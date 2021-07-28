@@ -8,7 +8,6 @@
 The current repository embodies the second generation of GT and it is comprised of a set of distinct components:
 - [Inspector](https://github.com/feenkcom/gtoolkit-inspector): the moldable inspector.
 - [Lepiter](https://github.com/feenkcom/lepiter): the multi-language notebook + knowledge management.
-- [Presenter](https://github.com/feenkcom/gtoolkit-presenter): the engine for live slide-based storytelling.
 - [Debugger](https://github.com/feenkcom/gtoolkit-debugger): the moldable debugger for Pharo.
 - [Coder](https://github.com/feenkcom/gtoolkit-coder): the moldable coder for Pharo.
 - Transcript: a rethinking of the classic Transcript taking advantage of the moldable text editor from Bloc.
@@ -19,6 +18,7 @@ The current repository embodies the second generation of GT and it is comprised 
 - [Phlow](https://github.com/feenkcom/gtoolkit-phlow): the browsing engine.
 - [Releaser](https://github.com/feenkcom/gtoolkit-releaser): the engine that allows us to manage and release deeply nested projects.
 - [Remote](https://github.com/feenkcom/gtoolkit-remote): the engine for interaction with remote runtimes.
+- [Presenter](https://github.com/feenkcom/gtoolkit-presenter): the engine for live slide-based storytelling.
 - [Clipboard](https://github.com/feenkcom/gtoolkit-clipboard): a component for working with the clipboard.
 - [GlamorousToolkit4Pharo](https://github.com/feenkcom/gt4pharo): the environment for Pharo.
 - [GlamorousToolkit4Git](https://github.com/feenkcom/gt4git): the environment for manipulating Git.
