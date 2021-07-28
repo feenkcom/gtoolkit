@@ -7,8 +7,7 @@
 
 The current repository embodies the second generation of GT and it is comprised of a set of distinct components:
 - [Inspector](https://github.com/feenkcom/gtoolkit-inspector): the moldable inspector.
-- [Playground](https://github.com/feenkcom/gtoolkit-playground): the moldable playground.
-- [Documenter](https://github.com/feenkcom/gtoolkit-documenter): the engine for manipulating live documents.
+- [Lepiter](https://github.com/feenkcom/lepiter): the multi-language notebook + knowledge management.
 - [Presenter](https://github.com/feenkcom/gtoolkit-presenter): the engine for live slide-based storytelling.
 - [Debugger](https://github.com/feenkcom/gtoolkit-debugger): the moldable debugger for Pharo.
 - [Coder](https://github.com/feenkcom/gtoolkit-coder): the moldable coder for Pharo.
