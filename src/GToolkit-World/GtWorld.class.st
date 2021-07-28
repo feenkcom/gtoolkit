@@ -1,16 +1,16 @@
 Class {
-	#name : #GtWorld,
-	#superclass : #BlSpace,
+	#name : 'GtWorld',
+	#superclass : 'BlSpace',
 	#instVars : [
 		'worldElement'
 	],
 	#classInstVars : [
 		'defaultId'
 	],
-	#category : #'GToolkit-World-UI'
+	#category : 'GToolkit-World-UI'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorld class >> buildWithShutdownListener [
 	| aSpace |
 	aSpace := self new.
@@ -20,23 +20,23 @@ GtWorld class >> buildWithShutdownListener [
 	^ aSpace
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorld class >> defaultId [
 	^ defaultId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorld class >> defaultId: anId [
 	"Set the id of the default space opened initially."
 	defaultId := anId
 ]
 
-{ #category : #defaults }
+{ #category : 'defaults' }
 GtWorld class >> defaultTitle [
 	^ 'Glamorous Toolkit'
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 GtWorld class >> initialize [
 	"Register the handler to execute after the default priority that reads preferences."
 	SessionManager default
@@ -45,7 +45,7 @@ GtWorld class >> initialize [
 		atPriority: SessionManager default defaultPriority + 1
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 GtWorld class >> notifyDefaultInstance [
 	self defaultId ifNil: [ ^ self ].
  	self
@@ -55,7 +55,7 @@ GtWorld class >> notifyDefaultInstance [
 				aSpace refreshContent ]) ] 
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorld class >> open [
 	<script: 'self open'>
 	| aSpace |
@@ -68,7 +68,7 @@ GtWorld class >> open [
 	^ aSpace
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorld class >> openDefault [
 	"Open an instance with shutdown handlers and mark it as default."
 	<script: 'self openDefault'>
@@ -82,7 +82,7 @@ GtWorld class >> openDefault [
 	^ aSpace
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorld class >> openWithShutdownListener [
 	<script: 'self openWithShutdownListener'>
 	| aSpace |
@@ -91,7 +91,7 @@ GtWorld class >> openWithShutdownListener [
 	^ aSpace
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorld class >> openWithSpaces: aCollectionOfSpaces [
 	| aSpace |
 
@@ -105,7 +105,7 @@ GtWorld class >> openWithSpaces: aCollectionOfSpaces [
 	^ aSpace
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorld class >> openWithSpaces: aCollectionOfSpaces from: aSpace [
 	| aNewSpace |
 	aNewSpace := self openWithSpaces: aCollectionOfSpaces.
@@ -114,7 +114,7 @@ GtWorld class >> openWithSpaces: aCollectionOfSpaces from: aSpace [
 	^ aNewSpace
 ]
 
-{ #category : #'api - notification' }
+{ #category : 'api - notification' }
 GtWorld class >> showNotification: aNotification [
 	BlSpace
 		spaceWithId: self defaultId 
@@ -122,7 +122,7 @@ GtWorld class >> showNotification: aNotification [
 			aSpace showNotification: aNotification ].
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 GtWorld class >> startUp: resuming [
 	"Implement an update mechanism to update the saved world on open."
 	resuming
@@ -130,27 +130,27 @@ GtWorld class >> startUp: resuming [
 	self notifyDefaultInstance.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorld >> addShutdownListener [
 	self addEventHandler: BlSpaceShutdownOnCloseListener new
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorld >> database [
 	^ self knowledgeBase
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtWorld >> defaultTitle [
 	^ self class defaultTitle
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtWorld >> defaultWorldElement [
 	^ GtWorldElement new
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtWorld >> initialize [
 	super initialize.
 	worldElement := self defaultWorldElement beInSeparateCompositionLayer.
@@ -164,47 +164,47 @@ GtWorld >> initialize [
 	self withGlamorousFullscreenMaxizimerHost
 ]
 
-{ #category : #'focus managing' }
+{ #category : 'focus managing' }
 GtWorld >> initializeFocus [
 	worldElement isFocusable
 		ifTrue: [ worldElement requestFocus ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorld >> knowledgeBase [
 	^ worldElement knowledgeBase
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorld >> knowledgeBase: aKnowledgeBase [
 	worldElement knowledgeBase: aKnowledgeBase.
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtWorld >> markAsDefault [
 	"Mark this instance as being the one that is saved and automatically opened when
 	the image is opened. This instance will refresh it's content on start-up."
 	self class defaultId: self id
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtWorld >> prepareForRelease [
 	"Prepare this space to be saved as part of the release process."
 	worldElement prepareForRelease
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtWorld >> refreshContent [
 	"Refresh the content of the space. Is only called for the default instance on start-up."
 	worldElement refreshContent
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorld >> removeShutdownListener [
 	self removeEventHandlersSuchThat: [ :eachHandler | eachHandler isKindOf: BlSpaceShutdownOnCloseListener ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtWorld >> showSpace: aSpace [
 	worldElement showSpace: aSpace
 ]

@@ -1,6 +1,6 @@
 Class {
-	#name : #GtWorldElement,
-	#superclass : #GtWorldTabElement,
+	#name : 'GtWorldElement',
+	#superclass : 'GtWorldTabElement',
 	#instVars : [
 		'spotterDropdown',
 		'subSpaceDropdown',
@@ -11,35 +11,35 @@ Class {
 		'IsWorldSpotterPreviewDisplayed',
 		'WorldSpotterSize'
 	],
-	#category : #'GToolkit-World-UI'
+	#category : 'GToolkit-World-UI'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldElement class >> isWorldSpotterPreviewDisplayed [
 	^ IsWorldSpotterPreviewDisplayed ifNil: [ IsWorldSpotterPreviewDisplayed := true ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldElement class >> showWorldSpotterPreview: aBoolean [
 	IsWorldSpotterPreviewDisplayed := aBoolean
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldElement class >> worldSpotterSize [
 	^ WorldSpotterSize ifNil: [ WorldSpotterSize := 640@480 ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldElement class >> worldSpotterSize: aPoint [
 	WorldSpotterSize := aPoint
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldElement >> announcer [
 	^ announcer
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtWorldElement >> clearKnowledgeBase [
 	| currentKnowledgeBase |
 	currentKnowledgeBase := self home knowledgeBase.
@@ -50,17 +50,17 @@ GtWorldElement >> clearKnowledgeBase [
 			source: self) ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldElement >> database [
 	^ self knowledgeBase
 ]
 
-{ #category : #defaults }
+{ #category : 'defaults' }
 GtWorldElement >> defaultHomeElement [
 	^ GtHome new
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtWorldElement >> initialize [ 
 
 	announcer := Announcer new.
@@ -68,7 +68,7 @@ GtWorldElement >> initialize [
 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtWorldElement >> initializeListeners [
 	super initializeListeners.
 
@@ -79,7 +79,7 @@ GtWorldElement >> initializeListeners [
 			spotterDropdown dispatchEvent: BrDropdownShowWish new ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtWorldElement >> initializeShortcuts [
 	super initializeShortcuts.
 	self
@@ -101,12 +101,12 @@ GtWorldElement >> initializeShortcuts [
 										yourself) ] ])
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldElement >> knowledgeBase [
 	^ self home knowledgeBase
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldElement >> knowledgeBase: aKnowledgeBase [
 	self home knowledgeBase:  aKnowledgeBase.
 	self announcer announce: (LeWorldElementDatabaseChanged new
@@ -114,7 +114,7 @@ GtWorldElement >> knowledgeBase: aKnowledgeBase [
 		source: self)
 ]
 
-{ #category : #'private - instance creation' }
+{ #category : 'private - instance creation' }
 GtWorldElement >> newActionItemsInto: anActionbar [
 	super newActionItemsInto: anActionbar.
 	anActionbar addItem: self newNotificationsBadge.
@@ -126,7 +126,7 @@ GtWorldElement >> newActionItemsInto: anActionbar [
 	anActionbar addItem: self newSubSpaceButton.
 ]
 
-{ #category : #'private - instance creation' }
+{ #category : 'private - instance creation' }
 GtWorldElement >> newNotificationsBadge [
 	self 
 		assert: [ notificationsDropdown isNil ]
@@ -139,7 +139,7 @@ GtWorldElement >> newNotificationsBadge [
 	^ notificationsDropdown
 ]
 
-{ #category : #'private - instance creation' }
+{ #category : 'private - instance creation' }
 GtWorldElement >> newSpotterButton [
 	self 
 		assert: [ spotterDropdown isNil ]
@@ -163,7 +163,7 @@ GtWorldElement >> newSpotterButton [
 	^ spotterDropdown
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorldElement >> newStatusButton [
 	"Answer a dropdown button for the  status of knowledge base associated with the current world"
 
@@ -171,7 +171,7 @@ GtWorldElement >> newStatusButton [
 		leWorldElement: self
 ]
 
-{ #category : #'private - instance creation' }
+{ #category : 'private - instance creation' }
 GtWorldElement >> newSubSpaceButton [
 	self
 		assert: [ subSpaceDropdown isNil ]
@@ -203,7 +203,7 @@ GtWorldElement >> newSubSpaceButton [
 	^ subSpaceDropdown
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldElement >> newSynchronizeButton [
 	"Answer a dropdown button for syncronizing databases"
 
@@ -211,7 +211,7 @@ GtWorldElement >> newSynchronizeButton [
 		leWorldElement: self
 ]
 
-{ #category : #'hooks - children' }
+{ #category : 'hooks - children' }
 GtWorldElement >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 
@@ -226,30 +226,30 @@ GtWorldElement >> onAddedToSceneGraph [
 		to: self home. 
 ]
 
-{ #category : #'hooks - children' }
+{ #category : 'hooks - children' }
 GtWorldElement >> onRemovedFromSceneGraph [
 	super onRemovedFromSceneGraph.
 	SystemAnnouncer uniqueInstance unsubscribe: self home
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtWorldElement >> prepareForRelease [
 	self home prepareForRelease.
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtWorldElement >> refreshContent [
 	"Refresh all notifications in the home screen."
 	self home refreshNotifications
 ]
 
-{ #category : #'api - notification' }
+{ #category : 'api - notification' }
 GtWorldElement >> removeNotification: aNotification [
 	notificationsDropdown ifNotNil: [ :anElement | 
 		anElement removeNotification: aNotification ]
 ]
 
-{ #category : #'api - notification' }
+{ #category : 'api - notification' }
 GtWorldElement >> showNotification: aNotification [
 	"I am a root element of the default space ID, I will display the notification."
 	notificationsDropdown ifNotNil: [ :anElement | 

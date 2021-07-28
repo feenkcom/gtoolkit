@@ -1,12 +1,12 @@
 Class {
-	#name : #GtWorldUtility,
-	#superclass : #Object,
+	#name : 'GtWorldUtility',
+	#superclass : 'Object',
 	#traits : 'TBlDebug',
 	#classTraits : 'TBlDebug classTrait',
-	#category : #'GToolkit-World-Utilities'
+	#category : 'GToolkit-World-Utilities'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorldUtility class >> showSpaceWithIcon: anIcon title: aString with: aStencil from: anotherElement [
 	| aSpace |
 	aSpace := BlSpace new.
@@ -20,7 +20,7 @@ GtWorldUtility class >> showSpaceWithIcon: anIcon title: aString with: aStencil 
 	^ aSpace
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorldUtility class >> showSpaceWithTitle: aString icon: anIcon inPager: aPagerConfiguration with: aStencil from: anotherElement [
 	| anElement aPager |
 	anElement := aStencil asElement.
@@ -30,7 +30,7 @@ GtWorldUtility class >> showSpaceWithTitle: aString icon: anIcon inPager: aPager
 	^ self showSpaceWithTitle: aString with: aPager from: anotherElement.
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorldUtility class >> showSpaceWithTitle: aString icon: anIcon inPagerWith: aStencil from: anotherElement [
 	^ self 
 		showSpaceWithTitle: aString 
@@ -40,7 +40,7 @@ GtWorldUtility class >> showSpaceWithTitle: aString icon: anIcon inPagerWith: aS
 		from: anotherElement
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorldUtility class >> showSpaceWithTitle: aString icon: anIcon with: aStencil from: anotherElement [
 	| aSpace |
 	aSpace := BlSpace new.
@@ -55,12 +55,12 @@ GtWorldUtility class >> showSpaceWithTitle: aString icon: anIcon with: aStencil 
 	^ aSpace
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorldUtility class >> showSpaceWithTitle: aString inPager: aPagerConfiguration with: aStencil from: anotherElement [
 	^ self showSpaceWithTitle: aString icon: nil inPager: aPagerConfiguration with: aStencil from: anotherElement
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorldUtility class >> showSpaceWithTitle: aString inPagerWith: aStencil from: anotherElement [
 	^ self 
 		showSpaceWithTitle: aString 
@@ -69,7 +69,7 @@ GtWorldUtility class >> showSpaceWithTitle: aString inPagerWith: aStencil from: 
 		from: anotherElement
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtWorldUtility class >> showSpaceWithTitle: aString with: aStencil from: anotherElement [
 	^ self showSpaceWithTitle: aString icon: nil with: aStencil from: anotherElement
 ]

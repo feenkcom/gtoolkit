@@ -1,20 +1,20 @@
 Class {
-	#name : #GtLocalDataStorage,
-	#superclass : #Object,
+	#name : 'GtLocalDataStorage',
+	#superclass : 'Object',
 	#instVars : [
 		'schemaVersion',
 		'fileBaseName',
 		'storageFolderLocator'
 	],
-	#category : #'GToolkit-World-Storage'
+	#category : 'GToolkit-World-Storage'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtLocalDataStorage class >> defaultPreferences [
 	^ FileLocator preferences / 'pharo'
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtLocalDataStorage class >> forFileWithBasename: aFileName withSchema: schemaVersion [
 	^ self new
 		fileBaseName: aFileName;
@@ -22,7 +22,7 @@ GtLocalDataStorage class >> forFileWithBasename: aFileName withSchema: schemaVer
 		storageFolderLocator: self defaultPreferences
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtLocalDataStorage >> exportDictionaryForObject: anObject [
 	^ { 
 		'schema' -> self schemaVersion.
@@ -30,17 +30,17 @@ GtLocalDataStorage >> exportDictionaryForObject: anObject [
 	} asDictionary
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtLocalDataStorage >> fileBaseName [
 	^ fileBaseName
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtLocalDataStorage >> fileBaseName: anObject [
 	fileBaseName := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtLocalDataStorage >> fileName [
 	^ String streamContents: [ :aStream|
 		aStream 
@@ -50,7 +50,7 @@ GtLocalDataStorage >> fileName [
 			nextPutAll: '.ston' ]
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 GtLocalDataStorage >> gtDisplayOn: aStream [
 	super gtDisplayOn: aStream.
 	aStream 
@@ -61,7 +61,7 @@ GtLocalDataStorage >> gtDisplayOn: aStream [
 		nextPutAll: ')'
 ]
 
-{ #category : #ui }
+{ #category : 'ui' }
 GtLocalDataStorage >> gtViewDetailsFor: aView [
 	<gtView>
 	^ aView columnedList 
@@ -74,14 +74,14 @@ GtLocalDataStorage >> gtViewDetailsFor: aView [
 		column: 'Value' item: #value
 ]
 
-{ #category : #ui }
+{ #category : 'ui' }
 GtLocalDataStorage >> gtViewStorageFileFor: aView [
 	<gtView>
 	self storageFileReference exists	ifFalse: [ ^ aView empty ].
 	^ self storageFileReference gtContentsFor: aView
 ]
 
-{ #category : #ui }
+{ #category : 'ui' }
 GtLocalDataStorage >> gtViewStorageFolderFor: aView [
 	<gtView>
 	self storageFolderLocator ifNil: [ ^ aView empty ].
@@ -89,13 +89,13 @@ GtLocalDataStorage >> gtViewStorageFolderFor: aView [
 		title: 'Storage folder'
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtLocalDataStorage >> isRawDataValidFor: aDictionary [
 	^ (aDictionary includesKey: 'data') and: [  
 		 	(aDictionary at: 'schema' ifAbsent: [nil]) = self schemaVersion ]
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtLocalDataStorage >> readContentAndDo: aBlock [
 	| fileReference rawData |
 	fileReference := self storageFileReference.
@@ -107,14 +107,14 @@ GtLocalDataStorage >> readContentAndDo: aBlock [
 		 aBlock value: (rawData at: 'data') ]
 ]
 
-{ #category : #'load and saving' }
+{ #category : 'load and saving' }
 GtLocalDataStorage >> saveJsonFor: aValue into: aWriteStream [
 	STONJSON
 		put: aValue 
 		onStreamPretty: (ZnCharacterWriteStream on: aWriteStream encoding: 'utf8')
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtLocalDataStorage >> saveObject: anObject [
 	| fileReference |
 	fileReference := self storageFileReference.
@@ -126,27 +126,27 @@ GtLocalDataStorage >> saveObject: anObject [
 			into: aPreferenceStream ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtLocalDataStorage >> schemaVersion [
 	^ schemaVersion
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtLocalDataStorage >> schemaVersion: anObject [
 	schemaVersion := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtLocalDataStorage >> storageFileReference [
 	^ (self storageFolderLocator / self fileName) asFileReference
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtLocalDataStorage >> storageFolderLocator [
 	^ storageFolderLocator
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtLocalDataStorage >> storageFolderLocator: anObject [
 	storageFolderLocator := anObject
 ]
