@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'knowledgeBaseComputation'
 	],
-	#category : #'GToolkit-World-Sections'
+	#category : 'GToolkit-World-Sections'
 }
 
 { #category : #'api - instantiation' }
@@ -58,10 +58,10 @@ GtHomeToolsSection >> knowledgeBaseComputation: aValuable [
 GtHomeToolsSection >> newCodeChangesButtonStencil [
 	^ GtToolButtonStencil new
 		title: 'Code Changes';
-		icon: BrGlamorousVectorIcons largebranching;
+		icon: BrGlamorousVectorIcons changes;
 		action: [ :card | 
 			self
-				showSpaceWithIcon: BrGlamorousVectorIcons emphasizedInspect
+				showSpaceWithIcon: BrGlamorousVectorIcons changes
 				title: 'Code Changes'
 					with: (GtInspector createOn: GtEpicea allInSessionStore) maximized
 					from: card ];
