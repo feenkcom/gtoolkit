@@ -1,21 +1,21 @@
 Class {
-	#name : 'GtButtonsDefiningActionsThroughModels',
-	#superclass : 'GtPharoConstraint',
-	#category : 'GToolkit-Constraints'
+	#name : #GtButtonsDefiningActionsThroughModels,
+	#superclass : #GtPharoConstraint,
+	#category : #'GToolkit-Constraints'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtButtonsDefiningActionsThroughModels >> description [
 	^ 'Button action is defined through the model instead of the button'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtButtonsDefiningActionsThroughModels >> issues [
 	^ '`@a addViewModel: (BrButtonModel new action: [:`var | | `@temps | `@.Stmts ])'
 		gtASTMatches result
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtButtonsDefiningActionsThroughModels >> name [
 	^ 'Button action is defined through the model'
 ]

@@ -1,13 +1,13 @@
 Class {
-	#name : 'GtHomeToolsSection',
-	#superclass : 'GtHomeSection',
+	#name : #GtHomeToolsSection,
+	#superclass : #GtHomeSection,
 	#instVars : [
 		'knowledgeBaseComputation'
 	],
 	#category : 'GToolkit-World-Sections'
 }
 
-{ #category : 'api - instantiation' }
+{ #category : #'api - instantiation' }
 GtHomeToolsSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := BlElement new
@@ -44,17 +44,17 @@ GtHomeToolsSection >> create [
 	^ sectionContainer
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHomeToolsSection >> knowledgeBase [
 	^ knowledgeBaseComputation ifNotNil: [ :aValuable | aValuable value ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHomeToolsSection >> knowledgeBaseComputation: aValuable [
 	knowledgeBaseComputation := aValuable
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHomeToolsSection >> newCodeChangesButtonStencil [
 	^ GtToolButtonStencil new
 		title: 'Code Changes';
@@ -69,7 +69,7 @@ GtHomeToolsSection >> newCodeChangesButtonStencil [
 			'Browse the local code changes from the current and previous sessions.'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newCoderButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Coder';
@@ -83,7 +83,7 @@ GtHomeToolsSection >> newCoderButtonStencil [
 		description: 'Browse and manipulate code.'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newExamplesButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Exemplifier';
@@ -99,7 +99,7 @@ GtHomeToolsSection >> newExamplesButtonStencil [
 		description: 'Units of tests and of documentation. In one.'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newFileSystemButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'File system';
@@ -117,7 +117,7 @@ GtHomeToolsSection >> newFileSystemButtonStencil [
 		description: 'Browse the file system.'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newGitButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Git';
@@ -133,7 +133,7 @@ GtHomeToolsSection >> newGitButtonStencil [
 		description: 'Manage git repositories.'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newLepiterButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Lepiter';
@@ -148,7 +148,7 @@ GtHomeToolsSection >> newLepiterButtonStencil [
 		description: 'Lepiter'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newMonitorButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Monitor';
@@ -162,7 +162,7 @@ GtHomeToolsSection >> newMonitorButtonStencil [
 		description: 'Monitor processes and high level tasks.'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newMorphicWorldButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Morphic World';
@@ -171,7 +171,7 @@ GtHomeToolsSection >> newMorphicWorldButtonStencil [
 		description: 'The legacy Morphic World interface and tools.'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newNotesButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Note';
@@ -186,7 +186,7 @@ GtHomeToolsSection >> newNotesButtonStencil [
 		description: 'Take notes. Live.'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newPlaygroundButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Playground';
@@ -201,7 +201,7 @@ GtHomeToolsSection >> newPlaygroundButtonStencil [
 		description: 'Play with code. Live.'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newSpotterButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Spotter';
@@ -210,7 +210,7 @@ GtHomeToolsSection >> newSpotterButtonStencil [
 		description: 'Search anything. Really anything.'
 ]
 
-{ #category : 'tools creation' }
+{ #category : #'tools creation' }
 GtHomeToolsSection >> newTranscriptButtonStencil [
 	^ GtToolButtonStencil new 
 		title: 'Transcript';

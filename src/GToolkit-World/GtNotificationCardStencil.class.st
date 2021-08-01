@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtNotificationCardStencil',
-	#superclass : 'BrStencil',
+	#name : #GtNotificationCardStencil,
+	#superclass : #BrStencil,
 	#instVars : [
 		'headerText',
 		'actionText',
@@ -8,20 +8,20 @@ Class {
 		'openAction',
 		'closeAction'
 	],
-	#category : 'GToolkit-World-Notifications'
+	#category : #'GToolkit-World-Notifications'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationCardStencil >> actionText: anObject [
 	actionText := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationCardStencil >> closeAction: aBlock [
 	closeAction := aBlock
 ]
 
-{ #category : 'api - instantiation' }
+{ #category : #'api - instantiation' }
 GtNotificationCardStencil >> create [
 	| container actionButton headerLabel closeButton |
 	container := BlElement new
@@ -62,17 +62,17 @@ GtNotificationCardStencil >> create [
 	^ container
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationCardStencil >> headerText: anObject [
 	headerText := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationCardStencil >> openAction: anObject [
 	openAction := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationCardStencil >> tooltipText: anObject [
 	tooltipText := anObject
 ]

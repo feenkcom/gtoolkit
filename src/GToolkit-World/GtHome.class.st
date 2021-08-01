@@ -1,35 +1,35 @@
 Class {
-	#name : 'GtHome',
-	#superclass : 'BlElement',
+	#name : #GtHome,
+	#superclass : #BlElement,
 	#instVars : [
 		'sectionsHolder',
 		'feedElement',
 		'notificationsElement',
 		'knowledgeBase'
 	],
-	#category : 'GToolkit-World-UI'
+	#category : #'GToolkit-World-UI'
 }
 
-{ #category : 'sections' }
+{ #category : #sections }
 GtHome >> caseStudyShowsSection [
 	<gtHomeSection>
 	^ GtHomeUseCaseShowsSection new 
 		priority: 17
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHome >> clearKnowledgeBase [
 	knowledgeBase := nil
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHome >> collectHomeSectionStencils [
 	^ GtHomeSectionsCollector new
 		fromObject: self;
 		collect
 ]
 
-{ #category : 'building' }
+{ #category : #building }
 GtHome >> createSectionWrapperFor: aSectionStencil [
 	^ BlLazyElement new
 			margin: (BlInsets all: self spaceGap);
@@ -43,14 +43,14 @@ GtHome >> createSectionWrapperFor: aSectionStencil [
 			elementBuilder: [ aSectionStencil asElement ]
 ]
 
-{ #category : 'building' }
+{ #category : #building }
 GtHome >> createSectionsHolder [
 	^ BrVerticalPane new
 		hMatchParent;
 		vFitContent
 ]
 
-{ #category : 'building' }
+{ #category : #building }
 GtHome >> createVersionLabel [
 	^ BrButton new 
 		label: 'Glamorous Toolkit ', GtImage instance version versionString; 
@@ -70,21 +70,21 @@ GtHome >> createVersionLabel [
 				from: button ]
 ]
 
-{ #category : 'sections' }
+{ #category : #sections }
 GtHome >> documentationSection [
 "	<gtHomeSection>"
 	^ GtHomeDocumentationSection new
 		priority: 20  
 ]
 
-{ #category : 'sections' }
+{ #category : #sections }
 GtHome >> getStartedSection [
 	<gtHomeSection>
 	^ GtHomeGetStartedSection new 
 		priority: 15
 ]
 
-{ #category : 'ui' }
+{ #category : #ui }
 GtHome >> gtViewHomeSectionsFor: aView [
 	<gtView>
 	^ aView list 
@@ -92,14 +92,14 @@ GtHome >> gtViewHomeSectionsFor: aView [
 		items: [ self collectHomeSectionStencils ]
 ]
 
-{ #category : 'sections' }
+{ #category : #sections }
 GtHome >> howToSection [
 	"<gtHomeSection>"
 	^ GtHomeHowToSection new
 		priority: 19
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHome >> initialize [
 	super initialize.
 	self background: self theme default backdropColor.
@@ -112,7 +112,7 @@ GtHome >> initialize [
 	self updateWidget
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHome >> initializePanes [
 	| mainPane sectionsPane |
 	notificationsElement := GtHomeNotifications new
@@ -150,23 +150,23 @@ GtHome >> initializePanes [
 	self addChild: self createVersionLabel.
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHome >> knowledgeBase [
 	^ knowledgeBase
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHome >> knowledgeBase: aKnowledgeBase [
 	knowledgeBase := aKnowledgeBase
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHome >> prepareForRelease [ 
 	notificationsElement clearContent.
 	feedElement clearContent
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHome >> refreshNotifications [
 	"Update the notifications and content of the home screen that can potentially changed 
 	based on local user preferences."
@@ -174,19 +174,19 @@ GtHome >> refreshNotifications [
 	self updateFeed.
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHome >> spaceGap [
 	^ 10
 ]
 
-{ #category : 'sections' }
+{ #category : #sections }
 GtHome >> toolShowsSection [
 	"<gtHomeSection>"
 	^ GtHomeToolDocsSection new 
 		priority: 16
 ]
 
-{ #category : 'sections' }
+{ #category : #sections }
 GtHome >> toolsSection [
 "	<gtHomeSection>"
 	^ GtHomeToolsSection new
@@ -194,7 +194,7 @@ GtHome >> toolsSection [
 		knowledgeBaseComputation: [ self knowledgeBase ]
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHome >> update: anAnnouncement [
 	anAnnouncement classAffected == self class
 		ifFalse: [ ^ self ].
@@ -202,19 +202,19 @@ GtHome >> update: anAnnouncement [
 	self updateWidget.
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHome >> updateFeed [
 	feedElement ifNotNil: [  
 		feedElement updateWidget ]
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHome >> updateNotifications [
 	notificationsElement ifNotNil: [  
 		notificationsElement updateWidget ]
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHome >> updateSections [
 	| sectionElements sectionStencils |
 	sectionsHolder ifNil:  [ ^ self ].
@@ -225,7 +225,7 @@ GtHome >> updateSections [
 	sectionsHolder addChildren: sectionElements.
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHome >> updateWidget [
 	self updateNotifications.
 	self updateSections.

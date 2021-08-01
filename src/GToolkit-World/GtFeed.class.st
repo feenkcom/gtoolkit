@@ -1,20 +1,20 @@
 Class {
-	#name : 'GtFeed',
-	#superclass : 'Object',
+	#name : #GtFeed,
+	#superclass : #Object,
 	#instVars : [
 		'status',
 		'feedSources',
 		'persistenceStrategy'
 	],
-	#category : 'GToolkit-World-Feed'
+	#category : #'GToolkit-World-Feed'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeed class >> currentSchemaVersion [
 	^ 'v1'
 ]
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtFeed class >> loadDefault [
 	^ self new
 		persistenceStrategy: (GtLocalDataStorage 
@@ -23,23 +23,23 @@ GtFeed class >> loadDefault [
 		loadContent
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeed class >> registryFileName [
 	^ 'com.glamoroustoolkit.feeds'
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtFeed >> addFeenkBlog [
 	self addSourceUrl: 'https://blog.feenk.com'
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtFeed >> addSourceUrl: anUrl [
 	feedSources add: (GtFeedSource new
 		url: anUrl)
 ]
 
-{ #category : 'converting' }
+{ #category : #converting }
 GtFeed >> asDictionaryForExport [
 	^ { 
 		'status' -> status registryValue asString.
@@ -48,12 +48,12 @@ GtFeed >> asDictionaryForExport [
 	} asDictionary
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeed >> feedSources [
 	^ feedSources
 ]
 
-{ #category : 'ui' }
+{ #category : #ui }
 GtFeed >> gtViewExportJSONFor: aView [
 	<gtView>
 	^ aView textEditor 
@@ -63,7 +63,7 @@ GtFeed >> gtViewExportJSONFor: aView [
 			STONJSON toStringPretty: (self persistenceStrategy exportDictionaryForObject: self) ]
 ]
 
-{ #category : 'ui' }
+{ #category : #ui }
 GtFeed >> gtViewSourcesFor: aView [
 	<gtView>
 	^ aView list 
@@ -71,42 +71,42 @@ GtFeed >> gtViewSourcesFor: aView [
 		items: [ self feedSources ]
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtFeed >> importDataFrom: rawData [
 	self loadStatusFrom: rawData.
 	self loadSourcesFrom: rawData.
 	
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtFeed >> initialize [
 	super initialize.
 	status := GtFeedNotConfiguredStatus new.
 	feedSources := OrderedCollection new.
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtFeed >> isEnabled [
 	^ status isEnabled
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtFeed >> isLoadedDataValidFor: aDictionary [
 	^ true
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtFeed >> isNotConfigured [ 
 	^ status isNotConfigured
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtFeed >> loadContent [
 	self persistenceStrategy readContentAndDo: [ :rawData | 
 		self importDataFrom: rawData ]
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtFeed >> loadSourcesFrom: rawData [
 	| sourcesValue |
 	sourcesValue := rawData at: 'sources' ifAbsent: [ ^ self ].
@@ -115,7 +115,7 @@ GtFeed >> loadSourcesFrom: rawData [
 			self addSourceUrl: anUrl ] ]
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtFeed >> loadStatusFrom: rawData [
 	| statusValue |
 	statusValue := rawData at: 'status' ifAbsent: [ ^ self ].
@@ -124,27 +124,27 @@ GtFeed >> loadStatusFrom: rawData [
 		ifNone: [ GtFeedNotConfiguredStatus new ].
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtFeed >> markAsDisabled [
 	status := GtFeedDisabledStatus new
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtFeed >> markAsEnabled [
 	status := GtFeedEnabledStatus new
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeed >> persistenceStrategy [
 	^ persistenceStrategy
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeed >> persistenceStrategy: anObject [
 	persistenceStrategy := anObject
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtFeed >> saveContent [
 	self persistenceStrategy saveObject: self
 ]

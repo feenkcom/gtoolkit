@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtWorldTabToolbarButtonAptitude',
-	#superclass : 'BrStyleCommonAptitude',
-	#category : 'GToolkit-World-UI'
+	#name : #GtWorldTabToolbarButtonAptitude,
+	#superclass : #BrStyleCommonAptitude,
+	#category : #'GToolkit-World-UI'
 }
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtWorldTabToolbarButtonAptitude >> initialize [
 	super initialize.
 	

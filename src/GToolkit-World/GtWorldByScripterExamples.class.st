@@ -1,12 +1,12 @@
 Class {
-	#name : 'GtWorldByScripterExamples',
-	#superclass : 'Object',
+	#name : #GtWorldByScripterExamples,
+	#superclass : #Object,
 	#traits : 'TBlDevScripterExamples',
 	#classTraits : 'TBlDevScripterExamples classTrait',
-	#category : 'GToolkit-World-Examples'
+	#category : #'GToolkit-World-Examples'
 }
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> addCoderIntoTabElement [
 	<gtExample>
 	| aScripter |
@@ -43,7 +43,7 @@ GtWorldByScripterExamples >> addCoderIntoTabElement [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - playground' }
+{ #category : #'examples - playground' }
 GtWorldByScripterExamples >> addPlaygroundIntoTabElement [
 	<gtExample>
 	| aScripter |
@@ -82,7 +82,7 @@ GtWorldByScripterExamples >> addPlaygroundIntoTabElement [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> browsePackageInSecondPane [
 	<gtExample>
 	| aScripter |
@@ -105,7 +105,7 @@ GtWorldByScripterExamples >> browsePackageInSecondPane [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
 	<gtExample>
 	| aScripter |
@@ -132,7 +132,7 @@ GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - playground' }
+{ #category : #'examples - playground' }
 GtWorldByScripterExamples >> clickBackOnPlaygroundInTheFirstPane [
 	<gtExample>
 	| aScripter |
@@ -154,7 +154,7 @@ GtWorldByScripterExamples >> clickBackOnPlaygroundInTheFirstPane [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - playground' }
+{ #category : #'examples - playground' }
 GtWorldByScripterExamples >> clickOnInspectorInTheSecondPane [
 	<gtExample>
 	| aScripter |
@@ -176,7 +176,7 @@ GtWorldByScripterExamples >> clickOnInspectorInTheSecondPane [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickOnPackageEditableName [
 	<gtExample>
 	| aScripter |
@@ -202,7 +202,7 @@ GtWorldByScripterExamples >> clickOnPackageEditableName [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickOnPackageEditableNameInSecondPane [
 	<gtExample>
 	| aScripter |
@@ -233,7 +233,7 @@ GtWorldByScripterExamples >> clickOnPackageEditableNameInSecondPane [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickOnWorldHomeCoderIcon [
 	<gtExample>
 	| aScripter |
@@ -263,13 +263,13 @@ GtWorldByScripterExamples >> clickOnWorldHomeCoderIcon [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - world' }
+{ #category : #'examples - world' }
 GtWorldByScripterExamples >> coderStencil [
 	<gtExample>
 	^ GtCoderStencil new
 ]
 
-{ #category : 'examples - playground' }
+{ #category : #'examples - playground' }
 GtWorldByScripterExamples >> executePlaygroundSnippet [
 	<gtExample>
 	| aScripter |
@@ -296,23 +296,23 @@ GtWorldByScripterExamples >> executePlaygroundSnippet [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> paneModelKeyAt: aPaneIndex [
 	^ 'paneModelAt', aPaneIndex asString
 ]
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> paneTabLabelKeyAt: aPaneIndex [
 	^ 'paneTabLabelAt', aPaneIndex asString
 ]
 
-{ #category : 'examples - playground' }
+{ #category : #'examples - playground' }
 GtWorldByScripterExamples >> playgroundStencil [
 	<gtExample>
 	^ GtPlaygroundStencil new 
 ]
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> selectClassInSecondPane [
 	<gtExample>
 	| aScripter |
@@ -367,7 +367,7 @@ GtWorldByScripterExamples >> selectClassInSecondPane [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> selectPackageInCoder [
 	<gtExample>
 	| aScripter |
@@ -403,7 +403,7 @@ GtWorldByScripterExamples >> selectPackageInCoder [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - coder' }
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> setupExpectedTabLabel: aBlock at: aPaneIndex step: aStep scripter: aScripter [
 	<gtExample>
 	aStep do
@@ -423,7 +423,7 @@ GtWorldByScripterExamples >> setupExpectedTabLabel: aBlock at: aPaneIndex step: 
 			onBreadthFirstChildOfClass: GtCoder.
 ]
 
-{ #category : 'examples - world' }
+{ #category : #'examples - world' }
 GtWorldByScripterExamples >> tabElementInScripter [
 	<gtExample>
 	| aScripter |
@@ -433,7 +433,7 @@ GtWorldByScripterExamples >> tabElementInScripter [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - playground' }
+{ #category : #'examples - playground' }
 GtWorldByScripterExamples >> typeSnippetInPlayground [
 	<gtExample>
 	| aScripter |
@@ -467,7 +467,7 @@ GtWorldByScripterExamples >> typeSnippetInPlayground [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - world' }
+{ #category : #'examples - world' }
 GtWorldByScripterExamples >> worldElementInScripter [
 	<gtExample>
 	| aScripter |

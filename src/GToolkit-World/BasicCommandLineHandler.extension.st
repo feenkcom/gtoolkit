@@ -1,6 +1,6 @@
-Extension { #name : 'BasicCommandLineHandler' }
+Extension { #name : #BasicCommandLineHandler }
 
-{ #category : '*GToolkit-World' }
+{ #category : #'*GToolkit-World' }
 BasicCommandLineHandler >> gtHandleArgument: aString [
 
 	"give priority to subcommands"

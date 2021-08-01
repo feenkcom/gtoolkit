@@ -1,45 +1,45 @@
 Class {
-	#name : 'GtHomeDocumentCardElement',
-	#superclass : 'GtHomeCardElement',
+	#name : #GtHomeDocumentCardElement,
+	#superclass : #GtHomeCardElement,
 	#instVars : [
 		'descriptionElement',
 		'titleElement',
 		'document'
 	],
-	#category : 'GToolkit-World-Sections'
+	#category : #'GToolkit-World-Sections'
 }
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtHomeDocumentCardElement class >> forClass: aClass [
 	^ GtHomeClassCommentCardElement new
 		documentClass: aClass
 ]
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtHomeDocumentCardElement class >> forFile: aFile [
 	^ GtHomeFileDocumentCardElement new
 		file: aFile
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtHomeDocumentCardElement >> description [
 	<return: #String>
 	^ self subclassResponsibility
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtHomeDocumentCardElement >> descriptionElement [
 	<return: #BrEditor>
 	^ descriptionElement
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtHomeDocumentCardElement >> document [
 	<return: #Object>
 	^ document
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtHomeDocumentCardElement >> document: anObject [
 	document = anObject ifTrue: [ ^ self ].
 	self unsubscribeFromDocument.
@@ -48,7 +48,7 @@ GtHomeDocumentCardElement >> document: anObject [
 	self onDocumentChanged.
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeDocumentCardElement >> initialize [
 	super initialize.
 	self initializeTitleElement.
@@ -63,7 +63,7 @@ GtHomeDocumentCardElement >> initialize [
 		inherit: self descriptionElement).
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeDocumentCardElement >> initializeDescriptionElement [
 	descriptionElement := BrEditor new
 		aptitude: (BrGlamorousEditorAptitude new 
@@ -73,7 +73,7 @@ GtHomeDocumentCardElement >> initializeDescriptionElement [
 		beReadOnlyWithoutSelection
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeDocumentCardElement >> initializeTitleElement [
 	titleElement := BrEditor new
 		aptitude: (BrGlamorousEditorAptitude new 
@@ -85,37 +85,37 @@ GtHomeDocumentCardElement >> initializeTitleElement [
 		beReadOnlyWithoutSelection.
 ]
 
-{ #category : 'defaults' }
+{ #category : #defaults }
 GtHomeDocumentCardElement >> maxDescriptionLenght [
 	^ 400
 ]
 
-{ #category : 'defaults' }
+{ #category : #defaults }
 GtHomeDocumentCardElement >> maxTitleLenght [
 	^ 30
 ]
 
-{ #category : 'private - hooks' }
+{ #category : #'private - hooks' }
 GtHomeDocumentCardElement >> onDocumentChanged [
 ]
 
-{ #category : 'private - subscriptions' }
+{ #category : #'private - subscriptions' }
 GtHomeDocumentCardElement >> subscribeToDocument [
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtHomeDocumentCardElement >> title [
 	<return: #String>
 	^ self subclassResponsibility
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtHomeDocumentCardElement >> titleElement [
 	<return: #BrEditor>
 	^ titleElement
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtHomeDocumentCardElement >> titleWithoutHeadingsFrom: aComment [
 	^ String 
 		streamContents: [ :aStream |
@@ -133,22 +133,22 @@ GtHomeDocumentCardElement >> titleWithoutHeadingsFrom: aComment [
 		limitedTo: self maxTitleLenght.
 ]
 
-{ #category : 'private - subscriptions' }
+{ #category : #'private - subscriptions' }
 GtHomeDocumentCardElement >> unsubscribeFromDocument [
 ]
 
-{ #category : 'private - updating' }
+{ #category : #'private - updating' }
 GtHomeDocumentCardElement >> updateDescriptionElement [
 	self descriptionElement text: self description.
 ]
 
-{ #category : 'private - updating' }
+{ #category : #'private - updating' }
 GtHomeDocumentCardElement >> updateElement [
 	self updateTitleElement.
 	self updateDescriptionElement.
 ]
 
-{ #category : 'private - updating' }
+{ #category : #'private - updating' }
 GtHomeDocumentCardElement >> updateTitleElement [
 	self titleElement text: self title.
 ]

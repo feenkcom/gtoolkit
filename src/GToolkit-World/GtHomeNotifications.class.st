@@ -1,34 +1,34 @@
 Class {
-	#name : 'GtHomeNotifications',
-	#superclass : 'BlElement',
-	#category : 'GToolkit-World-UI'
+	#name : #GtHomeNotifications,
+	#superclass : #BlElement,
+	#category : #'GToolkit-World-UI'
 }
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHomeNotifications >> availableNotifications [
 	^ { 
 		self takeATourNotification 
 	}
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHomeNotifications >> clearContent [
 	self removeChildren.
 	self visibility: BlVisibility gone
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtHomeNotifications >> hasNotifications [
 	^ self hasChildren 
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeNotifications >> initialize [
 	super initialize.
 	self layout: BlLinearLayout vertical.
 ]
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtHomeNotifications >> showSpaceWithTitle: aString with: anElement from: anotherElement [
 	| aSpace |
 	aSpace := BlSpace new.
@@ -39,12 +39,12 @@ GtHomeNotifications >> showSpaceWithTitle: aString with: anElement from: another
 	anotherElement showSpace: aSpace
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHomeNotifications >> statusRegistry [
 	^ GtNotificationStatusRegistry loadDefault
 ]
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtHomeNotifications >> takeATourNotification [
 	^ GtNotification new
 		id: 'notification/take-a-tour';
@@ -57,7 +57,7 @@ GtHomeNotifications >> takeATourNotification [
 		cardStencil: self takeATourStencil
 ]
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtHomeNotifications >> takeATourStencil [
 	^ GtNotificationCardStencil new
 		headerText: 'New to Glamorous Toolkit?';
@@ -65,7 +65,7 @@ GtHomeNotifications >> takeATourStencil [
 		tooltipText: 'Take an interactive tour through tools and engines'
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHomeNotifications >> updateWidget [
 	| availableNotifications validNotifications statusRegistry |
 	availableNotifications := self availableNotifications.

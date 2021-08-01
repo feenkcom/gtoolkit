@@ -1,13 +1,13 @@
 Class {
-	#name : 'GtBlogPostList',
-	#superclass : 'Object',
+	#name : #GtBlogPostList,
+	#superclass : #Object,
 	#instVars : [
 		'posts'
 	],
-	#category : 'GToolkit-World-Utilities'
+	#category : #'GToolkit-World-Utilities'
 }
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtBlogPostList >> gtPostsFor: aView [
 	<gtView>
 	self posts ifNil: [ ^ aView empty ].
@@ -17,12 +17,12 @@ GtBlogPostList >> gtPostsFor: aView [
 		view: #gtItemsFor:
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtBlogPostList >> posts [
 	^ posts
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtBlogPostList >> posts: anObject [
 	posts := anObject
 ]

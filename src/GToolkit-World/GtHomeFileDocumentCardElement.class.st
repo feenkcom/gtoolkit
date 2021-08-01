@@ -12,12 +12,12 @@ I summarize a file content for a given {{gtMethod:GtHomeFileDocumentCardElement>
 
 "
 Class {
-	#name : 'GtHomeFileDocumentCardElement',
-	#superclass : 'GtHomeDocumentCardElement',
-	#category : 'GToolkit-World-Sections'
+	#name : #GtHomeFileDocumentCardElement,
+	#superclass : #GtHomeDocumentCardElement,
+	#category : #'GToolkit-World-Sections'
 }
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtHomeFileDocumentCardElement >> description [
 	| aComment aDescription |
 	aComment := self limitedFileContent.
@@ -39,32 +39,32 @@ GtHomeFileDocumentCardElement >> description [
 	^ aDescription
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtHomeFileDocumentCardElement >> documentClass [
 	^ self document
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtHomeFileDocumentCardElement >> documentClass: aClass [
 	self document: aClass instanceSide.
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtHomeFileDocumentCardElement >> file [
 	^ self document
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtHomeFileDocumentCardElement >> file: aFile [
 	self document: aFile.
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtHomeFileDocumentCardElement >> fileReference [
 	^ self file asFileReference
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtHomeFileDocumentCardElement >> limitedFileContent [
 	<return: #String>
 	| aFileRefernece |
@@ -80,12 +80,12 @@ GtHomeFileDocumentCardElement >> limitedFileContent [
 		limitedTo: self maxTitleLenght + self maxDescriptionLenght + 10.
 ]
 
-{ #category : 'private - hooks' }
+{ #category : #'private - hooks' }
 GtHomeFileDocumentCardElement >> onDocumentChanged [
 	self updateElement.
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtHomeFileDocumentCardElement >> title [
 	| aComment aTitle |
 	aComment := self limitedFileContent.

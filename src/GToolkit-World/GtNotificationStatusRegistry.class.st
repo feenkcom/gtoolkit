@@ -5,32 +5,32 @@ I hold a list of status objects for neews and know how to persists it and read i
 
 "
 Class {
-	#name : 'GtNotificationStatusRegistry',
-	#superclass : 'GtInteractiveStatusRegistry',
-	#category : 'GToolkit-World-Notifications'
+	#name : #GtNotificationStatusRegistry,
+	#superclass : #GtInteractiveStatusRegistry,
+	#category : #'GToolkit-World-Notifications'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationStatusRegistry class >> currentSchemaVersion [
 	^ 'v1'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationStatusRegistry class >> registryFileName [
 	^ 'com.glamoroustoolkit.notification-statuses'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationStatusRegistry >> defaultStatus [
 	^ GtNotificationNullStatus new
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationStatusRegistry >> rootStatusClass [
 	^ GtNotificationStatus
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtNotificationStatusRegistry >> updateStatusForNotification: aNotification [
 	self 
 		updateStatus: aNotification status  

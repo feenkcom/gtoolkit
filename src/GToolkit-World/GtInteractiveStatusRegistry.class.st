@@ -1,19 +1,19 @@
 Class {
-	#name : 'GtInteractiveStatusRegistry',
-	#superclass : 'Object',
+	#name : #GtInteractiveStatusRegistry,
+	#superclass : #Object,
 	#instVars : [
 		'statusesById',
 		'persistenceStrategy'
 	],
-	#category : 'GToolkit-World-Notifications'
+	#category : #'GToolkit-World-Notifications'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtInteractiveStatusRegistry class >> currentSchemaVersion [
 	self subclassResponsibility
 ]
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtInteractiveStatusRegistry class >> loadDefault [
 	^ self new
 		persistenceStrategy: (GtLocalDataStorage 
@@ -22,12 +22,12 @@ GtInteractiveStatusRegistry class >> loadDefault [
 		loadContent
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtInteractiveStatusRegistry class >> registryFileName [
 	self subclassResponsibility
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtInteractiveStatusRegistry >> asDictionaryForExport [
 	| statusesData |
 	statusesData := OrderedCollection new.
@@ -39,12 +39,12 @@ GtInteractiveStatusRegistry >> asDictionaryForExport [
 	^ {'statuses' -> statusesData asArray} asDictionary
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtInteractiveStatusRegistry >> defaultStatus [
 	self subclassResponsibility
 ]
 
-{ #category : 'ui' }
+{ #category : #ui }
 GtInteractiveStatusRegistry >> gtViewStatusesFor: aView [
 	<gtView>
 	statusesById ifNil: [ ^ aView empty ].
@@ -52,7 +52,7 @@ GtInteractiveStatusRegistry >> gtViewStatusesFor: aView [
 		title: 'Statuses'
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtInteractiveStatusRegistry >> importDataFrom: aDictionary [
 	(aDictionary at: 'statuses')
 		select: [ :statusData | statusData includesKey: 'id' ]
@@ -60,13 +60,13 @@ GtInteractiveStatusRegistry >> importDataFrom: aDictionary [
 	
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtInteractiveStatusRegistry >> initialize [
 	super initialize.
 	statusesById := OrderedDictionary new.
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtInteractiveStatusRegistry >> instantiateStatusFrom: newsItemData [
 	| statusValue |
 	statusValue := newsItemData at: 'status' ifAbsent: [ ^ self defaultStatus ].
@@ -74,13 +74,13 @@ GtInteractiveStatusRegistry >> instantiateStatusFrom: newsItemData [
 		statusFor: statusValue ifNone: [ self defaultStatus ]
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtInteractiveStatusRegistry >> loadContent [
 	self persistenceStrategy readContentAndDo: [ :rawData | 
 		self importDataFrom: rawData ]
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtInteractiveStatusRegistry >> loadStatusFromData: newsItemData [ 
 	| newsId newsStatus |
 	newsId := newsItemData at: 'id'.
@@ -90,34 +90,34 @@ GtInteractiveStatusRegistry >> loadStatusFromData: newsItemData [
 		put: newsStatus
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtInteractiveStatusRegistry >> persistenceStrategy [
 	^ persistenceStrategy
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtInteractiveStatusRegistry >> persistenceStrategy: anObject [
 	persistenceStrategy := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtInteractiveStatusRegistry >> rootStatusClass [
 	self subclassResponsibility
 ]
 
-{ #category : 'load and saving' }
+{ #category : #'load and saving' }
 GtInteractiveStatusRegistry >> saveContent [
 	self persistenceStrategy saveObject: self
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtInteractiveStatusRegistry >> statusForId: anId [
 	^ statusesById 
 		at: anId
 		ifAbsent: [ self defaultStatus ]
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtInteractiveStatusRegistry >> updateStatus: aStatus forId: anId [
 	statusesById 
 		at: anId

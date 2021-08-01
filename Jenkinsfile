@@ -254,6 +254,8 @@ pipeline {
                         stage('Windows Examples') {
                              steps {
                                 retry(2) {
+                                    powershell 'git config --global user.name "Jenkins"'
+                                    powershell 'git config --global user.email "jenkins@feenk.com"'
                                     powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
                                     junit '*.xml'
                                 }

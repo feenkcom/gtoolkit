@@ -1,5 +1,5 @@
 Class {
-	#name : 'GtSpawnSpotter',
-	#superclass : 'BlEvent',
-	#category : 'GToolkit-World-Events'
+	#name : #GtSpawnSpotter,
+	#superclass : #BlEvent,
+	#category : #'GToolkit-World-Events'
 }

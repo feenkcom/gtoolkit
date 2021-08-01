@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtLooksSubscribingToEventsNotFromInitializeListenerMethods',
-	#superclass : 'GtPharoConstraint',
-	#category : 'GToolkit-Constraints'
+	#name : #GtLooksSubscribingToEventsNotFromInitializeListenerMethods,
+	#superclass : #GtPharoConstraint,
+	#category : #'GToolkit-Constraints'
 }
 
-{ #category : 'utilities' }
+{ #category : #utilities }
 GtLooksSubscribingToEventsNotFromInitializeListenerMethods class >> lookMethodWithEvents [
 	<gtExample>
 	^ Array streamContents: [ :aStream |
@@ -15,7 +15,7 @@ GtLooksSubscribingToEventsNotFromInitializeListenerMethods class >> lookMethodWi
 				referencedEvents ifNotEmpty: [ aStream nextPut: eachMethod ] ] ] ]
 ]
 
-{ #category : 'utilities' }
+{ #category : #utilities }
 GtLooksSubscribingToEventsNotFromInitializeListenerMethods class >> lookMethodWithEventsOutsideOfInitializeListeners [
 	<gtExample>
 	| validSelectors |
@@ -37,12 +37,12 @@ GtLooksSubscribingToEventsNotFromInitializeListenerMethods class >> lookMethodWi
 						ifFalse: [ aStream nextPut: eachMethod ] ]	 ] ] ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtLooksSubscribingToEventsNotFromInitializeListenerMethods >> description [
 	^ 'Looks should subscribe to events only from initializeListeners'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtLooksSubscribingToEventsNotFromInitializeListenerMethods >> issues [
 	| listenerSelectors |
 	
@@ -72,7 +72,7 @@ GtLooksSubscribingToEventsNotFromInitializeListenerMethods >> issues [
 						] ]	 ] ] ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtLooksSubscribingToEventsNotFromInitializeListenerMethods >> name [
 	^ 'We should only subscribe to events in initializeListeners method'
 ]

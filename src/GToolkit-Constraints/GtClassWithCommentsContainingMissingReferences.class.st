@@ -1,22 +1,22 @@
 Class {
-	#name : 'GtClassWithCommentsContainingMissingReferences',
-	#superclass : 'GtPharoConstraint',
+	#name : #GtClassWithCommentsContainingMissingReferences,
+	#superclass : #GtPharoConstraint,
 	#traits : 'TGtDocumentInvalidCommentsConstraint',
 	#classTraits : 'TGtDocumentInvalidCommentsConstraint classTrait',
-	#category : 'GToolkit-Constraints'
+	#category : #'GToolkit-Constraints'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> description [
 	^ 'All references from class comments should be present in the image.'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> name [
 	^ 'Classes with comments containing missing references'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
 	| gtProject allPackages |
 	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit/src'.
@@ -35,7 +35,7 @@ GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
 					aPackage name = 'Python3Generator' ] ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> status [ 
 	^ GtNeutralConstraintStatus new
 ]

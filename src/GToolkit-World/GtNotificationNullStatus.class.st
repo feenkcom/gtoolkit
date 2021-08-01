@@ -3,12 +3,12 @@ I am a null status, indicating that a notification does not have a status. I am 
 
 "
 Class {
-	#name : 'GtNotificationNullStatus',
-	#superclass : 'GtNotificationStatus',
-	#category : 'GToolkit-World-Notifications'
+	#name : #GtNotificationNullStatus,
+	#superclass : #GtNotificationStatus,
+	#category : #'GToolkit-World-Notifications'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationNullStatus class >> registryValue [
 	^ 'null'
 ]

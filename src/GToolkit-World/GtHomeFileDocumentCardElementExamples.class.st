@@ -3,12 +3,12 @@ I exemplify {{gtClass:GtHomeFileDocumentCardElement}}.
 
 "
 Class {
-	#name : 'GtHomeFileDocumentCardElementExamples',
-	#superclass : 'GtHomeDocumentCardElementExamples',
-	#category : 'GToolkit-World-Examples'
+	#name : #GtHomeFileDocumentCardElementExamples,
+	#superclass : #GtHomeDocumentCardElementExamples,
+	#category : #'GToolkit-World-Examples'
 }
 
-{ #category : 'examples - basic' }
+{ #category : #'examples - basic' }
 GtHomeFileDocumentCardElementExamples >> basicElement [
 	<gtExample>
 	| anElement |
@@ -19,7 +19,7 @@ GtHomeFileDocumentCardElementExamples >> basicElement [
 	^ anElement
 ]
 
-{ #category : 'examples - element' }
+{ #category : #'examples - element' }
 GtHomeFileDocumentCardElementExamples >> elementWithEmptyFile [
 	<gtExample>
 	| anElement |
@@ -32,7 +32,7 @@ GtHomeFileDocumentCardElementExamples >> elementWithEmptyFile [
 	^ anElement
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHomeFileDocumentCardElementExamples >> elementWithFilledFile [
 	<gtExample>
 	| anElement |
@@ -54,7 +54,7 @@ GtHomeFileDocumentCardElementExamples >> elementWithFilledFile [
 	^ anElement
 ]
 
-{ #category : 'examples - element' }
+{ #category : #'examples - element' }
 GtHomeFileDocumentCardElementExamples >> elementWithInexistentFile [
 	<gtExample>
 	| anElement |
@@ -67,7 +67,7 @@ GtHomeFileDocumentCardElementExamples >> elementWithInexistentFile [
 	^ anElement
 ]
 
-{ #category : 'examples - model' }
+{ #category : #'examples - model' }
 GtHomeFileDocumentCardElementExamples >> existingEmptyFile [
 	<gtExample>
 	| aFile |
@@ -78,7 +78,7 @@ GtHomeFileDocumentCardElementExamples >> existingEmptyFile [
 	^ aFile
 ]
 
-{ #category : 'examples - model' }
+{ #category : #'examples - model' }
 GtHomeFileDocumentCardElementExamples >> existingFilledFile [
 	<gtExample>
 	| aFile |
@@ -93,13 +93,13 @@ GtHomeFileDocumentCardElementExamples >> existingFilledFile [
 	^ aFile
 ]
 
-{ #category : 'examples - model' }
+{ #category : #'examples - model' }
 GtHomeFileDocumentCardElementExamples >> fileSystem [
 	<gtExample>
 	^ FileSystem memory
 ]
 
-{ #category : 'examples - model' }
+{ #category : #'examples - model' }
 GtHomeFileDocumentCardElementExamples >> inexistentFile [
 	<gtExample>
 	| aFile |
