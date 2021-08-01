@@ -546,13 +546,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "tudor@tudorgirba.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-24T15:53:59.302487+02:00"
+									"dateAndTimeString" : "2021-08-01T23:23:26.009576+02:00"
 								}
 							},
 							"uid" : {
@@ -562,7 +562,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Looks (subclass of {{gtClass:BrLook}}) provide the ability to modify the element to which they are attached.  A typical example is the look of a {{gtClass:BrButton}}, whether it has a border or not, a label or not, an icon or not, etc.  Looks should only be created when the underlying widget is used in many places, e.g. buttons, and should not affect the API of the widget."
+							"string" : "Looks (subclass of {{gtClass:BrAptitude}}) provide the ability to modify the element to which they are attached.  A typical example is the look of a {{gtClass:BrButton}}, whether it has a border or not, a label or not, an icon or not, etc.  Looks should only be created when the underlying widget is used in many places, e.g. buttons, and should not affect the API of the widget."
 						},
 						{
 							"__type" : "textSnippet",
