@@ -3,7 +3,7 @@ set -o xtrace
 
 # find . ! -name '*.st' ! -name '*.sh' ! -name '.' -exec rm -rf {} +
 
-curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt-loader.st -o loadgt-loader.st
+curl -L https://raw.githubusercontent.com/feenkcom/gtoolkit/main/scripts/localbuild/loadgt-loader.st -o loadgt-loader.st
 
 curl https://get.pharo.org/64/80 | bash
 
