@@ -49,7 +49,6 @@ pipeline {
     environment {
         GITHUB_TOKEN = credentials('githubrelease')
         AWSIP = 'sftp.feenk.com'
-        // MASTER_WORKSPACE = ""
         EXAMPLE_PACKAGES = "GToolkit-.* GT4SmaCC-.* DeepTraverser-.* Brick Brick-.* Bloc Bloc-.* Sparta-.*"
     }
     stages {
@@ -58,15 +57,12 @@ pipeline {
                 label "unix"
             }
             stages {
-                stage('Load latest master commit') {
+                stage('Load latest main commit') {
                     when { expression {
-                            env.BRANCH_NAME.toString().equals('master')
+                            env.BRANCH_NAME.toString().equals('main')
                         }
                     }
                     steps {
-                        // script {
-                        //     MASTER_WORKSPACE = WORKSPACE
-                        // }
                         sh 'git clean -fdx'
                         sh 'chmod +x scripts/build/*.sh'
                         sh 'rm -rf pharo-local/iceberg'
@@ -85,7 +81,7 @@ pipeline {
                 }
                 stage('Package image') {
                     when { expression {
-                            env.BRANCH_NAME.toString().equals('master')
+                            env.BRANCH_NAME.toString().equals('main')
                         }
                     }
                     steps {
@@ -97,7 +93,7 @@ pipeline {
 
                 stage('Save with GtWorld') {
                     when { expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
+                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                         }
                     }
                     steps {
@@ -109,7 +105,7 @@ pipeline {
 
                     when {
                         expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
+                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                         }
                     }
                     steps {
@@ -126,7 +122,7 @@ pipeline {
 
                     when {
                         expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
+                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                         }
                     }
                     steps {
@@ -148,7 +144,7 @@ pipeline {
         }
         stage('Run Examples') {
             when { expression {
-                   (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
+                   (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                 }
             }
             parallel {
@@ -271,31 +267,29 @@ pipeline {
                 label "unix"
             }
             when { expression {
-                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('master')
+                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                 }
             }
             steps {
-                // dir(MASTER_WORKSPACE) {
-                    sh 'chmod +x scripts/build/*.sh'
-                    unstash 'release_prediction'
-                    unstash 'winbuild'
-                    unstash 'alllibs'
-                    unstash 'gtimage'  
-                    sh 'scripts/build/runreleaser.sh' 
-                    sh 'scripts/build/upload.sh'
-                    script {
-                        TAG_NAME = readFile('tagname.txt').trim()
-                        withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-                                def remote = [:]
-                                remote.name = 'deploy'
-                                remote.host = 'sftp.feenk.com'
-                                remote.user = userName
-                                remote.identityFile = identity
-                                remote.allowAnyHosts = true
-                                sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
-                        }
+                sh 'chmod +x scripts/build/*.sh'
+                unstash 'release_prediction'
+                unstash 'winbuild'
+                unstash 'alllibs'
+                unstash 'gtimage'  
+                sh 'scripts/build/runreleaser.sh' 
+                sh 'scripts/build/upload.sh'
+                script {
+                    TAG_NAME = readFile('tagname.txt').trim()
+                    withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+                            def remote = [:]
+                            remote.name = 'deploy'
+                            remote.host = 'sftp.feenk.com'
+                            remote.user = userName
+                            remote.identityFile = identity
+                            remote.allowAnyHosts = true
+                            sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
                     }
-                // }
+                }
             }
         }
     }
