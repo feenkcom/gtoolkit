@@ -23,6 +23,6 @@ GtGitRepositoryWithoutJenkinsFile >> issues [
 ]
 
 { #category : #accessing }
-GtGitRepositoryWithoutJenkinsFile >> name [
+GtGitRepositoryWithoutJenkinsFile >> name [ 
 	^ 'Git repositories from feenkcom should specify a Jenkinsfile'
 ]
