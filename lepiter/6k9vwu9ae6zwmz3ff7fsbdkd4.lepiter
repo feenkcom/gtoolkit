@@ -546,13 +546,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "tudor@tudorgirba.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-08-01T23:27:38.524682+02:00"
+									"dateAndTimeString" : "2021-05-24T15:53:59.302487+02:00"
 								}
 							},
 							"uid" : {
@@ -562,7 +562,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Aptitudes (subclass of {{gtClass:BrAptitude}}) provide the ability to modify the element to which they are attached.  A typical example is the look of a {{gtClass:BrButton}}, whether it has a border or not, a label or not, an icon or not, etc.  Aptitudes should only be created when the underlying widget is used in many places, e.g. buttons, and should not affect the API of the widget."
+							"string" : "Looks (subclass of {{gtClass:BrLook}}) provide the ability to modify the element to which they are attached.  A typical example is the look of a {{gtClass:BrButton}}, whether it has a border or not, a label or not, an icon or not, etc.  Looks should only be created when the underlying widget is used in many places, e.g. buttons, and should not affect the API of the widget."
 						},
 						{
 							"__type" : "textSnippet",
@@ -583,13 +583,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "tudor@tudorgirba.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-08-01T23:27:42.872382+02:00"
+									"dateAndTimeString" : "2021-05-24T15:50:25.556986+02:00"
 								}
 							},
 							"uid" : {
@@ -599,7 +599,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "View Models are used to maintain the state of a Brick widget, e.g. pressed, focused, hovered, and, like Aptitudes, can be composed by adding multiple models together.  Like Aptitudes, models also receive events."
+							"string" : "View Models are used to maintain the state of a Brick widget, e.g. pressed, focused, hovered, and, like Looks, can be composed by adding multiple models together.  Like Looks, models also receive events."
 						}
 					]
 				},
