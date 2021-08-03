@@ -1,18 +1,18 @@
 Class {
-	#name : #GtGitRepositoryWithoutJenkinsFile,
-	#superclass : #GtLeafConstraint,
-	#category : #'GToolkit-Constraints'
+	#name : 'GtGitRepositoryWithoutJenkinsFile',
+	#superclass : 'GtLeafConstraint',
+	#category : 'GToolkit-Constraints'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtGitRepositoryWithoutJenkinsFile >> description [
 	^ 'A repository should specify the Jenkins file to trigger a build for Glamorous Toolkit'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtGitRepositoryWithoutJenkinsFile >> issues [
 	| project feenkRepositories directories |
-	project := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit/src'.
+	project := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit:main/src'.
 	feenkRepositories := project withAllRepositories select: [ :aRepository |
 		aRepository ownerName = 'feenkcom' and: [
 			(#('pillar' 'XPath' 'XMLWriter' 'Chrysal' 'mustache' 'XMLParser' 'OSSubprocess' 'Containers-PropertyEnvironment' 'tffi-dev' 'taskit' 'pharo-unicode') includes: aRepository icebergRepository workingCopy fileSystem basename) not
@@ -22,7 +22,7 @@ GtGitRepositoryWithoutJenkinsFile >> issues [
 	^ directories select: [ :aDirectory | (aDirectory / 'Jenkinsfile') exists not ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtGitRepositoryWithoutJenkinsFile >> name [ 
 	^ 'Git repositories from feenkcom should specify a Jenkinsfile'
 ]

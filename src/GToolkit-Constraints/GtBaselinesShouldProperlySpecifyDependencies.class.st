@@ -1,10 +1,10 @@
 Class {
-	#name : #GtBaselinesShouldProperlySpecifyDependencies,
-	#superclass : #GtPharoConstraint,
-	#category : #'GToolkit-Constraints'
+	#name : 'GtBaselinesShouldProperlySpecifyDependencies',
+	#superclass : 'GtPharoConstraint',
+	#category : 'GToolkit-Constraints'
 }
 
-{ #category : #example }
+{ #category : 'example' }
 GtBaselinesShouldProperlySpecifyDependencies class >> blocSpartaPackageAnalysisExample [
 	<gtExample>
 	| analyzer packageAnalyzers blocSpartaPackageAnaluser |
@@ -17,10 +17,10 @@ GtBaselinesShouldProperlySpecifyDependencies class >> blocSpartaPackageAnalysisE
 	^ blocSpartaPackageAnaluser
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtBaselinesShouldProperlySpecifyDependencies >> issues [
 	| gtProject allDependencies analyzers |
-	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit/src'.
+	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit:main/src'.
 	allDependencies := gtProject withAllChildProjects.
 
 	analyzers := allDependencies collect: [:aProject |
@@ -32,12 +32,12 @@ GtBaselinesShouldProperlySpecifyDependencies >> issues [
 	
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtBaselinesShouldProperlySpecifyDependencies >> name [
 	^ 'Baselines should properly define project dependencies'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtBaselinesShouldProperlySpecifyDependencies >> status [ 
 	^ GtNeutralConstraintStatus new
 ]

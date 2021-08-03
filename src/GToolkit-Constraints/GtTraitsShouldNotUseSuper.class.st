@@ -1,15 +1,15 @@
 Class {
-	#name : #GtTraitsShouldNotUseSuper,
-	#superclass : #GtPharoConstraint,
-	#category : #'GToolkit-Constraints-GToolkit-Constraints'
+	#name : 'GtTraitsShouldNotUseSuper',
+	#superclass : 'GtPharoConstraint',
+	#category : 'GToolkit-Constraints-GToolkit-Constraints'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtTraitsShouldNotUseSuper >> description [
 	^ 'Pharo 9 forbids `super` in traits.'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtTraitsShouldNotUseSuper >> issues [
 	^ (Smalltalk image allTraits select: [ :eachTrait |
 		#('Bloc' . 'Brick' . 'GToolkit' ) anySatisfy: [ :prefix |

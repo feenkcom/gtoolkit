@@ -1,15 +1,15 @@
 Class {
-	#name : #GtWeakSubscriptionsWithBlockSubscribers,
-	#superclass : #GtPharoConstraint,
-	#category : #'GToolkit-Constraints'
+	#name : 'GtWeakSubscriptionsWithBlockSubscribers',
+	#superclass : 'GtPharoConstraint',
+	#category : 'GToolkit-Constraints'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWeakSubscriptionsWithBlockSubscribers >> description [
 	^ 'Weak subscriptions should not use #when:do: and register blocks as receivers. If blocks are used it will have the effect of not garbage-collecting the receiver.'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWeakSubscriptionsWithBlockSubscribers >> issues [
 	<return: #GtSearchMethodGroupResult>
 	| items |
@@ -19,7 +19,7 @@ GtWeakSubscriptionsWithBlockSubscribers >> issues [
 	^ items
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWeakSubscriptionsWithBlockSubscribers >> name [
 	^ 'Weak subscriptions should nor use #when:do: and register blocks as receivers.'
 ]

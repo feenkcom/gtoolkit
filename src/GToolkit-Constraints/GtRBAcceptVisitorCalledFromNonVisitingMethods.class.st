@@ -1,10 +1,10 @@
 Class {
-	#name : #GtRBAcceptVisitorCalledFromNonVisitingMethods,
-	#superclass : #GtPharoConstraint,
+	#name : 'GtRBAcceptVisitorCalledFromNonVisitingMethods',
+	#superclass : 'GtPharoConstraint',
 	#category : 'GToolkit-Constraints'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRBAcceptVisitorCalledFromNonVisitingMethods >> description [
 	^ 'There are two interesting methods in the visitor:
 - ${method:RBNode>>#acceptVisitor:}$
@@ -15,7 +15,7 @@ From the outside, we should always use visitNode:.
 See *https://github.com/feenkcom/gtoolkit/issues/837*'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRBAcceptVisitorCalledFromNonVisitingMethods >> issues [
 	| all |
 	all := (#acceptVisitor: gtReferences select: [:each | 
@@ -28,7 +28,7 @@ GtRBAcceptVisitorCalledFromNonVisitingMethods >> issues [
 	^ (self ignoreIssuesInMethodsBasedOnPragmas: all) result
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtRBAcceptVisitorCalledFromNonVisitingMethods >> name [
 	^ 'acceptVisitor: called from non visiting methods'
 ]
