@@ -1,7 +1,7 @@
 Class {
 	#name : #GtBaselinesShouldProperlySpecifyDependencies,
 	#superclass : #GtPharoConstraint,
-	#category : #'GToolkit-Constraints'
+	#category : 'GToolkit-Constraints'
 }
 
 { #category : #example }
@@ -20,7 +20,7 @@ GtBaselinesShouldProperlySpecifyDependencies class >> blocSpartaPackageAnalysisE
 { #category : #accessing }
 GtBaselinesShouldProperlySpecifyDependencies >> issues [
 	| gtProject allDependencies analyzers |
-	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit/src'.
+	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit:main/src'.
 	allDependencies := gtProject withAllChildProjects.
 
 	analyzers := allDependencies collect: [:aProject |
