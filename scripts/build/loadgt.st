@@ -92,7 +92,7 @@ IceGitWorkingCopyUpdateVisitor compile: 'remoteFileReferenceInPath: aPath
 		load."
 	 Metacello new 
 		baseline: 'GToolkit'; 
-		githubUser: 'feenkcom' project: 'gtoolkit' commitish: 'master' path: ''; 
+		githubUser: 'feenkcom' project: 'gtoolkit' commitish: 'main' path: ''; 
 		load.
 	" GtRlProjectsLoader new
 		loadBaseline: 'GToolkit' 

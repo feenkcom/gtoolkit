@@ -62,7 +62,7 @@ EpMonitor disableDuring: [
 		load.
     Metacello new 
 		baseline: 'GToolkitReleaser'; 
-		githubUser: 'feenkcom' project: 'gtoolkit-releaser' commitish: 'master' path: ''; 
+		githubUser: 'feenkcom' project: 'gtoolkit-releaser' commitish: 'main' path: ''; 
 		load.
 
 	Metacello new

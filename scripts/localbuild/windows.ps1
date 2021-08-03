@@ -74,11 +74,11 @@ $pwd = Get-Location
 
 Get-FileFromURL "https://github.com/feenkcom/opensmalltalk-vm/releases/latest/download/build-artifacts.zip" "$pwd\build-artifacts.zip"
 
-$url = "https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadgt.st"
+$url = "https://raw.githubusercontent.com/feenkcom/gtoolkit/main/scripts/localbuild/loadgt.st"
 $output = "$pwd\loadgt.st"
 Get-FileFromURL $url $output
 
-$url = "https://raw.githubusercontent.com/feenkcom/gtoolkit/master/scripts/localbuild/loadice.st"
+$url = "https://raw.githubusercontent.com/feenkcom/gtoolkit/main/scripts/localbuild/loadice.st"
 $output = "$pwd\loadice.st"
 Get-FileFromURL $url $output
 

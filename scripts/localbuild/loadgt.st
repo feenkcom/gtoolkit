@@ -1,8 +1,8 @@
 
 EpMonitor disableDuring: [
-    	GtRlProjectsLoader new
+    GtRlProjectsLoader new
 		loadBaseline: 'GToolkit' 
-		fromRepository: 'github://feenkcom/gtoolkit/src'.
+		fromRepository: 'github://feenkcom/gtoolkit:main/src'.
 	"Metacello new 
 		baseline: 'GToolkit'; 
 		repository: 'github://feenkcom/gtoolkit/src';
