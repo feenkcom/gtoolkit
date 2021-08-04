@@ -98,7 +98,21 @@ GtWorldElement >> initializeShortcuts [
 								dispatchEvent:
 									(BrDropdownShowWish new
 										anchor: subSpaceDropdown;
-										yourself) ] ])
+										yourself) ] ]).
+	self
+		addShortcut:
+			(BlShortcutWithAction new
+				repeatable: false;
+				combination: (BlKeyCombinationBuilder new 
+						primary key: BlKeyboardKey leftBracket) build;
+				action: [ self tabs selectTabToTheLeft ]).
+	self
+		addShortcut:
+			(BlShortcutWithAction new
+				repeatable: false;
+				combination: (BlKeyCombinationBuilder new 
+						primary key: BlKeyboardKey rightBracket) build;
+				action: [ self tabs selectTabToTheRight ]).
 ]
 
 { #category : #accessing }
