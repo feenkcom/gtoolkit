@@ -52,13 +52,7 @@ catch
 }
 
 
-$FileName = ".\GToolkit-Documenter-XDoc-XdDocumentExamples-Examples.xml"
-if (Test-Path $FileName) 
-{
-  Remove-Item $FileName
-}
-
-$FileName = ".\PharoLink-Examples.xml"
+$FileName = ".\glamoroustoolkit\GToolkit-Documenter-XDoc-XdDocumentExamples-Examples.xml"
 if (Test-Path $FileName) 
 {
   Remove-Item $FileName
