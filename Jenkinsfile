@@ -62,7 +62,7 @@ pipeline {
 
         TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
         RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
-        PHARO_IMAGE_URL = 'https://files.pharo.org/image/90/Pharo9.0-SNAPSHOT.build.1532.sha.e58ef49.arch.64bit.zip'
+        PHARO_IMAGE_URL = 'https://dl.feenk.com/pharo/Pharo9.0-SNAPSHOT.build.1532.sha.e58ef49.arch.64bit.zip'
     }
     stages {
         stage ('Build pre release') {
@@ -402,7 +402,7 @@ pipeline {
                 sh """
                 ./feenk-releaser \
                     --owner feenkcom \
-                    --repo gtoolkit9 \
+                    --repo gtoolkit \
                     --token GITHUB_TOKEN \
                     --bump-${params.BUMP} \
                     --auto-accept \
