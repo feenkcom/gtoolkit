@@ -3,7 +3,7 @@ Class {
 	#superclass : #GtPharoConstraint,
 	#traits : 'TGtDocumentInvalidCommentsConstraint',
 	#classTraits : 'TGtDocumentInvalidCommentsConstraint classTrait',
-	#category : #'GToolkit-Constraints'
+	#category : 'GToolkit-Constraints'
 }
 
 { #category : #accessing }
@@ -19,7 +19,7 @@ GtClassWithCommentsContainingMissingReferences >> name [
 { #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
 	| gtProject allPackages |
-	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit/src'.
+	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit:main/src'.
 	allPackages := gtProject allPPackages.
 	
 	NonInteractiveTranscript stdout 

@@ -41,88 +41,92 @@ def getTestSummary = { ->
 
 pipeline {
     agent none
-    parameters { string(name: 'FORCED_TAG_NAME', defaultValue: '', description: 'Environment variable used for increasing the minor or major version of Glamorous Toolkit. Example input `v0.8.0`. Can be left blank, in that case, the patch will be incremented.') }
-    options { 
+    parameters {
+        choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing') }
+    options {
         buildDiscarder(logRotator(numToKeepStr: '50'))
-        disableConcurrentBuilds() 
+        disableConcurrentBuilds()
     }
     environment {
         GITHUB_TOKEN = credentials('githubrelease')
         AWSIP = 'sftp.feenk.com'
-        EXAMPLE_PACKAGES = "GToolkit-.* GT4SmaCC-.* DeepTraverser-.* Brick Brick-.* Bloc Bloc-.* Sparta-.*"
+
+        MACOS_INTEL_TARGET = 'x86_64-apple-darwin'
+        MACOS_M1_TARGET = 'aarch64-apple-darwin'
+
+        LINUX_SERVER_NAME = 'mickey-mouse'
+        LINUX_AMD64_TARGET = 'x86_64-unknown-linux-gnu'
+
+        WINDOWS_SERVER_NAME = 'daffy-duck'
+        WINDOWS_AMD64_TARGET = 'x86_64-pc-windows-msvc'
+
+        TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
+        RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
+        PHARO_IMAGE_URL = 'https://dl.feenk.com/pharo/Pharo9.0-SNAPSHOT.build.1532.sha.e58ef49.arch.64bit.zip'
     }
     stages {
         stage ('Build pre release') {
+            environment {
+                TARGET = "${MACOS_M1_TARGET}"
+            }
             agent {
-                label "unix"
+                label "${MACOS_M1_TARGET}"
             }
             stages {
-                stage('Load latest main commit') {
+                stage('Clean up') {
+                    steps {
+                        sh 'rm -rf glamoroustoolkit'
+                        sh 'rm -rf ~/Documents/lepiter'
+                        sh 'git clean -fdx'
+                    }
+                }
+                stage('Load latest commit') {
                     when { expression {
                             env.BRANCH_NAME.toString().equals('main')
                         }
                     }
                     steps {
-                        sh 'git clean -fdx'
                         sh 'chmod +x scripts/build/*.sh'
-                        sh 'rm -rf pharo-local/iceberg'
-                        
+
                         slackSend (color: '#FFFF00', message: ("Started <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>") )
 
-                        sh 'scripts/build/load.sh'
+                        sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                        sh 'chmod +x gt-installer'
+
+                        sh """
+                        ./gt-installer \
+                            --verbose \
+                            --image-url ${PHARO_IMAGE_URL} \
+                            release-build \
+                                --loader cloner """
+
                         script {
-                            def newCommitFiles = findFiles(glob: 'newcommits*.txt')
+                            def newCommitFiles = findFiles(glob: 'glamoroustoolkit/newcommits*.txt')
                             for (int i = 0; i < newCommitFiles.size(); ++i) {
                                 env.NEWCOMMITS = readFile(newCommitFiles[i].path)
-                                slackSend (color: '#00FF00', message: "Commits from <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )   
+                                slackSend (color: '#00FF00', message: "Commits from <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )
                             }
-                        } 
+                        }
                     }
                 }
                 stage('Package image') {
-                    when { expression {
-                            env.BRANCH_NAME.toString().equals('main')
-                        }
-                    }
-                    steps {
-                        sh 'scripts/build/pack_image.sh'
-                        echo currentBuild.toString()
-                        echo currentBuild.result
-                    }
-                }
-
-                stage('Save with GtWorld') {
-                    when { expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                        }
-                    }
-                    steps {
-                        sh 'scripts/build/open_gt_world.sh'
-                    }
-                }
-
-                stage('Prepare deploy packages') {
-
                     when {
                         expression {
                             (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                         }
                     }
                     steps {
-                        sh 'scripts/build/package.sh'
-                        stash includes: 'tagname.txt' , name: 'release_prediction'
-                        stash includes: 'GlamorousToolkitWin64*.zip', name: 'winbuild'
-                        stash includes: 'lib*.zip', name: 'alllibs'
-                        stash includes: 'GT.zip', name: 'gtimage'
-                        
+                        sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE}"
+                        echo currentBuild.toString()
+                        echo currentBuild.result
+                        stash includes: "${TENTATIVE_PACKAGE}", name: "${TENTATIVE_PACKAGE}"
                     }
                 }
 
                 stage('Upload prerelease') {
-
                     when {
                         expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                            false
                         }
                     }
                     steps {
@@ -149,147 +153,264 @@ pipeline {
             }
             parallel {
                 stage('Linux') {
-                    agent {
-                        label "unix"
+                    environment {
+                        TARGET = "${LINUX_AMD64_TARGET}"
                     }
-                     stages {
-                        stage('Download') {
-                             steps {
-                                sh 'chmod +x scripts/build/parallelsmoke/*.sh'
-                                sh 'scripts/build/parallelsmoke/lnx_1_download.sh'
-                             }
+                    agent {
+                        label "${LINUX_AMD64_TARGET}-${LINUX_SERVER_NAME}"
+                    }
+                    stages {
+                        stage('Clean up') {
+                            steps {
+                                sh 'rm -rf glamoroustoolkit'
+                                sh 'rm -rf ~/Documents/lepiter'
+                                sh 'git clean -fdx'
+                            }
                         }
                         stage('Linux Examples') {
-                             steps {
-                                retry(2) {
-                                    sh 'scripts/build/parallelsmoke/lnx_2_1_examples.sh'
-                                    junit '*.xml'
-                                }
-                             } 
+                            steps {
+                                unstash "${TENTATIVE_PACKAGE}"
+
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                                sh 'chmod +x gt-installer'
+
+                                sh 'git config --global user.name "Jenkins"'
+                                sh 'git config --global user.email "jenkins@feenk.com"'
+                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
+                                sh 'xvfb-run -a ./gt-installer --verbose test --disable-deprecation-rewrites'
+                                junit 'glamoroustoolkit/*.xml'
+                            }
                         }
-                        stage('Smoke Test') {
-                             steps {
-                                sh 'scripts/build/parallelsmoke/lnx_2_2_smoke.sh'
-                             }
+                        stage('Linux Package') {
+                            steps {
+                                script {
+                                    RELEASED_PACKAGE_LINUX = sh (
+                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE} --bump ${params.BUMP}",
+                                        returnStdout: true
+                                    ).trim()
+                                }
+                                echo "Created release package ${RELEASED_PACKAGE_LINUX}"
+                            }
+                        }
+                        stage('Linux Stash') {
+                            steps {
+                                echo "About to stash ${RELEASED_PACKAGE_LINUX}"
+                                stash includes: "${RELEASED_PACKAGE_LINUX}", name: "${TARGET}"
+                            }
                         }
                     }
                 }
-                stage ('MacOSX') {
-                    agent {
-                        label "x86_64-apple-darwin"
-                    }
+                stage ('MacOS M1') {
                     environment {
+                        TARGET = "${MACOS_M1_TARGET}"
                         CERT = credentials('devcertificate')
-                        SUDO = credentials('sudo')
                         APPLEPASSWORD = credentials('notarizepassword')
-                        SIGNING_IDENTITY = 'Developer ID Application: feenk gmbh (77664ZXL29)'
-                    } 
+                    }
+                    agent {
+                        label "${MACOS_M1_TARGET}"
+                    }
                     stages {
-                        stage('Download') {
-                             steps {
-                                sh 'echo "${SUDO}" | sudo -S git clean -fdx'
-                                sh 'chmod +x scripts/build/parallelsmoke/*.sh'
-                                sh 'scripts/build/parallelsmoke/osx_1_download.sh'
-                             }
-                        }
-                        stage('MacOSX Examples') {
-                             steps {
-                                retry(2) {
-                                    sshagent([]) {
-                                        sh 'scripts/build/parallelsmoke/osx_2_smoke.sh'
-                                        sh 'rm -rf GToolkit-Releaser-*.xml'
-                                        junit '*.xml'
-                                    }
-                                }
-                             }
-                        }
-                        stage('Codesign and Notarize') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS')
-                                }
-                            }
+                        stage('Clean up') {
                             steps {
-                                sh 'scripts/build/parallelsmoke/osx_3_sign_notarize.sh'
-
+                                sh 'rm -rf glamoroustoolkit'
+                                sh 'rm -rf ~/Documents/lepiter'
+                                sh 'git clean -fdx'
                             }
                         }
-                        stage('Upload') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS')
-                                }
+                        stage('MacOS M1 Examples') {
+                            steps {
+                                unstash "${TENTATIVE_PACKAGE}"
+
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                                sh 'chmod +x gt-installer'
+
+                                sh 'git config --global user.name "Jenkins"'
+                                sh 'git config --global user.email "jenkins@feenk.com"'
+                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
+                                sh "./gt-installer --verbose test --disable-deprecation-rewrites"
+                                junit 'glamoroustoolkit/*.xml'
                             }
-                             steps {
-                                sh 'scripts/build/parallelsmoke/osx_4_upload.sh'
-                             }
+                        }
+                        stage('MacOS M1 Package') {
+                            steps {
+                                script {
+                                    RELEASED_PACKAGE_MACOS_M1 = sh (
+                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE} --bump ${params.BUMP}",
+                                        returnStdout: true
+                                    ).trim()
+                                }
+                                echo "Created release package ${RELEASED_PACKAGE_MACOS_M1}"
+                            }
+                        }
+                        stage('MacOS M1 Notarize') {
+                            steps {
+                                sh """
+                                xcrun altool \
+                                    -t osx \
+                                    -f ${RELEASED_PACKAGE_MACOS_M1} \
+                                    -itc_provider "77664ZXL29" \
+                                    --primary-bundle-id "com.feenk.gtoolkit.darwin-apple-aarch64" \
+                                    --notarize-app \
+                                    --verbose \
+                                    --username "george.ganea@feenk.com" \
+                                    --password "${APPLEPASSWORD}" \
+                                """
+                            }
+                        }
+                        stage('MacOS M1 Stash') {
+                            steps {
+                                echo "About to stash ${RELEASED_PACKAGE_MACOS_M1}"
+                                stash includes: "${RELEASED_PACKAGE_MACOS_M1}", name: "${TARGET}"
+                            }
+                        }
+                    }
+                }
+                stage ('MacOS Intel') {
+                    environment {
+                        TARGET = "${MACOS_INTEL_TARGET}"
+                        CERT = credentials('devcertificate')
+                        APPLEPASSWORD = credentials('notarizepassword')
+                    }
+                    agent {
+                        label "${MACOS_INTEL_TARGET}"
+                    }
+                    stages {
+                        stage('Clean up') {
+                            steps {
+                                sh 'rm -rf glamoroustoolkit'
+                                sh 'rm -rf ~/Documents/lepiter'
+                                sh 'git clean -fdx'
+                            }
+                        }
+                        stage('MacOS Intel Examples') {
+                            steps {
+                                unstash "${TENTATIVE_PACKAGE}"
+
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                                sh 'chmod +x gt-installer'
+
+                                sh 'git config --global user.name "Jenkins"'
+                                sh 'git config --global user.email "jenkins@feenk.com"'
+                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
+                                sh "./gt-installer --verbose test --disable-deprecation-rewrites"
+                                junit 'glamoroustoolkit/*.xml'
+                            }
+                        }
+                        stage('MacOS Intel Package') {
+                            steps {
+                                script {
+                                    RELEASED_PACKAGE_MACOS_INTEL = sh (
+                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE} --bump ${params.BUMP}",
+                                        returnStdout: true
+                                    ).trim()
+                                }
+                                echo "Created release package ${RELEASED_PACKAGE_MACOS_INTEL}"
+                            }
+                        }
+                        stage('MacOS Intel Notarize') {
+                            steps {
+                                sh """
+                                xcrun altool \
+                                    -t osx \
+                                    -f ${RELEASED_PACKAGE_MACOS_INTEL} \
+                                    -itc_provider "77664ZXL29" \
+                                    --primary-bundle-id "com.feenk.gtoolkit.darwin-apple-x86-64" \
+                                    --notarize-app \
+                                    --verbose \
+                                    --username "george.ganea@feenk.com" \
+                                    --password "${APPLEPASSWORD}" \
+                                """
+                            }
+                        }
+                        stage('MacOS Intel Stash') {
+                            steps {
+                                echo "About to stash ${RELEASED_PACKAGE_MACOS_INTEL}"
+                                stash includes: "${RELEASED_PACKAGE_MACOS_INTEL}", name: "${TARGET}"
+                            }
                         }
                     }
                 }
                 stage('Windows') {
                     agent {
-                        label "windows"
+                        label "${WINDOWS_AMD64_TARGET}-${WINDOWS_SERVER_NAME}"
+                    }
+                    environment {
+                        TARGET = "${WINDOWS_AMD64_TARGET}"
                     }
                     stages {
-                        stage('Cleanup') {
-                             steps {
-                                powershell './scripts/build/parallelsmoke/win_1_cleanup.ps1'
-                             }
+                        stage('Clean up') {
+                            steps {
+                                powershell 'Remove-Item glamoroustoolkit -Recurse -ErrorAction Ignore'
+                                powershell 'Remove-Item  "C:/Users/Administrator/Documents/lepiter" -Recurse -ErrorAction Ignore'
+                                powershell 'git clean -fdx'
+                            }
                         }
-                        stage('Download') {
-                             steps {
-                                powershell './scripts/build/parallelsmoke/win_2_download.ps1'
-                             }
-                        }
-                        stage('Unpack') {
-                             steps {
-                                powershell './scripts/build/parallelsmoke/win_3_unpack.ps1'
-                             }
-                        }
-
                         stage('Windows Examples') {
-                             steps {
-                                retry(2) {
-                                    powershell 'git config --global user.name "Jenkins"'
-                                    powershell 'git config --global user.email "jenkins@feenk.com"'
-                                    powershell './scripts/build/parallelsmoke/win_4_timeout_examples.ps1'
-                                    junit '*.xml'
-                                }
-                             }
-                        }
+                            steps {
+                                unstash "${TENTATIVE_PACKAGE}"
 
+                                powershell "curl -o gt-installer.exe https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}.exe"
+
+                                powershell 'git config --global user.name "Jenkins"'
+                                powershell 'git config --global user.email "jenkins@feenk.com"'
+                                powershell "./gt-installer.exe --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
+                                powershell './gt-installer.exe --verbose test --disable-deprecation-rewrites'
+                                junit 'glamoroustoolkit/*.xml'
+                            }
+                        }
+                        stage('Windows Package') {
+                            steps {
+                                script {
+                                    RELEASED_PACKAGE_WINDOWS = powershell (
+                                        returnStdout: true,
+                                        script: "./gt-installer.exe --verbose package-release \"${RELEASE_PACKAGE_TEMPLATE}\" --bump \"${params.BUMP}\"",
+                                    ).trim()
+                                }
+                                echo "Created release package ${RELEASED_PACKAGE_WINDOWS}"
+                            }
+                        }
+                        stage('Windows Stash') {
+                            steps {
+                                echo "About to stash ${RELEASED_PACKAGE_WINDOWS}"
+                                stash includes: "${RELEASED_PACKAGE_WINDOWS}", name: "${TARGET}"
+                            }
+                        }
                     }
                 }
             }
         }
-        stage('Deploy release') {
-            agent {
-                label "unix"
-            }
+        stage('Releaser') {
             when { expression {
-                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                   false && (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                 }
+            }
+            agent {
+                label "${MACOS_M1_TARGET}"
+            }
+            environment {
+                TARGET = "${MACOS_M1_TARGET}"
             }
             steps {
-                sh 'chmod +x scripts/build/*.sh'
-                unstash 'release_prediction'
-                unstash 'winbuild'
-                unstash 'alllibs'
-                unstash 'gtimage'  
-                sh 'scripts/build/runreleaser.sh' 
-                sh 'scripts/build/upload.sh'
-                script {
-                    TAG_NAME = readFile('tagname.txt').trim()
-                    withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-                            def remote = [:]
-                            remote.name = 'deploy'
-                            remote.host = 'sftp.feenk.com'
-                            remote.user = userName
-                            remote.identityFile = identity
-                            remote.allowAnyHosts = true
-                            sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
-                    }
-                }
+                unstash "${MACOS_INTEL_TARGET}"
+                unstash "${MACOS_M1_TARGET}"
+                unstash "${LINUX_AMD64_TARGET}"
+                unstash "${WINDOWS_AMD64_TARGET}"
+
+                sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/latest/download/feenk-releaser-${TARGET}"
+                sh "chmod +x feenk-releaser"
+
+                sh """
+                ./feenk-releaser \
+                    --owner feenkcom \
+                    --repo gtoolkit \
+                    --token GITHUB_TOKEN \
+                    --bump-${params.BUMP} \
+                    --auto-accept \
+                    --assets \
+                        ${RELEASED_PACKAGE_LINUX} \
+                        ${RELEASED_PACKAGE_MACOS_M1} \
+                        ${RELEASED_PACKAGE_MACOS_INTEL} \
+                        ${RELEASED_PACKAGE_WINDOWS} """
             }
         }
     }
