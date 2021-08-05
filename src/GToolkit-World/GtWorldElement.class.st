@@ -104,14 +104,14 @@ GtWorldElement >> initializeShortcuts [
 			(BlShortcutWithAction new
 				repeatable: true;
 				combination: (BlKeyCombinationBuilder new 
-						primary key: BlKeyboardKey leftBracket) build;
+						primary shift key: BlKeyboardKey leftBracket) build;
 				action: [ self tabs selectTabToTheLeft ]).
 	self
 		addShortcut:
 			(BlShortcutWithAction new
 				repeatable: true;
 				combination: (BlKeyCombinationBuilder new 
-						primary key: BlKeyboardKey rightBracket) build;
+						primary shift key: BlKeyboardKey rightBracket) build;
 				action: [ self tabs selectTabToTheRight ]).
 ]
 
