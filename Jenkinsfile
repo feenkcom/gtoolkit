@@ -404,7 +404,7 @@ pipeline {
         }
         stage('Releaser') {
             when { expression {
-                   false && (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                   (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                 }
             }
             agent {
@@ -420,10 +420,10 @@ pipeline {
                 unstash "${WINDOWS_AMD64_TARGET}"
                 unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
 
-                // we should call gtoolkit-releaser here
-
                 sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/latest/download/feenk-releaser-${TARGET}"
                 sh "chmod +x feenk-releaser"
+
+                sh "./gt-installer --verbose --workspace ${RELEASER_FOLDER} run-releaser"
 
                 sh """
                 ./feenk-releaser \
