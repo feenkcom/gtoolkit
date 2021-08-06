@@ -60,7 +60,11 @@ pipeline {
         WINDOWS_SERVER_NAME = 'daffy-duck'
         WINDOWS_AMD64_TARGET = 'x86_64-pc-windows-msvc'
 
+        RELEASER_FOLDER = 'gt-releaser'
+        GTOOLKIT_FOLDER = 'glamoroustoolkit'
+
         TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
+        TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-tentative-without-gt-world.zip'
         RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
         PHARO_IMAGE_URL = 'https://dl.feenk.com/pharo/Pharo9.0-SNAPSHOT.build.1532.sha.e58ef49.arch.64bit.zip'
     }
@@ -75,7 +79,8 @@ pipeline {
             stages {
                 stage('Clean up') {
                     steps {
-                        sh 'rm -rf glamoroustoolkit'
+                        sh "rm -rf ${GTOOLKIT_FOLDER}"
+                        sh "rm -rf ${RELEASER_FOLDER}"
                         sh 'rm -rf ~/Documents/lepiter'
                         sh 'git clean -fdx'
                     }
@@ -93,12 +98,15 @@ pipeline {
                         sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
                         sh 'chmod +x gt-installer'
 
+                        /// the following loads glamorous toolkit without opening GT world
                         sh """
                         ./gt-installer \
                             --verbose \
+                            --workspace ${RELEASER_FOLDER} \
                             --image-url ${PHARO_IMAGE_URL} \
                             release-build \
-                                --loader cloner """
+                                --loader cloner \
+                                --no-gt-world """
 
                         script {
                             def newCommitFiles = findFiles(glob: 'glamoroustoolkit/newcommits*.txt')
@@ -116,10 +124,25 @@ pipeline {
                         }
                     }
                     steps {
+                        /// make a copy from RELEASER_FOLDER to the default folder
+                        sh "./gt-installer --verbose --workspace ${RELEASER_FOLDER} copy-to"
+
+                        /// clean the ssh keys and remove iceberg repositories
+                        sh "./gt-installer  --verbose clean-up"
+
+                        /// package without gt-world
+                        sh "./gt-installer  --verbose package-tentative ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
+
+                        /// open gt world here
+                        sh "./gt-installer --verbose start"
+
+                        /// package with gt world opened, ready to run tests on all platforms
                         sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE}"
+
                         echo currentBuild.toString()
                         echo currentBuild.result
                         stash includes: "${TENTATIVE_PACKAGE}", name: "${TENTATIVE_PACKAGE}"
+                        stash includes: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}", name: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
                     }
                 }
 
@@ -162,7 +185,7 @@ pipeline {
                     stages {
                         stage('Clean up') {
                             steps {
-                                sh 'rm -rf glamoroustoolkit'
+                                sh "rm -rf ${GTOOLKIT_FOLDER}"
                                 sh 'rm -rf ~/Documents/lepiter'
                                 sh 'git clean -fdx'
                             }
@@ -178,7 +201,7 @@ pipeline {
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
                                 sh 'xvfb-run -a ./gt-installer --verbose test'
-                                junit 'glamoroustoolkit/*.xml'
+                                junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
                         stage('Linux Package') {
@@ -212,7 +235,7 @@ pipeline {
                     stages {
                         stage('Clean up') {
                             steps {
-                                sh 'rm -rf glamoroustoolkit'
+                                sh "rm -rf ${GTOOLKIT_FOLDER}"
                                 sh 'rm -rf ~/Documents/lepiter'
                                 sh 'git clean -fdx'
                             }
@@ -228,7 +251,7 @@ pipeline {
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
                                 sh "./gt-installer --verbose test"
-                                junit 'glamoroustoolkit/*.xml'
+                                junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
                         stage('MacOS M1 Package') {
@@ -277,7 +300,7 @@ pipeline {
                     stages {
                         stage('Clean up') {
                             steps {
-                                sh 'rm -rf glamoroustoolkit'
+                                sh "rm -rf ${GTOOLKIT_FOLDER}"
                                 sh 'rm -rf ~/Documents/lepiter'
                                 sh 'git clean -fdx'
                             }
@@ -293,7 +316,7 @@ pipeline {
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
                                 sh "./gt-installer --verbose test"
-                                junit 'glamoroustoolkit/*.xml'
+                                junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
                         stage('MacOS Intel Package') {
@@ -340,7 +363,7 @@ pipeline {
                     stages {
                         stage('Clean up') {
                             steps {
-                                powershell 'Remove-Item glamoroustoolkit -Recurse -ErrorAction Ignore'
+                                powershell "Remove-Item ${GTOOLKIT_FOLDER} -Recurse -ErrorAction Ignore"
                                 powershell 'Remove-Item  "C:/Users/Administrator/Documents/lepiter" -Recurse -ErrorAction Ignore'
                                 powershell 'git clean -fdx'
                             }
@@ -355,7 +378,7 @@ pipeline {
                                 powershell 'git config --global user.email "jenkins@feenk.com"'
                                 powershell "./gt-installer.exe --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
                                 powershell './gt-installer.exe --verbose test'
-                                junit 'glamoroustoolkit/*.xml'
+                                junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
                         stage('Windows Package') {
@@ -395,6 +418,9 @@ pipeline {
                 unstash "${MACOS_M1_TARGET}"
                 unstash "${LINUX_AMD64_TARGET}"
                 unstash "${WINDOWS_AMD64_TARGET}"
+                unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
+
+                // we should call gtoolkit-releaser here
 
                 sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/latest/download/feenk-releaser-${TARGET}"
                 sh "chmod +x feenk-releaser"
@@ -410,7 +436,8 @@ pipeline {
                         ${RELEASED_PACKAGE_LINUX} \
                         ${RELEASED_PACKAGE_MACOS_M1} \
                         ${RELEASED_PACKAGE_MACOS_INTEL} \
-                        ${RELEASED_PACKAGE_WINDOWS} """
+                        ${RELEASED_PACKAGE_WINDOWS} \
+                        ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD} """
             }
         }
     }
