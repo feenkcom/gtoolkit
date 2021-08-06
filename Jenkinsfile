@@ -177,7 +177,7 @@ pipeline {
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh 'xvfb-run -a ./gt-installer --verbose test --disable-deprecation-rewrites'
+                                sh 'xvfb-run -a ./gt-installer --verbose test'
                                 junit 'glamoroustoolkit/*.xml'
                             }
                         }
@@ -227,7 +227,7 @@ pipeline {
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh "./gt-installer --verbose test --disable-deprecation-rewrites"
+                                sh "./gt-installer --verbose test"
                                 junit 'glamoroustoolkit/*.xml'
                             }
                         }
@@ -292,7 +292,7 @@ pipeline {
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh "./gt-installer --verbose test --disable-deprecation-rewrites"
+                                sh "./gt-installer --verbose test"
                                 junit 'glamoroustoolkit/*.xml'
                             }
                         }
@@ -354,7 +354,7 @@ pipeline {
                                 powershell 'git config --global user.name "Jenkins"'
                                 powershell 'git config --global user.email "jenkins@feenk.com"'
                                 powershell "./gt-installer.exe --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                powershell './gt-installer.exe --verbose test --disable-deprecation-rewrites'
+                                powershell './gt-installer.exe --verbose test'
                                 junit 'glamoroustoolkit/*.xml'
                             }
                         }
