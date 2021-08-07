@@ -237,7 +237,6 @@ pipeline {
                             steps {
                                 sh "rm -rf ${GTOOLKIT_FOLDER}"
                                 sh 'rm -rf ~/Documents/lepiter'
-                                sh 'git clean -fdx'
                             }
                         }
                         stage('MacOS M1 Examples') {

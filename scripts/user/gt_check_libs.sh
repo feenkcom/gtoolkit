@@ -3,7 +3,7 @@
 # Check that Gtoolkit libraries have the required dependencies available
 #
 
-LOG_FILE="GtLibs-`date --iso-8601`.log"
+LOG_FILE="GtLibs-$(date --iso-8601).log"
 
 function libs_not_found() {
 	echo "Unable to find Gtoolkit libraries."
@@ -20,8 +20,7 @@ function libs_not_found() {
 # Quick check of the log for problems
 #
 function check_log() {
-	grep "not found" $LOG_FILE
-	if [ $? -eq 0 ]
+	if [ "$(grep "not found" "$LOG_FILE")" -eq 0 ]
 	then
 		echo "Library dependencies missing"
 	fi
@@ -47,15 +46,15 @@ fi
 #
 if [ -z "$1" ]
 then
-	$0 save > $LOG_FILE
+	$0 save > "$LOG_FILE"
 	check_log
 	echo "Output saved to $LOG_FILE"
 	exit 0
 fi
 
-export LD_LIBRARY_PATH=`pwd`/lib
+export LD_LIBRARY_PATH="$(pwd)/lib"
 
-echo "Run: `date`"
+echo "Run: $(date)"
 echo ""
 echo "glibc version:"
 echo ""
