@@ -396,7 +396,7 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 powershell "./gt-installer.exe --verbose copy-to ${EXAMPLES_FOLDER}"
 
-                                powershell './gt-installer.exe --verbose --workspace ${EXAMPLES_FOLDER} test --disable-deprecation-rewrites'
+                                powershell "./gt-installer.exe --verbose --workspace ${EXAMPLES_FOLDER} test --disable-deprecation-rewrites"
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
