@@ -62,8 +62,8 @@ pipeline {
 
         RELEASER_FOLDER = 'gt-releaser'
         GTOOLKIT_FOLDER = 'glamoroustoolkit'
+        EXAMPLES_FOLDER = 'gt-examples'
 
-        TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
         TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-tentative-without-gt-world.zip'
         RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
         PHARO_IMAGE_URL = 'https://dl.feenk.com/pharo/Pharo9.0-SNAPSHOT.build.1532.sha.e58ef49.arch.64bit.zip'
@@ -133,15 +133,8 @@ pipeline {
                         /// package without gt-world
                         sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
 
-                        /// open gt world here
-                        sh "./gt-installer --verbose start"
-
-                        /// package with gt world opened, ready to run tests on all platforms
-                        sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE}"
-
                         echo currentBuild.toString()
                         echo currentBuild.result
-                        stash includes: "${TENTATIVE_PACKAGE}", name: "${TENTATIVE_PACKAGE}"
                         stash includes: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}", name: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
                     }
                 }
@@ -192,20 +185,26 @@ pipeline {
                         }
                         stage('Linux Examples') {
                             steps {
-                                unstash "${TENTATIVE_PACKAGE}"
+                                unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
 
                                 sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
                                 sh 'chmod +x gt-installer'
 
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
-                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh 'xvfb-run -a ./gt-installer --verbose test --disable-deprecation-rewrites'
+                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
+
+                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
+                                sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
+
+                                sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test --disable-deprecation-rewrites"
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
                         stage('Linux Package') {
                             steps {
+                                /// open gt world and start the lepiter monitor
+                                sh "xvfb-run -a ./gt-installer --verbose start"
                                 script {
                                     RELEASED_PACKAGE_LINUX = sh (
                                         script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE} --bump ${params.BUMP}",
@@ -241,20 +240,26 @@ pipeline {
                         }
                         stage('MacOS M1 Examples') {
                             steps {
-                                unstash "${TENTATIVE_PACKAGE}"
+                                unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
 
                                 sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
                                 sh 'chmod +x gt-installer'
 
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
-                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh "./gt-installer --verbose test --disable-deprecation-rewrites"
+                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
+
+                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
+                                sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
+
+                                sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test --disable-deprecation-rewrites"
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
                         stage('MacOS M1 Package') {
                             steps {
+                                /// open gt world and start the lepiter monitor
+                                sh "./gt-installer --verbose start"
                                 script {
                                     RELEASED_PACKAGE_MACOS_M1 = sh (
                                         script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE} --bump ${params.BUMP}",
@@ -306,20 +311,26 @@ pipeline {
                         }
                         stage('MacOS Intel Examples') {
                             steps {
-                                unstash "${TENTATIVE_PACKAGE}"
+                                unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
 
                                 sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
                                 sh 'chmod +x gt-installer'
 
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
-                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh "./gt-installer --verbose test --disable-deprecation-rewrites"
+                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
+
+                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
+                                sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
+
+                                sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test --disable-deprecation-rewrites"
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
                         stage('MacOS Intel Package') {
                             steps {
+                                /// open gt world and start the lepiter monitor
+                                sh "./gt-installer --verbose start"
                                 script {
                                     RELEASED_PACKAGE_MACOS_INTEL = sh (
                                         script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE} --bump ${params.BUMP}",
@@ -369,19 +380,25 @@ pipeline {
                         }
                         stage('Windows Examples') {
                             steps {
-                                unstash "${TENTATIVE_PACKAGE}"
+                                unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
 
                                 powershell "curl -o gt-installer.exe https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}.exe"
 
                                 powershell 'git config --global user.name "Jenkins"'
                                 powershell 'git config --global user.email "jenkins@feenk.com"'
-                                powershell "./gt-installer.exe --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                powershell './gt-installer.exe --verbose test --disable-deprecation-rewrites'
+                                powershell "./gt-installer.exe --verbose unpackage-tentative ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
+
+                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
+                                powershell "./gt-installer.exe --verbose copy-to ${EXAMPLES_FOLDER}"
+
+                                powershell './gt-installer.exe --verbose --workspace ${EXAMPLES_FOLDER} test --disable-deprecation-rewrites'
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
                         stage('Windows Package') {
                             steps {
+                                /// open gt world and start the lepiter monitor
+                                powershell "./gt-installer.exe --verbose start"
                                 script {
                                     RELEASED_PACKAGE_WINDOWS = powershell (
                                         returnStdout: true,
