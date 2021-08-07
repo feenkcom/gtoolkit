@@ -81,6 +81,7 @@ pipeline {
                     steps {
                         sh "rm -rf ${GTOOLKIT_FOLDER}"
                         sh "rm -rf ${RELEASER_FOLDER}"
+                        sh "rm -rf ${EXAMPLES_FOLDER}"
                         sh 'rm -rf ~/Documents/lepiter'
                         sh 'git clean -fdx'
                     }
@@ -179,6 +180,7 @@ pipeline {
                         stage('Clean up') {
                             steps {
                                 sh "rm -rf ${GTOOLKIT_FOLDER}"
+                                sh "rm -rf ${EXAMPLES_FOLDER}"
                                 sh 'rm -rf ~/Documents/lepiter'
                                 sh 'git clean -fdx'
                             }
@@ -235,6 +237,7 @@ pipeline {
                         stage('Clean up') {
                             steps {
                                 sh "rm -rf ${GTOOLKIT_FOLDER}"
+                                sh "rm -rf ${EXAMPLES_FOLDER}"
                                 sh 'rm -rf ~/Documents/lepiter'
                             }
                         }
@@ -305,6 +308,7 @@ pipeline {
                         stage('Clean up') {
                             steps {
                                 sh "rm -rf ${GTOOLKIT_FOLDER}"
+                                sh "rm -rf ${EXAMPLES_FOLDER}"
                                 sh 'rm -rf ~/Documents/lepiter'
                                 sh 'git clean -fdx'
                             }
@@ -374,6 +378,7 @@ pipeline {
                         stage('Clean up') {
                             steps {
                                 powershell "Remove-Item ${GTOOLKIT_FOLDER} -Recurse -ErrorAction Ignore"
+                                powershell "Remove-Item ${EXAMPLES_FOLDER} -Recurse -ErrorAction Ignore"
                                 powershell 'Remove-Item  "C:/Users/Administrator/Documents/lepiter" -Recurse -ErrorAction Ignore'
                                 powershell 'git clean -fdx'
                             }
