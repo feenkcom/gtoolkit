@@ -105,7 +105,7 @@ pipeline {
                             --workspace ${RELEASER_FOLDER} \
                             --image-url ${PHARO_IMAGE_URL} \
                             release-build \
-                                --loader metacello \
+                                --loader cloner \
                                 --no-gt-world """
 
                         script {
@@ -128,10 +128,10 @@ pipeline {
                         sh "./gt-installer --verbose --workspace ${RELEASER_FOLDER} copy-to"
 
                         /// clean the ssh keys and remove iceberg repositories
-                        sh "./gt-installer  --verbose clean-up"
+                        sh "./gt-installer --verbose clean-up"
 
                         /// package without gt-world
-                        sh "./gt-installer  --verbose package-tentative ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
+                        sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
 
                         /// open gt world here
                         sh "./gt-installer --verbose start"
@@ -200,7 +200,7 @@ pipeline {
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh 'xvfb-run -a ./gt-installer --verbose test'
+                                sh 'xvfb-run -a ./gt-installer --verbose test --disable-deprecation-rewrites'
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
@@ -250,7 +250,7 @@ pipeline {
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh "./gt-installer --verbose test"
+                                sh "./gt-installer --verbose test --disable-deprecation-rewrites"
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
@@ -315,7 +315,7 @@ pipeline {
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh "./gt-installer --verbose test"
+                                sh "./gt-installer --verbose test --disable-deprecation-rewrites"
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
@@ -377,7 +377,7 @@ pipeline {
                                 powershell 'git config --global user.name "Jenkins"'
                                 powershell 'git config --global user.email "jenkins@feenk.com"'
                                 powershell "./gt-installer.exe --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                powershell './gt-installer.exe --verbose test'
+                                powershell './gt-installer.exe --verbose test --disable-deprecation-rewrites'
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
