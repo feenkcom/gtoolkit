@@ -202,7 +202,7 @@ pipeline {
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
                                 sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                junit "${GTOOLKIT_FOLDER}/*.xml"
+                                junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('Linux Package') {
@@ -258,7 +258,7 @@ pipeline {
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
                                 sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                junit "${GTOOLKIT_FOLDER}/*.xml"
+                                junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('MacOS M1 Package') {
@@ -330,7 +330,7 @@ pipeline {
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
                                 sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                junit "${GTOOLKIT_FOLDER}/*.xml"
+                                junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('MacOS Intel Package') {
@@ -399,7 +399,7 @@ pipeline {
                                 powershell "./gt-installer.exe --verbose copy-to ${EXAMPLES_FOLDER}"
 
                                 powershell "./gt-installer.exe --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                junit "${GTOOLKIT_FOLDER}/*.xml"
+                                junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('Windows Package') {
