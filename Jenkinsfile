@@ -64,6 +64,8 @@ pipeline {
         GTOOLKIT_FOLDER = 'glamoroustoolkit'
         EXAMPLES_FOLDER = 'gt-examples'
 
+        TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo"'
+
         TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-tentative-without-gt-world.zip'
         RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
         PHARO_IMAGE_URL = 'https://dl.feenk.com/pharo/Pharo9.0-SNAPSHOT.build.1532.sha.e58ef49.arch.64bit.zip'
@@ -199,7 +201,7 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
-                                sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test --disable-deprecation-rewrites"
+                                sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
@@ -255,7 +257,7 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
-                                sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test --disable-deprecation-rewrites"
+                                sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
@@ -327,7 +329,7 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
-                                sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test --disable-deprecation-rewrites"
+                                sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
@@ -396,7 +398,7 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 powershell "./gt-installer.exe --verbose copy-to ${EXAMPLES_FOLDER}"
 
-                                powershell "./gt-installer.exe --verbose --workspace ${EXAMPLES_FOLDER} test --disable-deprecation-rewrites"
+                                powershell "./gt-installer.exe --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
                                 junit "${GTOOLKIT_FOLDER}/*.xml"
                             }
                         }
