@@ -488,7 +488,7 @@ pipeline {
                             --verbose \
                             --workspace ${RELEASER_FOLDER} \
                             run-releaser \
-                                --bump ${params.BUMP} """"
+                                --bump ${params.BUMP} """
                 }
 
                 sh """
