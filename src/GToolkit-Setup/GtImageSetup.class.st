@@ -69,12 +69,25 @@ GtImageSetup class >> performLocalSetup [
 { #category : #api }
 GtImageSetup class >> performSetupForRelease [
 	"Perform a setup for images that should be released. This should 
-	be called on the CI server during the release process"
+	be called on the CI server during the release process."
+	
+	self performSetupForRelease: 'patch'
+]
+
+{ #category : #api }
+GtImageSetup class >> performSetupForRelease: aVersionComputationName [
+	"Perform a setup for images that should be released. This should 
+	be called on the CI server during the release process.
+	
+	aVersionComputationName must be one of the following:
+	 - patch
+	 - minor
+	 - major"
 	
 	self copyDataAndDocsFolders.
 	self installLogo.
 	self registerTools.
-	self updateNextReleaseVersion.
+	self updateNextReleaseVersion: (GtRlSemanticVersionComputation named: aVersionComputationName)
 ]
 
 { #category : #actions }
@@ -95,28 +108,19 @@ GtImageSetup class >> updateDocumentationDirectoryForLocalDevelopment [
 
 { #category : #actions }
 GtImageSetup class >> updateLocalVersion [
-	| gtoolkitRepository releaseTags theVersion |
-	gtoolkitRepository := IceRepository registry 
-		detect: [ :anIceRepository | anIceRepository name = 'gtoolkit' ]
-		ifNone: [ ^ self ].
+	| theVersion |
 	
-	releaseTags := ((gtoolkitRepository tags 
-		select: #gtIsSemanticVersion
-		thenCollect: [ :anIceTag | 
-			anIceTag gtAsSemanticVersionNumber]) sorted: [ :a :b |
-				a <= b ]).
-	releaseTags ifEmpty: [ ^ self ].
-	theVersion := releaseTags last asDevSemanticVersion. 
+	theVersion := GtImage computeCurrentGToolkitVersion asDevSemanticVersion. 
 	
 	GtImage version: theVersion.
 	GtImage timestamp: DateAndTime now.
 ]
 
 { #category : #actions }
-GtImageSetup class >> updateNextReleaseVersion [
+GtImageSetup class >> updateNextReleaseVersion: aVersionComputation [
 	| theVersion |
-	theVersion := GtRlReleaserExportWorkflow buildGToolkitRelease rootProjectRelease version.
 	
+	theVersion := GtImage computeNextGToolkitVersion: aVersionComputation.
 	GtImage version: theVersion.
 	GtImage timestamp: DateAndTime now.
 ]
