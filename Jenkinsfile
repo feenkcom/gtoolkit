@@ -62,13 +62,35 @@ pipeline {
 
         RELEASER_FOLDER = 'gt-releaser'
         GTOOLKIT_FOLDER = 'glamoroustoolkit'
+        EXAMPLES_FOLDER = 'gt-examples'
 
-        TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
+        TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo"'
+
         TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-tentative-without-gt-world.zip'
+        TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
         RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
         PHARO_IMAGE_URL = 'https://dl.feenk.com/pharo/Pharo9.0-SNAPSHOT.build.1532.sha.e58ef49.arch.64bit.zip'
     }
     stages {
+        stage ('Read tool versions') {
+            agent {
+                label "${MACOS_M1_TARGET}"
+            }
+            steps {
+                script {
+                    FEENK_RELEASER_VERSION = sh (
+                        script: "cat feenk-releaser.version",
+                        returnStdout: true
+                    ).trim()
+                    GTOOLKIT_INSTALLER_VERSION = sh (
+                        script: "cat gtoolkit-installer.version",
+                        returnStdout: true
+                    ).trim()
+                }
+                echo "Will install using gtoolkit-installer ${GTOOLKIT_INSTALLER_VERSION}"
+                echo "Will release using feenk-releaser ${FEENK_RELEASER_VERSION}"
+            }
+        }
         stage ('Build pre release') {
             environment {
                 TARGET = "${MACOS_M1_TARGET}"
@@ -81,6 +103,7 @@ pipeline {
                     steps {
                         sh "rm -rf ${GTOOLKIT_FOLDER}"
                         sh "rm -rf ${RELEASER_FOLDER}"
+                        sh "rm -rf ${EXAMPLES_FOLDER}"
                         sh 'rm -rf ~/Documents/lepiter'
                         sh 'git clean -fdx'
                     }
@@ -95,7 +118,7 @@ pipeline {
 
                         slackSend (color: '#FFFF00', message: ("Started <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>") )
 
-                        sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                        sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_INSTALLER_VERSION}/gt-installer-${TARGET}"
                         sh 'chmod +x gt-installer'
 
                         /// the following loads glamorous toolkit without opening GT world
@@ -133,16 +156,16 @@ pipeline {
                         /// package without gt-world
                         sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
 
-                        /// open gt world here
+                        /// open gt world
                         sh "./gt-installer --verbose start"
 
-                        /// package with gt world opened, ready to run tests on all platforms
+                        /// package with gt-world opened, ready to run tests
                         sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE}"
 
                         echo currentBuild.toString()
                         echo currentBuild.result
-                        stash includes: "${TENTATIVE_PACKAGE}", name: "${TENTATIVE_PACKAGE}"
                         stash includes: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}", name: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
+                        stash includes: "${TENTATIVE_PACKAGE}", name: "${TENTATIVE_PACKAGE}"
                     }
                 }
 
@@ -186,6 +209,7 @@ pipeline {
                         stage('Clean up') {
                             steps {
                                 sh "rm -rf ${GTOOLKIT_FOLDER}"
+                                sh "rm -rf ${EXAMPLES_FOLDER}"
                                 sh 'rm -rf ~/Documents/lepiter'
                                 sh 'git clean -fdx'
                             }
@@ -194,14 +218,18 @@ pipeline {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
-                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_INSTALLER_VERSION}/gt-installer-${TARGET}"
                                 sh 'chmod +x gt-installer'
 
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh 'xvfb-run -a ./gt-installer --verbose test --disable-deprecation-rewrites'
-                                junit "${GTOOLKIT_FOLDER}/*.xml"
+
+                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
+                                sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
+
+                                sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
+                                junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('Linux Package') {
@@ -236,22 +264,26 @@ pipeline {
                         stage('Clean up') {
                             steps {
                                 sh "rm -rf ${GTOOLKIT_FOLDER}"
+                                sh "rm -rf ${EXAMPLES_FOLDER}"
                                 sh 'rm -rf ~/Documents/lepiter'
-                                sh 'git clean -fdx'
                             }
                         }
                         stage('MacOS M1 Examples') {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
-                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_INSTALLER_VERSION}/gt-installer-${TARGET}"
                                 sh 'chmod +x gt-installer'
 
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh "./gt-installer --verbose test --disable-deprecation-rewrites"
-                                junit "${GTOOLKIT_FOLDER}/*.xml"
+
+                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
+                                sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
+
+                                sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
+                                junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('MacOS M1 Package') {
@@ -301,6 +333,7 @@ pipeline {
                         stage('Clean up') {
                             steps {
                                 sh "rm -rf ${GTOOLKIT_FOLDER}"
+                                sh "rm -rf ${EXAMPLES_FOLDER}"
                                 sh 'rm -rf ~/Documents/lepiter'
                                 sh 'git clean -fdx'
                             }
@@ -309,14 +342,18 @@ pipeline {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
-                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_INSTALLER_VERSION}/gt-installer-${TARGET}"
                                 sh 'chmod +x gt-installer'
 
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                sh "./gt-installer --verbose test --disable-deprecation-rewrites"
-                                junit "${GTOOLKIT_FOLDER}/*.xml"
+
+                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
+                                sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
+
+                                sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
+                                junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('MacOS Intel Package') {
@@ -364,6 +401,7 @@ pipeline {
                         stage('Clean up') {
                             steps {
                                 powershell "Remove-Item ${GTOOLKIT_FOLDER} -Recurse -ErrorAction Ignore"
+                                powershell "Remove-Item ${EXAMPLES_FOLDER} -Recurse -ErrorAction Ignore"
                                 powershell 'Remove-Item  "C:/Users/Administrator/Documents/lepiter" -Recurse -ErrorAction Ignore'
                                 powershell 'git clean -fdx'
                             }
@@ -372,13 +410,17 @@ pipeline {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
-                                powershell "curl -o gt-installer.exe https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}.exe"
+                                powershell "curl -o gt-installer.exe https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_INSTALLER_VERSION}/gt-installer-${TARGET}.exe"
 
                                 powershell 'git config --global user.name "Jenkins"'
                                 powershell 'git config --global user.email "jenkins@feenk.com"'
                                 powershell "./gt-installer.exe --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                                powershell './gt-installer.exe --verbose test --disable-deprecation-rewrites'
-                                junit "${GTOOLKIT_FOLDER}/*.xml"
+
+                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
+                                powershell "./gt-installer.exe --verbose copy-to ${EXAMPLES_FOLDER}"
+
+                                powershell "./gt-installer.exe --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
+                                junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('Windows Package') {
@@ -420,7 +462,7 @@ pipeline {
                 unstash "${WINDOWS_AMD64_TARGET}"
                 unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
 
-                sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/latest/download/feenk-releaser-${TARGET}"
+                sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/download/${FEENK_RELEASER_VERSION}/feenk-releaser-${TARGET}"
                 sh "chmod +x feenk-releaser"
 
                 sh "./gt-installer --verbose --workspace ${RELEASER_FOLDER} run-releaser"
@@ -430,7 +472,7 @@ pipeline {
                     --owner feenkcom \
                     --repo gtoolkit \
                     --token GITHUB_TOKEN \
-                    --bump-${params.BUMP} \
+                    --bump ${params.BUMP} \
                     --auto-accept \
                     --assets \
                         ${RELEASED_PACKAGE_LINUX} \
@@ -438,6 +480,8 @@ pipeline {
                         ${RELEASED_PACKAGE_MACOS_INTEL} \
                         ${RELEASED_PACKAGE_WINDOWS} \
                         ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD} """
+
+
             }
         }
     }
