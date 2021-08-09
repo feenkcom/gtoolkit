@@ -72,6 +72,25 @@ pipeline {
         PHARO_IMAGE_URL = 'https://dl.feenk.com/pharo/Pharo9.0-SNAPSHOT.build.1532.sha.e58ef49.arch.64bit.zip'
     }
     stages {
+        stage ('Read tool versions') {
+            agent {
+                label "${MACOS_M1_TARGET}"
+            }
+            steps {
+                script {
+                    FEENK_RELEASER_VERSION = sh (
+                        script: "cat feenk-releaser.version",
+                        returnStdout: true
+                    ).trim()
+                    GTOOLKIT_INSTALLER_VERSION = sh (
+                        script: "cat gtoolkit-installer.version",
+                        returnStdout: true
+                    ).trim()
+                }
+                echo "Will install using gtoolkit-installer ${GTOOLKIT_INSTALLER_VERSION}"
+                echo "Will release using feenk-releaser ${FEENK_RELEASER_VERSION}"
+            }
+        }
         stage ('Build pre release') {
             environment {
                 TARGET = "${MACOS_M1_TARGET}"
@@ -99,7 +118,7 @@ pipeline {
 
                         slackSend (color: '#FFFF00', message: ("Started <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>") )
 
-                        sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                        sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_INSTALLER_VERSION}/gt-installer-${TARGET}"
                         sh 'chmod +x gt-installer'
 
                         /// the following loads glamorous toolkit without opening GT world
@@ -199,7 +218,7 @@ pipeline {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
-                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_INSTALLER_VERSION}/gt-installer-${TARGET}"
                                 sh 'chmod +x gt-installer'
 
                                 sh 'git config --global user.name "Jenkins"'
@@ -253,7 +272,7 @@ pipeline {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
-                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_INSTALLER_VERSION}/gt-installer-${TARGET}"
                                 sh 'chmod +x gt-installer'
 
                                 sh 'git config --global user.name "Jenkins"'
@@ -323,7 +342,7 @@ pipeline {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
-                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}"
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_INSTALLER_VERSION}/gt-installer-${TARGET}"
                                 sh 'chmod +x gt-installer'
 
                                 sh 'git config --global user.name "Jenkins"'
@@ -391,7 +410,7 @@ pipeline {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
-                                powershell "curl -o gt-installer.exe https://github.com/feenkcom/gtoolkit-maestro-rs/releases/latest/download/gt-installer-${TARGET}.exe"
+                                powershell "curl -o gt-installer.exe https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_INSTALLER_VERSION}/gt-installer-${TARGET}.exe"
 
                                 powershell 'git config --global user.name "Jenkins"'
                                 powershell 'git config --global user.email "jenkins@feenk.com"'
@@ -443,7 +462,7 @@ pipeline {
                 unstash "${WINDOWS_AMD64_TARGET}"
                 unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
 
-                sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/latest/download/feenk-releaser-${TARGET}"
+                sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/download/${FEENK_RELEASER_VERSION}/feenk-releaser-${TARGET}"
                 sh "chmod +x feenk-releaser"
 
                 sh "./gt-installer --verbose --workspace ${RELEASER_FOLDER} run-releaser"
@@ -453,7 +472,7 @@ pipeline {
                     --owner feenkcom \
                     --repo gtoolkit \
                     --token GITHUB_TOKEN \
-                    --bump-${params.BUMP} \
+                    --bump ${params.BUMP} \
                     --auto-accept \
                     --assets \
                         ${RELEASED_PACKAGE_LINUX} \
@@ -461,6 +480,8 @@ pipeline {
                         ${RELEASED_PACKAGE_MACOS_INTEL} \
                         ${RELEASED_PACKAGE_WINDOWS} \
                         ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD} """
+
+
             }
         }
     }

@@ -12,14 +12,9 @@ TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 
 PREDICTED_TAG_NAME=$(cat tagname.txt)
 
 if [ "$PREDICTED_TAG_NAME" != "$TAG_NAME" ]; then
-
-echo "Predicted tag name did not materialize. Most likely Releaser did not create a new release because of an accute lack of new commits. Exiting now, goodbye."
-exit 0
-
+  echo "Predicted tag name did not materialize. Most likely Releaser did not create a new release because of an accute lack of new commits. Exiting now, goodbye."
+  exit 0
 fi
-
-#download GlamorousToolkitOSX64 from tentative because the osx vm uploaded a notarized version of it 
-curl https://dl.feenk.com/tentative/GlamorousToolkitOSX64.zip -o GlamorousToolkitOSX64.zip
 
 mv GlamorousToolkitWin64.zip GlamorousToolkitWin64-$TAG_NAME.zip
 mv GlamorousToolkitLinux64.zip GlamorousToolkitLinux64-$TAG_NAME.zip
@@ -34,48 +29,36 @@ date +%s > releasedateinseconds
 scp releasedateinseconds $AWS:$GT_FOLDER/.releasedateinseconds
 
 ssh $AWS -t "cd ${GT_FOLDER}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n' -r rm --"
-./scripts/build/create-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=$build_zip
 
 libFolder=libOSX64
 unzip $libFolder.zip
 rm $libFolder.zip
 mv $libFolder $libFolder-$TAG_NAME
 zip -qyr libOSX64.zip $libFolder-$TAG_NAME
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libOSX64.zip
 
 libFolder=libWin64
 unzip $libFolder.zip
 rm $libFolder.zip
 mv $libFolder $libFolder-$TAG_NAME
 zip -qyr libWin64.zip $libFolder-$TAG_NAME
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libWin64.zip
 
 libFolder=libLinux64
 unzip $libFolder.zip
 rm $libFolder.zip
 mv $libFolder $libFolder-$TAG_NAME
 zip -qyr libLinux64.zip $libFolder-$TAG_NAME
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=libLinux64.zip
 
 
 file=$(echo build-artifacts/GlamorousToolkitVM-*-linux64-bin.zip)
 mv $file GlamorousToolkitVM-linux64-bin.zip
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=GlamorousToolkitVM-linux64-bin.zip
 
 file=$(echo build-artifacts/GlamorousToolkitVM-*-mac64-bin.zip)
 mv $file GlamorousToolkitVM-mac64-bin.zip
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=GlamorousToolkitVM-mac64-bin.zip
 
 file=$(echo build-artifacts/GlamorousToolkitVM-*-win64-bin.zip)
 mv $file GlamorousToolkitVM-win64-bin.zip
-./scripts/build/upload-github-release.sh github_api_token=$GITHUB_TOKEN owner=feenkcom repo=gtoolkit tag=$TAG_NAME filename=GlamorousToolkitVM-win64-bin.zip
-
 
 #deploy local build scripts
-scp scripts/localbuild/linux.sh $AWS:$ScriptsFolder
-scp scripts/localbuild/mac.sh $AWS:$ScriptsFolder
-scp scripts/localbuild/windows.ps1 $AWS:$ScriptsFolder
 scp scripts/zeroconf/get $AWS:$GT_FOLDER
 
 pwd
