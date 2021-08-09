@@ -250,6 +250,11 @@ pipeline {
                             }
                         }
                         stage('Linux Package') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
                             steps {
                                 script {
                                     RELEASED_PACKAGE_LINUX = sh (
@@ -261,6 +266,11 @@ pipeline {
                             }
                         }
                         stage('Linux Stash') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
                             steps {
                                 echo "About to stash ${RELEASED_PACKAGE_LINUX}"
                                 stash includes: "${RELEASED_PACKAGE_LINUX}", name: "${TARGET}"
@@ -304,6 +314,11 @@ pipeline {
                             }
                         }
                         stage('MacOS M1 Package') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
                             steps {
                                 script {
                                     RELEASED_PACKAGE_MACOS_M1 = sh (
@@ -315,6 +330,11 @@ pipeline {
                             }
                         }
                         stage('MacOS M1 Notarize') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
                             steps {
                                 sh """
                                 xcrun altool \
@@ -330,6 +350,11 @@ pipeline {
                             }
                         }
                         stage('MacOS M1 Stash') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
                             steps {
                                 echo "About to stash ${RELEASED_PACKAGE_MACOS_M1}"
                                 stash includes: "${RELEASED_PACKAGE_MACOS_M1}", name: "${TARGET}"
@@ -374,6 +399,11 @@ pipeline {
                             }
                         }
                         stage('MacOS Intel Package') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
                             steps {
                                 script {
                                     RELEASED_PACKAGE_MACOS_INTEL = sh (
@@ -385,6 +415,11 @@ pipeline {
                             }
                         }
                         stage('MacOS Intel Notarize') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
                             steps {
                                 sh """
                                 xcrun altool \
@@ -400,6 +435,11 @@ pipeline {
                             }
                         }
                         stage('MacOS Intel Stash') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
                             steps {
                                 echo "About to stash ${RELEASED_PACKAGE_MACOS_INTEL}"
                                 stash includes: "${RELEASED_PACKAGE_MACOS_INTEL}", name: "${TARGET}"
@@ -441,6 +481,11 @@ pipeline {
                             }
                         }
                         stage('Windows Package') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
                             steps {
                                 script {
                                     RELEASED_PACKAGE_WINDOWS = powershell (
@@ -452,6 +497,11 @@ pipeline {
                             }
                         }
                         stage('Windows Stash') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
                             steps {
                                 echo "About to stash ${RELEASED_PACKAGE_WINDOWS}"
                                 stash includes: "${RELEASED_PACKAGE_WINDOWS}", name: "${TARGET}"
