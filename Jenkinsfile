@@ -258,7 +258,7 @@ pipeline {
                             steps {
                                 script {
                                     RELEASED_PACKAGE_LINUX = sh (
-                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE} --bump ${params.BUMP}",
+                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE}",
                                         returnStdout: true
                                     ).trim()
                                 }
@@ -322,7 +322,7 @@ pipeline {
                             steps {
                                 script {
                                     RELEASED_PACKAGE_MACOS_M1 = sh (
-                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE} --bump ${params.BUMP}",
+                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE}",
                                         returnStdout: true
                                     ).trim()
                                 }
@@ -407,7 +407,7 @@ pipeline {
                             steps {
                                 script {
                                     RELEASED_PACKAGE_MACOS_INTEL = sh (
-                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE} --bump ${params.BUMP}",
+                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE}",
                                         returnStdout: true
                                     ).trim()
                                 }
@@ -490,7 +490,7 @@ pipeline {
                                 script {
                                     RELEASED_PACKAGE_WINDOWS = powershell (
                                         returnStdout: true,
-                                        script: "./gt-installer.exe --verbose package-release \"${RELEASE_PACKAGE_TEMPLATE}\" --bump \"${params.BUMP}\"",
+                                        script: "./gt-installer.exe --verbose package-release \"${RELEASE_PACKAGE_TEMPLATE}\"",
                                     ).trim()
                                 }
                                 echo "Created release package ${RELEASED_PACKAGE_WINDOWS}"
