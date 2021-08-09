@@ -3,64 +3,23 @@ set -o xtrace
 set -e
 pwd
 ls -al
-export AWS=ubuntu@$AWSIP
-export GT_FOLDER=/var/www/html/gt/
-export ScriptsFolder=/var/www/html/scripts/
-export build_zip=GT.zip
+AWS="ubuntu@$AWSIP"
+GT_FOLDER=/var/www/html/gt/
+SCRIPTS_FOLDER=/var/www/html/scripts/
 
-TAG_NAME=$(git ls-remote --tags git@github.com:feenkcom/gtoolkit.git | grep /v0 | sort -t '/' -k 3 -V | tail -n1 |sed 's/.*\///; s/\^{}//')
-PREDICTED_TAG_NAME=$(cat tagname.txt)
+# Upload released artefacts to https://dl.feenk.com/gt/
+scp GlamorousToolkit*.zip "$AWS:$GT_FOLDER"
 
-if [ "$PREDICTED_TAG_NAME" != "$TAG_NAME" ]; then
-  echo "Predicted tag name did not materialize. Most likely Releaser did not create a new release because of an accute lack of new commits. Exiting now, goodbye."
-  exit 0
-fi
-
-mv GlamorousToolkitWin64.zip GlamorousToolkitWin64-$TAG_NAME.zip
-mv GlamorousToolkitLinux64.zip GlamorousToolkitLinux64-$TAG_NAME.zip
-mv GlamorousToolkitOSX64.zip GlamorousToolkitOSX64-$TAG_NAME.zip
-
-scp GlamorousToolkitWin64-$TAG_NAME.zip $AWS:$GT_FOLDER
-scp GlamorousToolkitLinux64-$TAG_NAME.zip $AWS:$GT_FOLDER
-scp GlamorousToolkitOSX64-$TAG_NAME.zip $AWS:$GT_FOLDER
-
-#save the date so we can show it in the download button
+# Save the date so we can show it in the download button
 date +%s > releasedateinseconds
-scp releasedateinseconds $AWS:$GT_FOLDER/.releasedateinseconds
+scp releasedateinseconds "$AWS:$GT_FOLDER/.releasedateinseconds"
 
-ssh $AWS -t "cd ${GT_FOLDER}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n' -r rm --"
+# Remove the oldest 40 releases
+ssh "$AWS" -t "cd ${GT_FOLDER}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n' -r rm --"
 
-libFolder=libOSX64
-unzip $libFolder.zip
-rm $libFolder.zip
-mv $libFolder $libFolder-$TAG_NAME
-zip -qyr libOSX64.zip $libFolder-$TAG_NAME
-
-libFolder=libWin64
-unzip $libFolder.zip
-rm $libFolder.zip
-mv $libFolder $libFolder-$TAG_NAME
-zip -qyr libWin64.zip $libFolder-$TAG_NAME
-
-libFolder=libLinux64
-unzip $libFolder.zip
-rm $libFolder.zip
-mv $libFolder $libFolder-$TAG_NAME
-zip -qyr libLinux64.zip $libFolder-$TAG_NAME
-
-
-file=$(echo build-artifacts/GlamorousToolkitVM-*-linux64-bin.zip)
-mv $file GlamorousToolkitVM-linux64-bin.zip
-
-file=$(echo build-artifacts/GlamorousToolkitVM-*-mac64-bin.zip)
-mv $file GlamorousToolkitVM-mac64-bin.zip
-
-file=$(echo build-artifacts/GlamorousToolkitVM-*-win64-bin.zip)
-mv $file GlamorousToolkitVM-win64-bin.zip
-
-#deploy local build scripts
-scp scripts/zeroconf/get $AWS:$GT_FOLDER
+# Deploy local build scripts
+scp scripts/zeroconf/get "$AWS:$GT_FOLDER"
+scp scripts/localbuild/*.sh "$AWS:$SCRIPTS_FOLDER"
 
 pwd
-find ../../ -type d -name workspace -mtime +4 | xargs /bin/rm -rf
 set +e

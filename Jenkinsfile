@@ -129,6 +129,7 @@ pipeline {
                             --image-url ${PHARO_IMAGE_URL} \
                             release-build \
                                 --loader metacello \
+                                --bump ${params.BUMP} \
                                 --no-gt-world """
 
                         script {
@@ -138,6 +139,22 @@ pipeline {
                                 slackSend (color: '#00FF00', message: "Commits from <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )
                             }
                         }
+                    }
+                }
+                stage ('Read gtoolkit version') {
+                    when {
+                        expression {
+                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                        }
+                    }
+                    steps {
+                        script {
+                            GTOOLKIT_EXPECTED_VERSION = sh (
+                                script: "./gt-installer --workspace ${RELEASER_FOLDER} print-gtoolkit-image-version",
+                                returnStdout: true
+                            ).trim()
+                        }
+                        echo "We expect to release gtoolkit ${GTOOLKIT_EXPECTED_VERSION}"
                     }
                 }
                 stage('Package image') {
@@ -465,14 +482,21 @@ pipeline {
                 sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/download/${FEENK_RELEASER_VERSION}/feenk-releaser-${TARGET}"
                 sh "chmod +x feenk-releaser"
 
-                sh "./gt-installer --verbose --workspace ${RELEASER_FOLDER} run-releaser"
+                sshagent(credentials : ['jenkins-ubuntu-node-aliaksei-syrel']) {
+                    sh """
+                        ./gt-installer \
+                            --verbose \
+                            --workspace ${RELEASER_FOLDER} \
+                            run-releaser \
+                                --bump ${params.BUMP} """"
+                }
 
                 sh """
                 ./feenk-releaser \
                     --owner feenkcom \
                     --repo gtoolkit \
                     --token GITHUB_TOKEN \
-                    --bump ${params.BUMP} \
+                    --version ${GTOOLKIT_EXPECTED_VERSION} \
                     --auto-accept \
                     --assets \
                         ${RELEASED_PACKAGE_LINUX} \
@@ -481,7 +505,18 @@ pipeline {
                         ${RELEASED_PACKAGE_WINDOWS} \
                         ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD} """
 
-
+                sh "./scripts/build/upload.sh"
+                script {
+                    withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+                            def remote = [:]
+                            remote.name = 'deploy'
+                            remote.host = 'ec2-18-197-145-81.eu-central-1.compute.amazonaws.com'
+                            remote.user = userName
+                            remote.identityFile = identity
+                            remote.allowAnyHosts = true
+                            sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
+                    }
+                }
             }
         }
     }
