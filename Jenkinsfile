@@ -64,7 +64,7 @@ pipeline {
         GTOOLKIT_FOLDER = 'glamoroustoolkit'
         EXAMPLES_FOLDER = 'gt-examples'
 
-        TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo"'
+        TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo" "Sparta-Skia"'
 
         TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-tentative-without-gt-world.zip'
         TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
