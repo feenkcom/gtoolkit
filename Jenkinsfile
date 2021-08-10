@@ -532,14 +532,12 @@ pipeline {
                 sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/download/${FEENK_RELEASER_VERSION}/feenk-releaser-${TARGET}"
                 sh "chmod +x feenk-releaser"
 
-                sshagent(credentials : ['jenkins-ubuntu-node-aliaksei-syrel']) {
-                    sh """
-                        ./gt-installer \
-                            --verbose \
-                            --workspace ${RELEASER_FOLDER} \
-                            run-releaser \
-                                --bump ${params.BUMP} """
-                }
+                sh """
+                    ./gt-installer \
+                        --verbose \
+                        --workspace ${RELEASER_FOLDER} \
+                        run-releaser \
+                            --bump ${params.BUMP} """
 
                 sh """
                 ./feenk-releaser \
