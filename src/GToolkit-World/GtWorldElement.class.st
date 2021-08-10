@@ -98,7 +98,30 @@ GtWorldElement >> initializeShortcuts [
 								dispatchEvent:
 									(BrDropdownShowWish new
 										anchor: subSpaceDropdown;
-										yourself) ] ])
+										yourself) ] ]).
+	self
+		addShortcut:
+			(BlShortcutWithAction new
+				repeatable: true;
+				combination: (BlKeyCombinationBuilder new 
+						primary shift key: BlKeyboardKey leftBracket) build;
+				action: [ self tabs selectTabToTheLeft ]).
+	self
+		addShortcut:
+			(BlShortcutWithAction new
+				repeatable: true;
+				combination: (BlKeyCombinationBuilder new 
+						primary shift key: BlKeyboardKey rightBracket) build;
+				action: [ self tabs selectTabToTheRight ]).
+	self
+		addShortcut:
+			(BlShortcutWithAction new
+				repeatable: true;
+				combination: BlKeyCombination primaryW;
+				action: [ 
+					self tabs content children anyOne = home ifFalse: [
+						"only close the non-home tabs"
+						self tabs removeSelectedTab ] ]).
 ]
 
 { #category : #accessing }
