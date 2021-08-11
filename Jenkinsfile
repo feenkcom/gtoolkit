@@ -122,7 +122,6 @@ pipeline {
                         sh 'chmod +x gt-installer'
 
                         /// the following loads glamorous toolkit without opening GT world
-
                         sshagent(credentials : ['jenkins-ubuntu-node-aliaksei-syrel']) {
                             sh """
                                 ./gt-installer \
@@ -537,7 +536,6 @@ pipeline {
 
                 sshagent(credentials : ['jenkins-ubuntu-node-aliaksei-syrel']) {
                     sh """
-                        ssh-add -K ~/.ssh/id_rsa
                         ./gt-installer \
                             --verbose \
                             --workspace ${RELEASER_FOLDER} \
