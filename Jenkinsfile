@@ -557,6 +557,7 @@ pipeline {
                         ${RELEASED_PACKAGE_WINDOWS} \
                         ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD} """
 
+                sh "chmod +x ./scripts/build/*.sh"
                 sh "./scripts/build/upload.sh"
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
