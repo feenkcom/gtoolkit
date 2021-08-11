@@ -187,28 +187,6 @@ pipeline {
                         stash includes: "${TENTATIVE_PACKAGE}", name: "${TENTATIVE_PACKAGE}"
                     }
                 }
-
-                stage('Upload prerelease') {
-                    when {
-                        expression {
-                            false
-                        }
-                    }
-                    steps {
-                        script {
-                            withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-                                def remote = [:]
-                                remote.name = 'deploy'
-                                remote.host = 'ip-172-31-37-111.eu-central-1.compute.internal'
-                                remote.user = userName
-                                remote.identityFile = identity
-                                remote.allowAnyHosts = true
-                                sshScript remote: remote, script: "scripts/build/clean-tentative.sh"
-                            }
-                        }
-                        sh 'scripts/build/upload-to-tentative.sh'
-                    }
-                }
             }
         }
         stage('Run Examples') {
