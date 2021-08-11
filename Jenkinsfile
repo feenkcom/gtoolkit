@@ -123,6 +123,7 @@ pipeline {
 
                         /// the following loads glamorous toolkit without opening GT world
                         sh """
+                        ssh-add -K ~/.ssh/id_rsa
                         ./gt-installer \
                             --verbose \
                             --workspace ${RELEASER_FOLDER} \
