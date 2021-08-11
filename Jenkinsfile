@@ -125,7 +125,6 @@ pipeline {
 
                         sshagent(credentials : ['jenkins-ubuntu-node-aliaksei-syrel']) {
                             sh """
-                                //ssh-add -K ~/.ssh/id_rsa
                                 ./gt-installer \
                                     --verbose \
                                     --workspace ${RELEASER_FOLDER} \
@@ -134,8 +133,6 @@ pipeline {
                                         --loader metacello \
                                         --bump ${params.BUMP} \
                                         --no-gt-world """
-                                        //--private-key ~/.ssh/id_rsa \
-                                        //--public-key ~/.ssh/id_rsa.pub """
                         }
 
                         script {
