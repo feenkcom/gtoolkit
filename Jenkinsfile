@@ -540,8 +540,8 @@ pipeline {
                             --workspace ${RELEASER_FOLDER} \
                             run-releaser \
                                 --bump ${params.BUMP} \
-                                --private-key '~/.ssh/id_rsa' \
-                                --public-key '~/.ssh/id_rsa.pub' """
+                                --private-key ~/.ssh/id_rsa \
+                                --public-key ~/.ssh/id_rsa.pub """
                 }
 
                 sh """
