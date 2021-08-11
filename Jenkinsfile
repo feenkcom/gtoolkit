@@ -64,7 +64,7 @@ pipeline {
         GTOOLKIT_FOLDER = 'glamoroustoolkit'
         EXAMPLES_FOLDER = 'gt-examples'
 
-        TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo" "Sparta-Skia"'
+        TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages ".*" "Sparta-Cairo" "Sparta-Skia"'
 
         TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-tentative-without-gt-world.zip'
         TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
@@ -122,15 +122,17 @@ pipeline {
                         sh 'chmod +x gt-installer'
 
                         /// the following loads glamorous toolkit without opening GT world
-                        sh """
-                        ./gt-installer \
-                            --verbose \
-                            --workspace ${RELEASER_FOLDER} \
-                            --image-url ${PHARO_IMAGE_URL} \
-                            release-build \
-                                --loader metacello \
-                                --bump ${params.BUMP} \
-                                --no-gt-world """
+                        sshagent(credentials : ['jenkins-ubuntu-node-aliaksei-syrel']) {
+                            sh """
+                                ./gt-installer \
+                                    --verbose \
+                                    --workspace ${RELEASER_FOLDER} \
+                                    --image-url ${PHARO_IMAGE_URL} \
+                                    release-build \
+                                        --loader metacello \
+                                        --bump ${params.BUMP} \
+                                        --no-gt-world """
+                        }
 
                         script {
                             def newCommitFiles = findFiles(glob: 'glamoroustoolkit/newcommits*.txt')
@@ -532,12 +534,14 @@ pipeline {
                 sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/download/${FEENK_RELEASER_VERSION}/feenk-releaser-${TARGET}"
                 sh "chmod +x feenk-releaser"
 
-                sh """
-                    ./gt-installer \
-                        --verbose \
-                        --workspace ${RELEASER_FOLDER} \
-                        run-releaser \
-                            --bump ${params.BUMP} """
+                sshagent(credentials : ['jenkins-ubuntu-node-aliaksei-syrel']) {
+                    sh """
+                        ./gt-installer \
+                            --verbose \
+                            --workspace ${RELEASER_FOLDER} \
+                            run-releaser \
+                                --bump ${params.BUMP} """
+                }
 
                 sh """
                 ./feenk-releaser \
