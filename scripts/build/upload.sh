@@ -3,7 +3,7 @@ set -o xtrace
 set -e
 pwd
 ls -al
-AWS="ubuntu@$AWSIP"
+AWS="ubuntu@sftp.feenk.com"
 GT_FOLDER=/var/www/html/gt/
 SCRIPTS_FOLDER=/var/www/html/scripts/
 
