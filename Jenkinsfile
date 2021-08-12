@@ -262,10 +262,12 @@ pipeline {
                                     # Make the gtoolkit-remote repository accessible
                                     cd pharo-local/iceberg/feenkcom
                                     echo "Iceberg1:"
-                                    ls
+                                    ls -lh
                                     ln -s ${GTOOLKIT_FOLDER}/pharo-local/iceberg/feenkcom/gtoolkit-remote
                                     echo "Iceberg2:"
-                                    ls
+                                    ls -lh
+                                    echo "gtoolkit-remote..."
+                                    ls -lh gtoolkit-remote/
                                     cd -
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/jenkins_download_gemstone.sh
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
