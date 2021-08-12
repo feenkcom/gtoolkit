@@ -103,7 +103,14 @@ pipeline {
                     steps {
                         sh "rm -rf ${GTOOLKIT_FOLDER}"
                         sh "rm -rf ${RELEASER_FOLDER}"
-                        sh "rm -rf ${EXAMPLES_FOLDER}"
+                        sh """
+                            if [ -d ${EXAMPLES_FOLDER} ]
+                            then
+                                echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
+                                chmod -R u+w ${EXAMPLES_FOLDER}
+                            fi
+                            rm -rf ${EXAMPLES_FOLDER}
+                           """
                         sh 'rm -rf ~/Documents/lepiter'
                         sh 'git clean -fdx'
                     }
@@ -206,7 +213,14 @@ pipeline {
                         stage('Clean up') {
                             steps {
                                 sh "rm -rf ${GTOOLKIT_FOLDER}"
-                                sh "rm -rf ${EXAMPLES_FOLDER}"
+                                sh """
+                                    if [ -d ${EXAMPLES_FOLDER} ]
+                                    then
+                                        echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
+                                        chmod -R u+w ${EXAMPLES_FOLDER}
+                                    fi
+                                    rm -rf ${EXAMPLES_FOLDER}
+                                   """
                                 sh 'rm -rf ~/Documents/lepiter'
                                 sh 'git clean -fdx'
                             }
@@ -229,6 +243,39 @@ pipeline {
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
+                        // stage('Linux Remote Examples') {
+                        //    steps {
+                                // Run the GemStone remote examples.
+                                // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
+                                // sh "pwd; ls"
+                                // sh """
+                                //     cd ${EXAMPLES_FOLDER}
+                                //     ./bin/GlamorousToolkit-cli GlamorousToolkit.image eval --save "Metacello new \
+	                            //         repository: 'github://feenkcom/gt4gemstone:main/src'; \
+	                            //         baseline: 'GtGemstoneClient'; \
+	                            //         load."
+                                //     echo "GtGemstoneClient loaded"
+                                //     echo "EXAMPLES_FOLDER=${EXAMPLES_FOLDER}"
+                                //     pwd
+                                //     ls
+                                //     chmod +x pharo-local/iceberg/feenkcom/gt4gemstone/scripts/*.sh
+                                //     # Make the gtoolkit-remote repository accessible
+                                //     cd pharo-local/iceberg/feenkcom
+                                //     echo "Iceberg1:"
+                                //     ls -lh
+                                //     ln -s ${GTOOLKIT_FOLDER}/pharo-local/iceberg/feenkcom/gtoolkit-remote
+                                //     echo "Iceberg2:"
+                                //     ls -lh
+                                //     echo "gtoolkit-remote..."
+                                //     ls -lh gtoolkit-remote/
+                                //     cd -
+                                //     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/jenkins_download_gemstone.sh
+                                //     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
+                                //     # ./pharo-local/iceberg/feenkcom/gtoolkit-remote/scripts/run-remote-pharo-examples.sh
+                                //     """
+                                // junit "${EXAMPLES_FOLDER}/*.xml"
+                        //     }
+                        // }
                         stage('Linux Package') {
                             when {
                                 expression {
