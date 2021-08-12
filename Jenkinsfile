@@ -240,9 +240,9 @@ pipeline {
 	                                    baseline: 'GtGemstoneClient';
 	                                    load."
                                    """
-                                ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
-                                ./pharo-local/iceberg/feenkcom/gtoolkit-remote/scripts/run-remote-pharo-examples.sh
-                                junit "${EXAMPLES_FOLDER}/*.xml"
+                                sh "./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh"
+                                sh "./pharo-local/iceberg/feenkcom/gtoolkit-remote/scripts/run-remote-pharo-examples.sh"
+                                junit "${EXAMPLES_FOLDER}/glamoroustoolkit/*.xml"
                             }
                         }
                         stage('Linux Package') {
