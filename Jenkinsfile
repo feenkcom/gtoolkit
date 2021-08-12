@@ -241,10 +241,12 @@ pipeline {
 	                                    baseline: 'GtGemstoneClient'; \
 	                                    load."
                                     echo "GtGemstoneClient loaded"
+                                    echo "EXAMPLES_FOLDER=${EXAMPLES_FOLDER}"
+                                    pwd
+                                    ls
+                                    ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
+                                    # ./pharo-local/iceberg/feenkcom/gtoolkit-remote/scripts/run-remote-pharo-examples.sh
                                    """
-                                sh "pwd; ls"
-                                // sh "./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh"
-                                // sh "./pharo-local/iceberg/feenkcom/gtoolkit-remote/scripts/run-remote-pharo-examples.sh"
                                 // junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
