@@ -233,9 +233,9 @@ pipeline {
                             steps {
                                 // Run the GemStone remote examples.
                                 // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
-                                cd "${EXAMPLES_FOLDER}"
                                 sh "pwd; ls"
                                 sh """
+                                    cd ${EXAMPLES_FOLDER}
                                     ./bin/GlamorousToolkit-cli GlamorousToolkit.image eval --save "Metacello new \
 	                                    repository: 'github://feenkcom/gt4gemstone:main/src'; \
 	                                    baseline: 'GtGemstoneClient'; \
