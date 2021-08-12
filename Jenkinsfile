@@ -229,6 +229,21 @@ pipeline {
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
+                        stage('Linux Remote Examples') {
+                            steps {
+                                // Run the GemStone remote examples.
+                                // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
+                                cd ${EXAMPLES_FOLDER}/glamoroustoolkit
+                                sh """
+                                    ./bin/GlamorousToolkit-cli GlamorousToolkit.image eval --save "Metacello new
+	                                    repository: 'github://feenkcom/gt4gemstone:main/src';
+	                                    baseline: 'GtGemstoneClient';
+	                                    load."
+                                   """
+                                ./pharo-local/iceberg/feenkcom/gtoolkit-remote/scripts/run-remote-gemstone-examples.sh
+                                junit "${EXAMPLES_FOLDER}/*.xml"
+                            }
+                        }
                         stage('Linux Package') {
                             when {
                                 expression {
