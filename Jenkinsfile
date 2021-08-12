@@ -103,7 +103,12 @@ pipeline {
                     steps {
                         sh "rm -rf ${GTOOLKIT_FOLDER}"
                         sh "rm -rf ${RELEASER_FOLDER}"
-                        sh "chmod -R u+w ${EXAMPLES_FOLDER}"
+                        sh """
+                            if [ -d ${EXAMPLES_FOLDER} ]
+                            then
+                                chmod -R u+w ${EXAMPLES_FOLDER}
+                            fi
+                           """
                         sh "rm -rf ${EXAMPLES_FOLDER}"
                         sh 'rm -rf ~/Documents/lepiter'
                         sh 'git clean -fdx'
