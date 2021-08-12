@@ -106,10 +106,11 @@ pipeline {
                         sh """
                             if [ -d ${EXAMPLES_FOLDER} ]
                             then
+                                echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
                                 chmod -R u+w ${EXAMPLES_FOLDER}
                             fi
+                            rm -rf ${EXAMPLES_FOLDER}
                            """
-                        sh "rm -rf ${EXAMPLES_FOLDER}"
                         sh 'rm -rf ~/Documents/lepiter'
                         sh 'git clean -fdx'
                     }
