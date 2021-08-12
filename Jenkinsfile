@@ -244,6 +244,8 @@ pipeline {
                                     echo "EXAMPLES_FOLDER=${EXAMPLES_FOLDER}"
                                     pwd
                                     ls
+                                    chmod +x pharo-local/iceberg/feenkcom/gt4gemstone/scripts/*.sh
+                                    ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/jenkins_download_gemstone.sh
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
                                     # ./pharo-local/iceberg/feenkcom/gtoolkit-remote/scripts/run-remote-pharo-examples.sh
                                    """
