@@ -52,16 +52,16 @@ What is XDoc? Learn here: {{gtClass:BaselineOfXdoc}}
 
 "
 Class {
-	#name : #BaselineOfGToolkit,
-	#superclass : #BaselineOf,
+	#name : 'BaselineOfGToolkit',
+	#superclass : 'BaselineOf',
 	#classVars : [
 		'PostLoaded',
 		'PreLoaded'
 	],
-	#category : #BaselineOfGToolkit
+	#category : 'BaselineOfGToolkit'
 }
 
-{ #category : #baseline }
+{ #category : 'baseline' }
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>
 	spec for: #'common' do: [
@@ -96,8 +96,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4petitparser2:main/src' ];
 			baseline: 'GToolkit4Famix3' with: [
 				spec repository: 'github://feenkcom/gt4famix3:main/src' ];
-			baseline: 'GToolkitRemote' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:main/src' ];
+			baseline: 'GtGemstoneClient' with: [
+				spec repository: 'github://feenkcom/gt4gemstone:main/src' ];
 			baseline: 'GToolkit4Git' with: [
 				spec repository: 'github://feenkcom/gt4git:main/src' ];
 			baseline: 'GToolkit4Jenkins' with: [
@@ -133,7 +133,7 @@ BaselineOfGToolkit >> baseline: spec [
 
 ]
 
-{ #category : #'post load' }
+{ #category : 'post load' }
 BaselineOfGToolkit >> fixCommandLineHandlerForPharo7 [
 	BasicCommandLineHandler compile: ((BasicCommandLineHandler>>#gtHandleArgument:) sourceCode
 		copyReplaceAll: 'gtHandleArgument: aString' with: 'handleArgument: aString').
@@ -141,13 +141,13 @@ BaselineOfGToolkit >> fixCommandLineHandlerForPharo7 [
 		copyReplaceAll: 'gtArgumentString' with: 'argumentString')
 ]
 
-{ #category : #'post load' }
+{ #category : 'post load' }
 BaselineOfGToolkit >> fixCommandLineHandlerForPharo8 [
 	EvaluateCommandLineHandler compile: ((EvaluateCommandLineHandler>>#gtArgumentString) sourceCode
 		copyReplaceAll: 'gtArgumentString' with: 'argumentString')
 ]
 
-{ #category : #'post load' }
+{ #category : 'post load' }
 BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ])
 		ifTrue: [ ^ self ].
@@ -164,7 +164,7 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(self class environment at: #GtImage) setupLepiterIntegration.
 ]
 
-{ #category : #'post load' }
+{ #category : 'post load' }
 BaselineOfGToolkit >> preLoadGToolkit: spec [
 
 	(PreLoaded isNotNil and: [ PreLoaded ])
