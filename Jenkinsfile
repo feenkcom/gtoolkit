@@ -142,7 +142,7 @@ pipeline {
                         }
 
                         script {
-                            def newCommitFiles = findFiles(glob: 'glamoroustoolkit/newcommits*.txt')
+                            def newCommitFiles = findFiles(glob: 'gt-releaser/newcommits*.txt')
                             for (int i = 0; i < newCommitFiles.size(); ++i) {
                                 env.NEWCOMMITS = readFile(newCommitFiles[i].path)
                                 slackSend (color: '#00FF00', message: "Commits from <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )
