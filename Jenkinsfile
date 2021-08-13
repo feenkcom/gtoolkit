@@ -136,7 +136,7 @@ pipeline {
                                     --workspace ${RELEASER_FOLDER} \
                                     --image-url ${PHARO_IMAGE_URL} \
                                     release-build \
-                                        --loader metacello \
+                                        --loader cloner \
                                         --bump ${params.BUMP} \
                                         --no-gt-world """
                         }
