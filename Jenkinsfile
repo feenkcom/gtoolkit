@@ -252,7 +252,7 @@ pipeline {
                                     git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
                                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
-                                    # ./pharo-local/iceberg/feenkcom/gtoolkit-remote/scripts/run-remote-pharo-examples.sh
+                                    ./pharo-local/iceberg/feenkcom/gtoolkit-remote/scripts/run-remote-pharo-examples.sh
                                    """
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                            }
