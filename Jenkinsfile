@@ -240,11 +240,13 @@ pipeline {
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
                                 sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                junit "${EXAMPLES_FOLDER}/*.xml"
+                                //junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('Linux Remote Examples') {
                            steps {
+                                sh 'rm -rf ~/Documents/lepiter'
+                               
                                 // Run the GemStone remote examples.
                                 // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
                                 sh """
