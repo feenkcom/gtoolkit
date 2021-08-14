@@ -64,7 +64,7 @@ pipeline {
         GTOOLKIT_FOLDER = 'glamoroustoolkit'
         EXAMPLES_FOLDER = 'gt-examples'
 
-        TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo" "Sparta-Skia"'
+        TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
 
         TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-tentative-without-gt-world.zip'
         TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
@@ -142,7 +142,7 @@ pipeline {
                         }
 
                         script {
-                            def newCommitFiles = findFiles(glob: 'glamoroustoolkit/newcommits*.txt')
+                            def newCommitFiles = findFiles(glob: 'gt-releaser/newcommits*.txt')
                             for (int i = 0; i < newCommitFiles.size(); ++i) {
                                 env.NEWCOMMITS = readFile(newCommitFiles[i].path)
                                 slackSend (color: '#00FF00', message: "Commits from <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )
@@ -240,11 +240,13 @@ pipeline {
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
                                 sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                junit "${EXAMPLES_FOLDER}/*.xml"
+                                //junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('Linux Remote Examples') {
                            steps {
+                                sh 'rm -rf ~/Documents/lepiter'
+                               
                                 // Run the GemStone remote examples.
                                 // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
                                 sh """
@@ -252,7 +254,6 @@ pipeline {
                                     git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
                                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
-                                    ./pharo-local/iceberg/feenkcom/gtoolkit-remote/scripts/run-remote-pharo-examples.sh
                                    """
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                            }

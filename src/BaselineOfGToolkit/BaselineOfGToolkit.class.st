@@ -52,16 +52,16 @@ What is XDoc? Learn here: {{gtClass:BaselineOfXdoc}}
 
 "
 Class {
-	#name : #BaselineOfGToolkit,
-	#superclass : #BaselineOf,
+	#name : 'BaselineOfGToolkit',
+	#superclass : 'BaselineOf',
 	#classVars : [
 		'PostLoaded',
 		'PreLoaded'
 	],
-	#category : #BaselineOfGToolkit
+	#category : 'BaselineOfGToolkit'
 }
 
-{ #category : #baseline }
+{ #category : 'baseline' }
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>
 	spec for: #'common' do: [
@@ -69,49 +69,49 @@ BaselineOfGToolkit >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
 			baseline: 'GToolkitClipboard' with: [
-				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.8.18/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-clipboard:main/src' ];
 			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:v0.8.588/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-documenter:main/src' ];
 			baseline: 'GToolkitPresenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.281/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-presenter:main/src' ];
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.816/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:main/src' ];
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.498/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-debugger:main/src' ];
 			baseline: 'GToolkitFileBrowser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-filebrowser:v0.6.82/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-filebrowser:main/src' ];
 			baseline: 'GToolkitDemos' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.8.425/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-demos:main/src' ];
 			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.8.66/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-releaser:main/src' ];
 			baseline: 'GToolkitConstrainer' with: [
-				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.8.6/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-constrainer:main/src' ];
 			baseline: 'GToolkit4Pharo' with: [
-				spec repository: 'github://feenkcom/gt4pharo:v0.6.100/src' ];
+				spec repository: 'github://feenkcom/gt4pharo:main/src' ];
 			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:v0.8.61/src' ];
+				spec repository: 'github://feenkcom/gt4smacc:main/src' ];
 			baseline: 'GToolkit4XMLSupport' with: [
-				spec repository: 'github://feenkcom/gt4xmlsupport:v0.8.12/src' ];
+				spec repository: 'github://feenkcom/gt4xmlsupport:main/src' ];
 			baseline: 'GToolkit4PetitParser2' with: [
-				spec repository: 'github://feenkcom/gt4petitparser2:v0.8.12/src' ];
+				spec repository: 'github://feenkcom/gt4petitparser2:main/src' ];
 			baseline: 'GToolkit4Famix3' with: [
-				spec repository: 'github://feenkcom/gt4famix3:v0.8.25/src' ];
-			baseline: 'GToolkitRemote' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.549/src' ];
+				spec repository: 'github://feenkcom/gt4famix3:main/src' ];
+			baseline: 'GtGemstoneClient' with: [
+				spec repository: 'github://feenkcom/gt4gemstone:main/src' ];
 			baseline: 'GToolkit4Git' with: [
-				spec repository: 'github://feenkcom/gt4git:v0.8.41/src' ];
+				spec repository: 'github://feenkcom/gt4git:main/src' ];
 			baseline: 'GToolkit4Jenkins' with: [
-				spec repository: 'github://feenkcom/gt4jenkins:v0.8.21/src' ];
+				spec repository: 'github://feenkcom/gt4jenkins:main/src' ];
 			baseline: 'Gt4PharoLink' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.549/src' ];
+				spec repository: 'github://feenkcom/gtoolkit-remote:main/src' ];
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.816/src' ];
+				spec repository: 'github://feenkcom/gtoolkit:main/src' ];
 			baseline: 'BlocExtensions' with: [
-				spec repository: 'github://feenkcom/Bloc:v0.8.229/src' ];
+				spec repository: 'github://feenkcom/Bloc:main/src' ];
 			baseline: 'LepiterEngine' with: [
-				spec repository: 'github://feenkcom/lepiter:v0.6.115/src' ];
+				spec repository: 'github://feenkcom/lepiter:main/src' ];
 			baseline: 'GToolkitRobocoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-robocoder:v0.6.25/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-robocoder:main/src' ].
 		spec 
 			package: 'GToolkit-Extensions' with: [
 				spec requires: #('GToolkitDocumenter' ). ];
@@ -133,7 +133,7 @@ BaselineOfGToolkit >> baseline: spec [
 
 ]
 
-{ #category : #'post load' }
+{ #category : 'post load' }
 BaselineOfGToolkit >> fixCommandLineHandlerForPharo7 [
 	BasicCommandLineHandler compile: ((BasicCommandLineHandler>>#gtHandleArgument:) sourceCode
 		copyReplaceAll: 'gtHandleArgument: aString' with: 'handleArgument: aString').
@@ -141,13 +141,13 @@ BaselineOfGToolkit >> fixCommandLineHandlerForPharo7 [
 		copyReplaceAll: 'gtArgumentString' with: 'argumentString')
 ]
 
-{ #category : #'post load' }
+{ #category : 'post load' }
 BaselineOfGToolkit >> fixCommandLineHandlerForPharo8 [
 	EvaluateCommandLineHandler compile: ((EvaluateCommandLineHandler>>#gtArgumentString) sourceCode
 		copyReplaceAll: 'gtArgumentString' with: 'argumentString')
 ]
 
-{ #category : #'post load' }
+{ #category : 'post load' }
 BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ])
 		ifTrue: [ ^ self ].
@@ -164,7 +164,7 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(self class environment at: #GtImage) setupLepiterIntegration.
 ]
 
-{ #category : #'post load' }
+{ #category : 'post load' }
 BaselineOfGToolkit >> preLoadGToolkit: spec [
 
 	(PreLoaded isNotNil and: [ PreLoaded ])
