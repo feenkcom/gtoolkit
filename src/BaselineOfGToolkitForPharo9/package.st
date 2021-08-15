@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfGToolkitForPharo9 }
+Package { #name : 'BaselineOfGToolkitForPharo9' }
