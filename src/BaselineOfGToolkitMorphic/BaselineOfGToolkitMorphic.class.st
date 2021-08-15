@@ -1,19 +1,21 @@
 Class {
-	#name : #BaselineOfGToolkitMorphic,
-	#superclass : #BaselineOf,
-	#category : #BaselineOfGToolkitMorphic
+	#name : 'BaselineOfGToolkitMorphic',
+	#superclass : 'BaselineOf',
+	#category : 'BaselineOfGToolkitMorphic'
 }
 
-{ #category : #baseline }
+{ #category : 'baseline' }
 BaselineOfGToolkitMorphic >> baseline: spec [
 	<baseline>
 	spec for: #'common' do: [
-		spec 
+		spec
 			baseline: 'Bloc' with: [
-				spec repository: 'github://feenkcom/Bloc:v0.8.229/src' ];
+				spec repository: 'github://feenkcom/Bloc:v0.8.229/src' ].
+		spec
 			baseline: 'GlutinMorphic' with: [
 				spec repository: 'github://feenkcom/gtoolkit-glutin:v0.8.54/src' ].
-		spec package: #'GToolkit-Morphic' with: [
-				spec requires: #('Bloc' 'GlutinMorphic' ). ]. ].
 
+		spec package: 'GToolkit-Morphic' with: [
+			spec requires: #('Bloc' 'GlutinMorphic') ].
+	]
 ]

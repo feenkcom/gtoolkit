@@ -15,18 +15,20 @@ To get an idea of how this tool could be useful, take a look at the following ex
 
 "
 Class {
-	#name : #BaselineOfGToolkitTranscript,
-	#superclass : #BaselineOf,
-	#category : #BaselineOfGToolkitTranscript
+	#name : 'BaselineOfGToolkitTranscript',
+	#superclass : 'BaselineOf',
+	#category : 'BaselineOfGToolkitTranscript'
 }
 
-{ #category : #baseline }
+{ #category : 'baseline' }
 BaselineOfGToolkitTranscript >> baseline: spec [
 	<baseline>
 	spec for: #'common' do: [
-		spec baseline: 'Brick' with: [
+		spec
+			baseline: 'Brick' with: [
 				spec repository: 'github://feenkcom/Brick:v0.8.371/src' ].
-		spec package: 'GToolkit-Transcript' with: [
-				spec requires: #('Brick' ). ]. ].
 
+		spec package: 'GToolkit-Transcript' with: [
+			spec requires: #('Brick') ].
+	]
 ]
