@@ -42,20 +42,28 @@ GtImageSetup class >> cleanUpMonticelloCaches [
 
 { #category : 'actions' }
 GtImageSetup class >> copyDataAndDocsFolders [
-	| gtoolkitRepoFolders docFolders |
+	| gtoolkitRepoFolders docFolders icebergRepositories |
 	GtResourcesUtilityConstants localGtDirectory asFileReference ensureCreateDirectory.
 	
 	('localGtDirectory: ', GtResourcesUtilityConstants localGtDirectory printString) traceCr.
 	
 	gtoolkitRepoFolders := (IceRepository registry detect: [ :r | r name = 'gtoolkit' ]) location parent.
-	docFolders := OrderedCollection new
-		addAll: (gtoolkitRepoFolders allChildrenMatching: 'doc');
-		addAll: (gtoolkitRepoFolders allChildrenMatching: 'data');
+	
+	icebergRepositories := IceRepository registry reject: [ :aRepository | 
+		aRepository name = 'zinc' or: [
+			aRepository location isNil or: [ 
+				(aRepository location parent = gtoolkitRepoFolders) not ] ] ].
+	
+	docFolders := OrderedCollection new.
+	icebergRepositories do: [ :aRepository | 
+		docFolders 
+			addAll: (aRepository location childrenMatching: 'doc');
+			addAll: (aRepository location childrenMatching: 'data') ].
+	docFolders 
 		add: (gtoolkitRepoFolders asFileReference / 'gtoolkit' / 'lepiter');
 		add: (gtoolkitRepoFolders asFileReference / 'lepiter' / 'test-data');
 		add: (gtoolkitRepoFolders asFileReference / 'JSLink' / 'js');
-		add: (gtoolkitRepoFolders asFileReference / 'PythonBridge' / 'PythonBridgeRuntime');
-		yourself.
+		add: (gtoolkitRepoFolders asFileReference / 'PythonBridge' / 'PythonBridgeRuntime').
 
 	docFolders do: [ :each |
 		|icebergIndex size topSegments localPath|
