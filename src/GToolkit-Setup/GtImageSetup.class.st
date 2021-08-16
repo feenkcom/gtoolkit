@@ -10,12 +10,37 @@ The various configurations that I support are in class-side methods in the `acti
 
 "
 Class {
-	#name : #GtImageSetup,
-	#superclass : #Object,
-	#category : #'GToolkit-Setup'
+	#name : 'GtImageSetup',
+	#superclass : 'Object',
+	#category : 'GToolkit-Setup'
 }
 
-{ #category : #actions }
+{ #category : 'actions' }
+GtImageSetup class >> cleanUpChangeSets [
+	ChangeSet removeChangeSetsNamedSuchThat: [ :each | true ].
+	ChangeSet resetCurrentToNewUnnamedChangeSet.
+]
+
+{ #category : 'actions' }
+GtImageSetup class >> cleanUpImageAfterLoad [
+	self cleanUpMonticelloCaches.
+	self cleanUpChangeSets.
+	
+	Smalltalk organization sortCategories.
+	3 timesRepeat: [ 
+		Smalltalk garbageCollect.
+	 	Symbol compactSymbolTable ].
+	
+	Smalltalk garbageCollect.
+]
+
+{ #category : 'actions' }
+GtImageSetup class >> cleanUpMonticelloCaches [
+	MCFileBasedRepository flushAllCaches.
+	MCMethodDefinition shutDown.
+]
+
+{ #category : 'actions' }
 GtImageSetup class >> copyDataAndDocsFolders [
 	| gtoolkitRepoFolders docFolders |
 	GtResourcesUtilityConstants localGtDirectory asFileReference ensureCreateDirectory.
@@ -51,12 +76,12 @@ GtImageSetup class >> copyDataAndDocsFolders [
 
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtImageSetup class >> installLogo [
 	GtWorldMenu setGtDesktopLogo.
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 GtImageSetup class >> performLocalSetup [
 	"Perform a setup for images that should be used locally for development."
 	
@@ -64,9 +89,10 @@ GtImageSetup class >> performLocalSetup [
 	self registerTools.
 	self updateLocalVersion.
 	self updateDocumentationDirectoryForLocalDevelopment.
+	self cleanUpImageAfterLoad.
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 GtImageSetup class >> performSetupForRelease [
 	"Perform a setup for images that should be released. This should 
 	be called on the CI server during the release process."
@@ -74,7 +100,7 @@ GtImageSetup class >> performSetupForRelease [
 	self performSetupForRelease: 'patch'
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 GtImageSetup class >> performSetupForRelease: aVersionComputationName [
 	"Perform a setup for images that should be released. This should 
 	be called on the CI server during the release process.
@@ -87,10 +113,11 @@ GtImageSetup class >> performSetupForRelease: aVersionComputationName [
 	self copyDataAndDocsFolders.
 	self installLogo.
 	self registerTools.
-	self updateNextReleaseVersion: (GtRlSemanticVersionComputation named: aVersionComputationName)
+	self updateNextReleaseVersion: (GtRlSemanticVersionComputation named: aVersionComputationName).
+	self cleanUpImageAfterLoad
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtImageSetup class >> registerTools [
 	GtMoldableDebugger register.
 	GtExpandableDebuggerElement register.
@@ -99,14 +126,14 @@ GtImageSetup class >> registerTools [
 	GtPlaygroundToolRegistryAdaptor register.
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 GtImageSetup class >> updateDocumentationDirectoryForLocalDevelopment [
 	LepiterCoreDefaults defaultDocumentationDirectory: FileLocator imageDirectory 
 		/ 'pharo-local'
 		/ 'iceberg'
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtImageSetup class >> updateLocalVersion [
 	| theVersion |
 	
@@ -116,7 +143,7 @@ GtImageSetup class >> updateLocalVersion [
 	GtImage timestamp: DateAndTime now.
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtImageSetup class >> updateNextReleaseVersion: aVersionComputation [
 	| theVersion |
 	
