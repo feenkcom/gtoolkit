@@ -251,6 +251,7 @@ pipeline {
                                 // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
+                                    export GTOOLKIT_EXPECTED_VERSION=`cat gtoolkit.version`
                                     git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
                                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
