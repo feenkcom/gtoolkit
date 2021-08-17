@@ -247,7 +247,6 @@ pipeline {
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
                                 sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                //junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
                         stage('Linux Remote Examples') {
@@ -262,6 +261,10 @@ pipeline {
                                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
                                    """
+                           }
+                        }
+                        stage('Linux Report Examples') {
+                           steps {
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                            }
                         }
