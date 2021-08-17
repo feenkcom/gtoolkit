@@ -596,7 +596,7 @@ pipeline {
                         ${RELEASED_PACKAGE_MACOS_M1} \
                         ${RELEASED_PACKAGE_MACOS_INTEL} \
                         ${RELEASED_PACKAGE_WINDOWS} \
-                        ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}
+                        ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD} \
                         ${RELEASED_PACKAGE_GEMSTONE} """
 
 
