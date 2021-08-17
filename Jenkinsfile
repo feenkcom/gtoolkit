@@ -246,7 +246,7 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
-                                //sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
+                                sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
                             }
                         }
                         stage('Linux Remote Examples') {
@@ -308,8 +308,6 @@ pipeline {
                                 }
                             }
                             steps {
-                                echo "About to stash ${RELEASED_PACKAGE_GEMSTONE}"
-                                echo "About to stash ${GEMSTONE_WORKSPACE}/${RELEASED_PACKAGE_GEMSTONE}"
                                 echo "About to stash ${EXAMPLES_FOLDER}/remote-gemstone/${RELEASED_PACKAGE_GEMSTONE}"
                                 stash includes: "${EXAMPLES_FOLDER}/remote-gemstone/${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
                             }
@@ -592,7 +590,8 @@ pipeline {
                         ${RELEASED_PACKAGE_MACOS_M1} \
                         ${RELEASED_PACKAGE_MACOS_INTEL} \
                         ${RELEASED_PACKAGE_WINDOWS} \
-                        ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD} """
+                        ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}
+                        ${RELEASED_PACKAGE_GEMSTONE} """
 
 
                 sh "chmod +x ./scripts/build/*.sh"
