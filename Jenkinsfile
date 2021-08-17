@@ -232,7 +232,7 @@ pipeline {
                                 sh 'git clean -fdx'
                                 script {
                                     RELEASED_PACKAGE_GEMSTONE = sh (
-                                        script: "${RELEASED_PACKAGE_GEMSTONE_NAME}.zip",
+                                        script: "echo ${RELEASED_PACKAGE_GEMSTONE_NAME}.zip",
                                         returnStdout: true
                                     ).trim()
                                 }
