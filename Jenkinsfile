@@ -232,7 +232,7 @@ pipeline {
                                 sh 'git clean -fdx'
                             }
                         }
-                        /*stage('Linux Examples') {
+                        stage('Linux Examples') {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
@@ -246,9 +246,9 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
-                                sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
+                                //sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
                             }
-                        }*/
+                        }
                         stage('Linux Remote Examples') {
                            steps {
                                 sh 'rm -rf ~/Documents/lepiter'
@@ -258,6 +258,9 @@ pipeline {
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
                                     git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
+                                    git clone --depth=1 https://github.com/feenkcom/gtoolkit-remote.git
+                                    git clone --depth=1 https://github.com/feenkcom/Sparkle.git
+
                                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
                                    """
