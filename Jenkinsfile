@@ -211,7 +211,7 @@ pipeline {
                         GEMSTONE_WORKSPACE="${WORKSPACE}/${EXAMPLES_FOLDER}/remote-gemstone"
                         GT4GEMSTONE_VERSION="${GTOOLKIT_EXPECTED_VERSION}"
                         RELEASED_PACKAGE_GEMSTONE_NAME="gt4gemstone-3.7.0-${GTOOLKIT_EXPECTED_VERSION}"
-                        RELEASED_PACKAGE_GEMSTONE="${RELEASED_PACKAGE_GEMSTONE_NAME}.zip"
+                        //RELEASED_PACKAGE_GEMSTONE="${RELEASED_PACKAGE_GEMSTONE_NAME}.zip"
                     }
                     agent {
                         label "${LINUX_AMD64_TARGET}-${LINUX_SERVER_NAME}"
@@ -230,6 +230,12 @@ pipeline {
                                    """
                                 sh 'rm -rf ~/Documents/lepiter'
                                 sh 'git clean -fdx'
+                                script {
+                                    RELEASED_PACKAGE_GEMSTONE = sh (
+                                        script: "${RELEASED_PACKAGE_GEMSTONE_NAME}.zip",
+                                        returnStdout: true
+                                    ).trim()
+                                }
                             }
                         }
                         stage('Linux Examples') {
