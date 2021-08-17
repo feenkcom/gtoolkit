@@ -309,7 +309,9 @@ pipeline {
                             }
                             steps {
                                 echo "About to stash ${RELEASED_PACKAGE_GEMSTONE}"
-                                stash includes: "${GEMSTONE_WORKSPACE}/${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
+                                echo "About to stash ${GEMSTONE_WORKSPACE}/${RELEASED_PACKAGE_GEMSTONE}"
+                                echo "About to stash ${EXAMPLES_FOLDER}/remote-gemstone/${RELEASED_PACKAGE_GEMSTONE}"
+                                stash includes: "${EXAMPLES_FOLDER}/remote-gemstone/${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
                             }
                         }
                     }
