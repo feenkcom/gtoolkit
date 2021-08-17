@@ -232,7 +232,7 @@ pipeline {
                                 sh 'git clean -fdx'
                             }
                         }
-                        stage('Linux Examples') {
+                        /*stage('Linux Examples') {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
@@ -248,7 +248,7 @@ pipeline {
 
                                 sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
                             }
-                        }
+                        }*/
                         stage('Linux Remote Examples') {
                            steps {
                                 sh 'rm -rf ~/Documents/lepiter'
