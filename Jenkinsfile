@@ -263,6 +263,10 @@ pipeline {
                                     git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
                                     git clone --depth=1 https://github.com/feenkcom/gtoolkit-remote.git
                                     git clone --depth=1 https://github.com/feenkcom/Sparkle.git
+
+                                    chmod +x gt4gemstone/scripts/*.sh
+                                    chmod +x gt4gemstone/scripts/release/*.sh
+                                    chmod +x gtoolkit-remote/scripts/*.sh
                                    """
                                 
                                 // Run the GemStone remote examples.
@@ -270,7 +274,7 @@ pipeline {
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
                                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
-                                    ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
+                                    ./gt4gemstone/scripts/run-remote-gemstone-examples.sh
                                    """
                            }
                         }
