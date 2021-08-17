@@ -211,7 +211,6 @@ pipeline {
                         GEMSTONE_WORKSPACE="${WORKSPACE}/${EXAMPLES_FOLDER}/remote-gemstone"
                         GT4GEMSTONE_VERSION="${GTOOLKIT_EXPECTED_VERSION}"
                         RELEASED_PACKAGE_GEMSTONE_NAME="gt4gemstone-3.7.0-${GTOOLKIT_EXPECTED_VERSION}"
-                        //RELEASED_PACKAGE_GEMSTONE="${RELEASED_PACKAGE_GEMSTONE_NAME}.zip"
                     }
                     agent {
                         label "${LINUX_AMD64_TARGET}-${LINUX_SERVER_NAME}"
@@ -314,8 +313,9 @@ pipeline {
                                 }
                             }
                             steps {
-                                echo "About to stash ${EXAMPLES_FOLDER}/remote-gemstone/${RELEASED_PACKAGE_GEMSTONE}"
-                                stash includes: "${EXAMPLES_FOLDER}/remote-gemstone/${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
+                                sh "cp ${GEMSTONE_WORKSPACE}/${RELEASED_PACKAGE_GEMSTONE} ${WORKSPACE}" 
+                                echo "About to stash ${RELEASED_PACKAGE_GEMSTONE}"
+                                stash includes: "${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
                             }
                         }
                     }
