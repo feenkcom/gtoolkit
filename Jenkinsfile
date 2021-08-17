@@ -60,6 +60,8 @@ pipeline {
         WINDOWS_SERVER_NAME = 'daffy-duck'
         WINDOWS_AMD64_TARGET = 'x86_64-pc-windows-msvc'
 
+        GEMSTONE_TARGET = 'GemStone-3.7.0'
+
         RELEASER_FOLDER = 'gt-releaser'
         GTOOLKIT_FOLDER = 'glamoroustoolkit'
         EXAMPLES_FOLDER = 'gt-examples'
@@ -205,6 +207,11 @@ pipeline {
                 stage('Linux') {
                     environment {
                         TARGET = "${LINUX_AMD64_TARGET}"
+
+                        GEMSTONE_WORKSPACE="${WORKSPACE}/${EXAMPLES_FOLDER}/remote-gemstone"
+                        GT4GEMSTONE_VERSION="${GTOOLKIT_EXPECTED_VERSION}"
+                        RELEASED_PACKAGE_GEMSTONE_NAME="gt4gemstone-3.7.0-${GTOOLKIT_EXPECTED_VERSION}"
+                        RELEASED_PACKAGE_GEMSTONE="${RELEASED_PACKAGE_GEMSTONE_NAME}.zip"
                     }
                     agent {
                         label "${LINUX_AMD64_TARGET}-${LINUX_SERVER_NAME}"
@@ -239,23 +246,31 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
-                                sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                //junit "${EXAMPLES_FOLDER}/*.xml"
+                                //sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
                             }
                         }
                         stage('Linux Remote Examples') {
-                           steps {
+                            steps {
                                 sh 'rm -rf ~/Documents/lepiter'
-                               
+                                
+                                sh """
+                                    cd ${EXAMPLES_FOLDER}
+                                    git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
+                                    git clone --depth=1 https://github.com/feenkcom/gtoolkit-remote.git
+                                    git clone --depth=1 https://github.com/feenkcom/Sparkle.git
+                                   """
+                                
                                 // Run the GemStone remote examples.
                                 // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
-                                    export GTOOLKIT_EXPECTED_VERSION=`cat gtoolkit.version`
-                                    git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
                                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
                                    """
+                           }
+                        }
+                        stage('Linux Report Examples') {
+                           steps {
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                            }
                         }
@@ -284,6 +299,19 @@ pipeline {
                             steps {
                                 echo "About to stash ${RELEASED_PACKAGE_LINUX}"
                                 stash includes: "${RELEASED_PACKAGE_LINUX}", name: "${TARGET}"
+                            }
+                        }
+                        stage('GemStone Stash') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
+                            steps {
+                                echo "About to stash ${RELEASED_PACKAGE_GEMSTONE}"
+                                echo "About to stash ${GEMSTONE_WORKSPACE}/${RELEASED_PACKAGE_GEMSTONE}"
+                                echo "About to stash ${EXAMPLES_FOLDER}/remote-gemstone/${RELEASED_PACKAGE_GEMSTONE}"
+                                stash includes: "${EXAMPLES_FOLDER}/remote-gemstone/${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
                             }
                         }
                     }
@@ -538,6 +566,7 @@ pipeline {
                 unstash "${LINUX_AMD64_TARGET}"
                 unstash "${WINDOWS_AMD64_TARGET}"
                 unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
+                unstash "${GEMSTONE_TARGET}"
 
                 sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/download/${FEENK_RELEASER_VERSION}/feenk-releaser-${TARGET}"
                 sh "chmod +x feenk-releaser"
