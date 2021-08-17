@@ -60,6 +60,8 @@ pipeline {
         WINDOWS_SERVER_NAME = 'daffy-duck'
         WINDOWS_AMD64_TARGET = 'x86_64-pc-windows-msvc'
 
+        GEMSTONE_TARGET = 'GemStone-3.7.0'
+
         RELEASER_FOLDER = 'gt-releaser'
         GTOOLKIT_FOLDER = 'glamoroustoolkit'
         EXAMPLES_FOLDER = 'gt-examples'
@@ -205,6 +207,11 @@ pipeline {
                 stage('Linux') {
                     environment {
                         TARGET = "${LINUX_AMD64_TARGET}"
+
+                        GEMSTONE_WORKSPACE="${EXAMPLES_FOLDER}/remote-gemstone"
+                        GT4GEMSTONE_VERSION="${GTOOLKIT_EXPECTED_VERSION}"
+                        RELEASED_PACKAGE_GEMSTONE_NAME="gt4gemstone-3.7.0-${GTOOLKIT_EXPECTED_VERSION}"
+                        RELEASED_PACKAGE_GEMSTONE="${RELEASED_PACKAGE_GEMSTONE_NAME}.zip"
                     }
                     agent {
                         label "${LINUX_AMD64_TARGET}-${LINUX_SERVER_NAME}"
@@ -251,7 +258,6 @@ pipeline {
                                 // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
-                                    export GTOOLKIT_EXPECTED_VERSION=`cat gtoolkit.version`
                                     git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
                                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
@@ -284,6 +290,17 @@ pipeline {
                             steps {
                                 echo "About to stash ${RELEASED_PACKAGE_LINUX}"
                                 stash includes: "${RELEASED_PACKAGE_LINUX}", name: "${TARGET}"
+                            }
+                        }
+                        stage('GemStone Stash') {
+                            when {
+                                expression {
+                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                }
+                            }
+                            steps {
+                                echo "About to stash ${RELEASED_PACKAGE_GEMSTONE}"
+                                stash includes: "${GEMSTONE_WORKSPACE}/${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
                             }
                         }
                     }
@@ -538,6 +555,7 @@ pipeline {
                 unstash "${LINUX_AMD64_TARGET}"
                 unstash "${WINDOWS_AMD64_TARGET}"
                 unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
+                unstash "${GEMSTONE_TARGET}"
 
                 sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/download/${FEENK_RELEASER_VERSION}/feenk-releaser-${TARGET}"
                 sh "chmod +x feenk-releaser"
