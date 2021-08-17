@@ -98,6 +98,7 @@ GtImageSetup class >> performLocalSetup [
 	self updateLocalVersion.
 	self updateDocumentationDirectoryForLocalDevelopment.
 	self cleanUpImageAfterLoad.
+	self preparePharoCompletionCache
 ]
 
 { #category : 'api' }
@@ -122,7 +123,13 @@ GtImageSetup class >> performSetupForRelease: aVersionComputationName [
 	self installLogo.
 	self registerTools.
 	self updateNextReleaseVersion: (GtRlSemanticVersionComputation named: aVersionComputationName).
-	self cleanUpImageAfterLoad
+	self cleanUpImageAfterLoad.
+	self preparePharoCompletionCache
+]
+
+{ #category : 'api' }
+GtImageSetup class >> preparePharoCompletionCache [
+	GtPharoCompletionStrategy initializeCache
 ]
 
 { #category : 'actions' }
