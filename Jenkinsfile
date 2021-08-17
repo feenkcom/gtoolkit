@@ -250,6 +250,17 @@ pipeline {
                             }
                         }
                         stage('Linux Remote Examples') {
+                            steps {
+                                sh 'rm -rf ~/Documents/lepiter'
+                           }
+                           steps {
+                                sh """
+                                    cd ${EXAMPLES_FOLDER}
+                                    git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
+                                    git clone --depth=1 https://github.com/feenkcom/gtoolkit-remote.git
+                                    git clone --depth=1 https://github.com/feenkcom/Sparkle.git
+                                   """
+                           }
                            steps {
                                 sh 'rm -rf ~/Documents/lepiter'
                                
@@ -257,10 +268,6 @@ pipeline {
                                 // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
-                                    git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
-                                    git clone --depth=1 https://github.com/feenkcom/gtoolkit-remote.git
-                                    git clone --depth=1 https://github.com/feenkcom/Sparkle.git
-
                                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
                                     ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
                                    """
