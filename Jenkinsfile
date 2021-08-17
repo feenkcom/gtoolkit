@@ -262,8 +262,6 @@ pipeline {
                                    """
                            }
                            steps {
-                                sh 'rm -rf ~/Documents/lepiter'
-                               
                                 // Run the GemStone remote examples.
                                 // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
                                 sh """
