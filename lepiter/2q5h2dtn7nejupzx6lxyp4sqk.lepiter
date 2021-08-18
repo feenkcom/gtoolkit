@@ -3,7 +3,45 @@
 	"__type" : "page",
 	"children" : {
 		"__type" : "snippets",
-		"items" : [ ]
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-08-18T12:01:01.054313+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-08-18T12:02:11.284076+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8UdKzTOGDQCsQP4TBP8y0Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "These instructions are for installing gt4gemstone into a GemStone extent by manually loading each repository. This can be useful for development, but normally loading a release is enough.  "
+			}
+		]
 	},
 	"createEmail" : {
 		"__type" : "email",
@@ -24,12 +62,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-08-16T17:15:11.55658+02:00"
+			"dateAndTimeString" : "2021-08-18T11:35:35.193111+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Installing gt4gemstone into a GemStone extent"
+		"title" : "Manually installing gt4gemstone into a GemStone extent"
 	},
 	"uid" : {
 		"__type" : "uuid",
