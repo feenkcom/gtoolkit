@@ -106,13 +106,13 @@ pipeline {
                         sh "rm -rf ${GTOOLKIT_FOLDER}"
                         sh "rm -rf ${RELEASER_FOLDER}"
                         sh """
-                            if [ -d ${EXAMPLES_FOLDER} ]
+                            if [ -d "${EXAMPLES_FOLDER}" ]
                             then
                                 echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
-                                chmod -R u+w ${EXAMPLES_FOLDER}
+                                chmod -R u+w "${EXAMPLES_FOLDER}"
                             fi
-                            rm -rf ${EXAMPLES_FOLDER}
-                           """
+                            rm -rf "${EXAMPLES_FOLDER}"
+                        """
                         sh 'rm -rf ~/Documents/lepiter'
                         sh 'git clean -fdx'
                     }
@@ -190,8 +190,6 @@ pipeline {
                         /// package with gt-world opened, ready to run tests
                         sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE}"
 
-                        echo currentBuild.toString()
-                        echo currentBuild.result
                         stash includes: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}", name: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
                         stash includes: "${TENTATIVE_PACKAGE}", name: "${TENTATIVE_PACKAGE}"
                     }
