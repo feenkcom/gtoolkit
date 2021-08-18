@@ -106,13 +106,13 @@ pipeline {
                         sh "rm -rf ${GTOOLKIT_FOLDER}"
                         sh "rm -rf ${RELEASER_FOLDER}"
                         sh """
-                            if [ -d ${EXAMPLES_FOLDER} ]
+                            if [ -d "${EXAMPLES_FOLDER}" ]
                             then
                                 echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
-                                chmod -R u+w ${EXAMPLES_FOLDER}
+                                chmod -R u+w "${EXAMPLES_FOLDER}"
                             fi
-                            rm -rf ${EXAMPLES_FOLDER}
-                           """
+                            rm -rf "${EXAMPLES_FOLDER}"
+                        """
                         sh 'rm -rf ~/Documents/lepiter'
                         sh 'git clean -fdx'
                     }
@@ -190,8 +190,6 @@ pipeline {
                         /// package with gt-world opened, ready to run tests
                         sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE}"
 
-                        echo currentBuild.toString()
-                        echo currentBuild.result
                         stash includes: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}", name: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
                         stash includes: "${TENTATIVE_PACKAGE}", name: "${TENTATIVE_PACKAGE}"
                     }
@@ -211,7 +209,6 @@ pipeline {
                         GEMSTONE_WORKSPACE="${WORKSPACE}/${EXAMPLES_FOLDER}/remote-gemstone"
                         GT4GEMSTONE_VERSION="${GTOOLKIT_EXPECTED_VERSION}"
                         RELEASED_PACKAGE_GEMSTONE_NAME="gt4gemstone-3.7.0-${GTOOLKIT_EXPECTED_VERSION}"
-                        RELEASED_PACKAGE_GEMSTONE="${RELEASED_PACKAGE_GEMSTONE_NAME}.zip"
                     }
                     agent {
                         label "${LINUX_AMD64_TARGET}-${LINUX_SERVER_NAME}"
@@ -230,6 +227,12 @@ pipeline {
                                    """
                                 sh 'rm -rf ~/Documents/lepiter'
                                 sh 'git clean -fdx'
+                                script {
+                                    RELEASED_PACKAGE_GEMSTONE = sh (
+                                        script: "echo ${RELEASED_PACKAGE_GEMSTONE_NAME}.zip",
+                                        returnStdout: true
+                                    ).trim()
+                                }
                             }
                         }
                         stage('Linux Examples') {
@@ -246,28 +249,30 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
-                                //sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
+                                sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
                             }
                         }
                         stage('Linux Remote Examples') {
                             steps {
                                 sh 'rm -rf ~/Documents/lepiter'
-                           }
-                           steps {
+                                
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
                                     git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
                                     git clone --depth=1 https://github.com/feenkcom/gtoolkit-remote.git
                                     git clone --depth=1 https://github.com/feenkcom/Sparkle.git
+
+                                    chmod +x gt4gemstone/scripts/*.sh
+                                    chmod +x gt4gemstone/scripts/release/*.sh
+                                    chmod +x gtoolkit-remote/scripts/*.sh
                                    """
-                           }
-                           steps {
+                                
                                 // Run the GemStone remote examples.
                                 // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
                                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
-                                    ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/run-remote-gemstone-examples.sh
+                                    ./gt4gemstone/scripts/run-remote-gemstone-examples.sh
                                    """
                            }
                         }
@@ -310,8 +315,9 @@ pipeline {
                                 }
                             }
                             steps {
+                                sh "cp ${GEMSTONE_WORKSPACE}/${RELEASED_PACKAGE_GEMSTONE} ${WORKSPACE}" 
                                 echo "About to stash ${RELEASED_PACKAGE_GEMSTONE}"
-                                stash includes: "${GEMSTONE_WORKSPACE}/${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
+                                stash includes: "${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
                             }
                         }
                     }
@@ -592,7 +598,8 @@ pipeline {
                         ${RELEASED_PACKAGE_MACOS_M1} \
                         ${RELEASED_PACKAGE_MACOS_INTEL} \
                         ${RELEASED_PACKAGE_WINDOWS} \
-                        ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD} """
+                        ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD} \
+                        ${RELEASED_PACKAGE_GEMSTONE} """
 
 
                 sh "chmod +x ./scripts/build/*.sh"
