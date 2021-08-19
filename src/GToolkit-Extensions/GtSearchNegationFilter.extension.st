@@ -1,6 +1,6 @@
-Extension { #name : #GtSearchNegationFilter }
+Extension { #name : 'GtSearchNegationFilter' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 GtSearchNegationFilter >> children [
 	^ Array with: self originalFilter
 ]

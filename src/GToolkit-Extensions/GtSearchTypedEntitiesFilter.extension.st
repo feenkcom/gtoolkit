@@ -1,6 +1,6 @@
-Extension { #name : #GtSearchTypedEntitiesFilter }
+Extension { #name : 'GtSearchTypedEntitiesFilter' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 GtSearchTypedEntitiesFilter >> gtHierarchyFor: aView [
 	<gtView>
 	^ aView empty

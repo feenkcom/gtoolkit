@@ -1,6 +1,6 @@
-Extension { #name : #Class }
+Extension { #name : 'Class' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 Class >> gtAllConfigurationReferencesFor: aView [
 	<gtView>
 	<gtClassView>
@@ -18,7 +18,7 @@ Class >> gtAllConfigurationReferencesFor: aView [
 			| (('`@receiver configuration: ''', aName, ''' with: `@arg') gtASTMatches) ]
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 Class >> gtAllReferencesFor: aView [
 	<gtView>
 	<gtClassView>

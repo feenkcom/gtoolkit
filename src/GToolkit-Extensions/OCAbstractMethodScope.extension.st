@@ -1,6 +1,6 @@
-Extension { #name : #OCAbstractMethodScope }
+Extension { #name : 'OCAbstractMethodScope' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 OCAbstractMethodScope >> gtAllTempsFor: aView [
 	<gtView>
 	^ aView columnedList
