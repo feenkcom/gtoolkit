@@ -1,6 +1,6 @@
-Extension { #name : #OSSUnixSubprocess }
+Extension { #name : 'OSSUnixSubprocess' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 OSSUnixSubprocess >> gtEnvironmentVariablesFor: aView [
 	<gtView>
 	self envVariables ifNil: [ ^ aView empty ].
@@ -11,7 +11,7 @@ OSSUnixSubprocess >> gtEnvironmentVariablesFor: aView [
 		view: #gtItemsFor:
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 OSSUnixSubprocess >> gtPathFor: aView [
 	<gtView>
 	self envVariables ifNil: [ ^ aView empty ].

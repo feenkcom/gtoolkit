@@ -1,6 +1,6 @@
-Extension { #name : #SubscriptionRegistry }
+Extension { #name : 'SubscriptionRegistry' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 SubscriptionRegistry >> gtSubscriptionsFor: aView [
 	<gtView>
 	self subscriptions ifNil: [ ^ aView empty ].

@@ -1,6 +1,6 @@
-Extension { #name : #ClassOrganization }
+Extension { #name : 'ClassOrganization' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 ClassOrganization >> gtClassCommentFor: aView [
 	<gtView>
 	self commentRemoteString ifNil: [ ^ aView empty ].
@@ -11,7 +11,7 @@ ClassOrganization >> gtClassCommentFor: aView [
 		view: #gtStringFor:
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 ClassOrganization >> gtProtocolsFor: aView [
 	<gtView>
 	self protocolOrganizer ifNil: [ ^ aView empty ].

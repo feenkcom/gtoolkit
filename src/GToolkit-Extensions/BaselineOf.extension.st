@@ -1,6 +1,6 @@
-Extension { #name : #BaselineOf }
+Extension { #name : 'BaselineOf' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 BaselineOf class >> gtAllReferencesFor: aView [
 	<gtView>
 	<gtClassView>
@@ -15,7 +15,7 @@ BaselineOf class >> gtAllReferencesFor: aView [
 			| (('`@receiver baseline: ''', aName, ''' with: `@arg') gtASTMatches) ]
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 BaselineOf class >> gtDependencyAnalyzerFor: aView [
 	<gtClassView>
 	

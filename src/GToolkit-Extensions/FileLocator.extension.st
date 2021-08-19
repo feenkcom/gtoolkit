@@ -1,6 +1,6 @@
-Extension { #name : #FileLocator }
+Extension { #name : 'FileLocator' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 FileLocator class >> gtPredefinedOriginsFor: aView [
 	<gtView>
 	<gtClassView>

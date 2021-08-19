@@ -1,6 +1,6 @@
-Extension { #name : #GtSpotterStart }
+Extension { #name : 'GtSpotterStart' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 GtSpotterStart >> spotterForColorFor: aStep [
 	<gtSearch>
 	^ aStep listProcessor
