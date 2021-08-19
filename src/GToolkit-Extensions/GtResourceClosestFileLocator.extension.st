@@ -1,6 +1,6 @@
-Extension { #name : #GtResourceClosestFileLocator }
+Extension { #name : 'GtResourceClosestFileLocator' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 GtResourceClosestFileLocator >> gtOverviewFor: aView [
 	<gtView>
 	self file ifNil: [ ^ aView empty ].

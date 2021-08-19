@@ -1,6 +1,6 @@
-Extension { #name : #TBlDevScripterException }
+Extension { #name : 'TBlDevScripterException' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 TBlDevScripterException >> gtInspectScripterFor: anAction [
 	<gtAction>
 	self scripter ifNil: [ ^ anAction empty ].
@@ -12,14 +12,14 @@ TBlDevScripterException >> gtInspectScripterFor: anAction [
 		action: [ :aButton | aButton phlow spawnObject: self scripter ]
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 TBlDevScripterException >> gtLiveFor: aView [
 	<gtView>
 	^ (super gtLiveFor: aView)
 		priority: 2
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 TBlDevScripterException >> gtMessageTextFor: aView [
 	<gtView>
 	self exception ifNil: [ ^ aView empty ].
@@ -30,7 +30,7 @@ TBlDevScripterException >> gtMessageTextFor: aView [
 		view: #gtMessageTextFor:
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 TBlDevScripterException >> gtSpaceFor: aView [
 	<gtView>
 	self scripter ifNil: [ ^ aView empty ].
@@ -41,7 +41,7 @@ TBlDevScripterException >> gtSpaceFor: aView [
 		view: #gtSpaceFor:
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 TBlDevScripterException >> gtStepsMondrianTreeFor: aView [
 	<gtView>
 	self scripter ifNil: [ ^ aView empty ].
@@ -52,7 +52,7 @@ TBlDevScripterException >> gtStepsMondrianTreeFor: aView [
 		view: #gtStepsMondrianTreeFor:
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 TBlDevScripterException >> gtStepsTreeFor: aView [
 	<gtView>
 	self scripter ifNil: [ ^ aView empty ].

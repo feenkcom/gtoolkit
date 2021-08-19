@@ -1,6 +1,6 @@
-Extension { #name : #Color }
+Extension { #name : 'Color' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 Color class >> gtRegisteredColors [
 	^ ColorRegistry associations
 		collect: [ :anAssoc | GtColorPreview new
@@ -8,7 +8,7 @@ Color class >> gtRegisteredColors [
 			color: anAssoc value ]
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 Color class >> gtRegisteredColorsFor: aView [
 	<gtView>
 	<gtClassView>

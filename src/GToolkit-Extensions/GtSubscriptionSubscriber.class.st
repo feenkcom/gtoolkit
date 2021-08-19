@@ -4,16 +4,16 @@ See {{gtMethod:Announcer>>#gtSubscriptionsPerSubscriberFor:}}.
 
 "
 Class {
-	#name : #GtSubscriptionSubscriber,
-	#superclass : #Object,
+	#name : 'GtSubscriptionSubscriber',
+	#superclass : 'Object',
 	#instVars : [
 		'subscriber',
 		'subscriptions'
 	],
-	#category : #'GToolkit-Extensions'
+	#category : 'GToolkit-Extensions'
 }
 
-{ #category : #'api - factory' }
+{ #category : 'api - factory' }
 GtSubscriptionSubscriber class >> fromAnnouncer: anAnnouncer [
 	| anArray aGroup |
 	anArray := anAnnouncer subscriptions subscriptions asArray.
@@ -22,26 +22,26 @@ GtSubscriptionSubscriber class >> fromAnnouncer: anAnnouncer [
 		GtSubscriptionSubscriber subscriber: e key subscriptions: e value ]
 ]
 
-{ #category : #'api - instance creation' }
+{ #category : 'api - instance creation' }
 GtSubscriptionSubscriber class >> subscriber: aSubscriber subscriptions: aCollection [
 	^ self new
 		subscriber: aSubscriber;
 		subscriptions: aCollection
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtSubscriptionSubscriber >> announcementClass [
 	^ ''
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 GtSubscriptionSubscriber >> gtDisplayString [
 	^ self subscriber
 		ifNotNil: #gtDisplayString 
 		ifNil: [ super gtDisplayString ]
 ]
 
-{ #category : #'gt - extensions' }
+{ #category : 'gt - extensions' }
 GtSubscriptionSubscriber >> gtSubscriberFor: aView [
 	<gtView>
 	self subscriber ifNil: [ ^ aView empty ].
@@ -57,7 +57,7 @@ GtSubscriptionSubscriber >> gtSubscriberFor: aView [
 				aButton phlow spawnObject: self subscriber ]
 ]
 
-{ #category : #'gt - extensions' }
+{ #category : 'gt - extensions' }
 GtSubscriptionSubscriber >> gtSubscriptionsFor: aView [
 	<gtView>
 	self subscriptions ifNil: [ ^ aView empty ].
@@ -70,17 +70,17 @@ GtSubscriptionSubscriber >> gtSubscriptionsFor: aView [
 		column: 'Kind' item: [ :aSubscription | aSubscription class ]
 ]
 
-{ #category : #'api - testing' }
+{ #category : 'api - testing' }
 GtSubscriptionSubscriber >> isEmpty [
 	^ self subscriptions isEmpty
 ]
 
-{ #category : #'api - testing' }
+{ #category : 'api - testing' }
 GtSubscriptionSubscriber >> isNotEmpty [
 	^ self subscriptions isNotEmpty
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 GtSubscriptionSubscriber >> printOn: aStream [
 	super printOn: aStream.
 	self subscriber ifNil: [ ^ self ].
@@ -95,22 +95,22 @@ GtSubscriptionSubscriber >> printOn: aStream [
 		
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtSubscriptionSubscriber >> subscriber [
 	^ subscriber
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtSubscriptionSubscriber >> subscriber: anObject [
 	subscriber := anObject
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtSubscriptionSubscriber >> subscriptions [
 	^ subscriptions
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtSubscriptionSubscriber >> subscriptions: anObject [
 	subscriptions := anObject
 ]

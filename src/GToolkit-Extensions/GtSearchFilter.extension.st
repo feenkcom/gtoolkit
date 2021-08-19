@@ -1,12 +1,12 @@
-Extension { #name : #GtSearchFilter }
+Extension { #name : 'GtSearchFilter' }
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 GtSearchFilter >> children [
 	<return: #Collection of: #GtSearchFilter>
 	^ Array empty
 ]
 
-{ #category : #'*GToolkit-Extensions' }
+{ #category : '*GToolkit-Extensions' }
 GtSearchFilter >> gtHierarchyFor: aView [
 	<gtView>
 	^ aView tree
