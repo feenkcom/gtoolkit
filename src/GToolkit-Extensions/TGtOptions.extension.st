@@ -30,7 +30,7 @@ TGtOptions >> gtOptionsFor: aView [
 						   visibility: BlVisibility hidden;
 						   margin: (BlInsets left: 5);
 						   icon: BrGlamorousVectorIcons remove;
-						   label: 'Remove cached ' , assoc key asString;
+						   label: 'Remove ' , assoc key asString;
 						   action: [ :aButton | 
 							   self clearOption: assoc key ifAbsent: [ "ignore" ].
 							   aButton phlow firstParentWithView
