@@ -3,8 +3,8 @@ I model a notification.
 
 "
 Class {
-	#name : #GtNotification,
-	#superclass : #Object,
+	#name : 'GtNotification',
+	#superclass : 'Object',
 	#instVars : [
 		'id',
 		'status',
@@ -13,15 +13,15 @@ Class {
 		'refreshAction',
 		'closeAction'
 	],
-	#category : #'GToolkit-World-Notifications'
+	#category : 'GToolkit-World-Notifications'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNotification >> cardStencil [
 	^ cardStencil
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNotification >> cardStencil: aCardStencil [
 	cardStencil := aCardStencil.
 	cardStencil 
@@ -31,30 +31,30 @@ GtNotification >> cardStencil: aCardStencil [
 			self executeCloseFor: newsElement]
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtNotification >> executeCloseFor: anElement [
 	self markAsDismissedAndSaveStatus.
 	refreshAction value.
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtNotification >> executeOpenFor: anElement [
 	openAction cull: anElement.
 	self markAsViewsAndSaveStatus.
 	refreshAction value.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNotification >> id [
 	^ id
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNotification >> id: anId [
 	id := anId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNotification >> markAsDismissedAndSaveStatus [
 	self status: GtNotificationDismissedStatus new.
 	self statusRegistry 
@@ -62,7 +62,7 @@ GtNotification >> markAsDismissedAndSaveStatus [
 		saveContent.
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 GtNotification >> markAsViewsAndSaveStatus [
 	self status: GtNotificationViewedStatus new.
 	self statusRegistry 
@@ -70,27 +70,27 @@ GtNotification >> markAsViewsAndSaveStatus [
 		saveContent.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNotification >> openAction: aBlock [
 	openAction := aBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNotification >> refreshAction: aBlock [
 	refreshAction := aBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNotification >> status [
 	^ status
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNotification >> status: aStatus [
 	status := aStatus
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNotification >> statusRegistry [
 	^ GtNotificationStatusRegistry loadDefault
 ]

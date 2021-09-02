@@ -1,16 +1,16 @@
 Class {
-	#name : #GtProfilerProcessTelemetryListItemElement,
-	#superclass : #BrHorizontalPane,
+	#name : 'GtProfilerProcessTelemetryListItemElement',
+	#superclass : 'BrHorizontalPane',
 	#traits : 'TGtWithProfilerProcessTelemetryViewModel',
 	#classTraits : 'TGtWithProfilerProcessTelemetryViewModel classTrait',
 	#instVars : [
 		'label',
 		'status'
 	],
-	#category : #'GToolkit-Profiler-Process - Views'
+	#category : 'GToolkit-Profiler-Process - Views'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtProfilerProcessTelemetryListItemElement >> initialize [
 	super initialize.
 	
@@ -36,7 +36,7 @@ GtProfilerProcessTelemetryListItemElement >> initialize [
 		self profilerProcessTelemetryViewModel selectProcessTelemetryWithoutOtherEntities ]
 ]
 
-{ #category : #'api - profiler process telemetry view model' }
+{ #category : 'api - profiler process telemetry view model' }
 GtProfilerProcessTelemetryListItemElement >> onProfilerProcessTelemetryViewModelChanged [
 	"Is sent when a new profilerProcessTelemetryViewModel is assigned to the receiver.
 	Note: #onProfilerProcessTelemetryViewModelChanged is sent before #subscribeToProfilerProcessTelemetryViewModel
@@ -49,7 +49,7 @@ GtProfilerProcessTelemetryListItemElement >> onProfilerProcessTelemetryViewModel
 	self updateStatus
 ]
 
-{ #category : #'api - profiler process telemetry view model' }
+{ #category : 'api - profiler process telemetry view model' }
 GtProfilerProcessTelemetryListItemElement >> subscribeToProfilerProcessTelemetryViewModel [
 	"Is sent after a new profilerProcessTelemetryViewModel is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -68,7 +68,7 @@ GtProfilerProcessTelemetryListItemElement >> subscribeToProfilerProcessTelemetry
 			to: self
 ]
 
-{ #category : #'api - profiler process telemetry view model' }
+{ #category : 'api - profiler process telemetry view model' }
 GtProfilerProcessTelemetryListItemElement >> unsubscribeFromProfilerProcessTelemetryViewModel [
 	"Is sent before a new profilerProcessTelemetryViewModel is assigned to the receiver.
 	Objects that subscribe to profilerProcessTelemetryViewModel are required to implement this method."
@@ -78,7 +78,7 @@ GtProfilerProcessTelemetryListItemElement >> unsubscribeFromProfilerProcessTelem
 	self profilerProcessTelemetryViewModel unsubscribe: self
 ]
 
-{ #category : #'private - updating' }
+{ #category : 'private - updating' }
 GtProfilerProcessTelemetryListItemElement >> updateSelection [
 	
 	self profilerProcessTelemetryViewModel isOnlySelectedProcessTelemetry
@@ -89,7 +89,7 @@ GtProfilerProcessTelemetryListItemElement >> updateSelection [
 		ifTrue: [ self phlow spawnTool: (GtProfilerProcessTelemetryTool new profilerProcessTelemetryViewModel: self profilerProcessTelemetryViewModel) ]
 ]
 
-{ #category : #'private - updating' }
+{ #category : 'private - updating' }
 GtProfilerProcessTelemetryListItemElement >> updateStatus [
 	| aColor |
 

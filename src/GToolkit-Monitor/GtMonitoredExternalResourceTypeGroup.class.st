@@ -1,20 +1,20 @@
 Class {
-	#name : #GtMonitoredExternalResourceTypeGroup,
-	#superclass : #GtMonitoredExternalResourceGroup,
+	#name : 'GtMonitoredExternalResourceTypeGroup',
+	#superclass : 'GtMonitoredExternalResourceGroup',
 	#instVars : [
 		'resourceClass',
 		'null',
 		'notNull'
 	],
-	#category : #'GToolkit-Monitor-External Resources'
+	#category : 'GToolkit-Monitor-External Resources'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceTypeGroup >> children [
 	^ { notNull . null }
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceTypeGroup >> name [
 	| nullText |
 
@@ -29,17 +29,17 @@ GtMonitoredExternalResourceTypeGroup >> name [
 	}) asRopedText, nullText, ')' asRopedText
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceTypeGroup >> resourceClass [
 	^ resourceClass
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceTypeGroup >> resourceClass: anObject [
 	resourceClass := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceTypeGroup >> resources: aCollectionOfExternalResources [
 	| theGroups |
 
@@ -57,7 +57,7 @@ GtMonitoredExternalResourceTypeGroup >> resources: aCollectionOfExternalResource
 		ifAbsent: [ #() ])
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceTypeGroup >> size [
 	^ null size + notNull size
 ]

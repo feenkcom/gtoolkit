@@ -1,46 +1,46 @@
 Class {
-	#name : #GtHomeFeenkBlogSection,
-	#superclass : #GtHomeSection,
+	#name : 'GtHomeFeenkBlogSection',
+	#superclass : 'GtHomeSection',
 	#instVars : [
 		'client'
 	],
-	#category : #'GToolkit-World-Sections'
+	#category : 'GToolkit-World-Sections'
 }
 
-{ #category : #defaults }
+{ #category : 'defaults' }
 GtHomeFeenkBlogSection class >> defaultClient [
 	^ XdClient new
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeFeenkBlogSection class >> newDefault [
 	^ self new 
 		client: self defaultClient
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtHomeFeenkBlogSection >> addChildren: aNewCards in: aCardsContainer [
 	aCardsContainer enqueueTask: (BlTaskAction new action: [ aCardsContainer 
 		removeChildren;
 		addChildren: aNewCards ])
 ]
 
-{ #category : #defaults }
+{ #category : 'defaults' }
 GtHomeFeenkBlogSection >> cardSize [
 	^ 200 @ 100
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtHomeFeenkBlogSection >> client [
 	^ client
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtHomeFeenkBlogSection >> client: anObject [
 	client := anObject
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : 'api - instantiation' }
 GtHomeFeenkBlogSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := BrVerticalPane new fitContent.
@@ -51,12 +51,12 @@ GtHomeFeenkBlogSection >> create [
 	^ sectionContainer
 ]
 
-{ #category : #defaults }
+{ #category : 'defaults' }
 GtHomeFeenkBlogSection >> defaultClient [
 	^ XdClient null
 ]
 
-{ #category : #blog }
+{ #category : 'blog' }
 GtHomeFeenkBlogSection >> documentsInto: aCardsContainer [
 	| aClient |
 	self flag: 'XdClient does not understand onSuccessDo: and onFailureDo:, we should implement it'.
@@ -69,13 +69,13 @@ GtHomeFeenkBlogSection >> documentsInto: aCardsContainer [
 		documents
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtHomeFeenkBlogSection >> initialize [
 	super initialize.
 	client := self defaultClient.
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeFeenkBlogSection >> newDocsExplorerWith: aCollectionOfPosts [
 	^ self
 		newHeaderCardWithTitle: 'Post'
@@ -93,7 +93,7 @@ GtHomeFeenkBlogSection >> newDocsExplorerWith: aCollectionOfPosts [
 				from: card ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeFeenkBlogSection >> newExceptionLabelFor: anException [
 	^ BrLabel new
 		aptitude: (BrGlamorousLabelAptitude new
@@ -103,7 +103,7 @@ GtHomeFeenkBlogSection >> newExceptionLabelFor: anException [
 		text: anException messageText
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeFeenkBlogSection >> newPostCardContentFor: aXdFileInfo [
 	| container |
 	container := BrVerticalPane new 
@@ -128,7 +128,7 @@ GtHomeFeenkBlogSection >> newPostCardContentFor: aXdFileInfo [
 	^ container
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeFeenkBlogSection >> newPostCardFor: aXdFileInfo [
 	^ (self 
 		newHeaderCardWithTitle: 'Post'
@@ -142,7 +142,7 @@ GtHomeFeenkBlogSection >> newPostCardFor: aXdFileInfo [
 				from: aCard ])
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeFeenkBlogSection >> newPostCardsFor: aCollectionOfPosts into: aStream [
 	aCollectionOfPosts do: [ :eachXdFileInfo | 
 		| anElement |
@@ -150,7 +150,7 @@ GtHomeFeenkBlogSection >> newPostCardsFor: aCollectionOfPosts into: aStream [
 		aStream nextPut: anElement ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeFeenkBlogSection >> newSectionTitleWithUpdatesIn: aCardsContainer [
 	| aLabel aButton aContainer |
 	aLabel := self newSectionTitle: 'blog.feenk.com'.
@@ -163,7 +163,7 @@ GtHomeFeenkBlogSection >> newSectionTitleWithUpdatesIn: aCardsContainer [
 	^ aContainer addChild: aLabel; addChild: aButton
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeFeenkBlogSection >> newTextFor: aXdFileInfo [
 
 	| aTitle aDescription aText |
@@ -175,7 +175,7 @@ GtHomeFeenkBlogSection >> newTextFor: aXdFileInfo [
 	^ aText
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeFeenkBlogSection >> newUpdateDocsContent [
 	^ BrLabel new
 		text: 'Update ...';
@@ -183,14 +183,14 @@ GtHomeFeenkBlogSection >> newUpdateDocsContent [
 		padding: (BlInsets all: 20)
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 GtHomeFeenkBlogSection >> onFailure: anException in: aCardsContainer [
 	| aCard |
 	aCard := self newExceptionLabelFor: anException.
 	self addChildren: { aCard } in: aCardsContainer.
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 GtHomeFeenkBlogSection >> onPosts: aCollectionOfPosts in: aCardsContainer [
 	| newCards |
 	newCards := OrderedCollection 

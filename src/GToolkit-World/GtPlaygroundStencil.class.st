@@ -1,21 +1,21 @@
 Class {
-	#name : #GtPlaygroundStencil,
-	#superclass : #GtToolStencil,
+	#name : 'GtPlaygroundStencil',
+	#superclass : 'GtToolStencil',
 	#instVars : [
 		'knowledgeBase'
 	],
 	#classInstVars : [
 		'playgroundClassName'
 	],
-	#category : #'GToolkit-World-Stencils'
+	#category : 'GToolkit-World-Stencils'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil class >> defaultPlaygroundClass [
 	^ GtPlayground
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil class >> playgroundClass [
 	^ self playgroundClassName 
 		ifNil: [ self defaultPlaygroundClass ]
@@ -25,17 +25,17 @@ GtPlaygroundStencil class >> playgroundClass [
 				ifAbsent: [ self defaultPlaygroundClass ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil class >> playgroundClassName [
 	^ playgroundClassName
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil class >> playgroundClassName: aClassName [
 	playgroundClassName := aClassName
 ]
 
-{ #category : #converting }
+{ #category : 'converting' }
 GtPlaygroundStencil >> asPreviewElement [
 	| notePage toolElement |
 	notePage := LePlayground newBasicPharoCodePage.
@@ -46,7 +46,7 @@ GtPlaygroundStencil >> asPreviewElement [
 		padding: (BlInsets all: 10)
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : 'api - instantiation' }
 GtPlaygroundStencil >> create [
 	"Very ugly check for now until Lepiter is enabled by default."
 	^ self class playgroundClass = LePlayground 
@@ -56,18 +56,18 @@ GtPlaygroundStencil >> create [
 	
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : 'api - instantiation' }
 GtPlaygroundStencil >> createWithSnippets: snippets [
 	^ self class playgroundClass newWithSnippets: snippets
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil >> currentKnowledgeBase [
 	^ self knowledgeBase ifNil: [
 		LeDatabasesRegistry uniqueInstance currentLoadedDefaultLogicalDatabase ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil >> gtSpotterForEmptyPlayBookFor: aStep [
 	<gtSearch>
 	aStep listProcessor
@@ -80,7 +80,7 @@ GtPlaygroundStencil >> gtSpotterForEmptyPlayBookFor: aStep [
 		filter: GtFilterSubstring
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil >> gtSpotterForXDocPlayBooksFor: aStep [
 	<gtSearch>
 	aStep listProcessor
@@ -97,32 +97,32 @@ GtPlaygroundStencil >> gtSpotterForXDocPlayBooksFor: aStep [
 		filter: XdPlayBookFilter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil >> icon [
 	^ self class playgroundClass defaultIcon
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil >> knowledgeBase [
 	^ knowledgeBase
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil >> knowledgeBase: aKnowledgeBase [
 	knowledgeBase := aKnowledgeBase
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtPlaygroundStencil >> name [
 	^ 'Playground'
 ]
 
-{ #category : #'api - opening' }
+{ #category : 'api - opening' }
 GtPlaygroundStencil >> openWithSnippets: snippets [
 	(self createWithSnippets: snippets) openInPager
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 GtPlaygroundStencil >> playgroundWithSnippets [
 	<gtExample>
 	^ GtPlaygroundStencil new createWithSnippets: {'3+4' . '42'}

@@ -1,16 +1,16 @@
 Class {
-	#name : #GtMonitoredProcessesElement,
-	#superclass : #GtMonitoredServicesElement,
-	#category : #'GToolkit-Monitor'
+	#name : 'GtMonitoredProcessesElement',
+	#superclass : 'GtMonitoredServicesElement',
+	#category : 'GToolkit-Monitor'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitoredProcessesElement class >> open [
 	<script: 'self open'>
 	GtInspector openOn: self new
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredProcessesElement >> initializeServiceListDefinition [
 
 	servicesList column
@@ -65,12 +65,12 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 	self updateList
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredProcessesElement >> onClickTransformation [
 	^ [ :aMonitoredService | aMonitoredService "service ifNil: [ aMonitoredService ]" ]
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtMonitoredProcessesElement >> retreiveNewServiceList [
 	| allServices |
 	allServices := Process allSubInstances reject: [:each | each isTerminated].
@@ -79,7 +79,7 @@ GtMonitoredProcessesElement >> retreiveNewServiceList [
 	^ allServices 
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtMonitoredProcessesElement >> updateTaskName [
 	^ '[Monitor] TaskIt Services Update Task'
 ]

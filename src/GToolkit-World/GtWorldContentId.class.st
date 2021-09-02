@@ -1,10 +1,10 @@
 Class {
-	#name : #GtWorldContentId,
-	#superclass : #BlElementUniqueId,
-	#category : #'GToolkit-World-UI - ID'
+	#name : 'GtWorldContentId',
+	#superclass : 'BlElementUniqueId',
+	#category : 'GToolkit-World-UI - ID'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtWorldContentId class >> isAbstract [
 	^ self name = #GtWorldContentId 
 ]

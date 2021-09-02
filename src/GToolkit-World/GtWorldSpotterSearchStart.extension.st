@@ -1,6 +1,6 @@
-Extension { #name : #GtWorldSpotterSearchStart }
+Extension { #name : 'GtWorldSpotterSearchStart' }
 
-{ #category : #'*GToolkit-World' }
+{ #category : '*GToolkit-World' }
 GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
 	<gtSearch>
 	aStep listProcessor

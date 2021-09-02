@@ -1,13 +1,13 @@
 Class {
-	#name : #GtMonitoredProcessElement,
-	#superclass : #GtMonitoredServiceElement,
+	#name : 'GtMonitoredProcessElement',
+	#superclass : 'GtMonitoredServiceElement',
 	#instVars : [
 		'stackList'
 	],
-	#category : #'GToolkit-Monitor'
+	#category : 'GToolkit-Monitor'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredProcessElement >> initialize [
 	super initialize.
 	self
@@ -21,12 +21,12 @@ GtMonitoredProcessElement >> initialize [
 	self updateList.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredProcessElement >> stack [
 	^ self service ifNotNil: #stack ifNil: [ #() ]
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtMonitoredProcessElement >> updateList [
 	self
 		enqueueTask:

@@ -65,9 +65,9 @@ GtSubscriptionSubscriber >> gtSubscriptionsFor: aView [
 		title: 'Subscriptions';
 		priority: 1;
 		items: [ self subscriptions ];
-		column: 'Subscriber' item: [ :aSubscription | aSubscription subscriber ];
-		column: 'Announcement' item: [ :aSubscription | aSubscription announcementClass ];
-		column: 'Kind' item: [ :aSubscription | aSubscription class ]
+		column: 'Subscriber' text: [ :aSubscription | aSubscription subscriber ];
+		column: 'Announcement' text: [ :aSubscription | aSubscription announcementClass ];
+		column: 'Kind' text: [ :aSubscription | aSubscription class ]
 ]
 
 { #category : 'api - testing' }

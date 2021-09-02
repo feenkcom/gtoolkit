@@ -3,17 +3,17 @@ I log space and universe related events
 
 "
 Class {
-	#name : #GtMonitorSpaceLogger,
-	#superclass : #MemoryLogger,
-	#category : #'GToolkit-Monitor-Space Runner'
+	#name : 'GtMonitorSpaceLogger',
+	#superclass : 'MemoryLogger',
+	#category : 'GToolkit-Monitor-Space Runner'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitorSpaceLogger >> interestingSignals [
 	^ { BlParallelUniverseSignal }
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitorSpaceLogger >> nextPut: aSignal [
 	(self interestingSignals anySatisfy: [ :eachSignalClass |
 		aSignal class == eachSignalClass or: [ aSignal class inheritsFrom: eachSignalClass ] ])

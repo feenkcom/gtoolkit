@@ -8,7 +8,7 @@ ZnApplicationFormUrlEncodedEntity >> gtFieldsFor: aView [
 		title: 'Fields';
 		priority: 1;
 		items: [ self fields associations ];
-		column: 'Key' item: #key;
-		column: 'Value' item: #value weight: 3;
+		column: 'Key' text: #key;
+		column: 'Value' text: #value weight: 3;
 		send: #value
 ]

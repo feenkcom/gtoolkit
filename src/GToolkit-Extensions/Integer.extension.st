@@ -18,7 +18,7 @@ Integer >> gtIntegerFor: aView [
 			(self between: 0 and: 16r10FFFF)
 				ifTrue: [ associations add: 'character' -> self asCharacter ].
 			associations ];
-		column: 'Key' item: #key;
-		column: 'Value' item: #value;
+		column: 'Key' text: #key;
+		column: 'Value' text: #value;
 		send: #value
 ]

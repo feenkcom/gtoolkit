@@ -1,45 +1,45 @@
 Class {
-	#name : #GtWorldChangeTabAppearanceChangeHandler,
-	#superclass : #BlCustomEventHandler,
+	#name : 'GtWorldChangeTabAppearanceChangeHandler',
+	#superclass : 'BlCustomEventHandler',
 	#instVars : [
 		'tabReference'
 	],
-	#category : #'GToolkit-World-UI'
+	#category : 'GToolkit-World-UI'
 }
 
-{ #category : #visiting }
+{ #category : 'visiting' }
 GtWorldChangeTabAppearanceChangeHandler >> changeTitleWish: aWish [
 	self updateTitleIconFromWish: aWish.
 	self updateTitleLabelFromWish: aWish.
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtWorldChangeTabAppearanceChangeHandler >> eventsToHandle [
 	^ { GtPhlowChangeTitleWish }
 ]
 
-{ #category : #'api - event managing' }
+{ #category : 'api - event managing' }
 GtWorldChangeTabAppearanceChangeHandler >> handleEvent: aGtWorldChangeTabAppearanceWish [
 	aGtWorldChangeTabAppearanceWish sendTo: self.
 	aGtWorldChangeTabAppearanceWish consumed: true.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldChangeTabAppearanceChangeHandler >> tab [
 	^ tabReference ifNotNil: [ :aWeakReference | aWeakReference at: 1 ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtWorldChangeTabAppearanceChangeHandler >> tab: aBrTab [
 	tabReference := aBrTab asWeakReference
 ]
 
-{ #category : #enumerating }
+{ #category : 'enumerating' }
 GtWorldChangeTabAppearanceChangeHandler >> tabDo: aBlock [
 	self tab ifNotNil: aBlock
 ]
 
-{ #category : #'private - updating' }
+{ #category : 'private - updating' }
 GtWorldChangeTabAppearanceChangeHandler >> updateTitleIconFromWish: aWish [
 	self tabDo: [ :aBrTab |
 		aWish iconDo: [ :anIcon |
@@ -47,7 +47,7 @@ GtWorldChangeTabAppearanceChangeHandler >> updateTitleIconFromWish: aWish [
 				aBrTab icon: anIcon ])]].
 ]
 
-{ #category : #'private - updating' }
+{ #category : 'private - updating' }
 GtWorldChangeTabAppearanceChangeHandler >> updateTitleLabelFromWish: aWish [
 	self tabDo: [ :aBrTab |
 		aWish labelDo: [ :aLabel |
