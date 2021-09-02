@@ -20,5 +20,6 @@ TAsyncStream >> gtCompositionFor: aView [
 		  items: [ { self } ];
 		  children: #gtCompositionChildren; 
 		  expandAll;
-		  column: 'Name' text: #gtCompositionDescription
+		  column: 'Name' item: #gtCompositionDescription;
+		  actionUpdateButtonTooltip: 'Update composition tree'
 ]
