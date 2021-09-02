@@ -1,18 +1,18 @@
-Extension { #name : 'AsyncFilterStream' }
+Extension { #name : 'AsyncStreamCollectFuture' }
 
 { #category : '*GToolkit-Extensions' }
-AsyncFilterStream >> gtCompositionChildren [
+AsyncStreamCollectFuture >> gtCompositionChildren [
 
 	^ { stream }
 ]
 
 { #category : '*GToolkit-Extensions' }
-AsyncFilterStream >> gtCompositionDescription [
+AsyncStreamCollectFuture >> gtCompositionDescription [
 
 	^ self printString asRopedText
 		  append: ': ' asRopedText;
-		  append: ('filter=' asRopedText foreground:
+		  append: ('species=' asRopedText foreground:
 					   BrGlamorousColors disabledButtonTextColor);
-		  append: (filter printString asRopedText foreground:
+		  append: (species printString asRopedText foreground:
 					   BrGlamorousColors disabledButtonTextColor)
 ]
