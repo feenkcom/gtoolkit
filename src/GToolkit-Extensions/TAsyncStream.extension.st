@@ -23,3 +23,8 @@ TAsyncStream >> gtCompositionFor: aView [
 		  column: 'Name' item: #gtCompositionDescription;
 		  actionUpdateButtonTooltip: 'Update composition tree'
 ]
+
+{ #category : '*GToolkit-Extensions' }
+TAsyncStream >> gtLiveFor: aView [
+	^ self gtCompositionFor: aView
+]
