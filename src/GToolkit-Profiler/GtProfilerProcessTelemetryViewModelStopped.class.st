@@ -1,13 +1,13 @@
 Class {
-	#name : #GtProfilerProcessTelemetryViewModelStopped,
-	#superclass : #Announcement,
+	#name : 'GtProfilerProcessTelemetryViewModelStopped',
+	#superclass : 'Announcement',
 	#instVars : [
 		'profilerProcessTelemetryViewModel'
 	],
-	#category : #'GToolkit-Profiler-Process - Events'
+	#category : 'GToolkit-Profiler-Process - Events'
 }
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtProfilerProcessTelemetryViewModelStopped >> profilerProcessTelemetryViewModel [
 	<objectGetter: #processTelemetry>
 	<generatedFrom: #'GtRobocoderMetamodelAnnouncementTemplate>>#objectGetterTemplate'>
@@ -15,7 +15,7 @@ GtProfilerProcessTelemetryViewModelStopped >> profilerProcessTelemetryViewModel 
 	^ profilerProcessTelemetryViewModel
 ]
 
-{ #category : #generated }
+{ #category : 'generated' }
 GtProfilerProcessTelemetryViewModelStopped >> profilerProcessTelemetryViewModel: aProfilerProcessTelemetryViewModel [
 	<objectSetter: #processTelemetry>
 	<generatedFrom: #'GtRobocoderMetamodelAnnouncementTemplate>>#objectSetterTemplate'>

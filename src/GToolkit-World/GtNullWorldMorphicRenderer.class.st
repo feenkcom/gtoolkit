@@ -2,30 +2,30 @@
 I exist to prevent opening of Morphic World when there is a default GtWorld opened
 "
 Class {
-	#name : #GtNullWorldMorphicRenderer,
-	#superclass : #NullWorldRenderer,
+	#name : 'GtNullWorldMorphicRenderer',
+	#superclass : 'NullWorldRenderer',
 	#classVars : [
 		'isEnabled'
 	],
-	#category : #'GToolkit-World-UI'
+	#category : 'GToolkit-World-UI'
 }
 
-{ #category : #protocol }
+{ #category : 'protocol' }
 GtNullWorldMorphicRenderer class >> disable [
 	isEnabled := false
 ]
 
-{ #category : #protocol }
+{ #category : 'protocol' }
 GtNullWorldMorphicRenderer class >> enable [
 	isEnabled := true
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNullWorldMorphicRenderer class >> initialize [
 	isEnabled := true
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNullWorldMorphicRenderer class >> isApplicableFor: aWorld [
 	<return: #Boolean>
 
@@ -45,7 +45,7 @@ GtNullWorldMorphicRenderer class >> isApplicableFor: aWorld [
 	^ false
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtNullWorldMorphicRenderer class >> priority [ 
 	^ 100
 ]

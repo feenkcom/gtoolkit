@@ -1,30 +1,30 @@
 Class {
-	#name : #GtMonitoredMixedAnnouncer,
-	#superclass : #Object,
+	#name : 'GtMonitoredMixedAnnouncer',
+	#superclass : 'Object',
 	#instVars : [
 		'announcer'
 	],
-	#category : #'GToolkit-Monitor-Mixed Announcers'
+	#category : 'GToolkit-Monitor-Mixed Announcers'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> announcer [
 	<return: #Announcer or: nil>
 
 	^ announcer at: 1
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> announcer: anAnnouncer [
 	announcer := anAnnouncer asWeakReference
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtMonitoredMixedAnnouncer >> exists [
 	^ self announcer isNotNil
 ]
 
-{ #category : #'gt-extension' }
+{ #category : 'gt-extension' }
 GtMonitoredMixedAnnouncer >> gtInstVarPointersFor: aView [
 	<gtView>
 	
@@ -33,11 +33,11 @@ GtMonitoredMixedAnnouncer >> gtInstVarPointersFor: aView [
 		priority: 4;
 		items: [ self instVarPointers ];
 		column: 'Object' 
-			item: [ :eachAssoc | eachAssoc key gtDisplayText ];
+			text: [ :eachAssoc | eachAssoc key gtDisplayText ];
 		column: 'Class' 
-			item: [ :eachAssoc | eachAssoc key class name ];
+			text: [ :eachAssoc | eachAssoc key class name ];
 		column: 'Slots' 
-			item: [ :eachAssoc |
+			text: [ :eachAssoc |
 				String streamContents: [ :aStream | 
 					eachAssoc value
 						do: [ :eachName | aStream nextPut: $#; nextPutAll: eachName ]
@@ -45,7 +45,7 @@ GtMonitoredMixedAnnouncer >> gtInstVarPointersFor: aView [
 		send: #key
 ]
 
-{ #category : #'gt-extension' }
+{ #category : 'gt-extension' }
 GtMonitoredMixedAnnouncer >> gtPathToFor: aView [
 	<gtView>
 	
@@ -54,10 +54,10 @@ GtMonitoredMixedAnnouncer >> gtPathToFor: aView [
 		priority: 11;
 		items: [ self pathTo ];
 		column: 'Path from Smalltalk' 
-			item: [ :anObject | anObject gtDisplayText ]
+			text: [ :anObject | anObject gtDisplayText ]
 ]
 
-{ #category : #'gt-extension' }
+{ #category : 'gt-extension' }
 GtMonitoredMixedAnnouncer >> gtPointersFor: aView [
 	<gtView>
 	
@@ -66,10 +66,10 @@ GtMonitoredMixedAnnouncer >> gtPointersFor: aView [
 		priority: 10;
 		items: [ self pointers ];
 		column: 'Pointers' 
-			item: [ :anObject | anObject gtDisplayText ]
+			text: [ :anObject | anObject gtDisplayText ]
 ]
 
-{ #category : #'gt-extension' }
+{ #category : 'gt-extension' }
 GtMonitoredMixedAnnouncer >> gtSubscriptionsFor: aView [
 	<gtView>
 	
@@ -103,7 +103,7 @@ GtMonitoredMixedAnnouncer >> gtSubscriptionsFor: aView [
 		yourself.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> instVarPointers [
 	| anAnnouncer |
 	Smalltalk garbageCollectMost.
@@ -127,14 +127,14 @@ GtMonitoredMixedAnnouncer >> instVarPointers [
 		select: [ :eachAssoc | eachAssoc value isNotEmpty ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> isSystemAnnouncer [
 	^ self announcer
 		ifNotNil: [ :anAnnouncer | anAnnouncer isKindOf: SystemAnnouncer ]
 		ifNil: [ false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> makeStrong [
 	self isSystemAnnouncer
 		ifTrue: [ ^ self ].
@@ -144,7 +144,7 @@ GtMonitoredMixedAnnouncer >> makeStrong [
 			[ each makeStrong ] on: Error do: [  ] ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> makeWeak [
 	self isSystemAnnouncer
 		ifTrue: [ ^ self ].
@@ -154,36 +154,36 @@ GtMonitoredMixedAnnouncer >> makeWeak [
 			[ each makeWeak ] on: Error do: [  ] ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> numberOfStrongSubscriptions [
 	^ self strongSubscriptions size
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> numberOfSubscriptions [
 	^ self announcer
 		ifNil: [ 0 ]
 		ifNotNil: [ :anAnnouncer | anAnnouncer numberOfSubscriptions ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> numberOfWeakSubscriptions [
 	^ self weakSubscriptions size
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> numberOfWeakSubscriptionsWithBlockAction [
 	^ (self weakSubscriptions select: [ :aSubscription |
 		aSubscription action isClosure ]) size
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> numberOfWeakSubscriptionsWithWeakSendAction [
 	^ (self weakSubscriptions select: [ :aSubscription |
 		aSubscription action isKindOf: WeakMessageSend ]) size
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> pathTo [
 	Smalltalk garbageCollectMost.
 
@@ -192,7 +192,7 @@ GtMonitoredMixedAnnouncer >> pathTo [
 		ifNotNil: [ :anAnnouncer | ReferenceFinder findPathTo: anAnnouncer ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> pointers [
 	Smalltalk garbageCollectMost.
 
@@ -201,7 +201,7 @@ GtMonitoredMixedAnnouncer >> pointers [
 		ifNil: [ {  } ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> removeSubscriptions [
 	self isSystemAnnouncer
 		ifTrue: [ ^ self ].
@@ -210,7 +210,7 @@ GtMonitoredMixedAnnouncer >> removeSubscriptions [
 		ifNotNil: [ :anAnnouncer | anAnnouncer subscriptions reset ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtMonitoredMixedAnnouncer >> shouldIgnoreForInstVarsPointer: anObject [
 
 	(anObject isKindOf: AnnouncementSubscription)
@@ -231,7 +231,7 @@ GtMonitoredMixedAnnouncer >> shouldIgnoreForInstVarsPointer: anObject [
 	^ false
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> strongSubscriptions [
 	^ self announcer
 		ifNil: [ #() ]
@@ -240,14 +240,14 @@ GtMonitoredMixedAnnouncer >> strongSubscriptions [
 				select: [ :eachSubscription | eachSubscription isKindOf: AnnouncementSubscription ]) ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> title [
 	^ self announcer
 		ifNil: [ '' ]
 		ifNotNil: [ :anAnnouncer | anAnnouncer class asString ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredMixedAnnouncer >> weakSubscriptions [
 	^ self announcer
 		ifNil: [ #() ]

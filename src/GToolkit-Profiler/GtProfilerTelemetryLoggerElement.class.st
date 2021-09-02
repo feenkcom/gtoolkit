@@ -1,17 +1,17 @@
 Class {
-	#name : #GtProfilerTelemetryLoggerElement,
-	#superclass : #BrVerticalPane,
+	#name : 'GtProfilerTelemetryLoggerElement',
+	#superclass : 'BrVerticalPane',
 	#traits : 'TGtWithProfilerTelemetryLoggerViewModel',
 	#classTraits : 'TGtWithProfilerTelemetryLoggerViewModel classTrait',
-	#category : #'GToolkit-Profiler-Process - Views'
+	#category : 'GToolkit-Profiler-Process - Views'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtProfilerTelemetryLoggerElement >> initialize [
 	super initialize
 ]
 
-{ #category : #'api - profiler telemetry logger view model' }
+{ #category : 'api - profiler telemetry logger view model' }
 GtProfilerTelemetryLoggerElement >> onProfilerTelemetryLoggerViewModelChanged [
 	"Is sent when a new profilerTelemetryLoggerViewModel is assigned to the receiver.
 	Note: #onProfilerTelemetryLoggerViewModelChanged is sent before #subscribeToProfilerTelemetryLoggerViewModel

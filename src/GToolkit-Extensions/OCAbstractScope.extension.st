@@ -14,5 +14,5 @@ OCAbstractScope >> gtOuterScopesFor: aView [
 				ifNotNil: [ :anOuterScope |
 					anOuterScope asArray ] ];
 		expandAll;
-		column: 'Scope' item: #value
+		column: 'Scope' text: #value
 ]

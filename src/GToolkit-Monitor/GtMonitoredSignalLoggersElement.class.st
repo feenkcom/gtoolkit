@@ -1,19 +1,19 @@
 Class {
-	#name : #GtMonitoredSignalLoggersElement,
-	#superclass : #BlElement,
+	#name : 'GtMonitoredSignalLoggersElement',
+	#superclass : 'BlElement',
 	#instVars : [
 		'loggersList'
 	],
-	#category : #'GToolkit-Monitor-Beacon Loggers'
+	#category : 'GToolkit-Monitor-Beacon Loggers'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitoredSignalLoggersElement class >> open [
 	<script: 'self open'>
 	GtInspector openOn: self new title: 'Monitor'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredSignalLoggersElement >> initialize [
 	super initialize.
 	
@@ -63,7 +63,7 @@ GtMonitoredSignalLoggersElement >> initialize [
 	self updateList
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtMonitoredSignalLoggersElement >> updateList [
 	self
 		enqueueTask:

@@ -1,15 +1,15 @@
 Class {
-	#name : #GtProfilerCompositionLayers,
-	#superclass : #BrVerticalPane,
+	#name : 'GtProfilerCompositionLayers',
+	#superclass : 'BrVerticalPane',
 	#instVars : [
 		'profiledSpace',
 		'toolbar',
 		'updateButton'
 	],
-	#category : #'GToolkit-Profiler'
+	#category : 'GToolkit-Profiler'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtProfilerCompositionLayers >> initialize [
 	super initialize.
 	
@@ -42,7 +42,7 @@ GtProfilerCompositionLayers >> initialize [
 	self addChild: toolbar.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtProfilerCompositionLayers >> profileSpace: anOpenedSpace [
 	profiledSpace = anOpenedSpace
 		ifTrue: [ ^ self ].
@@ -52,17 +52,17 @@ GtProfilerCompositionLayers >> profileSpace: anOpenedSpace [
 	updateButton enable
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtProfilerCompositionLayers >> profiledSpace [
 	^ profiledSpace
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtProfilerCompositionLayers >> profiledSpace: anObject [
 	profiledSpace := anObject.
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtProfilerCompositionLayers >> updateLayer [
 	self removeChildNamed: #compositionLayerContainer.
 	

@@ -14,6 +14,6 @@ GtResourceClosestFileLocator >> gtOverviewFor: aView [
 				'Closest FileLocator parent' -> self closestParent.
 				'Transformed file' -> self transform
 			} ];
-		column: 'Name' item: #key width: 160;
-		column: 'Value' item: #value
+		column: 'Name' text: #key width: 160;
+		column: 'Value' text: #value
 ]

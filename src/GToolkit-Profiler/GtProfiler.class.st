@@ -1,15 +1,15 @@
 Class {
-	#name : #GtProfiler,
-	#superclass : #BrPager,
+	#name : 'GtProfiler',
+	#superclass : 'BrPager',
 	#instVars : [
 		'openedSpaces',
 		'framesChart',
 		'layersGraph'
 	],
-	#category : #'GToolkit-Profiler'
+	#category : 'GToolkit-Profiler'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtProfiler class >> open [
 	<script: 'self open'>
 	
@@ -18,7 +18,7 @@ GtProfiler class >> open [
 		title: 'Profiler') maximized
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtProfiler >> initialize [
 	super initialize.
 		

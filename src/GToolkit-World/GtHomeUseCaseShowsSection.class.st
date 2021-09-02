@@ -1,10 +1,10 @@
 Class {
-	#name : #GtHomeUseCaseShowsSection,
-	#superclass : #GtHomeSection,
-	#category : #'GToolkit-World-Sections'
+	#name : 'GtHomeUseCaseShowsSection',
+	#superclass : 'GtHomeSection',
+	#category : 'GToolkit-World-Sections'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtHomeUseCaseShowsSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := self newSectionContainer.

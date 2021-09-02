@@ -1,5 +1,5 @@
 Class {
-	#name : #GtMonitoredExternalResourceGroup,
-	#superclass : #Object,
-	#category : #'GToolkit-Monitor-External Resources'
+	#name : 'GtMonitoredExternalResourceGroup',
+	#superclass : 'Object',
+	#category : 'GToolkit-Monitor-External Resources'
 }

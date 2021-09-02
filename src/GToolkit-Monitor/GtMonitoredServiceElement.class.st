@@ -1,18 +1,18 @@
 Class {
-	#name : #GtMonitoredServiceElement,
-	#superclass : #BlElement,
+	#name : 'GtMonitoredServiceElement',
+	#superclass : 'BlElement',
 	#instVars : [
 		'service'
 	],
-	#category : #'GToolkit-Monitor'
+	#category : 'GToolkit-Monitor'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredServiceElement >> service [
 	^ service
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredServiceElement >> service: aGtMonitoredProcess [
 	service := aGtMonitoredProcess.
 
