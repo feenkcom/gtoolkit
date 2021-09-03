@@ -339,6 +339,7 @@ pipeline {
                                 sh 'rm -rf ~/Documents/lepiter'
                             }
                         }
+/* Disable M1 Examples due to repeated VM crashes
                         stage('MacOS M1 Examples') {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
@@ -357,6 +358,7 @@ pipeline {
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
+*/
                         stage('MacOS M1 Package') {
                             when {
                                 expression {
