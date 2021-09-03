@@ -256,17 +256,6 @@ pipeline {
                             steps {
                                 sh 'rm -rf ~/Documents/lepiter'
                                 
-                                sh """
-                                    cd ${EXAMPLES_FOLDER}
-                                    git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
-                                    git clone --depth=1 https://github.com/feenkcom/gtoolkit-remote.git
-                                    git clone --depth=1 https://github.com/feenkcom/Sparkle.git
-
-                                    chmod +x gt4gemstone/scripts/*.sh
-                                    chmod +x gt4gemstone/scripts/release/*.sh
-                                    chmod +x gtoolkit-remote/scripts/*.sh
-                                   """
-                                
                                 // Run the GemStone remote examples.
                                 // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
                                 sh """
