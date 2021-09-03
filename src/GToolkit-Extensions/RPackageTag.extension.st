@@ -2,13 +2,15 @@ Extension { #name : 'RPackageTag' }
 
 { #category : '*GToolkit-Extensions' }
 RPackageTag >> gtClassHierarchyFor: aView [
+
 	<gtView>
 	<gtPackageTagView>
 	^ aView mondrian
-		title: 'Classes Map';
-		priority: 10.5;
-		painting: [ :aMondrian | self paintClassHierarchyWith: aMondrian ];
-		actionUpdateButton
+		  title: 'Classes Map';
+		  priority: 10.5;
+		  tooltip: 'Classes: black, Traits: orange';
+		  painting: [ :aMondrian | self paintClassHierarchyWith: aMondrian ];
+		  actionUpdateButton
 ]
 
 { #category : '*GToolkit-Extensions' }

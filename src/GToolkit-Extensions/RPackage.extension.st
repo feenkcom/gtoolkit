@@ -7,6 +7,7 @@ RPackage >> gtClassHierarchyFor: aView [
 	^ aView mondrian
 		title: 'Classes Map';
 		priority: 10.6;
+		tooltip: 'Classes: black, Traits: orange, Extended classes: gray';
 		painting: [ :aMondrian | self paintClassHierarchyWith: aMondrian ];
 		actionUpdateButton
 ]
@@ -36,6 +37,7 @@ RPackage >> gtTagAndClassHierarchyFor: aView [
 	^ aView mondrian
 		title: 'Tags Map';
 		priority: 10.7;
+		tooltip: 'Classes: black, Traits: orange';
 		painting: [ :aMondrian | self paintTagAndClassHierarchyWith: aMondrian ];
 		actionUpdateButton
 ]
