@@ -1,10 +1,10 @@
 Class {
-	#name : #GtMonitoredUniversesElement,
-	#superclass : #BrHorizontalFlow,
-	#category : #'GToolkit-Monitor'
+	#name : 'GtMonitoredUniversesElement',
+	#superclass : 'BrHorizontalFlow',
+	#category : 'GToolkit-Monitor'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredUniversesElement >> createUniverseCard: aUniverse [
 	| aContainer |
 	aContainer := BlElement new layout: BlLinearLayout vertical.
@@ -36,7 +36,7 @@ GtMonitoredUniversesElement >> createUniverseCard: aUniverse [
 	^ aContainer
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredUniversesElement >> createUniverseName: aUniverse [
 	| aNameLabel |
 
@@ -54,7 +54,7 @@ GtMonitoredUniversesElement >> createUniverseName: aUniverse [
 	^ aNameLabel
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredUniversesElement >> createUniverseRunning: aUniverse [
 	| aNameLabel |
 
@@ -66,7 +66,7 @@ GtMonitoredUniversesElement >> createUniverseRunning: aUniverse [
 	^ aNameLabel
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredUniversesElement >> createUniverseSpaces: aUniverse [
 	| aNameLabel |
 
@@ -78,7 +78,7 @@ GtMonitoredUniversesElement >> createUniverseSpaces: aUniverse [
 	^ aNameLabel
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredUniversesElement >> initialize [
 	super initialize.
 
@@ -91,14 +91,14 @@ GtMonitoredUniversesElement >> initialize [
 			action: [ self updateList ])
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredUniversesElement >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	
 	self updateList
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredUniversesElement >> updateList [
 	| theUniverses |
 	

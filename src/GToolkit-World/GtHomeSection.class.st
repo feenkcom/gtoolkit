@@ -1,18 +1,18 @@
 Class {
-	#name : #GtHomeSection,
-	#superclass : #BrStencil,
+	#name : 'GtHomeSection',
+	#superclass : 'BrStencil',
 	#instVars : [
 		'priority'
 	],
-	#category : #'GToolkit-World-Sections'
+	#category : 'GToolkit-World-Sections'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 GtHomeSection class >> isAbstract [ 
 	^ self name = #GtHomeSection 
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newAddCardWithTooltip: aTooltip size: aPoint action: aBlock [
 	| anAddButton |
 		
@@ -34,7 +34,7 @@ GtHomeSection >> newAddCardWithTooltip: aTooltip size: aPoint action: aBlock [
 			addChild: anAddButton
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newCard [
 	self deprecated: 'not used'.
 	^ self newCardWithoutIcon
@@ -42,7 +42,7 @@ GtHomeSection >> newCard [
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newCardWithTitle: aTitle description: aDescription action: aBlock [ 
 	| cardElement |	
 	self deprecated: 'not used'.
@@ -56,7 +56,7 @@ GtHomeSection >> newCardWithTitle: aTitle description: aDescription action: aBlo
 	^ cardElement
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anElementOrStencil action: aBlock [ 
 	self deprecated: 'not used'.
 	^ self newCard
@@ -79,7 +79,7 @@ GtHomeSection >> newCardWithTitle: aTitle description: aDescription picture: anE
 		action: aBlock
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newCardWithoutIcon [
 	^ BrCard new
 		aptitude: (BrShadowAptitude new beLarge)+
@@ -93,7 +93,7 @@ GtHomeSection >> newCardWithoutIcon [
 		margin: (BlInsets top: self spaceGap left: self spaceGap * 2 bottom: self spaceGap right: self spaceGap * 2)
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newCardsContainer [
 	^ BlElement new
 		layout: BlFlowLayout new;
@@ -103,7 +103,7 @@ GtHomeSection >> newCardsContainer [
 		padding: (BlInsets all: 0)
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newDocCardForClass: aClass [
 	^ self
 		newHeaderCardWithTitle: 'Doc'
@@ -121,7 +121,7 @@ GtHomeSection >> newDocCardForClass: aClass [
 				from: card ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newDocCardForFile: aReference [
 	^ self
 		newHeaderCardWithTitle: 'Doc'
@@ -139,7 +139,7 @@ GtHomeSection >> newDocCardForFile: aReference [
 				from: card ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: aPoint content: anElement action: aBlock [
 	| container headerContainer |
 
@@ -159,7 +159,7 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription size: 
 		addChild: (anElement preventMeAndChildrenMouseEvents).
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription width: aWidth content: anElement action: aBlock [
 	| container headerContainer |
 
@@ -190,7 +190,7 @@ GtHomeSection >> newHeaderCardWithTitle: aTitle description: aDescription width:
 		addChild: (anElement preventMeAndChildrenMouseEvents).
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newInspectorCardForObject: anObject [
 	^ self
 		newHeaderCardWithTitle: 'Inspector'
@@ -211,7 +211,7 @@ GtHomeSection >> newInspectorCardForObject: anObject [
 				from: card ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook title: aTitle description: aDescription [
 	^ self
 		newHeaderCardWithTitle: 'Playground: ' , aTitle
@@ -228,14 +228,14 @@ GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook title: aTitle descripti
 				from: card ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newSectionButton [
 
 	^ BrButton new
 		padding: self newSectionTitlePaddingInsets
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newSectionButtonWithIcon: anIcon [
 
 	^ self newSectionButton 
@@ -243,7 +243,7 @@ GtHomeSection >> newSectionButtonWithIcon: anIcon [
 		icon: anIcon asElement
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newSectionContainer [
 	^ BlElement new
 		layout: BlLinearLayout vertical;
@@ -252,7 +252,7 @@ GtHomeSection >> newSectionContainer [
 			c vertical fitContent ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newSectionTitle: aString [
 	^ BrLabel new
 		aptitude:
@@ -263,19 +263,19 @@ GtHomeSection >> newSectionTitle: aString [
 		text: aString
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newSectionTitleContainer [
 	^ BrHorizontalPane new
 		vFitContent;
 		hFitContent.
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newSectionTitlePaddingInsets [
 	^ BlInsets left: self sectionPaddingLeftInsets
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShowBlock description: aDescription [
 	^ self
 		newHeaderCardWithTitle: 'Slideshow'
@@ -293,7 +293,7 @@ GtHomeSection >> newShowCardWithTitle: aString slideshow: aSlideShowBlock descri
 				from: card ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock description: aDescriptionString [
 	| iconElement labelElement |
 	iconElement := anElement margin: (BlInsets bottom: 5).
@@ -315,7 +315,7 @@ GtHomeSection >> newToolCardWithTitle: aString icon: anElement action: aBlock de
 		addChild: labelElement.
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> newUrlCardWithTitle: aTitle description: aDescription url: aUrl [
 	^ self
 		newHeaderCardWithTitle: 'www'
@@ -341,22 +341,22 @@ GtHomeSection >> newUrlCardWithTitle: aTitle description: aDescription url: aUrl
 		action: [ :card | WebBrowser openOn: aUrl ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtHomeSection >> priority [
 	^ priority
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtHomeSection >> priority: aNumber [
 	priority := aNumber
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtHomeSection >> sectionPaddingLeftInsets [
 	^ self spaceGap * 2
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> showSpaceWithIcon: anIcon title: aString with: aStencil from: anotherElement [
 	^ GtWorldUtility 
 		showSpaceWithIcon: anIcon 
@@ -365,7 +365,7 @@ GtHomeSection >> showSpaceWithIcon: anIcon title: aString with: aStencil from: a
 		from: anotherElement
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtHomeSection >> showSpaceWithTitle: aString with: aStencil from: anotherElement [
 	^ GtWorldUtility 
 		showSpaceWithTitle: aString 
@@ -373,7 +373,7 @@ GtHomeSection >> showSpaceWithTitle: aString with: aStencil from: anotherElement
 		from: anotherElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtHomeSection >> spaceGap [
 	^ 10
 ]

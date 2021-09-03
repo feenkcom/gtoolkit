@@ -1,15 +1,15 @@
 Class {
-	#name : #GtProfilerTelemetrySignalsElement,
-	#superclass : #BrSimpleTree,
+	#name : 'GtProfilerTelemetrySignalsElement',
+	#superclass : 'BrSimpleTree',
 	#traits : 'TGtWithProfilerTelemetrySignalsViewModel',
 	#classTraits : 'TGtWithProfilerTelemetrySignalsViewModel classTrait',
 	#instVars : [
 		'updateRequester'
 	],
-	#category : #'GToolkit-Profiler-Process - Views'
+	#category : 'GToolkit-Profiler-Process - Views'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtProfilerTelemetrySignalsElement >> initialize [
 	super initialize.
 
@@ -26,7 +26,7 @@ GtProfilerTelemetrySignalsElement >> initialize [
 		element: self selector: #updateList.
 ]
 
-{ #category : #'api - profiler telemetry signals view model' }
+{ #category : 'api - profiler telemetry signals view model' }
 GtProfilerTelemetrySignalsElement >> onProfilerTelemetrySignalsViewModelChanged [
 	"Is sent when a new profilerTelemetrySignalsViewModel is assigned to the receiver.
 	Note: #onProfilerTelemetrySignalsViewModelChanged is sent before #subscribeToProfilerTelemetrySignalsViewModel
@@ -38,12 +38,12 @@ GtProfilerTelemetrySignalsElement >> onProfilerTelemetrySignalsViewModelChanged 
 	self updateList
 ]
 
-{ #category : #'private - event handling' }
+{ #category : 'private - event handling' }
 GtProfilerTelemetrySignalsElement >> onTelemetrySignalAdded: aTelemetrySignalAddedAnnouncement [
 	updateRequester requestUpdate
 ]
 
-{ #category : #'api - profiler telemetry signals view model' }
+{ #category : 'api - profiler telemetry signals view model' }
 GtProfilerTelemetrySignalsElement >> subscribeToProfilerTelemetrySignalsViewModel [
 	"Is sent after a new profilerTelemetrySignalsViewModel is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -57,7 +57,7 @@ GtProfilerTelemetrySignalsElement >> subscribeToProfilerTelemetrySignalsViewMode
 		to: self
 ]
 
-{ #category : #'api - profiler telemetry signals view model' }
+{ #category : 'api - profiler telemetry signals view model' }
 GtProfilerTelemetrySignalsElement >> unsubscribeFromProfilerTelemetrySignalsViewModel [
 	"Is sent before a new profilerTelemetrySignalsViewModel is assigned to the receiver.
 	Objects that subscribe to profilerTelemetrySignalsViewModel are required to implement this method."
@@ -67,7 +67,7 @@ GtProfilerTelemetrySignalsElement >> unsubscribeFromProfilerTelemetrySignalsView
 	self profilerTelemetrySignalsViewModel unsubscribe: self
 ]
 
-{ #category : #'private - updating' }
+{ #category : 'private - updating' }
 GtProfilerTelemetrySignalsElement >> updateList [
 	self items: self profilerTelemetrySignalsViewModel profilerTelemetrySignalViewModels immediate: [ :eachNode | #() ]
 ]

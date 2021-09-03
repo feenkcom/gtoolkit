@@ -12,8 +12,8 @@ When done press the `Stop` button to safely close the space. Or press the `Reset
 
 "
 Class {
-	#name : #GtMonitorSpaceRunner,
-	#superclass : #BrHorizontalPane,
+	#name : 'GtMonitorSpaceRunner',
+	#superclass : 'BrHorizontalPane',
 	#instVars : [
 		'startButton',
 		'stopButton',
@@ -23,10 +23,10 @@ Class {
 		'resetButton',
 		'monitoredSpace'
 	],
-	#category : #'GToolkit-Monitor-Space Runner'
+	#category : 'GToolkit-Monitor-Space Runner'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitorSpaceRunner >> createExplanation [
 	^ (GtDocumenter forText: self explanationText)
 			matchParent;
@@ -34,7 +34,7 @@ GtMonitorSpaceRunner >> createExplanation [
 			margin: (BlInsets left: 10)
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitorSpaceRunner >> createLogger [
 	| aLogger |
 
@@ -43,7 +43,7 @@ GtMonitorSpaceRunner >> createLogger [
 	^ aLogger
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitorSpaceRunner >> createSignalTree: aLogger [
 	| signals view |
 
@@ -84,7 +84,7 @@ GtMonitorSpaceRunner >> createSignalTree: aLogger [
 	^ (view root constraintsDo: [ :c | c horizontal matchParent ]) asPannableElement
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [
 	| aContainer aNode theSignals |
 	aContainer := BrHorizontalPane new fitContent.
@@ -118,7 +118,7 @@ GtMonitorSpaceRunner >> createSignalTreeNode: aSignalClass logger: aLogger [
 	^ aContainer
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitorSpaceRunner >> createSpace [
 	| aSpace |
 	
@@ -132,12 +132,12 @@ GtMonitorSpaceRunner >> createSpace [
 	^ aSpace
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitorSpaceRunner >> explanationText [
 	^ self class comment
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitorSpaceRunner >> initialize [
 	super initialize.
 	
@@ -180,7 +180,7 @@ GtMonitorSpaceRunner >> initialize [
 		addChildren: { toolbar . signalTree })
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitorSpaceRunner >> reset [
 	self stop.
 	
@@ -188,7 +188,7 @@ GtMonitorSpaceRunner >> reset [
 	signalTree parent replaceChild: signalTree with: (signalTree := self createSignalTree: logger)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitorSpaceRunner >> start [
 	monitoredSpace isOpened
 		ifTrue: [ ^ self ].
@@ -200,7 +200,7 @@ GtMonitorSpaceRunner >> start [
 	monitoredSpace show
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitorSpaceRunner >> stop [		
 	startButton enable.
 	stopButton disable.

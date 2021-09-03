@@ -7,6 +7,6 @@ BrTextEditorCompositeMemento >> gtMementosFor: aView [
 	^ aView columnedList
 		title: 'Mementos';
 		items: [ self mementos ];
-		column: 'Label' item: #label weight: 0.5;
-		column: 'Value' item: #value
+		column: 'Label' text: #label weight: 0.5;
+		column: 'Value' text: #value
 ]

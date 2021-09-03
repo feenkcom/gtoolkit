@@ -1,23 +1,23 @@
 Class {
-	#name : #GtHomeCloseButtonStencil,
-	#superclass : #BrStencil,
+	#name : 'GtHomeCloseButtonStencil',
+	#superclass : 'BrStencil',
 	#instVars : [
 		'closeAction'
 	],
-	#category : #'GToolkit-World-Stencils'
+	#category : 'GToolkit-World-Stencils'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtHomeCloseButtonStencil >> closeAction [
 	^ closeAction
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtHomeCloseButtonStencil >> closeAction: aBlock [
 	closeAction := aBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtHomeCloseButtonStencil >> create [
 	^ GtInspectorRoundButtonStencil normal asElement
 		icon: GtInspectorPlusIconStencil close asElement;

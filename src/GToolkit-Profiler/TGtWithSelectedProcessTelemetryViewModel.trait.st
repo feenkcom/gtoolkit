@@ -1,12 +1,12 @@
 Trait {
-	#name : #TGtWithSelectedProcessTelemetryViewModel,
+	#name : 'TGtWithSelectedProcessTelemetryViewModel',
 	#instVars : [
 		'selectedProcessTelemetryViewModel'
 	],
-	#category : #'GToolkit-Profiler-Process - Support'
+	#category : 'GToolkit-Profiler-Process - Support'
 }
 
-{ #category : #'api - selected process telemetry view model' }
+{ #category : 'api - selected process telemetry view model' }
 TGtWithSelectedProcessTelemetryViewModel >> deselectProcessTelemetryViewModel [
 	<propertyUnsetter: #selectedProcessTelemetryViewModel>
 	<generatedFrom: #'TGtRobocoderWithPropertyTraitTemplate>>#propertyUnsetterTemplate'>
@@ -21,7 +21,7 @@ TGtWithSelectedProcessTelemetryViewModel >> deselectProcessTelemetryViewModel [
 	self notifySelectedProcessTelemetryViewModelChanged
 ]
 
-{ #category : #'api - selected process telemetry view model' }
+{ #category : 'api - selected process telemetry view model' }
 TGtWithSelectedProcessTelemetryViewModel >> hasSelectedProcessTelemetryViewModel [
 	<return: #Boolean>
 	<propertyTester: #selectedProcessTelemetryViewModel>
@@ -30,28 +30,28 @@ TGtWithSelectedProcessTelemetryViewModel >> hasSelectedProcessTelemetryViewModel
 	^ selectedProcessTelemetryViewModel notNil
 ]
 
-{ #category : #'api - selected process telemetry view model' }
+{ #category : 'api - selected process telemetry view model' }
 TGtWithSelectedProcessTelemetryViewModel >> notifySelectedProcessTelemetryViewModelChanged [
 	"Override this notify method to announce changes to the property"
 	<propertyChangeNotifier: #selectedProcessTelemetryViewModel>
 	<generatedFrom: #'TGtRobocoderWithPropertyTraitTemplate>>#notifyPropertyChangedTemplate'>
 ]
 
-{ #category : #'api - selected process telemetry view model' }
+{ #category : 'api - selected process telemetry view model' }
 TGtWithSelectedProcessTelemetryViewModel >> onNewSelectedProcessTelemetryViewModelSet: aNewSelectedProcessTelemetryViewModel [
 	"Is sent after a new value of the selectedProcessTelemetryViewModel is assigned"
 	<propertySetHook: #selectedProcessTelemetryViewModel>
 	<generatedFrom: #'TGtRobocoderWithPropertyTraitTemplate>>#onNewPropertySetHookTemplate'>
 ]
 
-{ #category : #'api - selected process telemetry view model' }
+{ #category : 'api - selected process telemetry view model' }
 TGtWithSelectedProcessTelemetryViewModel >> onPreviousSelectedProcessTelemetryViewModelUnset: aPreviousSelectedProcessTelemetryViewModel [
 	"Is sent after a previous value of the selectedProcessTelemetryViewModel is de-assigned"
 	<propertyUnsetHook: #selectedProcessTelemetryViewModel>
 	<generatedFrom: #'TGtRobocoderWithPropertyTraitTemplate>>#onPreviousPropertyUnsetHookTemplate'>
 ]
 
-{ #category : #'api - selected process telemetry view model' }
+{ #category : 'api - selected process telemetry view model' }
 TGtWithSelectedProcessTelemetryViewModel >> selectProcessTelemetryViewModel: aNewSelectedProcessTelemetryViewModel [
 	<propertySetter: #selectedProcessTelemetryViewModel>
 	<generatedFrom: #'TGtRobocoderWithPropertyTraitTemplate>>#propertySetterTemplate'>
@@ -71,7 +71,7 @@ TGtWithSelectedProcessTelemetryViewModel >> selectProcessTelemetryViewModel: aNe
 	self notifySelectedProcessTelemetryViewModelChanged
 ]
 
-{ #category : #'api - selected process telemetry view model' }
+{ #category : 'api - selected process telemetry view model' }
 TGtWithSelectedProcessTelemetryViewModel >> selectedProcessTelemetryViewModel [
 	<return: #GtProfilerProcessTelemetryViewModel>
 	<propertyGetter: #selectedProcessTelemetryViewModel>

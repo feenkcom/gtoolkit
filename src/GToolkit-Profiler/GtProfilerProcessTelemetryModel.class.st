@@ -1,15 +1,15 @@
 Class {
-	#name : #GtProfilerProcessTelemetryModel,
-	#superclass : #Object,
+	#name : 'GtProfilerProcessTelemetryModel',
+	#superclass : 'Object',
 	#instVars : [
 		'telemetry',
 		'announcer',
 		'parentProfilerProcessTelemetriesModel'
 	],
-	#category : #'GToolkit-Profiler-Process - Models'
+	#category : 'GToolkit-Profiler-Process - Models'
 }
 
-{ #category : #'api - announcer' }
+{ #category : 'api - announcer' }
 GtProfilerProcessTelemetryModel >> announce: anAnnouncement [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#announceTemplate'>
 	announcer ifNotNil: [ :anAnnouncer | anAnnouncer announce: anAnnouncement ].
@@ -18,7 +18,7 @@ GtProfilerProcessTelemetryModel >> announce: anAnnouncement [
 		ifTrue: [ self parentProfilerProcessTelemetriesModel announce: anAnnouncement ].
 ]
 
-{ #category : #'api - testing' }
+{ #category : 'api - testing' }
 GtProfilerProcessTelemetryModel >> hasParentProfilerProcessTelemetriesModel [
 	"Return true if the parent object is attached"
 	<return: #Boolean>
@@ -28,7 +28,7 @@ GtProfilerProcessTelemetryModel >> hasParentProfilerProcessTelemetriesModel [
 	^ parentProfilerProcessTelemetriesModel notNil
 ]
 
-{ #category : #'api - telemetry' }
+{ #category : 'api - telemetry' }
 GtProfilerProcessTelemetryModel >> hasTelemetry [
 	"Return a true if nil is assigned to the receiver, false otherwise"
 	<return: #Boolean>
@@ -38,7 +38,7 @@ GtProfilerProcessTelemetryModel >> hasTelemetry [
 	^ telemetry notNil
 ]
 
-{ #category : #'api - testing' }
+{ #category : 'api - testing' }
 GtProfilerProcessTelemetryModel >> isProfilerProcessTelemetriesModel [
 	"Return true if the receiver represents profilerProcessTelemetriesModel, false otherwise"
 	<return: #Boolean>
@@ -47,7 +47,7 @@ GtProfilerProcessTelemetryModel >> isProfilerProcessTelemetriesModel [
 	^ false
 ]
 
-{ #category : #'api - testing' }
+{ #category : 'api - testing' }
 GtProfilerProcessTelemetryModel >> isProfilerProcessTelemetryModel [
 	"Return true if the receiver represents profilerProcessTelemetryModel, false otherwise"
 	<return: #Boolean>
@@ -56,12 +56,12 @@ GtProfilerProcessTelemetryModel >> isProfilerProcessTelemetryModel [
 	^ true
 ]
 
-{ #category : #'api - telemetry' }
+{ #category : 'api - telemetry' }
 GtProfilerProcessTelemetryModel >> isRunning [
 	^ self telemetry defaultTelemetryClass = BlMemoryTelemetry
 ]
 
-{ #category : #'api - telemetry' }
+{ #category : 'api - telemetry' }
 GtProfilerProcessTelemetryModel >> onPostTelemetryChanged [
 	"I am an optional hook method that is sent after #subscribeToTelemetry.
 	I do nothing by default but allow users to perform update operations when a receiver object is already
@@ -69,7 +69,7 @@ GtProfilerProcessTelemetryModel >> onPostTelemetryChanged [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onPostObjectChangedTemplate'>
 ]
 
-{ #category : #'api - telemetry' }
+{ #category : 'api - telemetry' }
 GtProfilerProcessTelemetryModel >> onTelemetryChanged [
 	"Is sent when a new telemetry is assigned to the receiver.
 	Note: #onTelemetryChanged is sent before #subscribeToTelemetry
@@ -79,7 +79,7 @@ GtProfilerProcessTelemetryModel >> onTelemetryChanged [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onObjectChangedTemplate'>
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtProfilerProcessTelemetryModel >> parentProfilerProcessTelemetriesModel [
 	"Return a parent object which is used to access various state properties,
 	for example parent may be responsible for knowing a selected child object.
@@ -95,7 +95,7 @@ GtProfilerProcessTelemetryModel >> parentProfilerProcessTelemetriesModel [
 	^ parentProfilerProcessTelemetriesModel
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtProfilerProcessTelemetryModel >> parentProfilerProcessTelemetriesModel: aGtProfilerProcessTelemetriesModel [
 	"Assign a parent object (${class:GtProfilerProcessTelemetriesModel}$) which is used to access various state properties,
 	for example parent may be responsible for knowing a selected child object.
@@ -110,25 +110,25 @@ GtProfilerProcessTelemetryModel >> parentProfilerProcessTelemetriesModel: aGtPro
 	parentProfilerProcessTelemetriesModel := aGtProfilerProcessTelemetriesModel
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 GtProfilerProcessTelemetryModel >> printOn: aStream [
 	<generatedFrom: #'GtRobocoderMetamodelPrintDerive>>#printOnTemplate'>
 	aStream print: self telemetry
 ]
 
-{ #category : #'api - telemetry' }
+{ #category : 'api - telemetry' }
 GtProfilerProcessTelemetryModel >> start [
 	self telemetry defaultTelemetryClass: BlMemoryTelemetry.
 	self announce: (GtProfilerProcessTelemetryModelStarted new profilerProcessTelemetryModel: self)
 ]
 
-{ #category : #'api - telemetry' }
+{ #category : 'api - telemetry' }
 GtProfilerProcessTelemetryModel >> stop [
 	self telemetry defaultTelemetryClass: BlNullTelemetry.
 	self announce: (GtProfilerProcessTelemetryModelStopped new profilerProcessTelemetryModel: self)
 ]
 
-{ #category : #'api - telemetry' }
+{ #category : 'api - telemetry' }
 GtProfilerProcessTelemetryModel >> subscribeToTelemetry [
 	"Is sent after a new telemetry is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -137,7 +137,7 @@ GtProfilerProcessTelemetryModel >> subscribeToTelemetry [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#subscribeToObjectTemplate'>
 ]
 
-{ #category : #'api - telemetry' }
+{ #category : 'api - telemetry' }
 GtProfilerProcessTelemetryModel >> telemetry [
 	"Return a not-null telemetry assigned to the receiver"
 	<modelGetter: #telemetry>
@@ -149,7 +149,7 @@ GtProfilerProcessTelemetryModel >> telemetry [
 	^ telemetry
 ]
 
-{ #category : #'api - telemetry' }
+{ #category : 'api - telemetry' }
 GtProfilerProcessTelemetryModel >> telemetry: aTelemetry [
 	"Set a not-null telemetry assigned to the receiver"
 	<modelSetter: #telemetry>
@@ -169,7 +169,7 @@ GtProfilerProcessTelemetryModel >> telemetry: aTelemetry [
 	self onPostTelemetryChanged
 ]
 
-{ #category : #'api - announcer' }
+{ #category : 'api - announcer' }
 GtProfilerProcessTelemetryModel >> unsubscribe: anObject [
 	"Unsubscribe all subscriptions of anObject from the receiver"
 
@@ -177,7 +177,7 @@ GtProfilerProcessTelemetryModel >> unsubscribe: anObject [
 	^ announcer ifNotNil: [ :anAnnouncer | anAnnouncer unsubscribe: anObject ]
 ]
 
-{ #category : #'api - telemetry' }
+{ #category : 'api - telemetry' }
 GtProfilerProcessTelemetryModel >> unsubscribeFromTelemetry [
 	"Is sent before a new telemetry is assigned to the receiver.
 	Objects that subscribe to telemetry are required to implement this method."
@@ -185,14 +185,14 @@ GtProfilerProcessTelemetryModel >> unsubscribeFromTelemetry [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#unsubscribeFromObjectTemplate'>
 ]
 
-{ #category : #'api - announcer' }
+{ #category : 'api - announcer' }
 GtProfilerProcessTelemetryModel >> when: anAnnouncementClass do: aBlock [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#whenDoTemplate'>
 	^ (announcer ifNil: [ announcer := Announcer new ])
 		when: anAnnouncementClass do: aBlock
 ]
 
-{ #category : #'api - announcer' }
+{ #category : 'api - announcer' }
 GtProfilerProcessTelemetryModel >> when: anAnnouncementClass send: aSelector to: anObject [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#whenSendToTemplate'>
 	^ (announcer ifNil: [ announcer := Announcer new ]) weak

@@ -1,29 +1,29 @@
 Class {
-	#name : #GtMonitoredExternalResourceStatusGroup,
-	#superclass : #GtMonitoredExternalResourceGroup,
+	#name : 'GtMonitoredExternalResourceStatusGroup',
+	#superclass : 'GtMonitoredExternalResourceGroup',
 	#instVars : [
 		'resources',
 		'isNull'
 	],
-	#category : #'GToolkit-Monitor-External Resources'
+	#category : 'GToolkit-Monitor-External Resources'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceStatusGroup >> children [
 	^ self resources
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceStatusGroup >> isNull [
 	^ isNull
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceStatusGroup >> isNull: anObject [
 	isNull := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceStatusGroup >> name [
 	^ '{1}: {2}' format: { 
 		self isNull
@@ -34,17 +34,17 @@ GtMonitoredExternalResourceStatusGroup >> name [
 	}
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceStatusGroup >> resources [
 	^ resources
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceStatusGroup >> resources: anObject [
 	resources := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtMonitoredExternalResourceStatusGroup >> size [
 	^ self resources size
 ]

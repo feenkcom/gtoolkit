@@ -1,13 +1,13 @@
 Class {
-	#name : #GtMonitoredExternalResourcesElement,
-	#superclass : #BrVerticalPane,
+	#name : 'GtMonitoredExternalResourcesElement',
+	#superclass : 'BrVerticalPane',
 	#instVars : [
 		'resourcesTree'
 	],
-	#category : #'GToolkit-Monitor-External Resources'
+	#category : 'GToolkit-Monitor-External Resources'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitoredExternalResourcesElement class >> allExternalResources [
 	<script: 'self allExternalResources inspect'>
 	| aRegistry allResources|
@@ -21,7 +21,7 @@ GtMonitoredExternalResourcesElement class >> allExternalResources [
 			resources: each value ]) asSortedCollection: [ :a :b | a size > b size ]
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitoredExternalResourcesElement class >> open [
 	<script: 'self open'>
 
@@ -30,7 +30,7 @@ GtMonitoredExternalResourcesElement class >> open [
 		title: 'Monitor'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredExternalResourcesElement >> initialize [
 	super initialize.
 	
@@ -52,7 +52,7 @@ GtMonitoredExternalResourcesElement >> initialize [
 	self updateList
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtMonitoredExternalResourcesElement >> updateList [
 	self
 		enqueueTask:

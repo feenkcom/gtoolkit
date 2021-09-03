@@ -1,10 +1,10 @@
 Class {
-	#name : #GtHomeDocumentationSection,
-	#superclass : #GtHomeSection,
-	#category : #'GToolkit-World-Sections'
+	#name : 'GtHomeDocumentationSection',
+	#superclass : 'GtHomeSection',
+	#category : 'GToolkit-World-Sections'
 }
 
-{ #category : #'api - instantiation' }
+{ #category : 'api - instantiation' }
 GtHomeDocumentationSection >> create [
 	| sectionContainer cardsContainer |
 	sectionContainer := self newSectionContainer.
@@ -24,7 +24,7 @@ GtHomeDocumentationSection >> create [
 	^ sectionContainer
 ]
 
-{ #category : #'api - instantiation' }
+{ #category : 'api - instantiation' }
 GtHomeDocumentationSection >> newDocsExplorer [
 	^ self
 		newHeaderCardWithTitle: 'Glamorous Toolkit'
