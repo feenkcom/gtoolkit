@@ -136,9 +136,9 @@ pipeline {
                                 ./gt-installer \
                                     --verbose \
                                     --workspace ${RELEASER_FOLDER} \
-                                    --image-url ${PHARO_IMAGE_URL} \
                                     release-build \
                                         --loader cloner \
+                                        --image-url ${PHARO_IMAGE_URL} \
                                         --bump ${params.BUMP} \
                                         --no-gt-world """
                         }
