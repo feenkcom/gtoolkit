@@ -355,8 +355,8 @@ pipeline {
 
 /* Disable M1 Examples due to repeated VM crashes
                                 sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-*/
                                 junit "${EXAMPLES_FOLDER}/*.xml"
+*/
                             }
                         }
                         stage('MacOS M1 Package') {
