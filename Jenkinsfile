@@ -339,7 +339,6 @@ pipeline {
                                 sh 'rm -rf ~/Documents/lepiter'
                             }
                         }
-/* Disable M1 Examples due to repeated VM crashes
                         stage('MacOS M1 Examples') {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
@@ -354,11 +353,12 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
+/* Disable M1 Examples due to repeated VM crashes
                                 sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
+*/
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                             }
                         }
-*/
                         stage('MacOS M1 Package') {
                             when {
                                 expression {
