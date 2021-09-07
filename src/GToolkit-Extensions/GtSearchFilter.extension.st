@@ -16,3 +16,14 @@ GtSearchFilter >> gtHierarchyFor: aView [
 		children: [ :aFilter | aFilter children ];
 		expandUpTo: 2
 ]
+
+{ #category : '*GToolkit-Extensions' }
+GtSearchFilter >> gtMetricsFor: aView [
+
+	<gtView>
+	^ aView forward
+		  title: 'Metrics';
+		  priority: 11;
+		  object: [ self result ];
+		  view: #gtMetricsFor:
+]
