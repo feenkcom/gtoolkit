@@ -4,3 +4,10 @@ Extension { #name : 'ZnDispatcherDelegate' }
 ZnDispatcherDelegate >> gtDelegateFor: aView [ 
 	^ self gtMapFor: aView
 ]
+
+{ #category : '*GToolkit-Extensions' }
+ZnDispatcherDelegate >> gtMapFor: aView [
+	<gtView>
+	^ (self dispatcherDictionary gtItemsFor: aView)
+		title: 'Access Point Handlers'
+]
