@@ -1,6 +1,6 @@
 Class {
-	#name : #GtProfilerProcessTelemetryElement,
-	#superclass : #BrVerticalPane,
+	#name : 'GtProfilerProcessTelemetryElement',
+	#superclass : 'BrVerticalPane',
 	#traits : 'TGtWithProfilerProcessTelemetryViewModel',
 	#classTraits : 'TGtWithProfilerProcessTelemetryViewModel classTrait',
 	#instVars : [
@@ -11,10 +11,10 @@ Class {
 		'resetButton',
 		'description'
 	],
-	#category : #'GToolkit-Profiler-Process - Views'
+	#category : 'GToolkit-Profiler-Process - Views'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtProfilerProcessTelemetryElement >> initialize [
 	super initialize.
 	
@@ -60,7 +60,7 @@ GtProfilerProcessTelemetryElement >> initialize [
 	self addChildren: { description . toolbar . telemetryLogger }
 ]
 
-{ #category : #'api - profiler process telemetry view model' }
+{ #category : 'api - profiler process telemetry view model' }
 GtProfilerProcessTelemetryElement >> onProfilerProcessTelemetryViewModelChanged [
 	"Is sent when a new profilerProcessTelemetryViewModel is assigned to the receiver.
 	Note: #onProfilerProcessTelemetryViewModelChanged is sent before #subscribeToProfilerProcessTelemetryViewModel
@@ -74,7 +74,7 @@ GtProfilerProcessTelemetryElement >> onProfilerProcessTelemetryViewModelChanged 
 	telemetryLogger profilerTelemetryLoggerViewModel: self profilerProcessTelemetryViewModel profilerTelemetryLoggerViewModel
 ]
 
-{ #category : #'api - profiler process telemetry view model' }
+{ #category : 'api - profiler process telemetry view model' }
 GtProfilerProcessTelemetryElement >> subscribeToProfilerProcessTelemetryViewModel [
 	"Is sent after a new profilerProcessTelemetryViewModel is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -88,7 +88,7 @@ GtProfilerProcessTelemetryElement >> subscribeToProfilerProcessTelemetryViewMode
 		to: self
 ]
 
-{ #category : #'api - profiler process telemetry view model' }
+{ #category : 'api - profiler process telemetry view model' }
 GtProfilerProcessTelemetryElement >> unsubscribeFromProfilerProcessTelemetryViewModel [
 	"Is sent before a new profilerProcessTelemetryViewModel is assigned to the receiver.
 	Objects that subscribe to profilerProcessTelemetryViewModel are required to implement this method."
@@ -98,7 +98,7 @@ GtProfilerProcessTelemetryElement >> unsubscribeFromProfilerProcessTelemetryView
 	self profilerProcessTelemetryViewModel unsubscribe: self
 ]
 
-{ #category : #'private - updating' }
+{ #category : 'private - updating' }
 GtProfilerProcessTelemetryElement >> updateDescriptionText [
 	| aText |
 	
@@ -123,7 +123,7 @@ GtProfilerProcessTelemetryElement >> updateDescriptionText [
 	description text: aText
 ]
 
-{ #category : #'private - updating' }
+{ #category : 'private - updating' }
 GtProfilerProcessTelemetryElement >> updateToolbarButtons [
 	startButton enabled: self profilerProcessTelemetryViewModel isRunning not.
 	stopButton enabled: self profilerProcessTelemetryViewModel isRunning.

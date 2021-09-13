@@ -1,13 +1,13 @@
 Class {
-	#name : #GtMonitoredMixedAnnouncersElement,
-	#superclass : #BlElement,
+	#name : 'GtMonitoredMixedAnnouncersElement',
+	#superclass : 'BlElement',
 	#instVars : [
 		'announcersList'
 	],
-	#category : #'GToolkit-Monitor-Mixed Announcers'
+	#category : 'GToolkit-Monitor-Mixed Announcers'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 GtMonitoredMixedAnnouncersElement class >> allMixedAnnouncers [
 	| allMixedAnnouncers |
 	
@@ -22,26 +22,26 @@ GtMonitoredMixedAnnouncersElement class >> allMixedAnnouncers [
 	^ allMixedAnnouncers
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtMonitoredMixedAnnouncersElement class >> hasMultipleSubscriptionTypesFor: anAnnouncer [
 	^ (anAnnouncer subscriptions 
 			subscriptions groupedBy: [ :each | each class ]) keys size > 1
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 GtMonitoredMixedAnnouncersElement class >> hasSubscriptionWithNonWeakActionTypesFor: anAnnouncer [
 	^ (anAnnouncer subscriptions subscriptions select: [:each | 
 			(each isKindOf: WeakAnnouncementSubscription) and: [
 				(each action isKindOf: WeakMessageSend) not ] ]) size > 0
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitoredMixedAnnouncersElement class >> open [
 	<script: 'self open'>
 	GtInspector openOn: self new title: 'Monitor'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredMixedAnnouncersElement >> initialize [
 	super initialize.
 	
@@ -88,7 +88,7 @@ GtMonitoredMixedAnnouncersElement >> initialize [
 	self updateList
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtMonitoredMixedAnnouncersElement >> updateList [
 	announcersList items: self class allMixedAnnouncers
 ]

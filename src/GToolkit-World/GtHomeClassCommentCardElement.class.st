@@ -10,12 +10,12 @@ I summarize a class comment for a given {{gtMethod:GtHomeClassCommentCardElement
 
 "
 Class {
-	#name : #GtHomeClassCommentCardElement,
-	#superclass : #GtHomeDocumentCardElement,
-	#category : #'GToolkit-World-Sections'
+	#name : 'GtHomeClassCommentCardElement',
+	#superclass : 'GtHomeDocumentCardElement',
+	#category : 'GToolkit-World-Sections'
 }
 
-{ #category : #'private - accessing' }
+{ #category : 'private - accessing' }
 GtHomeClassCommentCardElement >> description [
 	| aComment aDescription reachedSecondLine |
 	aComment := self documentClass organization classComment.
@@ -31,22 +31,22 @@ GtHomeClassCommentCardElement >> description [
 	^ aDescription
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtHomeClassCommentCardElement >> documentClass [
 	^ self document
 ]
 
-{ #category : #'api - accessing' }
+{ #category : 'api - accessing' }
 GtHomeClassCommentCardElement >> documentClass: aClass [
 	self document: aClass instanceSide.
 ]
 
-{ #category : #'private - hooks' }
+{ #category : 'private - hooks' }
 GtHomeClassCommentCardElement >> onDocumentChanged [
 	self updateElement.
 ]
 
-{ #category : #'private - accessing' }
+{ #category : 'private - accessing' }
 GtHomeClassCommentCardElement >> title [
 	| aComment aTitle |
 	aComment := self documentClass organization classComment.

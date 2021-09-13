@@ -1,16 +1,16 @@
 Class {
-	#name : #GtMonitoredTaskItServicesElement,
-	#superclass : #GtMonitoredServicesElement,
-	#category : #'GToolkit-Monitor'
+	#name : 'GtMonitoredTaskItServicesElement',
+	#superclass : 'GtMonitoredServicesElement',
+	#category : 'GToolkit-Monitor'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 GtMonitoredTaskItServicesElement class >> open [
 	<script: 'self open'>
 	GtInspector openOn: self new
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 
 	servicesList column
@@ -78,12 +78,12 @@ GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
 				fitContent ].
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitoredTaskItServicesElement >> onClickTransformation [
 	^ [ :aMonitoredService | aMonitoredService service ifNil: [ aMonitoredService ] ]
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtMonitoredTaskItServicesElement >> retreiveNewServiceList [
 	| allServices |
 	allServices := TKTConfiguration serviceManager services copy.
@@ -92,7 +92,7 @@ GtMonitoredTaskItServicesElement >> retreiveNewServiceList [
 	^ allServices 
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 GtMonitoredTaskItServicesElement >> updateTaskName [
 	^ '[Monitor] TaskIt Services Update Task'
 ]

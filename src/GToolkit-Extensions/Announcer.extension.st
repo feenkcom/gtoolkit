@@ -13,15 +13,15 @@ Announcer >> gtSubscriptionsPerSubscriberFor: aView [
 				ifTrue: [ each subscriptions ]
 				ifFalse: [ Array empty ] ];
 		actionUpdateButtonTooltip: 'Update subscription list';
-		column: 'Subscriber' item: [ :aSubscription | 
+		column: 'Subscriber' text: [ :aSubscription | 
 			(aSubscription isKindOf: GtSubscriptionSubscriber)
 				ifTrue: [ aSubscription subscriber ]
 				ifFalse: [ '' ] ];
-		column: 'Announcement' item: [ :aSubscription |
+		column: 'Announcement' text: [ :aSubscription |
 			(aSubscription isKindOf: GtSubscriptionSubscriber)
 				ifTrue: [ '' ]
 				ifFalse: [ aSubscription announcementClass ] ];
-		column: 'Kind' item: [ :aSubscription | 
+		column: 'Kind' text: [ :aSubscription | 
 			(aSubscription isKindOf: GtSubscriptionSubscriber)
 				ifTrue: [ '' ]
 				ifFalse: [ aSubscription class ] ];

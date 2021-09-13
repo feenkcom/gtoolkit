@@ -1,15 +1,15 @@
 Class {
-	#name : #GtMonitorArgumentTypeValidator,
-	#superclass : #GtMonitorTypeValidator,
+	#name : 'GtMonitorArgumentTypeValidator',
+	#superclass : 'GtMonitorTypeValidator',
 	#instVars : [
 		'link',
 		'pragmas',
 		'validations'
 	],
-	#category : #'GToolkit-Monitor-Type Validator'
+	#category : 'GToolkit-Monitor-Type Validator'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitorArgumentTypeValidator >> initialize [
 	super initialize.
 	
@@ -17,7 +17,7 @@ GtMonitorArgumentTypeValidator >> initialize [
 	validations := self validations
 ]
 
-{ #category : #installation }
+{ #category : 'installation' }
 GtMonitorArgumentTypeValidator >> install [	
 	self uninstall.
 
@@ -29,17 +29,17 @@ GtMonitorArgumentTypeValidator >> install [
 	self relevantMethods do: [ :eachMethod | eachMethod ast link: link ]
 ]
 
-{ #category : #installation }
+{ #category : 'installation' }
 GtMonitorArgumentTypeValidator >> isInstalled [
 	^ link notNil
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitorArgumentTypeValidator >> link [
 	^ link
 ]
 
-{ #category : #'private - validation' }
+{ #category : 'private - validation' }
 GtMonitorArgumentTypeValidator >> logErrors: theErrors in: aCompiledMethod [
 	NonInteractiveTranscript stderr
 			cr; cr;
@@ -56,24 +56,24 @@ GtMonitorArgumentTypeValidator >> logErrors: theErrors in: aCompiledMethod [
 		NonInteractiveTranscript stderr cr; nextPutAll: '======================================================='; cr; cr; cr.
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitorArgumentTypeValidator >> pragmas [
 	^ self validations keys
 ]
 
-{ #category : #'private - validation' }
+{ #category : 'private - validation' }
 GtMonitorArgumentTypeValidator >> relevantMethods [
 	^ self pragmas flatCollect: [ :eachPragma | eachPragma gtPragmas result collect: #yourself ] as: Set
 ]
 
-{ #category : #installation }
+{ #category : 'installation' }
 GtMonitorArgumentTypeValidator >> uninstall [
 	link
 		ifNotNil: [ :aMetaLink | aMetaLink uninstall ].
 	link := nil
 ]
 
-{ #category : #'private - validation' }
+{ #category : 'private - validation' }
 GtMonitorArgumentTypeValidator >> validateArgument: anArgumentObject isKindOf: aClassName [
 	^ self class environment
 		at: aClassName
@@ -86,7 +86,7 @@ GtMonitorArgumentTypeValidator >> validateArgument: anArgumentObject isKindOf: a
 		ifAbsent: [ GtMonitorTypeValidatorClassTypeDoesNotExistError new argumentClassName: aClassName ]
 ]
 
-{ #category : #'private - validation' }
+{ #category : 'private - validation' }
 GtMonitorArgumentTypeValidator >> validateArgument: anArgumentObject satisfies: aCondition [
 	| satisfies |
 	
@@ -101,7 +101,7 @@ GtMonitorArgumentTypeValidator >> validateArgument: anArgumentObject satisfies: 
 		ifFalse: [ GtMonitorTypeValidatorDoesNotSatisfyConditionError new condition:aCondition ]
 ]
 
-{ #category : #'private - validation' }
+{ #category : 'private - validation' }
 GtMonitorArgumentTypeValidator >> validateArguments: theArguments receiver: aReceiverObject method: aCompiledMethod [
 	| theInterestingPragmas supportedPragmas theArgumentsDictionary validationResults errors |
 	
@@ -149,7 +149,7 @@ GtMonitorArgumentTypeValidator >> validateArguments: theArguments receiver: aRec
 				nextPutAll: aCompiledMethod printString ]) ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtMonitorArgumentTypeValidator >> validations [
 	^ {
 		#argument:isKindOf: -> [ :anArgumentObject :aPragma | self validateArgument: anArgumentObject isKindOf: aPragma arguments second ].

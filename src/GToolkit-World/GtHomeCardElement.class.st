@@ -1,17 +1,17 @@
 Class {
-	#name : #GtHomeCardElement,
-	#superclass : #BlElement,
+	#name : 'GtHomeCardElement',
+	#superclass : 'BlElement',
 	#traits : 'TBrLayoutResizable',
 	#classTraits : 'TBrLayoutResizable classTrait',
-	#category : #'GToolkit-World-Sections'
+	#category : 'GToolkit-World-Sections'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtHomeCardElement >> defaultLayout [
 	^ BlLinearLayout vertical
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 GtHomeCardElement >> initialize [
 	super initialize.
 	

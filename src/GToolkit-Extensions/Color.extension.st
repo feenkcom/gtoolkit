@@ -22,6 +22,6 @@ Color class >> gtRegisteredColorsFor: aView [
 		actionUpdateButton;
 		column: 'Icon' icon: [ :aColorHolder | 
 			BlElement new background: aColorHolder color; size: 16@16 ];
-		column: 'Name' item: #name;
+		column: 'Name' text: #name;
 		send: #color
 ]

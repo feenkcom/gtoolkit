@@ -1,12 +1,12 @@
 Class {
-	#name : #GtProfilerProcessTelemetryTool,
-	#superclass : #GtPhlowTool,
+	#name : 'GtProfilerProcessTelemetryTool',
+	#superclass : 'GtPhlowTool',
 	#traits : 'TGtWithProfilerProcessTelemetryViewModel',
 	#classTraits : 'TGtWithProfilerProcessTelemetryViewModel classTrait',
-	#category : #'GToolkit-Profiler-Process - Tools'
+	#category : 'GToolkit-Profiler-Process - Tools'
 }
 
-{ #category : #'api - converting' }
+{ #category : 'api - converting' }
 GtProfilerProcessTelemetryTool >> asElementDo: aOneArgBlock [
 	"Create a tool element and execute the block."
 	| aProcessTelemetryElement |

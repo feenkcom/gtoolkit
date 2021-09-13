@@ -8,5 +8,5 @@ OCAbstractMethodScope >> gtAllTempsFor: aView [
 		tooltip: 'All Temporary Variables';
 		priority: 1;
 		items: [ self allTemps ];
-		column: 'Variable' item: #yourself
+		column: 'Variable' text: #yourself
 ]
