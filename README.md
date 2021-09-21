@@ -34,7 +34,7 @@ Glamorous Toolkit is based on graphical stack made of:
 - [Brick](https://github.com/feenkcom/Brick): the widget set.
 - [Bloc](https://github.com/feenkcom/Bloc): the graphical framework.
 - [Sparta](https://github.com/feenkcom/Sparta): the graphical canvas, including bindings for the [Skia](https://skia.org) graphics library.
-- [Glutin](https://github.com/feenkcom/gtoolkit-glutin): the connection to the [Glutin](https://github.com/rust-windowing/glutin) library for managing windows and OpenGL contexts.
+- [Glutin](https://github.com/feenkcom/gtoolkit-glutin): the connection to the [Glutin](https://github.com/rust-windowing/glutin) Rust library for managing windows and OpenGL contexts.
 
 ## How to install 
 
