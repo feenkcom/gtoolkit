@@ -2,23 +2,40 @@ Class {
 	#name : 'GtMonitoredProcessElement',
 	#superclass : 'GtMonitoredServiceElement',
 	#instVars : [
-		'stackList'
+		'stackList',
+		'debugSession'
 	],
 	#category : 'GToolkit-Monitor'
 }
 
 { #category : 'initialization' }
 GtMonitoredProcessElement >> initialize [
+
 	super initialize.
-	self
-		constraintsDo: [ :c | 
-			c horizontal matchParent.
-			c vertical matchParent ].
+	self constraintsDo: [ :c | 
+		c horizontal matchParent.
+		c vertical matchParent ].
 	stackList := BrSimpleList new.
-	stackList
-		stencil: [ :eachContext | (GtPharoMethodCoder forMethod: eachContext method) asCoderUIModel expanded: false; asElement  ].
-	self addChild: stackList.
-	self updateList.
+	stackList stencil: [ :eachContext | 
+		debugSession ifNil: [ Halt once ].
+		(GtPharoMethodContextCoder forContext: eachContext session: debugSession)
+			asCoderUIModel
+			expanded: false;
+			asElement ].
+	self addChild: stackList
+]
+
+{ #category : 'accessing' }
+GtMonitoredProcessElement >> service: aGtMonitoredProcess [
+
+	| process |
+	super service: aGtMonitoredProcess.
+	process := aGtMonitoredProcess service.
+	debugSession := DebugSession
+		                named: 'Debug ' , process name
+		                on: process
+		                startedAt: process suspendedContext.
+	self updateList
 ]
 
 { #category : 'accessing' }

@@ -32,11 +32,14 @@ GtMonitoredProcess >> gtAnnotationsFor: aView [
 
 { #category : 'gt-extension' }
 GtMonitoredProcess >> gtStackFor: aView [
+
 	<gtView>
 	^ aView explicit
-		title: 'Stack';
-		priority: 1;
-		stencil: [ GtPharoMethodsCoder forItems: self stackMethods ]
+		  title: 'Stack';
+		  priority: 1;
+		  stencil: [ 
+			  (GtMethodContextsCoder forProcess: self service) forItems:
+					  self stack ]
 ]
 
 { #category : 'accessing' }
@@ -80,11 +83,6 @@ GtMonitoredProcess >> processIdAndContext [
 GtMonitoredProcess >> stack [
 	<return: #Array or: #Context>
 	^ self stackOfSize: 20
-]
-
-{ #category : 'accessing' }
-GtMonitoredProcess >> stackMethods [
-	^ self stack collect: #method
 ]
 
 { #category : 'accessing' }
