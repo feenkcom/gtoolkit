@@ -1,5 +1,5 @@
 # Glamorous Toolkit (GT)
-[Glamorous Toolkit](https://gtoolkit.com) is the moldable development environment. It is a live notebook. It is a flexible search interface. It is a fancy code editor. It is a software analysis platform. It is a data visualization engine. All in one. And it is free and open-source under an MIT license.
+[Glamorous Toolkit](https://gtoolkit.com) is a live notebook. A fancy code editor. A software analysis platform. A data visualization engine. A knowledge management system. All in one.
 
 ![Glamorous Toolkit overview](https://raw.githubusercontent.com/feenkcom/gtoolkit/main/doc/gtr-overview.png)
 
@@ -34,7 +34,7 @@ Glamorous Toolkit is based on graphical stack made of:
 - [Brick](https://github.com/feenkcom/Brick): the widget set.
 - [Bloc](https://github.com/feenkcom/Bloc): the graphical framework.
 - [Sparta](https://github.com/feenkcom/Sparta): the graphical canvas, including bindings for the [Skia](https://skia.org) graphics library.
-- [Glutin](https://github.com/feenkcom/gtoolkit-glutin): the connection to the [Glutin](https://github.com/rust-windowing/glutin) library for managing windows and OpenGL contexts.
+- [Glutin](https://github.com/feenkcom/gtoolkit-glutin): the connection to the [Glutin](https://github.com/rust-windowing/glutin) Rust library for managing windows and OpenGL contexts.
 
 ## How to install 
 
@@ -43,7 +43,9 @@ Please download it via the instructions available at: https://gtoolkit.com/downl
 ## Contact us
 
 Follow us on Twitter: https://twitter.com/feenkcom
+
 Chat with us: https://discord.gg/FTJr9gP
+
 Watch our videos: https://www.youtube.com/channel/UClLZHVq_-2D2-iI4rA2O8Ug
 
 ## License
