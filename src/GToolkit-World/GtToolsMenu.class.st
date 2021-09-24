@@ -46,11 +46,6 @@ GtToolsMenu class >> open [
 		ifFalse: [ world show ]
 ]
 
-{ #category : 'api - tools' }
-GtToolsMenu class >> openPlaygroundFrom: anElement [
-	  GtPlayground openFrom: anElement
-]
-
 { #category : 'initialization' }
 GtToolsMenu >> iconSize [
 	^ 75 asPoint

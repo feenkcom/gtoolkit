@@ -212,23 +212,6 @@ GtHomeSection >> newInspectorCardForObject: anObject [
 ]
 
 { #category : 'instance creation' }
-GtHomeSection >> newPlaygroundCardForPlaybook: aPlaybook title: aTitle description: aDescription [
-	^ self
-		newHeaderCardWithTitle: 'Playground: ' , aTitle
-		description: aDescription
-		size: 200 @ 200
-		content:
-			(aPlaybook asElement
-				size: 400 @ 400;
-				asScalableElement)
-		action: [ :card | 
-			self
-				showSpaceWithTitle: aTitle
-				with: (GtPlayground createOn: aPlaybook)
-				from: card ]
-]
-
-{ #category : 'instance creation' }
 GtHomeSection >> newSectionButton [
 
 	^ BrButton new
