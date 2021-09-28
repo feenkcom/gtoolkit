@@ -32,15 +32,11 @@ GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
 		allCandidates: [ 
 			{
 				GtPlaygroundStencil new 
-					knowledgeBase: self knowledgeBase
-			}, (GtImage isLepiterEnabled 
-					ifTrue: [ {
-						LeNotePlaygroundStencil new
-							knowledgeBase: self knowledgeBase.
-						(LeLepiterToolStencil new
-							knowledgeBase: self knowledgeBase) } ]
-					ifFalse: [ {} ]),
-			{
+					knowledgeBase: self knowledgeBase.
+				LeNotePlaygroundStencil new
+					knowledgeBase: self knowledgeBase.
+				LeLepiterToolStencil new
+					knowledgeBase: self knowledgeBase.
 				GtCoderStencil new . 
 				GtMonitorStencil new . 
 				GtRlGToolkitExamplesExplorer buildForGToolkitProject . 

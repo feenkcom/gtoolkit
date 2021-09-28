@@ -142,8 +142,7 @@ GtWorldElement >> newActionItemsInto: anActionbar [
 	super newActionItemsInto: anActionbar.
 	anActionbar addItem: self newNotificationsBadge.
 	anActionbar addItem: self newSpotterButton.
-	GtImage isLepiterEnabled ifTrue: [
-		anActionbar addItem: self newStatusButton].
+	anActionbar addItem: self newStatusButton.
 	GtImage isSyncEnabled ifTrue: [
 		anActionbar addItem: self newSynchronizeButton].
 	anActionbar addItem: self newSubSpaceButton.
