@@ -70,12 +70,11 @@ GtToolsMenu >> initializeElements [
 	self addChild: ((GtHomeToolsSection new knowledgeBaseComputation: [ self knowledgeBase ])
 		newPlaygroundButtonStencil smallIcon smallMargin create size: self iconSize).
 	
-	GtImage isLepiterEnabled ifTrue: [ 
-		self addChild: ((GtHomeToolsSection new knowledgeBaseComputation: [ self knowledgeBase ])
-			newNotesButtonStencil smallIcon smallMargin create size: self iconSize).
-		self addChild: ((GtHomeToolsSection new knowledgeBaseComputation: [ self knowledgeBase ]) 
-			newLepiterButtonStencil smallIcon smallMargin create size: self iconSize) ].
 	
+	self addChild: ((GtHomeToolsSection new knowledgeBaseComputation: [ self knowledgeBase ])
+		newNotesButtonStencil smallIcon smallMargin create size: self iconSize).
+	self addChild: ((GtHomeToolsSection new knowledgeBaseComputation: [ self knowledgeBase ]) 
+		newLepiterButtonStencil smallIcon smallMargin create size: self iconSize).
 	self addChild: (GtHomeToolsSection new newCoderButtonStencil smallIcon smallMargin create size: self iconSize).
 	self addChild: (GtHomeToolsSection new newGitButtonStencil smallIcon smallMargin create size: self iconSize).
 	self addChild: (GtHomeToolsSection new newCodeChangesButtonStencil smallIcon smallMargin create size: self iconSize).
