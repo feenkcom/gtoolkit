@@ -160,6 +160,24 @@ pipeline {
                     }
                     steps {
                         script {
+                            GT4GEMSTONE_COMMIT_HASH = sh (
+                                script: "cd ${RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/gt4gemstone && git rev-parse HEAD",
+                                returnStdout: true
+                            ).trim()
+                        }
+                        script {
+                            GTOOLKIT_REMOTE_COMMIT_HASH = sh (
+                                script: "cd ${RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/gtoolkit-remote && git rev-parse HEAD",
+                                returnStdout: true
+                            ).trim()
+                        }
+                        script {
+                            SPARKLE_COMMIT_HASH = sh (
+                                script: "cd ${RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/Sparkle && git rev-parse HEAD",
+                                returnStdout: true
+                            ).trim()
+                        }
+                        script {
                             GTOOLKIT_EXPECTED_VERSION = sh (
                                 script: "./gt-installer --workspace ${RELEASER_FOLDER} print-gtoolkit-image-version",
                                 returnStdout: true
@@ -258,10 +276,27 @@ pipeline {
                                 
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
-                                    git clone --depth=1 https://github.com/feenkcom/gt4gemstone.git
-                                    git clone --depth=1 https://github.com/feenkcom/gtoolkit-remote.git
-                                    git clone --depth=1 https://github.com/feenkcom/Sparkle.git
+                                    git clone https://github.com/feenkcom/gt4gemstone.git 
+                                    cd gt4gemstone 
+                                    git checkout ${GT4GEMSTONE_COMMIT_HASH}
+                                   """
+                                
+                                sh """
+                                    cd ${EXAMPLES_FOLDER}
+                                    git clone https://github.com/feenkcom/gtoolkit-remote.git
+                                    cd gtoolkit-remote 
+                                    git checkout ${GTOOLKIT_REMOTE_COMMIT_HASH}
+                                   """
 
+                                sh """
+                                    cd ${EXAMPLES_FOLDER}
+                                    git clone https://github.com/feenkcom/Sparkle.git
+                                    cd Sparkle
+                                    git checkout ${SPARKLE_COMMIT_HASH}
+                                   """
+
+                                sh """
+                                    cd ${EXAMPLES_FOLDER}
                                     chmod +x gt4gemstone/scripts/*.sh
                                     chmod +x gt4gemstone/scripts/release/*.sh
                                     chmod +x gtoolkit-remote/scripts/*.sh
