@@ -1,1 +1,1 @@
-Package { #name : #'GToolkit-Pharo9-Debugger' }
+Package { #name : 'GToolkit-Pharo9-Debugger' }
