@@ -172,12 +172,6 @@ pipeline {
                             ).trim()
                         }
                         script {
-                            SPARKLE_COMMIT_HASH = sh (
-                                script: "cd ${RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/Sparkle && git rev-parse HEAD",
-                                returnStdout: true
-                            ).trim()
-                        }
-                        script {
                             GTOOLKIT_EXPECTED_VERSION = sh (
                                 script: "./gt-installer --workspace ${RELEASER_FOLDER} print-gtoolkit-image-version",
                                 returnStdout: true
@@ -291,8 +285,6 @@ pipeline {
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
                                     git clone https://github.com/feenkcom/Sparkle.git
-                                    cd Sparkle
-                                    git checkout ${SPARKLE_COMMIT_HASH}
                                    """
 
                                 sh """
