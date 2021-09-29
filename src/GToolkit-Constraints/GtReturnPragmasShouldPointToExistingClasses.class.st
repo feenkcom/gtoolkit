@@ -1,15 +1,15 @@
 Class {
-	#name : #GtReturnPragmasShouldPointToExistingClasses,
-	#superclass : #GtPharoConstraint,
-	#category : #'GToolkit-Constraints'
+	#name : 'GtReturnPragmasShouldPointToExistingClasses',
+	#superclass : 'GtPharoConstraint',
+	#category : 'GToolkit-Constraints'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtReturnPragmasShouldPointToExistingClasses >> description [
 	^ 'The type defined in ==<return: #AType>== must exist in the image.'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtReturnPragmasShouldPointToExistingClasses >> issues [
 	^ ((#return: gtPragmas | #return:or: gtPragmas | #return:of: gtPragmas) & 
 		(RBParser parseRewriteMethod: '
@@ -22,7 +22,7 @@ GtReturnPragmasShouldPointToExistingClasses >> issues [
 		                (Smalltalk includesKey: name asSymbol) not]}>') pragmas first gtASTMatches) result
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtReturnPragmasShouldPointToExistingClasses >> name [
 	^ 'Methods with return pragmas pointing to missing classes'
 ]

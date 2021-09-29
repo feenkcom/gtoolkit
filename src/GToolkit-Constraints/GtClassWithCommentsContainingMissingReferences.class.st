@@ -1,41 +1,30 @@
 Class {
-	#name : #GtClassWithCommentsContainingMissingReferences,
-	#superclass : #GtPharoConstraint,
-	#traits : 'TGtDocumentInvalidCommentsConstraint',
-	#classTraits : 'TGtDocumentInvalidCommentsConstraint classTrait',
+	#name : 'GtClassWithCommentsContainingMissingReferences',
+	#superclass : 'GtPharoConstraint',
+	#traits : 'TLeInvalidCommentsConstraint',
+	#classTraits : 'TLeInvalidCommentsConstraint classTrait',
 	#category : 'GToolkit-Constraints'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtClassWithCommentsContainingMissingReferences >> description [
 	^ 'All references from class comments should be present in the image.'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtClassWithCommentsContainingMissingReferences >> name [
 	^ 'Classes with comments containing missing references'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
 	| gtProject allPackages |
 	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit:main/src'.
 	allPackages := gtProject allPPackages.
-	
-	NonInteractiveTranscript stdout 
-		nextPutAll: gtProject asString; cr.
-	NonInteractiveTranscript stdout 
-		nextPutAll: allPackages asString; cr.
-	
-	^ (allPackages
-			reject:  [ :aPackage | aPackage isNil ])
-			reject: [ :aPackage | 
-				"To avoid changing class comments in ThreadedFFI and Python3Generator"
-				aPackage name = 'ThreadedFFI' or: [
-					aPackage name = 'Python3Generator' ] ]
+	^ allPackages reject: [ :aPackage | aPackage isNil ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 GtClassWithCommentsContainingMissingReferences >> status [ 
 	^ GtNeutralConstraintStatus new
 ]
