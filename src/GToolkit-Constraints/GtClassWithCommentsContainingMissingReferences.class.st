@@ -12,6 +12,16 @@ GtClassWithCommentsContainingMissingReferences >> description [
 ]
 
 { #category : 'accessing' }
+GtClassWithCommentsContainingMissingReferences >> gtViewReferencesFor: aView [ 
+	<gtView>
+	^ aView forward 
+		title: 'Missing references by page';
+		priority: 20;
+		object: [ self issues ];
+		view: #gtViewReferencesFor:
+]
+
+{ #category : 'accessing' }
 GtClassWithCommentsContainingMissingReferences >> name [
 	^ 'Classes with comments containing missing references'
 ]
