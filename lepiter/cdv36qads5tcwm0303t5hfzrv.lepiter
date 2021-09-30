@@ -282,7 +282,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-19T17:32:25.800981+02:00"
+						"dateAndTimeString" : "2021-09-30T10:11:34.758435+02:00"
 					}
 				},
 				"uid" : {
@@ -292,7 +292,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First we setup a new session."
+				"string" : "First we setup a new session. The session should already be configured."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -319,14 +319,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-19T17:32:53.89703+02:00"
+						"dateAndTimeString" : "2021-09-30T10:12:34.765043+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "6isi+kyGDQCzdf+BBP8y0Q=="
 				},
-				"code" : "lepiterSettings := thisSnippet database properties gemStoneSettings.\rself assert: lepiterSettings connectionType = #GCI.\rconnector := GtGemStoneGciConnector fromLepiterSettings: lepiterSettings.\rsession := connector loggedInSession."
+				"code" : "defaultSession := GtGemStoneSessionRegistry default defaultSession."
 			},
 			{
 				"__type" : "textSnippet",
@@ -390,14 +390,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-19T17:46:25.591409+02:00"
+						"dateAndTimeString" : "2021-09-30T10:15:53.323781+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "f1MzBk2GDQCzfrsxBP8y0Q=="
 				},
-				"code" : "classSearchResult := session executeStringAndFetchResultString: 'Globals \r\tclassesDo: [:aUserProfile :aSymbolDictionary :aClass | \r\t\taClass name = #GtGsRelease ifTrue: [ ^ ''true''] ].\r''false'''"
+				"code" : "classSearchResult := defaultSession executeStringAndFetchResultString: 'Globals \r\tclassesDo: [:aUserProfile :aSymbolDictionary :aClass | \r\t\taClass name = #GtGsRelease ifTrue: [ ^ ''true''] ].\r''false'''"
 			},
 			{
 				"__type" : "textSnippet",
@@ -495,14 +495,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-19T17:56:18.500195+02:00"
+						"dateAndTimeString" : "2021-09-30T10:19:40.829038+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "df1lRE2GDQCzjHvxBP8y0Q=="
 				},
-				"code" : "remoteVersionString := (session \r\texecuteStringAndFetchResultByteArray: 'GtGsRelease versionString asByteArray'  \r\tmaxResultSize: 32) asString"
+				"code" : "remoteVersionString := (defaultSession \r\texecuteStringAndFetchResultByteArray: 'GtGsRelease versionString asByteArray'  \r\tmaxResultSize: 32) asString"
 			},
 			{
 				"__type" : "textSnippet",
@@ -637,14 +637,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-19T17:50:16.743864+02:00"
+						"dateAndTimeString" : "2021-09-30T10:17:20.008224+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "8c6RPU2GDQCzhmDABP8y0Q=="
 				},
-				"code" : "session logout"
+				"code" : "defaultSession close"
 			}
 		]
 	},
