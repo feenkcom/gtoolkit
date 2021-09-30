@@ -428,7 +428,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-08-16T17:27:56.415902+02:00"
+									"dateAndTimeString" : "2021-09-30T10:00:02.545875+02:00"
 								}
 							},
 							"editEmail" : {
@@ -439,14 +439,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-08-16T17:29:10.448582+02:00"
+									"dateAndTimeString" : "2021-09-30T10:06:16.019503+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "tw8blRCGDQCuF/8UD44NLg=="
+								"uidString" : "KzkokpOJDQC1dKr1A+1lrQ=="
 							},
-							"code" : "thisSnippet database properties gemStoneSettings\r\tconnectionType: #GCI;\n\thost: 'localhost';\n\tlibraryPath: '/path/to/GemStone/ClientLibs';\r\tgemstoneVersion: '3.7.0';\r\tstone: 'gs64stone';\r\tnetldi: '50377';\r\tusername: 'SystemUser';\r\tpassword: '<password>';\r\thostUsername: 'HostUser';\r\thostPassword: '<password>'."
+							"code" : "session := GtGemStoneSessionRegistry default defaultSession.\rsession connector\r\thost: 'localhost';\n\tlibraryPath: '/path/to/GemStone/ClientLibs' asFileReference;\r\tgemstoneVersion: '3.7.0';\r\tstone: 'gs64stone';\r\tnetldi: '50377';\r\tusername: 'SystemUser';\r\tpassword: '<password>';\r\thostUsername: 'HostUser';\r\thostPassword: '<password>'.\rsession connector notifyUpdated"
 						}
 					]
 				},
