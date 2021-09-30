@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:29:32.921839+02:00"
+						"dateAndTimeString" : "2021-09-29T16:24:29.643878+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:29:43.378906+02:00"
+						"dateAndTimeString" : "2021-09-29T17:34:37.9197+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "BRXYmhCGDQCuIEKTD44NLg=="
+					"uidString" : "RCO6nYSJDQCKPvEdCzzdqw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In case something goes wrong the connection can be reset."
+				"string" : "{{gtClass:GtGemStoneSessionRegistry}} was partially generated from:"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "robocoderMetamodelSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:29:41.881736+02:00"
+						"dateAndTimeString" : "2021-09-29T16:09:36.42276+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-30T10:34:26.178996+02:00"
+						"dateAndTimeString" : "2021-09-30T11:01:32.070597+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uFdkmxCGDQCuI4AvD44NLg=="
+					"uidString" : "k1v7nYSJDQCKQ5vbCzzdqw=="
 				},
-				"code" : "GtGemStoneSessionRegistry default defaultSession close."
+				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'Registry'\r@project GemStone\r\r@derive api\r\rsessionRegistry"
 			},
 			{
 				"__type" : "textSnippet",
@@ -89,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:00.504318+02:00"
+						"dateAndTimeString" : "2021-09-29T17:34:17.714891+02:00"
 					}
 				},
 				"editEmail" : {
@@ -100,20 +100,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:05.013024+02:00"
+						"dateAndTimeString" : "2021-09-29T17:34:35.024545+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "9FF5nBCGDQCuJs7rD44NLg=="
+					"uidString" : "3+vFzIWJDQCdrEEWCQbvfw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The snippet below is a GemStone snippet that executes a the code remotely."
+				"string" : "{{gtClass:GtGemStoneConnector}} was partially generated from:"
 			},
 			{
-				"__type" : "gemstoneSnippet",
+				"__type" : "robocoderMetamodelSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -126,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:07.879263+02:00"
+						"dateAndTimeString" : "2021-09-29T17:33:22.266095+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:11.859657+02:00"
+						"dateAndTimeString" : "2021-09-30T11:01:30.316237+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "lgjxnBCGDQCuKaboD44NLg=="
+					"uidString" : "8diLyYWJDQCdqiXTCQbvfw=="
 				},
-				"code" : "System stoneName"
+				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'Client'\r@project GemStone\r\r@derive api\r\rconnector"
 			},
 			{
 				"__type" : "textSnippet",
@@ -160,7 +160,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:25.251845+02:00"
+						"dateAndTimeString" : "2021-09-29T18:58:50.467132+02:00"
 					}
 				},
 				"editEmail" : {
@@ -171,20 +171,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:25.251845+02:00"
+						"dateAndTimeString" : "2021-09-29T18:58:57.006527+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "85lMnRCGDQCuLGGtD44NLg=="
+					"uidString" : "ofQt+4aJDQCK+7vqArtoFw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A usefull command during development is to abord the current transaction."
+				"string" : "{{gtClass:GtGemStoneSession}} was partially generated from:"
 			},
 			{
-				"__type" : "gemstoneSnippet",
+				"__type" : "robocoderMetamodelSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -197,7 +197,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:39.374502+02:00"
+						"dateAndTimeString" : "2021-09-29T18:59:01.761635+02:00"
 					}
 				},
 				"editEmail" : {
@@ -208,14 +208,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:46.050668+02:00"
+						"dateAndTimeString" : "2021-09-29T19:00:02.436963+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "y5zRnhCGDQCuLyfFD44NLg=="
+					"uidString" : "hx7i+4aJDQCK/YObArtoFw=="
 				},
-				"code" : "System abortTransaction."
+				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'Client'\r@project GemStone\r\r@derive api\r\rsession"
 			},
 			{
 				"__type" : "textSnippet",
@@ -231,7 +231,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:41.343046+02:00"
+						"dateAndTimeString" : "2021-09-29T16:37:33.733586+02:00"
 					}
 				},
 				"editEmail" : {
@@ -242,20 +242,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:41.343046+02:00"
+						"dateAndTimeString" : "2021-09-29T17:34:42.779507+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "M3HonhCGDQCuMvoxD44NLg=="
+					"uidString" : "AruzAYWJDQCKpNB5Czzdqw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Alternatively, keeping an inspector on the GtGemstonClient provides commit (tick) and abort (cross) buttons:"
+				"string" : "The view models are generated from:"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "robocoderMetamodelSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -268,7 +268,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:30:51.698915+02:00"
+						"dateAndTimeString" : "2021-09-29T16:28:30.786521+02:00"
 					}
 				},
 				"editEmail" : {
@@ -279,14 +279,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-30T10:34:09.676142+02:00"
+						"dateAndTimeString" : "2021-09-29T19:33:54.465898+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AauNnxCGDQCuNat0D44NLg=="
+					"uidString" : "/V+Y4YSJDQCKnL71Czzdqw=="
 				},
-				"code" : "GtGemStoneSessionRegistry default defaultSession."
+				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'UI'\r@project GemStone\r@suffix ViewModel\r\r@derive children\r@derive parent\r@derive name\r@derive print\r@derive announcer\r@derive notifier\r@derive typeTest\r@derive phlowList\r@derive api\r@derive selection\r@derive activation\r\rsessionManager => session(s).\r\rsessionManager {\r\t@derive model(api: TGtWithGemStoneSessionRegistry),\r\tsession(s): #activeSessions\r}.\r\rsession(s) {\r\t@derive model(name: activeSessions),\r}.\r\rsession {\r\t@derive model(api: TGtWithGemStoneSession)\r}"
 			}
 		]
 	},
@@ -298,7 +298,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-08-16T17:25:40.577041+02:00"
+			"dateAndTimeString" : "2021-09-29T16:09:32.10378+02:00"
 		}
 	},
 	"editEmail" : {
@@ -309,15 +309,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-08-16T17:31:32.959383+02:00"
+			"dateAndTimeString" : "2021-09-29T16:25:46.298706+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Managing the Gt4Gemstone server connection"
+		"title" : "GemStone session registry and manager UI"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "ca52028d-1086-0d00-adf1-f2fe0f8e0d2e"
+		"uuid" : "db73b99d-8489-0d00-8a3d-f0f70b3cddab"
 	}
 }
