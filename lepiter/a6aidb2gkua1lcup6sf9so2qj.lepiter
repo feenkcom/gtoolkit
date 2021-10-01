@@ -89,6 +89,77 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-01T11:39:55.247098+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-01T11:40:31.112103+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jfQfFamJDQC56jQeAlCbRQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Once loaded it is required to reload the Lepiter database to re-load the Robocoder snippets:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-01T11:40:34.576358+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-01T11:40:51.343652+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ChSJF6mJDQC568M2AlCbRQ=="
+				},
+				"code" : "LeDatabasesRegistry defaultLogicalDatabase reload"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2021-09-29T16:24:29.643878+02:00"
 					}
 				},
@@ -279,14 +350,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-30T12:00:38.452954+02:00"
+						"dateAndTimeString" : "2021-10-01T11:06:02.05293+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/V+Y4YSJDQCKnL71Czzdqw=="
 				},
-				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'UI'\r@project GemStone\r@suffix ViewModel\r\r@derive children\r@derive parent\r@derive announcer\r@derive notifier\r@derive api\r@derive selection\r@derive activation\r@derive phlowList\r@derive print\r\rsessionManager => session(s).\r\rsessionManager {\r\t@derive model(api: TGtWithGemStoneSessionRegistry),\r\tsession(s): #activeSessions\r}.\r\rsession(s) {\r\t@derive model(name: activeSessions),\r}.\r\rsession {\r\t@derive model(api: TGtWithGemStoneSession)\r}"
+				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'UI'\r@project GemStone\r@suffix ViewModel\r\r@derive children\r@derive parent\r@derive announcer\r@derive notifier\r@derive api\r@derive phlowList\r@derive print\r\rsessionManager => session(s).\r\rsessionManager {\r\t@derive model(api: TGtWithGemStoneSessionRegistry),\r\tsession(s): #activeSessions\r}.\r\rsession(s) {\r\t@derive model(name: activeSessions),\r\t@derive selection,\r\t@derive activation\r}.\r\rsession {\r\t@derive model(api: TGtWithGemStoneSession),\r\t@derive selection,\r\t@derive activation\r}"
 			}
 		]
 	},
