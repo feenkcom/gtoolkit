@@ -1,1 +1,1 @@
-Package { #name : 'BaselineOfGToolkitMorphic' }
+Package { #name : #BaselineOfGToolkitMorphic }
