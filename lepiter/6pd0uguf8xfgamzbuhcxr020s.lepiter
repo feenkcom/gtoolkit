@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:16:45.752156+02:00"
+						"dateAndTimeString" : "2021-10-05T18:12:18.293821+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:24:07.57127+02:00"
+						"dateAndTimeString" : "2021-10-05T19:31:29.686235+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6CuKPliJDQCm6cN+CdHXew=="
+					"uidString" : "3N00/v6JDQC7jg8UCDg/cQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Responsive and non-blocking user interface is a key to a good user experience. It is therefore a responsibility of a UI developer to ensure that most if not all actions do not block the UI thread. That can be acomplished by asynchronously performing time consuming operations in a different worker thread and then refreshing or updating the UI once the data is available. While waiting for the background task to finish, the UI should inform a user that there is a *pending* operation and the UI is not yet in its final state."
+				"string" : "A Promise represents is value that may not yet be computed. Any object that implements {{gtClass:TAsyncPromise}} can be used as a Promise."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:24:08.721627+02:00"
+						"dateAndTimeString" : "2021-10-05T19:11:25.790636+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:25:18.275039+02:00"
+						"dateAndTimeString" : "2021-10-05T19:11:32.787017+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "LKfvO1mJDQCvMnD1A8wzBQ=="
+					"uidString" : "cKYv2/+JDQC89i3wCDg/cQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Futures"
+				"string" : "###Promise combinators"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:31:28.016378+02:00"
+						"dateAndTimeString" : "2021-10-05T19:11:34.22222+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-05T19:32:35.534747+02:00"
+						"dateAndTimeString" : "2021-10-05T19:12:52.296823+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "VDExQFmJDQCvO1ohA8wzBQ=="
+					"uidString" : "aXm52/+JDQC8+JSmCDg/cQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A future represents an asynchronous computation. Any object that implements {{gtClass:TAsyncFuture}} trait can be used as a future. For example, a {{gtClass:BlockClosure}} can be transformed into a future by sending {{gtMethod:BlockClosure>>#asAsyncFuture}} and later be composed as part of a more complex future using future combinators api. One such future combinator is {{gtClass:AsyncMapFuture}}:"
+				"string" : "Promises can be chained and the type of the new chained promise depends on the state of chainable promise. In total there are the following kinds of Promises:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:25:24.359884+02:00"
+						"dateAndTimeString" : "2021-10-05T18:32:48.134804+02:00"
 					}
 				},
 				"editEmail" : {
@@ -140,17 +140,131 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:25:24.359884+02:00"
+						"dateAndTimeString" : "2021-10-05T18:32:48.134804+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "72p+QFmJDQCvPzAgA8wzBQ=="
+					"uidString" : "troiUf+JDQC7zFQaCDg/cQ=="
 				},
-				"exampleSelector" : "mapFuture",
-				"previewHeight" : 120,
-				"previewShowSelector" : "gtCompositionFor:",
-				"exampleBehaviorName" : "AsyncFutureExamples",
+				"exampleSelector" : "allTypesOfPromises",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtItemsFor:",
+				"exampleBehaviorName" : "AsyncPromiseExamples",
+				"codeExpanded" : false,
+				"previewExpanded" : true,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:22:25.348239+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:22:29.814927+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gLh7AgCKDQCPzmM4DcMwsA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "###Fulfilled promise"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:22:43.258977+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:24:52.19467+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fK3tAgCKDQCP0CnnDcMwsA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "A Promise created from an existing value or a promise whose computation is succesfully finished is called `fulfilled`:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:24:57.238996+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:24:57.238996+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+xGlCwCKDQCP0inxDcMwsA=="
+				},
+				"exampleSelector" : "fulfilledPromise",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtPromiseFor:",
+				"exampleBehaviorName" : "AsyncPromiseExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
 				"noCode" : false
@@ -169,7 +283,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-05T19:33:19.037162+02:00"
+						"dateAndTimeString" : "2021-10-05T19:26:04.800597+02:00"
 					}
 				},
 				"editEmail" : {
@@ -180,17 +294,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-05T19:33:57.545686+02:00"
+						"dateAndTimeString" : "2021-10-05T19:26:10.829283+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "gmrtJwCKDQCP47JTDcMwsA=="
+					"uidString" : "DDSQDwCKDQCP1GzKDcMwsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "More information about asynchronous programming can be found in [[Futures, Promises & Streams]]."
+				"string" : "###Rejected promise"
 			},
 			{
 				"__type" : "textSnippet",
@@ -206,7 +320,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:34:51.313428+02:00"
+						"dateAndTimeString" : "2021-10-05T19:26:15.502302+02:00"
 					}
 				},
 				"editEmail" : {
@@ -217,91 +331,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:35:18.607694+02:00"
+						"dateAndTimeString" : "2021-10-05T19:26:40.808276+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "klj2YVmJDQCwI+KzCp+oWQ=="
+					"uidString" : "KuwSEACKDQCP1U9jDcMwsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Brick widgets from the Future"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:36:40.567184+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:39:59.880525+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "CVv2ZFmJDQCwMfVTCp+oWQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "While {{gtClass:TAsyncFuture}} represents a foundation brick of an asynchronous programming, `Brick` widgets are foundation of the user interface. To glue them together developers can use {{gtClass:BrFromFuture}} widget (read as `brick from the future`) to display values coming from asynchronous computations."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:48:04.114133+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:48:55.548414+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "X8Eywl2JDQCF5lCWCEitkQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The following examples shows how to wrap a {{gtClass:BrLabel}} into an element that gets data from a future and assigns the text of a label depending on the state:"
+				"string" : "A Promise created from an {{gtClass:Exception}} or a promise whose computation failed is called `rejected`:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -317,7 +357,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:46:51.481517+02:00"
+						"dateAndTimeString" : "2021-10-05T19:26:49.794968+02:00"
 					}
 				},
 				"editEmail" : {
@@ -328,17 +368,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:46:51.481517+02:00"
+						"dateAndTimeString" : "2021-10-05T19:26:49.794968+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "1okYvl2JDQCF5Ia+CEitkQ=="
+					"uidString" : "xIlaEgCKDQCP11luDcMwsA=="
 				},
-				"exampleSelector" : "fromFutureLabel",
-				"previewHeight" : 70,
-				"previewShowSelector" : "gtLiveFor:",
-				"exampleBehaviorName" : "BrFromFutureExamples",
+				"exampleSelector" : "rejectedPromise",
+				"previewHeight" : 250,
+				"previewShowSelector" : "gtPromiseFor:",
+				"exampleBehaviorName" : "AsyncPromiseExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
 				"noCode" : false
@@ -357,7 +397,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:49:25.855875+02:00"
+						"dateAndTimeString" : "2021-10-05T19:28:18.564852+02:00"
 					}
 				},
 				"editEmail" : {
@@ -368,17 +408,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:50:11.247896+02:00"
+						"dateAndTimeString" : "2021-10-05T19:28:23.150379+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "aDIHx12JDQCF7OIdCEitkQ=="
+					"uidString" : "XeNgFwCKDQCP2Y4wDcMwsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:BrFromFuture}} allows developers to gracefully handle *pending* state and even *errors*:"
+				"string" : "###Pending promise"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:28:24.516384+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:29:25.043475+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XA7vFwCKDQCP25KmDcMwsA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "A Promise with a not yet computed value is called `pending`. Once computation is finished a `pending` promise becomes `fulfilled` or `rejected`:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -394,7 +471,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:49:07.344863+02:00"
+						"dateAndTimeString" : "2021-10-05T19:29:32.150139+02:00"
 					}
 				},
 				"editEmail" : {
@@ -405,17 +482,57 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:49:07.344863+02:00"
+						"dateAndTimeString" : "2021-10-05T19:29:32.150139+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "A6Yxxl2JDQCF6rZpCEitkQ=="
+					"uidString" : "ouEHHACKDQCP3VhZDcMwsA=="
 				},
-				"exampleSelector" : "fromFutureLabelWithError",
-				"previewHeight" : 70,
-				"previewShowSelector" : "gtLiveFor:",
-				"exampleBehaviorName" : "BrFromFutureExamples",
+				"exampleSelector" : "promiseResolvingToString",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtPromiseFor:",
+				"exampleBehaviorName" : "AsyncPromiseExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:30:05.790686+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:30:05.790686+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NTIJHgCKDQCP3/leDcMwsA=="
+				},
+				"exampleSelector" : "promiseWithError",
+				"previewHeight" : 250,
+				"previewShowSelector" : "gtPromiseFor:",
+				"exampleBehaviorName" : "AsyncPromiseExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
 				"noCode" : false
@@ -430,7 +547,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-09-27T11:13:16.564694+02:00"
+			"dateAndTimeString" : "2021-10-05T18:09:36.768408+02:00"
 		}
 	},
 	"editEmail" : {
@@ -441,15 +558,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-09-27T12:15:42.974616+02:00"
+			"dateAndTimeString" : "2021-10-05T18:09:36.768408+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Asynchronous widgets & futures"
+		"title" : "Promises"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "5180893e-5889-0d00-a6e8-632309d1d77b"
+		"uuid" : "3c2934fe-fe89-0d00-bb8d-9d5808383f71"
 	}
 }
