@@ -25,6 +25,17 @@ TAsyncStream >> gtCompositionFor: aView [
 ]
 
 { #category : #'*GToolkit-Extensions' }
+TAsyncStream >> gtExecuteActionFor: anAction [
+	<gtAction>
+	
+	^ anAction button
+		icon: BrGlamorousVectorIcons playinspect;
+		tooltip: 'Collect all values and inspect';
+		priority: 10;
+		action: [ :aButton | aButton phlow spawnObject: self collect asAsyncPromise ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 TAsyncStream >> gtLiveFor: aView [
 	^ self gtCompositionFor: aView
 ]
