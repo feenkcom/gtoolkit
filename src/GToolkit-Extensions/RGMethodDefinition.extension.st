@@ -1,6 +1,6 @@
-Extension { #name : 'RGMethodDefinition' }
+Extension { #name : #RGMethodDefinition }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RGMethodDefinition >> gtBasicSourceFor: aView [
 	^ aView explicit
 		title: 'Source';
@@ -15,7 +15,7 @@ RGMethodDefinition >> gtBasicSourceFor: aView [
 				asElement) ].
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RGMethodDefinition >> gtImplementorsFor: aView [
 	<gtView>
 	^ aView explicit
@@ -24,7 +24,7 @@ RGMethodDefinition >> gtImplementorsFor: aView [
 		stencil: [ self selector gtImplementors ]
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RGMethodDefinition >> gtSendersFor: aView [
 	<gtView>
 	^ aView explicit
@@ -33,7 +33,7 @@ RGMethodDefinition >> gtSendersFor: aView [
 		stencil: [ self selector gtSenders ]
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RGMethodDefinition >> gtSourceFor: aView [
 	<gtView>
 	^ aView explicit

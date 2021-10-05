@@ -1,12 +1,12 @@
-Extension { #name : 'AsyncMapStream' }
+Extension { #name : #AsyncMapStream }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncMapStream >> gtCompositionChildren [
 
 	^ { stream } 
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncMapStream >> gtCompositionDescription [
 
 	^ self printString asRopedText 

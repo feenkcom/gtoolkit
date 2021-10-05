@@ -1,6 +1,6 @@
-Extension { #name : 'AsyncSomeValue' }
+Extension { #name : #AsyncSomeValue }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncSomeValue >> gtCompositionChildren [
 
 	(self value class isComposedBy: TAsyncFuture) ifTrue: [ 
@@ -10,7 +10,7 @@ AsyncSomeValue >> gtCompositionChildren [
 	^ #(  )
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncSomeValue >> gtCompositionDescription [
 
 	^ self printString asRopedText
@@ -21,7 +21,7 @@ AsyncSomeValue >> gtCompositionDescription [
 					   BrGlamorousColors disabledButtonTextColor)
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncSomeValue >> gtCompositionFor: aView [
 
 	<gtView>
@@ -34,7 +34,7 @@ AsyncSomeValue >> gtCompositionFor: aView [
 		  actionUpdateButtonTooltip: 'Update composition tree'
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncSomeValue >> gtLiveFor: aView [
 	^ self gtCompositionFor: aView
 ]

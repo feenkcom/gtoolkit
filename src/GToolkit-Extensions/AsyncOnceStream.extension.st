@@ -1,6 +1,6 @@
-Extension { #name : 'AsyncOnceStream' }
+Extension { #name : #AsyncOnceStream }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncOnceStream >> gtCompositionChildren [
 
 	^ { future }

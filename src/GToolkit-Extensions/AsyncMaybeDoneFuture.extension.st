@@ -1,6 +1,6 @@
-Extension { #name : 'AsyncMaybeDoneFuture' }
+Extension { #name : #AsyncMaybeDoneFuture }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncMaybeDoneFuture >> gtCompositionChildren [
 
 	^ state ifNotNil: [ :anAssoc | 
@@ -9,7 +9,7 @@ AsyncMaybeDoneFuture >> gtCompositionChildren [
 			  ifFalse: [ #(  ) ] ]
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncMaybeDoneFuture >> gtCompositionDescription [
 
 	^ self printString asRopedText

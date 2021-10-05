@@ -1,17 +1,17 @@
-Extension { #name : 'TAsyncStream' }
+Extension { #name : #TAsyncStream }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TAsyncStream >> gtCompositionChildren [
 
 	^ #(  )
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TAsyncStream >> gtCompositionDescription [
 	^ self printString
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TAsyncStream >> gtCompositionFor: aView [
 
 	<gtView>
@@ -24,7 +24,7 @@ TAsyncStream >> gtCompositionFor: aView [
 		  actionUpdateButtonTooltip: 'Update composition tree'
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TAsyncStream >> gtLiveFor: aView [
 	^ self gtCompositionFor: aView
 ]

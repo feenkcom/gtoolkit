@@ -1,6 +1,6 @@
-Extension { #name : 'Message' }
+Extension { #name : #Message }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 Message >> gtAllImplementorsFor: aView [
 
 	<gtView>

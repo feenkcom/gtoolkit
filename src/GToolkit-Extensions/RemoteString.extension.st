@@ -1,6 +1,6 @@
-Extension { #name : 'RemoteString' }
+Extension { #name : #RemoteString }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RemoteString >> gtStringFor: aView [
 	<gtView>
 	self sourceFileNumber ifNil: [ ^ aView empty ].

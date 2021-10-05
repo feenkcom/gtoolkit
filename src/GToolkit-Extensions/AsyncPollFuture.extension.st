@@ -1,6 +1,6 @@
-Extension { #name : 'AsyncPollFuture' }
+Extension { #name : #AsyncPollFuture }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncPollFuture >> gtCompositionDescription [
 
 	^ self printString asRopedText

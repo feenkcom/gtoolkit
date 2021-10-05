@@ -1,13 +1,13 @@
-Extension { #name : 'GtSpotterExceptionFilterSignal' }
+Extension { #name : #GtSpotterExceptionFilterSignal }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 GtSpotterExceptionFilterSignal >> gtDebugActionFor: anAction [
 	<gtAction>
 	self exception ifNil: [ ^ anAction noAction ].
 	^ self exception gtDebugActionFor: anAction
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 GtSpotterExceptionFilterSignal >> gtStackFor: aView [
 	<gtView>
 	self exception ifNil: [ ^ aView empty ].

@@ -1,12 +1,12 @@
-Extension { #name : 'AsyncMapFuture' }
+Extension { #name : #AsyncMapFuture }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncMapFuture >> gtCompositionChildren [
 
 	^ { future }
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncMapFuture >> gtCompositionDescription [
 
 	^ self printString asRopedText

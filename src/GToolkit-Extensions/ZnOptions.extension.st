@@ -1,6 +1,6 @@
-Extension { #name : 'ZnOptions' }
+Extension { #name : #ZnOptions }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 ZnOptions >> gtBindingsFor: aView [
 	<gtView>
 	^ aView forward 

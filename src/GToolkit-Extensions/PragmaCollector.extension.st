@@ -1,6 +1,6 @@
-Extension { #name : 'PragmaCollector' }
+Extension { #name : #PragmaCollector }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 PragmaCollector >> gtCollectedFor: aView [
 	<gtView>
 	collected ifNil: [ ^ aView empty ].
