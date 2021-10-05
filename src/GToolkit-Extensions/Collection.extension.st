@@ -1,11 +1,11 @@
-Extension { #name : 'Collection' }
+Extension { #name : #Collection }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 Collection >> gtLiveFor: aView [
 	^ self gtTreeFor: aView
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 Collection >> gtTreeFor: aView [
 
 	<gtView>

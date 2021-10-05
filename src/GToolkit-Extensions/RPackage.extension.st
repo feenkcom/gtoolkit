@@ -1,6 +1,6 @@
-Extension { #name : 'RPackage' }
+Extension { #name : #RPackage }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RPackage >> gtClassHierarchyFor: aView [
 	<gtView>
 	<gtPackageView>
@@ -12,7 +12,7 @@ RPackage >> gtClassHierarchyFor: aView [
 		actionUpdateButton
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RPackage >> gtDependencyAnalyzerFor: aView [
 	<gtPackageView>
 	
@@ -30,7 +30,7 @@ RPackage >> gtDependencyAnalyzerFor: aView [
 			action: [ :aButton | aButton phlow spawnObject: (GtDependencyAnalyzerEasy analyzePackageNamed: self name) ]
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RPackage >> gtTagAndClassHierarchyFor: aView [
 	<gtView>
 	<gtPackageView>
@@ -42,7 +42,7 @@ RPackage >> gtTagAndClassHierarchyFor: aView [
 		actionUpdateButton
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RPackage >> paintClassHierarchyWith: aMondrian [
 
 	| aModel |
@@ -90,7 +90,7 @@ RPackage >> paintClassHierarchyWith: aMondrian [
 	aMondrian
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RPackage >> paintTagAndClassHierarchyWith: aMondrian [
 
 	| aModel |

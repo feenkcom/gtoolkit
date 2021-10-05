@@ -1,6 +1,6 @@
-Extension { #name : 'BrTextEditorCompositeMemento' }
+Extension { #name : #BrTextEditorCompositeMemento }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 BrTextEditorCompositeMemento >> gtMementosFor: aView [
 	<gtView>
 	self mementos ifNil: [ ^ aView empty ].

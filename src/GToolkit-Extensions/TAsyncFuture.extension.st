@@ -1,17 +1,17 @@
-Extension { #name : 'TAsyncFuture' }
+Extension { #name : #TAsyncFuture }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TAsyncFuture >> gtCompositionChildren [
 
 	^ #(  )
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TAsyncFuture >> gtCompositionDescription [
 	^ self printString
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TAsyncFuture >> gtCompositionFor: aView [
 
 	<gtView>

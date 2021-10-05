@@ -1,6 +1,6 @@
-Extension { #name : 'RPackageTag' }
+Extension { #name : #RPackageTag }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RPackageTag >> gtClassHierarchyFor: aView [
 
 	<gtView>
@@ -13,7 +13,7 @@ RPackageTag >> gtClassHierarchyFor: aView [
 		  actionUpdateButton
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 RPackageTag >> paintClassHierarchyWith: aMondrian [
 
 	| aModel |

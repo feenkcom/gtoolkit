@@ -1,6 +1,6 @@
-Extension { #name : 'AsyncReadyFuture' }
+Extension { #name : #AsyncReadyFuture }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncReadyFuture >> gtCompositionChildren [
 
 	^ { value }

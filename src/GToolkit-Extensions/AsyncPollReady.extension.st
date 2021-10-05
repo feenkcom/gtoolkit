@@ -1,6 +1,6 @@
-Extension { #name : 'AsyncPollReady' }
+Extension { #name : #AsyncPollReady }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncPollReady >> gtValueFor: aView [
 
 	<gtView>

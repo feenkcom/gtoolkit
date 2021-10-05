@@ -1,6 +1,6 @@
-Extension { #name : 'BlBasicShortcut' }
+Extension { #name : #BlBasicShortcut }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 BlBasicShortcut >> gtCombinationFor: aView [
 	<gtView>
 	self combination ifNil: [ ^ aView empty ].
