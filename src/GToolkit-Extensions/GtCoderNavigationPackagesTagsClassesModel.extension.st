@@ -1,6 +1,6 @@
-Extension { #name : 'GtCoderNavigationPackagesTagsClassesModel' }
+Extension { #name : #GtCoderNavigationPackagesTagsClassesModel }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 GtCoderNavigationPackagesTagsClassesModel >> gtLiveFor: aView [
 	<gtView>
 	coder ifNil: [ ^ aView empty ].

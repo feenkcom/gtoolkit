@@ -1,6 +1,6 @@
-Extension { #name : 'AsyncSequenceStream' }
+Extension { #name : #AsyncSequenceStream }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncSequenceStream >> gtCompositionChildren [
 
 	^ { collectionFuture }

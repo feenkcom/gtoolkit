@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:16:45.752156+02:00"
+						"dateAndTimeString" : "2021-10-05T18:10:30.843802+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:24:07.57127+02:00"
+						"dateAndTimeString" : "2021-10-05T19:10:09.113721+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6CuKPliJDQCm6cN+CdHXew=="
+					"uidString" : "ASZu/f6JDQC7ibWuCDg/cQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Responsive and non-blocking user interface is a key to a good user experience. It is therefore a responsibility of a UI developer to ensure that most if not all actions do not block the UI thread. That can be acomplished by asynchronously performing time consuming operations in a different worker thread and then refreshing or updating the UI once the data is available. While waiting for the background task to finish, the UI should inform a user that there is a *pending* operation and the UI is not yet in its final state."
+				"string" : "A Future represents a computation that can be executed asynchronously. Any object that implements {{gtClass:TAsyncFuture}} trait can be used as a future. It is important to mention that futures are not executed at the moment of their creation, instead they should be explicitly run by the future executor."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:24:08.721627+02:00"
+						"dateAndTimeString" : "2021-10-05T18:23:16.421514+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:25:18.275039+02:00"
+						"dateAndTimeString" : "2021-10-05T18:23:27.001205+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "LKfvO1mJDQCvMnD1A8wzBQ=="
+					"uidString" : "6bP7Lv+JDQC7moL7CDg/cQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Futures"
+				"string" : "###Future combinators"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:31:28.016378+02:00"
+						"dateAndTimeString" : "2021-10-05T18:23:35.408914+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-05T19:32:35.534747+02:00"
+						"dateAndTimeString" : "2021-10-05T18:28:28.914726+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "VDExQFmJDQCvO1ohA8wzBQ=="
+					"uidString" : "J4i+L/+JDQC7nCJwCDg/cQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A future represents an asynchronous computation. Any object that implements {{gtClass:TAsyncFuture}} trait can be used as a future. For example, a {{gtClass:BlockClosure}} can be transformed into a future by sending {{gtMethod:BlockClosure>>#asAsyncFuture}} and later be composed as part of a more complex future using future combinators api. One such future combinator is {{gtClass:AsyncMapFuture}}:"
+				"string" : "The beauty of futures is that they can be combined to create complex futures. Here is a list of all available future types that can be combined in many ways:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:25:24.359884+02:00"
+						"dateAndTimeString" : "2021-10-05T18:25:41.701359+02:00"
 					}
 				},
 				"editEmail" : {
@@ -140,16 +140,130 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:25:24.359884+02:00"
+						"dateAndTimeString" : "2021-10-05T18:25:41.701359+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "72p+QFmJDQCvPzAgA8wzBQ=="
+					"uidString" : "Ht+3N/+JDQC7npVuCDg/cQ=="
 				},
-				"exampleSelector" : "mapFuture",
-				"previewHeight" : 120,
-				"previewShowSelector" : "gtCompositionFor:",
+				"exampleSelector" : "allTypesOfFutures",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtItemsFor:",
+				"exampleBehaviorName" : "AsyncFutureExamples",
+				"codeExpanded" : false,
+				"previewExpanded" : true,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T18:57:18.793478+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:43:50.606873+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ytxuqP+JDQC838sICDg/cQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "###Simple future"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:06:05.933542+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T19:06:57.776953+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TyOKq/+JDQC84R56CDg/cQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "A {{gtClass:BlockClosure}} can be made into a Future by sending {{gtMethod:BlockClosure>>#asAsyncFuture}}:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T18:58:56.384349+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-05T18:58:56.384349+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "g1Gcrv+JDQC85pvHCDg/cQ=="
+				},
+				"exampleSelector" : "simpleFuture",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
 				"exampleBehaviorName" : "AsyncFutureExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
@@ -169,7 +283,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-05T19:33:19.037162+02:00"
+						"dateAndTimeString" : "2021-10-05T19:07:30.829495+02:00"
 					}
 				},
 				"editEmail" : {
@@ -180,128 +294,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-05T19:33:57.545686+02:00"
+						"dateAndTimeString" : "2021-10-05T19:07:56.31219+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "gmrtJwCKDQCP47JTDcMwsA=="
+					"uidString" : "2lvQzP+JDQC86N6KCDg/cQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "More information about asynchronous programming can be found in [[Futures, Promises & Streams]]."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:34:51.313428+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:35:18.607694+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "klj2YVmJDQCwI+KzCp+oWQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "##Brick widgets from the Future"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:36:40.567184+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T12:39:59.880525+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "CVv2ZFmJDQCwMfVTCp+oWQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "While {{gtClass:TAsyncFuture}} represents a foundation brick of an asynchronous programming, `Brick` widgets are foundation of the user interface. To glue them together developers can use {{gtClass:BrFromFuture}} widget (read as `brick from the future`) to display values coming from asynchronous computations."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:48:04.114133+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:48:55.548414+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "X8Eywl2JDQCF5lCWCEitkQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The following examples shows how to wrap a {{gtClass:BrLabel}} into an element that gets data from a future and assigns the text of a label depending on the state:"
+				"string" : "The return value can be then transformed or mapped as follows:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -317,7 +320,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:46:51.481517+02:00"
+						"dateAndTimeString" : "2021-10-05T19:08:35.388485+02:00"
 					}
 				},
 				"editEmail" : {
@@ -328,94 +331,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:46:51.481517+02:00"
+						"dateAndTimeString" : "2021-10-05T19:08:35.388485+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "1okYvl2JDQCF5Ia+CEitkQ=="
+					"uidString" : "ajgf0f+JDQC86W+NCDg/cQ=="
 				},
-				"exampleSelector" : "fromFutureLabel",
-				"previewHeight" : 70,
-				"previewShowSelector" : "gtLiveFor:",
-				"exampleBehaviorName" : "BrFromFutureExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : false
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:49:25.855875+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:50:11.247896+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "aDIHx12JDQCF7OIdCEitkQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtClass:BrFromFuture}} allows developers to gracefully handle *pending* state and even *errors*:"
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:49:07.344863+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-27T17:49:07.344863+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "A6Yxxl2JDQCF6rZpCEitkQ=="
-				},
-				"exampleSelector" : "fromFutureLabelWithError",
-				"previewHeight" : 70,
-				"previewShowSelector" : "gtLiveFor:",
-				"exampleBehaviorName" : "BrFromFutureExamples",
+				"exampleSelector" : "mapFuture",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "AsyncFutureExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
 				"noCode" : false
@@ -430,7 +356,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-09-27T11:13:16.564694+02:00"
+			"dateAndTimeString" : "2021-10-05T18:09:23.752007+02:00"
 		}
 	},
 	"editEmail" : {
@@ -441,15 +367,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-09-27T12:15:42.974616+02:00"
+			"dateAndTimeString" : "2021-10-05T18:09:23.752007+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Asynchronous widgets & futures"
+		"title" : "Futures"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "5180893e-5889-0d00-a6e8-632309d1d77b"
+		"uuid" : "038c6dfd-fe89-0d00-bb88-9cf508383f71"
 	}
 }

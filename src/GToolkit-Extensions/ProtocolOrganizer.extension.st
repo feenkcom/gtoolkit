@@ -1,6 +1,6 @@
-Extension { #name : 'ProtocolOrganizer' }
+Extension { #name : #ProtocolOrganizer }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 ProtocolOrganizer >> gtAllProtocolsFor: aView [
 	<gtView>
 	allProtocol ifNil: [ ^ aView empty ].

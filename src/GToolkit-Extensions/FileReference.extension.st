@@ -1,6 +1,6 @@
-Extension { #name : 'FileReference' }
+Extension { #name : #FileReference }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 FileReference >> gtStyledCodeFor: aView [
 	<gtView>
 	| parser styler |

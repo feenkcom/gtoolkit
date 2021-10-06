@@ -1,6 +1,6 @@
-Extension { #name : 'TGtOptions' }
+Extension { #name : #TGtOptions }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TGtOptions >> gtOptionsFor: aView [
 
 	<gtView>

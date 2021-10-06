@@ -1,6 +1,6 @@
-Extension { #name : 'ZnServer' }
+Extension { #name : #ZnServer }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 ZnServer >> gtDelegateFor: aView [
 
 	<gtView>

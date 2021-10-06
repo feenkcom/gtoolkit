@@ -1,12 +1,12 @@
-Extension { #name : 'AsyncTakeStream' }
+Extension { #name : #AsyncTakeStream }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncTakeStream >> gtCompositionChildren [
 
 	^ { stream }
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncTakeStream >> gtCompositionDescription [
 
 	^ self printString asRopedText

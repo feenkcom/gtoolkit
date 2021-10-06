@@ -1,6 +1,6 @@
-Extension { #name : 'OCAbstractScope' }
+Extension { #name : #OCAbstractScope }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 OCAbstractScope >> gtOuterScopesFor: aView [
 	<gtView>
 	outerScope ifNil: [ ^ aView empty ].

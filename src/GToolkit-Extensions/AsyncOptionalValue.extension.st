@@ -1,12 +1,12 @@
-Extension { #name : 'AsyncOptionalValue' }
+Extension { #name : #AsyncOptionalValue }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncOptionalValue >> gtCompositionChildren [
 
 	^ #(  )
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncOptionalValue >> gtCompositionDescription [
 	^ self printString
 ]

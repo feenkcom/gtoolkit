@@ -1,6 +1,6 @@
-Extension { #name : 'AsyncJoinAllFuture' }
+Extension { #name : #AsyncJoinAllFuture }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 AsyncJoinAllFuture >> gtCompositionChildren [
 
 	^ futures

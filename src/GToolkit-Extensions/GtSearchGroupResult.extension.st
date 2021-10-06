@@ -1,6 +1,6 @@
-Extension { #name : 'GtSearchGroupResult' }
+Extension { #name : #GtSearchGroupResult }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 GtSearchGroupResult >> gtMetricsFor: aView [
 
 	^ aView empty

@@ -1,17 +1,17 @@
-Extension { #name : 'TAsyncFuture' }
+Extension { #name : #TAsyncFuture }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TAsyncFuture >> gtCompositionChildren [
 
 	^ #(  )
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TAsyncFuture >> gtCompositionDescription [
 	^ self printString
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 TAsyncFuture >> gtCompositionFor: aView [
 
 	<gtView>
@@ -22,4 +22,15 @@ TAsyncFuture >> gtCompositionFor: aView [
 		  expandAll;
 		  column: 'Name' text: #gtCompositionDescription;
 		  actionUpdateButtonTooltip: 'Update composition tree'
+]
+
+{ #category : #'*GToolkit-Extensions' }
+TAsyncFuture >> gtExecuteActionFor: anAction [
+	<gtAction>
+	
+	^ anAction button
+		icon: BrGlamorousVectorIcons playinspect;
+		tooltip: 'Convert to promise and inspect';
+		priority: 10;
+		action: [ :aButton | aButton phlow spawnObject: self asAsyncPromise ]
 ]

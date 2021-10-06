@@ -1,6 +1,6 @@
-Extension { #name : 'ZnApplicationFormUrlEncodedEntity' }
+Extension { #name : #ZnApplicationFormUrlEncodedEntity }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 ZnApplicationFormUrlEncodedEntity >> gtFieldsFor: aView [
 	<gtView>
 	self fields ifNil: [ ^ aView empty ].

@@ -1,6 +1,6 @@
-Extension { #name : 'ZnHttpUnsuccessful' }
+Extension { #name : #ZnHttpUnsuccessful }
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 ZnHttpUnsuccessful >> gtResponseFor: aView [
 
 	<gtView>
@@ -16,7 +16,7 @@ ZnHttpUnsuccessful >> gtResponseFor: aView [
 		  action: [ :aButton | aButton phlow spawnObject: self response ]
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 ZnHttpUnsuccessful >> gtResponseHeadersFor: aView [
 
 	<gtView>
@@ -32,7 +32,7 @@ ZnHttpUnsuccessful >> gtResponseHeadersFor: aView [
 		  action: [ :aButton | aButton phlow spawnObject: self response ]
 ]
 
-{ #category : '*GToolkit-Extensions' }
+{ #category : #'*GToolkit-Extensions' }
 ZnHttpUnsuccessful >> gtResponseTextContentsFor: aView [
 
 	<gtView>
