@@ -6,8 +6,8 @@ I am used by {{gtClass:GtWorldElement}}.
 
 "
 Class {
-	#name : 'GtWorldReEnqueueTasks',
-	#superclass : 'BlTask',
+	#name : #GtWorldReEnqueueTasks,
+	#superclass : #BlTask,
 	#instVars : [
 		'previousSpace',
 		'actualSpace'
@@ -15,48 +15,48 @@ Class {
 	#category : 'GToolkit-World-UI'
 }
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtWorldReEnqueueTasks >> actualSpace [
 	"Return a space to which the actual element is attached to."
 	<return: #BlSpace>
 	^ actualSpace
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtWorldReEnqueueTasks >> actualSpaceDo: aBlock [
 	self actualSpace ifNotNil: aBlock
 ]
 
-{ #category : 'hooks' }
+{ #category : #hooks }
 GtWorldReEnqueueTasks >> onEnqueued: aSpace [
 	actualSpace := aSpace
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtWorldReEnqueueTasks >> previousAndActualSpaceDo: aBlock [
 	self previousSpaceDo: [ :aPreviousSpace |
 		self actualSpaceDo: [ :anActualSpace | 
 			aBlock cull: aPreviousSpace cull: anActualSpace ] ]
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtWorldReEnqueueTasks >> previousSpace [
 	"Return a space to which the actual element was attached to."
 	<return: #BlSpace>
 	^ previousSpace at: 1
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtWorldReEnqueueTasks >> previousSpace: aSpace [
 	previousSpace := aSpace asWeakReference.
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtWorldReEnqueueTasks >> previousSpaceDo: aBlock [
 	self previousSpace ifNotNil: aBlock
 ]
 
-{ #category : 'api - running' }
+{ #category : #'api - running' }
 GtWorldReEnqueueTasks >> run [
 	self previousAndActualSpaceDo: [ :aPreviousSpace :anActualSpace |
 		anActualSpace enqueueTasksFrom: aPreviousSpace taskQueue ].

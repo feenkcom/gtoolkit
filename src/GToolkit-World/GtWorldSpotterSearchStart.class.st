@@ -1,13 +1,13 @@
 Class {
-	#name : 'GtWorldSpotterSearchStart',
-	#superclass : 'GtSpotterStart',
+	#name : #GtWorldSpotterSearchStart,
+	#superclass : #GtSpotterStart,
 	#instVars : [
 		'knowledgeBase'
 	],
 	#category : 'GToolkit-World-Search'
 }
 
-{ #category : 'gt-extensions' }
+{ #category : #'gt-extensions' }
 GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aStep [
 	<gtSearch>
 	self hasKnowledgeBase ifFalse: [ ^ self ].
@@ -24,7 +24,7 @@ GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aStep [
 		itemName: #spotterItemName
 ]
 
-{ #category : '*GToolkit-World' }
+{ #category : #'*GToolkit-World' }
 GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
 	<gtSearch>
 	aStep listProcessor
@@ -50,7 +50,7 @@ GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
 		wantsToDisplayOnEmptyQuery: true
 ]
 
-{ #category : 'gt-extensions' }
+{ #category : #'gt-extensions' }
 GtWorldSpotterSearchStart >> gtSpotterNewPageFor: aStep [
 	<gtSearch>
 	self hasKnowledgeBase ifFalse: [ ^ self ].
@@ -70,7 +70,7 @@ GtWorldSpotterSearchStart >> gtSpotterNewPageFor: aStep [
 		send: [ :aPageTitle :spotterStep | self knowledgeBase addPage: (LePage named: aPageTitle) ]
 ]
 
-{ #category : 'gt-extensions' }
+{ #category : #'gt-extensions' }
 GtWorldSpotterSearchStart >> gtSpotterPageTitlesFor: aStep [
 	<gtSearch>
 	self hasKnowledgeBase ifFalse: [ ^ self ].
@@ -86,23 +86,23 @@ GtWorldSpotterSearchStart >> gtSpotterPageTitlesFor: aStep [
 		wantsToDisplayOnEmptyQuery: false
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtWorldSpotterSearchStart >> hasChildren [
 	self knowledgeBase ifNil: [ ^ false ].
 	^ self knowledgeBase hasChildren
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtWorldSpotterSearchStart >> hasKnowledgeBase [
 	^ self knowledgeBase notNil
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtWorldSpotterSearchStart >> knowledgeBase [
 	^ knowledgeBase
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtWorldSpotterSearchStart >> knowledgeBase: aKnowledgeBase [
 	knowledgeBase := aKnowledgeBase
 ]

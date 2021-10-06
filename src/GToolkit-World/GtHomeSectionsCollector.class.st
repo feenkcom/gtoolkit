@@ -1,15 +1,15 @@
 Class {
-	#name : 'GtHomeSectionsCollector',
-	#superclass : 'GtPhlowCollector',
+	#name : #GtHomeSectionsCollector,
+	#superclass : #GtPhlowCollector,
 	#category : 'GToolkit-World-Utilities'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHomeSectionsCollector class >> defaultHomeSectionPragmaName [
 	^ #gtHomeSection
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtHomeSectionsCollector >> collect [
 	<return: #Array of: #GtPhlowView>
 	<gtCollector>
@@ -26,7 +26,7 @@ GtHomeSectionsCollector >> collect [
 	^ sectionStencils
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeSectionsCollector >> initializePragmaNames [
 	pragmaNames := { self class defaultHomeSectionPragmaName }
 ]

@@ -1,25 +1,25 @@
 Class {
-	#name : 'GtCoderStencil',
-	#superclass : 'GtToolStencil',
+	#name : #GtCoderStencil,
+	#superclass : #GtToolStencil,
 	#category : 'GToolkit-World-Stencils'
 }
 
-{ #category : 'converting' }
+{ #category : #converting }
 GtCoderStencil >> asPreviewElement [
 	^ GtCoder new asElement
 ]
 
-{ #category : 'api - instantiation' }
+{ #category : #'api - instantiation' }
 GtCoderStencil >> create [
 	^ GtCoder new createInPager maximized.
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtCoderStencil >> icon [
 	^ BrGlamorousVectorIcons emphasizedBrowse
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtCoderStencil >> name [
 	^ 'Coder'
 ]

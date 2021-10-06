@@ -3,29 +3,29 @@ I model a status for a notifications. My subclasses provide concrete statuses. C
 
 "
 Class {
-	#name : 'GtNotificationStatus',
-	#superclass : 'Object',
+	#name : #GtNotificationStatus,
+	#superclass : #Object,
 	#traits : 'TGtInteractiveStatusInstantiation',
 	#classTraits : 'TGtInteractiveStatusInstantiation classTrait',
 	#category : 'GToolkit-World-Notifications'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationStatus class >> registryValue [
 	self subclassResponsibility
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtNotificationStatus >> isDismissed [
 	^ false
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtNotificationStatus >> isViewed [
 	^ false
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationStatus >> registryValue [
 	^ self class registryValue
 ]

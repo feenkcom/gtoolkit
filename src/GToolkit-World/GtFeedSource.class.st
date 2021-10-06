@@ -1,13 +1,13 @@
 Class {
-	#name : 'GtFeedSource',
-	#superclass : 'Object',
+	#name : #GtFeedSource,
+	#superclass : #Object,
 	#instVars : [
 		'url'
 	],
 	#category : 'GToolkit-World-Feed'
 }
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtFeedSource >> gtDisplayOn: aStream [
 	super gtDisplayOn: aStream.
 	aStream 
@@ -16,12 +16,12 @@ GtFeedSource >> gtDisplayOn: aStream [
 		nextPutAll: ')'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeedSource >> url [
 	^ url
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeedSource >> url: anObject [
 	url := anObject
 ]

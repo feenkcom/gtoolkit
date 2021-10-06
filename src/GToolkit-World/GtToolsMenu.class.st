@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtToolsMenu',
-	#superclass : 'BlElement',
+	#name : #GtToolsMenu,
+	#superclass : #BlElement,
 	#traits : 'TBrLayoutResizable',
 	#classTraits : 'TBrLayoutResizable classTrait',
 	#instVars : [
@@ -12,7 +12,7 @@ Class {
 	#category : 'GToolkit-World-UI'
 }
 
-{ #category : 'system startup' }
+{ #category : #'system startup' }
 GtToolsMenu class >> cleanUp [
 	<script: 'self cleanUp'>
 
@@ -22,7 +22,7 @@ GtToolsMenu class >> cleanUp [
 		world := nil ]
 ]
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtToolsMenu class >> create [
 	| aSpace |
 	
@@ -33,7 +33,7 @@ GtToolsMenu class >> create [
 	^ aSpace
 ]
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtToolsMenu class >> open [
 	<script: 'self open'>
 
@@ -46,12 +46,12 @@ GtToolsMenu class >> open [
 		ifFalse: [ world show ]
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtToolsMenu >> iconSize [
 	^ 75 asPoint
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtToolsMenu >> initialize [
 	super initialize.
 	
@@ -62,7 +62,7 @@ GtToolsMenu >> initialize [
 	self initializeElements
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtToolsMenu >> initializeElements [
 
 	self removeChildren.
@@ -104,24 +104,24 @@ GtToolsMenu >> initializeElements [
 				action: [ :aButton | self quitFrom: aButton ] })
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolsMenu >> knowledgeBase [
 	^ knowledgeBase
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolsMenu >> knowledgeBase: aKnowledgeBase [
 	knowledgeBase := aKnowledgeBase
 ]
 
-{ #category : 'hooks - children' }
+{ #category : #'hooks - children' }
 GtToolsMenu >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	
 	self initializeElements
 ]
 
-{ #category : 'private - actions' }
+{ #category : #'private - actions' }
 GtToolsMenu >> quitFrom: aButton [
 	aButton label: 'Quitting...'.
 	aButton disable.
@@ -131,7 +131,7 @@ GtToolsMenu >> quitFrom: aButton [
 			aButton label: 'Quit'; enable ]) ].
 ]
 
-{ #category : 'private - actions' }
+{ #category : #'private - actions' }
 GtToolsMenu >> saveFrom: aButton [
 	aButton label: 'Saving...'.
 	aButton disable.

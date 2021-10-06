@@ -1,16 +1,16 @@
 Class {
-	#name : 'GtHomeFeed',
-	#superclass : 'BlElement',
+	#name : #GtHomeFeed,
+	#superclass : #BlElement,
 	#category : 'GToolkit-World-UI'
 }
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHomeFeed >> clearContent [
 	self removeChildren.
 	self visibility: BlVisibility gone
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeFeed >> createLinkAttribute [
 	^ GtButtonAttribute new
 		beAppend;
@@ -23,7 +23,7 @@ GtHomeFeed >> createLinkAttribute [
 			action: [ WebBrowser openOn: 'https://blog.feenk.com' ] ]
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeFeed >> createPrivacyPolicyLinkAttribute [
 	^ GtButtonAttribute new
 		beAppend;
@@ -36,7 +36,7 @@ GtHomeFeed >> createPrivacyPolicyLinkAttribute [
 			action: [ WebBrowser openOn: 'https://feenk.com/privacy' ] ]
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeFeed >> createSectionWrapperFor: aSectionStencil [
 	^ BlLazyElement new
 			margin: (BlInsets all: 10);
@@ -50,7 +50,7 @@ GtHomeFeed >> createSectionWrapperFor: aSectionStencil [
 			elementBuilder: [ aSectionStencil asElement ]
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtHomeFeed >> disableFeed [
 	self feed 
 		markAsDisabled;
@@ -58,7 +58,7 @@ GtHomeFeed >> disableFeed [
 	self hideFeed
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtHomeFeed >> enableFeed [
 	self feed 
 		markAsEnabled;
@@ -67,28 +67,28 @@ GtHomeFeed >> enableFeed [
 	self showFeedSections
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHomeFeed >> feed [
 	^ GtFeed loadDefault
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHomeFeed >> feedSectionStencils [
 	^ { self feenkBlogSection }
 ]
 
-{ #category : 'sections-feed' }
+{ #category : #'sections-feed' }
 GtHomeFeed >> feenkBlogSection [
 	^ GtHomeFeenkBlogSection newDefault
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeFeed >> hideFeed [
 	self removeChildren.
 	self visibility: BlVisibility gone
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeFeed >> initialize [
 	super initialize.
 	self layout: BlFlowLayout new.
@@ -97,7 +97,7 @@ GtHomeFeed >> initialize [
 		c vertical fitContent ]
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeFeed >> showFeedSections [
 	| sections  |
 	self removeChildren.
@@ -109,7 +109,7 @@ GtHomeFeed >> showFeedSections [
 	self addChildren: sections.
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtHomeFeed >> showPermissionDialog [
 	| dialogContainer |
 	self removeChildren.
@@ -171,7 +171,7 @@ GtHomeFeed >> showPermissionDialog [
 	self addChild: dialogContainer
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtHomeFeed >> updateWidget [
 	| aFeed |
 	aFeed := self feed.

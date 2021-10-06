@@ -3,12 +3,12 @@ I exemplify {{gtClass:GtWorldTabElement}}.
 
 "
 Class {
-	#name : 'GtWorldTabElementExamples',
-	#superclass : 'Object',
+	#name : #GtWorldTabElementExamples,
+	#superclass : #Object,
 	#category : 'GToolkit-World-Examples'
 }
 
-{ #category : 'examples - by scripter' }
+{ #category : #'examples - by scripter' }
 GtWorldTabElementExamples >> showSpaceSelectScripter [
 	| aScripter |
 	<gtExample>
@@ -19,7 +19,7 @@ GtWorldTabElementExamples >> showSpaceSelectScripter [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - by scripter' }
+{ #category : #'examples - by scripter' }
 GtWorldTabElementExamples >> showSpaceSelectScripter_01_addSpace [
 	| aScripter |
 	<gtExample>
@@ -41,7 +41,7 @@ GtWorldTabElementExamples >> showSpaceSelectScripter_01_addSpace [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - by scripter' }
+{ #category : #'examples - by scripter' }
 GtWorldTabElementExamples >> showSpaceSelectScripter_02_moveMouseOverSpaceCloseButton [
 	| aScripter |
 	<gtExample>
@@ -57,7 +57,7 @@ GtWorldTabElementExamples >> showSpaceSelectScripter_02_moveMouseOverSpaceCloseB
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - by scripter' }
+{ #category : #'examples - by scripter' }
 GtWorldTabElementExamples >> showSpaceSelectScripter_03_clickSpaceCloseButton [
 	| aScripter |
 	<gtExample>
@@ -80,7 +80,7 @@ GtWorldTabElementExamples >> showSpaceSelectScripter_03_clickSpaceCloseButton [
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - by scripter' }
+{ #category : #'examples - by scripter' }
 GtWorldTabElementExamples >> showSpaceSelectScripter_04_checkSpaceGarbageCollected [
 	| aScripter |
 	<gtExample>
@@ -102,7 +102,7 @@ GtWorldTabElementExamples >> showSpaceSelectScripter_04_checkSpaceGarbageCollect
 	^ aScripter syncContinue
 ]
 
-{ #category : 'examples - show space' }
+{ #category : #'examples - show space' }
 GtWorldTabElementExamples >> showSpaceSelect_ReleaseSpaceOnSelectedTabCloseAction [
 	<gtExample>
 	| aSpace aWorld aTabs |
@@ -117,7 +117,7 @@ GtWorldTabElementExamples >> showSpaceSelect_ReleaseSpaceOnSelectedTabCloseActio
 	^ aWorld
 ]
 
-{ #category : 'examples - show space' }
+{ #category : #'examples - show space' }
 GtWorldTabElementExamples >> showSpaceSelect_ReleaseSpaceOnUnselectedTabCloseAction [
 	<gtExample>
 	| aSpace aWorld aTabs |

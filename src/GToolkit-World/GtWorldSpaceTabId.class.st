@@ -1,24 +1,24 @@
 Class {
-	#name : 'GtWorldSpaceTabId',
-	#superclass : 'BlElementId',
+	#name : #GtWorldSpaceTabId,
+	#superclass : #BlElementId,
 	#instVars : [
 		'spaceId'
 	],
 	#category : 'GToolkit-World-UI - ID'
 }
 
-{ #category : 'api - instance creation' }
+{ #category : #'api - instance creation' }
 GtWorldSpaceTabId class >> spaceId: anInteger [
 	^ self new spaceId: anInteger
 ]
 
-{ #category : 'comparing' }
+{ #category : #comparing }
 GtWorldSpaceTabId >> = anObject [
 	^ self class = anObject class and: [ 
 		self spaceId = anObject spaceId ]
 ]
 
-{ #category : 'converting' }
+{ #category : #converting }
 GtWorldSpaceTabId >> asSymbol [
 	^ Symbol streamContents: [ :aStream |
 		aStream 
@@ -26,18 +26,18 @@ GtWorldSpaceTabId >> asSymbol [
 			print: self spaceId ]
 ]
 
-{ #category : 'comparing' }
+{ #category : #comparing }
 GtWorldSpaceTabId >> hash [
 	^ self class hash bitXor: [ 
 		self spaceId hash ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtWorldSpaceTabId >> spaceId [
 	^ spaceId
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtWorldSpaceTabId >> spaceId: anInteger [
 	spaceId := anInteger
 ]

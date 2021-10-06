@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtWorldTabElement',
-	#superclass : 'BlElement',
+	#name : #GtWorldTabElement,
+	#superclass : #BlElement,
 	#instVars : [
 		'tabs',
 		'home'
@@ -8,17 +8,17 @@ Class {
 	#category : 'GToolkit-World-UI'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtWorldTabElement class >> spaceCloseButtonName [
 	^ #'gt-world--space-close-button'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtWorldTabElement class >> tabNameForSpaceId: aNumber [
 	^ GtWorldSpaceTabId spaceId: aNumber
 ]
 
-{ #category : 'defaults' }
+{ #category : #defaults }
 GtWorldTabElement >> defaultHomeElement [
 	^ BrLabel new
 		text: 'Home';
@@ -31,7 +31,7 @@ GtWorldTabElement >> defaultHomeElement [
 		background: Color white
 ]
 
-{ #category : 'defaults' }
+{ #category : #defaults }
 GtWorldTabElement >> defaultHomeTab [
 	^ BrTab new
 		vExact: 36;
@@ -41,17 +41,17 @@ GtWorldTabElement >> defaultHomeTab [
 		stencil: [ self home ]
 ]
 
-{ #category : 'defaults' }
+{ #category : #defaults }
 GtWorldTabElement >> defaultHomeTabIcon [
 	^ BrGlamorousVectorIcons gt
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtWorldTabElement >> home [
 	^ home
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtWorldTabElement >> initialize [
 	super initialize.
 	self initializeHomeElement.
@@ -62,7 +62,7 @@ GtWorldTabElement >> initialize [
 	self initializeListeners.
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtWorldTabElement >> initializeElement [
 	self addChild: tabs as: GtWorldTabGroupId.
 	self
@@ -71,39 +71,39 @@ GtWorldTabElement >> initializeElement [
 			c vertical matchParent ]
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtWorldTabElement >> initializeHomeElement [
 	home := self defaultHomeElement
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtWorldTabElement >> initializeListeners [
 	"Subclasses may register listeners"
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtWorldTabElement >> initializeShortcuts [
 	"Subclasses may initialize shortcuts"
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtWorldTabElement >> initializeTabGroup [
 	tabs := BrTabGroup new.
 	tabs aptitude: BrGlamorousSpaceTabGroupAptitude new.
 	tabs actionbarStencil: [ self newActionbar ].
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtWorldTabElement >> initializeTabs [
 	tabs addTab: self defaultHomeTab
 ]
 
-{ #category : 'private - instance creation' }
+{ #category : #'private - instance creation' }
 GtWorldTabElement >> newActionItemsInto: anActionbar [
 	"Subclasses may add action items into the World toolbar"
 ]
 
-{ #category : 'private - instance creation' }
+{ #category : #'private - instance creation' }
 GtWorldTabElement >> newActionbar [
 	| anActionbar |
 
@@ -115,7 +115,7 @@ GtWorldTabElement >> newActionbar [
 	^ anActionbar
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtWorldTabElement >> newToolbarForTabModel: aTabModel [
 	^ BrToolbar new
 		aptitude: (BrGlamorousToolbarAptitude new spacing: 0);
@@ -144,25 +144,25 @@ GtWorldTabElement >> newToolbarForTabModel: aTabModel [
 				action: [ :aButtonElement | tabs viewModel removeTab: aButtonElement model ])}
 ]
 
-{ #category : 'releasing' }
+{ #category : #releasing }
 GtWorldTabElement >> prepareForRelease [
 	"Space sends this message to be saved as part of a release process.
 	Subclasses may trigger relevant actions."
 	
 ]
 
-{ #category : 'system startup & shutdown' }
+{ #category : #'system startup & shutdown' }
 GtWorldTabElement >> refreshContent [
 	"Refresh the content of the space. Is only called for a default space instance on start-up.
 	Subclasses may trigger relevant actions."
 ]
 
-{ #category : 'api - opening' }
+{ #category : #'api - opening' }
 GtWorldTabElement >> showSpace: aSpace [
 	self showSpace: aSpace select: true
 ]
 
-{ #category : 'api - opening' }
+{ #category : #'api - opening' }
 GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 	| aTab |
 	aTab := BrTab new
@@ -193,13 +193,13 @@ GtWorldTabElement >> showSpace: aSpace select: shouldBeSelected [
 	aTab := nil
 ]
 
-{ #category : 'private - accessing' }
+{ #category : #'private - accessing' }
 GtWorldTabElement >> tabs [
 	<return: #BrTabGroup>
 	^ tabs
 ]
 
-{ #category : 'children accessing' }
+{ #category : #'children accessing' }
 GtWorldTabElement >> topMostParent [
 	^ self
 ]
