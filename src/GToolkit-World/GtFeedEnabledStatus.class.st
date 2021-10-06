@@ -1,15 +1,15 @@
 Class {
-	#name : 'GtFeedEnabledStatus',
-	#superclass : 'GtFeedStatus',
+	#name : #GtFeedEnabledStatus,
+	#superclass : #GtFeedStatus,
 	#category : 'GToolkit-World-Feed'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeedEnabledStatus class >> registryValue [
 	^ #enabled
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtFeedEnabledStatus >> isEnabled [
 	^ true
 ]

@@ -1,1 +1,1 @@
-Package { #name : 'GToolkit-World' }
+Package { #name : #'GToolkit-World' }

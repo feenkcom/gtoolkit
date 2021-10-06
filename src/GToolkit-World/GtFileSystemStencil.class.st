@@ -1,25 +1,25 @@
 Class {
-	#name : 'GtFileSystemStencil',
-	#superclass : 'GtToolStencil',
+	#name : #GtFileSystemStencil,
+	#superclass : #GtToolStencil,
 	#category : 'GToolkit-World-Stencils'
 }
 
-{ #category : 'converting' }
+{ #category : #converting }
 GtFileSystemStencil >> asPreviewElement [
 	^ GtInspector forObject: FileLocator imageDirectory asFileReference 
 ]
 
-{ #category : 'api - instantiation' }
+{ #category : #'api - instantiation' }
 GtFileSystemStencil >> create [
 	^ (GtInspector createOn: FileLocator imageDirectory asFileReference) maximized.
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFileSystemStencil >> icon [
 	^ BrGlamorousVectorIcons folder
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFileSystemStencil >> name [
 	^ 'File System'
 ]

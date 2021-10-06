@@ -3,12 +3,12 @@ I exemplify {{gtClass:GtHomeClassCommentCardElement}}.
 
 "
 Class {
-	#name : 'GtHomeClassCommentCardElementExamples',
-	#superclass : 'GtHomeDocumentCardElementExamples',
+	#name : #GtHomeClassCommentCardElementExamples,
+	#superclass : #GtHomeDocumentCardElementExamples,
 	#category : 'GToolkit-World-Examples'
 }
 
-{ #category : 'examples - basic' }
+{ #category : #'examples - basic' }
 GtHomeClassCommentCardElementExamples >> basicElement [
 	<gtExample>
 	| anElement |
@@ -19,7 +19,7 @@ GtHomeClassCommentCardElementExamples >> basicElement [
 	^ anElement
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtHomeClassCommentCardElementExamples >> elementWithClassWithComment [
 	<gtExample>
 	| anElement |
@@ -40,7 +40,7 @@ GtHomeClassCommentCardElementExamples >> elementWithClassWithComment [
 	^ anElement
 ]
 
-{ #category : 'examples - element' }
+{ #category : #'examples - element' }
 GtHomeClassCommentCardElementExamples >> elementWithClassWithoutComment [
 	<gtExample>
 	| anElement |

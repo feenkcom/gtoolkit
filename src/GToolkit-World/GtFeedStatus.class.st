@@ -1,27 +1,27 @@
 Class {
-	#name : 'GtFeedStatus',
-	#superclass : 'Object',
+	#name : #GtFeedStatus,
+	#superclass : #Object,
 	#traits : 'TGtInteractiveStatusInstantiation',
 	#classTraits : 'TGtInteractiveStatusInstantiation classTrait',
 	#category : 'GToolkit-World-Feed'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeedStatus class >> registryValue [
 	self subclassResponsibility
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtFeedStatus >> isEnabled [
 	^ false
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtFeedStatus >> isNotConfigured [
 	^ false
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeedStatus >> registryValue [
 	^ self class registryValue
 ]

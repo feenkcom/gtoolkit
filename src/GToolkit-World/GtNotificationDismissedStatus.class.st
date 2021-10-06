@@ -1,15 +1,15 @@
 Class {
-	#name : 'GtNotificationDismissedStatus',
-	#superclass : 'GtNotificationStatus',
+	#name : #GtNotificationDismissedStatus,
+	#superclass : #GtNotificationStatus,
 	#category : 'GToolkit-World-Notifications'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtNotificationDismissedStatus class >> registryValue [
 	^ 'dismissed'
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtNotificationDismissedStatus >> isDismissed [
 	^ true
 ]

@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtPlaygroundStencil',
-	#superclass : 'GtToolStencil',
+	#name : #GtPlaygroundStencil,
+	#superclass : #GtToolStencil,
 	#instVars : [
 		'knowledgeBase'
 	],
@@ -10,12 +10,12 @@ Class {
 	#category : 'GToolkit-World-Stencils'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtPlaygroundStencil class >> defaultPlaygroundClass [
 	^ LePlayground
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtPlaygroundStencil class >> playgroundClass [
 	^ self playgroundClassName 
 		ifNil: [ self defaultPlaygroundClass ]
@@ -25,17 +25,17 @@ GtPlaygroundStencil class >> playgroundClass [
 				ifAbsent: [ self defaultPlaygroundClass ] ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtPlaygroundStencil class >> playgroundClassName [
 	^ playgroundClassName
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtPlaygroundStencil class >> playgroundClassName: aClassName [
 	playgroundClassName := aClassName
 ]
 
-{ #category : 'converting' }
+{ #category : #converting }
 GtPlaygroundStencil >> asPreviewElement [
 	| notePage toolElement |
 	notePage := LePlayground newBasicPharoCodePage.
@@ -46,49 +46,49 @@ GtPlaygroundStencil >> asPreviewElement [
 		padding: (BlInsets all: 10)
 ]
 
-{ #category : 'api - instantiation' }
+{ #category : #'api - instantiation' }
 GtPlaygroundStencil >> create [
 	^ self class playgroundClass 
 			createWithPharoCodPageInKnowledgeBase: self currentKnowledgeBase
 ]
 
-{ #category : 'api - instantiation' }
+{ #category : #'api - instantiation' }
 GtPlaygroundStencil >> createWithSnippets: snippets [
 	^ self class playgroundClass newWithSnippets: snippets
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtPlaygroundStencil >> currentKnowledgeBase [
 	^ self knowledgeBase ifNil: [
 		LeDatabasesRegistry uniqueInstance currentLoadedDefaultLogicalDatabase ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtPlaygroundStencil >> icon [
 	^ self class playgroundClass defaultIcon
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtPlaygroundStencil >> knowledgeBase [
 	^ knowledgeBase
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtPlaygroundStencil >> knowledgeBase: aKnowledgeBase [
 	knowledgeBase := aKnowledgeBase
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtPlaygroundStencil >> name [
 	^ 'Playground'
 ]
 
-{ #category : 'api - opening' }
+{ #category : #'api - opening' }
 GtPlaygroundStencil >> openWithSnippets: snippets [
 	(self createWithSnippets: snippets) openInPager
 ]
 
-{ #category : 'examples' }
+{ #category : #examples }
 GtPlaygroundStencil >> playgroundWithSnippets [
 	<gtExample>
 	^ GtPlaygroundStencil new createWithSnippets: {'3+4' . '42'}

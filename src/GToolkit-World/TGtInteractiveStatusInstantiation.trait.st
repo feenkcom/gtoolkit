@@ -1,9 +1,9 @@
 Trait {
-	#name : 'TGtInteractiveStatusInstantiation',
+	#name : #TGtInteractiveStatusInstantiation,
 	#category : 'GToolkit-World-Notifications'
 }
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 TGtInteractiveStatusInstantiation classSide >> statusFor: aRegistryValue ifNone: aBlock [
 	^ self subclasses 
 		detect: [ :aSubclass | aSubclass registryValue = aRegistryValue ]

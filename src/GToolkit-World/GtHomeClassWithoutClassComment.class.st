@@ -1,5 +1,5 @@
 Class {
-	#name : 'GtHomeClassWithoutClassComment',
-	#superclass : 'Object',
+	#name : #GtHomeClassWithoutClassComment,
+	#superclass : #Object,
 	#category : 'GToolkit-World-Examples'
 }
