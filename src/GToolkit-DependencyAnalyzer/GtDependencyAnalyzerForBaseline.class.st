@@ -60,7 +60,7 @@ GtDependencyAnalyzerForBaseline >> gtBaselineFor: aView [
 	^ aView forward
 		title: 'Baseline';
 		priority: 15;
-		object: [ (Pragma allNamed: #baseline in: BaselineOfBloc) first ];
+		object: [ (Pragma allNamed: #baseline in: self baseline) first ];
 		view: #gtSourceFor:
 ]
 
