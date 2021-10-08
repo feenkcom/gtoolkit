@@ -5,6 +5,6 @@ AsyncPollFuture >> gtCompositionDescription [
 
 	^ self printString asRopedText
 		  append: ': ' asRopedText;
-		  append: (pollBlock printString asRopedText foreground:
+		  append: ((pollBlock ifNil: [ executedBlock ]) printString asRopedText foreground:
 					   BrGlamorousColors disabledButtonTextColor)
 ]
