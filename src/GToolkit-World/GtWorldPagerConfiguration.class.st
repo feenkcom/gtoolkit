@@ -3,15 +3,15 @@ I initialize {{gtClass:GtPager}} when opened using {{gtMethod:GtWorldUtility cla
 
 "
 Class {
-	#name : 'GtWorldPagerConfiguration',
-	#superclass : 'Object',
+	#name : #GtWorldPagerConfiguration,
+	#superclass : #Object,
 	#instVars : [
 		'contentElementActions'
 	],
 	#category : 'GToolkit-World-Utilities'
 }
 
-{ #category : 'api - applying' }
+{ #category : #'api - applying' }
 GtWorldPagerConfiguration >> applyOn: aPager [
 	self 
 		contentElementDo: [ :aContentElement | 
@@ -20,17 +20,17 @@ GtWorldPagerConfiguration >> applyOn: aPager [
 		in: aPager
 ]
 
-{ #category : 'api - scripting' }
+{ #category : #'api - scripting' }
 GtWorldPagerConfiguration >> beNormalLevel [
 	self contentElementAction: [ :anElement | anElement beNormalLevel ]
 ]
 
-{ #category : 'api - scripting' }
+{ #category : #'api - scripting' }
 GtWorldPagerConfiguration >> contentElementAction: aValuable [
 	contentElementActions := contentElementActions copyWith: aValuable
 ]
 
-{ #category : 'private - applying' }
+{ #category : #'private - applying' }
 GtWorldPagerConfiguration >> contentElementDo: aBlock in: aPager [
 	| aContentElement |
 	aPager pages ifEmpty: [ ^ self ].
@@ -38,7 +38,7 @@ GtWorldPagerConfiguration >> contentElementDo: aBlock in: aPager [
 	aBlock value: aContentElement
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtWorldPagerConfiguration >> initialize [
 	super initialize.
 	contentElementActions := Array empty.

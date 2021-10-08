@@ -1,6 +1,6 @@
-Extension { #name : 'EvaluateCommandLineHandler' }
+Extension { #name : #EvaluateCommandLineHandler }
 
-{ #category : '*GToolkit-World' }
+{ #category : #'*GToolkit-World' }
 EvaluateCommandLineHandler >> gtArgumentString [
 	| arguments skipArguments |
 	

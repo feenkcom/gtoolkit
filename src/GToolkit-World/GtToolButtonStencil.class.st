@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtToolButtonStencil',
-	#superclass : 'BrStencil',
+	#name : #GtToolButtonStencil,
+	#superclass : #BrStencil,
 	#instVars : [
 		'icon',
 		'title',
@@ -12,17 +12,17 @@ Class {
 	#category : 'GToolkit-World-Stencils'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> action [
 	^ action
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> action: anObject [
 	action := anObject
 ]
 
-{ #category : 'api - instantiation' }
+{ #category : #'api - instantiation' }
 GtToolButtonStencil >> create [
 	<return: #BrButton>
 
@@ -46,37 +46,37 @@ GtToolButtonStencil >> create [
 		addChild: labelElement.
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> description [
 	^ description
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> description: anObject [
 	description := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> icon [
 	^ icon
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> icon: anObject [
 	icon := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> iconSize [
 	^ iconSize
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> iconSize: aPoint [
 	iconSize := aPoint
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtToolButtonStencil >> initialize [
 	super initialize.
 	description := 'Some tool'.
@@ -89,32 +89,32 @@ GtToolButtonStencil >> initialize [
 	icon := BlElement new size: iconSize.
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> margin [
 	^ margin
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> margin: anObject [
 	margin := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> smallIcon [
 	self iconSize: 32@32
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> smallMargin [
 	self margin: (BlInsets top: 10 left: 10 bottom: 10 right: 10)
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> title [
 	^ title
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtToolButtonStencil >> title: anObject [
 	title := anObject
 ]

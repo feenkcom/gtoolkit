@@ -1,15 +1,15 @@
 Class {
-	#name : 'GtFeedNotConfiguredStatus',
-	#superclass : 'GtFeedStatus',
+	#name : #GtFeedNotConfiguredStatus,
+	#superclass : #GtFeedStatus,
 	#category : 'GToolkit-World-Feed'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtFeedNotConfiguredStatus class >> registryValue [
 	^ #notConfigured
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtFeedNotConfiguredStatus >> isNotConfigured [
 	^ true
 ]
