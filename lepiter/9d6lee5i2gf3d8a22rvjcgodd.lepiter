@@ -390,14 +390,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:29:07.722128+02:00"
+						"dateAndTimeString" : "2021-10-09T17:44:43.781543+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "aXh3vTqKDQC5CwvmA9Q0ng=="
 				},
-				"code" : "output := GtExternalProcessBuilder new\r\tcommand: 'date';\r\tpipeStdout;\r\toutput.\routput stdoutString"
+				"code" : "output := GtExternalProcessBuilder new\r\tcommand: 'date';\r\toutput.\routput stdout"
 			}
 		]
 	},
