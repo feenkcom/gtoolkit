@@ -10,18 +10,18 @@ The various configurations that I support are in class-side methods in the `acti
 
 "
 Class {
-	#name : 'GtImageSetup',
-	#superclass : 'Object',
+	#name : #GtImageSetup,
+	#superclass : #Object,
 	#category : 'GToolkit-Setup'
 }
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtImageSetup class >> cleanUpChangeSets [
 	ChangeSet removeChangeSetsNamedSuchThat: [ :each | true ].
 	ChangeSet resetCurrentToNewUnnamedChangeSet.
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtImageSetup class >> cleanUpImageAfterLoad [
 	self cleanUpMonticelloCaches.
 	self cleanUpChangeSets.
@@ -34,13 +34,13 @@ GtImageSetup class >> cleanUpImageAfterLoad [
 	Smalltalk garbageCollect.
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtImageSetup class >> cleanUpMonticelloCaches [
 	MCFileBasedRepository flushAllCaches.
 	MCMethodDefinition shutDown.
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtImageSetup class >> copyDataAndDocsFolders [
 	| gtoolkitRepoFolders docFolders icebergRepositories |
 	GtResourcesUtilityConstants localGtDirectory asFileReference ensureCreateDirectory.
@@ -63,7 +63,8 @@ GtImageSetup class >> copyDataAndDocsFolders [
 		add: (gtoolkitRepoFolders asFileReference / 'gtoolkit' / 'lepiter');
 		add: (gtoolkitRepoFolders asFileReference / 'lepiter' / 'test-data');
 		add: (gtoolkitRepoFolders asFileReference / 'JSLink' / 'js');
-		add: (gtoolkitRepoFolders asFileReference / 'PythonBridge' / 'PythonBridgeRuntime').
+		add: (gtoolkitRepoFolders asFileReference / 'PythonBridge' / 'PythonBridgeRuntime');
+		add: (gtoolkitRepoFolders asFileReference / 'gtoolkit-external-process' / 'tests').
 
 	docFolders do: [ :each |
 		|icebergIndex size topSegments localPath|
@@ -84,12 +85,12 @@ GtImageSetup class >> copyDataAndDocsFolders [
 
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtImageSetup class >> installLogo [
 	GtWorldMenu setGtDesktopLogo.
 ]
 
-{ #category : 'api' }
+{ #category : #api }
 GtImageSetup class >> performLocalSetup [
 	"Perform a setup for images that should be used locally for development."
 	
@@ -101,7 +102,7 @@ GtImageSetup class >> performLocalSetup [
 	self preparePharoCompletionCache
 ]
 
-{ #category : 'api' }
+{ #category : #api }
 GtImageSetup class >> performSetupForRelease [
 	"Perform a setup for images that should be released. This should 
 	be called on the CI server during the release process."
@@ -109,7 +110,7 @@ GtImageSetup class >> performSetupForRelease [
 	self performSetupForRelease: 'patch'
 ]
 
-{ #category : 'api' }
+{ #category : #api }
 GtImageSetup class >> performSetupForRelease: aVersionComputationName [
 	"Perform a setup for images that should be released. This should 
 	be called on the CI server during the release process.
@@ -127,12 +128,12 @@ GtImageSetup class >> performSetupForRelease: aVersionComputationName [
 	self preparePharoCompletionCache
 ]
 
-{ #category : 'api' }
+{ #category : #api }
 GtImageSetup class >> preparePharoCompletionCache [
 	GtPharoCompletionStrategy initializeCache
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtImageSetup class >> registerTools [
 	GtMoldableDebugger register.
 	GtExpandableDebuggerElement register.
@@ -141,14 +142,14 @@ GtImageSetup class >> registerTools [
 	GtPlaygroundToolRegistryAdaptor register.
 ]
 
-{ #category : 'api' }
+{ #category : #api }
 GtImageSetup class >> updateDocumentationDirectoryForLocalDevelopment [
 	LepiterCoreDefaults defaultDocumentationDirectory: FileLocator imageDirectory 
 		/ 'pharo-local'
 		/ 'iceberg'
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtImageSetup class >> updateLocalVersion [
 	| theVersion |
 	
@@ -158,7 +159,7 @@ GtImageSetup class >> updateLocalVersion [
 	GtImage timestamp: DateAndTime now.
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtImageSetup class >> updateNextReleaseVersion: aVersionComputation [
 	| theVersion |
 	
