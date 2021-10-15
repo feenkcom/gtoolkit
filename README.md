@@ -4,7 +4,7 @@
 ![Glamorous Toolkit overview](https://raw.githubusercontent.com/feenkcom/gtoolkit/main/doc/gtr-overview.png)
 
 ## Components
-
+ 
 The current repository embodies the second generation of GT and it is comprised of a set of distinct components:
 - [Inspector](https://github.com/feenkcom/gtoolkit-inspector): the moldable inspector.
 - [Lepiter](https://github.com/feenkcom/lepiter): the multi-language notebook + knowledge management.
