@@ -2,7 +2,7 @@
 [Glamorous Toolkit](https://gtoolkit.com) is a live notebook. A fancy code editor. A software analysis platform. A data visualization engine. A knowledge management system. All in one.
 
 ![Glamorous Toolkit overview](https://raw.githubusercontent.com/feenkcom/gtoolkit/main/doc/gtr-overview.png)
-
+ 
 ## Components
  
 The current repository embodies the second generation of GT and it is comprised of a set of distinct components:
