@@ -303,6 +303,14 @@ pipeline {
                                    """
                            }
                         }
+                        stage('Linux Pharo Tests') {
+                            steps {
+                                sh """
+                                    cd ${EXAMPLES_FOLDER}
+                                    bin/GlamorousToolkit-cli GlamorousToolkit.image test --junit-xml-output 'Zinc.*' 'Zodiac.*'
+                                   """
+                            }
+                        }
                         stage('Linux Report Examples') {
                            steps {
                                 junit "${EXAMPLES_FOLDER}/*.xml"
