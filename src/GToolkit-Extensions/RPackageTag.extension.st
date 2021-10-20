@@ -14,6 +14,23 @@ RPackageTag >> gtClassHierarchyFor: aView [
 ]
 
 { #category : #'*GToolkit-Extensions' }
+RPackageTag >> gtTestsFor: aView [
+
+	<gtView>
+	<gtPackageTagView>
+	| aMethodsCoder |
+	aMethodsCoder := (GtSearchPackageTagTestSuiteFilter new packageTag: self)
+		                 asCoder.
+	^ aView explicit
+		  title: 'Tests';
+		  priority: 12;
+		  stencil: [ aMethodsCoder ];
+		  actionStencil: [ 
+			  GtCoderUIUtility newTestSuiteButtonForMethodsCoder:
+					  aMethodsCoder ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 RPackageTag >> paintClassHierarchyWith: aMondrian [
 
 	| aModel |
