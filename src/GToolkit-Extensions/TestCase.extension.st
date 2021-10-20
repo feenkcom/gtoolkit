@@ -30,9 +30,13 @@ TestCase class >> gtTestsFor: aView [
 
 	<gtView>
 	<gtClassView>
-	
+	| aMethodsCoder |
+	aMethodsCoder := (GtSearchClassTestSuiteFilter new testCaseClass:
+		                  self) asCoder.
 	^ aView explicit
-		title: 'Tests';
-		priority: 20;
-		stencil: [ GtSearchClassTestSuiteFilter new testCaseClass: self ]
+		  title: 'Tests';
+		  priority: 20;
+		  stencil: [ aMethodsCoder ];
+		  actionStencil: [ 
+			  self newTestSuiteButtonForMethodsCoder: aMethodsCoder ]
 ]
