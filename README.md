@@ -1,10 +1,10 @@
 # Glamorous Toolkit (GT)
 [Glamorous Toolkit](https://gtoolkit.com) is a live notebook. A fancy code editor. A software analysis platform. A data visualization engine. A knowledge management system. All in one.
-
+ 
 ![Glamorous Toolkit overview](https://raw.githubusercontent.com/feenkcom/gtoolkit/main/doc/gtr-overview.png)
 
 ## Components
-
+ 
 The current repository embodies the second generation of GT and it is comprised of a set of distinct components:
 - [Inspector](https://github.com/feenkcom/gtoolkit-inspector): the moldable inspector.
 - [Lepiter](https://github.com/feenkcom/lepiter): the multi-language notebook + knowledge management.

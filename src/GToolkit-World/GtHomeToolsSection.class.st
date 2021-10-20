@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'knowledgeBaseComputation'
 	],
-	#category : 'GToolkit-World-Sections'
+	#category : #'GToolkit-World-Sections'
 }
 
 { #category : #'api - instantiation' }
@@ -57,13 +57,13 @@ GtHomeToolsSection >> knowledgeBaseComputation: aValuable [
 GtHomeToolsSection >> newCodeChangesButtonStencil [
 	^ GtToolButtonStencil new
 		title: 'Code Changes';
-		icon: BrGlamorousVectorIcons changes;
+		icon: BrGlamorousVectorIcons largeChanges;
 		action: [ :card | 
 			self
-				showSpaceWithIcon: BrGlamorousVectorIcons changes
+				showSpaceWithIcon: (BrGlamorousVectorIcons changes asElement asPannableElement size: 16@16)
 				title: 'Code Changes'
-					with: (GtInspector createOn: GtEpicea allInSessionStore) maximized
-					from: card ];
+				with: (GtInspector createOn: GtEpicea allInSessionStore) maximized
+				from: card ];
 		description:
 			'Browse the local code changes from the current and previous sessions.'
 ]
