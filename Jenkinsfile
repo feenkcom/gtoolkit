@@ -361,7 +361,7 @@ pipeline {
                     environment {
                         TARGET = "${MACOS_M1_TARGET}"
                         CERT = credentials('devcertificate')
-                        APPLEPASSWORD = credentials('notarizepassword')
+                        APPLEPASSWORD = credentials('notarizepassword-manager')
                     }
                     agent {
                         label "${MACOS_M1_TARGET}"
@@ -425,7 +425,7 @@ pipeline {
                                     --primary-bundle-id "com.feenk.gtoolkit.darwin-apple-aarch64" \
                                     --notarize-app \
                                     --verbose \
-                                    --username "george.ganea@feenk.com" \
+                                    --username "notarization@feenk.com" \
                                     --password "${APPLEPASSWORD}" \
                                 """
                             }
@@ -447,7 +447,7 @@ pipeline {
                     environment {
                         TARGET = "${MACOS_INTEL_TARGET}"
                         CERT = credentials('devcertificate')
-                        APPLEPASSWORD = credentials('notarizepassword')
+                        APPLEPASSWORD = credentials('notarizepassword-manager')
                     }
                     agent {
                         label "${MACOS_INTEL_TARGET}"
@@ -510,7 +510,7 @@ pipeline {
                                     --primary-bundle-id "com.feenk.gtoolkit.darwin-apple-x86-64" \
                                     --notarize-app \
                                     --verbose \
-                                    --username "george.ganea@feenk.com" \
+                                    --username "notarization@feenk.com" \
                                     --password "${APPLEPASSWORD}" \
                                 """
                             }
