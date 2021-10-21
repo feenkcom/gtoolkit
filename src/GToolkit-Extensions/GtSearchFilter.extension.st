@@ -12,7 +12,7 @@ GtSearchFilter >> gtCodeStructureFor: aView [
 	<gtView>
 	^ aView columnedTree
 		  title: 'Code Structure';
-		  priority: 10;
+		  priority: 11;
 		  items: [ self methodPackages ];
 		  children: #gtCodeStructureChildren;
 		  expandUpTo: 1;
@@ -94,7 +94,7 @@ GtSearchFilter >> gtMetricsFor: aView [
 	<gtView>
 	^ aView forward
 		  title: 'Metrics';
-		  priority: 11;
+		  priority: 15;
 		  object: [ self result ];
 		  view: #gtMetricsFor:
 ]
