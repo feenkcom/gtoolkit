@@ -7,14 +7,17 @@ GtSearchFilter >> children [
 ]
 
 { #category : #'*GToolkit-Extensions' }
-GtSearchFilter >> gtHierarchyFor: aView [
+GtSearchFilter >> gtCodeStructureFor: aView [
+
 	<gtView>
-	^ aView tree
-		title: 'Hierarchy';
-		priority: 80;
-		items: [ { self } ];
-		children: [ :aFilter | aFilter children ];
-		expandUpTo: 2
+	^ aView columnedTree
+		  title: 'Code Structure';
+		  priority: 10;
+		  items: [ self methodPackages ];
+		  children: #gtCodeStructureChildren;
+		  expandUpTo: 1;
+		  column: 'Name' text: #gtCodeStructureName;
+		  send: #gtFilter
 ]
 
 { #category : #'*GToolkit-Extensions' }
@@ -72,6 +75,17 @@ GtSearchFilter class >> gtHierarchyFor: aView [
 				connectFrom: #superclass.
 			m layout explicit: (GtGraphHorizontalTreeLayout new layered horizontalGap: 20; verticalGap: 10).
 			]
+]
+
+{ #category : #'*GToolkit-Extensions' }
+GtSearchFilter >> gtHierarchyFor: aView [
+	<gtView>
+	^ aView tree
+		title: 'Hierarchy';
+		priority: 80;
+		items: [ { self } ];
+		children: [ :aFilter | aFilter children ];
+		expandUpTo: 2
 ]
 
 { #category : #'*GToolkit-Extensions' }
