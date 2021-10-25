@@ -55,7 +55,7 @@ RPackage >> gtTestsFor: aView [
 		  priority: 12;
 		  stencil: [ aMethodsCoder ];
 		  actionStencil: [ 
-			  GtCoderUIUtility newTestSuiteButtonForMethodsCoder:
+			  GtPharoCoderUIUtility newTestSuiteButtonForMethodsCoder:
 					  aMethodsCoder ]
 ]
 
