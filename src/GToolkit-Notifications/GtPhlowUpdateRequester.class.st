@@ -146,8 +146,18 @@ GtPhlowUpdateRequester >> mayUpdateNow [
 ]
 
 { #category : #'private - event handling' }
-GtPhlowUpdateRequester >> onElementAddedTooSceneGraph [
+GtPhlowUpdateRequester >> onElementAddedToSceneGraph [
 	self mayUpdateNow
+]
+
+{ #category : #'private - event handling' }
+GtPhlowUpdateRequester >> onElementAddedTooSceneGraph [
+
+	self
+		deprecated: 'typo, use #onElementAddedToSceneGraph instead'
+		transformWith: '`@receiver onElementAddedTooSceneGraph'
+			-> '`@receiver onElementAddedToSceneGraph'.
+	self onElementAddedToSceneGraph
 ]
 
 { #category : #'private - updating' }
@@ -217,9 +227,10 @@ GtPhlowUpdateRequester >> resetUpdateRequested [
 
 { #category : #'private - subscriptions' }
 GtPhlowUpdateRequester >> subscribeToElement [
+
 	self element
 		when: BlElementAddedToSceneGraphEvent
-		do: [ :anEvent | self onElementAddedTooSceneGraph ]
+		do: [ :anEvent | self onElementAddedToSceneGraph ]
 ]
 
 { #category : #'private - updating' }
