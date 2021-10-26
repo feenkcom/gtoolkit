@@ -304,6 +304,11 @@ pipeline {
                            }
                         }
                         stage('Linux Pharo Tests') {
+                            when {
+                                expression {
+                                    false
+                                }
+                            }
                             steps {
                                 sh """
                                     cd ${EXAMPLES_FOLDER}
