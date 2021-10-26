@@ -78,7 +78,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.294/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.993/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.994/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.598/src' ].
@@ -102,13 +102,13 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4smacc:v0.8.79/src' ].
 		spec
 			baseline: 'GToolkit4XMLSupport' with: [
-				spec repository: 'github://feenkcom/gt4xmlsupport:v0.8.14/src' ].
+				spec repository: 'github://feenkcom/gt4xmlsupport:v0.8.15/src' ].
 		spec
 			baseline: 'GToolkit4PetitParser2' with: [
 				spec repository: 'github://feenkcom/gt4petitparser2:v0.8.14/src' ].
 		spec
 			baseline: 'GToolkit4Famix3' with: [
-				spec repository: 'github://feenkcom/gt4famix3:v0.8.32/src' ].
+				spec repository: 'github://feenkcom/gt4famix3:v0.8.33/src' ].
 		spec
 			baseline: 'GToolkit4Ruby' with: [
 				spec repository: 'github://feenkcom/gt4ruby:v0.6.1/src' ].
@@ -126,7 +126,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.603/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.993/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.994/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.240/src' ].
