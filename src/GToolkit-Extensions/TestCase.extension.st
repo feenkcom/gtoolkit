@@ -38,5 +38,5 @@ TestCase class >> gtTestsFor: aView [
 		  priority: 20;
 		  stencil: [ aMethodsCoder ];
 		  actionStencil: [ 
-			  self newTestSuiteButtonForMethodsCoder: aMethodsCoder ]
+			  GtPharoCoderUIUtility newTestSuiteButtonForMethodsCoder: aMethodsCoder ]
 ]
