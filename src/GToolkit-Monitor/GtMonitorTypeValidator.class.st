@@ -1,45 +1,45 @@
 Class {
-	#name : 'GtMonitorTypeValidator',
-	#superclass : 'Object',
+	#name : #GtMonitorTypeValidator,
+	#superclass : #Object,
 	#classInstVars : [
 		'default'
 	],
 	#category : 'GToolkit-Monitor-Type Validator'
 }
 
-{ #category : 'installation' }
+{ #category : #installation }
 GtMonitorTypeValidator class >> default [
 	^ default ifNil: [ default := self new ]
 ]
 
-{ #category : 'installation' }
+{ #category : #installation }
 GtMonitorTypeValidator class >> install [
 	self default
 		uninstall;
 		install
 ]
 
-{ #category : 'installation' }
+{ #category : #installation }
 GtMonitorTypeValidator class >> isInstalled [
 	^ self default isInstalled
 ]
 
-{ #category : 'installation' }
+{ #category : #installation }
 GtMonitorTypeValidator class >> uninstall [
 	self default uninstall
 ]
 
-{ #category : 'installation' }
+{ #category : #installation }
 GtMonitorTypeValidator >> install [
 	self subclassResponsibility
 ]
 
-{ #category : 'installation' }
+{ #category : #installation }
 GtMonitorTypeValidator >> isInstalled [
 	^ self subclassResponsibility
 ]
 
-{ #category : 'installation' }
+{ #category : #installation }
 GtMonitorTypeValidator >> uninstall [
 	self subclassResponsibility
 ]

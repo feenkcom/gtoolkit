@@ -1,1 +1,1 @@
-Package { #name : 'GToolkit-Monitor' }
+Package { #name : #'GToolkit-Monitor' }

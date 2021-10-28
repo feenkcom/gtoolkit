@@ -1,30 +1,30 @@
 Class {
-	#name : 'GtMonitorGlutinEventsLogger',
-	#superclass : 'CircularMemoryLogger',
+	#name : #GtMonitorGlutinEventsLogger,
+	#superclass : #CircularMemoryLogger,
 	#instVars : [
 		'interestingEvents'
 	],
 	#category : 'GToolkit-Monitor-Glutin Events Logger'
 }
 
-{ #category : 'initialize' }
+{ #category : #initialize }
 GtMonitorGlutinEventsLogger >> initialize [
 	super initialize.
 	
 	interestingEvents := Set new
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitorGlutinEventsLogger >> interestingEvents [
 	^ interestingEvents
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitorGlutinEventsLogger >> interestingEvents: anObject [
 	interestingEvents := anObject asSet
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitorGlutinEventsLogger >> nextPut: aSignal [
 	aSignal class == GlutinEventSignal
 		ifFalse: [ ^ self ].

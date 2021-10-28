@@ -1,18 +1,18 @@
 Class {
-	#name : 'GtMonitoredExternalResource',
-	#superclass : 'Object',
+	#name : #GtMonitoredExternalResource,
+	#superclass : #Object,
 	#instVars : [
 		'resource'
 	],
 	#category : 'GToolkit-Monitor-External Resources'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredExternalResource >> children [
 	^ #()
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredExternalResource >> gtPathToFor: aView [
 	<gtView>
 	
@@ -24,7 +24,7 @@ GtMonitoredExternalResource >> gtPathToFor: aView [
 			text: [ :anObject | anObject gtDisplayText ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredExternalResource >> gtPointersFor: aView [
 	<gtView>
 	
@@ -36,19 +36,19 @@ GtMonitoredExternalResource >> gtPointersFor: aView [
 			text: [ :anObject | anObject gtDisplayText ]
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredExternalResource >> isNull [
 	^ (resource at: 1)
 		ifNil: [ true ]
 		ifNotNil: #isNull
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredExternalResource >> name [
 	^ self resource printString
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredExternalResource >> pathTo [
 	Smalltalk garbageCollectMost.
 
@@ -57,29 +57,29 @@ GtMonitoredExternalResource >> pathTo [
 		ifNil: [ {  } ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredExternalResource >> pointers [
 	Smalltalk garbageCollectMost.
 
 	^ self resource pointersTo
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitoredExternalResource >> reset [
 	resource := nil
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredExternalResource >> resource [
 	^ resource at: 1
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredExternalResource >> resource: anObject [
 	resource := anObject asWeakReference
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredExternalResource >> resourceClass [
 	^ self resource class
 ]

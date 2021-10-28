@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtMonitorTypeValidatorExamples',
-	#superclass : 'Object',
+	#name : #GtMonitorTypeValidatorExamples,
+	#superclass : #Object,
 	#category : 'GToolkit-Monitor-Type Validator'
 }
 
-{ #category : 'methods' }
+{ #category : #methods }
 GtMonitorTypeValidatorExamples >> methodWithKindOfFloatArgument: aFloat [
 	<argument: #aFloat isKindOf: #Float>
 	<argument: #aFloat satisfies: '[ :arg | arg isZero not ]'>
