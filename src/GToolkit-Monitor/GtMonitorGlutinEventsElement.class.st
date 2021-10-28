@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtMonitorGlutinEventsElement',
-	#superclass : 'BrHorizontalPane',
+	#name : #GtMonitorGlutinEventsElement,
+	#superclass : #BrHorizontalPane,
 	#traits : 'TGlutinEventVisitor',
 	#classTraits : 'TGlutinEventVisitor classTrait',
 	#instVars : [
@@ -17,12 +17,12 @@ Class {
 	#category : 'GToolkit-Monitor-Glutin Events Logger'
 }
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitorGlutinEventsElement >> allGlutinEventTypes [
 	^ GlutinWindowEvent allSubclasses, GlutinDeviceEvent allSubclasses, GlutinCommonEvent allSubclasses 
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitorGlutinEventsElement >> defaultEventTypes [
 	| theEventTypes |
 
@@ -39,28 +39,28 @@ GtMonitorGlutinEventsElement >> defaultEventTypes [
 	^ theEventTypes
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitorGlutinEventsElement >> disableEventType: aClass [
 	eventTypes at: aClass put: false.
 	logger interestingEvents: self enabledGlutinEventTypes.
 	eventTypesList items: eventTypes associations.
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitorGlutinEventsElement >> enableEventType: aClass [
 	eventTypes at: aClass put: true.
 	logger interestingEvents: self enabledGlutinEventTypes.
 	eventTypesList items: eventTypes associations.
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitorGlutinEventsElement >> enabledGlutinEventTypes [
 	^ eventTypes associations
 		select: [ :each | each value ]
 		thenCollect: [ :each | each key ]
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitorGlutinEventsElement >> initialize [
 	super initialize.
 	
@@ -175,7 +175,7 @@ GtMonitorGlutinEventsElement >> initialize [
 	self stop
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtMonitorGlutinEventsElement >> newButtonElement: aText [
 	^ BlElement new
 		layout: BlLinearLayout horizontal alignCenter;
@@ -192,7 +192,7 @@ GtMonitorGlutinEventsElement >> newButtonElement: aText [
 			text: aText)
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtMonitorGlutinEventsElement >> newSquareButtonElement: aText [
 	^ BlElement new
 		layout: BlLinearLayout horizontal alignCenter;
@@ -209,7 +209,7 @@ GtMonitorGlutinEventsElement >> newSquareButtonElement: aText [
 			text: aText)
 ]
 
-{ #category : 'hooks - children' }
+{ #category : #'hooks - children' }
 GtMonitorGlutinEventsElement >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	
@@ -219,7 +219,7 @@ GtMonitorGlutinEventsElement >> onAddedToSceneGraph [
 	self start
 ]
 
-{ #category : 'hooks - children' }
+{ #category : #'hooks - children' }
 GtMonitorGlutinEventsElement >> onRemovedFromSceneGraph [
 	super onRemovedFromSceneGraph.
 	
@@ -228,17 +228,17 @@ GtMonitorGlutinEventsElement >> onRemovedFromSceneGraph [
 	self stop
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtMonitorGlutinEventsElement >> reset [
 	self resetLogger
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtMonitorGlutinEventsElement >> resetLogger [
 	logger reset
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtMonitorGlutinEventsElement >> start [
 	self
 		startLogger.
@@ -248,12 +248,12 @@ GtMonitorGlutinEventsElement >> start [
 	resetButton disable
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtMonitorGlutinEventsElement >> startLogger [
 	logger start
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtMonitorGlutinEventsElement >> stop [
 	self
 		stopLogger.
@@ -263,17 +263,17 @@ GtMonitorGlutinEventsElement >> stop [
 	resetButton enable
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtMonitorGlutinEventsElement >> stopLogger [
 	logger stop
 ]
 
-{ #category : 'private' }
+{ #category : #private }
 GtMonitorGlutinEventsElement >> updateList [
 	eventsList items: logger recordings
 ]
 
-{ #category : 'event - visiting' }
+{ #category : #'event - visiting' }
 GtMonitorGlutinEventsElement >> visitCharacterReceivedEvent: anEvent [
 	^ BrHorizontalPane new
 		hMatchParent;
@@ -290,7 +290,7 @@ GtMonitorGlutinEventsElement >> visitCharacterReceivedEvent: anEvent [
 			self newSquareButtonElement: anEvent text }
 ]
 
-{ #category : 'event - visiting' }
+{ #category : #'event - visiting' }
 GtMonitorGlutinEventsElement >> visitKeyboardInputEvent: anEvent [
 	^ BrHorizontalPane new
 		hMatchParent;
@@ -316,7 +316,7 @@ GtMonitorGlutinEventsElement >> visitKeyboardInputEvent: anEvent [
 				ifFalse: [ anEvent scan_code asString ]). }
 ]
 
-{ #category : 'event - visiting' }
+{ #category : #'event - visiting' }
 GtMonitorGlutinEventsElement >> visitModifiersChanged: anEvent [
 	^ BrHorizontalPane new
 		hMatchParent;
@@ -342,7 +342,7 @@ GtMonitorGlutinEventsElement >> visitModifiersChanged: anEvent [
 		} select: #notNil).
 ]
 
-{ #category : 'event - visiting' }
+{ #category : #'event - visiting' }
 GtMonitorGlutinEventsElement >> visitMouseInputEvent: anEvent [
 	^ BrHorizontalPane new
 		hMatchParent;

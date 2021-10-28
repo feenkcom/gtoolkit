@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtMonitor',
-	#superclass : 'Object',
+	#name : #GtMonitor,
+	#superclass : #Object,
 	#category : 'GToolkit-Monitor'
 }
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtMonitor class >> printExternalResourcesOn: aTranscript [
 	| allExternalResources |
 	
@@ -17,7 +17,7 @@ GtMonitor class >> printExternalResourcesOn: aTranscript [
 		aTranscript nextPutAll: eachExternalResouce name; cr ].
 ]
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtMonitor class >> printProcessesOn: aTranscript [
 	| allProcesses |
 	
@@ -34,7 +34,7 @@ GtMonitor class >> printProcessesOn: aTranscript [
 			cr ].
 ]
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtMonitor class >> printRuntimeInfo [
 	| aTranscript |
 	
@@ -44,7 +44,7 @@ GtMonitor class >> printRuntimeInfo [
 	self printProcessesOn: aTranscript
 ]
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtMonitor class >> printSpacesOn: aTranscript [
 	| allSpaces |
 	
@@ -64,7 +64,7 @@ GtMonitor class >> printSpacesOn: aTranscript [
 			cr ].
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitor >> gtActionProfilerFor: anAction [
 	<gtAction>
 	^ anAction button 
@@ -74,7 +74,7 @@ GtMonitor >> gtActionProfilerFor: anAction [
 		action: [ GtProfiler open ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitor >> gtActionTelemetryFor: anAction [
 	<gtAction>
 	^ anAction button 
@@ -84,7 +84,7 @@ GtMonitor >> gtActionTelemetryFor: anAction [
 		action: [ :aButton | aButton phlow spawnTool: GtProfilerProcessTelemetriesTool new ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitor >> gtExternalResourcesFor: aView [
 	<gtView>
 	
@@ -106,7 +106,7 @@ GtMonitor >> gtExternalResourcesFor: aView [
 				action:  [ aTab viewContentElement children first updateList ] ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitor >> gtGlutinEventFor: aView [
 	<gtView>
 	
@@ -116,7 +116,7 @@ GtMonitor >> gtGlutinEventFor: aView [
 		stencil: [ GtMonitorGlutinEventsElement new ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitor >> gtKeyboardFor: aView [
 	<gtView>
 	^ aView explicit
@@ -125,7 +125,7 @@ GtMonitor >> gtKeyboardFor: aView [
 		stencil: [ BlDevKeyboard new asScalableElement ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitor >> gtLoggersFor: aView [
 	<gtView>
 	
@@ -143,7 +143,7 @@ GtMonitor >> gtLoggersFor: aView [
 					Smalltalk garbageCollect ] ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitor >> gtMixedAnnouncersFor: aView [
 	<gtView>
 	
@@ -170,7 +170,7 @@ GtMonitor >> gtMixedAnnouncersFor: aView [
 		actionUpdateButtonTooltip: 'Update mixed announcers list'
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitor >> gtProcessesFor: aView [
 	<gtView>
 	
@@ -180,7 +180,7 @@ GtMonitor >> gtProcessesFor: aView [
 		stencil: [ GtMonitoredProcessesElement new ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitor >> gtSpaceRunnerFor: aView [
 	<gtView>
 	
@@ -190,7 +190,7 @@ GtMonitor >> gtSpaceRunnerFor: aView [
 		stencil: [ GtMonitorSpaceRunner new ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitor >> gtSpacesFor: aView [
 	<gtView>
 	
@@ -218,7 +218,7 @@ GtMonitor >> gtSpacesFor: aView [
 					Smalltalk garbageCollect ] ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitor >> gtSystemInfoFor: aView [
 	<gtView>
 	
@@ -236,7 +236,7 @@ GtMonitor >> gtSystemInfoFor: aView [
 					aTab viewContentElement children first updateSystemInfo ] ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitor >> gtTaskItServicesFor: aView [
 	<gtView>
 	
@@ -250,7 +250,7 @@ GtMonitor >> gtTaskItServicesFor: aView [
 			action: [ :aButton | TKTConfiguration serviceManager purge ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitor >> gtUniversesFor: aView [
 	<gtView>
 	

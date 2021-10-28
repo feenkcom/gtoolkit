@@ -1,13 +1,13 @@
 Class {
-	#name : 'GtMonitorSystemInfoElement',
-	#superclass : 'BrVerticalPane',
+	#name : #GtMonitorSystemInfoElement,
+	#superclass : #BrVerticalPane,
 	#instVars : [
 		'infos'
 	],
 	#category : 'GToolkit-Monitor-System Info'
 }
 
-{ #category : 'private - elements' }
+{ #category : #'private - elements' }
 GtMonitorSystemInfoElement >> buildGlutinEventLoopInfo [
 	| anEventLoop |
 
@@ -27,7 +27,7 @@ GtMonitorSystemInfoElement >> buildGlutinEventLoopInfo [
 			spawn: [ self phlow spawnObject: anEventLoop ])
 ]
 
-{ #category : 'private - instance creation' }
+{ #category : #'private - instance creation' }
 GtMonitorSystemInfoElement >> buildPropertyButtonNamed: aName spawn: aSpawnBlock [
 	^ BrButton new
 		beSmallSize;
@@ -38,7 +38,7 @@ GtMonitorSystemInfoElement >> buildPropertyButtonNamed: aName spawn: aSpawnBlock
 		action: aSpawnBlock
 ]
 
-{ #category : 'private - instance creation' }
+{ #category : #'private - instance creation' }
 GtMonitorSystemInfoElement >> buildSectionContainer [
 	^ BrVerticalPane new
 		hMatchParent;
@@ -46,7 +46,7 @@ GtMonitorSystemInfoElement >> buildSectionContainer [
 		cellSpacing: 5
 ]
 
-{ #category : 'private - instance creation' }
+{ #category : #'private - instance creation' }
 GtMonitorSystemInfoElement >> buildSectionLabelNamed: aString [
 	^ BrLabel new
 		aptitude: (BrGlamorousLabelAptitude new foreground: Color gray; fontSize: 12);
@@ -54,7 +54,7 @@ GtMonitorSystemInfoElement >> buildSectionLabelNamed: aString [
 		text: aString
 ]
 
-{ #category : 'private - elements' }
+{ #category : #'private - elements' }
 GtMonitorSystemInfoElement >> buildSkiaCompositorsInfo [
 	| allSkiaCompositors |
 
@@ -81,7 +81,7 @@ GtMonitorSystemInfoElement >> buildSkiaCompositorsInfo [
 				spawn: [ self phlow spawnObject: eachCompositor ] ])
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitorSystemInfoElement >> initialize [
 	super initialize.
 
@@ -95,7 +95,7 @@ GtMonitorSystemInfoElement >> initialize [
 	self when: BlElementAddedToSceneGraphEvent do: [ self updateSystemInfo ]
 ]
 
-{ #category : 'private - elements' }
+{ #category : #'private - elements' }
 GtMonitorSystemInfoElement >> initializeSystemInfo [
 	infos removeChildren.
 	
@@ -103,7 +103,7 @@ GtMonitorSystemInfoElement >> initializeSystemInfo [
 	infos addChild: self buildSkiaCompositorsInfo.
 ]
 
-{ #category : 'private - elements' }
+{ #category : #'private - elements' }
 GtMonitorSystemInfoElement >> updateSystemInfo [
 	self removeChildren.
 	
