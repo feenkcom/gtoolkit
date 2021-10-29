@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtMonitoredProcess',
-	#superclass : 'GtMonitoredService',
+	#name : #GtMonitoredProcess,
+	#superclass : #GtMonitoredService,
 	#category : 'GToolkit-Monitor'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredProcess >> annotations [
 	<return: #Array of: #Association>
 	| aService |
@@ -16,7 +16,7 @@ GtMonitoredProcess >> annotations [
 			aStream nextPut: eachAssoc ] ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredProcess >> gtAnnotationsFor: aView [
 	<gtView>
 	self annotations ifEmpty: [ ^ aView empty ].
@@ -30,7 +30,7 @@ GtMonitoredProcess >> gtAnnotationsFor: aView [
 		
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredProcess >> gtStackFor: aView [
 
 	<gtView>
@@ -42,7 +42,7 @@ GtMonitoredProcess >> gtStackFor: aView [
 					  self stack ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredProcess >> gtTerminateActionFor: anAction [
 	<gtAction>
 	^ anAction button
@@ -51,7 +51,7 @@ GtMonitoredProcess >> gtTerminateActionFor: anAction [
 		action: [ :aButton | self terminate ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredProcess >> gtUpdatingStackFor: aView [
 	<gtView>
 	^ aView explicit
@@ -60,32 +60,32 @@ GtMonitoredProcess >> gtUpdatingStackFor: aView [
 		stencil: [ GtMonitoredProcessElement new service: self ]
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredProcess >> isSuspended [
 	<return: #Boolean>
 	^ self service ifNotNil: [ :aService | aService isSuspended ] ifNil: [ false ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredProcess >> priority [
 	<return: #Integer>
 	^ self service ifNotNil: [ :aService | aService priority ] ifNil: [ 0 ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredProcess >> processIdAndContext [
 	<return: #String>
 	^ self service ifNotNil: [ :aProcess | 
 			aProcess name, ': ', aProcess suspendedContext asString ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredProcess >> stack [
 	<return: #Array or: #Context>
 	^ self stackOfSize: 20
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredProcess >> stackOfSize: aStackDepth [
 	<return: #Array or: #Context>
 	| aProcess |
@@ -96,18 +96,18 @@ GtMonitoredProcess >> stackOfSize: aStackDepth [
 		ifFalse: [ aProcess suspendedContext stackOfSize: aStackDepth ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredProcess >> suspendedContext [
 	<return: #Context or: nil>
 	^ self service ifNotNil: [ :aService | aService suspendedContext ]
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtMonitoredProcess >> terminate [
 	^ self service ifNotNil: #terminate
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredProcess >> title [
 	<return: #String>
 	^ self service ifNotNil: [ :aService | aService gtName ] ifNil: [ '' ]

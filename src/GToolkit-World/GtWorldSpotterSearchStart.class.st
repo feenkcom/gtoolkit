@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'knowledgeBase'
 	],
-	#category : 'GToolkit-World-Search'
+	#category : #'GToolkit-World-Search'
 }
 
 { #category : #'gt-extensions' }
@@ -78,7 +78,7 @@ GtWorldSpotterSearchStart >> gtSpotterPageTitlesFor: aStep [
 	
 	aStep listProcessor
 		title: 'Page Names';
-		priority: 30;
+		priority: 22;
 		filter: GtFilterSubstring
 			item: [ :filter :context | 
 				self knowledgeBase pagesWithNameDo: filter ];
