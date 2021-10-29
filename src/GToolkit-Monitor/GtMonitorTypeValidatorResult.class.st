@@ -1,10 +1,10 @@
 Class {
-	#name : 'GtMonitorTypeValidatorResult',
-	#superclass : 'Object',
+	#name : #GtMonitorTypeValidatorResult,
+	#superclass : #Object,
 	#category : 'GToolkit-Monitor-Type Validator'
 }
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitorTypeValidatorResult >> isOk [
 	^ false
 ]

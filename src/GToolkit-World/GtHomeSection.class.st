@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'priority'
 	],
-	#category : 'GToolkit-World-Sections'
+	#category : #'GToolkit-World-Sections'
 }
 
 { #category : #testing }
@@ -116,25 +116,7 @@ GtHomeSection >> newDocCardForClass: aClass [
 				showSpaceWithIcon: BrGlamorousIcons file
 				title: aClass name
 				with: (GtPager createWrappedOn: (
-					(GtDocumenter forClass: aClass) 
-						withDefaultToolbar))
-				from: card ]
-]
-
-{ #category : #'instance creation' }
-GtHomeSection >> newDocCardForFile: aReference [
-	^ self
-		newHeaderCardWithTitle: 'Doc'
-		description: aReference fullName
-		size: 150 @ 200
-		content:
-			((GtHomeDocumentCardElement forFile: aReference fileReference) matchParent)
-		action: [ :card | 
-			self
-				showSpaceWithIcon: BrGlamorousIcons file
-				title: aReference fileReference basename
-				with: (GtPager createWrappedOn: (
-					(GtDocumenter forFile: aReference fileReference) 
+					(LeCoderCommentElement coderElementFor: aClass name) 
 						withDefaultToolbar))
 				from: card ]
 ]

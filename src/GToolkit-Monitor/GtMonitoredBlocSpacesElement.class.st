@@ -1,19 +1,19 @@
 Class {
-	#name : 'GtMonitoredBlocSpacesElement',
-	#superclass : 'BlElement',
+	#name : #GtMonitoredBlocSpacesElement,
+	#superclass : #BlElement,
 	#instVars : [
 		'spacesList'
 	],
 	#category : 'GToolkit-Monitor-Bloc Spaces'
 }
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtMonitoredBlocSpacesElement class >> open [
 	<script: 'self open'>
 	GtInspector openOn: self new title: 'Monitor'
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitoredBlocSpacesElement >> initialize [
 	super initialize.
 	
@@ -80,7 +80,7 @@ GtMonitoredBlocSpacesElement >> initialize [
 	self updateList
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtMonitoredBlocSpacesElement >> updateList [
 	self
 		enqueueTask:

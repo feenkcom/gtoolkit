@@ -1,18 +1,18 @@
 Class {
-	#name : 'GtMonitorTypeValidatorOk',
-	#superclass : 'GtMonitorTypeValidatorResult',
+	#name : #GtMonitorTypeValidatorOk,
+	#superclass : #GtMonitorTypeValidatorResult,
 	#classInstVars : [
 		'uniqueInstance'
 	],
 	#category : 'GToolkit-Monitor-Type Validator'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitorTypeValidatorOk class >> uniqueInstance [
 	^ uniqueInstance ifNil: [ uniqueInstance := self new ]
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitorTypeValidatorOk >> isOk [
 	^ true
 ]

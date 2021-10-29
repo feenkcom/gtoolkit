@@ -30,13 +30,17 @@ TestCase class >> gtTestsFor: aView [
 
 	<gtView>
 	<gtClassView>
-	| aMethodsCoder |
+	| aMethodsCoder aTestSuiteViewModel |
 	aMethodsCoder := (GtSearchClassTestSuiteFilter new testCaseClass:
 		                  self) asCoder.
+	aTestSuiteViewModel := GtPharoTestSuiteViewModel new 
+		                       methodsCoderModel: aMethodsCoder.
 	^ aView explicit
 		  title: 'Tests';
 		  priority: 20;
 		  stencil: [ aMethodsCoder ];
 		  actionStencil: [ 
-			  GtPharoCoderUIUtility newTestSuiteButtonForMethodsCoder: aMethodsCoder ]
+			  GtPharoCoderUIUtility
+				  newTestSuiteDropdownForViewModel: aTestSuiteViewModel
+				  methodsCoder: aMethodsCoder ]
 ]

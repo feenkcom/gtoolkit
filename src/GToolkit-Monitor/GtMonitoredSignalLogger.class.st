@@ -1,18 +1,18 @@
 Class {
-	#name : 'GtMonitoredSignalLogger',
-	#superclass : 'Object',
+	#name : #GtMonitoredSignalLogger,
+	#superclass : #Object,
 	#instVars : [
 		'logger'
 	],
 	#category : 'GToolkit-Monitor-Beacon Loggers'
 }
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredSignalLogger >> exists [
 	^ self logger isNotNil
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredSignalLogger >> gtPointersFor: aView [
 	<gtView>
 	
@@ -23,31 +23,31 @@ GtMonitoredSignalLogger >> gtPointersFor: aView [
 			text: [ :anObject | anObject gtDisplayText ]
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredSignalLogger >> isDead [
 	^ self isRunning not
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredSignalLogger >> isRunning [
 	^ self logger
 		ifNil: [ false ]
 		ifNotNil: [ :aLogger | aLogger isRunning ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredSignalLogger >> logger [
 	<return: #SignalLogger or: nil>
 
 	^ logger at: 1
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredSignalLogger >> logger: aSignalLogger [
 	logger := aSignalLogger asWeakReference
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredSignalLogger >> pointers [
 	Smalltalk garbageCollectMost.
 
@@ -56,7 +56,7 @@ GtMonitoredSignalLogger >> pointers [
 		ifFalse: [ {  } ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredSignalLogger >> title [
 	^ self logger
 		ifNil: [ 'nil' ]

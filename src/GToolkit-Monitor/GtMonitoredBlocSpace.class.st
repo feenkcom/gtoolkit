@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtMonitoredBlocSpace',
-	#superclass : 'Object',
+	#name : #GtMonitoredBlocSpace,
+	#superclass : #Object,
 	#instVars : [
 		'space',
 		'announcer'
@@ -8,7 +8,7 @@ Class {
 	#category : 'GToolkit-Monitor-Bloc Spaces'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredBlocSpace >> allPathsTo [
 	Smalltalk garbageCollectMost.
 
@@ -17,12 +17,12 @@ GtMonitoredBlocSpace >> allPathsTo [
 		ifFalse: [ {  } ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredBlocSpace >> announcer [
 	^ announcer ifNil: [ announcer := Announcer new ]
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtMonitoredBlocSpace >> changed [
 	"Receiver changed in a general way; inform all the dependents by 
 	sending each dependent an update: message."
@@ -30,30 +30,30 @@ GtMonitoredBlocSpace >> changed [
 	self announcer announce: Announcement new
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtMonitoredBlocSpace >> close [
 	self space ifNotNil: [ :aSpace | aSpace close ].
 	self changed
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtMonitoredBlocSpace >> disableShutdownOnClose [
 	self space ifNotNil: [ :aSpace | aSpace removeEventHandlersSuchThat: [ :h |  h isKindOf: BlSpaceShutdownOnCloseListener ] ].
 	self changed
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 GtMonitoredBlocSpace >> enableShutdownOnClose [
 	self space ifNotNil: [ :aSpace | aSpace addEventHandler: BlSpaceShutdownOnCloseListener new ].
 	self changed
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredBlocSpace >> exists [
 	^ self space isNotNil
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredBlocSpace >> gtActionsFor: aView [
 	<gtView>
 	
@@ -113,7 +113,7 @@ GtMonitoredBlocSpace >> gtActionsFor: aView [
 		]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredBlocSpace >> gtAllPathsToFor: aView [
 	<gtView>
 	
@@ -127,7 +127,7 @@ GtMonitoredBlocSpace >> gtAllPathsToFor: aView [
 			text: [ :anObject | anObject size ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredBlocSpace >> gtPathToFor: aView [
 	<gtView>
 	
@@ -139,7 +139,7 @@ GtMonitoredBlocSpace >> gtPathToFor: aView [
 			text: [ :anObject | anObject gtDisplayText ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredBlocSpace >> gtPointersFor: aView [
 	<gtView>
 	
@@ -151,19 +151,19 @@ GtMonitoredBlocSpace >> gtPointersFor: aView [
 			text: [ :anObject | anObject gtDisplayText ]
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtMonitoredBlocSpace >> gtPreviewFor: aView [
 	<gtView>
 	self space ifNil: [ ^ aView empty ].
 	^ self space gtPreviewFor: aView
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredBlocSpace >> isDead [
 	^ self isRunning not
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredBlocSpace >> isPausedAsSubSpace [
 	^ self space
 		ifNil: [ false ]
@@ -172,14 +172,14 @@ GtMonitoredBlocSpace >> isPausedAsSubSpace [
 				and: [ aSpace root isAttachedToSceneGraph not ] ]
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredBlocSpace >> isRunning [
 	^ self space
 		ifNil: [ false ]
 		ifNotNil: [ :aSpace | aSpace isOpened ]
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredBlocSpace >> isRunningAsSubSpace [
 	^ self space
 		ifNil: [ false ]
@@ -190,7 +190,7 @@ GtMonitoredBlocSpace >> isRunningAsSubSpace [
 						and: [ aSpace root space ~~ aSpace ] ] ] ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredBlocSpace >> pathTo [
 	Smalltalk garbageCollectMost.
 
@@ -199,7 +199,7 @@ GtMonitoredBlocSpace >> pathTo [
 		ifFalse: [ {  } ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredBlocSpace >> pointers [
 	Smalltalk garbageCollectMost.
 
@@ -208,7 +208,7 @@ GtMonitoredBlocSpace >> pointers [
 		ifFalse: [ {  } ]
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtMonitoredBlocSpace >> shouldShutdownOnClose [
 	^ self space
 		ifNil: [ false ]
@@ -219,19 +219,19 @@ GtMonitoredBlocSpace >> shouldShutdownOnClose [
 		false ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredBlocSpace >> space [
 	<return: #BlSpace or: nil>
 
 	^ space at: 1
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredBlocSpace >> space: aSpace [
 	space := aSpace asWeakReference
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredBlocSpace >> title [
 	^ self space title
 ]

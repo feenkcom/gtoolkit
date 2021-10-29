@@ -1,13 +1,13 @@
 Class {
-	#name : 'GtMonitoredServicesElement',
-	#superclass : 'BlElement',
+	#name : #GtMonitoredServicesElement,
+	#superclass : #BlElement,
 	#instVars : [
 		'servicesList'
 	],
 	#category : 'GToolkit-Monitor'
 }
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitoredServicesElement >> initialize [
 	super initialize.
 	self
@@ -29,22 +29,22 @@ GtMonitoredServicesElement >> initialize [
 	self updateList.
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitoredServicesElement >> initializeServiceListDefinition [
 	self subclassResponsibility
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitoredServicesElement >> onClickTransformation [
 	^ [ :aMonitoredService | aMonitoredService ]
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtMonitoredServicesElement >> retreiveNewServiceList [
 	^ #()
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtMonitoredServicesElement >> updateList [
 	self
 		enqueueTask:
@@ -64,7 +64,7 @@ GtMonitoredServicesElement >> updateList [
 								action: [ self updateList ]) ])
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtMonitoredServicesElement >> updateTaskName [
 	^ '[Monitor] Services Update Task'
 ]

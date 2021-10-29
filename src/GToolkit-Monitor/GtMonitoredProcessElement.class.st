@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtMonitoredProcessElement',
-	#superclass : 'GtMonitoredServiceElement',
+	#name : #GtMonitoredProcessElement,
+	#superclass : #GtMonitoredServiceElement,
 	#instVars : [
 		'stackList',
 		'debugSession'
@@ -8,7 +8,7 @@ Class {
 	#category : 'GToolkit-Monitor'
 }
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtMonitoredProcessElement >> initialize [
 
 	super initialize.
@@ -25,7 +25,7 @@ GtMonitoredProcessElement >> initialize [
 	self addChild: stackList
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredProcessElement >> service: aGtMonitoredProcess [
 
 	| process |
@@ -38,12 +38,12 @@ GtMonitoredProcessElement >> service: aGtMonitoredProcess [
 	self updateList
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtMonitoredProcessElement >> stack [
 	^ self service ifNotNil: #stack ifNil: [ #() ]
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtMonitoredProcessElement >> updateList [
 	self
 		enqueueTask:
