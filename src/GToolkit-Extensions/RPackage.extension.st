@@ -47,16 +47,19 @@ RPackage >> gtTestsFor: aView [
 
 	<gtView>
 	<gtPackageView>
-	| aMethodsCoder |
+	| aMethodsCoder aTestSuiteViewModel |
 	aMethodsCoder := (GtSearchPackageTestSuiteFilter new package: self)
 		                 asCoder.
+	aTestSuiteViewModel := GtPharoTestSuiteViewModel new 
+		                       methodsCoderModel: aMethodsCoder.
 	^ aView explicit
 		  title: 'Tests';
 		  priority: 12;
 		  stencil: [ aMethodsCoder ];
 		  actionStencil: [ 
-			  GtPharoCoderUIUtility newTestSuiteButtonForMethodsCoder:
-					  aMethodsCoder ]
+			  GtPharoCoderUIUtility
+				  newTestSuiteDropdownForViewModel: aTestSuiteViewModel
+				  methodsCoder: aMethodsCoder ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
