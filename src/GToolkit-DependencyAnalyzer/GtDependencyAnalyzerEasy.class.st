@@ -36,5 +36,7 @@ GtDependencyAnalyzerEasy class >> preloadedBaselines [
 		BaselineOfMorphic . 
 		BaselineOfMetacello . 
 		BaselineOfMonticello . 
-		BaselineOfIceberg }
+		BaselineOfIceberg.
+		BaselineOfUI.
+		BaselineOfBasicTools }
 ]
