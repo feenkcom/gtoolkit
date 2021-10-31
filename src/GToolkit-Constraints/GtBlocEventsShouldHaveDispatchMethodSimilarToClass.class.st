@@ -1,17 +1,17 @@
 Class {
-	#name : 'GtBlocEventsShouldHaveDispatchMethodSimilarToClass',
-	#superclass : 'GtPharoConstraint',
+	#name : #GtBlocEventsShouldHaveDispatchMethodSimilarToClass,
+	#superclass : #GtPharoConstraint,
 	#category : 'GToolkit-Constraints'
 }
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtBlocEventsShouldHaveDispatchMethodSimilarToClass >> dispatchMethodNameFor: anEventClass prefix: aClassPrefix [
 	<return: #String>
 	
 	^ (anEventClass name gtRemovePrefix: aClassPrefix) uncapitalized asSymbol asMutator
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtBlocEventsShouldHaveDispatchMethodSimilarToClass >> issues [
 	| eventsWithSendTo |
 
@@ -31,7 +31,7 @@ GtBlocEventsShouldHaveDispatchMethodSimilarToClass >> issues [
 			inContext: Dictionary new ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtBlocEventsShouldHaveDispatchMethodSimilarToClass >> name [
 	^ 'Dispatch method in BlEvent>>#sendTo: should be similar to the event class'
 ]
