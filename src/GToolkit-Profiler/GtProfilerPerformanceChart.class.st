@@ -3,8 +3,8 @@ I show a barchart of where each bar represents a frame and how long it took it t
 
 "
 Class {
-	#name : 'GtProfilerPerformanceChart',
-	#superclass : 'BrVerticalPane',
+	#name : #GtProfilerPerformanceChart,
+	#superclass : #BrVerticalPane,
 	#instVars : [
 		'currentLogger',
 		'profiledSpace',
@@ -17,7 +17,7 @@ Class {
 	#category : 'GToolkit-Profiler'
 }
 
-{ #category : 'private - profiling' }
+{ #category : #'private - profiling' }
 GtProfilerPerformanceChart >> computeIsRunning [
 	^ profiledSpace notNil
 		and: [ profiledSpace space telemetry = BlNullTelemetry uniqueInstance
@@ -25,7 +25,7 @@ GtProfilerPerformanceChart >> computeIsRunning [
 				and: [ currentLogger isRunning ] ] ]
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtProfilerPerformanceChart >> initialize [
 	super initialize.
 	
@@ -64,17 +64,17 @@ GtProfilerPerformanceChart >> initialize [
 	self addChild: toolbar.
 ]
 
-{ #category : 'private - profiling' }
+{ #category : #'private - profiling' }
 GtProfilerPerformanceChart >> instrumentSpace [
 	profiledSpace ifNotNil: [ :anOpenedSpace | self instrumentSpace: anOpenedSpace space ]
 ]
 
-{ #category : 'private - profiling' }
+{ #category : #'private - profiling' }
 GtProfilerPerformanceChart >> instrumentSpace: aSpace [
 	aSpace enqueueTask: (BlTaskAction new action: [ aSpace telemetry: BlMemoryTelemetry new ])
 ]
 
-{ #category : 'hooks - children' }
+{ #category : #'hooks - children' }
 GtProfilerPerformanceChart >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 	
@@ -85,7 +85,7 @@ GtProfilerPerformanceChart >> onAddedToSceneGraph [
 	self instrumentSpace
 ]
 
-{ #category : 'hooks - children' }
+{ #category : #'hooks - children' }
 GtProfilerPerformanceChart >> onRemovedFromSceneGraph [
 	super onRemovedFromSceneGraph.
 	
@@ -95,7 +95,7 @@ GtProfilerPerformanceChart >> onRemovedFromSceneGraph [
 	self uninstrumentSpace
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtProfilerPerformanceChart >> profileSpace: anOpenedSpace [
 	profiledSpace = anOpenedSpace
 		ifTrue: [ ^ self ].
@@ -113,17 +113,17 @@ GtProfilerPerformanceChart >> profileSpace: anOpenedSpace [
 		asElementDo: [ :aChart | self addChild: aChart as: #chart ]
 ]
 
-{ #category : 'api - profiler' }
+{ #category : #'api - profiler' }
 GtProfilerPerformanceChart >> reset [
 	self resetLogger
 ]
 
-{ #category : 'private - profiling' }
+{ #category : #'private - profiling' }
 GtProfilerPerformanceChart >> resetLogger [
 	currentLogger ifNotNil: [ :aLogger | aLogger reset ].
 ]
 
-{ #category : 'api - profiler' }
+{ #category : #'api - profiler' }
 GtProfilerPerformanceChart >> start [
 	self
 		instrumentSpace;
@@ -134,12 +134,12 @@ GtProfilerPerformanceChart >> start [
 	resetButton disable
 ]
 
-{ #category : 'private - profiling' }
+{ #category : #'private - profiling' }
 GtProfilerPerformanceChart >> startLogger [
 	currentLogger ifNotNil: [ :aLogger | aLogger start ].
 ]
 
-{ #category : 'api - profiler' }
+{ #category : #'api - profiler' }
 GtProfilerPerformanceChart >> stop [
 	self
 		stopLogger;
@@ -150,17 +150,17 @@ GtProfilerPerformanceChart >> stop [
 	resetButton enable
 ]
 
-{ #category : 'private - profiling' }
+{ #category : #'private - profiling' }
 GtProfilerPerformanceChart >> stopLogger [
 	currentLogger ifNotNil: [ :aLogger | aLogger stop ].
 ]
 
-{ #category : 'private - profiling' }
+{ #category : #'private - profiling' }
 GtProfilerPerformanceChart >> uninstrumentSpace [
 	profiledSpace ifNotNil: [ :anOpenedSpace | self uninstrumentSpace: anOpenedSpace space ]
 ]
 
-{ #category : 'private - profiling' }
+{ #category : #'private - profiling' }
 GtProfilerPerformanceChart >> uninstrumentSpace: aSpace [
 	aSpace enqueueTask: (BlTaskAction new action: [
 		aSpace telemetry: BlNullTelemetry uniqueInstance ])

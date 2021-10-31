@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtProfilerTelemetryLoggerViewModel',
-	#superclass : 'Object',
+	#name : #GtProfilerTelemetryLoggerViewModel,
+	#superclass : #Object,
 	#instVars : [
 		'logger',
 		'announcer',
@@ -10,7 +10,7 @@ Class {
 	#category : 'GToolkit-Profiler-Process - View Models'
 }
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetryLoggerViewModel >> announce: anAnnouncement [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#announceTemplate'>
 	announcer ifNotNil: [ :anAnnouncer | anAnnouncer announce: anAnnouncement ].
@@ -19,7 +19,7 @@ GtProfilerTelemetryLoggerViewModel >> announce: anAnnouncement [
 		ifTrue: [ self parentProfilerProcessTelemetryViewModel announce: anAnnouncement ].
 ]
 
-{ #category : 'private - instance creation' }
+{ #category : #'private - instance creation' }
 GtProfilerTelemetryLoggerViewModel >> createProfilerTelemetrySignalsViewModel [
 	"Create a nested child object for a domain child (or children) and return the result"
 	<return: #GtProfilerTelemetrySignalsViewModel>
@@ -32,7 +32,7 @@ GtProfilerTelemetryLoggerViewModel >> createProfilerTelemetrySignalsViewModel [
 	^ childObject
 ]
 
-{ #category : 'gt-extentions' }
+{ #category : #'gt-extentions' }
 GtProfilerTelemetryLoggerViewModel >> gtSignalsChartFor: aView [
 	<gtView>
 	<gtProfilerTelemetryLoggerView>
@@ -45,7 +45,7 @@ GtProfilerTelemetryLoggerViewModel >> gtSignalsChartFor: aView [
 				profilerTelemetrySignalsViewModel: self profilerTelemetrySignalsViewModel ]
 ]
 
-{ #category : 'gt-extentions' }
+{ #category : #'gt-extentions' }
 GtProfilerTelemetryLoggerViewModel >> gtSignalsFor: aView [
 	<gtView>
 	<gtProfilerTelemetryLoggerView>
@@ -58,7 +58,7 @@ GtProfilerTelemetryLoggerViewModel >> gtSignalsFor: aView [
 				profilerTelemetrySignalsViewModel: self profilerTelemetrySignalsViewModel ]
 ]
 
-{ #category : 'gt-extentions' }
+{ #category : #'gt-extentions' }
 GtProfilerTelemetryLoggerViewModel >> gtTelemetrySignalsListViewFor: aView [
 	<gtView>
 	<generatedFrom: #'GtRobocoderMetamodelPhlowListViewDerive>>#listForOneTemplate'>
@@ -69,7 +69,7 @@ GtProfilerTelemetryLoggerViewModel >> gtTelemetrySignalsListViewFor: aView [
 		items: [ self profilerTelemetrySignalsViewModel profilerTelemetrySignalViewModels ]
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> hasLogger [
 	"Return a true if nil is assigned to the receiver, false otherwise"
 	<return: #Boolean>
@@ -79,7 +79,7 @@ GtProfilerTelemetryLoggerViewModel >> hasLogger [
 	^ logger notNil
 ]
 
-{ #category : 'api - testing' }
+{ #category : #'api - testing' }
 GtProfilerTelemetryLoggerViewModel >> hasParentProfilerProcessTelemetryViewModel [
 	"Return true if the parent object is attached"
 	<return: #Boolean>
@@ -89,12 +89,12 @@ GtProfilerTelemetryLoggerViewModel >> hasParentProfilerProcessTelemetryViewModel
 	^ parentProfilerProcessTelemetryViewModel notNil
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> isRunning [
 	^ self logger isRunning
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> logger [
 	"Return a not-null logger assigned to the receiver"
 	<modelGetter: #logger>
@@ -106,7 +106,7 @@ GtProfilerTelemetryLoggerViewModel >> logger [
 	^ logger
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> logger: aLogger [
 	"Set a not-null logger assigned to the receiver"
 	<modelSetter: #logger>
@@ -126,7 +126,7 @@ GtProfilerTelemetryLoggerViewModel >> logger: aLogger [
 	self onPostLoggerChanged
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> onLoggerChanged [
 	"Is sent when a new logger is assigned to the receiver.
 	Note: #onLoggerChanged is sent before #subscribeToLogger
@@ -138,17 +138,17 @@ GtProfilerTelemetryLoggerViewModel >> onLoggerChanged [
 	self profilerTelemetrySignalsViewModel logger: self logger
 ]
 
-{ #category : 'private - event handling' }
+{ #category : #'private - event handling' }
 GtProfilerTelemetryLoggerViewModel >> onLoggerStarted [
 	self announce: (GtProfilerTelemetryLoggerViewModelStarted new profilerTelemetryLoggerViewModel: self)
 ]
 
-{ #category : 'private - event handling' }
+{ #category : #'private - event handling' }
 GtProfilerTelemetryLoggerViewModel >> onLoggerStopped [
 	self announce: (GtProfilerTelemetryLoggerViewModelStopped new profilerTelemetryLoggerViewModel: self)
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> onPostLoggerChanged [
 	"I am an optional hook method that is sent after #subscribeToLogger.
 	I do nothing by default but allow users to perform update operations when a receiver object is already
@@ -156,7 +156,7 @@ GtProfilerTelemetryLoggerViewModel >> onPostLoggerChanged [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onPostObjectChangedTemplate'>
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerTelemetryLoggerViewModel >> parentProfilerProcessTelemetryViewModel [
 	"Return a parent object which is used to access various state properties,
 	for example parent may be responsible for knowing a selected child object.
@@ -172,7 +172,7 @@ GtProfilerTelemetryLoggerViewModel >> parentProfilerProcessTelemetryViewModel [
 	^ parentProfilerProcessTelemetryViewModel
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerTelemetryLoggerViewModel >> parentProfilerProcessTelemetryViewModel: aGtProfilerProcessTelemetryViewModel [
 	"Assign a parent object (${class:GtProfilerProcessTelemetryViewModel}$) which is used to access various state properties,
 	for example parent may be responsible for knowing a selected child object.
@@ -187,13 +187,13 @@ GtProfilerTelemetryLoggerViewModel >> parentProfilerProcessTelemetryViewModel: a
 	parentProfilerProcessTelemetryViewModel := aGtProfilerProcessTelemetryViewModel
 ]
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtProfilerTelemetryLoggerViewModel >> printOn: aStream [
 	<generatedFrom: #'GtRobocoderMetamodelPrintDerive>>#printOnTemplate'>
 	aStream print: self logger
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerTelemetryLoggerViewModel >> profilerTelemetrySignalsViewModel [
 	"Return a composite object (${class:nil}$) created for a collection of children from the domain model.
 	Note: The object is lazily instantiated."
@@ -204,7 +204,7 @@ GtProfilerTelemetryLoggerViewModel >> profilerTelemetrySignalsViewModel [
 	^ profilerTelemetrySignalsViewModel ifNil: [ profilerTelemetrySignalsViewModel := self createProfilerTelemetrySignalsViewModel ]
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> reset [
 	self hasLogger
 		ifFalse: [ ^ self ].
@@ -212,7 +212,7 @@ GtProfilerTelemetryLoggerViewModel >> reset [
 	self logger reset
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> start [
 	self hasLogger
 		ifFalse: [ ^ self ].
@@ -220,7 +220,7 @@ GtProfilerTelemetryLoggerViewModel >> start [
 	self logger start
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> stop [
 	self hasLogger
 		ifFalse: [ ^ self ].
@@ -228,7 +228,7 @@ GtProfilerTelemetryLoggerViewModel >> stop [
 	self logger stop
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> subscribeToLogger [
 	"Is sent after a new logger is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -245,7 +245,7 @@ GtProfilerTelemetryLoggerViewModel >> subscribeToLogger [
 			to: self
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetryLoggerViewModel >> unsubscribe: anObject [
 	"Unsubscribe all subscriptions of anObject from the receiver"
 
@@ -253,7 +253,7 @@ GtProfilerTelemetryLoggerViewModel >> unsubscribe: anObject [
 	^ announcer ifNotNil: [ :anAnnouncer | anAnnouncer unsubscribe: anObject ]
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetryLoggerViewModel >> unsubscribeFromLogger [
 	"Is sent before a new logger is assigned to the receiver.
 	Objects that subscribe to logger are required to implement this method."
@@ -261,14 +261,14 @@ GtProfilerTelemetryLoggerViewModel >> unsubscribeFromLogger [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#unsubscribeFromObjectTemplate'>
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetryLoggerViewModel >> when: anAnnouncementClass do: aBlock [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#whenDoTemplate'>
 	^ (announcer ifNil: [ announcer := Announcer new ])
 		when: anAnnouncementClass do: aBlock
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetryLoggerViewModel >> when: anAnnouncementClass send: aSelector to: anObject [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#whenSendToTemplate'>
 	^ (announcer ifNil: [ announcer := Announcer new ]) weak

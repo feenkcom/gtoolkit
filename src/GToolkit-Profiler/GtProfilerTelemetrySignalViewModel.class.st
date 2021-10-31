@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtProfilerTelemetrySignalViewModel',
-	#superclass : 'Object',
+	#name : #GtProfilerTelemetrySignalViewModel,
+	#superclass : #Object,
 	#instVars : [
 		'signal',
 		'announcer',
@@ -9,7 +9,7 @@ Class {
 	#category : 'GToolkit-Profiler-Process - View Models'
 }
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetrySignalViewModel >> announce: anAnnouncement [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#announceTemplate'>
 	announcer ifNotNil: [ :anAnnouncer | anAnnouncer announce: anAnnouncement ].
@@ -18,7 +18,7 @@ GtProfilerTelemetrySignalViewModel >> announce: anAnnouncement [
 		ifTrue: [ self parentProfilerTelemetrySignalsViewModel announce: anAnnouncement ].
 ]
 
-{ #category : 'api - testing' }
+{ #category : #'api - testing' }
 GtProfilerTelemetrySignalViewModel >> hasParentProfilerTelemetrySignalsViewModel [
 	"Return true if the parent object is attached"
 	<return: #Boolean>
@@ -28,7 +28,7 @@ GtProfilerTelemetrySignalViewModel >> hasParentProfilerTelemetrySignalsViewModel
 	^ parentProfilerTelemetrySignalsViewModel notNil
 ]
 
-{ #category : 'api - signal' }
+{ #category : #'api - signal' }
 GtProfilerTelemetrySignalViewModel >> hasSignal [
 	"Return a true if nil is assigned to the receiver, false otherwise"
 	<return: #Boolean>
@@ -38,7 +38,7 @@ GtProfilerTelemetrySignalViewModel >> hasSignal [
 	^ signal notNil
 ]
 
-{ #category : 'api - signal' }
+{ #category : #'api - signal' }
 GtProfilerTelemetrySignalViewModel >> onPostSignalChanged [
 	"I am an optional hook method that is sent after #subscribeToSignal.
 	I do nothing by default but allow users to perform update operations when a receiver object is already
@@ -46,7 +46,7 @@ GtProfilerTelemetrySignalViewModel >> onPostSignalChanged [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onPostObjectChangedTemplate'>
 ]
 
-{ #category : 'api - signal' }
+{ #category : #'api - signal' }
 GtProfilerTelemetrySignalViewModel >> onSignalChanged [
 	"Is sent when a new signal is assigned to the receiver.
 	Note: #onSignalChanged is sent before #subscribeToSignal
@@ -56,7 +56,7 @@ GtProfilerTelemetrySignalViewModel >> onSignalChanged [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onObjectChangedTemplate'>
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerTelemetrySignalViewModel >> parentProfilerTelemetrySignalsViewModel [
 	"Return a parent object which is used to access various state properties,
 	for example parent may be responsible for knowing a selected child object.
@@ -72,7 +72,7 @@ GtProfilerTelemetrySignalViewModel >> parentProfilerTelemetrySignalsViewModel [
 	^ parentProfilerTelemetrySignalsViewModel
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerTelemetrySignalViewModel >> parentProfilerTelemetrySignalsViewModel: aGtProfilerTelemetrySignalsViewModel [
 	"Assign a parent object (${class:GtProfilerTelemetrySignalsViewModel}$) which is used to access various state properties,
 	for example parent may be responsible for knowing a selected child object.
@@ -87,13 +87,13 @@ GtProfilerTelemetrySignalViewModel >> parentProfilerTelemetrySignalsViewModel: a
 	parentProfilerTelemetrySignalsViewModel := aGtProfilerTelemetrySignalsViewModel
 ]
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtProfilerTelemetrySignalViewModel >> printOn: aStream [
 	<generatedFrom: #'GtRobocoderMetamodelPrintDerive>>#printOnTemplate'>
 	aStream print: self signal
 ]
 
-{ #category : 'api - signal' }
+{ #category : #'api - signal' }
 GtProfilerTelemetrySignalViewModel >> signal [
 	"Return a not-null signal assigned to the receiver"
 	<modelGetter: #signal>
@@ -105,7 +105,7 @@ GtProfilerTelemetrySignalViewModel >> signal [
 	^ signal
 ]
 
-{ #category : 'api - signal' }
+{ #category : #'api - signal' }
 GtProfilerTelemetrySignalViewModel >> signal: aSignal [
 	"Set a not-null signal assigned to the receiver"
 	<modelSetter: #signal>
@@ -125,7 +125,7 @@ GtProfilerTelemetrySignalViewModel >> signal: aSignal [
 	self onPostSignalChanged
 ]
 
-{ #category : 'api - signal' }
+{ #category : #'api - signal' }
 GtProfilerTelemetrySignalViewModel >> subscribeToSignal [
 	"Is sent after a new signal is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -134,7 +134,7 @@ GtProfilerTelemetrySignalViewModel >> subscribeToSignal [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#subscribeToObjectTemplate'>
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetrySignalViewModel >> unsubscribe: anObject [
 	"Unsubscribe all subscriptions of anObject from the receiver"
 
@@ -142,7 +142,7 @@ GtProfilerTelemetrySignalViewModel >> unsubscribe: anObject [
 	^ announcer ifNotNil: [ :anAnnouncer | anAnnouncer unsubscribe: anObject ]
 ]
 
-{ #category : 'api - signal' }
+{ #category : #'api - signal' }
 GtProfilerTelemetrySignalViewModel >> unsubscribeFromSignal [
 	"Is sent before a new signal is assigned to the receiver.
 	Objects that subscribe to signal are required to implement this method."
@@ -150,14 +150,14 @@ GtProfilerTelemetrySignalViewModel >> unsubscribeFromSignal [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#unsubscribeFromObjectTemplate'>
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetrySignalViewModel >> when: anAnnouncementClass do: aBlock [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#whenDoTemplate'>
 	^ (announcer ifNil: [ announcer := Announcer new ])
 		when: anAnnouncementClass do: aBlock
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetrySignalViewModel >> when: anAnnouncementClass send: aSelector to: anObject [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#whenSendToTemplate'>
 	^ (announcer ifNil: [ announcer := Announcer new ]) weak

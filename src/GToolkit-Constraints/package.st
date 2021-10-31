@@ -1,1 +1,1 @@
-Package { #name : 'GToolkit-Constraints' }
+Package { #name : #'GToolkit-Constraints' }

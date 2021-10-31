@@ -3,15 +3,15 @@ I represent a profiled space
 
 "
 Class {
-	#name : 'GtProfilerSpace',
-	#superclass : 'Object',
+	#name : #GtProfilerSpace,
+	#superclass : #Object,
 	#instVars : [
 		'space'
 	],
 	#category : 'GToolkit-Profiler'
 }
 
-{ #category : 'comparing' }
+{ #category : #comparing }
 GtProfilerSpace >> = anObject [
 	"Answer whether the receiver and anObject represent the same object."
 
@@ -22,7 +22,7 @@ GtProfilerSpace >> = anObject [
 	^ space = anObject space
 ]
 
-{ #category : 'gt-extension' }
+{ #category : #'gt-extension' }
 GtProfilerSpace >> gtPointersFor: aView [
 	<gtView>
 	
@@ -33,7 +33,7 @@ GtProfilerSpace >> gtPointersFor: aView [
 			text: [ :anObject | anObject gtDisplayText ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtProfilerSpace >> gtPreviewFor: aView [
 	<gtView>
 
@@ -41,38 +41,38 @@ GtProfilerSpace >> gtPreviewFor: aView [
 		gtPreviewFor: aView
 ]
 
-{ #category : 'comparing' }
+{ #category : #comparing }
 GtProfilerSpace >> hash [
 	"Answer an integer value that is related to the identity of the receiver."
 
 	^ space hash
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 GtProfilerSpace >> isRunning [
 	^ self space isOpened
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtProfilerSpace >> pointers [
 	Smalltalk garbageCollectMost.
 
 	^ self space pointersTo reject: [ :eachObject | eachObject isKindOf: WeakArray ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtProfilerSpace >> space [
 	<return: #BlSpace>
 
 	^ space
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtProfilerSpace >> space: aSpace [
 	space := aSpace
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtProfilerSpace >> title [
 	^ self space title
 ]

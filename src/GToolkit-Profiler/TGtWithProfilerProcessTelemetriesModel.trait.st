@@ -1,12 +1,12 @@
 Trait {
-	#name : 'TGtWithProfilerProcessTelemetriesModel',
+	#name : #TGtWithProfilerProcessTelemetriesModel,
 	#instVars : [
 		'profilerProcessTelemetriesModel'
 	],
 	#category : 'GToolkit-Profiler-Process - Support'
 }
 
-{ #category : 'api - profiler process telemetries model' }
+{ #category : #'api - profiler process telemetries model' }
 TGtWithProfilerProcessTelemetriesModel >> hasProfilerProcessTelemetriesModel [
 	"Return a true if nil is assigned to the receiver, false otherwise"
 	<return: #Boolean>
@@ -16,7 +16,7 @@ TGtWithProfilerProcessTelemetriesModel >> hasProfilerProcessTelemetriesModel [
 	^ profilerProcessTelemetriesModel notNil
 ]
 
-{ #category : 'api - profiler process telemetries model' }
+{ #category : #'api - profiler process telemetries model' }
 TGtWithProfilerProcessTelemetriesModel >> onPostProfilerProcessTelemetriesModelChanged [
 	"I am an optional hook method that is sent after #subscribeToProfilerProcessTelemetriesModel.
 	I do nothing by default but allow users to perform update operations when a receiver object is already
@@ -24,7 +24,7 @@ TGtWithProfilerProcessTelemetriesModel >> onPostProfilerProcessTelemetriesModelC
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onPostObjectChangedTemplate'>
 ]
 
-{ #category : 'api - profiler process telemetries model' }
+{ #category : #'api - profiler process telemetries model' }
 TGtWithProfilerProcessTelemetriesModel >> onProfilerProcessTelemetriesModelChanged [
 	"Is sent when a new profilerProcessTelemetriesModel is assigned to the receiver.
 	Note: #onProfilerProcessTelemetriesModelChanged is sent before #subscribeToProfilerProcessTelemetriesModel
@@ -34,7 +34,7 @@ TGtWithProfilerProcessTelemetriesModel >> onProfilerProcessTelemetriesModelChang
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onObjectChangedTemplate'>
 ]
 
-{ #category : 'api - profiler process telemetries model' }
+{ #category : #'api - profiler process telemetries model' }
 TGtWithProfilerProcessTelemetriesModel >> profilerProcessTelemetriesModel [
 	"Return a not-null profilerProcessTelemetriesModel assigned to the receiver"
 	<modelGetter: #processTelemetries>
@@ -46,7 +46,7 @@ TGtWithProfilerProcessTelemetriesModel >> profilerProcessTelemetriesModel [
 	^ profilerProcessTelemetriesModel
 ]
 
-{ #category : 'api - profiler process telemetries model' }
+{ #category : #'api - profiler process telemetries model' }
 TGtWithProfilerProcessTelemetriesModel >> profilerProcessTelemetriesModel: aProfilerProcessTelemetriesModel [
 	"Set a not-null profilerProcessTelemetriesModel assigned to the receiver"
 	<modelSetter: #processTelemetries>
@@ -66,7 +66,7 @@ TGtWithProfilerProcessTelemetriesModel >> profilerProcessTelemetriesModel: aProf
 	self onPostProfilerProcessTelemetriesModelChanged
 ]
 
-{ #category : 'api - profiler process telemetries model' }
+{ #category : #'api - profiler process telemetries model' }
 TGtWithProfilerProcessTelemetriesModel >> subscribeToProfilerProcessTelemetriesModel [
 	"Is sent after a new profilerProcessTelemetriesModel is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -75,7 +75,7 @@ TGtWithProfilerProcessTelemetriesModel >> subscribeToProfilerProcessTelemetriesM
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#subscribeToObjectTemplate'>
 ]
 
-{ #category : 'api - profiler process telemetries model' }
+{ #category : #'api - profiler process telemetries model' }
 TGtWithProfilerProcessTelemetriesModel >> unsubscribeFromProfilerProcessTelemetriesModel [
 	"Is sent before a new profilerProcessTelemetriesModel is assigned to the receiver.
 	Objects that subscribe to profilerProcessTelemetriesModel are required to implement this method."

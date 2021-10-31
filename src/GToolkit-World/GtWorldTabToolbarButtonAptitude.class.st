@@ -1,7 +1,7 @@
 Class {
 	#name : #GtWorldTabToolbarButtonAptitude,
 	#superclass : #BrStyleCommonAptitude,
-	#category : 'GToolkit-World-UI'
+	#category : #'GToolkit-World-UI'
 }
 
 { #category : #initialization }
@@ -16,7 +16,7 @@ GtWorldTabToolbarButtonAptitude >> initialize [
 
 	self
 		default: [ :aStyle |
-			aStyle geometry: BlCircle new.
+			aStyle geometry: BlCircleGeometry new.
 			aStyle layout: BlLinearLayout horizontal alignCenter.
 			aStyle background: (Color transparent) ];
 		hovered: [ :aStyle | aStyle background: (Color gray alpha: 0.2) ];
