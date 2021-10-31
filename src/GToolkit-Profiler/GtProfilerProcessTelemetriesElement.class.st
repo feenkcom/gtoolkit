@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtProfilerProcessTelemetriesElement',
-	#superclass : 'BrVerticalPane',
+	#name : #GtProfilerProcessTelemetriesElement,
+	#superclass : #BrVerticalPane,
 	#traits : 'TGtWithProfilerProcessTelemetriesViewModel',
 	#classTraits : 'TGtWithProfilerProcessTelemetriesViewModel classTrait',
 	#instVars : [
@@ -10,7 +10,7 @@ Class {
 	#category : 'GToolkit-Profiler-Process - Views'
 }
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtProfilerProcessTelemetriesElement >> createDescriptionText [
 	| aText |
 	
@@ -32,7 +32,7 @@ GtProfilerProcessTelemetriesElement >> createDescriptionText [
 	^ aText
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtProfilerProcessTelemetriesElement >> initialize [
 	super initialize.
 	
@@ -60,7 +60,7 @@ GtProfilerProcessTelemetriesElement >> initialize [
 		asElementDo: [ :aTabGroup | self addChild: aTabGroup ])
 ]
 
-{ #category : 'api - profiler process telemetries view model' }
+{ #category : #'api - profiler process telemetries view model' }
 GtProfilerProcessTelemetriesElement >> onProfilerProcessTelemetriesViewModelChanged [
 	"Is sent when a new profilerProcessTelemetriesViewModel is assigned to the receiver.
 	Note: #onProfilerProcessTelemetriesViewModelChanged is sent before #subscribeToProfilerProcessTelemetriesViewModel

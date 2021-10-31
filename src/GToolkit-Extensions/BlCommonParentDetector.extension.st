@@ -35,34 +35,42 @@ BlCommonParentDetector >> paintTreeWith: aMondrian [
 	aMondrian nodes
 		stencil: [ :eachElement | 
 			| eachPreviewElement |
+
 			eachPreviewElement := BlElement new.
+			eachPreviewElement size: 10@10.
+			eachPreviewElement geometry: BlCircleGeometry new.
 
 			eachElement = commonParent
-				ifTrue: [ 
-					eachPreviewElement addChild:
-							(BlTextElement new text: 'Common parent' asRopedText)
-								asScalableElement ]
+				ifTrue: [ eachPreviewElement background: BrGlamorousColors textHighlightColor ]
 				ifFalse: [ 
 					eachElement = provisionalCommonParent
-						ifTrue: [ 
-							eachPreviewElement addChild:
-									(BlTextElement new text:
-											 'Potential common parent' asRopedText) asScalableElement ]
-						ifFalse: [ 
-							(elements includes: eachElement) ifTrue: [ 
-									eachPreviewElement addChild:
-											(BlTextElement new text: 'Node' asRopedText)
-												asScalableElement ] ] ].
-
-			eachPreviewElement enqueueTask: (BlTaskAction new action: [ 
-							 | eachForm |
-							 eachForm := eachElement asSpartaForm.
-							 eachPreviewElement
-								 background: eachForm;
-								 size: eachForm extent ]) ];
+						ifTrue: [
+							eachPreviewElement
+								background: (BlRadialGradientPaint new
+									stops: { 
+										0 -> Color white.
+										1 -> BrGlamorousColors textHighlightColor };
+									radius: 5;
+									center: 5@5);
+								border: (BlBorder paint: BrGlamorousColors textHighlightColor width: 1) ]
+						ifFalse: [
+							(elements includes: eachElement)
+								ifTrue: [ eachPreviewElement border: (BlBorder paint: BrGlamorousColors textHighlightColor width: 1) ]
+								ifFalse: [ eachPreviewElement border: (BlBorder paint: BrGlamorousColors lightBorderColor width: 1) ] ] ].
+			eachPreviewElement ];
 		with: theNodes.
-	aMondrian edges connectFrom: [ :x | x parent ].
-	aMondrian layout tree levelDistance: 50; nodeDistance: 50.
+
+	aMondrian edges 
+		stencil: [
+			BlSigmoidElement new
+				beHorizontal;
+				sharpness: 0.1;
+				border: (BlBorder paint: (BrGlamorousColors defaultHeaderBackgroundColor alpha: 0.5) width: 2) ];
+		fromRightCenter;
+		toLeftCenter;
+		connectFrom: #parent.
+
+	aMondrian layout horizontalTree levelDistance: 30; nodeDistance: 10..
 
 	^ aMondrian
 ]

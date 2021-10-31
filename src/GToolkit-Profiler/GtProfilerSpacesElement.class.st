@@ -3,21 +3,21 @@ I display a list of running {{gtClass:BlSpace}} that can be profiled. I exclude 
 
 "
 Class {
-	#name : 'GtProfilerSpacesElement',
-	#superclass : 'BlElement',
+	#name : #GtProfilerSpacesElement,
+	#superclass : #BlElement,
 	#instVars : [
 		'spacesList'
 	],
 	#category : 'GToolkit-Profiler'
 }
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 GtProfilerSpacesElement class >> open [
 	<script: 'self open'>
 	GtInspector openOn: self new title: 'Monitor'
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 GtProfilerSpacesElement >> allOpenedSpaces [
 	| openedSpaces |
 
@@ -30,7 +30,7 @@ GtProfilerSpacesElement >> allOpenedSpaces [
 	^ openedSpaces
 ]
 
-{ #category : 'initialization' }
+{ #category : #initialization }
 GtProfilerSpacesElement >> initialize [
 	super initialize.
 	
@@ -77,7 +77,7 @@ GtProfilerSpacesElement >> initialize [
 	self updateList
 ]
 
-{ #category : 'updating' }
+{ #category : #updating }
 GtProfilerSpacesElement >> updateList [
 	self
 		enqueueTask:

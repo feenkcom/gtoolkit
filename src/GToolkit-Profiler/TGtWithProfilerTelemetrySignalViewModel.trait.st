@@ -1,12 +1,12 @@
 Trait {
-	#name : 'TGtWithProfilerTelemetrySignalViewModel',
+	#name : #TGtWithProfilerTelemetrySignalViewModel,
 	#instVars : [
 		'profilerTelemetrySignalViewModel'
 	],
 	#category : 'GToolkit-Profiler-Process - Support'
 }
 
-{ #category : 'api - profiler telemetry signal view model' }
+{ #category : #'api - profiler telemetry signal view model' }
 TGtWithProfilerTelemetrySignalViewModel >> hasProfilerTelemetrySignalViewModel [
 	"Return a true if nil is assigned to the receiver, false otherwise"
 	<return: #Boolean>
@@ -16,7 +16,7 @@ TGtWithProfilerTelemetrySignalViewModel >> hasProfilerTelemetrySignalViewModel [
 	^ profilerTelemetrySignalViewModel notNil
 ]
 
-{ #category : 'api - profiler telemetry signal view model' }
+{ #category : #'api - profiler telemetry signal view model' }
 TGtWithProfilerTelemetrySignalViewModel >> onPostProfilerTelemetrySignalViewModelChanged [
 	"I am an optional hook method that is sent after #subscribeToProfilerTelemetrySignalViewModel.
 	I do nothing by default but allow users to perform update operations when a receiver object is already
@@ -24,7 +24,7 @@ TGtWithProfilerTelemetrySignalViewModel >> onPostProfilerTelemetrySignalViewMode
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onPostObjectChangedTemplate'>
 ]
 
-{ #category : 'api - profiler telemetry signal view model' }
+{ #category : #'api - profiler telemetry signal view model' }
 TGtWithProfilerTelemetrySignalViewModel >> onProfilerTelemetrySignalViewModelChanged [
 	"Is sent when a new profilerTelemetrySignalViewModel is assigned to the receiver.
 	Note: #onProfilerTelemetrySignalViewModelChanged is sent before #subscribeToProfilerTelemetrySignalViewModel
@@ -34,7 +34,7 @@ TGtWithProfilerTelemetrySignalViewModel >> onProfilerTelemetrySignalViewModelCha
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onObjectChangedTemplate'>
 ]
 
-{ #category : 'api - profiler telemetry signal view model' }
+{ #category : #'api - profiler telemetry signal view model' }
 TGtWithProfilerTelemetrySignalViewModel >> profilerTelemetrySignalViewModel [
 	"Return a not-null profilerTelemetrySignalViewModel assigned to the receiver"
 	<modelGetter: #telemetrySignal>
@@ -46,7 +46,7 @@ TGtWithProfilerTelemetrySignalViewModel >> profilerTelemetrySignalViewModel [
 	^ profilerTelemetrySignalViewModel
 ]
 
-{ #category : 'api - profiler telemetry signal view model' }
+{ #category : #'api - profiler telemetry signal view model' }
 TGtWithProfilerTelemetrySignalViewModel >> profilerTelemetrySignalViewModel: aProfilerTelemetrySignalViewModel [
 	"Set a not-null profilerTelemetrySignalViewModel assigned to the receiver"
 	<modelSetter: #telemetrySignal>
@@ -66,7 +66,7 @@ TGtWithProfilerTelemetrySignalViewModel >> profilerTelemetrySignalViewModel: aPr
 	self onPostProfilerTelemetrySignalViewModelChanged
 ]
 
-{ #category : 'api - profiler telemetry signal view model' }
+{ #category : #'api - profiler telemetry signal view model' }
 TGtWithProfilerTelemetrySignalViewModel >> subscribeToProfilerTelemetrySignalViewModel [
 	"Is sent after a new profilerTelemetrySignalViewModel is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -75,7 +75,7 @@ TGtWithProfilerTelemetrySignalViewModel >> subscribeToProfilerTelemetrySignalVie
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#subscribeToObjectTemplate'>
 ]
 
-{ #category : 'api - profiler telemetry signal view model' }
+{ #category : #'api - profiler telemetry signal view model' }
 TGtWithProfilerTelemetrySignalViewModel >> unsubscribeFromProfilerTelemetrySignalViewModel [
 	"Is sent before a new profilerTelemetrySignalViewModel is assigned to the receiver.
 	Objects that subscribe to profilerTelemetrySignalViewModel are required to implement this method."

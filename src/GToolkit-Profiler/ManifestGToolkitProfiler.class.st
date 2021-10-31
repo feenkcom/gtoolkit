@@ -3,12 +3,12 @@ A set of utilities to profile performance
 
 "
 Class {
-	#name : 'ManifestGToolkitProfiler',
-	#superclass : 'PackageManifest',
+	#name : #ManifestGToolkitProfiler,
+	#superclass : #PackageManifest,
 	#category : 'GToolkit-Profiler-Manifest'
 }
 
-{ #category : 'metamodel' }
+{ #category : #metamodel }
 ManifestGToolkitProfiler class >> processTelemetry [
 "@prefix Gt
 @project Profiler
@@ -38,7 +38,7 @@ processTelemetry {
 }"
 ]
 
-{ #category : 'metamodel' }
+{ #category : #metamodel }
 ManifestGToolkitProfiler class >> processTelemetryViewModel [
 "@prefix Gt
 @project Profiler

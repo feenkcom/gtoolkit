@@ -1,1 +1,1 @@
-Package { #name : 'GToolkit-Profiler' }
+Package { #name : #'GToolkit-Profiler' }

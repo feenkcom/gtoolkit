@@ -1,13 +1,13 @@
 Class {
-	#name : 'GtProfilerTelemetryLoggerViewModelStarted',
-	#superclass : 'Announcement',
+	#name : #GtProfilerTelemetryLoggerViewModelStarted,
+	#superclass : #Announcement,
 	#instVars : [
 		'profilerTelemetryLoggerViewModel'
 	],
 	#category : 'GToolkit-Profiler-Process - Events'
 }
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtProfilerTelemetryLoggerViewModelStarted >> profilerTelemetryLoggerViewModel [
 	<objectGetter: #telemetryLogger>
 	<generatedFrom: #'GtRobocoderMetamodelAnnouncementTemplate>>#objectGetterTemplate'>
@@ -15,7 +15,7 @@ GtProfilerTelemetryLoggerViewModelStarted >> profilerTelemetryLoggerViewModel [
 	^ profilerTelemetryLoggerViewModel
 ]
 
-{ #category : 'generated' }
+{ #category : #generated }
 GtProfilerTelemetryLoggerViewModelStarted >> profilerTelemetryLoggerViewModel: aProfilerTelemetryLoggerViewModel [
 	<objectSetter: #telemetryLogger>
 	<generatedFrom: #'GtRobocoderMetamodelAnnouncementTemplate>>#objectSetterTemplate'>

@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtProfilerProcessTelemetryViewModel',
-	#superclass : 'Object',
+	#name : #GtProfilerProcessTelemetryViewModel,
+	#superclass : #Object,
 	#traits : 'TGtWithProfilerProcessTelemetryModel',
 	#classTraits : 'TGtWithProfilerProcessTelemetryModel classTrait',
 	#instVars : [
@@ -11,7 +11,7 @@ Class {
 	#category : 'GToolkit-Profiler-Process - View Models'
 }
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerProcessTelemetryViewModel >> announce: anAnnouncement [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#announceTemplate'>
 	announcer ifNotNil: [ :anAnnouncer | anAnnouncer announce: anAnnouncement ].
@@ -20,7 +20,7 @@ GtProfilerProcessTelemetryViewModel >> announce: anAnnouncement [
 		ifTrue: [ self parentProfilerProcessTelemetriesViewModel announce: anAnnouncement ].
 ]
 
-{ #category : 'private - instance creation' }
+{ #category : #'private - instance creation' }
 GtProfilerProcessTelemetryViewModel >> createProfilerTelemetryLoggerViewModel [
 	"Create a nested child object for a domain child (or children) and return the result"
 	<return: #GtProfilerTelemetryLoggerViewModel>
@@ -33,7 +33,7 @@ GtProfilerProcessTelemetryViewModel >> createProfilerTelemetryLoggerViewModel [
 	^ childObject
 ]
 
-{ #category : 'api - selection' }
+{ #category : #'api - selection' }
 GtProfilerProcessTelemetryViewModel >> deselectAllFromTopMostParent [
 	"Deselect any selected child starting from the top most parent"
 	<propertyUnsetFromParent: #selectedProcessTelemetryViewModel>
@@ -42,19 +42,19 @@ GtProfilerProcessTelemetryViewModel >> deselectAllFromTopMostParent [
 	self topMostParentsWithSelectionDo: [ :eachParent | eachParent deselectChildren ]
 ]
 
-{ #category : 'api - selection' }
+{ #category : #'api - selection' }
 GtProfilerProcessTelemetryViewModel >> deselectChildren [
 	"Deselect any selected child"
 	<propertyUnsetChildren: #selectedProcessTelemetryViewModel>
 	<generatedFrom: #'TGtRobocoderMetamodelPropertyForParentTemplate>>#unsetChildrenTemplate'>
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerProcessTelemetryViewModel >> displayLabel [
 	^ self profilerProcessTelemetryModel telemetry name
 ]
 
-{ #category : 'api - selection' }
+{ #category : #'api - selection' }
 GtProfilerProcessTelemetryViewModel >> hasOtherSelectedEntities [
 	"Return true if there are other selected entities that are the children"
 	<return: #Boolean>
@@ -64,7 +64,7 @@ GtProfilerProcessTelemetryViewModel >> hasOtherSelectedEntities [
 	^ false
 ]
 
-{ #category : 'api - testing' }
+{ #category : #'api - testing' }
 GtProfilerProcessTelemetryViewModel >> hasParentProfilerProcessTelemetriesViewModel [
 	"Return true if the parent object is attached"
 	<return: #Boolean>
@@ -74,7 +74,7 @@ GtProfilerProcessTelemetryViewModel >> hasParentProfilerProcessTelemetriesViewMo
 	^ parentProfilerProcessTelemetriesViewModel notNil
 ]
 
-{ #category : 'api - selection' }
+{ #category : #'api - selection' }
 GtProfilerProcessTelemetryViewModel >> isOnlySelectedProcessTelemetry [
 	"Return true if only this processTelemetry is selected and not any of the children"
 	<return: #Boolean>
@@ -83,12 +83,12 @@ GtProfilerProcessTelemetryViewModel >> isOnlySelectedProcessTelemetry [
 	^ self isSelectedProcessTelemetry and: [ self hasOtherSelectedEntities not ]
 ]
 
-{ #category : 'api - profiler process telemetry model' }
+{ #category : #'api - profiler process telemetry model' }
 GtProfilerProcessTelemetryViewModel >> isRunning [
 	^ self profilerProcessTelemetryModel isRunning
 ]
 
-{ #category : 'api - selection' }
+{ #category : #'api - selection' }
 GtProfilerProcessTelemetryViewModel >> isSelectedProcessTelemetry [
 	"Return true if this processTelemetry is selected"
 	<return: #Boolean>
@@ -98,7 +98,7 @@ GtProfilerProcessTelemetryViewModel >> isSelectedProcessTelemetry [
 		and: [ self parentProfilerProcessTelemetriesViewModel selectedProcessTelemetryViewModel == self ]
 ]
 
-{ #category : 'api - selection' }
+{ #category : #'api - selection' }
 GtProfilerProcessTelemetryViewModel >> notifyProcessTelemetryDeselected [
 	<propertyUnsetNotifier: #selectedProcessTelemetryViewModel>
 	<generatedFrom: #'TGtRobocoderMetamodelPropertyForChildTemplate>>#notifyPropertyUnsetTemplate'>
@@ -106,7 +106,7 @@ GtProfilerProcessTelemetryViewModel >> notifyProcessTelemetryDeselected [
 	self announce: (GtProfilerProcessTelemetryViewModelDeselected new profilerProcessTelemetryViewModel: self)
 ]
 
-{ #category : 'api - selection' }
+{ #category : #'api - selection' }
 GtProfilerProcessTelemetryViewModel >> notifyProcessTelemetrySelected [
 	<propertySetNotifier: #selectedProcessTelemetryViewModel>
 	<generatedFrom: #'TGtRobocoderMetamodelPropertyForChildTemplate>>#notifyPropertySetTemplate'>
@@ -114,19 +114,19 @@ GtProfilerProcessTelemetryViewModel >> notifyProcessTelemetrySelected [
 	self announce: (GtProfilerProcessTelemetryViewModelSelected new profilerProcessTelemetryViewModel: self)
 ]
 
-{ #category : 'private - event handling' }
+{ #category : #'private - event handling' }
 GtProfilerProcessTelemetryViewModel >> onProcessTelemetryStarted [
 	self announce: (GtProfilerProcessTelemetryViewModelStarted new profilerProcessTelemetryViewModel: self).
 	self profilerTelemetryLoggerViewModel start
 ]
 
-{ #category : 'private - event handling' }
+{ #category : #'private - event handling' }
 GtProfilerProcessTelemetryViewModel >> onProcessTelemetryStopped [
 	self announce: (GtProfilerProcessTelemetryViewModelStopped new profilerProcessTelemetryViewModel: self).
 	self profilerTelemetryLoggerViewModel stop
 ]
 
-{ #category : 'api - profiler process telemetry model' }
+{ #category : #'api - profiler process telemetry model' }
 GtProfilerProcessTelemetryViewModel >> onProfilerProcessTelemetryModelChanged [
 	"Is sent when a new profilerProcessTelemetryModel is assigned to the receiver.
 	Note: #onProfilerProcessTelemetryModelChanged is sent before #subscribeToProfilerProcessTelemetryModel
@@ -143,7 +143,7 @@ GtProfilerProcessTelemetryViewModel >> onProfilerProcessTelemetryModelChanged [
 		ifTrue: [ self profilerTelemetryLoggerViewModel start ].
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerProcessTelemetryViewModel >> parentProfilerProcessTelemetriesViewModel [
 	"Return a parent object which is used to access various state properties,
 	for example parent may be responsible for knowing a selected child object.
@@ -159,7 +159,7 @@ GtProfilerProcessTelemetryViewModel >> parentProfilerProcessTelemetriesViewModel
 	^ parentProfilerProcessTelemetriesViewModel
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerProcessTelemetryViewModel >> parentProfilerProcessTelemetriesViewModel: aGtProfilerProcessTelemetriesViewModel [
 	"Assign a parent object (${class:GtProfilerProcessTelemetriesViewModel}$) which is used to access various state properties,
 	for example parent may be responsible for knowing a selected child object.
@@ -174,18 +174,18 @@ GtProfilerProcessTelemetryViewModel >> parentProfilerProcessTelemetriesViewModel
 	parentProfilerProcessTelemetriesViewModel := aGtProfilerProcessTelemetriesViewModel
 ]
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtProfilerProcessTelemetryViewModel >> printOn: aStream [
 	<generatedFrom: #'GtRobocoderMetamodelPrintDerive>>#printOnTemplate'>
 	aStream print: self profilerProcessTelemetryModel
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerProcessTelemetryViewModel >> processTelemetryClass [
 	^ self profilerProcessTelemetryModel telemetry
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerProcessTelemetryViewModel >> profilerTelemetryLoggerViewModel [
 	"Return a composite object (${class:nil}$) created for a collection of children from the domain model.
 	Note: The object is lazily instantiated."
@@ -196,12 +196,12 @@ GtProfilerProcessTelemetryViewModel >> profilerTelemetryLoggerViewModel [
 	^ profilerTelemetryLoggerViewModel ifNil: [ profilerTelemetryLoggerViewModel := self createProfilerTelemetryLoggerViewModel ]
 ]
 
-{ #category : 'api - profiler process telemetry model' }
+{ #category : #'api - profiler process telemetry model' }
 GtProfilerProcessTelemetryViewModel >> reset [
 	self profilerTelemetryLoggerViewModel reset
 ]
 
-{ #category : 'api - selection' }
+{ #category : #'api - selection' }
 GtProfilerProcessTelemetryViewModel >> selectProcessTelemetry [
 	"Just select a processTelemetry without changing children"
 	<propertySetter: #selectedProcessTelemetryViewModel>
@@ -211,7 +211,7 @@ GtProfilerProcessTelemetryViewModel >> selectProcessTelemetry [
 		ifTrue: [ self parentProfilerProcessTelemetriesViewModel selectProcessTelemetryViewModel: self ]
 ]
 
-{ #category : 'api - selection' }
+{ #category : #'api - selection' }
 GtProfilerProcessTelemetryViewModel >> selectProcessTelemetryWithoutOtherEntities [
 	"Select a processTelemetry and deselect other selected children"
 
@@ -220,17 +220,17 @@ GtProfilerProcessTelemetryViewModel >> selectProcessTelemetryWithoutOtherEntitie
 	self selectProcessTelemetry
 ]
 
-{ #category : 'api - profiler process telemetry model' }
+{ #category : #'api - profiler process telemetry model' }
 GtProfilerProcessTelemetryViewModel >> start [
 	self profilerProcessTelemetryModel start
 ]
 
-{ #category : 'api - profiler process telemetry model' }
+{ #category : #'api - profiler process telemetry model' }
 GtProfilerProcessTelemetryViewModel >> stop [
 	self profilerProcessTelemetryModel stop
 ]
 
-{ #category : 'api - profiler process telemetry model' }
+{ #category : #'api - profiler process telemetry model' }
 GtProfilerProcessTelemetryViewModel >> subscribeToProfilerProcessTelemetryModel [
 	"Is sent after a new profilerProcessTelemetryModel is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -247,7 +247,7 @@ GtProfilerProcessTelemetryViewModel >> subscribeToProfilerProcessTelemetryModel 
 			to: self
 ]
 
-{ #category : 'api - selection' }
+{ #category : #'api - selection' }
 GtProfilerProcessTelemetryViewModel >> topMostParentsWithSelectionDo: aBlock [
 	"Evaluate a given block with each top most parent that has a selection property"
 	<propertyTopMostParents: #selectedProcessTelemetryViewModel>
@@ -273,7 +273,7 @@ GtProfilerProcessTelemetryViewModel >> topMostParentsWithSelectionDo: aBlock [
 		ifFalse: [ aBlock value: self ].
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerProcessTelemetryViewModel >> unsubscribe: anObject [
 	"Unsubscribe all subscriptions of anObject from the receiver"
 
@@ -281,7 +281,7 @@ GtProfilerProcessTelemetryViewModel >> unsubscribe: anObject [
 	^ announcer ifNotNil: [ :anAnnouncer | anAnnouncer unsubscribe: anObject ]
 ]
 
-{ #category : 'api - profiler process telemetry model' }
+{ #category : #'api - profiler process telemetry model' }
 GtProfilerProcessTelemetryViewModel >> unsubscribeFromProfilerProcessTelemetryModel [
 	"Is sent before a new profilerProcessTelemetryModel is assigned to the receiver.
 	Objects that subscribe to profilerProcessTelemetryModel are required to implement this method."
@@ -291,14 +291,14 @@ GtProfilerProcessTelemetryViewModel >> unsubscribeFromProfilerProcessTelemetryMo
 	self profilerProcessTelemetryModel unsubscribe: self
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerProcessTelemetryViewModel >> when: anAnnouncementClass do: aBlock [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#whenDoTemplate'>
 	^ (announcer ifNil: [ announcer := Announcer new ])
 		when: anAnnouncementClass do: aBlock
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerProcessTelemetryViewModel >> when: anAnnouncementClass send: aSelector to: anObject [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#whenSendToTemplate'>
 	^ (announcer ifNil: [ announcer := Announcer new ]) weak

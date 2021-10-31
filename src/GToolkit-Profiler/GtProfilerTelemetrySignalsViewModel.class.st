@@ -1,6 +1,6 @@
 Class {
-	#name : 'GtProfilerTelemetrySignalsViewModel',
-	#superclass : 'Object',
+	#name : #GtProfilerTelemetrySignalsViewModel,
+	#superclass : #Object,
 	#instVars : [
 		'logger',
 		'announcer',
@@ -10,7 +10,7 @@ Class {
 	#category : 'GToolkit-Profiler-Process - View Models'
 }
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetrySignalsViewModel >> announce: anAnnouncement [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#announceTemplate'>
 	announcer ifNotNil: [ :anAnnouncer | anAnnouncer announce: anAnnouncement ].
@@ -19,7 +19,7 @@ GtProfilerTelemetrySignalsViewModel >> announce: anAnnouncement [
 		ifTrue: [ self parentProfilerTelemetryLoggerViewModel announce: anAnnouncement ].
 ]
 
-{ #category : 'private - instance creation' }
+{ #category : #'private - instance creation' }
 GtProfilerTelemetrySignalsViewModel >> createProfilerTelemetrySignalViewModels [
 	"For each child from the domain model create an object and return a resulting collection"
 	<return: #Collection of: #GtProfilerTelemetrySignalViewModel>
@@ -29,7 +29,7 @@ GtProfilerTelemetrySignalsViewModel >> createProfilerTelemetrySignalViewModels [
 		self createProfilerTelemetrySignalViewModelsFor: eachModel ] as: OrderedCollection
 ]
 
-{ #category : 'private - instance creation' }
+{ #category : #'private - instance creation' }
 GtProfilerTelemetrySignalsViewModel >> createProfilerTelemetrySignalViewModelsFor: aChildModel [
 	<return: #GtProfilerTelemetrySignalViewModel>
 	<childObjectCreator: #telemetrySignal>
@@ -42,7 +42,7 @@ GtProfilerTelemetrySignalsViewModel >> createProfilerTelemetrySignalViewModelsFo
 	^ aNewChild
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerTelemetrySignalsViewModel >> findProfilerTelemetrySignalViewModels: aTelemetrySignal [
 	"Find a child object based on the child model and return the child if it was found, nil otherwise.
 	aNoneBlock otherwise."
@@ -56,7 +56,7 @@ GtProfilerTelemetrySignalsViewModel >> findProfilerTelemetrySignalViewModels: aT
 		ifNone: [ nil ]
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerTelemetrySignalsViewModel >> findProfilerTelemetrySignalViewModels: aTelemetrySignal ifFound: aFoundBlock ifNone: aNoneBlock [
 	"Find a child object based on the child model and evaluate aFoundBlock if such child was found,
 	aNoneBlock otherwise."
@@ -70,7 +70,7 @@ GtProfilerTelemetrySignalsViewModel >> findProfilerTelemetrySignalViewModels: aT
 		ifNone: aNoneBlock
 ]
 
-{ #category : 'gt-extentions' }
+{ #category : #'gt-extentions' }
 GtProfilerTelemetrySignalsViewModel >> gtTelemetrySignalListViewFor: aView [
 	<gtView>
 	<generatedFrom: #'GtRobocoderMetamodelPhlowListViewDerive>>#listForManyTemplate'>
@@ -81,7 +81,7 @@ GtProfilerTelemetrySignalsViewModel >> gtTelemetrySignalListViewFor: aView [
 		items: [ self profilerTelemetrySignalViewModels ]
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetrySignalsViewModel >> hasLogger [
 	"Return a true if nil is assigned to the receiver, false otherwise"
 	<return: #Boolean>
@@ -91,7 +91,7 @@ GtProfilerTelemetrySignalsViewModel >> hasLogger [
 	^ logger notNil
 ]
 
-{ #category : 'api - testing' }
+{ #category : #'api - testing' }
 GtProfilerTelemetrySignalsViewModel >> hasParentProfilerTelemetryLoggerViewModel [
 	"Return true if the parent object is attached"
 	<return: #Boolean>
@@ -101,7 +101,7 @@ GtProfilerTelemetrySignalsViewModel >> hasParentProfilerTelemetryLoggerViewModel
 	^ parentProfilerTelemetryLoggerViewModel notNil
 ]
 
-{ #category : 'api - testing' }
+{ #category : #'api - testing' }
 GtProfilerTelemetrySignalsViewModel >> includesProfilerTelemetrySignalViewModels: aProfilerTelemetrySignalViewModels [
 	"Check and return true if a given child object exists among my children, false otherwise.
 	The comparison happens by identity"
@@ -113,7 +113,7 @@ GtProfilerTelemetrySignalsViewModel >> includesProfilerTelemetrySignalViewModels
 		eachProfilerTelemetrySignalViewModels == aProfilerTelemetrySignalViewModels ]
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetrySignalsViewModel >> logger [
 	"Return a not-null logger assigned to the receiver"
 	<modelGetter: #logger>
@@ -125,7 +125,7 @@ GtProfilerTelemetrySignalsViewModel >> logger [
 	^ logger
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetrySignalsViewModel >> logger: aLogger [
 	"Set a not-null logger assigned to the receiver"
 	<modelSetter: #logger>
@@ -145,7 +145,7 @@ GtProfilerTelemetrySignalsViewModel >> logger: aLogger [
 	self onPostLoggerChanged
 ]
 
-{ #category : 'private - notifying' }
+{ #category : #'private - notifying' }
 GtProfilerTelemetrySignalsViewModel >> notifyProfilerTelemetrySignalViewModelAdded: aProfilerTelemetrySignalViewModel [
 	"Notifies that a given child object was added to the receiver"
 	
@@ -154,7 +154,7 @@ GtProfilerTelemetrySignalsViewModel >> notifyProfilerTelemetrySignalViewModelAdd
 		profilerTelemetrySignalViewModel: aProfilerTelemetrySignalViewModel) 
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetrySignalsViewModel >> onLoggerChanged [
 	"Is sent when a new logger is assigned to the receiver.
 	Note: #onLoggerChanged is sent before #subscribeToLogger
@@ -164,7 +164,7 @@ GtProfilerTelemetrySignalsViewModel >> onLoggerChanged [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onObjectChangedTemplate'>
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetrySignalsViewModel >> onPostLoggerChanged [
 	"I am an optional hook method that is sent after #subscribeToLogger.
 	I do nothing by default but allow users to perform update operations when a receiver object is already
@@ -172,7 +172,7 @@ GtProfilerTelemetrySignalsViewModel >> onPostLoggerChanged [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#onPostObjectChangedTemplate'>
 ]
 
-{ #category : 'private - event handling' }
+{ #category : #'private - event handling' }
 GtProfilerTelemetrySignalsViewModel >> onProfilerTelemetrySignalAdded: aBlTelemetrySignal [
 	"Is sent when a new TelemetrySignal is added to the model of the receiver due to
 	the handled ${class:BlTelemetrySignal}$ announcement."
@@ -185,7 +185,7 @@ GtProfilerTelemetrySignalsViewModel >> onProfilerTelemetrySignalAdded: aBlTeleme
 	self onProfilerTelemetrySignalViewModelAdded: aNewChildObject
 ]
 
-{ #category : 'api - adding' }
+{ #category : #'api - adding' }
 GtProfilerTelemetrySignalsViewModel >> onProfilerTelemetrySignalViewModelAdded: aProfilerTelemetrySignalViewModel [
 	"Is sent after a given child object was added to the receiver"
 	<generatedFrom: #'TGtRobocoderMetamodelAdditionForManyTemplate>>#objectAddedHookTemplate'>
@@ -193,7 +193,7 @@ GtProfilerTelemetrySignalsViewModel >> onProfilerTelemetrySignalViewModelAdded: 
 	self notifyProfilerTelemetrySignalViewModelAdded: aProfilerTelemetrySignalViewModel.
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerTelemetrySignalsViewModel >> parentProfilerTelemetryLoggerViewModel [
 	"Return a parent object which is used to access various state properties,
 	for example parent may be responsible for knowing a selected child object.
@@ -209,7 +209,7 @@ GtProfilerTelemetrySignalsViewModel >> parentProfilerTelemetryLoggerViewModel [
 	^ parentProfilerTelemetryLoggerViewModel
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerTelemetrySignalsViewModel >> parentProfilerTelemetryLoggerViewModel: aGtProfilerTelemetryLoggerViewModel [
 	"Assign a parent object (${class:GtProfilerTelemetryLoggerViewModel}$) which is used to access various state properties,
 	for example parent may be responsible for knowing a selected child object.
@@ -224,13 +224,13 @@ GtProfilerTelemetrySignalsViewModel >> parentProfilerTelemetryLoggerViewModel: a
 	parentProfilerTelemetryLoggerViewModel := aGtProfilerTelemetryLoggerViewModel
 ]
 
-{ #category : 'printing' }
+{ #category : #printing }
 GtProfilerTelemetrySignalsViewModel >> printOn: aStream [
 	<generatedFrom: #'GtRobocoderMetamodelPrintDerive>>#printOnTemplate'>
 	aStream print: self logger
 ]
 
-{ #category : 'api - accessing' }
+{ #category : #'api - accessing' }
 GtProfilerTelemetrySignalsViewModel >> profilerTelemetrySignalViewModels [
 	"Return a collection of objects (${class:GtProfilerTelemetrySignalViewModel}$) created for each child from the domain model.
 	Note: The children are lazily instantiated."
@@ -241,7 +241,7 @@ GtProfilerTelemetrySignalsViewModel >> profilerTelemetrySignalViewModels [
 	^  profilerTelemetrySignalViewModels ifNil: [ profilerTelemetrySignalViewModels := self createProfilerTelemetrySignalViewModels ]
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetrySignalsViewModel >> subscribeToLogger [
 	"Is sent after a new logger is assigned to the receiver.
 	It is required to unsubscribe from the previously subscribed objects by implementing
@@ -251,7 +251,7 @@ GtProfilerTelemetrySignalsViewModel >> subscribeToLogger [
 	self logger when: BlTelemetrySignal send: #onProfilerTelemetrySignalAdded: to: self.
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetrySignalsViewModel >> unsubscribe: anObject [
 	"Unsubscribe all subscriptions of anObject from the receiver"
 
@@ -259,7 +259,7 @@ GtProfilerTelemetrySignalsViewModel >> unsubscribe: anObject [
 	^ announcer ifNotNil: [ :anAnnouncer | anAnnouncer unsubscribe: anObject ]
 ]
 
-{ #category : 'api - logger' }
+{ #category : #'api - logger' }
 GtProfilerTelemetrySignalsViewModel >> unsubscribeFromLogger [
 	"Is sent before a new logger is assigned to the receiver.
 	Objects that subscribe to logger are required to implement this method."
@@ -268,14 +268,14 @@ GtProfilerTelemetrySignalsViewModel >> unsubscribeFromLogger [
 	self logger unsubscribe: self.
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetrySignalsViewModel >> when: anAnnouncementClass do: aBlock [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#whenDoTemplate'>
 	^ (announcer ifNil: [ announcer := Announcer new ])
 		when: anAnnouncementClass do: aBlock
 ]
 
-{ #category : 'api - announcer' }
+{ #category : #'api - announcer' }
 GtProfilerTelemetrySignalsViewModel >> when: anAnnouncementClass send: aSelector to: anObject [
 	<generatedFrom: #'TGtRobocoderAnnouncerTemplate>>#whenSendToTemplate'>
 	^ (announcer ifNil: [ announcer := Announcer new ]) weak
