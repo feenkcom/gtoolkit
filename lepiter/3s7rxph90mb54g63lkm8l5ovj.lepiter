@@ -18,6 +18,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-31T08:34:59.209653+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-31T08:35:00.189344+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "srqQ1QKMDQCePpRnD7+G4A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Setup"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2021-08-25T11:21:35.563769+02:00"
 					}
 				},
@@ -100,7 +137,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-29T14:05:34.744461+02:00"
+						"dateAndTimeString" : "2021-10-31T08:34:08.555605+01:00"
 					}
 				},
 				"uid" : {
@@ -110,7 +147,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Before you start it, you should save the image, to ensure the remote images is starting from the same state as the main image."
+				"string" : "Before you start it, you should save the image, to ensure the remote image is starting from the same state as the main image."
 			},
 			{
 				"__type" : "textSnippet",
@@ -137,7 +174,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-29T14:05:34.747912+02:00"
+						"dateAndTimeString" : "2021-10-30T16:29:06.85999+02:00"
 					}
 				},
 				"uid" : {
@@ -147,7 +184,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Start it. This takes a few seconds, as it copies the changes file into memory to detach it from the main image."
+				"string" : "Start it. This takes a few seconds, as it spawns a new image."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -174,7 +211,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-25T11:51:30.668318+02:00"
+						"dateAndTimeString" : "2021-10-30T22:35:23.359899+02:00"
 					}
 				},
 				"uid" : {
@@ -245,7 +282,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-25T12:25:36.204973+02:00"
+						"dateAndTimeString" : "2021-10-30T22:50:38.365991+02:00"
 					}
 				},
 				"uid" : {
@@ -290,6 +327,80 @@
 					"__type" : "textStyle"
 				},
 				"string" : "When the remote is running, you can verify in the `remote` properties view that the changes file is in memory, so changes in the remote will not interfere with the main image. In the playground view you can evaluate an expression and get a proxy object back."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-30T21:46:09.503147+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-30T21:46:11.954201+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kbaT7viLDQCdcs4tD7+G4A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Use cases"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-31T08:34:23.031873+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-31T08:34:29.689428+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dxZo0wKMDQCeNbUkD7+G4A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Code search"
 			},
 			{
 				"__type" : "textSnippet",
@@ -353,7 +464,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-17T14:14:43.334849+02:00"
+						"dateAndTimeString" : "2021-10-30T22:17:20.025562+02:00"
 					}
 				},
 				"uid" : {
@@ -376,7 +487,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-13T12:08:39.575004+02:00"
+						"dateAndTimeString" : "2021-10-31T08:34:37.814334+01:00"
 					}
 				},
 				"editEmail" : {
@@ -387,51 +498,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-17T14:30:58.303034+02:00"
+						"dateAndTimeString" : "2021-10-31T08:34:45.706802+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "FEmbYj+IDQCSRUhvAA0cJw=="
+					"uidString" : "5eo61AKMDQCeNzEnD7+G4A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Run tests remotely by using `runRemotely` on a test suite:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-13T12:08:48.335255+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-17T14:22:26.91998+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "uwlZYz+IDQCSSXv5AA0cJw=="
-				},
-				"code" : "ArrayTest suite gtRunRemotely"
+				"string" : "##Running Examples"
 			},
 			{
 				"__type" : "textSnippet",
@@ -495,7 +572,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-17T14:26:15.216798+02:00"
+						"dateAndTimeString" : "2021-10-30T22:15:03.292086+02:00"
 					}
 				},
 				"uid" : {
@@ -503,6 +580,114 @@
 					"uidString" : "0zbRZD+IDQCSTDVbAA0cJw=="
 				},
 				"code" : "(GtExampleGroup withAll: 'GToolkit-Spotter-Examples' asPackage gtExamplesAllContained) runRemotely"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-31T08:34:48.993901+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-31T08:34:51.803768+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "AlP21AKMDQCePBDpD7+G4A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Running Tests"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-09-13T12:08:39.575004+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-09-17T14:30:58.303034+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FEmbYj+IDQCSRUhvAA0cJw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Run tests remotely by using `runRemotely` on a test suite:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-09-13T12:08:48.335255+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-10-30T22:15:07.119461+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uwlZYz+IDQCSSXv5AA0cJw=="
+				},
+				"code" : "ArrayTest suite gtRunRemotely"
 			}
 		]
 	},
