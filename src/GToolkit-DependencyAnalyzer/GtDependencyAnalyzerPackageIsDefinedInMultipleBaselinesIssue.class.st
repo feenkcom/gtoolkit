@@ -15,6 +15,18 @@ GtDependencyAnalyzerPackageIsDefinedInMultipleBaselinesIssue >> gtDisplayOn: aSt
 		nextPutAll: ') baseline'
 ]
 
+{ #category : #'gt - extensions' }
+GtDependencyAnalyzerPackageIsDefinedInMultipleBaselinesIssue >> gtPackagesInBaselineFor: aView [
+
+	<gtView>
+	self packagesInBaseline ifNil: [ ^ aView empty ].
+
+	^ aView list
+		  title: 'Baselines';
+		  priority: 1;
+		  items: [ self packagesInBaseline ]
+]
+
 { #category : #accessing }
 GtDependencyAnalyzerPackageIsDefinedInMultipleBaselinesIssue >> packagesInBaseline [
 	^ packagesInBaseline
