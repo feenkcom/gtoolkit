@@ -5,7 +5,8 @@ Class {
 		'package',
 		'preloadedBaselines',
 		'definingBaselines',
-		'packageDependencies'
+		'packageDependencies',
+		'packageDependents'
 	],
 	#category : #'GToolkit-DependencyAnalyzer'
 }
@@ -27,6 +28,13 @@ GtDependencyAnalyzerForPackage class >> packageDependenciesOf: aPackage [
 	<return: #Set of: #RPackage>
 
 	^ aPackage gtDependencies collect: [ :each | each toPackage ]
+]
+
+{ #category : #dependencies }
+GtDependencyAnalyzerForPackage class >> packageDependentsOf: aPackage [
+	<return: #GtPharoAssociation>
+
+	^ aPackage gtDependents
 ]
 
 { #category : #querying }
@@ -65,6 +73,11 @@ GtDependencyAnalyzerForPackage >> computePackageDependencies [
 		collect: [ :eachPackage | GtDependencyAnalyzerForPackage new package: eachPackage ] as: Array
 ]
 
+{ #category : #private }
+GtDependencyAnalyzerForPackage >> computePackageDependents [
+	^ self class packageDependentsOf: self package
+]
+
 { #category : #dependencies }
 GtDependencyAnalyzerForPackage >> definingBaselinesWithContext: aContext [
 	^ definingBaselines ifNil: [ definingBaselines := self computeDefiningBaselinesWithContext: aContext ]
@@ -94,12 +107,44 @@ GtDependencyAnalyzerForPackage >> gtIssuesFor: aView [
 { #category : #'gt-extensions' }
 GtDependencyAnalyzerForPackage >> gtPackageDependenciesFor: aView [
 	<gtView>
-	
+
 	^ aView list
 		title: 'Package dependencies';
 		priority: 10;
 		items: [ self packageDependencies sorted: [ :a :b | a package name < b package name ] ];
 		itemText: [ :each | each package name ]
+]
+
+{ #category : #'gt-extensions' }
+GtDependencyAnalyzerForPackage >> gtPackageDependentsFor: aView [
+
+	<gtView>
+	^ aView tree
+		  title: 'Package dependents';
+		  priority: 11;
+		  items: [ 
+			  (self packageDependents groupedBy: [ :eachAssociation | 
+					   eachAssociation class ]) associations ];
+		  children: [ :each | 
+			  (each isKindOf: GtPharoAssociation)
+				  ifTrue: [ #(  ) ]
+				  ifFalse: [ 
+					  (each isKindOf: Association)
+						  ifTrue: [ 
+							  each key = GtPharoClassReference
+								  ifTrue: [ 
+									  | aSorter |
+									  aSorter := GtMethodsSortFunction new.
+									  each value sorted: [ :a :b | 
+											  aSorter
+												  value: a referencingMethod
+												  value: b referencingMethod ] ]
+								  ifFalse: [ each value ] ]
+						  ifFalse: [ #(  ) ] ] ];
+		  itemText: [ :each | 
+			  (each isKindOf: Association)
+				  ifTrue: [ each key name, ' (', each value size asString, ')' ]
+				  ifFalse: [ each ] ]
 ]
 
 { #category : #'gt-extensions' }
@@ -160,6 +205,11 @@ GtDependencyAnalyzerForPackage >> package: aPackage [
 { #category : #dependencies }
 GtDependencyAnalyzerForPackage >> packageDependencies [
 	^ packageDependencies ifNil: [ packageDependencies := self computePackageDependencies ]
+]
+
+{ #category : #dependencies }
+GtDependencyAnalyzerForPackage >> packageDependents [
+	^ packageDependents ifNil: [ packageDependents := self computePackageDependents ]
 ]
 
 { #category : #accessing }
