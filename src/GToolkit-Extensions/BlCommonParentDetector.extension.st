@@ -41,7 +41,7 @@ BlCommonParentDetector >> paintTreeWith: aMondrian [
 			eachPreviewElement geometry: BlCircleGeometry new.
 
 			eachElement = commonParent
-				ifTrue: [ eachPreviewElement background: BrGlamorousColors textHighlightColor ]
+				ifTrue: [ eachPreviewElement background: (Color red alpha: 0.5) ]
 				ifFalse: [ 
 					eachElement = provisionalCommonParent
 						ifTrue: [
@@ -49,13 +49,13 @@ BlCommonParentDetector >> paintTreeWith: aMondrian [
 								background: (BlRadialGradientPaint new
 									stops: { 
 										0 -> Color white.
-										1 -> BrGlamorousColors textHighlightColor };
+										1 -> (Color magenta alpha: 0.5) };
 									radius: 5;
 									center: 5@5);
-								border: (BlBorder paint: BrGlamorousColors textHighlightColor width: 1) ]
+								border: (BlBorder paint: (Color magenta alpha: 0.5) width: 1) ]
 						ifFalse: [
 							(elements includes: eachElement)
-								ifTrue: [ eachPreviewElement border: (BlBorder paint: BrGlamorousColors textHighlightColor width: 1) ]
+								ifTrue: [ eachPreviewElement border: (BlBorder paint: (Color blue alpha: 0.5) width: 1) ]
 								ifFalse: [ eachPreviewElement border: (BlBorder paint: BrGlamorousColors lightBorderColor width: 1) ] ] ].
 			eachPreviewElement ];
 		with: theNodes.
