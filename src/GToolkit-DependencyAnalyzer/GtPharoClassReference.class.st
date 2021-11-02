@@ -33,9 +33,6 @@ GtPharoClassReference >> gtSourceFor: aView [
 	^ aView explicit
 		title: 'Source';
 		priority: 10;
-		actionButtonIcon: BrGlamorousVectorIcons browse
-			tooltip: 'Browse method'
-			action: [ self gtBrowse ];
 		stencil: [ (GtPharoMethodCoder new
 			forMethod: self referencingMethod;
 			highlighter: (GtPharoVariableReferenceHighlighter forVariableName: self referencedClass name))

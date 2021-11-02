@@ -23,6 +23,15 @@ GtPharoTraitUsage >> from [
 	^ self baseBehavior
 ]
 
+{ #category : #accessing }
+GtPharoTraitUsage >> gtDefinitionFor: aView [
+	<gtView>
+	^ aView explicit
+		  title: 'Definition';
+		  priority: 1;
+		  stencil: [ (GtPharoSnippetCoder forSource: self baseBehavior definitionString) asExpandedOnlyElement vFitContentLimited ]
+]
+
 { #category : #printing }
 GtPharoTraitUsage >> gtDisplayOn: stream [
 	self baseBehavior gtDisplayOn: stream.
