@@ -47,15 +47,22 @@ RPackage >> gtTestsFor: aView [
 
 	<gtView>
 	<gtPackageView>
-	| aMethodsCoder aTestSuiteViewModel |
+	| aMethodsCoder aTestSuiteViewModel anExampleViewModel |
 	aMethodsCoder := (GtSearchPackageTestSuiteFilter new package: self)
 		                 asCoder.
 	aTestSuiteViewModel := GtPharoTestSuiteViewModel new 
 		                       methodsCoderModel: aMethodsCoder.
+	anExampleViewModel := GtPharoExampleSuiteViewModel new 
+		                      methodsCoderModel: aMethodsCoder.
+
 	^ aView explicit
 		  title: 'Tests';
 		  priority: 12;
 		  stencil: [ aMethodsCoder ];
+		  actionStencil: [ :aBrTab | 
+			  GtPharoCoderUIUtility
+				  newExamplesDropdownButtonForViewModel: anExampleViewModel
+				  methodsCoder: aMethodsCoder ];
 		  actionStencil: [ 
 			  GtPharoCoderUIUtility
 				  newTestSuiteDropdownForViewModel: aTestSuiteViewModel
