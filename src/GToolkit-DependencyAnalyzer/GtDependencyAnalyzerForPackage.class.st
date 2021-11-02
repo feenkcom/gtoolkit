@@ -120,12 +120,12 @@ GtDependencyAnalyzerForPackage >> gtPackageDependentsFor: aView [
 
 	<gtView>
 	^ aView tree
-		  title: 'Package dependents';
-		  priority: 11;
-		  items: [ 
+			title: 'Package dependents';
+			priority: 11;
+			items: [ 
 			  (self packageDependents groupedBy: [ :eachAssociation | 
-					   eachAssociation class ]) associations ];
-		  children: [ :each | 
+					   eachAssociation from package]) associations sorted: [:a :b | a name < b name] ];
+			children: [ :each | 
 			  (each isKindOf: GtPharoAssociation)
 				  ifTrue: [ #(  ) ]
 				  ifFalse: [ 
@@ -141,10 +141,11 @@ GtDependencyAnalyzerForPackage >> gtPackageDependentsFor: aView [
 												  value: b referencingMethod ] ]
 								  ifFalse: [ each value ] ]
 						  ifFalse: [ #(  ) ] ] ];
-		  itemText: [ :each | 
+			itemText: [ :each | 
 			  (each isKindOf: Association)
 				  ifTrue: [ each key name, ' (', each value size asString, ')' ]
-				  ifFalse: [ each ] ]
+				  ifFalse: [ each ] ];
+			send: [:a | a isAssociation ifTrue: [ a value ] ifFalse: [a]]
 ]
 
 { #category : #'gt-extensions' }
