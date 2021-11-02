@@ -1,15 +1,30 @@
 Extension { #name : #Behavior }
 
 { #category : #'*GToolkit-Extensions' }
+Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
+
+	<return: #GtPharoExampleSuiteViewModel>
+	^ aPhlowContext
+		  optionAt: #exampleViewModel
+		  ifPresent: [ :anExampleViewModel | anExampleViewModel ]
+		  ifAbsentPut: [ 
+		  	GtPharoExampleSuiteViewModel new methodsCoderModel: aMethodsCoder ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 Behavior >> gtCoderMethodsFor: aView context: aPhlowContext [
 
 	<gtClassView>
-	| aMethodsCoderUIModel aMethodsCoder aTestSuiteViewModel |
+	| aMethodsCoderUIModel aMethodsCoder aTestSuiteViewModel anExampleViewModel |
 	aMethodsCoderUIModel := self methodsCoderFromContext: aPhlowContext.
 	aMethodsCoder := aMethodsCoderUIModel coder.
 	aTestSuiteViewModel := self
 		                       testSuiteViewModelWith: aMethodsCoder
 		                       fromContext: aPhlowContext.
+
+	anExampleViewModel := self
+		                      exampleViewModelWith: aMethodsCoder
+		                      fromContext: aPhlowContext.
 
 	^ aView explicit
 		  priority: 10;
@@ -31,8 +46,9 @@ Behavior >> gtCoderMethodsFor: aView context: aPhlowContext [
 				  codeGeneratorsDropDown: element
 				  for: aMethodsCoderUIModel ];
 		  actionStencil: [ :aBrTab | 
-			  GtPharoCoderUIUtility newExamplesButtonForMethodsCoder:
-				  aMethodsCoder ];
+			  GtPharoCoderUIUtility
+				  newExamplesDropdownButtonForViewModel: anExampleViewModel
+				  methodsCoder: aMethodsCoder ];
 		  actionStencil: [ :aBrTab | 
 			  GtPharoCoderUIUtility
 				  newTestSuiteDropdownForViewModel: aTestSuiteViewModel
