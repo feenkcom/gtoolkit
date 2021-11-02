@@ -13,6 +13,15 @@ GtPharoInheritance >> from [
 	^ self subclass
 ]
 
+{ #category : #accessing }
+GtPharoInheritance >> gtDefinitionFor: aView [
+	<gtView>
+	^ aView explicit
+		  title: 'Definition';
+		  priority: 1;
+		  stencil: [ (GtPharoSnippetCoder forSource: self subclass definitionString) asExpandedOnlyElement vFitContentLimited ]
+]
+
 { #category : #printing }
 GtPharoInheritance >> gtDisplayOn: stream [
 	self subclass gtDisplayOn: stream.

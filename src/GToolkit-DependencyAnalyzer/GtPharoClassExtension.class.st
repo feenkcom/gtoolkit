@@ -41,6 +41,17 @@ GtPharoClassExtension >> gtDisplayText [
 		self extendingMethod gtDisplayText glamorousMonospaceBackground
 ]
 
+{ #category : #accessing }
+GtPharoClassExtension >> gtSourceFor: aView [
+	<gtView>
+	^ aView explicit
+		title: 'Source';
+		priority: 10;
+		stencil: [ (GtPharoMethodCoder new
+			forMethod: self extendingMethod)
+				asExpandedOnlyElement vFitContentLimited ]
+]
+
 { #category : #'instance creation' }
 GtPharoClassExtension >> to [
 	^ self extendedClass  
