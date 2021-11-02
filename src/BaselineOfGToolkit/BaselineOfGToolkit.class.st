@@ -110,6 +110,10 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit:main/src' ];
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:main/src' ];
+			baseline: 'GToolkitVisualizerPhlow' with: [
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:main/src' ];
+			baseline: 'XdocClient' with: [
+				spec repository: 'github://feenkcom/xdoc:main/src' ];
 			baseline: 'LepiterEngine' with: [
 				spec repository: 'github://feenkcom/lepiter:main/src' ].
 		spec 

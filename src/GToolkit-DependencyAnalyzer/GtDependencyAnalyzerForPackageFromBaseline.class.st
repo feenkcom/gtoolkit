@@ -194,6 +194,18 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtPackageDependenciesFor: aView [
 					ifFalse: [ each key second ] ]  ]
 ]
 
+{ #category : #accessing }
+GtDependencyAnalyzerForPackageFromBaseline >> gtPackageDependentsFor: aView [
+
+	<gtView>
+	^ aView forward
+			title: 'Package dependents';
+			priority: 11;
+			object: [ packageAnalyzer ];
+			view: #gtPackageDependentsFor:
+	
+]
+
 { #category : #'gt-extensions' }
 GtDependencyAnalyzerForPackageFromBaseline >> gtPackageRequirementsFor: aView [
 	<gtView>
