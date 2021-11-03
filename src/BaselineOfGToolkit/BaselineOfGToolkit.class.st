@@ -70,8 +70,6 @@ BaselineOfGToolkit >> baseline: spec [
 		spec 
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:main/src' ];
-			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:main/src' ];
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:main/src' ];
 			baseline: 'GToolkitTranscript' with: [
@@ -117,22 +115,19 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'LepiterEngine' with: [
 				spec repository: 'github://feenkcom/lepiter:main/src' ].
 		spec 
-			package: 'GToolkit-Extensions' with: [
-				spec requires: #('GToolkitDocumenter' ). ];
+			package: 'GToolkit-Extensions';
 			package: 'GToolkit-Docs';
-			package: 'GToolkit-Monitor' with: [
-				spec requires: #('GToolkitDocumenter' ). ];
-			package: 'GToolkit-Profiler' with: [
-				spec requires: #('GToolkitDocumenter' ). ];
+			package: 'GToolkit-Monitor';
+			package: 'GToolkit-Profiler';
 			package: 'GToolkit-Constraints' with: [
-				spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter' ). ];
+				spec requires: #('GToolkitConstrainer'). ];
 			package: 'GToolkit-Notifications' with: [
-				spec requires: #('GToolkitDocumenter' 'GToolkitDebugger' ). ];
+				spec requires: #('GToolkitDebugger'). ];
 			package: 'GToolkit-SceneDriller';
 			package: 'GToolkit-World' with: [
 				spec requires: #('GToolkit-Notifications' 'GToolkit-SceneDriller' 'GToolkitFileBrowser' ). ];
 			package: 'GToolkit-Setup' with: [
-				spec requires: #('GToolkitReleaser' 'GToolkitDocumenter' 'GToolkitDebugger' ). ];
+				spec requires: #('GToolkitReleaser' 'GToolkitDebugger' ). ];
 			package: 'GToolkit-DependencyAnalyzer'. ].
 
 ]
