@@ -259,11 +259,10 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtSuggestedBaselinesFor: aView [
 			  (self packageDependencies sorted: [ :a :b | 
 					   a package name < b package name ]) select: [ :each | 
 					  (allPackages hasPackageNamed: each package name) not ] ];
-		  column: 'Name' text: [ :each | each package name ];
-		  column: 'Package' text: [ :each | 
+		  column: 'Missing Package' text: [ :each | each package name ];
+		  column: 'Defining Baselines' text: [ :each | 
 			  ((each definingBaselinesWithContext:
-					    GtDependencyAnalyzerContext new) collect: [ :analyzer | 
-					   analyzer baseline ]) joinUsing: ', ' ]
+					    GtDependencyAnalyzerContext new) collect: #baseline) joinUsing: ', ' ]
 ]
 
 { #category : #comparing }
