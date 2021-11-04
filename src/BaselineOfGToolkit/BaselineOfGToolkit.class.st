@@ -137,7 +137,7 @@ BaselineOfGToolkit >> baseline: spec [
 			package: 'GToolkit-SceneDriller' with: [
 				spec requires: #('GToolkitVisualizerPhlow' 'GToolkitPager').];
 			package: 'GToolkit-World' with: [
-				spec requires: #('GToolkit-SceneDriller' 'GToolkitFileBrowser' 'LepiterEngine' 'GToolkit4Git' 'GToolkitTranscript' 'GToolkit-Monitor' 'GToolkitReleaser'). ];
+				spec requires: #('GToolkit-SceneDriller' 'GToolkitFileBrowser' 'LepiterEngine' 'GToolkit4Git' 'GToolkitTranscript' 'GToolkit-Monitor' 'GToolkitReleaser' 'XdocClient'). ];
 			package: 'GToolkit-Setup' with: [
 				spec requires: #('GToolkitReleaser' 'GToolkitDebugger' 'LepiterEngine'). ];
 			package: 'GToolkit-DependencyAnalyzer'. ].
