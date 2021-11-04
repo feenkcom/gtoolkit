@@ -58,3 +58,8 @@ GtDependencyAnalyzerPackageFromBaselineNameMap >> sortedPackagesNamed: aPackageN
 
 	^ (self packagesNamed: aPackageName) asArray sorted: [ :a :b | a name < b name ]
 ]
+
+{ #category : #accessing }
+GtDependencyAnalyzerPackageFromBaselineNameMap >> union: aPackageFromBaselineNameMap [
+  ^ aPackageFromBaselineNameMap addPackages: (packages values flatten)
+]

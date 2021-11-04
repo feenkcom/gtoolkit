@@ -225,6 +225,47 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtPreloadedBaselinesFor: aView [
 		items: [ self preloadedBaselines asOrderedCollection ]
 ]
 
+{ #category : #'gt-extension' }
+GtDependencyAnalyzerForPackageFromBaseline >> gtSuggestedBaselinesFor: aView [
+
+	<gtView>
+	| allExplicitlyRequiredPackages allImplicitlyRequiredPackages allPreloadedPackages aContext allPackages |
+	aContext := GtDependencyAnalyzerContext new.
+
+	allExplicitlyRequiredPackages := GtDependencyAnalyzerPackageFromBaselineNameMap 
+		                                 withPackages:
+		                                 (self 
+			                                  directlyRequiredPackagesWithContext:
+			                                  aContext).
+
+	allImplicitlyRequiredPackages := GtDependencyAnalyzerPackageFromBaselineNameMap 
+		                                 withPackages:
+		                                 (self 
+			                                  indirectlyRequiredPackagesWithContext:
+			                                  aContext).
+
+	allPreloadedPackages := GtDependencyAnalyzerPackageFromBaselineNameMap 
+		                        withPackages:
+		                        (self preloadedPackagesWithContext: aContext).
+
+	allPackages := (allExplicitlyRequiredPackages union:
+		                allImplicitlyRequiredPackages) union:
+		               allPreloadedPackages.
+
+	^ aView columnedList
+		  title: 'Suggested Baselines';
+		  priority: 10;
+		  items: [ 
+			  (self packageDependencies sorted: [ :a :b | 
+					   a package name < b package name ]) select: [ :each | 
+					  (allPackages hasPackageNamed: each package name) not ] ];
+		  column: 'Name' text: [ :each | each package name ];
+		  column: 'Package' text: [ :each | 
+			  ((each definingBaselinesWithContext:
+					    GtDependencyAnalyzerContext new) collect: [ :analyzer | 
+					   analyzer baseline ]) joinUsing: ', ' ]
+]
+
 { #category : #comparing }
 GtDependencyAnalyzerForPackageFromBaseline >> hash [
 	"Answer an integer value that is related to the identity of the receiver."
