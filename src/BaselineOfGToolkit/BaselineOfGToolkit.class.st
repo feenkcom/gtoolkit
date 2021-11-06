@@ -70,8 +70,6 @@ BaselineOfGToolkit >> baseline: spec [
 		spec 
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:main/src' ];
-			baseline: 'GToolkitDocumenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-documenter:main/src' ];
 			baseline: 'GToolkitPresenter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:main/src' ];
 			baseline: 'GToolkitTranscript' with: [
@@ -104,6 +102,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4git:main/src' ];
 			baseline: 'GToolkit4Jenkins' with: [
 				spec repository: 'github://feenkcom/gt4jenkins:main/src' ];
+			baseline: 'GToolkitCoder' with: [
+				spec repository: 'github://feenkcom/gtoolkit-coder:main/src' ];
 			baseline: 'Gt4PharoLink' with: [
 				spec repository: 'github://feenkcom/gtoolkit-remote:main/src' ];
 			baseline: 'GToolkitMorphic' with: [
@@ -112,27 +112,34 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/Bloc:main/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:main/src' ];
+			baseline: 'GToolkitPager'
+			with: [ 
+				spec repository: 'github://feenkcom/gtoolkit-pager:main/src' ];
+			baseline: 'GToolkitSpotter' with: [
+				spec repository: 'github://feenkcom/gtoolkit-spotter:main/src' ];
 			baseline: 'XdocClient' with: [
 				spec repository: 'github://feenkcom/xdoc:main/src' ];
 			baseline: 'LepiterEngine' with: [
 				spec repository: 'github://feenkcom/lepiter:main/src' ].
 		spec 
 			package: 'GToolkit-Extensions' with: [
-				spec requires: #('GToolkitDocumenter' ). ];
-			package: 'GToolkit-Docs';
+				spec requires: #('GToolkitCoder' 'GToolkit4Pharo' 'GToolkitSpotter'). ];
+			package: 'GToolkit-Docs' with: [
+				spec requires: #('GToolkitCoder' 'GToolkit-World'). ];
 			package: 'GToolkit-Monitor' with: [
-				spec requires: #('GToolkitDocumenter' ). ];
+				spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow') .];
 			package: 'GToolkit-Profiler' with: [
-				spec requires: #('GToolkitDocumenter' ). ];
+				spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow' 'GToolkit-Notifications'). ];
 			package: 'GToolkit-Constraints' with: [
-				spec requires: #('GToolkitConstrainer' 'GToolkitDocumenter' ). ];
+				spec requires: #('GToolkitConstrainer' 'GToolkit-DependencyAnalyzer' 'LepiterEngine'). ];
 			package: 'GToolkit-Notifications' with: [
-				spec requires: #('GToolkitDocumenter' 'GToolkitDebugger' ). ];
-			package: 'GToolkit-SceneDriller';
+				spec requires: #('GToolkitDebugger' 'GToolkit-World'). ];
+			package: 'GToolkit-SceneDriller' with: [
+				spec requires: #('GToolkitVisualizerPhlow' 'GToolkitPager').];
 			package: 'GToolkit-World' with: [
-				spec requires: #('GToolkit-Notifications' 'GToolkit-SceneDriller' 'GToolkitFileBrowser' ). ];
+				spec requires: #('GToolkit-SceneDriller' 'GToolkitFileBrowser' 'LepiterEngine' 'GToolkit4Git' 'GToolkitTranscript' 'GToolkit-Monitor' 'GToolkitReleaser' 'XdocClient'). ];
 			package: 'GToolkit-Setup' with: [
-				spec requires: #('GToolkitReleaser' 'GToolkitDocumenter' 'GToolkitDebugger' ). ];
+				spec requires: #('GToolkitReleaser' 'GToolkitDebugger' 'LepiterEngine'). ];
 			package: 'GToolkit-DependencyAnalyzer'. ].
 
 ]
