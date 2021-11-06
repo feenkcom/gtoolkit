@@ -1,0 +1,218 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-23T22:14:13.341538+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T16:27:30.842463+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "4ys1EdOBDQCTyD6lAUw8Aw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Suppose you have an [ANTLR](https://www.antlr.org) grammar. How do you get a corresponding SmaCC grammar?"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T16:27:33.86063+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T16:28:10.951059+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mme5IoKMDQC1CJSEAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First, download the corresponding grammar archive and parse the  `.g4` file:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-23T18:23:16.424442+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-23T18:23:54.5955+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Jh+QD9OBDQCTxpn/AUw8Aw=="
+				},
+				"code" : "tree := Antlr4Parser parseFile: '/path/to/grammar.g4'."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T16:28:15.15323+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T16:28:59.211643+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dFsYJYKMDQC1CWr+AEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Once you have it you can use the {{gtClass:SmaCCRewriteEngine}} to transform it, like this:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-23T18:12:41.923076+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-06-23T18:23:16.427457+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VGa+6dKBDQCTxXfOAUw8Aw=="
+				},
+				"code" : "rewriter := SmaCCRewriteEngine new.\nrewriter\n    rewriteRule:\n        (SmaCCRewriteRuleFileParser\n            parseFile: (GtResourcesUtility default resourceAtPath: Path * 'j-brant' / 'SmaCC' / 'rewrites' / 'antlr' / 'antlr.rw')).\nrewriter rewriteTree: tree"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-06-23T18:12:41.923038+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-06T16:26:52.516206+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "How to translate an ANTLr parser into SmaCC"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "1864bee9-d281-0d00-93c4-5b10014c3c03"
+	}
+}
