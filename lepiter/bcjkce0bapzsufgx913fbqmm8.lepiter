@@ -1,0 +1,583 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:14:19.547151+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T14:04:45.622908+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VpNJJIaMDQC1GbbYAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Objects can form complicated graphs. To understand graphs, you need to traverse them."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:17:50.886575+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:17:50.886575+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zlviMIaMDQC1HE49AEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Indeed, this need is often observed in traversal methods directly written inside the domain classes. For example, to get all subclasses of a given class we have {{gtMethod:Behavior>>#allSubclassesDo:}} . For traversing the children of an element we have {{gtMethod:BlElement>>allChildrenDepthFirstDo:}}. These are great, but what do we do when we don't have these?"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:13:59.710466+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:18:01.039892+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QPEEI4aMDQC1F3l0AEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Enter DeepTraverser, a scriptable traversal engine."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:18:04.291585+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:22:36.484349+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QomoMYaMDQC1HaQMAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For example, to get all subclasses of {{gtClass:Collection}}, we can do:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:15:41.468715+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:27:06.354558+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "U5wrKYaMDQC1G1WbAEmwvw=="
+				},
+				"code" : "all := OrderedCollection new.\rCollection \r\tdeep: [:class | class subclasses ] \r\tdo: [ :class | all add: class ].\rall"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-06T21:25:34.967+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-06T21:25:47.613906+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wi15TIaMDQC1HyC2AEmwvw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The way to go from one object to the next objects in the graph, and"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-06T21:25:50.177452+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-11-06T21:25:58.280189+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uN1QTYaMDQC1IJYKAEmwvw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "What to do for each traversed object."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:21:37.882338+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T21:25:33.297387+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xdGzPYaMDQC1HhkHAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The {{gtMethod:Object>>#deep:collect:}} is a generic traversal that can be applied to any object and specifices two parts:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:12:45.342719+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:12:48.846048+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "w7lSsZKMDQCxmxjVAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Example: getting the object graph"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:11:13.68487+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:12:51.850517+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qogLToaMDQC1IW7fAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Say we have a Bloc element:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:12:36.608393+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:12:37.778305+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rnnNsJKMDQCxmqdGAEmwvw=="
+				},
+				"code" : "element := BlElement new"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:11:34.728742+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:14:21.700693+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "IQL0rJKMDQCxlj9pAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "What objects is it made of? To find this out, we can traverse all objects reachable from this object that are part of packages named `Bloc`:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-06T22:08:21.652892+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T14:05:22.955788+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vjGI5YaMDQCxnNh+AEmwvw=="
+				},
+				"code" : "BlElement new\r\twithDeepCollect: [ :each | \r\t\teach class instVarNames \r\t\t\tcollect: [:iv | each instVarNamed: iv]\r\t\t\tthenSelect: [:object | object class package name beginsWith: 'Bloc' ] ]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:14:32.589575+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:14:45.52334+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "HdRJt5KMDQCxnGYEAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Having the list is nice. But, how are the objects composed? A graph would be better:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:14:50.264115+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T14:09:57.496266+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "W+bEuJKMDQCxnls7AEmwvw=="
+				},
+				"code" : "m := GtMondrian new.\nBlElement new\r\twithDeep: [ :each | \r\t\t(each class instVarNames \r\t\t\tcollect: [:iv | each instVarNamed: iv]\r\t\t\tthenSelect: [ :object | object class package name beginsWith: 'Bloc' ]) ]\n     do: [ :each | \r     \tm nodes \r     \t\tstencil: [:x | \r     \t\t\tBrVerticalPane new\r     \t\t\t\tfitContent;\r     \t\t\t\taddChild: (BrLabel new text: x class name; aptitude: (BrGlamorousLabelAptitude new foreground: Color gray; fontSize: 10));\r     \t\t\t\taddChild: (BrLabel new text: x gtDisplayString; aptitude: (BrGlamorousLabelAptitude new))]; \r     \t\twith: {each} ]\n     relationDo:  [ :from :to | \r     \tm edges \r     \t\tfromRightCenter;\r     \t\ttoLeftCenter;\r     \t\tstencil: [:x | BlParabollaArcElement new \r\t\t\t\t\t\tzIndex: 0;\r\t\t\t\t\t\tcurvatureFraction: 0.3;\r\t\t\t\t\t\tborder: (BlBorder paint: (Color gray alpha: 0.2) width: 2);\r\t\t\t\t\t\ttoHead: (BlArrowheadSimpleArrow new\r\t\t\t\t\t\t\tborder: (BlBorder builder paint: (Color gray alpha: 0.2); width: 4; build)) ];\r     \t\tconnectAssociations: {from->to} ].\nm layout custom: ((GtGraphHorizontalTreeLayout new levelDistance: 50; nodeDistance: 20)).\nm "
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-06T21:13:58.270334+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-06T21:15:37.694686+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "DeepTraverser"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "00ec0423-868c-0d00-b516-4e3c0049b0bf"
+	}
+}

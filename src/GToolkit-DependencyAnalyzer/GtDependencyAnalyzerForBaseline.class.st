@@ -66,26 +66,32 @@ GtDependencyAnalyzerForBaseline >> gtBaselineFor: aView [
 
 { #category : #'gt-extensions' }
 GtDependencyAnalyzerForBaseline >> gtDirectlyDefinedPackagesFor: aView [
-	<gtView>
 
+	<gtView>
 	^ aView columnedList
-		title: 'Directly defined packages';
-		priority: 10;
-		items: [
-			| aContext |
-			
-			aContext := GtDependencyAnalyzerContext new.
-			
-			((self directlyDefinedPackagesWithContext: aContext)
-				sorted: [ :a :b | a name < b name ])
-					collect: [ :eachPackageFromBaseline | eachPackageFromBaseline -> (eachPackageFromBaseline undefinedDependenciesWithContext: aContext) ] ];
-		column: 'Package' text: [ :each |
-			| aText |
-			aText := each key name asRopedText.
-			each value ifNotEmpty: [ aText foreground: Color red darker ].
-			aText ];
-		column: 'Undefined dependencies' text: [ :each | each value size ];
-		send: [ :each | each key ]
+		  title: 'Directly defined packages';
+		  priority: 10;
+		  items: [ 
+			  | aContext |
+			  aContext := GtDependencyAnalyzerContext new.
+
+			  ((self directlyDefinedPackagesWithContext: aContext) sorted: [ 
+					   :a 
+					   :b | a name < b name ]) collect: [ :eachPackageFromBaseline | 
+					  eachPackageFromBaseline
+					  ->
+						  (eachPackageFromBaseline undefinedDependenciesWithContext:
+								   aContext) ] ];
+		  column: 'Package' text: [ :each | 
+			  | aText |
+			  aText := each key name asRopedText.
+			  each value ifNotEmpty: [ aText foreground: Color red darker ].
+			  aText ];
+		  column: 'Undefined dependencies'
+		  text: [ :each | each value size ];
+		  column: 'Suggested Missing Baselines' text: [ :each | 
+			  ((self missingBaselinesFor: each value) asOrderedCollection) joinUsing: ', ' ];
+		  send: [ :each | each key ]
 ]
 
 { #category : #'gt-extensions' }
@@ -176,6 +182,16 @@ GtDependencyAnalyzerForBaseline >> initialize [
 GtDependencyAnalyzerForBaseline >> issuesWithContext: aContext [
 	^ (self directlyDefinedPackagesWithContext: aContext)
 		flatCollect: [ :eachPackage | eachPackage issuesWithContext: aContext ]
+]
+
+{ #category : #'gt-extensions' }
+GtDependencyAnalyzerForBaseline >> missingBaselinesFor: aCollection [
+
+	| aBaselineAnalyzer |
+	^ aCollection flatCollectAsSet: [ :aPackage | 
+		  aBaselineAnalyzer := aPackage definingBaselinesWithContext:
+			                       GtDependencyAnalyzerContext new.
+		  (aBaselineAnalyzer collect: #baseline) ifEmpty: [ Set new add: aPackage name; yourself  ] ]
 ]
 
 { #category : #accessing }

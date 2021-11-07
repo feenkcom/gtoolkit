@@ -1,0 +1,837 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:27:33.222512+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:34:10.114865+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8LM+5pKMDQCxvGJsAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[[Mondrian]] is a graph visualization engine that works directly with the generic [[Bloc]] graphical engine. In essence, Mondrian acts like a builder of a Bloc scene. This means that everything that can be achieved with Mondrian can also be achieved using plain Bloc elements. At the same time, it also means that Mondrian can benefit from all widgets and abilities already present in Bloc."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:27:38.553687+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:27:38.553687+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jQ+Q5pKMDQCxvre/AEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Understanding nodes"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:27:41.862986+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:29:16.853819+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "i4zC5pKMDQCxv53iAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Let us consider a simple example with a visualization showing a few nodes:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:29:12.664696+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:29:12.664696+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nRYs7JKMDQCxwQX+AEmwvw=="
+				},
+				"exampleSelector" : "multipleNodes",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtMondrianVsBlocExplanation",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:29:49.936253+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:30:01.243693+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8MNk7pKMDQCxw3JRAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Mondrian does not have its own internal model for representing the graph. Instead it builds directly an {{gtClass:BlElement}}:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:30:09.02122+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:30:09.02122+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QgWI75KMDQCxxCRvAEmwvw=="
+				},
+				"exampleSelector" : "rootWithMultipleNodes",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtMondrianVsBlocExplanation",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:30:21.691148+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:30:47.686249+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3lRJ8JKMDQCxxfayAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The root element holds the elements that represent our nodes. Mondrian is only a shallow builder of elements and this offers quite some flexibility in customizing the rendering. For example, if we want to specify a custom element for each node, we can do that like this:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:30:50.940304+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:30:50.940304+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "sKcH8pKMDQCxylSTAEmwvw=="
+				},
+				"exampleSelector" : "multipleNodesWithStencil",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtMondrianVsBlocExplanation",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:30:57.00321+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:30:57.00321+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9yhk8pKMDQCxy4SgAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Working with Bloc"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:01.271241+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:21.750802+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9Eal8pKMDQCxzbyAAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Mondrian being a builder for Bloc, also means that the same result can be obtained by working directly with Bloc:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:26.05638+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:26.05638+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "33sf9JKMDQCx0IyFAEmwvw=="
+				},
+				"exampleSelector" : "blocWithMultipleNodes",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtMondrianVsBlocExplanation",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:35.855125+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:35.855125+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Hvu09JKMDQCx0XYyAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##The graph extensions in Bloc"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:38.840034+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:38.840034+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VIni9JKMDQCx0yKUAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "By default, the Bloc model does not know about graphs. For example, an element does not know that it is supposed to be a node in a graph, and it does not know how to get to the other connected nodes. That is mandatory as Bloc is generic and a graph imposes a specific kind of contraints. Nevertheless, when working with graphs, it would still be useful to navigate a scene using a high level graph knowledge."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:26.471997+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:26.471997+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FlS595KMDQCx3xbTAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This is achieved through a `graph` extension. For example, below we see how to query the {{gtMethod:GtGraphElementContext>>#nodeChildren}}, and how the resulting collection of elements answers `true` to {{gtMethod:GtGraphElementContext>>#isNode}}."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:30.801827+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:30.801827+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "HWz795KMDQCx4LRaAEmwvw=="
+				},
+				"exampleSelector" : "graphNodeChildrenOfRoot",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtMondrianVsBlocExplanation",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:43.073372+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:26.476074+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kR4j9ZKMDQCx1XCYAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For more details about the graph API, please browse {{gtClass:GtGraphElementContext}}."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:54.60505+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:54.60505+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "hRXT9ZKMDQCx2cnHAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Dealing with lines and edges"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:56.739907+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:07.249027+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "k6nz9ZKMDQCx2ifcAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "A key benefit of using Mondrian is the ability of creating edges in a declarative manner, without having to maintain an intermediate data structure or to traverse the nodes explicitly."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:10.144421+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:10.144421+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xTbA9pKMDQCx3twZAEmwvw=="
+				},
+				"exampleSelector" : "multipleNodesWithEdges",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtMondrianVsBlocExplanation",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:31:50.667177+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:46.238615+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Pf+W9ZKMDQCx12xBAEmwvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "As Mondrian works directly with Bloc, we can also combine the two worlds. For example, in the example below we create edges explicitly and add them to the root element created with Mondrian. To create these edges, we traverse the nodes and then explicitly connect them. There are two things to note: \r1. The newly created edges do affect the layout, but they do not have corresponding visible lines. This is because in Bloc, an edge is only a constraint. To create a line, we need an explicit line element. Mondrian creates both at the same time.\r2. There is extra code that is required when working directly with Bloc."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:48.80673+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-11-07T12:32:48.80673+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "aycO+ZKMDQCx4xmlAEmwvw=="
+				},
+				"exampleSelector" : "rootWithHybridEdges",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtMondrianVsBlocExplanation",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-07T12:27:26.30639+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-11-07T12:33:29.15488+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "How does Mondrian relate to Bloc"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "f82fd5e5-928c-0d00-b1b9-d8280049b0bf"
+	}
+}
