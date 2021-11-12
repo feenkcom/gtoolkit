@@ -3818,7 +3818,45 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [ ]
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "juraj.kubelka@icloud.com"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2021-11-10T18:02:29.373289-03:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "juraj.kubelka@icloud.com"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2021-11-10T18:47:48.0825-03:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "0L7DR9eMDQCpWIGFD6wbtA=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "[[Promise then:, asyncThen:, and then:otherwise: usage]] "
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
