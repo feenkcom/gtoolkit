@@ -75,7 +75,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.315/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1043/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1044/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.628/src' ].
@@ -126,7 +126,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.627/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1043/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1044/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.250/src' ].
@@ -141,7 +141,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.8.436/src' ].
 		spec
 			baseline: 'XdocClient' with: [
-				spec repository: 'github://feenkcom/xdoc:v0.8.467/src' ].
+				spec repository: 'github://feenkcom/xdoc:v0.8.468/src' ].
 		spec
 			baseline: 'LepiterEngine' with: [
 				spec repository: 'github://feenkcom/lepiter:v0.6.275/src' ].
