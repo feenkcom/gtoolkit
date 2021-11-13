@@ -8,8 +8,8 @@ GtSearchFilter >> children [
 
 { #category : #'*GToolkit-Extensions' }
 GtSearchFilter >> gtCodeStructureFor: aView [
+	"<gtView>"
 
-	<gtView>
 	^ aView columnedTree
 		  title: 'Code Structure';
 		  priority: 11;
@@ -89,9 +89,21 @@ GtSearchFilter >> gtHierarchyFor: aView [
 ]
 
 { #category : #'*GToolkit-Extensions' }
-GtSearchFilter >> gtMetricsFor: aView [
-
+GtSearchFilter >> gtItemsFor: aView [
+	"this is a view that is polymorphic with the one defined in ${method:Collection>>#gtItemsFor:}$"
 	<gtView>
+
+	^ aView forward
+		title: 'Live';
+		priority: 10;
+		object: [ self result ];
+		view: #gtItemsFor:
+]
+
+{ #category : #'*GToolkit-Extensions' }
+GtSearchFilter >> gtMetricsFor: aView [
+	<gtView>
+
 	^ aView forward
 		  title: 'Metrics';
 		  priority: 15;

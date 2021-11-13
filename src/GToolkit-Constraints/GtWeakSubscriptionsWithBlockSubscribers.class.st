@@ -1,7 +1,7 @@
 Class {
 	#name : #GtWeakSubscriptionsWithBlockSubscribers,
 	#superclass : #GtPharoConstraint,
-	#category : 'GToolkit-Constraints'
+	#category : #'GToolkit-Constraints'
 }
 
 { #category : #accessing }
@@ -11,10 +11,10 @@ GtWeakSubscriptionsWithBlockSubscribers >> description [
 
 { #category : #accessing }
 GtWeakSubscriptionsWithBlockSubscribers >> issues [
-	<return: #GtSearchMethodGroupResult>
+	<return: #OrderedCollection>
 	| items |
 	items := OrderedCollection new.
-	('`@rcvr weak when: `@ann do: `@block' gtASTMatches result) do: [ :each |
+	('`@rcvr weak when: `@ann do: `@block' gtASTMatches result collect wait) do: [ :each |
 		 (each methodClass = ToolRegistry) ifFalse: [items add: each  ]  ].
 	^ items
 ]
