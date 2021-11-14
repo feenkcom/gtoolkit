@@ -12,7 +12,7 @@ GtSubscriptionsShouldNotUseDeliveryConditionWhere >> description [
 { #category : #accessing }
 GtSubscriptionsShouldNotUseDeliveryConditionWhere >> issues [
 	<return: #OrderedCollection>
-	^ '`@rcvr weak when: (`@ann where: `@block) send: `@send to: `@arg' gtASTMatches result collect wait
+	^ '`@rcvr weak when: (`@ann where: `@block) send: `@send to: `@arg' gtASTMatches result toArray wait
 ]
 
 { #category : #accessing }

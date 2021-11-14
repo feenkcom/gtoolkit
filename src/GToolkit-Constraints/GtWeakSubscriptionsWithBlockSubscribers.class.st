@@ -14,7 +14,7 @@ GtWeakSubscriptionsWithBlockSubscribers >> issues [
 	<return: #OrderedCollection>
 	| items |
 	items := OrderedCollection new.
-	('`@rcvr weak when: `@ann do: `@block' gtASTMatches result collect wait) do: [ :each |
+	('`@rcvr weak when: `@ann do: `@block' gtASTMatches result toArray wait) do: [ :each |
 		 (each methodClass = ToolRegistry) ifFalse: [items add: each  ]  ].
 	^ items
 ]
