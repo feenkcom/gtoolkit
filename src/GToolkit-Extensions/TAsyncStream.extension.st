@@ -36,6 +36,16 @@ TAsyncStream >> gtExecuteActionFor: anAction [
 ]
 
 { #category : #'*GToolkit-Extensions' }
+TAsyncStream >> gtItemsFor: aView [
+	<gtView>
+	
+	^ aView list
+		title: 'Items';
+		priority: 5;
+		items: [ self asyncSimilarCopy ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 TAsyncStream >> gtLiveFor: aView [
 	^ self gtCompositionFor: aView
 ]
