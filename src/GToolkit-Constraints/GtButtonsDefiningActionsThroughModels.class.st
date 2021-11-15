@@ -1,7 +1,7 @@
 Class {
 	#name : #GtButtonsDefiningActionsThroughModels,
 	#superclass : #GtPharoConstraint,
-	#category : 'GToolkit-Constraints'
+	#category : #'GToolkit-Constraints'
 }
 
 { #category : #accessing }
@@ -12,7 +12,7 @@ GtButtonsDefiningActionsThroughModels >> description [
 { #category : #accessing }
 GtButtonsDefiningActionsThroughModels >> issues [
 	^ '`@a addViewModel: (BrButtonModel new action: [:`var | | `@temps | `@.Stmts ])'
-		gtASTMatches result
+		gtASTMatches result toArray wait
 ]
 
 { #category : #accessing }
