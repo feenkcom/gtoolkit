@@ -1,7 +1,7 @@
 Class {
 	#name : #GtSubscriptionsShouldNotUseDeliveryConditionWhere,
 	#superclass : #GtPharoConstraint,
-	#category : 'GToolkit-Constraints'
+	#category : #'GToolkit-Constraints'
 }
 
 { #category : #accessing }
@@ -11,8 +11,8 @@ GtSubscriptionsShouldNotUseDeliveryConditionWhere >> description [
 
 { #category : #accessing }
 GtSubscriptionsShouldNotUseDeliveryConditionWhere >> issues [
-	<return: #GtSearchMethodGroupResult>
-	^ '`@rcvr weak when: (`@ann where: `@block) send: `@send to: `@arg' gtASTMatches result
+	<return: #OrderedCollection>
+	^ '`@rcvr weak when: (`@ann where: `@block) send: `@send to: `@arg' gtASTMatches result toArray wait
 ]
 
 { #category : #accessing }

@@ -13,8 +13,8 @@ TAsyncStream >> gtCompositionDescription [
 
 { #category : #'*GToolkit-Extensions' }
 TAsyncStream >> gtCompositionFor: aView [
-
 	<gtView>
+
 	^ aView columnedTree
 		  title: 'Composition';
 		  items: [ { self } ];
@@ -32,10 +32,15 @@ TAsyncStream >> gtExecuteActionFor: anAction [
 		icon: BrGlamorousVectorIcons playinspect;
 		tooltip: 'Collect all values and inspect';
 		priority: 10;
-		action: [ :aButton | aButton phlow spawnObject: self collect asAsyncPromise ]
+		action: [ :aButton | aButton phlow spawnObject: self asyncSimilarCopy toArray asAsyncPromise ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
 TAsyncStream >> gtLiveFor: aView [
-	^ self gtCompositionFor: aView
+	<gtView>
+
+	^ aView list
+		title: 'Items';
+		priority: 5;
+		items: [ self asyncSimilarCopy ]
 ]
