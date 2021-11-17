@@ -57,6 +57,37 @@ Behavior >> gtCoderMethodsFor: aView context: aPhlowContext [
 ]
 
 { #category : #'*GToolkit-Extensions' }
+Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
+	"<gtClassView>"
+	| aMethodsCoderUIModel aMethodsCoder |
+
+	aMethodsCoderUIModel := (GtPharoFilteredStreamingMethodsCoder forBehavior: self) asCoderUIModel.
+	aMethodsCoderUIModel expandAndFocusCompiledMethod: (ASTCache>>#at:).
+
+	aMethodsCoder := aMethodsCoderUIModel codersModel.
+
+	^ aView explicit
+		  priority: 10.5;
+		  title: 'Streaming Methods';
+		  disableAsync;
+		  actionDropdownButtonIcon: BrGlamorousVectorIcons filter
+		  	tooltip: 'Filter'
+		  	content: [ :element | aMethodsCoder filterDropDown: element ];
+		  actionButtonDo: [ :aButtonAction | 
+			  aButtonAction
+				  icon: BrGlamorousVectorIcons add;
+				  tooltip: 'Add new method';
+				  action: [ aMethodsCoderUIModel addNewCoder: (GtPharoMethodCoder forNewMethod: self) ];
+				  name: GtPharoBehaviorCoder addNewMethodButtonName ];
+			actionButtonDo: [ :aButtonAction | 
+			  aButtonAction
+				  icon: BrGlamorousVectorIcons inspect;
+				  tooltip: 'Inspect vieww model';
+				  action: [ :aButton | aButton phlow spawnObject: aMethodsCoderUIModel ] ];
+			stencil: [ GtPharoFilteredStreamingMethodsCoderElement new pharoFilteredStreamingMethodsCoderViewModel: aMethodsCoderUIModel ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 Behavior >> testSuiteViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 
 	<return: #GtPharoTestSuiteViewModel>
