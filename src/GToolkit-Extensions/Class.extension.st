@@ -25,11 +25,12 @@ Class >> gtAllReferencesFor: aView [
 	
 	(self name beginsWith: ConfigurationOf name) ifTrue: [ ^ aView empty ].
 	
-	^ aView explicit
+	^ aView forward
 		title: 'References';
 		tooltip: 'Class references';
 		priority: 40;
-		stencil: [ self gtReferences ]
+		object: [ self gtReferences ];
+		view: #gtItemsFor:
 ]
 
 { #category : #'*GToolkit-Extensions' }
