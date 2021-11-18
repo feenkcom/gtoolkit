@@ -61,30 +61,53 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 	"<gtClassView>"
 	| aMethodsCoderUIModel aMethodsCoder |
 
-	aMethodsCoderUIModel := (GtPharoFilteredStreamingMethodsCoder forBehavior: self) asCoderUIModel.
-	aMethodsCoderUIModel expandAndFocusCompiledMethod: (ASTCache>>#at:).
-
+	aMethodsCoderUIModel := (GtPharoStreamingBehaviorMethodsCoder forBehavior: self) asCoderUIModel.
 	aMethodsCoder := aMethodsCoderUIModel codersModel.
 
 	^ aView explicit
-		  priority: 10.5;
-		  title: 'Streaming Methods';
-		  disableAsync;
-		  actionDropdownButtonIcon: BrGlamorousVectorIcons filter
-		  	tooltip: 'Filter'
-		  	content: [ :element | aMethodsCoder filterDropDown: element ];
-		  actionButtonDo: [ :aButtonAction | 
-			  aButtonAction
-				  icon: BrGlamorousVectorIcons add;
-				  tooltip: 'Add new method';
-				  action: [ aMethodsCoderUIModel addNewCoder: (GtPharoMethodCoder forNewMethod: self) ];
-				  name: GtPharoBehaviorCoder addNewMethodButtonName ];
-			actionButtonDo: [ :aButtonAction | 
-			  aButtonAction
-				  icon: BrGlamorousVectorIcons inspect;
-				  tooltip: 'Inspect vieww model';
-				  action: [ :aButton | aButton phlow spawnObject: aMethodsCoderUIModel ] ];
-			stencil: [ GtPharoFilteredStreamingMethodsCoderElement new pharoFilteredStreamingMethodsCoderViewModel: aMethodsCoderUIModel ]
+		priority: 10.5;
+		title: 'Streaming Methods';
+		disableAsync;
+		actionDropdownButtonIcon: BrGlamorousVectorIcons filter
+			tooltip: 'Filter'
+			content: [ :element | aMethodsCoder filterDropDown: element ];
+		actionDropdownButtonDo: [ :aDrodownAction | 
+			aDrodownAction dropdown 
+				icon: BrGlamorousVectorIcons add;
+				tooltip: 'Add new method';
+				content: [ :aButton |
+					| aNewMethodCoder aNewMethodCoderViewModel |
+					
+					aNewMethodCoder := GtPharoMethodCoder forNewMethod: self.
+					aNewMethodCoder
+						currentSourceString: 'newMethod', String cr, String tab, '"This is a new method"';
+						withoutHeader.
+
+					aNewMethodCoderViewModel := aNewMethodCoder asCoderViewModel.
+					aNewMethodCoderViewModel
+						expanded: true;
+						focused: true;
+						moveCursorAtEnd.
+
+					aNewMethodCoderViewModel
+						when: GtMethodCoderSaved
+						do: [ :aSavedEvent |
+							aMethodsCoderUIModel expandAndFocusCompiledMethod: aSavedEvent method.
+							aButton fireEvent: BrDropdownHideWish new ].	
+
+					(GtExpandedOnlyCoderElement new coderUIModel: aNewMethodCoderViewModel)
+						hExact: 300;
+						vFitContent;
+						background: Color white;
+						padding: (BlInsets all: 5);
+						addAptitude: BrGlamorousFocusableShadowAptitude new ];
+				name: GtPharoBehaviorCoder addNewMethodButtonName ];
+		actionButtonDo: [ :aButtonAction | 
+			aButtonAction
+				icon: BrGlamorousVectorIcons inspect;
+				tooltip: 'Inspect view model';
+				action: [ :aButton | aButton phlow spawnObject: aMethodsCoderUIModel ] ];
+		stencil: [ GtPharoFilteredStreamingMethodsCoderElement new pharoFilteredStreamingMethodsCoderViewModel: aMethodsCoderUIModel ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
