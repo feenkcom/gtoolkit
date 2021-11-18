@@ -4,9 +4,9 @@ Class {
 	#traits : 'TGtWithProfilerTelemetrySignalsViewModel',
 	#classTraits : 'TGtWithProfilerTelemetrySignalsViewModel classTrait',
 	#instVars : [
-		'updateRequester'
+		'updater'
 	],
-	#category : 'GToolkit-Profiler-Process - Views'
+	#category : #'GToolkit-Profiler-Process - Views'
 }
 
 { #category : #initialization }
@@ -17,7 +17,7 @@ GtProfilerTelemetrySignalsChartElement >> initialize [
 	self alignTopCenter.
 	self padding: (BlInsets all: 10).
 	
-	updateRequester := GtPhlowUpdateRequester new 
+	updater := BrElementUpdater new 
 		element: self selector: #updateChart.
 ]
 
@@ -35,7 +35,7 @@ GtProfilerTelemetrySignalsChartElement >> onProfilerTelemetrySignalsViewModelCha
 
 { #category : #'private - event handling' }
 GtProfilerTelemetrySignalsChartElement >> onTelemetrySignalAdded: aTelemetrySignalAddedAnnouncement [
-	updateRequester requestUpdate
+	updater requestUpdate
 ]
 
 { #category : #'api - profiler telemetry signals view model' }

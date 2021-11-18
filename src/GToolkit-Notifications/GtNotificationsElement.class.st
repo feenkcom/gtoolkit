@@ -3,7 +3,7 @@ Class {
 	#superclass : #GtNotificationElement,
 	#instVars : [
 		'notifications',
-		'updateRequester'
+		'updater'
 	],
 	#category : #'GToolkit-Notifications-Badge'
 }
@@ -29,7 +29,7 @@ GtNotificationsElement >> gtNotificationsFor: aView [
 GtNotificationsElement >> initialize [
 	super initialize.
 	notifications := GtNotifications new.
-	updateRequester := GtPhlowUpdateRequester new 
+	updater := BrElementUpdater new 
 		element: self selector: #updateElement.
 		
 	self subscribeToNotifications.
@@ -74,7 +74,7 @@ GtNotificationsElement >> removeNotification: aGtNotificationEvent [
 
 { #category : #'private - updating' }
 GtNotificationsElement >> requestUpdate [
-	self updateRequester requestUpdate.
+	self updater requestUpdate.
 ]
 
 { #category : #'private - subscriptions' }
@@ -97,7 +97,7 @@ GtNotificationsElement >> updateElement [
 ]
 
 { #category : #'private - accessing' }
-GtNotificationsElement >> updateRequester [
-	<return: #GtPhlowUpdateRequester>
-	^ updateRequester
+GtNotificationsElement >> updater [
+	<return: #BrElementUpdater>
+	^ updater
 ]

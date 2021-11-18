@@ -4,9 +4,9 @@ Class {
 	#traits : 'TGtWithProfilerTelemetrySignalsViewModel',
 	#classTraits : 'TGtWithProfilerTelemetrySignalsViewModel classTrait',
 	#instVars : [
-		'updateRequester'
+		'updater'
 	],
-	#category : 'GToolkit-Profiler-Process - Views'
+	#category : #'GToolkit-Profiler-Process - Views'
 }
 
 { #category : #initialization }
@@ -22,7 +22,7 @@ GtProfilerTelemetrySignalsElement >> initialize [
 		eachElement
 			text: eachTelemetrySignalViewModel signal task durationInMilliseconds asString, 'ms', ' ',eachTelemetrySignalViewModel signal task name  ].
 	
-	updateRequester := GtPhlowUpdateRequester new 
+	updater := BrElementUpdater new 
 		element: self selector: #updateList.
 ]
 
@@ -40,7 +40,7 @@ GtProfilerTelemetrySignalsElement >> onProfilerTelemetrySignalsViewModelChanged 
 
 { #category : #'private - event handling' }
 GtProfilerTelemetrySignalsElement >> onTelemetrySignalAdded: aTelemetrySignalAddedAnnouncement [
-	updateRequester requestUpdate
+	updater requestUpdate
 ]
 
 { #category : #'api - profiler telemetry signals view model' }
