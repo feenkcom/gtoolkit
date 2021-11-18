@@ -1,7 +1,7 @@
 Class {
 	#name : #GtRBAcceptVisitorCalledFromNonVisitingMethods,
 	#superclass : #GtPharoConstraint,
-	#category : 'GToolkit-Constraints'
+	#category : #'GToolkit-Constraints'
 }
 
 { #category : #accessing }
@@ -25,7 +25,7 @@ GtRBAcceptVisitorCalledFromNonVisitingMethods >> issues [
 				(each selector beginsWith: 'visit') not and: [
 					(each methodClass name beginsWith: 'Br') or: [
 						(each methodClass name beginsWith: 'Gt') ]]]]]).
-	^ (self ignoreIssuesInMethodsBasedOnPragmas: all) result
+	^ (self ignoreIssuesInMethodsBasedOnPragmas: all) result toArray wait
 ]
 
 { #category : #accessing }

@@ -1,7 +1,7 @@
 Class {
 	#name : #GtDoNotManuallyFindThisContextMethodDefinition,
 	#superclass : #GtPharoConstraint,
-	#category : 'GToolkit-Constraints-GToolkit-Constraints'
+	#category : #'GToolkit-Constraints-GToolkit-Constraints'
 }
 
 { #category : #accessing }
@@ -11,8 +11,8 @@ GtDoNotManuallyFindThisContextMethodDefinition >> description [
 
 { #category : #accessing }
 GtDoNotManuallyFindThisContextMethodDefinition >> issues [
-	^ ('`{:node | | found | found := false. node nodesDo: [:each | found := found or: [each isKindOf: RBThisContextNode]]. found} asRingDefinition' gtASTMatches result collect: #yourself)
-		select: [ :eachMethod |
+	^ (('`{:node | | found | found := false. node nodesDo: [:each | found := found or: [each isKindOf: RBThisContextNode]]. found} asRingDefinition' gtASTMatches result)
+		filter: [ :eachMethod |
 			#('Bloc' . 'Brick' . 'GToolkit' ) anySatisfy: [ :prefix | 
-				eachMethod package name beginsWith: prefix ] ]
+				eachMethod package name beginsWith: prefix ] ]) toArray wait
 ]

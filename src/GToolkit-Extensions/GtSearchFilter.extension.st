@@ -8,8 +8,8 @@ GtSearchFilter >> children [
 
 { #category : #'*GToolkit-Extensions' }
 GtSearchFilter >> gtCodeStructureFor: aView [
+	"<gtView>"
 
-	<gtView>
 	^ aView columnedTree
 		  title: 'Code Structure';
 		  priority: 11;
@@ -89,12 +89,44 @@ GtSearchFilter >> gtHierarchyFor: aView [
 ]
 
 { #category : #'*GToolkit-Extensions' }
-GtSearchFilter >> gtMetricsFor: aView [
-
+GtSearchFilter >> gtItemsFor: aView [
+	"this is a view that is polymorphic with the one defined in ${method:Collection>>#gtItemsFor:}$"
 	<gtView>
+
+	^ aView forward
+		title: 'Live';
+		priority: 10;
+		object: [ self result ];
+		view: #gtItemsFor:
+]
+
+{ #category : #'*GToolkit-Extensions' }
+GtSearchFilter >> gtMetricsFor: aView [
+	<gtView>
+
 	^ aView forward
 		  title: 'Metrics';
 		  priority: 15;
 		  object: [ self result ];
 		  view: #gtMetricsFor:
+]
+
+{ #category : #'*GToolkit-Extensions' }
+GtSearchFilter >> methodPackages [
+
+	| aResult |
+	aResult := OrderedCollection new.
+
+	self do: [ :eachMethod | 
+		| aSearchPackage aMethodPackage |
+		aMethodPackage := eachMethod package.
+
+		(aResult anySatisfy: [ :eachSearchPackage | 
+			 eachSearchPackage package = aMethodPackage ]) ifFalse: [ 
+			aSearchPackage := GtSearchPackage new
+				                  package: aMethodPackage;
+				                  group: self.
+			aResult add: aSearchPackage ] ].
+			
+	^ aResult
 ]
