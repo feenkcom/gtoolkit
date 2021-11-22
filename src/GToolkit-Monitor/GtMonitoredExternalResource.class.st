@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'resource'
 	],
-	#category : 'GToolkit-Monitor-External Resources'
+	#category : #'GToolkit-Monitor-External Resources'
 }
 
 { #category : #accessing }
@@ -40,7 +40,13 @@ GtMonitoredExternalResource >> gtPointersFor: aView [
 GtMonitoredExternalResource >> isNull [
 	^ (resource at: 1)
 		ifNil: [ true ]
-		ifNotNil: #isNull
+		ifNotNil: [ :anObject |
+			(anObject respondsTo: #isNull)
+				ifTrue: [ anObject isNull ]
+				ifFalse: [
+					(anObject respondsTo: #getHandle)
+						ifTrue: [ anObject getHandle isNull ]
+						ifFalse: [ false ] ] ]
 ]
 
 { #category : #accessing }
