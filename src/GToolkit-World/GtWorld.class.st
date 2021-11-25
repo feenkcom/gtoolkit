@@ -75,7 +75,7 @@ GtWorld class >> openDefault [
 	| aSpace |
 	aSpace := self buildWithShutdownListener.
 	aSpace knowledgeBase: LeDatabasesRegistry uniqueInstance 
-		setupForGlamorousToolkit.
+		ensureDatabase.
 	aSpace markAsDefault.
 	aSpace prepareForRelease.
 	aSpace show.
