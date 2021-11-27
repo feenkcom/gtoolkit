@@ -35,13 +35,17 @@ Class >> gtAllReferencesFor: aView [
 
 { #category : #'*GToolkit-Extensions' }
 Class >> gtExamplesMapFor: aView context: aPhlowContext [
-
-	<gtView>
-	<gtClassView>
+	"<gtView>
+	<gtClassView>"
 	| aMethodsCoderUIModel aMethodsCoder |
+
+	self flag: #TODO.
+	
 	aMethodsCoderUIModel := self methodsCoderFromContext: aPhlowContext.
 	aMethodsCoder := aMethodsCoderUIModel coder.
+
 	aMethodsCoder exampler hasExamples ifFalse: [ ^ aView empty ].
+	
 	^ aView forward
 		  title: 'Examples map';
 		  priority: 11;
