@@ -14,13 +14,13 @@ Class {
 		'resetButton',
 		'isPaused'
 	],
-	#category : 'GToolkit-Profiler'
+	#category : #'GToolkit-Profiler'
 }
 
 { #category : #'private - profiling' }
 GtProfilerPerformanceChart >> computeIsRunning [
 	^ profiledSpace notNil
-		and: [ profiledSpace space telemetry = BlNullTelemetry uniqueInstance
+		and: [ profiledSpace space telemetry = NullTelemetry uniqueInstance
 			and: [ currentLogger notNil
 				and: [ currentLogger isRunning ] ] ]
 ]
@@ -71,7 +71,7 @@ GtProfilerPerformanceChart >> instrumentSpace [
 
 { #category : #'private - profiling' }
 GtProfilerPerformanceChart >> instrumentSpace: aSpace [
-	aSpace enqueueTask: (BlTaskAction new action: [ aSpace telemetry: BlMemoryTelemetry new ])
+	aSpace enqueueTask: (BlTaskAction new action: [ aSpace telemetry: MemoryTelemetry new ])
 ]
 
 { #category : #'hooks - children' }
@@ -107,7 +107,7 @@ GtProfilerPerformanceChart >> profileSpace: anOpenedSpace [
 	self removeChildNamed: #chart.
 	
 	profiledSpace := anOpenedSpace.
-	currentLogger := BlTelemetryLogger new.
+	currentLogger := TelemetryLogger new.
 
 	(currentLogger gtFramesFor: GtPhlowEmptyView new)
 		asElementDo: [ :aChart | self addChild: aChart as: #chart ]
@@ -163,5 +163,5 @@ GtProfilerPerformanceChart >> uninstrumentSpace [
 { #category : #'private - profiling' }
 GtProfilerPerformanceChart >> uninstrumentSpace: aSpace [
 	aSpace enqueueTask: (BlTaskAction new action: [
-		aSpace telemetry: BlNullTelemetry uniqueInstance ])
+		aSpace telemetry: NullTelemetry uniqueInstance ])
 ]

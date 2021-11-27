@@ -6,7 +6,7 @@ Class {
 		'announcer',
 		'parentProfilerProcessTelemetriesModel'
 	],
-	#category : 'GToolkit-Profiler-Process - Models'
+	#category : #'GToolkit-Profiler-Process - Models'
 }
 
 { #category : #'api - announcer' }
@@ -58,7 +58,7 @@ GtProfilerProcessTelemetryModel >> isProfilerProcessTelemetryModel [
 
 { #category : #'api - telemetry' }
 GtProfilerProcessTelemetryModel >> isRunning [
-	^ self telemetry defaultTelemetryClass = BlMemoryTelemetry
+	^ self telemetry defaultTelemetryClass = MemoryTelemetry
 ]
 
 { #category : #'api - telemetry' }
@@ -118,13 +118,13 @@ GtProfilerProcessTelemetryModel >> printOn: aStream [
 
 { #category : #'api - telemetry' }
 GtProfilerProcessTelemetryModel >> start [
-	self telemetry defaultTelemetryClass: BlMemoryTelemetry.
+	self telemetry defaultTelemetryClass: MemoryTelemetry.
 	self announce: (GtProfilerProcessTelemetryModelStarted new profilerProcessTelemetryModel: self)
 ]
 
 { #category : #'api - telemetry' }
 GtProfilerProcessTelemetryModel >> stop [
-	self telemetry defaultTelemetryClass: BlNullTelemetry.
+	self telemetry defaultTelemetryClass: NullTelemetry.
 	self announce: (GtProfilerProcessTelemetryModelStopped new profilerProcessTelemetryModel: self)
 ]
 
