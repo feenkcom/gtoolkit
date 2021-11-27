@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'defaultId'
 	],
-	#category : 'GToolkit-World-UI'
+	#category : #'GToolkit-World-UI'
 }
 
 { #category : #'instance creation' }
@@ -75,7 +75,19 @@ GtWorld class >> openDefault [
 	| aSpace |
 	aSpace := self buildWithShutdownListener.
 	aSpace knowledgeBase: LeDatabasesRegistry uniqueInstance 
-		setupForGlamorousToolkit.
+		ensureDatabase.
+	aSpace markAsDefault.
+	aSpace prepareForRelease.
+	aSpace show.
+	^ aSpace
+]
+
+{ #category : #'instance creation' }
+GtWorld class >> openOnCurrentDefaultDatabase [
+	| aSpace |
+	aSpace := self buildWithShutdownListener.
+	aSpace knowledgeBase: LeDatabasesRegistry uniqueInstance 
+		defaultLogicalDatabase .
 	aSpace markAsDefault.
 	aSpace prepareForRelease.
 	aSpace show.
