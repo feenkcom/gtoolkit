@@ -9,7 +9,7 @@ Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 		  ifPresent: [ :anExampleViewModel | anExampleViewModel ]
 		  ifAbsentPut: [
 				| aSuiteModel |
-				aSuiteModel := GtPharoExampleSuite forStream: aMethodsCoder filteredItemsStream.
+				aSuiteModel := GtPharoExampleSuite forStream: aMethodsCoder itemsStream.
 		  		GtPharoExampleSuiteViewModel new
 					pharoExampleSuite: aSuiteModel;
 					when: GtPharoSuiteSelectedStateChanged do: [ :anEvent |
@@ -98,7 +98,7 @@ Behavior >> testSuiteViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 		  ifPresent: [ :aTestSuiteViewModel | aTestSuiteViewModel ]
 		  ifAbsentPut: [ 
 				| aSuiteModel |
-				aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder filteredItemsStream.
+				aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder itemsStream.
 		  		GtPharoTestSuiteViewModel new
 					pharoTestSuite: aSuiteModel;
 					when: GtPharoSuiteSelectedStateChanged do: [ :anEvent |
