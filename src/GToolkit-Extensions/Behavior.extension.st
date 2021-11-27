@@ -63,7 +63,9 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 					aNewMethodCoderViewModel
 						when: GtMethodCoderSaved
 						do: [ :aSavedEvent |
-							aMethodsCoderUIModel expandAndFocusCompiledMethod: aSavedEvent method.
+							aMethodsCoderUIModel
+								expandAndFocusCompiledMethod: aSavedEvent method;
+								scrollToCompiledMethod: aSavedEvent method.
 							aButton fireEvent: BrDropdownHideWish new ].
 
 					(GtExpandedOnlyCoderElement new coderUIModel: aNewMethodCoderViewModel)
