@@ -33,12 +33,10 @@ RPackageTag >> gtTestsFor: aView [
 		  stencil: [ aMethodsCoder ];
 		  actionStencil: [ :aBrTab | 
 			  GtPharoCoderUIUtility
-				  newExamplesDropdownButtonForViewModel: anExampleViewModel
-				  methodsCoder: aMethodsCoder ];
+				  newExamplesDropdownButtonForViewModel: anExampleViewModel ];
 		  actionStencil: [ 
 			  GtPharoCoderUIUtility
-				  newTestSuiteDropdownForViewModel: aTestSuiteViewModel
-				  methodsCoder: aMethodsCoder ]
+				  newTestsDropdownButtonForViewModel: aTestSuiteViewModel ]
 ]
 
 { #category : #'*GToolkit-Extensions' }

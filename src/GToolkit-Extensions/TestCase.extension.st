@@ -41,6 +41,5 @@ TestCase class >> gtTestsFor: aView [
 		  stencil: [ aMethodsCoder ];
 		  actionStencil: [ 
 			  GtPharoCoderUIUtility
-				  newTestSuiteDropdownForViewModel: aTestSuiteViewModel
-				  methodsCoder: aMethodsCoder ]
+				  newTestsDropdownButtonForViewModel: aTestSuiteViewModel ]
 ]
