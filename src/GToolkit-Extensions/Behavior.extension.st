@@ -22,10 +22,10 @@ Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 { #category : #'*GToolkit-Extensions' }
 Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 	<gtClassView>
-	| aMethodsCoder aMethodsCoderUIModel aTestSuiteViewModel anExampleViewModel |
-
-	aMethodsCoderUIModel := (GtPharoStreamingBehaviorMethodsCoder forBehavior: self) asCoderUIModel.
-	aMethodsCoder := aMethodsCoderUIModel codersModel.
+	| aMethodsCoder aMethodsCoderViewModel aTestSuiteViewModel anExampleViewModel |
+	
+	aMethodsCoder := GtPharoStreamingBehaviorMethodsCoder forBehavior: self.
+	aMethodsCoderViewModel := GtPharoStreamingMethodsCoderViewModel new streamingCodersModel: aMethodsCoder.
 
 	aTestSuiteViewModel := self
 		testSuiteViewModelWith: aMethodsCoder
@@ -63,7 +63,7 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 					aNewMethodCoderViewModel
 						when: GtMethodCoderSaved
 						do: [ :aSavedEvent |
-							aMethodsCoderUIModel
+							aMethodsCoderViewModel
 								expandAndFocusCompiledMethod: aSavedEvent method;
 								scrollToCompiledMethod: aSavedEvent method.
 							aButton fireEvent: BrDropdownHideWish new ].
@@ -79,14 +79,14 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 			aButtonAction
 				icon: BrGlamorousVectorIcons inspect;
 				tooltip: 'Inspect view model';
-				action: [ :aButton | aButton phlow spawnObject: aMethodsCoderUIModel ] ];
+				action: [ :aButton | aButton phlow spawnObject: aMethodsCoderViewModel ] ];
 		actionStencil: [ :aBrTab | 
 			  GtPharoCoderUIUtility
 				  newExamplesDropdownButtonForViewModel: anExampleViewModel ];
 		actionStencil: [ :aBrTab | 
 			  GtPharoCoderUIUtility
 				  newTestsDropdownButtonForViewModel: aTestSuiteViewModel ];
-		stencil: [ GtPharoFilteredStreamingMethodsCoderElement new pharoFilteredStreamingMethodsCoderViewModel: aMethodsCoderUIModel ]
+		stencil: [ GtPharoStreamingMethodsCoderElement new streamingCodersViewModel: aMethodsCoderViewModel ]
 ]
 
 { #category : #'*GToolkit-Extensions' }

@@ -19,32 +19,80 @@ GtPharoPackageDependenciesConstraint >> actualDependenciesOf: aPackageName [
 		aStream cr; nextPut: $} ]
 ]
 
-{ #category : #'private - dependencies' }
-GtPharoPackageDependenciesConstraint >> package: aPackageName mustDependOn: aCollectionOfPackageNames [
-	| theIssues aPackage theDeclaredDependentPackages theActualDependencies |
+{ #category : #accessing }
+GtPharoPackageDependenciesConstraint >> issues [
+	"returns the facts that contradict the constraint"
+	
+	^ Array streamContents: [ :aStream |
+		RPackage organizer packageNames do: [ :eachPackageName | aStream nextPutAll: (self packageIssuesOf: eachPackageName) ] ]
+]
+
+{ #category : #'api - dependencies' }
+GtPharoPackageDependenciesConstraint >> package: aPackage mustNotDependOn: aCollectionOfPackageNames [
+	| theIssues theDeclaredDependentPackages theActualDependencies |
 	
 	theIssues := OrderedCollection new.
 	
-	aPackage := aPackageName asPackageIfAbsent: [
-		theIssues add: ('Package named {1} does not exist' format: { aPackageName asString printString } ).
-		nil ]. 
-	
-	theDeclaredDependentPackages := OrderedCollection new.
-	aCollectionOfPackageNames do: [ :eachPackageName |
-		theDeclaredDependentPackages add: (eachPackageName asPackageIfAbsent: [
-		theIssues add: ('Package named {1} does not exist' format: { eachPackageName asString printString } ).
-		nil ]) ].
+	theDeclaredDependentPackages := self
+		packageNamesToPackages: aCollectionOfPackageNames
+		issues: theIssues.
 
-	(aPackage isNil or: [ theDeclaredDependentPackages anySatisfy: #isNil ])
-		ifTrue: [ ^ theIssues ].
+	theIssues ifNotEmpty: [ ^ theIssues ].
+
+	theActualDependencies := (aPackage gtDependencies collect: #toPackage) asSet asArray sorted: [ :a :b | a name < b name ].
+
+	(theActualDependencies intersection: theDeclaredDependentPackages)
+		do: [ :eachPackage |
+			theIssues add: ('Package named {1} must not depend on {2}' format: {
+				aPackage name asString printString.
+				eachPackage name asString printString }) ].
+
+	^ theIssues
+]
+
+{ #category : #'api - dependencies' }
+GtPharoPackageDependenciesConstraint >> package: aPackage mustOnlyDependOn: aCollectionOfPackageNames [
+	<return: #OrderedCollection>
+	| theIssues theDeclaredDependentPackages theActualDependencies |
+	
+	theIssues := OrderedCollection new.
+	
+	theDeclaredDependentPackages := self
+		packageNamesToPackages: aCollectionOfPackageNames
+		issues: theIssues.
+
+	theIssues ifNotEmpty: [ ^ theIssues ].
 	
 	theActualDependencies := (aPackage gtDependencies collect: #toPackage) asSet asArray sorted: [ :a :b | a name < b name ].
 
 	(theActualDependencies difference: theDeclaredDependentPackages)
 		do: [ :eachUndeclaredPackage |
-			theIssues add: ('Package named {1} should not depend on {2}' format: {
+			theIssues add: ('Package named {1} must not depend on {2}' format: {
 				aPackage name asString printString.
 				eachUndeclaredPackage name asString printString }) ].
+
+	(theDeclaredDependentPackages difference: theActualDependencies)
+		do: [ :eachUndeclaredPackage |
+			theIssues add: ('Package named {1} no longer depends on {2}' format: {
+				aPackage name asString printString.
+				eachUndeclaredPackage name asString printString }) ].
+		
+	^ theIssues
+]
+
+{ #category : #'api - dependencies' }
+GtPharoPackageDependenciesConstraint >> package: aPackage shouldDependOn: aCollectionOfPackageNames [
+	<return: #OrderedCollection>
+	| theIssues theDeclaredDependentPackages theActualDependencies |
+	
+	theIssues := OrderedCollection new.
+	
+	theDeclaredDependentPackages := self
+		packageNamesToPackages: aCollectionOfPackageNames
+		issues: theIssues.
+
+	theIssues ifNotEmpty: [ ^ theIssues ].
+	theActualDependencies := (aPackage gtDependencies collect: #toPackage) asSet asArray sorted: [ :a :b | a name < b name ].
 		
 	(theDeclaredDependentPackages difference: theActualDependencies)
 		do: [ :eachUndeclaredPackage |
@@ -56,42 +104,47 @@ GtPharoPackageDependenciesConstraint >> package: aPackageName mustDependOn: aCol
 ]
 
 { #category : #'private - dependencies' }
-GtPharoPackageDependenciesConstraint >> package: aPackageName mustNotDependOn: aCollectionOfPackageNames [
-	| theIssues aPackage theDeclaredDependentPackages theActualDependencies |
+GtPharoPackageDependenciesConstraint >> packageIssuesOf: aPackageName [
+	| aPackage aPackageManifest theIssues |
+	
+	aPackage := aPackageName asPackageIfAbsent: [ ^ { 
+		'Package named {1} does not exist' format: { aPackageName asString printString }
+	} ].
+
+	aPackageManifest := aPackage packageManifestOrNil ifNil: [ ^ #() ].
 	
 	theIssues := OrderedCollection new.
 	
-	aPackage := aPackageName asPackageIfAbsent: [
-		theIssues add: ('Package named {1} does not exist' format: { aPackageName asString printString } ).
-		nil ]. 
-	
-	theDeclaredDependentPackages := OrderedCollection new.
-	aCollectionOfPackageNames do: [ :eachPackageName |
-		theDeclaredDependentPackages add: (eachPackageName asPackageIfAbsent: [
-		theIssues add: ('Package named {1} does not exist' format: { eachPackageName asString printString } ).
-		nil ]) ].
-
-	(aPackage isNil or: [ theDeclaredDependentPackages anySatisfy: #isNil ])
-		ifTrue: [ ^ theIssues ].
-	
-	theActualDependencies := (aPackage gtDependencies collect: #toPackage) asSet asArray sorted: [ :a :b | a name < b name ].
-
-	(theActualDependencies difference: theDeclaredDependentPackages)
-		do: [ :eachUndeclaredPackage |
-			theIssues add: ('Package named {1} must not depend on {2}' format: {
-				aPackage name asString printString.
-				eachUndeclaredPackage name asString printString }) ].
+	(aPackageManifest respondsTo: #mustOnlyDependOn)
+		ifTrue: [ theIssues addAll: (self package: aPackage mustOnlyDependOn: (aPackageManifest perform: #mustOnlyDependOn)) ].
+		
+	(aPackageManifest respondsTo: #mustNotDependOn)
+		ifTrue: [ theIssues addAll: (self package: aPackage mustNotDependOn: (aPackageManifest perform: #mustNotDependOn)) ].
+		
+	(aPackageManifest respondsTo: #shouldDependOn)
+		ifTrue: [ theIssues addAll: (self package: aPackage shouldDependOn: (aPackageManifest perform: #shouldDependOn)) ].
 		
 	^ theIssues
 ]
 
 { #category : #'private - dependencies' }
-GtPharoPackageDependenciesConstraint >> validatePackageNames: aCollectionOfPackageNames issues: theIssues [
+GtPharoPackageDependenciesConstraint >> packageNameToPackage: aPackageName issues: aCollectionOfIssues [
+	<return: #Collection of: #RPackage>
+
+	^ aPackageName asPackageIfAbsent: [
+		aCollectionOfIssues add: ('Package named {1} does not exist' format: { aPackageName asString printString } ).
+		nil ]
+]
+
+{ #category : #'private - dependencies' }
+GtPharoPackageDependenciesConstraint >> packageNamesToPackages: aCollectionOfPackageNames issues: aCollectionOfIssues [
+	<return: #Collection of: #RPackage>
 	| theDeclaredDependentPackages |
-	
+
 	theDeclaredDependentPackages := OrderedCollection new.
-	aCollectionOfPackageNames do: [ :eachPackageName |
-		theDeclaredDependentPackages add: (eachPackageName asPackageIfAbsent: [
-		theIssues add: ('Package named {1} does not exist' format: { eachPackageName asString printString } ).
-		nil ]) ]
+
+	aCollectionOfPackageNames do: [ :eachPackageName | 
+		theDeclaredDependentPackages add: (self packageNameToPackage: eachPackageName issues: aCollectionOfIssues) ].
+
+	^ theDeclaredDependentPackages select: [ :eachPackage | eachPackage notNil ]
 ]
