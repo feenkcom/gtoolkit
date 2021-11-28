@@ -104,23 +104,12 @@ RPackage >> gtTagAndClassHierarchyFor: aView [
 RPackage >> gtTestsFor: aView [
 	<gtView>
 	<gtPackageView>
-	| aMethodsCoder aTestSuiteViewModel anExampleViewModel |
-
-	aMethodsCoder := (GtSearchPackageTestSuiteFilter new package: self) asCoder.
-
-	aTestSuiteViewModel := GtPharoTestSuiteViewModel new methodsCoderModel: aMethodsCoder.
-	anExampleViewModel := GtPharoExampleSuiteViewModel new methodsCoderModel: aMethodsCoder.
-
-	^ aView explicit
-		  title: 'Tests';
-		  priority: 12;
-		  stencil: [ aMethodsCoder ];
-		  actionStencil: [ :aBrTab | 
-			  GtPharoCoderUIUtility
-				newExamplesDropdownButtonForViewModel: anExampleViewModel ];
-		  actionStencil: [ 
-			  GtPharoCoderUIUtility
-				  newTestsDropdownButtonForViewModel: aTestSuiteViewModel ]
+	
+	^ (GtPharoCoderUIUtility
+		testMethodsPhlowViewFor: aView
+		filter: (GtSearchPackageTestSuiteFilter new package: self))
+			title: 'Tests';
+			priority: 12
 ]
 
 { #category : #'*GToolkit-Extensions' }
