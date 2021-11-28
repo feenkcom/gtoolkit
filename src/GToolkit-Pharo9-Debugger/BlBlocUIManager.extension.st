@@ -4,12 +4,12 @@ Extension { #name : #BlBlocUIManager }
 BlBlocUIManager >> handleDebugRequest: aDebugRequest [
 	<debuggerCompleteToSender>
 	
-	OupsDebuggerSystem new openDebuggerOnRequest: aDebugRequest
+	OupsDebuggerSystem new gtOpenDebuggerOnRequest: aDebugRequest
 ]
 
 { #category : #'*GToolkit-Pharo9-Debugger' }
 BlBlocUIManager >> handleWarningDebugRequest: aDebugRequest [
 	<debuggerCompleteToSender>
 	
-	OupsDebuggerSystem new openDebuggerOnRequest: aDebugRequest
+	OupsDebuggerSystem new gtOpenDebuggerOnRequest: aDebugRequest
 ]
