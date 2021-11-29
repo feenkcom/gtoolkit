@@ -26,6 +26,9 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 	
 	aMethodsCoder := GtPharoStreamingBehaviorMethodsCoder forBehavior: self.
 	aMethodsCoderViewModel := GtPharoStreamingMethodsCoderViewModel new streamingCodersModel: aMethodsCoder.
+	aMethodsCoderViewModel
+		shouldExpandByDefault: false;
+		shouldHaveHeaderByDefault: false.
 
 	aTestSuiteViewModel := self
 		testSuiteViewModelWith: aMethodsCoder
@@ -51,11 +54,11 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 
 					aNewMethodCoder := GtPharoMethodCoder forNewMethod: self.
 					aNewMethodCoder
-						currentSourceString: 'newMethod', String cr, String tab, '"This is a new method"';
-						withoutHeader.
+						currentSourceString: 'newMethod', String cr, String tab, '"This is a new method"'.
 
 					aNewMethodCoderViewModel := aNewMethodCoder asCoderViewModel.
 					aNewMethodCoderViewModel
+						withoutHeader;
 						expanded: true;
 						focused: true;
 						moveCursorAtEnd.
