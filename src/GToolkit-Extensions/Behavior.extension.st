@@ -39,7 +39,7 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 		fromContext: aPhlowContext.
 
 	^ aView explicit
-		priority: 10.5;
+		priority: 9;
 		title: 'Methods';
 		disableAsync;
 		actionDropdownButtonIcon: BrGlamorousVectorIcons filter
