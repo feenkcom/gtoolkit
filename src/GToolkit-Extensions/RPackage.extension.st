@@ -13,6 +13,37 @@ RPackage >> gtClassHierarchyFor: aView [
 ]
 
 { #category : #'*GToolkit-Extensions' }
+RPackage >> gtDependenciesMapFor: aView [
+	<gtView>
+	^ aView mondrian
+	title: 'Dependencies Map';
+	priority: 10;
+	painting: [ :mondrian |
+		mondrian nodes 
+			shape: [ :each | 
+				BrLabel new 
+					text: each name asRopedText;
+					aptitude: BrGlamorousLabelAptitude
+			];
+		  with: (self gtPackagesUsed, {self}).
+		mondrian edges 
+			shape: [ 
+				BlParabollaArcElement new 
+					zIndex: 0;
+					curvatureFraction: 0.1;
+					border: (BlBorder paint: (Color gray alpha: 0.1) width:2 );
+					toHead: (BlArrowheadSimpleArrow new
+						border: (BlBorder builder paint: (Color gray alpha: 0.1); width:2; build)) ];
+			fromRightCenter;
+			toLeftCenter;
+			connectFrom: #yourself
+			toAll: [ :each | |usedPackages | 
+				usedPackages := each gtPackagesUsed].
+		mondrian layout custom: (GtGraphHorizontalDominanceTreeLayout new).
+	]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 RPackage >> gtDependencyAnalyzerFor: aView [
 	<gtPackageView>
 	
@@ -31,6 +62,33 @@ RPackage >> gtDependencyAnalyzerFor: aView [
 ]
 
 { #category : #'*GToolkit-Extensions' }
+RPackage >> gtDependencyTreeFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Dependencies';
+		priority: 2;
+		items: [ (self gtDependencies groupedBy: [ :each | each toPackage ])
+				associations sorted: [ :a :b | a key name < b key name ] ];
+		"children: [:each | (each gtPackagesUsed asOrderedCollection) copyWithout: each];
+		"
+		column: 'Package' text: [ :assoc | assoc key name ];
+		column: 'Dependencies'
+			text: [ :assoc | assoc value size ];
+		send: #value
+]
+
+{ #category : #'*GToolkit-Extensions' }
+RPackage >> gtPackageDependentsFor: aView [
+	<gtView>
+	
+	^ aView forward
+		title: 'Package dependents';
+		priority: 3;
+		object: [ GtDependencyAnalyzerForPackage packageNamed: self name ];
+		view: #gtPackageDependentsFor:
+]
+
+{ #category : #'*GToolkit-Extensions' }
 RPackage >> gtTagAndClassHierarchyFor: aView [
 	<gtView>
 	<gtPackageView>
@@ -44,29 +102,14 @@ RPackage >> gtTagAndClassHierarchyFor: aView [
 
 { #category : #'*GToolkit-Extensions' }
 RPackage >> gtTestsFor: aView [
-
 	<gtView>
 	<gtPackageView>
-	| aMethodsCoder aTestSuiteViewModel anExampleViewModel |
-	aMethodsCoder := (GtSearchPackageTestSuiteFilter new package: self)
-		                 asCoder.
-	aTestSuiteViewModel := GtPharoTestSuiteViewModel new 
-		                       methodsCoderModel: aMethodsCoder.
-	anExampleViewModel := GtPharoExampleSuiteViewModel new 
-		                      methodsCoderModel: aMethodsCoder.
-
-	^ aView explicit
-		  title: 'Tests';
-		  priority: 12;
-		  stencil: [ aMethodsCoder ];
-		  actionStencil: [ :aBrTab | 
-			  GtPharoCoderUIUtility
-				  newExamplesDropdownButtonForViewModel: anExampleViewModel
-				  methodsCoder: aMethodsCoder ];
-		  actionStencil: [ 
-			  GtPharoCoderUIUtility
-				  newTestSuiteDropdownForViewModel: aTestSuiteViewModel
-				  methodsCoder: aMethodsCoder ]
+	
+	^ (GtPharoCoderUIUtility
+		testMethodsPhlowViewFor: aView
+		filter: (GtSearchPackageTestSuiteFilter new package: self))
+			title: 'Tests';
+			priority: 12
 ]
 
 { #category : #'*GToolkit-Extensions' }

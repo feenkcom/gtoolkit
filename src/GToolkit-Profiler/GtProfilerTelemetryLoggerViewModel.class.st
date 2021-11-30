@@ -7,7 +7,7 @@ Class {
 		'parentProfilerProcessTelemetryViewModel',
 		'profilerTelemetrySignalsViewModel'
 	],
-	#category : 'GToolkit-Profiler-Process - View Models'
+	#category : #'GToolkit-Profiler-Process - View Models'
 }
 
 { #category : #'api - announcer' }
@@ -237,10 +237,10 @@ GtProfilerTelemetryLoggerViewModel >> subscribeToLogger [
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#subscribeToObjectTemplate'>
 	
 	self logger
-		when: BlTelemetryLoggerStarted
+		when: TelemetryLoggerStarted
 			send: #onLoggerStarted
 			to: self;
-		when: BlTelemetryLoggerStopped
+		when: TelemetryLoggerStopped
 			send: #onLoggerStopped
 			to: self
 ]

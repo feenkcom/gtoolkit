@@ -8,7 +8,7 @@ Class {
 		'parentProfilerProcessTelemetriesViewModel',
 		'profilerTelemetryLoggerViewModel'
 	],
-	#category : 'GToolkit-Profiler-Process - View Models'
+	#category : #'GToolkit-Profiler-Process - View Models'
 }
 
 { #category : #'api - announcer' }
@@ -137,7 +137,7 @@ GtProfilerProcessTelemetryViewModel >> onProfilerProcessTelemetryModelChanged [
 	
 	self profilerTelemetryLoggerViewModel stop.
 	self profilerTelemetryLoggerViewModel
-		logger: (BlTelemetryLogger new telemetryClass: self profilerProcessTelemetryModel telemetry).
+		logger: (TelemetryLogger new telemetryClass: self profilerProcessTelemetryModel telemetry).
 		
 	self profilerProcessTelemetryModel isRunning
 		ifTrue: [ self profilerTelemetryLoggerViewModel start ].

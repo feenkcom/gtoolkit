@@ -7,7 +7,7 @@ Class {
 		'telemetries',
 		'description'
 	],
-	#category : 'GToolkit-Profiler-Process - Views'
+	#category : #'GToolkit-Profiler-Process - Views'
 }
 
 { #category : #initialization }
@@ -20,12 +20,12 @@ GtProfilerProcessTelemetriesElement >> createDescriptionText [
 	aText append: String cr asRopedText.
 	aText append: 'To create a new type of telemetry simply make a new empty subclass of ' asRopedText.
 	
-	aText append: (BlProcessTelemetry name asRopedText attribute: (GtButtonAttribute new
+	aText append: (ProcessTelemetry name asRopedText attribute: (GtButtonAttribute new
 		beReplace;
 		stencil: (GtButtonStencilBuilder new
-			label: BlProcessTelemetry name;
+			label: ProcessTelemetry name;
 			icon: BrGlamorousVectorIcons browse;
-			action: [ self phlow spawnTool: (GtClassCoderTool forClass: BlProcessTelemetry) ]))).
+			action: [ self phlow spawnTool: (GtClassCoderTool forClass: ProcessTelemetry) ]))).
 	
 	aText append: '.' asRopedText.
 	

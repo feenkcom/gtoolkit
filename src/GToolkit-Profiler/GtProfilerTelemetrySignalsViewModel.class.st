@@ -7,7 +7,7 @@ Class {
 		'parentProfilerTelemetryLoggerViewModel',
 		'profilerTelemetrySignalViewModels'
 	],
-	#category : 'GToolkit-Profiler-Process - View Models'
+	#category : #'GToolkit-Profiler-Process - View Models'
 }
 
 { #category : #'api - announcer' }
@@ -176,7 +176,7 @@ GtProfilerTelemetrySignalsViewModel >> onPostLoggerChanged [
 GtProfilerTelemetrySignalsViewModel >> onProfilerTelemetrySignalAdded: aBlTelemetrySignal [
 	"Is sent when a new TelemetrySignal is added to the model of the receiver due to
 	the handled ${class:BlTelemetrySignal}$ announcement."
-	<modelEventHandler: #telemetrySignal event: #BlTelemetrySignal>
+	<modelEventHandler: #telemetrySignal event: #TelemetrySignal>
 	<generatedFrom: #'TGtRobocoderMetamodelAdditionForManyTemplate>>#onAddedEventHanderTemplate'>
 	| aNewChildObject |
 
@@ -248,7 +248,7 @@ GtProfilerTelemetrySignalsViewModel >> subscribeToLogger [
 	#unsubscribeFromLogger if the receiver subscribes to them"
 	<modelSubscriber: #logger>
 	<generatedFrom: #'TGtRobocoderWithObjectTraitTemplate>>#subscribeToObjectTemplate'>
-	self logger when: BlTelemetrySignal send: #onProfilerTelemetrySignalAdded: to: self.
+	self logger when: TelemetrySignal send: #onProfilerTelemetrySignalAdded: to: self.
 ]
 
 { #category : #'api - announcer' }
