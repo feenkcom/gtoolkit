@@ -1,6 +1,18 @@
 Extension { #name : #RPackage }
 
 { #category : #'*GToolkit-DependencyAnalyzer' }
+RPackage >> gtBehaviorReferences [
+	"Return all behaviors referenced by behaviors in this package.
+	This is opposite to #gtClassReferents"
+
+	^ self gtMethodReferences flatCollectAsSet: [ :m | 
+		m method gtReferencedBehaviors collect: [ :each | 
+			GtPharoClassReference new 
+				referencingMethod: m; 
+				referencedClass: each ]]
+]
+
+{ #category : #'*GToolkit-DependencyAnalyzer' }
 RPackage >> gtClassExtensions [
 	^ self extensionMethods collect: [ :each | GtPharoClassExtension new extendingMethod: each ]
 ]
@@ -24,7 +36,7 @@ RPackage >> gtDependencies [
 	all addAll: self gtClassExtensions.
 	all addAll: self gtInheritances.
 	all addAll: self gtTraitUsages.
-	all addAll: self gtClassReferences.
+	all addAll: self gtBehaviorReferences.
 	all addAll: self gtExtensionMethodReferences.
 	^ all select: [ :each | each toPackage ~= self ]
 ]
