@@ -27,7 +27,10 @@ Collection >> gtTreeFor: aView [
 								  ifFalse: [ 
 									  (eachItem value isCollection and: [ 
 											   eachItem value isString not ])
-										  ifTrue: [ eachItem value asOrderedCollection ]
+										  ifTrue: [ 
+											  eachItem value asOrderedCollection withIndexCollect: [ 
+													  :aValue 
+													  :aKey | aKey -> aValue ] ]
 										  ifFalse: [ #(  ) ] ] ]
 						  ifFalse: [ #(  ) ] ] ];
 		  actionUpdateButtonTooltip: 'Update tree';
