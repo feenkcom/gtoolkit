@@ -356,7 +356,7 @@ pipeline {
                         stage('GemStone Stash') {
                             when {
                                 expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                    env.RUN_TESTS && (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                                 }
                             }
                             steps {
