@@ -92,6 +92,7 @@ pipeline {
                 }
                 echo "Will install using gtoolkit-installer ${GTOOLKIT_BUILDER_VERSION}"
                 echo "Will release using feenk-releaser ${FEENK_RELEASER_VERSION}"
+                echo "Will run tests: ${env.RUN_TESTS}"
             }
         }
         stage ('Build pre release') {
@@ -261,7 +262,10 @@ pipeline {
                             }
                         }
                         stage('Linux Examples') {
-                            when { expression { env.RUN_TESTS } }
+                            when { expression {
+                                    env.RUN_TESTS
+                                }
+                            }
                             steps {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
@@ -270,7 +274,10 @@ pipeline {
                             }
                         }
                         stage('Linux Remote Examples') {
-                            when { expression { env.RUN_TESTS } }
+                            when { expression {
+                                    env.RUN_TESTS
+                                }
+                            }
                             steps {
                                 sh 'rm -rf ~/Documents/lepiter'
                                 
@@ -310,8 +317,9 @@ pipeline {
                            }
                         }
                         stage('Linux Pharo Tests') {
-                            when {
-                                expression { env.RUN_TESTS && false }
+                            when { expression {
+                                    env.RUN_TESTS && false
+                                }
                             }
                             steps {
                                 sh """
@@ -321,7 +329,10 @@ pipeline {
                             }
                         }
                         stage('Linux Report Examples') {
-                           when { expression { env.RUN_TESTS } }
+                           when { expression {
+                                    env.RUN_TESTS
+                                }
+                            }
                            steps {
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                            }
@@ -396,7 +407,10 @@ pipeline {
                             }
                         }
                         stage('MacOS M1 Examples') {
-                            when { expression { env.RUN_TESTS } }
+                            when { expression {
+                                    env.RUN_TESTS
+                                }
+                            }
                             steps {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
@@ -487,7 +501,10 @@ pipeline {
                             }
                         }
                         stage('MacOS Intel Examples') {
-                            when { expression { env.RUN_TESTS } }
+                            when { expression {
+                                    env.RUN_TESTS
+                                }
+                            }
                             steps {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
@@ -573,7 +590,10 @@ pipeline {
                             }
                         }
                         stage('Windows Examples') {
-                            when { expression { env.RUN_TESTS } }
+                            when { expression {
+                                    env.RUN_TESTS
+                                }
+                            }
                             steps {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 powershell "./gt-installer.exe --verbose copy-to ${EXAMPLES_FOLDER}"
