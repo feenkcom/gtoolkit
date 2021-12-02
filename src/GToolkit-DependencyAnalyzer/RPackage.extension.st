@@ -25,6 +25,7 @@ RPackage >> gtDependencies [
 	all addAll: self gtInheritances.
 	all addAll: self gtTraitUsages.
 	all addAll: self gtClassReferences.
+	all addAll: self gtExtensionMethodReferences.
 	^ all select: [ :each | each toPackage ~= self ]
 ]
 
@@ -37,6 +38,18 @@ RPackage >> gtDependents [
 	all addAll: self gtIncomingTraitUsages.
 	all addAll: self gtIncomingClassReferences.
 	^ all select: [ :each | each fromPackage ~= self ]
+]
+
+{ #category : #'*GToolkit-DependencyAnalyzer' }
+RPackage >> gtExtensionMethodReferences [
+	"Return all classes referenced by extension methods from this package"
+
+	^ (self methods collect: [:each | each methodReference ] thenSelect: [:each| each isValid and: [ each isExtension ] ])
+		flatCollectAsSet: [ :m | 
+			m method gtReferencedBehaviors collect: [ :each | 
+				GtPharoClassReference new 
+					referencingMethod: m; 
+					referencedClass: each ]]
 ]
 
 { #category : #'*GToolkit-DependencyAnalyzer' }
@@ -80,7 +93,7 @@ RPackage >> gtInheritances [
 RPackage >> gtMethodReferences [
 	<return: #Collection of: #RGMethodDefinition>
 
-	^ self methods collect: [:each | each methodReference] thenSelect: [:each| each isValid and: [each isLocalSelector]].
+	^ self methods collect: [:each | each methodReference ] thenSelect: [:each| each isValid and: [ each isLocalSelector ] ].
 ]
 
 { #category : #'*GToolkit-DependencyAnalyzer' }
