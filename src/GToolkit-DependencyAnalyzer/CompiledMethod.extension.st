@@ -5,7 +5,7 @@ CompiledMethod >> gtReferencedBehaviors [
 	"Return behaviors that are directly referenced by this method.
 	Compared to #referencedClasses I do not count a value of the ClassVariable as a reference"
 
-	^ self literals
+	^ self literalsEvenTheOnesInTheInnerBlocks
 		select: [ :l | (l isKindOf: ClassVariable) not and: [ l value isBehavior ] ] 
 		thenCollect: [:v | v value ].
 ]

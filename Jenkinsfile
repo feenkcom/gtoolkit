@@ -42,7 +42,8 @@ def getTestSummary = { ->
 pipeline {
     agent none
     parameters {
-        choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing') }
+        choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing')
+        booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Build GT without running tests') }
     options {
         buildDiscarder(logRotator(numToKeepStr: '50'))
         disableConcurrentBuilds()
@@ -247,7 +248,7 @@ pipeline {
                                 }
                             }
                         }
-                        stage('Linux Examples') {
+                        stage('Linux Unpackage') {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
@@ -257,7 +258,11 @@ pipeline {
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-
+                            }
+                        }
+                        stage('Linux Examples') {
+                            when { expression { env.RUN_TESTS } }
+                            steps {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
@@ -265,6 +270,7 @@ pipeline {
                             }
                         }
                         stage('Linux Remote Examples') {
+                            when { expression { env.RUN_TESTS } }
                             steps {
                                 sh 'rm -rf ~/Documents/lepiter'
                                 
@@ -305,9 +311,7 @@ pipeline {
                         }
                         stage('Linux Pharo Tests') {
                             when {
-                                expression {
-                                    false
-                                }
+                                expression { env.RUN_TESTS && false }
                             }
                             steps {
                                 sh """
@@ -317,6 +321,7 @@ pipeline {
                             }
                         }
                         stage('Linux Report Examples') {
+                           when { expression { env.RUN_TESTS } }
                            steps {
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                            }
@@ -351,7 +356,7 @@ pipeline {
                         stage('GemStone Stash') {
                             when {
                                 expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                                    env.RUN_TESTS && (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                                 }
                             }
                             steps {
@@ -379,17 +384,20 @@ pipeline {
                                 sh 'rm -rf ~/Documents/lepiter'
                             }
                         }
-                        stage('MacOS M1 Examples') {
+                        stage('MacOS M1 Unpackage') {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
-
                                 sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
                                 sh 'chmod +x gt-installer'
 
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-
+                            }
+                        }
+                        stage('MacOS M1 Examples') {
+                            when { expression { env.RUN_TESTS } }
+                            steps {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
@@ -466,7 +474,7 @@ pipeline {
                                 sh 'git clean -fdx'
                             }
                         }
-                        stage('MacOS Intel Examples') {
+                        stage('MacOS Intel Unpackage') {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
@@ -476,7 +484,11 @@ pipeline {
                                 sh 'git config --global user.name "Jenkins"'
                                 sh 'git config --global user.email "jenkins@feenk.com"'
                                 sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-
+                            }
+                        }
+                        stage('MacOS Intel Examples') {
+                            when { expression { env.RUN_TESTS } }
+                            steps {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
 
@@ -549,7 +561,7 @@ pipeline {
                                 powershell 'git clean -fdx'
                             }
                         }
-                        stage('Windows Examples') {
+                        stage('Windows Unpackage') {
                             steps {
                                 unstash "${TENTATIVE_PACKAGE}"
 
@@ -558,7 +570,11 @@ pipeline {
                                 powershell 'git config --global user.name "Jenkins"'
                                 powershell 'git config --global user.email "jenkins@feenk.com"'
                                 powershell "./gt-installer.exe --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-
+                            }
+                        }
+                        stage('Windows Examples') {
+                            when { expression { env.RUN_TESTS } }
+                            steps {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 powershell "./gt-installer.exe --verbose copy-to ${EXAMPLES_FOLDER}"
 
