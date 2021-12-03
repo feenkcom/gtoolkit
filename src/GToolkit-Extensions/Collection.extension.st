@@ -8,46 +8,53 @@ Collection >> gtLiveFor: aView [
 { #category : #'*GToolkit-Extensions' }
 Collection >> gtTreeFor: aView [
 
+	^ aView forward
+		  title: 'Tree';
+		  priority: 51;
+		  object: [ self ];
+		  view: #gtTreeFor:context:
+]
+
+{ #category : #'*GToolkit-Extensions' }
+Collection >> gtTreeFor: aView context: aContext [
+
 	<gtView>
+	| anIndexStyler aValueStyler |
+	anIndexStyler := aContext 
+		at: #gtTreeIndexStyler 
+		ifAbsent: [ [ :anAssoc | 
+			anAssoc key gtDisplayText 
+				asRopedText foreground: Color gray ] ].
+	aValueStyler := aContext
+		at: #gtTreeValueStyler
+		ifAbsent: [ [ :anAssoc | anAssoc value gtDisplayText ] ].
+
 	^ aView columnedTree
 		  title: 'Tree';
 		  priority: 51;
 		  items: [ 
 			  self isDictionary
 				  ifTrue: [ self associations ]
-				  ifFalse: [ self asOrderedCollection ] ];
-		  children: [ :eachItem | 
-			  eachItem isDictionary
-				  ifTrue: [ eachItem associations ]
 				  ifFalse: [ 
-					  (eachItem isKindOf: Association)
+					  self asOrderedCollection withIndexCollect: [ :aValue :aKey | 
+							  aKey -> aValue ] ] ];
+		  children: [ :anAssoc | 
+			  anAssoc value isDictionary
+				  ifTrue: [ anAssoc value associations ]
+				  ifFalse: [ 
+					  (anAssoc value isCollection and: [ anAssoc value isString not ])
 						  ifTrue: [ 
-							  eachItem value isDictionary
-								  ifTrue: [ eachItem value associations ]
-								  ifFalse: [ 
-									  (eachItem value isCollection and: [ 
-											   eachItem value isString not ])
-										  ifTrue: [ 
-											  eachItem value asOrderedCollection withIndexCollect: [ 
-													  :aValue 
-													  :aKey | aKey -> aValue ] ]
-										  ifFalse: [ #(  ) ] ] ]
+							  anAssoc value asOrderedCollection withIndexCollect: [ 
+									  :aValue 
+									  :aKey | aKey -> aValue ] ]
 						  ifFalse: [ #(  ) ] ] ];
 		  actionUpdateButtonTooltip: 'Update tree';
-		  column: 'Index' text: [ :eachItem :eachIndex | 
-			  | aKey |
-			  aKey := (eachItem isKindOf: Association)
-				          ifTrue: [ eachItem key ]
-				          ifFalse: [ eachIndex ].
-			  aKey asRopedText foreground: Color gray ];
-		  column: 'Item' text: [ :eachItem | 
-			  | aKey |
-			  aKey := (eachItem isKindOf: Association)
-				          ifTrue: [ eachItem value gtDisplayText ]
-				          ifFalse: [ eachItem gtDisplayText ] ]
+		  column: 'Index'
+		  text: [ :anAssoc :anIndex | 
+			  anIndexStyler cull: anAssoc cull: anIndex ];
+		  column: 'Item'
+		  text: [ :anAssoc :anIndex | 
+			  aValueStyler cull: anAssoc cull: anIndex ]
 		  weight: 3;
-		  send: [ :anItem | 
-			  (anItem isKindOf: Association)
-				  ifTrue: [ anItem value ]
-				  ifFalse: [ anItem ] ]
+		  send: [ :anAssoc | anAssoc value ]
 ]
