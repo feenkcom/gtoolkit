@@ -56,5 +56,16 @@ Collection >> gtTreeFor: aView context: aContext [
 		  text: [ :anAssoc :anIndex | 
 			  aValueStyler cull: anAssoc cull: anIndex ]
 		  weight: 3;
+		  in: [ :theNewView |
+		  	aContext 
+				at: #gtTreeExpansionLevel
+				ifPresent: [ :anObject | 
+					anObject isNumber 
+						ifTrue: [ theNewView expandUpTo: anObject ]
+						ifFalse: [ anObject = true ifTrue: [
+							theNewView expandAll ] ] ] 
+				ifAbsent: [ [ :anAssoc | 
+					anAssoc key gtDisplayText 
+						asRopedText foreground: Color gray ] ] ];
 		  send: [ :anAssoc | anAssoc value ]
 ]
