@@ -21,7 +21,7 @@ GtTreeNode class >> fromCollection: aCollection parent: aNodeOrNil [
 	aCollection isDictionary ifTrue: [ 
 		^ self fromDictionary: aCollection parent: aNodeOrNil ].
 
-	^ aCollection withIndexCollect: [ :aValue :aKey | 
+	^ aCollection asOrderedCollection withIndexCollect: [ :aValue :aKey | 
 		  self new
 			  key: aKey;
 			  value: aValue;
