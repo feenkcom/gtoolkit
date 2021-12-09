@@ -346,156 +346,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-12-09T19:04:58.053699+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-12-09T19:05:29.409729+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "wYhFLhyPDQCPp4IWBfv27g=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "The parser: {{gtClass:LeWordAnnotationParser}}"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-12-09T19:05:26.764869+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-12-09T19:05:51.780835+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "ntuILxyPDQCPqJ6QBfv27g=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "The abstract syntax tree: {{gtClass:LeWordParseNode}} and its subclasses."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-12-09T19:07:14.14297+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-12-09T19:07:32.362782+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "n3ClMRyPDQCPqy4rBfv27g=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "The styler of the annotaiton: {{gtClass:LeWordAnnotationStyler}}."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-12-09T19:08:14.121806+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-12-09T19:08:30.173778+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "hbwUOhyPDQCPsw3wBfv27g=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "The model: {{gtClass:LeWordData}} and its subclasses."
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -505,7 +356,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-12-09T19:04:40.838952+01:00"
+									"dateAndTimeString" : "2021-12-09T15:34:06.410634-06:00"
 								}
 							},
 							"editEmail" : {
@@ -516,17 +367,165 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-12-09T19:04:54.95054+01:00"
+									"dateAndTimeString" : "2021-12-09T16:16:08.041307-06:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "yMR5FxyPDQCPoz4xBfv27g=="
+								"uidString" : "rbgtGh+PDQCw5Zc6CX45FQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The annotations requires several parts:"
+							"string" : "To create a new annotation, first you need to create a GLR parser that has been annotated to create an abstract syntax tree. It should parse whatever the user can enter between the colon (:) after the annotation name and the ending right braces. For the *gtWordExplanation* annotation, the parser is defined in {{gtClass:LeWordAnnotationParser}} and the AST is defined by {{gtClass:LeWordParseNode}} and its subclasses."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-12-09T15:40:51.217159-06:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-12-09T16:31:42.487515-06:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "y4RnMR+PDQCw7+E1CX45FQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Once the parser has been created, you need to register it with {{gtClass:LeParser}}. In our example, {{gtClass:LeWordAnnotationParser}} is registered in the {{gtMethod:LeWordAnnotationParser class>>initialize|expanded}} method which is executed automatically when the class is loaded.  "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-12-09T15:46:32.684169-06:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-12-09T15:53:13.876186-06:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "eDi9Rh+PDQCw9Yb8CX45FQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtMethod:LeWordAnnotationParser class>>obsolete}} is used to deregister the parser if it is unloaded."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-12-09T15:47:45.832295-06:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-12-09T16:33:07.040461-06:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bhH9Rx+PDQCw9itnCX45FQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "After the parser has been created and registered, you need to define a {{gtClass:LeComponentStyler}} subclass  that inserts the attributes into the text. For the explanation annotation, the {{gtClass:LeWordAnnotationStyler}} was created using the visitor trait, {{gtClass:TLeWordParseNodeVisitor}}.  Like the parser, the styler needs to be registered, {{gtMethod:LeWordAnnotationStyler class>>initialize}} and deregistered when removed, {{gtMethod:LeWordAnnotationStyler class>>obsolete}}."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-12-09T16:18:57.002091-06:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-12-09T16:36:13.734942-06:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dAlxdh+PDQCw/OZ6CX45FQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Finally, completion can be added to the Lepiter editor for the annotation by defining a visitor that is used when completion is activated. For our example, {{gtClass:LeWordAnnotationCompletionVisitor}} was created to complete the *expanded* and *height* tags. The completion visitor needs to be registered, {{gtMethod:LeWordAnnotationCompletionVisitor class>>initialize}} and deregestered, {{gtMethod:LeWordAnnotationCompletionVisitor class>>obsolete}}."
 						},
 						{
 							"__type" : "textSnippet",
