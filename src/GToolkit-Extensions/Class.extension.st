@@ -35,38 +35,15 @@ Class >> gtAllReferencesFor: aView [
 
 { #category : #'*GToolkit-Extensions' }
 Class >> gtExamplesMapFor: aView context: aPhlowContext [
-	"<gtView>
-	<gtClassView>"
-	| aMethodsCoderUIModel aMethodsCoder |
+	<gtView>
+	<gtClassView>
 
-	self flag: #TODO.
-	
-	aMethodsCoderUIModel := self methodsCoderFromContext: aPhlowContext.
-	aMethodsCoder := aMethodsCoderUIModel coder.
+	self gtExamplesContained ifEmpty: [ ^ aView empty ].
 
-	aMethodsCoder exampler hasExamples ifFalse: [ ^ aView empty ].
-	
 	^ aView forward
 		  title: 'Examples map';
 		  priority: 11;
-		  object: [ 
-			  | allExamples |
-			  allExamples := Array streamContents: [ :aStream | 
-					                 aMethodsCoder exampler 
-						                 allExecutableExampleCodersDo: [ 
-							                 :aCoder 
-							                 :anExample | aStream nextPut: anExample ] ].
-			  GtExampleGroup withAll: allExamples ];
+		  object: [ GtExampleGroup withAll: self gtExamplesContained ];
 		  view: #gtMapFor:;
-		  actionStencilDo: [ :anExplicitAction | 
-			  anExplicitAction
-				  priority: 80;
-				  stencil: [ :aBrTab | 
-					  GtPharoCoderUIUtility newExamplesButtonForMethodsCoder:
-							  aMethodsCoder ] ];
-		  updateWhen:
-			  GtCodersCoderAdded , GtCodersCoderRemoved , GtCodersCodersChanged
-			  , GtCoderSourceCodeChanged
-		  in: [ aMethodsCoder ];
 		  addAutoUpdate: GtPhlowUpdateViewOnAddedToScene
 ]
