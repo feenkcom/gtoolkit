@@ -18,6 +18,7 @@ GtProfilerTelemetrySignalsChartElement >> initialize [
 	self padding: (BlInsets all: 10).
 	
 	updater := BrElementUpdater new 
+		postponedDuration: 100 milliSeconds;
 		element: self selector: #updateChart.
 ]
 

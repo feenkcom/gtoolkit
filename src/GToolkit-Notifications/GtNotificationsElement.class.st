@@ -30,6 +30,7 @@ GtNotificationsElement >> initialize [
 	super initialize.
 	notifications := GtNotifications new.
 	updater := BrElementUpdater new 
+		postponedDuration: 100 milliSeconds;
 		element: self selector: #updateElement.
 		
 	self subscribeToNotifications.
