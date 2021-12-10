@@ -23,6 +23,7 @@ GtProfilerTelemetrySignalsElement >> initialize [
 			text: eachTelemetrySignalViewModel signal task durationInMilliseconds asString, 'ms', ' ',eachTelemetrySignalViewModel signal task name  ].
 	
 	updater := BrElementUpdater new 
+		postponedDuration: 100 milliSeconds;
 		element: self selector: #updateList.
 ]
 
