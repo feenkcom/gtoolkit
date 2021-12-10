@@ -24,7 +24,7 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 	<gtClassView>
 	| aMethodsCoder aMethodsCoderViewModel aTestSuiteViewModel anExampleViewModel |
 	
-	aMethodsCoder := GtPharoStreamingBehaviorMethodsCoder forBehavior: self.
+	aMethodsCoder := GtPharoStreamingMethodsCoder forBehavior: self.
 	aMethodsCoderViewModel := GtPharoStreamingMethodsCoderViewModel new streamingCodersModel: aMethodsCoder.
 	aMethodsCoderViewModel
 		shouldExpandByDefault: false;
@@ -81,6 +81,12 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 						padding: (BlInsets all: 5);
 						addAptitude: BrGlamorousFocusableShadowAptitude new ];
 				name: GtPharoBehaviorCoder addNewMethodButtonName ];
+		actionDropdownButtonIcon: BrGlamorousVectorIcons robot
+		  tooltip: 'Generate'
+		  content: [ :anElement | 
+			  aMethodsCoder
+				  codeGeneratorsDropDown: anElement
+				  for: aMethodsCoderViewModel ];
 		actionButtonDo: [ :aButtonAction | 
 			aButtonAction
 				icon: BrGlamorousVectorIcons inspect;
