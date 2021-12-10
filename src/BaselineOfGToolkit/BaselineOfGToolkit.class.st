@@ -82,6 +82,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-demos:main/src' ];
 			baseline: 'GToolkitReleaser' with: [
 				spec repository: 'github://feenkcom/gtoolkit-releaser:main/src' ];
+			baseline: 'RemoteRunner' with: [
+				spec repository: 'github://feenkcom/gtoolkit-remoterunner:main/src' ];
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:main/src' ];
 			baseline: 'GToolkit4Pharo' with: [
