@@ -29,7 +29,7 @@ GtNotificationBadgeByScripterExamples >> closeButtonTarget: aStep [
 	<gtExample>
 	aStep 
 		onChildOfClass: GtNotificationBorderElement;
-		onChildNamed: #closeButton
+		id: #closeButton
 ]
 
 { #category : #'examples - inform message' }

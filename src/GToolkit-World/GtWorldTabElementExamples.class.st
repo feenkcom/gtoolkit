@@ -5,7 +5,7 @@ I exemplify {{gtClass:GtWorldTabElement}}.
 Class {
 	#name : #GtWorldTabElementExamples,
 	#superclass : #Object,
-	#category : 'GToolkit-World-Examples'
+	#category : #'GToolkit-World-Examples'
 }
 
 { #category : #'examples - by scripter' }
@@ -51,8 +51,8 @@ GtWorldTabElementExamples >> showSpaceSelectScripter_02_moveMouseOverSpaceCloseB
 		aStep mouseMove by: 10@10.
 		
 		aStep mouseMoveOver
-			onChildNamed: (GtWorldTabElement tabNameForSpaceId: aScripter model);
-			onChildNamed: GtWorldTabElement spaceCloseButtonName ].
+			id: (GtWorldTabElement tabNameForSpaceId: aScripter model);
+			id: GtWorldTabElement spaceCloseButtonName ].
 
 	^ aScripter syncContinue
 ]
@@ -65,8 +65,8 @@ GtWorldTabElementExamples >> showSpaceSelectScripter_03_clickSpaceCloseButton [
 	aScripter := self showSpaceSelectScripter_02_moveMouseOverSpaceCloseButton.
 	aScripter substep: 'Mouse click the close button' do: [ :aStep | 
 		aStep click
-			onChildNamed: (GtWorldTabElement tabNameForSpaceId: aScripter model);
-			onChildNamed: GtWorldTabElement spaceCloseButtonName.
+			id: (GtWorldTabElement tabNameForSpaceId: aScripter model);
+			id: GtWorldTabElement spaceCloseButtonName.
 		"We have to wait with timeout because due to the problem described in the issue one of the tasks stays forever in the queue
 		https://github.com/feenkcom/gtoolkit/issues/1627"
 		aStep wait forEmptySpaceTaskQueueTimeout: 1 second.
