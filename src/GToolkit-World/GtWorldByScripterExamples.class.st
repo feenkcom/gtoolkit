@@ -3,15 +3,15 @@ Class {
 	#superclass : #Object,
 	#traits : 'TBlDevScripterExamples',
 	#classTraits : 'TBlDevScripterExamples classTrait',
-	#category : 'GToolkit-World-Examples'
+	#category : #'GToolkit-World-Examples'
 }
 
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> addCoderIntoTabElement [
 	<gtExample>
 	| aScripter |
-	aScripter := self tabElementInScripter.
 
+	aScripter := self tabElementInScripter.
 	aScripter substep: 'Add Coder as a World tab' do: [ :aStep |
 		aStep do
 			label: 'Show Coder space';
@@ -22,25 +22,27 @@ GtWorldByScripterExamples >> addCoderIntoTabElement [
 					showSpaceWithIcon: aStencil icon 
 					title: aStencil name 
 					with: aStencil 
-					from: aTabElement ].
+					from: aTabElement ];
+			play.
 			
 		aStep check
 			label: 'Check Coder in a new tab';
-			value: [ :anElement | anElement tabs tabs size ]
-			equals: 2.
+			value: [ :anElement | anElement tabs tabs size ] equals: 2;
+			play.
 			
 		aStep check 
 			label: 'Check Coder tab label';
 			value: [ :anElement | anElement tabs tabs second widget label asString ]
-			equals: 'Coder'.
+				equals: 'Coder';
+			play.
 
 		aStep check 
 			label: 'Check Coder tab selection';
 			satisfies: [ :anElement | anElement tabs tabs second isSelected ]
-			description: [ 'Coder tab must be selected' ].
-	].
+				description: [ 'Coder tab must be selected' ];
+			play ].
 
-	^ aScripter syncContinue
+	^ aScripter
 ]
 
 { #category : #'examples - playground' }
@@ -86,50 +88,41 @@ GtWorldByScripterExamples >> addPlaygroundIntoTabElement [
 GtWorldByScripterExamples >> browsePackageInSecondPane [
 	<gtExample>
 	| aScripter |
+
 	aScripter := self clickOnPackageEditableName.
+	aScripter shortcut
+		combination: BlKeyCombination primaryB;
+		id: GtPackageCoderPackageNameId;
+		play.
+	
+	aScripter check
+		label: 'Check we have two tools';
+		// GtPager;
+		value: [ :anElement | anElement pages size ] equals: [ 2 ];
+		play.
 
-	aScripter substep: 'Browse package from editable name' do: [ :aStep |
-		aStep shortcut
-			combination: BlKeyCombination primaryB;
-			id: GtPackageCoderPackageNameId.
-		
-		aStep check
-			label: 'Check we have two tools';
-			value: [ :anElement | anElement pages size ]
-			equals: [ 2 ];
-			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPager.
-
-	].
-
-	^ aScripter syncContinue
+	^ aScripter
 ]
 
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
 	<gtExample>
 	| aScripter |
+
 	aScripter := self selectClassInSecondPane.
+	aScripter click
+		label: 'Click on a package editable name';
+		id: GtPagerPageElementId index: 1;
+		id: GtPackageCoderPackageNameId;
+		play.
+	
+	aScripter check
+		label: 'Check World tab label with package name';
+		value: [ :anElement | anElement tabs tabs second widget label asString ]
+		equals: [ aScripter userData at: #tabLabel ];
+		play.
 
-	aScripter substep: 'Select the first pane with package' do: [ :aStep |
-		aStep click
-			label: 'Click on a package editable name';
-			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPager;
-			onChildFromBlock: [ :aPager | aPager pages first widget ];
-			onBreadthFirstChildOfClass: GtPharoPackageCoderElement;
-			id: GtPackageCoderPackageNameId.
-			
-		aStep do pulse.
-		
-		aStep check
-			label: 'Check World tab label with package name';
-			value: [ :anElement | anElement tabs tabs second widget label asString ]
-			equals: [ aScripter userData at: #tabLabel ].
-
-	].
-
-	^ aScripter syncContinue
+	^ aScripter
 ]
 
 { #category : #'examples - playground' }
@@ -180,42 +173,34 @@ GtWorldByScripterExamples >> clickOnInspectorInTheSecondPane [
 GtWorldByScripterExamples >> clickOnPackageEditableName [
 	<gtExample>
 	| aScripter |
+
 	aScripter := self selectPackageInCoder.
+	aScripter click
+		label: 'Click on a package editable name';
+		id: GtPackageCoderPackageNameId;
+		play.
 
-	aScripter substep: 'Select package editable name' do: [ :aStep |
-		aStep click
-			label: 'Click on a package editable name';
-			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPharoPackageCoderElement;
-			id: GtPackageCoderPackageNameId.
-		
-		aStep check
-			label: 'Check World tab label';
-			value: [ :anElement | anElement text asString ]
-			equals: [ aScripter model name ];
-			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPharoPackageCoderElement;
-			id: GtPackageCoderPackageNameId.
+	aScripter check
+		label: 'Check World tab label';
+		id: GtPackageCoderPackageNameId;
+		value: [ :anElement | anElement text asString ] equals: [ aScripter model name ];
+		play.
 
-	].
-
-	^ aScripter syncContinue
+	^ aScripter
 ]
 
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickOnPackageEditableNameInSecondPane [
 	<gtExample>
 	| aScripter |
-	aScripter := self browsePackageInSecondPane.
 
+	aScripter := self browsePackageInSecondPane.
 	aScripter substep: 'Select package editable name in the second pane' do: [ :aStep |
 		aStep click
 			label: 'Click on a package editable name';
-			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPager;
-			onChildFromBlock: [ :aPager | aPager pages second widget ];
-			onBreadthFirstChildOfClass: GtPharoPackageCoderElement;
-			id: GtPackageCoderPackageNameId.
+			id: GtPagerPageElementId index: 2;
+			id: GtPackageCoderPackageNameId;
+			play.
 		
 		self 
 			setupExpectedTabLabel: [ :aNavigationModel | aNavigationModel selectedPackage ] 
@@ -226,41 +211,41 @@ GtWorldByScripterExamples >> clickOnPackageEditableNameInSecondPane [
 		aStep check
 			label: 'Check World tab label with class name';
 			value: [ :anElement | anElement tabs tabs second widget label asString ]
-			equals: [ aScripter userData at: (self paneTabLabelKeyAt: 2) ].
+				equals: [ aScripter userData at: (self paneTabLabelKeyAt: 2) ];
+			play	].
 
-	].
-
-	^ aScripter syncContinue
+	^ aScripter
 ]
 
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickOnWorldHomeCoderIcon [
 	<gtExample>
 	| aScripter |
-	aScripter := self worldElementInScripter.
 
+	aScripter := self worldElementInScripter.
 	aScripter substep: 'Click on World Home Coder button' do: [ :aStep |
 		aStep click
 			label: 'Click on Coder button';
-			id: GtHomeCoderButtonId.
+			id: GtHomeCoderButtonId;
+			play.
 			
 		aStep check
 			label: 'Check Coder in a new tab';
-			value: [ :anElement | anElement tabs tabs size ]
-			equals: 2.
+			value: [ :anElement | anElement tabs tabs size ] equals: 2;
+			play.
 			
 		aStep check 
 			label: 'Check Coder tab label';
-			value: [ :anElement | anElement tabs tabs second widget label asString ]
-			equals: 'Coder'.
+			value: [ :anElement | anElement tabs tabs second widget label asString ] equals: 'Coder';
+			play.
 
 		aStep check 
 			label: 'Check Coder tab selection';
 			satisfies: [ :anElement | anElement tabs tabs second isSelected ]
-			description: [ 'Coder tab must be selected' ].
-	].
+				description: [ 'Coder tab must be selected' ];
+			play ].
 
-	^ aScripter syncContinue
+	^ aScripter
 ]
 
 { #category : #'examples - world' }
@@ -316,8 +301,8 @@ GtWorldByScripterExamples >> playgroundStencil [
 GtWorldByScripterExamples >> selectClassInSecondPane [
 	<gtExample>
 	| aScripter |
-	aScripter := self clickOnPackageEditableNameInSecondPane.
 
+	aScripter := self clickOnPackageEditableNameInSecondPane.
 	aScripter substep: 'Select class in second pane' do: [ :aStep |
 		aStep click
 			id: GtWorldTabGroupId;
@@ -371,6 +356,7 @@ GtWorldByScripterExamples >> selectClassInSecondPane [
 GtWorldByScripterExamples >> selectPackageInCoder [
 	<gtExample>
 	| aScripter |
+
 	aScripter := self addCoderIntoTabElement.
 
 	aScripter substep: 'Select package' do: [ :aStep |
@@ -407,30 +393,32 @@ GtWorldByScripterExamples >> selectPackageInCoder [
 GtWorldByScripterExamples >> setupExpectedTabLabel: aBlock at: aPaneIndex step: aStep scripter: aScripter [
 	<gtExample>
 	aStep do
-			label: 'Store expected Coder model and tab label name';
-			block: [ :aCoder | 
-				| aModel |
-				aModel := aBlock value: aCoder navigationModel.
-				self 
-					assert: aModel isNotNil
-					description: 'Second pane must have a class selected'.
-				aScripter userData 
-					at: (self paneModelKeyAt: aPaneIndex) put: aModel;
-					at: (self paneTabLabelKeyAt: aPaneIndex) put: aCoder shortTitle asString ];
-			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPager;
-			onChildFromBlock: [ :aPager | (aPager pages at: aPaneIndex) widget ];
-			onBreadthFirstChildOfClass: GtCoder.
+		label: 'Store expected Coder model and tab label name';
+		block: [ :aCoder | 
+			| aModel |
+			aModel := aBlock value: aCoder navigationModel.
+			self 
+				assert: aModel isNotNil
+				description: 'Second pane must have a class selected'.
+			aScripter userData 
+				at: (self paneModelKeyAt: aPaneIndex) put: aModel;
+				at: (self paneTabLabelKeyAt: aPaneIndex) put: aCoder shortTitle asString ];
+		id: GtWorldTabGroupId;
+		onBreadthFirstChildOfClass: GtPager;
+		onChildFromBlock: [ :aPager | (aPager pages at: aPaneIndex) widget ];
+		onBreadthFirstChildOfClass: GtCoder;
+		play
 ]
 
 { #category : #'examples - world' }
 GtWorldByScripterExamples >> tabElementInScripter [
 	<gtExample>
 	| aScripter |
+
 	aScripter := self scripter.
 	aScripter element: GtWorldTabElement new.
-	aScripter wait forEmptySpaceTaskQueue.
-	^ aScripter syncContinue
+
+	^ aScripter
 ]
 
 { #category : #'examples - playground' }
@@ -439,32 +427,27 @@ GtWorldByScripterExamples >> typeSnippetInPlayground [
 	| aScripter |
 	aScripter := self addPlaygroundIntoTabElement.
 
-	aScripter substep: 'Type Playground snippet' do: [ :aStep |
-			
+	aScripter substep: 'Type Playground snippet' do: [ :aStep |	
 		aStep click
-			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPager;
-			onChildFromBlock: [ :aPager | aPager pages first widget ];
-			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
-			
+			id: GtPagerPageElementId index: 1;
+			id: GtSourceCoderEditorId;
+			play.
+
 		aStep type
 			text: '42';
-			id: GtWorldTabGroupId;
-			onBreadthFirstChildOfClass: GtPager;
-			onChildFromBlock: [ :aPager | aPager pages first widget ];
-			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
-			
+			id: GtPagerPageElementId index: 1;
+			id: GtSourceCoderEditorId;
+			play.
+
 		aStep check 
 			label: 'Check Playground content';
+			id: GtPagerPageElementId index: 1;
+			id: GtSourceCoderEditorId;
 			value: [ :anElement | anElement text asString ]
-			equals: '42';
-			onBreadthFirstChildOfClass: GtPager;
-			onChildFromBlock: [ :aPager | aPager pages first widget ];
-			onBreadthFirstChildOfClass: GtSourceCoderEditorElement.
-			
-	].
+				equals: '42';
+			play ].
 
-	^ aScripter syncContinue
+	^ aScripter
 ]
 
 { #category : #'examples - world' }
@@ -473,6 +456,5 @@ GtWorldByScripterExamples >> worldElementInScripter [
 	| aScripter |
 	aScripter := self scripter.
 	aScripter element: GtWorldElement new.
-	aScripter wait forEmptySpaceTaskQueue.
-	^ aScripter syncContinue
+	^ aScripter
 ]
