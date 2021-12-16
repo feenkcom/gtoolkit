@@ -1,8 +1,21 @@
 Class {
 	#name : #GtMonitoredTaskItService,
 	#superclass : #GtMonitoredService,
-	#category : 'GToolkit-Monitor'
+	#category : #'GToolkit-Monitor'
 }
+
+{ #category : #'gt - extensions' }
+GtMonitoredTaskItService >> gtQueueFor: aView [
+
+	<gtView>
+	self service ifNil: [ ^ aView empty ].
+
+	^ aView forward
+		  title: 'Queue';
+		  priority: 1;
+		  object: [ self service ];
+		  view: #gtQueueFor:
+]
 
 { #category : #accessing }
 GtMonitoredTaskItService >> numberOfFailedTasks [
@@ -18,6 +31,11 @@ GtMonitoredTaskItService >> queueSize [
 
 { #category : #accessing }
 GtMonitoredTaskItService >> title [
+
 	<return: #String>
-	^ self service name ifNil: [ '' ] ifNotNil: #trimmed
+	| aService |
+	aService := self service.
+
+	aService ifNil: [ ^ '' ].
+	^ aService name ifNil: [ '' ] ifNotNil: #trimmed
 ]

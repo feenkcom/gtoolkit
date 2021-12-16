@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'service'
 	],
-	#category : 'GToolkit-Monitor'
+	#category : #'GToolkit-Monitor'
 }
 
 { #category : #testing }
@@ -21,10 +21,24 @@ GtMonitoredService >> isRunning [
 ]
 
 { #category : #accessing }
-GtMonitoredService >> service [
-	<return: #TKTService or: nil>
+GtMonitoredService >> printOn: aStream [
 
-	^ service at: 1
+	super printOn: aStream.
+
+	self service ifNil: [ ^ self ].
+
+	aStream
+		nextPut: $(;
+		nextPutAll: self title;
+		nextPut: $)
+]
+
+{ #category : #accessing }
+GtMonitoredService >> service [
+
+	<return: #TKTService or: nil>
+	
+	^ service ifNotNil: [ :aService | aService at: 1 ]
 ]
 
 { #category : #accessing }
