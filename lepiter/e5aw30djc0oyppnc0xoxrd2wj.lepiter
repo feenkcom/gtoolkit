@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-12-09T19:02:14.254297+01:00"
+									"dateAndTimeString" : "2021-12-25T23:02:32.952694+01:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +155,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This is a word embedded in text: {{gtWordExplanation:refactoring|expanded}}."
+							"string" : "This is a word embedded in text: {{gtWordExplanation:refactoring|expanded=true}}."
 						},
 						{
 							"__type" : "textSnippet",
@@ -367,7 +367,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-12-09T16:16:08.041307-06:00"
+									"dateAndTimeString" : "2021-12-25T23:01:46.944298+01:00"
 								}
 							},
 							"uid" : {
@@ -377,7 +377,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To create a new annotation, first you need to create a GLR parser that has been annotated to create an abstract syntax tree. It should parse whatever the user can enter between the colon (:) after the annotation name and the ending right braces. For the *gtWordExplanation* annotation, the parser is defined in {{gtClass:LeWordAnnotationParser}} and the AST is defined by {{gtClass:LeWordParseNode}} and its subclasses."
+							"string" : "To create a new annotation, first you need to create a GLR parser that has been annotated to create an abstract syntax tree. It should parse whatever the user can enter between the colon (`:`) after the annotation name and the ending right braces. For the *gtWordExplanation* annotation, the parser is defined in {{gtClass:LeWordAnnotationParser}} and the AST is defined by {{gtClass:LeWordParseNode}} and its subclasses."
 						},
 						{
 							"__type" : "textSnippet",
