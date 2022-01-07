@@ -1,7 +1,7 @@
 Class {
 	#name : #GtMonitoredProcessesElement,
 	#superclass : #GtMonitoredServicesElement,
-	#category : 'GToolkit-Monitor'
+	#category : #'GToolkit-Monitor'
 }
 
 { #category : #'instance creation' }
@@ -61,7 +61,27 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 				aptitude: BrGlamorousLabelAptitude;
 				text: isOpened;
 				fitContent ].
-		
+			
+	servicesList column
+		title: 'Inspect';
+		width: 30;
+		stencil: [ :aMonitoredService |
+			| aReifiedProcess |
+
+			aReifiedProcess := aMonitoredService service
+				ifNotNil: [ :aProcess |
+					AsyncProcessProperties
+						reifiedProcess: aProcess
+						ifAbsent: [ nil ] ].
+
+			BrButton new
+				beSmallSize;
+				visibility: (aReifiedProcess ifNil: [ BlVisibility gone ] ifNotNil: [ BlVisibility visible ]);
+				aptitude: BrGlamorousButtonWithIconAptitude;
+				icon: BrGlamorousVectorIcons inspect;
+				label: 'Inspect reified process';
+				action: [ :aButton | aButton phlow spawnObject: aReifiedProcess objectOfInterest ] ].
+	
 	self updateList
 ]
 
