@@ -84,7 +84,7 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 								aButton fireEvent: BrDropdownHideWish new .
 								aNewMethodCoderHolder contents: nil ] ].
 
-						(GtExpandedOnlyCoderElement new coderUIModel: aNewMethodCoderViewModel)
+						(GtExpandedOnlyCoderElement new coderViewModel: aNewMethodCoderViewModel)
 							hExact: 300;
 							vFitContent;
 							background: Color white;
