@@ -66,7 +66,7 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 						aNewMethodCoder
 							currentSourceString: 'newMethod', String cr, String tab, '"This is a new method"'.
 
-						aNewMethodCoderViewModel := aNewMethodCoder asCoderUIModel.
+						aNewMethodCoderViewModel := aNewMethodCoder asCoderViewModel.
 						aNewMethodCoderViewModel
 							withoutHeader;
 							expanded: true;
