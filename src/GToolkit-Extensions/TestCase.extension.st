@@ -16,7 +16,7 @@ TestCase >> gtTestMethodFor: aView [
 				            ifNil: [ GtPharoMethodCoder new ]
 				            ifNotNil: [ 
 					            GtPharoMethodCoder forMethod: aCompiledMethod ].
-			  (aCoder asCoderUIModel selfObject: self) asExpandedOnlyElement
+			  (aCoder asCoderViewModel selfObject: self) asExpandedOnlyElement
 				  vFitContentLimited ]
 ]
 

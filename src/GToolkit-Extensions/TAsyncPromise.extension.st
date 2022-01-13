@@ -1,12 +1,79 @@
 Extension { #name : #TAsyncPromise }
 
 { #category : #'*GToolkit-Extensions' }
+TAsyncPromise >> gtChainedPromises [
+	"Return a collection of promises that are next in the chain after this one"
+	<return: #Collection of: #TAsyncPromise>
+
+	^ #()
+]
+
+{ #category : #'*GToolkit-Extensions' }
+TAsyncPromise >> gtHandlesErrors [
+	"Return true if the promise is able to handle errors"
+
+	^ false
+]
+
+{ #category : #'*GToolkit-Extensions' }
+TAsyncPromise >> gtPaintTreeWith: aMondrian [
+	| theChainedPromises thePrecedingPromises allPromises |
+	
+	thePrecedingPromises := self withDeepCollect: #gtPrecedingPromises.
+	theChainedPromises := thePrecedingPromises withDeepCollect: #gtChainedPromises.
+	allPromises := ({ self } asSet, theChainedPromises, thePrecedingPromises) asArray.
+
+	aMondrian nodes
+		stencil: [ :eachPromise |
+			BlElement new
+				geometry: BlEllipseGeometry new;
+				layout: BlFrameLayout new;
+				size: 40@40;
+				border: (BlBorder paint: Color black width: 2);
+				background: (eachPromise == self
+					ifTrue: [ BrGlamorousColors textHighlightColor ]
+					ifFalse: [ Color white ]);
+				in: [ :anElement |
+					eachPromise gtHandlesErrors
+						ifTrue: [ anElement addChild: (BrLabel new
+							constraintsDo: [ :c |
+								c frame horizontal alignCenter.
+								c frame vertical alignCenter ];
+							aptitude: (BrGlamorousLabelAptitude new fontSize: 5);
+							text: 'Handles errors') ] ];
+				yourself ];
+		with: allPromises.
+		
+	aMondrian edges 
+		stencil: [
+			BlSigmoidElement new
+				beHorizontal;
+				sharpness: 0.1;
+				border: (BlBorder paint: (BrGlamorousColors defaultHeaderBackgroundColor alpha: 0.5) width: 2) ];
+		fromRightCenter;
+		toLeftCenter;
+		connectToAll: #gtChainedPromises.
+
+	aMondrian layout horizontalTree levelDistance: 30; nodeDistance: 10.
+	
+	^ aMondrian
+]
+
+{ #category : #'*GToolkit-Extensions' }
+TAsyncPromise >> gtPrecedingPromises [
+	"Return a collection promises on which this promise depends"
+	<return: #Collection of: #TAsyncPromise>
+
+	^ #()
+]
+
+{ #category : #'*GToolkit-Extensions' }
 TAsyncPromise >> gtPromiseFor: aView [
 	<gtView>
 	
 	^ aView explicit
 		title: 'Promise';
-		priority: 10;
+		priority: 1;
 		stencil: [
 			BrFromPromise new
 				matchParent;
@@ -51,4 +118,14 @@ TAsyncPromise >> gtPromiseFor: aView [
 									aptitude: (BrGlamorousLabelAptitude new foreground: Color lightGray);
 									text: 'Waiting a promised value...') ] ];
 				promise: self ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
+TAsyncPromise >> gtPromiseTreeFor: aView [
+	<gtView>
+	
+	^ aView mondrian
+		title: 'Tree';
+		priority: 2;
+		painting: [ :aMondrian | self gtPaintTreeWith: aMondrian ]
 ]
