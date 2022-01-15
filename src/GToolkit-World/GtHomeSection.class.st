@@ -194,7 +194,8 @@ GtHomeSection >> newInspectorCardForObject: anObject [
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newLepiterPageCardForPage: aTargetPage withTitle: aCardTitle andDescription: aDescription [
+GtHomeSection >> newLepiterPageCardForPageNamed: aPageTitle inDatabaseNamed: aDatabaseName withTitle: aCardTitle andDescription: aDescription [
+				
 	^ self
 		newHeaderCardWithTitle: aCardTitle
 		description: aDescription
@@ -206,42 +207,26 @@ GtHomeSection >> newLepiterPageCardForPage: aTargetPage withTitle: aCardTitle an
 					bold;
 				padding: (BlInsets all: 20)) asScalableElement
 		action: [ :card | 
+			| targetDatabase startPage |
+			targetDatabase := aDatabaseName 
+				ifNil: [ LeDatabasesRegistry default currentLoadedDefaultLogicalDatabase ] 
+				ifNotNil: [ LeDatabasesRegistry default currentLoadedDefaultLogicalDatabase 
+					databaseNamed: aDatabaseName ].
+			startPage := targetDatabase pageNamed: aPageTitle.
+				
 			GtWorldUtility 
-				showSpaceWithTitle: aTargetPage title
-				inPagerWith: [ aTargetPage
+				showSpaceWithTitle: startPage title
+				inPagerWith: [ startPage
 					asLepiterPagePhlowTool asElementDo: [ :e | e ] ] asStencil
 				from: card ]
 ]
 
 { #category : #'instance creation' }
-GtHomeSection >> newLepiterPageCardForPageNamed: aPageTitle inDatabase: aDatabase withTitle: aCardTitle andDescription: aDescription [
-	| startPage |
-	startPage := aDatabase pageNamed: aPageTitle.
-				
-	^ self 
-		newLepiterPageCardForPage: startPage 
-		withTitle: aCardTitle 
-		andDescription: aDescription
-]
-
-{ #category : #'instance creation' }
-GtHomeSection >> newLepiterPageCardForPageNamed: aPageTitle inDatabaseNamed: aDatabaseName withTitle: aCardTitle andDescription: aDescription [
-	| targetDatabase |
-	targetDatabase := LeDatabasesRegistry default currentLoadedDefaultLogicalDatabase 
-		databaseNamed: aDatabaseName.
-				
-	^ self 
-		newLepiterPageCardForPageNamed: aPageTitle 
-		inDatabase: targetDatabase
-		withTitle: aCardTitle 
-		andDescription: aDescription
-]
-
-{ #category : #'instance creation' }
 GtHomeSection >> newLepiterPageCardForPageNamed: aPageTitle withTitle: aCardTitle andDescription: aDescription [				
+	
 	^ self 
 		newLepiterPageCardForPageNamed: aPageTitle 
-		inDatabase: LeDatabasesRegistry default currentLoadedDefaultLogicalDatabase 
+		inDatabaseNamed: nil 
 		withTitle: aCardTitle 
 		andDescription: aDescription
 ]
