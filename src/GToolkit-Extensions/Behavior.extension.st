@@ -2,21 +2,26 @@ Extension { #name : #Behavior }
 
 { #category : #'*GToolkit-Extensions' }
 Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
-	<return: #GtPharoExampleSuiteViewModel>
 
+	<return: #GtPharoExampleSuiteViewModel>
 	^ aPhlowContext
 		  optionAt: #exampleViewModel
 		  ifPresent: [ :anExampleViewModel | anExampleViewModel ]
-		  ifAbsentPut: [
-				| aSuiteModel |
-				aSuiteModel := GtPharoExampleSuite forStream: aMethodsCoder itemsStream.
-		  		GtPharoExampleSuiteViewModel new
-					pharoExampleSuite: aSuiteModel;
-					when: GtPharoSuiteSelectedStateChanged do: [ :anEvent |
-						aMethodsCoder additionalFilters: (GtPharoExampleStateFilter new
-					 		resultState: anEvent state;
-					 		pharoExampleSuite: aSuiteModel) ];
-					yourself ]
+		  ifAbsentPut: [ 
+			  | aSuiteModel aViewModel aHandler |
+			  aSuiteModel := GtPharoExampleSuite forStream:
+				                 aMethodsCoder itemsStream.
+			  aHandler := GtPharoExampleSuiteSelectionHandler new
+				              methodsCoder: aMethodsCoder;
+				              suiteModel: aSuiteModel.
+			  aPhlowContext optionAt: #exampleViewModelHandler put: aHandler.
+			  aViewModel := GtPharoExampleSuiteViewModel new 
+				                pharoExampleSuite: aSuiteModel.
+			  aViewModel
+				  when: GtPharoSuiteSelectedStateChanged
+				  send: #onAnnouncement:
+				  to: aHandler.
+			  aViewModel ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
@@ -55,7 +60,7 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 				icon: BrGlamorousVectorIcons add;
 				tooltip: 'Add new method';
 				content: [ :aButton |
-					| aNewMethodCoder aNewMethodCoderViewModel |
+					| aNewMethodCoder aNewMethodCoderViewModel aHandler |
 
 					aNewMethodCoderHolder contents
 						ifNotNil: [ :aContents |
@@ -75,14 +80,15 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 						
 						aNewMethodCoderHolder contents: aNewMethodCoderViewModel.
 
-						aNewMethodCoderViewModel
+						aHandler := GtPharoNewMethodCodeSavedHandler new
+							methodsCoderViewModel: aMethodsCoderViewModel;
+							element: aButton;
+							methodCoderHolder: aNewMethodCoderHolder.
+						
+						aNewMethodCoderViewModel weak
 							when: GtMethodCoderSaved
-							do: [ :aSavedEvent |
-								aMethodsCoderViewModel
-									expandAndFocusCompiledMethod: aSavedEvent method;
-									scrollToCompiledMethod: aSavedEvent method.
-								aButton fireEvent: BrDropdownHideWish new .
-								aNewMethodCoderHolder contents: nil ] ].
+							send: #onAnnouncement:
+							to: aHandler ].
 
 						(GtExpandedOnlyCoderElement new coderViewModel: aNewMethodCoderViewModel)
 							hExact: 300;
