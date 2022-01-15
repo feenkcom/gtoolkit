@@ -1,22 +1,22 @@
 Class {
 	#name : #GtGitStencil,
 	#superclass : #GtToolStencil,
-	#category : 'GToolkit-World-Stencils'
+	#category : #'GToolkit-World-Stencils'
 }
 
 { #category : #converting }
 GtGitStencil >> asPreviewElement [
-	^ GtInspector forObject: Gt4Git new
+	^ GtGitElement new asElement
 ]
 
 { #category : #'api - instantiation' }
 GtGitStencil >> create [
-	^ (GtInspector createOn: Gt4Git new) maximized.
+	^ GtGitElement new createInPager maximized
 ]
 
 { #category : #accessing }
 GtGitStencil >> icon [
-	^ BrGlamorousVectorIcons emphasizedInspect
+	^ BrGlamorousVectorIcons branching
 ]
 
 { #category : #accessing }

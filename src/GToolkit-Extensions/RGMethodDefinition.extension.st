@@ -11,7 +11,7 @@ RGMethodDefinition >> gtBasicSourceFor: aView [
 				(GtMethodCoderTool compiledMethod: self compiledMethod) ];
 		stencil: [ 
 			 ((((GtPharoMethodCoder forMethod: self) 
-				subscribeToSystem) asCoderUIModel expanded: true)
+				subscribeToSystem) asCoderViewModel expanded: true)
 				asElement) ].
 ]
 

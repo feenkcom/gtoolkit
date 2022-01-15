@@ -5,7 +5,7 @@ Class {
 		'stackList',
 		'debugSession'
 	],
-	#category : 'GToolkit-Monitor'
+	#category : #'GToolkit-Monitor'
 }
 
 { #category : #initialization }
@@ -19,7 +19,7 @@ GtMonitoredProcessElement >> initialize [
 	stackList stencil: [ :eachContext | 
 		debugSession ifNil: [ Halt once ].
 		(GtPharoMethodContextCoder forContext: eachContext session: debugSession)
-			asCoderUIModel
+			asCoderViewModel
 			expanded: false;
 			asElement ].
 	self addChild: stackList

@@ -2,27 +2,32 @@ Extension { #name : #Behavior }
 
 { #category : #'*GToolkit-Extensions' }
 Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
-	<return: #GtPharoExampleSuiteViewModel>
 
+	<return: #GtPharoExampleSuiteViewModel>
 	^ aPhlowContext
 		  optionAt: #exampleViewModel
 		  ifPresent: [ :anExampleViewModel | anExampleViewModel ]
-		  ifAbsentPut: [
-				| aSuiteModel |
-				aSuiteModel := GtPharoExampleSuite forStream: aMethodsCoder itemsStream.
-		  		GtPharoExampleSuiteViewModel new
-					pharoExampleSuite: aSuiteModel;
-					when: GtPharoSuiteSelectedStateChanged do: [ :anEvent |
-						aMethodsCoder additionalFilters: (GtPharoExampleStateFilter new
-					 		resultState: anEvent state;
-					 		pharoExampleSuite: aSuiteModel) ];
-					yourself ]
+		  ifAbsentPut: [ 
+			  | aSuiteModel aViewModel aHandler |
+			  aSuiteModel := GtPharoExampleSuite forStream:
+				                 aMethodsCoder itemsStream.
+			  aHandler := GtPharoExampleSuiteSelectionHandler new
+				              methodsCoder: aMethodsCoder;
+				              suiteModel: aSuiteModel.
+			  aPhlowContext optionAt: #exampleViewModelHandler put: aHandler.
+			  aViewModel := GtPharoExampleSuiteViewModel new 
+				                pharoExampleSuite: aSuiteModel.
+			  aViewModel
+				  when: GtPharoSuiteSelectedStateChanged
+				  send: #onAnnouncement:
+				  to: aHandler.
+			  aViewModel ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
 Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 	<gtClassView>
-	| aMethodsCoder aMethodsCoderViewModel aTestSuiteViewModel anExampleViewModel |
+	| aMethodsCoder aMethodsCoderViewModel aTestSuiteViewModel anExampleViewModel aNewMethodCoderHolder |
 	
 	aMethodsCoder := GtPharoStreamingMethodsCoder forBehavior: self.
 	aMethodsCoderViewModel := GtPharoStreamingMethodsCoderViewModel new streamingCodersModel: aMethodsCoder.
@@ -40,6 +45,8 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 	anExampleViewModel := self
 		exampleViewModelWith: aMethodsCoder
 		fromContext: aPhlowContext.
+		
+	aNewMethodCoderHolder := ValueHolder new.
 
 	^ aView explicit
 		priority: 9;
@@ -53,33 +60,42 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 				icon: BrGlamorousVectorIcons add;
 				tooltip: 'Add new method';
 				content: [ :aButton |
-					| aNewMethodCoder aNewMethodCoderViewModel |
+					| aNewMethodCoder aNewMethodCoderViewModel aHandler |
 
-					aNewMethodCoder := GtPharoMethodCoder forNewMethod: self.
-					aNewMethodCoder
-						currentSourceString: 'newMethod', String cr, String tab, '"This is a new method"'.
+					aNewMethodCoderHolder contents
+						ifNotNil: [ :aContents |
+							aNewMethodCoderViewModel := aContents ]
+						ifNil: [
+					
+						aNewMethodCoder := GtPharoMethodCoder forNewMethod: self.
+						aNewMethodCoder
+							currentSourceString: 'newMethod', String cr, String tab, '"This is a new method"'.
 
-					aNewMethodCoderViewModel := aNewMethodCoder asCoderViewModel.
-					aNewMethodCoderViewModel
-						withoutHeader;
-						expanded: true;
-						focused: true;
-						moveCursorAtEnd.
+						aNewMethodCoderViewModel := aNewMethodCoder asCoderViewModel.
+						aNewMethodCoderViewModel
+							withoutHeader;
+							expanded: true;
+							focused: true;
+							moveCursorAtEnd.
+						
+						aNewMethodCoderHolder contents: aNewMethodCoderViewModel.
 
-					aNewMethodCoderViewModel
-						when: GtMethodCoderSaved
-						do: [ :aSavedEvent |
-							aMethodsCoderViewModel
-								expandAndFocusCompiledMethod: aSavedEvent method;
-								scrollToCompiledMethod: aSavedEvent method.
-							aButton fireEvent: BrDropdownHideWish new ].
+						aHandler := GtPharoNewMethodCodeSavedHandler new
+							methodsCoderViewModel: aMethodsCoderViewModel;
+							element: aButton;
+							methodCoderHolder: aNewMethodCoderHolder.
+						
+						aNewMethodCoderViewModel weak
+							when: GtMethodCoderSaved
+							send: #onAnnouncement:
+							to: aHandler ].
 
-					(GtExpandedOnlyCoderElement new coderUIModel: aNewMethodCoderViewModel)
-						hExact: 300;
-						vFitContent;
-						background: Color white;
-						padding: (BlInsets all: 5);
-						addAptitude: BrGlamorousFocusableShadowAptitude new ];
+						(GtExpandedOnlyCoderElement new coderViewModel: aNewMethodCoderViewModel)
+							hExact: 300;
+							vFitContent;
+							background: Color white;
+							padding: (BlInsets all: 5);
+							addAptitude: BrGlamorousFocusableShadowAptitude new ];
 				name: GtPharoBehaviorCoder addNewMethodButtonName ];
 		actionDropdownButtonIcon: BrGlamorousVectorIcons robot
 		  tooltip: 'Generate'
