@@ -1,7 +1,7 @@
-Extension { #name : #SubscriptionRegistry2 }
+Extension { #name : #FastSubscriptionRegistry }
 
 { #category : #'*GToolkit-Extensions' }
-SubscriptionRegistry2 >> gtSubscriptionsFor: aView [
+FastSubscriptionRegistry >> gtSubscriptionsFor: aView [
 	<gtView>
 	self subscriptions ifNil: [ ^ aView empty ].
 	^ aView columnedList
