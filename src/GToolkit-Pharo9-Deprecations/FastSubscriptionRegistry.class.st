@@ -8,6 +8,18 @@ Class {
 	#category : #'GToolkit-Pharo9-Deprecations-Subscription'
 }
 
+{ #category : #accessing }
+FastSubscriptionRegistry class >> initialize [
+	"Patches for the base image and running SystemAnnouncer"
+	| newReg |
+	Announcer compile: 'initialize
+	super initialize.
+	registry := FastSubscriptionRegistry new.' classified: 'initialization'.
+	
+	newReg := FastSubscriptionRegistry new copyFromSlowRegistry: (SystemAnnouncer uniqueInstance instVarNamed: #registry).
+	SystemAnnouncer uniqueInstance instVarNamed: #registry put: newReg.
+]
+
 { #category : #'add/remove' }
 FastSubscriptionRegistry >> add: subscription [
 
