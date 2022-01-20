@@ -148,6 +148,6 @@ FastSubscriptionRegistry >> subscriptionsHandling: anAnnouncement [
 { #category : #iterating }
 FastSubscriptionRegistry >> subscriptionsOf: aSubscriber do: aBlock [
 	| copy |
-	self protected: [ copy := (subscriberMap at: aSubscriber) copy ].
+	self protected: [ copy := (subscriberMap at: aSubscriber ifAbsent: [#()]) copy ].
 	copy do: [ :subscription | aBlock value: subscription ]
 ]
