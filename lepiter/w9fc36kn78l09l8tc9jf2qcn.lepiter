@@ -824,6 +824,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Managing projects"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-01-20T15:03:46.587265+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-01-20T15:04:07.028831+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UeYDtWWSDQCC67NlAlObJQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "{{gtTodo:label=Add a pointer to a page on how to work with github}}"
 			}
 		]
 	},
@@ -846,12 +883,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-01-17T13:57:21.970463+01:00"
+			"dateAndTimeString" : "2022-01-20T15:15:20.97464+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "The Pharo architecture"
+		"title" : "Pharo architecture"
 	},
 	"uid" : {
 		"__type" : "uuid",
