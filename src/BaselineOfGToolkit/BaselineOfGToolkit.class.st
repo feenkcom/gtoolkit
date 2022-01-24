@@ -122,7 +122,10 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'XdocClient' with: [
 				spec repository: 'github://feenkcom/xdoc:main/src' ];
 			baseline: 'LepiterEngine' with: [
-				spec repository: 'github://feenkcom/lepiter:main/src' ].
+				spec repository: 'github://feenkcom/lepiter:main/src' ];
+			baseline: 'GToolkit4Magritte' with: [
+				spec repository: 'github://feenkcom/gt4magritte:main/src' ].
+				
 		spec 
 			package: 'GToolkit-Extensions' with: [
 				spec requires: #('GToolkitCoder' 'GToolkit4Pharo' 'GToolkitSpotter'). ];
