@@ -67,7 +67,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-24T15:47:39.498928+01:00"
+						"dateAndTimeString" : "2022-01-25T07:53:18.478278+01:00"
 					}
 				},
 				"uid" : {
@@ -77,7 +77,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#TLDR"
+				"string" : "#TL;DR"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1733,7 +1733,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-24T16:29:29.971265+01:00"
+									"dateAndTimeString" : "2022-01-25T09:07:53.741336+01:00"
 								}
 							},
 							"uid" : {
@@ -1743,7 +1743,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If you need a list of objects, you will normally work with an {{gtClass:name=OrderedCollection}}, but Arrays are also convenient as Pharo provides dedicated syntax for both *literal* and *dynamic* arrays."
+							"string" : "If you need a list of objects, you will normally work with a growable {{gtClass:name=OrderedCollection}}, but fixed-size Arrays are also convenient as Pharo provides dedicated syntax for both *literal* and *dynamic* arrays."
 						},
 						{
 							"__type" : "textSnippet",
