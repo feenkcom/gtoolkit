@@ -44,7 +44,23 @@ FastSubscriptionRegistry >> deliver: anAnnouncement [
 	self protected: [ interestedSubscriptions := self subscriptionsHandling: anAnnouncement ].
 	interestedSubscriptions isEmpty ifTrue: [ ^ self ].
 	anAnnouncement prepareForDelivery.
-	interestedSubscriptions do: [:sub | [sub deliver: anAnnouncement] valueUninterruptably]
+	self deliver: anAnnouncement to: interestedSubscriptions
+]
+
+{ #category : #announcing }
+FastSubscriptionRegistry >> deliver: anAnnouncement to: subs [
+	^ self deliver: anAnnouncement to: subs startingAt: 1
+]
+
+{ #category : #announcing }
+FastSubscriptionRegistry >> deliver: anAnnouncement to: subs startingAt: startIndex [
+	
+	startIndex to: subs size do: [ :index| | subscription |
+		subscription := subs at: index.
+		[ subscription deliver: anAnnouncement ] 
+			"Ensure delivery to remaining announcements"
+			ifCurtailed: [
+				self deliver: anAnnouncement to: subs startingAt: index + 1 ]]
 ]
 
 { #category : #'gt - extensions' }
