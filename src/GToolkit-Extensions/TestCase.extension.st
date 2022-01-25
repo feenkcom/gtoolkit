@@ -30,16 +30,31 @@ TestCase class >> gtTestsFor: aView [
 
 	<gtView>
 	<gtClassView>
-	| aMethodsCoder aTestSuiteViewModel |
-	aMethodsCoder := (GtSearchClassTestSuiteFilter new testCaseClass:
-		                  self) asCoder.
-	aTestSuiteViewModel := GtPharoTestSuiteViewModel new 
-		                       methodsCoderModel: aMethodsCoder.
+	| aMethodsCoder aTestSuiteViewModel aSuiteModel aMethodsCoderViewModel |
+	aMethodsCoder := GtPharoStreamingMethodsCoder forBehavior: self.
+
+	aMethodsCoderViewModel := GtPharoStreamingMethodsCoderViewModel new.
+	aMethodsCoderViewModel
+		streamingCodersModel: aMethodsCoder;
+		shouldExpandByDefault: false;
+		shouldHaveHeaderByDefault: false.
+
+	aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder itemsStream.
+	aTestSuiteViewModel := GtPharoTestSuiteViewModel new.
+	aTestSuiteViewModel
+		pharoTestSuite: aSuiteModel;
+		when: GtPharoSuiteSelectedStateChanged do: [ :anEvent | 
+			aMethodsCoder additionalFilters: (GtPharoTestCaseStateFilter new
+						 resultState: anEvent state;
+						 pharoTestSuite: aSuiteModel) ].
+
 	^ aView explicit
 		  title: 'Tests';
 		  priority: 20;
-		  stencil: [ aMethodsCoder ];
+		  stencil: [ 
+			  GtPharoStreamingMethodsCoderElement new 
+				  streamingCodersViewModel: aMethodsCoderViewModel ];
 		  actionStencil: [ 
-			  GtPharoCoderUIUtility
-				  newTestsDropdownButtonForViewModel: aTestSuiteViewModel ]
+			  GtPharoCoderUIUtility newTestsDropdownButtonForViewModel:
+					  aTestSuiteViewModel ]
 ]
