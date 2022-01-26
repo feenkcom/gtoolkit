@@ -68,6 +68,8 @@ BaselineOfGToolkit >> baseline: spec [
 		spec preLoadDoIt: #'preLoadGToolkit:'.
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec 
+			baseline: 'GToolkitVirtualMachine' with: [
+				spec repository: 'github://feenkcom/gtoolkit-vm-bindings:main/src' ];
 			baseline: 'GToolkitClipboard' with: [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:main/src' ];
 			baseline: 'GToolkitPresenter' with: [
