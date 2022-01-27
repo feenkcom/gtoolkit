@@ -791,6 +791,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "A common way to work is to load a project into a fresh image, work for a while, commit and push all the changes, and then throw away the image. This way you avoid depending on an image that may get cluttered or corrupted over time. On the other hand, you might save a backup image ready to present a demo."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-01-27T09:39:06.980953+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-01-27T09:39:13.596921+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gkLy/O2SDQCPY23lAGyDGA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "See [[How to work with GitHub]]."
 						}
 					]
 				},
@@ -824,43 +861,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Managing projects"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T15:03:46.587265+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T15:04:07.028831+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "UeYDtWWSDQCC67NlAlObJQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtTodo:label=Add a pointer to a page on how to work with github}}"
 			}
 		]
 	},
