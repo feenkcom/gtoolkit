@@ -77,6 +77,13 @@ FastSubscriptionRegistry >> gtSubscriptionsFor: aView [
 		column: 'Kind' text: [ :aSubscription | aSubscription class ]
 ]
 
+{ #category : #'as yet unclassified' }
+FastSubscriptionRegistry >> handleEventClass: eventClass [
+	"Return true if the receiver has a callback subscripbed for the event class"
+
+	^ subscriberMap anySatisfy: [ :coll | coll anySatisfy: [ :sub | sub announcementClass includesBehavior: eventClass ] ]
+]
+
 { #category : #accessing }
 FastSubscriptionRegistry >> handleSubscriberClass: subClass [
 	"Return true if the receiver has a callback subscripbed for the event class"
