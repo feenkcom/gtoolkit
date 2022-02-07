@@ -803,7 +803,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-21T10:16:58.319337+01:00"
+									"dateAndTimeString" : "2022-02-07T09:55:00.691747+01:00"
 								}
 							},
 							"uid" : {
@@ -813,10 +813,10 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Accept the changes and then inspect the code of method we have created:"
+							"string" : "Accept the changes and then you should be able to see the method we have created:"
 						},
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -829,7 +829,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-21T10:13:58.029578+01:00"
+									"dateAndTimeString" : "2022-02-07T09:55:03.461623+01:00"
 								}
 							},
 							"editEmail" : {
@@ -840,14 +840,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-21T10:19:26.265357+01:00"
+									"dateAndTimeString" : "2022-02-07T09:55:14.514899+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "JLWZxnWSDQCsoROuBNK90g=="
+								"uidString" : "SpI3fsuTDQCF1vUJAChh4w=="
 							},
-							"code" : "GtCoder forMethod:  Jumble >> #initialize"
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtMethod:name=Jumble>>initialize|expanded}}"
 						},
 						{
 							"__type" : "textSnippet",
