@@ -8,117 +8,6 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-18T10:41:18.039629+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-18T11:29:59.921411+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "OyOxzjmSDQCgCt8gAjTJ7g=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtTodo:label=draft intro to classes and methods}} "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-18T11:25:18.305215+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-21T10:34:37.12955+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "PVIubDqSDQCgdEtPAjTJ7g=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Caveat: This page is a draft in progress."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T15:05:33.761162+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T15:05:33.761162+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qAKWu2WSDQCC8m5cAlObJQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -406,14 +295,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-21T09:27:33.52558+01:00"
+									"dateAndTimeString" : "2022-02-07T09:31:22.705513+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "mXldIHWSDQCqRsFcBNK90g=="
 							},
-							"code" : "Jumble new"
+							"code" : "\"We can't run this snippet because the class Jumble doesn't exist yet (shown in red). We could 'fix it' by clicking the wrench icon, but instead we will load in the changes from the next snippet below.\"\r\rJumble new"
 						},
 						{
 							"__type" : "textSnippet",
@@ -466,6 +355,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-02-07T09:32:51.235781+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-02-07T09:32:51.235781+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QMbeLsuTDQCmLhFGDfkCsg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Everything happens by sending messages, and it is the same for creating new classes. We send the message `#subclass:...` to the the superclass of the class we want to create. In this case, we ask {{gtClass:name=Object}} to create `Jumble` as a subclass. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2022-01-20T15:25:57.467057+01:00"
 								}
 							},
@@ -477,7 +403,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T15:27:49.762829+01:00"
+									"dateAndTimeString" : "2022-02-07T09:32:51.241491+01:00"
 								}
 							},
 							"uid" : {
@@ -487,7 +413,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Everything happens by sending messages, and it is the same for creating new classes. We send the message `#subclass:...` to the the superclass of the class we want to create. In this case, we ask {{gtClass:name=Object}} to create `Jumble` as a subclass. Click on the checkmark to accept this change:"
+							"string" : "Click on the *checkmark* to accept this change:"
 						},
 						{
 							"__type" : "changesSnippet",
@@ -948,7 +874,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-21T10:12:21.239529+01:00"
+									"dateAndTimeString" : "2022-02-07T09:34:41.137347+01:00"
 								}
 							},
 							"uid" : {
@@ -958,7 +884,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Notice that the only changes to the original smippet are:"
+							"string" : "Notice that the only changes to the original snippet are:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -985,7 +911,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-21T10:20:56.103104+01:00"
+									"dateAndTimeString" : "2022-02-07T09:34:58.530036+01:00"
 								}
 							},
 							"uid" : {
@@ -995,7 +921,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "1. We added a method declaration in the first line."
+							"string" : "1. We added a method declaration in the first line (`initialize`)."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1022,7 +948,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-21T10:21:21.361034+01:00"
+									"dateAndTimeString" : "2022-02-07T09:35:17.371529+01:00"
 								}
 							},
 							"uid" : {
@@ -1032,7 +958,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "2. We declared the local variables `wordlistUrl` etc."
+							"string" : "2. We declared the local variables `wordlistUrl` etc. within or-bars (`|...|`)."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1059,7 +985,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-21T10:24:06.359649+01:00"
+									"dateAndTimeString" : "2022-02-07T09:35:42.581766+01:00"
 								}
 							},
 							"uid" : {
@@ -1069,7 +995,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "3. We declared `key` as variable local to its block."
+							"string" : "3. We declared `key` as variable local to its block (`|key|`)."
 						}
 					]
 				},
@@ -1347,7 +1273,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-24T09:15:55.316188+01:00"
+						"dateAndTimeString" : "2022-02-07T09:36:12.979261+01:00"
 					}
 				},
 				"uid" : {
@@ -1358,43 +1284,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "\tThis first version seems to work, but we have no tests, the Jumble fails with an exception if the word cannot be unjumbled, and the source file is hard-wired. To see how we can fix this, continue with: [[Introducing test examples and code cleaning]]"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-18T10:43:08.276766+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-18T10:43:08.276766+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "ODxm1TmSDQCgFDLNAjTJ7g=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
 			}
 		]
 	},
