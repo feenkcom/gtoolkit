@@ -8,7 +8,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-02-08T17:12:41.750008+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-02-08T17:13:09.503175+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "u7EbueWTDQCTdd6iCHjCcg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This page provides a few pointers to documents about the history of Smalltalk, Pharo and GT."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -18,7 +56,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T11:00:17.096033+01:00"
+						"dateAndTimeString" : "2022-02-08T17:12:36.830861+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,81 +67,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T11:00:20.981591+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "One8TGKSDQCZ5EEkCPhJLQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "This page is a stub."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T11:00:23.598797+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T11:00:36.493245+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "dDW5TmKSDQCZ6mLUCPhJLQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtTodo:label=Draft page on Smalltalk history}}"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T11:00:45.469848+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T11:03:28.987674+01:00"
+						"dateAndTimeString" : "2022-02-08T17:12:38.863508+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +77,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Stuff to include:"
+				"string" : "#TL;DR"
 			},
 			{
 				"__type" : "textSnippet",
@@ -134,7 +98,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:23:51.230576+01:00"
+									"dateAndTimeString" : "2022-02-08T17:13:15.277661+01:00"
 								}
 							},
 							"editEmail" : {
@@ -145,17 +109,128 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:24:30.226731+01:00"
+									"dateAndTimeString" : "2022-02-08T17:16:20.557608+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "oBYiWWKSDQCaGtg+CPhJLQ=="
+								"uidString" : "VQ0hu+WTDQCTeJGICHjCcg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Something about the genealogy of Smalltalk-80 and its descendents, including Squeak, Pharo and GT."
+							"string" : "[Smalltalk](https://en.wikipedia.org/wiki/Smalltalk) was developed at Xerox PARC in the 1970s by the team of Alan Kay as a new, purely object-oriented programming language and run-time environment to support a new generation of graphical workstations. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-02-08T17:16:23.002807+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-02-08T17:17:32.922383+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dV5UxuWTDQCTgnenCHjCcg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[Squeak](https://en.wikipedia.org/wiki/Squeak) was derived from Smalltalk when Kay went to Apple, and then Disney to explore its use for various multimedia projects."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-02-08T17:17:34.88504+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-02-08T17:19:08.467458+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xWSeyuWTDQCTg6shCHjCcg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[Pharo](https://en.wikipedia.org/wiki/Pharo) started as a fork of Squeak, intended as a cleaner version suitable for both research and industry projects."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-02-08T17:20:14.427454+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-02-08T17:21:12.550295+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ustQ0OWTDQCThBwiCHjCcg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[GT](https://lepiter.io/feenk/glamorous-toolkit-and-pharo-9q25tavxwfq6z1drwvegd5u9o/) is built on Pharo, using a new graphical stack, native windows, and a completely new set of tools."
 						}
 					]
 				},
@@ -209,7 +284,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T12:00:09.592437+01:00"
+									"dateAndTimeString" : "2022-02-08T17:21:35.853347+01:00"
 								}
 							},
 							"editEmail" : {
@@ -220,7 +295,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T12:00:09.592437+01:00"
+									"dateAndTimeString" : "2022-02-08T17:23:06.877813+01:00"
 								}
 							},
 							"uid" : {
@@ -230,118 +305,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "article by Alan Kay"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:05:40.568048+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:06:12.997736+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "h8g/YWKSDQCaKwjQCPhJLQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[ACM page](https://dl.acm.org/doi/10.1145/234286.1057828) with PDF link is freely available"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:05:45.570012+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:05:45.570012+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "+6L7YWKSDQCaMLF6CPhJLQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:03:05.17282+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:14:57.509794+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "GRHeV2KSDQCaFmMnCPhJLQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Pointer to story about Kay being inspired by Simula?"
+							"string" : "This [article by Alan Kay](https://dl.acm.org/doi/10.1145/234286.1057828) documents the history of Smalltalk, up to the standardization of Smalltak-80."
 						}
 					]
 				},
@@ -395,7 +359,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:12:06.866386+01:00"
+									"dateAndTimeString" : "2022-02-08T17:23:30.966704+01:00"
 								}
 							},
 							"editEmail" : {
@@ -406,23 +370,61 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:12:18.708257+01:00"
+									"dateAndTimeString" : "2022-02-08T17:25:04.586958+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "XgeReGKSDQCaPHjiCPhJLQ=="
+								"uidString" : "IoTX3uWTDQCTifrrCHjCcg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[Archive.org page](https://archive.org/details/byte-magazine-1981-08) with pdf download"
+							"string" : "In August, 1981, a [special issue of Byte magazine](https://archive.org/details/byte-magazine-1981-08) entirely devoted to Smalltalk was published. This issue was highly influential, and introduced the famous “Smalltalk balloon” meme."
 						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-01-20T11:01:45.099981+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-02-08T17:26:41.432993+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "rer/UmKSDQCZ/X+hCPhJLQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Memorable quote: *“we have a universe of well-behaved objects that courteously ask each other to carry out their various desires.”*"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -432,7 +434,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:01:21.079167+01:00"
+									"dateAndTimeString" : "2022-02-08T17:25:07.099851+01:00"
 								}
 							},
 							"editEmail" : {
@@ -443,91 +445,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:01:31.903878+01:00"
+									"dateAndTimeString" : "2022-02-08T17:26:27.916942+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "HMljUWKSDQCZ9pUMCPhJLQ=="
+								"uidString" : "bNKT5eWTDQCTjZOFCHjCcg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Pointer to article by Dan Ingalls “Design Principles Behind Smalltalk”"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:14:24.962824+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:14:38.073619+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "LzvqgGKSDQCaPyPzCPhJLQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Many links available, including [citeseer](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.1081.8113&rep=rep1&type=pdf) "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:01:45.099981+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-25T09:41:10.57357+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "rer/UmKSDQCZ/X+hCPhJLQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Quote: “we have a universe of well-behaved objects that courteously ask each other to carry out their various desires.”"
+							"string" : "The issue also contains several classic articles by members of Kay's team, including [“Design Principles Behind Smalltalk”](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.1081.8113&rep=rep1&type=pdf) by Dan Ingalls."
 						}
 					]
 				},
@@ -581,7 +509,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:06:39.324472+01:00"
+									"dateAndTimeString" : "2022-02-08T17:27:23.599225+01:00"
 								}
 							},
 							"editEmail" : {
@@ -592,17 +520,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:06:39.324472+01:00"
+									"dateAndTimeString" : "2022-02-08T17:40:02.87679+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "O8AhZWKSDQCaM3wSCPhJLQ=="
+								"uidString" : "St9r7eWTDQCTmZ8sCHjCcg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Smalltalk-80: The Language and Its Implementation"
+							"string" : "In the early 1980s, a series of books about Smalltalk were published by various members of the original team. As the covers of these books looked similar, but used different colors, they were commonly referred to as the [“Green Book”](https://wirfs-brock.com/allen/files/tek/SmalltalkBitsOfHistory-wirfs-brock-chapter.pdf) (*“Smalltalk-80: Bits of History, Words of Advice”*) the “[Red Book](http://stephane.ducasse.free.fr/FreeBooks/TheInteractiveProgrammingEnv/TheInteractiveProgrammingEnv.pdf)” (*“Smalltalk-80: The interactive Programming Environment”*), and so on."
 						},
 						{
 							"__type" : "textSnippet",
@@ -618,7 +546,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:07:26.988088+01:00"
+									"dateAndTimeString" : "2022-02-08T17:29:55.937541+01:00"
 								}
 							},
 							"editEmail" : {
@@ -629,91 +557,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:07:32.184904+01:00"
+									"dateAndTimeString" : "2022-02-08T17:40:11.174674+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "swTgZ2KSDQCaNqx4CPhJLQ=="
+								"uidString" : "S77K9uWTDQCTm5KpCHjCcg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[ACM PDF link](https://dl.acm.org/doi/pdf/10.5555/273)"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:10:57.482252+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:11:02.100047+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "hGVtdGKSDQCaOW1sCPhJLQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[ACM DL Page](https://dl.acm.org/doi/book/10.5555/273)"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:02:09.95697+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-20T11:02:14.00844+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "N+3IVGKSDQCaCGT+CPhJLQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Brief summary of contents"
+							"string" : "The most famous of these is probably the [Blue Book](https://dl.acm.org/doi/book/10.5555/273), or *“Smalltalk-80: The Language and Its Implementation”* by Adele Goldberg and David Robson. This book describes not only the design of Smalltalk's object model, but also the design of the core classes, as well as the bytecode of the virtual machine, which has largely remained unchanged in modern implementations of Smalltalk, including Pharo. "
 						}
 					]
 				},
@@ -736,7 +590,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T11:59:18.046407+01:00"
+						"dateAndTimeString" : "2022-02-08T17:40:23.259056+01:00"
 					}
 				},
 				"uid" : {
@@ -746,7 +600,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#The “Blue book”"
+				"string" : "#The “Blue Book”"
 			}
 		]
 	},
