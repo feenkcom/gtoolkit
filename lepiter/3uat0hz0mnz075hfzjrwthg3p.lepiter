@@ -40,6 +40,46 @@
 					"__type" : "textStyle"
 				},
 				"string" : "{{gtTodo:label=TBD}}"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-02-13T13:54:19.886353+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-02-13T13:54:19.886353+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "M9sIiUeUDQCVezMMC/TjQA=="
+				},
+				"exampleSelector" : "exampleMethodsExample",
+				"previewHeight" : 300,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "GtConnectorExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			}
 		]
 	},
