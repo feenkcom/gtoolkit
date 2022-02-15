@@ -12,6 +12,43 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-02-15T11:11:01.21596+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-02-15T11:11:15.096489+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "sR+6e22UDQChPcngD3Q2zw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[Yarn](https://en.wikipedia.org/wiki/Yarn_%28package_manager%29) is a package manager for Node.js JavaScript."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
 				"createTime" : {
@@ -23,13 +60,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-03-01T17:23:49.027556+01:00"
+						"dateAndTimeString" : "2022-02-15T11:09:02.035832+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is a page for parsing and visualizing `yarn.lock` files. The file can be dowloaded from a url or loaded from disk."
+				"string" : "This page describes how to parse and visualize `yarn.lock` files. A yarn file can be dowloaded from a url or loaded from disk."
 			},
 			{
 				"__type" : "textSnippet",

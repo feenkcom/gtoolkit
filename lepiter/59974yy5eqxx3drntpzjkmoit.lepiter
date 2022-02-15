@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:15:09.97493+02:00"
+						"dateAndTimeString" : "2022-02-15T11:18:02.783617+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit is implemented in Pharo (see [[Glamorous Toolkit and Pharo]]). Of course, it also comes with the tools necessary for making sense of Pharo code as well. One mechanism is related to querying code. This comes in the form of a fluent API can simply be as scripting."
+				"string" : "Glamorous Toolkit is implemented in Pharo (see [[Glamorous Toolkit and Pharo]]). Of course, it also comes with the tools necessary for making sense of Pharo code as well. One mechanism is related to querying code. This comes in the form of a fluent API that can used for scripting."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:15:22.475736+02:00"
+						"dateAndTimeString" : "2022-02-15T11:18:55.754741+01:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "They are small pieces of code, written in plain Pharo, that we can use to get information about a package, a class, a method or an object that satisfies one or more conditions."
+				"string" : "Queries are snippets of code, written in plain Pharo, that we can use to get information about a package, a class, a method or an object that satisfies one or more conditions."
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:23:27.35344+02:00"
+						"dateAndTimeString" : "2022-02-15T11:19:11.107625+01:00"
 					}
 				},
 				"uid" : {
@@ -187,7 +187,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's see an example: a search for all the methods annotated with the #gtView pragma."
+				"string" : "Let's see an example: a search for all the methods annotated with the `#gtView` pragma."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -243,7 +243,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:15:27.367377+02:00"
+						"dateAndTimeString" : "2022-02-15T11:20:37.163011+01:00"
 					}
 				},
 				"editEmail" : {
@@ -254,17 +254,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:44:41.107648+02:00"
+						"dateAndTimeString" : "2022-02-15T11:21:44.088455+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "307tFliADQCqiGZeCHfMWA=="
+					"uidString" : "Dv3/nm2UDQChxfrwD3Q2zw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Executing the query, opens up an inspector on the result which, in this case, is an instance of {{gtClass:GtSearchPragmasFilter}}. The filter instance knows how to present itself through a view that shows method widgets. The method widgets know how to match the input query to the abstract syntax tree nodes to produce the orange highlighting."
+				"string" : "Executing the query opens up an inspector on the result, which in this case is an instance of {{gtClass:GtSearchPragmasFilter}}. The filter instance knows how to present itself through a view that shows method widgets. The method widgets know how to match the input query to the abstract syntax tree nodes to produce the orange highlighting of the matched nodes."
 			},
 			{
 				"__type" : "textSnippet",
@@ -405,7 +405,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:27:21.490621+02:00"
+						"dateAndTimeString" : "2022-02-15T11:23:03.834228+01:00"
 					}
 				},
 				"uid" : {
@@ -415,7 +415,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now let's search for those methods above, plus the ones that implement a columnedTree view."
+				"string" : "Now let's search for those methods above, in addition to those that implement a columnedTree view."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -482,7 +482,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:27:19.856044+02:00"
+						"dateAndTimeString" : "2022-02-15T11:23:20.269291+01:00"
 					}
 				},
 				"uid" : {
@@ -492,7 +492,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Since queries are just plain Pharo code, we can combine them with Pharo methods like select: , collect: and others."
+				"string" : "Since queries are just plain Pharo code, we can combine them with Pharo methods like `select:` , `collect:` and others."
 			},
 			{
 				"__type" : "textSnippet",
@@ -633,7 +633,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:45:15.080217+02:00"
+						"dateAndTimeString" : "2022-02-15T11:24:06.414552+01:00"
 					}
 				},
 				"uid" : {
@@ -643,7 +643,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##What are filters? \rThey are predicates that work as conditions in the query.\r\rFor example, let's search certain methods in a certain package. The result will be an instance of {{gtClass:GtSearchIntersectionFilter}}, being the intersetion of two filters: {{gtClass:GtSearchReferencesFilter}} and {{gtClass:GtSearchMethodsWithPackagePatternFilter}}."
+				"string" : "##What are filters? \rFilters are predicates that work as conditions in a query.\r\rFor example, let's search for certain methods in a certain package. The result will be an instance of {{gtClass:GtSearchIntersectionFilter}}, being the intersection of two filters: {{gtClass:GtSearchReferencesFilter}} and {{gtClass:GtSearchMethodsWithPackagePatternFilter}}."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -710,7 +710,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:45:21.415305+02:00"
+						"dateAndTimeString" : "2022-02-15T11:26:21.619003+01:00"
 					}
 				},
 				"uid" : {
@@ -720,7 +720,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "There already exists a number of such predicates readily available. Below is a diagram of the {{gtClass:GtSearchFilter}} class hierarchy."
+				"string" : "A number of such predicates are readily available. Below is a diagram of the {{gtClass:GtSearchFilter}} class hierarchy."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -861,7 +861,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:36:09.489761+02:00"
+						"dateAndTimeString" : "2022-02-15T11:26:49.728347+01:00"
 					}
 				},
 				"uid" : {
@@ -871,7 +871,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "###Binary\rThe intersetion filter is a result of the & message. The result is a collection of elements that satisfy both the left side and the right side of the query."
+				"string" : "###Binary\rThe intersection filter is a result of sending the `&` message. The result is a collection of elements that satisfy both the left side and the right side of the query."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -938,7 +938,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:31:34.76669+02:00"
+						"dateAndTimeString" : "2022-02-15T11:27:08.087017+01:00"
 					}
 				},
 				"uid" : {
@@ -948,7 +948,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The union filter is a result of the | message. The result is a collection of elements that satisfy at least one of the query parts."
+				"string" : "The union filter is a result of sending the `|` message. The result is a collection of elements that satisfy at least one of the query parts."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -1474,7 +1474,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:35:37.356582+02:00"
+						"dateAndTimeString" : "2022-02-15T11:28:01.830229+01:00"
 					}
 				},
 				"uid" : {
@@ -1484,7 +1484,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### Methods\rThese allow us to perform various searches related to methods. For example, we can search methods in a certain package,"
+				"string" : "### Methods\rThese allow us to perform various searches related to methods. For example, we can search for methods in a certain package,"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -1551,7 +1551,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:36:56.767421+02:00"
+						"dateAndTimeString" : "2022-02-15T11:28:10.795129+01:00"
 					}
 				},
 				"uid" : {
@@ -1561,7 +1561,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "with a certain category,"
+				"string" : "within a certain category,"
 			},
 			{
 				"__type" : "exampleSnippet",
