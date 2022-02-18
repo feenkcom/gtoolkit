@@ -78,7 +78,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.417/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1225/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1226/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.733/src' ].
@@ -120,7 +120,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4gemstone:v0.6.299/src' ].
 		spec
 			baseline: 'GToolkit4Git' with: [
-				spec repository: 'github://feenkcom/gt4git:v0.8.153/src' ].
+				spec repository: 'github://feenkcom/gt4git:v0.8.154/src' ].
 		spec
 			baseline: 'GToolkit4Jenkins' with: [
 				spec repository: 'github://feenkcom/gt4jenkins:v0.8.28/src' ].
@@ -132,7 +132,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.708/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1225/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1226/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.280/src' ].
@@ -153,7 +153,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/lepiter:v0.6.404/src' ].
 		spec
 			baseline: 'GToolkit4Magritte' with: [
-				spec repository: 'github://feenkcom/gt4magritte:v0.6.22/src' ].
+				spec repository: 'github://feenkcom/gt4magritte:v0.6.23/src' ].
 
 		spec package: 'GToolkit-Extensions' with: [
 			spec requires: #('GToolkitCoder' 'GToolkit4Pharo' 'GToolkitSpotter') ].
