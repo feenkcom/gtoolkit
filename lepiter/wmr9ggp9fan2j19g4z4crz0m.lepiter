@@ -12,6 +12,43 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-02-21T10:42:53.760954+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-02-21T10:42:56.361781+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BxIIy+WUDQC0ckj1AQumiw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#TL;DR"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "tudor@tudorgirba.com"
 				},
 				"createTime" : {
@@ -23,13 +60,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:15:23.556984+02:00"
+						"dateAndTimeString" : "2022-02-21T10:43:03.27598+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Examples combine testing with documentation."
+				"string" : "We learn how an [[example]] method combines testing with documentation."
 			},
 			{
 				"__type" : "textSnippet",
@@ -97,13 +134,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:33:54.134124+02:00"
+						"dateAndTimeString" : "2022-02-21T09:36:49.490273+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let us imagine that we want to explain how to create a file with some contents. To store this example, we create a class and a unary method:"
+				"string" : "Let us imagine that we want to explain how to create a file with some content. To store this example, we create a class and a unary method:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -158,34 +195,34 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:20:18.019832+02:00"
+						"dateAndTimeString" : "2022-02-21T10:21:28.025272+01:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:35:05.13079+02:00"
+						"dateAndTimeString" : "2022-02-21T10:22:53.087618+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "4VnzsjTXAAAAAAAAAAAAAA=="
+					"uidString" : "hbSAfuWUDQC0Hcc7AQumiw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Apply the changes above either by creating the code manually or by clicking the apply button. Doing that, you should see the method here:"
+				"string" : "Apply the changes above either by creating the code manually or by clicking the apply button (checkmark). After doing that, you should see the method here:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -246,13 +283,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:35:18.201654+02:00"
+						"dateAndTimeString" : "2022-02-21T10:27:55.9578+01:00"
 					}
 				},
 				"uid" : {
@@ -262,7 +299,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The only special thing about the unary method is the pragma `<gtExample>` which converts any regular method into a {{gtClass:GtExample}}. The name of the method can be arbitrary."
+				"string" : "The only special thing about the unary method is the pragma `<gtExample>` which converts any regular method into a {{gtClass:GtExample}}. The name of the method can be anything."
 			},
 			{
 				"__type" : "textSnippet",
@@ -571,13 +608,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T16:23:06.920417+02:00"
+						"dateAndTimeString" : "2022-02-21T10:28:22.561226+01:00"
 					}
 				},
 				"uid" : {
@@ -587,7 +624,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "As examples return objects, we can use those objects to compose other objects that in their turn can also constitute examples. To support this, examples may be chained to form trees (or even graphs) of depending examples."
+				"string" : "As examples return objects, we can use those objects to compose other objects that in turn can also constitute examples. To support this, examples may be chained to form trees (or even graphs) of depending examples."
 			},
 			{
 				"__type" : "textSnippet",
@@ -613,13 +650,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "tudor@tudorgirba.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-22T16:23:18.09559+02:00"
+									"dateAndTimeString" : "2022-02-21T10:30:12.79207+01:00"
 								}
 							},
 							"uid" : {
@@ -629,7 +666,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[A] the file reference"
+							"string" : "[A] the file reference (`createFileInMemory`)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -650,13 +687,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "tudor@tudorgirba.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-22T16:23:20.191197+02:00"
+									"dateAndTimeString" : "2022-02-21T10:30:24.642325+01:00"
 								}
 							},
 							"uid" : {
@@ -666,7 +703,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[B] the string contents"
+							"string" : "[B] the string contents (`fileContents`)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -687,13 +724,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "tudor@tudorgirba.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-22T16:23:20.192427+02:00"
+									"dateAndTimeString" : "2022-02-21T10:30:31.639946+01:00"
 								}
 							},
 							"uid" : {
@@ -703,7 +740,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[C] the file name"
+							"string" : "[C] the file name (`fileName`)"
 						}
 					]
 				},
@@ -1075,6 +1112,83 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-02-21T10:33:28.827177+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-02-21T10:33:28.827177+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Fzd3qeWUDQC0XnLFAQumiw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Try the example. "
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-02-21T10:36:02.354794+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-02-21T10:36:02.354794+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "f+6dsuWUDQC0YKvgAQumiw=="
+				},
+				"exampleSelector" : "createFileInMemory",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtExamplesTutorial",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "tudor@tudorgirba.com"
 				},
 				"createTime" : {
@@ -1086,13 +1200,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T16:26:29.517687+02:00"
+						"dateAndTimeString" : "2022-02-21T10:33:58.154044+01:00"
 					}
 				},
 				"uid" : {
@@ -1102,7 +1216,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Try the example. At first sight, we got the same result. However, one issue with our current scenario is the side effect of leaving that file reside on disk. In this situation we would like to cleanup such artifacts after running an example. We can do that with the declaration of a so called after-method."
+				"string" : "At first glance, we got the same result. However, one issue with our current scenario is the side effect of leaving a file on disk. In this situation we would like to clean up such artifacts after running an example. We can do that with the declaration of a so called after-method."
 			},
 			{
 				"__type" : "changesSnippet",
@@ -1198,13 +1312,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T16:28:09.465773+02:00"
+						"dateAndTimeString" : "2022-02-21T10:35:24.853501+01:00"
 					}
 				},
 				"uid" : {
@@ -1214,7 +1328,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The after-method is a unary method that gets executed after the examples got executed. In our case, we wanted the after method to delete the newly created file. To this end, we stored lazily the file in an instance variable, and then simply delete it in the after method. When we perform the example from above, no file is left on the disk after the example finished running."
+				"string" : "The after-method is a unary method that is executed after the example is executed. In our case, we want the after method to delete the newly created file. To this end, we store the file lazily in an instance variable, and then simply delete it in the after method. When we run the example above, no file is left on the disk after the example has finished running."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1421,13 +1535,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T16:28:30.550718+02:00"
+						"dateAndTimeString" : "2022-02-21T10:38:09.054004+01:00"
 					}
 				},
 				"uid" : {
@@ -1437,7 +1551,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Examples, like tests, provide a way to encode and check assumptions, too. Welcome assertions:"
+				"string" : "Examples, like tests, provide a way to encode and check assumptions, with the help of assertions:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -1533,13 +1647,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T16:29:33.869365+02:00"
+						"dateAndTimeString" : "2022-02-21T10:38:18.48182+01:00"
 					}
 				},
 				"uid" : {
@@ -1549,7 +1663,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Failing assertions are being treated as unexpected exceptions and will result in a failing example (invalid)."
+				"string" : "Failing assertions are treated as unexpected exceptions and will result in a failing example (invalid)."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1649,13 +1763,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "tudor@tudorgirba.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-22T16:29:44.630638+02:00"
+									"dateAndTimeString" : "2022-02-21T10:38:34.927412+01:00"
 								}
 							},
 							"uid" : {
@@ -1665,7 +1779,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "tearDown: We can define behavior to cleanup after the example execution (like tearDown)."
+							"string" : "tearDown: We can define behavior to clean up after the example execution (like tearDown)."
 						}
 					]
 				},
@@ -1719,13 +1833,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T16:29:49.169548+02:00"
+						"dateAndTimeString" : "2022-02-21T10:39:05.978713+01:00"
 					}
 				},
 				"uid" : {
@@ -1735,7 +1849,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "But, with examples, we can go beyond what is typically possible with xUnit. As we have only example as a concept, we can write assertions even in \"setup\" examples or in after methods. Furthermore, we have a way to reuse code at multiple levels, not just two (i.e., setup/test). "
+				"string" : "But, with examples, we can go beyond what is typically possible with xUnit. As we have only examples as a concept, we can write assertions even in \"setup\" examples or in after methods. Furthermore, we have a way to reuse code at multiple levels, not just two (i.e., setup/test). "
 			},
 			{
 				"__type" : "textSnippet",
@@ -1756,13 +1870,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T16:29:49.170859+02:00"
+						"dateAndTimeString" : "2022-02-21T10:39:20.69952+01:00"
 					}
 				},
 				"uid" : {
@@ -1772,7 +1886,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To understand the dependencies, let's look at the current state of our examples, by inspecting the following code:"
+				"string" : "To understand the dependencies, let's look at the current state of our examples by inspecting the following code:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1827,13 +1941,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T16:30:27.044086+02:00"
+						"dateAndTimeString" : "2022-02-21T10:39:58.760019+01:00"
 					}
 				},
 				"uid" : {
@@ -1843,7 +1957,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In the map of examples, we see how examples depend on each other. We see that the top two examples (creating the file in memory and on disk) share one common example that provides the contents."
+				"string" : "In the map of examples (see the `Map` view), we see how examples depend on each other. We see that the top two examples (creating the file in memory and on disk) share one common example that provides the contents."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1864,13 +1978,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T16:30:27.04894+02:00"
+						"dateAndTimeString" : "2022-02-21T10:40:48.249883+01:00"
 					}
 				},
 				"uid" : {
@@ -1880,7 +1994,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "But, the situation can get more elaborate, enabling a more fine grained level of reuse. For example, take a look at these set of examples from Bloc:"
+				"string" : "But, the situation can get more elaborate, enabling more finely grained levels of reuse. For example, take a look at this set of examples from Bloc:"
 			},
 			{
 				"__type" : "pharoSnippet",
