@@ -60,20 +60,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-24T15:01:07.166427+02:00"
+						"dateAndTimeString" : "2022-02-24T10:00:56.76222+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "pq277F9/AAAAAAAAAAAAAA=="
 				},
-				"code" : "| credentials store |\rcredentials := IceSshCredentials new\r\thost:  #'*';\r\tusername: 'git';\r\tpublicKey: 'PATH/TO/id_rsa.pub';\r\tprivateKey: 'PATH/TO/id_rsa';\"\r\tkeyPassphrase: 'potential rsa passphrase';\"\r\tyourself.\rstore := IceCredentialStore current.\rstore storeSshCredential: credentials forHostname: credentials host.\rIceCredentialsProvider useCustomSsh: true."
+				"code" : "| credentials store |\rcredentials := IceSshCredentials new\r\thost:  #'*';\r\tusername: 'git';\r\tpublicKey: (FileLocator home / '.ssh/id_rsa.pub') pathString;\r\tprivateKey: (FileLocator home / '.ssh/id_rsa') pathString;\"\r\tkeyPassphrase: 'potential rsa passphrase';\"\r\tyourself.\rstore := IceCredentialStore current.\rstore storeSshCredential: credentials forHostname: credentials host.\rIceCredentialsProvider useCustomSsh: true."
 			},
 			{
 				"__type" : "textSnippet",
