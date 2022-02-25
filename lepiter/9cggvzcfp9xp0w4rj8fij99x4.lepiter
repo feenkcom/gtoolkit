@@ -323,13 +323,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "veit.heller@feenk.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-25T08:40:27.713384+01:00"
+									"dateAndTimeString" : "2022-02-25T09:51:48.355563+01:00"
 								}
 							},
 							"uid" : {
@@ -339,7 +339,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "From the Git tool, add the package."
+							"string" : "From the Git tool, add the package. (Go to the `Packages` tab and select the `+` button.)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -536,38 +536,76 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [ ]
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "veit.heller@feenk.com"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2022-02-25T09:55:37.386891+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "veit.heller@feenk.com"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2022-02-25T09:55:54.587183+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "XVBxmTWVDQC9lrqCAd6efg=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "```language=text\n[init]\n\tdefaultBranch = main\n```"
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
-											"emailString" : "<unknown>"
+											"emailString" : "veit.heller@feenk.com"
 										},
 										"createTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-02-25T09:09:27.396886+01:00"
+												"dateAndTimeString" : "2022-02-25T09:52:43.107654+01:00"
 											}
 										},
 										"editEmail" : {
 											"__type" : "email",
-											"emailString" : "<unknown>"
+											"emailString" : "veit.heller@feenk.com"
 										},
 										"editTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-02-25T09:10:24.332147+01:00"
+												"dateAndTimeString" : "2022-02-25T09:55:13.913692+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "V5AX9DSVDQCYzam4AandnQ=="
+											"uidString" : "GwoOjzWVDQC9labfAd6efg=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "NB: by default Iceberg looks for the branch called `master` but github changes it to `main`. You can either specify in github to change the default, or specifying in the script to look for main instead."
+										"string" : "NB: Git is currently changing the name of the default branch from `master` to `main`, which can mess things up. You can either explicitly refer to the branch to use in the script (as we see above), or you can change the default in your git configuration, i.e., edit the file `.gitconfig`, typically in your home directory, to include:"
 									}
 								]
 							},
