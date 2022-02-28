@@ -5,7 +5,7 @@ Class {
 		'monitor',
 		'subscriberMap'
 	],
-	#category : #'GToolkit-Pharo9-Deprecations-Subscription'
+	#category : #'GToolkit-Pharo9-Subscriptions'
 }
 
 { #category : #accessing }
