@@ -10,12 +10,13 @@ BaselineOfGToolkitForPharo9 >> baseline: spec [
 	spec for: #'common' do: [
 		spec
 			baseline: 'GToolkit' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1266/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1267/src' ].
 
 		spec package: 'GToolkit-Pharo9-Deprecations'.
 		spec package: 'GToolkit-Pharo9-Debugger'.
 		spec package: 'GToolkit-Pharo9-Subscriptions'.
+		spec package: 'GToolkit-Pharo9-Iceberg'.
 		spec package: 'GToolkit-Pharo9' with: [
-			spec requires: #('GToolkit-Pharo9-Deprecations' 'GToolkit-Pharo9-Debugger' 'GToolkit-Pharo9-Subscriptions' 'GToolkit') ].
+			spec requires: #('GToolkit-Pharo9-Deprecations' 'GToolkit-Pharo9-Debugger' 'GToolkit-Pharo9-Subscriptions' 'GToolkit-Pharo9-Iceberg' 'GToolkit') ].
 	]
 ]
