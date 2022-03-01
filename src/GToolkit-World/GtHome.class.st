@@ -71,13 +71,6 @@ GtHome >> createVersionLabel [
 ]
 
 { #category : #sections }
-GtHome >> documentationSection [
-"	<gtHomeSection>"
-	^ GtHomeDocumentationSection new
-		priority: 20  
-]
-
-{ #category : #sections }
 GtHome >> getStartedSection [
 	<gtHomeSection>
 	^ GtHomeGetStartedSection new 
