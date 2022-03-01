@@ -32,3 +32,29 @@ BaselineOf class >> gtDependencyAnalyzerFor: aView [
 			tooltip: 'Inspect dependency analyzer' 
 			action: [ :aButton | aButton phlow spawnObject: (GtDependencyAnalyzerEasy analyzeBaseline: self) ]
 ]
+
+{ #category : #'*GToolkit-Extensions' }
+BaselineOf class >> gtViewAllExamplesFor: aView [
+	<gtView>
+	<gtClassView>
+	^ aView forward
+		title: 'All Examples';
+		priority: 33;
+		tooltip: 'Examples defined in packages defined in the baseline or any direct and indirect dependency.';
+		object: [
+			GtRlSystemExamplesExplorer forProject: (self gtRlProjectWithRepository: '') ];
+		view: #gtViewAllExamplesFor:
+]
+
+{ #category : #'*GToolkit-Extensions' }
+BaselineOf class >> gtViewLocalExamplesFor: aView [
+	<gtView>
+	<gtClassView>
+	^ aView forward
+		title: 'Local Examples';
+		priority: 30;
+		tooltip: 'Examples defined in packages directly contained within the baseline.';
+		object: [
+			GtRlProjectExamplesExplorer forProject: (self gtRlProjectWithRepository: '') ];
+		view: #gtViewExamplesFor:
+]
