@@ -40,7 +40,7 @@ BaselineOf class >> gtViewAllExamplesFor: aView [
 	^ aView forward
 		title: 'All Examples';
 		priority: 33;
-		tooltip: 'Examples defined in packages defined in the baseline or any direct and indirect dependency.';
+		tooltip: 'Examples defined in packages contained in the baseline or in dependencies.';
 		object: [
 			GtRlSystemExamplesExplorer forProject: (self gtRlProjectWithRepository: '') ];
 		view: #gtViewAllExamplesFor:
