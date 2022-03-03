@@ -1,7 +1,7 @@
 Class {
 	#name : #GtHomeFeed,
 	#superclass : #BlElement,
-	#category : 'GToolkit-World-UI'
+	#category : #'GToolkit-World-UI'
 }
 
 { #category : #updating }
@@ -38,16 +38,16 @@ GtHomeFeed >> createPrivacyPolicyLinkAttribute [
 
 { #category : #initialization }
 GtHomeFeed >> createSectionWrapperFor: aSectionStencil [
-	^ BlLazyElement new
-			margin: (BlInsets all: 10);
-			layout: BlFrameLayout new;
-			withGlamorousPreview;
-			constraintsDo: [ :c |
-				c vertical exact: 100.
-				c horizontal fitContent ];
+
+	^ BrAsyncWidget new
+		  margin: (BlInsets all: 10);
+		  layout: BlFrameLayout new;
+		  constraintsDo: [ :c | 
+			  c vertical exact: 100.
+			  c horizontal fitContent ];
 			postAction: [ :theLazyElement | theLazyElement constraintsDo: [ :c | 
 				c vertical fitContent ] ];
-			elementBuilder: [ aSectionStencil asElement ]
+		  stencil: aSectionStencil
 ]
 
 { #category : #actions }

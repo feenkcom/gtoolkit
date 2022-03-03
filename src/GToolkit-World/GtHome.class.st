@@ -31,16 +31,15 @@ GtHome >> collectHomeSectionStencils [
 
 { #category : #building }
 GtHome >> createSectionWrapperFor: aSectionStencil [
-	^ BlLazyElement new
+	^ BrAsyncWidget new
 			margin: (BlInsets all: self spaceGap);
 			layout: BlFrameLayout new;
-			withGlamorousPreview;
 			constraintsDo: [ :c |
 				c vertical exact: 100.
 				c horizontal matchParent ];
 			postAction: [ :theLazyElement | theLazyElement constraintsDo: [ :c | 
 				c vertical fitContent ] ];
-			elementBuilder: [ aSectionStencil asElement ]
+			stencil: aSectionStencil
 ]
 
 { #category : #building }
