@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'resourcesTree'
 	],
-	#category : 'GToolkit-Monitor-External Resources'
+	#category : #'GToolkit-Monitor-External Resources'
 }
 
 { #category : #'instance creation' }
@@ -56,7 +56,7 @@ GtMonitoredExternalResourcesElement >> initialize [
 GtMonitoredExternalResourcesElement >> updateList [
 	self
 		enqueueTask:
-			(BlEnqueuedTaskItAction new
+			(BlEnqueuedFutureAction new
 				name: '[Monitor] External resources';
 				element: self;
 				action: [ self class allExternalResources ];
