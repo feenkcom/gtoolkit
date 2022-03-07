@@ -8,7 +8,7 @@ Class {
 	#instVars : [
 		'spacesList'
 	],
-	#category : 'GToolkit-Profiler'
+	#category : #'GToolkit-Profiler'
 }
 
 { #category : #'instance creation' }
@@ -81,7 +81,7 @@ GtProfilerSpacesElement >> initialize [
 GtProfilerSpacesElement >> updateList [
 	self
 		enqueueTask:
-			(BlEnqueuedTaskItAction new
+			(BlEnqueuedFutureAction new
 				name: '[Monitor] Bloc spaces';
 				element: self;
 				action: [ self allOpenedSpaces ];

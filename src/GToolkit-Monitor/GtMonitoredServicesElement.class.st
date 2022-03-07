@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'servicesList'
 	],
-	#category : 'GToolkit-Monitor'
+	#category : #'GToolkit-Monitor'
 }
 
 { #category : #initialization }
@@ -48,7 +48,7 @@ GtMonitoredServicesElement >> retreiveNewServiceList [
 GtMonitoredServicesElement >> updateList [
 	self
 		enqueueTask:
-			(BlEnqueuedTaskItAction new
+			(BlEnqueuedFutureAction new
 				name: self updateTaskName;
 				action: [ self retreiveNewServiceList ];
 				element: self;

@@ -47,7 +47,7 @@ GtMonitoredProcessElement >> stack [
 GtMonitoredProcessElement >> updateList [
 	self
 		enqueueTask:
-			(BlEnqueuedTaskItAction new
+			(BlEnqueuedFutureAction new
 				name: '[Monitor] Process Stack Update';
 				action: [ self stack ];
 				element: self;

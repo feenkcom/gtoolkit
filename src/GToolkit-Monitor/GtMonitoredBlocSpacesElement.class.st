@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'spacesList'
 	],
-	#category : 'GToolkit-Monitor-Bloc Spaces'
+	#category : #'GToolkit-Monitor-Bloc Spaces'
 }
 
 { #category : #'instance creation' }
@@ -84,7 +84,7 @@ GtMonitoredBlocSpacesElement >> initialize [
 GtMonitoredBlocSpacesElement >> updateList [
 	self
 		enqueueTask:
-			(BlEnqueuedTaskItAction new
+			(BlEnqueuedFutureAction new
 				name: '[Monitor] Bloc spaces';
 				element: self;
 				action: [ | allSpaces |

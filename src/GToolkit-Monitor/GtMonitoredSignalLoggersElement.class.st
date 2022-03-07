@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'loggersList'
 	],
-	#category : 'GToolkit-Monitor-Beacon Loggers'
+	#category : #'GToolkit-Monitor-Beacon Loggers'
 }
 
 { #category : #'instance creation' }
@@ -67,7 +67,7 @@ GtMonitoredSignalLoggersElement >> initialize [
 GtMonitoredSignalLoggersElement >> updateList [
 	self
 		enqueueTask:
-			(BlEnqueuedTaskItAction new
+			(BlEnqueuedFutureAction new
 				name: '[Monitor] Signal Loggers';
 				element: self;
 				action: [ | allLoggers |
