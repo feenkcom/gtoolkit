@@ -1,6 +1,16 @@
 Extension { #name : #GtVirtualMachine }
 
 { #category : #'*GToolkit-Extensions' }
+GtVirtualMachine >> gtEnabledSignals: aView [
+	<gtView>
+	
+	^ aView list
+		priority: 2;
+		title: 'Enabled signals';
+		items: [ self enabledSignals ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 GtVirtualMachine >> gtNamedPrimitives: aView [
 	<gtView>
 	
