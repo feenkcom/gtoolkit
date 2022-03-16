@@ -384,13 +384,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:48:10.312728+02:00"
+						"dateAndTimeString" : "2022-03-16T09:10:06.862514+01:00"
 					}
 				},
 				"uid" : {
@@ -400,7 +400,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To test the {{gtMethod:Card>>#flip}} method, you can try the following snippet receiving an exception:"
+				"string" : "To test the {{gtMethod:Card>>#flip}} method, you can try the following snippet, which will raise an exception:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -492,13 +492,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:52:23.137354+02:00"
+						"dateAndTimeString" : "2022-03-16T09:13:27.866515+01:00"
 					}
 				},
 				"uid" : {
@@ -508,7 +508,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Card actions should notify about card state changes. They announce events of type {{gtClass:CardFlipped}} and {{gtClass:CardDisappeared}}, as follows in the {{gtMethod:Card>>#notifyFlipped}} and {{gtMethod: Card>>#notifyDisappear}} methods. Graphical elements will have to register to these announcements as we will see later: "
+				"string" : "Card actions should notify subscribers about card state changes. They announce events of type {{gtClass:CardFlipped}} and {{gtClass:CardDisappeared}}, as follows in the {{gtMethod:Card>>#notifyFlipped}} and {{gtMethod: Card>>#notifyDisappear}} methods. Graphical elements will have to subscribe to these announcements as we will see later: "
 			},
 			{
 				"__type" : "changesSnippet",
@@ -564,13 +564,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:52:52.659539+02:00"
+						"dateAndTimeString" : "2022-03-16T09:13:16.745472+01:00"
 					}
 				},
 				"uid" : {
@@ -580,7 +580,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "At this moment, we are able to initialize a card and flip card sides:"
+				"string" : "Now we are able to initialize a card and flip it:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -672,13 +672,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:53:11.416065+02:00"
+						"dateAndTimeString" : "2022-03-16T09:13:52.003975+01:00"
 					}
 				},
 				"uid" : {
@@ -733,34 +733,34 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:57.873584+01:00"
+						"dateAndTimeString" : "2022-03-16T09:15:21.594026+01:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:53:24.971705+02:00"
+						"dateAndTimeString" : "2022-03-16T09:16:40.15547+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "X3CeLVg1AAAAAAAAAAAAAA=="
+					"uidString" : "5GVvQLOWDQCAdAmdBkigGA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "After creating the {{gtClass:Game}} class we add an {{gtMethod:Game>>#initialize}} method to set the card as not flipped, together with several accessors: "
+				"string" : "After creating the {{gtClass:Game}} class we add an {{gtMethod:Game>>#initialize}} method to create empty collections of available and chosen cards, and we provide accessors for them:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -816,13 +816,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:53:46.067054+02:00"
+						"dateAndTimeString" : "2022-03-16T09:17:17.237631+01:00"
 					}
 				},
 				"uid" : {
@@ -832,7 +832,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "At this moment we have a basic game object that cannot be initialized yet:"
+				"string" : "At this moment we have a basic game object that has no cards:"
 			},
 			{
 				"__type" : "pharoSnippet",
