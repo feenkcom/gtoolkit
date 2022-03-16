@@ -23,13 +23,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.097354+01:00"
+						"dateAndTimeString" : "2022-03-16T09:59:16.888402+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Game Logic"
+				"string" : "##Game Logic"
 			},
 			{
 				"__type" : "textSnippet",
@@ -60,13 +60,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:57:40.034018+02:00"
+						"dateAndTimeString" : "2022-03-16T09:48:48.279348+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Next, we need {{gtMethod:Game>>#chooseCard:}}, a method that is called when a user selects a card. This method is actually the most complex method of the model and implements the main logic of the game. First, the method makes sure that the chosen card is not already selected. This could happen if a player by chance click on a card more than once. Next, the card is flipped by sending it the message {{gtMethod:Card>>#flip}}. \rFinally, depending on the actual state of the game, the step is complete and the selected cards are either removed or flipped back:"
+				"string" : "Next, we need {{gtMethod:Game>>#chooseCard:}}, a method that is called when a user selects a card. This method is actually the most complex method of the model and implements the main logic of the game. First, the method makes sure that the chosen card is not already selected. This could happen if a player by chance clicks on a card more than once. Next, the card is flipped by sending it the message {{gtMethod:Card>>#flip}}. \rFinally, depending on the actual state of the game, the step is complete and the selected cards are either removed or flipped back:"
 			},
 			{
 				"__type" : "changesSnippet",

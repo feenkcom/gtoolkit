@@ -386,13 +386,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:57.947589+01:00"
+						"dateAndTimeString" : "2022-03-16T10:13:35.226676+01:00"
 					}
 				},
 				"uid" : {
@@ -402,7 +402,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our card have two sides, back and face that needs to be implemented. We implement them by composing two {{gtClass:BlElement}} objects, one representing the face side, another the back side."
+				"string" : "Our card has two sides, the back side and the face side, that need to be implemented. We implement them by composing two {{gtClass:BlElement}} objects, one representing the face side, another the back side."
 			},
 			{
 				"__type" : "textSnippet",
@@ -460,13 +460,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:00:14.582457+02:00"
+						"dateAndTimeString" : "2022-03-16T10:16:13.136674+01:00"
 					}
 				},
 				"uid" : {
@@ -476,7 +476,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's start with the back side, that will be represented by two diagonal lines, across the {{gtClass:CardElement}} card. To do so, we introduce a new `back` instance variable, that will be initialized in the {{gtMethod:CardElement>>#initialize}}:"
+				"string" : "Let's start with the back side, which will be represented by two diagonal lines, across the {{gtClass:CardElement}} card. To do so, we introduce a new `back` instance variable, that will be initialized in the {{gtMethod:CardElement>>#initialize}}:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -1433,13 +1433,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:57.947702+01:00"
+						"dateAndTimeString" : "2022-03-16T10:22:31.631155+01:00"
 					}
 				},
 				"uid" : {
@@ -1449,7 +1449,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "It should display the card's face side. The reason is that the graphical widget does not register to the card model changes in the {{gtMethod:CardElement>>#card:|expanded=true}} method."
+				"string" : "It should display the card's face side. The reason is that the graphical widget does not subscribe to the card model changes in the {{gtMethod:CardElement>>#card:|expanded=true}} method."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1470,13 +1470,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:03:08.687519+02:00"
+						"dateAndTimeString" : "2022-03-16T10:22:37.551686+01:00"
 					}
 				},
 				"uid" : {
@@ -1486,7 +1486,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The following code registers to the card {{gtClass:CardFlipped}} changes and updates the UI widget accordingly:"
+				"string" : "The following code subscribes to the card {{gtClass:CardFlipped}} changes and updates the UI widget accordingly:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -1542,13 +1542,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:57.947711+01:00"
+						"dateAndTimeString" : "2022-03-16T10:23:10.0729+01:00"
 					}
 				},
 				"uid" : {
@@ -1558,7 +1558,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The {{gtClass:CardElement}} now register to {{gtClass:Card}} changes in the {{gtMethod:CardElement>>#card:|expanded=true}} method:"
+				"string" : "The {{gtClass:CardElement}} now subscribes to {{gtClass:Card}} changes in the {{gtMethod:CardElement>>#card:|expanded=true}} method:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1690,13 +1690,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:03:33.778245+02:00"
+						"dateAndTimeString" : "2022-03-16T10:23:41.666228+01:00"
 					}
 				},
 				"uid" : {
@@ -1706,7 +1706,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To test the existing code, you can execute the following snippet that initialize a card and its element:"
+				"string" : "To test the existing code, you can execute the following snippet that initializes a card and its element:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1869,13 +1869,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:03:55.881645+02:00"
+						"dateAndTimeString" : "2022-03-16T10:24:00.96753+01:00"
 					}
 				},
 				"uid" : {
@@ -1885,7 +1885,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To make a card disappear from a game board, we will register to the {{gtClass:CardDisappeared}} announcement and set the card element's {{gtClass:BlVisibility}} as we do for the card flipping:"
+				"string" : "To make a card disappear from a game board, we will subscribe to the {{gtClass:CardDisappeared}} announcement and set the card element's {{gtClass:BlVisibility}} as we do for the card flipping:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -1941,13 +1941,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:57.947757+01:00"
+						"dateAndTimeString" : "2022-03-16T10:24:16.557574+01:00"
 					}
 				},
 				"uid" : {
@@ -1957,7 +1957,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:CardElement}} now registers to {{gtClass:CardDisappeared}} announcements at {{gtMethod:CardElement>>#card:|expanded=true}}:"
+				"string" : "{{gtClass:CardElement}} now subscribes to {{gtClass:CardDisappeared}} announcements at {{gtMethod:CardElement>>#card:|expanded=true}}:"
 			},
 			{
 				"__type" : "textSnippet",

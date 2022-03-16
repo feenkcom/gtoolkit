@@ -750,13 +750,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:08:13.696004+02:00"
+						"dateAndTimeString" : "2022-03-16T10:43:34.016088+01:00"
 					}
 				},
 				"uid" : {
@@ -766,7 +766,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here, we need to add one line to register the listener:"
+				"string" : "Here, we need to add one line to subscribe the listener:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -841,41 +841,38 @@
 				"string" : "We just finished the last piece of code to be able to play a game with numbers:"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.163861+01:00"
+						"dateAndTimeString" : "2022-03-16T10:44:06.904349+01:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.163861+01:00"
+						"dateAndTimeString" : "2022-03-16T10:44:07.839244+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "FGbKutWsAAAAAAAAAAAAAA=="
+					"uidString" : "NzLZfbSWDQCBP1WpBkigGA=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```height=500\r| aGame |\raGame := Game numbers.\rGameElement new game: aGame.\r```"
+				"code" : "| aGame |\raGame := Game numbers.\rGameElement new game: aGame."
 			},
 			{
 				"__type" : "textSnippet",
