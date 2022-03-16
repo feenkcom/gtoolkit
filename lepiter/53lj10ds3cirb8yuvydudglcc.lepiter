@@ -23,13 +23,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:42:26.038761+02:00"
+						"dateAndTimeString" : "2022-03-16T16:38:14.237149+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In this chapter, we will build the visual appearance of the cards step by step, using a {{gtClass:SpartaCanvas}} API. [[Sparta]] is an almost stateless vector graphics API for Pharo that provides bindings to the [Moz2D](https://wiki.mozilla.org/Platform/GFX/Moz2D) rendering backend. Moz2D is the extracted graphical engine from [Mozilla Firefox](https://en.wikipedia.org/wiki/Firefox) compiled as standalone shared library together with the external C bindings required to call the engine from Pharo."
+				"string" : "In this chapter, we will build the visual appearance of the cards step by step, using a {{gtClass:SpartaCanvas}} API. [[Sparta]] is an almost stateless vector graphics API for Pharo that provides bindings to the [Moz2D](https://wiki.mozilla.org/Platform/GFX/Moz2D) rendering backend. Moz2D is the extracted graphical engine from [Mozilla Firefox](https://en.wikipedia.org/wiki/Firefox) compiled as a standalone shared library together with the external C bindings required to call the engine from Pharo."
 			},
 			{
 				"__type" : "textSnippet",
@@ -60,13 +60,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:43:18.358523+02:00"
+						"dateAndTimeString" : "2022-03-16T16:38:29.931036+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The Bloc graphical engine uses Sparta to draw {{gtClass:BlElement}} graphical widgets. All Bloc visual objects subclass the {{gtClass:BlElement}}. Bloc widgets are drawn calling Sparta in {{gtMethod:BlElement>>#drawOnSpartaCanvas:}}, whic h is the method we will override in this section."
+				"string" : "The Bloc graphical engine uses Sparta to draw {{gtClass:BlElement}} graphical widgets. All Bloc visual objects subclass {{gtClass:BlElement}}. Bloc widgets are drawn calling Sparta in {{gtMethod:BlElement>>#drawOnSpartaCanvas:}}, whic h is the method we will override in this section."
 			},
 			{
 				"__type" : "textSnippet",
@@ -134,13 +134,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:12:47.567723+02:00"
+						"dateAndTimeString" : "2022-03-16T16:39:09.326124+01:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our graphic element, called {{gtClass:RawCardElement}}, representing a card will be a subclass of the {{gtClass:BlElement}} which has a reference to a card model:"
+				"string" : "Our graphic element representing a card, called {{gtClass:RawCardElement}}, will be a subclass of {{gtClass:BlElement}} which has a reference to a card model:"
 			},
 			{
 				"__type" : "changesSnippet",
