@@ -12,6 +12,43 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-16T16:59:00.94229+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-16T17:00:18.285358+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "d1R9urmWDQCbSY13DOBJhw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "**Caveat:** This tutorial is currently incomplete and may hang at times. {{gtTodo:label=To be fixed.}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "contact@feenk.com"
 				},
 				"createTime" : {
@@ -29,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-16T16:38:14.237149+01:00"
+						"dateAndTimeString" : "2022-03-16T16:40:31.519799+01:00"
 					}
 				},
 				"uid" : {
@@ -66,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-16T16:38:29.931036+01:00"
+						"dateAndTimeString" : "2022-03-16T16:40:31.529415+01:00"
 					}
 				},
 				"uid" : {
@@ -140,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-16T16:39:09.326124+01:00"
+						"dateAndTimeString" : "2022-03-16T16:40:31.611009+01:00"
 					}
 				},
 				"uid" : {
@@ -460,13 +497,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.056281+01:00"
+						"dateAndTimeString" : "2022-03-16T16:47:44.9686+01:00"
 					}
 				},
 				"uid" : {
@@ -476,7 +513,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our card have two sides, back and face, that needs to be implemented. We implement them by overriding the {{gtMethod:BlElement>>#drawOnSpartaCanvas:}} method."
+				"string" : "Our card has two sides, back and face, that need to be implemented. We implement them by overriding the {{gtMethod:BlElement>>#drawOnSpartaCanvas:}} method."
 			},
 			{
 				"__type" : "textSnippet",
@@ -534,13 +571,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:13:41.668918+02:00"
+						"dateAndTimeString" : "2022-03-16T16:47:52.978104+01:00"
 					}
 				},
 				"uid" : {
@@ -550,7 +587,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's start with the back side, that will be represented by two diagonal lines, across the {{gtClass:RawCardElement}} card. First, we need to define a basic card shape, represented by a rectangle:"
+				"string" : "Let's start with the back side, which will be represented by two diagonal lines, across the {{gtClass:RawCardElement}} card. First, we need to define a basic card shape, represented by a rectangle:"
 			},
 			{
 				"__type" : "changesSnippet",
