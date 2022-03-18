@@ -49,13 +49,13 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.097403+01:00"
+						"dateAndTimeString" : "2022-03-18T13:49:40.896278+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-16T09:48:48.279348+01:00"
+						"dateAndTimeString" : "2022-03-18T13:49:40.896278+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "BxFe8MvoAAAAAAAAAAAAAA=="
+					"uidString" : "disrUd+WDQCdfkg1AOKYcQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Next, we need {{gtMethod:Game>>#chooseCard:}}, a method that is called when a user selects a card. This method is actually the most complex method of the model and implements the main logic of the game. First, the method makes sure that the chosen card is not already selected. This could happen if a player by chance clicks on a card more than once. Next, the card is flipped by sending it the message {{gtMethod:Card>>#flip}}. \rFinally, depending on the actual state of the game, the step is complete and the selected cards are either removed or flipped back:"
+				"string" : "Next, we need `Game>>#chooseCard:`, a method that is called when a user selects a card. This method is actually the most complex method of the model and implements the main logic of the game. First, the method makes sure that the chosen card is not already selected. This could happen if a player by chance clicks on a card more than once. Next, the card is flipped by sending it the message {{gtMethod:Card>>#flip}}. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-18T13:50:39.818918+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-18T13:51:26.955856+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XaZcUd+WDQCdgLmMAOKYcQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If two cards are flipped and they match, they are made to disappear. If they don't match, when a third card is chosen to flip, the first two will be flipped back."
 			},
 			{
 				"__type" : "changesSnippet",
@@ -132,13 +169,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:57:53.495375+02:00"
+						"dateAndTimeString" : "2022-03-18T13:52:21.338321+01:00"
 					}
 				},
 				"uid" : {
@@ -148,7 +185,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's play with the  {{gtMethod:Game>>#chooseCard:}} method. By executing the following script, we obtain a random card flipped (face side visible):"
+				"string" : "Let's play with the  {{gtMethod:Game>>#chooseCard:}} method. By executing the following script, we flip a random card (face side visible):"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -169,20 +206,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:57:56.494055+02:00"
+						"dateAndTimeString" : "2022-03-18T13:51:56.972888+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "UiyjxKOBDQCJ5rLQB345NA=="
 				},
-				"code" : "aGame := Game numbers.\raGame chooseCard: aGame availableCards atRandom."
+				"code" : "aGame := Game numbers.\raGame chooseCard: aGame availableCards atRandom"
 			},
 			{
 				"__type" : "textSnippet",
@@ -240,20 +277,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:58:03.917242+02:00"
+						"dateAndTimeString" : "2022-03-18T13:52:43.31513+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "s38WxaOBDQCJ55U9B345NA=="
 				},
-				"code" : "aGame := Game numbers.\raGame chooseCard: aGame availableCards first.\raGame chooseCard: aGame availableCards second."
+				"code" : "aGame := Game numbers.\raGame chooseCard: aGame availableCards first.\raGame chooseCard: aGame availableCards second"
 			},
 			{
 				"__type" : "textSnippet",
@@ -274,13 +311,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:58:08.746289+02:00"
+						"dateAndTimeString" : "2022-03-18T13:52:54.654082+01:00"
 					}
 				},
 				"uid" : {
@@ -290,7 +327,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "And finally, by executing the following snippet, we will obtain a game state where the first two cards are flipped back (back-side) and third card is flipped (face side is visible):"
+				"string" : "And finally, by executing the next snippet, we will obtain a game state where the first two cards are flipped back (back-side) and third card is flipped (face side is visible):"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -311,20 +348,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:58:11.412733+02:00"
+						"dateAndTimeString" : "2022-03-18T13:53:14.642291+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "qCuJxaOBDQCJ6jqjB345NA=="
 				},
-				"code" : "aGame := Game numbers.\raGame chooseCard: aGame availableCards first.\raGame chooseCard: aGame availableCards second.\raGame chooseCard: aGame availableCards third."
+				"code" : "aGame := Game numbers.\raGame chooseCard: aGame availableCards first.\raGame chooseCard: aGame availableCards second.\raGame chooseCard: aGame availableCards third"
 			},
 			{
 				"__type" : "textSnippet",

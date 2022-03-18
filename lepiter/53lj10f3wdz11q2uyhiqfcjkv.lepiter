@@ -97,13 +97,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:04:55.019228+02:00"
+						"dateAndTimeString" : "2022-03-18T14:15:58.785165+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To this purpose, we will define {{gtClass:GameElement}}:"
+				"string" : "To this purpose, we will define `GameElement`:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -387,13 +387,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.163817+01:00"
+						"dateAndTimeString" : "2022-03-18T14:16:54.106465+01:00"
 					}
 				},
 				"uid" : {
@@ -403,7 +403,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The {{gtMethod:GameElement>>#onUpdated|expanded=true}} method then defines {{gtClass:BlGridLayout}} layout dimensions calling {{gtMethod:BlGridLayout>>#columnCount:}} and add all {{gtClass:CardElement}} instances representing cards."
+				"string" : "The {{gtMethod:GameElement>>#onUpdated|expanded=true}} method then defines {{gtClass:BlGridLayout}} layout dimensions calling {{gtMethod:BlGridLayout>>#columnCount:}} and adds all {{gtClass:CardElement}} instances representing cards."
 			},
 			{
 				"__type" : "textSnippet",
@@ -461,20 +461,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:07:23.968605+02:00"
+						"dateAndTimeString" : "2022-03-18T14:17:00.180042+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "3Et45qOBDQCKEZHEB345NA=="
 				},
-				"code" : "aGame := Game numbers.\rGameElement new game: aGame."
+				"code" : "aGame := Game numbers.\rGameElement new game: aGame"
 			},
 			{
 				"__type" : "textSnippet",
@@ -532,13 +532,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:07:39.253417+02:00"
+						"dateAndTimeString" : "2022-03-18T14:17:42.25884+01:00"
 					}
 				},
 				"uid" : {
@@ -548,7 +548,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If you try to click on cards above, you will notice that they do not flip as it is expected in this game. The reason is that we have not implemented a mouse click events yet. To handle the mouse click events, we will subclass {{gtClass:BlElementEventListener}}:"
+				"string" : "If you try to click on cards above, you will notice that they do not yet flip as is expected in this game. The reason is that we have not implemented mouse click events yet. To handle the mouse click events, we will subclass {{gtClass:BlEventListener}}: "
 			},
 			{
 				"__type" : "changesSnippet",
@@ -865,14 +865,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-16T10:44:07.839244+01:00"
+						"dateAndTimeString" : "2022-03-18T14:18:29.113494+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "NzLZfbSWDQCBP1WpBkigGA=="
 				},
-				"code" : "| aGame |\raGame := Game numbers.\rGameElement new game: aGame."
+				"code" : "| aGame |\raGame := Game numbers.\rGameElement new game: aGame"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1121,13 +1121,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.163884+01:00"
+						"dateAndTimeString" : "2022-03-18T14:19:00.163829+01:00"
 					}
 				},
 				"uid" : {
@@ -1137,7 +1137,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In this tutorial we will use {{gtClass:BlTransformAnimation}} to scale {{gtClass:CardElement}} when a mouse is over the card."
+				"string" : "In this tutorial we will use {{gtClass:BlTransformAnimation}} to scale a {{gtClass:CardElement}} when a mouse is over the card."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1304,20 +1304,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:10:47.155036+02:00"
+						"dateAndTimeString" : "2022-03-18T14:19:11.242826+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "FnGO8qOBDQCKK9TsB345NA=="
 				},
-				"code" : "aGame := Game numbers.\rGameElement new game: aGame."
+				"code" : "aGame := Game numbers.\rGameElement new game: aGame"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1484,20 +1484,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:11:19.686475+02:00"
+						"dateAndTimeString" : "2022-03-18T14:19:24.634941+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "WzqH9KOBDQCKLoE2B345NA=="
 				},
-				"code" : "aGame := Game numbers.\rGameElement new game: aGame."
+				"code" : "aGame := Game numbers.\rGameElement new game: aGame"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1738,20 +1738,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:11:55.101491+02:00"
+						"dateAndTimeString" : "2022-03-18T14:19:57.410912+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "uMKj9qOBDQCKM2xWB345NA=="
 				},
-				"code" : "aGame := Game numbers.\rGameElement new game: aGame."
+				"code" : "aGame := Game numbers.\rGameElement new game: aGame"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1809,13 +1809,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.16395+01:00"
+						"dateAndTimeString" : "2022-03-18T14:20:22.185322+01:00"
 					}
 				},
 				"uid" : {
@@ -1825,78 +1825,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You just finished the tutorial. You can play the game executing the code snippet above, or challenge yourself playing with emojis or chinese symbols."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "contact@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.163955+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:12:00.965242+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "2YyQIZN/AAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Emojis:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:12:04.079428+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:12:04.414857+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "eRMx96OBDQCKNjYsB345NA=="
-				},
-				"code" : "aGame := Game emoji.\rGameElement new game: aGame."
+				"string" : "You just finished the tutorial. You can play the game executing the code snippet above."
 			}
 		]
 	},

@@ -97,13 +97,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:59:33.739247+02:00"
+						"dateAndTimeString" : "2022-03-18T13:54:10.66703+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our graphic element, called {{gtClass:CardElement}}, representing a card will be a subclass of the {{gtClass:BlElement}} which has a reference to a card model:"
+				"string" : "Our graphic element, called `CardElement`, representing a card will subclass {{gtClass:BlElement}} and have a reference to a card model:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -392,7 +392,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-16T10:13:35.226676+01:00"
+						"dateAndTimeString" : "2022-03-18T13:55:12.192128+01:00"
 					}
 				},
 				"uid" : {
@@ -402,7 +402,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our card has two sides, the back side and the face side, that need to be implemented. We implement them by composing two {{gtClass:BlElement}} objects, one representing the face side, another the back side."
+				"string" : "Our card has two sides, the back side and the face side, that need to be implemented. We implement them by composing two {{gtClass:BlElement}} objects, one for the face, and the other the back."
 			},
 			{
 				"__type" : "textSnippet",
@@ -595,6 +595,80 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-18T13:56:55.956012+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-18T13:57:06.845768+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+6MZa9+WDQCdij9AAOKYcQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "By creating an element instance, we should be able to observe a back side card that looks like this:"
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-18T13:57:10.426457+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-18T13:58:04.65069+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "enf2a9+WDQCdi472AOKYcQ=="
+				},
+				"code" : "GtMemoryCardElement new",
+				"elementHeight" : 100,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "contact@feenk.com"
 				},
 				"createTime" : {
@@ -606,13 +680,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:00:43.005595+02:00"
+						"dateAndTimeString" : "2022-03-18T13:56:55.959128+01:00"
 					}
 				},
 				"uid" : {
@@ -622,7 +696,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By creating an element instance, we should be able to observe a back side card. To do so, execute the following snippet:"
+				"string" : "To do so, execute the following snippet:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -643,20 +717,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:00:46.913709+02:00"
+						"dateAndTimeString" : "2022-03-18T13:56:05.342121+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "vP3NzqOBDQCJ8DrkB345NA=="
 				},
-				"code" : "CardElement new."
+				"code" : "CardElement new"
 			},
 			{
 				"__type" : "textSnippet",
@@ -860,20 +934,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:01:24.607563+02:00"
+						"dateAndTimeString" : "2022-03-18T13:59:24.796568+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Vj8N0aOBDQCJ9TrvB345NA=="
 				},
-				"code" : "CardElement new."
+				"code" : "CardElement new"
 			},
 			{
 				"__type" : "textSnippet",
@@ -894,13 +968,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:01:30.51185+02:00"
+						"dateAndTimeString" : "2022-03-18T13:59:44.250105+01:00"
 					}
 				},
 				"uid" : {
@@ -910,7 +984,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To be able to see face side, we can implement a method that switch the face- and back- side visibility:"
+				"string" : "To be able to see face side, we can implement a method that toggles the face- and back- side visibility:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -1040,20 +1114,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:02:09.983727+02:00"
+						"dateAndTimeString" : "2022-03-18T14:00:20.24784+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ZH/E06OBDQCJ+OxVB345NA=="
 				},
-				"code" : "CardElement new onFlippedFace."
+				"code" : "CardElement new onFlippedFace"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1148,20 +1222,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:02:19.317939+02:00"
+						"dateAndTimeString" : "2022-03-18T14:00:44.015082+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/tVQ1KOBDQCJ+eenB345NA=="
 				},
-				"code" : "CardElement new layout."
+				"code" : "CardElement new layout"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1254,13 +1328,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:02:53.169962+02:00"
+						"dateAndTimeString" : "2022-03-18T14:02:08.906372+01:00"
 					}
 				},
 				"uid" : {
@@ -1270,7 +1344,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now, the face symbol should be centered:"
+				"string" : "Now, the face symbol should be centered, and look like this:"
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-18T14:01:05.772184+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-18T14:01:41.597016+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "so79ed+WDQCdlvjbAOKYcQ=="
+				},
+				"code" : "GtMemoryCardElement new onFlippedFace",
+				"elementHeight" : 100,
+				"codeHeight" : 50,
+				"codeVisible" : false
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1291,20 +1402,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:02:56.052936+02:00"
+						"dateAndTimeString" : "2022-03-18T14:00:54.881105+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "XLGA1qOBDQCJ/JaQB345NA=="
 				},
-				"code" : "CardElement new onFlippedFace."
+				"code" : "CardElement new onFlippedFace"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1362,13 +1473,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:03:00.379335+02:00"
+						"dateAndTimeString" : "2022-03-18T14:02:31.292223+01:00"
 					}
 				},
 				"uid" : {
@@ -1378,7 +1489,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Tu summarize current progress, we have the game model, including {{gtClass:Card}}, {{gtClass:Game}}, and announcements {{gtClass:CardFlipped}} and {{gtClass:CardDisappeared}}. The UI element {{gtClass:CardElement}} can display back and face card sides. The UI element does not reflect the model changes as we can check by executing the following snippet:"
+				"string" : "Tu summarize our current progress, we have the game model, including {{gtClass:Card}}, {{gtClass:Game}}, and announcements {{gtClass:CardFlipped}} and {{gtClass:CardDisappeared}}. The UI element {{gtClass:CardElement}} can display back and face card sides. The UI element does not yet reflect the model changes as we can check by executing the following snippet:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1399,20 +1510,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:03:02.655669+02:00"
+						"dateAndTimeString" : "2022-03-18T14:02:25.523164+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "pLTn1qOBDQCJ/ewlB345NA=="
 				},
-				"code" : "aCard := Card new.\raCard flip.\rCardElement new card: aCard."
+				"code" : "aCard := Card new.\raCard flip.\rCardElement new card: aCard"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1476,7 +1587,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-16T10:22:37.551686+01:00"
+						"dateAndTimeString" : "2022-03-18T14:02:57.225574+01:00"
 					}
 				},
 				"uid" : {
@@ -1486,7 +1597,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The following code subscribes to the card {{gtClass:CardFlipped}} changes and updates the UI widget accordingly:"
+				"string" : "The following code subscribes to the card's {{gtClass:CardFlipped}} changes and updates the UI widget accordingly:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -1727,20 +1838,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:03:35.822802+02:00"
+						"dateAndTimeString" : "2022-03-18T14:03:32.908742+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "197h2KOBDQCKAHJTB345NA=="
 				},
-				"code" : "aCardOne := Card new symbol: $A.\raCardOneElement := CardElement new card: aCardOne."
+				"code" : "aCardOne := Card new symbol: $A.\raCardOneElement := CardElement new card: aCardOne"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1761,13 +1872,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:03:38.549388+02:00"
+						"dateAndTimeString" : "2022-03-18T14:05:16.155618+01:00"
 					}
 				},
 				"uid" : {
@@ -1777,7 +1888,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To switch card side, execute several times the following snippet and observe the changes in the result above:"
+				"string" : "To switch card side, execute several times the following snippet (NB: `Evaluate`, not `Inspect`) and observe the changes in the adjacent pane:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1798,20 +1909,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:03:41.044058+02:00"
+						"dateAndTimeString" : "2022-03-18T14:03:40.388322+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "HU4u2aOBDQCKAeC8B345NA=="
 				},
-				"code" : "aCardOne flip."
+				"code" : "aCardOne flip"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1978,13 +2089,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:57.947763+01:00"
+						"dateAndTimeString" : "2022-03-18T14:05:37.761504+01:00"
 					}
 				},
 				"uid" : {
@@ -1994,7 +2105,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The {{gtMethod:CardElement>>#onDisappear|expanded=true}} is implemented by changing the element visibility:"
+				"string" : "The {{gtMethod:CardElement>>#onDisappear|expanded=true}} is implemented by changing the element's visibility:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -2015,13 +2126,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:04:17.157614+02:00"
+						"dateAndTimeString" : "2022-03-18T14:06:06.892607+01:00"
 					}
 				},
 				"uid" : {
@@ -2031,7 +2142,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By displaying the card:"
+				"string" : "By displaying the card (`Inspect`):"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -2052,20 +2163,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:04:19.486286+02:00"
+						"dateAndTimeString" : "2022-03-18T14:05:42.009122+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ONZ526OBDQCKBtsqB345NA=="
 				},
-				"code" : "aCardTwo := Card new symbol: $B.\raCardTwoElement := CardElement new card: aCardTwo."
+				"code" : "aCardTwo := Card new symbol: $B.\raCardTwoElement := CardElement new card: aCardTwo"
 			},
 			{
 				"__type" : "textSnippet",
@@ -2086,13 +2197,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:04:23.455818+02:00"
+						"dateAndTimeString" : "2022-03-18T14:06:18.48928+01:00"
 					}
 				},
 				"uid" : {
@@ -2102,7 +2213,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "we can make it disappear by executing the following snippet:"
+				"string" : "we can make it disappear by executing (`Evaluate`) the following snippet:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -2123,20 +2234,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:04:25.717191+02:00"
+						"dateAndTimeString" : "2022-03-18T14:05:55.266347+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ZMXZ26OBDQCKCPCKB345NA=="
 				},
-				"code" : "aCardTwo disappear."
+				"code" : "aCardTwo disappear"
 			},
 			{
 				"__type" : "textSnippet",
@@ -2157,13 +2268,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:57.947785+01:00"
+						"dateAndTimeString" : "2022-03-18T14:06:25.494872+01:00"
 					}
 				},
 				"uid" : {
@@ -2173,7 +2284,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Notice, that we do not have an `appear` action as the game does not require it."
+				"string" : "Notice that we do not have an `appear` action as the game does not require it."
 			},
 			{
 				"__type" : "textSnippet",
