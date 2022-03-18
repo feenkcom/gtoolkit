@@ -23,13 +23,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.111371+01:00"
+						"dateAndTimeString" : "2022-03-18T09:48:48.269183+01:00"
 					}
 				},
 				"uid" : {
@@ -60,13 +60,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:50:16.025306+02:00"
+						"dateAndTimeString" : "2022-03-18T09:46:34.010938+01:00"
 					}
 				},
 				"uid" : {
@@ -76,41 +76,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The following figure shows the game after the first selection of two cards. Faced-down cards are represented with a cross and turned cards with their number: "
+				"string" : "The following live example shows the game after the first selection of two cards. Faced-down cards are represented with a cross and turned cards with their number: "
 			},
 			{
-				"__type" : "pictureSnippet",
+				"__type" : "elementSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:50:07.799407+02:00"
+						"dateAndTimeString" : "2022-03-18T09:46:45.236618+01:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:50:10.668384+02:00"
+						"dateAndTimeString" : "2022-03-18T09:47:20.411045+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "muBPf6SBDQCKZq0NB345NA=="
+					"uidString" : "pENk7NuWDQCwFFq6DzX4Jg=="
 				},
-				"url" : "attachments/53lj10b11sa32u43jn7ylsxrl/memoryExample0.png"
+				"code" : "GtMemoryGameExamples new chooseMisMatchingPair",
+				"elementHeight" : 366,
+				"codeHeight" : 50,
+				"codeVisible" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -137,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-16T09:33:16.623229+01:00"
+						"dateAndTimeString" : "2022-03-18T09:49:04.509519+01:00"
 					}
 				},
 				"uid" : {
@@ -147,10 +150,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The following figure shows the same game after a few rounds. While this game can be played by multiple players, in this tutorial we will build a game with just one player: "
+				"string" : "The following example shows the same game after a few rounds. While this game can be played by multiple players, in this tutorial we will build a game with just one player: "
 			},
 			{
-				"__type" : "pictureSnippet",
+				"__type" : "elementSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -163,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-16T09:32:56.328344+01:00"
+						"dateAndTimeString" : "2022-03-18T09:47:52.867429+01:00"
 					}
 				},
 				"editEmail" : {
@@ -174,14 +177,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-16T09:33:03.882082+01:00"
+						"dateAndTimeString" : "2022-03-18T09:48:16.863804+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "rmBNf7OWDQCAoB09BkigGA=="
+					"uidString" : "ezps8NuWDQCwG6msDzX4Jg=="
 				},
-				"url" : "attachments/53lj10fznqo2indw073wbzq96/memoryExample1.png"
+				"code" : "GtMemoryGameExamples new afterSomeMoves",
+				"elementHeight" : 369,
+				"codeHeight" : 50,
+				"codeVisible" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-18T09:49:31.962335+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-18T09:50:45.744517+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FxLw9duWDQCwI+PdDzX4Jg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Please note that the live examples are from an existing complete implementation called {{gtClass:name=GtMemoryGame}}. We will, however, build a new implementation from scratch."
 			},
 			{
 				"__type" : "textSnippet",
