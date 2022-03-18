@@ -14,7 +14,7 @@ Class {
 		'eventTypes',
 		'eventTypesList'
 	],
-	#category : 'GToolkit-Monitor-Glutin Events Logger'
+	#category : #'GToolkit-Monitor-Glutin Events Logger'
 }
 
 { #category : #initialization }
@@ -300,14 +300,14 @@ GtMonitorGlutinEventsElement >> visitKeyboardInputEvent: anEvent [
 			BrLabel new
 				aptitude: BrGlamorousLabelAptitude new;
 				text: ('Key {1}' format: {
-					anEvent state = GlutinEventInputElementState Pressed
+					anEvent state = WinitEventInputElementState Pressed
 						ifTrue: [ 'pressed' ]
 						ifFalse: [ 'released' ] }).
 			BlElement new
 				width: 2;
 				height: 0.
 
-			anEvent state = GlutinEventInputElementState Pressed
+			anEvent state = WinitEventInputElementState Pressed
 				ifTrue: [ BrGlamorousVectorIcons downwards asElement ]
 				ifFalse: [ BrGlamorousVectorIcons upwards asElement ].
 			
@@ -352,18 +352,18 @@ GtMonitorGlutinEventsElement >> visitMouseInputEvent: anEvent [
 			BrLabel new
 				aptitude: BrGlamorousLabelAptitude new;
 				text: ('Mouse {1}' format: {
-					anEvent state = GlutinEventInputElementState Pressed
+					anEvent state = WinitEventInputElementState Pressed
 						ifTrue: [ 'pressed' ]
 						ifFalse: [ 'released' ] }).
 			BlElement new
 				width: 2;
 				height: 0.
 
-			anEvent state = GlutinEventInputElementState Pressed
+			anEvent state = WinitEventInputElementState Pressed
 				ifTrue: [ BrGlamorousVectorIcons downwards asElement ]
 				ifFalse: [ BrGlamorousVectorIcons upwards asElement ].
 			
-			self newButtonElement: (anEvent button button_type = GlutinEventMouseButtonType Other
+			self newButtonElement: (anEvent button button_type = WinitEventMouseButtonType Other
 				ifTrue: [ anEvent button button_code asString ]
 				ifFalse: [ anEvent button button_type item asString ]). }
 ]
