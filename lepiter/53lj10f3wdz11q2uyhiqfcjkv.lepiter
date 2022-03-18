@@ -1195,13 +1195,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T10:10:14.795735+02:00"
+						"dateAndTimeString" : "2022-03-16T16:32:07.909241+01:00"
 					}
 				},
 				"uid" : {
@@ -1211,7 +1211,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In the following part, we will learn how to enlarge a card when we move a mouse over. To do so, we add a method to the {{gtClass:CardEventListener}}:"
+				"string" : "In the following part, we will learn how to enlarge a card when we move a mouse over it. To do so, we add a method to the {{gtClass:CardEventListener}}:"
 			},
 			{
 				"__type" : "changesSnippet",
@@ -1544,6 +1544,43 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-16T16:34:17.368055+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-03-16T16:34:17.368055+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ImgrYrmWDQCkI+LTD0nGLA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The just written code has a potential issue. If you move your mouse fast enough, enlarging and shrinking animations will be in a queue at a same time, using {{gtMethod:BlElement>>#addAnimation:}} and executed in parallel. It means, that the {{gtMethod:CardEventListener>>#mouseLeaveEvent:}} animation is performed while the {{gtMethod:CardEventListener>>#mouseEnterEvent:}} animation is not over yet. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "contact@feenk.com"
 				},
 				"createTime" : {
@@ -1555,13 +1592,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.163928+01:00"
+						"dateAndTimeString" : "2022-03-16T16:34:17.374035+01:00"
 					}
 				},
 				"uid" : {
@@ -1571,7 +1608,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The just written code has a potential issue. If you move your mouse fast enough, enlarging and shrinking animations will be at a queue at a same time, using {{gtMethod:BlElement>>#addAnimation:}} and executed in parallel. It means, that the {{gtMethod:CardEventListener>>#mouseLeaveEvent:}} animation is performed while the {{gtMethod:CardEventListener>>#mouseEnterEvent:}} animation is not over yet. Same issue happens if the {{gtMethod:CardEventListener>>#mouseLeaveEvent:}} animation is not over yet and we add the {{gtMethod:CardEventListener>>#mouseEnterEvent:}} animation."
+				"string" : "The same issue arises if the {{gtMethod:CardEventListener>>#mouseLeaveEvent:}} animation is not over yet and we add the {{gtMethod:CardEventListener>>#mouseEnterEvent:}} animation."
 			},
 			{
 				"__type" : "textSnippet",
