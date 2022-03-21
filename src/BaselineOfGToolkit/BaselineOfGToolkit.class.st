@@ -104,7 +104,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4gemstone:main/src' ];
 			baseline: 'GToolkit4Git' with: [
 				spec repository: 'github://feenkcom/gt4git:main/src' ];
-			baseline: 'GToolkit4Epicea' with: [
+			baseline: 'GToolkit4Changes' with: [
 				spec repository: 'github://feenkcom/gt4changes:main/src' ];
 			baseline: 'GToolkit4Jenkins' with: [
 				spec repository: 'github://feenkcom/gt4jenkins:main/src' ];
