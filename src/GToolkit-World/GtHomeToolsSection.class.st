@@ -62,7 +62,7 @@ GtHomeToolsSection >> newCodeChangesButtonStencil [
 			self
 				showSpaceWithIcon: (BrGlamorousVectorIcons changes asElement asPannableElement size: 16@16)
 				title: 'Code Changes'
-				with: (GtInspector createOn: GtEpicea allInSessionStore) maximized
+				with: GtEpiceaStencil new
 				from: card ];
 		description:
 			'Browse the local code changes from the current and previous sessions.'
