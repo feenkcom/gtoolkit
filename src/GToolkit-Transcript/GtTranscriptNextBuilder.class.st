@@ -90,6 +90,11 @@ GtTranscriptNextBuilder >> fontSize: aNumber [
 	self attribute: (BlFontSizeAttribute size: aNumber)
 ]
 
+{ #category : #attributes }
+GtTranscriptNextBuilder >> foreground: aColor [
+	self attribute: (BlTextForegroundAttribute paint: aColor)
+]
+
 { #category : #initialize }
 GtTranscriptNextBuilder >> initialize [
 	attributes := OrderedCollection with: (BlFontFamilyAttribute named: 'Source Code Pro')

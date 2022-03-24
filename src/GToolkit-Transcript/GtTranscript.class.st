@@ -37,6 +37,14 @@ GtTranscript class >> installDefault [
 	Smalltalk globals at: #Transcript put: self default.
 ]
 
+{ #category : #accessing }
+GtTranscript class >> streamContents: aBlock [
+	| temp |
+	temp := self new.
+	aBlock value: temp.
+	^ temp textDo: #yourself
+]
+
 { #category : #'api - streaming' }
 GtTranscript >> << anObject [
 	self show: anObject
