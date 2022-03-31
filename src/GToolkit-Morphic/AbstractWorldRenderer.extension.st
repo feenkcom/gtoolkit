@@ -4,12 +4,6 @@ Extension { #name : #AbstractWorldRenderer }
 AbstractWorldRenderer class >> openMorphicWorld [
 	| aRenderer aWorld |
 	
-	self class environment
-		at: #ThreadedFFIMigration
-		ifPresent: [ :aThreadedFFIMigration |
-			aThreadedFFIMigration threadedFFIAvailable ifFalse: [
-				self error: 'Morphic World can only be run when Threaded FFI is available.  See the class comments in ThreadedFFIMigration for more information.' ] ].
-
 	aWorld := self currentWorld.
 	
 	aWorld worldState worldRenderer class = self
