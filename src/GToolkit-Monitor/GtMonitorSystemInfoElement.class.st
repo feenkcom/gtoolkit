@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'infos'
 	],
-	#category : 'GToolkit-Monitor-System Info'
+	#category : #'GToolkit-Monitor-System Info'
 }
 
 { #category : #'private - elements' }
@@ -15,10 +15,10 @@ GtMonitorSystemInfoElement >> buildGlutinEventLoopInfo [
 		ifFalse: [ ^ BlElement new size: 0@0 ].
 
 	self class environment
-		at: #GlutinEventFetcher
+		at: #RustWindowingEventFetcher
 		ifAbsent: [ ^ BlElement new size: 0@0 ].
 
-	anEventLoop := (self class environment at: #GlutinEventFetcher) default eventLoop.
+	anEventLoop := (self class environment at: #RustWindowingEventFetcher) default eventLoop.
 
 	^ self buildSectionContainer
 		addChild: (self buildSectionLabelNamed: 'System');
@@ -99,8 +99,8 @@ GtMonitorSystemInfoElement >> initialize [
 GtMonitorSystemInfoElement >> initializeSystemInfo [
 	infos removeChildren.
 	
-	infos addChild: self buildGlutinEventLoopInfo.
-	infos addChild: self buildSkiaCompositorsInfo.
+	"infos addChild: self buildGlutinEventLoopInfo.
+	infos addChild: self buildSkiaCompositorsInfo."
 ]
 
 { #category : #'private - elements' }
