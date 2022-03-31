@@ -1,34 +1,29 @@
 #!/bin/bash
-set -o xtrace
 set -e
 
 export GTfolder=/var/www/html/gt
 
 cd $GTfolder
 
-version=$(cat $GTfolder/GlamorousToolkitWin64-release)
-vn="$(cut -d '.' -f3 <<<$version)"
-previous="$(($vn - 1))"
-sed -i "s/${vn}/${previous}/g" $GTfolder/GlamorousToolkitWin64-release
-version=$(cat $GTfolder/GlamorousToolkitWin64-release)
-cp $version $GTfolder/GlamorousToolkitWin64-release.zip
+function rollback {
+        local release_archive_name=$(cat $GTfolder/GlamorousToolkit$1-release)
+        local yank_version_number="$(cut -d '.' -f3 <<< $release_archive_name)"
+        local rollback_version="$($yank_version_number - 1)"
 
-version=$(cat $GTfolder/GlamorousToolkitOSX64-release)
-vn="$(cut -d '.' -f3 <<<$version)"
-previous="$(($vn - 1))"
-sed -i "s/${vn}/${previous}/g" $GTfolder/GlamorousToolkitOSX64-release
-version=$(cat $GTfolder/GlamorousToolkitOSX64-release)
-cp $version $GTfolder/GlamorousToolkitOSX64-release.zip
+        echo "[$1] We yank $yank_version_number and rollback to $rollback_version"
 
-version=$(cat $GTfolder/GlamorousToolkitLinux64-release)
-vn="$(cut -d '.' -f3 <<<$version)"
-previous="$(($vn - 1))"
-sed -i "s/${vn}/${previous}/g" $GTfolder/GlamorousToolkitLinux64-release
-version=$(cat $GTfolder/GlamorousToolkitLinux64-release)
-cp $version $GTfolder/GlamorousToolkitLinux64-release.zip
+        # The following replaces the path to the release archive in the release file
+        sed -i "s/${yank_version_number}/${rollback_version}/g" "$GTfolder/GlamorousToolkit$1-release"
 
+        local rollback_archive_name=$(cat $GTfolder/GlamorousToolkit$1-release)
+        cp -rf "$rollback_archive_name" "$GTfolder/GlamorousToolkit$1-release.zip"
+}
+
+rollback "Win64"
+rollback "OSX64"
+rollback "OSXM1"
+rollback "Linux64"
 
 stat -c %Y "$(cat $GTfolder/GlamorousToolkitLinux64-release)" > .releasedateinseconds
-cd -
 
 set +e
