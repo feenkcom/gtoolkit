@@ -104,12 +104,22 @@ TelemetryPing >> gtNestedTree [
 ]
 
 { #category : #'*GToolkit-Profiler' }
+TelemetryPing >> gtSourceFor: aView [
+	<gtView>
+	^ aView forward
+		title: 'Source';
+		priority: 2;
+		object: [ sender ];
+		view: #gtSourceFor:
+]
+
+{ #category : #'*GToolkit-Profiler' }
 TelemetryPing >> gtTreeFor: aView [
 	<gtView>
 	
 	^ aView forward
 		title: 'Tree';
-		priority: 2;
+		priority: 3;
 		object: [ self gtNestedTree ];
 		view: #gtTreeFor:
 ]
