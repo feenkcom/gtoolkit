@@ -15,7 +15,7 @@ GtClassWithCommentsContainingMissingReferences >> description [
 GtClassWithCommentsContainingMissingReferences >> gtViewReferencesFor: aView [ 
 	<gtView>
 	^ aView forward 
-		title: 'Missing references by page';
+		title: 'Missing references by class';
 		priority: 20;
 		object: [ self issues ];
 		view: #gtViewReferencesFor:
@@ -28,8 +28,5 @@ GtClassWithCommentsContainingMissingReferences >> name [
 
 { #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
-	| gtProject allPackages |
-	gtProject := BaselineOfGToolkit gtRlProjectWithRepository: 'github://feenkcom/gtoolkit:main/src'.
-	allPackages := gtProject allPPackages.
-	^ allPackages reject: [ :aPackage | aPackage isNil ]
+	^ BaselineOfGToolkitForPharo9 gtRlAllValidRPackages
 ]
