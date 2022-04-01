@@ -5,7 +5,7 @@ Architectural report for Glamorous Toolkit.
 Class {
 	#name : #GtGtoolkitArchitecturalReport,
 	#superclass : #GtConstrainerReport,
-	#category : 'GToolkit-Constraints'
+	#category : #'GToolkit-Constraints'
 }
 
 { #category : #accessing }
@@ -25,8 +25,8 @@ GtGtoolkitArchitecturalReport >> build: aComposite [
 		addConstraint: GtLooksSubscribingToEventsNotFromInitializeListenerMethods new;
 		addConstraint: GtBlocEventsShouldHaveDispatchMethodSimilarToClass new;
 		addConstraint: GtSubscriptionsShouldNotUseDeliveryConditionWhere new;
-		addConstraint: GtTraitsShouldNotBeNested new;
-		addConstraint: GtWeakSubscriptionsWithBlockSubscribers new
+		addConstraint: GtWeakSubscriptionsWithBlockSubscribers new;
+		addConstraint: GtGlamorousToolkitBookPagesContainingMissingReferences new
 		"addConstraint: GtBaselinesShouldProperlySpecifyDependencies new"";
 		addConstraint: GtGitRepositoryWithoutJenkinsFile new"
 ]
