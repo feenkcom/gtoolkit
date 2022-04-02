@@ -7,6 +7,11 @@ AsyncSomeValue >> gtCompositionChildren [
 		^ { self value } ].
 	(self value class isComposedBy: TAsyncStream) ifTrue: [ 
 		^ { self value } ].
+	(self value isCollection and: [ 
+		 self value allSatisfy: [ :anElement | 
+			 (anElement class isComposedBy: TAsyncFuture) or: [ 
+				 anElement class isComposedBy: TAsyncStream ] ] ]) ifTrue: [ 
+		^ self value ].
 	^ #(  )
 ]
 
