@@ -1,6 +1,11 @@
 Extension { #name : #AsyncPendingFuturePromise }
 
 { #category : #'*GToolkit-Extensions' }
+AsyncPendingFuturePromise >> gtCompositionChildren [
+	^ { future }
+]
+
+{ #category : #'*GToolkit-Extensions' }
 AsyncPendingFuturePromise >> gtCompositionFor: aView [
 	<gtView>
 	
