@@ -17,6 +17,7 @@ GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
 				GtMonitorStencil new . 
 				GtRlGToolkitExamplesExplorer buildForGToolkitProject . 
 				GtGitStencil new . 
+				GtEpiceaStencil new . 
 				GtTranscriptStencil new .
 				GtFileSystemStencil new
 			} ];
