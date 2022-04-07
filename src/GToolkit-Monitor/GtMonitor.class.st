@@ -1,7 +1,7 @@
 Class {
 	#name : #GtMonitor,
 	#superclass : #Object,
-	#category : 'GToolkit-Monitor'
+	#category : #'GToolkit-Monitor'
 }
 
 { #category : #printing }
@@ -104,6 +104,17 @@ GtMonitor >> gtExternalResourcesFor: aView [
 				icon: BrGlamorousVectorIcons refresh;
 				label: 'Refresh';
 				action:  [ aTab viewContentElement children first updateList ] ]
+]
+
+{ #category : #'gt-extension' }
+GtMonitor >> gtFutureWorkersPoolFor: aView [
+	<gtView>
+	
+	^ aView forward
+		title: 'Future Workers';
+		priority: 45;
+		object: [ AsyncFutureThreadPool current ];
+		view: #gtWorkersFor:
 ]
 
 { #category : #'gt-extension' }

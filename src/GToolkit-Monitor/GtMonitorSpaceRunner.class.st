@@ -29,7 +29,6 @@ Class {
 { #category : #'instance creation' }
 GtMonitorSpaceRunner >> createExplanation [
 	^ (LeCoderTextElement coderElementFor: self explanationText)
-			matchParent;
 			constraintsDo: [ :c | c linear weight: 0.75 ];
 			margin: (BlInsets left: 10)
 ]

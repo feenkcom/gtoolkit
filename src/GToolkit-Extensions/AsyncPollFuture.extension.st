@@ -8,3 +8,14 @@ AsyncPollFuture >> gtCompositionDescription [
 		  append: ((pollBlock ifNil: [ executedBlock ]) printString asRopedText foreground:
 					   BrGlamorousColors disabledButtonTextColor)
 ]
+
+{ #category : #'*GToolkit-Extensions' }
+AsyncPollFuture >> gtViewExecutedBlockFor: aView [
+	<gtView>
+	executedBlock ifNil: [ ^ aView empty ].
+	
+	^ aView forward 
+		title: 'Executed Block';
+		object: [ executedBlock ];
+		view: #gtSourceCodeFor:
+]

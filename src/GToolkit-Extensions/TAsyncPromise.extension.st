@@ -9,10 +9,98 @@ TAsyncPromise >> gtChainedPromises [
 ]
 
 { #category : #'*GToolkit-Extensions' }
+TAsyncPromise >> gtFullPromiseTreeFor: aView [
+	<gtView>
+	
+	^ aView mondrian
+		title: 'Full Tree';
+		priority: 3;
+		painting: [ :aMondrian | self gtPaintFullTreeOn: aMondrian ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 TAsyncPromise >> gtHandlesErrors [
 	"Return true if the promise is able to handle errors"
 
 	^ false
+]
+
+{ #category : #'*GToolkit-Extensions' }
+TAsyncPromise >> gtPaintFullTreeOn: aMondrian [
+	| relations theChainedPromises thePrecedingPromises allPromises allFutures |
+	
+	relations := OrderedCollection new.
+	thePrecedingPromises := OrderedCollection new.
+	self 
+		withDeep: #gtPrecedingPromises 
+		do: [ :aPromise | thePrecedingPromises add: aPromise ] 
+		relationDo: [ :from :to | relations add: from->to ].
+	
+	theChainedPromises := OrderedCollection new.
+	self 
+		withDeep: #gtChainedPromises 
+		do: [ :aPromise | theChainedPromises add: aPromise ] 
+		relationDo: [ :from :to | relations add: from->to ].
+
+	allPromises := ({ self } asSet, theChainedPromises, thePrecedingPromises) asArray.
+
+	allFutures := OrderedCollection new.
+	allPromises do: [ :aPromise |
+		aPromise relatedFutures do: [ :aFuture | 
+			allFutures add: aFuture.
+			relations add: aPromise -> aFuture ] ].	
+	allFutures copy 
+		withDeep: #gtCompositionChildren 
+		do: [ :aFuture | allFutures add: aFuture ] 
+		relationDo: [ :from :to | relations add: from->to ].
+	allFutures := allFutures removeDuplicates.
+	
+	aMondrian nodes
+		stencil: [ :eachPromise |
+			BlElement new
+				geometry: BlEllipseGeometry new;
+				layout: BlFrameLayout new;
+				size: 40@40;
+				border: (BlBorder paint: Color black width: 2);
+				background: (eachPromise == self
+					ifTrue: [ BrGlamorousColors textHighlightColor ]
+					ifFalse: [ Color white ]);
+				in: [ :anElement |
+					eachPromise gtHandlesErrors
+						ifTrue: [ anElement addChild: (BrLabel new
+							constraintsDo: [ :c |
+								c frame horizontal alignCenter.
+								c frame vertical alignCenter ];
+							aptitude: (BrGlamorousLabelAptitude new fontSize: 5);
+							text: 'Handles errors') ] ];
+				yourself ];
+		with: allPromises.
+	aMondrian nodes
+		stencil: [ :eachPromise |
+			BlElement new
+				geometry: BlRectangleGeometry new;
+				layout: BlFrameLayout new;
+				size: 40@40;
+				border: (BlBorder paint: Color black width: 2);
+				background: (eachPromise == self
+					ifTrue: [ BrGlamorousColors textHighlightColor ]
+					ifFalse: [ Color white ]);
+				yourself ];
+		with: allFutures.
+		
+	aMondrian edges 
+		stencil: [
+			BlSigmoidElement new
+				beHorizontal;
+				sharpness: 0.1;
+				border: (BlBorder paint: (BrGlamorousColors defaultHeaderBackgroundColor alpha: 0.5) width: 2) ];
+		fromRightCenter;
+		toLeftCenter;
+		connect: relations from: #key to: #value.
+
+	aMondrian layout horizontalTree levelDistance: 30; nodeDistance: 10.
+	
+	^ aMondrian
 ]
 
 { #category : #'*GToolkit-Extensions' }
@@ -125,7 +213,7 @@ TAsyncPromise >> gtPromiseTreeFor: aView [
 	<gtView>
 	
 	^ aView mondrian
-		title: 'Tree';
+		title: 'Promise Tree';
 		priority: 2;
 		painting: [ :aMondrian | self gtPaintTreeWith: aMondrian ]
 ]

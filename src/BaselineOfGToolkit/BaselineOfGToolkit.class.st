@@ -61,6 +61,11 @@ Class {
 	#category : #BaselineOfGToolkit
 }
 
+{ #category : #accessing }
+BaselineOfGToolkit class >> gtoolkitRepositorySpec [
+	^ 'github://feenkcom/gtoolkit:main/src'
+]
+
 { #category : #baseline }
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>

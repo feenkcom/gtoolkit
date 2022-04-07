@@ -7,3 +7,13 @@ AsyncDeferredPromise >> gtChainedPromises [
 
 	^ mutex critical: [ chainedPromises copy ]
 ]
+
+{ #category : #'*GToolkit-Extensions' }
+AsyncDeferredPromise >> gtCompositionChildren [
+	^ #( )
+]
+
+{ #category : #'*GToolkit-Extensions' }
+AsyncDeferredPromise >> gtCompositionDescription [
+	^ self printString
+]
