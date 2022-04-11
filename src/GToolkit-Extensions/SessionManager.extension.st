@@ -11,10 +11,12 @@ SessionManager >> gtStartupListWithDetails [
 SessionManager >> gtViewSessionCategoriesFor: aView [
 	<gtView>
 	
-	^ aView list 
+	^ aView columnedList 
 		title: 'Categories';
 		priority: 10;
-		items: [ categories ]
+		items: [ categories ];
+		column: 'Category' text: [ :each | each name ];
+		column: 'Handlers Count' text: [ :each | each prioritizedList size ] width: 200
 ]
 
 { #category : #'*GToolkit-Extensions' }
@@ -26,7 +28,7 @@ SessionManager >> gtViewShutdownListFor: aView [
 		priority: 25;
 		items: [ 
 			self gtStartupListWithDetails  reversed ];
-		column: 'Category' text: [ :data | data first ];
+		column: 'Category' text: [ :data | data first name ] width: 120;
 		column: 'Priority' text: [ :data | data second ] width: 150;
 		column: 'Handler' text: [ :data | data third ];
 		send: [ :data | data third ]
@@ -41,7 +43,9 @@ SessionManager >> gtViewStartupListFor: aView [
 		priority: 20;
 		items: [ 
 			self gtStartupListWithDetails ];
-		column: 'Category' text: [ :data | data first ];
+		column: 'Category' 
+			text: [ :data | data first name ]
+			width: 120;
 		column: 'Priority' text: [ :data | data second ] width: 150;
 		column: 'Handler' text: [ :data | data third ];
 		send: [ :data | data third ]
