@@ -12,7 +12,9 @@ Class {
 { #category : #'instance creation' }
 GtTreeNode class >> fromCollection: aCollection [
 
-	^ self fromCollection: aCollection parent: nil
+	^ self
+		  fromCollection: aCollection
+		  parent: (self new value: aCollection)
 ]
 
 { #category : #'instance creation' }
@@ -31,7 +33,9 @@ GtTreeNode class >> fromCollection: aCollection parent: aNodeOrNil [
 { #category : #'instance creation' }
 GtTreeNode class >> fromDictionary: aDictionary [
 
-	^ self fromDictionary: aDictionary parent: nil
+	^ self
+		  fromDictionary: aDictionary
+		  parent: (self new value: aDictionary)
 ]
 
 { #category : #'instance creation' }
@@ -50,9 +54,38 @@ GtTreeNode class >> fromNode: aNode [
 	^ self fromCollection: aNode value parent: aNode
 ]
 
+{ #category : #'gt - extensions' }
+GtTreeNode >> gtHierarchyFor: aView [
+
+	<gtView>
+	^ aView columnedList
+		  title: 'Hierarchy';
+		  priority: 1;
+		  items: [ self withParents ];
+		  column: 'Depth' text: [ :aNode :anIndex | anIndex ] width: 50;
+		  column: 'Key' text: #gtKeyText;
+		  column: 'Value' text: #value weight: 3
+]
+
+{ #category : #'gt - extensions' }
+GtTreeNode >> gtKeyText [
+
+	^ self isRoot
+		  ifTrue: [ 
+			  'root' asRopedText foreground:
+				  BrGlamorousColors disabledButtonTextColor ]
+		  ifFalse: [ self key ]
+]
+
 { #category : #testing }
 GtTreeNode >> hasParent [
 	^ self parent isNotNil
+]
+
+{ #category : #testing }
+GtTreeNode >> isRoot [
+
+	^ self parent isNil and: [ self key isNil ]
 ]
 
 { #category : #accessing }
@@ -103,4 +136,19 @@ GtTreeNode >> value [
 GtTreeNode >> value: anObject [
 
 	value := anObject
+]
+
+{ #category : #enumerating }
+GtTreeNode >> withParents [
+
+	^ Array streamContents: [ :aStream | 
+		  self withParentsDo: [ :eachNode | aStream nextPut: eachNode ] ]
+]
+
+{ #category : #enumerating }
+GtTreeNode >> withParentsDo: aBlock [
+
+	self parent ifNotNil: [ :aParent | aParent withParentsDo: aBlock ].
+
+	aBlock cull: self
 ]
