@@ -50,5 +50,10 @@ Collection >> gtTreeFor: aView context: aContext [
 						  ifTrue: [ theNewView expandUpTo: anObject ]
 						  ifFalse: [ anObject = true ifTrue: [ theNewView expandAll ] ] ]
 				  ifAbsent: [ "ignore" ] ];
-		  send: [ :aNode | aNode value ]
+		  send: [ :aNode | 
+			  aContext
+				  at: #gtTreeSend
+				  ifPresent: [ :aBlock | 
+					  aBlock cull: aNode value cull: aNode cull: self ]
+				  ifAbsent: [ aNode value ] ]
 ]
