@@ -635,7 +635,7 @@ pipeline {
         }
         stage('Releaser') {
             when { expression {
-                   (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                   false && (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                 }
             }
             agent {
