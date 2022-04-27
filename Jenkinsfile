@@ -598,6 +598,9 @@ pipeline {
                                 /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
                                 powershell "./gt-installer.exe --verbose copy-to ${EXAMPLES_FOLDER}"
 
+                                /// disable the firewall for the exe
+                                powershell "netsh advfirewall firewall add rule name='Gt Examples cli exe' dir=in action=allow program='${EXAMPLES_FOLDER}\bin\GlamorousToolkit-cli.exe' enable=yes"
+
                                 powershell "./gt-installer.exe --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
                                 junit "${EXAMPLES_FOLDER}/*.xml"
                             }
