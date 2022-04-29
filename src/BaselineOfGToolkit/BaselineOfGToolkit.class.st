@@ -83,13 +83,13 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.500/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1410/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1411/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.819/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.820/src' ].
 		spec
 			baseline: 'GToolkitFileBrowser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-filebrowser:v0.6.404/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-filebrowser:v0.6.405/src' ].
 		spec
 			baseline: 'GToolkitDemos' with: [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.8.630/src' ].
@@ -122,7 +122,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4ruby:v0.6.6/src' ].
 		spec
 			baseline: 'GtGemstoneClient' with: [
-				spec repository: 'github://feenkcom/gt4gemstone:v0.6.409/src' ].
+				spec repository: 'github://feenkcom/gt4gemstone:v0.6.410/src' ].
 		spec
 			baseline: 'GToolkit4Git' with: [
 				spec repository: 'github://feenkcom/gt4git:v0.8.251/src' ].
@@ -140,7 +140,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.784/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1410/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1411/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.332/src' ].
@@ -158,7 +158,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/xdoc:v0.8.505/src' ].
 		spec
 			baseline: 'LepiterEngine' with: [
-				spec repository: 'github://feenkcom/lepiter:v0.6.514/src' ].
+				spec repository: 'github://feenkcom/lepiter:v0.6.515/src' ].
 		spec
 			baseline: 'GToolkit4Magritte' with: [
 				spec repository: 'github://feenkcom/gt4magritte:v0.6.100/src' ].
