@@ -5,10 +5,18 @@ export GTfolder=/var/www/html/gt
 
 cd $GTfolder
 
+function fail {
+        printf '%s\n' "$1" >&2
+        exit 1
+}
+
 function rollback {
         local release_archive_name=$(cat $GTfolder/GlamorousToolkit$1-release)
         local yank_version_number="$(cut -d '.' -f3 <<< $release_archive_name)"
-        local rollback_version="$($yank_version_number - 1)"
+        local rollback_version="$(($yank_version_number - 1))"
+        
+        [ -z "$yank_version_number" ] && fail "[$1] Failed to detect version to yank"
+        [ -z "$rollback_version" ] && fail "[$1] Failed to detect a version before $yank_version_number"
 
         echo "[$1] We yank $yank_version_number and rollback to $rollback_version"
 
@@ -16,7 +24,7 @@ function rollback {
         sed -i "s/${yank_version_number}/${rollback_version}/g" "$GTfolder/GlamorousToolkit$1-release"
 
         local rollback_archive_name=$(cat $GTfolder/GlamorousToolkit$1-release)
-        cp -rf "$rollback_archive_name" "$GTfolder/GlamorousToolkit$1-release.zip"
+        cp -rf "$GTfolder/$rollback_archive_name" "$GTfolder/GlamorousToolkit$1-release.zip"
 }
 
 rollback "Win64"
