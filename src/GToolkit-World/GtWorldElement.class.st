@@ -11,7 +11,7 @@ Class {
 		'IsWorldSpotterPreviewDisplayed',
 		'WorldSpotterSize'
 	],
-	#category : 'GToolkit-World-UI'
+	#category : #'GToolkit-World-UI'
 }
 
 { #category : #accessing }
@@ -195,6 +195,7 @@ GtWorldElement >> newStatusButton [
 
 { #category : #'private - instance creation' }
 GtWorldElement >> newSubSpaceButton [
+	| apt |
 	self
 		assert: [ subSpaceDropdown isNil ]
 		description: [ 'Sub-space dropdown is already created!' ].
@@ -202,7 +203,7 @@ GtWorldElement >> newSubSpaceButton [
 		aptitude:
 			BrGlamorousButtonWithIconAptitude - BrGlamorousButtonExteriorAptitude
 				+
-					(BrGlamorousWithDropdownAptitude
+					(apt := BrGlamorousWithDropdownAptitude
 						handle: [ BrButton new
 								aptitude:
 									BrGlamorousButtonWithIconAptitude
@@ -218,6 +219,7 @@ GtWorldElement >> newSubSpaceButton [
 								vMatchParent;
 								content: (GtToolsMenu new
 									knowledgeBase: self knowledgeBase;
+									dropDownAptitude: apt;
 									yourself) ]);
 		icon: BrGlamorousIcons hamburger;
 		label: 'Menu';

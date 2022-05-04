@@ -4,12 +4,13 @@ Class {
 	#traits : 'TBrLayoutResizable',
 	#classTraits : 'TBrLayoutResizable classTrait',
 	#instVars : [
-		'knowledgeBase'
+		'knowledgeBase',
+		'dropDownAptitude'
 	],
 	#classInstVars : [
 		'world'
 	],
-	#category : 'GToolkit-World-UI'
+	#category : #'GToolkit-World-UI'
 }
 
 { #category : #'system startup' }
@@ -44,6 +45,11 @@ GtToolsMenu class >> open [
 
 	world isOpened
 		ifFalse: [ world show ]
+]
+
+{ #category : #accessing }
+GtToolsMenu >> dropDownAptitude: anAptitude [
+	dropDownAptitude := anAptitude
 ]
 
 { #category : #initialization }
@@ -137,6 +143,7 @@ GtToolsMenu >> saveFrom: aButton [
 	aButton disable.
 	aButton space universe snapshot: true andQuit: false.
 	aButton space universe postpone: [
+		dropDownAptitude hide.
 		aButton enqueueTask: (BlTaskAction new action: [
 			aButton label: 'Save'; enable ]) ].
 ]
