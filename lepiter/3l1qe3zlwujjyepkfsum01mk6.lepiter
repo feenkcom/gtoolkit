@@ -23,7 +23,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T15:31:37.723911+02:00"
+									"dateAndTimeString" : "2022-05-06T16:22:53.438469+02:00"
 								}
 							},
 							"editEmail" : {
@@ -34,17 +34,54 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T15:32:07.819716+02:00"
+									"dateAndTimeString" : "2022-05-06T16:23:35.058983+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "vOSpg7maDQCVz2zdDY4YJg=="
+								"uidString" : "lKU9TbqaDQC7dJR2D3Vz6w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Let's inspect a running instance of a Ludo game."
+							"string" : "Since games may last a long time, an autoplay feature would be useful to exercise the game."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:23:35.627475+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:23:45.802289+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "87Q6V7qaDQC7h9Y/D3Vz6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We start by creating a live instance."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -60,7 +97,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T15:24:25.815291+02:00"
+									"dateAndTimeString" : "2022-05-06T16:20:47.719383+02:00"
 								}
 							},
 							"editEmail" : {
@@ -71,14 +108,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T15:24:25.815291+02:00"
+									"dateAndTimeString" : "2022-05-06T16:20:47.719383+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "/eSpg7maDQCV0l00DY4YJg=="
+								"uidString" : "8Kc9TbqaDQC7ddAwD3Vz6w=="
 							},
-							"code" : "GtLudoGame new"
+							"code" : "game := GtLudoGame new"
 						},
 						{
 							"__type" : "textSnippet",
@@ -94,7 +131,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T15:32:14.796949+02:00"
+									"dateAndTimeString" : "2022-05-06T16:23:55.370553+02:00"
 								}
 							},
 							"editEmail" : {
@@ -105,20 +142,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T15:32:24.143609+02:00"
+									"dateAndTimeString" : "2022-05-06T16:24:21.914521+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "KPIDn7maDQCTr2jKDn20DA=="
+								"uidString" : "MfddWLqaDQC7iuNWD3Vz6w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Have a look at the various views (tabs)."
+							"string" : "We can interact with it programatically."
 						},
 						{
-							"__type" : "textSnippet",
+							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -131,7 +168,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T15:32:41.205255+02:00"
+									"dateAndTimeString" : "2022-05-06T16:20:47.719678+02:00"
 								}
 							},
 							"editEmail" : {
@@ -142,54 +179,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T15:33:26.410151+02:00"
+									"dateAndTimeString" : "2022-05-06T16:20:47.719678+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Ux4qobmaDQCTu5gTDn20DA=="
+								"uidString" : "D6k9TbqaDQC7dgWDD3Vz6w=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "The `Raw` view is the one most IDEs will show you. The others are specialized views. The Board, Players and Squares views are custom-made for the Ludo game."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T15:33:45.266807+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:06:12.154948+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "jZ4Hn7maDQCTsQTwDn20DA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Note how you can more easily navigate through the game entites (Players, Tokens, Squares) using the dedicated views than with the Raw view."
+							"code" : "game roll: 6.\ngame moveTokenNamed: 'a'"
 						}
 					]
 				},
@@ -201,7 +198,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T15:24:25.815158+02:00"
+						"dateAndTimeString" : "2022-05-06T16:22:05.094206+02:00"
 					}
 				},
 				"editEmail" : {
@@ -212,17 +209,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T15:28:41.490026+02:00"
+						"dateAndTimeString" : "2022-05-06T16:22:26.999772+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ieSpg7maDQCVzvmfDY4YJg=="
+					"uidString" : "Bp89TbqaDQC7c5qkD3Vz6w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Exploring the Ludo Game"
+				"string" : "#Introducing an autoplay feature to a running game"
 			},
 			{
 				"__type" : "textSnippet",
@@ -243,7 +240,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:06:31.223282+02:00"
+									"dateAndTimeString" : "2022-05-06T16:25:41.930576+02:00"
 								}
 							},
 							"editEmail" : {
@@ -254,17 +251,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:06:49.122564+02:00"
+									"dateAndTimeString" : "2022-05-06T16:26:32.479393+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "swIOGrqaDQCSzm0dBTCbPQ=="
+								"uidString" : "NknWXLqaDQC7kNFJD3Vz6w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "You can OPT-click on the tabs to see the code creating each view."
+							"string" : "By exploring the code, we see that the methods {{gtMethod:name=GtLudoGame>>playerToRoll}} and {{gtMethod:name=GtLudoGame>>playerToMove}} tell us what should happen next."
 						},
 						{
 							"__type" : "textSnippet",
@@ -280,7 +277,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:06:50.682937+02:00"
+									"dateAndTimeString" : "2022-05-06T16:26:33.891368+02:00"
 								}
 							},
 							"editEmail" : {
@@ -291,17 +288,193 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:07:09.786495+02:00"
+									"dateAndTimeString" : "2022-05-06T16:27:53.356794+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "akhLG7qaDQCS0UsNBTCbPQ=="
+								"uidString" : "55LZYbqaDQC7ky8eD3Vz6w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Most of these are quite simple. The Board view is the most complex one."
+							"string" : "Also {{gtMethod:name=GtLudoGame>>tokensToMove}} computes the set of tokens that can possibly move next. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:28:08.657516+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:28:17.320755+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "h0+nZrqaDQC7mFuUD3Vz6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We roll the die or move as required:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:20:47.721178+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:20:47.721178+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4K49TbqaDQC7etkKD3Vz6w=="
+							},
+							"code" : "game playerToRoll ifTrue: [ game die roll ]"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:20:47.721256+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:20:47.721256+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "La89TbqaDQC7eyjGD3Vz6w=="
+							},
+							"code" : "game playerToMove ifTrue: [ game moveTokenNamed: game tokensToMove atRandom name ]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:28:43.329708+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:29:10.904044+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "e4KCaLqaDQC7mW8JD3Vz6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Let's combine them. We can just repeatedly perform this snippet to play the game."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:20:47.721322+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:20:47.721322+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "b689TbqaDQC7fOCkD3Vz6w=="
+							},
+							"code" : "game playerToRoll ifTrue: [ game die roll ].\ngame playerToMove ifTrue: [ \n\tgame moveTokenNamed: game tokensToMove atRandom name ]"
 						}
 					]
 				},
@@ -313,7 +486,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T16:06:18.78027+02:00"
+						"dateAndTimeString" : "2022-05-06T16:25:02.234446+02:00"
 					}
 				},
 				"editEmail" : {
@@ -324,17 +497,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T16:06:26.620141+02:00"
+						"dateAndTimeString" : "2022-05-06T16:25:08.860996+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "POcZGbqaDQCSy8AZBTCbPQ=="
+					"uidString" : "Z6w9TbqaDQC7d/LrD3Vz6w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Exploring the view code"
+				"string" : "#Automating one move."
 			},
 			{
 				"__type" : "textSnippet",
@@ -355,7 +528,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:07:59.803074+02:00"
+									"dateAndTimeString" : "2022-05-06T16:29:37.812744+02:00"
 								}
 							},
 							"editEmail" : {
@@ -366,17 +539,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:08:37.747529+02:00"
+									"dateAndTimeString" : "2022-05-06T16:31:56.98629+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "TNxVH7qaDQCS3Y9fBTCbPQ=="
+								"uidString" : "7a60bLqaDQC7ncKaD3Vz6w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "From the Meta tab you can explore not only the class definition and the source code of methods, but also find references. This leads us to the classes that define test examples."
+							"string" : "Let's turn this into a method that repeatedly plays a number of moves."
 						},
 						{
 							"__type" : "textSnippet",
@@ -392,7 +565,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:08:54.530532+02:00"
+									"dateAndTimeString" : "2022-05-06T16:32:04.150702+02:00"
 								}
 							},
 							"editEmail" : {
@@ -403,203 +576,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:09:56.403536+02:00"
+									"dateAndTimeString" : "2022-05-06T16:35:13.588753+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "NlfIIbqaDQCS4ET4BTCbPQ=="
+								"uidString" : "51+DdbqaDQC7oURgD3Vz6w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Let's explore {{gtClass:name=GtLudoGameExamples}}.  From the Examples view we can run all the tests."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:10:00.922663+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:10:30.858483+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "QRBvJrqaDQCS5uJ+BTCbPQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Let's have a closer look at {{gtMethod:name=GtLudoGameExamples>>playerAentersTokenA}}. "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:10:41.153846+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:11:07.783424+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "QOUGKbqaDQCS6Bs8BTCbPQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "It's a simple scenario of a token entering the game after a 6 is rolled."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:13:49.683869+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:14:18.387356+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "z7SxKrqaDQCS6riIBTCbPQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Note that we can inspect and interact with the example that results from the test, and we can use the example to build further tests."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T16:07:53.18869+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T16:07:57.144107+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "gGwtqrmaDQCTytKMDn20DA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Finding examples"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:14:54.395619+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:15:05.054079+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "IdD+N7qaDQCha8UlAspxEg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Let's open two views of the same example."
+							"string" : "Normally we would program this directly in the Coder (i.e., use the + button to add a method), but we can also do it programmatically."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -615,7 +602,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:15:07.273696+02:00"
+									"dateAndTimeString" : "2022-05-06T16:20:47.721783+02:00"
 								}
 							},
 							"editEmail" : {
@@ -626,14 +613,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:17:02.969538+02:00"
+									"dateAndTimeString" : "2022-05-06T16:20:47.721783+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "/93yOLqaDQChbrJQAspxEg=="
+								"uidString" : "PbE9TbqaDQC7fpg2D3Vz6w=="
 							},
-							"code" : "game := GtLudoGameExamples new playerAentersTokenA"
+							"code" : "GtLudoGame compile: 'autoPlay: numberOfMoves\n\t(1 to: numberOfMoves) do: [ :n | \n\t\tself playerToRoll ifTrue: [ self die roll ].\n\t\tself playerToMove ifTrue: [ \n\t\t\tself moveTokenNamed: self tokensToMove atRandom name ] ]'"
 						},
 						{
 							"__type" : "textSnippet",
@@ -649,7 +636,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:15:43.797351+02:00"
+									"dateAndTimeString" : "2022-05-06T16:20:47.721927+02:00"
 								}
 							},
 							"editEmail" : {
@@ -660,54 +647,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:18:42.361713+02:00"
+									"dateAndTimeString" : "2022-05-06T16:20:47.721927+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "B1PeHbqaDQCS15MABTCbPQ=="
+								"uidString" : "zLE9TbqaDQC7fxGfD3Vz6w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Either navigate from the raw view, or evaluate `self` in the Playground underneath the inspector view (pull up the grey bar)."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:16:29.880423+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:17:12.989288+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "N594PbqaDQChcQn1AspxEg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "You can interact both through the GUI or programatically and the views will stay in sync."
+							"string" : "Now we can use it to play."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -723,7 +673,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:17:16.316439+02:00"
+									"dateAndTimeString" : "2022-05-06T16:20:47.722007+02:00"
 								}
 							},
 							"editEmail" : {
@@ -734,14 +684,196 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:17:43.188636+02:00"
+									"dateAndTimeString" : "2022-05-06T16:20:47.722007+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "MeejQLqaDQChc9PRAspxEg=="
+								"uidString" : "HLI9TbqaDQC7gPqHD3Vz6w=="
 							},
-							"code" : "game die roll: 5.\rgame moveTokenNamed: 'A'"
+							"code" : "game := GtLudoGame new"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:20:47.722076+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:38:15.276745+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "YbI9TbqaDQC7gd8VD3Vz6w=="
+							},
+							"code" : "game autoPlay: 1000"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:35:46.774621+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:36:05.5522+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xH+tgrqaDQC7qIMuD3Vz6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Note that we get an exception at the end, as we try to continue to play after the game is over."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:20:47.722212+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:36:23.349468+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6bI9TbqaDQC7guj7D3Vz6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We can fix the autoPlay: method to immediately return if the game is over."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:36:59.66551+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:37:22.321968+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "liUlh7qaDQC7qvbSD3Vz6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "(We add `self isOver ifTrue: [ ^ self ].` at the start of the loop.)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:37:30.605728+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-06T16:37:47.626189+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Kj7WiLqaDQC7q1uLD3Vz6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Now we can safely play without an exception."
 						}
 					]
 				},
@@ -753,7 +885,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T16:14:22.422733+02:00"
+						"dateAndTimeString" : "2022-05-06T16:29:16.718444+02:00"
 					}
 				},
 				"editEmail" : {
@@ -764,17 +896,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T16:14:28.618219+02:00"
+						"dateAndTimeString" : "2022-05-06T16:29:35.259845+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "bUHbHbqaDQCS1fedBTCbPQ=="
+					"uidString" : "I1Zma7qaDQC7msOBD3Vz6w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Interacting with Objects"
+				"string" : "#Introducing an autoPlay:method"
 			},
 			{
 				"__type" : "textSnippet",
@@ -790,7 +922,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T15:32:05.140057+02:00"
+						"dateAndTimeString" : "2022-05-06T16:20:47.72231+02:00"
 					}
 				},
 				"editEmail" : {
@@ -801,12 +933,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T15:32:05.140057+02:00"
+						"dateAndTimeString" : "2022-05-06T16:20:47.72231+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "g6IKn7maDQCTswKTDn20DA=="
+					"uidString" : "S7M9TbqaDQC7g9jlD3Vz6w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -823,7 +955,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-05-06T15:20:39.966258+02:00"
+			"dateAndTimeString" : "2022-05-06T14:16:12.386479+02:00"
 		}
 	},
 	"editEmail" : {
@@ -834,15 +966,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-05-06T15:20:39.966258+02:00"
+			"dateAndTimeString" : "2022-05-06T15:25:04.029974+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Exploring a live system"
+		"title" : "Changing a running system"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "f7b53376-b99a-0d00-894c-7f7f0e564172"
+		"uuid" : "7620ad8f-b89a-0d00-84dd-8f4e05a58c3c"
 	}
 }
