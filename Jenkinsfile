@@ -638,7 +638,7 @@ pipeline {
         }
         stage('Releaser') {
             when { expression {
-                   (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
+                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
                 }
             }
             agent {
@@ -654,6 +654,9 @@ pipeline {
                 unstash "${WINDOWS_AMD64_TARGET}"
                 unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
                 unstash "${GEMSTONE_TARGET}"
+
+                // Remove the gt-extra folder so it does not influence the release.
+                sh "rm -rf ${RELEASER_FOLDER}/gt-extra"
 
                 sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/download/${FEENK_RELEASER_VERSION}/feenk-releaser-${TARGET}"
                 sh "chmod +x feenk-releaser"
