@@ -230,40 +230,6 @@
 							"string" : "There are no built-in operators. These are all just message sends:"
 						},
 						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-07T15:55:38.817039+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-07T15:55:41.153411+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "J8LnkXKYDQCAeV/xB03vFQ=="
-							},
-							"code" : "3 / 4"
-						},
-						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -314,7 +280,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-07T15:55:50.156225+02:00"
+									"dateAndTimeString" : "2022-04-07T15:55:38.817039+02:00"
 								}
 							},
 							"editEmail" : {
@@ -325,14 +291,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-07T16:00:39.731112+02:00"
+									"dateAndTimeString" : "2022-04-07T15:55:41.153411+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "28eUknKYDQCAe0nKB03vFQ=="
+								"uidString" : "J8LnkXKYDQCAeV/xB03vFQ=="
 							},
-							"code" : "(3 = 4) not"
+							"code" : "3 / 4"
 						},
 						{
 							"__type" : "textSnippet",
@@ -385,7 +351,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-07T16:01:27.36815+02:00"
+									"dateAndTimeString" : "2022-04-07T15:55:50.156225+02:00"
 								}
 							},
 							"editEmail" : {
@@ -396,14 +362,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-07T16:01:34.964973+02:00"
+									"dateAndTimeString" : "2022-04-07T16:00:39.731112+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "7jmupnKYDQCAjH0/B03vFQ=="
+								"uidString" : "28eUknKYDQCAe0nKB03vFQ=="
 							},
-							"code" : "[ 3 +  4 ] value "
+							"code" : "(3 = 4) not"
 						},
 						{
 							"__type" : "textSnippet",
@@ -441,6 +407,40 @@
 								"__type" : "textStyle"
 							},
 							"string" : "You can evaluate a block by sending it a `value` message."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-04-07T16:01:27.36815+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-04-07T16:01:34.964973+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7jmupnKYDQCAjH0/B03vFQ=="
+							},
+							"code" : "[ 3 +  4 ] value "
 						}
 					]
 				},
@@ -832,6 +832,77 @@
 								"uidString" : "cadIrXKYDQCAlRgAB03vFQ=="
 							},
 							"code" : "MyClass new foo "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-09T15:05:57.757245+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-09T15:06:19.7098+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MlIMm/WaDQC0cDigBVZZQw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We can remove the class by asking the `Smalltalk` object to do it:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-09T15:05:52.423386+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-09T15:06:23.736497+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9AHTmvWaDQC0brzoBVZZQw=="
+							},
+							"code" : "Smalltalk removeClassNamed: 'MyClass'"
 						}
 					]
 				},
