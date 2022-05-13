@@ -453,20 +453,20 @@
 							"string" : "Note in particular the second move, which required two hops."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "veit.heller@feenk.com"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T18:14:29.873097+02:00"
+									"dateAndTimeString" : "2022-05-13T09:38:05.900219+02:00"
 								}
 							},
 							"editEmail" : {
@@ -477,17 +477,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-10T09:27:12.591687+02:00"
+									"dateAndTimeString" : "2022-05-13T09:38:05.900219+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "63Xf47uaDQCJvN18BIdQPw=="
+								"uidString" : "1i35fUGbDQCO5iDhCgPpAA=="
 							},
-							"code" : "GtLudoMoveExamples new landingOnOwnPlayerToken",
-							"elementHeight" : 387,
-							"codeHeight" : 0,
-							"codeVisible" : true
+							"exampleSelector" : "landingOnOwnPlayerToken",
+							"previewHeight" : 410,
+							"previewShowSelector" : "moveOnBoardFor:",
+							"exampleBehaviorName" : "GtLudoMoveExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						}
 					]
 				},
