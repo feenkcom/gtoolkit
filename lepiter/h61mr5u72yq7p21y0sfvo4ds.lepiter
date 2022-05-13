@@ -79,7 +79,7 @@
 				"string" : "See {{gtClass:name=SmalltalkIntroSlideshow}}."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "elementSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T08:34:36.419429+02:00"
+						"dateAndTimeString" : "2022-05-13T10:20:47.641759+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,14 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T08:34:42.360824+02:00"
+						"dateAndTimeString" : "2022-05-13T10:22:25.699676+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "f30FyrOaDQCH1OtJByEOCA=="
+					"uidString" : "1kCqFkKbDQCPG6TlCgPpAA=="
 				},
-				"code" : "SmalltalkIntroSlideshow show"
+				"code" : "show := GtNewSlideShow create: SmalltalkIntroSlideshow new.\rGtNewSlideShowElement new slideShow: show; background: Color white",
+				"elementHeight" : 468,
+				"codeHeight" : 84,
+				"codeVisible" : false
 			},
 			{
 				"__type" : "textSnippet",
