@@ -214,6 +214,10 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(self class environment at: #GtNotificationIcebergCredentialsProvider) beDefaultProvider.
 	
 	(self class environment at: #GtImage) setupLepiterIntegration.
+	
+	(self class environment at: #RBConfigurableFormatter)
+		parenthesizeCascadeReceiver: false;
+		retainBlankLinesBetweenStatements: true
 ]
 
 { #category : #'post load' }
