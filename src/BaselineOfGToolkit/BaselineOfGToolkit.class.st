@@ -133,7 +133,9 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'LepiterEngine' with: [
 				spec repository: 'github://feenkcom/lepiter:main/src' ];
 			baseline: 'GToolkit4Magritte' with: [
-				spec repository: 'github://feenkcom/gt4magritte:main/src' ].
+				spec repository: 'github://feenkcom/gt4magritte:main/src' ];
+			baseline: 'RBFormatter' with: [
+				spec repository: 'github://j-brant/RBFormatter/src' ].
 				
 		spec 
 			package: 'GToolkit-Extensions' with: [
@@ -187,6 +189,10 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(self class environment at: #GtNotificationIcebergCredentialsProvider) beDefaultProvider.
 	
 	(self class environment at: #GtImage) setupLepiterIntegration.
+	
+	(self class environment at: #RBConfigurableFormatter)
+		parenthesizeCascadeReceiver: false;
+		retainBlankLinesBetweenStatements: true
 ]
 
 { #category : #'post load' }
