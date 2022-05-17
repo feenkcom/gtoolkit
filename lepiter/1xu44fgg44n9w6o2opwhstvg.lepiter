@@ -163,34 +163,34 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T09:19:31.153697+02:00"
+									"dateAndTimeString" : "2022-05-17T16:36:06.308925+02:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T09:19:56.061648+02:00"
+									"dateAndTimeString" : "2022-05-17T16:36:26.902746+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "qdTLspGbDQCvQA5LA6Cs4Q=="
+								"uidString" : "CHYnzJebDQCIbfWPCKMJCg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Instead of just being a static diagram, we can navigate to the actual implementation."
+							"string" : "Note in particular the four hierarchies. Instead of just being a static diagram, we can navigate to the actual implementation."
 						}
 					]
 				},
@@ -379,50 +379,13 @@
 								"__type" : "uid",
 								"uidString" : "Co51NpGbDQCvRLA5A6Cs4Q=="
 							},
-							"exampleSelector" : "modelClassLabeledCircleReferences",
+							"exampleSelector" : "modelClassExplicitLabeledReferences",
 							"previewHeight" : 600,
 							"previewShowSelector" : "gtLiveFor:",
 							"exampleBehaviorName" : "GtLudoCodeDocumentationExamples",
 							"codeExpanded" : true,
 							"previewExpanded" : false,
 							"noCode" : true
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T09:22:29.105544+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T09:23:57.218267+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "0QU0NJGbDQCvPiB3A6Cs4Q=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "The layout is perhaps not ideal, but you can adjust it to get a better overview. (Try dragging the root classes `Game` and `NamedEntity` towards the top.)"
 						}
 					]
 				},
@@ -456,80 +419,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Model classes"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-17T08:44:05.862589+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-17T08:44:05.862589+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "26A3NJGbDQCvP6HqA6Cs4Q=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-13T11:45:37.162471+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-13T11:45:47.569907+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "/ajAM0ObDQCPjwx1CgPpAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtClass:GtLudoRecordingGame}}"
 			}
 		]
 	},
