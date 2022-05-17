@@ -76,7 +76,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-17T15:26:10.257064+02:00"
+												"dateAndTimeString" : "2022-05-17T17:46:24.030047+02:00"
 											}
 										},
 										"uid" : {
@@ -86,7 +86,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "The size of methods includes all bytecodes, additional state and literals. Literals include strings and literal arrays."
+										"string" : "The size of methods includes all bytecodes, additional state and literals. Literals include strings and literal arrays, but excludes symbols."
 									}
 								]
 							},
@@ -109,7 +109,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T13:53:10.631089+02:00"
+									"dateAndTimeString" : "2022-05-17T17:43:16.269907+02:00"
 								}
 							},
 							"uid" : {
@@ -119,13 +119,87 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Methods:  {{gtExample:GtMetrics class>>totalMethodsSize|label=#humanReadableIsqByteSize}}"
+							"string" : "Methods:  {{gtExample:GtMetrics class>>totalMethodsSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMetrics class>>totalMethodsCount|label=#asString}} methods."
 						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-05-17T17:38:11.824478+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-05-17T17:38:13.072031+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "5C5OqpibDQCCG2TEBmnnSA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Instance Side:  {{gtExample:GtMetrics class>>totalClassesInstanceSideSize|label=#humanReadableIsqByteSize}}"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-05-17T17:38:14.544519+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-05-17T17:39:02.104337+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "kM1vqpibDQCCHKyIBmnnSA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Class side: {{gtExample:GtMetrics class>>totalClassesClassSideSize|label=#humanReadableIsqByteSize}} (metaclasses)"
+									},
 									{
 										"__type" : "textSnippet",
 										"children" : {
@@ -184,7 +258,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T13:54:06.885543+02:00"
+									"dateAndTimeString" : "2022-05-17T17:45:09.244715+02:00"
 								}
 							},
 							"uid" : {
@@ -194,7 +268,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Classes:  {{gtExample:GtMetrics class>>totalClassesSize|label=#humanReadableIsqByteSize}}"
+							"string" : "Classes:  {{gtExample:GtMetrics class>>totalClassesSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMetrics class>>totalClassesCount|label=#asString}} classess."
 						},
 						{
 							"__type" : "textSnippet",
@@ -221,7 +295,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T14:00:32.042288+02:00"
+									"dateAndTimeString" : "2022-05-17T17:45:56.585777+02:00"
 								}
 							},
 							"uid" : {
@@ -231,7 +305,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Symbols: {{gtExample:GtMetrics class>>totalSymbolsSize|label=#humanReadableIsqByteSize}}"
+							"string" : "Symbols: {{gtExample:GtMetrics class>>totalSymbolsSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMetrics class>>totalSymbolsCount|label=#asString}} symbols"
 						},
 						{
 							"__type" : "textSnippet",
@@ -445,7 +519,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T15:24:17.764718+02:00"
+									"dateAndTimeString" : "2022-05-17T17:48:43.899399+02:00"
 								}
 							},
 							"uid" : {
@@ -455,7 +529,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtClass:MethodDictionary}} instances sanity check: {{gtExample:GtMetrics class>>totalMethodDictionarySize|label=#humanReadableIsqByteSize}}"
+							"string" : "{{gtClass:MethodDictionary}} instances sanity check: {{gtExample:GtMetrics class>>totalMethodDictionarySize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMetrics class>>totalMethodDictionaryInstancesCount|label=#asString}} instances."
 						}
 					]
 				},
