@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-17T19:50:57.87432+02:00"
+						"dateAndTimeString" : "2022-05-18T14:32:56.504136+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Current image size is {{gtExample:GtMetrics class>>totalImageSize|label=#humanReadableIsqByteSize}}."
+				"string" : "Current image size is {{gtExample:GtMemoryMetrics class>>totalImageSize|label=#humanReadableIsqByteSize}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -146,7 +146,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T17:43:16.269907+02:00"
+									"dateAndTimeString" : "2022-05-18T14:33:06.77678+02:00"
 								}
 							},
 							"uid" : {
@@ -156,7 +156,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Methods:  {{gtExample:GtMetrics class>>totalMethodsSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMetrics class>>totalMethodsCount|label=#asString}} methods."
+							"string" : "Methods:  {{gtExample:GtMemoryMetrics class>>totalMethodsSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMemoryMetrics class>>totalMethodsCount|label=#asString}} methods."
 						},
 						{
 							"__type" : "textSnippet",
@@ -188,7 +188,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-17T17:38:13.072031+02:00"
+												"dateAndTimeString" : "2022-05-18T14:33:16.0567+02:00"
 											}
 										},
 										"uid" : {
@@ -198,7 +198,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Instance Side:  {{gtExample:GtMetrics class>>totalClassesInstanceSideSize|label=#humanReadableIsqByteSize}}"
+										"string" : "Instance Side:  {{gtExample:GtMemoryMetrics class>>totalClassesInstanceSideSize|label=#humanReadableIsqByteSize}}"
 									},
 									{
 										"__type" : "textSnippet",
@@ -225,7 +225,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-17T17:39:02.104337+02:00"
+												"dateAndTimeString" : "2022-05-18T14:34:32.070877+02:00"
 											}
 										},
 										"uid" : {
@@ -235,7 +235,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Class side: {{gtExample:GtMetrics class>>totalClassesClassSideSize|label=#humanReadableIsqByteSize}} (metaclasses)"
+										"string" : "Class side: {{gtExample:GtMemoryMetrics class>>totalClassesClassSideSize|label=#humanReadableIsqByteSize}} (metaclasses)"
 									},
 									{
 										"__type" : "textSnippet",
@@ -295,7 +295,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T17:45:09.244715+02:00"
+									"dateAndTimeString" : "2022-05-18T14:33:11.003166+02:00"
 								}
 							},
 							"uid" : {
@@ -305,7 +305,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Classes:  {{gtExample:GtMetrics class>>totalClassesSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMetrics class>>totalClassesCount|label=#asString}} classess."
+							"string" : "Classes:  {{gtExample:GtMemoryMetrics class>>totalClassesSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMemoryMetrics class>>totalClassesCount|label=#asString}} classess."
 						},
 						{
 							"__type" : "textSnippet",
@@ -332,7 +332,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T17:45:56.585777+02:00"
+									"dateAndTimeString" : "2022-05-18T14:34:38.844747+02:00"
 								}
 							},
 							"uid" : {
@@ -342,7 +342,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Symbols: {{gtExample:GtMetrics class>>totalSymbolsSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMetrics class>>totalSymbolsCount|label=#asString}} symbols"
+							"string" : "Symbols: {{gtExample:GtMemoryMetrics class>>totalSymbolsSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMemoryMetrics class>>totalSymbolsCount|label=#asString}} symbols"
 						},
 						{
 							"__type" : "textSnippet",
@@ -369,7 +369,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T15:44:41.95025+02:00"
+									"dateAndTimeString" : "2022-05-18T14:34:43.199567+02:00"
 								}
 							},
 							"uid" : {
@@ -379,7 +379,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Pragmas Cache: {{gtExample:GtMetrics class>>totalPragmasCacheSize|label=#humanReadableIsqByteSize}}"
+							"string" : "Pragmas Cache: {{gtExample:GtMemoryMetrics class>>totalPragmasCacheSize|label=#humanReadableIsqByteSize}}"
 						},
 						{
 							"__type" : "textSnippet",
@@ -406,7 +406,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T17:07:56.971966+02:00"
+									"dateAndTimeString" : "2022-05-18T14:34:46.082003+02:00"
 								}
 							},
 							"uid" : {
@@ -416,7 +416,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "GT  Completion Cache: {{gtExample:GtMetrics class>>totalCompleterCacheSize|label=#humanReadableIsqByteSize}}"
+							"string" : "GT  Completion Cache: {{gtExample:GtMemoryMetrics class>>totalCompleterCacheSize|label=#humanReadableIsqByteSize}}"
 						}
 					]
 				},
@@ -439,7 +439,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-17T13:57:45.57469+02:00"
+						"dateAndTimeString" : "2022-05-18T14:33:00.042255+02:00"
 					}
 				},
 				"uid" : {
@@ -449,7 +449,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Total analysed size: {{gtExample:GtMetrics class>>totalCodeAnalysedSize|label=#humanReadableIsqByteSize}}"
+				"string" : "Total analysed size: {{gtExample:GtMemoryMetrics class>>totalCodeAnalysedSize|label=#humanReadableIsqByteSize}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -481,7 +481,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T15:21:41.899561+02:00"
+									"dateAndTimeString" : "2022-05-18T14:34:49.009348+02:00"
 								}
 							},
 							"uid" : {
@@ -491,7 +491,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Traits overhead: {{gtExample:GtMetrics class>>totalTraitsOverheadSize|label=#humanReadableIsqByteSize}}"
+							"string" : "Traits overhead: {{gtExample:GtMemoryMetrics class>>totalTraitsOverheadSize|label=#humanReadableIsqByteSize}}"
 						}
 					]
 				},
@@ -556,7 +556,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-17T17:48:43.899399+02:00"
+									"dateAndTimeString" : "2022-05-18T14:34:56.297556+02:00"
 								}
 							},
 							"uid" : {
@@ -566,7 +566,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtClass:MethodDictionary}} instances sanity check: {{gtExample:GtMetrics class>>totalMethodDictionarySize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMetrics class>>totalMethodDictionaryInstancesCount|label=#asString}} instances."
+							"string" : "{{gtClass:MethodDictionary}} instances sanity check: {{gtExample:GtMemoryMetrics class>>totalMethodDictionarySize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMemoryMetrics class>>totalMethodDictionaryInstancesCount|label=#asString}} instances."
 						}
 					]
 				},
