@@ -19,7 +19,7 @@ GtNotificationForwarder class >> spaceDo: aBlock [
 { #category : #'api - space' }
 GtNotificationForwarder >> anotherSpaceDo: aBlock [
 	"Find a focused space"
-	self focusedSpaceDo: [ :aSpace | aBlock cull: aSpace ].
+	self focusedSpaceDo: [ :aSpace | ^ aBlock cull: aSpace ].
 
 	"There is no a focused space, find any opened space"
 	self openedSpaceDo: [ :aSpace | aBlock cull: aSpace ]
