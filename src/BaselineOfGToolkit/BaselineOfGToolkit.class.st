@@ -176,21 +176,21 @@ BaselineOfGToolkit >> fixCommandLineHandlerForPharo8 [
 
 { #category : #'post load' }
 BaselineOfGToolkit >> postLoadGToolkit: spec [
-	(PostLoaded isNotNil and: [ PostLoaded ])
-		ifTrue: [ ^ self ].
+	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
 	PostLoaded := true.
-	
-	SystemVersion current major = 7 ifTrue: [ 
-		self fixCommandLineHandlerForPharo7 ].
-	SystemVersion current major = 8 ifTrue: [ 
-		self fixCommandLineHandlerForPharo8 ].
-	
+
+	SystemVersion current major = 7 ifTrue: [ self fixCommandLineHandlerForPharo7 ].
+	SystemVersion current major = 8 ifTrue: [ self fixCommandLineHandlerForPharo8 ].
+
 	(self class environment at: #GtNotificationBadgePublisher) beActivated.
-	(self class environment at: #GtNotificationIcebergCredentialsProvider) beDefaultProvider.
-	
+	(self class environment at: #GtNotificationIcebergCredentialsProvider)
+		beDefaultProvider.
+
 	(self class environment at: #GtImage) setupLepiterIntegration.
-	
+
 	(self class environment at: #RBConfigurableFormatter)
+		maxLineLength: 80;
+		sameLineKeywordArgument: true;
 		parenthesizeCascadeReceiver: false;
 		retainBlankLinesBetweenStatements: true
 ]
