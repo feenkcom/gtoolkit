@@ -248,6 +248,43 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-05-18T18:45:40.69013+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-05-18T18:45:58.947934+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "nttpua2bDQCoZ6kjBMcBZQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "This includes information related about the class, but excludes the actual methods."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
 												"dateAndTimeString" : "2022-05-17T17:38:11.824478+02:00"
 											}
 										},
@@ -675,6 +712,80 @@
 								"__type" : "textStyle"
 							},
 							"string" : "{{gtClass:MethodDictionary}} instances sanity check: {{gtExample:GtMemoryMetrics class>>totalMethodDictionarySize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMemoryMetrics class>>totalMethodDictionaryInstancesCount|label=#asString}} instances."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-18T18:03:34.279181+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-18T19:23:44.625259+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "EmDOIq2bDQCoLuzPBMcBZQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:CompiledMethod}}:  {{gtExample:GtMemoryMetrics class>>totalCompiledMethodInstancesSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMemoryMetrics class>>totalCompiledMethodInstancesCount|label=#asString}} instances"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-18T18:54:46.80061+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-05-18T19:14:24.165176+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Pvf82a2bDQCoaa3cBMcBZQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:ClassOrganization}}:  {{gtExample:GtMemoryMetrics class>>totalClassOrganisationInstancesSize|label=#humanReadableIsqByteSize}}  for {{gtExample:GtMemoryMetrics class>>totalClassOrganisationInstancesCount|label=#asString}} instances."
 						}
 					]
 				},
