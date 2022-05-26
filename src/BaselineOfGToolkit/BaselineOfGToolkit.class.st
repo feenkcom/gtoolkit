@@ -83,7 +83,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.541/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1506/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1507/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.861/src' ].
@@ -140,7 +140,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.803/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1506/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1507/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.341/src' ].
@@ -153,6 +153,9 @@ BaselineOfGToolkit >> baseline: spec [
 		spec
 			baseline: 'GToolkitSpotter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.8.583/src' ].
+		spec
+			baseline: 'GToolkitNotifications' with: [
+				spec repository: 'github://feenkcom/gtoolkit-notifications:v0.6.0/src' ].
 		spec
 			baseline: 'XdocClient' with: [
 				spec repository: 'github://feenkcom/xdoc:v0.8.507/src' ].
@@ -170,14 +173,12 @@ BaselineOfGToolkit >> baseline: spec [
 			spec requires: #('GToolkitCoder' 'GToolkit4Pharo' 'GToolkitSpotter') ].
 		spec package: 'GToolkit-Monitor' with: [
 			spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow') ].
+		spec package: 'GToolkit-Profiler' with: [
+			spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow' 'GToolkitNotifications') ].
 		spec package: 'GToolkit-SceneDriller' with: [
 			spec requires: #('GToolkitVisualizerPhlow' 'GToolkitPager') ].
 		spec package: 'GToolkit-World' with: [
-			spec requires: #('GToolkit-SceneDriller' 'GToolkitFileBrowser' 'LepiterEngine' 'GToolkit4Git' 'GToolkitTranscript' 'GToolkit-Monitor' 'GToolkitReleaser' 'XdocClient') ].
-		spec package: 'GToolkit-Notifications' with: [
-			spec requires: #('GToolkitDebugger' 'GToolkit-World') ].
-		spec package: 'GToolkit-Profiler' with: [
-			spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow' 'GToolkit-Notifications') ].
+			spec requires: #('GToolkit-SceneDriller' 'GToolkitFileBrowser' 'LepiterEngine' 'GToolkit4Git' 'GToolkitTranscript' 'GToolkit-Monitor' 'GToolkitReleaser' 'XdocClient' 'GToolkitNotifications') ].
 		spec package: 'GToolkit-Docs' with: [
 			spec requires: #('GToolkitCoder' 'GToolkit-World') ].
 		spec package: 'GToolkit-Setup' with: [
