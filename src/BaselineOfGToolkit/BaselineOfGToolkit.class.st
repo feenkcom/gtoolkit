@@ -147,7 +147,7 @@ BaselineOfGToolkit >> baseline: spec [
 			package: 'GToolkit-Monitor' with: [
 				spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow') .];
 			package: 'GToolkit-Profiler' with: [
-				spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow' 'GToolkit-Notifications'). ];
+				spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow' 'GToolkitNotifications'). ];
 			package: 'GToolkit-Constraints' with: [
 				spec requires: #('GToolkitConstrainer' 'GToolkit-DependencyAnalyzer' 'LepiterEngine'). ];
 			package: 'GToolkit-SceneDriller' with: [
