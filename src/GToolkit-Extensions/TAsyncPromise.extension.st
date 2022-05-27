@@ -204,7 +204,7 @@ TAsyncPromise >> gtPromiseFor: aView [
 							aResultElement
 								addChild: (BrLabel new
 									aptitude: (BrGlamorousLabelAptitude new foreground: Color lightGray);
-									text: 'Waiting a promised value...') ] ];
+									text: 'Awaiting a promised value...') ] ];
 				promise: self ]
 ]
 
