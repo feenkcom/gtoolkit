@@ -12,7 +12,9 @@ Class {
 		'startButton',
 		'stopButton',
 		'resetButton',
-		'isPaused'
+		'isPaused',
+		'rootMessageTally',
+		'tallyRunning'
 	],
 	#category : #'GToolkit-Profiler'
 }
@@ -23,6 +25,15 @@ GtProfilerPerformanceChart >> computeIsRunning [
 		and: [ profiledSpace space telemetry = NullTelemetry uniqueInstance
 			and: [ currentLogger notNil
 				and: [ currentLogger isRunning ] ] ]
+]
+
+{ #category : #accessing }
+GtProfilerPerformanceChart >> createDefaultMessageTally [
+	^ MessageTally new
+		reportOtherProcesses: false;
+		maxClassNameSize: 1000;
+		maxClassPlusSelectorSize: 1000;
+		maxTabs: 100
 ]
 
 { #category : #initialization }
@@ -60,7 +71,7 @@ GtProfilerPerformanceChart >> initialize [
 		action: [ self reset ].
 
 	toolbar addItems: { startButton . stopButton . resetButton }.
-	
+	tallyRunning := false.
 	self addChild: toolbar.
 ]
 
@@ -139,6 +150,14 @@ GtProfilerPerformanceChart >> startLogger [
 	currentLogger ifNotNil: [ :aLogger | aLogger start ].
 ]
 
+{ #category : #'private - profiling' }
+GtProfilerPerformanceChart >> startTally [
+	tallyRunning := true.
+	rootMessageTally := [ MessageTally new
+			spyAllProcessesEvery: 1
+			while: [ tallyRunning ] ] asAsyncPromise
+]
+
 { #category : #'api - profiler' }
 GtProfilerPerformanceChart >> stop [
 	self
@@ -153,6 +172,11 @@ GtProfilerPerformanceChart >> stop [
 { #category : #'private - profiling' }
 GtProfilerPerformanceChart >> stopLogger [
 	currentLogger ifNotNil: [ :aLogger | aLogger stop ].
+]
+
+{ #category : #'private - profiling' }
+GtProfilerPerformanceChart >> stopTally [
+	tallyRunning := false
 ]
 
 { #category : #'private - profiling' }

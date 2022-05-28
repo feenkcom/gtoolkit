@@ -182,7 +182,7 @@ GtSceneDrillerEventHandler >> hideOverlayIn: aRootElement [
 	hasOverlay
 		ifFalse: [ ^ self ].
 
-	hasOverlay := false.	
+	hasOverlay := false.
 	aRootElement removeChildNamed: DrillerOverlayId
 ]
 
@@ -293,7 +293,13 @@ GtSceneDrillerEventHandler >> maybeHideOverlayIn: aRootElement [
 { #category : #'event handling' }
 GtSceneDrillerEventHandler >> mouseMoveEvent: aMouseMoveEvent [
 	| aDrillerTarget |
-
+	
+	hasOverlay
+		ifFalse: [ 
+			mousePosition := aMouseMoveEvent localPosition.
+			elementToHighlight := nil.
+			^ self ].
+	
 	aDrillerTarget := self drillerTargetIn: aMouseMoveEvent currentTarget.
 	(aDrillerTarget containsGlobalPoint: aMouseMoveEvent position)
 		ifTrue: [
