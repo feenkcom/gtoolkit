@@ -413,6 +413,11 @@ GtTally >> rootPrintOn: aStream total: total totalTime: totalTime threshold: thr
 ]
 
 { #category : #accessing }
+GtTally >> setMethod: aMethod [
+	method := aMethod
+]
+
+{ #category : #accessing }
 GtTally >> sonsOver: threshold [
 	"Returns all the sons that are not below a certain threshold. threshold is a number."
 
