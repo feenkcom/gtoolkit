@@ -40,13 +40,10 @@ GtMonitoredExternalResource >> gtPointersFor: aView [
 GtMonitoredExternalResource >> isNull [
 	^ (resource at: 1)
 		ifNil: [ true ]
-		ifNotNil: [ :anObject |
-			(anObject respondsTo: #isNull)
-				ifTrue: [ anObject isNull ]
-				ifFalse: [
-					(anObject respondsTo: #getHandle)
-						ifTrue: [ anObject getHandle isNull ]
-						ifFalse: [ false ] ] ]
+		ifNotNil: [ :anObject | 
+			[ anObject isNull ]
+				onDNU: #isNull
+				do: [ :ex | [ anObject getHandle isNull ] onDNU: #getHandle do: [ :ex2 | false ] ] ]
 ]
 
 { #category : #accessing }
