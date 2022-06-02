@@ -8,6 +8,11 @@ Class {
 	#category : #'GToolkit-SceneDriller-UI'
 }
 
+{ #category : #accessing }
+GtSceneDrillerTreeRowStencilBuilder class >> stencilProperties [
+	^ #(whenHovered whenUnhovered)
+]
+
 { #category : #'api - instantiation' }
 GtSceneDrillerTreeRowStencilBuilder >> buildDefault [
 	^ super buildDefault
