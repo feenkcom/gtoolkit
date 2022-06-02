@@ -106,24 +106,29 @@ GtPharoPackageDependenciesConstraint >> package: aPackage shouldDependOn: aColle
 { #category : #'private - dependencies' }
 GtPharoPackageDependenciesConstraint >> packageIssuesOf: aPackageName [
 	| aPackage aPackageManifest theIssues |
-	
-	aPackage := aPackageName asPackageIfAbsent: [ ^ { 
-		'Package named {1} does not exist' format: { aPackageName asString printString }
-	} ].
+	aPackage := aPackageName
+			asPackageIfAbsent: [ ^ {'Package named {1} does not exist'
+						format: {aPackageName asString printString}} ].
 
 	aPackageManifest := aPackage packageManifestOrNil ifNil: [ ^ #() ].
-	
+
 	theIssues := OrderedCollection new.
-	
-	(aPackageManifest respondsTo: #mustOnlyDependOn)
-		ifTrue: [ theIssues addAll: (self package: aPackage mustOnlyDependOn: (aPackageManifest perform: #mustOnlyDependOn)) ].
-		
-	(aPackageManifest respondsTo: #mustNotDependOn)
-		ifTrue: [ theIssues addAll: (self package: aPackage mustNotDependOn: (aPackageManifest perform: #mustNotDependOn)) ].
-		
-	(aPackageManifest respondsTo: #shouldDependOn)
-		ifTrue: [ theIssues addAll: (self package: aPackage shouldDependOn: (aPackageManifest perform: #shouldDependOn)) ].
-		
+
+	[ theIssues
+		addAll: (self package: aPackage mustOnlyDependOn: aPackageManifest mustOnlyDependOn) ]
+		onDNU: #mustOnlyDependOn
+		do: [ :ex |  ].
+
+	[ theIssues
+		addAll: (self package: aPackage mustNotDependOn: aPackageManifest mustNotDependOn) ]
+		onDNU: #mustNotDependOn
+		do: [ :ex |  ].
+
+	[ theIssues
+		addAll: (self package: aPackage shouldDependOn: aPackageManifest shouldDependOn) ]
+		onDNU: #shouldDependOn
+		do: [ :ex |  ].
+
 	^ theIssues
 ]
 
