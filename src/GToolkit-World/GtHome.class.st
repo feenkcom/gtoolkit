@@ -72,7 +72,7 @@ GtHome >> createVersionLabel [
 { #category : #sections }
 GtHome >> getStartedSection [
 	<gtHomeSection>
-	^ GtHomeGetStartedSection new 
+	^ GtHomeGetStartedSection new
 		priority: 15
 ]
 
