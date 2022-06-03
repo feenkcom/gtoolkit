@@ -72,7 +72,7 @@ pipeline {
         TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
         TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
         RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
-        PHARO_IMAGE_URL = 'https://dl.feenk.com/pharo/Pharo9.0-SNAPSHOT.build.1574.sha.6f28d0a.arch.64bit.zip'
+        PHARO_IMAGE_URL = 'https://dl.feenk.com/pharo/Pharo9.0-SNAPSHOT.build.1575.sha.9bb5f99.arch.64bit.zip'
     }
     stages {
         stage ('Read tool versions') {
