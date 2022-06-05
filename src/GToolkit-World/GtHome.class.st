@@ -10,13 +10,6 @@ Class {
 	#category : #'GToolkit-World-UI'
 }
 
-{ #category : #sections }
-GtHome >> caseStudyShowsSection [
-	<gtHomeSection>
-	^ GtHomeUseCaseShowsSection new 
-		priority: 17
-]
-
 { #category : #updating }
 GtHome >> clearKnowledgeBase [
 	knowledgeBase := nil
@@ -82,13 +75,6 @@ GtHome >> gtViewHomeSectionsFor: aView [
 	^ aView list 
 		title: 'Section Stencils';
 		items: [ self collectHomeSectionStencils ]
-]
-
-{ #category : #sections }
-GtHome >> howToSection [
-	"<gtHomeSection>"
-	^ GtHomeHowToSection new
-		priority: 19
 ]
 
 { #category : #initialization }
