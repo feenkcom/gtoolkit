@@ -99,7 +99,8 @@ GtImageSetup class >> performLocalSetup [
 	self updateLocalVersion.
 	self updateDocumentationDirectoryForLocalDevelopment.
 	self cleanUpImageAfterLoad.
-	self preparePharoCompletionCache
+	self preparePharoCompletionCache.
+	self recordSpaceTally
 ]
 
 { #category : #api }
@@ -125,12 +126,18 @@ GtImageSetup class >> performSetupForRelease: aVersionComputationName [
 	self registerTools.
 	self updateNextReleaseVersion: (GtRlSemanticVersionComputation named: aVersionComputationName).
 	self cleanUpImageAfterLoad.
-	self preparePharoCompletionCache
+	self preparePharoCompletionCache.
+	self recordSpaceTally.
 ]
 
 { #category : #api }
 GtImageSetup class >> preparePharoCompletionCache [
 	GtPharoCompletionStrategy initializeCache
+]
+
+{ #category : #api }
+GtImageSetup class >> recordSpaceTally [
+	GtSpaceTallyHistory recordDefaultSystemWideData
 ]
 
 { #category : #actions }
