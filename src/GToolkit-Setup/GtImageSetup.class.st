@@ -137,7 +137,7 @@ GtImageSetup class >> preparePharoCompletionCache [
 
 { #category : #api }
 GtImageSetup class >> recordSpaceTally [
-	GtSpaceTallyHistory recordDefaultSystemWideData
+	GtSpaceTallyHistory recordDefaultSystemWideDataLabeled: 'Image Setup'
 ]
 
 { #category : #actions }

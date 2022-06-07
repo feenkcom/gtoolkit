@@ -79,6 +79,10 @@ GtWorld class >> openDefault [
 	aSpace markAsDefault.
 	aSpace prepareForRelease.
 	aSpace show.
+	
+	"Record a tally"
+	GtSpaceTallyHistory recordDefaultSystemWideDataLabeled: 'Open Default GtWorld'.
+	
 	^ aSpace
 ]
 
