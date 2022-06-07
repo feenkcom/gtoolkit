@@ -19,3 +19,8 @@ GtSubscriptionsShouldNotUseDeliveryConditionWhere >> issues [
 GtSubscriptionsShouldNotUseDeliveryConditionWhere >> name [
 	^ 'Weak subscriptions should not use `where`: delivery condition'
 ]
+
+{ #category : #accessing }
+GtSubscriptionsShouldNotUseDeliveryConditionWhere >> status [ 
+	^ GtNeutralConstraintStatus new
+]

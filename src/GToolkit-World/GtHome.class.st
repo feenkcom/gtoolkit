@@ -158,13 +158,6 @@ GtHome >> spaceGap [
 ]
 
 { #category : #sections }
-GtHome >> toolShowsSection [
-	"<gtHomeSection>"
-	^ GtHomeToolDocsSection new 
-		priority: 16
-]
-
-{ #category : #sections }
 GtHome >> toolsSection [
 "	<gtHomeSection>"
 	^ GtHomeToolsSection new
