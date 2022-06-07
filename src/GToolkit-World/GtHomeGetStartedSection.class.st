@@ -1,7 +1,7 @@
 Class {
 	#name : #GtHomeGetStartedSection,
 	#superclass : #GtHomeSection,
-	#category : 'GToolkit-World-Sections'
+	#category : #'GToolkit-World-Sections'
 }
 
 { #category : #accessing }
@@ -12,7 +12,7 @@ GtHomeGetStartedSection >> create [
 	cardsContainer := self newCardsContainer.
 	cardsContainer addChild: (self 
 		newShowCardWithTitle: 'Tour' 
-		slideshow: [ GtLiveShow createWithArrowsVisible: GtTour new ]
+		slideshow: [ GtPresenterSlideShow create: GtTour new ]
 		description: 'Take an interactive tour through the environment.').
 		
 	cardsContainer addChild: (self

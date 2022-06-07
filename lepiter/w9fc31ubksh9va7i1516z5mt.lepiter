@@ -159,7 +159,7 @@
 							"string" : "Here we see an extract of the the hierarchy. The abstract root  is {{gtClass:name=Collection}}, which defines the common API of the library."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -172,7 +172,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-25T15:54:34.013756+01:00"
+									"dateAndTimeString" : "2022-06-03T23:17:00.728085+02:00"
 								}
 							},
 							"editEmail" : {
@@ -183,17 +183,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-25T15:54:43.30419+01:00"
+									"dateAndTimeString" : "2022-06-03T23:17:00.728085+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "cZQLAMuSDQC5lty7COwM2w=="
+								"uidString" : "PwdOYfOcDQCUZFk1Dr7Hxg=="
 							},
-							"code" : "GtMondrianDomainExamples new collectionHierarchy",
-							"elementHeight" : 382,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "collectionHierarchy",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "GtMondrianDomainExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -416,7 +419,7 @@
 							"string" : "There are several kinds of collections that implement sequences of elements."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -429,7 +432,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-03T10:22:20.389819+01:00"
+									"dateAndTimeString" : "2022-06-03T23:18:38.532973+02:00"
 								}
 							},
 							"editEmail" : {
@@ -440,17 +443,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-03T10:22:22.468817+01:00"
+									"dateAndTimeString" : "2022-06-03T23:18:38.532973+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "5v16aHuTDQCo0ueACpgilQ=="
+								"uidString" : "mGkiZ/OcDQCUZ5AwDr7Hxg=="
 							},
-							"code" : "GtMondrianDomainExamples new classHierarchyFor: { \r\t\tSequenceableCollection.\r\t\tArrayedCollection.\r\t\tArray.\r\t\tString.\r\t\tByteString.\r\t\tSymbol.\r\t\tText.\r\t\tOrderedCollection.\r\t\tSortedCollection.\r\t\tLinkedList.\r\t\tInterval }",
-							"elementHeight" : 382,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "sequenceableCollectionHierarchy",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "GtMondrianDomainExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -815,7 +821,7 @@
 							"string" : "Sets, Bags and Dictionaries form an odd implementation hierarchy. They are all unordered collections."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -828,7 +834,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-03T10:46:06.754015+01:00"
+									"dateAndTimeString" : "2022-06-03T23:19:39.852161+02:00"
 								}
 							},
 							"editEmail" : {
@@ -839,17 +845,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-03T10:46:08.046525+01:00"
+									"dateAndTimeString" : "2022-06-03T23:19:39.852161+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "C5V/vXuTDQCpCo8GCpgilQ=="
+								"uidString" : "qBHKavOcDQCUaGWUDr7Hxg=="
 							},
-							"code" : "GtMondrianDomainExamples new classHierarchyFor: { \r\t\tCollection.\r\t\tHashedCollection.\r\t\tSet.\r\t\tDictionary.\r\t\tIdentityDictionary.\r\t\tBag }",
-							"elementHeight" : 361,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "collectionSetBagHierarchy",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "GtMondrianDomainExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",

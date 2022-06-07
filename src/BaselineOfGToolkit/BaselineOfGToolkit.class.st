@@ -219,6 +219,7 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 
 	(self class environment at: #RBConfigurableFormatter)
 		maxLineLength: 80;
+		newLineAfterPragma: false;
 		sameLineKeywordArgument: true;
 		parenthesizeCascadeReceiver: false;
 		retainBlankLinesBetweenStatements: true
