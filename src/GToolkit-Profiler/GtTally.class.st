@@ -517,6 +517,13 @@ GtTally >> tallyPath: context in: aProcess by: count [
 	^ path bumpBy: count
 ]
 
+{ #category : #accessing }
+GtTally >> theClass [
+	"Return the class of the object receiver related to this tally"
+	
+	 ^ class
+]
+
 { #category : #printing }
 GtTally >> treePrintOn: aStream tabs: tabs thisTab: myTab total: total totalTime: totalTime tallyExact: isExact orThreshold: threshold [
 	| sons sonTab |
