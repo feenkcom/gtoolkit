@@ -4,10 +4,18 @@ Class {
 	#instVars : [
 		'visitedBaselines',
 		'visitedPackages',
-		'packageFromBaselineMap'
+		'packageFromBaselineMap',
+		'baselineAnalyzersMap'
 	],
 	#category : #'GToolkit-DependencyAnalyzer'
 }
+
+{ #category : #accessing }
+GtDependencyAnalyzerContext >> dependencyAnalyzerForBaseline: aBaseline [
+	^ baselineAnalyzersMap
+		at: aBaseline
+		ifAbsentPut: [ GtDependencyAnalyzerForBaseline new baseline: aBaseline ]
+]
 
 { #category : #initialization }
 GtDependencyAnalyzerContext >> initialize [
@@ -15,7 +23,8 @@ GtDependencyAnalyzerContext >> initialize [
 	
 	visitedBaselines := Stack new.
 	visitedPackages := Stack new.
-	packageFromBaselineMap := Dictionary new
+	packageFromBaselineMap := Dictionary new.
+	baselineAnalyzersMap := Dictionary new.
 ]
 
 { #category : #accessing }

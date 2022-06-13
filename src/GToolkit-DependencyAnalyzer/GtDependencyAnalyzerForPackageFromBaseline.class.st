@@ -46,7 +46,7 @@ GtDependencyAnalyzerForPackageFromBaseline >> baselineAnalyzer [
 ]
 
 { #category : #private }
-GtDependencyAnalyzerForPackageFromBaseline >> computePackageRequirements [
+GtDependencyAnalyzerForPackageFromBaseline >> computePackageRequirementsWithContext: aContext [
 	| thePackageSpec aVersion |
 
 	aVersion := self baseline project version.
@@ -62,15 +62,17 @@ GtDependencyAnalyzerForPackageFromBaseline >> computePackageRequirements [
 					packageFromBaseline: self;
 					requiredPackageFromBaselineAnalyzer: (GtDependencyAnalyzerForPackageFromBaseline new
 						forBaseline: self baselineAnalyzer
-						andPackage: (GtDependencyAnalyzerForPackage new package: aPackageRequire name asPackage)) ]
+						andPackage: (GtDependencyAnalyzerForPackage new 
+							package: aPackageRequire name asPackage; 
+							preloadedBaselines: self preloadedBaselines)) ]
 			ifNone: [
 				aVersion projects
 					detect: [ :eachProjectSpec | eachProjectSpec name = eachRequire ]
 					ifFound: [ :projectSpec |
 						GtDependencyAnalyzerPackageBaselineRequirement new
 							packageFromBaseline: self;
-							requirementBaselineAnalyzer: (GtDependencyAnalyzerForBaseline new
-								baseline: (self class environment at: projectSpec className asSymbol)) ]
+							requirementBaselineAnalyzer: (aContext dependencyAnalyzerForBaseline: (
+								self class environment at: projectSpec className asSymbol)) ]
 					ifNone: [ self error: 'Baseline is invalid' ] ] ]
 ]
 
@@ -84,7 +86,7 @@ GtDependencyAnalyzerForPackageFromBaseline >> directlyRequiredPackagesWithContex
 	cachedExplicitlyRequiredPackages := aGtDependencyAnalyzerContext
 		visitPackage: packageAnalyzer
 		during: [
-			(self packageRequirements
+			((self packageRequirementsWithContext: aGtDependencyAnalyzerContext)
 				flatCollect: [ :eachRequirement | eachRequirement directlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext ] as: Set) asArray ].
 
 	cachedExplicitlyRequiredPackages do: [ :eachPackage | eachPackage preloadedBaselines: self preloadedBaselines ].
@@ -110,33 +112,45 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtBaselineFor: aView [
 ]
 
 { #category : #'gt-extensions' }
-GtDependencyAnalyzerForPackageFromBaseline >> gtExplicitlyRequiredPackagesFor: aView [
+GtDependencyAnalyzerForPackageFromBaseline >> gtExplicitlyRequiredPackagesFor: aView context: aPhlowContext [
 	<gtView>
 	
+	| aContext |
+	aContext := aPhlowContext 
+		at: #GtDependencyAnalyzerContext 
+		ifAbsentPut: [ GtDependencyAnalyzerContext new ].
+		
 	^ aView list
 		title: 'Explicitly required packages';
 		priority: 11;
-		items: [ (self directlyRequiredPackagesWithContext: GtDependencyAnalyzerContext new)
+		items: [ (self directlyRequiredPackagesWithContext: aContext)
 			sorted: [ :a :b | a name < b name ] ]
 ]
 
 { #category : #'gt-extensions' }
-GtDependencyAnalyzerForPackageFromBaseline >> gtImplicitlyRequiredPackagesFor: aView [
+GtDependencyAnalyzerForPackageFromBaseline >> gtImplicitlyRequiredPackagesFor: aView context: aPhlowContext [
 	<gtView>
-	
+
+	| aContext |
+	aContext := aPhlowContext 
+		at: #GtDependencyAnalyzerContext 
+		ifAbsentPut: [ GtDependencyAnalyzerContext new ].
+			
 	^ aView list
 		title: 'Implicitly required packages';
 		priority: 12;
-		items: [ (self indirectlyRequiredPackagesWithContext: GtDependencyAnalyzerContext new)
+		items: [ (self indirectlyRequiredPackagesWithContext: aContext)
 			sorted: [ :a :b | a name < b name ] ]
 ]
 
 { #category : #'gt-extensions' }
-GtDependencyAnalyzerForPackageFromBaseline >> gtPackageDependenciesFor: aView [
+GtDependencyAnalyzerForPackageFromBaseline >> gtPackageDependenciesFor: aView context: aPhlowContext [
 	<gtView>
 	| allExplicitlyRequiredPackages allImplicitlyRequiredPackages allPreloadedPackages aContext |
 	
-	aContext := GtDependencyAnalyzerContext new.
+	aContext := aPhlowContext 
+		at: #GtDependencyAnalyzerContext 
+		ifAbsentPut: [ GtDependencyAnalyzerContext new ].
 	
 	allExplicitlyRequiredPackages := GtDependencyAnalyzerPackageFromBaselineNameMap
 		withPackages: (self directlyRequiredPackagesWithContext: aContext).
@@ -207,13 +221,18 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtPackageDependentsFor: aView [
 ]
 
 { #category : #'gt-extensions' }
-GtDependencyAnalyzerForPackageFromBaseline >> gtPackageRequirementsFor: aView [
+GtDependencyAnalyzerForPackageFromBaseline >> gtPackageRequirementsFor: aView context: aPhlowContext [
 	<gtView>
+	
+	| aContext |
+	aContext := aPhlowContext 
+		at: #GtDependencyAnalyzerContext 
+		ifAbsentPut: [ GtDependencyAnalyzerContext new ].
 	
 	^ aView list
 		title: 'Defined requirements';
 		priority: 20;
-		items: [ self packageRequirements ]
+		items: [ self packageRequirementsWithContext: aContext ]
 ]
 
 { #category : #'gt-extensions' }
@@ -226,11 +245,14 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtPreloadedBaselinesFor: aView [
 ]
 
 { #category : #'gt-extension' }
-GtDependencyAnalyzerForPackageFromBaseline >> gtSuggestedBaselinesFor: aView [
+GtDependencyAnalyzerForPackageFromBaseline >> gtSuggestedBaselinesFor: aView context: aPhlowContext [
 
 	<gtView>
 	| allExplicitlyRequiredPackages allImplicitlyRequiredPackages allPreloadedPackages aContext allPackages |
-	aContext := GtDependencyAnalyzerContext new.
+
+	aContext := aPhlowContext 
+		at: #GtDependencyAnalyzerContext 
+		ifAbsentPut: [ GtDependencyAnalyzerContext new ].
 
 	allExplicitlyRequiredPackages := GtDependencyAnalyzerPackageFromBaselineNameMap 
 		                                 withPackages:
@@ -282,7 +304,7 @@ GtDependencyAnalyzerForPackageFromBaseline >> indirectlyRequiredPackagesWithCont
 	cachedImplicitlyRequiredPackages := aGtDependencyAnalyzerContext
 		visitPackage: packageAnalyzer
 		during: [
-			(self packageRequirements
+			((self packageRequirementsWithContext: aGtDependencyAnalyzerContext)
 				flatCollect: [ :eachRequirement | eachRequirement indirectlyRequiredPackagesWithContext: aGtDependencyAnalyzerContext ] as: Set) asArray ].
 	
 	cachedImplicitlyRequiredPackages do: [ :eachPackage | eachPackage preloadedBaselines: self preloadedBaselines ].
@@ -333,8 +355,9 @@ GtDependencyAnalyzerForPackageFromBaseline >> packageDependencies [
 ]
 
 { #category : #dependencies }
-GtDependencyAnalyzerForPackageFromBaseline >> packageRequirements [
-	^ cachedPackageRequirements ifNil: [ cachedPackageRequirements := self computePackageRequirements ]
+GtDependencyAnalyzerForPackageFromBaseline >> packageRequirementsWithContext: aContext [
+	^ cachedPackageRequirements ifNil: [ 
+			cachedPackageRequirements := self computePackageRequirementsWithContext: aContext ]
 ]
 
 { #category : #accessing }
@@ -343,8 +366,11 @@ GtDependencyAnalyzerForPackageFromBaseline >> preloadedBaselines [
 ]
 
 { #category : #accessing }
-GtDependencyAnalyzerForPackageFromBaseline >> preloadedBaselines: anObject [
-	preloadedBaselines := anObject asSet
+GtDependencyAnalyzerForPackageFromBaseline >> preloadedBaselines: aCollection [
+	preloadedBaselines := aCollection asSet.
+	
+	baselineAnalyzer ifNotNil: [ baselineAnalyzer preloadedBaselines: aCollection ].
+	packageAnalyzer ifNotNil: [ packageAnalyzer preloadedBaselines: aCollection ].
 ]
 
 { #category : #dependencies }
@@ -354,7 +380,7 @@ GtDependencyAnalyzerForPackageFromBaseline >> preloadedPackagesWithContext: aGtD
 	
 	thePreloadedPackages := Set new.
 	self preloadedBaselines do: [ :eachClass |
-		thePreloadedPackages addAll: ((GtDependencyAnalyzerForBaseline new baseline: eachClass)
+		thePreloadedPackages addAll: ((aGtDependencyAnalyzerContext dependencyAnalyzerForBaseline: eachClass)
 			indirectlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext) ].
 
 	thePreloadedPackages do: [ :eachPackage | eachPackage preloadedBaselines: self preloadedBaselines ].

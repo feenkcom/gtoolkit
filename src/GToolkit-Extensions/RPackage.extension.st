@@ -47,18 +47,26 @@ RPackage >> gtDependenciesMapFor: aView [
 RPackage >> gtDependencyAnalyzerFor: aView [
 	<gtPackageView>
 	
+	| anAnalyzer |
 	^ aView explicit
 		title: 'Dependency Analysis';
 		priority: 40;
 		stencil: [ 
-			| anAnalyzer anObjectHolder |
+			| anObjectHolder |
 			anAnalyzer := GtDependencyAnalyzerEasy analyzePackageNamed: self name.
-			anObjectHolder := GtInspectorObject new object: anAnalyzer; viewSelector: #gtPackageDependenciesFor:.
+			anObjectHolder := GtInspectorObject new object: anAnalyzer; viewSelector: #gtPackageDependenciesFor:context:.
 			GtInspector new objectHolder: anObjectHolder ];
-		actionUpdateButtonTooltip: 'Update dependency analysis';
+		actionButtonIcon: BrGlamorousVectorIcons refresh 
+			tooltip: 'Update dependency analysis' 
+			action: [ :aButton :aTab | 
+				aButton disable.
+				[ aTab viewContentElement phlow syncUpdate ] asAsyncPromise 
+					then: [ :aResult | aButton enable ] 
+					otherwise: [ :anError | aButton enable ] ];
 		actionButtonIcon: BrGlamorousVectorIcons inspect 
 			tooltip: 'Inspect dependency analyzer' 
-			action: [ :aButton | aButton phlow spawnObject: (GtDependencyAnalyzerEasy analyzePackageNamed: self name) ]
+			action: [ :aButton | anAnalyzer ifNotNil: [ 
+				aButton phlow spawnObject: anAnalyzer ] ]
 ]
 
 { #category : #'*GToolkit-Extensions' }

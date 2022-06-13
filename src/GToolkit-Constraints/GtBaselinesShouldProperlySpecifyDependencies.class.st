@@ -1,7 +1,7 @@
 Class {
 	#name : #GtBaselinesShouldProperlySpecifyDependencies,
 	#superclass : #GtPharoConstraint,
-	#category : 'GToolkit-Constraints'
+	#category : #'GToolkit-Constraints'
 }
 
 { #category : #example }
@@ -24,7 +24,8 @@ GtBaselinesShouldProperlySpecifyDependencies >> issues [
 	allDependencies := gtProject withAllChildProjects.
 
 	analyzers := allDependencies collect: [:aProject |
-		(GtDependencyAnalyzerForBaseline new baseline: aProject baselineClass)
+		(GtDependencyAnalyzerForBaseline new 
+			baseline: aProject baselineClass)
 			preloadedBaselines: aProject baselineClass gtDependencyAnalysisPreloadedBaselines ].
 
 	^ analyzers select: [ :aBaselineAnalizer | 

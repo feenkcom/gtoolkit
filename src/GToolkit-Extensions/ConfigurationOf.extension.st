@@ -55,7 +55,8 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 				toAll: [:each | |dependedProjects |
 					dependedProjects := each projects collect: #version.
 					projects select: [ :project | dependedProjects anySatisfy: [ :dependedProject | dependedProject = project ] ] ].
-			mondrian layout custom: (GtGradHorizontalDominanceCenteredTreeLayout new levelDistance: 10; nodeDistance: 10)]
+			mondrian layout custom: (GtGradHorizontalDominanceCenteredTreeLayout new levelDistance: 10; nodeDistance: 10)];
+		actionUpdateButton
 ]
 
 { #category : #'*GToolkit-Extensions' }
@@ -90,7 +91,8 @@ ConfigurationOf class >> gtPackagesMapFor: aView [
 	^ aView mondrian
 		title: 'Packages map';
 		priority: 11;
-		painting: [ :mondrian | self paintPackagesMapWith: mondrian]
+		painting: [ :mondrian | self paintPackagesMapWith: mondrian];
+		actionUpdateButton
 ]
 
 { #category : #'*GToolkit-Extensions' }
