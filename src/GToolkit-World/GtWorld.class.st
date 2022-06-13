@@ -81,7 +81,7 @@ GtWorld class >> openDefault [
 	aSpace show.
 	
 	"Record a tally"
-	GtSpaceTallyHistory recordDefaultSystemWideDataLabeled: 'Open Default GtWorld'.
+	"GtSpaceTallyHistory recordDefaultSystemWideDataLabeled: 'Open Default GtWorld'."
 	
 	^ aSpace
 ]
