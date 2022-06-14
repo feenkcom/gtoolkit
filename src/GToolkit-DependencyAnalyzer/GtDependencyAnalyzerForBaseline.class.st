@@ -65,16 +65,19 @@ GtDependencyAnalyzerForBaseline >> gtBaselineFor: aView [
 ]
 
 { #category : #'gt-extensions' }
-GtDependencyAnalyzerForBaseline >> gtDirectlyDefinedPackagesFor: aView [
+GtDependencyAnalyzerForBaseline >> gtDirectlyDefinedPackagesFor: aView context: aPhlowContext [
 
 	<gtView>
+	
+	| aContext |
+	aContext := aPhlowContext 
+		at: #GtDependencyAnalyzerContext 
+		ifAbsentPut: [ GtDependencyAnalyzerContext new ].
+		
 	^ aView columnedList
 		  title: 'Directly defined packages';
 		  priority: 10;
-		  items: [ 
-			  | aContext |
-			  aContext := GtDependencyAnalyzerContext new.
-
+		  items: [
 			  ((self directlyDefinedPackagesWithContext: aContext) sorted: [ 
 					   :a 
 					   :b | a name < b name ]) collect: [ :eachPackageFromBaseline | 
@@ -88,33 +91,43 @@ GtDependencyAnalyzerForBaseline >> gtDirectlyDefinedPackagesFor: aView [
 			  each value ifNotEmpty: [ aText foreground: Color red darker ].
 			  aText ];
 		  column: 'Undefined dependencies'
-		  text: [ :each | each value size ];
+		  text: [ :each | each value size ] width: 150;
 		  column: 'Suggested Missing Baselines' text: [ :each | 
-			  ((self missingBaselinesFor: each value) asOrderedCollection) joinUsing: ', ' ];
+			  ((self missingBaselinesFor: each value) asOrderedCollection) joinUsing: ', ' ] weight: 2;
 		  send: [ :each | each key ]
 ]
 
 { #category : #'gt-extensions' }
-GtDependencyAnalyzerForBaseline >> gtIndirectlyDefinedPackagesFor: aView [
+GtDependencyAnalyzerForBaseline >> gtIndirectlyDefinedPackagesFor: aView context: aPhlowContext [
 	<gtView>
 	
+	| aContext |
+	aContext := aPhlowContext 
+		at: #GtDependencyAnalyzerContext 
+		ifAbsentPut: [ GtDependencyAnalyzerContext new ].
+		
 	^ aView list
 		title: 'Idirectly defined packages';
 		priority: 12;
 		items: [
-			(self indirectlyDefinedPackagesWithContext: GtDependencyAnalyzerContext new)
+			(self indirectlyDefinedPackagesWithContext: aContext)
 				sorted: [ :a :b | a name < b name ] ]
 ]
 
 { #category : #'gt-extensions' }
-GtDependencyAnalyzerForBaseline >> gtIssuesFor: aView [
+GtDependencyAnalyzerForBaseline >> gtIssuesFor: aView context: aPhlowContext [
 	<gtView>
-	
+
+	| aContext |
+	aContext := aPhlowContext 
+		at: #GtDependencyAnalyzerContext 
+		ifAbsentPut: [ GtDependencyAnalyzerContext new ].
+			
 	^ aView list
 		title: 'Issues';
 		priority: 11;
 		items: [
-			(self issuesWithContext: GtDependencyAnalyzerContext new)
+			(self issuesWithContext: aContext)
 				sorted: [ :a :b | a package name < b package name ] ];
 		itemText: [ :each | each printString ]
 ]
@@ -141,7 +154,7 @@ GtDependencyAnalyzerForBaseline >> indirectlyDefinedPackagesWithContext: aGtDepe
 	| theDirectlyDefinedPackages theIndirectlyDefinedPackages |
 	
 	cachedIndirectlyDefinedPackages
-		ifNotNil: [ ^ self ].
+		ifNotNil: [ ^ cachedIndirectlyDefinedPackages ].
 	
 	theDirectlyDefinedPackages := (self directlyDefinedPackagesWithContext: aGtDependencyAnalyzerContext) asSet.
 	theIndirectlyDefinedPackages := Set new.
@@ -157,7 +170,10 @@ GtDependencyAnalyzerForBaseline >> indirectlyDefinedPackagesWithContext: aGtDepe
 		visitBaseline: self
 		during: [
 			self baseline project version projects
-				reject: [ :eachProjectSpec | theDirectlyDefinedPackages anySatisfy: [ :eachPackage | eachPackage packageRequirements anySatisfy: [ :eachPackageRequirement | eachPackageRequirement requiredBaseline name = eachProjectSpec className ] ] ]
+				reject: [ :eachProjectSpec | theDirectlyDefinedPackages anySatisfy: [ :eachPackage | 
+					(eachPackage packageRequirementsWithContext: aGtDependencyAnalyzerContext) 
+						anySatisfy: [ :eachPackageRequirement | 
+							eachPackageRequirement requiredBaseline name = eachProjectSpec className ] ] ]
 				thenDo: [ :eachProjectSpec |
 					(self class environment includesKey: eachProjectSpec className asSymbol)
 						ifTrue: [

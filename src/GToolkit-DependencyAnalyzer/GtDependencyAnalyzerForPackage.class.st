@@ -61,7 +61,7 @@ GtDependencyAnalyzerForPackage >> computeDefiningBaselinesWithContext: aContext 
 		collect: [ :eachBaseline |
 			aContext
 				package: self name
-				fromBaseline: (GtDependencyAnalyzerForBaseline new baseline: eachBaseline) ] as: Array.
+				fromBaseline: (aContext dependencyAnalyzerForBaseline: eachBaseline) ] as: Array.
 			
 	thePackagesFromBaseline do: [ :eachPackage | eachPackage preloadedBaselines: self preloadedBaselines ].
 	^ thePackagesFromBaseline
@@ -70,7 +70,9 @@ GtDependencyAnalyzerForPackage >> computeDefiningBaselinesWithContext: aContext 
 { #category : #private }
 GtDependencyAnalyzerForPackage >> computePackageDependencies [
 	^ (self class packageDependenciesOf: self package)
-		collect: [ :eachPackage | GtDependencyAnalyzerForPackage new package: eachPackage ] as: Array
+		collect: [ :eachPackage | GtDependencyAnalyzerForPackage new 
+			package: eachPackage; 
+			preloadedBaselines: self preloadedBaselines ] as: Array
 ]
 
 { #category : #private }
