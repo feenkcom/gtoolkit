@@ -19,18 +19,26 @@ BaselineOf class >> gtAllReferencesFor: aView [
 BaselineOf class >> gtDependencyAnalyzerFor: aView [
 	<gtClassView>
 	
+	| anAnalyzer |
 	^ aView explicit
 		title: 'Dependency Analysis';
 		priority: 41;
 		stencil: [ 
-			| anAnalyzer anObjectHolder |
+			| anObjectHolder |
 			anAnalyzer := GtDependencyAnalyzerEasy analyzeBaseline: self.
-			anObjectHolder := GtInspectorObject new object: anAnalyzer; viewSelector: #gtDirectlyDefinedPackagesFor:.
+			anObjectHolder := GtInspectorObject new object: anAnalyzer; viewSelector: #gtDirectlyDefinedPackagesFor:context:.
 			GtInspector new objectHolder: anObjectHolder ];
-		actionUpdateButtonTooltip: 'Update dependency analysis';
+		actionButtonIcon: BrGlamorousVectorIcons refresh 
+			tooltip: 'Update dependency analysis' 
+			action: [ :aButton :aTab | 
+				aButton disable.
+				[ aTab viewContentElement phlow syncUpdate ] asAsyncPromise 
+					then: [ :aResult | aButton enable ] 
+					otherwise: [ :anError | aButton enable ] ];
 		actionButtonIcon: BrGlamorousVectorIcons inspect 
 			tooltip: 'Inspect dependency analyzer' 
-			action: [ :aButton | aButton phlow spawnObject: (GtDependencyAnalyzerEasy analyzeBaseline: self) ]
+			action: [ :aButton | anAnalyzer ifNotNil: [ 
+				aButton phlow spawnObject: anAnalyzer ] ]
 ]
 
 { #category : #'*GToolkit-Extensions' }

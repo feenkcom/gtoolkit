@@ -94,13 +94,14 @@ GtImageSetup class >> installLogo [
 GtImageSetup class >> performLocalSetup [
 	"Perform a setup for images that should be used locally for development."
 	
+	self recordSpaceTallyAtBeginning.
 	self installLogo.
 	self registerTools.
 	self updateLocalVersion.
 	self updateDocumentationDirectoryForLocalDevelopment.
 	self cleanUpImageAfterLoad.
 	self preparePharoCompletionCache.
-	self recordSpaceTally
+	self recordSpaceTallyAtEnd
 ]
 
 { #category : #api }
@@ -121,13 +122,14 @@ GtImageSetup class >> performSetupForRelease: aVersionComputationName [
 	 - minor
 	 - major"
 	
+	self recordSpaceTallyAtBeginning.
 	self copyDataAndDocsFolders.
 	self installLogo.
 	self registerTools.
 	self updateNextReleaseVersion: (GtRlSemanticVersionComputation named: aVersionComputationName).
 	self cleanUpImageAfterLoad.
 	self preparePharoCompletionCache.
-	self recordSpaceTally.
+	self recordSpaceTallyAtEnd.
 ]
 
 { #category : #api }
@@ -136,8 +138,13 @@ GtImageSetup class >> preparePharoCompletionCache [
 ]
 
 { #category : #api }
-GtImageSetup class >> recordSpaceTally [
-	GtSpaceTallyHistory recordDefaultSystemWideDataLabeled: 'Image Setup'
+GtImageSetup class >> recordSpaceTallyAtBeginning [
+	GtSpaceTallyHistory recordDefaultSystemWideDataLabeled: 'Image Setup Start'
+]
+
+{ #category : #api }
+GtImageSetup class >> recordSpaceTallyAtEnd [
+	GtSpaceTallyHistory recordDefaultSystemWideDataLabeled: 'Image Setup End'
 ]
 
 { #category : #actions }
