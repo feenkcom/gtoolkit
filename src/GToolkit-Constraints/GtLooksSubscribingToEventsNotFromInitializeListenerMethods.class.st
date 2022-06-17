@@ -1,7 +1,7 @@
 Class {
 	#name : #GtLooksSubscribingToEventsNotFromInitializeListenerMethods,
 	#superclass : #GtPharoConstraint,
-	#category : 'GToolkit-Constraints'
+	#category : #'GToolkit-Constraints'
 }
 
 { #category : #utilities }
@@ -46,8 +46,6 @@ GtLooksSubscribingToEventsNotFromInitializeListenerMethods >> description [
 GtLooksSubscribingToEventsNotFromInitializeListenerMethods >> issues [
 	| listenerSelectors |
 	
-	true ifTrue: [ ^ #() ].
-	
 	listenerSelectors := { 
 		#when:do:.
 		#when:reply:.
@@ -75,4 +73,9 @@ GtLooksSubscribingToEventsNotFromInitializeListenerMethods >> issues [
 { #category : #accessing }
 GtLooksSubscribingToEventsNotFromInitializeListenerMethods >> name [
 	^ 'We should only subscribe to events in initializeListeners method'
+]
+
+{ #category : #accessing }
+GtLooksSubscribingToEventsNotFromInitializeListenerMethods >> status [
+	^ GtNeutralConstraintStatus new
 ]

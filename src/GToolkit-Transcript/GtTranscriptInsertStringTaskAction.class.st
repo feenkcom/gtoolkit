@@ -19,7 +19,7 @@ GtTranscriptInsertStringTaskAction >> attributes: anObject [
 ]
 
 { #category : #'api - running' }
-GtTranscriptInsertStringTaskAction >> run [
+GtTranscriptInsertStringTaskAction >> run: aWaker [
 	"We should only modify the editor from within the UI thread"
 
 	self editor text append: (self string asRopedText attributes: self attributes)

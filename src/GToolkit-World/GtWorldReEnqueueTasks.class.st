@@ -12,7 +12,7 @@ Class {
 		'previousSpace',
 		'actualSpace'
 	],
-	#category : 'GToolkit-World-UI'
+	#category : #'GToolkit-World-UI'
 }
 
 { #category : #'private - accessing' }
@@ -58,6 +58,12 @@ GtWorldReEnqueueTasks >> previousSpaceDo: aBlock [
 
 { #category : #'api - running' }
 GtWorldReEnqueueTasks >> run [
+	self previousAndActualSpaceDo: [ :aPreviousSpace :anActualSpace |
+		anActualSpace enqueueTasksFrom: aPreviousSpace taskQueue ].
+]
+
+{ #category : #'api - running' }
+GtWorldReEnqueueTasks >> run: aWaker [
 	self previousAndActualSpaceDo: [ :aPreviousSpace :anActualSpace |
 		anActualSpace enqueueTasksFrom: aPreviousSpace taskQueue ].
 ]

@@ -5,7 +5,7 @@ Class {
 }
 
 { #category : #'api - running' }
-GtTranscriptDeleteAllTaskAction >> run [
+GtTranscriptDeleteAllTaskAction >> run: aWaker [
 	"We should only modify the editor from within the UI thread"
 	
 	self editor text deleteAll

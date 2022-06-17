@@ -9,12 +9,6 @@ GtGlamorousToolkitBookPagesContainingMissingReferences >> description [
 	^ 'All references to methods and classes from the Glamorous Toolkit Book should be present in the image'
 ]
 
-{ #category : #initialization }
-GtGlamorousToolkitBookPagesContainingMissingReferences >> initialize [
-	super initialize.
-	status := GtNeutralConstraintStatus new
-]
-
 { #category : #accessing }
 GtGlamorousToolkitBookPagesContainingMissingReferences >> issues [
 	| results lepiterKnowledgebases |
@@ -39,4 +33,9 @@ GtGlamorousToolkitBookPagesContainingMissingReferences >> knowledgebasesToAnalys
 { #category : #accessing }
 GtGlamorousToolkitBookPagesContainingMissingReferences >> name [
 	^ 'Glamorous Toolkit Book Pages Containing Missing References'
+]
+
+{ #category : #initialization }
+GtGlamorousToolkitBookPagesContainingMissingReferences >> status [
+	^ GtNeutralConstraintStatus new
 ]

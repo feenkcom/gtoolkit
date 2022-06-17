@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-27T06:36:05.640771+02:00"
+						"dateAndTimeString" : "2022-06-16T21:52:25.768785+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,57 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-15T10:15:57.26712+01:00"
+						"dateAndTimeString" : "2022-06-16T21:55:17.350564+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "1q1fLR8RAAAAAAAAAAAAAA=="
+					"uidString" : "9jsHqfedDQC6nZ68AiwUNQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This section contains several tutorials about Glamorous Toolkit."
+				"string" : "Glamorous Toolkit embodies our long term goal of making the inside of software systems explainable.  It is the first environment that supports [[Moldable Development]]."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-06-16T21:48:49.316843+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-06-16T21:48:49.316843+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DGDZqfedDQC6oEcTAiwUNQ=="
+				},
+				"exampleSelector" : "timelineElement",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "GtTour",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : true
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +95,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-15T10:16:11.300146+01:00"
+						"dateAndTimeString" : "2022-06-16T22:15:30.158028+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,54 +106,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-06-16T21:54:20.181889+02:00"
+						"dateAndTimeString" : "2022-06-16T22:15:43.721563+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2DLYt2yUDQCfJJGzD3Q2zw=="
+					"uidString" : "8Kc9CfidDQC7jT7zAiwUNQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For a general introduction to Glamorous Toolkit, see [[Get started]] and the various [[Use cases]]."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-15T10:17:09.741227+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-22T20:05:57.342092+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "2TLgu2yUDQCfW/QHD3Q2zw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "If you are  new to [[Pharo]], start with [[An introduction to Pharo]] and [[A gentle introduction to Pharo Smalltalk]]."
+				"string" : "See [[Smalltalk history]] for a broader perspective."
 			}
 		]
 	},
@@ -125,7 +128,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-05-27T06:35:46.056431+02:00"
+			"dateAndTimeString" : "2022-06-16T21:48:35.496072+02:00"
 		}
 	},
 	"editEmail" : {
@@ -136,15 +139,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-05-27T06:35:49.635838+02:00"
+			"dateAndTimeString" : "2022-06-16T22:15:18.620312+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Tutorials"
+		"title" : "Glamorous Toolkit history"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "75c89b07-aa7f-0d00-819d-43440bcacd6e"
+		"uuid" : "387c06a9-f79d-0d00-ba9c-34e0022c1435"
 	}
 }
