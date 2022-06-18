@@ -132,7 +132,7 @@ GtTranscriptElement >> newClearButtonElement [
 { #category : #'private - instance creation' }
 GtTranscriptElement >> newEditorElement [
 	^ BrEditorElement new
-		editor: BrTextEditor new
+		editor: BrTextEditorModel new
 		"look: BrGlamorousCodeEditorLook new"
 ]
 
