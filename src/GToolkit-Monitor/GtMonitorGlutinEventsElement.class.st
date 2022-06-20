@@ -150,7 +150,7 @@ GtMonitorGlutinEventsElement >> initialize [
 				ifTrue: [
 					BrLabel new
 						aptitude: BrGlamorousLabelAptitude new;
-						text: aGlutinEventSignal event printString ]
+						text: aGlutinEventSignal event gtDisplayString ]
 				ifFalse: [ anEventElement ] ].
 	
 	self addChild: (BrVerticalPane new
@@ -182,8 +182,8 @@ GtMonitorGlutinEventsElement >> newButtonElement: aText [
 		aptitude: (BrShadowAptitude new width: 1; offset: 0@0.5);
 		background: Color white;
 		geometry: (BlRoundedRectangleGeometry cornerRadius: 3);
-		margin: (BlInsets all: 3);
-		padding: (BlInsets all: 4);
+		margin: (BlInsets all: 5);
+		padding: (BlInsets all: 2);
 		constraintsDo: [ :c |
 			c horizontal fitContent.
 			c vertical fitContent ];
