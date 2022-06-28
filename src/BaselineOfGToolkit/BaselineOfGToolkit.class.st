@@ -161,26 +161,9 @@ BaselineOfGToolkit >> baseline: spec [
 ]
 
 { #category : #'post load' }
-BaselineOfGToolkit >> fixCommandLineHandlerForPharo7 [
-	BasicCommandLineHandler compile: ((BasicCommandLineHandler>>#gtHandleArgument:) sourceCode
-		copyReplaceAll: 'gtHandleArgument: aString' with: 'handleArgument: aString').
-	EvaluateCommandLineHandler compile: ((EvaluateCommandLineHandler>>#gtArgumentString) sourceCode
-		copyReplaceAll: 'gtArgumentString' with: 'argumentString')
-]
-
-{ #category : #'post load' }
-BaselineOfGToolkit >> fixCommandLineHandlerForPharo8 [
-	EvaluateCommandLineHandler compile: ((EvaluateCommandLineHandler>>#gtArgumentString) sourceCode
-		copyReplaceAll: 'gtArgumentString' with: 'argumentString')
-]
-
-{ #category : #'post load' }
 BaselineOfGToolkit >> postLoadGToolkit: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
 	PostLoaded := true.
-
-	SystemVersion current major = 7 ifTrue: [ self fixCommandLineHandlerForPharo7 ].
-	SystemVersion current major = 8 ifTrue: [ self fixCommandLineHandlerForPharo8 ].
 
 	(self class environment at: #GtNotificationBadgePublisher) beActivated.
 	(self class environment at: #GtNotificationIcebergCredentialsProvider)
