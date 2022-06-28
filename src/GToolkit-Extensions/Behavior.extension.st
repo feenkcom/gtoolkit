@@ -27,68 +27,65 @@ Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 { #category : #'*GToolkit-Extensions' }
 Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 	<gtClassView>
-	| aMethodsCoder aMethodsCoderViewModel aTestSuiteViewModel anExampleViewModel aNewMethodCoderHolder |
-	
+	| aMethodsCoder aMethodsCoderViewModel aTestSuiteViewModel anExampleViewModel aNewMethodCoderHolder view |
 	aMethodsCoder := GtPharoStreamingMethodsCoder forBehavior: self.
-	aMethodsCoderViewModel := GtPharoStreamingMethodsCoderViewModel new streamingCodersModel: aMethodsCoder.
+	aMethodsCoderViewModel := GtPharoStreamingMethodsCoderViewModel new
+			streamingCodersModel: aMethodsCoder.
 	aMethodsCoderViewModel
 		shouldExpandByDefault: false;
 		shouldHaveHeaderByDefault: false;
-		selfObject: (aPhlowContext optionAt: #behaviorCoder
-			ifPresent: [ :aBehaviorCoderUIModel | aBehaviorCoderUIModel coderModel object ]
-			ifAbsent: [ nil ]).
+		selfObject: (aPhlowContext
+				optionAt: #behaviorCoder
+				ifPresent: [ :aBehaviorCoderUIModel | aBehaviorCoderUIModel coderModel object ]
+				ifAbsent: [ nil ]).
 
 	aTestSuiteViewModel := self
-		testSuiteViewModelWith: aMethodsCoder
-		fromContext: aPhlowContext.
-		
+			testSuiteViewModelWith: aMethodsCoder
+			fromContext: aPhlowContext.
+
 	anExampleViewModel := self
-		exampleViewModelWith: aMethodsCoder
-		fromContext: aPhlowContext.
-		
+			exampleViewModelWith: aMethodsCoder
+			fromContext: aPhlowContext.
+
 	aNewMethodCoderHolder := ValueHolder new.
 
-	^ aView explicit
-		priority: 9;
-		title: 'Methods';
-		disableAsync;
-		actionDropdownButtonIcon: BrGlamorousVectorIcons filter
-			tooltip: 'Filter'
-			content: [ :element | aMethodsCoder filterDropDown: element ];
-		actionDropdownButtonDo: [ :aDrodownAction | 
-			aDrodownAction dropdown 
-				icon: BrGlamorousVectorIcons add;
-				tooltip: 'Add new method';
-				content: [ :aButton |
-					| aNewMethodCoder aNewMethodCoderViewModel aHandler |
+	view := aView explicit
+			priority: 9;
+			title: 'Methods';
+			disableAsync;
+			actionDropdownButtonIcon: BrGlamorousVectorIcons filter
+				tooltip: 'Filter'
+				content: [ :element | aMethodsCoder filterDropDown: element ];
+			actionDropdownButtonDo: [ :aDrodownAction | 
+				aDrodownAction dropdown
+					icon: BrGlamorousVectorIcons add;
+					tooltip: 'Add new method';
+					content: [ :aButton | 
+						| aNewMethodCoder aNewMethodCoderViewModel aHandler |
+						aNewMethodCoderHolder contents
+							ifNotNil: [ :aContents | aNewMethodCoderViewModel := aContents ]
+							ifNil: [ aNewMethodCoder := GtPharoMethodCoder forNewMethod: self.
+								aNewMethodCoder
+									currentSourceString: 'newMethod' , String cr , String tab , '"This is a new method"'.
 
-					aNewMethodCoderHolder contents
-						ifNotNil: [ :aContents |
-							aNewMethodCoderViewModel := aContents ]
-						ifNil: [
-					
-						aNewMethodCoder := GtPharoMethodCoder forNewMethod: self.
-						aNewMethodCoder
-							currentSourceString: 'newMethod', String cr, String tab, '"This is a new method"'.
+								aNewMethodCoderViewModel := aNewMethodCoder asCoderViewModel.
+								aNewMethodCoderViewModel
+									withoutHeader;
+									expanded: true;
+									focused: true;
+									moveCursorAtEnd.
 
-						aNewMethodCoderViewModel := aNewMethodCoder asCoderViewModel.
-						aNewMethodCoderViewModel
-							withoutHeader;
-							expanded: true;
-							focused: true;
-							moveCursorAtEnd.
-						
-						aNewMethodCoderHolder contents: aNewMethodCoderViewModel.
+								aNewMethodCoderHolder contents: aNewMethodCoderViewModel.
 
-						aHandler := GtPharoNewMethodCodeSavedHandler new
-							methodsCoderViewModel: aMethodsCoderViewModel;
-							element: aButton;
-							methodCoderHolder: aNewMethodCoderHolder.
-						
-						aNewMethodCoderViewModel weak
-							when: GtMethodCoderSaved
-							send: #onAnnouncement:
-							to: aHandler ].
+								aHandler := GtPharoNewMethodCodeSavedHandler new
+										methodsCoderViewModel: aMethodsCoderViewModel;
+										element: aButton;
+										methodCoderHolder: aNewMethodCoderHolder.
+
+								aNewMethodCoderViewModel weak
+									when: GtMethodCoderSaved
+									send: #onAnnouncement:
+									to: aHandler ].
 
 						(GtExpandedOnlyCoderElement new coderViewModel: aNewMethodCoderViewModel)
 							hExact: 300;
@@ -96,25 +93,23 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 							background: Color white;
 							padding: (BlInsets all: 5);
 							addAptitude: BrGlamorousFocusableShadowAptitude new ];
-				name: GtPharoBehaviorCoder addNewMethodButtonName ];
-		actionDropdownButtonIcon: BrGlamorousVectorIcons robot
-		  tooltip: 'Generate'
-		  content: [ :anElement | 
-			  aMethodsCoder
-				  codeGeneratorsDropDown: anElement
-				  for: aMethodsCoderViewModel ];
+					name: GtPharoBehaviorCoder addNewMethodButtonName ].
+
+	(aMethodsCoder codeGeneratorsAvailableFor: aMethodsCoderViewModel)
+		ifTrue: [ view
+				actionDropdownButtonIcon: BrGlamorousVectorIcons robot
+				tooltip: 'Generate'
+				content: [ :anElement | aMethodsCoder codeGeneratorsDropDown: anElement for: aMethodsCoderViewModel ] ].
+	^ view
 		actionButtonDo: [ :aButtonAction | 
 			aButtonAction
 				icon: BrGlamorousVectorIcons inspect;
 				tooltip: 'Inspect view model';
 				action: [ :aButton | aButton phlow spawnObject: aMethodsCoderViewModel ] ];
-		actionStencil: [ :aBrTab | 
-			  GtPharoCoderUIUtility
-				  newExamplesDropdownButtonForViewModel: anExampleViewModel ];
-		actionStencil: [ :aBrTab | 
-			  GtPharoCoderUIUtility
-				  newTestsDropdownButtonForViewModel: aTestSuiteViewModel ];
-		stencil: [ GtPharoStreamingMethodsCoderElement new streamingCodersViewModel: aMethodsCoderViewModel ]
+		actionStencil: [ :aBrTab | GtPharoCoderUIUtility newExamplesDropdownButtonForViewModel: anExampleViewModel ];
+		actionStencil: [ :aBrTab | GtPharoCoderUIUtility newTestsDropdownButtonForViewModel: aTestSuiteViewModel ];
+		stencil: [ GtPharoStreamingMethodsCoderElement new
+				streamingCodersViewModel: aMethodsCoderViewModel ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
