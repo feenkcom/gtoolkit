@@ -6,13 +6,19 @@ Class {
 
 { #category : #accessing }
 GtDoNotManuallyFindThisContextMethodDefinition >> description [
-	^ 'In Pharo9 Context>>#method is deprecated as it can return CompiledBlock or CompiledMethod'
+	^ 'Check that thisContext is not used to access the method. We were using this pattern in Phlow.'
 ]
 
 { #category : #accessing }
 GtDoNotManuallyFindThisContextMethodDefinition >> issues [
-	^ (('`{:node | | found | found := false. node nodesDo: [:each | found := found or: [each isKindOf: RBThisContextNode]]. found} asRingDefinition' gtASTMatches result)
+	^ (('`{:node | | found | found := false. node nodesDo: [:each | found := found or: [each isThisContextVariable]]. found} asRingDefinition' gtASTMatches result)
 		filter: [ :eachMethod |
-			#('Bloc' . 'Brick' . 'GToolkit' ) anySatisfy: [ :prefix | 
-				eachMethod package name beginsWith: prefix ] ]) toArray wait
+			BaselineOfGToolkitForPharo9 gtRlAllValidRPackages anySatisfy: [ :aPackage | 
+				eachMethod package name = aPackage name ] ]) toArray wait 
+	reject: [ :each | each selector = #testRemovesIrrelevantStackEntriesFromOnTop ]
+]
+
+{ #category : #accessing }
+GtDoNotManuallyFindThisContextMethodDefinition >> name [
+	^ 'ThisContext should not be used to access a method''s ring definition'
 ]

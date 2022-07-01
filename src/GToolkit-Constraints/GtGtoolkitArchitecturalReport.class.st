@@ -24,9 +24,15 @@ GtGtoolkitArchitecturalReport >> build: aComposite [
 		addConstraint: GtButtonsDefiningActionsThroughModels new;
 		addConstraint: GtLooksSubscribingToEventsNotFromInitializeListenerMethods new;
 		addConstraint: GtBlocEventsShouldHaveDispatchMethodSimilarToClass new;
+		addConstraint: GtBlocStencilBuilderShouldImplementReset new;
 		addConstraint: GtSubscriptionsShouldNotUseDeliveryConditionWhere new;
-		addConstraint: GtWeakSubscriptionsWithBlockSubscribers new";
-		addConstraint: GtGlamorousToolkitBookPagesContainingMissingReferences new"
-		"addConstraint: GtBaselinesShouldProperlySpecifyDependencies new"";
-		addConstraint: GtGitRepositoryWithoutJenkinsFile new"
+		addConstraint: GtWeakSubscriptionsWithBlockSubscribers new;
+		addConstraint: GtGlamorousToolkitBookPagesContainingMissingReferences new;
+		"addConstraint: GtBaselinesShouldProperlySpecifyDependencies new;"
+		"addConstraint: GtGitRepositoryWithoutJenkinsFile new;"
+		addConstraint: GSubclassesOfExternalObjectShouldImplementStartUp new;
+		addConstraint: GtAnnouncementSubscriberShouldNotBeChanged new;
+		addConstraint: GtBoxerExternalObjectsShouldOnlyImplementFFILibrary new;
+		addConstraint: GtDoNotManuallyFindThisContextMethodDefinition new;
+		addConstraint: GtPharoPackageDependenciesConstraint new
 ]
