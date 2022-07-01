@@ -29,7 +29,7 @@ GtGtoolkitArchitecturalReport >> build: aComposite [
 		addConstraint: GtWeakSubscriptionsWithBlockSubscribers new;
 		addConstraint: GtGlamorousToolkitBookPagesContainingMissingReferences new;
 		"addConstraint: GtBaselinesShouldProperlySpecifyDependencies new;"
-		addConstraint: GtGitRepositoryWithoutJenkinsFile new;
+		"addConstraint: GtGitRepositoryWithoutJenkinsFile new;"
 		addConstraint: GSubclassesOfExternalObjectShouldImplementStartUp new;
 		addConstraint: GtAnnouncementSubscriberShouldNotBeChanged new;
 		addConstraint: GtBoxerExternalObjectsShouldOnlyImplementFFILibrary new;

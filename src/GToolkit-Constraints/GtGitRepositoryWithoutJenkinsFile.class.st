@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #accessing }
+GtGitRepositoryWithoutJenkinsFile class >> instance [
+	<gtExample>
+	^ self new
+]
+
+{ #category : #accessing }
 GtGitRepositoryWithoutJenkinsFile >> description [
 	^ 'A repository in the Feenk organisation should specify the Jenkins file to trigger a build for Glamorous Toolkit'
 ]
