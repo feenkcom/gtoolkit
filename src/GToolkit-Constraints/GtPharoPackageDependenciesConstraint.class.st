@@ -27,6 +27,11 @@ GtPharoPackageDependenciesConstraint >> issues [
 		RPackage organizer packageNames do: [ :eachPackageName | aStream nextPutAll: (self packageIssuesOf: eachPackageName) ] ]
 ]
 
+{ #category : #accessing }
+GtPharoPackageDependenciesConstraint >> name [ 
+	^ 'Packages should respect must only depend on dependenies'
+]
+
 { #category : #'api - dependencies' }
 GtPharoPackageDependenciesConstraint >> package: aPackage mustNotDependOn: aCollectionOfPackageNames [
 	| theIssues theDeclaredDependentPackages theActualDependencies |
@@ -152,4 +157,9 @@ GtPharoPackageDependenciesConstraint >> packageNamesToPackages: aCollectionOfPac
 		theDeclaredDependentPackages add: (self packageNameToPackage: eachPackageName issues: aCollectionOfIssues) ].
 
 	^ theDeclaredDependentPackages select: [ :eachPackage | eachPackage notNil ]
+]
+
+{ #category : #accessing }
+GtPharoPackageDependenciesConstraint >> status [ 
+	^ GtNeutralConstraintStatus new
 ]
