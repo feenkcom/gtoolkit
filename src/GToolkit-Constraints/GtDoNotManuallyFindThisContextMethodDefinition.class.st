@@ -11,7 +11,7 @@ GtDoNotManuallyFindThisContextMethodDefinition >> description [
 
 { #category : #accessing }
 GtDoNotManuallyFindThisContextMethodDefinition >> issues [
-	^ (('`{:node | | found | found := false. node nodesDo: [:each | found := found or: [each isThisContext]]. found} asRingDefinition' gtASTMatches result)
+	^ (('`{:node | | found | found := false. node nodesDo: [:each | found := found or: [each isThisContextVariable]]. found} asRingDefinition' gtASTMatches result)
 		filter: [ :eachMethod |
 			BaselineOfGToolkitForPharo9 gtRlAllValidRPackages anySatisfy: [ :aPackage | 
 				eachMethod package name = aPackage name ] ]) toArray wait 
