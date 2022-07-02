@@ -20,7 +20,7 @@ GtGitRepositoryWithoutJenkinsFile >> issues [
 	| project directories |
 	project := GtGhGToolkitProject default.
 	directories := project ownedRepositories collect: [ :aRepository | 
-		aRepository icebergRepository workingCopy fileSystem ].
+		aRepository baselineRepository icebergRepository workingCopy fileSystem ].
 	^ directories select: [ :aDirectory | (aDirectory / 'Jenkinsfile') exists not ]
 ]
 
