@@ -134,7 +134,7 @@ GtImageSetup class >> performSetupForRelease: aVersionComputationName [
 
 { #category : #api }
 GtImageSetup class >> preparePharoCompletionCache [
-	GtPharoCompletionStrategy initializeCache
+	GtPharoIndex initializeCache
 ]
 
 { #category : #api }
