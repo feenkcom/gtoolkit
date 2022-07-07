@@ -1,6 +1,6 @@
 "
 I preview colors.
-I am used by {{gtMethod:GtSpotterStart>>#spotterForColorFor:}}.
+I am used in the context of {{gtClass:GtSpotterStart}}.
 
 #Example
 {{gtExample:GtColorPreview class>>#grayColor|codeExpanded=false|previewExpanded=true}}
@@ -12,7 +12,7 @@ Class {
 		'name',
 		'color'
 	],
-	#category : 'GToolkit-Extensions'
+	#category : #'GToolkit-Extensions'
 }
 
 { #category : #examples }
