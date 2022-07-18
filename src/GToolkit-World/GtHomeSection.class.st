@@ -324,15 +324,21 @@ GtHomeSection >> newUrlCardWithTitle: aTitle description: aDescription url: aUrl
 		newHeaderCardWithTitle: 'www'
 		description: aDescription
 		size: 200 @ 80
-		content: (BlElement new
+		content:
+			(BlElement new
 				constraintsDo: [ :c | 
 					c horizontal matchParent.
 					c vertical matchParent ];
 				layout: BlLinearLayout vertical alignCenter;
-				addChild: (BrLabel new text: aTitle);
-				addChild: (BrLabel new
+				addChild:
+					(BrLabel new
+						text: aTitle;
+						aptitude: BrGlamorousLabelAptitude);
+				addChild:
+					(BrLabel new
 						text: aDescription;
-						aptitude: (BrGlamorousLabelAptitude new
+						aptitude:
+							(BrGlamorousLabelAptitude new
 								fontSize: 10;
 								foreground: Color gray)))
 		action: [ :card | WebBrowser openOn: aUrl ]

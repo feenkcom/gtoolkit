@@ -16,29 +16,31 @@ RPackage >> gtClassHierarchyFor: aView [
 RPackage >> gtDependenciesMapFor: aView [
 	<gtView>
 	^ aView mondrian
-		title: 'Dependencies Map';
-		priority: 10;
-		painting: [ :mondrian | 
-			mondrian nodes
-				shape: [ :each | BrLabel new text: each name asRopedText ];
-				with: self gtPackagesUsed , {self}.
-			mondrian edges
-				shape: [ BlParabollaArcElement new
-						zIndex: 0;
-						curvatureFraction: 0.1;
-						border: (BlBorder paint: (Color gray alpha: 0.1) width: 2);
-						toHead: (BlArrowheadSimpleArrow new
-								border: (BlBorder builder
-										paint: (Color gray alpha: 0.1);
-										width: 2;
-										build)) ];
-				fromRightCenter;
-				toLeftCenter;
-				connectFrom: #yourself
-					toAll: [ :each | 
-						| usedPackages |
-						usedPackages := each gtPackagesUsed ].
-			mondrian layout custom: GtGraphHorizontalDominanceTreeLayout new ]
+	title: 'Dependencies Map';
+	priority: 10;
+	painting: [ :mondrian |
+		mondrian nodes 
+			shape: [ :each | 
+				BrLabel new 
+					text: each name asRopedText;
+					aptitude: BrGlamorousLabelAptitude
+			];
+		  with: (self gtPackagesUsed, {self}).
+		mondrian edges 
+			shape: [ 
+				BlParabollaArcElement new 
+					zIndex: 0;
+					curvatureFraction: 0.1;
+					border: (BlBorder paint: (Color gray alpha: 0.1) width:2 );
+					toHead: (BlArrowheadSimpleArrow new
+						border: (BlBorder builder paint: (Color gray alpha: 0.1); width:2; build)) ];
+			fromRightCenter;
+			toLeftCenter;
+			connectFrom: #yourself
+			toAll: [ :each | |usedPackages | 
+				usedPackages := each gtPackagesUsed].
+		mondrian layout custom: (GtGraphHorizontalDominanceTreeLayout new).
+	]
 ]
 
 { #category : #'*GToolkit-Extensions' }

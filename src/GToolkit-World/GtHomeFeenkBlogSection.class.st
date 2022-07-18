@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'client'
 	],
-	#category : #'GToolkit-World-Sections'
+	#category : 'GToolkit-World-Sections'
 }
 
 { #category : #defaults }
@@ -81,8 +81,10 @@ GtHomeFeenkBlogSection >> newDocsExplorerWith: aCollectionOfPosts [
 		newHeaderCardWithTitle: 'Post'
 		description: 'Browse all feenk blog posts.'
 		size: self cardSize
-		content: (BrLabel new
+		content:
+			(BrLabel new
 				text: 'More posts ...';
+				aptitude: BrGlamorousLabelAptitude;
 				padding: (BlInsets all: 20)) asScalableElement
 		action: [ :card | 
 			self
@@ -177,6 +179,7 @@ GtHomeFeenkBlogSection >> newTextFor: aXdFileInfo [
 GtHomeFeenkBlogSection >> newUpdateDocsContent [
 	^ BrLabel new
 		text: 'Update ...';
+		aptitude: BrGlamorousLabelAptitude;
 		padding: (BlInsets all: 20)
 ]
 

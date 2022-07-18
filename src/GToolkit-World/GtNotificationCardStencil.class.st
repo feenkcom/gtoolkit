@@ -8,7 +8,7 @@ Class {
 		'openAction',
 		'closeAction'
 	],
-	#category : #'GToolkit-World-Notifications'
+	#category : 'GToolkit-World-Notifications'
 }
 
 { #category : #accessing }
@@ -25,45 +25,36 @@ GtNotificationCardStencil >> closeAction: aBlock [
 GtNotificationCardStencil >> create [
 	| container actionButton headerLabel closeButton |
 	container := BlElement new
-			clipChildren: false;
-			background: BrGlamorousColors newsBackgroundColor;
-			layout: BlLinearLayout horizontal;
-			constraintsDo: [ :c | 
-				c horizontal matchParent.
-				c vertical fitContent ];
-			aptitude: BrShadowAptitude;
-			margin: (BlInsets
-					top: 10 + 5
-					left: 30
-					bottom: 10
-					right: 30);
-			padding: (BlInsets
-					top: 10
-					left: 10
-					bottom: 10
-					right: 10).
-
-	headerLabel := BrLabel new
-			fitContent;
-			constraintsDo: [ :c | c linear vertical alignCenter ];
-			text: headerText.
+		clipChildren: false;
+		background: BrGlamorousColors newsBackgroundColor;
+		layout: BlLinearLayout horizontal;
+		constraintsDo: [ :c |
+			c horizontal matchParent.
+			c vertical fitContent ];
+		aptitude: BrShadowAptitude;
+		margin: (BlInsets top: 10+5 left: 30 bottom: 10 right: 30);
+		padding: (BlInsets top: 10 left: 10 bottom: 10 right: 10).
+	
+	headerLabel := BrLabel new 
+		fitContent;
+		aptitude: (BrGlamorousLabelAptitude new);
+		constraintsDo: [ :c |
+			c linear vertical alignCenter ];
+		text: headerText.
 
 	actionButton := BrButton new
-			label: actionText;
-			aptitude: BrGlamorousButtonWithLabelAptitude new;
-			border: (BlBorder paint: Color black);
-			padding: (BlInsets left: 10 right: 10);
-			margin: (BlInsets
-					top: 0
-					left: 15
-					bottom: 0
-					right: 0);
-			constraintsDo: [ :c | c linear vertical alignCenter ];
-			action: openAction.
-	closeButton := GtHomeCloseButtonStencil new
-			closeAction: closeAction;
-			create.
-
+		label: actionText;
+		aptitude: BrGlamorousButtonWithLabelAptitude new;
+		border: (BlBorder paint: Color black);
+		padding: (BlInsets left: 10 right: 10);
+		margin: (BlInsets top: 0 left: 15 bottom: 0 right: 0);
+		constraintsDo: [ :c |
+			c linear vertical alignCenter ];
+		action: openAction.
+	closeButton := GtHomeCloseButtonStencil new 
+		closeAction: closeAction;
+		create.
+	
 	container
 		addChild: headerLabel;
 		addChild: actionButton;

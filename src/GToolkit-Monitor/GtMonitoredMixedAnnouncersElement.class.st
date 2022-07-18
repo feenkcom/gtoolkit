@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'announcersList'
 	],
-	#category : #'GToolkit-Monitor-Mixed Announcers'
+	#category : 'GToolkit-Monitor-Mixed Announcers'
 }
 
 { #category : #private }
@@ -44,45 +44,47 @@ GtMonitoredMixedAnnouncersElement class >> open [
 { #category : #initialization }
 GtMonitoredMixedAnnouncersElement >> initialize [
 	super initialize.
-
-	self
-		constraintsDo: [ :c | 
-			c horizontal matchParent.
-			c vertical matchParent ].
-
+	
+	self constraintsDo: [ :c |
+		c horizontal matchParent.
+		c vertical matchParent ].
+	
 	announcersList := BrColumnedList new.
-	announcersList addEventHandler: GtPhlowListToSelectHandler new.
-	announcersList
-		rowStencil: (BrGlamorousColumnedListSelectableRowElementStencilBuilder new
-				cellSpacing: 10;
-				padding: (BlInsets top: 4 bottom: 4)).
+	announcersList addEventHandler: (GtPhlowListToSelectHandler new).
+	announcersList rowStencil: (BrGlamorousColumnedListSelectableRowElementStencilBuilder new
+		cellSpacing: 10;
+		padding: (BlInsets top: 4 bottom: 4)).
 
 	announcersList column
 		title: 'Announcer';
-		stencil: [ :aMonitoredAnnouncer | 
+		stencil: [ :aMonitoredAnnouncer |
 			| aTitle |
+			
 			aTitle := aMonitoredAnnouncer title
-					ifEmpty: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
-
+				ifEmpty: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
+			
 			BrLabel new
+				aptitude: BrGlamorousLabelAptitude;
 				text: aTitle;
 				hMatchParent ].
 
 	announcersList column
 		title: 'Subscriptions';
-		stencil: [ :aMonitoredAnnouncer | 
+		stencil: [ :aMonitoredAnnouncer |
+			
 			BrLabel new
+				aptitude: BrGlamorousLabelAptitude;
 				text: (aMonitoredAnnouncer numberOfSubscriptions asRopedText bold
-						append: (' strong: {1}; weak: {2} ({3} weak send; {4} block)'
-								format: {aMonitoredAnnouncer numberOfStrongSubscriptions.
-										aMonitoredAnnouncer numberOfWeakSubscriptions.
-										aMonitoredAnnouncer numberOfWeakSubscriptionsWithWeakSendAction.
-										aMonitoredAnnouncer numberOfWeakSubscriptionsWithBlockAction})
-								asRopedText);
+					append: (' strong: {1}; weak: {2} ({3} weak send; {4} block)' format: {
+						aMonitoredAnnouncer numberOfStrongSubscriptions.
+						aMonitoredAnnouncer numberOfWeakSubscriptions.
+						aMonitoredAnnouncer numberOfWeakSubscriptionsWithWeakSendAction.
+						aMonitoredAnnouncer numberOfWeakSubscriptionsWithBlockAction
+					}) asRopedText);
 				hMatchParent ].
-
+		
 	self addChild: announcersList.
-
+	
 	self updateList
 ]
 

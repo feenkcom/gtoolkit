@@ -1,7 +1,7 @@
 Class {
 	#name : #GtMonitoredUniversesElement,
 	#superclass : #BrHorizontalFlow,
-	#category : #'GToolkit-Monitor'
+	#category : 'GToolkit-Monitor'
 }
 
 { #category : #initialization }
@@ -39,15 +39,17 @@ GtMonitoredUniversesElement >> createUniverseCard: aUniverse [
 { #category : #initialization }
 GtMonitoredUniversesElement >> createUniverseName: aUniverse [
 	| aNameLabel |
-	aNameLabel := BrLabel new
-			padding: (BlInsets all: 4);
-			text: aUniverse hostClass label;
-			asScalableElement.
 
+	aNameLabel := BrLabel new
+		padding: (BlInsets all: 4);
+		aptitude: BrGlamorousLabelAptitude;
+		text: aUniverse hostClass label;
+		asScalableElement.
+	
 	aNameLabel fitWidth.
 	aNameLabel constraintsDo: [ :c | c vertical fitContent ].
 	aNameLabel maxScale: 1.
-	aNameLabel background: Color veryVeryLightGray.
+	aNameLabel background: (Color veryVeryLightGray).
 
 	^ aNameLabel
 ]
@@ -55,9 +57,11 @@ GtMonitoredUniversesElement >> createUniverseName: aUniverse [
 { #category : #initialization }
 GtMonitoredUniversesElement >> createUniverseRunning: aUniverse [
 	| aNameLabel |
+
 	aNameLabel := BrLabel new
-			padding: (BlInsets left: 5 right: 5);
-			text: 'Running: ' , aUniverse hostClass isRunning asString.
+		padding: (BlInsets left: 5 right: 5);
+		aptitude: BrGlamorousLabelAptitude;
+		text: 'Running: ', aUniverse hostClass isRunning asString.
 
 	^ aNameLabel
 ]
@@ -65,9 +69,11 @@ GtMonitoredUniversesElement >> createUniverseRunning: aUniverse [
 { #category : #initialization }
 GtMonitoredUniversesElement >> createUniverseSpaces: aUniverse [
 	| aNameLabel |
+
 	aNameLabel := BrLabel new
-			padding: (BlInsets left: 5 right: 5);
-			text: 'Spaces: ' , aUniverse spaces size asString.
+		padding: (BlInsets left: 5 right: 5);
+		aptitude: BrGlamorousLabelAptitude;
+		text: 'Spaces: ', aUniverse spaces size asString.
 
 	^ aNameLabel
 ]

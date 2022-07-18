@@ -5,7 +5,7 @@ Class {
 		'space',
 		'announcer'
 	],
-	#category : #'GToolkit-Monitor-Bloc Spaces'
+	#category : 'GToolkit-Monitor-Bloc Spaces'
 }
 
 { #category : #accessing }
@@ -56,43 +56,61 @@ GtMonitoredBlocSpace >> exists [
 { #category : #'gt-extension' }
 GtMonitoredBlocSpace >> gtActionsFor: aView [
 	<gtView>
+	
 	^ aView explicit
 		title: 'Actions';
 		priority: 1;
 		updateWhen: Announcement in: self announcer;
-		stencil: [ (BrVerticalPane new
+		stencil: [
+			(BrVerticalPane new
 				vFitContent;
 				hMatchParent;
 				cellSpacing: 5;
 				addChild: (BrHorizontalPane new
-						vFitContent;
-						hMatchParent;
-						cellSpacing: 5;
-						alignCenterLeft;
-						addChildren: (self shouldShutdownOnClose
-								ifTrue: [ {BrLabel new text: 'When closed I will shutdown GToolkit'.
-										BrButton new
-											aptitude: BrGlamorousButtonWithLabelAptitude new;
-											label: 'Disable';
-											action: [ self disableShutdownOnClose ]} ]
-								ifFalse: [ {BrLabel new text: 'When closed I will not shutdown GToolkit'.
-										BrButton new
-											aptitude: BrGlamorousButtonWithLabelAptitude new;
-											label: 'Enable';
-											action: [ self enableShutdownOnClose ]} ]));
+					vFitContent;
+					hMatchParent;
+					cellSpacing: 5;
+					alignCenterLeft;
+					addChildren: (self shouldShutdownOnClose
+						ifTrue: [ {
+							BrLabel new
+								aptitude: BrGlamorousLabelAptitude new;
+								text: 'When closed I will shutdown GToolkit'.
+							BrButton new
+								aptitude: BrGlamorousButtonWithLabelAptitude new;
+								label: 'Disable';
+								action: [ self disableShutdownOnClose ].
+						}]
+						ifFalse: [ { 
+							BrLabel new
+								aptitude: BrGlamorousLabelAptitude new;
+								text: 'When closed I will not shutdown GToolkit'.
+							BrButton new
+								aptitude: BrGlamorousButtonWithLabelAptitude new;
+								label: 'Enable';
+								action: [ self enableShutdownOnClose ]
+						 } ]));
 				addChild: (BrHorizontalPane new
-						vFitContent;
-						hMatchParent;
-						cellSpacing: 5;
-						alignCenterLeft;
-						addChildren: (self isRunning
-								ifTrue: [ {BrLabel new text: 'The space is running'.
-										BrButton new
-											aptitude: BrGlamorousButtonWithLabelAptitude new;
-											label: 'Close';
-											action: [ self close ]} ]
-								ifFalse: [ {BrLabel new text: 'The space is not running'} ])))
-				asScrollableElement ]
+					vFitContent;
+					hMatchParent;
+					cellSpacing: 5;
+					alignCenterLeft;
+					addChildren: (self isRunning
+						ifTrue: [ {
+							BrLabel new
+								aptitude: BrGlamorousLabelAptitude new;
+								text: 'The space is running'.
+							BrButton new
+								aptitude: BrGlamorousButtonWithLabelAptitude new;
+								label: 'Close';
+								action: [ self close ].
+						}]
+						ifFalse: [ { 
+							BrLabel new
+								aptitude: BrGlamorousLabelAptitude new;
+								text: 'The space is not running'.
+						 } ]))) asScrollableElement
+		]
 ]
 
 { #category : #'gt-extension' }
