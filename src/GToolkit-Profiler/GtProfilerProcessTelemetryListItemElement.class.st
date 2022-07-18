@@ -13,27 +13,29 @@ Class {
 { #category : #initialization }
 GtProfilerProcessTelemetryListItemElement >> initialize [
 	super initialize.
-	
+
 	self addAptitude: BrGlamorousListItemAptitude.
 	self hMatchParent.
 	self vFitContent.
 	self padding: (BlInsets all: 3).
 	self cellSpacing: 10.
 	self alignCenterLeft.
-	
+
 	status := BlElement new
-		geometry: BlCircleGeometry new;
-		size: 10@10.
-	
-	label := BrLabel new
-		aptitude: BrGlamorousLabelAptitude.
-	
+			geometry: BlCircleGeometry new;
+			size: 10 @ 10.
+
+	label := BrLabel new.
+
 	self addChild: status.
 	self addChild: label.
-	
-	self when: BlClickEvent do: [ :anEvent |
-		anEvent consumed: true.
-		self profilerProcessTelemetryViewModel selectProcessTelemetryWithoutOtherEntities ]
+
+	self
+		when: BlClickEvent
+		do: [ :anEvent | 
+			anEvent consumed: true.
+			self profilerProcessTelemetryViewModel
+				selectProcessTelemetryWithoutOtherEntities ]
 ]
 
 { #category : #'api - profiler process telemetry view model' }
