@@ -134,28 +134,34 @@ GtSceneDriller >> newPagerFor: aTargetContainer [
 	^ BrVerticalPane new
 		matchParent;
 		constraintsDo: [ :c | c linear weight: 0.7 ];
-		padding: (BlInsets
+		padding:
+			(BlInsets
 				top: 10
 				left: 10
 				bottom: 10
 				right: 0);
 		addAptitude: BrShadowAptitude new beLarge;
 		background: self theme default backdropColor;
-		addChildren: {self newSectionLabel text: 'Details'.
-				(GtPager
-					createWrappedOn: (BrVerticalPane new
-							matchParent;
-							addChild: (BrLabel new
-									hMatchParent;
-									padding: (BlInsets
-											top: 10.0
-											right: 12.0
-											bottom: 10.0
-											left: 12.0);
-									background: self theme header defaultBackgroundColor;
-									text: 'Elements');
-							addChild: (elementsTree := self newElementsTree)))
-					id: '#gtoolkit-driller--pager'}
+		addChildren:
+			{(self newSectionLabel text: 'Details').
+			((GtPager
+				createWrappedOn:
+					(BrVerticalPane new
+						matchParent;
+						addChild:
+							(BrLabel new
+								aptitude: BrGlamorousLabelAptitude;
+								hMatchParent;
+								padding:
+									(BlInsets
+										top: 10.0
+										right: 12.0
+										bottom: 10.0
+										left: 12.0);
+								background: self theme header defaultBackgroundColor;
+								text: 'Elements');
+						addChild: (elementsTree := self newElementsTree)))
+				id: '#gtoolkit-driller--pager')}
 ]
 
 { #category : #'instance creation' }
@@ -195,28 +201,30 @@ GtSceneDriller >> newTreeRowElement [
 		hMatchParent;
 		vFitContent;
 		alignCenterLeft;
-		addChildren: {BrLabel new
-					beSmallSize;
-					id: #elementLabel.
-				BrButton new
-					beTinySize;
-					id: #elementId;
-					aptitude: (BrGlamorousButtonLabelAptitude new
+		addChildren: {
+			BrLabel new
+				beSmallSize;
+				id: #elementLabel;
+				aptitude: BrGlamorousLabelAptitude new.
+			BrButton new
+				beTinySize;
+				id: #elementId;
+				aptitude: (BrGlamorousButtonLabelAptitude new
 							hoveredColor: Color black;
-							pressedColor: Color black)
-							+ (BrGlamorousButtonRectangularAptitude
-									paddingScale: 0.8
-									heightScale: 0.85
-									cornerRadius: 3)
-							+ (BrStyleCommonAptitude new
-									default: [ :s | s background: (Color gray alpha: 0.1) ];
-									hovered: [ :s | s background: (Color gray alpha: 0.2) ];
-									pressed: [ :s | s background: (Color gray alpha: 0.3) ]);
-					action: [ :aButtonElement | aButtonElement phlow spawnObject: aButtonElement model ].
-				BrLabel new
-					beSmallSize;
-					id: #elementResizers;
-					aptitude: (BrGlamorousLabelAptitude new foreground: Color darkGray)}
+							pressedColor: Color black) +
+						(BrGlamorousButtonRectangularAptitude
+							paddingScale: 0.8
+							heightScale: 0.85
+							cornerRadius: 3) + (BrStyleCommonAptitude new
+					default: [ :s | s background: (Color gray alpha: 0.1) ];
+					hovered: [ :s | s background: (Color gray alpha: 0.2) ];
+					pressed: [ :s | s background: (Color gray alpha: 0.3) ]
+				);
+				action: [ :aButtonElement | aButtonElement phlow spawnObject: aButtonElement model ].
+			BrLabel new
+				beSmallSize;
+				id: #elementResizers;
+				aptitude: (BrGlamorousLabelAptitude new foreground: Color darkGray) }
 ]
 
 { #category : #accessing }

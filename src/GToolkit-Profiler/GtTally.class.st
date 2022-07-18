@@ -162,50 +162,53 @@ GtTally >> gtInspectorSourceIn: composite [
 { #category : #inspecting }
 GtTally >> gtMessagesTreeIn: aView [
 	<gtView>
+	
 	| methods normalizer |
 	methods := self withDeepCollect: #children.
 	normalizer := BrColorLinearNormalizer
-			inContext: methods
-			withCommand: #tally
-			lowColor: Color gray
-			highColor: (Color
-					r: 216
-					g: 55
-					b: 62
-					range: 255).
-	^ aView columnedTree
+		inContext: methods
+		withCommand: #tally
+		lowColor: Color gray
+		highColor:
+			(Color
+				r: 216
+				g: 55
+				b: 62
+				range: 255).
+	^ (aView columnedTree)
 		title: 'Tree';
 		priority: 10;
 		expandSuchThat: [ :aNode :aMessageTally | aMessageTally tally / (self tally max: 0.1) > 0.15 ];
 		items: [ {self} ];
 		children: [ :each | each children ];
 		column: 'Method'
-			do: [ :aColumn | 
-				aColumn
-					cellStencil: [ BrLabel new
-							addAptitude: (BrGlamorousWithContextMenuAptitude
-									content: [ BrGlamorousSimpleContextMenuContent new
-											items: {'Gather'
-														-> [ :e | 
-															e phlow
-																spawnObject: (self
-																		applyFilter: (GtGatherMessageTallyFilter forMethod: (e userData at: #method))) ]};
-											yourself ]) ];
-					dataBinder: [ :eachLabel :each | 
-						eachLabel userData at: #method put: each method.
-						eachLabel
-							text: (each method gtDisplayString asRopedText glamorousRegularFont
-									foreground: (normalizer value: each)) ] ];
+			do:
+				[ :aColumn | 
+					aColumn
+						cellStencil:
+								[ (BrLabel new)
+										aptitude: BrGlamorousLabelAptitude new;
+										addAptitude:
+												(BrGlamorousWithContextMenuAptitude
+														content:
+															[ (BrGlamorousSimpleContextMenuContent new)
+																items:
+																		{'Gather'
+																					->
+																						[ :e | e phlow spawnObject: (self applyFilter: (GtGatherMessageTallyFilter forMethod: (e userData at: #method))) ]};
+																yourself ]) ];
+						dataBinder:
+								[ :eachLabel :each | 
+									eachLabel userData at: #method put: each method.
+									eachLabel text: (each method gtDisplayString asRopedText glamorousRegularFont foreground: (normalizer value: each)) ] ];
 		column: 'Percent'
-			text: [ :each | 
-				((each tally / (self tally max: 0.1) asFloat * 100 printShowingDecimalPlaces: 1)
-					, '%') asRopedText glamorousRegularFont
+			text:
+				[ :each | 
+				((each tally / (self tally max: 0.1) asFloat * 100 printShowingDecimalPlaces: 1) , '%') asRopedText glamorousRegularFont
 					foreground: (normalizer value: each) ]
 			width: 100;
 		column: 'Tally'
-			text: [ :each | 
-				each tally asString asRopedText glamorousRegularFont
-					foreground: (normalizer value: each) ]
+			text: [ :each | each tally asString asRopedText glamorousRegularFont foreground: (normalizer value: each) ]
 			width: 100
 ]
 

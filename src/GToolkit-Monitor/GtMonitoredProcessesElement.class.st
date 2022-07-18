@@ -12,57 +12,67 @@ GtMonitoredProcessesElement class >> open [
 
 { #category : #initialization }
 GtMonitoredProcessesElement >> initializeServiceListDefinition [
+
 	servicesList column
 		title: 'Priority';
 		width: 30;
-		stencil: [ :aMonitoredService | 
+		stencil: [ :aMonitoredService |
 			| aPriority |
+			
 			aPriority := aMonitoredService priority.
-			aPriority isZero
+			aPriority isZero 
 				ifTrue: [ aPriority := aPriority asRopedText italic ]
 				ifFalse: [ aPriority := aPriority asRopedText ].
-
+			
 			BrLabel new
+				aptitude: BrGlamorousLabelAptitude;
 				text: aPriority;
 				fitContent ].
-
+	
 	servicesList column
 		title: 'Processes';
 		weight: 1;
-		stencil: [ :aMonitoredService | 
+		stencil: [ :aMonitoredService |
 			| aTitle |
+			
 			aTitle := aMonitoredService title.
-			aTitle isEmpty
-				ifTrue: [ aTitle := aMonitoredService processIdAndContext asRopedText
-							foreground: Color gray ].
+			aTitle isEmpty ifTrue: [ 
+				aTitle := aMonitoredService processIdAndContext asRopedText foreground: Color gray ].
 			aTitle isEmpty ifTrue: [ aTitle := '[No name]' asRopedText italic ].
-
+			
 			BrLabel new
+				aptitude: BrGlamorousLabelAptitude;
 				text: aTitle;
 				fitContent ].
 
 	servicesList column
 		title: 'State';
 		width: 100;
-		stencil: [ :aMonitoredService | 
+		stencil: [ :aMonitoredService |
 			| isOpened |
-			isOpened := aMonitoredService exists
-					ifTrue: [ aMonitoredService isSuspended
-							ifTrue: [ 'Suspended' asRopedText bold ]
-							ifFalse: [ ' ' asRopedText ] ]
-					ifFalse: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
 
+			isOpened := aMonitoredService exists
+				ifTrue: [ aMonitoredService isSuspended
+					ifTrue: [ 'Suspended' asRopedText bold ]
+					ifFalse: [ ' ' asRopedText ] ]
+				ifFalse: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
+			
 			BrLabel new
+				aptitude: BrGlamorousLabelAptitude;
 				text: isOpened;
 				fitContent ].
-
+			
 	servicesList column
 		title: 'Inspect';
 		width: 30;
-		stencil: [ :aMonitoredService | 
+		stencil: [ :aMonitoredService |
 			| aReifiedProcess |
+
 			aReifiedProcess := aMonitoredService service
-					ifNotNil: [ :aProcess | AsyncProcessProperties reifiedProcess: aProcess ifAbsent: [ nil ] ].
+				ifNotNil: [ :aProcess |
+					AsyncProcessProperties
+						reifiedProcess: aProcess
+						ifAbsent: [ nil ] ].
 
 			BrButton new
 				beSmallSize;
@@ -71,7 +81,7 @@ GtMonitoredProcessesElement >> initializeServiceListDefinition [
 				icon: BrGlamorousVectorIcons inspect;
 				label: 'Inspect reified process';
 				action: [ :aButton | aButton phlow spawnObject: aReifiedProcess objectOfInterest ] ].
-
+	
 	self updateList
 ]
 
