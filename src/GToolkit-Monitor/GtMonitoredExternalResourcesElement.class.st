@@ -33,22 +33,22 @@ GtMonitoredExternalResourcesElement class >> open [
 { #category : #initialization }
 GtMonitoredExternalResourcesElement >> initialize [
 	super initialize.
-	
+
 	self matchParent.
 	self padding: (BlInsets all: 5).
-	
+
 	resourcesTree := BrColumnedTree new.
-	resourcesTree addEventHandler: (GtPhlowListToSelectHandler new transformation: GtPhlowSendTransformation default asTreeNodeTransformation).
+	resourcesTree
+		addEventHandler: (GtPhlowListToSelectHandler new
+				transformation: GtPhlowSendTransformation default asTreeNodeTransformation).
 
 	resourcesTree column
 		title: 'Class';
-		cellStencil: [ 
-			BrLabel new 
-				aptitude: BrGlamorousLabelAptitude new ];
-		dataBinder: [  :eachLabel :eachItem | eachLabel text: eachItem name ].
+		cellStencil: [ BrLabel new ];
+		dataBinder: [ :eachLabel :eachItem | eachLabel text: eachItem name ].
 
 	self addChild: resourcesTree.
-	
+
 	self updateList
 ]
 

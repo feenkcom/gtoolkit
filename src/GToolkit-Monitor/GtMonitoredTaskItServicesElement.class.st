@@ -1,7 +1,7 @@
 Class {
 	#name : #GtMonitoredTaskItServicesElement,
 	#superclass : #GtMonitoredServicesElement,
-	#category : 'GToolkit-Monitor'
+	#category : #'GToolkit-Monitor'
 }
 
 { #category : #'instance creation' }
@@ -12,70 +12,62 @@ GtMonitoredTaskItServicesElement class >> open [
 
 { #category : #initialization }
 GtMonitoredTaskItServicesElement >> initializeServiceListDefinition [
-
 	servicesList column
 		title: 'Service';
 		weight: 1;
-		stencil: [ :aMonitoredService |
+		stencil: [ :aMonitoredService | 
 			| aTitle |
-			
 			aTitle := aMonitoredService title.
 			aTitle ifEmpty: [ aTitle := '[No name]' asRopedText italic ].
-			
+
 			BrLabel new
-				aptitude: BrGlamorousLabelAptitude;
 				text: aTitle;
 				fitContent ].
 
 	servicesList column
 		title: 'Running';
 		width: 100;
-		stencil: [ :aMonitoredService |
+		stencil: [ :aMonitoredService | 
 			| isOpened |
-
 			isOpened := aMonitoredService exists
-				ifTrue: [ aMonitoredService isRunning
-					ifTrue: [ 'Running' asRopedText bold ]
-					ifFalse: [ 'Inactive' asRopedText ] ]
-				ifFalse: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
-			
+					ifTrue: [ aMonitoredService isRunning
+							ifTrue: [ 'Running' asRopedText bold ]
+							ifFalse: [ 'Inactive' asRopedText ] ]
+					ifFalse: [ '~Garbage collected~' asRopedText italic foreground: Color gray ].
+
 			BrLabel new
-				aptitude: BrGlamorousLabelAptitude;
 				text: isOpened;
 				fitContent ].
-			
+
 	servicesList column
 		title: 'Queue';
 		width: 30;
-		stencil: [ :aMonitoredService |
+		stencil: [ :aMonitoredService | 
 			| aQueueSize |
 			aQueueSize := aMonitoredService queueSize.
-			aQueueSize := aQueueSize isZero 
-				ifTrue: [ '0' asRopedText foreground: Color gray ]
-				ifFalse: [ aQueueSize asString asRopedText ].
-			
+			aQueueSize := aQueueSize isZero
+					ifTrue: [ '0' asRopedText foreground: Color gray ]
+					ifFalse: [ aQueueSize asString asRopedText ].
+
 			BrLabel new
-				aptitude: BrGlamorousLabelAptitude;
 				text: aQueueSize;
 				fitContent ].
-			
+
 	servicesList column
 		title: 'Errors';
 		width: 30;
-		stencil: [ :aMonitoredService |
+		stencil: [ :aMonitoredService | 
 			| aNumberOfFailedTasks |
 			aNumberOfFailedTasks := aMonitoredService numberOfFailedTasks.
-			aNumberOfFailedTasks := aNumberOfFailedTasks isZero 
-				ifTrue: [ '' asRopedText ]
-				ifFalse: [ 
-					(aNumberOfFailedTasks asString, 
-						(' failure' asPluralBasedOn: aNumberOfFailedTasks))
-					 		asRopedText foreground: Color red ].
-			
+			aNumberOfFailedTasks := aNumberOfFailedTasks isZero
+					ifTrue: [ '' asRopedText ]
+					ifFalse: [ (aNumberOfFailedTasks asString
+							, (' failure' asPluralBasedOn: aNumberOfFailedTasks)) asRopedText
+							foreground: Color red ].
+
 			BrLabel new
-				aptitude: BrGlamorousLabelAptitude;
 				text: aNumberOfFailedTasks;
-				fitContent ].
+				fitContent ]
 ]
 
 { #category : #initialization }
