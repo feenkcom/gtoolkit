@@ -101,6 +101,7 @@ GtImageSetup class >> performLocalSetup [
 	self updateDocumentationDirectoryForLocalDevelopment.
 	self cleanUpImageAfterLoad.
 	self preparePharoCompletionCache.
+	self registerGTNamespace.
 	self recordSpaceTallyAtEnd
 ]
 
@@ -129,6 +130,7 @@ GtImageSetup class >> performSetupForRelease: aVersionComputationName [
 	self updateNextReleaseVersion: (GtRlSemanticVersionComputation named: aVersionComputationName).
 	self cleanUpImageAfterLoad.
 	self preparePharoCompletionCache.
+	self registerGTNamespace.
 	self recordSpaceTallyAtEnd.
 ]
 
@@ -145,6 +147,11 @@ GtImageSetup class >> recordSpaceTallyAtBeginning [
 { #category : #api }
 GtImageSetup class >> recordSpaceTallyAtEnd [
 	GtSpaceTallyHistory recordDefaultSystemWideDataLabeled: 'Image Setup End'
+]
+
+{ #category : #actions }
+GtImageSetup class >> registerGTNamespace [
+	RBClassModelFactory setRBNamespace: GtRBNamespace
 ]
 
 { #category : #actions }
