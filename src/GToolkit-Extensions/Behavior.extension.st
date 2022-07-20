@@ -36,7 +36,8 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 		shouldHaveHeaderByDefault: false;
 		selfObject: (aPhlowContext
 				optionAt: #behaviorCoder
-				ifPresent: [ :aBehaviorCoderUIModel | aBehaviorCoderUIModel coderModel object ]
+				ifPresent: [ :aBehaviorCoderUIModel | 
+					aBehaviorCoderUIModel coderModel object ]
 				ifAbsent: [ nil ]).
 
 	aTestSuiteViewModel := self
@@ -96,20 +97,25 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 					name: GtPharoBehaviorCoder addNewMethodButtonName ].
 
 	(aMethodsCoder codeGeneratorsAvailableFor: aMethodsCoderViewModel)
-		ifTrue: [ view
+		ifTrue: [ 
+			view
 				actionDropdownButtonIcon: BrGlamorousVectorIcons robot
 				tooltip: 'Generate'
-				content: [ :anElement | aMethodsCoder codeGeneratorsDropDown: anElement for: aMethodsCoderViewModel ] ].
+				content: [ :anElement | 
+					aMethodsCoder codeGeneratorsDropDown: anElement for: aMethodsCoderViewModel ] ].
 	^ view
 		actionButtonDo: [ :aButtonAction | 
 			aButtonAction
 				icon: BrGlamorousVectorIcons inspect;
 				tooltip: 'Inspect view model';
-				action: [ :aButton | aButton phlow spawnObject: aMethodsCoderViewModel ] ];
-		actionStencil: [ :aBrTab | GtPharoCoderUIUtility newExamplesDropdownButtonForViewModel: anExampleViewModel ];
-		actionStencil: [ :aBrTab | GtPharoCoderUIUtility newTestsDropdownButtonForViewModel: aTestSuiteViewModel ];
+				action: [ :aButton | 
+					aButton phlow spawnObject: aMethodsCoderViewModel ] ];
+		actionStencil: [ :aBrTab | 
+			GtPharoCoderUIUtility newExamplesDropdownButtonForViewModel: anExampleViewModel ];
+		actionStencil: [ :aBrTab | 
+			GtPharoCoderUIUtility newTestsDropdownButtonForViewModel: aTestSuiteViewModel ];
 		stencil: [ GtPharoStreamingMethodsCoderElement new
-				streamingCodersViewModel: aMethodsCoderViewModel ]
+			streamingCodersViewModel: aMethodsCoderViewModel ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
