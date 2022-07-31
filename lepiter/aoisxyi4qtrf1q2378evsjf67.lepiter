@@ -1,0 +1,1337 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:40:27.624705+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:40:27.624705+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "KaWLuFehDQCbNlBCB/tqtA=="
+							},
+							"exampleSelector" : "squarifyWithSevenNodes",
+							"previewHeight" : 300,
+							"previewShowSelector" : "gtPreviewFor:",
+							"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:29:12.211249+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:30:05.436193+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "m7r5AGqhDQCp5HgyB/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Among the visualization support, Glamorous Toolkit offers an implementaiton of a squarified treemap. The algorithm is responsible for creating visualizations such as this one:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T17:52:09.797777+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:31:37.755429+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "hvd3fGmhDQCp2ElRB/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The implementation is captured in {{gtClass:GtGraphTreemapSquarify}} and a few adjacent helper classes. But how does it work?"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:39:58.547373+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-30T18:33:04.904431+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "v1GVtlehDQCbMR4uB/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "\"An extension to the treemap method for the visualization of hierarchical information, such as directory structures and organization structures, is presented. The standard treemap method often gives thin, elongated rectangles. As a result, rectangles are difficult to compare and to select. A new method is presented to generate layouts in which the rectangles approximate squares.\""
+						},
+						{
+							"__type" : "pictureSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:39:46.514534+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:39:46.514534+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hFoYtlehDQCbLyyjB/tqtA=="
+							},
+							"url" : "attachments/aoisxyiybi07utq6jplxvps7t/squarified-treemap-paper.png"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:31:49.129005+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:32:40.828365+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "r7KqCWqhDQCp5UuXB/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "One way to answer the question is to read the code. However, this particular algorithm was already published previously in[Squarified Treemaps, Bruls etal, 2000](https://www.win.tue.nl/~vanwijk/stm.pdf), a paper that starts with the following abstract: "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pictureSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:41:14.263546+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:41:14.263546+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FUxTu1ehDQCbOza4B/tqtA=="
+							},
+							"url" : "attachments/aoisxyipgyz7vgv8ixzqls579/squarified-treemap-paper-algorithm-example.png"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-29T22:02:57.885914+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:33:48.148874+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "w7hv31ihDQCbUgZKB/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The paper details the algorithm in several ways, but the core of the explanation is based on this depiction showing the steps that the algorithm takes for a specific input."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-29T22:20:58.902977+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:35:17.799596+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nZwJIFmhDQCbXfM5B/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The example in the picture is about laying out the nodes with the following weights {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodes|label=#nodeValues}}. The whole idea of the algorithm is to find splittings that preserve a certain ratio. The depiction shows both the accepted and the not accepted steps."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:35:25.959723+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:35:57.848721+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kKlAF2qhDQCp5rh9B/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This picture is worth a thousand words. Of course, the primary intent of implementing an algorithm is to get to the final result. But our goal is not only to produce a functional system. We want an explainable system. The rule of thumb is that if a human deems a representation as meaningful, it should be the responsibility of the system to carry it forward."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:41:39.132539+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:41:39.132539+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "osTOvFehDQCbP9d3B/tqtA=="
+							},
+							"exampleSelector" : "squarifyWithSevenNodes",
+							"previewHeight" : 300,
+							"previewShowSelector" : "gtAllStepsPreviewFor:",
+							"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-29T22:21:06.825977+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:35:25.961223+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "aOu9u1ehDQCbPU2MB/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "So, naturally, we want our implementation to offer this kind of view, too."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:42:05.327875+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T20:42:05.327875+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "WnpevlehDQCbQz1QB/tqtA=="
+							},
+							"exampleSelector" : "squarifyWithSevenNodes",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:18:06.416727+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:39:15.875509+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qqwU2WmhDQCp2lCiB/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In our case, when we inspect an instance of {{gtClass:GtGraphTreemapSquarify}}, we see the picture showing the steps as in the paper! This picture is available as a custom view (see the Steps Figure view below):"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:42:18.279943+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:42:18.279943+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Xy3UL2qhDQCp9SavB/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Once the algorithm object knows how to present itself, we document the code through examples that give us interesting algorithm objects. For example, take a look at {{gtMethod:GtGraphTreemapLayoutExamples >> #squarifyWithSevenNodes}}."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:39:36.5436+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:42:33.331097+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ezwnJmqhDQCp8extB/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And once we have examples, we can quickly write narratives. Just like this one!"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "exampleSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-30T18:41:48.354339+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-30T18:41:48.354339+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "SpMLLmqhDQCp8zymB/tqtA=="
+										},
+										"exampleSelector" : "squarifyWithSevenNodesFirstStep",
+										"previewHeight" : 200,
+										"previewShowSelector" : "gtViewsFor:",
+										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : true,
+										"noCode" : true
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-30T18:18:40.877368+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-30T18:21:55.502727+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZIlI22mhDQCp296kB/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "At the start, the algorithm splits the initial rectangle. It chooses a horizontal subdivision because the rectangle is wider than taller. It then fills the left half with a single rectangle. The aspect ratio of this first rectangle is {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesFirstStep|label=#worstValueRounded}}."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "exampleSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-30T18:43:12.008598+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-30T18:43:12.008598+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "swkIM2qhDQCp+dtvB/tqtA=="
+										},
+										"exampleSelector" : "squarifyWithSevenNodesSecondStep",
+										"previewHeight" : 200,
+										"previewShowSelector" : "gtViewsFor:",
+										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : true,
+										"noCode" : true
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-30T18:42:51.535506+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-31T12:46:36.616754+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lTLEMWqhDQCp93XuB/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Next it adds a second rectangle above the first. The worst aspect ratio improves to {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesSecondStep|label=#worstValueRounded}}."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "exampleSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-30T18:43:58.254861+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-30T18:43:58.254861+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "J7PJNWqhDQCp/VZcB/tqtA=="
+										},
+										"exampleSelector" : "squarifyWithSevenNodesThirdStep",
+										"previewHeight" : 200,
+										"previewShowSelector" : "gtViewsFor:",
+										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : true,
+										"noCode" : true
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-30T18:43:38.39847+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-31T12:46:53.952439+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ftOQNGqhDQCp+w68B/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "However, if it adds the next (area 4) above these original rectangles, the aspect ratio of this rectangle gets {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesThirdStep|label=#worstValueRounded}}."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "exampleSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-30T18:45:57.087136+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-30T18:45:57.087136+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "0+/ePGqhDQCqAZBEB/tqtA=="
+										},
+										"exampleSelector" : "squarifyWithSevenNodesFourthStep",
+										"previewHeight" : 200,
+										"previewShowSelector" : "gtViewsFor:",
+										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : true,
+										"noCode" : true
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-30T18:45:18.011097+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-31T12:47:22.870756+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "p6h5OmqhDQCp/1/LB/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Therefore, it decides that it has reached an optimum for the left half in step two, and start processing the right half. The initial subdivision it chooses here is vertical, because the rectangle is taller than it is wider. In step 4 it adds the rectangle with area 4:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "exampleSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-31T12:09:48.271577+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-31T12:09:48.271577+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "//f60XihDQCqBf8RB/tqtA=="
+										},
+										"exampleSelector" : "squarifyWithSevenNodesFifthStep",
+										"previewHeight" : 200,
+										"previewShowSelector" : "gtViewsFor:",
+										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : true,
+										"noCode" : true
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-31T12:09:31.589463+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-31T12:47:28.992001+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "m3X00HihDQCqA8QlB/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In the next step, it adds area 3. The worst aspect ratio decreases from {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesFourthStep|label=#worstValueRounded}} to {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesFifthStep|label=#worstValueRounded}}:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "exampleSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-31T12:10:36.600781+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-31T12:10:36.600781+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "/Wnc1HihDQCqCdEjB/tqtA=="
+										},
+										"exampleSelector" : "squarifyWithSevenNodesSixthStep",
+										"previewHeight" : 200,
+										"previewShowSelector" : "gtViewsFor:",
+										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : true,
+										"noCode" : true
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-31T12:10:09.443315+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-31T12:47:44.874874+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "44gu03ihDQCqB+RJB/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The addition of the next area (2) however does not improve the result as the worst aspect ratio increases from {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesFifthStep|label=#worstValueRounded}} to {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesSixthStep|label=#worstValueRounded}}:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "exampleSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-31T12:11:03.430409+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-07-31T12:11:03.430409+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "M8111nihDQCqDYdYB/tqtA=="
+										},
+										"exampleSelector" : "squarifyWithSevenNodesSeventhStep",
+										"previewHeight" : 200,
+										"previewShowSelector" : "gtViewsFor:",
+										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : true,
+										"noCode" : true
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-31T12:10:52.282128+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-31T12:47:53.106143+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UxbE1XihDQCqC3M3B/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "So it rejects the previous step and start to fill the right top partition:"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:37:21.463731+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-30T18:37:26.510306+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "huYKHmqhDQCp7f9/B/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Describing the Steps"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-31T12:11:28.820602+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-31T12:11:28.820602+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "LC/s13ihDQCqDxinB/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "These steps are repeated until all rectangles have been processed. The final result is the following:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-31T12:11:39.882999+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-31T12:11:39.882999+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "HAai2HihDQCqEYAjB/tqtA=="
+				},
+				"exampleSelector" : "squarifyWithSevenNodes",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+				"codeExpanded" : false,
+				"previewExpanded" : true,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-31T12:11:58.729974+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-07-31T12:11:58.729974+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "eb662XihDQCqE0pmB/tqtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "An optimal result can not be guaranteed, and counterexamples can be set up. The order in which the rectangles are processed is important. We found that a decreasing order usually gives the best results. The initially large rectangle is then filled in first with the larger subrectangles."
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "veit.heller@feenk.com"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2022-07-29T20:39:41.587428+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "veit.heller@feenk.com"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2022-07-29T21:45:51.698653+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Explaining the Squarified Treemap Algorithm"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "8f2bcdb5-57a1-0d00-9b2b-123707fb6ab4"
+	}
+}
