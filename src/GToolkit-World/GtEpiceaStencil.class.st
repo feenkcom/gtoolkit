@@ -11,7 +11,16 @@ GtEpiceaStencil >> asPreviewElement [
 
 { #category : #accessing }
 GtEpiceaStencil >> create [
-	^ GtEpiceaElement new createInPager maximized
+	| tool compositeTool |
+	tool := GtChangePhlowTool new.
+	compositeTool := GtPhlowCompositeTool new
+			addTool: tool;
+			addTool: (GtInspectorTool forObject: nil).
+	^ (GtPager
+		createOn: (GtPagerWrapperElement new
+				tool: compositeTool;
+				embellisher: (GtPagerPageEmbellisher new extension: GtPagerPageEmbellisherExtension null)))
+		maximized
 ]
 
 { #category : #accessing }
