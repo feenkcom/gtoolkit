@@ -11,7 +11,16 @@ GtGitStencil >> asPreviewElement [
 
 { #category : #'api - instantiation' }
 GtGitStencil >> create [
-	^ GtGitElement new createInPager maximized
+	| tool compositeTool |
+	tool := GtGitPhlowTool new.
+	compositeTool := GtPhlowCompositeTool new
+		addTool: tool;
+		addTool: (GtInspectorTool forObject: nil).
+	^ (GtPager
+		createOn: (GtPagerWrapperElement new
+				tool: compositeTool;
+				embellisher: (GtPagerPageEmbellisher new extension: GtPagerPageEmbellisherExtension null)))
+		maximized
 ]
 
 { #category : #accessing }
