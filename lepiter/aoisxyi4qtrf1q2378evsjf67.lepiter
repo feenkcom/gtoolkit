@@ -8,6 +8,43 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-08-17T08:39:20.937762+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-08-17T08:39:20.937762+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WYWi3MuiDQCrgJkIB7JnUw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "exampleSnippet",
@@ -70,7 +107,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-30T18:30:05.436193+02:00"
+						"dateAndTimeString" : "2022-08-17T08:28:17.969168+02:00"
 					}
 				},
 				"uid" : {
@@ -80,50 +117,50 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Among the visualization support, Glamorous Toolkit offers an implementaiton of a squarified treemap. The algorithm is responsible for creating visualizations such as this one:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-30T17:52:09.797777+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-30T18:31:37.755429+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "hvd3fGmhDQCp2ElRB/tqtA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The implementation is captured in {{gtClass:GtGraphTreemapSquarify}} and a few adjacent helper classes. But how does it work?"
+				"string" : "As part of the visualization support, Glamorous Toolkit offers an implementation of a squarified treemap. The algorithm is responsible for creating visualizations such as this one:"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-30T18:31:49.129005+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-30T18:32:40.828365+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "r7KqCWqhDQCp5UuXB/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "One way to answer the question is to read the code. However, this particular algorithm was already published previously in[Squarified Treemaps, Bruls etal, 2000](https://www.win.tue.nl/~vanwijk/stm.pdf), a paper that starts with the following abstract: "
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -205,7 +242,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-30T18:31:49.129005+02:00"
+						"dateAndTimeString" : "2022-07-30T17:52:09.797777+02:00"
 					}
 				},
 				"editEmail" : {
@@ -216,17 +253,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-30T18:32:40.828365+02:00"
+						"dateAndTimeString" : "2022-07-30T18:31:37.755429+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "r7KqCWqhDQCp5UuXB/tqtA=="
+					"uidString" : "hvd3fGmhDQCp2ElRB/tqtA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "One way to answer the question is to read the code. However, this particular algorithm was already published previously in[Squarified Treemaps, Bruls etal, 2000](https://www.win.tue.nl/~vanwijk/stm.pdf), a paper that starts with the following abstract: "
+				"string" : "The implementation is captured in {{gtClass:GtGraphTreemapSquarify}} and a few adjacent helper classes. But how does it work?"
 			},
 			{
 				"__type" : "textSnippet",
@@ -266,6 +303,80 @@
 								"uidString" : "FUxTu1ehDQCbOza4B/tqtA=="
 							},
 							"url" : "attachments/aoisxyipgyz7vgv8ixzqls579/squarified-treemap-paper-algorithm-example.png"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-29T22:20:58.902977+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-17T08:30:46.003653+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "nZwJIFmhDQCbXfM5B/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The example in the picture is about laying out nodes with the following weights {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodes|label=#nodeValues}}. The whole idea of the algorithm is to choose subdivisions that preserve the desired ratio. The diagram shows both the accepted and the rejected choices."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-30T18:35:25.959723+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-07-30T18:35:57.848721+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kKlAF2qhDQCp5rh9B/tqtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This picture is worth a thousand words. Of course, the primary intent of implementing an algorithm is to get to the final result. But our goal is not only to produce a functional system. We want an explainable system. The rule of thumb is that if a human deems a representation as meaningful, it should be the responsibility of the system to carry it forward."
 						}
 					]
 				},
@@ -299,80 +410,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "The paper details the algorithm in several ways, but the core of the explanation is based on this depiction showing the steps that the algorithm takes for a specific input."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-29T22:20:58.902977+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-30T18:35:17.799596+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "nZwJIFmhDQCbXfM5B/tqtA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The example in the picture is about laying out the nodes with the following weights {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodes|label=#nodeValues}}. The whole idea of the algorithm is to find splittings that preserve a certain ratio. The depiction shows both the accepted and the not accepted steps."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-30T18:35:25.959723+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-30T18:35:57.848721+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "kKlAF2qhDQCp5rh9B/tqtA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "This picture is worth a thousand words. Of course, the primary intent of implementing an algorithm is to get to the final result. But our goal is not only to produce a functional system. We want an explainable system. The rule of thumb is that if a human deems a representation as meaningful, it should be the responsibility of the system to carry it forward."
 			},
 			{
 				"__type" : "textSnippet",
@@ -412,7 +449,7 @@
 								"uidString" : "osTOvFehDQCbP9d3B/tqtA=="
 							},
 							"exampleSelector" : "squarifyWithSevenNodes",
-							"previewHeight" : 300,
+							"previewHeight" : 500,
 							"previewShowSelector" : "gtAllStepsPreviewFor:",
 							"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 							"codeExpanded" : true,
@@ -490,7 +527,7 @@
 								"uidString" : "WnpevlehDQCbQz1QB/tqtA=="
 							},
 							"exampleSelector" : "squarifyWithSevenNodes",
-							"previewHeight" : 400,
+							"previewHeight" : 500,
 							"previewShowSelector" : "gtViewsFor:",
 							"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 							"codeExpanded" : true,
@@ -647,7 +684,7 @@
 											"uidString" : "SpMLLmqhDQCp8zymB/tqtA=="
 										},
 										"exampleSelector" : "squarifyWithSevenNodesFirstStep",
-										"previewHeight" : 200,
+										"previewHeight" : 400,
 										"previewShowSelector" : "gtViewsFor:",
 										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 										"codeExpanded" : true,
@@ -725,7 +762,7 @@
 											"uidString" : "swkIM2qhDQCp+dtvB/tqtA=="
 										},
 										"exampleSelector" : "squarifyWithSevenNodesSecondStep",
-										"previewHeight" : 200,
+										"previewHeight" : 400,
 										"previewShowSelector" : "gtViewsFor:",
 										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 										"codeExpanded" : true,
@@ -753,7 +790,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-07-31T12:46:36.616754+02:00"
+									"dateAndTimeString" : "2022-08-17T08:44:44.247371+02:00"
 								}
 							},
 							"uid" : {
@@ -763,7 +800,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Next it adds a second rectangle above the first. The worst aspect ratio improves to {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesSecondStep|label=#worstValueRounded}}."
+							"string" : "Next it adds a second rectangle above the first. The worst aspect ratio improves to {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesSecondStep|label=#worstValueRounded}}. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -803,7 +840,7 @@
 											"uidString" : "J7PJNWqhDQCp/VZcB/tqtA=="
 										},
 										"exampleSelector" : "squarifyWithSevenNodesThirdStep",
-										"previewHeight" : 200,
+										"previewHeight" : 400,
 										"previewShowSelector" : "gtViewsFor:",
 										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 										"codeExpanded" : true,
@@ -831,7 +868,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-07-31T12:46:53.952439+02:00"
+									"dateAndTimeString" : "2022-08-17T08:42:57.381747+02:00"
 								}
 							},
 							"uid" : {
@@ -841,7 +878,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "However, if it adds the next (area 4) above these original rectangles, the aspect ratio of this rectangle gets {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesThirdStep|label=#worstValueRounded}}."
+							"string" : "However, if it adds the next area of size 4 above these original rectangles, then the aspect ratio of this rectangle degrades to {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesThirdStep|label=#worstValueRounded}}."
 						},
 						{
 							"__type" : "textSnippet",
@@ -881,7 +918,7 @@
 											"uidString" : "0+/ePGqhDQCqAZBEB/tqtA=="
 										},
 										"exampleSelector" : "squarifyWithSevenNodesFourthStep",
-										"previewHeight" : 200,
+										"previewHeight" : 400,
 										"previewShowSelector" : "gtViewsFor:",
 										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 										"codeExpanded" : true,
@@ -909,7 +946,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-07-31T12:47:22.870756+02:00"
+									"dateAndTimeString" : "2022-08-17T08:43:28.273005+02:00"
 								}
 							},
 							"uid" : {
@@ -919,7 +956,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Therefore, it decides that it has reached an optimum for the left half in step two, and start processing the right half. The initial subdivision it chooses here is vertical, because the rectangle is taller than it is wider. In step 4 it adds the rectangle with area 4:"
+							"string" : "The algorithm therefore decides that it has reached an optimum for the left half in step two, and starts processing the right half. The initial subdivision it chooses here is vertical, because the rectangle is taller than it is wider. In step 4 it adds the rectangle with area 4:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -959,7 +996,7 @@
 											"uidString" : "//f60XihDQCqBf8RB/tqtA=="
 										},
 										"exampleSelector" : "squarifyWithSevenNodesFifthStep",
-										"previewHeight" : 200,
+										"previewHeight" : 400,
 										"previewShowSelector" : "gtViewsFor:",
 										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 										"codeExpanded" : true,
@@ -1037,7 +1074,7 @@
 											"uidString" : "/Wnc1HihDQCqCdEjB/tqtA=="
 										},
 										"exampleSelector" : "squarifyWithSevenNodesSixthStep",
-										"previewHeight" : 200,
+										"previewHeight" : 400,
 										"previewShowSelector" : "gtViewsFor:",
 										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 										"codeExpanded" : true,
@@ -1115,7 +1152,7 @@
 											"uidString" : "M8111nihDQCqDYdYB/tqtA=="
 										},
 										"exampleSelector" : "squarifyWithSevenNodesSeventhStep",
-										"previewHeight" : 200,
+										"previewHeight" : 400,
 										"previewShowSelector" : "gtViewsFor:",
 										"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 										"codeExpanded" : true,
@@ -1143,7 +1180,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-07-31T12:47:53.106143+02:00"
+									"dateAndTimeString" : "2022-08-17T08:47:04.043045+02:00"
 								}
 							},
 							"uid" : {
@@ -1153,7 +1190,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "So it rejects the previous step and start to fill the right top partition:"
+							"string" : "So it rejects this step and starts to fill the bottom right partition:"
 						}
 					]
 				},
@@ -1258,7 +1295,7 @@
 					"uidString" : "HAai2HihDQCqEYAjB/tqtA=="
 				},
 				"exampleSelector" : "squarifyWithSevenNodes",
-				"previewHeight" : 200,
+				"previewHeight" : 400,
 				"previewShowSelector" : "gtViewsFor:",
 				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 				"codeExpanded" : false,
