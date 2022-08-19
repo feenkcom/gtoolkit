@@ -42,5 +42,6 @@ TAsyncStream >> gtLiveFor: aView [
 	^ aView list
 		title: 'Items';
 		priority: 5;
-		items: [ self asyncSimilarCopy ]
+		items: [ self asyncSimilarCopy ];
+		actionUpdateButton
 ]
