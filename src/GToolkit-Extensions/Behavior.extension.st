@@ -2,26 +2,28 @@ Extension { #name : #Behavior }
 
 { #category : #'*GToolkit-Extensions' }
 Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
-
 	<return: #GtPharoExampleSuiteViewModel>
 	^ aPhlowContext
-		  optionAt: #exampleViewModel
-		  ifPresent: [ :anExampleViewModel | anExampleViewModel ]
-		  ifAbsentPut: [ 
-			  | aSuiteModel aViewModel aHandler |
-			  aSuiteModel := GtPharoExampleSuite forStream:
-				                 aMethodsCoder itemsStream.
-			  aHandler := GtPharoExampleSuiteSelectionHandler new
-				              methodsCoder: aMethodsCoder;
-				              suiteModel: aSuiteModel.
-			  aPhlowContext optionAt: #exampleViewModelHandler put: aHandler.
-			  aViewModel := GtPharoExampleSuiteViewModel new 
-				                pharoExampleSuite: aSuiteModel.
-			  aViewModel
-				  when: GtPharoSuiteSelectedStateChanged
-				  send: #onAnnouncement:
-				  to: aHandler.
-			  aViewModel ]
+		optionAt: #exampleViewModel
+		ifPresent: [ :anExampleViewModel | anExampleViewModel ]
+		ifAbsentPut: [ | aSuiteModel aViewModel aHandler |
+			aSuiteModel := GtPharoExampleSuite forStream: aMethodsCoder itemsStream.
+			
+			aHandler := GtPharoExampleSuiteSelectionHandler new
+					methodsCoder: aMethodsCoder;
+					suiteModel: aSuiteModel.
+			aPhlowContext optionAt: #exampleViewModelHandler put: aHandler.
+			aViewModel := GtPharoExampleSuiteViewModel new pharoExampleSuite: aSuiteModel.
+			
+			aMethodsCoder
+				when: GtStreamingCodersStreamChanged
+				send: #onCodersStreamChanged:
+				to: aHandler.
+			aViewModel
+				when: GtPharoSuiteSelectedStateChanged
+				send: #onSuiteSelectedStateChanged:
+				to: aHandler.
+			aViewModel ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
@@ -121,18 +123,28 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 { #category : #'*GToolkit-Extensions' }
 Behavior >> testSuiteViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 	<return: #GtPharoTestSuiteViewModel>
-
 	^ aPhlowContext
-		  optionAt: #testSuiteViewModel
-		  ifPresent: [ :aTestSuiteViewModel | aTestSuiteViewModel ]
-		  ifAbsentPut: [ 
-				| aSuiteModel |
-				aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder itemsStream.
-		  		GtPharoTestSuiteViewModel new
-					pharoTestSuite: aSuiteModel;
-					when: GtPharoSuiteSelectedStateChanged do: [ :anEvent |
-						aMethodsCoder additionalFilters: (GtPharoTestCaseStateFilter new
-					 		resultState: anEvent state;
-					 		pharoTestSuite: aSuiteModel) ];
-					yourself ]
+		optionAt: #testSuiteViewModel
+		ifPresent: [ :aTestSuiteViewModel | aTestSuiteViewModel ]
+		ifAbsentPut: [ | aSuiteModel aHandler |
+			aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder itemsStream.
+
+			aHandler := GtPharoExampleSuiteSelectionHandler new
+					methodsCoder: aMethodsCoder;
+					suiteModel: aSuiteModel.
+			aPhlowContext optionAt: #testSuiteViewModelHandler put: aHandler.
+			aMethodsCoder
+				when: GtStreamingCodersStreamChanged
+				send: #onCodersStreamChanged:
+				to: aHandler.
+
+			GtPharoTestSuiteViewModel new
+				pharoTestSuite: aSuiteModel;
+				when: GtPharoSuiteSelectedStateChanged
+					do: [ :anEvent | 
+						aMethodsCoder
+							additionalFilters: (GtPharoTestCaseStateFilter new
+									resultState: anEvent state;
+									pharoTestSuite: aSuiteModel) ];
+				yourself ]
 ]

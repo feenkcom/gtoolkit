@@ -22,6 +22,23 @@ GtPharoExampleSuiteSelectionHandler >> methodsCoder: anObject [
 
 { #category : #'api - announcement handling' }
 GtPharoExampleSuiteSelectionHandler >> onAnnouncement: anAnnouncement [
+	self onSuiteSelectedStateChanged: anAnnouncement
+]
+
+{ #category : #'api - announcement handling' }
+GtPharoExampleSuiteSelectionHandler >> onCodersStreamChanged: anAnnouncement [
+	self methodsCoder ifNil: [ ^ self ].
+	self suiteModel ifNil: [ ^ self ].
+
+	((anAnnouncement isDueTo: GtStreamingCodersAddedReason)
+		or: [ anAnnouncement isDueTo: GtStreamingCodersRemovedReason ])
+		ifFalse: [ ^ self ].
+
+	self suiteModel streamChangedTo: self methodsCoder itemsStream
+]
+
+{ #category : #'api - announcement handling' }
+GtPharoExampleSuiteSelectionHandler >> onSuiteSelectedStateChanged: anAnnouncement [
 
 	self methodsCoder ifNil: [ ^ self ].
 	self suiteModel ifNil: [ ^ self ].
