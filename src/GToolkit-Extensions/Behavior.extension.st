@@ -8,7 +8,7 @@ Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 		ifPresent: [ :anExampleViewModel | anExampleViewModel ]
 		ifAbsentPut: [ | aSuiteModel aViewModel aHandler |
 			aSuiteModel := GtPharoExampleSuite forStream: aMethodsCoder itemsStream.
-			"aSuiteModel inspect."
+			
 			aHandler := GtPharoExampleSuiteSelectionHandler new
 					methodsCoder: aMethodsCoder;
 					suiteModel: aSuiteModel.
@@ -123,18 +123,28 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 { #category : #'*GToolkit-Extensions' }
 Behavior >> testSuiteViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 	<return: #GtPharoTestSuiteViewModel>
-
 	^ aPhlowContext
-		  optionAt: #testSuiteViewModel
-		  ifPresent: [ :aTestSuiteViewModel | aTestSuiteViewModel ]
-		  ifAbsentPut: [ 
-				| aSuiteModel |
-				aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder itemsStream.
-		  		GtPharoTestSuiteViewModel new
-					pharoTestSuite: aSuiteModel;
-					when: GtPharoSuiteSelectedStateChanged do: [ :anEvent |
-						aMethodsCoder additionalFilters: (GtPharoTestCaseStateFilter new
-					 		resultState: anEvent state;
-					 		pharoTestSuite: aSuiteModel) ];
-					yourself ]
+		optionAt: #testSuiteViewModel
+		ifPresent: [ :aTestSuiteViewModel | aTestSuiteViewModel ]
+		ifAbsentPut: [ | aSuiteModel aHandler |
+			aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder itemsStream.
+
+			aHandler := GtPharoExampleSuiteSelectionHandler new
+					methodsCoder: aMethodsCoder;
+					suiteModel: aSuiteModel.
+			aPhlowContext optionAt: #testSuiteViewModelHandler put: aHandler.
+			aMethodsCoder
+				when: GtStreamingCodersStreamChanged
+				send: #onCodersStreamChanged:
+				to: aHandler.
+
+			GtPharoTestSuiteViewModel new
+				pharoTestSuite: aSuiteModel;
+				when: GtPharoSuiteSelectedStateChanged
+					do: [ :anEvent | 
+						aMethodsCoder
+							additionalFilters: (GtPharoTestCaseStateFilter new
+									resultState: anEvent state;
+									pharoTestSuite: aSuiteModel) ];
+				yourself ]
 ]
