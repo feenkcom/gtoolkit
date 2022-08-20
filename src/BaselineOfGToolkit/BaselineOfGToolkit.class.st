@@ -123,8 +123,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/Bloc:main/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:main/src' ];
-			baseline: 'GToolkitPager'
-			with: [ 
+			baseline: 'GToolkitPager' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-pager:main/src' ];
 			baseline: 'GToolkitSpotter' with: [
 				spec repository: 'github://feenkcom/gtoolkit-spotter:main/src' ];
@@ -141,7 +140,13 @@ BaselineOfGToolkit >> baseline: spec [
 				
 		spec 
 			package: 'GToolkit-Extensions' with: [
-				spec requires: #('GToolkitCoder' 'GToolkit4Pharo' 'GToolkitSpotter'). ];
+				spec requires: #(
+					'GToolkitCoder' 'GToolkit4Pharo' 'GToolkitSpotter' 'GToolkitVirtualMachine'
+					 'GToolkitClipboard' 'GToolkitTranscript' 'GToolkitDebugger' 'GToolkitFileBrowser'
+					 'GToolkitConstrainer' 'GToolkit4Git' 'GToolkitVisualizerPhlow' 'GToolkitReleaser'
+					 'GToolkit4XMLSupport' 'GToolkit-DependencyAnalyzer' 'GToolkit-Docs'
+					 'GToolkit-Monitor' 'GToolkit-Profiler' 'GToolkit-Constraints'
+					 'GToolkit-SceneDriller' 'GToolkit-World' 'GToolkit-Setup'). ];
 			package: 'GToolkit-Docs' with: [
 				spec requires: #('GToolkitCoder' 'GToolkit-World'). ];
 			package: 'GToolkit-Monitor' with: [
