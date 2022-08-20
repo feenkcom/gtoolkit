@@ -83,7 +83,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.737/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1818/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1819/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.1066/src' ].
@@ -140,7 +140,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.900/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.1818/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.1819/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.381/src' ].
@@ -169,8 +169,6 @@ BaselineOfGToolkit >> baseline: spec [
 			baseline: 'RBFormatter' with: [
 				spec repository: 'github://j-brant/RBFormatter:5214567865267400a855c3ebbcb61c0f15195f0f/src' ].
 
-		spec package: 'GToolkit-Extensions' with: [
-			spec requires: #('GToolkitCoder' 'GToolkit4Pharo' 'GToolkitSpotter') ].
 		spec package: 'GToolkit-Monitor' with: [
 			spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow') ].
 		spec package: 'GToolkit-Profiler' with: [
@@ -186,6 +184,8 @@ BaselineOfGToolkit >> baseline: spec [
 		spec package: 'GToolkit-DependencyAnalyzer'.
 		spec package: 'GToolkit-Constraints' with: [
 			spec requires: #('GToolkitConstrainer' 'GToolkit-DependencyAnalyzer' 'LepiterEngine') ].
+		spec package: 'GToolkit-Extensions' with: [
+			spec requires: #('GToolkitCoder' 'GToolkit4Pharo' 'GToolkitSpotter' 'GToolkitVirtualMachine' 'GToolkitClipboard' 'GToolkitTranscript' 'GToolkitDebugger' 'GToolkitFileBrowser' 'GToolkitConstrainer' 'GToolkit4Git' 'GToolkitVisualizerPhlow' 'GToolkitReleaser' 'GToolkit4XMLSupport' 'GToolkit-DependencyAnalyzer' 'GToolkit-Docs' 'GToolkit-Monitor' 'GToolkit-Profiler' 'GToolkit-Constraints' 'GToolkit-SceneDriller' 'GToolkit-World' 'GToolkit-Setup') ].
 	]
 ]
 
