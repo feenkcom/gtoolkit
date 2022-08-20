@@ -7,7 +7,8 @@ Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 		optionAt: #exampleViewModel
 		ifPresent: [ :anExampleViewModel | anExampleViewModel ]
 		ifAbsentPut: [ | aSuiteModel aViewModel aHandler |
-			aSuiteModel := GtPharoExampleSuite forStream: aMethodsCoder itemsStream.
+			aSuiteModel := GtPharoExampleSuite forStream: aMethodsCoder examplesStream.
+			aSuiteModel inspect.
 			
 			aHandler := GtPharoExampleSuiteSelectionHandler new
 					methodsCoder: aMethodsCoder;

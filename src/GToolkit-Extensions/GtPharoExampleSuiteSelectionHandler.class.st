@@ -34,7 +34,7 @@ GtPharoExampleSuiteSelectionHandler >> onCodersStreamChanged: anAnnouncement [
 		or: [ anAnnouncement isDueTo: GtStreamingCodersRemovedReason ])
 		ifFalse: [ ^ self ].
 
-	self suiteModel streamChangedTo: self methodsCoder itemsStream
+	self suiteModel streamChangedTo: self methodsCoder examplesStream
 ]
 
 { #category : #'api - announcement handling' }
