@@ -62,7 +62,6 @@ GtPharoExampleSuite >> gtExamplesWithResultCacheFor: aView [
 					label: 'Inspect example with result';
 					action: [ :aButton | aButton phlow spawnObject: anAssoc value ] ]
 			width: 35;
-		updateWhen: GtPharoSuiteStreamChanged in: [ self announcer ];
 		send: #value;
 		actionUpdateButton
 ]
@@ -88,6 +87,5 @@ GtPharoExampleSuite >> gtExamplesWithResultStreamFor: aView [
 					background: anExample color;
 					aptitude: (BrGlamorousWithLabelTooltipAptitude new text: 'Example execution result') ]
 			width: 40;
-		updateWhen: GtPharoSuiteStreamChanged in: [ self announcer ];
 		actionUpdateButton
 ]
