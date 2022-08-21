@@ -7,22 +7,15 @@ Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 		optionAt: #exampleViewModel
 		ifPresent: [ :anExampleViewModel | anExampleViewModel ]
 		ifAbsentPut: [ | aSuiteModel aViewModel aHandler |
-			aSuiteModel := GtPharoExampleSuite forStream: aMethodsCoder examplesStream.
-			
-			aHandler := GtPharoExampleSuiteSelectionHandler new
-					methodsCoder: aMethodsCoder;
-					suiteModel: aSuiteModel.
-			aPhlowContext optionAt: #exampleViewModelHandler put: aHandler.
+			aSuiteModel := GtPharoExampleSuite new.
 			aViewModel := GtPharoExampleSuiteViewModel new pharoExampleSuite: aSuiteModel.
-			
-			aMethodsCoder
-				when: GtStreamingCodersStreamChanged
-				send: #onCodersStreamChanged:
-				to: aHandler.
-			aViewModel
-				when: GtPharoSuiteSelectedStateChanged
-				send: #onSuiteSelectedStateChanged:
-				to: aHandler.
+
+			aHandler := GtPharoExampleSuiteMethodsCoderCommunicator
+					forMethodsCoder: aMethodsCoder
+					suiteModel: aSuiteModel
+					viewModel: aViewModel.
+			aPhlowContext optionAt: #exampleViewModelHandler put: aHandler.
+
 			aViewModel ]
 ]
 
@@ -129,7 +122,7 @@ Behavior >> testSuiteViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 		ifAbsentPut: [ | aSuiteModel aHandler |
 			aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder itemsStream.
 
-			aHandler := GtPharoExampleSuiteSelectionHandler new
+			aHandler := GtPharoExampleSuiteMethodsCoderCommunicator new
 					methodsCoder: aMethodsCoder;
 					suiteModel: aSuiteModel.
 			aPhlowContext optionAt: #testSuiteViewModelHandler put: aHandler.

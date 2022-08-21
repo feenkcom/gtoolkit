@@ -9,6 +9,7 @@ AsyncSharedDictionary >> gtItemsFor: aView [
 		title: 'Items';
 		priority: 1;
 		items: [ monitor critical: [ dictionary copy associations ] ];
+		column: '' text: [ :_ :anIndex | anIndex ] width: 40;
 		column: 'Key'
 			stencil: [ :anAssoc | 
 				BrButton new
