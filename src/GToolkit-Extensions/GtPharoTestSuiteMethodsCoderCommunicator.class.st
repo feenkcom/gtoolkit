@@ -1,5 +1,5 @@
 Class {
-	#name : #GtPharoExampleSuiteMethodsCoderCommunicator,
+	#name : #GtPharoTestSuiteMethodsCoderCommunicator,
 	#superclass : #Object,
 	#instVars : [
 		'methodsCoder',
@@ -10,7 +10,7 @@ Class {
 }
 
 { #category : #accessing }
-GtPharoExampleSuiteMethodsCoderCommunicator class >> forMethodsCoder: aMethodsCoder suiteModel: aSuiteModel viewModel: aSuiteViewModel [
+GtPharoTestSuiteMethodsCoderCommunicator class >> forMethodsCoder: aMethodsCoder suiteModel: aSuiteModel viewModel: aSuiteViewModel [
 	^ self new
 		methodsCoder: aMethodsCoder;
 		suiteModel: aSuiteModel;
@@ -19,13 +19,13 @@ GtPharoExampleSuiteMethodsCoderCommunicator class >> forMethodsCoder: aMethodsCo
 ]
 
 { #category : #'private - updating' }
-GtPharoExampleSuiteMethodsCoderCommunicator >> connect [
-	| aCoderStream anExamplesStream |
+GtPharoTestSuiteMethodsCoderCommunicator >> connect [
+	| aCoderStream aTestCaseStream |
 	aCoderStream := self methodsCoder codersStream.
-	anExamplesStream := aCoderStream
+	aTestCaseStream := aCoderStream
 			map: [ :aMethodCoder | 
-				| anExample |
-				anExample := aMethodCoder example.
+				| aTestCase |
+				aTestCase := aMethodCoder testCase.
 
 				aMethodCoder weak
 					when: GtCoderMethodAdded
@@ -40,19 +40,19 @@ GtPharoExampleSuiteMethodsCoderCommunicator >> connect [
 					send: #onCoderMethodModified:
 					to: self.
 				
-				anExample ].
+				aMethodCoder compiledMethod ].
 
-	self suiteModel stream: anExamplesStream
+	self suiteModel stream: aTestCaseStream
 ]
 
 { #category : #accessing }
-GtPharoExampleSuiteMethodsCoderCommunicator >> methodsCoder [
+GtPharoTestSuiteMethodsCoderCommunicator >> methodsCoder [
 
 	^ methodsCoder
 ]
 
 { #category : #accessing }
-GtPharoExampleSuiteMethodsCoderCommunicator >> methodsCoder: aMethodsCoder [
+GtPharoTestSuiteMethodsCoderCommunicator >> methodsCoder: aMethodsCoder [
 	self
 		assert: [ methodsCoder isNil ]
 		description: [ 'Methods coder can be initialized only once' ].
@@ -65,22 +65,22 @@ GtPharoExampleSuiteMethodsCoderCommunicator >> methodsCoder: aMethodsCoder [
 ]
 
 { #category : #'private - announcement handling' }
-GtPharoExampleSuiteMethodsCoderCommunicator >> onCoderMethodAdded: anAnnouncement [
+GtPharoTestSuiteMethodsCoderCommunicator >> onCoderMethodAdded: anAnnouncement [
 	self connect
 ]
 
 { #category : #'private - announcement handling' }
-GtPharoExampleSuiteMethodsCoderCommunicator >> onCoderMethodModified: anAnnouncement [
+GtPharoTestSuiteMethodsCoderCommunicator >> onCoderMethodModified: anAnnouncement [
 	self connect
 ]
 
 { #category : #'private - announcement handling' }
-GtPharoExampleSuiteMethodsCoderCommunicator >> onCoderMethodRemoved: anAnnouncement [
+GtPharoTestSuiteMethodsCoderCommunicator >> onCoderMethodRemoved: anAnnouncement [
 	self connect
 ]
 
 { #category : #'private - announcement handling' }
-GtPharoExampleSuiteMethodsCoderCommunicator >> onCodersStreamChanged: anAnnouncement [
+GtPharoTestSuiteMethodsCoderCommunicator >> onCodersStreamChanged: anAnnouncement [
 	self methodsCoder ifNil: [ ^ self ].
 	self suiteModel ifNil: [ ^ self ].
 
@@ -92,24 +92,24 @@ GtPharoExampleSuiteMethodsCoderCommunicator >> onCodersStreamChanged: anAnnounce
 ]
 
 { #category : #'private - announcement handling' }
-GtPharoExampleSuiteMethodsCoderCommunicator >> onSuiteSelectedStateChanged: anAnnouncement [
-
+GtPharoTestSuiteMethodsCoderCommunicator >> onSuiteSelectedStateChanged: anAnnouncement [
 	self methodsCoder ifNil: [ ^ self ].
 	self suiteModel ifNil: [ ^ self ].
 
-	self methodsCoder additionalFilters: (GtPharoExampleStateFilter new
-			 resultState: anAnnouncement state;
-			 pharoExampleSuite: self suiteModel)
+	self methodsCoder
+		additionalFilters: (GtPharoTestCaseStateFilter new
+				resultState: anAnnouncement state;
+				pharoTestSuite: self suiteModel)
 ]
 
 { #category : #accessing }
-GtPharoExampleSuiteMethodsCoderCommunicator >> suiteModel [
+GtPharoTestSuiteMethodsCoderCommunicator >> suiteModel [
 
 	^ suiteModel
 ]
 
 { #category : #accessing }
-GtPharoExampleSuiteMethodsCoderCommunicator >> suiteModel: aSuiteModel [
+GtPharoTestSuiteMethodsCoderCommunicator >> suiteModel: aSuiteModel [
 	self
 		assert: [ suiteModel isNil ]
 		description: [ 'Suite model can be initialized only once' ].
@@ -118,13 +118,13 @@ GtPharoExampleSuiteMethodsCoderCommunicator >> suiteModel: aSuiteModel [
 ]
 
 { #category : #accessing }
-GtPharoExampleSuiteMethodsCoderCommunicator >> suiteViewModel [
+GtPharoTestSuiteMethodsCoderCommunicator >> suiteViewModel [
 
 	^ suiteViewModel
 ]
 
 { #category : #accessing }
-GtPharoExampleSuiteMethodsCoderCommunicator >> suiteViewModel: aViewModel [
+GtPharoTestSuiteMethodsCoderCommunicator >> suiteViewModel: aViewModel [
 	self
 		assert: [ suiteViewModel isNil ]
 		description: [ 'Suite view model can be initialized only once' ].

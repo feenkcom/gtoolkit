@@ -119,25 +119,15 @@ Behavior >> testSuiteViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 	^ aPhlowContext
 		optionAt: #testSuiteViewModel
 		ifPresent: [ :aTestSuiteViewModel | aTestSuiteViewModel ]
-		ifAbsentPut: [ | aSuiteModel aHandler |
+		ifAbsentPut: [ | aSuiteModel aViewModel aHandler |
 			aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder itemsStream.
+			aViewModel := GtPharoTestSuiteViewModel new pharoTestSuite: aSuiteModel.
 
-			aHandler := GtPharoExampleSuiteMethodsCoderCommunicator new
-					methodsCoder: aMethodsCoder;
-					suiteModel: aSuiteModel.
+			aHandler := GtPharoTestSuiteMethodsCoderCommunicator
+					forMethodsCoder: aMethodsCoder
+					suiteModel: aSuiteModel
+					viewModel: aViewModel.
 			aPhlowContext optionAt: #testSuiteViewModelHandler put: aHandler.
-			aMethodsCoder
-				when: GtStreamingCodersStreamChanged
-				send: #onCodersStreamChanged:
-				to: aHandler.
 
-			GtPharoTestSuiteViewModel new
-				pharoTestSuite: aSuiteModel;
-				when: GtPharoSuiteSelectedStateChanged
-					do: [ :anEvent | 
-						aMethodsCoder
-							additionalFilters: (GtPharoTestCaseStateFilter new
-									resultState: anEvent state;
-									pharoTestSuite: aSuiteModel) ];
-				yourself ]
+			aViewModel ]
 ]
