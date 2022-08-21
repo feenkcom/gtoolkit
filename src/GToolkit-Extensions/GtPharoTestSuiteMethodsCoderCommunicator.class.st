@@ -35,7 +35,7 @@ GtPharoTestSuiteMethodsCoderCommunicator >> connect [
 					when: GtCoderMethodRemoved
 					send: #onCoderMethodRemoved:
 					to: self.
-				aMethodCoder
+				aMethodCoder weak
 					when: GtCoderMethodModified
 					send: #onCoderMethodModified:
 					to: self.

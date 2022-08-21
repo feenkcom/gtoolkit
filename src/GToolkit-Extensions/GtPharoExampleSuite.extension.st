@@ -15,29 +15,53 @@ GtPharoExampleSuite >> gtExamplesWithResultCacheFor: aView [
 		column: ''
 			text: [ :_ :anIndex | anIndex ]
 			width: 40;
-		column: 'Key'
+		column: 'Compiled Method' text: #key;
+		column: ''
+			stencil: [ :anAssoc | 
+				| isLatest |
+				isLatest := anAssoc key methodClass methodDict
+						at: anAssoc key selector
+						ifPresent: [ :aMethod | aMethod == anAssoc key ]
+						ifAbsent: [ false ].
+
+				BlElement new
+					size: 13 @ 13;
+					geometry: BlCircleGeometry new;
+					background: (isLatest
+							ifTrue: [ BrGlamorousColors successBackgroundColor ]
+							ifFalse: [ BrGlamorousColors errorBackgroundColor ]);
+					aptitude: (BrGlamorousWithLabelTooltipAptitude new
+							text: (isLatest ifTrue: [ 'The current method' ] ifFalse: [ 'An old method version' ])) ]
+			width: 20;
+		column: ''
 			stencil: [ :anAssoc | 
 				BrButton new
 					aptitude: BrGlamorousButtonWithIconAptitude;
 					fitContent;
 					beTinySize;
 					icon: BrGlamorousVectorIcons inspect;
-					label: 'Inspect key';
+					label: 'Inspect compiled method';
 					action: [ :aButton | aButton phlow spawnObject: anAssoc key ] ]
 			width: 35;
-		column: '' text: #key;
-		column: 'Value'
+		column: 'Example With Result' text: #value;
+		column: ''
+			stencil: [ :anAssoc | 
+				BlElement new
+					size: 13 @ 13;
+					geometry: BlCircleGeometry new;
+					background: anAssoc value color;
+					aptitude: (BrGlamorousWithLabelTooltipAptitude new text: 'Example execution result') ]
+			width: 20;
+		column: ''
 			stencil: [ :anAssoc | 
 				BrButton new
 					aptitude: BrGlamorousButtonWithIconAptitude;
 					fitContent;
 					beTinySize;
 					icon: BrGlamorousVectorIcons inspect;
-					label: 'Inspect value';
+					label: 'Inspect example with result';
 					action: [ :aButton | aButton phlow spawnObject: anAssoc value ] ]
 			width: 35;
-		column: '' text: #value;
-		column: 'Result' stencil: [ :anAssoc | anAssoc value icon ] width: 40;
 		updateWhen: GtPharoSuiteStreamChanged in: [ self announcer ];
 		send: #value;
 		actionUpdateButton
@@ -52,9 +76,18 @@ GtPharoExampleSuite >> gtExamplesWithResultStreamFor: aView [
 		title: 'Examples With Result Stream';
 		priority: 2;
 		items: [ examplesWithResultStream asyncSimilarCopy ];
-		column: 'Number' text: [ :_ :anIndex | anIndex ] width: 50;
-		column: 'Name' text: #yourself;
-		column: 'Result' stencil: [ :anAssoc | anAssoc value icon ] width: 40;
+		column: 'Number'
+			text: [ :_ :anIndex | anIndex ]
+			width: 50;
+		column: 'Example With Result' text: #yourself;
+		column: 'Result'
+			stencil: [ :anExample | 
+				BlElement new
+					size: 13 @ 13;
+					geometry: BlCircleGeometry new;
+					background: anExample color;
+					aptitude: (BrGlamorousWithLabelTooltipAptitude new text: 'Example execution result') ]
+			width: 40;
 		updateWhen: GtPharoSuiteStreamChanged in: [ self announcer ];
 		actionUpdateButton
 ]
