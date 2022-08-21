@@ -1,18 +1,6 @@
 Extension { #name : #GtPharoExampleSuite }
 
 { #category : #'*GToolkit-Extensions' }
-GtPharoExampleSuite >> gtExamplesCacheFor: aView [
-	<gtView>
-	examplesCache ifNil: [ ^ aView empty ].
-
-	^ aView forward
-		title: 'Examples Cache';
-		priority: 1;
-		object: [ examplesCache ];
-		view: #gtItemsFor:
-]
-
-{ #category : #'*GToolkit-Extensions' }
 GtPharoExampleSuite >> gtExamplesWithResultCacheFor: aView [
 	<gtView>
 	examplesWithResultCache ifNil: [ ^ aView empty ].
