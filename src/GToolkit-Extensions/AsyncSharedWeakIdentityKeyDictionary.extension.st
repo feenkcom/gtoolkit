@@ -1,7 +1,7 @@
-Extension { #name : #AsyncSharedDictionary }
+Extension { #name : #AsyncSharedWeakIdentityKeyDictionary }
 
 { #category : #'*GToolkit-Extensions' }
-AsyncSharedDictionary >> gtItemsFor: aView [
+AsyncSharedWeakIdentityKeyDictionary >> gtItemsFor: aView [
 	<gtView>
 	dictionary ifNil: [ ^ aView empty ].
 
@@ -9,7 +9,7 @@ AsyncSharedDictionary >> gtItemsFor: aView [
 		title: 'Items';
 		priority: 1;
 		items: [ monitor critical: [ dictionary copy associations ] ];
-		column: '' text: [ :_ :anIndex | anIndex ] width: 40;
+		column: '' text: [ :_ :anIndex | anIndex ] width: 30;
 		column: 'Key'
 			stencil: [ :anAssoc | 
 				BrButton new

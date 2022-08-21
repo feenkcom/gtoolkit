@@ -39,9 +39,11 @@ TAsyncStream >> gtExecuteActionFor: anAction [
 TAsyncStream >> gtLiveFor: aView [
 	<gtView>
 
-	^ aView list
+	^ aView columnedList
 		title: 'Items';
 		priority: 5;
 		items: [ self asyncSimilarCopy ];
+		column: 'Number' text: [ :_ :anIndex | anIndex ] width: 50;
+		column: 'Name' text: #yourself;
 		actionUpdateButton
 ]

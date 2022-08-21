@@ -109,12 +109,13 @@ RPackage >> gtTagAndClassHierarchyFor: aView [
 ]
 
 { #category : #'*GToolkit-Extensions' }
-RPackage >> gtTestsFor: aView [
+RPackage >> gtTestsFor: aView context: aPhlowConetxt [
 	<gtView>
 	<gtPackageView>
 	
 	^ (GtPharoCoderUIUtility
 		testMethodsPhlowViewFor: aView
+		context: aPhlowConetxt
 		filter: (GtSearchPackageTestSuiteFilter new package: self))
 			title: 'Tests';
 			priority: 12
