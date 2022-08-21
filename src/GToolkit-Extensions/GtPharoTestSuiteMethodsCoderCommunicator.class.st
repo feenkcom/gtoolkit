@@ -39,6 +39,10 @@ GtPharoTestSuiteMethodsCoderCommunicator >> connect [
 					when: GtCoderMethodModified
 					send: #onCoderMethodModified:
 					to: self.
+				aMethodCoder weak
+					when: GtPharoMethodCoderCompiled
+					send: #onPharoMethodCoderCompiled:
+					to: self.
 				
 				aMethodCoder compiledMethod ].
 
@@ -85,10 +89,16 @@ GtPharoTestSuiteMethodsCoderCommunicator >> onCodersStreamChanged: anAnnouncemen
 	self suiteModel ifNil: [ ^ self ].
 
 	((anAnnouncement isDueTo: GtStreamingCodersAddedReason)
-		or: [ anAnnouncement isDueTo: GtStreamingCodersRemovedReason ])
+		or: [ (anAnnouncement isDueTo: GtStreamingCodersRemovedReason)
+				or: [ anAnnouncement isDueTo: GtStreamingCodersSwappedReason ] ])
 		ifFalse: [ ^ self ].
 
 	self connect.
+]
+
+{ #category : #'private - announcement handling' }
+GtPharoTestSuiteMethodsCoderCommunicator >> onPharoMethodCoderCompiled: anAnnouncement [
+	self connect
 ]
 
 { #category : #'private - announcement handling' }
