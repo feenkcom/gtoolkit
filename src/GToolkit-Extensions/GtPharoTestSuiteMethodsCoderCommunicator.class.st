@@ -26,24 +26,7 @@ GtPharoTestSuiteMethodsCoderCommunicator >> connect [
 			map: [ :aMethodCoder | 
 				| aTestCase |
 				aTestCase := aMethodCoder testCase.
-
-				aMethodCoder weak
-					when: GtCoderMethodAdded
-					send: #onCoderMethodAdded:
-					to: self.
-				aMethodCoder weak
-					when: GtCoderMethodRemoved
-					send: #onCoderMethodRemoved:
-					to: self.
-				aMethodCoder weak
-					when: GtCoderMethodModified
-					send: #onCoderMethodModified:
-					to: self.
-				aMethodCoder weak
-					when: GtPharoMethodCoderCompiled
-					send: #onPharoMethodCoderCompiled:
-					to: self.
-				
+				self subscribeToMethodCoder: aMethodCoder.
 				aMethodCoder compiledMethod ].
 
 	self suiteModel stream: aTestCaseStream
@@ -110,6 +93,29 @@ GtPharoTestSuiteMethodsCoderCommunicator >> onSuiteSelectedStateChanged: anAnnou
 		additionalFilters: (GtPharoTestCaseStateFilter new
 				resultState: anAnnouncement state;
 				pharoTestSuite: self suiteModel)
+]
+
+{ #category : #'private - updating' }
+GtPharoTestSuiteMethodsCoderCommunicator >> subscribeToMethodCoder: aMethodCoder [
+	GtPharoExampleSuiteMethodsCoderCommunicator canSubscribeToMethodCoder
+		ifFalse: [ ^ self ].
+
+	aMethodCoder weak
+		when: GtCoderMethodAdded
+		send: #onCoderMethodAdded:
+		to: self.
+	aMethodCoder weak
+		when: GtCoderMethodRemoved
+		send: #onCoderMethodRemoved:
+		to: self.
+	aMethodCoder weak
+		when: GtCoderMethodModified
+		send: #onCoderMethodModified:
+		to: self.
+	aMethodCoder weak
+		when: GtPharoMethodCoderCompiled
+		send: #onPharoMethodCoderCompiled:
+		to: self
 ]
 
 { #category : #accessing }
