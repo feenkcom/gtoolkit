@@ -6,8 +6,26 @@ Class {
 		'suiteModel',
 		'suiteViewModel'
 	],
+	#classVars : [
+		'CanSubscribeToMethodCoder'
+	],
 	#category : #'GToolkit-Extensions-Examples'
 }
+
+{ #category : #'api - settings' }
+GtPharoExampleSuiteMethodsCoderCommunicator class >> canSubscribeToMethodCoder [
+	^ CanSubscribeToMethodCoder = true
+]
+
+{ #category : #'api - settings' }
+GtPharoExampleSuiteMethodsCoderCommunicator class >> disableSubscribeToMethodCoder [
+	CanSubscribeToMethodCoder := false
+]
+
+{ #category : #'api - settings' }
+GtPharoExampleSuiteMethodsCoderCommunicator class >> enableSubscribeToMethodCoder [
+	CanSubscribeToMethodCoder := true
+]
 
 { #category : #accessing }
 GtPharoExampleSuiteMethodsCoderCommunicator class >> forMethodsCoder: aMethodsCoder suiteModel: aSuiteModel viewModel: aSuiteViewModel [
@@ -19,6 +37,11 @@ GtPharoExampleSuiteMethodsCoderCommunicator class >> forMethodsCoder: aMethodsCo
 ]
 
 { #category : #'private - updating' }
+GtPharoExampleSuiteMethodsCoderCommunicator >> canSubscribeToMethodCoder [
+	^ self class canSubscribeToMethodCoder
+]
+
+{ #category : #'private - updating' }
 GtPharoExampleSuiteMethodsCoderCommunicator >> connect [
 	| aCoderStream anExamplesStream |
 	aCoderStream := self methodsCoder codersStream.
@@ -26,24 +49,7 @@ GtPharoExampleSuiteMethodsCoderCommunicator >> connect [
 			map: [ :aMethodCoder | 
 				| anExample |
 				anExample := aMethodCoder example.
-
-				aMethodCoder weak
-					when: GtCoderMethodAdded
-					send: #onCoderMethodAdded:
-					to: self.
-				aMethodCoder weak
-					when: GtCoderMethodRemoved
-					send: #onCoderMethodRemoved:
-					to: self.
-				aMethodCoder weak
-					when: GtCoderMethodModified
-					send: #onCoderMethodModified:
-					to: self.
-				aMethodCoder weak
-					when: GtPharoMethodCoderCompiled
-					send: #onPharoMethodCoderCompiled:
-					to: self.
-
+				self subscribeToMethodCoder: aMethodCoder.
 				anExample ].
 
 	self suiteModel stream: anExamplesStream
@@ -110,6 +116,29 @@ GtPharoExampleSuiteMethodsCoderCommunicator >> onSuiteSelectedStateChanged: anAn
 	self methodsCoder additionalFilters: (GtPharoExampleStateFilter new
 			 resultState: anAnnouncement state;
 			 pharoExampleSuite: self suiteModel)
+]
+
+{ #category : #'private - updating' }
+GtPharoExampleSuiteMethodsCoderCommunicator >> subscribeToMethodCoder: aMethodCoder [
+
+	self canSubscribeToMethodCoder ifFalse: [ ^ self ].
+
+	aMethodCoder weak
+		when: GtCoderMethodAdded
+		send: #onCoderMethodAdded:
+		to: self.
+	aMethodCoder weak
+		when: GtCoderMethodRemoved
+		send: #onCoderMethodRemoved:
+		to: self.
+	aMethodCoder weak
+		when: GtCoderMethodModified
+		send: #onCoderMethodModified:
+		to: self.
+	aMethodCoder weak
+		when: GtPharoMethodCoderCompiled
+		send: #onPharoMethodCoderCompiled:
+		to: self
 ]
 
 { #category : #accessing }
