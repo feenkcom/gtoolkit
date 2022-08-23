@@ -17,6 +17,11 @@ GtPharoTestSuiteMethodsCoderMediator >> connect [
 	self suiteModel stream: aTestCaseStream
 ]
 
+{ #category : #accessing }
+GtPharoTestSuiteMethodsCoderMediator >> mediatorLabel [
+	^ 'T'
+]
+
 { #category : #'private - announcement handling' }
 GtPharoTestSuiteMethodsCoderMediator >> onSuiteSelectedStateChanged: anAnnouncement [
 	self methodsCoder ifNil: [ ^ self ].

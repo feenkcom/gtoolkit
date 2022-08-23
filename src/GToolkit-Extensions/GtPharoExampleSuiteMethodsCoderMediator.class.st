@@ -24,6 +24,11 @@ GtPharoExampleSuiteMethodsCoderMediator >> examplesStream [
 		filter: [ :anExample | anExample isNotNil ]
 ]
 
+{ #category : #accessing }
+GtPharoExampleSuiteMethodsCoderMediator >> mediatorLabel [
+	^ 'E'
+]
+
 { #category : #'private - announcement handling' }
 GtPharoExampleSuiteMethodsCoderMediator >> onSuiteSelectedStateChanged: anAnnouncement [
 	self methodsCoder ifNil: [ ^ self ].
