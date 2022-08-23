@@ -10,7 +10,7 @@ Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 			aSuiteModel := GtPharoExampleSuite new.
 			aViewModel := GtPharoExampleSuiteViewModel new pharoExampleSuite: aSuiteModel.
 
-			aHandler := GtPharoExampleSuiteMethodsCoderCommunicator
+			aHandler := GtPharoExampleSuiteMethodsCoderMediator
 					forMethodsCoder: aMethodsCoder
 					suiteModel: aSuiteModel
 					viewModel: aViewModel.
@@ -123,7 +123,7 @@ Behavior >> testSuiteViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 			aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder itemsStream.
 			aViewModel := GtPharoTestSuiteViewModel new pharoTestSuite: aSuiteModel.
 
-			aHandler := GtPharoTestSuiteMethodsCoderCommunicator
+			aHandler := GtPharoTestSuiteMethodsCoderMediator
 					forMethodsCoder: aMethodsCoder
 					suiteModel: aSuiteModel
 					viewModel: aViewModel.
