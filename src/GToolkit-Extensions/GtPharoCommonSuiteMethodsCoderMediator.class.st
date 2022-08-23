@@ -49,6 +49,11 @@ GtPharoCommonSuiteMethodsCoderMediator >> connect [
 ]
 
 { #category : #accessing }
+GtPharoCommonSuiteMethodsCoderMediator >> mediatorLabel [
+	^ ''
+]
+
+{ #category : #accessing }
 GtPharoCommonSuiteMethodsCoderMediator >> methodsCoder [
 
 	^ methodsCoder 
@@ -94,6 +99,7 @@ GtPharoCommonSuiteMethodsCoderMediator >> onCoderMethodRemoved: anAnnouncement [
 		announcement: anAnnouncement;
 		emit.
 
+	anAnnouncement coder ifNotNil: [ :aCoder | aCoder unsubscribe: self ].
 	self connect
 ]
 
@@ -138,14 +144,14 @@ GtPharoCommonSuiteMethodsCoderMediator >> subscribeToMethodCoder: aMethodCoder [
 
 	(aMethodCoder announcer hasSubscriber: self) ifTrue: [ ^ self ].
 
-	aMethodCoder weak
+	"aMethodCoder weak
 		when: GtCoderMethodAdded
 		send: #onCoderMethodAdded:
 		to: self.
 	aMethodCoder weak
 		when: GtCoderMethodRemoved
 		send: #onCoderMethodRemoved:
-		to: self.
+		to: self."
 	aMethodCoder weak
 		when: GtCoderMethodModified
 		send: #onCoderMethodModified:
