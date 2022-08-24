@@ -1,25 +1,6 @@
 Extension { #name : #Behavior }
 
 { #category : #'*GToolkit-Extensions' }
-Behavior >> exampleViewModelWith: aMethodsCoder fromContext: aPhlowContext [
-	<return: #GtPharoExampleSuiteViewModel>
-	^ aPhlowContext
-		optionAt: #exampleViewModel
-		ifPresent: [ :anExampleViewModel | anExampleViewModel ]
-		ifAbsentPut: [ | aSuiteModel aViewModel aHandler |
-			aSuiteModel := GtPharoExampleSuite new.
-			aViewModel := GtPharoExampleSuiteViewModel new pharoExampleSuite: aSuiteModel.
-
-			aHandler := GtPharoExampleSuiteMethodsCoderMediator
-					forMethodsCoder: aMethodsCoder
-					suiteModel: aSuiteModel
-					viewModel: aViewModel.
-			aPhlowContext optionAt: #exampleViewModelHandler put: aHandler.
-
-			aViewModel ]
-]
-
-{ #category : #'*GToolkit-Extensions' }
 Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 	<gtClassView>
 	| aMethodsCoder aMethodsCoderViewModel aTestSuiteViewModel anExampleViewModel aNewMethodCoderHolder view |
@@ -31,17 +12,17 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 		shouldHaveHeaderByDefault: false;
 		selfObject: (aPhlowContext
 				optionAt: #behaviorCoder
-				ifPresent: [ :aBehaviorCoderUIModel | 
-					aBehaviorCoderUIModel coderModel object ]
+				ifPresent: [ :aBehaviorCoderUIModel | aBehaviorCoderUIModel coderModel object ]
 				ifAbsent: [ nil ]).
 
 	aTestSuiteViewModel := self
 			testSuiteViewModelWith: aMethodsCoder
 			fromContext: aPhlowContext.
 
-	anExampleViewModel := self
-			exampleViewModelWith: aMethodsCoder
-			fromContext: aPhlowContext.
+	anExampleViewModel := GtPharoCoderUIUtility
+			exampleViewModelCachedAs: #exampleViewModelHandler_gtCoderStreamingMethodsForContext
+			inPhlowContext: aPhlowContext
+			forMethodsCoder: aMethodsCoder.
 
 	aNewMethodCoderHolder := ValueHolder new.
 
@@ -92,25 +73,20 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 					name: GtPharoBehaviorCoder addNewMethodButtonName ].
 
 	(aMethodsCoder codeGeneratorsAvailableFor: aMethodsCoderViewModel)
-		ifTrue: [ 
-			view
+		ifTrue: [ view
 				actionDropdownButtonIcon: BrGlamorousVectorIcons robot
 				tooltip: 'Generate'
-				content: [ :anElement | 
-					aMethodsCoder codeGeneratorsDropDown: anElement for: aMethodsCoderViewModel ] ].
+				content: [ :anElement | aMethodsCoder codeGeneratorsDropDown: anElement for: aMethodsCoderViewModel ] ].
 	^ view
 		actionButtonDo: [ :aButtonAction | 
 			aButtonAction
 				icon: BrGlamorousVectorIcons inspect;
 				tooltip: 'Inspect view model';
-				action: [ :aButton | 
-					aButton phlow spawnObject: aMethodsCoderViewModel ] ];
-		actionStencil: [ :aBrTab | 
-			GtPharoCoderUIUtility newExamplesDropdownButtonForViewModel: anExampleViewModel ];
-		actionStencil: [ :aBrTab | 
-			GtPharoCoderUIUtility newTestsDropdownButtonForViewModel: aTestSuiteViewModel ];
+				action: [ :aButton | aButton phlow spawnObject: aMethodsCoderViewModel ] ];
+		actionStencil: [ :aBrTab | GtPharoCoderUIUtility newExamplesDropdownButtonForViewModel: anExampleViewModel ];
+		actionStencil: [ :aBrTab | GtPharoCoderUIUtility newTestsDropdownButtonForViewModel: aTestSuiteViewModel ];
 		stencil: [ GtPharoStreamingMethodsCoderElement new
-			streamingCodersViewModel: aMethodsCoderViewModel ]
+				streamingCodersViewModel: aMethodsCoderViewModel ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
