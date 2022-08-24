@@ -37,13 +37,13 @@ Class >> gtAllReferencesFor: aView [
 Class >> gtExamplesMapFor: aView context: aPhlowContext [
 	<gtView>
 	<gtClassView>
-
-	self gtExamplesContained ifEmpty: [ ^ aView empty ].
+	self gtExamplesAll ifEmpty: [ ^ aView empty ].
 
 	^ aView forward
-		  title: 'Examples map';
-		  priority: 11;
-		  object: [ GtExampleGroup withAll: self gtExamplesContained ];
-		  view: #gtMapFor:;
-		  addAutoUpdate: GtPhlowUpdateViewOnAddedToScene
+		title: 'Examples map';
+		priority: 11;
+		object: [ GtExampleGroup
+				withAll: (self gtExamplesAll collect: #asCachedExampleWithResult) ];
+		view: #gtMapFor:;
+		addAutoUpdate: GtPhlowUpdateViewOnAddedToScene
 ]
