@@ -35,7 +35,7 @@ GtPharoTestSuiteMethodsCoderMediator >> onSuiteSelectedStateChanged: anAnnouncem
 
 { #category : #'private - streaming' }
 GtPharoTestSuiteMethodsCoderMediator >> testCasesStream [
-	^ (self subscriptionsStream
-		map: [ :aMethodCoder | aMethodCoder compiledMethod ]) 
-		filter: [ :aMethod | aMethod isNotNil ]
+	^ (self subscriptionsStream 
+		map: [ :aMethodCoder | aMethodCoder testCase ])
+		filter: [ :aTestCase | aTestCase isNotNil ]
 ]
