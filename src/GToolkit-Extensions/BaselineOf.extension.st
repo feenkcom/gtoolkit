@@ -51,7 +51,7 @@ BaselineOf class >> gtViewAllExamplesFor: aView [
 		tooltip: 'Examples defined in packages contained in the baseline or in dependencies.';
 		object: [
 			GtRlSystemExamplesExplorer forProject: (self gtRlProjectWithRepository: '') ];
-		view: #gtViewAllExamplesFor:
+		view: #gtViewAllExamplesFor:context:
 ]
 
 { #category : #'*GToolkit-Extensions' }
