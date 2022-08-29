@@ -140,13 +140,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:01:43.629795+02:00"
+									"dateAndTimeString" : "2022-08-29T15:15:25.864604+02:00"
 								}
 							},
 							"uid" : {
@@ -156,7 +156,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The Ludo game was the team exercise for the [first-year programming course](https://seg.inf.unibe.ch/teaching/current/p2/) in Java at the University of Bern in 2022. The course included a guest lecture on Smalltalk. (For the slideshow, see the [[Smalltalk Introductory lecture]].)"
+							"string" : "The Ludo game was the team exercise for the [first-year programming course](https://seg.inf.unibe.ch/teaching/current/p2/) in Java at the University of Bern in 2022. The course included a guest lecture on Smalltalk. (For the live GT slideshow, see the [[Smalltalk Introductory lecture]].)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -289,13 +289,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:10:22.229423+02:00"
+									"dateAndTimeString" : "2022-08-29T15:17:31.951188+02:00"
 								}
 							},
 							"uid" : {
@@ -305,7 +305,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "For the record, here are the exercise descriptions from the course:"
+							"string" : "For the record, here are the exercise descriptions from the course (it's not necessary to read these to follow the tutorial):"
 						}
 					]
 				},
@@ -424,6 +424,43 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T17:20:21.555254+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T17:22:16.065127+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "o8nlicSjDQCcz9XAB2rXvg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The following pages were originally drafted while developing the game, as a way of documenting the moldable development process. The pages were then edited and revised after the game had been completed."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
 								"items" : [
 									{
 										"__type" : "textSnippet",
@@ -494,43 +531,6 @@
 								"__type" : "textStyle"
 							},
 							"string" : "As a first step, we create a simple model of the Ludo board state, without any game logic or graphical presentation"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:37:59.751255+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:46:35.106343+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "NSf+SjajDQC6ZKoWAtXtMQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "***CONTINUE HERE***"
 						},
 						{
 							"__type" : "textSnippet",
@@ -611,65 +611,66 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-08-22T15:35:35.323477+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-08-22T15:35:35.323477+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "VkduQjajDQC6Pk4+AtXtMQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "[[Placing tokens on the Ludo Board]]"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T16:17:54.299563+02:00"
+									"dateAndTimeString" : "2022-08-29T15:46:26.936386+02:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T16:17:54.299563+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "xvrD2TajDQC7gmbPAtXtMQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T16:17:57.907821+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T16:17:57.907821+02:00"
+									"dateAndTimeString" : "2022-08-29T15:47:32.962451+02:00"
 								}
 							},
 							"uid" : {
@@ -679,6 +680,193 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
+							"string" : "We extend the low-level interface to have tokens change their state when they enter play. We prototype this in the Playground, and then promote the snippet to an example method with assertions."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-08-22T15:35:35.323479+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-08-22T15:35:35.323479+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "WUduQjajDQC6PwKGAtXtMQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "[[Creating the Ludo Board view]]"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:09:30.124187+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:10:04.141469+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mRTcD8OjDQCTvkzCBqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We create a visualization of the board state, that can be used as the basis for various views, and also form the basis for the game UI."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-08-22T15:35:35.323483+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-08-22T15:35:35.323483+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "XEduQjajDQC6QMMdAtXtMQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "[[Implementing the Ludo Die in the Playground]] "
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:11:54.772297+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:12:34.357964+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Z1cnP8OjDQCT4Lu4BqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We show how the Die for the Ludo game can be implemented in Playground snippets, while we document our steps as text snippets."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:10:30.274719+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:10:30.274719+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "v1IwkMOjDQCUFzUsBqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
 							"string" : ""
 						},
 						{
@@ -695,7 +883,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:35:35.323477+02:00"
+									"dateAndTimeString" : "2022-08-22T15:37:59.751255+02:00"
 								}
 							},
 							"editEmail" : {
@@ -706,17 +894,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:35:35.323477+02:00"
+									"dateAndTimeString" : "2022-08-22T15:46:35.106343+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "VkduQjajDQC6Pk4+AtXtMQ=="
+								"uidString" : "NSf+SjajDQC6ZKoWAtXtMQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Placing tokens on the Ludo Board]]"
+							"string" : "***CONTINUE HERE***"
 						},
 						{
 							"__type" : "textSnippet",
@@ -726,34 +914,34 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:35:35.323479+02:00"
+									"dateAndTimeString" : "2022-08-29T16:10:30.534273+02:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:35:35.323479+02:00"
+									"dateAndTimeString" : "2022-08-29T16:10:30.534273+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "WUduQjajDQC6PwKGAtXtMQ=="
+								"uidString" : "nEg0kMOjDQCUGBvbBqbZPg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Creating the Ludo Board view]]"
+							"string" : ""
 						},
 						{
 							"__type" : "textSnippet",
@@ -763,34 +951,34 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:35:35.323483+02:00"
+									"dateAndTimeString" : "2022-08-29T16:10:30.788119+02:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:35:35.323483+02:00"
+									"dateAndTimeString" : "2022-08-29T16:10:30.788119+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "XEduQjajDQC6QMMdAtXtMQ=="
+								"uidString" : "Lig4kMOjDQCUGeRzBqbZPg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Implementing the Ludo Die in the Playground]] "
+							"string" : ""
 						},
 						{
 							"__type" : "textSnippet",
@@ -828,6 +1016,80 @@
 								"__type" : "textStyle"
 							},
 							"string" : "[[Introducing rules to the Ludo Board Game]]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:52:51.645612+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:52:51.645612+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "0ZCqJ8SjDQCUa/yvBqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:52:51.838656+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:52:51.838656+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7oKtJ8SjDQCUbFG0BqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
 						},
 						{
 							"__type" : "textSnippet",
