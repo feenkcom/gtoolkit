@@ -23,13 +23,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "juraj.kubelka@icloud.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-18T09:20:17.183933+02:00"
+						"dateAndTimeString" : "2022-08-29T16:02:27.526011+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,82 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[LudoDraft]] "
+				"string" : "+[[LudoDraft]] "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T15:50:48.604204+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T15:51:44.812554+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FYx7SMOjDQCT8rViBqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We implement a visualization of the board state, which will later also serve as a GUI for the game, as well as the basis for other views."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka@icloud.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-08-29T15:50:24.103824+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka@icloud.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-08-29T15:50:26.577702+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ULQ8SMOjDQCT8Q1iBqbZPg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#TL;DR"
 			},
 			{
 				"__type" : "textSnippet",
@@ -82,6 +157,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "Before we implement the game logic, it would be nice to have already a visualization of the Board state. We can lay out 40 squares on an 11x11 grid."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T15:52:05.504432+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T15:53:05.673804+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "U5tOTsOjDQCT94klBqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*NB: As before we continue to experiment and prototype our ideas as Notebook snippets, while documenting our steps.*"
 						},
 						{
 							"__type" : "textSnippet",
@@ -210,13 +322,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.393269+02:00"
+									"dateAndTimeString" : "2022-08-29T15:56:18.67525+02:00"
 								}
 							},
 							"uid" : {
@@ -226,7 +338,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We encode magic numbers such as the grid size and the default dimensions as constant methods."
+							"string" : "We encode magic numbers such as the grid size and the default dimensions as constant methods, {{gtMethod:name=GtLudoBoardElement>>#gridSize}} and {{gtMethod:name=GtLudoBoardElement>>#dimensions}}. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -310,102 +422,31 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.393284+02:00"
+									"dateAndTimeString" : "2022-08-29T16:04:20.054548+02:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.393284+02:00"
+									"dateAndTimeString" : "2022-08-29T16:04:36.036132+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Rni4GKGaDQCduO9/DdKafQ=="
+								"uidString" : "LTYfesOjDQCUDzyOBqbZPg=="
 							},
-							"code" : "GtLudoBoardExamples new boardWith2PlayingPlayers asElement "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.393291+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.393291+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "THi4GKGaDQCduYQJDdKafQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Now we install this as a `Board` tab by implementing {{gtMethod:name=GtLudoBoard>>gtBoardFor:}}."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.393297+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.393297+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "Uni4GKGaDQCdunXbDdKafQ=="
-							},
-							"code" : "GtLudoBoardExamples new boardWith2PlayingPlayers"
+							"code" : "GtLudoBoardElement for: GtLudoBoardExamples new boardWith2PlayingPlayers  "
 						}
 					]
 				},
@@ -575,13 +616,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.394782+02:00"
+									"dateAndTimeString" : "2022-08-29T16:06:29.438327+02:00"
 								}
 							},
 							"uid" : {
@@ -612,13 +653,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.394784+02:00"
+									"dateAndTimeString" : "2022-08-29T16:09:15.559877+02:00"
 								}
 							},
 							"uid" : {
@@ -628,7 +669,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now we can "
+							"string" : "Now we can programmatically move a token around the board."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -638,31 +679,31 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.394787+02:00"
+									"dateAndTimeString" : "2022-08-29T16:06:43.986483+02:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.394787+02:00"
+									"dateAndTimeString" : "2022-08-29T16:07:41.280923+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "JH64GKGaDQCdwTTgDdKafQ=="
+								"uidString" : "SXCzgsOjDQCUFOLuBqbZPg=="
 							},
-							"code" : "board := GtLudoBoardExamples new boardWith2PlayingPlayers"
+							"code" : "example := GtLudoBoardExamples new boardWith2PlayingPlayers .\rboard := GtLudoBoardElement for: example "
 						},
 						{
 							"__type" : "textSnippet",
@@ -720,20 +761,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:16:32.394792+02:00"
+									"dateAndTimeString" : "2022-08-29T16:08:38.947544+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "Kn64GKGaDQCdw1KmDdKafQ=="
 							},
-							"code" : "position := 9.\nboard players first tokens first goToSquare: (board squares at: position)"
+							"code" : "position := 9.\nexample players first tokens first goToSquare: (example squares at: position)"
 						}
 					]
 				},
@@ -767,6 +808,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Adding start and goal positions"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka@icloud.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-08-29T16:10:52.549635+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka@icloud.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-08-29T16:11:01.182497+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "KrVQkcOjDQCUG9vGBqbZPg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "*Next:* [[Implementing the Ludo Die in the Playground]] "
 			}
 		]
 	},

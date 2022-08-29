@@ -23,13 +23,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "juraj.kubelka@icloud.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-18T09:20:17.18442+02:00"
+						"dateAndTimeString" : "2022-08-29T16:24:39.311108+02:00"
 					}
 				},
 				"uid" : {
@@ -39,44 +39,82 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[LudoDraft]] "
+				"string" : "+[[LudoDraft]] "
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-04-29T11:34:18.212419+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:11:35.674149+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4/MteimaDQCLoNAmAC/tWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We illustrate how we can implement a Die for the Ludo game working from the Playground, and using it to document our steps. "
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "juraj.kubelka@icloud.com"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-04-29T11:34:18.212419+02:00"
+						"dateAndTimeString" : "2022-08-29T16:11:18.544155+02:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "juraj.kubelka@icloud.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-04-29T15:07:59.106179+02:00"
+						"dateAndTimeString" : "2022-08-29T16:11:21.249598+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "4/MteimaDQCLoNAmAC/tWw=="
+					"uidString" : "0gHiksOjDQCUIDTKBqbZPg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A little experiment to see how we can implement a Die for the Ludo game working from the Playground, and using it to document our steps. (2022-04-29)"
+				"string" : "#TL;DR"
 			},
 			{
 				"__type" : "textSnippet",
@@ -247,13 +285,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T11:39:39.760924+02:00"
+									"dateAndTimeString" : "2022-08-29T16:13:46.021445+02:00"
 								}
 							},
 							"uid" : {
@@ -261,6 +299,43 @@
 								"uidString" : "X8OIhymaDQCDg6eeDm9yhA=="
 							},
 							"code" : "GtLudoDie new roll "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:13:59.07457+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:15:37.594764+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "x/d8nMOjDQCUJngLBqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*(To see how this works, slightly modify the name *`GtLudoDie`* — you will see a \"fixit\" wrench icon prompting you to create the class.)* "
 						},
 						{
 							"__type" : "textSnippet",
@@ -281,13 +356,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T11:44:50.423326+02:00"
+									"dateAndTimeString" : "2022-08-29T16:16:20.511712+02:00"
 								}
 							},
 							"uid" : {
@@ -297,7 +372,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We want to be able to see the last value rolled, so we should store it. We'll update the roll method to save the state."
+							"string" : "We want to be able to see the last value rolled, so we should store it. We'll update the roll method to save the state in a `topFace` slot."
 						},
 						{
 							"__type" : "textSnippet",
@@ -392,13 +467,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T11:49:09.348195+02:00"
+									"dateAndTimeString" : "2022-08-29T16:18:19.489027+02:00"
 								}
 							},
 							"uid" : {
@@ -408,7 +483,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If we inspect an instance we see the slot is there, but it is initially nil."
+							"string" : "If we inspect the Raw view of an instance at this point we see the slot is there, but it is initially nil."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -458,55 +533,18 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T11:41:08.597279+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T11:41:56.060879+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "oflgfimaDQCLo97mAC/tWw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Later, we will make the Die observable by giving it an announcer for updates."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2022-04-29T11:49:13.629365+02:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T11:49:27.761308+02:00"
+									"dateAndTimeString" : "2022-08-29T16:23:51.759908+02:00"
 								}
 							},
 							"uid" : {
@@ -516,7 +554,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We should initialize a new die by initially rolling it. Let's add the `initialize method` using the `Meta` view."
+							"string" : "We should initialize a new die by initially rolling it. We add the {{gtMethod:name=GtLudoDie>>#initialize | expanded}}method using the `Meta` view."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1121,13 +1159,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T13:36:46.994203+02:00"
+									"dateAndTimeString" : "2022-08-29T16:20:27.932144+02:00"
 								}
 							},
 							"uid" : {
@@ -1137,7 +1175,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "While we're at it, we'll make a factor block for the face:"
+							"string" : "While we're at it, we'll make a factory block for the face:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1158,20 +1196,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T16:21:55.42192+02:00"
+									"dateAndTimeString" : "2022-08-29T16:21:54.479449+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "qWAaKSuaDQCXcPLED0C+Pw=="
 							},
-							"code" : "face := (BlElement new)\r\tsize: 100 @ 100;\r\tbackground: Color paleBuff;\r\tborder: (BlBorder paint: Color veryVeryLightGray width: 1);\r\tgeometry: (BlRoundedRectangleGeometry cornerRadius: 12);\r\tyourself"
+							"code" : "newFace := [ (BlElement new)\r\tsize: 100 @ 100;\r\tbackground: Color paleBuff;\r\tborder: (BlBorder paint: Color veryVeryLightGray width: 1);\r\tgeometry: (BlRoundedRectangleGeometry cornerRadius: 12);\r\tyourself].\rnewFace value"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1409,13 +1447,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T13:57:51.61+02:00"
+									"dateAndTimeString" : "2022-08-29T16:22:37.004228+02:00"
 								}
 							},
 							"uid" : {
@@ -1425,7 +1463,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We'll use the Meta tab to define {{gtMethod:name=GtLudoDieElement>>initialize}}.  "
+							"string" : "We'll use the Meta tab to define {{gtMethod:name=GtLudoDieElement>>initialize | expanded}}.  "
 						},
 						{
 							"__type" : "textSnippet",
@@ -1446,13 +1484,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T14:04:32.443058+02:00"
+									"dateAndTimeString" : "2022-08-29T16:25:27.558208+02:00"
 								}
 							},
 							"uid" : {
@@ -1462,7 +1500,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now's a good time to define {{gtMethod:name=GtLudoDieElement>>dotWidth}}, {{gtMethod:name=GtLudoDieElement>>dotSpace}}, and compute {{gtMethod:name=GtLudoDieElement>>dieWidth}} from them."
+							"string" : "Now's a good time to define the constant methods  {{gtMethod:name=GtLudoDieElement>>dotWidth}}, {{gtMethod:name=GtLudoDieElement>>dotSpace}}, and compute {{gtMethod:name=GtLudoDieElement>>dieWidth}} from them."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1483,13 +1521,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:17:14.613258+02:00"
+									"dateAndTimeString" : "2022-08-29T16:25:52.555761+02:00"
 								}
 							},
 							"uid" : {
@@ -1499,7 +1537,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "And now we can define the pixel location of the dots from the logical 3x3 position."
+							"string" : "And now we can define the pixel location of the dots from their logical 3x3 position."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1688,31 +1726,31 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:24:52.843223+02:00"
+									"dateAndTimeString" : "2022-08-29T16:35:36.510617+02:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:25:16.728087+02:00"
+									"dateAndTimeString" : "2022-08-29T16:37:47.567094+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "8q5itCyaDQC88TnkDn+2jw=="
+								"uidString" : "t6j36cOjDQCUVHdGBqbZPg=="
 							},
-							"code" : "(1 to: 6) collect: [ :each | GtLudoDieElement new showFace: each ]"
+							"code" : "container := BrVerticalPane new\r\t\thMatchParent;\r\t\tvFitContent.\rcontainer\r\taddChildren: \r\t\t((1 to: 6) collect: \r\t\t\t[ :each | GtLudoDieElement new showFace: each ]).\rcontainer"
 						}
 					]
 				},
@@ -1771,13 +1809,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:36:04.174379+02:00"
+									"dateAndTimeString" : "2022-08-29T16:38:11.846681+02:00"
 								}
 							},
 							"uid" : {
@@ -1787,7 +1825,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We'll want to get an alement from the model instance, sowe should implement `asElement`. We'll have to create a new {{gtClass:name=GtLudoDieElement}} and save the die as a slot."
+							"string" : "We'll want to get an element from the model instance, so we should implement `asElement`. We'll have to create a new {{gtClass:name=GtLudoDieElement}} and save the die as a slot."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1879,13 +1917,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:38:56.738184+02:00"
+									"dateAndTimeString" : "2022-08-29T16:39:19.424968+02:00"
 								}
 							},
 							"uid" : {
@@ -1895,7 +1933,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "However what we want is to add this view to the inspector for the die itself."
+							"string" : "However what we really want is to add this view to the inspector for the die itself."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1916,13 +1954,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:39:57.665176+02:00"
+									"dateAndTimeString" : "2022-08-29T16:39:41.727777+02:00"
 								}
 							},
 							"uid" : {
@@ -1932,7 +1970,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Let's quickly see how other similar views are implemented. We look for methods with the `gtView` pragma that also send `asElement`, and we sort them by size so we can see the small methods."
+							"string" : "Let's see how other similar views are implemented. We look for methods with the `gtView` pragma that also send `asElement`, and we sort them by size so we can see the small methods."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1953,20 +1991,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:45:32.530428+02:00"
+									"dateAndTimeString" : "2022-08-29T16:39:51.346096+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "wAsI5iyaDQC9CjmyDn+2jw=="
 							},
-							"code" : "(#gtView gtPragmas & #asElement gtSenders) contents sort: [ :a :b | a linesOfCode < b linesOfCode ]"
+							"code" : "(#gtView gtPragmas & #asElement gtSenders)\r\tcontents sort: [ :a :b | a linesOfCode < b linesOfCode ]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1987,13 +2025,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:47:22.110233+02:00"
+									"dateAndTimeString" : "2022-08-29T16:40:27.108416+02:00"
 								}
 							},
 							"uid" : {
@@ -2003,7 +2041,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now we can implement {{gtMethod:name=GtLudoDie>>#gtLiveFor:}} in an easy way, and we can directly get the Live view when inspecting a die."
+							"string" : "Now we can implement {{gtMethod:name=GtLudoDie>>#gtLiveFor: | expanded}} in an easy way, and we can directly get the Live view when inspecting a die."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2058,13 +2096,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:48:33.928339+02:00"
+									"dateAndTimeString" : "2022-08-29T16:41:09.007136+02:00"
 								}
 							},
 							"uid" : {
@@ -2074,7 +2112,44 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Unfortunately, if we evaluate `self roll` in the playground of the inspector instance, nothing happens because the view isnot automatically updated."
+							"string" : "Unfortunately, if we evaluate `self roll` in the playground of the inspector instance, nothing happens because the view is not automatically updated."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:41:19.971223+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:43:03.472851+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6XZQ/sOjDQCUVs7+BqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*(Don't forget, we are looking at the final, complete implementation, so the automatic updates have already been implemented, but from the perspective of this tutorial, we haven't done that yet!)* "
 						}
 					]
 				},
@@ -2133,13 +2208,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:55:12.200042+02:00"
+									"dateAndTimeString" : "2022-08-29T16:43:13.650465+02:00"
 								}
 							},
 							"uid" : {
@@ -2149,7 +2224,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To automatically update the view, the die must announce to its subscribers (ie the view) that it has been updated. "
+							"string" : "To automatically update the view, the die must announce to its subscribers (i.e., the view) that it has been updated. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -2244,13 +2319,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-29T15:59:22.688735+02:00"
+									"dateAndTimeString" : "2022-08-29T16:44:24.367396+02:00"
 								}
 							},
 							"uid" : {
@@ -2260,7 +2335,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We announce updates in the `roll` method (directly above)."
+							"string" : "We announce updates in {{gtMethod:name=GtLudoDie>>#roll | expanded}}."
 						},
 						{
 							"__type" : "textSnippet",
@@ -2337,6 +2412,43 @@
 							"string" : "With some luck (and maybe a bit of debugging) we can now inspect a new die instance, and see the changes as the die is rolled."
 						},
 						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:45:05.715008+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:45:08.957216+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4dDeC8SjDQCUV4ykBqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Inpect this:"
+						},
+						{
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -2369,6 +2481,43 @@
 								"uidString" : "j6lzCi2aDQC9DgvnDn+2jw=="
 							},
 							"code" : "die := GtLudoDie new"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:45:15.952421+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:45:27.202694+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mL1ODMSjDQCUWG1MBqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "and evaluate (don't inspect) this:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2461,13 +2610,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-30T08:15:24.047457+02:00"
+									"dateAndTimeString" : "2022-08-29T16:51:19.566218+02:00"
 								}
 							},
 							"uid" : {
@@ -2477,7 +2626,44 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Roll the die when you (double) click on the view."
+							"string" : "We want to roll the die when we (double) click on its view."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:49:52.797904+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-29T16:51:00.115696+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "g40BHcSjDQCUY9sjBqbZPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We search in Spotter for “ClickEvent” and find {{gtClass:name=BlDoubleClickEvent}}. If we browse the `Announcement references` view, we find the `#when:do:` method. For example, we see that {{gtMethod:name=BrEditableLabel>>#initialize}} registers for double click events."
 						},
 						{
 							"__type" : "textSnippet",
@@ -2498,13 +2684,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-30T08:03:20.943308+02:00"
+									"dateAndTimeString" : "2022-08-29T16:51:57.260065+02:00"
 								}
 							},
 							"uid" : {
@@ -2514,7 +2700,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We search in Spotter for “ClickEvent” and find {{gtClass:name=BlDoubleClickEvent}}. This leads us to the `#when:do:` method. We add it to {{gtMethod:name=GtLudoDieElement>>die:|expanded}}. "
+							"string" : "We subscribe to double clicks in the same way in {{gtMethod:name=GtLudoDieElement>>die:|expanded}}. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -2572,13 +2758,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-30T08:15:37.032712+02:00"
+									"dateAndTimeString" : "2022-08-29T16:52:13.910274+02:00"
 								}
 							},
 							"uid" : {
@@ -2586,43 +2772,6 @@
 								"uidString" : "+XjklDqaDQCb6SrSBDQwoQ=="
 							},
 							"code" : "GtLudoDie new"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-30T08:12:26.426123+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-04-30T08:14:52.853747+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "+l3fxTqaDQCcEvnPBDQwoQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
 						}
 					]
 				},
@@ -2639,13 +2788,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "juraj.kubelka@icloud.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-04-30T08:15:11.516387+02:00"
+						"dateAndTimeString" : "2022-08-29T16:46:19.973931+02:00"
 					}
 				},
 				"uid" : {
@@ -2655,7 +2804,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Exercise"
+				"string" : "##Clicking to roll the die"
 			},
 			{
 				"__type" : "textSnippet",
@@ -2702,24 +2851,24 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "juraj.kubelka@icloud.com"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-04-30T07:57:09.640098+02:00"
+						"dateAndTimeString" : "2022-08-29T16:12:47.410252+02:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "juraj.kubelka@icloud.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-04-30T07:57:09.640098+02:00"
+						"dateAndTimeString" : "2022-08-29T16:12:57.437145+02:00"
 					}
 				},
 				"uid" : {
@@ -2729,7 +2878,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "*Next:* [[Introducing rules to the Ludo Board Game]]  "
 			}
 		]
 	},

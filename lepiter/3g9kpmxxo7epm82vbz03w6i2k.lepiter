@@ -225,7 +225,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-08-23T16:12:42.18014+02:00"
+												"dateAndTimeString" : "2022-08-29T15:19:00.442369+02:00"
 											}
 										},
 										"uid" : {
@@ -235,7 +235,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "*Caveat:* Originally we had separate LudoBoard and LudoGame classes, but at some point it became simpler to unify these two, have the game logic close to the representation."
+										"string" : "*Caveat:* Originally we had separate LudoBoard and LudoGame classes, but at some point it became simpler to unify these two, to have the game logic close to the representation."
 									}
 								]
 							},
@@ -372,7 +372,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:12:42.180159+02:00"
+									"dateAndTimeString" : "2022-08-29T15:20:36.737402+02:00"
 								}
 							},
 							"uid" : {
@@ -382,7 +382,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "In this first simple example we just focus on the basics:"
+							"string" : "In this first simple example we just focus on the basics (each of these translates to an assertion in the example method above):"
 						},
 						{
 							"__type" : "textSnippet",
@@ -446,7 +446,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:12:42.180164+02:00"
+									"dateAndTimeString" : "2022-08-29T15:19:35.008954+02:00"
 								}
 							},
 							"uid" : {
@@ -456,7 +456,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "* the Board knows the Players and the Squares, and the Players know their Tokens."
+							"string" : "• the Board knows the Players and the Squares, and the Players know their Tokens."
 						},
 						{
 							"__type" : "textSnippet",
@@ -483,7 +483,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:12:42.180167+02:00"
+									"dateAndTimeString" : "2022-08-29T15:19:38.13955+02:00"
 								}
 							},
 							"uid" : {
@@ -493,7 +493,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "* Tokens know their state, i.e., whether they are in play or not"
+							"string" : "• Tokens know their state, i.e., whether they are in play or not"
 						},
 						{
 							"__type" : "textSnippet",
@@ -557,7 +557,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:12:42.180174+02:00"
+									"dateAndTimeString" : "2022-08-29T15:19:44.018169+02:00"
 								}
 							},
 							"uid" : {
@@ -567,7 +567,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "* Squares know whether they are empty or not. They either hold a real player token or a dummy, blank token. A token knows if it is the blank token or not."
+							"string" : "• Squares know whether they are empty or not. They either hold a real player token or a dummy, blank token. A token knows if it is the blank token or not."
 						},
 						{
 							"__type" : "textSnippet",
@@ -852,7 +852,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-23T16:12:42.18111+02:00"
+						"dateAndTimeString" : "2022-08-29T15:49:36.847503+02:00"
 					}
 				},
 				"uid" : {
@@ -862,7 +862,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "***Next step:*** [[Adding simple list views for Ludo Players and Squares]] "
+				"string" : "*Next:* [[Adding simple list views for Ludo Players and Squares]] "
 			}
 		]
 	},

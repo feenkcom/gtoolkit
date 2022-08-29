@@ -635,7 +635,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:13:19.082125+02:00"
+									"dateAndTimeString" : "2022-08-29T15:28:10.035116+02:00"
 								}
 							},
 							"uid" : {
@@ -645,7 +645,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We would like the views to be updated automatically whenever the game state changes. To do this, we need an *announcer* that will announce when the "
+							"string" : "We would like the views to be updated automatically whenever the game state changes. To do this, we need an *announcer* that will  be used to announce updates. We create an `announcer` slot in {{gtClass:name=GtLudoGame}} and initialize it in {{gtMethod:name=GtLudoGame>>#initialize}}. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -661,7 +661,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:13:19.082129+02:00"
+									"dateAndTimeString" : "2022-08-29T15:30:53.93334+02:00"
 								}
 							},
 							"editEmail" : {
@@ -672,17 +672,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:13:19.082129+02:00"
+									"dateAndTimeString" : "2022-08-29T15:31:41.374531+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "k94z50qjDQCUeomYAjxOOg=="
+								"uidString" : "hziMAsOjDQCTsY5zBqbZPg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "We define {{gtClass:name=GtLudoGameUpdated}} as a subclass of {{gtClass:name=Announcement}}, and we broadcast it using the announcer whenever we need it by running {{gtMethod:name=GtLudoGame>>#notifyGameUpdated}}. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -698,7 +698,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:13:19.082132+02:00"
+									"dateAndTimeString" : "2022-08-29T15:32:11.658717+02:00"
 								}
 							},
 							"editEmail" : {
@@ -709,91 +709,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:13:19.082132+02:00"
+									"dateAndTimeString" : "2022-08-29T15:33:02.480716+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "ld4z50qjDQCUe3lPAjxOOg=="
+								"uidString" : "Ez0fB8OjDQCTtTgOBqbZPg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "***CONTINUE HERE***"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "juraj.kubelka@icloud.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:13:19.082135+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "juraj.kubelka@icloud.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:13:19.082135+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "mN4z50qjDQCUfFIlAjxOOg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "juraj.kubelka@icloud.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:13:19.082137+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "juraj.kubelka@icloud.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-23T16:13:19.082137+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "m94z50qjDQCUfRIKAjxOOg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Have a  look at the last line of {{gtMethod:name=GtLudoGame>>#gtPlayersFor:  | expanded}}."
+							"string" : "We subscribe to this event in the last line of {{gtMethod:name=GtLudoGame>>#gtPlayersFor:  | expanded}}."
 						},
 						{
 							"__type" : "textSnippet",
@@ -879,7 +805,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-23T16:13:19.082423+02:00"
+						"dateAndTimeString" : "2022-08-29T15:33:22.123237+02:00"
 					}
 				},
 				"editEmail" : {
@@ -890,7 +816,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-23T16:13:19.082423+02:00"
+						"dateAndTimeString" : "2022-08-29T15:34:17.733086+02:00"
 					}
 				},
 				"uid" : {
@@ -900,7 +826,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "In this way, the view will be automatically updated whenever the game state changes."
 			},
 			{
 				"__type" : "textSnippet",
