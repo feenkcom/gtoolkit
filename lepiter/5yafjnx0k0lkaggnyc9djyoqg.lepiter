@@ -65,13 +65,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-04T21:30:45.686385+02:00"
+									"dateAndTimeString" : "2022-08-30T10:39:31.170483+02:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "An experiment to merge the Game and Board classes. Although they have slightly different responsibilities, the Board is just a lower-level view of the Game. The only client of the Board is the Game."
+							"string" : "We merge the Game and Board classes. Although they have slightly different responsibilities, the Board is just a lower-level view of the Game. The only client of the Board is the Game."
 						}
 					]
 				},
@@ -353,38 +353,76 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [ ]
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2022-05-04T21:37:50.190964+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "juraj.kubelka@icloud.com"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2022-08-30T10:43:05.677442+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "hrFLf5aaDQC2KIQ5BXaLZA=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "*Caveat: of course this won't work now, because in this image the classes have already been merged, and *`GtLudoBoard`* no longer exists. However you can browse the github snapshot above to get an insight into what the original state was.* "
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
-											"emailString" : "<unknown>"
+											"emailString" : "juraj.kubelka@icloud.com"
 										},
 										"createTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-04T21:37:50.190964+02:00"
+												"dateAndTimeString" : "2022-08-30T10:41:24.25704+02:00"
 											}
 										},
 										"editEmail" : {
 											"__type" : "email",
-											"emailString" : "<unknown>"
+											"emailString" : "juraj.kubelka@icloud.com"
 										},
 										"editTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-04T21:37:58.251087+02:00"
+												"dateAndTimeString" : "2022-08-30T10:41:24.25704+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "hrFLf5aaDQC2KIQ5BXaLZA=="
+											"uidString" : "m1sTFdOjDQCrFpD7BkjhCw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Here we have the common selectors."
+										"string" : "Here we have the common selectors. "
 									},
 									{
 										"__type" : "pharoSnippet",
@@ -547,13 +585,13 @@
 										},
 										"editEmail" : {
 											"__type" : "email",
-											"emailString" : "<unknown>"
+											"emailString" : "juraj.kubelka@icloud.com"
 										},
 										"editTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-04T21:43:47.199279+02:00"
+												"dateAndTimeString" : "2022-08-30T10:42:10.006352+02:00"
 											}
 										},
 										"uid" : {
@@ -563,7 +601,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Similarly, the `feedback:`, `die`, and `rolle:` methods just forward to the board, so we can remove them."
+										"string" : "Similarly, the `feedback:`, `die`, and `roll:` methods just forward to the board, so we can remove them."
 									},
 									{
 										"__type" : "textSnippet",
@@ -658,13 +696,13 @@
 										},
 										"editEmail" : {
 											"__type" : "email",
-											"emailString" : "<unknown>"
+											"emailString" : "juraj.kubelka@icloud.com"
 										},
 										"editTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-04T21:48:41.110331+02:00"
+												"dateAndTimeString" : "2022-08-30T10:43:37.408975+02:00"
 											}
 										},
 										"uid" : {
@@ -674,7 +712,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "The two `initialize` need to be merged. First we can compose them with a `super initialize`. We should take care with the `board` slot. We can initialize it to `self`, and later deprecate and then remove the `board` accessor."
+										"string" : "The two `initialize` methods need to be merged. First we can compose them with a `super initialize`. We should take care with the `board` slot. We can initialize it to `self`, and later deprecate and then remove the `board` accessor."
 									}
 								]
 							},
@@ -807,13 +845,13 @@
 										},
 										"editEmail" : {
 											"__type" : "email",
-											"emailString" : "<unknown>"
+											"emailString" : "juraj.kubelka@icloud.com"
 										},
 										"editTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-04T21:58:50.845533+02:00"
+												"dateAndTimeString" : "2022-08-30T10:44:26.817884+02:00"
 											}
 										},
 										"uid" : {
@@ -823,7 +861,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We try to rename the `players` accessor in {{gtClass:name=GtLudoGame}}, but this would also rename other `players` methods in other classes, namely {{gtClass:name=GtLudoBoard}}, so we must refactor manually."
+										"string" : "We try to rename the `players` accessor in {{gtClass:name=GtLudoGame}}, but this would also rename other `players` methods in other classes, namely in `GtLudoBoard`, so we must refactor manually."
 									},
 									{
 										"__type" : "textSnippet",
