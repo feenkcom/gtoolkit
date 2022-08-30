@@ -1312,7 +1312,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-08-30T18:43:12.571166+02:00"
+												"dateAndTimeString" : "2022-08-30T20:03:39.920501+02:00"
 											}
 										},
 										"uid" : {
@@ -1361,17 +1361,55 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-08-22T15:35:35.323508+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-08-30T20:03:38.346907+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "dUduQjajDQC6SVgfAtXtMQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "[[Fixing Ludo autoplay and storeStrings]]   "
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:35:35.323505+02:00"
+									"dateAndTimeString" : "2022-08-30T20:03:21.482111+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1382,44 +1420,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-30T18:43:21.974084+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "ckduQjajDQC6SKp2AtXtMQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:37:59.751255+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:46:35.106343+02:00"
+									"dateAndTimeString" : "2022-08-30T20:03:33.212255+02:00"
 								}
 							},
 							"uid" : {
@@ -1429,44 +1430,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "***CONTINUE HERE***"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:35:35.323508+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-22T15:35:35.323508+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "dUduQjajDQC6SVgfAtXtMQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[Fixing Ludo autoplay and storeStrings]] "
+							"string" : "Finally we clean up various open issues."
 						}
 					]
 				},
