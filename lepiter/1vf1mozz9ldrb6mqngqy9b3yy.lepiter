@@ -18,18 +18,18 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-25T14:20:14.749334+02:00"
+						"dateAndTimeString" : "2022-08-30T18:45:49.906124+02:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-18T09:20:17.187773+02:00"
+						"dateAndTimeString" : "2022-08-30T18:45:51.161463+02:00"
 					}
 				},
 				"uid" : {
@@ -39,13 +39,51 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[LudoDraft]] "
+				"string" : "[[LudoDraft]]  "
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T18:43:48.811151+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T18:44:31.428657+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "/Oam0dmjDQCIJmT/CPWS0A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In order to browse the state of the game over time, we make moves first-class objects."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -55,7 +93,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-04T16:22:48.572136+02:00"
+						"dateAndTimeString" : "2022-08-30T18:43:34.31477+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,7 +104,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-04T16:22:53.938391+02:00"
+						"dateAndTimeString" : "2022-08-30T18:43:37.418669+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +114,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Experiment with TG."
+				"string" : "#TL;DR"
 			},
 			{
 				"__type" : "textSnippet",
@@ -294,7 +332,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-04T16:47:06.904848+02:00"
+									"dateAndTimeString" : "2022-08-30T18:45:59.627378+02:00"
 								}
 							},
 							"uid" : {
@@ -304,7 +342,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Start by creating a *Move*  object that encapsulates a token to move and the rolled number of of steps to move."
+							"string" : "We start by creating a *Move*  object that encapsulates a token to move and the rolled number of of steps to move."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -339,77 +377,6 @@
 								"uidString" : "kNXLKJKaDQCaTwXeC+uhHw=="
 							},
 							"code" : "game := GtLudoGame new.\rgame roll: 6.\r\rmove := GtLudoMove new\r\t        roll: 6;\r\t        token: (game tokenNamed: 'a');\r\t        yourself.\r\rgame"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-04T16:48:00.703093+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-04T16:48:33.281885+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "PMPLcpKaDQCaZb5XC+uhHw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Views with a context as their second argument:"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-04T17:21:30.492832+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-04T17:22:03.913007+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "uzev6pKaDQCCZzVaAGLl2g=="
-							},
-							"code" : "#gtView gtPragmas select: [:each | each selector numArgs = 2 ]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -473,7 +440,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-04T17:14:10.143769+02:00"
+									"dateAndTimeString" : "2022-08-30T18:46:56.659902+02:00"
 								}
 							},
 							"uid" : {
@@ -483,7 +450,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We want to reuse the BoardElement to highlight token on the board."
+							"string" : "We want to reuse the BoardElement to highlight a token on the board."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -520,6 +487,43 @@
 							"code" : "token := move token.\rboardElement := token player game boardElement.\r(boardElement children select: [ :each | \r\t (each isKindOf: GtLudoSquareElement) and: [ \r\t\t each square token = token ] ]) do: #highlight.\rboardElement"
 						},
 						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T18:47:31.246048+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T18:47:50.855048+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "P3mA39mjDQCINFezCPWS0A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "From a token we can navigate to its player, and highlight the player's tokens."
+						},
+						{
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -552,6 +556,43 @@
 								"uidString" : "G/r21JKaDQCairRnC+uhHw=="
 							},
 							"code" : "token player"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T18:47:57.462027+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T18:48:43.853494+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "JfsE4dmjDQCINc8MCPWS0A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We introduce {{gtClass:name=GtLudoRecordingGame}} as a subclass of {{gtClass:name=GtLudoGame}}, with first-class moves."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -649,7 +690,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T18:07:28.549604+02:00"
+									"dateAndTimeString" : "2022-08-30T18:49:13.675368+02:00"
 								}
 							},
 							"uid" : {
@@ -659,7 +700,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We create a RecordingGame that records the moves, and add a view showing the list of recorded moves."
+							"string" : "A RecordingGame records its moves, and has a view showing the list of recorded moves."
 						},
 						{
 							"__type" : "textSnippet",
@@ -686,7 +727,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T18:07:52.685575+02:00"
+									"dateAndTimeString" : "2022-08-30T18:49:25.737279+02:00"
 								}
 							},
 							"uid" : {
@@ -696,7 +737,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To automatically update, we should use `GtPhlowView>>#updateWhen:in:`"
+							"string" : "To automatically update views, we should use `GtPhlowView>>#updateWhen:in:`"
 						},
 						{
 							"__type" : "textSnippet",
@@ -712,7 +753,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T18:23:20.995476+02:00"
+									"dateAndTimeString" : "2022-08-30T18:50:02.609746+02:00"
 								}
 							},
 							"editEmail" : {
@@ -723,17 +764,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T07:47:57.807772+02:00"
+									"dateAndTimeString" : "2022-08-30T18:50:51.330237+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "RuZwrqeaDQC83rYBA3lxgA=="
+								"uidString" : "F8yE6NmjDQCINlJCCPWS0A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Adding playMove: method to play a recorded move."
+							"string" : "For example, see {{gtMethod:name=GtLudoGame>>#gtPlayersFor: | expanded}}, which is automatically updated when the game state is updated."
 						}
 					]
 				},
@@ -1041,7 +1082,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T10:12:50.553308+02:00"
+									"dateAndTimeString" : "2022-08-30T18:54:05.360672+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1052,86 +1093,12 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T10:13:11.551465+02:00"
+									"dateAndTimeString" : "2022-08-30T18:54:05.360672+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "yGidJ7WaDQCqYru9A10ABw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "In this way however we are not recording all the moves, so the storeString is wrong."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T10:13:12.153809+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T10:13:39.481791+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "pwqcKrWaDQCqZjWIA10ABw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "We should have separate move objects for rolls and moves."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T10:12:21.970073+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T10:12:21.970073+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "x7CiJ7WaDQCqY7J0A10ABw=="
+								"uidString" : "PQYO99mjDQCIQhjzCPWS0A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
@@ -1185,7 +1152,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-04T16:26:37.40127+02:00"
+						"dateAndTimeString" : "2022-08-30T18:53:50.555316+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1196,7 +1163,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-04T16:26:37.40127+02:00"
+						"dateAndTimeString" : "2022-08-30T18:54:00.861948+02:00"
 					}
 				},
 				"uid" : {
@@ -1206,7 +1173,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "*Next:* [[Fixing Ludo autoplay and storeStrings]] "
 			}
 		]
 	},
