@@ -1340,34 +1340,34 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T11:07:28.143867+02:00"
+									"dateAndTimeString" : "2022-08-30T11:11:19.843315+02:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T11:09:53.162613+02:00"
+									"dateAndTimeString" : "2022-08-30T11:11:22.462418+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "b8RxyqGaDQCdcUZODdKafQ=="
+								"uidString" : "CtQZgNOjDQCrYvQoBkjhCw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We change the {{gtClass:name=GtLudoGame}} definition to make it a subclass of {{gtClass:name=GtLudoBoard}}."
+							"string" : "We change the {{gtClass:name=GtLudoGame}} definition to make it a subclass of `GtLudoBoard`."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1604,13 +1604,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T11:24:09.312109+02:00"
+									"dateAndTimeString" : "2022-08-30T11:11:52.99414+02:00"
 								}
 							},
 							"uid" : {
@@ -1620,7 +1620,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The refactoring engine won't let us remove the slow, so we search for any remaining references:"
+							"string" : "The refactoring engine won't let us remove the slot, so we search for any remaining references:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1746,13 +1746,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "juraj.kubelka@icloud.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T11:35:50.773243+02:00"
+									"dateAndTimeString" : "2022-08-30T11:12:12.513857+02:00"
 								}
 							},
 							"uid" : {
@@ -1762,7 +1762,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We run all the tests again. This time the tests fail, and we find the danglingreferences to the slot, which is not initialized. We replace it by `self` and remove the slot."
+							"string" : "We run all the tests again. This time the tests fail, and we find the dangling references to the slot, which is not initialized. We replace it by `self` and remove the slot."
 						},
 						{
 							"__type" : "textSnippet",
@@ -2597,6 +2597,80 @@
 								"__type" : "textStyle"
 							},
 							"string" : "The tests are green, so we commit [this version](https://github.com/feenkcom/gtoolkit-demos/tree/0fae46d8e6171cf02882edb1d597395ad3acebef/src/GToolkit-Demo-Ludo)."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T11:12:44.150188+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T11:12:44.150188+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "y0UghdOjDQCrZtI8BkjhCw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T11:12:51.698685+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka@icloud.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T11:17:41.724568+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "0iMuhdOjDQCrZ25lBkjhCw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*Next:* [[Refactoring scenario with Ludo]] "
 						}
 					]
 				},
