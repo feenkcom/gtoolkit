@@ -19,9 +19,9 @@ GtPharoExampleSuite >> gtExamplesWithResultCacheFor: aView [
 		column: ''
 			stencil: [ :anAssoc | 
 				| isLatest |
-				isLatest := anAssoc key methodClass methodDict
-						at: anAssoc key selector
-						ifPresent: [ :aMethod | aMethod == anAssoc key ]
+				isLatest := anAssoc key second methodClass methodDict
+						at: anAssoc key second selector
+						ifPresent: [ :aMethod | aMethod == anAssoc key second ]
 						ifAbsent: [ false ].
 
 				BlElement new

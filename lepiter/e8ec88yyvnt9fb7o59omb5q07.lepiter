@@ -60,6 +60,81 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T20:03:51.322199+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-30T20:04:57.334393+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UJ5v8NqjDQC8iFPKBDXVKw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This last page is about cleaning up a number of open issues. We add some further tests, refactor, and repair the broken bits."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-08-30T20:03:46.899279+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-08-30T20:03:48.830756+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+7Q68NqjDQC8h0ZcBDXVKw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#TL;DR"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2022-05-08T07:50:38.236176+02:00"
 								}
 							},
@@ -71,7 +146,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-08T07:51:31.297702+02:00"
+									"dateAndTimeString" : "2022-08-30T20:00:51.075047+02:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +156,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Currently the recording Ludo game records moves, but misses the rolles. To replay a game via the storeString, the empty rolls without any physical moves are needed. "
+							"string" : "Currently the recording Ludo game records moves, but misses the roll+s. To replay a game via the storeString, the empty rolls without any physical moves are needed. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -1106,7 +1181,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-08T08:43:29.715972+02:00"
+									"dateAndTimeString" : "2022-08-30T20:02:23.83422+02:00"
 								}
 							},
 							"uid" : {
@@ -1116,7 +1191,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "One problem is that we introduce a fake `roll:` ifa player rolls the die when they shouldn't. This would make the recording logic unnecessarily complex, so instead we introduce a `rollback:` method to the die that does *not* signal an update, and use it to rollback invalid die rolls."
+							"string" : "One problem is that we introduce a fake `roll:` if a player rolls the die when they shouldn't. This would make the recording logic unnecessarily complex, so instead we introduce a `rollback:` method to the die that does *not* signal an update, and use it to rollback invalid die rolls."
 						},
 						{
 							"__type" : "textSnippet",
