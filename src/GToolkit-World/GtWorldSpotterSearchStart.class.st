@@ -7,7 +7,34 @@ Class {
 	#category : #'GToolkit-World-Search'
 }
 
-{ #category : #'gt-extensions' }
+{ #category : #searches }
+GtWorldSpotterSearchStart >> gtSearchForToolsFor: aSearch [
+	<gtSpotterSearch>
+
+	^ aSearch list
+		priority: 1;
+		items: [ 
+			{
+				GtPlaygroundStencil new 
+					knowledgeBase: self knowledgeBase.
+				LeNotePlaygroundStencil new
+					knowledgeBase: self knowledgeBase.
+				LeLepiterToolStencil new
+					knowledgeBase: self knowledgeBase.
+				GtCoderStencil new . 
+				GtMonitorStencil new . 
+				GtRlGToolkitExamplesExplorer buildForGToolkitProject . 
+				GtGitStencil new . 
+				GtEpiceaStencil new . 
+				GtTranscriptStencil new .
+				GtFileSystemStencil new
+			} ];
+		title: 'Tools';
+		filter: [ GtSpotterSubstringFilter new ];
+		wantsToDisplayOnEmptyQuery: true
+]
+
+{ #category : #spotter }
 GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aStep [
 	<gtSearch>
 	self hasKnowledgeBase ifFalse: [ ^ self ].
@@ -24,7 +51,7 @@ GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aStep [
 		itemName: #spotterItemName
 ]
 
-{ #category : #'*GToolkit-World' }
+{ #category : #spotter }
 GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
 	<gtSearch>
 	aStep listProcessor
@@ -51,7 +78,7 @@ GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
 		wantsToDisplayOnEmptyQuery: true
 ]
 
-{ #category : #'gt-extensions' }
+{ #category : #spotter }
 GtWorldSpotterSearchStart >> gtSpotterNewPageFor: aStep [
 	<gtSearch>
 	self hasKnowledgeBase ifFalse: [ ^ self ].
@@ -71,7 +98,7 @@ GtWorldSpotterSearchStart >> gtSpotterNewPageFor: aStep [
 		send: [ :aPageTitle :spotterStep | self knowledgeBase addPage: (LePage named: aPageTitle) ]
 ]
 
-{ #category : #'gt-extensions' }
+{ #category : #spotter }
 GtWorldSpotterSearchStart >> gtSpotterPageTitlesFor: aStep [
 	<gtSearch>
 	self hasKnowledgeBase ifFalse: [ ^ self ].
