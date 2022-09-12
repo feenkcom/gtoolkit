@@ -34,6 +34,22 @@ GtWorldSpotterSearchStart >> gtSearchForToolsFor: aSearch [
 		wantsToDisplayOnEmptyQuery: true
 ]
 
+{ #category : #searches }
+GtWorldSpotterSearchStart >> gtSearchPagesByTitleFor: aSearch [
+	<gtSpotterSearch>
+	self hasKnowledgeBase ifFalse: [ ^ aSearch empty ].
+	self hasChildren ifFalse: [ ^ aSearch empty ].
+
+	^ aSearch list
+		title: 'Page Names';
+		priority: 22;
+		items: [ Array
+				streamContents: [ :aStream | self knowledgeBase pagesWithNameDo: [ :eachPage | aStream nextPut: eachPage ] ] ];
+		filter: GtSpotterSubstringFilter new;
+		itemName: #title;
+		wantsToDisplayOnEmptyQuery: false
+]
+
 { #category : #spotter }
 GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aStep [
 	<gtSearch>
