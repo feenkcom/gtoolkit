@@ -30,7 +30,8 @@ GtWorldSpotterSearchStart >> gtSearchForToolsFor: aSearch [
 				GtFileSystemStencil new
 			} ];
 		title: 'Tools';
-		filter: [ GtSpotterSubstringFilter new ];
+		filter: GtSpotterSubstringFilter new;
+		previewElement: [ :aStencil | aStencil asPreviewElement asElement ];
 		wantsToDisplayOnEmptyQuery: true
 ]
 
