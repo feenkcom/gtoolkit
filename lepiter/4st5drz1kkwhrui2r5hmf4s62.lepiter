@@ -242,7 +242,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:42:17.651931+02:00"
+						"dateAndTimeString" : "2022-09-17T21:05:21.145932+02:00"
 					}
 				},
 				"uid" : {
@@ -252,7 +252,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The collector uses Beacon signals subclassing {{gtClass:name=GtRrAnnouncementQueueAnnouncement}}. It is also possible to listen for those events directly using beacon."
+				"string" : "The collector uses Beacon signals subclassing {{gtClass:name=GtRrAnnouncementQueueSignal}}. It is also possible to listen for those events directly using beacon."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -279,14 +279,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:41:29.332271+02:00"
+						"dateAndTimeString" : "2022-09-17T21:06:43.535466+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "8kJ24OukDQCHHhVOCxMVUQ=="
 				},
-				"code" : "logger := MemoryLogger  startFor: GtRrAnnouncementQueueAnnouncement."
+				"code" : "logger := MemoryLogger  startFor: GtRrAnnouncementQueueSignal."
 			},
 			{
 				"__type" : "pharoSnippet",
