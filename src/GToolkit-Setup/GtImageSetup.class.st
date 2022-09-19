@@ -158,6 +158,7 @@ GtImageSetup class >> registerGTNamespace [
 GtImageSetup class >> registerTools [
 	GtMoldableDebugger register.
 	GtExpandableDebuggerElement register.
+	GtPharoDebuggerElement register.
 	GtEmergencyDebugger register.
 	GtInspectorToolRegistryAdaptor register.
 	GtPlaygroundToolRegistryAdaptor register.
