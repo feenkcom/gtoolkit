@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T08:35:06.780707-05:00"
+						"dateAndTimeString" : "2022-09-20T10:45:09.785157-05:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,116 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This page converts many of the old spotter search methods into the new format. These rewrites should be applied in order.  Most of the rewrites are very fast, but there are a couple that take much longer as they are searching all methods."
+				"string" : "This page converts many of the old spotter search methods into the new format. These rewrites should be applied in order.  "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T10:45:19.750554-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T10:47:45.223162-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0Fqgc3+lDQCGftbhDyhjkg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Create a filter for the scope of the rewrites below"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-20T05:39:55.248345-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-20T11:30:26.634459-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "U1+XL3ulDQCD2quDDyhjkg=="
+							},
+							"code" : "searchMethods := #gtSearch gtPragmas\r\t\t& (#listProcessor gtReferences | #list gtReferences)\r\t\t& #filter:item: gtReferences not"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T10:45:40.991664-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T11:33:20.361175-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zznedH+lDQCGf3uLDyhjkg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The scope is all `<gtSearch>` pragma methods that send `listProcessor` and don't use the `filter:item:` method from the old spotter as those methods need to be manually converted. Since the `listProcessor` is converted to `list` towards the bottom, we need to search for both or rewrites that appear after the conversion will not work."
 			},
 			{
 				"__type" : "textSnippet",
@@ -78,8 +187,8 @@
 								"__type" : "uid",
 								"uidString" : "gBwv3GelDQCaqDFKC5blJw=="
 							},
-							"search" : "(`@a listProcessor\n\t`@;cascadesBefore; \n\tfilter: GtFilterSubstring; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
-							"replace" : "`@a listProcessor \n\t`@;cascadesBefore; \n\tfilterBySubstring;\n\t`@;cascadesAfter"
+							"search" : "`@a listProcessor filter: GtFilterSubstring",
+							"replace" : "`@a listProcessor filterBySubstring"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -113,8 +222,8 @@
 								"__type" : "uid",
 								"uidString" : "kZvK8melDQCaqwYcC5blJw=="
 							},
-							"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\tallCandidates: `@block; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
-							"replace" : "`@a listProcessor \n\t`@;cascadesBefore; \n\titems: `@block;\n\t`@;cascadesAfter"
+							"search" : "`@a listProcessor allCandidates: `@block",
+							"replace" : "`@a listProcessor items: `@block"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -148,8 +257,8 @@
 								"__type" : "uid",
 								"uidString" : "nPFsgmilDQCaVJBlC5blJw=="
 							},
-							"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\tactLogic: `@block; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
-							"replace" : "`@a listProcessor \n\t`@;cascadesBefore; \n\titemActLogic: `@block;\n\t`@;cascadesAfter"
+							"search" : "`@a listProcessor actLogic: `@block",
+							"replace" : "`@a listProcessor itemActLogic: `@block"
 						}
 					]
 				},
@@ -221,7 +330,7 @@
 								"__type" : "uid",
 								"uidString" : "2/moNmilDQCawPH2C5blJw=="
 							},
-							"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\titemIcon: `@block; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
+							"search" : "`@a listProcessor \n\t`@;cascadesBefore; \n\titemIcon: `@block; \n\t`@;cascadesAfter",
 							"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"itemIcon: `@block; \"\n\t`@;cascadesAfter"
 						},
 						{
@@ -256,7 +365,7 @@
 								"__type" : "uid",
 								"uidString" : "eR8Gb2ilDQCaSVpUC5blJw=="
 							},
-							"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\tkeyBinding: `@b; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
+							"search" : "`@a listProcessor \n\t`@;cascadesBefore; \n\tkeyBinding: `@b; \n\t`@;cascadesAfter",
 							"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"keyBinding: `@b; \"\n\t`@;cascadesAfter"
 						}
 					]
@@ -329,7 +438,7 @@
 								"__type" : "uid",
 								"uidString" : "GR+cEWmlDQCaVo4XC5blJw=="
 							},
-							"search" : "^self `{:node :dict | \n\t((node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\tand: [\n\t\t\tnode methodNode allChildren \n\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]])\n\t\tifTrue: [\n\t\t\tdict at: #variable put: node methodNode arguments first name.\n\t\t\ttrue] \n\t\tifFalse: [false]}",
+							"search" : "^self  `{:node :dict | \n\tdict at: #variable put: node methodNode arguments first name. \n\ttrue}",
 							"replace" : "^`{:dict | RBVariableNode named: (dict at: #variable)} empty"
 						},
 						{
@@ -364,7 +473,7 @@
 								"__type" : "uid",
 								"uidString" : "4/KW9WilDQCaSbTSC5blJw=="
 							},
-							"search" : "(`@a listProcessor `;cascade; `@;cascades) `{:node | \n\t(node allParents noneSatisfy: [:each | each isReturn]) and: [\n\t\t(node methodNode pragmaNamed: #gtSearch \n\t\t\tifPresent: [:p | true] \n\t\t\tifAbsent: [false]) and: [\n\t\tnode methodNode allChildren \n\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]]}",
+							"search" : "(`@a listProcessor `;cascade; `@;cascades) `{:node | \n\t(node allParents noneSatisfy: [:each | each isReturn])}",
 							"replace" : "^`@a listProcessor `;cascade; `@;cascades"
 						},
 						{
@@ -399,7 +508,7 @@
 								"__type" : "uid",
 								"uidString" : "SjSBOmmlDQCaYa/jC5blJw=="
 							},
-							"search" : "^(`@bool ifTrue: `@true) `{:node :dict | \n\t((node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\tand: [\n\t\t\tnode methodNode allChildren \n\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]])\n\t\tifTrue: [\n\t\t\tdict at: #variable put: node methodNode arguments first name.\n\t\t\ttrue] \n\t\tifFalse: [false]}",
+							"search" : "^(`@bool ifTrue: `@true) `{:node :dict | \n\tdict at: #variable put: node methodNode arguments first name.\n\ttrue}",
 							"replace" : "^ `@bool \n\tifTrue: `@true \n\tifFalse: [`{:dict | RBVariableNode named: (dict at: #variable)} empty]"
 						}
 					]
@@ -472,7 +581,7 @@
 								"__type" : "uid",
 								"uidString" : "lyd0+WelDQCarBldC5blJw=="
 							},
-							"search" : "`@a listProcessor `{:node | \n\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\tand: [\n\t\t\tnode methodNode allChildren \n\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
+							"search" : "`@a listProcessor",
 							"replace" : "`@a list"
 						},
 						{
@@ -507,7 +616,7 @@
 								"__type" : "uid",
 								"uidString" : "R7+lJWilDQCavbveC5blJw=="
 							},
-							"search" : "`{:node | node isPragma \n\tand: [node selector = #gtSearch \n\tand: [\n\t\tnode methodNode allChildren \n\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]]}",
+							"search" : "`{:node | node isPragma \n\tand: [node selector = #gtSearch ]}",
 							"replace" : "`{RBPragmaNode selector: #gtSpotterSearch arguments: #()}"
 						}
 					]
