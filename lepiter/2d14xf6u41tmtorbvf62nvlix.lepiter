@@ -108,14 +108,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-09-20T10:45:53.378827-05:00"
+									"dateAndTimeString" : "2022-09-20T11:30:26.634459-05:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "U1+XL3ulDQCD2quDDyhjkg=="
 							},
-							"code" : "searchMethods := #gtSearch gtPragmas\r\t\t& #listProcessor gtReferences\r\t\t& #filter:item: gtReferences not"
+							"code" : "searchMethods := #gtSearch gtPragmas\r\t\t& (#listProcessor gtReferences | #list gtReferences)\r\t\t& #filter:item: gtReferences not"
 						}
 					]
 				},
@@ -138,7 +138,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T10:47:03.109488-05:00"
+						"dateAndTimeString" : "2022-09-20T11:33:20.361175-05:00"
 					}
 				},
 				"uid" : {
@@ -148,7 +148,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The scope is all `<gtSearch>` pragma methods that send `listProcessor` and don't use the `filter:item:` method from the old spotter as those methods need to be manually converted."
+				"string" : "The scope is all `<gtSearch>` pragma methods that send `listProcessor` and don't use the `filter:item:` method from the old spotter as those methods need to be manually converted. Since the `listProcessor` is converted to `list` towards the bottom, we need to search for both or rewrites that appear after the conversion will not work."
 			},
 			{
 				"__type" : "textSnippet",
