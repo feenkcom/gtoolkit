@@ -188,7 +188,8 @@
 								"uidString" : "gBwv3GelDQCaqDFKC5blJw=="
 							},
 							"search" : "`@a listProcessor filter: GtFilterSubstring",
-							"replace" : "`@a listProcessor filterBySubstring"
+							"replace" : "`@a listProcessor filterBySubstring",
+							"scope" : "searchMethods"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -223,7 +224,8 @@
 								"uidString" : "kZvK8melDQCaqwYcC5blJw=="
 							},
 							"search" : "`@a listProcessor allCandidates: `@block",
-							"replace" : "`@a listProcessor items: `@block"
+							"replace" : "`@a listProcessor items: `@block",
+							"scope" : "searchMethods"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -258,7 +260,8 @@
 								"uidString" : "nPFsgmilDQCaVJBlC5blJw=="
 							},
 							"search" : "`@a listProcessor actLogic: `@block",
-							"replace" : "`@a listProcessor itemActLogic: `@block"
+							"replace" : "`@a listProcessor itemActLogic: `@block",
+							"scope" : "searchMethods"
 						}
 					]
 				},
@@ -331,7 +334,8 @@
 								"uidString" : "2/moNmilDQCawPH2C5blJw=="
 							},
 							"search" : "`@a listProcessor \n\t`@;cascadesBefore; \n\titemIcon: `@block; \n\t`@;cascadesAfter",
-							"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"itemIcon: `@block; \"\n\t`@;cascadesAfter"
+							"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"itemIcon: `@block; \"\n\t`@;cascadesAfter",
+							"scope" : "searchMethods"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -366,7 +370,8 @@
 								"uidString" : "eR8Gb2ilDQCaSVpUC5blJw=="
 							},
 							"search" : "`@a listProcessor \n\t`@;cascadesBefore; \n\tkeyBinding: `@b; \n\t`@;cascadesAfter",
-							"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"keyBinding: `@b; \"\n\t`@;cascadesAfter"
+							"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"keyBinding: `@b; \"\n\t`@;cascadesAfter",
+							"scope" : "searchMethods"
 						}
 					]
 				},
@@ -439,7 +444,8 @@
 								"uidString" : "GR+cEWmlDQCaVo4XC5blJw=="
 							},
 							"search" : "^self  `{:node :dict | \n\tdict at: #variable put: node methodNode arguments first name. \n\ttrue}",
-							"replace" : "^`{:dict | RBVariableNode named: (dict at: #variable)} empty"
+							"replace" : "^`{:dict | RBVariableNode named: (dict at: #variable)} empty",
+							"scope" : "searchMethods"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -474,7 +480,8 @@
 								"uidString" : "4/KW9WilDQCaSbTSC5blJw=="
 							},
 							"search" : "(`@a listProcessor `;cascade; `@;cascades) `{:node | \n\t(node allParents noneSatisfy: [:each | each isReturn])}",
-							"replace" : "^`@a listProcessor `;cascade; `@;cascades"
+							"replace" : "^`@a listProcessor `;cascade; `@;cascades",
+							"scope" : "searchMethods"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -509,7 +516,8 @@
 								"uidString" : "SjSBOmmlDQCaYa/jC5blJw=="
 							},
 							"search" : "^(`@bool ifTrue: `@true) `{:node :dict | \n\tdict at: #variable put: node methodNode arguments first name.\n\ttrue}",
-							"replace" : "^ `@bool \n\tifTrue: `@true \n\tifFalse: [`{:dict | RBVariableNode named: (dict at: #variable)} empty]"
+							"replace" : "^ `@bool \n\tifTrue: `@true \n\tifFalse: [`{:dict | RBVariableNode named: (dict at: #variable)} empty]",
+							"scope" : "searchMethods"
 						}
 					]
 				},
@@ -582,7 +590,8 @@
 								"uidString" : "lyd0+WelDQCarBldC5blJw=="
 							},
 							"search" : "`@a listProcessor",
-							"replace" : "`@a list"
+							"replace" : "`@a list",
+							"scope" : "searchMethods"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -617,7 +626,8 @@
 								"uidString" : "R7+lJWilDQCavbveC5blJw=="
 							},
 							"search" : "`{:node | node isPragma \n\tand: [node selector = #gtSearch ]}",
-							"replace" : "`{RBPragmaNode selector: #gtSpotterSearch arguments: #()}"
+							"replace" : "`{RBPragmaNode selector: #gtSpotterSearch arguments: #()}",
+							"scope" : "searchMethods"
 						}
 					]
 				},
