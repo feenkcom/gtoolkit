@@ -45,7 +45,113 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T06:36:31.527971-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T06:36:31.527971-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gBwv3GelDQCaqDFKC5blJw=="
+							},
+							"search" : "(`@a listProcessor\n\t`@;cascadesBefore; \n\tfilter: GtFilterSubstring; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
+							"replace" : "`@a listProcessor \n\t`@;cascadesBefore; \n\tfilterBySubstring;\n\t`@;cascadesAfter"
+						},
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T06:42:50.817343-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T06:42:50.817343-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kZvK8melDQCaqwYcC5blJw=="
+							},
+							"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\tallCandidates: `@block; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
+							"replace" : "`@a listProcessor \n\t`@;cascadesBefore; \n\titems: `@block;\n\t`@;cascadesAfter"
+						},
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T07:23:00.598137-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T07:23:00.598137-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "nPFsgmilDQCaVJBlC5blJw=="
+							},
+							"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\tactLogic: `@block; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
+							"replace" : "`@a listProcessor \n\t`@;cascadesBefore; \n\titemActLogic: `@block;\n\t`@;cascadesAfter"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -66,7 +172,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T08:48:46.762732-05:00"
+						"dateAndTimeString" : "2022-09-20T07:12:57.993917+02:00"
 					}
 				},
 				"uid" : {
@@ -76,118 +182,84 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**Rename messages used by the old listProcessor**"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T06:36:31.527971-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T06:36:31.527971-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "gBwv3GelDQCaqDFKC5blJw=="
-				},
-				"search" : "(`@a listProcessor\n\t`@;cascadesBefore; \n\tfilter: GtFilterSubstring; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
-				"replace" : "`@a listProcessor \n\t`@;cascadesBefore; \n\tfilterBySubstring; \n\t`@;cascadesAfter"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T06:42:50.817343-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T06:42:50.817343-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "kZvK8melDQCaqwYcC5blJw=="
-				},
-				"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\tallCandidates: `@block; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
-				"replace" : "`@a listProcessor \n\t`@;cascadesBefore; \n\titems: `@block;\n\t`@;cascadesAfter"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T07:23:00.598137-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T07:23:00.598137-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "nPFsgmilDQCaVJBlC5blJw=="
-				},
-				"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\tactLogic: `@block; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
-				"replace" : "`@a listProcessor \n\t`@;cascadesBefore; \n\titemActLogic: `@block;\n\t`@;cascadesAfter"
+				"string" : "#Rename messages used by the old listProcessor"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T07:01:49.463977-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T07:01:49.463977-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "2/moNmilDQCawPH2C5blJw=="
+							},
+							"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\titemIcon: `@block; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
+							"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"itemIcon: `@block; \"\n\t`@;cascadesAfter"
+						},
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T07:17:35.092461-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T07:17:35.092461-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "eR8Gb2ilDQCaSVpUC5blJw=="
+							},
+							"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\tkeyBinding: `@b; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
+							"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"keyBinding: `@b; \"\n\t`@;cascadesAfter"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -208,7 +280,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T08:32:54.461207-05:00"
+						"dateAndTimeString" : "2022-09-20T07:12:15.110702+02:00"
 					}
 				},
 				"uid" : {
@@ -218,83 +290,119 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**Remove not supported items**"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T07:01:49.463977-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T07:01:49.463977-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "2/moNmilDQCawPH2C5blJw=="
-				},
-				"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\titemIcon: `@block; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
-				"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"itemIcon: `@block; \"\n\t`@;cascadesAfter"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T07:17:35.092461-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T07:17:35.092461-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "eR8Gb2ilDQCaSVpUC5blJw=="
-				},
-				"search" : "(`@a listProcessor \n\t`@;cascadesBefore; \n\tkeyBinding: `@b; \n\t`@;cascadesAfter) `{:node | \n\t\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\t\tand: [\n\t\t\t\tnode methodNode allChildren \n\t\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
-				"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"keyBinding: `@b; \"\n\t`@;cascadesAfter"
+				"string" : "#Remove not supported items"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T08:03:02.831868-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T08:03:02.831868-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "GR+cEWmlDQCaVo4XC5blJw=="
+							},
+							"search" : "^self `{:node :dict | \n\t((node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\tand: [\n\t\t\tnode methodNode allChildren \n\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]])\n\t\tifTrue: [\n\t\t\tdict at: #variable put: node methodNode arguments first name.\n\t\t\ttrue] \n\t\tifFalse: [false]}",
+							"replace" : "^`{:dict | RBVariableNode named: (dict at: #variable)} empty"
+						},
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T07:55:12.730791-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T07:55:12.730791-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4/KW9WilDQCaSbTSC5blJw=="
+							},
+							"search" : "(`@a listProcessor `;cascade; `@;cascades) `{:node | \n\t(node allParents noneSatisfy: [:each | each isReturn]) and: [\n\t\t(node methodNode pragmaNamed: #gtSearch \n\t\t\tifPresent: [:p | true] \n\t\t\tifAbsent: [false]) and: [\n\t\tnode methodNode allChildren \n\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]]}",
+							"replace" : "^`@a listProcessor `;cascade; `@;cascades"
+						},
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T08:14:28.93369-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T08:14:28.93369-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "SjSBOmmlDQCaYa/jC5blJw=="
+							},
+							"search" : "^(`@bool ifTrue: `@true) `{:node :dict | \n\t((node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\tand: [\n\t\t\tnode methodNode allChildren \n\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]])\n\t\tifTrue: [\n\t\t\tdict at: #variable put: node methodNode arguments first name.\n\t\t\ttrue] \n\t\tifFalse: [false]}",
+							"replace" : "^ `@bool \n\tifTrue: `@true \n\tifFalse: [`{:dict | RBVariableNode named: (dict at: #variable)} empty]"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -315,7 +423,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T08:32:42.297428-05:00"
+						"dateAndTimeString" : "2022-09-20T07:12:08.782813+02:00"
 					}
 				},
 				"uid" : {
@@ -325,118 +433,84 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**Fix the return values**"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T08:03:02.831868-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T08:03:02.831868-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "GR+cEWmlDQCaVo4XC5blJw=="
-				},
-				"search" : "^self `{:node :dict | \n\t((node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\tand: [\n\t\t\tnode methodNode allChildren \n\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]])\n\t\tifTrue: [\n\t\t\tdict at: #variable put: node methodNode arguments first name.\n\t\t\ttrue] \n\t\tifFalse: [false]}",
-				"replace" : "^`{:dict | RBVariableNode named: (dict at: #variable)} empty"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T07:55:12.730791-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T07:55:12.730791-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "4/KW9WilDQCaSbTSC5blJw=="
-				},
-				"search" : "(`@a listProcessor `;cascade; `@;cascades) `{:node | \n\t(node allParents noneSatisfy: [:each | each isReturn]) and: [\n\t\t(node methodNode pragmaNamed: #gtSearch \n\t\t\tifPresent: [:p | true] \n\t\t\tifAbsent: [false]) and: [\n\t\tnode methodNode allChildren \n\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]]}",
-				"replace" : "^`@a listProcessor `;cascade; `@;cascades"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T08:14:28.93369-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T08:14:28.93369-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "SjSBOmmlDQCaYa/jC5blJw=="
-				},
-				"search" : "^(`@bool ifTrue: `@true) `{:node :dict | \n\t((node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\tand: [\n\t\t\tnode methodNode allChildren \n\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]])\n\t\tifTrue: [\n\t\t\tdict at: #variable put: node methodNode arguments first name.\n\t\t\ttrue] \n\t\tifFalse: [false]}",
-				"replace" : "^ `@bool \n\tifTrue: `@true \n\tifFalse: [`{:dict | RBVariableNode named: (dict at: #variable)} empty]"
+				"string" : "#Fix the return values"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T06:44:42.592077-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T06:44:42.592077-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lyd0+WelDQCarBldC5blJw=="
+							},
+							"search" : "`@a listProcessor `{:node | \n\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\tand: [\n\t\t\tnode methodNode allChildren \n\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
+							"replace" : "`@a list"
+						},
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T06:57:04.039703-05:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-19T06:57:04.039703-05:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "R7+lJWilDQCavbveC5blJw=="
+							},
+							"search" : "`{:node | node isPragma \n\tand: [node selector = #gtSearch \n\tand: [\n\t\tnode methodNode allChildren \n\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]]}",
+							"replace" : "`{RBPragmaNode selector: #gtSpotterSearch arguments: #()}"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -457,7 +531,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T08:36:39.14707-05:00"
+						"dateAndTimeString" : "2022-09-20T07:12:01.228563+02:00"
 					}
 				},
 				"uid" : {
@@ -467,77 +541,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**Finally change the listProcessor message and gtSearch pragma**"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T06:44:42.592077-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T06:44:42.592077-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "lyd0+WelDQCarBldC5blJw=="
-				},
-				"search" : "`@a listProcessor `{:node | \n\t(node methodNode pragmaNamed: #gtSearch ifPresent: [:p | true] ifAbsent: [false]) \n\t\tand: [\n\t\t\tnode methodNode allChildren \n\t\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]}",
-				"replace" : "`@a list"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T06:57:04.039703-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-19T06:57:04.039703-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "R7+lJWilDQCavbveC5blJw=="
-				},
-				"search" : "`{:node | node isPragma \n\tand: [node selector = #gtSearch \n\tand: [\n\t\tnode methodNode allChildren \n\t\t\tnoneSatisfy: [:each | each isMessage and: [each selector = #filter:item:]]]]}",
-				"replace" : "`{RBPragmaNode selector: #gtSpotterSearch arguments: #()}"
+				"string" : "#Finally change the listProcessor message and gtSearch pragma"
 			}
 		]
 	},
@@ -560,12 +564,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-09-19T08:29:05.700667-05:00"
+			"dateAndTimeString" : "2022-09-20T07:20:18.416998+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Converting old spotter searches to use new spotter"
+		"title" : "Converting old Spotter searches to use new Spotter"
 	},
 	"uid" : {
 		"__type" : "uuid",
