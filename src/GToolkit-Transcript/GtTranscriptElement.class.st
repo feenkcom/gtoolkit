@@ -156,7 +156,7 @@ GtTranscriptElement >> onAddedToSceneGraph [
 		ifNil: [ ^ self ].
 
 	aTranscript textDo: [ :aText |
-		editorElement editor text: aText copy collapse.
+		editorElement editor text: aText copy.
 	
 		aTranscript announcer
 			when: GtTranscriptInsertStringAnnouncement
