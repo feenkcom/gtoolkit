@@ -9,7 +9,7 @@ Class {
 
 { #category : #searches }
 GtWorldSpotterSearchStart >> gtSearchForToolsFor: aSearch [
-	<gtSpotterSearch>
+	<gtSearch>
 
 	^ aSearch list
 		priority: 1;
@@ -37,7 +37,7 @@ GtWorldSpotterSearchStart >> gtSearchForToolsFor: aSearch [
 
 { #category : #searches }
 GtWorldSpotterSearchStart >> gtSearchPagesByTitleFor: aSearch [
-	<gtSpotterSearch>
+	<gtSearch>
 	self hasKnowledgeBase ifFalse: [ ^ aSearch empty ].
 	self hasChildren ifFalse: [ ^ aSearch empty ].
 
