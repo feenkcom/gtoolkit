@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:35:32.814306+02:00"
+						"dateAndTimeString" : "2022-09-20T18:30:12.077322+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:36:28.39083+02:00"
+						"dateAndTimeString" : "2022-09-20T18:31:24.492881+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "+gKZxOukDQCGyfHDCxMVUQ=="
+					"uidString" : "pGjrEoClDQCUsvXCAXGt4Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "When working with remote objects through proxies, [[PharoLink]] allows local objects to register for remote events. "
+				"string" : "Using  [[PharoLink]] we can make calls to remote objects. This page shows how to profile those calls. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:36:30.091514+02:00"
+						"dateAndTimeString" : "2022-09-20T18:31:21.953203+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,153 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:42:53.206492+02:00"
+						"dateAndTimeString" : "2022-09-20T22:41:57.28966+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Au2xzuukDQCG+sjTCxMVUQ=="
+					"uidString" : "JZ1wGIClDQCU8XvHAXGt4Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The current mechanism uses queues to pull and deliver announcements in bulk in a background process. {{gtClass:name=GtRrAnnouncementQueueLocalListener}} provides more details."
+				"string" : "{{gtClass:name=LanguageLinkSendCommandEventsCollector}} provides a way to monitor remote calls and get details about their duration and receiver. The simplest way is to use the default instance of the collector."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T22:42:00.146036+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T22:42:05.757801+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mZDNmIOlDQCKIsuPAXGt4Q=="
+				},
+				"code" : "LanguageLinkSendCommandEventsCollector start."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T22:42:06.295204+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T22:42:08.356278+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yWQrmYOlDQCKJKhnAXGt4Q=="
+				},
+				"code" : "LanguageLinkSendCommandEventsCollector stop."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T22:42:08.668282+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T22:42:16.129676+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mppPmYOlDQCKJhjnAXGt4Q=="
+				},
+				"code" : "LanguageLinkSendCommandEventsCollector reset."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T22:42:16.921204+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-20T22:42:24.948623+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pIjNmYOlDQCKKAO8AXGt4Q=="
+				},
+				"code" : "LanguageLinkSendCommandEventsCollector defaultInstance"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +228,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:37:53.948408+02:00"
+						"dateAndTimeString" : "2022-09-20T22:42:36.451072+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,222 +239,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:43:19.623657+02:00"
+						"dateAndTimeString" : "2022-09-20T22:42:53.202443+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "eZSa0+ukDQCG/7mLCxMVUQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Delivering large numbers of announcements can be slow if they contains a lot of data, or objects receiving those announcements do a lot of work. {{gtClass:name=GtRrAnnouncementQueueEventsCollector}} provides a way to monitor the delivery of remote announcements and measure performance."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:43:38.727832+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:43:42.574377+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "wxmpnoOlDQCKL4lQAXGt4Q=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The simplest way is to use the default instance of the collector."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:43:44.184843+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:43:47.624874+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "KhIBn4OlDQCKNH37AXGt4Q=="
-				},
-				"code" : "GtRrAnnouncementQueueEventsCollector start."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:43:49.257302+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:43:51.435433+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "cHhOn4OlDQCKNu3tAXGt4Q=="
-				},
-				"code" : "GtRrAnnouncementQueueEventsCollector stop."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:43:52.636611+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:43:56.254547+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "6wiCn4OlDQCKN4c2AXGt4Q=="
-				},
-				"code" : "GtRrAnnouncementQueueEventsCollector reset."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:43:57.326581+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:44:01.033877+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "G5nJn4OlDQCKOP9tAXGt4Q=="
-				},
-				"code" : "GtRrAnnouncementQueueEventsCollector defaultInstance."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:44:10.087174+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T22:44:10.087174+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "SIGEoIOlDQCKO2RpAXGt4Q=="
+					"uidString" : "nNXBmoOlDQCKKo5hAXGt4Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -339,7 +265,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:40:03.582345+02:00"
+						"dateAndTimeString" : "2022-09-20T18:31:06.869492+02:00"
 					}
 				},
 				"editEmail" : {
@@ -350,14 +276,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:40:48.96697+02:00"
+						"dateAndTimeString" : "2022-09-20T18:32:43.846066+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "rf132+ukDQCHCwSHCxMVUQ=="
+					"uidString" : "EsuOF4ClDQCU7MXaAXGt4Q=="
 				},
-				"code" : "eventsCollector := GtRrAnnouncementQueueEventsCollector  new"
+				"code" : "eventsCollector := LanguageLinkSendCommandEventsCollector  new"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -373,7 +299,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:40:37.089987+02:00"
+						"dateAndTimeString" : "2022-09-20T18:32:14.518632+02:00"
 					}
 				},
 				"editEmail" : {
@@ -384,12 +310,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:40:45.721109+02:00"
+						"dateAndTimeString" : "2022-09-20T18:32:14.83059+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8kZ33eukDQCHENKxCxMVUQ=="
+					"uidString" : "lAmXG4ClDQCU+wr2AXGt4Q=="
 				},
 				"code" : "eventsCollector start"
 			},
@@ -407,7 +333,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:40:42.224062+02:00"
+						"dateAndTimeString" : "2022-09-20T18:32:15.288611+02:00"
 					}
 				},
 				"editEmail" : {
@@ -418,12 +344,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:40:50.598052+02:00"
+						"dateAndTimeString" : "2022-09-20T18:32:19.860974+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "3Z3F3eukDQCHE1KSCxMVUQ=="
+					"uidString" : "ScmiG4ClDQCU/jiiAXGt4Q=="
 				},
 				"code" : "eventsCollector stop"
 			},
@@ -441,7 +367,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T19:34:12.067511+02:00"
+						"dateAndTimeString" : "2022-09-20T19:34:49.829791+02:00"
 					}
 				},
 				"editEmail" : {
@@ -452,17 +378,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T19:34:32.533869+02:00"
+						"dateAndTimeString" : "2022-09-20T22:43:23.547155+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "bJk0+IClDQCwlUuNAXGt4Q=="
+					"uidString" : "i9Rl+4ClDQCwvvOiAXGt4Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In case multiple instance of the collector are registered, the snippet below will stop them."
+				"string" : "In case multiple instance of the collector are registered, the snippet below will stop them and also remove all content."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -478,7 +404,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T19:33:39.449333+02:00"
+						"dateAndTimeString" : "2022-09-20T19:34:45.643995+02:00"
 					}
 				},
 				"editEmail" : {
@@ -489,51 +415,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-20T19:33:52.22362+02:00"
+						"dateAndTimeString" : "2022-09-20T19:34:56.813728+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "G54694ClDQCwjY19AXGt4Q=="
+					"uidString" : "+6os+4ClDQCwtjM5AXGt4Q=="
 				},
-				"code" : "GtRrAnnouncementQueueEventsCollector allInstances do: #stop"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:41:10.623116+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-17T21:05:21.145932+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "DaSW3uukDQCHG3BeCxMVUQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The collector uses Beacon signals subclassing {{gtClass:name=GtRrAnnouncementQueueSignal}}. It is also possible to listen for those events directly using beacon."
+				"code" : "LanguageLinkSendCommandEventsCollector allInstances do: #stop"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -549,7 +438,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:41:27.35508+02:00"
+						"dateAndTimeString" : "2022-09-20T22:43:14.300311+02:00"
 					}
 				},
 				"editEmail" : {
@@ -560,82 +449,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-17T21:06:43.535466+02:00"
+						"dateAndTimeString" : "2022-09-20T22:43:16.887541+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8kJ24OukDQCHHhVOCxMVUQ=="
+					"uidString" : "txE5nYOlDQCKLI99AXGt4Q=="
 				},
-				"code" : "logger := MemoryLogger  startFor: GtRrAnnouncementQueueSignal."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:42:21.217754+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:42:24.267392+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "8SOs4+ukDQCHIfEhCxMVUQ=="
-				},
-				"code" : "logger start"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:42:24.927356+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-13T09:42:28.76314+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "nL7k4+ukDQCHJFjeCxMVUQ=="
-				},
-				"code" : "loger stop"
+				"code" : "LanguageLinkSendCommandEventsCollector allInstances do: #reset"
 			}
 		]
 	},
@@ -647,7 +468,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-09-13T09:33:39.820261+02:00"
+			"dateAndTimeString" : "2022-09-20T18:29:49.01032+02:00"
 		}
 	},
 	"editEmail" : {
@@ -658,15 +479,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-09-13T09:33:39.820261+02:00"
+			"dateAndTimeString" : "2022-09-20T18:29:49.01032+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to measure the performance of delivering remote  announcements"
+		"title" : "How to profile PharoLink remote calls"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "9a3e98c4-eba4-0d00-86c8-456c0b131551"
+		"uuid" : "54c1ea12-80a5-0d00-94b1-a53b0171ade1"
 	}
 }
