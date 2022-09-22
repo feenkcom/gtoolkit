@@ -35,7 +35,7 @@ GtWorldSpotterSearchStart >> gtSearchPagesByTitleFor: aSearch [
 	self hasChildren ifFalse: [ ^ aSearch empty ].
 
 	^ aSearch list
-		title: 'Page Names';
+		title: 'Named pages';
 		priority: 22;
 		items: [ Array
 				streamContents: [ :aStream | self knowledgeBase pagesWithNameDo: [ :eachPage | aStream nextPut: eachPage ] ] ];
@@ -45,19 +45,32 @@ GtWorldSpotterSearchStart >> gtSearchPagesByTitleFor: aSearch [
 ]
 
 { #category : #spotter }
-GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aStep [
-	"<gtSearch>"
-	self hasKnowledgeBase ifFalse: [ ^ self ].
-	self hasChildren ifFalse: [ ^ self ].
+GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aSearch [
+	<gtSearch>
+	self hasKnowledgeBase
+		ifFalse: [ ^ aSearch empty ].
+	self hasChildren
+		ifFalse: [ ^ aSearch empty ].
 	
-	aStep listProcessor
+	^ aSearch explicit
 		priority: 23;
-		title: 'Pages';
-		wantsToDisplayOnEmptyQuery: true;
-		filter: LeSubstringFilter
-			item: [ :filter :context | 
-				self knowledgeBase pagesWithNameDo: filter.
-				self knowledgeBase unnamedPagesDo: filter ];
+		title: 'Page contents';
+		search: [ :aContext |
+			[
+			| filter results |
+			results := OrderedCollection new.
+			filter := LeSubstringFilter new
+				caseSensitive: false;
+				query: aContext searchQuery.
+			self knowledgeBase pagesWithNameDo: [ :eachPage |
+				(filter isMatchedItem: eachPage)
+					ifTrue: [ results add: eachPage ] ].
+			self knowledgeBase unnamedPagesDo: [ :eachPage |
+				(filter isMatchedItem: eachPage)
+					ifTrue: [ results add: eachPage ] ].
+			results asAsyncStream
+			] asAsyncFuture asAsyncStream flatten
+		];
 		itemName: #spotterItemName
 ]
 
