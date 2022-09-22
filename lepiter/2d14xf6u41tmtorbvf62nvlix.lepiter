@@ -621,7 +621,7 @@
 					"__type" : "uid",
 					"uidString" : "4MqoRo+lDQCnfWqxA2IO4Q=="
 				},
-				"search" : "`{:node :dict | node isVariable and: [\n\t| arg |\n\targ := node methodNode arguments first.\n\tdict at: #arg put: arg.\n\targ\n\t\tpropertyAt: #original\n\t\tifPresent: [ :original | node = original ]\n\t\tifAbsent: [ arg = node ]]}",
+				"search" : "`{:node :dict | node isVariable and: [\n\tnode name asString ~= 'aSearch' and: [\n\t\t| arg |\n\t\targ := node methodNode arguments first.\n\t\tdict at: #arg put: arg.\n\t\targ\n\t\t\tpropertyAt: #original\n\t\t\tifPresent: [ :original | node = original ]\n\t\t\tifAbsent: [ arg = node ]]]}",
 				"replace" : "`{:dict | \n\t| arg |\n\targ := dict at: #arg.\n\targ\n\t\tpropertyAt: #original\n\t\tifAbsent: \n\t\t\t[ arg replaceWith: \n\t\t\t\t((RBVariableNode named: 'aSearch') \n\t\t\t\t\tpropertyAt: #original put: arg; \n\t\t\t\t\tyourself) ].\n\tRBVariableNode named: 'aSearch' }",
 				"scope" : "searchMethods"
 			},
