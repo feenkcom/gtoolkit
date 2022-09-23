@@ -83,7 +83,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.818/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.2002/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.2003/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.1182/src' ].
@@ -140,13 +140,13 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.956/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.2002/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.2003/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.409/src' ].
 		spec
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.801/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.802/src' ].
 		spec
 			baseline: 'GToolkitPager' with: [
 				spec repository: 'github://feenkcom/gtoolkit-pager:v0.8.746/src' ].
