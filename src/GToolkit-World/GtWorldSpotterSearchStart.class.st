@@ -9,95 +9,74 @@ Class {
 
 { #category : #searches }
 GtWorldSpotterSearchStart >> gtSearchForToolsFor: aSearch [
-	<gtSpotterSearch>
-
+	<gtSearch>
 	^ aSearch list
 		priority: 1;
-		items: [ 
-			{
-				GtPlaygroundStencil new 
-					knowledgeBase: self knowledgeBase.
-				LeNotePlaygroundStencil new
-					knowledgeBase: self knowledgeBase.
-				LeLepiterToolStencil new
-					knowledgeBase: self knowledgeBase.
-				GtCoderStencil new . 
-				GtMonitorStencil new . 
-				GtRlGToolkitExamplesExplorer buildForGToolkitProject . 
-				GtGitStencil new . 
-				GtEpiceaStencil new . 
-				GtTranscriptStencil new .
-				GtFileSystemStencil new
-			} ];
+		items: [ {GtPlaygroundStencil new knowledgeBase: self knowledgeBase.
+				LeNotePlaygroundStencil new knowledgeBase: self knowledgeBase.
+				LeLepiterToolStencil new knowledgeBase: self knowledgeBase.
+				GtCoderStencil new.
+				GtMonitorStencil new.
+				GtRlGToolkitExamplesExplorer buildForGToolkitProject.
+				GtGitStencil new.
+				GtEpiceaStencil new.
+				GtTranscriptStencil new.
+				GtFileSystemStencil new} ];
 		title: 'Tools';
-		filter: GtSpotterSubstringFilter new;
+		filterBySubstring;
 		previewElement: [ :aStencil | aStencil asPreviewElement asElement ];
 		wantsToDisplayOnEmptyQuery: true
 ]
 
 { #category : #searches }
 GtWorldSpotterSearchStart >> gtSearchPagesByTitleFor: aSearch [
-	<gtSpotterSearch>
+	<gtSearch>
 	self hasKnowledgeBase ifFalse: [ ^ aSearch empty ].
 	self hasChildren ifFalse: [ ^ aSearch empty ].
 
 	^ aSearch list
-		title: 'Page Names';
+		title: 'Named pages';
 		priority: 22;
 		items: [ Array
 				streamContents: [ :aStream | self knowledgeBase pagesWithNameDo: [ :eachPage | aStream nextPut: eachPage ] ] ];
-		filter: GtSpotterSubstringFilter new;
+		filterBySubstring;
 		itemName: #title;
 		wantsToDisplayOnEmptyQuery: false
 ]
 
 { #category : #spotter }
-GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aStep [
+GtWorldSpotterSearchStart >> gtSpotterContainingSubPartsFor: aSearch [
 	<gtSearch>
-	self hasKnowledgeBase ifFalse: [ ^ self ].
-	self hasChildren ifFalse: [ ^ self ].
+	self hasKnowledgeBase
+		ifFalse: [ ^ aSearch empty ].
+	self hasChildren
+		ifFalse: [ ^ aSearch empty ].
 	
-	aStep listProcessor
+	^ aSearch explicit
 		priority: 23;
-		title: 'Pages';
-		wantsToDisplayOnEmptyQuery: true;
-		filter: LeSubstringFilter
-			item: [ :filter :context | 
-				self knowledgeBase pagesWithNameDo: filter.
-				self knowledgeBase unnamedPagesDo: filter ];
+		title: 'Page contents';
+		search: [ :aContext |
+			[
+			| filter results |
+			results := OrderedCollection new.
+			filter := LeSubstringFilter new
+				caseSensitive: false;
+				query: aContext searchQuery.
+			self knowledgeBase pagesWithNameDo: [ :eachPage |
+				(filter isMatchedItem: eachPage)
+					ifTrue: [ results add: eachPage ] ].
+			self knowledgeBase unnamedPagesDo: [ :eachPage |
+				(filter isMatchedItem: eachPage)
+					ifTrue: [ results add: eachPage ] ].
+			results asAsyncStream
+			] asAsyncFuture asAsyncStream flatten
+		];
 		itemName: #spotterItemName
 ]
 
 { #category : #spotter }
-GtWorldSpotterSearchStart >> gtSpotterForToolsFor: aStep [
-	<gtSearch>
-	aStep listProcessor
-		priority: 1;
-		allCandidates: [ 
-			{
-				GtPlaygroundStencil new 
-					knowledgeBase: self knowledgeBase.
-				LeNotePlaygroundStencil new
-					knowledgeBase: self knowledgeBase.
-				LeLepiterToolStencil new
-					knowledgeBase: self knowledgeBase.
-				GtCoderStencil new . 
-				GtMonitorStencil new . 
-				GtRlGToolkitExamplesExplorer buildForGToolkitProject . 
-				GtGitStencil new . 
-				GtEpiceaStencil new . 
-				GtTranscriptStencil new .
-				GtFileSystemStencil new
-			} ];
-		previewElement: [ :aStencil | aStencil asPreviewElement asElement ];
-		title: 'Tools';
-		filter: GtFilterSubstring;
-		wantsToDisplayOnEmptyQuery: true
-]
-
-{ #category : #spotter }
 GtWorldSpotterSearchStart >> gtSpotterNewPageFor: aStep [
-	<gtSearch>
+	"<gtSearch>"
 	self hasKnowledgeBase ifFalse: [ ^ self ].
 	aStep listProcessor
 		title: 'New Page';
@@ -113,22 +92,6 @@ GtWorldSpotterSearchStart >> gtSpotterNewPageFor: aStep [
 				isExistingPage ifFalse: [ 
 					filter value: context textTrimmed ] ];
 		send: [ :aPageTitle :spotterStep | self knowledgeBase addPage: (LePage named: aPageTitle) ]
-]
-
-{ #category : #spotter }
-GtWorldSpotterSearchStart >> gtSpotterPageTitlesFor: aStep [
-	<gtSearch>
-	self hasKnowledgeBase ifFalse: [ ^ self ].
-	self hasChildren ifFalse: [ ^ self ].
-	
-	aStep listProcessor
-		title: 'Page Names';
-		priority: 22;
-		filter: GtFilterSubstring
-			item: [ :filter :context | 
-				self knowledgeBase pagesWithNameDo: filter ];
-		itemName: #title;
-		wantsToDisplayOnEmptyQuery: false
 ]
 
 { #category : #testing }
