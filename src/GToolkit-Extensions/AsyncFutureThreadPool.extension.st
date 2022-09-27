@@ -9,11 +9,19 @@ AsyncFutureThreadPool >> gtWorkersFor: aView [
 		priority: 10;
 		items: [ workers asArray withIndexCollect: [ :each :index | each -> index ] ];
 		column: 'Worker' text: [ :each | each value ] weight: 0.5;
-		column: 'Name' text: [ :each | each key group 
+		column: 'Name' text: [ :each |
+			| aLabel |
+			
+			aLabel := each key group 
+				ifNotNil: [ :aGroup | aGroup label ] 
+				ifNil: [ '' ].
+				
+			aLabel := '{1} ({2})' format: { aLabel. each key priority gtDisplayString }.
+			
+			each key group 
 			ifNotNil: [ :aGroup | aGroup isUnspecified 
-				ifTrue: [ aGroup label asRopedText foreground: BrGlamorousColors disabledButtonTextColor ] 
-				ifFalse: [ aGroup label ] ] 
-			ifNil: [ '' ] ];
+				ifTrue: [ aLabel := aLabel asRopedText foreground: BrGlamorousColors disabledButtonTextColor ]  ] .
+			aLabel ];
 		column: 'Tasks' text: [ :each | each key amountOfFutures ];
 		column: 'Pending' text: [ :each | each key pendingQueueSize ];
 		column: 'Busy' text: [ :each | each key isBusy ];
