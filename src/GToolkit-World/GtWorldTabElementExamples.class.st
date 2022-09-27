@@ -13,7 +13,7 @@ GtWorldTabElementExamples >> showSpaceSelectScripter [
 	| aScripter |
 	<gtExample>
 	
-	aScripter := BlDevScripter new.
+	aScripter := BlScripter new.
 	aScripter element: GtWorldTabElement new.
 	
 	^ aScripter

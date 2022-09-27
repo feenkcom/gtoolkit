@@ -214,7 +214,7 @@ GtTranscriptExamples >> randomElement [
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> scripter [
 	<gtExample>
-	^ BlDevScripter new
+	^ BlScripter new
 ]
 
 { #category : #'examples - scripter' }
