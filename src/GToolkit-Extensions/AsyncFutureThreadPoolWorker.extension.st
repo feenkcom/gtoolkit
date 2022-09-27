@@ -19,7 +19,12 @@ AsyncFutureThreadPoolWorker >> gtPendingQueueFor: aView [
 		title: 'Pending queue';
 		priority: 12;
 		object: [ pendingQueue ];
-		view: #gtItemsFor:
+		view: #gtItemsFor:;
+		actionButtonIcon: BrGlamorousVectorIcons cancel
+			tooltip: 'Cancel pending tasks'
+			action: [ :aButton :aTab |
+				pendingQueue itemArray do: [ :each | each task cancelSoft ].
+				aTab viewContentElement phlow update ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
