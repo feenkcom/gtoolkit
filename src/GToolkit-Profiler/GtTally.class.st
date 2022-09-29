@@ -378,6 +378,67 @@ GtTally >> report: strm cutoff: threshold [
 		[self reportGCStatsOn: strm].
 ]
 
+{ #category : #initialize }
+GtTally >> reportGCStatsOn: str [
+	| oldSpaceEnd youngSpaceEnd memoryEnd fullGCs fullGCTime incrGCs incrGCTime tenureCount upTime rootOverflows |
+	upTime := time.
+	oldSpaceEnd			:= gcStats at: 1.
+	youngSpaceEnd		:= gcStats at: 2.
+	memoryEnd			:= gcStats at: 3.
+	fullGCs				:= gcStats at: 7.
+	fullGCTime			:= gcStats at: 8.
+	incrGCs				:= gcStats at: 9.
+	incrGCTime			:= gcStats at: 10.
+	tenureCount			:= gcStats at: 11.
+	rootOverflows		:= gcStats at: 22.
+
+	str cr.
+	str	nextPutAll: '**Memory**'; cr.
+	str	nextPutAll:	'	old			'.
+	oldSpaceEnd printWithCommasSignedOn: str. 
+	str nextPutAll: ' bytes'; cr.
+	str	nextPutAll: '	young		'.
+	(youngSpaceEnd - oldSpaceEnd) printWithCommasSignedOn: str. 
+	str  nextPutAll: ' bytes'; cr.
+	str	nextPutAll: '	used		'.
+	youngSpaceEnd printWithCommasSignedOn: str. 
+	str  nextPutAll: ' bytes'; cr.
+	str	nextPutAll: '	free		'.
+	(memoryEnd - youngSpaceEnd) printWithCommasSignedOn: str. 
+	str  nextPutAll: ' bytes'; cr.
+
+	str cr.
+	str	nextPutAll: '**GCs**'; cr.
+	str	nextPutAll: '	full			';
+		print: fullGCs; nextPutAll: ' totalling '.
+	fullGCTime printWithCommasOn: str.
+	str nextPutAll: 'ms (';
+		print: ((fullGCTime / upTime * 100) roundTo: 1.0);
+		nextPutAll: '% uptime)'.
+	fullGCs = 0 ifFalse:
+		[str	nextPutAll: ', avg '; print: ((fullGCTime / fullGCs) roundTo: 1.0); nextPutAll: 'ms'].
+	str	cr.
+	str	nextPutAll: '	incr		';
+		print: incrGCs; nextPutAll: ' totalling '.
+	incrGCTime printWithCommasOn: str.
+	str nextPutAll: 'ms (';
+		print: ((incrGCTime / upTime * 100) roundTo: 1.0);
+		nextPutAll: '% uptime)'.
+	incrGCs = 0 ifFalse:
+		[str nextPutAll:', avg '; print: ((incrGCTime / incrGCs) roundTo: 1.0); nextPutAll: 'ms'].
+	str cr.
+	str	nextPutAll: '	tenures		'.
+	tenureCount printWithCommasOn: str.
+	tenureCount = 0 ifFalse:
+		[str nextPutAll: ' (avg '; print: (incrGCs / tenureCount) asInteger; nextPutAll: ' GCs/tenure)'].
+	str	cr.
+	str	nextPutAll: '	root table	'.
+	rootOverflows printWithCommasOn: str.
+	str nextPutAll:' overflows'.
+	str cr.
+
+]
+
 { #category : #printing }
 GtTally >> rootPrintOn: aStream total: total totalTime: totalTime threshold: threshold [
 	| groups |
@@ -448,10 +509,11 @@ GtTally >> spyAllProcessesEvery: millisecs forMilliseconds: msecDuration [
 
 { #category : #tallying }
 GtTally >> spyAllProcessesEvery: millisecs while: aBlock [
-	| myDelay sem processes startTime timer |
+	^ [ | myDelay sem processes startTime timer myPriority |
+	myPriority := Processor timingPriority - 1.
 	self class: thisContext receiver class method: thisContext method.	"set up the probe"
 	processes := Process allInstances
-			select: [ :each | each priority <= (Processor timingPriority - 1) ]
+			select: [ :each | each priority <= myPriority ]
 			thenCollect: [ :each | each -> each suspendedContext ].
 	myDelay := Delay forMilliseconds: millisecs.
 	sem := Semaphore new.
@@ -468,13 +530,14 @@ GtTally >> spyAllProcessesEvery: millisecs while: aBlock [
 		aBlock value ] whileTrue.
 		sem signal ] newProcess.
 	startTime := Time millisecondClockValue.
-	timer priority: Processor timingPriority - 1.	"activate the probe and evaluate the block"
+	timer priority: myPriority.	"activate the probe and evaluate the block"
 	timer resume.	"activate the probe and wait for it to finish"
 	sem wait.
 	timer terminate.
 	Smalltalk vm getParameters
 		keysAndValuesDo: [ :idx :gcVal | gcVal isNumber ifTrue: [ gcStats at: idx put: gcVal - (gcStats at: idx) ] ].
-	time := Time millisecondClockValue - startTime
+	time := Time millisecondClockValue - startTime.
+	self ] asAsyncPromise
 ]
 
 { #category : #accessing }
