@@ -47,21 +47,21 @@ AsyncFutureThreadPoolWorker >> gtShutdownActionFor: anAction [
 AsyncFutureThreadPoolWorker >> gtTelemetryEventsFor: aView [
 	<gtView>
 
-	threadPool
+	self
 		telemetryDo: #yourself
 		ifNone: [ ^ aView empty ].
 
 	^ aView list
 		title: 'Telemetry events';
 		priority: 13;
-		items: [ threadPool telemetryDo: [ :aTelemetry | aTelemetry eventsForWorker: self ] ifNone: [ #() ] ]
+		items: [ self telemetryDo: [ :aTelemetry | aTelemetry eventsForWorker: self ] ifNone: [ #() ] ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
 AsyncFutureThreadPoolWorker >> gtTelemetryTimelineFor: aView [
 	<gtView>
 
-	threadPool
+	self
 		telemetryDo: #yourself
 		ifNone: [ ^ aView empty ].
 
@@ -71,7 +71,7 @@ AsyncFutureThreadPoolWorker >> gtTelemetryTimelineFor: aView [
 		stencil: [ 
 			| allEvents eventsByPromise colors |
 			
-			allEvents := threadPool telemetryDo: [ :aTelemetry | aTelemetry eventsForWorker: self ] ifNone: [ #() ].
+			allEvents := self telemetryDo: [ :aTelemetry | aTelemetry eventsForWorker: self ] ifNone: [ #() ].
 			eventsByPromise := (allEvents groupedBy: [ :eachEvent | eachEvent promise ]) values
 				collect: [ :eachArray | AsyncFutureThreadPoolTelemetryByPromise new events: eachArray ].
 				
