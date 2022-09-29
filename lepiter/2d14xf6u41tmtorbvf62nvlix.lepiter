@@ -102,13 +102,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "veit.heller@feenk.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-09-20T11:30:26.634459-05:00"
+									"dateAndTimeString" : "2022-09-29T13:37:17.350753-05:00"
 								}
 							},
 							"uid" : {
@@ -189,7 +189,7 @@
 							},
 							"search" : "`@a listProcessor filter: GtFilterSubstring",
 							"replace" : "`@a listProcessor filterBySubstring",
-							"scope" : "searchMethods"
+							"scope" : "#(#('searchMethods' '') )"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -225,7 +225,7 @@
 							},
 							"search" : "`@a listProcessor allCandidates: `@block",
 							"replace" : "`@a listProcessor items: `@block",
-							"scope" : "searchMethods"
+							"scope" : "#(#('searchMethods' '') )"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -261,7 +261,7 @@
 							},
 							"search" : "`@a listProcessor actLogic: `@block",
 							"replace" : "`@a listProcessor itemActLogic: `@block",
-							"scope" : "searchMethods"
+							"scope" : "#(#('searchMethods' '') )"
 						}
 					]
 				},
@@ -335,7 +335,7 @@
 							},
 							"search" : "`@a listProcessor \n\t`@;cascadesBefore; \n\titemIcon: `@block; \n\t`@;cascadesAfter",
 							"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"itemIcon: `@block; \"\n\t`@;cascadesAfter",
-							"scope" : "searchMethods"
+							"scope" : "#(#('searchMethods' '') )"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -371,7 +371,7 @@
 							},
 							"search" : "`@a listProcessor \n\t`@;cascadesBefore; \n\tkeyBinding: `@b; \n\t`@;cascadesAfter",
 							"replace" : "`@a listProcessor\n\t`@;cascadesBefore; \n\t\"keyBinding: `@b; \"\n\t`@;cascadesAfter",
-							"scope" : "searchMethods"
+							"scope" : "#(#('searchMethods' '') )"
 						}
 					]
 				},
@@ -445,7 +445,7 @@
 							},
 							"search" : "^self  `{:node :dict | \n\tdict at: #variable put: node methodNode arguments first name. \n\ttrue}",
 							"replace" : "^`{:dict | RBVariableNode named: (dict at: #variable)} empty",
-							"scope" : "searchMethods"
+							"scope" : "#(#('searchMethods' '') )"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -481,7 +481,7 @@
 							},
 							"search" : "(`@a listProcessor `;cascade; `@;cascades) `{:node | \n\t(node allParents noneSatisfy: [:each | each isReturn])}",
 							"replace" : "^`@a listProcessor `;cascade; `@;cascades",
-							"scope" : "searchMethods"
+							"scope" : "#(#('searchMethods' '') )"
 						},
 						{
 							"__type" : "pharoRewrite",
@@ -517,7 +517,7 @@
 							},
 							"search" : "^(`@bool ifTrue: `@true) `{:node :dict | \n\tdict at: #variable put: node methodNode arguments first name.\n\ttrue}",
 							"replace" : "^ `@bool \n\tifTrue: `@true \n\tifFalse: [`{:dict | RBVariableNode named: (dict at: #variable)} empty]",
-							"scope" : "searchMethods"
+							"scope" : "#(#('searchMethods' '') )"
 						}
 					]
 				},
@@ -623,7 +623,7 @@
 				},
 				"search" : "`{:node :dict | node isVariable and: [\n\tnode name asString ~= 'aSearch' and: [\n\t\t| arg |\n\t\targ := node methodNode arguments first.\n\t\tdict at: #arg put: arg.\n\t\targ\n\t\t\tpropertyAt: #original\n\t\t\tifPresent: [ :original | node = original ]\n\t\t\tifAbsent: [ arg = node ]]]}",
 				"replace" : "`{:dict | \n\t| arg |\n\targ := dict at: #arg.\n\targ\n\t\tpropertyAt: #original\n\t\tifAbsent: \n\t\t\t[ arg replaceWith: \n\t\t\t\t((RBVariableNode named: 'aSearch') \n\t\t\t\t\tpropertyAt: #original put: arg; \n\t\t\t\t\tyourself) ].\n\tRBVariableNode named: 'aSearch' }",
-				"scope" : "searchMethods"
+				"scope" : "#(#('searchMethods' '') )"
 			},
 			{
 				"__type" : "textSnippet",
@@ -664,7 +664,7 @@
 							},
 							"search" : "`@a listProcessor",
 							"replace" : "`@a list",
-							"scope" : "searchMethods"
+							"scope" : "#(#('searchMethods' '') )"
 						}
 					]
 				},
