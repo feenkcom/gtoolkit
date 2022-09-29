@@ -8,7 +8,12 @@ AsyncFutureThreadPoolWorker >> gtLocalQueueFor: aView [
 		title: 'Local queue';
 		priority: 11;
 		object: [ localQueue ];
-		view: #gtItemsFor:
+		view: #gtItemsFor:;
+		actionButtonIcon: BrGlamorousVectorIcons cancel
+			tooltip: 'Cancel pending tasks'
+			action: [ :aButton :aTab |
+				localQueue itemArray do: [ :each | each cancelSoft ].
+				aTab viewContentElement phlow update ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
@@ -36,4 +41,57 @@ AsyncFutureThreadPoolWorker >> gtShutdownActionFor: anAction [
 		priority: 30;
 		icon: BrGlamorousVectorIcons shutdown;
 		action: [ self shutdown ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
+AsyncFutureThreadPoolWorker >> gtTelemetryEventsFor: aView [
+	<gtView>
+
+	threadPool
+		telemetryDo: #yourself
+		ifNone: [ ^ aView empty ].
+
+	^ aView list
+		title: 'Telemetry events';
+		priority: 13;
+		items: [ threadPool telemetryDo: [ :aTelemetry | aTelemetry eventsForWorker: self ] ifNone: [ #() ] ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
+AsyncFutureThreadPoolWorker >> gtTelemetryTimelineFor: aView [
+	<gtView>
+
+	threadPool
+		telemetryDo: #yourself
+		ifNone: [ ^ aView empty ].
+
+	^ aView explicit
+		title: 'Telemetry timeline';
+		priority: 14;
+		stencil: [ 
+			| allEvents eventsByPromise colors |
+			
+			allEvents := threadPool telemetryDo: [ :aTelemetry | aTelemetry eventsForWorker: self ] ifNone: [ #() ].
+			eventsByPromise := (allEvents groupedBy: [ :eachEvent | eachEvent promise ]) values
+				collect: [ :eachArray | AsyncFutureThreadPoolTelemetryByPromise new events: eachArray ].
+				
+			colors := Dictionary new
+				at: AsyncFutureThreadPoolTelemetryPolledEvent
+					put: (Color gray alpha: 0.25);
+				at: AsyncFutureThreadPoolTelemetryScheduledEvent
+					put: ((Color r: 92 g: 204 b: 231 range: 255) alpha: 0.2);
+				at: AsyncFutureThreadPoolTelemetryDoneEvent
+					put: (Color transparent);
+				yourself.
+			
+			GtMonitorFutureWorkerHorizontalChartStencil new
+				leftPadding: 20;
+				labelWidth: 100;
+				rowHeight: 15;
+				executions: eventsByPromise;
+				rowValuesComputation: #events;
+				startTimeComputation: #startTime;
+				endTimeComputation: #endTime;
+				colorComputation: [ :each | colors at: each class ifAbsent: [ Color red alpha: 0.2 ] ];
+				rowLabelComputation: [ :each | each promise identityHash ] ]
 ]
