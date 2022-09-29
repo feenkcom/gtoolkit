@@ -1,8 +1,25 @@
 Extension { #name : #AsyncFutureThreadPool }
 
 { #category : #'*GToolkit-Extensions' }
+AsyncFutureThreadPool >> gtEnableTelemetryActionFor: anAction [
+	<gtAction>
+	| aTelemetry |
+	
+	aTelemetry := self telemetryDo: #yourself.
+ 
+	^ anAction button
+		tooltip: 'Enable telemetry';
+		priority: 30;
+		icon: BrGlamorousVectorIcons signal;
+		action: [ self telemetryDo: #yourself ifNone: [ self telemetry: (aTelemetry := AsyncFutureThreadPoolTelemetry new) ] ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 AsyncFutureThreadPool >> gtWorkersFor: aView [
 	<gtView>
+	| aTelemetry |
+	
+	aTelemetry := self telemetryDo: #yourself ifNone: nil.
 	
 	^ aView columnedList
 		title: 'Workers';
@@ -27,5 +44,11 @@ AsyncFutureThreadPool >> gtWorkersFor: aView [
 		column: 'Busy' text: [ :each | each key isBusy ];
 		column: 'Running' text: [ :each | each key isRunning ];
 		send: [ :each | each key ];
-		actionUpdateButton
+		actionUpdateButton;
+		actionButtonIcon: BrGlamorousVectorIcons signal
+			tooltip: 'Enable telemetry'
+			action: [ self telemetryDo: #yourself ifNone: [ self telemetry: (aTelemetry := AsyncFutureThreadPoolTelemetry new) ] ];
+			actionButtonIcon: BrGlamorousVectorIcons cancel
+		tooltip: 'Reset telemetry'
+			action: [ self telemetryDo: #reset ]
 ]
