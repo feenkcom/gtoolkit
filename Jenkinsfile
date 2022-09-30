@@ -217,6 +217,9 @@ pipeline {
             }
             parallel {
                 stage('Linux') {
+                    options {
+                        timeout(time: 45, unit: "MINUTES")
+                    }
                     environment {
                         TARGET = "${LINUX_AMD64_TARGET}"
 
@@ -379,6 +382,9 @@ pipeline {
                     }
                 }
                 stage ('MacOS M1') {
+                    options {
+                        timeout(time: 45, unit: "MINUTES")
+                    }
                     environment {
                         TARGET = "${MACOS_M1_TARGET}"
                         CERT = credentials('devcertificate')
@@ -471,6 +477,9 @@ pipeline {
                     }
                 }
                 stage ('MacOS Intel') {
+                    options {
+                        timeout(time: 45, unit: "MINUTES")
+                    }
                     environment {
                         TARGET = "${MACOS_INTEL_TARGET}"
                         CERT = credentials('devcertificate')
@@ -563,6 +572,9 @@ pipeline {
                     }
                 }
                 stage('Windows') {
+                    options {
+                        timeout(time: 45, unit: "MINUTES")
+                    }
                     agent {
                         label "${WINDOWS_AMD64_TARGET}-${WINDOWS_SERVER_NAME}"
                     }
