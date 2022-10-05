@@ -144,14 +144,6 @@ GtPharoCommonSuiteMethodsCoderMediator >> subscribeToMethodCoder: aMethodCoder [
 
 	(aMethodCoder announcer hasSubscriber: self) ifTrue: [ ^ self ].
 
-	"aMethodCoder weak
-		when: GtCoderMethodAdded
-		send: #onCoderMethodAdded:
-		to: self.
-	aMethodCoder weak
-		when: GtCoderMethodRemoved
-		send: #onCoderMethodRemoved:
-		to: self."
 	aMethodCoder weak
 		when: GtCoderMethodModified
 		send: #onCoderMethodModified:
