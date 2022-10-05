@@ -19,7 +19,7 @@ BlSpaceTaskQueue >> gtTasksAtQueueFor: aView [
 
 	^ aView forward
 		title: 'Tasks At Queue';
-		priority: 2;
+		priority: 3;
 		object: [ self taskAtQueue ];
 		view: #gtItemsFor:;
 		actionUpdateButtonTooltip: 'Update task list'

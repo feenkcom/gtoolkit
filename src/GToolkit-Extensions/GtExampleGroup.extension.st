@@ -130,20 +130,19 @@ GtExampleGroup >> gtExamplesFor: aView [
 			aListView := self buildListViewFor: aView.
 			aListView
 				asElementDo: [ :anElement | 
-					| aHandler aBuilder anUpdater |
+					| aBuilder anUpdater |
 					aBuilder := [  
 						self buildButtonsContainer: aButtonsContainer listWidget: anElement ].
 					anUpdater := BrElementUpdater new
 						element: anElement;
 						action: (MessageSend receiver: aBuilder selector: #value).
 
-					aHandler := [ :anAnnouncement | anUpdater requestUpdate ].
-					anElement userData at: #exampleAnnouncementHandler_gtExamplesFor put: aHandler.
+					anElement userData at: #exampleAnnouncementHandler_gtExamplesFor put: anUpdater.
 										
 					self announcer weak
 						when: GtExamplesExecuted , GtExampleExecuted
-						send: #value:
-						to: aHandler.
+						send: #requestUpdate
+						to: anUpdater.
 					aContainer addChild: anElement.
 					self
 						buildButtonsContainer: aButtonsContainer
