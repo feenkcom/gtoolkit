@@ -14,7 +14,7 @@ BlScripter >> gtSpaceActiveTasksFor: aView [
 		actionButtonIcon: BrGlamorousVectorIcons inspect
 			label: 'Task Queue'
 			tooltip: 'Inspect space task queue'
-			action: [ :aButton | aButton phlow spawn: self space taskQueue ]
+			action: [ :aButton | aButton phlow spawnObject: self space taskQueue ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
@@ -31,5 +31,5 @@ BlScripter >> gtSpacePendingTasksFor: aView [
 		actionButtonIcon: BrGlamorousVectorIcons inspect
 			label: 'Task Queue'
 			tooltip: 'Inspect space task queue'
-			action: [ :aButton | aButton phlow spawn: self space taskQueue ]
+			action: [ :aButton | aButton phlow spawnObject: self space taskQueue ]
 ]
