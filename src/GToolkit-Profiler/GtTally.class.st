@@ -2,8 +2,6 @@ Class {
 	#name : #GtTally,
 	#superclass : #Object,
 	#instVars : [
-		'gcStats',
-		'time',
 		'class',
 		'method',
 		'tally',
@@ -54,39 +52,6 @@ GtTally >> filterCopy [
 { #category : #filtering }
 GtTally >> filterPostCopy [
 	receivers := Array new: 0.
-]
-
-{ #category : #printing }
-GtTally >> fullPrintExactOn: aStream [
-	aStream nextPutAll: '**Tree**'; cr.
-	self
-		treePrintOn: aStream
-		tabs: OrderedCollection new
-		thisTab: ''
-		total: tally
-		totalTime: time
-		tallyExact: true
-		orThreshold: nil.
-	aStream nextPut: Character newPage; cr.
-	aStream nextPutAll: '**Leaves**'; cr.
-	self leavesPrintExactOn: aStream
-]
-
-{ #category : #printing }
-GtTally >> fullPrintOn: aStream threshold: perCent [
-	| threshold |  
-	threshold := (perCent asFloat / 100 * tally) rounded.
-	aStream nextPutAll: '**Tree**'; cr.
-	self
-		rootPrintOn: aStream
-		total: tally
-		totalTime: time
-		threshold: threshold.
-	aStream nextPut: Character newPage; cr.
-	"aStream nextPutAll: '**Leaves**'; cr.
-	self
-		leavesPrintOn: aStream
-		threshold: threshold"
 ]
 
 { #category : #inspecting }
@@ -145,70 +110,53 @@ GtTally >> gtGroupedByMethodFor: aView [
 ]
 
 { #category : #inspecting }
-GtTally >> gtInspectorReportIn: composite [
-	<gtInspectorPresentationOrder: 60>
-	^ composite text
-		title: 'Report';
-		display: [ String streamContents: [:s | self report: s ] ]
-]
-
-{ #category : #inspecting }
-GtTally >> gtInspectorSourceIn: composite [
-	<gtInspectorPresentationOrder: 50>
-	^ self method ifNotNil: [
-		self method gtInspectorSourceIn: composite]
-]
-
-{ #category : #inspecting }
 GtTally >> gtMessagesTreeIn: aView [
 	<gtView>
-	
 	| methods normalizer |
 	methods := self withDeepCollect: #children.
 	normalizer := BrColorLinearNormalizer
-		inContext: methods
-		withCommand: #tally
-		lowColor: Color gray
-		highColor:
-			(Color
-				r: 216
-				g: 55
-				b: 62
-				range: 255).
-	^ (aView columnedTree)
+			inContext: methods
+			withCommand: #tally
+			lowColor: Color gray
+			highColor: (Color
+					r: 216
+					g: 55
+					b: 62
+					range: 255).
+	^ aView columnedTree
 		title: 'Tree';
 		priority: 10;
-		expandSuchThat: [ :aNode :aMessageTally | aMessageTally tally / (self tally max: 0.1) > 0.15 ];
+		expandSuchThat: [ :aNode :aMessageTally | aMessageTally tally asFloat / (self tally max: 1) > 0.15 ];
 		items: [ {self} ];
 		children: [ :each | each children ];
 		column: 'Method'
-			do:
-				[ :aColumn | 
-					aColumn
-						cellStencil:
-								[ (BrLabel new)
-										aptitude: BrGlamorousLabelAptitude new;
-										addAptitude:
-												(BrGlamorousWithContextMenuAptitude
-														content:
-															[ (BrGlamorousSimpleContextMenuContent new)
-																items:
-																		{'Gather'
-																					->
-																						[ :e | e phlow spawnObject: (self applyFilter: (GtGatherMessageTallyFilter forMethod: (e userData at: #method))) ]};
-																yourself ]) ];
-						dataBinder:
-								[ :eachLabel :each | 
-									eachLabel userData at: #method put: each method.
-									eachLabel text: (each method gtDisplayString asRopedText glamorousRegularFont foreground: (normalizer value: each)) ] ];
+			do: [ :aColumn | 
+				aColumn
+					cellStencil: [ BrLabel new
+							aptitude: BrGlamorousLabelAptitude new;
+							addAptitude: (BrGlamorousWithContextMenuAptitude
+									content: [ BrGlamorousSimpleContextMenuContent new
+											items: {'Gather'
+														-> [ :e | 
+															e phlow
+																spawnObject: (self
+																		applyFilter: (GtGatherMessageTallyFilter forMethod: (e userData at: #method))) ]};
+											yourself ]) ];
+					dataBinder: [ :eachLabel :each | 
+						eachLabel userData at: #method put: each method.
+						eachLabel
+							text: (each method gtDisplayString asRopedText glamorousRegularFont
+									foreground: (normalizer value: each)) ] ];
 		column: 'Percent'
-			text:
-				[ :each | 
-				((each tally / (self tally max: 0.1) asFloat * 100 printShowingDecimalPlaces: 1) , '%') asRopedText glamorousRegularFont
+			text: [ :each | 
+				((each tally / (self tally max: 0.1) asFloat * 100 printShowingDecimalPlaces: 1)
+					, '%') asRopedText glamorousRegularFont
 					foreground: (normalizer value: each) ]
 			width: 100;
 		column: 'Tally'
-			text: [ :each | each tally asString asRopedText glamorousRegularFont foreground: (normalizer value: each) ]
+			text: [ :each | 
+				each tally asString asRopedText glamorousRegularFont
+					foreground: (normalizer value: each) ]
 			width: 100
 ]
 
@@ -240,19 +188,8 @@ GtTally >> gtSourceFor: aView [
 		view: #gtSourceFor:
 ]
 
-{ #category : #inspecting }
-GtTally >> gtTextReportFor: aView [
-	<gtView>
-	^ aView textEditor
-		title: 'Text report';
-		aptitude: BrGlamorousCodeEditorAptitude;
-		priority: 60;
-		text: [ String streamContents: [:s | self report: s ] ]
-]
-
 { #category : #initialize }
 GtTally >> initialize [
-	time := 0.
 	tally := 0
 ]
 
@@ -260,31 +197,6 @@ GtTally >> initialize [
 GtTally >> isPrimitives [
 	"Detect pseudo node used to carry tally of local hits"
 	^ receivers isNil
-]
-
-{ #category : #printing }
-GtTally >> leavesInto: leafDict fromSender: senderTally [
-	| rcvrs |
-	rcvrs := self sonsOver: 0.
-	rcvrs isEmpty
-		ifTrue: [ self into: leafDict fromSender: senderTally ]
-		ifFalse: [ rcvrs anyOne process isNil ifTrue: [ ^ self ].
-			rcvrs
-				do: [ :node | 
-					node isPrimitives
-						ifTrue: [ node leavesInto: leafDict fromSender: senderTally ]
-						ifFalse: [ node leavesInto: leafDict fromSender: self ] ] ]
-]
-
-{ #category : #printing }
-GtTally >> leavesPrintOn: aStream threshold: threshold [
-	| dict |
-	dict := IdentityDictionary new: 100.
-	self leavesInto: dict fromSender: nil.
-	(dict asOrderedCollection
-			select: [:node | node tally > threshold])
-		asSortedCollection do: [:node |
-			node printOn: aStream total: tally totalTime: time tallyExact: false ]
 ]
 
 { #category : #accessing }
@@ -344,7 +256,6 @@ GtTally >> printOn: aStream total: total totalTime: totalTime tallyExact: isExac
 
 { #category : #accessing }
 GtTally >> process [
-
 	^ process
 ]
 
@@ -359,92 +270,9 @@ GtTally >> receivers [
 ]
 
 { #category : #printing }
-GtTally >> report: strm [ 
-	"Print a report, with cutoff percentage of each element of the tree 
-	(leaves, roots, tree), on the stream, strm."
-
-	self report: strm cutoff: 1
-]
-
-{ #category : #printing }
-GtTally >> report: strm cutoff: threshold [ 
-	tally = 0
-		ifTrue: [strm nextPutAll: ' - no tallies obtained']
-		ifFalse: 
-			[strm nextPutAll: ' - '; print: tally; nextPutAll: ' tallies, ', time printString, ' msec.'; cr; cr.
-			self fullPrintOn: strm threshold: threshold].
-		
-	time isZero ifFalse:	
-		[self reportGCStatsOn: strm].
-]
-
-{ #category : #initialize }
-GtTally >> reportGCStatsOn: str [
-	| oldSpaceEnd youngSpaceEnd memoryEnd fullGCs fullGCTime incrGCs incrGCTime tenureCount upTime rootOverflows |
-	upTime := time.
-	oldSpaceEnd			:= gcStats at: 1.
-	youngSpaceEnd		:= gcStats at: 2.
-	memoryEnd			:= gcStats at: 3.
-	fullGCs				:= gcStats at: 7.
-	fullGCTime			:= gcStats at: 8.
-	incrGCs				:= gcStats at: 9.
-	incrGCTime			:= gcStats at: 10.
-	tenureCount			:= gcStats at: 11.
-	rootOverflows		:= gcStats at: 22.
-
-	str cr.
-	str	nextPutAll: '**Memory**'; cr.
-	str	nextPutAll:	'	old			'.
-	oldSpaceEnd printWithCommasSignedOn: str. 
-	str nextPutAll: ' bytes'; cr.
-	str	nextPutAll: '	young		'.
-	(youngSpaceEnd - oldSpaceEnd) printWithCommasSignedOn: str. 
-	str  nextPutAll: ' bytes'; cr.
-	str	nextPutAll: '	used		'.
-	youngSpaceEnd printWithCommasSignedOn: str. 
-	str  nextPutAll: ' bytes'; cr.
-	str	nextPutAll: '	free		'.
-	(memoryEnd - youngSpaceEnd) printWithCommasSignedOn: str. 
-	str  nextPutAll: ' bytes'; cr.
-
-	str cr.
-	str	nextPutAll: '**GCs**'; cr.
-	str	nextPutAll: '	full			';
-		print: fullGCs; nextPutAll: ' totalling '.
-	fullGCTime printWithCommasOn: str.
-	str nextPutAll: 'ms (';
-		print: ((fullGCTime / upTime * 100) roundTo: 1.0);
-		nextPutAll: '% uptime)'.
-	fullGCs = 0 ifFalse:
-		[str	nextPutAll: ', avg '; print: ((fullGCTime / fullGCs) roundTo: 1.0); nextPutAll: 'ms'].
-	str	cr.
-	str	nextPutAll: '	incr		';
-		print: incrGCs; nextPutAll: ' totalling '.
-	incrGCTime printWithCommasOn: str.
-	str nextPutAll: 'ms (';
-		print: ((incrGCTime / upTime * 100) roundTo: 1.0);
-		nextPutAll: '% uptime)'.
-	incrGCs = 0 ifFalse:
-		[str nextPutAll:', avg '; print: ((incrGCTime / incrGCs) roundTo: 1.0); nextPutAll: 'ms'].
-	str cr.
-	str	nextPutAll: '	tenures		'.
-	tenureCount printWithCommasOn: str.
-	tenureCount = 0 ifFalse:
-		[str nextPutAll: ' (avg '; print: (incrGCs / tenureCount) asInteger; nextPutAll: ' GCs/tenure)'].
-	str	cr.
-	str	nextPutAll: '	root table	'.
-	rootOverflows printWithCommasOn: str.
-	str nextPutAll:' overflows'.
-	str cr.
-
-]
-
-{ #category : #printing }
 GtTally >> rootPrintOn: aStream total: total totalTime: totalTime threshold: threshold [
 	| groups |
-	groups := (self sonsOver: threshold)
-			groupedBy: [ :aTally | aTally process ]
-			having: [ :g | true ].
+	groups := (self sonsOver: threshold) groupedBy: [ :aTally | aTally process ].
 	groups
 		do: [ :g | 
 			| sons p |
@@ -496,48 +324,6 @@ GtTally >> sonsOver: threshold [
 			last process: process.
 			^ sons copyWith: (last primitives: hereTally) ].
 	^ sons
-]
-
-{ #category : #tallying }
-GtTally >> spyAllProcessesEvery: millisecs forMilliseconds: msecDuration [
-	| endTime |
-	endTime := Time millisecondClockValue + msecDuration.
-	^ self
-		spyAllProcessesEvery: millisecs
-		while: [ Time millisecondClockValue < endTime ]
-]
-
-{ #category : #tallying }
-GtTally >> spyAllProcessesEvery: millisecs while: aBlock [
-	^ [ | myDelay sem processes startTime timer myPriority |
-	myPriority := Processor timingPriority - 1.
-	self class: thisContext receiver class method: thisContext method.	"set up the probe"
-	processes := Process allInstances
-			select: [ :each | each priority <= myPriority ]
-			thenCollect: [ :each | each -> each suspendedContext ].
-	myDelay := Delay forMilliseconds: millisecs.
-	sem := Semaphore new.
-	gcStats := Smalltalk vm getParameters.
-	timer := [ [ myDelay wait.
-		processes
-			do: [ :each | 
-				each key suspendedContext ~= each value
-					ifTrue: [ self
-							tally: each key suspendedContext
-							in: each key
-							by: 1.
-						each value: each key suspendedContext ] ].
-		aBlock value ] whileTrue.
-		sem signal ] newProcess.
-	startTime := Time millisecondClockValue.
-	timer priority: myPriority.	"activate the probe and evaluate the block"
-	timer resume.	"activate the probe and wait for it to finish"
-	sem wait.
-	timer terminate.
-	Smalltalk vm getParameters
-		keysAndValuesDo: [ :idx :gcVal | gcVal isNumber ifTrue: [ gcStats at: idx put: gcVal - (gcStats at: idx) ] ].
-	time := Time millisecondClockValue - startTime.
-	self ] asAsyncPromise
 ]
 
 { #category : #accessing }
