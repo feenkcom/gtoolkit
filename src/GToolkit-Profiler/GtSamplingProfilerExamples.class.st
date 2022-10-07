@@ -8,6 +8,6 @@ Class {
 GtSamplingProfilerExamples >> createSpyAllOn [
 	<gtExample>
 	| tally |
-	tally := GtSamplingProfiler spyAllProcessesEvery: 1 forMilliseconds: 2000.
+	tally := GtSamplingProfiler spyAllProcessesFor: 2 seconds.
 	^ tally
 ]

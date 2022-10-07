@@ -4,34 +4,36 @@ Class {
 	#instVars : [
 		'rootTally',
 		'gcStats',
-		'time'
+		'time',
+		'timer',
+		'timerDelay'
 	],
 	#category : #'GToolkit-Profiler'
 }
 
 { #category : #accessing }
-GtSamplingProfiler class >> spyAllProcessesEvery: millisecs forMilliseconds: msecDuration [
-	^ self new spyAllProcessesEvery: millisecs forMilliseconds: msecDuration
+GtSamplingProfiler class >> spyAllProcessesDuring: aBlock [
+	^ self new spyAllProcessesDuring: aBlock
 ]
 
 { #category : #accessing }
-GtSamplingProfiler class >> spyAllProcessesEvery: millisecs while: aBlock [
-	^ self new spyAllProcessesEvery: millisecs while: aBlock
+GtSamplingProfiler class >> spyAllProcessesFor: aDuration [
+	^ self new spyAllProcessesFor: aDuration
 ]
 
 { #category : #accessing }
 GtSamplingProfiler class >> spyAllProcessesForMilliseconds: msecDuration [
-	^ self spyAllProcessesEvery: 1 forMilliseconds: msecDuration
+	^ self new spyAllProcessesForMilliseconds: msecDuration
 ]
 
 { #category : #accessing }
 GtSamplingProfiler class >> spyAllProcessesWhile: aBlock [
-	^ self spyAllProcessesEvery: 1 while: aBlock
+	^ self new spyAllProcessesWhile: aBlock
 ]
 
 { #category : #accessing }
 GtSamplingProfiler class >> spyOn: aBlock [
-	^ self new spyOn: aBlock every: 1
+	^ self new spyOn: aBlock
 ]
 
 { #category : #printing }
@@ -82,7 +84,7 @@ GtSamplingProfiler >> gtRecursionSummaryMessagesTreeIn: aView [
 	<gtView>
 	^ aView forward
 		title: 'Summarize Recursion';
-		priority: 10;
+		priority: 1;
 		object: [ rootTally ];
 		view: #gtRecursionSummaryMessagesTreeIn:
 ]
@@ -105,6 +107,17 @@ GtSamplingProfiler >> gtTextReportFor: aView [
 		aptitude: BrGlamorousCodeEditorAptitude;
 		priority: 60;
 		text: [ String streamContents: [ :s | self report: s ] ]
+]
+
+{ #category : #initialization }
+GtSamplingProfiler >> initialize [
+	super initialize.
+	timerDelay := Delay forMilliseconds: 1
+]
+
+{ #category : #testing }
+GtSamplingProfiler >> isActive [
+	^ timer notNil
 ]
 
 { #category : #printing }
@@ -214,17 +227,8 @@ GtSamplingProfiler >> reportGCStatsOn: aStream [
 ]
 
 { #category : #accessing }
-GtSamplingProfiler >> spyAllProcessesEvery: millisecs forMilliseconds: msecDuration [
-	| endTime |
-	endTime := Time millisecondClockValue + msecDuration.
-	^ self
-		spyAllProcessesEvery: millisecs
-		while: [ Time millisecondClockValue < endTime ]
-]
-
-{ #category : #accessing }
-GtSamplingProfiler >> spyAllProcessesEvery: millisecs while: aBlock [
-	| myDelay sem processes startTime timer myPriority |
+GtSamplingProfiler >> spyAllProcessesDuring: aBlock [
+	| processes startTime myPriority |
 	myPriority := Processor timingPriority - 1.
 	rootTally := GtTally new
 			class: thisContext receiver class
@@ -232,12 +236,58 @@ GtSamplingProfiler >> spyAllProcessesEvery: millisecs while: aBlock [
 	processes := Process allInstances
 			select: [ :each | each priority <= myPriority ]
 			thenCollect: [ :each | each -> each suspendedContext ].
-	myDelay := Delay forMilliseconds: millisecs.
-	sem := Semaphore new.
 	gcStats := Smalltalk vm getParameters.
 	timer := [ [ | start |
 		start := Time microsecondClockValue.
-		myDelay wait.
+		timerDelay wait.
+		processes
+			do: [ :each | 
+				each key suspendedContext ~= each value
+					ifTrue: [ rootTally
+							tally: each key suspendedContext
+							in: each key
+							by: (((Time microsecondClockValue - start) / 1000.0) rounded max: 1).
+						each value: each key suspendedContext ] ] ] repeat ] newProcess.
+	startTime := Time microsecondClockValue.
+	timer priority: myPriority.
+
+	timer resume.	"activate the probe and evaluate the block"
+
+	[ aBlock value	"in case someone doesn't pass a block" ]
+		ensure: [ timer terminate.
+			timer := nil ].
+	Smalltalk vm getParameters
+		keysAndValuesDo: [ :idx :gcVal | gcVal isNumber ifTrue: [ gcStats at: idx put: gcVal - (gcStats at: idx) ] ].
+	time := (Time microsecondClockValue - startTime) / 1000.0
+]
+
+{ #category : #accessing }
+GtSamplingProfiler >> spyAllProcessesFor: aDuration [
+	^ self spyAllProcessesForMilliseconds: aDuration asMilliSeconds
+]
+
+{ #category : #accessing }
+GtSamplingProfiler >> spyAllProcessesForMilliseconds: msecDuration [
+	| endTime |
+	endTime := Time millisecondClockValue + msecDuration.
+	^ self spyAllProcessesWhile: [ Time millisecondClockValue < endTime ]
+]
+
+{ #category : #accessing }
+GtSamplingProfiler >> spyAllProcessesWhile: aBlock [
+	| sem processes startTime myPriority |
+	myPriority := Processor timingPriority - 1.
+	rootTally := GtTally new
+			class: thisContext receiver class
+			method: thisContext method.	"set up the probe"
+	processes := Process allInstances
+			select: [ :each | each priority <= myPriority ]
+			thenCollect: [ :each | each -> each suspendedContext ].
+	sem := Semaphore new.
+	gcStats := Smalltalk vm getParameters.
+	timer := [ [ [ | start |
+		start := Time microsecondClockValue.
+		timerDelay wait.
 		processes
 			do: [ :each | 
 				each key suspendedContext ~= each value
@@ -246,33 +296,33 @@ GtSamplingProfiler >> spyAllProcessesEvery: millisecs while: aBlock [
 							in: each key
 							by: (((Time microsecondClockValue - start) / 1000.0) rounded max: 1).
 						each value: each key suspendedContext ] ].
-		aBlock value ] whileTrue.
-		sem signal ] newProcess.
+		aBlock value ] whileTrue ] ensure: [ sem signal ] ] newProcess.
 	startTime := Time microsecondClockValue.
-	timer priority: myPriority.	"activate the probe and evaluate the block"
-	timer resume.
+	timer priority: myPriority.
+
+	timer resume.	"activate the probe and evaluate the block"
 
 	^ [ sem wait.
 	timer terminate.
+	timer := nil.
 	Smalltalk vm getParameters
 		keysAndValuesDo: [ :idx :gcVal | gcVal isNumber ifTrue: [ gcStats at: idx put: gcVal - (gcStats at: idx) ] ].
-	time := Time microsecondClockValue - startTime / 1000.0.
+	time := (Time microsecondClockValue - startTime) / 1000.0.
 	self ] asAsyncPromise
 ]
 
 { #category : #accessing }
-GtSamplingProfiler >> spyOn: aBlock every: milliseconds [
-	| myDelay process startTime timer myPriority |
+GtSamplingProfiler >> spyOn: aBlock [
+	| process startTime myPriority |
 	myPriority := Processor timingPriority - 1.
 	rootTally := GtTally new
 			class: thisContext receiver class
 			method: thisContext method.
-	myDelay := Delay forMilliseconds: milliseconds.
 	gcStats := Smalltalk vm getParameters.
 	process := Processor activeProcess.
 	timer := [ [ | start |
 		start := Time microsecondClockValue.
-		myDelay wait.
+		timerDelay wait.
 		process isTerminated
 			ifTrue: [ true ]
 			ifFalse: [ rootTally
@@ -281,11 +331,12 @@ GtSamplingProfiler >> spyOn: aBlock every: milliseconds [
 					by: (((Time microsecondClockValue - start) / 1000.0) rounded max: 1).
 				false ] ] whileFalse ] newProcess.
 	startTime := Time microsecondClockValue.
-	timer priority: myPriority.	"activate the probe and evaluate the block"
-	timer resume.
+	timer priority: myPriority.
+	timer resume.	"activate the probe and evaluate the block"
 	[ aBlock value	"in case someone doesn't pass a block" ]
-		ensure: [ timer terminate ].
+		ensure: [ timer terminate.
+			timer := nil ].
 	Smalltalk vm getParameters
 		keysAndValuesDo: [ :idx :gcVal | gcVal isNumber ifTrue: [ gcStats at: idx put: gcVal - (gcStats at: idx) ] ].
-	time := Time microsecondClockValue - startTime / 1000.0
+	time := (Time microsecondClockValue - startTime) / 1000.0
 ]
