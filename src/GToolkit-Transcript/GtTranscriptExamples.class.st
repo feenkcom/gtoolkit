@@ -268,8 +268,8 @@ GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI_AndDisplayTheUI [
 		aStep wait forEmptySpaceTaskQueue.
 		aStep check
 			label: 'Check UI Transcript Content';
-			childrenCount: 9;
-			onBreadthFirstChildOfClass: BrTextEditorSegmentElement ].
+			childrenCount: 1;
+			onBreadthFirstChildOfClass: BrTextEditorParagraphElement ].
 	aScripter syncContinue.
 	^ aScripter
 ]
