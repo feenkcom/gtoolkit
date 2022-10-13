@@ -54,6 +54,40 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-10-13T20:42:51.107665+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-10-13T20:42:51.109041+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gYUJnVCnDQCQZ0krABWG8Q=="
+							},
+							"code" : "rootDirectory := 'whitehall' asFileReference"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
 								"emailString" : "<unknown>"
 							},
 							"createTime" : {
@@ -65,20 +99,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "veit.heller@feenk.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-06-05T10:04:12.85145+02:00"
+									"dateAndTimeString" : "2022-10-13T20:43:14.642631+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "E4H+bP6bDQCQ9r4qBRaJSg=="
 							},
-							"code" : "rootDirectory := 'whitehall' asFileReference ensureDeleteAll.\rrepository := IceRepositoryCreator new\n  remote: (IceGitRemote url: 'git@github.com:alphagov/whitehall.git');\n  location: rootDirectory;\n  createRepository.\rrootDirectory"
+							"code" : "rootDirectory ensureDeleteAll.\rrepository := IceRepositoryCreator\r\t\tfromUrl: 'git@github.com:alphagov/whitehall.git'\r\t\tto: rootDirectory.\rrootDirectory"
 						}
 					]
 				},
