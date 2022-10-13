@@ -17,6 +17,40 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-10-13T10:39:45.214641+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-10-13T10:39:57.222224+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "0ZwwMEinDQCQcfHnDjYNBg=="
+							},
+							"code" : "rootDirectory := 'zooniverse' asFileReference."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
 								"emailString" : "tudor@tudorgirba.com"
 							},
 							"createTime" : {
@@ -28,20 +62,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "veit.heller@feenk.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-23T08:11:59.030263+02:00"
+									"dateAndTimeString" : "2022-10-13T10:43:05.877144+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "X++EgAmGAAAAAAAAAAAAAA=="
 							},
-							"code" : "rootDirectory := 'zooniverse' asFileReference ensureDeleteAll.\rrepository := IceRepositoryCreator new\n  remote: (IceGitRemote url: 'git@github.com:zooniverse/mobile.git');\n  location: rootDirectory;\n  createRepository"
+							"code" : "rootDirectory ensureDeleteAll.\rrepository := IceRepositoryCreator\r\t\tfromUrl: 'git@github.com:zooniverse/mobile.git'\r\t\tto: rootDirectory"
 						}
 					]
 				},
