@@ -64,7 +64,7 @@ GtTranscriptNextBuilder >> expanded: aBlock [
 		stencil: aBlock.
 	
 	self attributes: {
-		BrGlamorousTrangleExpanderTextAttribute new
+		BrGlamorousTriangleExpanderTextAttribute new
 			isExpanded: true;
 			createdAttributes: { adornmentAttribute };
 			attributesCreatingBlock: [
@@ -77,7 +77,7 @@ GtTranscriptNextBuilder >> expanded: aBlock [
 { #category : #attributes }
 GtTranscriptNextBuilder >> expanding: aBlock [
 	self attribute: (
-		BrGlamorousTrangleExpanderTextAttribute new 
+		BrGlamorousTriangleExpanderTextAttribute new 
 			attributesCreatingBlock: [
 				BrTextAdornmentDynamicAttribute new 	
 					beAppend;
@@ -180,6 +180,6 @@ GtTranscriptNextBuilder >> transcript: aTranscript [
 { #category : #streaming }
 GtTranscriptNextBuilder >> with: aBlock [
 	| previewAttribute |
-	previewAttribute := BrGlamorousTrangleExpanderTextAttribute new attributesCreatingBlock: aBlock.
+	previewAttribute := BrGlamorousTriangleExpanderTextAttribute new attributesCreatingBlock: aBlock.
 	attributes add: previewAttribute
 ]
