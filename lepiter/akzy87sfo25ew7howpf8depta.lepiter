@@ -163,6 +163,40 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-19T22:20:30.255175+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-19T22:20:30.257189+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Y0RRrcqnDQCfSQaxANEkOQ=="
+				},
+				"code" : "url := 'https://api.github.com/orgs/feenkcom'."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "<unknown>"
 				},
 				"createTime" : {
@@ -174,20 +208,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T16:42:17.69046+02:00"
+						"dateAndTimeString" : "2022-10-19T22:20:41.691234+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "2ZiNXSRmAAAAAAAAAAAAAA=="
 				},
-				"code" : "json := ZnClient new get: 'https://api.github.com/orgs/feenkcom'"
+				"code" : "json := ZnClient new get: url."
 			},
 			{
 				"__type" : "textSnippet",
@@ -316,20 +350,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-28T06:00:40.654936+02:00"
+						"dateAndTimeString" : "2022-10-19T22:20:45.576132+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Kh4mWdInAAAAAAAAAAAAAA=="
 				},
-				"code" : "GhOrganization new rawData: dictionary"
+				"code" : "GhOrganization new rawData: dictionary."
 			},
 			{
 				"__type" : "textSnippet",
