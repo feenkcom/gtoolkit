@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-11T14:37:33.320099+02:00"
+						"dateAndTimeString" : "2022-11-02T21:43:24.82438+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[Spotter]] is a versatile search infrastructure that allows you to create custom searches. This happens in methods annotated with `<gtSearch>`. Of course, when you create such processors, it's possible to introduce errors that you might want to debug. The issue is that by default, Spotter swallows all exceptions."
+				"string" : "[[Spotter]] is a versatile search infrastructure that allows you to create custom searches. This happens in methods annotated with `<gtSearch>`. Of course, when you create such processors, it's possible to introduce errors that you might want to debug."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-11T14:37:36.934084+02:00"
+						"dateAndTimeString" : "2022-11-02T21:43:32.936349+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-11T14:41:34.983353+02:00"
+						"dateAndTimeString" : "2022-11-02T21:44:05.3679+01:00"
 					}
 				},
 				"uid" : {
@@ -76,23 +76,23 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "But there is a way out: simply install a debugging exception handler. For example try this:"
+				"string" : "When that happens you can spawn a debugger right from spotter as seen here:"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-11T14:04:01.762829+02:00"
+						"dateAndTimeString" : "2022-11-02T21:43:54.483696+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,126 +103,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-11T14:39:20.6895+02:00"
+						"dateAndTimeString" : "2022-11-02T21:43:54.483696+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ZxK8sleiDQCV8VutDN+glQ=="
+					"uidString" : "EVjLouSoDQCsF3jYCi1s5w=="
 				},
-				"code" : "spotter := GtSpotter new.\rspotter beDebugging.\rstep := GtSpotterStep new\r\tspotter: spotter;\r\torigin: GtSpotterClassWithExceptionInProcessor new;\r\tyourself.\rstep processContext: (step newContextForQuery: 'ABC')"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-11T14:41:47.78045+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-11T14:41:47.78045+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "5bvMOViiDQCXpw5qDN+glQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "First, we use {{gtMethod:GtSpotter>>beDebugging}} to set the exception handler."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-11T14:43:43.63005+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-11T14:43:43.63005+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "0W+0QFiiDQCXqIHJDN+glQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Second, we set an origin object that contains a processor with an error (in {{gtMethod:GtSpotterClassWithExceptionInProcessor>>#gtMockProcessorFor:}})."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-11T14:39:22.638803+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-11T14:40:49.011093+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "pYMeMViiDQCXnwnyDN+glQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "If you execute the above, you get a debugger. There are two parts that are relevant here."
+				"exampleSelector" : "elementOnStartWithExceptionsInSearch",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "GtSpotterByScripterExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			},
 			{
 				"__type" : "textSnippet",
@@ -249,7 +143,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-11T14:47:04.289086+02:00"
+						"dateAndTimeString" : "2022-11-02T21:44:15.77518+01:00"
 					}
 				},
 				"uid" : {
@@ -259,7 +153,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Of course, this is an example made specifically for testing the ability to raise exceptions. You can see more such examples in {{gtClass:GtSpotterExceptionHandlingExamples}}. If, for example, you want to debug a possible error, or even a halt in a search method in {{gtClass:GtWorldSpotterSearchStart}}, you would need to pass an instance of it as an origin."
+				"string" : ""
 			}
 		]
 	},
