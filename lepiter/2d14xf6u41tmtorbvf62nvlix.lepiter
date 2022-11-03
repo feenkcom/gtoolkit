@@ -556,7 +556,44 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoRewrite",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-21T12:38:01.611942+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-21T12:38:01.611942+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4MqoRo+lDQCnfWqxA2IO4Q=="
+							},
+							"search" : "`{:node :dict | node isVariable and: [\n\tnode name asString ~= 'aSearch' and: [\n\t\t| arg |\n\t\targ := node methodNode arguments first.\n\t\tdict at: #arg put: arg.\n\t\targ\n\t\t\tpropertyAt: #original\n\t\t\tifPresent: [ :original | node = original ]\n\t\t\tifAbsent: [ arg = node ]]]}",
+							"replace" : "`{:dict | \n\t| arg |\n\targ := dict at: #arg.\n\targ\n\t\tpropertyAt: #original\n\t\tifAbsent: \n\t\t\t[ arg replaceWith: \n\t\t\t\t((RBVariableNode named: 'aSearch') \n\t\t\t\t\tpropertyAt: #original put: arg; \n\t\t\t\t\tyourself) ].\n\tRBVariableNode named: 'aSearch' }",
+							"scope" : "#(#('searchMethods' '') )"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -588,42 +625,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "# Rename aStep argument to aSearch"
-			},
-			{
-				"__type" : "pharoRewrite",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-21T12:38:01.611942+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-21T12:38:01.611942+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "4MqoRo+lDQCnfWqxA2IO4Q=="
-				},
-				"search" : "`{:node :dict | node isVariable and: [\n\tnode name asString ~= 'aSearch' and: [\n\t\t| arg |\n\t\targ := node methodNode arguments first.\n\t\tdict at: #arg put: arg.\n\t\targ\n\t\t\tpropertyAt: #original\n\t\t\tifPresent: [ :original | node = original ]\n\t\t\tifAbsent: [ arg = node ]]]}",
-				"replace" : "`{:dict | \n\t| arg |\n\targ := dict at: #arg.\n\targ\n\t\tpropertyAt: #original\n\t\tifAbsent: \n\t\t\t[ arg replaceWith: \n\t\t\t\t((RBVariableNode named: 'aSearch') \n\t\t\t\t\tpropertyAt: #original put: arg; \n\t\t\t\t\tyourself) ].\n\tRBVariableNode named: 'aSearch' }",
-				"scope" : "#(#('searchMethods' '') )"
 			},
 			{
 				"__type" : "textSnippet",
