@@ -9,7 +9,7 @@ Class {
 
 { #category : #'private - elements' }
 GtMonitorSystemInfoElement >> buildGlutinEventLoopInfo [
-	| anEventLoop |
+	| anEventFetcher |
 
 	self space hasHostSpace
 		ifFalse: [ ^ BlElement new size: 0@0 ].
@@ -18,13 +18,13 @@ GtMonitorSystemInfoElement >> buildGlutinEventLoopInfo [
 		at: #RustWindowingEventFetcher
 		ifAbsent: [ ^ BlElement new size: 0@0 ].
 
-	anEventLoop := (self class environment at: #RustWindowingEventFetcher) default eventLoop.
+	anEventFetcher := (self class environment at: #RustWindowingEventFetcher) default.
 
 	^ self buildSectionContainer
-		addChild: (self buildSectionLabelNamed: 'System');
+		addChild: (self buildSectionLabelNamed: 'Event Loop');
 		addChild: (self
-			buildPropertyButtonNamed: anEventLoop type item
-			spawn: [ self phlow spawnObject: anEventLoop ])
+			buildPropertyButtonNamed: anEventFetcher eventLoopType item
+			spawn: [ self phlow spawnObject: anEventFetcher ])
 ]
 
 { #category : #'private - instance creation' }
@@ -99,8 +99,8 @@ GtMonitorSystemInfoElement >> initialize [
 GtMonitorSystemInfoElement >> initializeSystemInfo [
 	infos removeChildren.
 	
-	"infos addChild: self buildGlutinEventLoopInfo.
-	infos addChild: self buildSkiaCompositorsInfo."
+	infos addChild: self buildGlutinEventLoopInfo.
+	"infos addChild: self buildSkiaCompositorsInfo."
 ]
 
 { #category : #'private - elements' }
