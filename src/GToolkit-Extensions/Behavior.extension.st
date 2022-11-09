@@ -69,7 +69,18 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 							vFitContent;
 							background: Color white;
 							padding: (BlInsets all: 5);
-							addAptitude: BrGlamorousFocusableShadowAptitude new ];
+							addAptitude: BrGlamorousFocusableShadowAptitude new;
+							when: GtPhlowObjectToSpawn
+								do: [ :aSpawnEvent | 
+									aSpawnEvent consumed: true.
+									aButton
+										fireEvent: (GtPhlowObjectToSpawn new
+												previousSpawnEvent: aSpawnEvent;
+												tool: aSpawnEvent tool;
+												sourceElement: aSpawnEvent currentTarget;
+												spawnDestination: aSpawnEvent spawnDestination;
+												in: [ :anNewEvent | anNewEvent propertyAt: #spawnContainer put: aSpawnEvent currentTarget ];
+												yourself) ] ];
 					name: GtPharoBehaviorCoder addNewMethodButtonName ].
 
 	(aMethodsCoder codeGeneratorsAvailableFor: aMethodsCoderViewModel)
