@@ -18,6 +18,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-12T21:42:38.815851+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-12T21:42:38.815851+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "h3iyyK2pDQCR0Ws3ACNusg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "GraphQL offers an extensible way to work with remote models."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2022-11-09T08:50:22.715505+01:00"
 					}
 				},
@@ -29,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-09T09:21:33.406524+01:00"
+						"dateAndTimeString" : "2022-11-12T21:42:38.817496+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "GraphQL offers an extensible way to work with remote models. Let's consider the GitHub GraphQL schema. You can browse the schema in the browser here:[Objects](https://docs.github.com/en/graphql/reference/objects), but that is far from the rest of the development environment."
+				"string" : "You can browse the schema in the browser here:[Objects](https://docs.github.com/en/graphql/reference/objects), but that is far from the rest of the development environment."
 			},
 			{
 				"__type" : "textSnippet",
@@ -108,14 +145,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-09T08:06:18.154464+01:00"
+									"dateAndTimeString" : "2022-11-12T21:41:52.440447+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "tDmK/2WpDQCewlRQD5MB7Q=="
 							},
-							"code" : "schema := (ZnClient new\r\t\tget: 'https://docs.github.com/public/schema.docs.graphql') asString.\r'github-schema.graphql' asFileReference\r\twriteStreamDo: [ :s | s nextPutAll: schema ];\r\tyourself"
+							"code" : "aContext := GtGQLContext new\n\t\turl: 'https://api.github.com/graphql';\n\t\tbearerToken: (FileLocator home / '.secrets' / 'home-github.txt') contents;\n\t\tbuildSchema"
 						}
 					]
 				},
@@ -138,7 +175,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-09T10:56:30.428357+01:00"
+						"dateAndTimeString" : "2022-11-12T21:50:48.005051+01:00"
 					}
 				},
 				"uid" : {
@@ -148,7 +185,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First, we get the schema:"
+				"string" : "First, we get the schema and construct a local model of it that we store in a context variable. For example, here we take the [schema from GitHub](https://api.github.com/graphql). Besides the URL we also need to specify the API access key. In this example, it is stores in `.secrets` in the home directory:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -164,7 +201,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-09T10:56:10.57203+01:00"
+						"dateAndTimeString" : "2022-11-12T21:50:55.685728+01:00"
 					}
 				},
 				"editEmail" : {
@@ -175,20 +212,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-09T10:56:56.047003+01:00"
+						"dateAndTimeString" : "2022-11-12T21:51:20.236314+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "dhvpZmipDQCOlAzbD5MB7Q=="
+					"uidString" : "8DA45q2pDQCR2lOCACNusg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "And then we parse it and populate a model that we can browse in the inspector:"
+				"string" : "Inspecting the resulting context offers a way to navigate and learn about the schema."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -201,7 +238,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-09T08:05:56.938527+01:00"
+						"dateAndTimeString" : "2022-11-12T21:44:00.444253+01:00"
 					}
 				},
 				"editEmail" : {
@@ -212,14 +249,90 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-09T10:56:18.913463+01:00"
+						"dateAndTimeString" : "2022-11-12T21:51:30.028541+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "SA9vBmapDQCexsh6D5MB7Q=="
+					"uidString" : "IAKJza2pDQCR2G9gACNusg=="
 				},
-				"code" : "parsedSchema := GraphQLParser parse: schema.\rGtGQLSchema new import: parsedSchema."
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Of course, we want to use GraphQL for actually querying data. For this we can use the dedicated snippet as below. The snippet needs to be specified the GraphQL context. This happens through the dropdown from which you can point to the variable from the current page that holds that context object. In our case it is `aContext`."
+			},
+			{
+				"__type" : "GraphQL",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-12T21:51:41.958624+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-12T21:51:41.958624+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BjIS6a2pDQCR3I4HACNusg=="
+				},
+				"operation" : "query Repository($ownername: String!, $name: String!) {\n\trepository(owner: $ownername, name: $name) {\n\t\turl\n\t\tdescription\n\t}\n}",
+				"input" : "{\n\t\"ownername\": \"feenkcom\",\n\t\"name\": \"gtoolkit\"\n}",
+				"context" : "aContext"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-12T22:24:03.706074+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-12T22:24:38.00942+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dhvpZmipDQCOlAzbD5MB7Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Notice how the snippet offers completion. This is based on the schema, like expected from a typical GraphQL editor."
 			}
 		]
 	},
@@ -242,12 +355,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-11-09T07:59:25.54704+01:00"
+			"dateAndTimeString" : "2022-11-11T23:01:35.619687+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Browsing GraphQL: The GitHub GraphQL Schema"
+		"title" : "Exploring GitHub through GraphQL "
 	},
 	"uid" : {
 		"__type" : "uuid",
