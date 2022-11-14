@@ -479,7 +479,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-09T07:59:25.551263+01:00"
+									"dateAndTimeString" : "2022-11-11T23:01:35.626825+01:00"
 								}
 							},
 							"uid" : {
@@ -489,7 +489,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Browsing GraphQL: The GitHub GraphQL Schema]]"
+							"string" : "[[Exploring GitHub through GraphQL ]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -4256,7 +4256,45 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-11-14T09:30:38.615129+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "veit.heller@feenk.com"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-11-14T11:46:38.442514+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "c3RjysupDQCLRELfClHgtg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "[[Running Checks as part of the development cycle]] "
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
