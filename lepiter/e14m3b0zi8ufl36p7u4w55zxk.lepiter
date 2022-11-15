@@ -145,14 +145,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-12T21:41:52.440447+01:00"
+									"dateAndTimeString" : "2022-11-15T13:36:20.514531+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "tDmK/2WpDQCewlRQD5MB7Q=="
 							},
-							"code" : "aContext := GtGQLContext new\n\t\turl: 'https://api.github.com/graphql';\n\t\tbearerToken: (FileLocator home / '.secrets' / 'home-github.txt') contents;\n\t\tbuildSchema"
+							"code" : "aContext := GtGQLContext new\n\t\turl: 'https://api.github.com/graphql';\n\t\tbearerToken: (FileLocator home / '.secrets' / 'home-github.txt') contents trimBoth;\n\t\tbuildSchema"
 						}
 					]
 				},
@@ -295,7 +295,8 @@
 				},
 				"operation" : "query Repository($ownername: String!, $name: String!) {\n\trepository(owner: $ownername, name: $name) {\n\t\turl\n\t\tdescription\n\t}\n}",
 				"input" : "{\n\t\"ownername\": \"feenkcom\",\n\t\"name\": \"gtoolkit\"\n}",
-				"context" : "aContext"
+				"context" : "aContext",
+				"resultVariableName" : ""
 			},
 			{
 				"__type" : "textSnippet",
