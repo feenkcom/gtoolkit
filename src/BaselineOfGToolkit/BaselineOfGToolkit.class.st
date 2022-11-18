@@ -148,7 +148,7 @@ BaselineOfGToolkit >> baseline: spec [
 					 'GToolkitConstrainer' 'GToolkit4Git' 'GToolkitVisualizerPhlow' 'GToolkitReleaser'
 					 'GToolkit4XMLSupport' 'GToolkit-DependencyAnalyzer' 'GToolkit-Docs'
 					 'GToolkit-Monitor' 'GToolkit-Profiler' 'GToolkit-Constraints'
-					 'GToolkit-SceneDriller' 'GToolkit-World' 'GToolkit-Setup'). ];
+					 'GToolkit-SceneDriller' 'GToolkit-World' 'GToolkit-Setup' 'GToolkit4GraphQL'). ];
 			package: 'GToolkit-Docs' with: [
 				spec requires: #('GToolkitCoder' 'GToolkit-World'). ];
 			package: 'GToolkit-Monitor' with: [
