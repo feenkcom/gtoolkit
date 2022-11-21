@@ -293,8 +293,8 @@
 					"__type" : "uid",
 					"uidString" : "BjIS6a2pDQCR3I4HACNusg=="
 				},
-				"operation" : "query Repository($ownername: String!, $name: String!) {\n\trepository(owner: $ownername, name: $name) {\n\t\turl\n\t\tdescription\n\t}\n}",
-				"input" : "{\n\t\"ownername\": \"feenkcom\",\n\t\"name\": \"gtoolkit\"\n}",
+				"operation" : "query Repository($ownername: String!, $reponame: String!) {\n\trepository(owner: $ownername, name: $reponame) {\n\t\turl\n\t\tdescription\n\t}\n}",
+				"input" : "{\n\t\"ownername\": \"feenkcom\",\n\t\"reponame\": \"gtoolkit\"\n}",
 				"context" : "aContext",
 				"resultVariableName" : ""
 			},
@@ -545,14 +545,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-17T17:15:45.872616+01:00"
+						"dateAndTimeString" : "2022-11-19T21:39:37.818816+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "c1TWcw6qDQC71F7gDaKgQw=="
 				},
-				"code" : "repositoriesQuery paginator\n\tcursorInputName: #after;\n\tconnectorPath: #(organization repositories);\n\titemsName: #edges;\n\tcollect: [ :each | each at: #node ] "
+				"code" : "repositoriesQuery paginator\n\tcursorInputName: #after;\n\tconnectorPath: #(organization repositories);\n\titemsName: #edges\";\n\tcollect: [ :each | each at: #node ] \""
 			},
 			{
 				"__type" : "textSnippet",
@@ -590,6 +590,188 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Inspecting the above script shows an inspector in which the repositories are loaded in batches of `5`. Scrolling through the list prompts the paginator to load more."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-21T16:15:25.875331+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-21T16:15:49.582319+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "usf9Ql6qDQCcOMaZADV/mA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Paginating through repositories without specifying pageInfo"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-21T16:15:56.688664+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-21T16:17:01.368481+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uBLdRF6qDQCcOp9SADV/mA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In the previous example, the query had the pageInfo specified explicitly. However, that is optional. The paginator will infer and inject the missing part. Try it:"
+			},
+			{
+				"__type" : "GraphQL",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-21T16:14:14.742361+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-21T16:14:14.742361+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "e5HQPl6qDQCcNCLnADV/mA=="
+				},
+				"operation" : "query Repositories($count: Int!, $login: String!, $after: String, $privacy: RepositoryPrivacy) {\n\torganization (login: $login) {\n\t\tname\n\t\turl\n\t\trepositories(first: $count, after: $after, privacy: $privacy) {\n\t\t\tedges {\n\t\t\t\tnode {\n\t\t\t\t\tname\n\t\t\t\t\turl\n\t\t\t\t\tforks {\n\t\t\t\t\t\ttotalCount } } } } } }",
+				"input" : "{ \n\t\"count\" : 5,\n\t\"login\" : \"feenkcom\", \n\t\"after\" : null, \n\t\"privacy\" : \"PUBLIC\" }",
+				"context" : "aContext",
+				"resultVariableName" : "repositoriesQueryWithoutPageInfo"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-21T16:17:13.65855+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-21T16:17:24.288282+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "E1YTSV6qDQCcPF1nADV/mA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Now, inspect the paginator and check the `Future Query` view:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-21T16:14:56.756526+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "veit.heller@feenk.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-21T19:50:05.837625+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "W6dRQV6qDQCcNoXOADV/mA=="
+				},
+				"code" : "repositoriesQueryWithoutPageInfo paginator\n\tcursorInputName: #after;\n\tconnectorPath: #(organization repositories);\n\titemsName: #edges"
 			}
 		]
 	},
