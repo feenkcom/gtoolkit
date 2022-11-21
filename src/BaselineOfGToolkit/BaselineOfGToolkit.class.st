@@ -137,6 +137,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/lepiter:main/src' ];
 			baseline: 'GToolkit4Magritte' with: [
 				spec repository: 'github://feenkcom/gt4magritte:main/src' ];
+			baseline: 'GToolkit4OpenAPI' with: [
+				spec repository: 'github://feenkcom/gt4openapi:main/src' ];
 			baseline: 'RBFormatter' with: [
 				spec repository: 'github://j-brant/RBFormatter/src' ].
 				
