@@ -241,43 +241,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-09T09:21:34.367915+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T18:18:50.265364-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "cbjYFGepDQCeziNVD5MB7Q=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2022-11-22T18:20:45.84089-05:00"
 					}
 				},
@@ -400,14 +363,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T11:39:31.233287-05:00"
+						"dateAndTimeString" : "2022-11-27T16:17:27.244401+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "LkdrjHOqDQCdtW+JC1RiEA=="
 				},
-				"code" : "githubAccessKey := FileLocator home / '.secrets' / 'home-github.txt'"
+				"code" : "githubAccessKeyFile := FileLocator home / '.secrets' / 'home-github.txt'.\rgithubAccessKey := githubAccessKeyFile contents trimBoth"
 			},
 			{
 				"__type" : "textSnippet",
@@ -445,43 +408,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Create a new empty file in this spot if it’s not there."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:10:22.267164-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:10:22.267164-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "VvtLNH2qDQCeTphmC1RiEA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -582,14 +508,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T18:36:27.364614-05:00"
+						"dateAndTimeString" : "2022-11-27T16:17:30.713992+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "tDmK/2WpDQCewlRQD5MB7Q=="
 				},
-				"code" : "aContext := GtGQLContext new\r\t\turl: 'https://api.github.com/graphql';\r\t\tbearerToken: githubAccessKey contents trimBoth;\r\t\tbuildSchema"
+				"code" : "aContext := GtGQLContext new\r\t\turl: 'https://api.github.com/graphql';\r\t\tbearerToken: githubAccessKey;\r\t\tbuildSchema"
 			},
 			{
 				"__type" : "textSnippet",
@@ -701,43 +627,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Inspecting the resulting context offers a way to navigate and learn about the schema. If you get an error back, take a look at the `aResponse` object to see what GitHub is telling you."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:10:28.24853-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:10:28.24853-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "UECnNH2qDQCeT3SrC1RiEA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -923,43 +812,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Notice how the snippet offers completion based on the schema."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:10:59.990356-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:10:59.990356-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "gpeLNn2qDQCeUf5KC1RiEA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
 			},
 			{
 				"__type" : "textSnippet",
