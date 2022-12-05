@@ -29,5 +29,6 @@ GtSmaCCParserStyler >> gtStylerRulesFor: aView [
 					ifFalse: [ aText foreground: BrGlamorousColors disabledButtonTextColor ].
 				aText ]
 			width: 130;
-		send: [ :aRule | aRule asStyleRulesSendWithParserClass: self parserClass ]
+		send: [ :aRule | aRule asStyleRulesSendWithParserClass: self parserClass ];
+		actionUpdateButton
 ]

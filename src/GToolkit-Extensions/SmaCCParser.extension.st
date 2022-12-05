@@ -24,5 +24,6 @@ SmaCCParser class >> gtStylersFor: aView [
 		title: 'Stylers';
 		items: [ self gtStylers ];
 		column: 'Name' text: #yourself;
-		column: 'Number of Rules' text: [ :aStyler | aStyler stylerRules size ]
+		column: 'Number of Rules' text: [ :aStyler | aStyler stylerRules size ];
+		actionUpdateButton
 ]
