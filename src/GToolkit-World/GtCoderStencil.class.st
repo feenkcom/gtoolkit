@@ -1,17 +1,17 @@
 Class {
 	#name : #GtCoderStencil,
 	#superclass : #GtToolStencil,
-	#category : 'GToolkit-World-Stencils'
+	#category : #'GToolkit-World-Stencils'
 }
 
 { #category : #converting }
 GtCoderStencil >> asPreviewElement [
-	^ GtCoder new asElement
+	^ GtPhlowCoderView new asElement
 ]
 
 { #category : #'api - instantiation' }
 GtCoderStencil >> create [
-	^ GtCoder new createInPager maximized.
+	^ GtPhlowCoderView new asElement createInPager maximized.
 ]
 
 { #category : #accessing }
