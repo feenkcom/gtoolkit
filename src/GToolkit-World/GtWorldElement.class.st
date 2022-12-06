@@ -179,14 +179,18 @@ GtWorldElement >> newSpotterButton [
 			aSpotterElement 
 				when: GtSpotterResizedEvent 
 				do: [ :anEvent | self class worldSpotterSize: anEvent target extent ] ];
+		actOn: [ :anAnnouncement :aRawObject :aButton |
+			anAnnouncement beActed.
+			aButton phlow spawnTool: anAnnouncement toolToSend ];
 		asElement.
 	spotterDropdown aptitude - BrGlamorousButtonExteriorAptitude.
 	spotterDropdown
 		when: GtPhlowObjectToSpawn
 		do: [ :anEvent |
 			anEvent consumed: true.
-			anEvent object gtSpotterActDefaultFrom: self ].
-	
+			
+			anEvent object gtSpotterActDefaultFrom: spotterDropdown ].
+
 	^ spotterDropdown
 ]
 

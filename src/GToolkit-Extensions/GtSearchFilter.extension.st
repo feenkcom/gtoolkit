@@ -7,20 +7,6 @@ GtSearchFilter >> children [
 ]
 
 { #category : #'*GToolkit-Extensions' }
-GtSearchFilter >> gtCodeStructureFor: aView [
-	"<gtView>"
-
-	^ aView columnedTree
-		  title: 'Code Structure';
-		  priority: 11;
-		  items: [ self methodPackages ];
-		  children: #gtCodeStructureChildren;
-		  expandUpTo: 1;
-		  column: 'Name' text: #gtCodeStructureName;
-		  send: #gtFilter
-]
-
-{ #category : #'*GToolkit-Extensions' }
 GtSearchFilter class >> gtHierarchyFor: aView [
 	<gtView>
 	<gtClassView>
