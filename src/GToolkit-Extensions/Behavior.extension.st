@@ -97,7 +97,26 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 		actionStencil: [ :aBrTab | GtPharoCoderUIUtility newExamplesDropdownButtonForViewModel: anExampleViewModel ];
 		actionStencil: [ :aBrTab | GtPharoCoderUIUtility newTestsDropdownButtonForViewModel: aTestSuiteViewModel ];
 		stencil: [ GtPharoStreamingMethodsCoderElement new
-				streamingCodersViewModel: aMethodsCoderViewModel ]
+				streamingCodersViewModel: aMethodsCoderViewModel ];
+		actionStencil: [ :aButton | 
+				GtSpotterDropdownButtonStencil new
+					object: self;
+					tooltip: 'Search Code';
+					actOn: [ :anActOnEvent :anItem :theButton | 
+						| acted |
+						acted := false.
+						(anItem isKindOf: RPackage)
+							ifTrue: [ self navigationModel selectPackage: anItem.
+								acted := true ].
+						(anItem isKindOf: ClassDescription)
+							ifTrue: [ self navigationModel selectClass: anItem.
+								acted := true ].
+						(anItem isKindOf: CompiledMethod)
+							ifTrue: [ self navigationModel selectMethod: anItem.
+								acted := true ].
+						acted ifTrue: [ anActOnEvent beActed ] ];
+					asElement ]
+			tooltip: 'Search Code'
 ]
 
 { #category : #'*GToolkit-Extensions' }
