@@ -65,13 +65,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "veit.heller@feenk.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:23:45.802289+02:00"
+									"dateAndTimeString" : "2022-12-08T10:17:43.963433+01:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We start by creating a live instance."
+							"string" : "We start by inspecting a live instance."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -136,13 +136,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "veit.heller@feenk.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:24:21.914521+02:00"
+									"dateAndTimeString" : "2022-12-08T10:17:49.08233+01:00"
 								}
 							},
 							"uid" : {
@@ -152,7 +152,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We can interact with it programatically."
+							"string" : "We can interact with it programatically. *(NB: Just evaluate the snippet instead of inspecting the result, to see the effect on the game.)* "
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -173,13 +173,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "veit.heller@feenk.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:20:47.719678+02:00"
+									"dateAndTimeString" : "2022-12-08T10:17:37.843784+01:00"
 								}
 							},
 							"uid" : {
@@ -319,13 +319,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "veit.heller@feenk.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:28:17.320755+02:00"
+									"dateAndTimeString" : "2022-12-08T10:16:46.027888+01:00"
 								}
 							},
 							"uid" : {
@@ -335,7 +335,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We roll the die or move as required:"
+							"string" : "We roll the die or move as required: *(again, just evaluate the snippets)* "
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -641,13 +641,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "<unknown>"
+								"emailString" : "veit.heller@feenk.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-06T16:20:47.721927+02:00"
+									"dateAndTimeString" : "2022-12-08T10:21:19.003+01:00"
 								}
 							},
 							"uid" : {
@@ -657,7 +657,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now we can use it to play."
+							"string" : "Now we can use it to play. Inspect this, and then evaluate the autoplay snippet:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -837,6 +837,40 @@
 								"__type" : "textStyle"
 							},
 							"string" : "(We add `self isOver ifTrue: [ ^ self ].` at the start of the loop.)"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-12-08T10:20:34.836255+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-12-08T10:20:49.116883+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ON9PSa+rDQCXwDyiA6e8oQ=="
+							},
+							"code" : "GtLudoGame compile: 'autoPlay: numberOfMoves\n\t(1 to: numberOfMoves) do: [ :n | \r\t\tself isOver ifTrue: [ ^ self ].\n\t\tself playerToRoll ifTrue: [ self die roll ].\n\t\tself playerToMove ifTrue: [ \n\t\t\tself moveTokenNamed: self tokensToMove atRandom name ] ]'"
 						},
 						{
 							"__type" : "textSnippet",
