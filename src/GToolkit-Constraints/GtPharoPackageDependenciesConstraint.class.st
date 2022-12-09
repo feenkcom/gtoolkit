@@ -168,8 +168,3 @@ GtPharoPackageDependenciesConstraint >> packageNamesToPackages: aCollectionOfPac
 
 	^ theDeclaredDependentPackages select: [ :eachPackage | eachPackage notNil ]
 ]
-
-{ #category : #accessing }
-GtPharoPackageDependenciesConstraint >> status [
-	^ GtNeutralConstraintStatus new
-]
