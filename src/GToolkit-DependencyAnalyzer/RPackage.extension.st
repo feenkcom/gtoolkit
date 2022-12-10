@@ -30,6 +30,36 @@ RPackage >> gtClassReferences [
 ]
 
 { #category : #'*GToolkit-DependencyAnalyzer' }
+RPackage >> gtDeclaredMustNotDependOn [
+	^ self packageManifestOrNil
+		ifNil: [ nil ]
+		ifNotNil: [ :aManifest |
+			[ aManifest mustNotDependOn collect: [ :eachPackageName | eachPackageName asPackage ] ]
+				onDNU: #mustNotDependOn
+				do: [ :ex | nil ] ]
+]
+
+{ #category : #'*GToolkit-DependencyAnalyzer' }
+RPackage >> gtDeclaredMustOnlyDependOn [
+	^ self packageManifestOrNil
+		ifNil: [ nil ]
+		ifNotNil: [ :aManifest |
+			[ aManifest mustOnlyDependOn collect: [ :eachPackageName | eachPackageName asPackage ] ]
+				onDNU: #mustOnlyDependOn
+				do: [ :ex | nil ] ]
+]
+
+{ #category : #'*GToolkit-DependencyAnalyzer' }
+RPackage >> gtDeclaredShouldDependOn [
+	^ self packageManifestOrNil
+		ifNil: [ nil ]
+		ifNotNil: [ :aManifest |
+			[ aManifest shouldDependOn collect: [ :eachPackageName | eachPackageName asPackage ] ]
+				onDNU: #shouldDependOn
+				do: [ :ex | nil ] ]
+]
+
+{ #category : #'*GToolkit-DependencyAnalyzer' }
 RPackage >> gtDependencies [
 	| all |
 	all := Set new.
