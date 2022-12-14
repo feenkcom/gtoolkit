@@ -36,7 +36,7 @@ GtPharoClassReference >> gtSourceFor: aView [
 		stencil: [ (GtPharoMethodCoder new
 			forMethod: self referencingMethod;
 			highlighter: (GtPharoVariableReferenceHighlighter forVariableName: self referencedClass name))
-				asExpandedOnlyElement vFitContentLimited ]
+				asElement vFitContentLimited ]
 ]
 
 { #category : #accessing }

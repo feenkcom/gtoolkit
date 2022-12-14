@@ -131,6 +131,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-spotter:main/src' ];
 			baseline: 'GToolkitNotifications' with: [
 				spec repository: 'github://feenkcom/gtoolkit-notifications:main/src' ];
+			baseline: 'GToolkitNotificationsExamples' with: [
+				spec repository: 'github://feenkcom/gtoolkit-notifications:main/src' ];
 			baseline: 'XdocClient' with: [
 				spec repository: 'github://feenkcom/xdoc:main/src' ];
 			baseline: 'LepiterEngine' with: [
@@ -162,7 +164,7 @@ BaselineOfGToolkit >> baseline: spec [
 			package: 'GToolkit-SceneDriller' with: [
 				spec requires: #('GToolkitVisualizerPhlow' 'GToolkitPager').];
 			package: 'GToolkit-World' with: [
-				spec requires: #('GToolkit-SceneDriller' 'GToolkitFileBrowser' 'LepiterEngine' 'GToolkit4Git' 'GToolkitTranscript' 'GToolkit-Monitor' 'GToolkitReleaser' 'XdocClient' 'GToolkitNotifications'). ];
+				spec requires: #('GToolkit-SceneDriller' 'GToolkitFileBrowser' 'LepiterEngine' 'GToolkit4Git' 'GToolkitTranscript' 'GToolkit-Monitor' 'GToolkitReleaser' 'XdocClient' 'GToolkitNotifications' 'GToolkitNotificationsExamples'). ];
 			package: 'GToolkit-Setup' with: [
 				spec requires: #('GToolkitReleaser' 'GToolkitDebugger' 'LepiterEngine'). ];
 			package: 'GToolkit-DependencyAnalyzer'. ].

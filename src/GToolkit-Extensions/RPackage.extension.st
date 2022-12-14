@@ -2,7 +2,6 @@ Extension { #name : #RPackage }
 
 { #category : #'*GToolkit-Extensions' }
 RPackage >> gtClassHierarchyFor: aView [
-	<gtView>
 	<gtPackageView>
 	^ aView mondrian
 		title: 'Classes Map';
@@ -14,7 +13,7 @@ RPackage >> gtClassHierarchyFor: aView [
 
 { #category : #'*GToolkit-Extensions' }
 RPackage >> gtDependenciesMapFor: aView [
-	<gtView>
+	"<gtView>"
 	^ aView mondrian
 	title: 'Dependencies Map';
 	priority: 10;
@@ -41,6 +40,70 @@ RPackage >> gtDependenciesMapFor: aView [
 				usedPackages := each gtPackagesUsed].
 		mondrian layout custom: (GtGraphHorizontalDominanceTreeLayout new).
 	]
+]
+
+{ #category : #'*GToolkit-Extensions' }
+RPackage >> gtDependenciesStatusByAnalyzer [
+	| mustNotDependOn mustOnlyDependOn theDependenciesByPackage shouldDependOn anAnalyzer anAnalyzerContext allExplicitlyRequiredPackages allImplicitlyRequiredPackages allPreloadedPackages allDependenciesWithStatus |
+
+	"definitely must not depend on the package"
+	mustNotDependOn := (self gtDeclaredMustNotDependOn ifNil: [ #() ]) asSet.
+	shouldDependOn := (self gtDeclaredShouldDependOn ifNil: [ #() ]) asSet.
+	mustOnlyDependOn := self gtDeclaredMustOnlyDependOn
+			ifNotNil: [ :anArray | anArray asSet ].
+
+	theDependenciesByPackage := self gtDependencies groupedBy: [ :each | each toPackage ].
+	theDependenciesByPackage := ((theDependenciesByPackage associations
+			collect: [ :eachDependency | 
+				| eachDependencyStatus |
+				
+				eachDependencyStatus := GtPackageDependencyStatus new
+					package: self;
+					dependencyPackage: eachDependency key;
+					dependencies: eachDependency value.				
+				
+				(mustNotDependOn includes: eachDependency key)
+					ifTrue: [ eachDependencyStatus codeMustNotDepend ]
+					ifFalse: [ (mustOnlyDependOn isNotNil
+							and: [ (mustOnlyDependOn includes: eachDependency key) not ])
+							ifTrue: [ eachDependencyStatus codeShouldNotDepend ]
+							ifFalse: [ mustOnlyDependOn ifNotNil: [ eachDependencyStatus codeOkay ] ] ].
+
+				eachDependencyStatus ])
+			collect: [ :each | each dependencyPackage -> each ]) asDictionary.
+
+	shouldDependOn
+		do: [ :eachPackage | 
+			theDependenciesByPackage
+				at: eachPackage
+				ifAbsentPut: [ GtPackageCodeDependencyNoLongerDepends new
+						package: self;
+						dependencyPackage: eachPackage;
+						dependencies: #() ] ].
+				
+	anAnalyzer := GtDependencyAnalyzerEasy analyzePackageNamed: self name.
+	anAnalyzerContext := GtDependencyAnalyzerContext new.
+	
+	allExplicitlyRequiredPackages := GtDependencyAnalyzerPackageFromBaselineNameMap
+		withPackages: (anAnalyzer directlyRequiredPackagesWithContext: anAnalyzerContext).
+
+	allImplicitlyRequiredPackages := GtDependencyAnalyzerPackageFromBaselineNameMap
+		withPackages: (anAnalyzer indirectlyRequiredPackagesWithContext: anAnalyzerContext).
+
+	allPreloadedPackages := GtDependencyAnalyzerPackageFromBaselineNameMap
+		withPackages: (anAnalyzer preloadedPackagesWithContext: anAnalyzerContext).
+
+	allDependenciesWithStatus := theDependenciesByPackage values.
+	allDependenciesWithStatus do: [ :eachDependency |
+		(allExplicitlyRequiredPackages hasPackageNamed: eachDependency dependencyPackageName)
+			ifTrue: [ eachDependency explicitBaselines: (allExplicitlyRequiredPackages baselinesForPackageNamed: eachDependency dependencyPackageName) ].
+		(allImplicitlyRequiredPackages hasPackageNamed: eachDependency dependencyPackageName)
+			ifTrue: [ eachDependency implicitBaselines: (allImplicitlyRequiredPackages baselinesForPackageNamed: eachDependency dependencyPackageName) ].
+		(allPreloadedPackages hasPackageNamed: eachDependency dependencyPackageName)
+			ifTrue: [ eachDependency preloadedBaselines: (allPreloadedPackages baselinesForPackageNamed: eachDependency dependencyPackageName) ] ].
+
+	^ allDependenciesWithStatus
+		sorted: [ :a :b | a dependencyPackageName < b dependencyPackageName ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
@@ -75,52 +138,25 @@ RPackage >> gtDependencyTreeFor: aView [
 	^ aView columnedList
 		title: 'Dependencies';
 		priority: 2;
-		items: [
-			| mustNotDependOn mustOnlyDependOn shouldDependOn theDependenciesByPackage |
-
-			mustNotDependOn := (self gtDeclaredMustNotDependOn ifNil: [ #() ]) asSet.
-			shouldDependOn := (self gtDeclaredShouldDependOn ifNil: [ #() ]) asSet.
-			mustOnlyDependOn := self gtDeclaredMustOnlyDependOn ifNotNil: [ :anArray | anArray asSet ].
-			
-			theDependenciesByPackage := self gtDependencies groupedBy: [ :each | each toPackage ].
-			theDependenciesByPackage := ((theDependenciesByPackage associations collect: [ :eachDependency |
-				(mustNotDependOn includes: eachDependency key)
-					"definitely must not depend on the package"
-					ifTrue: [
-						GtDependencyAnalyzerPackageDependencyMustNotDependStatus new
-							package: self;
-							dependencyPackage: eachDependency key;
-							dependencies: eachDependency value ]
-					ifFalse: [
-						(mustOnlyDependOn isNotNil and: [ (mustOnlyDependOn includes: eachDependency key) not ])
-							ifTrue: [
-								GtDependencyAnalyzerPackageDependencyShouldNotDependStatus new
-									package: self;
-									dependencyPackage: eachDependency key;
-									dependencies: eachDependency value ]
-							ifFalse: [
-								GtDependencyAnalyzerPackageDependencyOkayStatus new
-									package: self;
-									dependencyPackage: eachDependency key;
-									dependencies: eachDependency value ] ] ])
-						collect: [ :each | each dependencyPackage -> each ]) asDictionary.
-
-			shouldDependOn do: [ :eachPackage |
-				theDependenciesByPackage at: eachPackage ifAbsentPut: [
-					GtDependencyAnalyzerPackageDependencyNoLongerDependsStatus new
-						package: self;
-						dependencyPackage: eachPackage;
-						dependencies: #() ] ].
-
-			theDependenciesByPackage values sorted: [ :a :b | a dependencyPackageName < b dependencyPackageName ] ];
+		items: [ self gtDependenciesStatusByAnalyzer ];
 		column: 'Package'
-			text: [ :eachDependencyStatus | eachDependencyStatus dependencyPackageName asRopedText foreground: eachDependencyStatus statusColor ];
+			text: [ :eachDependencyStatus | 
+				eachDependencyStatus dependencyPackageName asRopedText
+					foreground: eachDependencyStatus statusColor ]
+			weight: 0.5;
+		column: 'Baseline'
+			text: [ :eachDependencyStatus | 
+				eachDependencyStatus baselineStatusLabel asRopedText ];
 		column: 'Dependencies'
-			text: [ :eachDependencyStatus | eachDependencyStatus amountOfDependencies asRopedText foreground: eachDependencyStatus statusColor ]
+			text: [ :eachDependencyStatus | 
+				eachDependencyStatus amountOfDependencies asRopedText
+					foreground: eachDependencyStatus statusColor ]
 			width: 100;
 		column: 'Status'
-			text: [ :eachDependencyStatus | eachDependencyStatus statusLabel asRopedText foreground: eachDependencyStatus statusColor ];
-		send: #dependencies
+			text: [ :eachDependencyStatus | 
+				eachDependencyStatus statusLabel asRopedText
+					foreground: eachDependencyStatus statusColor ]
+			width: 220
 ]
 
 { #category : #'*GToolkit-Extensions' }
@@ -153,7 +189,7 @@ RPackage >> gtExamplesFor: aView context: aPhlowContext [
 
 { #category : #'*GToolkit-Extensions' }
 RPackage >> gtPackageDependentsFor: aView [
-	<gtView>
+	"<gtView>"
 	
 	^ aView forward
 		title: 'Package dependents';
@@ -163,8 +199,19 @@ RPackage >> gtPackageDependentsFor: aView [
 ]
 
 { #category : #'*GToolkit-Extensions' }
-RPackage >> gtTagAndClassHierarchyFor: aView [
+RPackage >> gtPackageOverviewFor: aView [
 	<gtView>
+	<gtPackageView>
+	^ aView explicit
+		title: 'Overview';
+		priority: 1.5;
+		stencil: [ GtPharoPackageOverviewElement new package: self ];
+		actionUpdateButton
+]
+
+{ #category : #'*GToolkit-Extensions' }
+RPackage >> gtTagAndClassHierarchyFor: aView [
+	"<gtView>"
 	<gtPackageView>
 	^ aView mondrian
 		title: 'Tags Map';
