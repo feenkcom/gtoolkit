@@ -103,16 +103,17 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 					object: self;
 					tooltip: 'Search Code';
 					actOn: [ :anActOnEvent :anItem :theButton | 
-						| acted |
+						| acted navigationModel |
 						acted := false.
+						navigationModel := theButton phlow firstParentWithView phlow firstParentWithView navigationModel.
 						(anItem isKindOf: RPackage)
-							ifTrue: [ self navigationModel selectPackage: anItem.
+							ifTrue: [ navigationModel selectPackage: anItem.
 								acted := true ].
 						(anItem isKindOf: ClassDescription)
-							ifTrue: [ self navigationModel selectClass: anItem.
+							ifTrue: [ navigationModel selectClass: anItem.
 								acted := true ].
 						(anItem isKindOf: CompiledMethod)
-							ifTrue: [ self navigationModel selectMethod: anItem.
+							ifTrue: [ navigationModel selectMethod: anItem.
 								acted := true ].
 						acted ifTrue: [ anActOnEvent beActed ] ];
 					asElement ]
