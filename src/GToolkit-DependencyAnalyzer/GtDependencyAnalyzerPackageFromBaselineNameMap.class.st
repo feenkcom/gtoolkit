@@ -31,6 +31,14 @@ GtDependencyAnalyzerPackageFromBaselineNameMap >> addPackages: aCollectionOfPack
 		do: [ :eachPackageFromBaseline | self addPackage: eachPackageFromBaseline ]
 ]
 
+{ #category : #accessing }
+GtDependencyAnalyzerPackageFromBaselineNameMap >> baselinesForPackageNamed: aPackageName [
+	<return: #Set of: #'BaselineOf class'>
+
+	^ (self packagesNamed: aPackageName)
+		collect: [ :each | each baseline ]
+]
+
 { #category : #testing }
 GtDependencyAnalyzerPackageFromBaselineNameMap >> hasPackageNamed: aPackageName [
 	^ packages includesKey: aPackageName
