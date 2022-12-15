@@ -1,4 +1,25 @@
-# Glamorous Toolkit (GT)
+<div align="center">
+  <div>
+  <a href="https://gtoolkit.com" target="_blank">
+     <img src="doc/gtoolkit.png" height=150/>
+  </a>
+  </div>
+  
+  <div>
+
+
+  <a href="https://discord.gg/FTJr9gP" target="_blank">
+    <img alt="Discord" src="https://img.shields.io/discord/729445214812504107?style=flat-square">
+  </a>
+
+  <a href="https://twitter.com/feenkcom" target="_blank">
+<img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/feenkcom?style=flat-square">
+  </a>
+  </div>
+</div>
+
+## The Moldable Development Environment
+
 [Glamorous Toolkit](https://gtoolkit.com) is a live notebook. A fancy code editor. A software analysis platform. A data visualization engine. A knowledge management system. All in one.
  
 ![Glamorous Toolkit overview](https://raw.githubusercontent.com/feenkcom/gtoolkit/main/doc/gtr-overview.png)
