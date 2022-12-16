@@ -20,7 +20,7 @@
 
 ## The Moldable Development Environment
 
-[Glamorous Toolkit](https://gtoolkit.com) is a live notebook. A fancy code editor. A software analysis platform. A data visualization engine. A knowledge management system. All in one.
+[Glamorous Toolkit](https://gtoolkit.com) is a multi-language notebook. A fancy code editor. A software analysis platform. A visualization engine. A knowledge management system. All programmable. Free and open-source.
  
 ![Glamorous Toolkit overview](https://raw.githubusercontent.com/feenkcom/gtoolkit/main/doc/gtr-overview.png)
 
