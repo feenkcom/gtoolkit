@@ -54,7 +54,7 @@ GtHome >> createVersionLabel [
 			| database startPage |
 			database := LeDatabasesRegistry default currentLoadedDefaultLogicalDatabase 
 				databaseNamed: 'Glamorous Toolkit Book'.
-			startPage := database pageNamed: 'About this Version of Glamorous Toolkit'.
+			startPage := database pageNamed: 'About this version of Glamorous Toolkit'.
 			GtWorldUtility 
 				showSpaceWithTitle: startPage title
 				inPagerWith: [ startPage
