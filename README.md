@@ -6,15 +6,15 @@
   </div>
   
   <div>
-
-
-  <a href="https://discord.gg/FTJr9gP" target="_blank">
-    <img alt="Discord" src="https://img.shields.io/discord/729445214812504107?style=flat-square">
-  </a>
-
-  <a href="https://twitter.com/feenkcom" target="_blank">
-<img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/feenkcom?style=flat-square">
-  </a>
+    <a href="https://discord.gg/FTJr9gP" target="_blank">
+      <img alt="Discord" src="https://img.shields.io/discord/729445214812504107?color=green&label=chat&logo=discord&logoColor=white&style=flat-square">
+    </a>
+    <a href="https://twitter.com/feenkcom" target="_blank">
+      <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/feenkcom?color=blue&label=%40feenkcom&logo=twitter&logoColor=white&style=flat-square">
+    </a>
+    <a href="https://youtube.com/@gtoolkit" target="_blank">
+      <img alt="YouTube Channel Subscribers" src="https://img.shields.io/youtube/channel/subscribers/UClLZHVq_-2D2-iI4rA2O8Ug?color=red&label=%40gtoolkit&logo=youtube&logoColor=white&style=flat-square">
+    </a>
   </div>
 </div>
 
