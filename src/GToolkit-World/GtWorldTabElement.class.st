@@ -5,7 +5,7 @@ Class {
 		'tabs',
 		'home'
 	],
-	#category : 'GToolkit-World-UI'
+	#category : #'GToolkit-World-UI'
 }
 
 { #category : #accessing }
@@ -54,6 +54,9 @@ GtWorldTabElement >> home [
 { #category : #initialization }
 GtWorldTabElement >> initialize [
 	super initialize.
+	
+	self beFocusable.
+	
 	self initializeHomeElement.
 	self initializeTabGroup.
 	self initializeTabs.
