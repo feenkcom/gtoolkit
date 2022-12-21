@@ -473,13 +473,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "<unknown>"
+					"emailString" : "veit.heller@feenk.com"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-19T12:01:15.083199+01:00"
+						"dateAndTimeString" : "2022-12-19T07:31:18.580899-06:00"
 					}
 				},
 				"uid" : {
@@ -489,7 +489,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For example, {{gtClass:AsyncPeakSink}} only records the last received item, here is an example:"
+				"string" : "For example, {{gtClass:AsyncPeekSink}} only records the last received item, here is an example:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -523,7 +523,7 @@
 					"__type" : "uid",
 					"uidString" : "sH4xAk+SDQCy26TIDs8qVw=="
 				},
-				"exampleSelector" : "peakSink",
+				"exampleSelector" : "peekSink",
 				"previewHeight" : 200,
 				"previewShowSelector" : "gtViewsFor:",
 				"exampleBehaviorName" : "BrSinkExamples",
