@@ -32,10 +32,10 @@ AsyncObservableValue >> gtLiveFor: aView [
 				
 				withAsyncSinkDo: [ :anElementSink |
 					anElementSink
-						sink: AsyncPeakSink new;
+						sink: AsyncPeekSink new;
 						whenUpdate: [ :anElement :aSink | 
 							anElement removeChildren.
-							aSink peak
+							aSink peek
 								ifSome: [ :aValue | anElement addChild: (GtInspector forObject: aValue) ]
 								ifNone: [  ] ].
 					self observe: anElementSink ] ]
