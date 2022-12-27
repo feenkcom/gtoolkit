@@ -4,14 +4,6 @@ Class {
 	#category : #BaselineOfGToolkitForPharo9
 }
 
-{ #category : #accessing }
-BaselineOfGToolkitForPharo9 class >> gtRlAllValidRPackages [
-	| gtProject allPackages |
-	gtProject := self gtRlProjectWithRepository: BaselineOfGToolkit gtoolkitRepositorySpec.
-	allPackages := gtProject allPPackages.
-	^ allPackages reject: [ :aPackage | aPackage isNil ]
-]
-
 { #category : #baselines }
 BaselineOfGToolkitForPharo9 >> baseline: spec [
 

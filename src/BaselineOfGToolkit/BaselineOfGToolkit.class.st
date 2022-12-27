@@ -62,6 +62,23 @@ Class {
 }
 
 { #category : #accessing }
+BaselineOfGToolkit class >> fullBaselineProject [
+	"Return a project for the main baseline used to load Glamorous Toolkit."
+	
+	^ BaselineOfGToolkitForPharo9 
+		gtRlProjectWithRepository: self gtoolkitRepositorySpec.
+]
+
+{ #category : #accessing }
+BaselineOfGToolkit class >> gtRlAllValidRPackages [
+	| gtProject allPackages |
+	
+	gtProject := self fullBaselineProject.
+	allPackages := gtProject allPPackages.
+	^ allPackages reject: [ :aPackage | aPackage isNil ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkit class >> gtoolkitRepositorySpec [
 	^ 'github://feenkcom/gtoolkit:main/src'
 ]

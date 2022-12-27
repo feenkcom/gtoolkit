@@ -28,6 +28,5 @@ GtClassWithCommentsContainingMissingReferences >> name [
 
 { #category : #accessing }
 GtClassWithCommentsContainingMissingReferences >> packagesToAnalyse [
-	thisContext method.
-	^ BaselineOfGToolkitForPharo9 gtRlAllValidRPackages
+	^ BaselineOfGToolkit gtRlAllValidRPackages
 ]
