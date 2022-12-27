@@ -36,5 +36,6 @@ GtGtoolkitArchitecturalReport >> build: aComposite [
 		addConstraint: GtDoNotManuallyFindThisContextMethodDefinition new;
 		addConstraint: GtPharoPackageDependenciesConstraint new;
 		addConstraint: GtEqualsMethodsShouldReturnAValueConstraint new;
-		addConstraint: GtHashMethodsShouldReturnAValueConstraint new
+		addConstraint: GtHashMethodsShouldReturnAValueConstraint new;
+		addConstraint: GtClassesImplementingEqualsShouldAlsoHaveHashConstraint new
 ]
