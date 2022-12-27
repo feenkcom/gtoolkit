@@ -34,5 +34,7 @@ GtGtoolkitArchitecturalReport >> build: aComposite [
 		addConstraint: GtAnnouncementSubscriberShouldNotBeChanged new;
 		addConstraint: GtBoxerExternalObjectsShouldOnlyImplementFFILibrary new;
 		addConstraint: GtDoNotManuallyFindThisContextMethodDefinition new;
-		addConstraint: GtPharoPackageDependenciesConstraint new
+		addConstraint: GtPharoPackageDependenciesConstraint new;
+		addConstraint: GtEqualsMethodsShouldReturnAValueConstraint new;
+		addConstraint: GtHashMethodsShouldReturnAValueConstraint new
 ]
