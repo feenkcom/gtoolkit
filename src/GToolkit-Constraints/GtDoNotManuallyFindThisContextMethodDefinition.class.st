@@ -13,7 +13,7 @@ GtDoNotManuallyFindThisContextMethodDefinition >> description [
 GtDoNotManuallyFindThisContextMethodDefinition >> issues [
 	^ (('`{:node | | found | found := false. node nodesDo: [:each | found := found or: [each isThisContextVariable]]. found} asRingDefinition' gtASTMatches result)
 		filter: [ :eachMethod |
-			BaselineOfGToolkitForPharo9 gtRlAllValidRPackages anySatisfy: [ :aPackage | 
+			BaselineOfGToolkit gtRlAllValidRPackages anySatisfy: [ :aPackage | 
 				eachMethod package name = aPackage name ] ]) toArray wait 
 	reject: [ :each | each selector = #testRemovesIrrelevantStackEntriesFromOnTop ]
 ]
