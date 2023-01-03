@@ -142,6 +142,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/Bloc:main/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:main/src' ];
+			baseline: 'GToolkitScenery' with: [
+				spec repository: 'github://feenkcom/gtoolkit-scenery:main/src' ];
 			baseline: 'GToolkitPager' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-pager:main/src' ];
 			baseline: 'GToolkitSpotter' with: [
