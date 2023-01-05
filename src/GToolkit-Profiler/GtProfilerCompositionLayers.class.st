@@ -6,7 +6,7 @@ Class {
 		'toolbar',
 		'updateButton'
 	],
-	#category : 'GToolkit-Profiler'
+	#category : #'GToolkit-Profiler'
 }
 
 { #category : #initialization }
@@ -16,16 +16,6 @@ GtProfilerCompositionLayers >> initialize [
 	self matchParent.
 	self alignTopCenter.
 	self padding: (BlInsets all: 10).
-	
-	self when: BlMouseWheelEvent do: [ :anEvent |
-		self
-			childNamed: #compositionLayer
-			ifFound: [ :aPannableElement |
-				anEvent isScrollDown
-					ifTrue: [ aPannableElement zoomIn ].
-				anEvent isScrollUp
-					ifTrue: [ aPannableElement zoomOut ] ]
-			ifNone: [  ] ].
 	
 	toolbar := BrToolbar new
 		aptitude: BrGlamorousToolbarAptitude new.
@@ -72,11 +62,10 @@ GtProfilerCompositionLayers >> updateLayer [
 		| aLayer |
 		aLayer := BlCompositionPainter repaintSpace: profiledSpace space.
 
-		(aLayer gtTreeFor: GtPhlowEmptyView new)
+		(aLayer gtLayersTreeFor: GtPhlowEmptyView new)
 			asElementDo: [ :anElement | self enqueueTask: (BlTaskAction new action: [
 				self addChild: anElement as: #compositionLayerContainer.
 				anElement children first
-					containerName: #compositionLayer;
-					zoomStep: 0.05.
+					containerName: #compositionLayer.
 				updateButton enable ]) ] ]).
 ]
