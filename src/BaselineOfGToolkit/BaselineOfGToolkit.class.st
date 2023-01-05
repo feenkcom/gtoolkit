@@ -62,6 +62,23 @@ Class {
 }
 
 { #category : #accessing }
+BaselineOfGToolkit class >> fullBaselineProject [
+	"Return a project for the main baseline used to load Glamorous Toolkit."
+	
+	^ BaselineOfGToolkitForPharo9 
+		gtRlProjectWithRepository: self gtoolkitRepositorySpec.
+]
+
+{ #category : #accessing }
+BaselineOfGToolkit class >> gtRlAllValidRPackages [
+	| gtProject allPackages |
+	
+	gtProject := self fullBaselineProject.
+	allPackages := gtProject allPPackages.
+	^ allPackages reject: [ :aPackage | aPackage isNil ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkit class >> gtoolkitRepositorySpec [
 	^ 'github://feenkcom/gtoolkit:main/src'
 ]
@@ -125,6 +142,8 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/Bloc:main/src' ];
 			baseline: 'GToolkitVisualizerPhlow' with: [
 				spec repository: 'github://feenkcom/gtoolkit-visualizer:main/src' ];
+			baseline: 'GToolkitScenery' with: [
+				spec repository: 'github://feenkcom/gtoolkit-scenery:main/src' ];
 			baseline: 'GToolkitPager' with: [ 
 				spec repository: 'github://feenkcom/gtoolkit-pager:main/src' ];
 			baseline: 'GToolkitSpotter' with: [
