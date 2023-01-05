@@ -177,7 +177,7 @@ GtImageSetup class >> updateLocalVersion [
 	theVersion := GtImage computeCurrentGToolkitVersion asDevSemanticVersion. 
 	
 	GtImage version: theVersion.
-	GtImage timestamp: DateAndTime now.
+	GtImage timestamp: DateAndTime now
 ]
 
 { #category : #actions }
