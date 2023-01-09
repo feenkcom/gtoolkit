@@ -10,7 +10,7 @@
 					"__type" : "snippets",
 					"items" : [
 						{
-							"__type" : "textSnippet",
+							"__type" : "youtubeSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -23,7 +23,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-27T22:46:56.820685+02:00"
+									"dateAndTimeString" : "2023-01-09T08:46:15.768013+01:00"
 								}
 							},
 							"editEmail" : {
@@ -34,17 +34,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-27T22:47:10.169084+02:00"
+									"dateAndTimeString" : "2023-01-09T08:46:16.386413+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "R2DymuS4AAAAAAAAAAAAAA=="
+								"uidString" : "31ftsjGuDQCJtFUWB2uRbg=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "What's the difference? Read [[Glamorous Toolkit and Pharo]]"
+							"youtubeUrl" : "https://youtu.be/-vFwfwy5WZA"
 						}
 					]
 				},
@@ -56,7 +53,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-27T21:38:09.986187+02:00"
+						"dateAndTimeString" : "2023-01-09T08:46:26.35667+01:00"
 					}
 				},
 				"editEmail" : {
@@ -67,17 +64,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-06T22:35:11.606823+02:00"
+						"dateAndTimeString" : "2023-01-09T08:46:26.35667+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "gXqyqQhqAAAAAAAAAAAAAA=="
+					"uidString" : "N/svsjGuDQCJsLxmB2uRbg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit is built in [[Pharo]], a pure object-oriented Smalltalk system."
+				"string" : "We show how an explorable and executable domain model can be constructed iteratively and incrementally in GT, using the GitHub REST API as a running example."
 			},
 			{
 				"__type" : "textSnippet",
@@ -93,7 +90,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-20T11:20:05.445169+01:00"
+						"dateAndTimeString" : "2023-01-09T08:46:50.983285+01:00"
 					}
 				},
 				"editEmail" : {
@@ -104,17 +101,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-24T08:47:51.820265+01:00"
+						"dateAndTimeString" : "2023-01-09T08:47:02.579136+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "QUU8lWKSDQCjEym5DAfdYw=="
+					"uidString" : "htN2tDGuDQCJuilZB2uRbg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To learn Pharo, you have to play with it.  You should start with [[A gentle introduction to Pharo Smalltalk]]."
+				"string" : "See also [[Working with a REST API: the GitHub case study]]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-09T08:47:04.775759+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-09T08:47:21.976294+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "78jStTGuDQCJyFpJB2uRbg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Also related: [[Exploring GitHub through GraphQL ]]."
 			}
 		]
 	},
@@ -126,7 +160,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-05-27T21:01:59.034691+02:00"
+			"dateAndTimeString" : "2023-01-09T08:46:03.308553+01:00"
 		}
 	},
 	"editEmail" : {
@@ -137,15 +171,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-09T11:01:22.786197+01:00"
+			"dateAndTimeString" : "2023-01-09T08:46:03.308553+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "A tour through Pharo"
+		"title" : "Exploring the GitHub REST API in 7'"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "db7b7021-b67f-0d00-a132-a11d0eee949d"
+		"uuid" : "88392fb2-31ae-0d00-89af-86eb076b916e"
 	}
 }
