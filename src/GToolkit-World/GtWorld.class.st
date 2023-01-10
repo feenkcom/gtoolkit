@@ -11,12 +11,11 @@ Class {
 }
 
 { #category : #'instance creation' }
-GtWorld class >> buildWithShutdownListener [
+GtWorld class >> buildWithDefaultTitle [
 	| aSpace |
 	aSpace := self new.
 	aSpace title: self defaultTitle.
 	aSpace extent: (800*1.6) @ 800.
-	aSpace addShutdownListener.
 	^ aSpace
 ]
 
@@ -73,7 +72,7 @@ GtWorld class >> openDefault [
 	"Open an instance with shutdown handlers and mark it as default."
 	<script: 'self openDefault'>
 	| aSpace |
-	aSpace := self buildWithShutdownListener.
+	aSpace := self buildWithDefaultTitle.
 	aSpace knowledgeBase: LeDatabasesRegistry uniqueInstance 
 		ensureDatabase.
 	aSpace markAsDefault.
@@ -89,20 +88,11 @@ GtWorld class >> openDefault [
 { #category : #'instance creation' }
 GtWorld class >> openOnCurrentDefaultDatabase [
 	| aSpace |
-	aSpace := self buildWithShutdownListener.
+	aSpace := self buildWithDefaultTitle.
 	aSpace knowledgeBase: LeDatabasesRegistry uniqueInstance 
 		defaultLogicalDatabase .
 	aSpace markAsDefault.
 	aSpace prepareForRelease.
-	aSpace show.
-	^ aSpace
-]
-
-{ #category : #'instance creation' }
-GtWorld class >> openWithShutdownListener [
-	<script: 'self openWithShutdownListener'>
-	| aSpace |
-	aSpace := self buildWithShutdownListener.
 	aSpace show.
 	^ aSpace
 ]
@@ -177,7 +167,8 @@ GtWorld >> initialize [
 	self root addChild: worldElement.
 
 	self withSceneDriller.
-	self withGlamorousFullscreenMaxizimerHost
+	self withGlamorousFullscreenMaxizimerHost.
+	self withWorldCloseEventHandler
 ]
 
 { #category : #'focus managing' }
@@ -220,7 +211,17 @@ GtWorld >> removeShutdownListener [
 	self removeEventHandlersSuchThat: [ :eachHandler | eachHandler isKindOf: BlSpaceShutdownOnCloseListener ]
 ]
 
+{ #category : #actions }
+GtWorld >> showShutdownPrompt [
+	worldElement showShutdownPrompt
+]
+
 { #category : #initialization }
 GtWorld >> showSpace: aSpace [
 	worldElement showSpace: aSpace
+]
+
+{ #category : #initialization }
+GtWorld >> withWorldCloseEventHandler [
+	self addEventHandler: GtWorldCloseEventHandler new
 ]

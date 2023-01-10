@@ -56,6 +56,10 @@ GtWorldTabElement >> initialize [
 	super initialize.
 	
 	self beFocusable.
+	self layout: BlLinearLayout vertical.
+	self constraintsDo: [ :c | 
+		c horizontal matchParent.
+		c vertical matchParent ].
 	
 	self initializeHomeElement.
 	self initializeTabGroup.
@@ -67,11 +71,7 @@ GtWorldTabElement >> initialize [
 
 { #category : #initialization }
 GtWorldTabElement >> initializeElement [
-	self addChild: tabs as: GtWorldTabGroupId.
-	self
-		constraintsDo: [ :c | 
-			c horizontal matchParent.
-			c vertical matchParent ]
+	self addChild: tabs as: GtWorldTabGroupId
 ]
 
 { #category : #initialization }
@@ -118,6 +118,56 @@ GtWorldTabElement >> newActionbar [
 	^ anActionbar
 ]
 
+{ #category : #'private - instance creation' }
+GtWorldTabElement >> newShutdownPrompt [
+	| aPrompt aQuestion aSaveAndQuitButton aQuitWithoutSaveButton aCancelButton |
+	
+	aPrompt := BrHorizontalPane new
+		hMatchParent;
+		cellSpacing: 10;
+		vFitContent;
+		background: self theme status errorBackgroundColor lighter lighter;
+		alignCenterLeft;
+		padding: (BlInsets top: 10 bottom: 10).
+	
+	aQuestion := BrLabel new
+		aptitude: BrGlamorousLabelAptitude;
+		text: 'Really quit?'.
+	
+	aSaveAndQuitButton := BrButton new
+		aptitude: BrGlamorousButtonWithLabelAptitude;
+		beSmallSize;
+		label: 'Save and quit';
+		action: [ :aButton |
+			aButton disable.
+			aPrompt removeFromParent.
+			self space universe snapshot: true andQuit: true ].
+		
+	aQuitWithoutSaveButton := BrButton new
+		aptitude: BrGlamorousButtonWithLabelAptitude;
+		beSmallSize;
+		label: 'Just quit';
+		action: [ :aButton |
+			aButton disable.
+			aPrompt removeFromParent.
+			self space universe snapshot: false andQuit: true ].
+		
+	aCancelButton := BrButton new
+		aptitude: BrGlamorousButtonWithLabelAptitude;
+		beSmallSize;
+		label: 'Don''t quit';
+		action: [ :aButton | aPrompt removeFromParent ].
+
+	aPrompt addChildren: {
+		aQuestion.
+		aSaveAndQuitButton.
+		aQuitWithoutSaveButton.
+		aCancelButton.
+	}.
+
+	^ aPrompt
+]
+
 { #category : #accessing }
 GtWorldTabElement >> newToolbarForTabModel: aTabModel [
 	^ BrToolbar new
@@ -158,6 +208,14 @@ GtWorldTabElement >> prepareForRelease [
 GtWorldTabElement >> refreshContent [
 	"Refresh the content of the space. Is only called for a default space instance on start-up.
 	Subclasses may trigger relevant actions."
+]
+
+{ #category : #'api - shutdown' }
+GtWorldTabElement >> showShutdownPrompt [
+	self
+		childWithId: GtWorldShutdownPromptId
+		ifFound: [ ^ self ]
+		ifNone: [ self addChildFirst: (self newShutdownPrompt id: GtWorldShutdownPromptId) ]
 ]
 
 { #category : #'api - opening' }

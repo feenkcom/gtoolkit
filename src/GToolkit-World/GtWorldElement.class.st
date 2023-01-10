@@ -55,17 +55,15 @@ GtWorldElement >> database [
 	^ self knowledgeBase
 ]
 
-{ #category : #defaults }
+{ #category : #initialization }
 GtWorldElement >> defaultHomeElement [
 	^ GtHome new
 ]
 
 { #category : #initialization }
 GtWorldElement >> initialize [ 
-
 	announcer := Announcer new.
-	super initialize.
-
+	super initialize
 ]
 
 { #category : #initialization }
@@ -240,7 +238,7 @@ GtWorldElement >> newSubSpaceButton [
 GtWorldElement >> newSynchronizeButton [
 	"Answer a dropdown button for syncronizing databases"
 
-	^ LeSyncClientAccountSyncBadge new
+	^ #LeSyncClientAccountSyncBadge asClass new
 		leWorldElement: self
 ]
 
