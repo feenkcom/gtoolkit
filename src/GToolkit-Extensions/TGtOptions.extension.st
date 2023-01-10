@@ -45,5 +45,6 @@ TGtOptions >> gtOptionsFor: aView [
 					  BlVisibility hidden ] ]
 		  weight: 0.5;
 		  column: 'Value' text: [ :assoc | assoc value ];
-		  send: [ :assoc | assoc value ]
+		  send: [ :assoc | assoc value ];
+		  actionUpdateButton
 ]
