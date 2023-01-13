@@ -125,10 +125,13 @@ Behavior >> testSuiteViewModelWith: aMethodsCoder fromContext: aPhlowContext [
 	<return: #GtPharoTestSuiteViewModel>
 	^ aPhlowContext
 		optionAt: #testSuiteViewModel
-		ifPresent: [ :aTestSuiteViewModel | aTestSuiteViewModel ]
+		ifPresent: [ :aTestSuiteViewModel | 
+			aMethodsCoder testSuite: aTestSuiteViewModel pharoTestSuite.
+			aTestSuiteViewModel ]
 		ifAbsentPut: [ | aSuiteModel aViewModel aHandler |
 			aSuiteModel := GtPharoTestSuite forStream: aMethodsCoder itemsStream.
 			aViewModel := GtPharoTestSuiteViewModel new pharoTestSuite: aSuiteModel.
+			aMethodsCoder testSuite: aViewModel pharoTestSuite.
 
 			aHandler := GtPharoTestSuiteMethodsCoderMediator
 					forMethodsCoder: aMethodsCoder
