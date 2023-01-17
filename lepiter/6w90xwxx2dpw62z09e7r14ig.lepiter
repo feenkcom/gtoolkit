@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-23T18:23:54.5955+02:00"
+						"dateAndTimeString" : "2023-01-17T09:03:46.756397-06:00"
 					}
 				},
 				"uid" : {
@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-23T18:23:16.427457+02:00"
+						"dateAndTimeString" : "2023-01-17T09:05:19.926516-06:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "VGa+6dKBDQCTxXfOAUw8Aw=="
 				},
-				"code" : "rewriter := SmaCCRewriteEngine new.\nrewriter\n    rewriteRule:\n        (SmaCCRewriteRuleFileParser\n            parseFile: (GtResourcesUtility default resourceAtPath: Path * 'j-brant' / 'SmaCC' / 'rewrites' / 'antlr' / 'antlr.rw')).\nrewriter rewriteTree: tree"
+				"code" : "fileSystem := FileSystem memory.\rrewriteFile := fileSystem / 'antlr.rw'.\rZnClient new\r\turl: 'https://raw.githubusercontent.com/j-brant/SmaCC/master/rewrites/antlr/antlr.rw';\r\tdownloadTo: rewriteFile.\rrewriter := SmaCCRewriteEngine new.\rrewriter rewriteRule: (SmaCCRewriteRuleFileParser parseFile: rewriteFile).\rrewriter rewriteTree: tree"
 			}
 		]
 	},
