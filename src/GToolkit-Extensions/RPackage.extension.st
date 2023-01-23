@@ -135,6 +135,7 @@ RPackage >> gtDependencyAnalyzerFor: aView [
 { #category : #'*GToolkit-Extensions' }
 RPackage >> gtDependencyTreeFor: aView [
 	<gtView>
+	<gtPackageView>
 	^ aView columnedList
 		title: 'Dependencies';
 		priority: 2;
