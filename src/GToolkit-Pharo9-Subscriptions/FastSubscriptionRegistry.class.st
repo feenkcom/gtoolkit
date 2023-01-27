@@ -1,9 +1,9 @@
 "
-{{gtClass:FastSubscriptionRegistry}} offer a polymorphic API to {{gtClass:SubscriptionRegistry}} and optimises the check done in {{gtMethod:FastSubscriptionRegistry>>subscriptionsOf:do:}}.
+{{gtClass:FastSubscriptionRegistry}} offer a polymorphic API to {{gtClass:SubscriptionRegistry}} and optimises  {{gtMethod:FastSubscriptionRegistry>>subscriptionsOf:do:}} and {{gtMethod:name=FastSubscriptionRegistry>>hasSubscriber:}}.
 
-This optimisation allows users of an announcement to quickly check if an object is registered as subscriber in any of the subscriptions added to the announcer. These kind of checks are used intensily in Bloc to determine if graphical elements should receive events.
+These optimisations allows users of an announcement to quickly check if an object is registered as subscriber in any of the subscriptions added to the announcer, and access those subscriptions. These kind of checks are used intensily in Bloc to determine if graphical elements should receive events.
 
-To perform this optimization, the registry holds subscriptions using a {{gtClass:WeakIdentityKeyDictionary}} where the key is the subscriber object. Like this it can get the subscriptions registered for an object with only a dictionary access.
+To perform these optimizations, the registry holds subscriptions using a {{gtClass:WeakIdentityKeyDictionary}} where the key is the subscriber object. Like this it can get the subscriptions registered for an object with only a dictionary access.
 
 The class side method {{gtMethod:FastSubscriptionRegistry class>>initialize}}  registers this registry as default when the class is initialize.
 "
@@ -103,9 +103,7 @@ FastSubscriptionRegistry >> handleSubscriberClass: subClass [
 
 { #category : #testing }
 FastSubscriptionRegistry >> hasSubscriber: anObject [
-
-	self subscriptionsOf: anObject do: [:each | ^ true].
-	^ false
+	^ self protected: [ (subscriberMap at: anObject ifAbsent: [#()]) notEmpty ].
 ]
 
 { #category : #initialization }
@@ -188,5 +186,8 @@ FastSubscriptionRegistry >> subscriptionsHandling: anAnnouncement [
 FastSubscriptionRegistry >> subscriptionsOf: aSubscriber do: aBlock [
 	| copy |
 	self protected: [ copy := (subscriberMap at: aSubscriber ifAbsent: [#()]) copy ].
+	
+	"We work on a copy to avoid issues caused by 
+	concurrent changes of the subscriber map."
 	copy do: [ :subscription | aBlock value: subscription ]
 ]
