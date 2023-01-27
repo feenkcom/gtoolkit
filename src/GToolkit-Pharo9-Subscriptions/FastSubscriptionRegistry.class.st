@@ -1,3 +1,12 @@
+"
+{{gtClass:FastSubscriptionRegistry}} offer a polymorphic API to {{gtClass:SubscriptionRegistry}} and optimises the check done in {{gtMethod:FastSubscriptionRegistry>>subscriptionsOf:do:}}.
+
+This optimisation allows users of an announcement to quickly check if an object is registered as subscriber in any of the subscriptions added to the announcer. These kind of checks are used intensily in Bloc to determine if graphical elements should receive events.
+
+To perform this optimization, the registry holds subscriptions using a {{gtClass:WeakIdentityKeyDictionary}} where the key is the subscriber object. Like this it can get the subscriptions registered for an object with only a dictionary access.
+
+The class side method {{gtMethod:FastSubscriptionRegistry class>>initialize}}  registers this registry as default when the class is initialize.
+"
 Class {
 	#name : #FastSubscriptionRegistry,
 	#superclass : #Object,
