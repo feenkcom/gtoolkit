@@ -22,6 +22,7 @@ FastSubscriptionRegistryExamples >> registryAddingAndRemoving [
 	self assert: reg numberOfSubscriptions == 0.
 	self assert: (reg handleEventClass: JobStart) not.
 	self assert: (reg handleEventClass: JobEnd) not.
+	self assert: (reg hasSubscriber: self) not.
 
 	reg add: sub1.
 
@@ -34,6 +35,7 @@ FastSubscriptionRegistryExamples >> registryAddingAndRemoving [
 		((reg subscriptionsHandling: JobStart new) includes: sub1).
 	self assert:
 		((reg subscriptionsHandling: JobEnd new) includes: sub2) not.
+	self assert: (reg hasSubscriber: self).
 
 	reg add: sub2.
 
@@ -46,11 +48,13 @@ FastSubscriptionRegistryExamples >> registryAddingAndRemoving [
 	self assert:
 		((reg subscriptionsHandling: JobStart new) includes: sub1).
 	self assert: ((reg subscriptionsHandling: JobEnd new) includes: sub2). 
+	self assert: (reg hasSubscriber: self).
 	
 	reg removeSubscriber: self.
 	self assert: reg numberOfSubscriptions == 0.
 	self assert: (reg handleEventClass: JobStart) not.
 	self assert: (reg handleEventClass: JobEnd) not.
+	self assert: (reg hasSubscriber: self) not.
 
 	^ reg
 ]
