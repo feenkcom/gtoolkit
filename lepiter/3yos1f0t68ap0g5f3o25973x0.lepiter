@@ -1,0 +1,295 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T11:14:24.481785+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T11:14:24.481785+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UjZnN9qvDQC49hh7CAnzQg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This page analyses the content of the page [[Patches/changes to the base Pharo Image]] and extracts from it issues from the base image related to Glamorous Toolkit. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T11:14:55.638377+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T11:14:56.162547+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1qBCOdqvDQC6XjGpCAnzQg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "As those issues are addressed, we can remove the underlying change from Glamorous Toolkit. "
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T11:15:03.853465+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T11:15:03.853465+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "p/q/OdqvDQC6cOUGCAnzQg=="
+				},
+				"exampleSelector" : "relatedIssues",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtItemsFor:",
+				"exampleBehaviorName" : "GtIssuesRelatedPharoIssuesMetrics class",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T12:50:41.878965+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T12:51:06.047476+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wVSLjtuvDQC64+xPCAnzQg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The list above is calculated using {{gtClass:GtIssuesRelatedPharoIssuesMetrics}}. It can be manually accesses using the following snippet:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T12:51:08.023242+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T12:51:11.973897+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GjhSkduvDQC8dMU/CAnzQg=="
+				},
+				"code" : "GtIssuesRelatedPharoIssuesMetrics relatedIssues."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T12:51:14.487462+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T12:51:40.846568+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2lmqkduvDQC8lKg7CAnzQg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The list is also cached to avoid calls to the GitHub API. The following snippet resets this cache."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T12:51:42.522401+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-30T12:51:50.164876+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "U6Ngk9uvDQC+Jc3uCAnzQg=="
+				},
+				"code" : "GtIssuesRelatedPharoIssuesMetrics cleanUp"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-01-30T11:13:18.213492+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-01-30T11:13:18.213492+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Issues related to patches to the base image"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "940c7433-daaf-0d00-b670-72f30809f342"
+	}
+}
