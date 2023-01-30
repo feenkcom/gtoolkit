@@ -4905,13 +4905,13 @@
 										},
 										"editEmail" : {
 											"__type" : "email",
-											"emailString" : "veit.heller@feenk.com"
+											"emailString" : "<unknown>"
 										},
 										"editTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-12-12T20:38:59.43815+01:00"
+												"dateAndTimeString" : "2023-01-30T22:25:27.210643+01:00"
 											}
 										},
 										"uid" : {
@@ -4921,7 +4921,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[[Inspector views show]]"
+										"string" : "[[Inspector views]]"
 									}
 								]
 							},
@@ -8353,120 +8353,44 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "veit.heller@feenk.com"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-12-26T18:22:21.131686+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "veit.heller@feenk.com"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-12-26T18:22:37.102844+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "qvq8Rh+tDQCkjiu7Bc7lxw=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "[[Exploring extension methods to the base image]]"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-01-30T11:12:56.024026+01:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-01-30T11:13:16.658234+01:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "gcAJMtqvDQC18ciQCAnzQg=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "[[Issues related to patches to the base image]]"
-												}
-											]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-01-27T16:08:33.19915+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-01-27T16:08:42.81624+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "gpq/+aGvDQC+BsfKCAnzQg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "[[Patches/changes to the base Pharo Image]]"
-									}
-								]
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-12-26T18:22:21.131686+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-12-26T18:22:37.102844+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qvq8Rh+tDQCkjiu7Bc7lxw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Exploring extension methods to the base image]]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -8476,7 +8400,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-30T11:03:11.472535+01:00"
+									"dateAndTimeString" : "2023-01-27T16:08:33.19915+01:00"
 								}
 							},
 							"editEmail" : {
@@ -8487,17 +8411,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-30T11:03:30.66311+01:00"
+									"dateAndTimeString" : "2023-01-27T16:08:42.81624+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "3hH2DtqvDQCwU9J3CAnzQg=="
+								"uidString" : "gpq/+aGvDQC+BsfKCAnzQg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Changes to the base Pharo image]]"
+							"string" : "[[Patches/changes to the base Pharo Image]]"
 						},
 						{
 							"__type" : "textSnippet",
