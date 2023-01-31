@@ -4905,13 +4905,13 @@
 										},
 										"editEmail" : {
 											"__type" : "email",
-											"emailString" : "veit.heller@feenk.com"
+											"emailString" : "<unknown>"
 										},
 										"editTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-12-12T20:38:59.43815+01:00"
+												"dateAndTimeString" : "2023-01-31T17:27:02.525804+01:00"
 											}
 										},
 										"uid" : {
@@ -6084,7 +6084,45 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [ ]
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-01-31T17:59:48.641355+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-01-31T18:00:02.112331+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "ZD3p/vOvDQC2QHAjCAnzQg=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "[[Example of parsing a Releaser log for Glamorous Toolkit]]"
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
