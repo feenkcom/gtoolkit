@@ -14,7 +14,7 @@ Object class >> gtMagritteDescriptionFor: aView [
 ]
 
 { #category : #'*GToolkit-Extensions' }
-Object class >> gtMagritteFor: anAction [
+Object class >> gtMagritteStencilFor: anAction [
 	"We do not compute descriptions because this can be expensive
 	and we want the view to be fast."
 
