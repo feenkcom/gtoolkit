@@ -39,7 +39,25 @@ def getTestSummary = { ->
     return summary
 }
 
+// Clean up the workspace directory; should be executed at the beginning of the build
+@NonCPS
+def cleanUpUnix(String GTOOLKIT_FOLDER, String RELEASER_FOLDER, String EXAMPLES_FOLDER) {
+    sh "rm -rf ${GTOOLKIT_FOLDER}"
+    sh "rm -rf ${RELEASER_FOLDER}"
+    sh """
+        if [ -d "${EXAMPLES_FOLDER}" ]
+        then
+            echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
+            chmod -R u+w "${EXAMPLES_FOLDER}"
+        fi
+        rm -rf "${EXAMPLES_FOLDER}"
+    """
+    sh 'rm -rf ~/Documents/lepiter'
+    sh 'git clean -fdx'
+}
+
 // Unpackages tentative image and prepares the environment for a given Target
+@NonCPS
 def unpackageTentativeUnix(String TENTATIVE_PACKAGE, String GTOOLKIT_BUILDER_VERSION, String TARGET) {
     unstash "${TENTATIVE_PACKAGE}"
 
@@ -119,18 +137,9 @@ pipeline {
             stages {
                 stage('Clean up') {
                     steps {
-                        sh "rm -rf ${GTOOLKIT_FOLDER}"
-                        sh "rm -rf ${RELEASER_FOLDER}"
-                        sh """
-                            if [ -d "${EXAMPLES_FOLDER}" ]
-                            then
-                                echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
-                                chmod -R u+w "${EXAMPLES_FOLDER}"
-                            fi
-                            rm -rf "${EXAMPLES_FOLDER}"
-                        """
-                        sh 'rm -rf ~/Documents/lepiter'
-                        sh 'git clean -fdx'
+                        script {
+                            cleanUpUnix(env.GTOOLKIT_FOLDER, env.RELEASER_FOLDER, env.EXAMPLES_FOLDER)
+                        }
                     }
                 }
                 stage('Load latest commit') {
@@ -247,17 +256,9 @@ pipeline {
                     stages {
                         stage('Clean up') {
                             steps {
-                                sh "rm -rf ${GTOOLKIT_FOLDER}"
-                                sh """
-                                    if [ -d ${EXAMPLES_FOLDER} ]
-                                    then
-                                        echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
-                                        chmod -R u+w ${EXAMPLES_FOLDER}
-                                    fi
-                                    rm -rf ${EXAMPLES_FOLDER}
-                                   """
-                                sh 'rm -rf ~/Documents/lepiter'
-                                sh 'git clean -fdx'
+                                script {
+                                    cleanUpUnix(env.GTOOLKIT_FOLDER, env.RELEASER_FOLDER, env.EXAMPLES_FOLDER)
+                                }
                                 script {
                                     RELEASED_PACKAGE_GEMSTONE = sh (
                                         script: "echo ${RELEASED_PACKAGE_GEMSTONE_NAME}.zip",
@@ -403,17 +404,9 @@ pipeline {
                     stages {
                         stage('Clean up') {
                             steps {
-                                sh "rm -rf ${GTOOLKIT_FOLDER}"
-                                sh """
-                                    if [ -d ${EXAMPLES_FOLDER} ]
-                                    then
-                                        echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
-                                        chmod -R u+w ${EXAMPLES_FOLDER}
-                                    fi
-                                    rm -rf ${EXAMPLES_FOLDER}
-                                   """
-                                sh 'rm -rf ~/Documents/lepiter'
-                                sh 'git clean -fdx'
+                                script {
+                                    cleanUpUnix(env.GTOOLKIT_FOLDER, env.RELEASER_FOLDER, env.EXAMPLES_FOLDER)
+                                }
                             }
                         }
                         stage('Linux Unpackage') {
@@ -500,9 +493,9 @@ pipeline {
                     stages {
                         stage('Clean up') {
                             steps {
-                                sh "rm -rf ${GTOOLKIT_FOLDER}"
-                                sh "rm -rf ${EXAMPLES_FOLDER}"
-                                sh 'rm -rf ~/Documents/lepiter'
+                                script {
+                                    cleanUpUnix(env.GTOOLKIT_FOLDER, env.RELEASER_FOLDER, env.EXAMPLES_FOLDER)
+                                }
                             }
                         }
                         stage('MacOS M1 Unpackage') {
@@ -591,10 +584,9 @@ pipeline {
                     stages {
                         stage('Clean up') {
                             steps {
-                                sh "rm -rf ${GTOOLKIT_FOLDER}"
-                                sh "rm -rf ${EXAMPLES_FOLDER}"
-                                sh 'rm -rf ~/Documents/lepiter'
-                                sh 'git clean -fdx'
+                                script {
+                                    cleanUpUnix(env.GTOOLKIT_FOLDER, env.RELEASER_FOLDER, env.EXAMPLES_FOLDER)
+                                }
                             }
                         }
                         stage('MacOS Intel Unpackage') {
