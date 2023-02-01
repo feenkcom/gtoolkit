@@ -39,6 +39,18 @@ def getTestSummary = { ->
     return summary
 }
 
+// Unpackages tentative image and prepares the environment for a given Target
+def unpackageTentativeUnix(String TENTATIVE_PACKAGE, String GTOOLKIT_BUILDER_VERSION, String TARGET) {
+    unstash "${TENTATIVE_PACKAGE}"
+
+    sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
+    sh 'chmod +x gt-installer'
+
+    sh 'git config --global user.name "Jenkins"'
+    sh 'git config --global user.email "jenkins@feenk.com"'
+    sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
+}
+
 pipeline {
     agent none
     parameters {
@@ -256,14 +268,9 @@ pipeline {
                         }
                         stage('Linux Unpackage') {
                             steps {
-                                unstash "${TENTATIVE_PACKAGE}"
-
-                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
-                                sh 'chmod +x gt-installer'
-
-                                sh 'git config --global user.name "Jenkins"'
-                                sh 'git config --global user.email "jenkins@feenk.com"'
-                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
+                                script {
+                                    unpackageTentativeUnix(env.TENTATIVE_PACKAGE, env.GTOOLKIT_BUILDER_VERSION, env.TARGET)
+                                }
                             }
                         }
                         stage('Linux Examples') {
