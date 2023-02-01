@@ -18,7 +18,6 @@ scp releasedateinseconds "$AWS:$GT_FOLDER/.releasedateinseconds"
 ssh "$AWS" -t "cd ${GT_FOLDER}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n' -r rm --"
 
 # Deploy local build scripts
-scp scripts/zeroconf/get "$AWS:$GT_FOLDER"
 scp scripts/localbuild/*.sh "$AWS:$SCRIPTS_FOLDER"
 
 pwd
