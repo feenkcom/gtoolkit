@@ -39,36 +39,6 @@ def getTestSummary = { ->
     return summary
 }
 
-// Clean up the workspace directory; should be executed at the beginning of the build
-@NonCPS
-def cleanUpUnix(String GTOOLKIT_FOLDER, String RELEASER_FOLDER, String EXAMPLES_FOLDER) {
-    sh "rm -rf ${GTOOLKIT_FOLDER}"
-    sh "rm -rf ${RELEASER_FOLDER}"
-    sh """
-        if [ -d "${EXAMPLES_FOLDER}" ]
-        then
-            echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
-            chmod -R u+w "${EXAMPLES_FOLDER}"
-        fi
-        rm -rf "${EXAMPLES_FOLDER}"
-    """
-    sh 'rm -rf ~/Documents/lepiter'
-    sh 'git clean -fdx'
-}
-
-// Unpackages tentative image and prepares the environment for a given Target
-@NonCPS
-def unpackageTentativeUnix(String TENTATIVE_PACKAGE, String GTOOLKIT_BUILDER_VERSION, String TARGET) {
-    unstash "${TENTATIVE_PACKAGE}"
-
-    sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
-    sh 'chmod +x gt-installer'
-
-    sh 'git config --global user.name "Jenkins"'
-    sh 'git config --global user.email "jenkins@feenk.com"'
-    sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-}
-
 pipeline {
     agent none
     parameters {
@@ -85,10 +55,8 @@ pipeline {
         MACOS_INTEL_TARGET = 'x86_64-apple-darwin'
         MACOS_M1_TARGET = 'aarch64-apple-darwin'
 
-        LINUX_AMD64_SERVER_NAME = 'mickey-mouse'
+        LINUX_SERVER_NAME = 'mickey-mouse'
         LINUX_AMD64_TARGET = 'x86_64-unknown-linux-gnu'
-        LINUX_ARM64_SERVER_NAME = 'peter-pan'
-        LINUX_ARM64_TARGET = 'aarch64-unknown-linux-gnu'
 
         WINDOWS_SERVER_NAME = 'daffy-duck'
         WINDOWS_AMD64_TARGET = 'x86_64-pc-windows-msvc'
@@ -137,9 +105,18 @@ pipeline {
             stages {
                 stage('Clean up') {
                     steps {
-                        script {
-                            cleanUpUnix(env.GTOOLKIT_FOLDER, env.RELEASER_FOLDER, env.EXAMPLES_FOLDER)
-                        }
+                        sh "rm -rf ${GTOOLKIT_FOLDER}"
+                        sh "rm -rf ${RELEASER_FOLDER}"
+                        sh """
+                            if [ -d "${EXAMPLES_FOLDER}" ]
+                            then
+                                echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
+                                chmod -R u+w "${EXAMPLES_FOLDER}"
+                            fi
+                            rm -rf "${EXAMPLES_FOLDER}"
+                        """
+                        sh 'rm -rf ~/Documents/lepiter'
+                        sh 'git clean -fdx'
                     }
                 }
                 stage('Load latest commit') {
@@ -239,7 +216,7 @@ pipeline {
                 }
             }
             parallel {
-                stage('Linux x86_64') {
+                stage('Linux') {
                     options {
                         timeout(time: 45, unit: "MINUTES")
                     }
@@ -251,14 +228,22 @@ pipeline {
                         RELEASED_PACKAGE_GEMSTONE_NAME="gt4gemstone-3.7.0-${GTOOLKIT_EXPECTED_VERSION}"
                     }
                     agent {
-                        label "${LINUX_AMD64_TARGET}-${LINUX_AMD64_SERVER_NAME}"
+                        label "${LINUX_AMD64_TARGET}-${LINUX_SERVER_NAME}"
                     }
                     stages {
                         stage('Clean up') {
                             steps {
-                                script {
-                                    cleanUpUnix(env.GTOOLKIT_FOLDER, env.RELEASER_FOLDER, env.EXAMPLES_FOLDER)
-                                }
+                                sh "rm -rf ${GTOOLKIT_FOLDER}"
+                                sh """
+                                    if [ -d ${EXAMPLES_FOLDER} ]
+                                    then
+                                        echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
+                                        chmod -R u+w ${EXAMPLES_FOLDER}
+                                    fi
+                                    rm -rf ${EXAMPLES_FOLDER}
+                                   """
+                                sh 'rm -rf ~/Documents/lepiter'
+                                sh 'git clean -fdx'
                                 script {
                                     RELEASED_PACKAGE_GEMSTONE = sh (
                                         script: "echo ${RELEASED_PACKAGE_GEMSTONE_NAME}.zip",
@@ -269,9 +254,14 @@ pipeline {
                         }
                         stage('Linux Unpackage') {
                             steps {
-                                script {
-                                    unpackageTentativeUnix(env.TENTATIVE_PACKAGE, env.GTOOLKIT_BUILDER_VERSION, env.TARGET)
-                                }
+                                unstash "${TENTATIVE_PACKAGE}"
+
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
+                                sh 'chmod +x gt-installer'
+
+                                sh 'git config --global user.name "Jenkins"'
+                                sh 'git config --global user.email "jenkins@feenk.com"'
+                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
                             }
                         }
                         stage('Linux Examples') {
@@ -358,12 +348,12 @@ pipeline {
                             }
                             steps {
                                 script {
-                                    RELEASED_PACKAGE_LINUX_AMD64 = sh (
+                                    RELEASED_PACKAGE_LINUX = sh (
                                         script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE}",
                                         returnStdout: true
                                     ).trim()
                                 }
-                                echo "Created release package ${RELEASED_PACKAGE_LINUX_AMD64}"
+                                echo "Created release package ${RELEASED_PACKAGE_LINUX}"
                             }
                         }
                         stage('Linux Stash') {
@@ -373,8 +363,8 @@ pipeline {
                                 }
                             }
                             steps {
-                                echo "About to stash ${RELEASED_PACKAGE_LINUX_AMD64}"
-                                stash includes: "${RELEASED_PACKAGE_LINUX_AMD64}", name: "${TARGET}"
+                                echo "About to stash ${RELEASED_PACKAGE_LINUX}"
+                                stash includes: "${RELEASED_PACKAGE_LINUX}", name: "${TARGET}"
                             }
                         }
                         stage('GemStone Stash') {
@@ -387,93 +377,6 @@ pipeline {
                                 sh "cp ${GEMSTONE_WORKSPACE}/${RELEASED_PACKAGE_GEMSTONE} ${WORKSPACE}" 
                                 echo "About to stash ${RELEASED_PACKAGE_GEMSTONE}"
                                 stash includes: "${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
-                            }
-                        }
-                    }
-                }
-                stage('Linux arm64') {
-                    options {
-                        timeout(time: 45, unit: "MINUTES")
-                    }
-                    environment {
-                        TARGET = "${LINUX_ARM64_TARGET}"
-                    }
-                    agent {
-                        label "${LINUX_ARM64_TARGET}-${LINUX_ARM64_SERVER_NAME}"
-                    }
-                    stages {
-                        stage('Clean up') {
-                            steps {
-                                script {
-                                    cleanUpUnix(env.GTOOLKIT_FOLDER, env.RELEASER_FOLDER, env.EXAMPLES_FOLDER)
-                                }
-                            }
-                        }
-                        stage('Linux Unpackage') {
-                            steps {
-                                script {
-                                    unpackageTentativeUnix(env.TENTATIVE_PACKAGE, env.GTOOLKIT_BUILDER_VERSION, env.TARGET)
-                                }
-                            }
-                        }
-                        stage('Linux Examples') {
-                            when { expression {
-                                    env.RUN_TESTS
-                                }
-                            }
-                            steps {
-                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
-                                sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
-
-                                sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                            }
-                        }
-                        stage('Linux Pharo Tests') {
-                            when { expression {
-                                    env.RUN_TESTS && false
-                                }
-                            }
-                            steps {
-                                sh """
-                                    cd ${EXAMPLES_FOLDER}
-                                    bin/GlamorousToolkit-cli GlamorousToolkit.image test --junit-xml-output 'Zinc.*' 'Zodiac.*'
-                                   """
-                            }
-                        }
-                        stage('Linux Report Examples') {
-                           when { expression {
-                                    env.RUN_TESTS
-                                }
-                            }
-                           steps {
-                                junit "${EXAMPLES_FOLDER}/*.xml"
-                           }
-                        }
-                        stage('Linux Package') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                script {
-                                    RELEASED_PACKAGE_LINUX_ARM64 = sh (
-                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE}",
-                                        returnStdout: true
-                                    ).trim()
-                                }
-                                echo "Created release package ${RELEASED_PACKAGE_LINUX_ARM64}"
-                            }
-                        }
-                        stage('Linux Stash') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                echo "About to stash ${RELEASED_PACKAGE_LINUX_ARM64}"
-                                stash includes: "${RELEASED_PACKAGE_LINUX_ARM64}", name: "${TARGET}"
                             }
                         }
                     }
@@ -493,16 +396,20 @@ pipeline {
                     stages {
                         stage('Clean up') {
                             steps {
-                                script {
-                                    cleanUpUnix(env.GTOOLKIT_FOLDER, env.RELEASER_FOLDER, env.EXAMPLES_FOLDER)
-                                }
+                                sh "rm -rf ${GTOOLKIT_FOLDER}"
+                                sh "rm -rf ${EXAMPLES_FOLDER}"
+                                sh 'rm -rf ~/Documents/lepiter'
                             }
                         }
                         stage('MacOS M1 Unpackage') {
                             steps {
-                                script {
-                                    unpackageTentativeUnix(env.TENTATIVE_PACKAGE, env.GTOOLKIT_BUILDER_VERSION, env.TARGET)
-                                }
+                                unstash "${TENTATIVE_PACKAGE}"
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
+                                sh 'chmod +x gt-installer'
+
+                                sh 'git config --global user.name "Jenkins"'
+                                sh 'git config --global user.email "jenkins@feenk.com"'
+                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
                             }
                         }
                         stage('MacOS M1 Examples') {
@@ -584,16 +491,22 @@ pipeline {
                     stages {
                         stage('Clean up') {
                             steps {
-                                script {
-                                    cleanUpUnix(env.GTOOLKIT_FOLDER, env.RELEASER_FOLDER, env.EXAMPLES_FOLDER)
-                                }
+                                sh "rm -rf ${GTOOLKIT_FOLDER}"
+                                sh "rm -rf ${EXAMPLES_FOLDER}"
+                                sh 'rm -rf ~/Documents/lepiter'
+                                sh 'git clean -fdx'
                             }
                         }
                         stage('MacOS Intel Unpackage') {
                             steps {
-                                script {
-                                    unpackageTentativeUnix(env.TENTATIVE_PACKAGE, env.GTOOLKIT_BUILDER_VERSION, env.TARGET)
-                                }
+                                unstash "${TENTATIVE_PACKAGE}"
+
+                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
+                                sh 'chmod +x gt-installer'
+
+                                sh 'git config --global user.name "Jenkins"'
+                                sh 'git config --global user.email "jenkins@feenk.com"'
+                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
                             }
                         }
                         stage('MacOS Intel Examples') {
@@ -750,7 +663,6 @@ pipeline {
                 unstash "${MACOS_INTEL_TARGET}"
                 unstash "${MACOS_M1_TARGET}"
                 unstash "${LINUX_AMD64_TARGET}"
-                unstash "${LINUX_ARM64_TARGET}"
                 unstash "${WINDOWS_AMD64_TARGET}"
                 unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
                 unstash "${GEMSTONE_TARGET}"
@@ -775,12 +687,11 @@ pipeline {
                     --owner feenkcom \
                     --repo gtoolkit \
                     --token GITHUB_TOKEN \
-					release \
+                    release \
                     --version ${GTOOLKIT_EXPECTED_VERSION} \
                     --auto-accept \
                     --assets \
-                        ${RELEASED_PACKAGE_LINUX_AMD64} \
-                        ${RELEASED_PACKAGE_LINUX_ARM64} \
+                        ${RELEASED_PACKAGE_LINUX} \
                         ${RELEASED_PACKAGE_MACOS_M1} \
                         ${RELEASED_PACKAGE_MACOS_INTEL} \
                         ${RELEASED_PACKAGE_WINDOWS} \
