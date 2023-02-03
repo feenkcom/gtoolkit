@@ -31,6 +31,7 @@ rollback "Win64"
 rollback "OSX64"
 rollback "OSXM1"
 rollback "Linux64"
+rollback "LinuxArm64"
 
 stat -c %Y "$(cat $GTfolder/GlamorousToolkitLinux64-release)" > .releasedateinseconds
 

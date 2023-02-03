@@ -687,6 +687,7 @@ pipeline {
                     --owner feenkcom \
                     --repo gtoolkit \
                     --token GITHUB_TOKEN \
+                    release \
                     --version ${GTOOLKIT_EXPECTED_VERSION} \
                     --auto-accept \
                     --assets \
