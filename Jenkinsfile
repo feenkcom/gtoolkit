@@ -2,8 +2,861 @@ import hudson.tasks.test.AbstractTestResultAction
 import hudson.model.Actionable
 import hudson.tasks.junit.CaseResult
 
+node {
+    properties([
+            parameters([
+                    choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing'),
+                    booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests during the build')
+            ]),
+            buildDiscarder(logRotator(numToKeepStr: '50')),
+            disableConcurrentBuilds()
+    ])
+    checkout scm
+    try {
+        onBuildStarted()
+        pipeline()
+        postSuccess()
+    } catch (e) {
+        def currentResult = currentBuild.result ?: 'SUCCESS'
+        if (currentResult == 'FAILURE') {
+            postFailure(e)
+        }
+        // Since we're catching the exception in order to report on it,
+        // we need to re-throw it, to ensure that the build is marked as failed
+        throw e
+    } finally {
+        def currentResult = currentBuild.result ?: 'SUCCESS'
+        if (currentResult == 'UNSTABLE') {
+            postUnstable()
+        }
+    }
+}
+
+def pipeline() {
+    new GlamorousToolkit(this,
+            new Agent(Triplet.MacOS_Aarch64),
+            [
+                    "BUILD_URL"   : env.BUILD_URL,
+                    "JOB_NAME"    : env.JOB_NAME,
+                    "BUILD_NUMBER": env.BUILD_NUMBER.toInteger(),
+                    "FRESH_BUILD" : true,
+                    "CLEAN_UP"    : true
+            ] + params).execute()
+}
+
+def postSuccess() {
+    tsum = getTestSummary()
+    slackSend(color: '#00FF00', message: "Successful <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>\n$tsum")
+}
+
+def postUnstable() {
+    tfailed = getFailedTests()
+    tsum = getTestSummary()
+    slackSend(color: '#FFFF00', message: "Unstable <${env.BUILD_URL}/testReport|${env.JOB_NAME} [${env.BUILD_NUMBER}]>\nTest Summary: $tsum\n$tfailed")
+}
+
+def postFailure(e) {
+    slackSend(color: '#FF0000', message: "Failed  <${env.BUILD_URL}/consoleFull|${env.JOB_NAME} [${env.BUILD_NUMBER}]> due to $e")
+}
+
+def onBuildStarted() {
+    slackSend(color: '#FFFF00', message: ("Started <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>"))
+}
+
+/**
+ * An entrance point into the Jenkins build of the Glamorous Toolkit.
+ * Knows the build parameters and drives the high level stages of the build.
+ * Decides on which Jenkins nodes it should run the build, examples and packaging steps.
+ * @see Builder - which is responsible for building a tentative GlamorousToolkit image.
+ */
+class GlamorousToolkit {
+    static final RELEASER_FOLDER = "gt-releaser"
+    static final GTOOLKIT_FOLDER = "glamoroustoolkit"
+    static final EXAMPLES_FOLDER = "gt-examples"
+    static final LEPITER_WINDOWS = "C:/Users/Administrator/Documents/lepiter"
+    static final LEPITER_UNIX = "~/Documents/lepiter"
+    static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo10-SNAPSHOT.build.521.sha.14f5413.arch.64bit.zip"
+    static final TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
+    static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
+    static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
+    static final RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
+
+    final Script script
+    Agent agent
+
+    final boolean runTests
+    final String bump
+    final boolean freshBuild
+    final boolean cleanUp
+
+    final String buildUrl
+    final String jobName
+    final int buildNumber
+
+    String releaserVersion
+    String installerVersion
+
+    String gtoolkitVersion
+    String gt4gemstoneCommitHash
+    String gt4remoteCommitHash
+    Map<String, String> artefacts
+
+    final def jobs
+
+    GlamorousToolkit(Script script, Agent agent, Map params) {
+        this.script = script
+        this.agent = agent
+        this.runTests = params.RUN_TESTS
+        this.freshBuild = params.FRESH_BUILD
+        this.cleanUp = params.CLEAN_UP
+        this.bump = params.BUMP
+
+        this.buildUrl = params.BUILD_URL
+        this.jobName = params.JOB_NAME
+        this.buildNumber = params.BUILD_NUMBER
+
+        this.gtoolkitVersion = null
+        this.gt4gemstoneCommitHash = null
+        this.gt4remoteCommitHash = null
+        this.artefacts = [:]
+
+        jobs = [
+                new TestAndPackage(this, new Agent(Triplet.MacOS_Aarch64), Triplet.MacOS_Aarch64).disable_tests(),
+                new TestAndPackage(this, new Agent(Triplet.MacOS_X86_64), Triplet.MacOS_X86_64),
+                new TestAndPackageWithGemstone(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64),
+                new TestAndPackage(this, new Agent(Triplet.Windows_X86_64, "daffy-duck"), Triplet.Windows_X86_64)
+        ]
+    }
+
+    void execute() {
+        build()
+        test_and_package()
+        release()
+    }
+
+    void build() {
+        read_tool_versions()
+        new Builder(this, new Agent(Triplet.MacOS_Aarch64)).execute()
+    }
+
+    void test_and_package() {
+        def testers = [:]
+        for (x in jobs) {
+            def job = x
+
+            // Create a map to pass in to the 'parallel' step so we can fire all the builds at once
+            testers[job.agent] = {
+                job.execute()
+            }
+        }
+
+        script.parallel testers
+    }
+
+    void release() {
+        def currentResult = script.currentBuild.result ?: 'SUCCESS'
+        // we must not release if the build is not successful until this point
+        if (currentResult != 'SUCCESS') {
+            return;
+        }
+
+        script.stage("Release") {
+            doRelease()
+        }
+    }
+
+    void doRelease() {
+        def artefacts_to_release = ""
+        this.artefacts.each {
+            key, path ->
+                script.unstash "${key}"
+                script.echo "Unstashed ${key} as ${path}"
+                artefacts_to_release += "${path} "
+        }
+
+        // Remove the gt-extra folder so it does not influence the release.
+        agent.platform().delete_directory(script, "${RELEASER_FOLDER}/gt-extra")
+
+        download_releaser()
+
+        script.sshagent(credentials: ['jenkins-ubuntu-node-aliaksei-syrel']) {
+            agent.platform().exec(
+                    script,
+                    "./gt-installer",
+                    "--verbose " +
+                            "--workspace ${RELEASER_FOLDER} " +
+                            "run-releaser " +
+                            "--bump ${bump}")
+        }
+
+        script.withCredentials([script.string(credentialsId: 'githubrelease', variable: 'GITHUB_TOKEN')]) {
+            agent.platform().exec(script,
+                    "./feenk-releaser",
+                    "--owner feenkcom " +
+                            "--repo gtoolkit " +
+                            "--token GITHUB_TOKEN " +
+                            "release " +
+                            "--version ${gtoolkitVersion} " +
+                            "--auto-accept " +
+                            "--assets ${artefacts_to_release}")
+        }
+
+        script.sshagent(credentials: ['jenkins-ubuntu-node-aliaksei-syrel']) {
+            script.sh "chmod +x ./scripts/build/*.sh"
+            script.sh "./scripts/build/upload.sh"
+        }
+
+        script.withCredentials([script.sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+            def remote = [:]
+            remote.name = 'deploy'
+            remote.host = 'sftp.feenk.com'
+            remote.user = userName
+            remote.identityFile = identity
+            remote.allowAnyHosts = true
+            script.sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
+        }
+    }
+
+    void stash_for_release(String path, String key = null) {
+        this.stash_internally(path, key)
+        this.artefacts[key ?: path] = path
+    }
+
+    void stash_internally(String path, String key = null) {
+        script.echo "About to stash ${path} as ${key ?: path}"
+        script.stash includes: path, name: key ?: path
+    }
+
+    /**
+     * Reads and remembers versions of the tools used during the build from .version files
+     */
+    void read_tool_versions() {
+        script.stage('Read tool versions') {
+            this.releaserVersion = script.sh(
+                    script: "cat feenk-releaser.version",
+                    returnStdout: true
+            ).trim()
+            this.installerVersion = script.sh(
+                    script: "cat gtoolkit-builder.version",
+                    returnStdout: true
+            ).trim()
+            script.echo "Will install using gtoolkit-installer ${installerVersion}"
+            script.echo "Will release using feenk-releaser ${releaserVersion}"
+            script.echo "Will run tests: ${runTests}"
+        }
+    }
+
+    void download_releaser() {
+        agent.platform().download_executable(script, releaser_url(), "feenk-releaser")
+    }
+
+    String releaser_url() {
+        return "https://github.com/feenkcom/releaser-rs/releases/download/${releaserVersion}/feenk-releaser-${agent.host().toString()}"
+    }
+}
+
+class Builder extends AgentJob {
+    Builder(GlamorousToolkit build, Agent agent) {
+        super(build, agent)
+    }
+
+    @java.lang.Override
+    void execute() {
+        script.node(agent.label()) {
+            script.echo "Will build pre-release image on ${agent.label()}"
+            cleanUp()
+            load_latest_commit()
+            read_gtoolkit_versions()
+            package_image()
+        }
+    }
+
+    void load_latest_commit() {
+        script.stage('Load latest commit') {
+            download_installer()
+            build_without_gt_world()
+            on_commits_loaded()
+        }
+    }
+
+    void on_commits_loaded() {
+        def newCommitFiles = script.findFiles(glob: 'gt-releaser/newcommits*.txt')
+        for (int i = 0; i < newCommitFiles.size(); ++i) {
+            def new_commits = script.readFile(newCommitFiles[i].path)
+            script.slackSend(color: '#00FF00', message: "Commits from <${script.env.BUILD_URL}|${script.env.JOB_NAME} [${script.env.BUILD_NUMBER}]>:\n ${new_commits}")
+        }
+    }
+
+    void read_gtoolkit_versions() {
+        build.gtoolkitVersion = platform().exec_stdout(script,
+                "./gt-installer",
+                "--workspace ${GlamorousToolkit.RELEASER_FOLDER} print-gtoolkit-image-version")
+
+        build.gt4gemstoneCommitHash = platform().exec_stdout(script,
+                "git",
+                "rev-parse HEAD",
+                "${GlamorousToolkit.RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/gt4gemstone")
+
+        build.gt4remoteCommitHash = platform().exec_stdout(script,
+                "git",
+                "rev-parse HEAD",
+                "${GlamorousToolkit.RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/gtoolkit-remote")
+
+        script.echo "We expect to release gtoolkit ${build.gtoolkitVersion}"
+        script.echo "We expect to release gt4gemstone ${build.gt4gemstoneCommitHash}"
+        script.echo "We expect to release gtoolkit-remote ${build.gt4remoteCommitHash}"
+    }
+
+    void build_without_gt_world() {
+        if (!build.freshBuild) {
+            script.echo "Skipping the loading of the latest commit due to the non-fresh build"
+            return
+        }
+        /// the following loads glamorous toolkit without opening GT world
+        script.sshagent(credentials: ['jenkins-ubuntu-node-aliaksei-syrel']) {
+            platform().exec(
+                    script,
+                    "./gt-installer",
+                    "--verbose " +
+                            "--workspace ${GlamorousToolkit.RELEASER_FOLDER} " +
+                            "release-build " +
+                            "--loader cloner " +
+                            "--image-url ${GlamorousToolkit.PHARO_IMAGE_URL} " +
+                            "--bump ${build.bump} " +
+                            "--no-gt-world")
+        }
+    }
+
+    void package_image() {
+        script.stage('Package image') {
+            // make a copy from RELEASER_FOLDER to the default folder
+            platform().exec(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.RELEASER_FOLDER} copy-to")
+            // clean the ssh keys and remove iceberg repositories
+            platform().exec(script, "./gt-installer", "--verbose clean-up")
+            // package without gt-world
+            platform().exec(script, "./gt-installer", "--verbose package-tentative ${GlamorousToolkit.TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}")
+            // open gt world
+            platform().exec(script, "./gt-installer", "--verbose start")
+            // package with gt-world opened, ready to run tests
+            platform().exec(script, "./gt-installer", "--verbose package-tentative ${GlamorousToolkit.TENTATIVE_PACKAGE}")
+
+            build.stash_for_release(GlamorousToolkit.TENTATIVE_PACKAGE_WITHOUT_GT_WORLD)
+            build.stash_internally(GlamorousToolkit.TENTATIVE_PACKAGE)
+        }
+    }
+}
+
+class TestAndPackage extends AgentJob {
+    final Triplet target
+    boolean runTests
+
+    TestAndPackage(GlamorousToolkit build, Agent agent, Triplet target) {
+        super(build, agent)
+        this.target = target
+        this.runTests = build.runTests
+    }
+
+    @NonCPS
+    TestAndPackage disable_tests() {
+        this.runTests = false
+        return this
+    }
+
+    @java.lang.Override
+    void execute() {
+        script.node(agent.label()) {
+            setup_node()
+            run_tests()
+            create_release_package()
+        }
+    }
+
+    void setup_node() {
+        script.stage("Unpackage " + target.short_label()) {
+            cleanUp()
+            configure_git()
+            unpackage_tentative()
+        }
+    }
+
+    void unpackage_tentative() {
+        script.unstash "${GlamorousToolkit.TENTATIVE_PACKAGE}"
+        download_installer()
+        platform().exec(script, "./gt-installer", "--verbose unpackage-tentative ${GlamorousToolkit.TENTATIVE_PACKAGE}")
+    }
+
+    void run_tests() {
+        if (runTests) {
+            script.stage("Test " + target.short_label()) {
+                prepare_for_testing()
+                run_gtoolkit_examples()
+                run_extra_examples()
+                run_pharo_tests()
+                report_test_results()
+            }
+        }
+    }
+
+    void prepare_for_testing() {
+        // make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
+        platform().exec(script, "./gt-installer", "--verbose copy-to ${GlamorousToolkit.EXAMPLES_FOLDER}")
+
+        // On Windows we must disable the firewall for the exe, otherwise there will be no internet access when running examples / tests
+        if (platform() == Platform.Windows) {
+            script.powershell "netsh advfirewall firewall add rule name='Gt Examples cli exe' dir=in action=allow program='${GlamorousToolkit.EXAMPLES_FOLDER}\\bin\\GlamorousToolkit-cli.exe' enable=yes"
+        }
+    }
+
+    void run_gtoolkit_examples() {
+        platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS}")
+    }
+
+    void run_extra_examples() {
+
+    }
+
+    /**
+     * Runs Pharo TestCase in a few selected packages to verify that the VM works good enough to support base Pharo features.
+     */
+    void run_pharo_tests() {
+        platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test --packages 'Zinc.*' 'Zodiac.*'")
+    }
+
+    /**
+     * Analyses and reports the test results.
+     * Should be executed after running all examples and tests.
+     */
+    void report_test_results() {
+        script.junit "${GlamorousToolkit.EXAMPLES_FOLDER}/*.xml"
+    }
+
+    /**
+     * Create a package ready for release
+     */
+    void create_release_package() {
+        script.stage("Package " + target.short_label()) {
+            def release_package = platform().exec_stdout(script, "./gt-installer", "--verbose package-release \"${GlamorousToolkit.RELEASE_PACKAGE_TEMPLATE}\"")
+            script.echo "Created release package ${release_package}"
+            sign_package(release_package)
+            build.stash_for_release(release_package, target.toString())
+        }
+    }
+
+    /**
+     * Sign the prepared package.
+     * Only supported when targeting MacOS.
+     */
+    void sign_package(String release_package) {
+        if (target.platform() != Platform.MacOS) {
+            return
+        }
+
+        def target_arch = target.architecture.toString()
+        def id_arch = ""
+        switch (target_arch) {
+            case "aarch64":
+                id_arch = "aarch64"
+                break
+            case "x86_64":
+                id_arch = "x86-64"
+                break
+            default:
+                script.error "Unsupported architecture: ${target_arch}"
+                break
+        }
+
+        script.withCredentials([script.string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')]) {
+            script.sh """
+                set +x
+                xcrun altool \
+                    -t osx \
+                    -f ${release_package} \
+                    -itc_provider "77664ZXL29" \
+                    --primary-bundle-id "com.feenk.gtoolkit.darwin-apple-${id_arch}" \
+                    --notarize-app \
+                    --verbose \
+                    --username "notarization@feenk.com" \
+                    --password \$APPLE_PASSWORD \
+            """
+        }
+
+        script.echo "Signed release package ${release_package}"
+    }
+}
+
+class TestAndPackageWithGemstone extends TestAndPackage {
+    static final GEMSTONE_FOLDER = "remote-gemstone"
+
+    TestAndPackageWithGemstone(GlamorousToolkit build, Agent agent, Triplet target) {
+        super(build, agent, target)
+
+        if (agent.host() != Triplet.Linux_X86_64) {
+            script.error "Gemstone build is only supported on x86_64 linux"
+        }
+    }
+
+    @Override
+    void prepare_for_testing() {
+        super.prepare_for_testing()
+
+        script.sh """
+            cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+            rm -rf gt4gemstone
+            git clone https://github.com/feenkcom/gt4gemstone.git 
+            cd gt4gemstone 
+            git checkout ${build.gt4gemstoneCommitHash}
+        """
+
+        script.sh """
+            cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+            rm -rf gtoolkit-remote
+            git clone https://github.com/feenkcom/gtoolkit-remote.git
+            cd gtoolkit-remote 
+            git checkout ${build.gt4remoteCommitHash}
+        """
+
+        script.sh """
+            cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+            rm -rf Sparkle
+            git clone https://github.com/feenkcom/Sparkle.git
+        """
+
+        script.sh """
+            cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+            chmod +x gt4gemstone/scripts/*.sh
+            chmod +x gt4gemstone/scripts/release/*.sh
+            chmod +x gtoolkit-remote/scripts/*.sh
+        """
+    }
+
+    @Override
+    void run_extra_examples() {
+        run_gemstone_examples()
+    }
+
+    void run_gemstone_examples() {
+        script.withEnv([
+                "GEMSTONE_WORKSPACE=${script.env.WORKSPACE}/${GlamorousToolkit.EXAMPLES_FOLDER}/${GEMSTONE_FOLDER}",
+                "GT4GEMSTONE_VERSION=${build.gtoolkitVersion}",
+                "RELEASED_PACKAGE_GEMSTONE_NAME=${gemstone_package_name()}"]) {
+            // Run the GemStone remote examples.
+            // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
+            script.sh """
+                    cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+                    ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
+                    ./gt4gemstone/scripts/run-remote-gemstone-examples.sh
+                """
+        }
+    }
+
+    String gemstone_package_name() {
+        return "gt4gemstone-3.7.0-${build.gtoolkitVersion}"
+    }
+
+    @Override
+    void create_release_package() {
+        super.create_release_package()
+
+        // Gemstone package is prepared during examples running step
+        if (!build.runTests) {
+            return
+        }
+
+        def gemstone_workspace = "${GlamorousToolkit.EXAMPLES_FOLDER}/${GEMSTONE_FOLDER}"
+        def gemstone_package = "${gemstone_package_name()}.zip"
+
+        script.sh "cp -rf ${gemstone_workspace}/${gemstone_package} ."
+        build.stash_for_release(gemstone_package, 'GemStone')
+    }
+}
+
+/**
+ * Represents a Job that is assigned to be run on a specific agent.
+ * @see Agent
+ */
+abstract class AgentJob {
+    final GlamorousToolkit build
+    final Script script
+    // agent on which to build the image
+    final Agent agent
+
+    AgentJob(GlamorousToolkit build, Agent agent) {
+        this.build = build
+        this.script = build.script
+        this.agent = agent
+    }
+
+    void cleanUp() {
+        doCleanUp()
+    }
+
+    void doCleanUp() {
+        if (build.cleanUp && build.freshBuild) {
+            platform().delete_directory(script, GlamorousToolkit.RELEASER_FOLDER)
+        }
+        platform().delete_directory(script, GlamorousToolkit.GTOOLKIT_FOLDER)
+        platform().delete_directory(script, GlamorousToolkit.EXAMPLES_FOLDER)
+        platform().delete_directory(script, platform().lepiter_directory())
+        if (build.cleanUp && build.freshBuild && script.fileExists("/.git")) {
+            platform().shell(script, "git clean -fdx")
+        }
+    }
+
+    abstract void execute()
+
+    void configure_git() {
+        platform().shell(script, 'git config --global user.name "Jenkins"')
+        platform().shell(script, 'git config --global user.email "jenkins@feenk.com"')
+    }
+
+    void download_installer() {
+        platform().download_executable(script, installer_url(), "gt-installer")
+    }
+
+    String installer_url() {
+        return "https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${build.installerVersion}/gt-installer-${agent.host().toString()}"
+    }
+
+    Platform platform() {
+        return agent.platform()
+    }
+}
+
+class Agent {
+    final Triplet host
+    final String tag
+
+    Agent(Triplet host) {
+        this(host, null)
+    }
+
+    Agent(Triplet host, String tag) {
+        this.host = host
+        this.tag = tag
+    }
+
+    @NonCPS
+    Triplet host() {
+        return host
+    }
+
+    @NonCPS
+    Platform platform() {
+        return host.platform()
+    }
+
+    @java.lang.Override
+    @NonCPS
+    String toString() {
+        return "Agent (" + label() + ")"
+    }
+
+    @NonCPS
+    String label() {
+        String host_string = host.toString()
+        if (tag == null) {
+            return host_string
+        } else {
+            return host_string + "-" + tag
+        }
+    }
+}
+
+enum Triplet {
+    MacOS_Aarch64(Platform.MacOS, Architecture.Aarch64),
+    MacOS_X86_64(Platform.MacOS, Architecture.X86_64),
+    Linux_Aarch64(Platform.Linux, Architecture.Aarch64),
+    Linux_X86_64(Platform.Linux, Architecture.X86_64),
+    Windows_Aarch64(Platform.Windows, Architecture.Aarch64),
+    Windows_X86_64(Platform.Windows, Architecture.X86_64)
+
+    final Platform platform
+    final Architecture architecture
+
+    Triplet(Platform platform, Architecture architecture) {
+        this.platform = platform
+        this.architecture = architecture
+    }
+
+    @NonCPS
+    Platform platform() {
+        return this.platform
+    }
+
+    @Override
+    @NonCPS
+    String toString() {
+        this.architecture.toString() + "-" + this.platform.toString()
+    }
+
+    @NonCPS
+    String short_label() {
+        this.platform.short_label() + " " + this.architecture.short_label()
+    }
+}
+
+/**
+ * Encapsulates platform specific aspects of the build process
+ */
+enum Platform {
+    Windows("pc-windows-msvc"),
+    MacOS("apple-darwin"),
+    Linux("unknown-linux-gnu")
+
+    final String value
+
+    Platform(String value) {
+        this.value = value
+    }
+
+    @Override
+    @NonCPS
+    String toString() {
+        this.value
+    }
+
+    @NonCPS
+    String short_label() {
+        switch (this) {
+            case Windows:
+                return "Windows"
+                break
+            case MacOS:
+                return "MacOS"
+                break
+            case Linux:
+                return "Linux"
+                break
+        }
+    }
+
+    /**
+     * Platform specific Lepiter directory
+     * @return - a String path to the lepiter directory depending on the platform
+     * where the script is executed
+     */
+    String lepiter_directory() {
+        if (this == Windows) {
+            GlamorousToolkit.LEPITER_WINDOWS
+        } else {
+            GlamorousToolkit.LEPITER_UNIX
+        }
+    }
+
+    void download_executable(Script script, String url, String executable) {
+        if (this == Windows) {
+            download_file(script, url + ".exe", executable + ".exe")
+        } else {
+            download_file(script, url, executable)
+            script.sh "chmod +x ${executable}"
+        }
+    }
+
+    void download_file(Script script, String url, String output) {
+        delete_file(script, output)
+        if (this == Windows) {
+            script.powershell "curl -o ${output} ${url}"
+        } else {
+            script.sh "curl -o ${output} -LsS ${url}"
+        }
+    }
+
+    void delete_directory(Script script, String directory) {
+        if (this == Windows) {
+            script.powershell "Remove-Item ${directory} -Recurse -ErrorAction Ignore"
+        } else {
+            script.sh """
+                if [ -d "${directory}" ]
+                then
+                    echo "Granting write permission for cleanup: ${directory}"
+                    chmod -R u+w "${directory}"
+                fi
+                rm -rf "${directory}"
+            """
+        }
+    }
+
+    void delete_file(Script script, String file) {
+        if (this == Windows) {
+            script.powershell "Remove-Item ${file} -ErrorAction Ignore"
+        } else {
+            script.sh "rm -rf ${file}"
+        }
+    }
+
+    void exec(Script script, String executable, String arguments) {
+        if (this == Windows) {
+            shell(script, "${executable}.exe $arguments")
+        } else {
+            shell(script, "${executable} $arguments")
+        }
+    }
+
+    void exec_ui(Script script, String executable, String arguments) {
+        if (this == Windows) {
+            shell(script, "${executable}.exe $arguments")
+        } else if (this == MacOS) {
+            shell(script, "${executable} $arguments")
+        } else {
+            shell(script, "xvfb-run -a ./${executable} $arguments")
+        }
+    }
+
+    String exec_stdout(Script script, String executable, String arguments, String path = null) {
+        def exec_path = path ?: "."
+        def output = ""
+        if (this == Windows) {
+            output = script.powershell script: """
+                cd ${exec_path}; `
+                ${executable}.exe ${arguments} """, returnStdout: true
+        } else {
+            output = script.sh script: """
+            cd ${exec_path} && \
+            ${executable} ${arguments} """, returnStdout: true
+        }
+        return output.trim()
+    }
+
+    void shell(Script script, String command) {
+        if (this == Windows) {
+            script.powershell "${command}"
+        } else {
+            script.sh "${command}"
+        }
+    }
+}
+
+enum Architecture {
+    Aarch64("aarch64"),
+    X86_64("x86_64")
+
+    final String value
+
+    Architecture(String value) {
+        this.value = value
+    }
+
+    @NonCPS
+    String short_label() {
+        switch (this) {
+            case Aarch64:
+                return "Arm64"
+                break
+            case X86_64:
+                return "x86_64"
+                break
+        }
+    }
+
+    @Override
+    @NonCPS
+    String toString() {
+        this.value
+    }
+}
+
 @NonCPS
-def getFailedTests = { ->
+String getFailedTests() {
     def testResultAction = currentBuild.rawBuild.getAction(AbstractTestResultAction.class)
     def failedTestsString = "```"
 
@@ -14,7 +867,7 @@ def getFailedTests = { ->
             failedTests = failedTests.subList(0, 8)
         }
 
-        for(CaseResult cr : failedTests) {
+        for (CaseResult cr : failedTests) {
             failedTestsString = failedTestsString + "${cr.getFullDisplayName()}:\n${cr.getErrorDetails()}\n\n"
         }
         failedTestsString = failedTestsString + "```"
@@ -23,7 +876,7 @@ def getFailedTests = { ->
 }
 
 @NonCPS
-def getTestSummary = { ->
+String getTestSummary() {
     def testResultAction = currentBuild.rawBuild.getAction(AbstractTestResultAction.class)
     def summary = ""
 
@@ -37,706 +890,4 @@ def getTestSummary = { ->
         summary = "No tests found"
     }
     return summary
-}
-
-pipeline {
-    agent none
-    parameters {
-        choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing')
-        booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Build GT without running tests') }
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '50'))
-        disableConcurrentBuilds()
-    }
-    environment {
-        GITHUB_TOKEN = credentials('githubrelease')
-        AWSIP = 'sftp.feenk.com'
-
-        MACOS_INTEL_TARGET = 'x86_64-apple-darwin'
-        MACOS_M1_TARGET = 'aarch64-apple-darwin'
-
-        LINUX_SERVER_NAME = 'mickey-mouse'
-        LINUX_AMD64_TARGET = 'x86_64-unknown-linux-gnu'
-
-        WINDOWS_SERVER_NAME = 'daffy-duck'
-        WINDOWS_AMD64_TARGET = 'x86_64-pc-windows-msvc'
-
-        GEMSTONE_TARGET = 'GemStone-3.7.0'
-
-        RELEASER_FOLDER = 'gt-releaser'
-        GTOOLKIT_FOLDER = 'glamoroustoolkit'
-        EXAMPLES_FOLDER = 'gt-examples'
-
-        TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
-
-        TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
-        TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
-        RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
-        PHARO_IMAGE_URL = 'https://dl.feenk.com/pharo/Pharo10-SNAPSHOT.build.521.sha.14f5413.arch.64bit.zip'
-    }
-    stages {
-        stage ('Read tool versions') {
-            agent {
-                label "${MACOS_M1_TARGET}"
-            }
-            steps {
-                script {
-                    FEENK_RELEASER_VERSION = sh (
-                        script: "cat feenk-releaser.version",
-                        returnStdout: true
-                    ).trim()
-                    GTOOLKIT_BUILDER_VERSION = sh (
-                        script: "cat gtoolkit-builder.version",
-                        returnStdout: true
-                    ).trim()
-                }
-                echo "Will install using gtoolkit-installer ${GTOOLKIT_BUILDER_VERSION}"
-                echo "Will release using feenk-releaser ${FEENK_RELEASER_VERSION}"
-                echo "Will run tests: ${env.RUN_TESTS}"
-            }
-        }
-        stage ('Build pre release') {
-            environment {
-                TARGET = "${MACOS_M1_TARGET}"
-            }
-            agent {
-                label "${MACOS_M1_TARGET}"
-            }
-            stages {
-                stage('Clean up') {
-                    steps {
-                        sh "rm -rf ${GTOOLKIT_FOLDER}"
-                        sh "rm -rf ${RELEASER_FOLDER}"
-                        sh """
-                            if [ -d "${EXAMPLES_FOLDER}" ]
-                            then
-                                echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
-                                chmod -R u+w "${EXAMPLES_FOLDER}"
-                            fi
-                            rm -rf "${EXAMPLES_FOLDER}"
-                        """
-                        sh 'rm -rf ~/Documents/lepiter'
-                        sh 'git clean -fdx'
-                    }
-                }
-                stage('Load latest commit') {
-                    when { expression {
-                            env.BRANCH_NAME.toString().equals('main')
-                        }
-                    }
-                    steps {
-                        sh 'chmod +x scripts/build/*.sh'
-
-                        slackSend (color: '#FFFF00', message: ("Started <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>") )
-
-                        sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
-                        sh 'chmod +x gt-installer'
-
-                        /// the following loads glamorous toolkit without opening GT world
-                        sshagent(credentials : ['jenkins-ubuntu-node-aliaksei-syrel']) {
-                            sh """
-                                ./gt-installer \
-                                    --verbose \
-                                    --workspace ${RELEASER_FOLDER} \
-                                    release-build \
-                                        --loader cloner \
-                                        --image-url ${PHARO_IMAGE_URL} \
-                                        --bump ${params.BUMP} \
-                                        --no-gt-world """
-                        }
-
-                        script {
-                            def newCommitFiles = findFiles(glob: 'gt-releaser/newcommits*.txt')
-                            for (int i = 0; i < newCommitFiles.size(); ++i) {
-                                env.NEWCOMMITS = readFile(newCommitFiles[i].path)
-                                slackSend (color: '#00FF00', message: "Commits from <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>:\n ${env.NEWCOMMITS}" )
-                            }
-                        }
-                    }
-                }
-                stage ('Read gtoolkit version') {
-                    when {
-                        expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                        }
-                    }
-                    steps {
-                        script {
-                            GT4GEMSTONE_COMMIT_HASH = sh (
-                                script: "cd ${RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/gt4gemstone && git rev-parse HEAD",
-                                returnStdout: true
-                            ).trim()
-                        }
-                        script {
-                            GTOOLKIT_REMOTE_COMMIT_HASH = sh (
-                                script: "cd ${RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/gtoolkit-remote && git rev-parse HEAD",
-                                returnStdout: true
-                            ).trim()
-                        }
-                        script {
-                            GTOOLKIT_EXPECTED_VERSION = sh (
-                                script: "./gt-installer --workspace ${RELEASER_FOLDER} print-gtoolkit-image-version",
-                                returnStdout: true
-                            ).trim()
-                        }
-                        echo "We expect to release gtoolkit ${GTOOLKIT_EXPECTED_VERSION}"
-                    }
-                }
-                stage('Package image') {
-                    when {
-                        expression {
-                            (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                        }
-                    }
-                    steps {
-                        /// make a copy from RELEASER_FOLDER to the default folder
-                        sh "./gt-installer --verbose --workspace ${RELEASER_FOLDER} copy-to"
-
-                        /// clean the ssh keys and remove iceberg repositories
-                        sh "./gt-installer --verbose clean-up"
-
-                        /// package without gt-world
-                        sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
-
-                        /// open gt world
-                        sh "./gt-installer --verbose start"
-
-                        /// package with gt-world opened, ready to run tests
-                        sh "./gt-installer --verbose package-tentative ${TENTATIVE_PACKAGE}"
-
-                        stash includes: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}", name: "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
-                        stash includes: "${TENTATIVE_PACKAGE}", name: "${TENTATIVE_PACKAGE}"
-                    }
-                }
-            }
-        }
-        stage('Run Examples') {
-            when { expression {
-                   (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                }
-            }
-            parallel {
-                stage('Linux') {
-                    options {
-                        timeout(time: 45, unit: "MINUTES")
-                    }
-                    environment {
-                        TARGET = "${LINUX_AMD64_TARGET}"
-
-                        GEMSTONE_WORKSPACE="${WORKSPACE}/${EXAMPLES_FOLDER}/remote-gemstone"
-                        GT4GEMSTONE_VERSION="${GTOOLKIT_EXPECTED_VERSION}"
-                        RELEASED_PACKAGE_GEMSTONE_NAME="gt4gemstone-3.7.0-${GTOOLKIT_EXPECTED_VERSION}"
-                    }
-                    agent {
-                        label "${LINUX_AMD64_TARGET}-${LINUX_SERVER_NAME}"
-                    }
-                    stages {
-                        stage('Clean up') {
-                            steps {
-                                sh "rm -rf ${GTOOLKIT_FOLDER}"
-                                sh """
-                                    if [ -d ${EXAMPLES_FOLDER} ]
-                                    then
-                                        echo "Granting write permission for cleanup: ${EXAMPLES_FOLDER}"
-                                        chmod -R u+w ${EXAMPLES_FOLDER}
-                                    fi
-                                    rm -rf ${EXAMPLES_FOLDER}
-                                   """
-                                sh 'rm -rf ~/Documents/lepiter'
-                                sh 'git clean -fdx'
-                                script {
-                                    RELEASED_PACKAGE_GEMSTONE = sh (
-                                        script: "echo ${RELEASED_PACKAGE_GEMSTONE_NAME}.zip",
-                                        returnStdout: true
-                                    ).trim()
-                                }
-                            }
-                        }
-                        stage('Linux Unpackage') {
-                            steps {
-                                unstash "${TENTATIVE_PACKAGE}"
-
-                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
-                                sh 'chmod +x gt-installer'
-
-                                sh 'git config --global user.name "Jenkins"'
-                                sh 'git config --global user.email "jenkins@feenk.com"'
-                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                            }
-                        }
-                        stage('Linux Examples') {
-                            when { expression {
-                                    env.RUN_TESTS
-                                }
-                            }
-                            steps {
-                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
-                                sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
-
-                                sh "xvfb-run -a ./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                            }
-                        }
-                        stage('Linux Remote Examples') {
-                            when { expression {
-                                    env.RUN_TESTS
-                                }
-                            }
-                            steps {
-                                sh 'rm -rf ~/Documents/lepiter'
-                                
-                                sh """
-                                    cd ${EXAMPLES_FOLDER}
-                                    git clone https://github.com/feenkcom/gt4gemstone.git 
-                                    cd gt4gemstone 
-                                    git checkout ${GT4GEMSTONE_COMMIT_HASH}
-                                   """
-                                
-                                sh """
-                                    cd ${EXAMPLES_FOLDER}
-                                    git clone https://github.com/feenkcom/gtoolkit-remote.git
-                                    cd gtoolkit-remote 
-                                    git checkout ${GTOOLKIT_REMOTE_COMMIT_HASH}
-                                   """
-
-                                sh """
-                                    cd ${EXAMPLES_FOLDER}
-                                    git clone https://github.com/feenkcom/Sparkle.git
-                                   """
-
-                                sh """
-                                    cd ${EXAMPLES_FOLDER}
-                                    chmod +x gt4gemstone/scripts/*.sh
-                                    chmod +x gt4gemstone/scripts/release/*.sh
-                                    chmod +x gtoolkit-remote/scripts/*.sh
-                                   """
-                                
-                                // Run the GemStone remote examples.
-                                // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
-                                sh """
-                                    cd ${EXAMPLES_FOLDER}
-                                    ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
-                                    ./gt4gemstone/scripts/run-remote-gemstone-examples.sh
-                                   """
-                           }
-                        }
-                        stage('Linux Pharo Tests') {
-                            when { expression {
-                                    env.RUN_TESTS && false
-                                }
-                            }
-                            steps {
-                                sh """
-                                    cd ${EXAMPLES_FOLDER}
-                                    bin/GlamorousToolkit-cli GlamorousToolkit.image test --junit-xml-output 'Zinc.*' 'Zodiac.*'
-                                   """
-                            }
-                        }
-                        stage('Linux Report Examples') {
-                           when { expression {
-                                    env.RUN_TESTS
-                                }
-                            }
-                           steps {
-                                junit "${EXAMPLES_FOLDER}/*.xml"
-                           }
-                        }
-                        stage('Linux Package') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                script {
-                                    RELEASED_PACKAGE_LINUX = sh (
-                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE}",
-                                        returnStdout: true
-                                    ).trim()
-                                }
-                                echo "Created release package ${RELEASED_PACKAGE_LINUX}"
-                            }
-                        }
-                        stage('Linux Stash') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                echo "About to stash ${RELEASED_PACKAGE_LINUX}"
-                                stash includes: "${RELEASED_PACKAGE_LINUX}", name: "${TARGET}"
-                            }
-                        }
-                        stage('GemStone Stash') {
-                            when {
-                                expression {
-                                    env.RUN_TESTS && (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                sh "cp ${GEMSTONE_WORKSPACE}/${RELEASED_PACKAGE_GEMSTONE} ${WORKSPACE}" 
-                                echo "About to stash ${RELEASED_PACKAGE_GEMSTONE}"
-                                stash includes: "${RELEASED_PACKAGE_GEMSTONE}", name: "${GEMSTONE_TARGET}"
-                            }
-                        }
-                    }
-                }
-                stage ('MacOS M1') {
-                    options {
-                        timeout(time: 45, unit: "MINUTES")
-                    }
-                    environment {
-                        TARGET = "${MACOS_M1_TARGET}"
-                        CERT = credentials('devcertificate')
-                        APPLEPASSWORD = credentials('notarizepassword-manager')
-                    }
-                    agent {
-                        label "${MACOS_M1_TARGET}"
-                    }
-                    stages {
-                        stage('Clean up') {
-                            steps {
-                                sh "rm -rf ${GTOOLKIT_FOLDER}"
-                                sh "rm -rf ${EXAMPLES_FOLDER}"
-                                sh 'rm -rf ~/Documents/lepiter'
-                            }
-                        }
-                        stage('MacOS M1 Unpackage') {
-                            steps {
-                                unstash "${TENTATIVE_PACKAGE}"
-                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
-                                sh 'chmod +x gt-installer'
-
-                                sh 'git config --global user.name "Jenkins"'
-                                sh 'git config --global user.email "jenkins@feenk.com"'
-                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                            }
-                        }
-                        stage('MacOS M1 Examples') {
-                            when { expression {
-                                    env.RUN_TESTS
-                                }
-                            }
-                            steps {
-                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
-                                sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
-
-/* Disable M1 Examples due to repeated VM crashes
-                                sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                junit "${EXAMPLES_FOLDER}/*.xml"
-*/
-                            }
-                        }
-                        stage('MacOS M1 Package') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                script {
-                                    RELEASED_PACKAGE_MACOS_M1 = sh (
-                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE}",
-                                        returnStdout: true
-                                    ).trim()
-                                }
-                                echo "Created release package ${RELEASED_PACKAGE_MACOS_M1}"
-                            }
-                        }
-                        stage('MacOS M1 Notarize') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                sh """
-                                xcrun altool \
-                                    -t osx \
-                                    -f ${RELEASED_PACKAGE_MACOS_M1} \
-                                    -itc_provider "77664ZXL29" \
-                                    --primary-bundle-id "com.feenk.gtoolkit.darwin-apple-aarch64" \
-                                    --notarize-app \
-                                    --verbose \
-                                    --username "notarization@feenk.com" \
-                                    --password "${APPLEPASSWORD}" \
-                                """
-                            }
-                        }
-                        stage('MacOS M1 Stash') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                echo "About to stash ${RELEASED_PACKAGE_MACOS_M1}"
-                                stash includes: "${RELEASED_PACKAGE_MACOS_M1}", name: "${TARGET}"
-                            }
-                        }
-                    }
-                }
-                stage ('MacOS Intel') {
-                    options {
-                        timeout(time: 45, unit: "MINUTES")
-                    }
-                    environment {
-                        TARGET = "${MACOS_INTEL_TARGET}"
-                        CERT = credentials('devcertificate')
-                        APPLEPASSWORD = credentials('notarizepassword-manager')
-                    }
-                    agent {
-                        label "${MACOS_INTEL_TARGET}"
-                    }
-                    stages {
-                        stage('Clean up') {
-                            steps {
-                                sh "rm -rf ${GTOOLKIT_FOLDER}"
-                                sh "rm -rf ${EXAMPLES_FOLDER}"
-                                sh 'rm -rf ~/Documents/lepiter'
-                                sh 'git clean -fdx'
-                            }
-                        }
-                        stage('MacOS Intel Unpackage') {
-                            steps {
-                                unstash "${TENTATIVE_PACKAGE}"
-
-                                sh "curl -o gt-installer -LsS https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}"
-                                sh 'chmod +x gt-installer'
-
-                                sh 'git config --global user.name "Jenkins"'
-                                sh 'git config --global user.email "jenkins@feenk.com"'
-                                sh "./gt-installer --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                            }
-                        }
-                        stage('MacOS Intel Examples') {
-                            when { expression {
-                                    env.RUN_TESTS
-                                }
-                            }
-                            steps {
-                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
-                                sh "./gt-installer --verbose copy-to ${EXAMPLES_FOLDER}"
-
-                                sh "./gt-installer --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                junit "${EXAMPLES_FOLDER}/*.xml"
-                            }
-                        }
-                        stage('MacOS Intel Package') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                script {
-                                    RELEASED_PACKAGE_MACOS_INTEL = sh (
-                                        script: "./gt-installer --verbose package-release ${RELEASE_PACKAGE_TEMPLATE}",
-                                        returnStdout: true
-                                    ).trim()
-                                }
-                                echo "Created release package ${RELEASED_PACKAGE_MACOS_INTEL}"
-                            }
-                        }
-                        stage('MacOS Intel Notarize') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                sh """
-                                xcrun altool \
-                                    -t osx \
-                                    -f ${RELEASED_PACKAGE_MACOS_INTEL} \
-                                    -itc_provider "77664ZXL29" \
-                                    --primary-bundle-id "com.feenk.gtoolkit.darwin-apple-x86-64" \
-                                    --notarize-app \
-                                    --verbose \
-                                    --username "notarization@feenk.com" \
-                                    --password "${APPLEPASSWORD}" \
-                                """
-                            }
-                        }
-                        stage('MacOS Intel Stash') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                echo "About to stash ${RELEASED_PACKAGE_MACOS_INTEL}"
-                                stash includes: "${RELEASED_PACKAGE_MACOS_INTEL}", name: "${TARGET}"
-                            }
-                        }
-                    }
-                }
-                stage('Windows') {
-                    options {
-                        timeout(time: 45, unit: "MINUTES")
-                    }
-                    agent {
-                        label "${WINDOWS_AMD64_TARGET}-${WINDOWS_SERVER_NAME}"
-                    }
-                    environment {
-                        TARGET = "${WINDOWS_AMD64_TARGET}"
-                    }
-                    stages {
-                        stage('Clean up') {
-                            steps {
-                                powershell "Remove-Item ${GTOOLKIT_FOLDER} -Recurse -ErrorAction Ignore"
-                                powershell "Remove-Item ${EXAMPLES_FOLDER} -Recurse -ErrorAction Ignore"
-                                powershell 'Remove-Item  "C:/Users/Administrator/Documents/lepiter" -Recurse -ErrorAction Ignore'
-                                powershell 'git clean -fdx'
-                            }
-                        }
-                        stage('Windows Unpackage') {
-                            steps {
-                                unstash "${TENTATIVE_PACKAGE}"
-
-                                powershell "curl -o gt-installer.exe https://github.com/feenkcom/gtoolkit-maestro-rs/releases/download/${GTOOLKIT_BUILDER_VERSION}/gt-installer-${TARGET}.exe"
-
-                                powershell 'git config --global user.name "Jenkins"'
-                                powershell 'git config --global user.email "jenkins@feenk.com"'
-                                powershell "./gt-installer.exe --verbose unpackage-tentative ${TENTATIVE_PACKAGE}"
-                            }
-                        }
-                        stage('Windows Examples') {
-                            when { expression {
-                                    env.RUN_TESTS
-                                }
-                            }
-                            steps {
-                                /// make a copy from GTOOLKIT_FOLDER to the EXAMPLES_FOLDER
-                                powershell "./gt-installer.exe --verbose copy-to ${EXAMPLES_FOLDER}"
-
-                                /// disable the firewall for the exe
-                                powershell "netsh advfirewall firewall add rule name='Gt Examples cli exe' dir=in action=allow program='${EXAMPLES_FOLDER}\\bin\\GlamorousToolkit-cli.exe' enable=yes"
-
-                                powershell "./gt-installer.exe --verbose --workspace ${EXAMPLES_FOLDER} test ${TEST_OPTIONS}"
-                                junit "${EXAMPLES_FOLDER}/*.xml"
-                            }
-                        }
-                        stage('Windows Package') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                script {
-                                    RELEASED_PACKAGE_WINDOWS = powershell (
-                                        returnStdout: true,
-                                        script: "./gt-installer.exe --verbose package-release \"${RELEASE_PACKAGE_TEMPLATE}\"",
-                                    ).trim()
-                                }
-                                echo "Created release package ${RELEASED_PACKAGE_WINDOWS}"
-                            }
-                        }
-                        stage('Windows Stash') {
-                            when {
-                                expression {
-                                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                                }
-                            }
-                            steps {
-                                echo "About to stash ${RELEASED_PACKAGE_WINDOWS}"
-                                stash includes: "${RELEASED_PACKAGE_WINDOWS}", name: "${TARGET}"
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        stage('Releaser') {
-            when { expression {
-                    (currentBuild.result == null || currentBuild.result == 'SUCCESS') && env.BRANCH_NAME.toString().equals('main')
-                }
-            }
-            agent {
-                label "${MACOS_M1_TARGET}"
-            }
-            environment {
-                TARGET = "${MACOS_M1_TARGET}"
-            }
-            steps {
-                unstash "${MACOS_INTEL_TARGET}"
-                unstash "${MACOS_M1_TARGET}"
-                unstash "${LINUX_AMD64_TARGET}"
-                unstash "${WINDOWS_AMD64_TARGET}"
-                unstash "${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD}"
-                unstash "${GEMSTONE_TARGET}"
-
-                // Remove the gt-extra folder so it does not influence the release.
-                sh "rm -rf ${RELEASER_FOLDER}/gt-extra"
-
-                sh "curl -o feenk-releaser -LsS https://github.com/feenkcom/releaser-rs/releases/download/${FEENK_RELEASER_VERSION}/feenk-releaser-${TARGET}"
-                sh "chmod +x feenk-releaser"
-
-                sshagent(credentials : ['jenkins-ubuntu-node-aliaksei-syrel']) {
-                    sh """
-                        ./gt-installer \
-                            --verbose \
-                            --workspace ${RELEASER_FOLDER} \
-                            run-releaser \
-                                --bump ${params.BUMP} """
-                }
-
-                sh """
-                ./feenk-releaser \
-                    --owner feenkcom \
-                    --repo gtoolkit \
-                    --token GITHUB_TOKEN \
-                    release \
-                    --version ${GTOOLKIT_EXPECTED_VERSION} \
-                    --auto-accept \
-                    --assets \
-                        ${RELEASED_PACKAGE_LINUX} \
-                        ${RELEASED_PACKAGE_MACOS_M1} \
-                        ${RELEASED_PACKAGE_MACOS_INTEL} \
-                        ${RELEASED_PACKAGE_WINDOWS} \
-                        ${TENTATIVE_PACKAGE_WITHOUT_GT_WORLD} \
-                        ${RELEASED_PACKAGE_GEMSTONE} """
-
-
-                sh "chmod +x ./scripts/build/*.sh"
-
-                sshagent(credentials : ['jenkins-ubuntu-node-aliaksei-syrel']) {
-                    sh "./scripts/build/upload.sh"
-                }
-
-                script {
-                    withCredentials([sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-                            def remote = [:]
-                            remote.name = 'deploy'
-                            remote.host = 'sftp.feenk.com'
-                            remote.user = userName
-                            remote.identityFile = identity
-                            remote.allowAnyHosts = true
-                            sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
-                    }
-                }
-            }
-        }
-    }
-    post {
-        success {
-            script {
-                tsum = getTestSummary()
-                slackSend (color: '#00FF00', message: "Successful <${env.BUILD_URL}|${env.JOB_NAME} [${env.BUILD_NUMBER}]>\n$tsum" )
-            }
-        }
-
-        failure {
-            slackSend (color: '#FF0000', message: "Failed  <${env.BUILD_URL}/consoleFull|${env.JOB_NAME} [${env.BUILD_NUMBER}]>")
-        }
-
-        unstable {
-            script {
-                tfailed = getFailedTests()
-                tsum = getTestSummary()
-                slackSend (color: '#FFFF00', message:  "Unstable <${env.BUILD_URL}/testReport|${env.JOB_NAME} [${env.BUILD_NUMBER}]>\nTest Summary: $tsum\n$tfailed")
-            }
-        }
-    }
 }
