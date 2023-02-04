@@ -604,8 +604,13 @@ abstract class AgentJob {
         platform().delete_directory(script, GlamorousToolkit.GTOOLKIT_FOLDER)
         platform().delete_directory(script, GlamorousToolkit.EXAMPLES_FOLDER)
         delete_lepiter_directory()
-        if (build.cleanUp && build.freshBuild && script.fileExists("/.git")) {
+
+        File git_folder = new File(".git");
+        if (build.cleanUp && build.freshBuild && git_folder.isDirectory()) {
             platform().shell(script, "git clean -fdx")
+        }
+        else {
+            script.echo ".git does not exist, no need to clean"
         }
     }
 
