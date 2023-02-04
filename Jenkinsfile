@@ -139,7 +139,7 @@ class GlamorousToolkit {
     }
 
     void build() {
-        script.checkout scm
+        script.checkout script.scm
 
         read_tool_versions()
         new Builder(this, agent).execute()
