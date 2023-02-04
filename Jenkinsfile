@@ -10,7 +10,6 @@ properties([
         buildDiscarder(logRotator(numToKeepStr: '50')),
         disableConcurrentBuilds()
 ])
-checkout scm
 try {
     onBuildStarted()
     pipeline()
@@ -140,6 +139,8 @@ class GlamorousToolkit {
     }
 
     void build() {
+        script.checkout scm
+
         read_tool_versions()
         new Builder(this, agent).execute()
     }
