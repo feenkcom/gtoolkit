@@ -17,6 +17,7 @@ node {
         pipeline()
         postSuccess()
     } catch (e) {
+        echo "Caught exception: $e; result: ${currentBuild.result}"
         def currentResult = currentBuild.result ?: 'SUCCESS'
         if (currentResult == 'FAILURE') {
             postFailure(e)
@@ -206,12 +207,12 @@ class GlamorousToolkit {
             script.sh "./scripts/build/upload.sh"
         }
 
-        script.withCredentials([script.sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+        script.withCredentials([script.sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'REMOTE_IDENTITY_FILE', passphraseVariable: '', usernameVariable: 'REMOTE_USERNAME')]) {
             def remote = [:]
             remote.name = 'deploy'
             remote.host = 'sftp.feenk.com'
-            remote.user = userName
-            remote.identityFile = identity
+            remote.user = script.env.REMOTE_USERNAME
+            remote.identityFile = script.env.REMOTE_IDENTITY_FILE
             remote.allowAnyHosts = true
             script.sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
         }
