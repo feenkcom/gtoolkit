@@ -412,6 +412,7 @@ class TestAndPackage extends AgentJob {
     }
 
     void run_gtoolkit_examples() {
+        delete_lepiter_directory()
         platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS}")
     }
 
@@ -423,6 +424,7 @@ class TestAndPackage extends AgentJob {
      * Runs Pharo TestCase in a few selected packages to verify that the VM works good enough to support base Pharo features.
      */
     void run_pharo_tests() {
+        delete_lepiter_directory()
         platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test --packages 'Zinc.*' 'Zodiac.*'")
     }
 
@@ -535,6 +537,7 @@ class TestAndPackageWithGemstone extends TestAndPackage {
 
     @Override
     void run_extra_examples() {
+        delete_lepiter_directory()
         run_gemstone_examples()
     }
 
@@ -600,10 +603,14 @@ abstract class AgentJob {
         }
         platform().delete_directory(script, GlamorousToolkit.GTOOLKIT_FOLDER)
         platform().delete_directory(script, GlamorousToolkit.EXAMPLES_FOLDER)
-        platform().delete_directory(script, platform().lepiter_directory())
+        delete_lepiter_directory()
         if (build.cleanUp && build.freshBuild && script.fileExists("/.git")) {
             platform().shell(script, "git clean -fdx")
         }
+    }
+
+    void delete_lepiter_directory() {
+        platform().delete_directory(script, platform().lepiter_directory())
     }
 
     abstract void execute()
