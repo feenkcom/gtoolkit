@@ -151,6 +151,12 @@ class GlamorousToolkit {
     }
 
     void release() {
+        def currentResult = script.currentBuild.result ?: 'SUCCESS'
+        // we must not release if the build is not successful until this point
+        if (currentResult != 'SUCCESS') {
+            return;
+        }
+
         script.stage("Release") {
             doRelease()
         }
@@ -179,15 +185,6 @@ class GlamorousToolkit {
                             "run-releaser " +
                             "--bump ${bump}")
         }
-
-
-        agent.platform().exec(
-                script,
-                "./feenk-releaser",
-                "--verbose " +
-                        "--workspace ${RELEASER_FOLDER} " +
-                        "run-releaser " +
-                        "--bump ${bump}")
 
         script.withCredentials([script.string(credentialsId: 'githubrelease', variable: 'GITHUB_TOKEN')]) {
             agent.platform().exec(script,
