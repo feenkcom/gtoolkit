@@ -3,6 +3,7 @@ import hudson.model.Actionable
 import hudson.tasks.junit.CaseResult
 
 node {
+    agent none
     properties([
             parameters([
                     choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing'),
@@ -134,14 +135,16 @@ class GlamorousToolkit {
     }
 
     void execute() {
-        build()
-        test_and_package()
-        release()
+        script.node(agent.label()) {
+            build()
+            test_and_package()
+            release()
+        }
     }
 
     void build() {
         read_tool_versions()
-        new Builder(this, new Agent(Triplet.MacOS_Aarch64)).execute()
+        new Builder(this, agent).execute()
     }
 
     void test_and_package() {
@@ -267,13 +270,11 @@ class Builder extends AgentJob {
 
     @java.lang.Override
     void execute() {
-        script.node(agent.label()) {
-            script.echo "Will build pre-release image on ${agent.label()}"
-            cleanUp()
-            load_latest_commit()
-            read_gtoolkit_versions()
-            package_image()
-        }
+        script.echo "Will build pre-release image on ${agent.label()}"
+        cleanUp()
+        load_latest_commit()
+        read_gtoolkit_versions()
+        package_image()
     }
 
     void load_latest_commit() {
