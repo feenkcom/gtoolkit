@@ -467,6 +467,43 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-04T08:38:49.058995+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-04T08:38:49.058995+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DdgsoDywDQCji3P9CevRJQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Stencils"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "tudor@tudorgirba.com"
 				},
 				"createTime" : {
@@ -478,13 +515,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-03-05T00:47:37.639115+01:00"
+						"dateAndTimeString" : "2023-02-04T08:38:54.441345+01:00"
 					}
 				},
 				"uid" : {
@@ -494,7 +531,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Shapes\rThe look and feel of nodes and edges is specified by Shapes, which can be included in the construction of nodes and edges."
+				"string" : "The look and feel of nodes and edges is specified by stencils, which can be included in the construction of nodes and edges."
 			},
 			{
 				"__type" : "textSnippet",
@@ -515,13 +552,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-03-05T00:47:39.499432+01:00"
+						"dateAndTimeString" : "2023-02-04T08:38:59.215086+01:00"
 					}
 				},
 				"uid" : {
@@ -531,7 +568,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A shape can be defined by a block that takes the node's model object as its argument and returns an instance of a Bloc element. In the example below, we see nine nodes drawn as circles with black borders, whose sizes depend on the number which each node represents."
+				"string" : "A stencil can be defined by a block that takes the node's model object as its argument and returns an instance of a Bloc element. In the example below, we see nine nodes drawn as circles with black borders, whose sizes depend on the number which each node represents."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -592,13 +629,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-03-05T00:48:01.305606+01:00"
+						"dateAndTimeString" : "2023-02-04T09:02:31.293566+01:00"
 					}
 				},
 				"uid" : {
@@ -608,7 +645,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can define the shape of edges in a similar way. In the example below, the nodes are connected by blue edges whose width varies depending on the node it tries to connect."
+				"string" : "We can define the stencil of edges in a similar way. In the example below, the nodes are connected by blue edges whose width varies depending on the node it tries to connect to."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -658,6 +695,157 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-04T09:02:07.840803+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-04T09:05:07.408638+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QikZrzywDQCkVg6pCevRJQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In the previous example, the `stencil:` block shows one input argument for the object representing the model behind the node the edge should connect to. We know that because the connection is specified with `connectFrom:`. But how can we make it depend on the other side of the edge? Luckily, the `stencil:` block can actually receive arguments with the `fromElement` and the `toElement`. Here is an example in which the thickness of the edge depends on the element the edge connects from:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-04T08:43:11.666608+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-04T08:43:11.666608+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "F+vTrzywDQCkWqKTCevRJQ=="
+				},
+				"exampleSelector" : "edgesWithThickerLinesDependingOnTheFromNode",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtMondrianBasicExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-04T09:05:17.047614+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-04T09:06:10.992053+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "tGe9/jywDQCqlnI6CevRJQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Find other edge creation method in {{gtClass:GtMondrian}} and {{gtClass:GtMondrianEdgeBuilder}}."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-04T08:42:57.4837+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-04T08:42:57.4837+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yXv7rjywDQCkUPjECevRJQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Nesting"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "tudor@tudorgirba.com"
 				},
 				"createTime" : {
@@ -669,13 +857,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-03-05T00:48:10.672625+01:00"
+						"dateAndTimeString" : "2023-02-04T08:42:57.486607+01:00"
 					}
 				},
 				"uid" : {
@@ -685,7 +873,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Nesting\rMondrian graphs can also be nested. In other words, a node can have a subgraph."
+				"string" : "Mondrian graphs can also be nested. In other words, a node can have a subgraph."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -1016,13 +1204,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "tudor@tudorgirba.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-03-05T00:55:48.988353+01:00"
+									"dateAndTimeString" : "2023-02-04T08:41:59.464427+01:00"
 								}
 							},
 							"uid" : {
@@ -1032,7 +1220,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Shapes are defined within the scope of a `view nodes` or `view edges` definition."
+							"string" : "Stencils are defined within the scope of a `view nodes` or `view edges` definition."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1053,13 +1241,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "tudor@tudorgirba.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-03-05T00:56:01.788617+01:00"
+									"dateAndTimeString" : "2023-02-04T08:41:56.081718+01:00"
 								}
 							},
 							"uid" : {
@@ -1069,7 +1257,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Shapes are mainly defined explicitly by instantiating of {{gtClass:BlElement}} and its subclasses."
+							"string" : "Stencils are mainly defined explicitly by instantiating of {{gtClass:BlElement}} and its subclasses."
 						},
 						{
 							"__type" : "textSnippet",
