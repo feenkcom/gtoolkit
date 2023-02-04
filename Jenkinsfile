@@ -17,8 +17,8 @@ node {
         pipeline()
         postSuccess()
     } catch (e) {
-        echo "Caught exception: $e; result: ${currentBuild.result}"
-        def currentResult = currentBuild.result ?: 'SUCCESS'
+        echo "Caught exception: $e; currentBuild.result: ${currentBuild.result}"
+        def currentResult = currentBuild.result ?: 'FAILURE'
         if (currentResult == 'FAILURE') {
             postFailure(e)
         }
