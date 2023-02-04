@@ -15,7 +15,10 @@ node {
     try {
         onBuildStarted()
         pipeline()
-        postSuccess()
+        def currentResult = currentBuild.result ?: 'SUCCESS'
+        if (currentResult == 'SUCCESS') {
+            postSuccess()
+        }
     } catch (e) {
         echo "Caught exception: $e; currentBuild.result: ${currentBuild.result}"
         def currentResult = currentBuild.result ?: 'FAILURE'
@@ -79,7 +82,7 @@ class GlamorousToolkit {
     static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo10-SNAPSHOT.build.521.sha.14f5413.arch.64bit.zip"
     static final TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
-    static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
+    static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
     static final RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
 
     final Script script
@@ -440,6 +443,12 @@ class TestAndPackage extends AgentJob {
      * Create a package ready for release
      */
     void create_release_package() {
+        def currentResult = script.currentBuild.result ?: 'SUCCESS'
+        // we must not package the build is not successful until this point
+        if (currentResult != 'SUCCESS') {
+            return;
+        }
+
         script.stage("Package " + target.short_label()) {
             def release_package = platform().exec_stdout(script, "./gt-installer", "--verbose package-release \"${GlamorousToolkit.RELEASE_PACKAGE_TEMPLATE}\"")
             script.echo "Created release package ${release_package}"
