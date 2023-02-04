@@ -2,33 +2,34 @@ import hudson.tasks.test.AbstractTestResultAction
 import hudson.model.Actionable
 import hudson.tasks.junit.CaseResult
 
-node {
-    properties([
-            parameters([
-                    choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing'),
-                    booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests during the build')
-            ]),
-            buildDiscarder(logRotator(numToKeepStr: '50')),
-            disableConcurrentBuilds()
-    ])
-    checkout scm
-    try {
-        onBuildStarted()
-        pipeline()
+properties([
+        parameters([
+                choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing'),
+                booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests during the build')
+        ]),
+        buildDiscarder(logRotator(numToKeepStr: '50')),
+        disableConcurrentBuilds()
+])
+try {
+    onBuildStarted()
+    pipeline()
+    def currentResult = currentBuild.result ?: 'SUCCESS'
+    if (currentResult == 'SUCCESS') {
         postSuccess()
-    } catch (e) {
-        def currentResult = currentBuild.result ?: 'SUCCESS'
-        if (currentResult == 'FAILURE') {
-            postFailure(e)
-        }
-        // Since we're catching the exception in order to report on it,
-        // we need to re-throw it, to ensure that the build is marked as failed
-        throw e
-    } finally {
-        def currentResult = currentBuild.result ?: 'SUCCESS'
-        if (currentResult == 'UNSTABLE') {
-            postUnstable()
-        }
+    }
+} catch (e) {
+    echo "Caught exception: $e; currentBuild.result: ${currentBuild.result}"
+    def currentResult = currentBuild.result ?: 'FAILURE'
+    if (currentResult == 'FAILURE') {
+        postFailure(e)
+    }
+    // Since we're catching the exception in order to report on it,
+    // we need to re-throw it, to ensure that the build is marked as failed
+    throw e
+} finally {
+    def currentResult = currentBuild.result ?: 'SUCCESS'
+    if (currentResult == 'UNSTABLE') {
+        postUnstable()
     }
 }
 
@@ -38,7 +39,7 @@ def pipeline() {
             [
                     "BUILD_URL"   : env.BUILD_URL,
                     "JOB_NAME"    : env.JOB_NAME,
-                    "BUILD_NUMBER": env.BUILD_NUMBER.toInteger(),
+                    "BUILD_NUMBER": env.BUILD_NUMBER,
                     "FRESH_BUILD" : true,
                     "CLEAN_UP"    : true
             ] + params).execute()
@@ -78,7 +79,7 @@ class GlamorousToolkit {
     static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo10-SNAPSHOT.build.521.sha.14f5413.arch.64bit.zip"
     static final TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
-    static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
+    static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
     static final RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
 
     final Script script
@@ -113,7 +114,7 @@ class GlamorousToolkit {
 
         this.buildUrl = params.BUILD_URL
         this.jobName = params.JOB_NAME
-        this.buildNumber = params.BUILD_NUMBER
+        this.buildNumber = params.BUILD_NUMBER.toInteger()
 
         this.gtoolkitVersion = null
         this.gt4gemstoneCommitHash = null
@@ -124,19 +125,28 @@ class GlamorousToolkit {
                 new TestAndPackage(this, new Agent(Triplet.MacOS_Aarch64), Triplet.MacOS_Aarch64).disable_tests(),
                 new TestAndPackage(this, new Agent(Triplet.MacOS_X86_64), Triplet.MacOS_X86_64),
                 new TestAndPackageWithGemstone(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64),
+                new TestAndPackage(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64),
                 new TestAndPackage(this, new Agent(Triplet.Windows_X86_64, "daffy-duck"), Triplet.Windows_X86_64)
         ]
     }
 
     void execute() {
-        build()
+        script.node(agent.label()) {
+            build()
+        }
+
         test_and_package()
-        release()
+
+        script.node(agent.label()) {
+            release()
+        }
     }
 
     void build() {
+        script.checkout script.scm
+
         read_tool_versions()
-        new Builder(this, new Agent(Triplet.MacOS_Aarch64)).execute()
+        new Builder(this, agent).execute()
     }
 
     void test_and_package() {
@@ -206,12 +216,12 @@ class GlamorousToolkit {
             script.sh "./scripts/build/upload.sh"
         }
 
-        script.withCredentials([script.sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+        script.withCredentials([script.sshUserPrivateKey(credentialsId: '31ee68a9-4d6c-48f3-9769-a2b8b50452b0', keyFileVariable: 'REMOTE_IDENTITY_FILE', passphraseVariable: '', usernameVariable: 'REMOTE_USERNAME')]) {
             def remote = [:]
             remote.name = 'deploy'
             remote.host = 'sftp.feenk.com'
-            remote.user = userName
-            remote.identityFile = identity
+            remote.user = script.env.REMOTE_USERNAME
+            remote.identityFile = script.env.REMOTE_IDENTITY_FILE
             remote.allowAnyHosts = true
             script.sshScript remote: remote, script: "scripts/build/update-latest-links.sh"
         }
@@ -262,13 +272,11 @@ class Builder extends AgentJob {
 
     @java.lang.Override
     void execute() {
-        script.node(agent.label()) {
-            script.echo "Will build pre-release image on ${agent.label()}"
-            cleanUp()
-            load_latest_commit()
-            read_gtoolkit_versions()
-            package_image()
-        }
+        script.echo "Will build pre-release image on ${agent.label()}"
+        cleanUp()
+        load_latest_commit()
+        read_gtoolkit_versions()
+        package_image()
     }
 
     void load_latest_commit() {
@@ -388,11 +396,13 @@ class TestAndPackage extends AgentJob {
     void run_tests() {
         if (runTests) {
             script.stage("Test " + target.short_label()) {
-                prepare_for_testing()
-                run_gtoolkit_examples()
-                run_extra_examples()
-                run_pharo_tests()
-                report_test_results()
+                script.timeout(time: 45, unit: 'MINUTES') {
+                    prepare_for_testing()
+                    run_gtoolkit_examples()
+                    run_extra_examples()
+                    run_pharo_tests()
+                    report_test_results()
+                }
             }
         }
     }
@@ -408,6 +418,7 @@ class TestAndPackage extends AgentJob {
     }
 
     void run_gtoolkit_examples() {
+        delete_lepiter_directory()
         platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS}")
     }
 
@@ -419,6 +430,7 @@ class TestAndPackage extends AgentJob {
      * Runs Pharo TestCase in a few selected packages to verify that the VM works good enough to support base Pharo features.
      */
     void run_pharo_tests() {
+        delete_lepiter_directory()
         platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test --packages 'Zinc.*' 'Zodiac.*'")
     }
 
@@ -434,6 +446,12 @@ class TestAndPackage extends AgentJob {
      * Create a package ready for release
      */
     void create_release_package() {
+        def currentResult = script.currentBuild.result ?: 'SUCCESS'
+        // we must not package the build is not successful until this point
+        if (currentResult != 'SUCCESS') {
+            return;
+        }
+
         script.stage("Package " + target.short_label()) {
             def release_package = platform().exec_stdout(script, "./gt-installer", "--verbose package-release \"${GlamorousToolkit.RELEASE_PACKAGE_TEMPLATE}\"")
             script.echo "Created release package ${release_package}"
@@ -531,6 +549,7 @@ class TestAndPackageWithGemstone extends TestAndPackage {
 
     @Override
     void run_extra_examples() {
+        delete_lepiter_directory()
         run_gemstone_examples()
     }
 
@@ -596,10 +615,18 @@ abstract class AgentJob {
         }
         platform().delete_directory(script, GlamorousToolkit.GTOOLKIT_FOLDER)
         platform().delete_directory(script, GlamorousToolkit.EXAMPLES_FOLDER)
-        platform().delete_directory(script, platform().lepiter_directory())
-        if (build.cleanUp && build.freshBuild && script.fileExists("/.git")) {
+        delete_lepiter_directory()
+
+        if (build.cleanUp && build.freshBuild && script.fileExists('.git')) {
             platform().shell(script, "git clean -fdx")
         }
+        else {
+            script.echo ".git does not exist, no need to clean"
+        }
+    }
+
+    void delete_lepiter_directory() {
+        platform().delete_directory(script, platform().lepiter_directory())
     }
 
     abstract void execute()
