@@ -2,38 +2,35 @@ import hudson.tasks.test.AbstractTestResultAction
 import hudson.model.Actionable
 import hudson.tasks.junit.CaseResult
 
-node {
-    agent none
-    properties([
-            parameters([
-                    choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing'),
-                    booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests during the build')
-            ]),
-            buildDiscarder(logRotator(numToKeepStr: '50')),
-            disableConcurrentBuilds()
-    ])
-    checkout scm
-    try {
-        onBuildStarted()
-        pipeline()
-        def currentResult = currentBuild.result ?: 'SUCCESS'
-        if (currentResult == 'SUCCESS') {
-            postSuccess()
-        }
-    } catch (e) {
-        echo "Caught exception: $e; currentBuild.result: ${currentBuild.result}"
-        def currentResult = currentBuild.result ?: 'FAILURE'
-        if (currentResult == 'FAILURE') {
-            postFailure(e)
-        }
-        // Since we're catching the exception in order to report on it,
-        // we need to re-throw it, to ensure that the build is marked as failed
-        throw e
-    } finally {
-        def currentResult = currentBuild.result ?: 'SUCCESS'
-        if (currentResult == 'UNSTABLE') {
-            postUnstable()
-        }
+properties([
+        parameters([
+                choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing'),
+                booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests during the build')
+        ]),
+        buildDiscarder(logRotator(numToKeepStr: '50')),
+        disableConcurrentBuilds()
+])
+checkout scm
+try {
+    onBuildStarted()
+    pipeline()
+    def currentResult = currentBuild.result ?: 'SUCCESS'
+    if (currentResult == 'SUCCESS') {
+        postSuccess()
+    }
+} catch (e) {
+    echo "Caught exception: $e; currentBuild.result: ${currentBuild.result}"
+    def currentResult = currentBuild.result ?: 'FAILURE'
+    if (currentResult == 'FAILURE') {
+        postFailure(e)
+    }
+    // Since we're catching the exception in order to report on it,
+    // we need to re-throw it, to ensure that the build is marked as failed
+    throw e
+} finally {
+    def currentResult = currentBuild.result ?: 'SUCCESS'
+    if (currentResult == 'UNSTABLE') {
+        postUnstable()
     }
 }
 
