@@ -133,7 +133,11 @@ class GlamorousToolkit {
     void execute() {
         script.node(agent.label()) {
             build()
-            test_and_package()
+        }
+
+        test_and_package()
+
+        script.node(agent.label()) {
             release()
         }
     }
