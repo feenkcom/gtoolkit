@@ -1607,7 +1607,7 @@
 					"__type" : "uid",
 					"uidString" : "fJT+8feqDQC+pWFGDSN6Dg=="
 				},
-				"operation" : "query Organization($login: String!) {\n\torganization (login: $login) {\n\t\tlogin\n\t\tname\n\t\turl\n\t}\n}",
+				"operation" : "query Organization($login: String!) {\n\torganization (login: $login) {\n\t\tlogin\n\t\tname\n\t\turl\n\t\t\n\t}\n}",
 				"input" : "{ \"login\": \"feenkcom\" }",
 				"context" : "aContext",
 				"resultVariableName" : ""
