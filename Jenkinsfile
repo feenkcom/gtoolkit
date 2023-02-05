@@ -707,7 +707,10 @@ class Agent {
     int hashCode() {
         int result
         result = host.hashCode()
-        result = 31 * result + tag.hashCode()
+
+        if (tag != null) {
+            result = 31 * result + tag.hashCode()
+        }
         return result
     }
 }
