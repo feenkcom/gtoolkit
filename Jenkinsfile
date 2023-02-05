@@ -380,10 +380,14 @@ class TestAndPackage extends AgentJob {
     }
 
     void setup_node() {
-        script.stage("Unpackage " + target.short_label()) {
-            cleanUp()
-            configure_git()
-            unpackage_tentative()
+        configure_git()
+
+        // Only unpackage tentative when running on a different node
+        if (agent != build.agent) {
+            script.stage("Unpackage " + target.short_label()) {
+                cleanUp()
+                unpackage_tentative()
+            }
         }
     }
 
@@ -686,6 +690,28 @@ class Agent {
         } else {
             return host_string + "-" + tag
         }
+    }
+
+    boolean equals(o) {
+        if (this.is(o)) return true
+        if (getClass() != o.class) return false
+
+        Agent agent = (Agent) o
+
+        if (host != agent.host) return false
+        if (tag != agent.tag) return false
+
+        return true
+    }
+
+    int hashCode() {
+        int result
+        result = host.hashCode()
+
+        if (tag != null) {
+            result = 31 * result + tag.hashCode()
+        }
+        return result
     }
 }
 
