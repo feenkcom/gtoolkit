@@ -102,7 +102,7 @@ class GlamorousToolkit {
     String gt4remoteCommitHash
     Map<String, String> artefacts
 
-    final def jobs
+    final ArrayList<AgentJob> jobs
 
     GlamorousToolkit(Script script, Agent agent, Map params) {
         this.script = script
@@ -235,6 +235,7 @@ class GlamorousToolkit {
     void stash_internally(String path, String key = null) {
         script.echo "About to stash ${path} as ${key ?: path}"
         script.stash includes: path, name: key ?: path
+        script.echo "Stashed ${path} as ${key ?: path}"
     }
 
     /**
@@ -692,11 +693,12 @@ class Agent {
         }
     }
 
-    boolean equals(o) {
-        if (this.is(o)) return true
-        if (getClass() != o.class) return false
+    @Override
+    @NonCPS
+    boolean equals(object) {
+        if (getClass() != object.getClass()) return false
 
-        Agent agent = (Agent) o
+        Agent agent = (Agent) object
 
         if (host != agent.host) return false
         if (tag != agent.tag) return false
@@ -704,13 +706,12 @@ class Agent {
         return true
     }
 
+    @Override
+    @NonCPS
     int hashCode() {
-        int result
-        result = host.hashCode()
-
-        if (tag != null) {
-            result = 31 * result + tag.hashCode()
-        }
+        int result = 7
+        result = 31 * result + host.hashCode()
+        result = 31 * result + (tag != null ? tag.hashCode() : 0)
         return result
     }
 }
