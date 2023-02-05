@@ -235,6 +235,7 @@ class GlamorousToolkit {
     void stash_internally(String path, String key = null) {
         script.echo "About to stash ${path} as ${key ?: path}"
         script.stash includes: path, name: key ?: path
+        script.echo "Stashed ${path} as ${key ?: path}"
     }
 
     /**
