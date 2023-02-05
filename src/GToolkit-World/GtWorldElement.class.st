@@ -88,51 +88,47 @@ GtWorldElement >> initializeListeners [
 GtWorldElement >> initializeShortcuts [
 	super initializeShortcuts.
 	self
-		addShortcut:
-			(BlShortcutWithAction new
+		addShortcut: (BlShortcutWithAction new
+				name: 'Open global Spotter';
 				repeatable: false;
 				combination: BlKeyCombination shiftReturn;
 				action: [ self dispatchEvent: GtSpawnSpotter new ]).
 	self
-		addShortcut:
-			(BlShortcutWithAction new
+		addShortcut: (BlShortcutWithAction new
+				name: 'Take screenshot';
 				repeatable: false;
 				combination: BlKeyCombination primaryShiftP;
 				action: [ self dispatchEvent: GtTakePicture new ]).
 	self
-		addShortcut:
-			(BlShortcutWithAction new
+		addShortcut: (BlShortcutWithAction new
+				name: 'Open global menu';
 				repeatable: false;
 				combination: BlKeyCombination primaryT;
 				action: [ subSpaceDropdown
 						ifNotNil: [ subSpaceDropdown
-								dispatchEvent:
-									(BrDropdownShowWish new
+								dispatchEvent: (BrDropdownShowWish new
 										anchor: subSpaceDropdown;
 										yourself) ] ]).
 	self
-		addShortcut:
-			(BlShortcutWithAction new
+		addShortcut: (BlShortcutWithAction new
+				name: 'Select previous tab';
 				repeatable: true;
-				combination: (BlKeyCombinationBuilder new 
-						primary shift key: BlKeyboardKey leftBracket) build;
+				combination: (BlKeyCombinationBuilder new primary shift key: BlKeyboardKey leftBracket) build;
 				action: [ self tabs selectTabToTheLeft ]).
 	self
-		addShortcut:
-			(BlShortcutWithAction new
+		addShortcut: (BlShortcutWithAction new
+				name: 'Select next tab';
 				repeatable: true;
-				combination: (BlKeyCombinationBuilder new 
-						primary shift key: BlKeyboardKey rightBracket) build;
+				combination: (BlKeyCombinationBuilder new primary shift key: BlKeyboardKey rightBracket)
+						build;
 				action: [ self tabs selectTabToTheRight ]).
 	self
-		addShortcut:
-			(BlShortcutWithAction new
+		addShortcut: (BlShortcutWithAction new
+				name: 'Close tab';
 				repeatable: true;
 				combination: BlKeyCombination primaryW;
-				action: [ 
-					self tabs content children anyOne = home ifFalse: [
-						"only close the non-home tabs"
-						self tabs removeSelectedTab ] ]).
+				action: [ self tabs content children anyOne = home
+						ifFalse: [  "only close the non-home tabs"self tabs removeSelectedTab ] ])
 ]
 
 { #category : #accessing }
