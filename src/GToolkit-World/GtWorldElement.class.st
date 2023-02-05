@@ -72,9 +72,16 @@ GtWorldElement >> initializeListeners [
 
 	self
 		when: GtSpawnSpotter
-		do: [ :anEvent |
+		do: [ :anEvent | 
 			anEvent consumed: true.
-			spotterDropdown dispatchEvent: BrDropdownShowWish new ]
+			spotterDropdown dispatchEvent: BrDropdownShowWish new ].
+	self
+		when: GtTakePicture
+		do: [ :anEvent | 
+			| fileReference |
+			anEvent consumed: true.
+			fileReference := self exportAsPNG.
+			Clipboard clipboardText: fileReference fullName ]
 ]
 
 { #category : #initialization }
@@ -86,6 +93,12 @@ GtWorldElement >> initializeShortcuts [
 				repeatable: false;
 				combination: BlKeyCombination shiftReturn;
 				action: [ self dispatchEvent: GtSpawnSpotter new ]).
+	self
+		addShortcut:
+			(BlShortcutWithAction new
+				repeatable: false;
+				combination: BlKeyCombination primaryShiftP;
+				action: [ self dispatchEvent: GtTakePicture new ]).
 	self
 		addShortcut:
 			(BlShortcutWithAction new
