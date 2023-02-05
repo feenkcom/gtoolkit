@@ -11,11 +11,11 @@ GtHomeGetStartedSection >> create [
 	sectionContainer addChild: (self newSectionTitle: 'Get started').
 	cardsContainer := self newCardsContainer.
 
-	cardsContainer
+	"cardsContainer
 		addChild: (self
 				newShowCardWithTitle: 'Tour'
 				slideshow: [ GtPresenterSlideShow create: GtTour new ]
-				description: 'Take an interactive tour through the environment.').
+				description: 'Take an interactive tour through the environment.')."
 
 	cardsContainer
 		addChild: (self
