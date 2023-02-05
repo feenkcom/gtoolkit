@@ -14,7 +14,7 @@ find $GT_FOLDER/GlamorousToolkit-MacOS-aarch64*.zip -type f -printf "%T+\t%p\n" 
 find $GT_FOLDER/GlamorousToolkit-Linux-x86_64*.zip -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2 | xargs basename > "$GT_FOLDER/GlamorousToolkitLinux64-release"
 find $GT_FOLDER/GlamorousToolkit-Linux-x86_64*.zip -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2 | xargs -i cp {} "$GT_FOLDER/GlamorousToolkitLinux64-release.zip"
 
-#find $GT_FOLDER/GlamorousToolkit-Linux-aarch64*.zip -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2 | xargs basename > "$GT_FOLDER/GlamorousToolkitLinuxArm64-release"
-#find $GT_FOLDER/GlamorousToolkit-Linux-aarch64*.zip -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2 | xargs -i cp {} "$GT_FOLDER/GlamorousToolkitLinuxArm64-release.zip"
+find $GT_FOLDER/GlamorousToolkit-Linux-aarch64*.zip -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2 | xargs basename > "$GT_FOLDER/GlamorousToolkitLinuxArm64-release"
+find $GT_FOLDER/GlamorousToolkit-Linux-aarch64*.zip -type f -printf "%T+\t%p\n" | sort | tail -n 1 | cut -f2 | xargs -i cp {} "$GT_FOLDER/GlamorousToolkitLinuxArm64-release.zip"
 
 set +e
