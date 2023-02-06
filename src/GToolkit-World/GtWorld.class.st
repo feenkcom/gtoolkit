@@ -167,6 +167,7 @@ GtWorld >> initialize [
 	self root addChild: worldElement.
 
 	self withSceneDriller.
+	self withScreenshotHandler.
 	self withGlamorousFullscreenMaxizimerHost.
 	self withWorldCloseEventHandler
 ]
