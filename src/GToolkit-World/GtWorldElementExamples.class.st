@@ -16,9 +16,9 @@ GtWorldElementExamples >> shortcutsHaveExplicitName [
 { #category : #accessing }
 GtWorldElementExamples >> takeScreenshotShortcut [
 	<gtExample>
-	| worldElement shortcut |
-	worldElement := GtWorldElement new.
-	shortcut := worldElement shortcuts
+	| worldRoot shortcut |
+	worldRoot := GtWorld new root.
+	shortcut := worldRoot shortcuts
 			detect: [ :each | each name = 'Take screenshot' ]
 			ifNone: [ self assert: false description: 'The shortcut should exist' ].
 	^ shortcut
