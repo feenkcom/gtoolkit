@@ -182,7 +182,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-11T14:32:42.340527+01:00"
+									"dateAndTimeString" : "2023-02-16T22:55:25.981116+01:00"
 								}
 							},
 							"uid" : {
@@ -192,7 +192,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*API exploration:* take an API and build a browser for it. Take a look at [[Working with a REST API: the GitHub case study]]."
+							"string" : "*API exploration:* take an API and build a browser for it. Take a look at [[Working with a REST API: the GitHub case study]] or [[Exploring GitHub through GraphQL ]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -219,7 +219,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-15T10:21:12.964202+01:00"
+									"dateAndTimeString" : "2023-02-16T22:54:44.766381+01:00"
 								}
 							},
 							"uid" : {
@@ -229,7 +229,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*Data exploration:* take piece of data, like some JSON files, reify and explore their content. Or explore a database."
+							"string" : "*Data exploration:* take piece of data, like some JSON files, reify and explore their content. Like in [[Exploring your Twitter data]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -256,7 +256,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-15T10:21:17.597214+01:00"
+									"dateAndTimeString" : "2023-02-16T22:55:05.588992+01:00"
 								}
 							},
 							"uid" : {
@@ -266,7 +266,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*Domain discovery:* take a domain you want to target and build a model for it that you visualize through custom views."
+							"string" : "*Domain discovery:* take a domain you want to target and build a model for it that you visualize through custom views. For example, as described in [[Documenting the domain: the Ludo game case study]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -293,7 +293,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-06-13T23:20:05.162685+02:00"
+									"dateAndTimeString" : "2023-02-16T22:55:13.131213+01:00"
 								}
 							},
 							"uid" : {
@@ -337,6 +337,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "To guide the investigation, focus on practical scenarios you have an interest in. Some examples are:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-16T22:56:18.508476+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-16T22:56:28.549041+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "LGzMADqxDQCfOoYIBr2j6A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And of course, you can also take a look at the [[GT in 7' videos]]."
 			}
 		]
 	},
