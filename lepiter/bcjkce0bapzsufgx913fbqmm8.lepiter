@@ -502,7 +502,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-17T12:24:18.233228+01:00"
+						"dateAndTimeString" : "2023-02-17T12:40:57.638142+01:00"
 					}
 				},
 				"uid" : {
@@ -512,7 +512,78 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Having the list is nice. But, how are the objects composed? A graph would be better. For this we need both to get the nodes and the edges using yet another traversal {{gtMethod:Object>>withDeep:do:relationDo:}}:"
+				"string" : "Having the list is nice. But, how are the objects composed? A graph would be better. For this we need both to get the nodes and the edges using yet another traversal {{gtMethod:Object>>withDeep:do:relationDo:}}. To build the actual graph we use [[Mondrian]]:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-17T12:38:09.154365+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-17T12:40:27.703433+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VWMKfEWxDQClm4yfBr2j6A=="
+				},
+				"code" : "m := GtMondrian new.\rBlElement new\r\twithDeep: [ :each | \r\t\teach class instVarNames\r\t\t\tcollect: [ :iv | each instVarNamed: iv ]\r\t\t\tthenSelect: [ :object | object class package name beginsWith: 'Bloc' ] ]\r\tdo: [ :each | m nodes with: {each} ]\r\trelationDo: [ :from :to | m edges connectAssociations: {from -> to} ].\rm layout custom: GtGraphHorizontalTreeLayout new.\rm"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-17T12:38:53.068525+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-17T12:39:50.580338+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "hvSefkWxDQClyYJoBr2j6A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Of course, once we have the basic graph in place, we can extend the visualization with more ebellishments:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -643,12 +714,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-17T12:26:32.526727+01:00"
+			"dateAndTimeString" : "2023-02-17T12:37:56.565661+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Querying graphs with DeepTraverser"
+		"title" : "Traversing graphs with DeepTraverser"
 	},
 	"uid" : {
 		"__type" : "uuid",
