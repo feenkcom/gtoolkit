@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T22:50:43.848549+01:00"
+						"dateAndTimeString" : "2023-02-19T12:55:15.262011+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T22:51:42.070236+01:00"
+						"dateAndTimeString" : "2023-02-19T12:56:08.858257+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MTQ2nlywDQCS91eWAU7DNg=="
+					"uidString" : "A+XT8W2xDQCVvgoqCigR3A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The selection mechanism can look trivial in a text editor, but it's really anything but."
+				"string" : "Writing isolated pieces of documentation can be entertaining, but sometimes we want to enhance the findability of those pieces. Linking them with other pieces can be a good path to achieve this."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T22:51:14.610189+01:00"
+						"dateAndTimeString" : "2023-02-19T12:58:45.526147+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,57 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T22:59:28.020928+01:00"
+						"dateAndTimeString" : "2023-02-19T13:03:33.586547+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "zWYyplywDQCUZd0DAU7DNg=="
+					"uidString" : "sKpqAW6xDQCechNgCigR3A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Take a look at this example: we get a selecter serivce for an editor and we tell it to select the word at position `2`. That does not sound too tricky. Only here we talk about cursor position, instead of text position."
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T22:49:21.973696+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T22:49:21.973696+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "F7PQn1ywDQCS/t+sAU7DNg=="
-				},
-				"exampleSelector" : "select_moveOneRight_at_6",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "BrTextEditorSelecterExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : false
+				"string" : "We actually had this very same problem when writing this book: We wanted to make it possible for people to start at [[Get started]] and have the chance to reach as many pages as possible by following direct links."
 			},
 			{
 				"__type" : "textSnippet",
@@ -132,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T22:59:54.412602+01:00"
+						"dateAndTimeString" : "2023-02-19T12:55:09.867305+01:00"
 					}
 				},
 				"editEmail" : {
@@ -143,20 +103,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T23:12:27.237007+01:00"
+						"dateAndTimeString" : "2023-02-19T13:00:18.16359+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "VMHsxFywDQCZpgSlAU7DNg=="
+					"uidString" : "J/nO8G2xDQCVvVoFCigR3A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The fact that we can have two kinds of positions (text and cursor) makes things a little more complicated. So, we devised a visualization to help us. Executing the example above shows us a view like this: an editor with the cursor positions highlighted."
+				"string" : "To help us with finding new linking opportunities, we built a visualization. We take inspiration from the visualization described in [[How to visualize the current knowledge base]]. We start by collecting the pages."
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -169,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T23:06:43.353447+01:00"
+						"dateAndTimeString" : "2023-02-19T12:55:08.341099+01:00"
 					}
 				},
 				"editEmail" : {
@@ -180,20 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T23:06:43.353447+01:00"
+						"dateAndTimeString" : "2023-02-19T12:55:08.584294+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "v97i3VywDQCdq8IiAU7DNg=="
+					"uidString" : "9q549G2xDQCV75ZnCigR3A=="
 				},
-				"exampleSelector" : "select_moveOneRight_at_6",
-				"previewHeight" : 300,
-				"previewShowSelector" : "gtLiveFor:",
-				"exampleBehaviorName" : "BrTextEditorSelecterExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : true
+				"code" : "pages := thisSnippet database pages reject: [:each | \r\teach title = 'Glamorous Toolkit Book']"
 			},
 			{
 				"__type" : "textSnippet",
@@ -209,7 +163,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T23:14:53.253913+01:00"
+						"dateAndTimeString" : "2023-02-19T13:00:21.97574+01:00"
 					}
 				},
 				"editEmail" : {
@@ -220,17 +174,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T23:14:53.253913+01:00"
+						"dateAndTimeString" : "2023-02-19T13:00:48.626369+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Hi0W+1ywDQCjX6IoAU7DNg=="
+					"uidString" : "BCgjB26xDQCiGo2YCigR3A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is achieved through a little utility: {{gtClass:BlDevCrossover}} ."
+				"string" : "Then we collect the pages that are reachable from [[Get started]] by traversing deeply all the outgoing links using [[DeepTraverser]]."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-19T12:54:46.178776+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-19T13:04:00.919648+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "JoMm822xDQCV1KjlCigR3A=="
+				},
+				"code" : "getStartedPage := pages detect: [:each | each title = 'Get started'].\rallReachedPages := getStartedPage deepCollect: [:each | \r\teach allChildOutgoingTextualLinks collectAsSet: [:x | x target ifNotNil: #page] ]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -246,7 +234,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T23:07:40.497784+01:00"
+						"dateAndTimeString" : "2023-02-19T13:00:54.112089+01:00"
 					}
 				},
 				"editEmail" : {
@@ -257,17 +245,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T23:15:14.088741+01:00"
+						"dateAndTimeString" : "2023-02-19T13:01:10.056642+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "JnBt3FywDQCdK4njAU7DNg=="
+					"uidString" : "7l/8CG6xDQCjwyuZCigR3A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We built this visualization to help us with debugging. And it saved us a large debugging effort, indeed. But more importantly, it made the bug solving fun."
+				"string" : "And then we highlight the reached pages in the overall graph:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-19T12:54:56.176008+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-19T13:04:34.238266+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xxG/822xDQCV6HVzCigR3A=="
+				},
+				"code" : "m := GtMondrian new.\rm nodes\r\tstencil: [ :each | \r\t\t| color size |\r\t\tcolor := (allReachedPages includes: each)\r\t\t\t\tifTrue: [ Color red ]\r\t\t\t\tifFalse: [ Color black ].\r\t\tsize := 5 @ 5.\r\t\teach = getStartedPage ifTrue: [ color := Color blue. size := 10 @ 10 ].\r\t\tBlElement new background: color; size: size;\r\t\t\twhen: BlClickEvent\r\t\t\t\tdo: [ :e | e currentTarget phlow spawnTool: each asPhlowTool ] ];\r\twith: pages.\rm edges\r\tstencil: [ BlLineElement new\r\t\t\tborder: Color veryLightGray;\r\t\t\ttoHead: (BlArrowheadSimpleArrow new border: Color veryLightGray);\r\t\t\tzIndex: -1 ];\r\tconnectToAll: [ :page | page allOutgoingTextualLinks collectAsSet: #target ].\rm layout force nbIterations: 30; charge: -50.\rm"
 			}
 		]
 	},
@@ -279,7 +301,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-05T22:48:55.031326+01:00"
+			"dateAndTimeString" : "2023-02-19T12:54:22.107984+01:00"
 		}
 	},
 	"editEmail" : {
@@ -290,15 +312,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-05T22:48:55.031326+01:00"
+			"dateAndTimeString" : "2023-02-19T12:57:01.678316+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Explaining the text editor's selection mechanism"
+		"title" : "Optimizing the links in the book for first time readers"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "8999359e-5cb0-0d00-92f6-10be014ec336"
+		"uuid" : "99f0cef0-6db1-0d00-95bc-c2970a2811dc"
 	}
 }
