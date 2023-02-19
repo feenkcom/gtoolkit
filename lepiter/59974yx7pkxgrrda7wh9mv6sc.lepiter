@@ -106,14 +106,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-06-14T23:38:55.320911+02:00"
+									"dateAndTimeString" : "2023-02-19T12:46:39.612416+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "leXykryADQCnVc9HDiSrtQ=="
 							},
-							"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [:each | \r\t\tBlElement new \r\t\t\tbackground: Color black;\r\t\t\tsize: 5@5;\r\t\t\twhen: BlClickEvent do: [:e | \r\t\t\t\te currentTarget phlow spawnTool: each asPhlowTool] ];\r\twith: pages.\rm edges connectToAll: [:page | page allOutgoingTextualLinks collect: #target].\rm layout force nbIterations: 30.\rm asElement"
+							"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [:each | \r\t\tBlElement new \r\t\t\tbackground: Color black;\r\t\t\tsize: 5@5;\r\t\t\twhen: BlClickEvent do: [:e | \r\t\t\t\te currentTarget phlow spawnTool: each asPhlowTool] ];\r\twith: pages.\rm edges connectToAll: [:page | page allOutgoingTextualLinks collectAsSet: #target].\rm layout force nbIterations: 30.\rm asElement"
 						}
 					]
 				},
@@ -250,14 +250,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-06-14T21:58:51.538637+02:00"
+									"dateAndTimeString" : "2023-02-19T12:46:35.428806+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "M4Xak7yADQCnWSLhDiSrtQ=="
 							},
-							"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [:each |\r\t\tBlElement new \r\t\t\tbackground: ((each title includesSubstring: 'Lepiter') \r\t\t\t\tifTrue: [Color red]\r\t\t\t\tifFalse:  [Color black]);\r\t\t\tsize: 5@5;\r\t\t\twhen: BlClickEvent do: [:e | \r\t\t\t\te currentTarget phlow spawnTool: each asPhlowTool] ];\r\twith: pages.\rm edges connectToAll: [:page | page allOutgoingTextualLinks collect: #target].\rm layout force nbIterations: 30.\rm asElement"
+							"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [:each |\r\t\tBlElement new \r\t\t\tbackground: ((each title includesSubstring: 'Lepiter') \r\t\t\t\tifTrue: [Color red]\r\t\t\t\tifFalse:  [Color black]);\r\t\t\tsize: 5@5;\r\t\t\twhen: BlClickEvent do: [:e | \r\t\t\t\te currentTarget phlow spawnTool: each asPhlowTool] ];\r\twith: pages.\rm edges connectToAll: [:page | page allOutgoingTextualLinks collectAsSet: #target].\rm layout force nbIterations: 30.\rm asElement"
 						}
 					]
 				},
@@ -350,12 +350,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-06-05T16:24:01.30212+02:00"
+			"dateAndTimeString" : "2023-02-19T12:59:37.906593+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to visualize the current database"
+		"title" : "How to visualize the current knowledge base"
 	},
 	"uid" : {
 		"__type" : "uuid",
