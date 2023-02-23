@@ -290,6 +290,435 @@
 					"uidString" : "xxG/822xDQCV6HVzCigR3A=="
 				},
 				"code" : "m := GtMondrian new.\rm nodes\r\tstencil: [ :each | \r\t\t| color size |\r\t\tcolor := (allReachedPages includes: each)\r\t\t\t\tifTrue: [ Color red ]\r\t\t\t\tifFalse: [ Color black ].\r\t\tsize := 5 @ 5.\r\t\teach = getStartedPage ifTrue: [ color := Color blue. size := 10 @ 10 ].\r\t\tBlElement new background: color; size: size;\r\t\t\twhen: BlClickEvent\r\t\t\t\tdo: [ :e | e currentTarget phlow spawnTool: each asPhlowTool ] ];\r\twith: pages.\rm edges\r\tstencil: [ BlLineElement new\r\t\t\tborder: Color veryLightGray;\r\t\t\ttoHead: (BlArrowheadSimpleArrow new border: Color veryLightGray);\r\t\t\tzIndex: -1 ];\r\tconnectToAll: [ :page | page allOutgoingTextualLinks collectAsSet: #target ].\rm layout force nbIterations: 30; charge: -50.\rm"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:53:40.581855+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:53:40.581855+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "KlOwE8CxDQCmyKL3B+HMxw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "So, now we have an idea of the parts of the book that are not reachable. But would it not be better to show the pages as they are in the book table of contents instead of as a graph of links? Let's try."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:53:52.150745+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:53:52.150745+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "u11lFMCxDQCm0FmZB+HMxw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First, we assemble the data structures. Here we traverse the table of contents page itself and get the links from each snippet."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:54:02.107408+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:54:02.532979+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "i9AKFcCxDQCm2KhmB+HMxw=="
+				},
+				"code" : "tocPage := database pages\r\t\tdetect: [ :each | each title = 'Glamorous Toolkit Book' ].\rallTocSnippets := tocPage allChildrenBreadthFirst."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:54:16.447491+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:54:16.447491+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nz7XFcCxDQCm4Lc/B+HMxw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And then we put it together in a simple visualization of the snippets that uses `allReachedPages` computed above to highlight the corresponding snippets:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:54:18.174225+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:54:28.235218+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Bvr/FcCxDQCm6GPkB+HMxw=="
+				},
+				"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [ :each | \r\t\t| title color |\r\t\ttitle := (each contentAsString removePrefix: '[[') removeSuffix: ']]'.\r\t\tcolor := Color gray alpha: 0.2.\r\t\t(allReachedPages anySatisfy: [ :aPage | aPage title = title ])\r\t\t\t\tifTrue: [ color := Color red alpha: 0.4 ].\r\t\ttitle = 'Get started' ifTrue: [ color := Color blue alpha: 0.6 ].\r\t\tBlShrinkingTextElement new\r\t\t\tconstraintsDo: [:c |c horizontal exact: 300. c vertical fitContent];\r\t\t\tbackground: color;\r\t\t\ttext: title asRopedText glamorousRegularFont;\r\t\t\twhen: BlClickEvent do: [:e | e consumed: true. e target phlow spawnObject: (each outgoingExplicitLinks anyOne target)] ];\r\twith: allTocSnippets.\rm edges fromRightCenter; toLeftCenter; connectToAll: #children.\rm layout custom: (GtGraphHorizontalTreeLayout new levelDistance: 150).\rm"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:54:45.482258+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:54:55.577585+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DJrVFsCxDQCm8MDvB+HMxw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This now gives us a view that is closer to the mental model of a book. The resulting tree shows pages. But some pages are longer than others, and it can be useful sometimes to also show the size of pages."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:04.387134+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:04.387134+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NYS1GMCxDQCnHIHXB+HMxw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To this end, we can count the words from the text representation of a page:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:10.568019+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:11.437627+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fHEfGcCxDQCnJLGJB+HMxw=="
+				},
+				"code" : "sizeCounter := [ :aPage | \r\t((String cr join: (aPage allChildrenBreadthFirst collect: #contentAsString))\r\t\tpiecesCutWhere: [ :a :b | a isSeparator ]) size ].\rmaxSize := pages max: sizeCounter."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:22.342692+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:22.342692+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Q23NGcCxDQCnNwA+B+HMxw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And then we enhance the visualization:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:18.545036+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:27.096206+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "hyyZGcCxDQCnLEEzB+HMxw=="
+				},
+				"code" : "m := GtMondrian new.\rm nodes\r\tstencil: [ :each | \r\t\t| title color linkedPage |\r\t\tlinkedPage := each outgoingExplicitLinks anyOne target.\r\t\ttitle := linkedPage title.\r\t\tcolor := Color gray alpha: 0.2.\r\t\t(allReachedPages anySatisfy: [ :aPage | aPage title = title ])\r\t\t\tifTrue: [ color := Color red alpha: 0.4 ].\r\t\ttitle = 'Get started' ifTrue: [ color := Color blue alpha: 0.6 ].\r\t\tBlShrinkingTextElement new\r\t\t\tconstraintsDo: [ :c | \r\t\t\t\tc horizontal exact: (((sizeCounter value: linkedPage) / maxSize * 500) max: 30).\r\t\t\t\tc vertical fitContent ];\r\t\t\tbackground: color;\r\t\t\ttext: title asRopedText glamorousRegularFont;\r\t\t\tpadding: (BlInsets all: 2);\r\t\t\twhen: BlClickEvent\r\t\t\t\tdo: [ :e | \r\t\t\t\t\te consumed: true.\r\t\t\t\t\te target phlow spawnObject: linkedPage ] ];\r\twith: allTocSnippets.\rm edges\r\tfromRightCenter;\r\ttoLeftCenter;\r\tconnectToAll: #children.\rm layout custom: (GtGraphHorizontalTreeLayout new levelDistance: 100; layered).\rm"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:37.114238+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:37.114238+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "a8KuGsCxDQCnQkhUB+HMxw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Of course, in a world of executable snippets, we can find other interesting measurements than words. For example, we can also consider the amount of snippets in a page."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:43.619437+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-23T14:55:44.041422+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "E8MXG8CxDQCnSplnB+HMxw=="
+				},
+				"code" : "sizeCounter := [ :aPage | aPage allChildrenBreadthFirst size ].\rmaxSize := pages max: snippetsCounter."
 			}
 		]
 	},
