@@ -42,41 +42,44 @@
 				"string" : "A bound is a territorial limit, a boundary. In terms of a graphical element, it is a space in which the graphical element is rendered. For simplicity, bounds are rectangular areas. Bloc defines three different bounds (layout, geometry, and visual) that we will explain using the following example:"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:57.822488+01:00"
+						"dateAndTimeString" : "2023-02-24T02:47:18.510648+01:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:57.822488+01:00"
+						"dateAndTimeString" : "2023-02-24T02:47:18.510648+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mQKCiZ43AAAAAAAAAAAAAA=="
+					"uidString" : "/R3oC8qxDQCvNHy7B+HMxw=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtExample:BlGeometryVisualAndLayoutBoundsExamples>>#centeredOutskirts|previewExpanded}}"
+				"exampleSelector" : "centeredOutskirts",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "BlGeometryVisualAndLayoutBoundsExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
 			},
 			{
 				"__type" : "textSnippet",
