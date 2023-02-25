@@ -390,14 +390,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-23T14:54:02.532979+01:00"
+						"dateAndTimeString" : "2023-02-25T15:21:11.113483+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "i9AKFcCxDQCm2KhmB+HMxw=="
 				},
-				"code" : "tocPage := database pages\r\t\tdetect: [ :each | each title = 'Glamorous Toolkit Book' ].\rallTocSnippets := tocPage allChildrenBreadthFirst."
+				"code" : "tocPage := thisSnippet database pages\r\t\tdetect: [ :each | each title = 'Glamorous Toolkit Book' ].\rallTocSnippets := tocPage allChildrenBreadthFirst."
 			},
 			{
 				"__type" : "textSnippet",
@@ -569,14 +569,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-23T14:55:11.437627+01:00"
+						"dateAndTimeString" : "2023-02-25T15:20:28.072495+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "fHEfGcCxDQCnJLGJB+HMxw=="
 				},
-				"code" : "sizeCounter := [ :aPage | \r\t((String cr join: (aPage allChildrenBreadthFirst collect: #contentAsString))\r\t\tpiecesCutWhere: [ :a :b | a isSeparator ]) size ].\rmaxSize := pages max: sizeCounter."
+				"code" : "sizeCounter := [ :aPage | \r\taPage allChildrenBreadthFirst\r\t\tsumNumbers: [ :each | each contentAsString substrings size ] ].\rmaxSize := pages max: sizeCounter"
 			},
 			{
 				"__type" : "textSnippet",
