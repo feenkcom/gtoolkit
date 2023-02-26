@@ -146,8 +146,7 @@ RPackage >> gtDependencyTreeFor: aView [
 					foreground: eachDependencyStatus statusColor ]
 			weight: 0.5;
 		column: 'Baseline'
-			text: [ :eachDependencyStatus | 
-				eachDependencyStatus baselineStatusLabel asRopedText ];
+			text: [ :eachDependencyStatus | eachDependencyStatus baselineStatusLabel asRopedText ];
 		column: 'Dependencies'
 			text: [ :eachDependencyStatus | 
 				eachDependencyStatus amountOfDependencies asRopedText
@@ -157,7 +156,8 @@ RPackage >> gtDependencyTreeFor: aView [
 			text: [ :eachDependencyStatus | 
 				eachDependencyStatus statusLabel asRopedText
 					foreground: eachDependencyStatus statusColor ]
-			width: 220
+			width: 220;
+		actionUpdateButton
 ]
 
 { #category : #'*GToolkit-Extensions' }
