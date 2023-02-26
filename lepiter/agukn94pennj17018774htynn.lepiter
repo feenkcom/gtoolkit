@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T00:49:08.346226+01:00"
+						"dateAndTimeString" : "2023-02-25T01:05:14.568804+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T00:49:22.255846+01:00"
+						"dateAndTimeString" : "2023-02-25T01:05:14.568804+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "r2m6WBOxDQCZ8WptCwqSgw=="
+					"uidString" : "AIe7vNyxDQCp95vWC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Twitter allows you to download your own data. But data alone is not particularly valuable if there isn't much you can do with it. This can change."
+				"string" : "The accordion is a graphical control element that can be \"expanded\" or \"collapsed\" to reveal the content associated with that element. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T00:48:48.648342+01:00"
+						"dateAndTimeString" : "2023-02-25T01:05:15.696214+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,51 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T00:49:53.955209+01:00"
+						"dateAndTimeString" : "2023-02-25T01:05:15.696214+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2tmNVxOxDQCZRXMxCwqSgw=="
+					"uidString" : "asDMvNyxDQCp/3zuC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Take a look at the following project for an exercise of building a model and views through which to explore this specific data:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T00:45:18.624005+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-15T00:45:21.276398+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "RR8JSxOxDQCV9D65CwqSgw=="
-				},
-				"code" : "Metacello new\n    repository: 'github://feenkcom/gt4twitter:main';\n    baseline: #GToolkit4Twitter;\n    load.\n#BaselineOfGToolkit4Twitter asClass loadLepiter."
+				"string" : "See {{gtClass:BrAccordionExamples|label=Accordion examples}} for a deeper dive into the api."
 			},
 			{
 				"__type" : "textSnippet",
@@ -126,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-24T02:49:46.412378+01:00"
+						"dateAndTimeString" : "2023-02-25T01:05:19.948187+01:00"
 					}
 				},
 				"editEmail" : {
@@ -137,17 +103,57 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-24T02:50:14.945267+01:00"
+						"dateAndTimeString" : "2023-02-25T01:05:19.948187+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "sM24FMqxDQCDt6pIB+HMxw=="
+					"uidString" : "kaENvdyxDQCqE2gKC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The repository contains a [[Lepiter]] knowledge base. Once you have loaded the code and the Lepiter knowledge base associated with it, please follow the instructions from: {{gtPage:Overview|db=8wx6wvi5avu2inao1waq2i6u7}}."
+				"string" : "#With editor"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T01:05:31.850254+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T01:05:31.850254+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2z/DvdyxDQCqK4JJC1TRsA=="
+				},
+				"exampleSelector" : "withEditor",
+				"previewHeight" : 150,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "BrGlamorousComponentsAccordions",
+				"codeExpanded" : false,
+				"previewExpanded" : true,
+				"noCode" : false
 			}
 		]
 	},
@@ -159,7 +165,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-15T00:44:59.98666+01:00"
+			"dateAndTimeString" : "2023-02-25T01:05:09.405253+01:00"
 		}
 	},
 	"editEmail" : {
@@ -170,15 +176,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-15T00:48:34.356671+01:00"
+			"dateAndTimeString" : "2023-02-25T01:05:09.405253+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Exploring your Twitter data"
+		"title" : "Accordion"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "2ec2ec49-13b1-0d00-95f0-b39f0b0a9283"
+		"uuid" : "b3c56cbc-dcb1-0d00-a9e6-56190b54d1b0"
 	}
 }

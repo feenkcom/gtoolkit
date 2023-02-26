@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:15:25.668822+02:00"
+						"dateAndTimeString" : "2023-02-25T01:13:33.794611+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-25T18:46:34.301301+01:00"
+						"dateAndTimeString" : "2023-02-25T01:13:33.794611+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "EQ24izqKDQC47qx9A9Q0ng=="
+					"uidString" : "ZiB92tyxDQCu1XGkC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "\tThe process builder ({{gtClass:GtExternalProcessBuilder}}) allows developers to create and spawn external child processes. It provides configuration api to pass arguments to the command or redirect standard streams (`stdout`, `stderr` and `stdin`."
+				"string" : "{{gtClass:BrButtonModel}} is one of the most essential parts of the brick. It allows users to create clickable widgets and attach a custom action that will be executed on {{gtClass:BlClickEvent}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:24:40.140546+02:00"
+						"dateAndTimeString" : "2023-02-25T01:13:35.521298+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,57 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:25:02.606681+02:00"
+						"dateAndTimeString" : "2023-02-25T01:13:35.521298+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/5X4tjqKDQC5BA5MA9Q0ng=="
+					"uidString" : "dXmX2tyxDQCu3WtoC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Asynchronous output"
+				"string" : "By default {{gtClass:BrButtonModel}} has an empty action that does nothing:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T01:15:47.305489+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T01:15:47.305489+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "11Vy4tyxDQCvpSkyC1TRsA=="
+				},
+				"exampleSelector" : "default",
+				"previewHeight" : 100,
+				"previewShowSelector" : "gtActionFor:",
+				"exampleBehaviorName" : "BrButtonModelExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +132,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:21:07.180234+02:00"
+						"dateAndTimeString" : "2023-02-25T01:13:43.628535+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,20 +143,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-11T15:43:43.937901+01:00"
+						"dateAndTimeString" : "2023-02-25T01:13:43.628535+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "evtAqjqKDQC5ACZPA9Q0ng=="
+					"uidString" : "5i4T29yxDQCu7fFCC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The following snippet creates an indefinitely running process that regularly pings the `localhost` and configures the standard streams to be piped into a buffer:"
+				"string" : "Every button model creates a corresponding event handler that responds to {{gtClass:BlClickEvent}}:"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -129,7 +169,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:14:09.085876+02:00"
+						"dateAndTimeString" : "2023-02-25T01:15:24.220431+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,14 +180,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:23:05.449936+02:00"
+						"dateAndTimeString" : "2023-02-25T01:15:24.220431+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "3OFhkTqKDQC49lTdA9Q0ng=="
+					"uidString" : "aBkS4dyxDQCvi4KGC1TRsA=="
 				},
-				"code" : "process := GtExternalProcessBuilder new\r\tcommand: 'ping';\r\targ: '127.0.0.1';\r\tpipeStdout;\r\tspawn."
+				"exampleSelector" : "default",
+				"previewHeight" : 50,
+				"previewShowSelector" : "gtHandlersFor:",
+				"exampleBehaviorName" : "BrButtonModelExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			},
 			{
 				"__type" : "textSnippet",
@@ -163,7 +209,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:22:54.756947+02:00"
+						"dateAndTimeString" : "2023-02-25T01:14:01.203552+01:00"
 					}
 				},
 				"editEmail" : {
@@ -174,20 +220,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:24:26.824412+02:00"
+						"dateAndTimeString" : "2023-02-25T01:14:01.203552+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "KY/FpzqKDQC4/GZTA9Q0ng=="
+					"uidString" : "SVwf3NyxDQCvFcZqC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The piped `stdout` is buffered and can be polled at regular intervals. The code snippet below polls the `stdout` as a string every `0.5 seconds` and prints it into a local transcript:"
+				"string" : "The following example shows how to create a new button model and attach an action. In this particular case we set `#clicked` as an inner domain model to be able to assert that the action  was indeed executed and also inform users about it:"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -200,7 +246,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:18:55.048189+02:00"
+						"dateAndTimeString" : "2023-02-25T01:15:13.633379+01:00"
 					}
 				},
 				"editEmail" : {
@@ -211,14 +257,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:20:55.854449+02:00"
+						"dateAndTimeString" : "2023-02-25T01:15:13.633379+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "KlJtojqKDQC4+P+TA9Q0ng=="
+					"uidString" : "RIhw4NyxDQCvdG87C1TRsA=="
 				},
-				"code" : "transcript := GtTranscript new.\r\rreader := process asynchronousStdout\r\tpollStringEvery: 0.5 second\r\tdo: [ :aString | transcript show: aString ].\r\rtranscript"
+				"exampleSelector" : "buttonModelWithAction",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "BrButtonModelExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -234,7 +286,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:24:32.703762+02:00"
+						"dateAndTimeString" : "2023-02-25T01:13:51.516355+01:00"
 					}
 				},
 				"editEmail" : {
@@ -245,20 +297,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:25:46.869659+02:00"
+						"dateAndTimeString" : "2023-02-25T01:13:57.478338+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "VHBrtjqKDQC5Ak3AA9Q0ng=="
+					"uidString" : "Z4qL29yxDQCvALK3C1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "At wish, the running process can be killed, stopping the asynchronous polling  of the output:"
+				"string" : "The instantiated button model can be attached to any visual {{gtClass:BlElement}} as its view model. Once attached, the visual element becomes clickable, as the following example shows:"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -271,7 +323,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:20:29.097657+02:00"
+						"dateAndTimeString" : "2023-02-25T01:14:36.116564+01:00"
 					}
 				},
 				"editEmail" : {
@@ -282,14 +334,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:20:47.408861+02:00"
+						"dateAndTimeString" : "2023-02-25T01:14:36.116564+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "5WYIqDqKDQC4/rbrA9Q0ng=="
+					"uidString" : "ZBM03tyxDQCvW/JDC1TRsA=="
 				},
-				"code" : "process kill"
+				"exampleSelector" : "elementWithButtonModel",
+				"previewHeight" : 70,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "BrButtonModelExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -305,7 +363,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:26:13.585193+02:00"
+						"dateAndTimeString" : "2023-02-25T01:14:08.608492+01:00"
 					}
 				},
 				"editEmail" : {
@@ -316,20 +374,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:26:24.988758+02:00"
+						"dateAndTimeString" : "2023-02-25T01:14:08.608492+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "hyyIvDqKDQC5CetGA9Q0ng=="
+					"uidString" : "L1iQ3NyxDQCvJ1zlC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Synchronous output"
+				"string" : "To test the behaviour of the button model we can simulate a click on the element with attached button model and make sure that the action was performed:"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -342,7 +400,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:30:54.573081+02:00"
+						"dateAndTimeString" : "2023-02-25T01:14:24.094147+01:00"
 					}
 				},
 				"editEmail" : {
@@ -353,51 +411,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:32:01.519895+02:00"
+						"dateAndTimeString" : "2023-02-25T01:14:24.094147+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "HzQmyDqKDQC5EpssA9Q0ng=="
+					"uidString" : "B6V83dyxDQCvQqPEC1TRsA=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "If desired, a command can be executed synchronously blocking the current running process:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:26:28.698175+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-09T17:44:43.781543+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "aXh3vTqKDQC5CwvmA9Q0ng=="
-				},
-				"code" : "output := GtExternalProcessBuilder new\r\tcommand: 'date';\r\toutput.\routput stdout"
+				"exampleSelector" : "clickOnElementWithButtonModel",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "BrButtonModelExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
 			}
 		]
 	},
@@ -409,7 +436,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-10-08T17:12:34.019327+02:00"
+			"dateAndTimeString" : "2023-02-25T01:13:16.342762+01:00"
 		}
 	},
 	"editEmail" : {
@@ -420,15 +447,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-10-08T17:13:03.642992+02:00"
+			"dateAndTimeString" : "2023-02-25T01:13:16.342762+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to work with external child processes"
+		"title" : "Learning how button model works"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "6147b78b-3a8a-0d00-b8ed-b8fc03d4349e"
+		"uuid" : "57d972d9-dcb1-0d00-aebd-a7aa0b54d1b0"
 	}
 }

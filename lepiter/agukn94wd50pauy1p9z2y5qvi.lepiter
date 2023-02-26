@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:15:25.668822+02:00"
+						"dateAndTimeString" : "2023-02-25T00:58:52.650852+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-25T18:46:34.301301+01:00"
+						"dateAndTimeString" : "2023-02-25T00:58:52.650852+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "EQ24izqKDQC47qx9A9Q0ng=="
+					"uidString" : "kuz3pdyxDQCl8QmqC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "\tThe process builder ({{gtClass:GtExternalProcessBuilder}}) allows developers to create and spawn external child processes. It provides configuration api to pass arguments to the command or redirect standard streams (`stdout`, `stderr` and `stdin`."
+				"string" : "Use editors to edit text."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:24:40.140546+02:00"
+						"dateAndTimeString" : "2023-02-25T00:58:58.042928+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:25:02.606681+02:00"
+						"dateAndTimeString" : "2023-02-25T00:58:58.042928+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/5X4tjqKDQC5BA5MA9Q0ng=="
+					"uidString" : "bDdKptyxDQCl/2RIC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Asynchronous output"
+				"string" : "#Basic editor"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:21:07.180234+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:02.727802+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,51 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-11T15:43:43.937901+01:00"
+						"dateAndTimeString" : "2023-02-25T00:59:02.727802+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "evtAqjqKDQC5ACZPA9Q0ng=="
+					"uidString" : "RrSRptyxDQCmBys0C1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The following snippet creates an indefinitely running process that regularly pings the `localhost` and configures the standard streams to be piped into a buffer:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:14:09.085876+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:23:05.449936+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "3OFhkTqKDQC49lTdA9Q0ng=="
-				},
-				"code" : "process := GtExternalProcessBuilder new\r\tcommand: 'ping';\r\targ: '127.0.0.1';\r\tpipeStdout;\r\tspawn."
+				"string" : "{{gtExample:BrGlamorousComponentsEditors>>#basicEditor|previewShow=#gtLiveFor:|previewHeight=100|previewExpanded=true|codeExpanded=false}}\r"
 			},
 			{
 				"__type" : "textSnippet",
@@ -163,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:22:54.756947+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:06.14413+01:00"
 					}
 				},
 				"editEmail" : {
@@ -174,51 +140,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:24:26.824412+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:28.898321+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "KY/FpzqKDQC4/GZTA9Q0ng=="
+					"uidString" : "79LFptyxDQCmDwFXC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The piped `stdout` is buffered and can be polled at regular intervals. The code snippet below polls the `stdout` as a string every `0.5 seconds` and prints it into a local transcript:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:18:55.048189+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:20:55.854449+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "KlJtojqKDQC4+P+TA9Q0ng=="
-				},
-				"code" : "transcript := GtTranscript new.\r\rreader := process asynchronousStdout\r\tpollStringEvery: 0.5 second\r\tdo: [ :aString | transcript show: aString ].\r\rtranscript"
+				"string" : "#Input filter allowing digits only"
 			},
 			{
 				"__type" : "textSnippet",
@@ -234,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:24:32.703762+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:12.97809+01:00"
 					}
 				},
 				"editEmail" : {
@@ -245,51 +177,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:25:46.869659+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:12.97809+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "VHBrtjqKDQC5Ak3AA9Q0ng=="
+					"uidString" : "pRgup9yxDQCmF2rnC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "At wish, the running process can be killed, stopping the asynchronous polling  of the output:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:20:29.097657+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:20:47.408861+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "5WYIqDqKDQC4/rbrA9Q0ng=="
-				},
-				"code" : "process kill"
+				"string" : "{{gtExample:BrGlamorousComponentsEditors>>#digitsOnly|previewShow=#gtLiveFor:|previewHeight=100|previewExpanded=true|codeExpanded=false}}\r"
 			},
 			{
 				"__type" : "textSnippet",
@@ -305,7 +203,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:26:13.585193+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:39.50422+01:00"
 					}
 				},
 				"editEmail" : {
@@ -316,17 +214,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:26:24.988758+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:39.50422+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "hyyIvDqKDQC5CetGA9Q0ng=="
+					"uidString" : "PN7CqNyxDQCmQVTBC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Synchronous output"
+				"string" : "#Input field"
 			},
 			{
 				"__type" : "textSnippet",
@@ -342,7 +240,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:30:54.573081+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:17.210239+01:00"
 					}
 				},
 				"editEmail" : {
@@ -353,20 +251,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:32:01.519895+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:39.508603+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "HzQmyDqKDQC5EpssA9Q0ng=="
+					"uidString" : "eLFup9yxDQCmH9J3C1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If desired, a command can be executed synchronously blocking the current running process:"
+				"string" : "{{gtExample:BrGlamorousComponentsEditors>>#inputField|previewShow=#gtLiveFor:|previewHeight=100|previewExpanded=true|codeExpanded=false}}\r"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -379,7 +277,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:26:28.698175+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:35.94473+01:00"
 					}
 				},
 				"editEmail" : {
@@ -390,14 +288,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-09T17:44:43.781543+02:00"
+						"dateAndTimeString" : "2023-02-25T00:59:35.94473+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "aXh3vTqKDQC5CwvmA9Q0ng=="
+					"uidString" : "/4yMqNyxDQCmORk8C1TRsA=="
 				},
-				"code" : "output := GtExternalProcessBuilder new\r\tcommand: 'date';\r\toutput.\routput stdout"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Text area"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T00:58:49.358395+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T00:59:35.947468+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dsqtpdyxDQCl5PO6C1TRsA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "{{gtExample:BrGlamorousComponentsEditors>>#textArea|previewShow=#gtLiveFor:|previewHeight=200|previewExpanded=true|codeExpanded=false}}\r"
 			}
 		]
 	},
@@ -409,7 +347,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-10-08T17:12:34.019327+02:00"
+			"dateAndTimeString" : "2023-02-25T00:58:47.751172+01:00"
 		}
 	},
 	"editEmail" : {
@@ -420,15 +358,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-10-08T17:13:03.642992+02:00"
+			"dateAndTimeString" : "2023-02-25T00:58:47.751172+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to work with external child processes"
+		"title" : "Text editor"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "6147b78b-3a8a-0d00-b8ed-b8fc03d4349e"
+		"uuid" : "4e31ada5-dcb1-0d00-a5e3-c71f0b54d1b0"
 	}
 }

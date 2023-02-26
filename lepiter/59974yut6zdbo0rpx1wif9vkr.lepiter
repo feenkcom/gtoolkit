@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:35:04.601603+02:00"
+						"dateAndTimeString" : "2023-02-24T02:46:27.117209+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now, if we take a closer look at the code from GT, there are a number of abilities that are not present in Pharo. For example, GT includes {{gtExample:GtAndPharoExplanation>>#smaccParsersPackages|label=#size}} parsers for other languages. These alone total {{gtExample:GtAndPharoExplanation>>#smaccParsersLinesOfCode|label=#asString}} lines of code. It includes  {{gtExample:GtAndPharoExplanation>>#famix3LinesOfCode|label=#asString}} lines of code to support code analysis of systems written in other languages. On top of that, we complement the already existing JSON support from Pharo with support for XML which adds another {{gtExample:GtAndPharoExplanation>>#xmlSupportLinesOfCode|label=#asString}} lines of code. We do that because we believe that a development environment should offer convenient support for various data formats."
+				"string" : "Now, if we take a closer look at the code from GT, there are a number of abilities that are not present in Pharo. For example, GT includes {{gtExample:GtAndPharoExplanation>>#smaccParsersPackages|label=#size}} [[SmaCC]] parsers for other languages. These alone total {{gtExample:GtAndPharoExplanation>>#smaccParsersLinesOfCode|label=#asString}} lines of code. It includes  {{gtExample:GtAndPharoExplanation>>#famix3LinesOfCode|label=#asString}} lines of code to support code analysis of systems written in other languages. On top of that, we complement the already existing [[JSON]] support from Pharo with support for [[XML]] which adds another {{gtExample:GtAndPharoExplanation>>#xmlSupportLinesOfCode|label=#asString}} lines of code. We do that because we believe that a development environment should offer convenient support for various data formats."
 			},
 			{
 				"__type" : "exampleSnippet",

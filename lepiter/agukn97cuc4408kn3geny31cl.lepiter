@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:15:25.668822+02:00"
+						"dateAndTimeString" : "2023-02-25T00:52:47.722586+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-25T18:46:34.301301+01:00"
+						"dateAndTimeString" : "2023-02-25T00:52:47.722586+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "EQ24izqKDQC47qx9A9Q0ng=="
+					"uidString" : "GZM3kNyxDQCj5O0HC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "\tThe process builder ({{gtClass:GtExternalProcessBuilder}}) allows developers to create and spawn external child processes. It provides configuration api to pass arguments to the command or redirect standard streams (`stdout`, `stderr` and `stdin`."
+				"string" : "Use pager to display a horizontally scrollable list of pages."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:24:40.140546+02:00"
+						"dateAndTimeString" : "2023-02-25T00:52:52.793233+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:25:02.606681+02:00"
+						"dateAndTimeString" : "2023-02-25T00:56:45.939391+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/5X4tjqKDQC5BA5MA9Q0ng=="
+					"uidString" : "kfOEkNyxDQCj+KWPC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Asynchronous output"
+				"string" : "#Simple three page pager"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:21:07.180234+02:00"
+						"dateAndTimeString" : "2023-02-25T00:52:54.940572+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,20 +103,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-11T15:43:43.937901+01:00"
+						"dateAndTimeString" : "2023-02-25T00:56:38.937024+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "evtAqjqKDQC5ACZPA9Q0ng=="
+					"uidString" : "5ralkNyxDQCkAMv7C1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The following snippet creates an indefinitely running process that regularly pings the `localhost` and configures the standard streams to be piped into a buffer:"
+				"string" : "The following example displays three predefined pages that occupy all available space within the pager ({{gtMethod:BrPagerPageElement>>#weight:}}is set to `1`)."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:14:09.085876+02:00"
+						"dateAndTimeString" : "2023-02-25T00:56:40.785385+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,14 +140,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:23:05.449936+02:00"
+						"dateAndTimeString" : "2023-02-25T00:56:40.785385+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "3OFhkTqKDQC49lTdA9Q0ng=="
+					"uidString" : "4dcbntyxDQCk7YSMC1TRsA=="
 				},
-				"code" : "process := GtExternalProcessBuilder new\r\tcommand: 'ping';\r\targ: '127.0.0.1';\r\tpipeStdout;\r\tspawn."
+				"exampleSelector" : "threeFullPagePager",
+				"previewHeight" : 250,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "BrGlamorousComponentsPagers",
+				"codeExpanded" : false,
+				"previewExpanded" : true,
+				"noCode" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -163,7 +169,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:22:54.756947+02:00"
+						"dateAndTimeString" : "2023-02-25T00:54:25.6757+01:00"
 					}
 				},
 				"editEmail" : {
@@ -174,51 +180,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:24:26.824412+02:00"
+						"dateAndTimeString" : "2023-02-25T00:54:25.6757+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "KY/FpzqKDQC4/GZTA9Q0ng=="
+					"uidString" : "nzoOltyxDQCkJGW9C1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The piped `stdout` is buffered and can be polled at regular intervals. The code snippet below polls the `stdout` as a string every `0.5 seconds` and prints it into a local transcript:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:18:55.048189+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:20:55.854449+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "KlJtojqKDQC4+P+TA9Q0ng=="
-				},
-				"code" : "transcript := GtTranscript new.\r\rreader := process asynchronousStdout\r\tpollStringEvery: 0.5 second\r\tdo: [ :aString | transcript show: aString ].\r\rtranscript"
+				"string" : "#Two page pager with custom weight"
 			},
 			{
 				"__type" : "textSnippet",
@@ -234,7 +206,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:24:32.703762+02:00"
+						"dateAndTimeString" : "2023-02-25T00:54:23.363342+01:00"
 					}
 				},
 				"editEmail" : {
@@ -245,20 +217,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:25:46.869659+02:00"
+						"dateAndTimeString" : "2023-02-25T00:54:25.679489+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "VHBrtjqKDQC5Ak3AA9Q0ng=="
+					"uidString" : "1PHqldyxDQCkHA6SC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "At wish, the running process can be killed, stopping the asynchronous polling  of the output:"
+				"string" : "It is possible, however, to set a different {{gtMethod:BrPagerPageElement>>#weight:}} which will make pages share the space within their pager."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -271,7 +243,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:20:29.097657+02:00"
+						"dateAndTimeString" : "2023-02-25T00:56:28.279419+01:00"
 					}
 				},
 				"editEmail" : {
@@ -282,14 +254,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:20:47.408861+02:00"
+						"dateAndTimeString" : "2023-02-25T00:56:28.279419+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "5WYIqDqKDQC4/rbrA9Q0ng=="
+					"uidString" : "GwRdndyxDQCk02z6C1TRsA=="
 				},
-				"code" : "process kill"
+				"exampleSelector" : "twoHalfPagePager",
+				"previewHeight" : 250,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "BrGlamorousComponentsPagers",
+				"codeExpanded" : false,
+				"previewExpanded" : true,
+				"noCode" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -305,7 +283,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:26:13.585193+02:00"
+						"dateAndTimeString" : "2023-02-25T00:54:34.173152+01:00"
 					}
 				},
 				"editEmail" : {
@@ -316,17 +294,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:26:24.988758+02:00"
+						"dateAndTimeString" : "2023-02-25T00:54:34.173152+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "hyyIvDqKDQC5CetGA9Q0ng=="
+					"uidString" : "YuGPltyxDQCkQqV5C1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Synchronous output"
+				"string" : "#Dynamically adding a page"
 			},
 			{
 				"__type" : "textSnippet",
@@ -342,7 +320,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:30:54.573081+02:00"
+						"dateAndTimeString" : "2023-02-25T00:54:37.783437+01:00"
 					}
 				},
 				"editEmail" : {
@@ -353,20 +331,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:32:01.519895+02:00"
+						"dateAndTimeString" : "2023-02-25T00:54:37.783437+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "HzQmyDqKDQC5EpssA9Q0ng=="
+					"uidString" : "N/rGltyxDQCkSjJDC1TRsA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If desired, a command can be executed synchronously blocking the current running process:"
+				"string" : "If needed, pages can be added dynamically with the same api as we used in the previous examples {{gtMethod:BrPager>>#addPage:}}. However, it is usually required to scroll to a newly created page which can be achieved with the help of the {{gtMethod:BrPager>>#scrollToLast}}method."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -379,7 +357,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-08T17:26:28.698175+02:00"
+						"dateAndTimeString" : "2023-02-25T00:55:55.574522+01:00"
 					}
 				},
 				"editEmail" : {
@@ -390,14 +368,134 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-10-09T17:44:43.781543+02:00"
+						"dateAndTimeString" : "2023-02-25T00:55:55.574522+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "aXh3vTqKDQC5CwvmA9Q0ng=="
+					"uidString" : "bvppm9yxDQCktxJLC1TRsA=="
 				},
-				"code" : "output := GtExternalProcessBuilder new\r\tcommand: 'date';\r\toutput.\routput stdout"
+				"exampleSelector" : "dynamicPager",
+				"previewHeight" : 250,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "BrGlamorousComponentsPagers",
+				"codeExpanded" : false,
+				"previewExpanded" : true,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T00:54:45.283528+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T00:56:51.595461+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GGg5l9yxDQCkZthnC1TRsA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Infinite pager"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T00:54:53.07128+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T00:54:53.07128+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "D0Cwl9yxDQCkbhJVC1TRsA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can build on the previous example to create an \"infinite\" pager by using a stencil to recursively build new pages:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T00:55:07.892345+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-25T00:55:07.892345+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fWiSmNyxDQCkmBwxC1TRsA=="
+				},
+				"exampleSelector" : "infinitePager",
+				"previewHeight" : 250,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "BrGlamorousComponentsPagers",
+				"codeExpanded" : false,
+				"previewExpanded" : true,
+				"noCode" : false
 			}
 		]
 	},
@@ -409,7 +507,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-10-08T17:12:34.019327+02:00"
+			"dateAndTimeString" : "2023-02-25T00:52:42.254487+01:00"
 		}
 	},
 	"editEmail" : {
@@ -420,15 +518,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-10-08T17:13:03.642992+02:00"
+			"dateAndTimeString" : "2023-02-25T00:52:42.254487+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to work with external child processes"
+		"title" : "Pager"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "6147b78b-3a8a-0d00-b8ed-b8fc03d4349e"
+		"uuid" : "9527e48f-dcb1-0d00-a3d6-b0710b54d1b0"
 	}
 }
