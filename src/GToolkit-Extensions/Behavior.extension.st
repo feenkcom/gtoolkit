@@ -102,6 +102,7 @@ Behavior >> gtCoderStreamingMethodsFor: aView context: aPhlowContext [
 				GtSpotterDropdownButtonStencil new
 					object: self;
 					tooltip: 'Search Code';
+					id: GtPharoSearchCodeButtonId;
 					actOn: [ :anActOnEvent :anItem :theButton | 
 						| acted navigationModel |
 						acted := false.
