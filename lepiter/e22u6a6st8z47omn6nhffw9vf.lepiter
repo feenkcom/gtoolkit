@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-13T11:18:55.424854+01:00"
+						"dateAndTimeString" : "2023-03-13T14:15:17.466489+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-13T11:19:01.366443+01:00"
+						"dateAndTimeString" : "2023-03-14T10:03:06.27907+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/jrjLCezDQCSaydEBsRz7Q=="
+					"uidString" : "z16goymzDQCxII8SBsRz7Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "See [[PetitParser case study]]."
+				"string" : "The version of PetitParser that is  integrated into GT is PetitParser2 (AKA PP2) by Jan Kurš. It builds on and extends the original PetitParser framework by Lukas Renggli."
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-13T11:16:06.451475+01:00"
+						"dateAndTimeString" : "2023-03-13T14:16:36.351813+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,128 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-13T11:16:27.784833+01:00"
+						"dateAndTimeString" : "2023-03-13T14:16:38.953085+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AOjQIiezDQCPy47gBsRz7Q=="
+					"uidString" : "2BFUqCmzDQC0VRtUBsRz7Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtTodo:label=Expand the PetitParser component page}}"
+				"string" : "#Resources"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-14T07:53:47.284723+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-14T09:50:05.381922+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "sEobbTizDQCy7CQEAVt5xQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For a tutorial, see [[Parsing with PetitParser2]], an adaptation to GT of the online tutorial of the same name."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-13T14:04:52.943262+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-14T09:50:23.703804+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xeRmfimzDQCugV3YBsRz7Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For a case study using PetitParser to build an interpreter for a simple programming language, see [[PetitParser case study]]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-13T14:17:34.953016+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-13T14:50:22.268813+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GbKLqymzDQC2uSTXBsRz7Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Implementations of PetitParser for other langauges can be found on the [Welcome to PetitParser](https://petitparser.github.io) website. "
 			}
 		]
 	},

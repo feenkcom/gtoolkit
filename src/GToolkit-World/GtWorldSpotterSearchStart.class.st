@@ -34,12 +34,10 @@ GtWorldSpotterSearchStart >> gtSearchPagesByTitleFor: aSearch [
 	self hasKnowledgeBase ifFalse: [ ^ aSearch empty ].
 	self hasChildren ifFalse: [ ^ aSearch empty ].
 
-	^ aSearch list
+	^ aSearch explicit
 		title: 'Named pages';
 		priority: 22;
-		items: [ Array
-				streamContents: [ :aStream | self knowledgeBase pagesWithNameDo: [ :eachPage | aStream nextPut: eachPage ] ] ];
-		filterBySubstring;
+		search: [ :aContext | self knowledgeBase asyncPagesForWord: aContext searchQuery ];
 		itemName: #title;
 		wantsToDisplayOnEmptyQuery: false
 ]
