@@ -1,0 +1,805 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:00:33.303738+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:02:01.610648+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "h8Ph5ECzDQCichLbAovPuA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Although it is convenient to rapidly develop a parser as a script using PetitParser rules, at some point to support regression testing and deployment for other purpose, it will be necessary to turn the script into a class. We show how to automate this for the [[PetitParser SPL case study]]."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-14T17:59:50.814418+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-14T17:59:55.477879+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "57qK5ECzDQCiUejnAovPuA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#TL;DR"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-15T07:27:02.708616+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-15T07:31:06.406575+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "r8ZOK0yzDQCMxZB+Ax2bYw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Here we see the complete parser for [[SPL]] as a script. Note that the rules for `expression`, `unary` and `statement` are first defined as instances of {{gtClass:name=PP2UnresolvedNode}}, and then later redefined recursively with `def:`."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:07:52.481765+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:14:21.004645+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rmBAAUGzDQCvuMjjAovPuA=="
+							},
+							"code" : "comment := '//' asPParser , #newline asPParser negate star.\nignorable := (comment / #space asPParser) star.\n\nboolean := ('true' asPParser trim: ignorable)\n\t\t/ ('false' asPParser trim: ignorable).\n\ninteger := #digit asPParser plus , $. asPParser not trim: ignorable.\n\nfloat := $- asPParser optional , #digit asPParser plus , $. asPParser\n\t\t, #digit asPParser plus trim: ignorable.\n\nnumber := integer / float.\n\nstring := $\" asPParser , $\" asPParser negate plus , $\" asPParser.\n\nkeyword := ('var' asPParser , #letter asPParser not)\n\t\t/ ('if' asPParser , #letter asPParser not)\n\t\t/ ('else' asPParser , #letter asPParser not)\n\t\t/ ('while' asPParser , #letter asPParser not)\n\t\t/ ('true' asPParser , #letter asPParser not)\n\t\t/ ('false' asPParser , #letter asPParser not)\n\t\t/ ('and' asPParser , #letter asPParser not)\n\t\t/ ('or' asPParser , #letter asPParser not).\n\nidentifier := keyword not , #letter asPParser , #word asPParser star.\n\n\"recursively defined rules\"\n\nexpression := PP2UnresolvedNode new.\n\nvarDecl := (('var' asPParser trim: ignorable) , identifier\n\t\t, (($= asPParser trim: ignorable) , expression) optional\n\t\t, ($; asPParser trim: ignorable))\n\t\t==> [ :node | \n\t\t\tnode third\n\t\t\t\tifNil: [ SPLDeclaration for: node second ]\n\t\t\t\tifNotNil: [ SPLInitializedDeclaration for: node second with: node third second ] ].\n\nparenthesizedExpression := ($( asPParser trim: ignorable) , expression\n\t\t, ($) asPParser trim: ignorable).\n\nprimary := parenthesizedExpression / boolean / number / string / identifier.\n\nnegatedUnary := ($! asPParser trim: ignorable) / ($- asPParser trim: ignorable)\n\t\t, unary.\n\nunary := PP2UnresolvedNode new.\n\nunary def: negatedUnary / primary.\n\nfactor := unary\n\t\t, (($/ asPParser trim: ignorable) / ($* asPParser trim: ignorable) , unary) star.\n\nterm := factor\n\t\t, (('-' asPParser trim: ignorable) / ('+' asPParser trim: ignorable) , factor)\n\t\t\t\tstar.\n\ncomparison := term\n\t\t, (('>=' asPParser trim: ignorable) / ('>' asPParser trim: ignorable)\n\t\t\t\t/ ('<=' asPParser trim: ignorable) / ('<' asPParser trim: ignorable) , term)\n\t\t\t\tstar.\n\nequality := comparison\n\t\t, (('!!=' asPParser trim: ignorable) / ('==' asPParser trim: ignorable)\n\t\t\t\t, comparison) star.\n\nlogicAnd := equality , (('and' asPParser trim: ignorable) , equality) star.\n\nlogicOr := logicAnd , (('or' asPParser trim: ignorable) , logicAnd) star.\n\nassignmentExpression := (identifier trim: ignorable)\n\t\t, ($= asPParser trim: ignorable) , assignment.\n\nassignment := assignmentExpression / logicOr.\n\nexpression def: assignment.\n\nexprStmt := expression , ($; asPParser trim: ignorable).\n\nprintStmt := ('print' asPParser trim: ignorable) , expression\n\t\t, ($; asPParser trim: ignorable).\n\nstatement := PP2UnresolvedNode new.\r\rdeclaration := varDecl / statement.\n\nifStmt := ('if' asPParser trim: ignorable) , ($( asPParser trim: ignorable)\n\t\t, expression , ($) asPParser trim: ignorable) , statement\n\t\t, (('else' asPParser trim: ignorable) , statement) optional.\n\nwhileStmt := ('while' asPParser trim: ignorable)\n\t\t, ($( asPParser trim: ignorable) , expression , ($) asPParser trim: ignorable)\n\t\t, statement.\n\nblock := ('{' asPParser trim: ignorable) , declaration star\n\t\t, ($} asPParser trim: ignorable).\n\nstatement def: ifStmt / printStmt / whileStmt / exprStmt / block.\n\nprogram := declaration star end.\n\nstart := program.\r"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:08:07.208785+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:08:25.183489+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9hghAkGzDQCvxzjhAovPuA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We can test that this will parse a simple SPL program."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:08:28.997864+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:09:05.745805+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8pFtA0GzDQCw5PB6AovPuA=="
+							},
+							"code" : "start parse: '// My first SPL program\rvar hello = \"Hello world\";\rprint hello;'"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-14T18:02:04.822278+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-14T18:02:35.475345+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zoSH7ECzDQCpGxq+AovPuA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#The complete SPL grammar as a PetitParser script"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-15T07:31:12.794626+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-15T07:31:13.562157+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qck2OkyzDQCT1l0QAx2bYw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : " Normally we would turn parser into a class at an earlier stage to enable [[Example-driven development by example]] (essentially TDD using example methods). Instead we have developed the full parser as a script, and then we will also turn our scripted tests into examples."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-14T18:15:43.114366+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-14T18:16:42.008791+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "nKpNHUGzDQC0wP1qAovPuA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "1. a class `MyParser` that subclasses {{gtClass:name=PP2CompositeNode}}"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-14T18:16:45.109673+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-14T18:18:00.890455+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "C6P/IEGzDQC2UXefAovPuA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "2. for every grammar rule `x` in the script, there must be *both* a method called `x` returning that parser, and a slot named `x` that will store an instance of the parser"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-14T18:18:02.327803+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-14T18:18:28.776702+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "7uWZJUGzDQC6JUOaAovPuA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "3. there must be a `start` rule and slot for the root of the  grammar."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:15:11.118523+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:15:42.061125+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "T3NlG0GzDQCz60icAovPuA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To turn the script into a class, we need:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:20:24.892643+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:20:24.892643+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jUIZLkGzDQCBedSoAovPuA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This can be created manually, but the class can also be extracted automatically from the script. However, the script must only contain rule definitions, and there may be no references to {{gtClass:name=PP2UnresolvedNode}} or any other external variables or classes. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:18:32.916132+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:22:09.281358+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "HqJsJ0GzDQC7sFvoAovPuA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This is relatively easy to do. First we evaluate the original version of the script, to initialize all rule variables. Then we copy the script, comment out or remove the lines that initialize recursive rules to {{gtClass:name=PP2UnresolvedNode}}, and replace the `def:` sends by assignments."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:22:10.669259+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:22:26.375625+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "g0lnNEGzDQCG3/EuAovPuA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Here's the result for our script:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:22:18.555115+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:22:42.173295+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rpvfNEGzDQCHPm2tAovPuA=="
+							},
+							"code" : "comment := '//' asPParser , #newline asPParser negate star.\nignorable := (comment / #space asPParser) star.\n\nboolean := ('true' asPParser trim: ignorable)\n\t\t/ ('false' asPParser trim: ignorable).\n\ninteger := #digit asPParser plus , $. asPParser not trim: ignorable.\n\nfloat := $- asPParser optional , #digit asPParser plus , $. asPParser\n\t\t, #digit asPParser plus trim: ignorable.\n\nnumber := integer / float.\n\nstring := $\" asPParser , $\" asPParser negate plus , $\" asPParser.\n\nkeyword := ('var' asPParser , #letter asPParser not)\n\t\t/ ('if' asPParser , #letter asPParser not)\n\t\t/ ('else' asPParser , #letter asPParser not)\n\t\t/ ('while' asPParser , #letter asPParser not)\n\t\t/ ('true' asPParser , #letter asPParser not)\n\t\t/ ('false' asPParser , #letter asPParser not)\n\t\t/ ('and' asPParser , #letter asPParser not)\n\t\t/ ('or' asPParser , #letter asPParser not).\n\nidentifier := keyword not , #letter asPParser , #word asPParser star.\n\nvarDecl := (('var' asPParser trim: ignorable) , identifier\n\t\t, (($= asPParser trim: ignorable) , expression) optional\n\t\t, ($; asPParser trim: ignorable))\n\t\t==> [ :node | \n\t\t\tnode third\n\t\t\t\tifNil: [ SPLDeclaration for: node second ]\n\t\t\t\tifNotNil: [ SPLInitializedDeclaration for: node second with: node third second ] ].\n\nparenthesizedExpression := ($( asPParser trim: ignorable) , expression\n\t\t, ($) asPParser trim: ignorable).\n\nprimary := parenthesizedExpression / boolean / number / string / identifier.\n\nunary := negatedUnary / primary.\n\nnegatedUnary := ($! asPParser trim: ignorable) / ($- asPParser trim: ignorable)\n\t\t, unary.\n\nfactor := unary\n\t\t, (($/ asPParser trim: ignorable) / ($* asPParser trim: ignorable) , unary) star.\n\nterm := factor\n\t\t, (('-' asPParser trim: ignorable) / ('+' asPParser trim: ignorable) , factor)\n\t\t\t\tstar.\n\ncomparison := term\n\t\t, (('>=' asPParser trim: ignorable) / ('>' asPParser trim: ignorable)\n\t\t\t\t/ ('<=' asPParser trim: ignorable) / ('<' asPParser trim: ignorable) , term)\n\t\t\t\tstar.\n\nequality := comparison\n\t\t, (('!!=' asPParser trim: ignorable) / ('==' asPParser trim: ignorable)\n\t\t\t\t, comparison) star.\n\nlogicAnd := equality , (('and' asPParser trim: ignorable) , equality) star.\n\nlogicOr := logicAnd , (('or' asPParser trim: ignorable) , logicAnd) star.\n\nassignmentExpression := (identifier trim: ignorable)\n\t\t, ($= asPParser trim: ignorable) , assignment.\n\nassignment := assignmentExpression / logicOr.\n\nexpression := assignment.\n\nexprStmt := expression , ($; asPParser trim: ignorable).\n\nprintStmt := ('print' asPParser trim: ignorable) , expression\n\t\t, ($; asPParser trim: ignorable).\n\ndeclaration := varDecl / statement.\n\nifStmt := ('if' asPParser trim: ignorable) , ($( asPParser trim: ignorable)\n\t\t, expression , ($) asPParser trim: ignorable) , statement\n\t\t, (('else' asPParser trim: ignorable) , statement) optional.\n\nwhileStmt := ('while' asPParser trim: ignorable)\n\t\t, ($( asPParser trim: ignorable) , expression , ($) asPParser trim: ignorable)\n\t\t, statement.\n\nblock := ('{' asPParser trim: ignorable) , declaration star\n\t\t, ($} asPParser trim: ignorable).\n\nstatement := ifStmt / printStmt / whileStmt / exprStmt / block.\n\nprogram := declaration star end.\n\nstart := program.\n"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:22:53.947892+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:23:44.854321+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "sqn7NkGzDQCHnWGuAovPuA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Now we can right-click and select `Extract PetitParser class`. We give a name to the class, apply the generated refactoring, and obtain something like this:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:23:09.866912+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:24:40.089409+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "WJDuN0GzDQCIbm7dAovPuA=="
+							},
+							"code" : "start := SPLGrammar new."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:24:58.796779+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:25:08.647429+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "u7RsPkGzDQCLIxQjAovPuA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We verify that the extracted class works as before."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:24:40.83177+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-14T18:24:50.51939+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6pJaPUGzDQCLGQQRAovPuA=="
+							},
+							"code" : "start parse: '// My first SPL program\rvar hello = \"Hello world\";\rprint hello;'"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-14T18:14:55.39327+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-14T18:15:10.096544+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yH91GkGzDQCzB5m8AovPuA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Extracting a parser class from a script"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-03-14T17:59:50.787408+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-03-14T17:59:50.787408+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Extracting a class from a PetitParser script"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "b1508ae4-40b3-0d00-a250-32cf028bcfb8"
+	}
+}

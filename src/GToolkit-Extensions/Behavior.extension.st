@@ -81,7 +81,9 @@ Behavior >> gtNewMethodDropdown: aDrodownAction withModel: aMethodsCoderViewMode
 		content: [ :aButton | 
 			| aNewMethodCoder aNewMethodCoderViewModel aHandler aNewMethodCoderHolder |
 			aNewMethodCoder := (GtPharoMethodCoder forNewMethod: self)
-					currentSourceString: 'newMethod' , String cr , String tab , '"This is a new method"'.
+					currentSourceString: 'newMethod' , String cr , String tab , '"This is a new method"';
+					protocol: #accessing;
+					yourself.
 
 			aNewMethodCoderViewModel := aNewMethodCoder asCoderViewModel
 					withoutHeader;
