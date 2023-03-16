@@ -146,14 +146,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T18:14:21.004645+01:00"
+									"dateAndTimeString" : "2023-03-16T08:25:40.055505+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "rmBAAUGzDQCvuMjjAovPuA=="
 							},
-							"code" : "comment := '//' asPParser , #newline asPParser negate star.\nignorable := (comment / #space asPParser) star.\n\nboolean := ('true' asPParser trim: ignorable)\n\t\t/ ('false' asPParser trim: ignorable).\n\ninteger := #digit asPParser plus , $. asPParser not trim: ignorable.\n\nfloat := $- asPParser optional , #digit asPParser plus , $. asPParser\n\t\t, #digit asPParser plus trim: ignorable.\n\nnumber := integer / float.\n\nstring := $\" asPParser , $\" asPParser negate plus , $\" asPParser.\n\nkeyword := ('var' asPParser , #letter asPParser not)\n\t\t/ ('if' asPParser , #letter asPParser not)\n\t\t/ ('else' asPParser , #letter asPParser not)\n\t\t/ ('while' asPParser , #letter asPParser not)\n\t\t/ ('true' asPParser , #letter asPParser not)\n\t\t/ ('false' asPParser , #letter asPParser not)\n\t\t/ ('and' asPParser , #letter asPParser not)\n\t\t/ ('or' asPParser , #letter asPParser not).\n\nidentifier := keyword not , #letter asPParser , #word asPParser star.\n\n\"recursively defined rules\"\n\nexpression := PP2UnresolvedNode new.\n\nvarDecl := (('var' asPParser trim: ignorable) , identifier\n\t\t, (($= asPParser trim: ignorable) , expression) optional\n\t\t, ($; asPParser trim: ignorable))\n\t\t==> [ :node | \n\t\t\tnode third\n\t\t\t\tifNil: [ SPLDeclaration for: node second ]\n\t\t\t\tifNotNil: [ SPLInitializedDeclaration for: node second with: node third second ] ].\n\nparenthesizedExpression := ($( asPParser trim: ignorable) , expression\n\t\t, ($) asPParser trim: ignorable).\n\nprimary := parenthesizedExpression / boolean / number / string / identifier.\n\nnegatedUnary := ($! asPParser trim: ignorable) / ($- asPParser trim: ignorable)\n\t\t, unary.\n\nunary := PP2UnresolvedNode new.\n\nunary def: negatedUnary / primary.\n\nfactor := unary\n\t\t, (($/ asPParser trim: ignorable) / ($* asPParser trim: ignorable) , unary) star.\n\nterm := factor\n\t\t, (('-' asPParser trim: ignorable) / ('+' asPParser trim: ignorable) , factor)\n\t\t\t\tstar.\n\ncomparison := term\n\t\t, (('>=' asPParser trim: ignorable) / ('>' asPParser trim: ignorable)\n\t\t\t\t/ ('<=' asPParser trim: ignorable) / ('<' asPParser trim: ignorable) , term)\n\t\t\t\tstar.\n\nequality := comparison\n\t\t, (('!!=' asPParser trim: ignorable) / ('==' asPParser trim: ignorable)\n\t\t\t\t, comparison) star.\n\nlogicAnd := equality , (('and' asPParser trim: ignorable) , equality) star.\n\nlogicOr := logicAnd , (('or' asPParser trim: ignorable) , logicAnd) star.\n\nassignmentExpression := (identifier trim: ignorable)\n\t\t, ($= asPParser trim: ignorable) , assignment.\n\nassignment := assignmentExpression / logicOr.\n\nexpression def: assignment.\n\nexprStmt := expression , ($; asPParser trim: ignorable).\n\nprintStmt := ('print' asPParser trim: ignorable) , expression\n\t\t, ($; asPParser trim: ignorable).\n\nstatement := PP2UnresolvedNode new.\r\rdeclaration := varDecl / statement.\n\nifStmt := ('if' asPParser trim: ignorable) , ($( asPParser trim: ignorable)\n\t\t, expression , ($) asPParser trim: ignorable) , statement\n\t\t, (('else' asPParser trim: ignorable) , statement) optional.\n\nwhileStmt := ('while' asPParser trim: ignorable)\n\t\t, ($( asPParser trim: ignorable) , expression , ($) asPParser trim: ignorable)\n\t\t, statement.\n\nblock := ('{' asPParser trim: ignorable) , declaration star\n\t\t, ($} asPParser trim: ignorable).\n\nstatement def: ifStmt / printStmt / whileStmt / exprStmt / block.\n\nprogram := declaration star end.\n\nstart := program.\r"
+							"code" : "comment := '//' asPParser , #newline asPParser negate star.\nignorable := (comment / #space asPParser) star.\n\nboolean := ('true' asPParser trim: ignorable)\n\t\t/ ('false' asPParser trim: ignorable).\n\ninteger := #digit asPParser plus , $. asPParser not trim: ignorable.\n\nfloat := $- asPParser optional , #digit asPParser plus , $. asPParser\n\t\t, #digit asPParser plus trim: ignorable.\n\nnumber := integer / float.\n\nstring := $\" asPParser , $\" asPParser negate plus , $\" asPParser.\n\nkeyword := ('var' asPParser , #letter asPParser not)\n\t\t/ ('if' asPParser , #letter asPParser not)\n\t\t/ ('else' asPParser , #letter asPParser not)\n\t\t/ ('while' asPParser , #letter asPParser not)\n\t\t/ ('true' asPParser , #letter asPParser not)\n\t\t/ ('false' asPParser , #letter asPParser not)\n\t\t/ ('and' asPParser , #letter asPParser not)\n\t\t/ ('or' asPParser , #letter asPParser not).\n\nidentifier := keyword not , #letter asPParser , #word asPParser star.\n\n\"recursively defined rules\"\n\nexpression := PP2UnresolvedNode new.\n\nvarDecl := (('var' asPParser trim: ignorable) , identifier\n\t\t, (($= asPParser trim: ignorable) , expression) optional\n\t\t, ($; asPParser trim: ignorable))\n\t\t==> [ :node | \n\t\t\tnode third\n\t\t\t\tifNil: [ SPLDeclaration for: node second ]\n\t\t\t\tifNotNil: [ SPLInitializedDeclaration for: node second with: node third second ] ].\n\nparenthesizedExpression := ($( asPParser trim: ignorable) , expression\n\t\t, ($) asPParser trim: ignorable).\n\nprimary := parenthesizedExpression / boolean / number / string / identifier.\n\nnegatedUnary := ($! asPParser trim: ignorable) / ($- asPParser trim: ignorable)\n\t\t, unary.\n\nunary := PP2UnresolvedNode new.\n\nunary def: negatedUnary / primary.\n\nfactor := unary\n\t\t, (($/ asPParser trim: ignorable) / ($* asPParser trim: ignorable) , unary) star.\n\nterm := factor\n\t\t, (('-' asPParser trim: ignorable) / ('+' asPParser trim: ignorable) , factor)\n\t\t\t\tstar.\n\ncomparison := term\n\t\t, (('>=' asPParser trim: ignorable) / ('>' asPParser trim: ignorable)\n\t\t\t\t/ ('<=' asPParser trim: ignorable) / ('<' asPParser trim: ignorable) , term)\n\t\t\t\tstar.\n\nequality := comparison\n\t\t, (('!!=' asPParser trim: ignorable) / ('==' asPParser trim: ignorable)\n\t\t\t\t, comparison) star.\n\nlogicAnd := equality , (('and' asPParser trim: ignorable) , equality) star.\n\nlogicOr := logicAnd , (('or' asPParser trim: ignorable) , logicAnd) star.\n\nassignmentExpression := (identifier trim: ignorable)\n\t\t, ($= asPParser trim: ignorable) , assignment.\n\nassignment := assignmentExpression / logicOr.\n\nexpression def: assignment.\n\nexprStmt := expression , ($; asPParser trim: ignorable).\n\nprintStmt := ('print' asPParser trim: ignorable) , expression\n\t\t, ($; asPParser trim: ignorable).\n\nstatement := PP2UnresolvedNode new.\r\rdeclaration := varDecl / statement.\n\nifStmt := ('if' asPParser trim: ignorable) , ($( asPParser trim: ignorable)\n\t\t, expression , ($) asPParser trim: ignorable) , statement\n\t\t, (('else' asPParser trim: ignorable) , statement) optional.\n\nwhileStmt := ('while' asPParser trim: ignorable)\n\t\t, ($( asPParser trim: ignorable) , expression , ($) asPParser trim: ignorable)\n\t\t, statement.\n\nblock := ('{' asPParser trim: ignorable) , declaration star\n\t\t, ($} asPParser trim: ignorable).\n\nstatement def: ifStmt / printStmt / whileStmt / exprStmt / block.\n\nprogram := declaration star end.\n"
 						},
 						{
 							"__type" : "textSnippet",
@@ -217,14 +217,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T18:09:05.745805+01:00"
+									"dateAndTimeString" : "2023-03-16T08:25:47.504688+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "8pFtA0GzDQCw5PB6AovPuA=="
 							},
-							"code" : "start parse: '// My first SPL program\rvar hello = \"Hello world\";\rprint hello;'"
+							"code" : "program parse: '// My first SPL program\rvar hello = \"Hello world\";\rprint hello;'"
 						}
 					]
 				},
@@ -586,14 +586,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T18:22:42.173295+01:00"
+									"dateAndTimeString" : "2023-03-16T08:25:32.814786+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "rpvfNEGzDQCHPm2tAovPuA=="
 							},
-							"code" : "comment := '//' asPParser , #newline asPParser negate star.\nignorable := (comment / #space asPParser) star.\n\nboolean := ('true' asPParser trim: ignorable)\n\t\t/ ('false' asPParser trim: ignorable).\n\ninteger := #digit asPParser plus , $. asPParser not trim: ignorable.\n\nfloat := $- asPParser optional , #digit asPParser plus , $. asPParser\n\t\t, #digit asPParser plus trim: ignorable.\n\nnumber := integer / float.\n\nstring := $\" asPParser , $\" asPParser negate plus , $\" asPParser.\n\nkeyword := ('var' asPParser , #letter asPParser not)\n\t\t/ ('if' asPParser , #letter asPParser not)\n\t\t/ ('else' asPParser , #letter asPParser not)\n\t\t/ ('while' asPParser , #letter asPParser not)\n\t\t/ ('true' asPParser , #letter asPParser not)\n\t\t/ ('false' asPParser , #letter asPParser not)\n\t\t/ ('and' asPParser , #letter asPParser not)\n\t\t/ ('or' asPParser , #letter asPParser not).\n\nidentifier := keyword not , #letter asPParser , #word asPParser star.\n\nvarDecl := (('var' asPParser trim: ignorable) , identifier\n\t\t, (($= asPParser trim: ignorable) , expression) optional\n\t\t, ($; asPParser trim: ignorable))\n\t\t==> [ :node | \n\t\t\tnode third\n\t\t\t\tifNil: [ SPLDeclaration for: node second ]\n\t\t\t\tifNotNil: [ SPLInitializedDeclaration for: node second with: node third second ] ].\n\nparenthesizedExpression := ($( asPParser trim: ignorable) , expression\n\t\t, ($) asPParser trim: ignorable).\n\nprimary := parenthesizedExpression / boolean / number / string / identifier.\n\nunary := negatedUnary / primary.\n\nnegatedUnary := ($! asPParser trim: ignorable) / ($- asPParser trim: ignorable)\n\t\t, unary.\n\nfactor := unary\n\t\t, (($/ asPParser trim: ignorable) / ($* asPParser trim: ignorable) , unary) star.\n\nterm := factor\n\t\t, (('-' asPParser trim: ignorable) / ('+' asPParser trim: ignorable) , factor)\n\t\t\t\tstar.\n\ncomparison := term\n\t\t, (('>=' asPParser trim: ignorable) / ('>' asPParser trim: ignorable)\n\t\t\t\t/ ('<=' asPParser trim: ignorable) / ('<' asPParser trim: ignorable) , term)\n\t\t\t\tstar.\n\nequality := comparison\n\t\t, (('!!=' asPParser trim: ignorable) / ('==' asPParser trim: ignorable)\n\t\t\t\t, comparison) star.\n\nlogicAnd := equality , (('and' asPParser trim: ignorable) , equality) star.\n\nlogicOr := logicAnd , (('or' asPParser trim: ignorable) , logicAnd) star.\n\nassignmentExpression := (identifier trim: ignorable)\n\t\t, ($= asPParser trim: ignorable) , assignment.\n\nassignment := assignmentExpression / logicOr.\n\nexpression := assignment.\n\nexprStmt := expression , ($; asPParser trim: ignorable).\n\nprintStmt := ('print' asPParser trim: ignorable) , expression\n\t\t, ($; asPParser trim: ignorable).\n\ndeclaration := varDecl / statement.\n\nifStmt := ('if' asPParser trim: ignorable) , ($( asPParser trim: ignorable)\n\t\t, expression , ($) asPParser trim: ignorable) , statement\n\t\t, (('else' asPParser trim: ignorable) , statement) optional.\n\nwhileStmt := ('while' asPParser trim: ignorable)\n\t\t, ($( asPParser trim: ignorable) , expression , ($) asPParser trim: ignorable)\n\t\t, statement.\n\nblock := ('{' asPParser trim: ignorable) , declaration star\n\t\t, ($} asPParser trim: ignorable).\n\nstatement := ifStmt / printStmt / whileStmt / exprStmt / block.\n\nprogram := declaration star end.\n\nstart := program.\n"
+							"code" : "comment := '//' asPParser , #newline asPParser negate star.\nignorable := (comment / #space asPParser) star.\n\nboolean := ('true' asPParser trim: ignorable)\n\t\t/ ('false' asPParser trim: ignorable).\n\ninteger := #digit asPParser plus , $. asPParser not trim: ignorable.\n\nfloat := $- asPParser optional , #digit asPParser plus , $. asPParser\n\t\t, #digit asPParser plus trim: ignorable.\n\nnumber := integer / float.\n\nstring := $\" asPParser , $\" asPParser negate plus , $\" asPParser.\n\nkeyword := ('var' asPParser , #letter asPParser not)\n\t\t/ ('if' asPParser , #letter asPParser not)\n\t\t/ ('else' asPParser , #letter asPParser not)\n\t\t/ ('while' asPParser , #letter asPParser not)\n\t\t/ ('true' asPParser , #letter asPParser not)\n\t\t/ ('false' asPParser , #letter asPParser not)\n\t\t/ ('and' asPParser , #letter asPParser not)\n\t\t/ ('or' asPParser , #letter asPParser not).\n\nidentifier := keyword not , #letter asPParser , #word asPParser star.\n\nvarDecl := (('var' asPParser trim: ignorable) , identifier\n\t\t, (($= asPParser trim: ignorable) , expression) optional\n\t\t, ($; asPParser trim: ignorable))\n\t\t==> [ :node | \n\t\t\tnode third\n\t\t\t\tifNil: [ SPLDeclaration for: node second ]\n\t\t\t\tifNotNil: [ SPLInitializedDeclaration for: node second with: node third second ] ].\n\nparenthesizedExpression := ($( asPParser trim: ignorable) , expression\n\t\t, ($) asPParser trim: ignorable).\n\nprimary := parenthesizedExpression / boolean / number / string / identifier.\n\nunary := negatedUnary / primary.\n\nnegatedUnary := ($! asPParser trim: ignorable) / ($- asPParser trim: ignorable)\n\t\t, unary.\n\nfactor := unary\n\t\t, (($/ asPParser trim: ignorable) / ($* asPParser trim: ignorable) , unary) star.\n\nterm := factor\n\t\t, (('-' asPParser trim: ignorable) / ('+' asPParser trim: ignorable) , factor)\n\t\t\t\tstar.\n\ncomparison := term\n\t\t, (('>=' asPParser trim: ignorable) / ('>' asPParser trim: ignorable)\n\t\t\t\t/ ('<=' asPParser trim: ignorable) / ('<' asPParser trim: ignorable) , term)\n\t\t\t\tstar.\n\nequality := comparison\n\t\t, (('!!=' asPParser trim: ignorable) / ('==' asPParser trim: ignorable)\n\t\t\t\t, comparison) star.\n\nlogicAnd := equality , (('and' asPParser trim: ignorable) , equality) star.\n\nlogicOr := logicAnd , (('or' asPParser trim: ignorable) , logicAnd) star.\n\nassignmentExpression := (identifier trim: ignorable)\n\t\t, ($= asPParser trim: ignorable) , assignment.\n\nassignment := assignmentExpression / logicOr.\n\nexpression := assignment.\n\nexprStmt := expression , ($; asPParser trim: ignorable).\n\nprintStmt := ('print' asPParser trim: ignorable) , expression\n\t\t, ($; asPParser trim: ignorable).\n\ndeclaration := varDecl / statement.\n\nifStmt := ('if' asPParser trim: ignorable) , ($( asPParser trim: ignorable)\n\t\t, expression , ($) asPParser trim: ignorable) , statement\n\t\t, (('else' asPParser trim: ignorable) , statement) optional.\n\nwhileStmt := ('while' asPParser trim: ignorable)\n\t\t, ($( asPParser trim: ignorable) , expression , ($) asPParser trim: ignorable)\n\t\t, statement.\n\nblock := ('{' asPParser trim: ignorable) , declaration star\n\t\t, ($} asPParser trim: ignorable).\n\nstatement := ifStmt / printStmt / whileStmt / exprStmt / block.\n\nprogram := declaration star end."
 						},
 						{
 							"__type" : "textSnippet",
@@ -657,14 +657,51 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T18:24:40.089409+01:00"
+									"dateAndTimeString" : "2023-03-16T08:26:59.240773+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "WJDuN0GzDQCIbm7dAovPuA=="
 							},
-							"code" : "start := SPLGrammar new."
+							"code" : "parser := SPLGrammar new."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-16T08:27:14.689916+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-16T08:28:13.223077+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "KZlwIGGzDQC38AwLDfa19A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Note that the extraction will automatically introduce a `start` method for the last production in the script. {{gtMethod:name=SPLGrammar>>#start|expanded}}"
 						},
 						{
 							"__type" : "textSnippet",
@@ -728,14 +765,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T18:24:50.51939+01:00"
+									"dateAndTimeString" : "2023-03-16T08:27:04.890525+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "6pJaPUGzDQCLGQQRAovPuA=="
 							},
-							"code" : "start parse: '// My first SPL program\rvar hello = \"Hello world\";\rprint hello;'"
+							"code" : "parser parse: '// My first SPL program\rvar hello = \"Hello world\";\rprint hello;'"
 						}
 					]
 				},

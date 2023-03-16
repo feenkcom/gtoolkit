@@ -3375,14 +3375,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T09:35:33.454861+01:00"
+									"dateAndTimeString" : "2023-03-16T08:33:43.78635+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "GpjgpDmzDQCOamFSDiONgQ=="
 							},
-							"code" : "number := #digit asPParser plus token trim ==> [ :token | token value asNumber ].\r\rterm := ((prod , $+ asPParser trim , term)\r\t\t==> [ :nodes | nodes first + nodes last ]) / prod.\rprod := ((prim , $* asPParser trim , prod)\r\t\t==> [ :nodes | nodes first * nodes last ]) / prim.\rprim := (($( asPParser trim , term , $) asPParser trim)\r\t\t==> [ :nodes | nodes second ]) / number.\rstart := term end."
+							"code" : "number := #digit asPParser plus token trim ==> [ :token | token value asNumber ].\r\rterm := ((prod , $+ asPParser trim , term)\r\t\t==> [ :nodes | nodes first + nodes last ]) / prod.\rprod := ((prim , $* asPParser trim , prod)\r\t\t==> [ :nodes | nodes first * nodes last ]) / prim.\rprim := (($( asPParser trim , term , $) asPParser trim)\r\t\t==> [ :nodes | nodes second ]) / number.\rexpression := term end."
 						},
 						{
 							"__type" : "textSnippet",
@@ -3446,14 +3446,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T09:37:15.840589+01:00"
+									"dateAndTimeString" : "2023-03-16T08:31:39.345713+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "xYUUyjmzDQCkhFMCDiONgQ=="
 							},
-							"code" : "start := TermPParser new"
+							"code" : "parser := TermPParser new"
 						},
 						{
 							"__type" : "textSnippet",
@@ -3469,7 +3469,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T09:44:24.897951+01:00"
+									"dateAndTimeString" : "2023-03-16T08:32:14.490389+01:00"
 								}
 							},
 							"editEmail" : {
@@ -3480,7 +3480,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T09:44:53.721128+01:00"
+									"dateAndTimeString" : "2023-03-16T08:33:05.732745+01:00"
 								}
 							},
 							"uid" : {
@@ -3490,7 +3490,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "(NB: check that the `start` rule is correctly defined after the extraction. You may need to redefine it."
+							"string" : "Note that a `start` method will be automatically created equal to the last production in the grammar. {{gtMethod:name=TermPParser>>#start|expanded}}"
 						},
 						{
 							"__type" : "textSnippet",
@@ -3554,14 +3554,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T09:38:28.974249+01:00"
+									"dateAndTimeString" : "2023-03-16T08:31:57.929655+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "H8YP4zmzDQCn1BggDiONgQ=="
 							},
-							"code" : "start parse: '1+2*3'"
+							"code" : "parser parse: '1+2*3'"
 						}
 					]
 				},
