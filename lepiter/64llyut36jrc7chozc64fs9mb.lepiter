@@ -8,7 +8,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "veit.heller@feenk.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-08-18T09:30:10.919265+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-17T16:29:47.606668+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wWQvsOCiDQCBpaxhCHrUzw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This is a tutorial on programming classes and methods with a stack machine example"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -18,7 +56,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-14T10:07:58.702697+01:00"
+						"dateAndTimeString" : "2023-03-17T16:29:41.777339+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,54 +67,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-14T10:08:21.529349+01:00"
+						"dateAndTimeString" : "2023-03-17T16:29:41.777339+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "7C0CTTqzDQCFXruOC/1STQ=="
+					"uidString" : "Pn6p+3uzDQCyJSfYCLLiDA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtTodo:label=Expand the stack machine page into a full tutorial.}}"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-08-18T09:30:10.919265+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-14T10:07:54.667405+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "wWQvsOCiDQCBpaxhCHrUzw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Draft tutorial on programming classes and methods with a stack machine example"
+				"string" : "#TL;DR"
 			},
 			{
 				"__type" : "textSnippet",
