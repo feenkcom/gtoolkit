@@ -711,14 +711,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-23T14:55:44.041422+01:00"
+						"dateAndTimeString" : "2023-03-20T23:45:50.001195+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "E8MXG8CxDQCnSplnB+HMxw=="
 				},
-				"code" : "sizeCounter := [ :aPage | aPage allChildrenBreadthFirst size ].\rmaxSize := pages max: snippetsCounter."
+				"code" : "sizeCounter := [ :aPage | aPage allChildrenBreadthFirst size ].\rmaxSize := pages max: sizeCounter."
 			}
 		]
 	},

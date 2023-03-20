@@ -734,6 +734,80 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:20:48.758577+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:20:48.758577+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "39QIH6mzDQCDG2YACLIv0g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##What are filters? "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:20:49.895099+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:20:49.895099+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gTIaH6mzDQCDJ0CkCLIv0g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Filters are predicates that work as conditions in a query."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2021-06-04T22:28:54.972619+02:00"
 					}
 				},
@@ -745,7 +819,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-15T11:24:06.414552+01:00"
+						"dateAndTimeString" : "2023-03-19T22:20:49.898823+01:00"
 					}
 				},
 				"uid" : {
@@ -755,7 +829,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##What are filters? \rFilters are predicates that work as conditions in a query.\r\rFor example, let's search for certain methods in a certain package. The result will be an instance of {{gtClass:GtSearchIntersectionFilter}}, being the intersection of two filters: {{gtClass:GtSearchReferencesFilter}} and {{gtClass:GtSearchMethodsWithPackagePatternFilter}}."
+				"string" : "For example, let's search for certain methods in a certain package. The result will be an instance of {{gtClass:GtSearchIntersectionFilter}}, being the intersection of two filters: {{gtClass:GtSearchReferencesFilter}} and {{gtClass:GtSearchMethodsWithPackagePatternFilter}}."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -962,6 +1036,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:20:56.503297+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:20:56.503297+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Hwd/H6mzDQCDLituCLIv0g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "###Binary"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2021-06-04T22:30:52.062307+02:00"
 					}
 				},
@@ -973,7 +1084,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-15T11:26:49.728347+01:00"
+						"dateAndTimeString" : "2023-03-19T22:20:56.506792+01:00"
 					}
 				},
 				"uid" : {
@@ -983,7 +1094,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "###Binary\rThe intersection filter is a result of sending the `&` message. The result is a collection of elements that satisfy both the left side and the right side of the query."
+				"string" : "The intersection filter is a result of sending the `&` message. The result is a collection of elements that satisfy both the left side and the right side of the query."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -1575,6 +1686,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:21:07.27916+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:21:07.27916+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "q3QjIKmzDQCDNXlXCLIv0g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### Methods"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2021-06-04T22:35:23.440573+02:00"
 					}
 				},
@@ -1586,7 +1734,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-15T11:28:01.830229+01:00"
+						"dateAndTimeString" : "2023-03-19T22:21:07.284063+01:00"
 					}
 				},
 				"uid" : {
@@ -1596,7 +1744,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### Methods\rThese allow us to perform various searches related to methods. For example, we can search for methods in a certain package,"
+				"string" : "These allow us to perform various searches related to methods. For example, we can search for methods in a certain package,"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -2576,6 +2724,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:21:15.825975+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:21:18.312512+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Bt6lIKmzDQCDPoMcCLIv0g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "###Negation"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2021-06-04T22:17:31.291129+02:00"
 					}
 				},
@@ -2587,7 +2772,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:18:30.02406+02:00"
+						"dateAndTimeString" : "2023-03-19T22:21:15.83531+01:00"
 					}
 				},
 				"uid" : {
@@ -2597,7 +2782,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### Negation\rThis filter takes another filter and does the opposite of that filter. For example, if we search for all deprecated packages and apply this filter, we end up with all the packages that are not deprecated."
+				"string" : "This filter takes another filter and does the opposite of that filter. For example, if we search for all deprecated packages and apply this filter, we end up with all the packages that are not deprecated."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -2653,6 +2838,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:21:20.776922+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-19T22:21:22.376016+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "RWrxIKmzDQCDTEO5CLIv0g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "###Null"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2021-06-04T22:14:41.428151+02:00"
 					}
 				},
@@ -2664,7 +2886,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:17:50.377387+02:00"
+						"dateAndTimeString" : "2023-03-19T22:21:20.780375+01:00"
 					}
 				},
 				"uid" : {
@@ -2674,7 +2896,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### Null\rThe Null filter always returns false, not matching anything."
+				"string" : "The Null filter always returns false, not matching anything."
 			},
 			{
 				"__type" : "exampleSnippet",
