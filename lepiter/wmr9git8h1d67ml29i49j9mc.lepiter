@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T17:22:32.581017+01:00"
+									"dateAndTimeString" : "2023-03-22T22:49:30.690861+01:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- Start with [[How to configure Git username and email address]] if you do not have git installed locally on your machine, or you have it installed but never used it to clone a repository."
+							"string" : "Start with [[How to configure Git username and email address]] if you do not have git installed locally on your machine, or you have it installed but never used it to clone a repository."
 						},
 						{
 							"__type" : "textSnippet",
@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T17:26:15.412717+01:00"
+									"dateAndTimeString" : "2023-03-22T22:49:32.177372+01:00"
 								}
 							},
 							"uid" : {
@@ -118,7 +118,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- Start with [[How to configure GitHub Credentials]] in case you are already using git locally, but did not configure it to access GitHub. You need to configure credentials in case you want to clone private repositories, or push comits to any GitHub repository. You do not need to configure credentials for cloning public repositories."
+							"string" : "Start with [[How to configure GitHub Credentials]] in case you are already using git locally, but did not configure it to access GitHub. You need to configure credentials in case you want to clone private repositories, or push comits to any GitHub repository. You do not need to configure credentials for cloning public repositories."
 						},
 						{
 							"__type" : "textSnippet",
@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T17:41:11.691813+01:00"
+									"dateAndTimeString" : "2023-03-22T22:49:34.654719+01:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +155,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- Start with [[How to set up a new GitHub repo]] if you have GitHub access configured and want to start with a new project. [[How to set up a GT GitHub repo in 7']] also provides a short video on how to setup a new project."
+							"string" : "Start with [[How to set up a new GitHub repo]] if you have GitHub access configured and want to start with a new project. [[How to set up a GT GitHub repo in 7']] also provides a short video on how to setup a new project."
 						}
 					]
 				},
@@ -334,43 +334,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Once you have a Git repository, you can further use the Git interface."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-04-27T17:54:11.673+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:41:41.886842+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qNOwjgaaDQC8DVo1DEO2Ig=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "In case you are having issues connecting to GitHub, to through the list of steps in [[Troubleshooting connecting to GitHub]]."
 			}
 		]
 	},
