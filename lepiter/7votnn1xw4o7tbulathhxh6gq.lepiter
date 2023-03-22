@@ -1,0 +1,260 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-22T18:02:03.666128+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-22T18:04:01.273529+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7t8w2+GzDQCDNL67A24bhQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- Create an SSH Key locally on your machine"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-22T18:02:16.996014+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-22T18:04:19.875251+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cEf82+GzDQCERiI4A24bhQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- Add the SSH Key to your GitHub account."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-22T18:08:14.845135+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-22T18:09:46.311646+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "4Z5Q8eGzDQCKLAOhA24bhQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "In case you are using a passphrase we recommend to configure the SSH agent, as otherwise the passphrase is stored in plain text on the disk."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-22T18:06:24.422754+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-22T18:11:33.815938+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xLO76uGzDQCFs9c3A24bhQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- Either configure the Glamorous Toolkit image with the SSH key, or configure the SSH agent on your local machine to use the SSH key."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-22T18:01:11.070707+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-22T18:01:51.352561+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "APCaf+GzDQCs/H53A24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To configure SSH Key autentication with GitHub you need to:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-22T17:47:37.547013+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-22T18:09:57.487924+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "d+2Qp+GzDQC19Im4A24bhQ=="
+				},
+				"code" : "| credentials store |\rcredentials := IceSshCredentials new\r\thost:  #'*';\r\tusername: 'git';\r\tpublicKey: (FileLocator home / '.ssh/id_rsa.pub') pathString;\r\tprivateKey: (FileLocator home / '.ssh/id_rsa') pathString;\"\r\tkeyPassphrase: 'potential rsa passphrase';\" \"Stored in plain text on disk\"\r\tyourself.\rstore := IceCredentialStore current.\rstore storeSshCredential: credentials forHostname: credentials host.\rIceCredentialsProvider useCustomSsh: true."
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-03-22T17:36:27.063469+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-03-22T17:36:27.063469+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "How to configure GitHub SSH key authentication"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "fa2f9a7f-e1b3-0d00-acfb-a608036e1b85"
+	}
+}
