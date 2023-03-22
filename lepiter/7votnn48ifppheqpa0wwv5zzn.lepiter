@@ -34,7 +34,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T17:54:17.453404+01:00"
+									"dateAndTimeString" : "2023-03-22T21:47:55.760281+01:00"
 								}
 							},
 							"uid" : {
@@ -115,43 +115,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Before being able to clone private repositories or push commits to any repository in GitHub, you first need to setup the credentials for GitHub. There are two ways to authenticate when using GitHub:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:55:41.884558+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:56:22.119918+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "WfaesOGzDQC5sFfwA24bhQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Currently the easiest way to get started is to use a SSH Key on Mac and Linux, and a Personal Access Token on Windows. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -279,7 +242,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:00.165414+01:00"
+						"dateAndTimeString" : "2023-03-22T23:10:04.465648+01:00"
 					}
 				},
 				"editEmail" : {
@@ -290,230 +253,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:00.561637+01:00"
+						"dateAndTimeString" : "2023-03-22T23:10:39.163727+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "KQj3ZOGzDQCp2RjHA24bhQ=="
+					"uidString" : "2G2HKOazDQC1HJ/BA24bhQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Make credentials' use persistent"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:07.887106+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:08.188266+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "p+BsZeGzDQCp5THhA24bhQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The above script sets the SSH keys as credentials for this image only, as the default setting to store credentials in  {{gtMethod:name=IceCredentialStore class>>#storeFile}} is `{localDirectory}\\iceberg\\credentials.fuel`. Subsequent cloning attempts in other directories may fallback to HTTPS, which is uncool. I am looking at you, Windows. And so far, I have not found a solution that works by just configuring the environment. But I did find a solution using global settings. We just have to change the credentials store setting to a user-specific path and make sure the credentials are stored there. The next time an image is started, it will pick up the credentials path from the global settings."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:19.150688+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:19.863555+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "frwYZuGzDQCp8dtKA24bhQ=="
-				},
-				"code" : "settings := SettingTree acceptableKeywords:\r\t            SettingBrowser settingsKeywords.\r(settings deeplyDetect: [ :e | \r\t e settingNodeIdentifier = '#icebergCredentials#useCustomSsh' ]) \r\trealValue: true.\r(settings deeplyDetect: [ :e | \r\t e settingNodeIdentifier = '#icebergCredentials#storeFile' ]) \r\trealValue: FileLocator home / 'credentials.fuel'.\rsettings storeSettingNodes.\rIceCredentialStore current\r\tstoreFile: FileLocator home / 'credentials.fuel';\r\tsaveIntoStore"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:35.605492+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:36.030631+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "mNMTZ+GzDQCp/QaEA24bhQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Now you should have a user-specific credentials file"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:45.350411+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:45.693709+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "cn6oZ+GzDQCqCSxoA24bhQ=="
-				},
-				"code" : "(FileLocator home / 'credentials.fuel') resolve"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:56.307246+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:29:57.59168+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "D7ZPaOGzDQCqFPoYA24bhQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "And your global settings should be updated accordingly"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:30:10.11463+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T17:30:10.521438+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "t2MiaeGzDQCqIEuNA24bhQ=="
-				},
-				"code" : "SystemSettingsPersistence defaultPreferenceFileReference"
+				"string" : "There is currently a limitation in using the ssh-agent on Windows when using SSH keys."
 			}
 		]
 	},
