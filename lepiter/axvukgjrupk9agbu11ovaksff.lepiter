@@ -433,7 +433,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T17:39:21.583773+01:00"
+									"dateAndTimeString" : "2023-03-22T11:26:21.189734+01:00"
 								}
 							},
 							"uid" : {
@@ -443,7 +443,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Clearly this will fail. You can inspect the Execution Traces view, and walk through it. If you click and explore the Stream State view of each Debug Result object in the execution trace, you can walk through and see exactly where the parse has failed."
+							"string" : "Clearly this will fail. You can inspect the Execution Traces view, and walk through it. If you click and explore the Stream State view of each Debug Result object in the execution trace, you can walk through and see exactly where the parse has failed. (The `+` character is not expected.)"
 						}
 					]
 				},

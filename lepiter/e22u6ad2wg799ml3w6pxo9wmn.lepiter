@@ -301,7 +301,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-14T17:09:11.307854+01:00"
+												"dateAndTimeString" : "2023-03-22T11:23:14.064587+01:00"
 											}
 										},
 										"uid" : {
@@ -311,7 +311,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Since PetitParser is a scannerless parser framework, there is no lexical phase. Instead, the same kinds of parser rules are used to detect tokens. We illustrate this by defining simple parsers for the tokens of SPL. See [[Parsing SPL tokens]]."
+										"string" : "Since PetitParser is a scannerless parser framework, there is no lexical analysis phase. Instead, the same kinds of parser rules are used to detect tokens. We illustrate this by defining simple parsers for the tokens of SPL. See [[Parsing SPL tokens]]."
 									}
 								]
 							},
@@ -451,7 +451,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-14T17:59:48.858179+01:00"
+												"dateAndTimeString" : "2023-03-22T11:27:30.382366+01:00"
 											}
 										},
 										"uid" : {
@@ -461,7 +461,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We continue to script the grammar rules until we have a more-or-less complete script. At any point we can decide to extract a parser class from the script, and then continue developing with the new class. See [[Extracting a class from a PetitParser script]]. "
+										"string" : "We continue to script the grammar rules until we have a more-or-less complete script. Actually, at any point we can decide to extract a parser class from the script, and then continue developing with the new class. See [[Extracting a class from a PetitParser script]]. "
 									}
 								]
 							},
