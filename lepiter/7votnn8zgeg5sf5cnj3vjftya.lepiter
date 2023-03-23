@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T22:40:18.485036+01:00"
+						"dateAndTimeString" : "2023-03-23T11:04:20.540639+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Instead of an SSH key you can use a personal access token to connect to GitHub."
+				"string" : "Instead of an SSH key you can use a Personal Access Token to connect to GitHub. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T23:14:48.655767+01:00"
+						"dateAndTimeString" : "2023-03-23T14:21:46.802175+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Note that the access token will be stored in plain text in the directory where Glamorous Toolkit is installed."
+				"string" : "**NB:** Note that the access token will be stored in plain text in the directory where Glamorous Toolkit is installed."
 			},
 			{
 				"__type" : "textSnippet",
@@ -185,6 +185,114 @@
 					"uidString" : "R4KI0+WzDQCr6eBMA24bhQ=="
 				},
 				"code" : "| credentials store |\ncredentials := IceTokenCredentials new\n\thost:  #'github.com';\n\tusername: 'githubusername'; \"Replace the value with your username\"\n\ttoken: 'ghp_yourtokenhere'; \"Replace the value with your token\"\r\t\"You can also use 'Clipboard clipboardText asString' to get it from the clipboard\"\n\tyourself.\nstore := IceCredentialStore current.\nstore storeCredential: credentials forHostname: credentials host.\nstore."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:04:24.431262+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:04:24.89099+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mapiI/CzDQCKADb8A24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This needs to be configured for every new Glamorous Toolkit release. To avoid this by persisting credentials look at [[How to make GitHub credentials persistent]]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:29:39.617753+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:29:39.976298+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "p5SyffCzDQChokYyA24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You can also inspect the current store to check that credentials were added:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:29:49.381676+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:29:49.729143+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Z49HfvCzDQChrtvoA24bhQ=="
+				},
+				"code" : "IceCredentialStore current"
 			}
 		]
 	},
