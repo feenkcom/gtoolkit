@@ -1,6 +1,22 @@
 Extension { #name : #BlScripter }
 
 { #category : #'*GToolkit-Extensions' }
+BlScripter >> gtAnchoredContainerOverviewFor: aView [
+	<gtView>
+	self userData at: BrAnchoredContainerOverview ifAbsent: [ ^ aView empty ].
+
+	^ aView forward
+		title: 'Dropdown Analysis';
+		priority: -1;
+		object: [ self userData at: BrAnchoredContainerOverview ];
+		view: #gtSpaceFor:;
+		actionButtonIcon: BrGlamorousVectorIcons inspect
+			label: 'Details'
+			tooltip: 'Inspect dropdown analysis details'
+			action: [ :aButton | aButton phlow spawnObject: (self userData at: BrAnchoredContainerOverview) ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 BlScripter >> gtSpaceActiveTasksFor: aView [
 	<gtView>
 	space ifNil: [ ^ aView empty ].
