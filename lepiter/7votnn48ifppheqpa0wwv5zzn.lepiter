@@ -253,7 +253,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-23T10:57:21.228758+01:00"
+						"dateAndTimeString" : "2023-03-23T15:45:00.383944+01:00"
 					}
 				},
 				"uid" : {
@@ -263,7 +263,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "There is currently a limitation in using SSH keys on Windows. We recomment using SSH Key on Mac and Linux and Personal Access Token on Windows."
+				"string" : "**NB:** There is currently a limitation in using SSH keys on Windows. What works by default is SSH Key authentication on Mac and Linux, and Personal Access Token authentication on Windows. For using SSH keys on Windows, the Pageant authentication agent from PuTTY should be used instead of the ssh-agent present in Windows."
 			}
 		]
 	},
