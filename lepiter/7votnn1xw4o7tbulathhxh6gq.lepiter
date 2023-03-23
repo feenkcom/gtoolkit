@@ -34,7 +34,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T23:11:03.67965+01:00"
+									"dateAndTimeString" : "2023-03-23T13:58:22.191657+01:00"
 								}
 							},
 							"uid" : {
@@ -102,7 +102,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-23T10:58:30.027887+01:00"
+												"dateAndTimeString" : "2023-03-22T18:06:24.422754+01:00"
 											}
 										},
 										"editEmail" : {
@@ -113,17 +113,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-23T10:58:30.027887+01:00"
+												"dateAndTimeString" : "2023-03-23T13:57:52.439991+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "5uZCDvCzDQCFaf72A24bhQ=="
+											"uidString" : "xLO76uGzDQCFs9c3A24bhQ=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "3a. Configure the Glamorous Toolkit image with the SSH key, or "
+										"string" : "3a. Configure the SSH agent on your  machine to use the SSH key (recommended), or"
 									},
 									{
 										"__type" : "textSnippet",
@@ -139,7 +139,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-22T18:06:24.422754+01:00"
+												"dateAndTimeString" : "2023-03-23T10:58:30.027887+01:00"
 											}
 										},
 										"editEmail" : {
@@ -150,17 +150,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-23T10:58:32.880441+01:00"
+												"dateAndTimeString" : "2023-03-23T13:58:44.49204+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "xLO76uGzDQCFs9c3A24bhQ=="
+											"uidString" : "5uZCDvCzDQCFaf72A24bhQ=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "3b. Configure the SSH agent on your  machine to use the SSH key."
+										"string" : "3b. Configure Glamorous Toolkit  with the SSH key, in case the previous option does not work."
 									}
 								]
 							},
@@ -253,7 +253,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T18:09:46.311646+01:00"
+						"dateAndTimeString" : "2023-03-23T14:03:47.254533+01:00"
 					}
 				},
 				"uid" : {
@@ -263,7 +263,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In case you are using a passphrase we recommend to configure the SSH agent, as otherwise the passphrase is stored in plain text on the disk."
+				"string" : "**NB:** In case you are using an SSH key that has a passphrase we strongly recomment to configure the SSH agent, as otherwise when doing the configuration from Glamorous Toolkit , the passphrase is stored in plain text on disk."
 			},
 			{
 				"__type" : "textSnippet",
@@ -584,7 +584,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T23:12:16.903204+01:00"
+						"dateAndTimeString" : "2023-03-23T14:35:24.369608+01:00"
 					}
 				},
 				"uid" : {
@@ -594,7 +594,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#3a. Adding the key to the ssh-agent (Linux or Mac)"
+				"string" : "#3a. Adding the key to the ssh-agent"
 			},
 			{
 				"__type" : "textSnippet",
@@ -626,7 +626,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-23T11:00:42.151818+01:00"
+									"dateAndTimeString" : "2023-03-23T14:04:07.290445+01:00"
 								}
 							},
 							"uid" : {
@@ -636,7 +636,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "On Windows, due to a limitation in libgit,  it does not work to connect to the existing ssh-agent. As a workaround one can use Pageant, which is part of the PuTTY suite, as an SSH authentication agent."
+							"string" : "On Windows, due to a limitation in libgit, the library used for git operations,  it does not work to connect to the existing ssh-agent. As a workaround one can use Pageant, which is part of the PuTTY suite, as an SSH authentication agent."
 						}
 					]
 				},
@@ -659,7 +659,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T22:05:43.372043+01:00"
+						"dateAndTimeString" : "2023-03-23T14:01:28.670154+01:00"
 					}
 				},
 				"uid" : {
@@ -669,7 +669,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In case you do not want to configure Glamorous Toolkit with an SSH key every time you download a new release, you can configure the ssh-agent with the key. Currently this only works on Mac and Linux."
+				"string" : "On Mac and Linux you can directly configure the ssh-agent from the operating system with the key. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -690,7 +690,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T22:07:42.020573+01:00"
+									"dateAndTimeString" : "2023-03-23T14:35:11.761056+01:00"
 								}
 							},
 							"editEmail" : {
@@ -701,56 +701,55 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T22:08:18.236475+01:00"
+									"dateAndTimeString" : "2023-03-23T14:35:12.684948+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "S1GqSeWzDQCGwEg6A24bhQ=="
+								"uidString" : "9pU5FfOzDQCae+kMDb13rg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "First make sure the ssh-agent is started. One way to do this is to execute the following command in a terminal:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:35:16.377314+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:35:16.759594+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bwuAFfOzDQCahJDCDb13rg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
 							"string" : "`eval \"$(ssh-agent -s)\"`"
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T22:05:44.247917+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T22:07:41.781101+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "gEClQuWzDQCEFvrmA24bhQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "First make sure the ssh-agent is started. One way to do this is to execute the following command in a terminal:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -760,7 +759,45 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [ ]
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-03-23T14:07:49.410999+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-03-23T14:07:50.9998+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "ilDlsvKzDQCDHF0CDb13rg=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "`ssh-add --apple-use-keychain ~/.ssh/id_ed25519`"
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -770,7 +807,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-22T22:10:49.046513+01:00"
+												"dateAndTimeString" : "2023-03-23T14:07:23.163176+01:00"
 											}
 										},
 										"editEmail" : {
@@ -781,17 +818,92 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-22T22:23:05.422434+01:00"
+												"dateAndTimeString" : "2023-03-23T14:07:41.763881+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "vhfQVOWzDQCLbaZ/A24bhQ=="
+											"uidString" : "atPEsfKzDQCCX42tDb13rg=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "`ssh-add -K ~/.ssh/id_ed25519`"
+										"string" : "In MacOS Monterey (12.0) and newer versions:"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-03-22T22:10:49.046513+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-03-22T22:23:05.422434+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "vhfQVOWzDQCLbaZ/A24bhQ=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "`ssh-add -K ~/.ssh/id_ed25519`"
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T14:07:14.465552+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T14:07:15.276912+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "zxtAsfKzDQCCU88fDb13rg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "In MacOS versions prior to Monterey (12.0)"
 									}
 								]
 							},
@@ -814,7 +926,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T22:24:02.901031+01:00"
+									"dateAndTimeString" : "2023-03-23T14:35:40.103676+01:00"
 								}
 							},
 							"uid" : {
@@ -824,7 +936,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "On Mac you can add the key with one of the following commands:"
+							"string" : "Second, you need to add the key to the ssh-agent, and stores the passphrase in the Keychain. This needs to be done only once.  On Mac you can add the key with one of the following commands, depending on your version of the operating system.  In case your key does not have a passphrase you can skip the `'--apple-use-keychain'` or `'-K'` parameter. If your key has a passphrase the command will ask you to enter it."
 						},
 						{
 							"__type" : "textSnippet",
@@ -851,7 +963,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-23T11:01:23.388711+01:00"
+									"dateAndTimeString" : "2023-03-23T14:35:42.388666+01:00"
 								}
 							},
 							"uid" : {
@@ -861,44 +973,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "You need to run this command every time you restart your computer. You can add this command to the `.zshrc` file your home directory."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T22:20:13.055084+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-23T11:01:33.860544+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "emJmcuWzDQCPSkm7A24bhQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Instead of running this command every time you start your computer, your can modify `~/.ssh/config` to automatically do the loading."
+							"string" : "Third, to avoid performing the previous step every time you restart your computer, your should modify the file  `'~/.ssh/config'` to configure the ssh-agent to automatically  load the key and to always use the Keychain for passphrases."
 						},
 						{
 							"__type" : "textSnippet",
@@ -967,7 +1042,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-22T22:23:46.171952+01:00"
+												"dateAndTimeString" : "2023-03-23T14:17:02.90995+01:00"
 											}
 										},
 										"uid" : {
@@ -977,7 +1052,115 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "You only need the `\"UseKeychain yes\"` line if your key uses a passphrase."
+										"string" : "You only need to add the line `\"UseKeychain yes\"` line if your key uses a passphrase (this is the instruction that tells the ssh-agent to look in your OSX keychain for the  passphrase)."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T14:16:00.356858+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T14:16:25.437004+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "TI6Y0PKzDQCOizRYDb13rg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "If you want to use multiple SSH keys, add line with `'IdentityFile'` for each key."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T14:18:28.736299+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T14:18:39.203833+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "maZw2fKzDQCRzedXDb13rg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "You can open the file with the following snippet:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T14:18:40.848456+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T14:18:55.021461+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "o3kp2vKzDQCS5IBzDb13rg=="
+										},
+										"code" : "FileLocator home / '.ssh' / 'config'"
 									}
 								]
 							},
@@ -1000,7 +1183,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T22:21:28.741468+01:00"
+									"dateAndTimeString" : "2023-03-23T14:15:44.306289+01:00"
 								}
 							},
 							"uid" : {
@@ -1010,7 +1193,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "You should make sure the file has the following lines (you should create the file, if it does not exist)"
+							"string" : "For this make sure the  `'~/.ssh/config'` file and has the following lines (you should create the file, if it does not exist)"
 						}
 					]
 				},
@@ -1050,6 +1233,80 @@
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:35:52.602557+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:35:54.261869+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "McuoF/OzDQCa7yiYDb13rg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "First make sure the ssh-agent is started. One way to do this is to execute the following command in a terminal:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:36:00.13152+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:36:02.215578+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "E68bGPOzDQCa+Eb+Db13rg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "`eval \"$(ssh-agent -s)\"`"
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -1113,7 +1370,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T22:25:27.374917+01:00"
+									"dateAndTimeString" : "2023-03-23T14:36:06.845949+01:00"
 								}
 							},
 							"uid" : {
@@ -1123,7 +1380,44 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "On Linux you can add the key with one of the following commands:"
+							"string" : "Then you can add the key with one of the following commands:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:29:28.775369+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:31:00.505776+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7A/IAPOzDQCUUuTIDb13rg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If you key has a passphrase, you should run a command from the terminal that uses the SSH key, so that the Desktop Manager asks for the passphrase and stores it. If the passphrase is not stored by the Desktop Manager, git operations that require the SSH key will fail from Glamorous Toolkit."
 						}
 					]
 				},
@@ -1157,6 +1451,155 @@
 					"__type" : "textStyle"
 				},
 				"string" : "###Configuring the ssh-agent on Linux"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:37:30.277275+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:38:48.476558+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "1zF7HfOzDQCcDanVDb13rg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Start by installing  the [PuTTY suite](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html); this comes with Pageant."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:40:26.349705+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:40:26.349705+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "iNb5J/OzDQCe+JxWDb13rg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Then you can follow the instructions from [How To Use Pageant to Streamline SSH Key Authentication with PuTTY](https://www.digitalocean.com/community/tutorials/how-to-use-pageant-to-streamline-ssh-key-authentication-with-putty) to add your SSH key to Pageant. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:39:42.463757+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T14:40:41.429259+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4zFcJfOzDQCdTxbIDb13rg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Note that PuTTY uses a different format for their SSH key files, but they have a keygen program that will convert between the standard format and their format."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T14:36:12.82513+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T14:36:45.656476+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "YV7dGPOzDQCbJN2iDb13rg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "###Configure Pageant to use SSH Key Authentication with PuTTY on Windows"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1220,7 +1663,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-23T11:02:48.093769+01:00"
+						"dateAndTimeString" : "2023-03-23T14:19:54.939335+01:00"
 					}
 				},
 				"uid" : {
@@ -1230,7 +1673,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Instead of configuring the ssh-agent with your SSH key, you can configure Glamorous Toolkit with the key. This needs to be configured for every new Glamorous Toolkit release. To avoid this by persisting credentials look at [[How to make GitHub credentials persistent]]."
+				"string" : "As an alternative tp configuring the ssh-agent with your SSH key, you can configure Glamorous Toolkit with the key. This needs to be configured for every new Glamorous Toolkit release. To avoid this by persisting credentials look at [[How to make GitHub credentials persistent]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1257,7 +1700,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T22:32:50.76218+01:00"
+						"dateAndTimeString" : "2023-03-23T14:20:09.116048+01:00"
 					}
 				},
 				"uid" : {
@@ -1267,7 +1710,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "As a note, if you are using a passphrase, this will store it on disk in plain text, in the directory where  Glamorous Toolkit is installed."
+				"string" : "**NB:** if you are using a passphrase, this will store it on disk in plain text, in the directory where  Glamorous Toolkit is installed."
 			},
 			{
 				"__type" : "textSnippet",
