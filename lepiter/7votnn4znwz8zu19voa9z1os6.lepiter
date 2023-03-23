@@ -8,6 +8,152 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T11:07:15.820434+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T11:10:24.011953+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZduZLfCzDQCRGkFVA24bhQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "These credentials are stored by default next to the Glamorous Toolkit image in the folder `iceberg\\credentials.fuel` . The snippet below inspects the current store for credentials: "
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T11:09:58.92324+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T11:10:12.608746+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "fpNSN/CzDQCWMY3PA24bhQ=="
+							},
+							"code" : "IceCredentialStore storeFile"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T11:39:04.11114+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T11:40:19.902782+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "O9E9n/CzDQCuruy7A24bhQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**NB:** In case you are using an access token or a passphrase, note that they will be store in plain text."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:05:35.821621+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:07:55.439624+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wv+jJ/CzDQCKDPcjA24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "When configuring Glamorous Toolkit with an SSH key or an access token for GitHub, they are only set for that installation. If you download a new release the configuration should  be done again."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [ ]
 				},
 				"createEmail" : {
@@ -29,7 +175,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T23:08:05.924753+01:00"
+						"dateAndTimeString" : "2023-03-23T11:15:18.010226+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +185,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The above script sets the SSH keys as credentials for this image only, as the default setting to store credentials in  {{gtMethod:name=IceCredentialStore class>>#storeFile}} is `{localDirectory}\\iceberg\\credentials.fuel`. Subsequent cloning attempts in other directories may fallback to HTTPS, which is uncool. I am looking at you, Windows. And so far, I have not found a solution that works by just configuring the environment. But I did find a solution using global settings. We just have to change the credentials store setting to a user-specific path and make sure the credentials are stored there. The next time an image is started, it will pick up the credentials path from the global settings."
+				"string" : "A solution to persist  credentials accross releases is using global settings. For this we change the credentials store setting to a user-specific path and make sure the credentials are stored there. The next time an image is started, it will pick up the credentials path from the global settings."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:17:57.017978+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:18:52.266303+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "L8HRU/CzDQCYozaeA24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The following snippet changes the default credential store to the `'credentials.fuel'` file in the home directory."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -66,14 +249,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T23:08:15.224328+01:00"
+						"dateAndTimeString" : "2023-03-23T11:19:31.336189+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "N/4xIuazDQC0oNJ0A24bhQ=="
 				},
-				"code" : "settings := SettingTree acceptableKeywords:\r\t            SettingBrowser settingsKeywords.\r(settings deeplyDetect: [ :e | \r\t e settingNodeIdentifier = '#icebergCredentials#useCustomSsh' ]) \r\trealValue: true.\r(settings deeplyDetect: [ :e | \r\t e settingNodeIdentifier = '#icebergCredentials#storeFile' ]) \r\trealValue: FileLocator home / 'credentials.fuel'.\rsettings storeSettingNodes.\rIceCredentialStore current\r\tstoreFile: FileLocator home / 'credentials.fuel';\r\tsaveIntoStore"
+				"code" : "settings := SettingTree acceptableKeywords:SettingBrowser settingsKeywords.\r(settings deeplyDetect: [ :e | \r\t e settingNodeIdentifier = '#icebergCredentials#storeFile' ]) \r\trealValue: FileLocator home / 'credentials.fuel'.\rsettings storeSettingNodes.\r\rIceCredentialStore current\r\tstoreFile: FileLocator home / 'credentials.fuel';\r\tsaveIntoStore"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:19:58.12182+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:20:19.701318+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "facJW/CzDQCbWdq2A24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In case you are using an SSH key also run the following snippet to configure that:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:19:53.14672+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:28:31.136094+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lrS9WvCzDQCbN0VjA24bhQ=="
+				},
+				"code" : "settings := SettingTree acceptableKeywords:SettingBrowser settingsKeywords.\r(settings deeplyDetect: [ :e | \r\te settingNodeIdentifier = '#icebergCredentials#useCustomSsh' ]) \r\t\trealValue: true.\rsettings storeSettingNodes."
 			},
 			{
 				"__type" : "textSnippet",
@@ -137,14 +391,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T23:08:44.58721+01:00"
+						"dateAndTimeString" : "2023-03-23T11:23:20.791942+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "K6jnI+azDQC0upFOA24bhQ=="
 				},
-				"code" : "(FileLocator home / 'credentials.fuel') resolve"
+				"code" : "FileLocator home / 'credentials.fuel'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -216,6 +470,333 @@
 					"uidString" : "RstgJeazDQC02/bWA24bhQ=="
 				},
 				"code" : "SystemSettingsPersistence defaultPreferenceFileReference"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:31:24.242216+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:31:35.444133+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TH/Mg/CzDQChwXHBA24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You can inspect the credential store to see what it contains."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:31:15.428869+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:31:25.013238+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "u4Fog/CzDQChvOsxA24bhQ=="
+				},
+				"code" : "IceCredentialStore current"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:31:49.713554+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:32:01.076527+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "I69zhfCzDQCjGgEdA24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Reseting the persistency of credentials"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T11:33:44.563867+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T11:33:44.563867+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "7ChMjPCzDQCrsG/+A24bhQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "If you do not have other preferences appart from credentials, you can delete the global preferences file:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T11:33:49.337032+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T11:33:49.692303+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "F/yUjPCzDQCrxR2mA24bhQ=="
+										},
+										"code" : "SystemSettingsPersistence defaultPreferenceFileReference"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T11:33:14.938758+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T11:33:14.938758+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Ex+IivCzDQCoxzVoA24bhQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "1. Deleting the global preferences file."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T11:34:25.270589+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T11:35:29.475069+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Dkq5jvCzDQCth656A24bhQ=="
+										},
+										"code" : "settings := SettingTree acceptableKeywords:SettingBrowser settingsKeywords.\r(settings deeplyDetect: [ :e | \r\t e settingNodeIdentifier = '#icebergCredentials#storeFile' ]) \r\trealValue: IceCredentialStore defaultCredentialsStoreFile.\r(settings deeplyDetect: [ :e | \r\te settingNodeIdentifier = '#icebergCredentials#useCustomSsh' ]) \r\t\trealValue: false.\rsettings storeSettingNodes.\r\rIceCredentialStore current\r\tstoreFile: IceCredentialStore defaultCredentialsStoreFile;\r\tsaveIntoStore"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T11:32:59.238188+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-23T11:34:22.227474+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "SI2YifCzDQCnvhO6A24bhQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "2. Configure the global preferences file with the default option"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:32:01.465882+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:32:55.791932+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vAQnhvCzDQCj+ncvA24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If you no longer want to have a persisted credentials there are two options:"
 			},
 			{
 				"__type" : "textSnippet",
