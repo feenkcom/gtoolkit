@@ -87,7 +87,82 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T10:58:30.027887+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T10:58:30.027887+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "5uZCDvCzDQCFaf72A24bhQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "3a. Configure the Glamorous Toolkit image with the SSH key, or "
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-22T18:06:24.422754+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-03-23T10:58:32.880441+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "xLO76uGzDQCFs9c3A24bhQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "3b. Configure the SSH agent on your  machine to use the SSH key."
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -97,7 +172,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T18:06:24.422754+01:00"
+									"dateAndTimeString" : "2023-03-23T10:58:07.240115+01:00"
 								}
 							},
 							"editEmail" : {
@@ -108,17 +183,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T23:11:49.018083+01:00"
+									"dateAndTimeString" : "2023-03-23T10:58:24.335203+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "xLO76uGzDQCFs9c3A24bhQ=="
+								"uidString" : "ATHnDPCzDQCEVmdWA24bhQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "3. Either configure the Glamorous Toolkit image with the SSH key, or configure the SSH agent on your  machine to use the SSH key."
+							"string" : "3. Configure GitHub access. There are two options:"
 						}
 					]
 				},
@@ -353,6 +428,77 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T10:59:11.176367+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T10:59:27.123441+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Sse2EPCzDQCFjRGfA24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You can use the snippet below to view the `.ssh` directory:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T10:59:29.473842+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T10:59:37.14762+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NvfNEfCzDQCG+O6JA24bhQ=="
+				},
+				"code" : "FileLocator home / '.ssh'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-03-22T22:27:51.491099+01:00"
 					}
 				},
@@ -401,7 +547,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T22:27:48.09071+01:00"
+						"dateAndTimeString" : "2023-03-23T11:00:05.449383+01:00"
 					}
 				},
 				"uid" : {
@@ -411,7 +557,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For this you need to log in into your GitHub accound and a new SSH key. Detailed steps for doing this can be found at [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)."
+				"string" : "For this you need to log in into your GitHub accound and the SSH key. Detailed steps for doing this can be found at [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)."
 			},
 			{
 				"__type" : "textSnippet",
@@ -480,7 +626,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T23:05:11.780326+01:00"
+									"dateAndTimeString" : "2023-03-23T11:00:42.151818+01:00"
 								}
 							},
 							"uid" : {
@@ -490,7 +636,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "On Windows, due to a limitation in libgit,  it does not work to connect to the ssh-agent directly. As a workaround one can use Pageant, which is part of the PuTTY suite, as an SSH authentication agent."
+							"string" : "On Windows, due to a limitation in libgit,  it does not work to connect to the existing ssh-agent. As a workaround one can use Pageant, which is part of the PuTTY suite, as an SSH authentication agent."
 						}
 					]
 				},
@@ -705,7 +851,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T22:19:05.046398+01:00"
+									"dateAndTimeString" : "2023-03-23T11:01:23.388711+01:00"
 								}
 							},
 							"uid" : {
@@ -715,7 +861,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "You need to run repeat this every time you restart your computer. You can add this command to the `.zshrc` file your home directory."
+							"string" : "You need to run this command every time you restart your computer. You can add this command to the `.zshrc` file your home directory."
 						},
 						{
 							"__type" : "textSnippet",
@@ -742,7 +888,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-22T22:20:58.094379+01:00"
+									"dateAndTimeString" : "2023-03-23T11:01:33.860544+01:00"
 								}
 							},
 							"uid" : {
@@ -752,7 +898,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Instead if running this command every time you start your computer, your can modify `~/.ssh/config` to automatically do the loading."
+							"string" : "Instead of running this command every time you start your computer, your can modify `~/.ssh/config` to automatically do the loading."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1074,7 +1220,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T22:40:52.412646+01:00"
+						"dateAndTimeString" : "2023-03-23T11:02:48.093769+01:00"
 					}
 				},
 				"uid" : {
@@ -1084,7 +1230,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Instead of configuring the ssh-agent with your SSH key, you can configure Glamorous Toolkit with the key. This needs to be configured for every new Glamorous Toolkit release."
+				"string" : "Instead of configuring the ssh-agent with your SSH key, you can configure Glamorous Toolkit with the key. This needs to be configured for every new Glamorous Toolkit release. To avoid this by persisting credentials look at [[How to make GitHub credentials persistent]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1185,14 +1331,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-22T23:14:01.584585+01:00"
+						"dateAndTimeString" : "2023-03-23T11:03:13.626035+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "d+2Qp+GzDQC19Im4A24bhQ=="
 				},
-				"code" : "| credentials store |\rcredentials := IceSshCredentials new\r\thost:  #'*';\r\tusername: 'git';\r\tpublicKey: (FileLocator home / '.ssh/id_ed25519.pub') pathString;\r\tprivateKey: (FileLocator home / '.ssh/id_ed25519') pathString;\r\t\"keyPassphrase: 'rsa passphrase';\" \"Stored in plain text on disk\"\r\tyourself.\rstore := IceCredentialStore current.\rstore storeSshCredential: credentials forHostname: credentials host.\rIceCredentialsProvider useCustomSsh: true."
+				"code" : "| credentials store |\rcredentials := IceSshCredentials new\r\thost:  #'*';\r\tusername: 'git';\r\tpublicKey: (FileLocator home / '.ssh/id_ed25519.pub') pathString;\r\tprivateKey: (FileLocator home / '.ssh/id_ed25519') pathString;\r\t\"keyPassphrase: 'rsa passphrase';\" \"Stored in plain text on disk\"\r\t\"You can also use 'Clipboard clipboardText asString' to get it from the clipboard\"\r\tyourself.\rstore := IceCredentialStore current.\rstore storeSshCredential: credentials forHostname: credentials host.\rIceCredentialsProvider useCustomSsh: true."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:29:10.062786+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:29:23.258051+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CJrve/CzDQCgFr9lA24bhQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You can also inspect the current store to check that credentials were added:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:29:24.933978+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-23T11:29:25.359853+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "YYPSfPCzDQChl0/WA24bhQ=="
+				},
+				"code" : "IceCredentialStore current"
 			}
 		]
 	},
