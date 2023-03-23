@@ -23,7 +23,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-15T11:38:20.540816+01:00"
+									"dateAndTimeString" : "2023-03-22T11:39:24.177026+01:00"
 								}
 							},
 							"editEmail" : {
@@ -34,17 +34,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-15T11:38:20.540816+01:00"
+									"dateAndTimeString" : "2023-03-22T11:40:50.341523+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "kkAErk+zDQCjLpYVAfgLcQ=="
+								"uidString" : "LtuygtyzDQCtCMiuCNL7kw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We implement an interpreter for the [[PetitParser SPL case study]] using a small-step operational semantics in which the state of a running program consists of (1) an AST representing the rest of the code to be executed, (2) the environment of variables and their values, and (3) the output produced so far."
+							"string" : "We implement an interpreter for the [[PetitParser SPL case study]] using a small-step operational semantics in which the state of a running program consists of:\n(1) an AST representing the rest of the code to be executed, \n(2) the environment of variables and their values, and \n(3) the output produced so far."
 						}
 					]
 				},
@@ -188,7 +188,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-15T11:38:20.548104+01:00"
+												"dateAndTimeString" : "2023-03-22T11:39:57.898194+01:00"
 											}
 										},
 										"uid" : {
@@ -198,7 +198,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "An AST is used to represent the code to be executed. With each step, this tree will be “reduced” to another tree. For normal, terminating programs, this AST will shrink in size until it reachs the empty program, and stop."
+										"string" : "An AST is used to represent the code to be executed. With each step, this tree will be “reduced”, or transformed, to another tree. For normal, terminating programs, this AST will shrink in size until it reachs the empty program, and stop."
 									}
 								]
 							},
@@ -263,7 +263,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-15T11:38:20.548119+01:00"
+												"dateAndTimeString" : "2023-03-22T11:40:12.321156+01:00"
 											}
 										},
 										"uid" : {
@@ -273,7 +273,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "SPL has variables, so we must keep track of their values. With each variable declaration, a new variables is added to the environment. With each variable initialization or assignment, the environment is updated."
+										"string" : "SPL has variables, so we must keep track of their values. With each variable declaration, a new variable is added to the environment. With each variable initialization or assignment, the environment is updated."
 									}
 								]
 							},
@@ -483,7 +483,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-15T11:38:20.553656+01:00"
+									"dateAndTimeString" : "2023-03-22T11:40:31.570231+01:00"
 								}
 							},
 							"uid" : {
@@ -493,7 +493,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To implement the semantics we need (1) the {{gtClass:name=SPLContext}} object to keep track of the execution states, and (2) `stepInContext:` methods for  every node in the {{gtClass:name=SPLNode}} hierarchy."
+							"string" : "To implement the semantics we need \n(1) the {{gtClass:name=SPLContext}} object to keep track of the execution states, and \n(2) `stepInContext:` methods for  every node in the {{gtClass:name=SPLNode}} hierarchy."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1400,7 +1400,7 @@
 								"uidString" : "7r6Ho3WzDQCDNpAtDgFalw=="
 							},
 							"exampleSelector" : "factorial",
-							"previewHeight" : 200,
+							"previewHeight" : 300,
 							"previewShowSelector" : "gtASTFor:",
 							"exampleBehaviorName" : "SPLCaseStudyExamples",
 							"codeExpanded" : true,
@@ -1477,7 +1477,7 @@
 								"uidString" : "X9d+1FGzDQCiGbLEB250Cw=="
 							},
 							"exampleSelector" : "factorialStep7",
-							"previewHeight" : 120,
+							"previewHeight" : 150,
 							"previewShowSelector" : "gtEnvironmentFor:",
 							"exampleBehaviorName" : "SPLCaseStudyExamples",
 							"codeExpanded" : true,
@@ -1708,7 +1708,7 @@
 								"uidString" : "372w81GzDQCppeFRB250Cw=="
 							},
 							"exampleSelector" : "factorialReduced",
-							"previewHeight" : 200,
+							"previewHeight" : 300,
 							"previewShowSelector" : "gtHistoryFor:",
 							"exampleBehaviorName" : "SPLCaseStudyExamples",
 							"codeExpanded" : true,

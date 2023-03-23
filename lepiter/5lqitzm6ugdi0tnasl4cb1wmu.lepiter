@@ -120,45 +120,7 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T18:44:23.531765+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T18:44:24.299804+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "gCbZg0GzDQCYGg92CKenXg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "In GT, test cases are implemented as examples, that is, methods that perform assertions on an example object returned by the example method. (For more details, see [[Composing (Test) Examples]].)"
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -195,6 +157,43 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-14T18:44:23.531765+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-22T11:31:39.468323+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gCbZg0GzDQCYGg92CKenXg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In GT, test cases are implemented as [[Examples]], that is, methods that perform assertions on an example object returned by the example method. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -221,7 +220,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T18:45:04.942893+01:00"
+									"dateAndTimeString" : "2023-03-22T11:32:01.766353+01:00"
 								}
 							},
 							"uid" : {
@@ -231,7 +230,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To create test examples for a PetitParser class called `MyParser`, you should define `MyParserExamples`. This may be a subclass of {{gtClass:name=Object}}, but even better is to define it as a subclass of {{gtClass:name=PP2CompositeNodeExamples}}. This class provide several utility methods that allow one to test that a given input can be parsed by a particular rule, and will fail with other rules."
+							"string" : "To create test examples for a PetitParser class called `MyParser`, you should define `MyParserExamples`. This may be a subclass of {{gtClass:name=Object}}, but even better is to define it as a subclass of {{gtClass:name=PP2CompositeNodeExamples}}. This class provides several utility methods that allow one to test that a given input can be parsed by a particular rule, and will fail with other rules."
 						},
 						{
 							"__type" : "textSnippet",

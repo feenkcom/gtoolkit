@@ -903,7 +903,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T16:11:24.176015+01:00"
+									"dateAndTimeString" : "2023-03-22T11:24:31.835546+01:00"
 								}
 							},
 							"uid" : {
@@ -913,7 +913,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Note that the rules for `integer` and `float` are disjoint due to the use of `$. asPParser not` at the end of the `integer` rule. This means there is no ambiguity. However there will be some backtracking in the case we parse float: the integer rule will match until the period is encountered, at which point the `integer` rule will fail, and the `float` rule will be tried."
+							"string" : "Note that the rules for `integer` and `float` are disjoint due to the use of `$. asPParser not` at the end of the `integer` rule. This means there is no ambiguity. However there will be some backtracking in the case we parse a float: the integer rule will match until the period is encountered, at which point the `integer` rule will fail, and then `float` rule will be tried."
 						}
 					]
 				},
@@ -978,7 +978,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T16:12:18.18459+01:00"
+									"dateAndTimeString" : "2023-03-22T11:24:39.831922+01:00"
 								}
 							},
 							"uid" : {
@@ -988,7 +988,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Strings are straightforward, as SPl does not specifying any escape sequences."
+							"string" : "Strings are straightforward, as SPl does not specify any escape sequences."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1229,7 +1229,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T16:21:12.900417+01:00"
+									"dateAndTimeString" : "2023-03-22T11:24:54.896023+01:00"
 								}
 							},
 							"uid" : {
@@ -1239,7 +1239,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now this should be recognized as variable, not a keyword. We use the `end` operator to ensure that the rule consumes all its input."
+							"string" : "Now `andy` should be recognized as variable, not a keyword. We use the `end` operator to ensure that the rule consumes all its input."
 						},
 						{
 							"__type" : "pharoSnippet",
