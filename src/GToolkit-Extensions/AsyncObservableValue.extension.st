@@ -6,15 +6,17 @@ AsyncObservableValue >> gtCompositionChildren [
 	^ stream
 		  ifNotNil: [ :aStream | 
 			  aStream == self
-				  ifFalse: [ { aStream } ]
-				  ifTrue: [ #(  ) ] ]
-		  ifNil: [ #(  ) ]
+				  ifFalse: [ { aStream }, (sinks asArray reject: #isNil) ]
+				  ifTrue: [ sinks asArray reject: #isNil ] ]
+		  ifNil: [ sinks asArray reject: #isNil ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
 AsyncObservableValue >> gtCompositionDescription [
 	^ self printString asRopedText
 		  appendString: ': ';
+		  append: ((sinks asArray reject: #isNil) size asRopedText foreground: BrGlamorousColors disabledButtonTextColor);
+		  append: (' observers, ' asRopedText foreground: BrGlamorousColors disabledButtonTextColor);
 		  append: ('value=' asRopedText foreground: BrGlamorousColors disabledButtonTextColor);
 		  append: (self valueOrNil printString asRopedText foreground: BrGlamorousColors disabledButtonTextColor)
 ]
@@ -28,6 +30,7 @@ AsyncObservableValue >> gtLiveFor: aView [
 		priority: 5;
 		stencil: [
 			BrHorizontalPane new
+				id: #gtLiveFor:;
 				matchParent;
 				
 				withAsyncSinkDo: [ :anElementSink |
