@@ -22,6 +22,19 @@ AsyncObservableValue >> gtCompositionDescription [
 ]
 
 { #category : #'*GToolkit-Extensions' }
+AsyncObservableValue >> gtCompositionFor: aView [
+
+	<gtView>
+	^ aView columnedTree
+		  title: 'Composition';
+		  items: [ { self } ];
+		  children: #gtCompositionChildren;
+		  expandAll;
+		  column: 'Name' text: #gtCompositionDescription;
+		  actionUpdateButtonTooltip: 'Update composition tree'
+]
+
+{ #category : #'*GToolkit-Extensions' }
 AsyncObservableValue >> gtLiveFor: aView [
 	<gtView>
 
