@@ -22,10 +22,6 @@
 
 [Glamorous Toolkit](https://gtoolkit.com) is the Moldable Development environment. It empowers you to make systems explainable through experiences tailored for each problem.
 
-
- 
-![Glamorous Toolkit overview](https://raw.githubusercontent.com/feenkcom/gtoolkit/main/doc/gtr-overview.png)
-
 ## Components
  
 The current repository embodies the second generation of GT and it is comprised of a set of distinct components:

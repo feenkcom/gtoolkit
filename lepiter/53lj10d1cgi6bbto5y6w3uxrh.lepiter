@@ -295,41 +295,44 @@
 				"string" : "The following example shows the complete API."
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.276045+01:00"
+						"dateAndTimeString" : "2023-03-28T09:12:41.985183+02:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.276045+01:00"
+						"dateAndTimeString" : "2023-03-28T09:12:41.985183+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "i6nw/fJyAAAAAAAAAAAAAA=="
+					"uidString" : "Na6EUlK0DQCmuMz3C9vwrw=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtExample:GtTranscriptExamples>>#completeAPI|expanded=true}}"
+				"exampleSelector" : "completeAPI",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtTranscriptExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -406,41 +409,44 @@
 				"string" : "To get an idea of how this tool could be useful, take a look at the following example. A Bloc animation is logged in a visual, domain centric way, providing insight far superior to plain text."
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.276067+01:00"
+						"dateAndTimeString" : "2023-03-28T09:03:47.99467+02:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "contact@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2020-12-18T17:32:58.276067+01:00"
+						"dateAndTimeString" : "2023-03-28T09:03:47.99467+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "OwELXMPgAAAAAAAAAAAAAA=="
+					"uidString" : "qqWwMlK0DQCmmzG5C9vwrw=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtExample:GtTranscriptExamples>>#transcriptWitAnimation|expanded=true}}"
+				"exampleSelector" : "transcriptWitAnimation",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtTranscriptExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
 			}
 		]
 	},
