@@ -79,9 +79,14 @@ Behavior >> gtNewMethodDropdown: aDrodownAction withModel: aMethodsCoderViewMode
 		icon: BrGlamorousVectorIcons add;
 		tooltip: 'Add new method';
 		content: [ :aButton | 
-			| aNewMethodCoder aNewMethodCoderViewModel aHandler aNewMethodCoderHolder |
+			| aNewMethodCoder aNewMethodCoderViewModel aHandler aNewMethodCoderHolder newMethodText element |
+			newMethodText := '' asRopedText
+					glamorousCodeFontAndSize;
+					attribute: (BrGhostTextAttribute
+							for: ('newMethod' asRopedText glamorousCodeFontAndSize foreground: Color lightGray))
+							beNotOverwritableByStyler.
 			aNewMethodCoder := (GtPharoMethodCoder forNewMethod: self)
-					currentSourceString: 'newMethod' , String cr , String tab , '"This is a new method"';
+					currentSourceText: newMethodText;
 					protocol: #accessing;
 					yourself.
 
@@ -102,24 +107,28 @@ Behavior >> gtNewMethodDropdown: aDrodownAction withModel: aMethodsCoderViewMode
 				when: GtMethodCoderSaved
 				send: #onAnnouncement:
 				to: aHandler.
-
-			(GtExpandedOnlyCoderElement new coderViewModel: aNewMethodCoderViewModel)
-				hExact: 300;
-				vFitContent;
-				background: Color white;
-				padding: (BlInsets all: 5);
-				addAptitude: BrGlamorousFocusableShadowAptitude new;
-				when: GtPhlowObjectToSpawn
-					do: [ :aSpawnEvent | 
-						aSpawnEvent consumed: true.
-						aButton
-							fireEvent: (GtPhlowObjectToSpawn new
-									previousSpawnEvent: aSpawnEvent;
-									tool: aSpawnEvent tool;
-									sourceElement: aSpawnEvent currentTarget;
-									spawnDestination: aSpawnEvent spawnDestination;
-									in: [ :anNewEvent | anNewEvent propertyAt: #spawnContainer put: aSpawnEvent currentTarget ];
-									yourself) ] ]
+			element := (GtSourceCoderExpandedContentElement new
+					coderViewModel: aNewMethodCoderViewModel)
+					hExact: 400;
+					vFitContent;
+					background: Color white;
+					padding: (BlInsets all: 10);
+					addAptitude: BrGlamorousFocusableShadowAptitude new;
+					when: GtPhlowObjectToSpawn
+						do: [ :aSpawnEvent | 
+							aSpawnEvent consumed: true.
+							aButton
+								fireEvent: (GtPhlowObjectToSpawn new
+										previousSpawnEvent: aSpawnEvent;
+										tool: aSpawnEvent tool;
+										sourceElement: aSpawnEvent currentTarget;
+										spawnDestination: aSpawnEvent spawnDestination;
+										in: [ :anNewEvent | anNewEvent propertyAt: #spawnContainer put: aSpawnEvent currentTarget ];
+										yourself) ].
+			element actions
+				addChild: (GtPharoMethodCoderTagsElement new
+						pharoMethodCoderViewModel: aNewMethodCoderViewModel).
+			element ]
 ]
 
 { #category : #'*GToolkit-Extensions' }
