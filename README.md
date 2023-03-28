@@ -23,8 +23,31 @@
 [Glamorous Toolkit](https://gtoolkit.com) is the Moldable Development environment. It empowers you to make systems explainable through experiences tailored for each problem.
 
 
- 
-![Glamorous Toolkit overview](https://raw.githubusercontent.com/feenkcom/gtoolkit/main/doc/gtr-overview.png)
+## Get started
+
+### Install and run
+
+Simply download: https://gtoolkit.com/download.
+The download is a self contained installation made of a Glamorous Toolkit image, a virtual machine, and a few other resources and libraries.
+Now, just run the executable.
+- On Mac: `GlamorousToolkit.app`
+- On Windows: `.\bin\GlamorousToolkit.exe`
+- On Linux: `./bin/GlamorousToolkit`
+
+### Learn how to learn
+Glamorous Toolkit was developed following Moldable Development, and it offers extensive opportunities to learn about itself. So, focus first on learning how to learn:
+- Read the book from inside the environment.
+- Go through the [GT in 7' video series](https://youtu.be/-vFwfwy5WZA?list=PLfrs5bwLJOoAaHvQGSLeKpHWmFuZXPUTJ).
+
+
+## Engage with the community
+
+Follow us on Twitter: https://twitter.com/feenkcom
+
+Chat with us: https://discord.gg/FTJr9gP
+
+Watch our videos: https://www.youtube.com/@gtoolkit
+
 
 ## Components
  
@@ -58,18 +81,6 @@ Glamorous Toolkit is based on graphical stack made of:
 - [Bloc](https://github.com/feenkcom/Bloc): the graphical framework.
 - [Sparta](https://github.com/feenkcom/Sparta): the graphical canvas, including bindings for the [Skia](https://skia.org) graphics library.
 - [Glutin](https://github.com/feenkcom/gtoolkit-glutin): the connection to the [Glutin](https://github.com/rust-windowing/glutin) Rust library for managing windows and OpenGL contexts.
-
-## How to install 
-
-Please download it via the instructions available at: https://gtoolkit.com/download.
-
-## Contact us
-
-Follow us on Twitter: https://twitter.com/feenkcom
-
-Chat with us: https://discord.gg/FTJr9gP
-
-Watch our videos: https://www.youtube.com/channel/UClLZHVq_-2D2-iI4rA2O8Ug
 
 ## License
 
