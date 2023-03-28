@@ -46,7 +46,7 @@ Follow us on Twitter: https://twitter.com/feenkcom
 
 Chat with us: https://discord.gg/FTJr9gP
 
-Watch our videos: https://www.youtube.com/channel/UClLZHVq_-2D2-iI4rA2O8Ug
+Watch our videos: https://www.youtube.com/@gtoolkit
 
 
 ## Components
