@@ -162,7 +162,7 @@ GtWorldByScripterExamples >> cannotClickOnCoderIssue [
 				
 			aStep click
 				label: 'Select an Integer detail';
-				flag: 'This is actually a but. We shold be able just to double click';
+				flag: 'This is actually a bug. We shold be able just to double click';
 				// (GtPagerPageElementId indexed: 2);
 				// GtInspector;
 				// (GtPhlowColumnedListId);
