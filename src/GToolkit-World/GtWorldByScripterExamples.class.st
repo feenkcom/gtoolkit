@@ -104,6 +104,112 @@ GtWorldByScripterExamples >> browsePackageInSecondPane [
 	^ aScripter
 ]
 
+{ #category : #'examples - read-only coders' }
+GtWorldByScripterExamples >> cannotClickOnCoderIssue [
+	"See [feenkcom/gtoolkit#3200](https://github.com/feenkcom/gtoolkit/issues/3200)"
+	<gtExample>
+	<noTest>
+	| aScripter |
+	aScripter := self executePlaygroundSnippet.
+
+	aScripter
+		substeps: 'Display method coder in Meta'
+		do: [ :aStep | 
+			aStep click
+				label: 'Select Meta tab';
+				// (GtPagerPageElementId indexed: 2);
+				// GtInspector;
+				// GtPhlowCompositeViewElementId;
+				// #tabbar;
+				onChildFromBlock: [ :anElement | anElement children detect: [ :each | each label asString = 'Meta' ] ];
+				play.
+
+			aStep click
+				label: 'Expand the first method';
+				// (GtPagerPageElementId indexed: 2);
+				// GtCoder;
+				// (GtSourceCoderId indexed: 1);
+				play.
+				
+			aStep assert
+				label: 'Assert a method coder is expanded';
+				value: [ :anElement | anElement isExpanded ] equals: [ true ];
+				// (GtPagerPageElementId indexed: 2);
+				// GtCoder;
+				// (GtSourceCoderId indexed: 1);
+				play ].
+
+	aScripter
+		substeps: 'Display Integer view'
+		do: [ :aStep | 
+			aStep click
+				label: 'Select Integer tab';
+				// (GtPagerPageElementId indexed: 2);
+				// GtInspector;
+				// GtPhlowCompositeViewElementId;
+				// #tabbar;
+				onChildFromBlock: [ :aCollection |
+					| aResult |
+					aResult := aCollection
+						collect: [ :anElement | 
+							anElement children
+								detect: [ :each | each label asString = 'Integer' ]
+								ifNone: [ nil ] ]
+						thenReject: #isNil.
+					self assert: aResult size equals: 1.
+					aResult anyOne ];
+				play.
+				
+			aStep click
+				label: 'Select an Integer detail';
+				flag: 'This is actually a bug. We should be able just do double click';
+				// (GtPagerPageElementId indexed: 2);
+				// GtInspector;
+				// (GtPhlowColumnedListId);
+				// #scrollable;
+				onChildAt: 1;
+				play.
+				
+			aStep doubleClick
+				label: 'Spawn an Integer detail';
+				// (GtPagerPageElementId indexed: 2);
+				// GtInspector;
+				// (GtPhlowColumnedListId);
+				// #scrollable;
+				onChildAt: 1;
+				play ].
+				
+	aScripter
+		substeps: 'Display again the method coder in Meta'
+		do: [ :aStep | 
+			aStep click
+				label: 'Select Meta tab';
+				// (GtPagerPageElementId indexed: 2);
+				// GtInspector;
+				// GtPhlowCompositeViewElementId;
+				// #tabbar;
+				onChildFromBlock: [ :anElement | anElement children detect: [ :each | each label asString = 'Meta' ] ];
+				play.
+
+			aStep click
+				label: 'Collapse the first method';
+				// (GtPagerPageElementId indexed: 2);
+				// GtCoder;
+				// (GtSourceCoderId indexed: 1);
+				// #sidebar;
+				play.
+				
+			aStep assert
+				label: 'Assert a method coder is collapsed';
+				value: [ :anElement | anElement isExpanded ] equals: [ false ];
+				// (GtPagerPageElementId indexed: 2);
+				// GtCoder;
+				// (GtSourceCoderId indexed: 1);
+				play ].
+
+	^ aScripter
+]
+
 { #category : #'examples - coder' }
 GtWorldByScripterExamples >> clickAgainOnPackageEditableNameInTheFirstPane [
 	<gtExample>
