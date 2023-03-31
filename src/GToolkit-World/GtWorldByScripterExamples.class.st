@@ -192,7 +192,7 @@ GtWorldByScripterExamples >> cannotClickOnCoderIssue [
 				play.
 
 			aStep click
-				label: 'Expand the first method';
+				label: 'Collapse the first method';
 				// (GtPagerPageElementId indexed: 2);
 				// GtCoder;
 				// (GtSourceCoderId indexed: 1);
