@@ -10,6 +10,17 @@ AsyncPollFuture >> gtCompositionDescription [
 ]
 
 { #category : #'*GToolkit-Extensions' }
+AsyncPollFuture >> gtSourceCodeFor: aView [
+	<gtView>
+	pollBlock ifNil: [ ^ aView empty ].
+	
+	^ aView forward
+		title: 'Source code';
+		object: [ pollBlock ];
+		view: #gtSourceCodeFor:
+]
+
+{ #category : #'*GToolkit-Extensions' }
 AsyncPollFuture >> gtViewExecutedBlockFor: aView [
 	<gtView>
 	executedBlock ifNil: [ ^ aView empty ].
