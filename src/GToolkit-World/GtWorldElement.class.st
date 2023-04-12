@@ -162,6 +162,7 @@ GtWorldElement >> newSpotterButton [
 		description: [ 'Spotter dropdown is already created!' ].
 	
 	spotterDropdown := GtSpotterDropdownButtonStencil new
+		id: GtWorldSpotterSearchElementId;
 		tooltip: 'Search';
 		valuable: [ GtWorldSpotterSearchStart new
 			knowledgeBase: self knowledgeBase ];
