@@ -404,6 +404,39 @@ GtWorldByScripterExamples >> playgroundStencil [
 ]
 
 { #category : #'examples - coder' }
+GtWorldByScripterExamples >> searchAndBrowseBlElementZIndexMethod [
+	"Issue [feenkcom/gtoolkit#3168](https://github.com/feenkcom/gtoolkit/issues/3168)"
+
+	<gtExample>
+	| aScripter aLogger |
+	aScripter := self worldElementInScripter.
+
+	aScripter
+		substep: 'Search BlElement>>#zIndex: using Spotter'
+		do: [ :aStep | 
+			aStep click
+				label: 'Click on Spotter button';
+				id: GtWorldSpotterSearchElementId;
+				play.
+
+			aStep type
+				text: (BlElement >> #zIndex:) printString;
+				play.
+
+			aLogger := MemoryLogger startFor: GtPharoStreamingMethodsCoderElementSignal.
+			aLogger name: '01 Browse method'.
+			aScripter userData at: aLogger name put: aLogger.
+
+				
+			[ aStep keyPress
+				label: 'Press return';
+				key: BlKeyboardKey return;
+				play ] ensure: [ aLogger stop ] ].
+
+	^ aScripter
+]
+
+{ #category : #'examples - coder' }
 GtWorldByScripterExamples >> selectClassInSecondPane [
 	<gtExample>
 	| aScripter |
