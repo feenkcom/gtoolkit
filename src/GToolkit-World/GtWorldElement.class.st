@@ -19,6 +19,11 @@ GtWorldElement class >> isWorldSpotterPreviewDisplayed [
 	^ IsWorldSpotterPreviewDisplayed ifNil: [ IsWorldSpotterPreviewDisplayed := true ]
 ]
 
+{ #category : #'event handling' }
+GtWorldElement class >> onShowWorldSpotterPreview: anAnnouncement [
+	self showWorldSpotterPreview: anAnnouncement shouldShowPreview
+]
+
 { #category : #accessing }
 GtWorldElement class >> showWorldSpotterPreview: aBoolean [
 	IsWorldSpotterPreviewDisplayed := aBoolean
@@ -168,8 +173,7 @@ GtWorldElement >> newSpotterButton [
 			knowledgeBase: self knowledgeBase ];
 		extent: [ self class worldSpotterSize ];
 		showPreview: [ self class isWorldSpotterPreviewDisplayed ];
-		onPreviewChangedDo: [ :isDisplayed | 
-			self class showWorldSpotterPreview: isDisplayed ];
+		onPreviewChangedSend: #onShowWorldSpotterPreview: to: self class;
 		spotterElementDo: [ :aSpotterElement |
 			aSpotterElement 
 				when: GtSpotterResizedEvent 

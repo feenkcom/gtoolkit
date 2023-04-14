@@ -21,5 +21,5 @@ GtWeakSubscriptionsWithBlockSubscribers >> issues [
 
 { #category : #accessing }
 GtWeakSubscriptionsWithBlockSubscribers >> name [
-	^ 'Weak subscriptions should nor use #when:do: and register blocks as receivers.'
+	^ 'Weak subscriptions should not use #when:do: and register blocks as receivers.'
 ]
