@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-30T16:57:22.921186+02:00"
+									"dateAndTimeString" : "2023-04-17T10:11:45.6111+02:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +155,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "```bash\nexport GEMSTONE=/path/to/GemStone64Bit3.7.0-x86_64.Linux\nexport MANPATH=$GEMSTONE/doc\nexport PATH=$GEMSTONE/bin:$PATH\nexport ROWAN_PROJECTS_HOME=/path/to/gitreps\n```"
+							"string" : "```bash\nexport GEMSTONE=/path/to/GemStone64Bit3.7.0-x86_64.Linux\nexport MANPATH=$GEMSTONE/doc\nexport PATH=$GEMSTONE/bin:$PATH\nexport ROWAN_PROJECTS_HOME=/path/to/gitreps\nexport STONE=gs64stone\n```"
 						}
 					]
 				},
@@ -257,7 +257,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-30T17:15:30.379443+02:00"
+									"dateAndTimeString" : "2023-04-17T08:52:04.555534+02:00"
 								}
 							},
 							"uid" : {
@@ -267,7 +267,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "```bash\ncd $GEMSTONE/..\nunzip GemStone64Bit3.7.0-x86_64.Linux.zip\ncd GemStone64Bit3.7.0-x86_64.Linux/install\n./installgs\nsudo chmod ug+s $GEMSTONE/sys/netldid\nsudo chown root $GEMSTONE/sys/netldid\ncd ../data\nrm *.dbf *.log\ncp /path/to/extent0.rowan.dbf ./extent0.dbf\nchmod 644 extent0.dbf\ncd -\nstartnetldi \nstartstone\n```"
+							"string" : "```bash\ncd $GEMSTONE/..\nunzip GemStone64Bit3.7.0-x86_64.Linux.zip\ncd GemStone64Bit3.7.0-x86_64.Linux/install\nsudo ./installgs\nsudo chmod ug+s $GEMSTONE/sys/netldid\nsudo chown root $GEMSTONE/sys/netldid\ncd ../data\nrm *.dbf *.log\ncp /path/to/extent0.rowan.dbf ./extent0.dbf\nchmod 644 extent0.dbf\ncd -\nstartnetldi \nstartstone\n```"
 						}
 					]
 				},
@@ -332,7 +332,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-30T17:15:55.501481+02:00"
+									"dateAndTimeString" : "2023-04-17T09:49:24.60659+02:00"
 								}
 							},
 							"uid" : {
@@ -342,7 +342,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "```bash\nmkdir $ROWAN_PROJECTS_HOME\ncd $ROWAN_PROJECTS_HOME\ngit clone git@github.com:feenkcom/gtoolkit-gemstone.git\ncd gtoolkit-gemstone/rowan/scripts/\n./clone_repositories.sh\n```"
+							"string" : "```bash\nmkdir $ROWAN_PROJECTS_HOME\ncd $ROWAN_PROJECTS_HOME\ngit clone git@github.com:feenkcom/gtoolkit-gemstone.git\ncd gtoolkit-gemstone/scripts/\n./clone_repositories.sh\n```"
 						}
 					]
 				},
@@ -407,7 +407,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-30T17:19:48.020656+02:00"
+									"dateAndTimeString" : "2023-04-17T09:50:22.947342+02:00"
 								}
 							},
 							"uid" : {
@@ -417,7 +417,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "```bash\ncd $ROWAN_PROJECTS_HOME/gtoolkit-gemstone/rowan/scripts\n./installGt4gemstone.sh\ncd $ROWAN_PROJECTS_HOME/gtoolkit-remote/rowan/scripts\n./installGtoolkitRemote.sh\n```"
+							"string" : "```bash\ncd $ROWAN_PROJECTS_HOME/gtoolkit-gemstone/scripts\n./installGt4gemstone.sh\ncd $ROWAN_PROJECTS_HOME/gtoolkit-remote/scripts\n./installGtoolkitRemote.sh\n```"
 						}
 					]
 				},
