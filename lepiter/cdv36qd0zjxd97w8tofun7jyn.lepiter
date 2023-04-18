@@ -362,14 +362,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-18T13:03:45.911592+02:00"
+						"dateAndTimeString" : "2023-04-17T08:33:23.799075+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Csu4HzWGDQCtLBQ7BP8y0Q=="
 				},
-				"code" : "releaseVersion := GtImage version versionString"
+				"code" : "releaseVersion := GtImage version versionString.\r(releaseVersion beginsWith: 'DEV ') ifTrue:\r\t[ releaseVersion := releaseVersion copyFrom: 5 to: releaseVersion size ].\rreleaseVersion."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -430,14 +430,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-18T13:03:57.079559+02:00"
+						"dateAndTimeString" : "2023-04-17T08:37:17.179211+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "EmS2BzWGDQCtHVUuBP8y0Q=="
 				},
-				"code" : "releaseArchiveName := 'gt4gemstone-3.7.0-{1}.zip' format: {releaseVersion}. \rreleaseUrl:='https://github.com/feenkcom/gtoolkit/releases/download/{1}/'\r\tformat: {releaseVersion}. \r\rtargetFolder / releaseArchiveName exists ifFalse: [\r\tZnClient new\r\t\turl: releaseUrl, releaseArchiveName;\r\t\tsignalProgress: true;\r\t\tdownloadTo: targetFolder ].\r\rtargetFolder"
+				"code" : "| releaseArchiveName releaseUrl |\rreleaseArchiveName := 'gt4gemstone-3.7.0-{1}.zip' format: {releaseVersion}. \rreleaseUrl:='https://github.com/feenkcom/gtoolkit/releases/download/{1}/'\r\tformat: {releaseVersion}. \r\r(targetFolder / releaseArchiveName) exists ifFalse: [\r\tZnClient new\r\t\turl: releaseUrl, releaseArchiveName;\r\t\tsignalProgress: true;\r\t\tdownloadTo: targetFolder ].\r\rtargetFolder"
 			}
 		]
 	},
