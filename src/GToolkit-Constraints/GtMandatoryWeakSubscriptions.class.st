@@ -22,7 +22,7 @@ GtMandatoryWeakSubscriptions class >> isConcernedAnnouncementClass: aClass [
 
 { #category : #accessing }
 GtMandatoryWeakSubscriptions >> description [
-	^ 'Some subscriptions should be weak otherwise there are be mixed (weak and strong) subscriptions and weak subscriptions are not going to be garbage-collected.'
+	^ 'Some subscriptions should be weak otherwise there are mixed (weak and strong) subscriptions. As a consequence weak subscriptions are not going to be garbage-collected.'
 ]
 
 { #category : #accessing }
