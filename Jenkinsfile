@@ -618,6 +618,7 @@ abstract class AgentJob {
         if (build.cleanUp && build.freshBuild) {
             platform().delete_directory(script, GlamorousToolkit.RELEASER_FOLDER)
         }
+        script.echo "doCleanUp(): clean gtoolkit and examples folders"
         platform().delete_directory(script, GlamorousToolkit.GTOOLKIT_FOLDER)
         platform().delete_directory(script, GlamorousToolkit.EXAMPLES_FOLDER)
         delete_lepiter_directory()
