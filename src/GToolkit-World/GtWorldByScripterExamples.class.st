@@ -426,12 +426,41 @@ GtWorldByScripterExamples >> searchAndBrowseBlElementZIndexMethod [
 			aLogger := MemoryLogger startFor: GtPharoStreamingMethodsCoderElementSignal.
 			aLogger name: '01 Browse method'.
 			aScripter userData at: aLogger name put: aLogger.
-
 				
 			[ aStep keyPress
 				label: 'Press return';
 				key: BlKeyboardKey return;
 				play ] ensure: [ aLogger stop ] ].
+				
+	aScripter assert 
+		label: 'Assert ', (BlElement >> #zIndex:) printString, ' bounds in space';
+		satisfies: [ :aMethodCoder | 
+			aScripter space root boundsInSpace 
+				containsRect: aMethodCoder boundsInSpace ];
+		// GtCoder;
+		// GtPharoStreamingMethodsCoderElement;
+		/ GtPharoStreamingMethodsCoderListId;
+		/ #scrollable;
+		onChildFromBlock: [ :anInfiniteList |
+			anInfiniteList children detect: [ :aMethodCoder | 
+				aMethodCoder coderViewModel behavior = BlElement and: [
+					aMethodCoder coderViewModel selector = #zIndex: ] ] ];
+		play.
+		
+	aScripter assert 
+		label: 'Assert ', (BlElement >> #zIndex:) printString, ' bounds in parent';
+		satisfies: [ :aMethodCoder | 
+			aMethodCoder parent boundsInSpace
+				containsRect: aMethodCoder boundsInSpace ];
+		// GtCoder;
+		// GtPharoStreamingMethodsCoderElement;
+		/ GtPharoStreamingMethodsCoderListId;
+		/ #scrollable;
+		onChildFromBlock: [ :anInfiniteList |
+			anInfiniteList children detect: [ :aMethodCoder | 
+				aMethodCoder coderViewModel behavior = BlElement and: [
+					aMethodCoder coderViewModel selector = #zIndex: ] ] ];
+		play.
 
 	^ aScripter
 ]
