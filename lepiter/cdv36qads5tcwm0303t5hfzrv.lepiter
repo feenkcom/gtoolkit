@@ -390,14 +390,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-30T10:15:53.323781+02:00"
+						"dateAndTimeString" : "2023-04-20T14:10:01.158691+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "f1MzBk2GDQCzfrsxBP8y0Q=="
 				},
-				"code" : "classSearchResult := defaultSession executeStringAndFetchResultString: 'Globals \r\tclassesDo: [:aUserProfile :aSymbolDictionary :aClass | \r\t\taClass name = #GtGsRelease ifTrue: [ ^ ''true''] ].\r''false'''"
+				"code" : "classSearchResult := defaultSession evaluateAndWait: 'Globals \r\tclassesDo: [ :aUserProfile :aSymbolDictionary :aClass | \r\t\taClass name = #GtGsRelease ifTrue: [ ^ true] ].\rfalse.'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -461,14 +461,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-19T17:50:46.229617+02:00"
+						"dateAndTimeString" : "2023-04-20T14:10:17.223902+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "xw5AQE2GDQCziM9pBP8y0Q=="
 				},
-				"code" : "self assert: classSearchResult = 'true'."
+				"code" : "self assert: classSearchResult = true."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -495,14 +495,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-30T10:19:40.829038+02:00"
+						"dateAndTimeString" : "2023-04-20T14:11:02.393279+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "df1lRE2GDQCzjHvxBP8y0Q=="
 				},
-				"code" : "remoteVersionString := (defaultSession \r\texecuteStringAndFetchResultByteArray: 'GtGsRelease versionString asByteArray'  \r\tmaxResultSize: 32) asString"
+				"code" : "remoteVersionString := defaultSession \r\tevaluateAndWait: 'GtGsRelease versionString'"
 			},
 			{
 				"__type" : "textSnippet",
