@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:25:45.44858+02:00"
+						"dateAndTimeString" : "2023-04-20T13:53:38.394625+02:00"
 					}
 				},
 				"uid" : {
@@ -39,156 +39,13 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here we manually use  {{gtClass:GtGemStoneClient}} to evaluate code."
+				"string" : "Here we manually use the default  {{gtClass:GtGemStoneSession}} to evaluate code."
 			},
 			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-14T11:35:51.010331+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-14T11:36:03.784419+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "UpUj0XODDQC36JU3B7W12w=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Stop the client if needed before starting a new one."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-14T11:36:08.642266+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-14T11:36:24.783918+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "BZ840nODDQC37UdHB7W12w=="
-							},
-							"code" : "GtGemStoneClient hasUniqueInstance ifTrue: [\r\tGtGemStoneClient uniqueInstance close ]"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-14T11:36:35.041585+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-14T11:36:42.446297+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "2AnE03ODDQC3728FB7W12w=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Reset the unique instance if needed"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-14T11:36:44.428293+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-14T11:36:53.597677+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "K6xa1HODDQC38R1BB7W12w=="
-							},
-							"code" : "GtGemStoneClient cleanUniqueInstance"
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -209,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:24:47.892268+02:00"
+						"dateAndTimeString" : "2023-04-20T13:54:09.717954+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "uIUp0HKDDQCbk/LBDmriJw=="
 				},
-				"code" : "gemstoneClient := GtGemStoneClient uniqueInstance.\rgemstoneClient ensureRunning."
+				"code" : "gemstoneSession := GtGemStoneSessionRegistry default sessionNamed: 'default'.\rgemstoneSession ensureRunning."
 			},
 			{
 				"__type" : "textSnippet",
@@ -280,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:26:18.390266+02:00"
+						"dateAndTimeString" : "2023-04-20T13:53:55.711006+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "cMSM13KDDQCbl4WVDmriJw=="
 				},
-				"code" : "gemstoneClient evaluateAndWait: 'System stoneName'"
+				"code" : "gemstoneSession evaluateAndWait: 'System stoneName'"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -314,14 +171,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T16:37:19.429925+02:00"
+						"dateAndTimeString" : "2023-04-20T13:53:55.71198+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "mA1S2XKDDQCbmQuHDmriJw=="
 				},
-				"code" : "gemstoneClient evaluateAndWait: 'Dictionary new add: (1->2); yourself'"
+				"code" : "gemstoneSession evaluateAndWait: 'Dictionary new add: (1->2); yourself'"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -348,14 +205,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:27:22.78296+02:00"
+						"dateAndTimeString" : "2023-04-20T13:53:55.715393+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "U+Wa2nKDDQCbm7fcDmriJw=="
 				},
-				"code" : "gemstoneClient evaluateAndWait: 'SessionTemps current'"
+				"code" : "gemstoneSession evaluateAndWait: 'SessionTemps current'"
 			}
 		]
 	},

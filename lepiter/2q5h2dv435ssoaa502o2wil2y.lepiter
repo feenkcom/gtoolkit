@@ -214,14 +214,82 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T17:27:11.229868+02:00"
+						"dateAndTimeString" : "2023-04-20T14:02:16.54384+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "hHFjkhCGDQCuBRkpD44NLg=="
 				},
-				"code" : "thisSnippet database properties gemStoneSettings\r\tconnectionType: #direct;\n\thost: 'localhost';\n\tport: 29299."
+				"code" : "connection := (RsrInitiateConnection host: 'localhost' port: 29299) connect.\revaluatorServiceClient := GtRsrEvaluatorServiceClient new.\revaluatorServiceClient registerWith: connection."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-20T14:00:28.515237+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-20T14:03:23.763197+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/qMIBiW2DQCVFYE2DJSsbw=="
+				},
+				"code" : "result := evaluatorServiceClient\r\tevaluateAndWait: 'self / v1'\r\tfor: 4\r\tbindings: { #v1 -> 2 } asDictionary."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-20T14:03:29.442578+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-20T14:04:32.066344+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OWHRECW2DQCVpWdqDJSsbw=="
+				},
+				"code" : "{ result. connection.  evaluatorServiceClient. }"
 			},
 			{
 				"__type" : "textSnippet",
@@ -447,6 +515,40 @@
 								"uidString" : "KzkokpOJDQC1dKr1A+1lrQ=="
 							},
 							"code" : "session := GtGemStoneSessionRegistry default defaultSession.\rsession connector\r\thost: 'localhost';\n\tlibraryPath: '/path/to/GemStone/ClientLibs' asFileReference;\r\tgemstoneVersion: '3.7.0';\r\tstone: 'gs64stone';\r\tnetldi: '50377';\r\tusername: 'SystemUser';\r\tpassword: '<password>';\r\thostUsername: 'HostUser';\r\thostPassword: '<password>'.\rsession connector notifyUpdated"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-04-20T14:05:43.752444+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-04-20T14:05:52.865162+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "C8nSGCW2DQCVwwNaDJSsbw=="
+							},
+							"code" : "result := session\r\tevaluateAndWait: 'self / v1'\r\tfor: 4\r\tbindings: { #v1 -> 2 } asDictionary."
 						}
 					]
 				},
