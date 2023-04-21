@@ -42,7 +42,7 @@ Class {
 GtSceneDrillerEventHandler class >> initialize [
 	DrillerId := #'gtoolkit-driller'.
 	DrillerOverlayId := BlElementId named: #'gtoolkit-driller--preview'.
-	KeyCombination := BlKeyCombination builder dnf control alt shift build
+	KeyCombination := BlKeyCombination builder control alt shift build
 ]
 
 { #category : #'private - accessing' }
@@ -193,7 +193,7 @@ GtSceneDrillerEventHandler >> highlightCombinationMatchesIn: aRootElement [
 	aRootElement isAttachedToSceneGraph
 		ifFalse: [ ^ false ].
 
-	^ KeyCombination matches: aRootElement space keyboardProcessor buffer
+	^ KeyCombination matchesKeyBuffer: aRootElement space keyboardProcessor buffer
 ]
 
 { #category : #'api - overlay' }
@@ -286,7 +286,7 @@ GtSceneDrillerEventHandler >> maybeHideOverlayIn: aRootElement [
 		ifFalse: [ ^ self hideOverlayIn: aRootElement ].
 
 	"only hide if the wrong combination is pressed"
-	(KeyCombination matches: aRootElement space keyboardProcessor buffer)
+	(KeyCombination matchesKeyBuffer: aRootElement space keyboardProcessor buffer)
 		ifFalse: [ self hideOverlayIn: aRootElement ]
 ]
 
