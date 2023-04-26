@@ -108,7 +108,6 @@ GtWorldByScripterExamples >> browsePackageInSecondPane [
 GtWorldByScripterExamples >> cannotClickOnCoderIssue [
 	"See [feenkcom/gtoolkit#3200](https://github.com/feenkcom/gtoolkit/issues/3200)"
 	<gtExample>
-	<noTest>
 	| aScripter |
 	aScripter := self executePlaygroundSnippet.
 
