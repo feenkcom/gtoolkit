@@ -12,7 +12,11 @@ GtWorldTabToolbarButtonAptitude >> initialize [
 		BrGlamorousButtonIconAptitude new.
 		BrGlamorousButtonWithLabelTooltipAptitude new.
 		BrLayoutResizerAptitude inherit.
-		BrLayoutAlignmentAptitude forHorizontalLinearLayout }.
+		BrLayoutAlignmentAptitude new }.
+		
+	self
+		addChangeProperty: #(widget layout)
+		with: [ BlLinearLayout horizontal ].
 
 	self
 		default: [ :aStyle |
