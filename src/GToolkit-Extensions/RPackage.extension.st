@@ -189,6 +189,18 @@ RPackage >> gtExamplesFor: aView context: aPhlowContext [
 ]
 
 { #category : #'*GToolkit-Extensions' }
+RPackage >> gtPackageCoderFor: aView [
+	<gtView>
+	^ aView explicit
+		title: 'Package Coder';
+		priority: 110;
+		stencil: [ | coder |
+			coder := GtCoder forPackage: self.
+			coder sidebarElement collapse.
+			coder ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
 RPackage >> gtPackageDependentsFor: aView [
 	"<gtView>"
 	
