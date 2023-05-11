@@ -161,7 +161,7 @@ class GlamorousToolkit {
             testers[job.agent] = {
                 try { job.execute() }
                 catch(e) {
-                    if (shouldPropagate) {} else {throw e}
+                    if (shouldPropagate) {throw e} else {}
                 }
             }
         }
