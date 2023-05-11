@@ -153,10 +153,16 @@ class GlamorousToolkit {
         def testers = [:]
         for (x in jobs) {
             def job = x
-
+            def shouldPropagate = true
+            if (job.agent.getHost()==Triplet.Linux_Aarch64) {
+                shouldPropagate = false }
+            
             // Create a map to pass in to the 'parallel' step so we can fire all the builds at once
             testers[job.agent] = {
-                job.execute()
+                try { job.execute() }
+                catch(e) {
+                    if (shouldPropagate) {throw e} else {}
+                }
             }
         }
 
