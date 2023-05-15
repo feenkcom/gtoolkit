@@ -1287,6 +1287,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "\tThis first version seems to work, but we have no tests, the Jumble fails with an exception if the word cannot be unjumbled, and the source file is hard-wired. To see how we can fix this, continue with: [[Introducing test examples and code cleaning]]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-15T16:03:02.630861+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-15T16:03:03.530573+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3Olnph24DQCUg/HRCAeS1g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Links to [[Pages Containing Missing References - Allowed Failures]] to allow references to missing classes and methods in the page."
 			}
 		]
 	},

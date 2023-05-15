@@ -34,7 +34,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-21T10:43:03.27598+01:00"
+									"dateAndTimeString" : "2023-05-15T20:29:15.380439+02:00"
 								}
 							},
 							"uid" : {
@@ -44,7 +44,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We learn how an [[example]] method combines testing with documentation."
+							"string" : "We learn how an [[Example]] method combines testing with documentation."
 						}
 					]
 				},
@@ -2141,6 +2141,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "All in all, examples provide both a more flexible platform for expressing tests, and once examples are created as part of a typical development effort, they can also serve as critical building blocks for documentation."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-15T16:42:57.847466+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-15T16:43:07.287935+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UwssNR64DQCPIhlBCAeS1g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Links to [[Pages Containing Missing References - Allowed Failures]] to allow references to missing classes and methods in the page."
 			}
 		]
 	},
