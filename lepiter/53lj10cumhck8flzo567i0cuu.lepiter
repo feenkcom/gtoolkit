@@ -1737,13 +1737,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-18T22:47:03.700547+02:00"
+						"dateAndTimeString" : "2023-05-15T20:15:13.374445+02:00"
 					}
 				},
 				"uid" : {
@@ -1753,7 +1753,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For example, let's say we want to understand how text styling works in Brick. To this end, we'd like to understand what is the path that leads to styling and how often is styling triggered. A quick code search reveals an interesting methods: {{gtMethod:BrTextEditor>>#styleText}}. A debugger would be useful, but we cannot just add a halt in that editor because this will prevent us from using the editor in the first place (this is especially problematic when the debugger uses that editor). Instead, we emit a signal for debugging purposes. We can do this dynamically by installing a meta-link:"
+				"string" : "For example, let's say we want to understand how text styling works in Brick. To this end, we'd like to understand what is the path that leads to styling and how often is styling triggered. A quick code search reveals an interesting method: {{gtMethod:BrTextEditorModel>>#styleText}}. A debugger would be useful, but we cannot just add a halt in that editor because this will prevent us from using the editor in the first place (this is especially problematic when the debugger uses that editor). Instead, we emit a signal for debugging purposes. We can do this dynamically by installing a meta-link:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1774,20 +1774,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-18T22:25:15.205593+02:00"
+						"dateAndTimeString" : "2023-05-15T20:15:10.350344+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "SzFimJKWAAAAAAAAAAAAAA=="
 				},
-				"code" : "| methodNode link |\rmethodNode := (BrTextEditor>>#styleText) ast.\rlink := MetaLink new\r\tmetaObject: [ ContextStackSignal emit ];\r\tselector: #value;\r\targuments: #().\rmethodNode link: link."
+				"code" : "| methodNode link |\rmethodNode := (BrTextEditorModel>>#styleText) ast.\rlink := MetaLink new\r\tmetaObject: [ ContextStackSignal emit ];\r\tselector: #value;\r\targuments: #().\rmethodNode link: link."
 			},
 			{
 				"__type" : "textSnippet",

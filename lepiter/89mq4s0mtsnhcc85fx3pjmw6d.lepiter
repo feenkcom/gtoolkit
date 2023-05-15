@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-21T10:08:05.873473+01:00"
+						"dateAndTimeString" : "2023-05-15T20:29:05.799581+02:00"
 					}
 				},
 				"uid" : {
@@ -113,10 +113,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "An example is always tagged with a `<gtExample>` pragma. For example, this example method produces a text snippet as its example, and asserts that it answers `true` when sent `#isTextSnippet`:"
+				"string" : "An example is always tagged with a `<gtExample>` pragma. For example, this example method produces a text editor, moves a cursor, simulates a selection, and eventually asserts that it answers the selection:"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-21T10:06:23.41824+01:00"
+						"dateAndTimeString" : "2023-05-15T20:27:43.064227+02:00"
 					}
 				},
 				"editEmail" : {
@@ -140,17 +140,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-21T10:08:39.271774+01:00"
+						"dateAndTimeString" : "2023-05-15T20:27:43.064227+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "FOR7SOWUDQCznTLTAQumiw=="
+					"uidString" : "Jx70WCG4DQCzXA7+BR1CCw=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtMethod:LeContentExamples>>#basicBlock|expanded}}"
+				"exampleSelector" : "select_moveOneRight_at_6",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "BrTextEditorSelecterExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -284,12 +287,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-02-21T09:38:48.90872+01:00"
+			"dateAndTimeString" : "2023-05-15T20:29:15.35814+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "example"
+		"title" : "Example"
 	},
 	"uid" : {
 		"__type" : "uuid",
