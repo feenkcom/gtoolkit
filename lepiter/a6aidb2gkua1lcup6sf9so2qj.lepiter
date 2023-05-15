@@ -358,6 +358,43 @@
 					"uidString" : "/V+Y4YSJDQCKnL71Czzdqw=="
 				},
 				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'UI'\r@project GemStone\r@suffix ViewModel\r\r@derive children\r@derive parent\r@derive announcer\r@derive notifier\r@derive api\r@derive phlowList\r@derive print\r\rsessionManager => session(s).\r\rsessionManager {\r\t@derive model(api: TGtWithGemStoneSessionRegistry),\r\tsession(s): #activeSessions\r}.\r\rsession(s) {\r\t@derive model(name: activeSessions),\r\t@derive selection,\r\t@derive activation\r}.\r\rsession {\r\t@derive model(api: TGtWithGemStoneSession),\r\t@derive selection,\r\t@derive activation\r}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-15T16:34:33.479921+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-15T16:34:34.667347+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iv8bFx64DQCOzFKqCAeS1g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Links to [[Pages Containing Missing References - Allowed Failures]] to allow references to missing classes and methods in the page."
 			}
 		]
 	},
