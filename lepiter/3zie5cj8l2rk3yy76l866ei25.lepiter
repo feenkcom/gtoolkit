@@ -110,10 +110,10 @@
 					"__type" : "uid",
 					"uidString" : "ukONSO7+AAAAAAAAAAAAAA=="
 				},
-				"exampleSelector" : "elementOnDefaultSpotter",
-				"previewHeight" : 300,
+				"exampleSelector" : "elementOnStart",
+				"previewHeight" : 400,
 				"previewShowSelector" : "gtLiveFor:",
-				"exampleBehaviorName" : "GtSpotterElementExamples",
+				"exampleBehaviorName" : "GtSpotterByScripterExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
 				"noCode" : true
@@ -143,7 +143,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-06T10:41:22.34655-05:00"
+						"dateAndTimeString" : "2023-05-15T12:29:26.713731+02:00"
 					}
 				},
 				"uid" : {
@@ -153,7 +153,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The actual search is executed through a processor. Each processor has a name, and is presented in the search result in the form of a search category. Through this, every search yields results in possibly multiple categories of results. For example, in the default context we get:"
+				"string" : "The actual search is defined separately. Each search definition has a name, and is presented in the search result in the form of a search category. Through this, every search yields results in possibly multiple categories of results. For example, in the default context we get:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -187,10 +187,10 @@
 					"__type" : "uid",
 					"uidString" : "uNuUEG8pAAAAAAAAAAAAAA=="
 				},
-				"exampleSelector" : "defaultStep",
+				"exampleSelector" : "defaultStepOnStart",
 				"previewHeight" : 200,
-				"previewShowSelector" : "gtProcessorsFor:",
-				"exampleBehaviorName" : "GtSpotterStepExamples",
+				"previewShowSelector" : "gtSearchesFor:",
+				"exampleBehaviorName" : "GtSpotterByScripterExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
 				"noCode" : true
@@ -251,13 +251,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-24T22:51:39.988137+02:00"
+						"dateAndTimeString" : "2023-05-15T12:11:21.209385+02:00"
 					}
 				},
 				"uid" : {
@@ -267,7 +267,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A Spotter search is like an inspector view: it's a method implemented in a class of the object in the context of which we want to search. The global Spotter starts from an instance of {{gtClass:GtSpotterStart}}. This one has methods like  {{gtMethod:GtSpotterStart>>#gtSpotterForClassesFor:|expanded=true}} which is responsible for searching for classes and traits in the image:"
+				"string" : "A Spotter search is like an inspector view: it's a method implemented in a class of the object in the context of which we want to search. The global Spotter starts from an instance of {{gtClass:GtSpotterStart}}. This one has methods like  {{gtMethod:GtSpotterStart>>#gtSearchForClassesFor:|expanded=true}} which is responsible for searching for classes and traits in the image:"
 			},
 			{
 				"__type" : "textSnippet",
