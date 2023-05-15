@@ -11,7 +11,6 @@ GtWorldTabToolbarButtonAptitude >> initialize [
 	self addAll: { 
 		BrGlamorousButtonIconAptitude new.
 		BrGlamorousButtonWithLabelTooltipAptitude new.
-		BrLayoutResizerAptitude inherit.
 		BrLayoutAlignmentAptitude new }.
 		
 	self
