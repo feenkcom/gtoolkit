@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-28T16:52:10.430433+02:00"
+						"dateAndTimeString" : "2023-05-04T22:22:09.157191+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-28T16:54:03.643246+02:00"
+						"dateAndTimeString" : "2023-05-04T22:43:06.500649+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AGzOWsi2DQC/s0hgDRkQ6g=="
+					"uidString" : "XkTzqUW3DQCdJurXDG6AuQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The home tab shows a section with a card for the current book. This is defined here: {{gtMethod:GtHome>>#getStartedSection|expanded=true}}."
+				"string" : "You can use the {{gtClass:BrAsyncFileWidget}}:"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-28T16:52:51.997527+02:00"
+						"dateAndTimeString" : "2023-05-04T22:22:11.594871+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-28T16:55:11.329037+02:00"
+						"dateAndTimeString" : "2023-05-04T22:42:37.234822+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Oa1IXci2DQCB0o9eDRkQ6g=="
+					"uidString" : "Z28YqkW3DQCdKT1GDG6AuQ=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "To define your own section, create an extension method to {{gtClass:GtHome}} that returns an instance of {{gtClass:GtHomeSection}} and that is annotated with the gtHomeSection pragma."
+				"code" : "BrAsyncFileWidget new\r\turl: 'https://gtoolkit.com/assets/pictures/glamoroustoolkit-icon.png';\r\tconstraintsDo: [ :c | \r\t\tc horizontal matchParent.\r\t\tc vertical matchParent ]"
 			}
 		]
 	},
@@ -88,7 +85,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-04-28T16:52:10.370255+02:00"
+			"dateAndTimeString" : "2023-05-04T22:22:09.064149+02:00"
 		}
 	},
 	"editEmail" : {
@@ -99,15 +96,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-04-28T16:52:10.370255+02:00"
+			"dateAndTimeString" : "2023-05-04T22:22:09.064149+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to extend the home tab with a new section"
+		"title" : "How to show a picture from a URL"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "2580cd5a-c8b6-0d00-bfb2-f3ae0d1910ea"
+		"uuid" : "04d8f1a9-45b7-0d00-9d25-ad000c6e80b9"
 	}
 }
