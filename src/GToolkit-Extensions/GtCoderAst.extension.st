@@ -16,7 +16,7 @@ GtCoderAst >> gtSourceStringFor: aView [
 	<gtView>
 
 	^ aView forward
-		title: 'Source String' translated;
+		title: 'Source string' translated;
 		priority: 11;
 		object: [ self sourceString ];
 		view: #gtStringFor:;

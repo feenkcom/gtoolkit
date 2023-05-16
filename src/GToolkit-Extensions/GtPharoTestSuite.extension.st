@@ -6,7 +6,7 @@ GtPharoTestSuite >> gtLiveFor: aView [
 	testCasesStream ifNil: [ ^ aView empty ].
 
 	^ aView columnedList
-		title: 'Test Cases';
+		title: 'Test cases';
 		priority: 1;
 		items: [ self allTestCases ];
 		column: 'Number'

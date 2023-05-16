@@ -16,7 +16,7 @@ Color class >> gtRegisteredColorsFor: aView [
 	ColorRegistry ifNil: [ ^ aView empty ].
 	
 	^ aView columnedList 
-		title: 'Registered Colors';
+		title: 'Registered colors';
 		items: [ self gtRegisteredColors
 			sort: [ :a :b | a < b ] ];
 		actionUpdateButton;

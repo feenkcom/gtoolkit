@@ -9,7 +9,7 @@ PharoCommonTools >> gtRecentToolsFor: aView context: aContext [
 	aContext at: #gtTreeExpansionLevel put: true.
 
 	^ aView forward
-		  title: 'Recent Tools';
+		  title: 'Recent tools';
 		  priority: 2;
 		  object: [ recentTools ];
 		  view: #gtTreeFor:context:

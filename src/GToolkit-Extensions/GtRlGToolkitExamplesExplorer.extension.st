@@ -9,7 +9,7 @@ GtRlGToolkitExamplesExplorer >> gtViewAllExamplesInImageFor: aView context: aPhl
 			inPhlowContext: aPhlowContext.
 
 	^ aView explicit
-		title: 'All Smalltalk Examples';
+		title: 'All smalltalk examples';
 		priority: 20;
 		stencil: [ | aCollection aGroup aGroupView anElement |
 			aCollection := Smalltalk gtExamplesContained

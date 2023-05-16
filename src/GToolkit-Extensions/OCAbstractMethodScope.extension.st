@@ -4,7 +4,7 @@ Extension { #name : #OCAbstractMethodScope }
 OCAbstractMethodScope >> gtAllTempsFor: aView [
 	<gtView>
 	^ aView columnedList
-		title: 'All Temps';
+		title: 'All temps';
 		tooltip: 'All Temporary Variables';
 		priority: 1;
 		items: [ self allTemps ];

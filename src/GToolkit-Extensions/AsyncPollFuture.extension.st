@@ -26,7 +26,7 @@ AsyncPollFuture >> gtViewExecutedBlockFor: aView [
 	executedBlock ifNil: [ ^ aView empty ].
 	
 	^ aView forward 
-		title: 'Executed Block';
+		title: 'Executed block';
 		object: [ executedBlock ];
 		view: #gtSourceCodeFor:
 ]

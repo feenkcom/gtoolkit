@@ -73,7 +73,7 @@ GtHome >> getStartedSection [
 GtHome >> gtViewHomeSectionsFor: aView [
 	<gtView>
 	^ aView list 
-		title: 'Section Stencils';
+		title: 'Section stencils';
 		items: [ self collectHomeSectionStencils ]
 ]
 

@@ -22,7 +22,7 @@ ZnHttpUnsuccessful >> gtResponseHeadersFor: aView [
 	<gtView>
 	self response ifNil: [ ^ aView empty ].
 	^ aView forward
-		  title: 'Response Headers';
+		  title: 'Response headers';
 		  priority: 4;
 		  object: [ self response ];
 		  view: #gtHeadersFor:;
@@ -38,7 +38,7 @@ ZnHttpUnsuccessful >> gtResponseTextContentsFor: aView [
 	<gtView>
 	self response ifNil: [ ^ aView empty ].
 	^ aView forward
-		  title: 'Response Contents';
+		  title: 'Response contents';
 		  priority: 5;
 		  object: [ self response ];
 		  view: #gtTextContentsFor:;

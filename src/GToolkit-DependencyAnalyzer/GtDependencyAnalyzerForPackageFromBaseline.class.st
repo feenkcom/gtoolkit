@@ -275,7 +275,7 @@ GtDependencyAnalyzerForPackageFromBaseline >> gtSuggestedBaselinesFor: aView con
 		               allPreloadedPackages.
 
 	^ aView columnedList
-		  title: 'Suggested Baselines';
+		  title: 'Suggested baselines';
 		  priority: 10;
 		  items: [ 
 			  (self packageDependencies sorted: [ :a :b | 

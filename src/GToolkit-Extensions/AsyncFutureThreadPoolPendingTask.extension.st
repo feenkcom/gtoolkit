@@ -29,7 +29,7 @@ AsyncFutureThreadPoolPendingTask >> gtTaskFullPromiseTreeFor: aView [
 	
 	task ifNil: [ ^ aView empty ].
 	^ aView forward 
-		title: 'Full Tree';
+		title: 'Full tree';
 		priority: 10;
 		object: [ task ];
 		view: #gtFullPromiseTreeFor:
@@ -41,7 +41,7 @@ AsyncFutureThreadPoolPendingTask >> gtTaskPromiseFor: aView [
 	
 	task ifNil: [ ^ aView empty ].
 	^ aView forward 
-		title: 'Task Promise';
+		title: 'Task promise';
 		priority: 1;
 		object: [ task ];
 		view: #gtPromiseFor:

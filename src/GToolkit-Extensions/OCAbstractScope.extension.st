@@ -5,7 +5,7 @@ OCAbstractScope >> gtOuterScopesFor: aView [
 	<gtView>
 	outerScope ifNil: [ ^ aView empty ].
 	^ aView columnedTree
-		title: 'Outer Scopes';
+		title: 'Outer scopes';
 		priority: 5;
 		items: [ { self } ];
 		children: [ :aScope | 

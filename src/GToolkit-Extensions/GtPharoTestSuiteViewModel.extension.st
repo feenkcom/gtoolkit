@@ -6,7 +6,7 @@ GtPharoTestSuiteViewModel >> gtLiveFor: aView [
 	self hasPharoTestSuite ifNil: [ ^ aView empty ].
 
 	^ aView forward
-		title: 'Test Cases';
+		title: 'Test cases';
 		priority: 1;
 		object: [ self pharoTestSuite ];
 		view: #gtLiveFor:

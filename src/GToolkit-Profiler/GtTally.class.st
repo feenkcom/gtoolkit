@@ -169,7 +169,7 @@ GtTally >> gtPreviewFor: aView [
 GtTally >> gtRecursionSummaryMessagesTreeIn: aView [
 	<gtView>
 	^ aView forward
-		title: 'Summarize Recursion';
+		title: 'Summarize recursion';
 		priority: 1;
 		object: [ self applyFilter: GtRecursionSummaryFilter new ];
 		view: #gtMessagesTreeIn:

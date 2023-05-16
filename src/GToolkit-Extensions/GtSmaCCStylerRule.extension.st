@@ -11,7 +11,7 @@ GtSmaCCStylerRule >> gtStyleBlockFor: aView [
 	self styleBlock ifNil: [ ^ aView empty ].
 
 	^ aView forward
-		title: 'Style Block';
+		title: 'Style block';
 		object: [ self styleBlock ];
 		view: #gtSourceCodeFor:
 ]

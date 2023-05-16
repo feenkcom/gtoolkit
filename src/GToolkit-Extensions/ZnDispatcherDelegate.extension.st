@@ -9,5 +9,5 @@ ZnDispatcherDelegate >> gtDelegateFor: aView [
 ZnDispatcherDelegate >> gtMapFor: aView [
 	<gtView>
 	^ (self dispatcherDictionary gtItemsFor: aView)
-		title: 'Access Point Handlers'
+		title: 'Access point handlers'
 ]

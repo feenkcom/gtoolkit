@@ -9,7 +9,7 @@ GtClassesImplementingEqualsShouldAlsoHaveHashConstraint >> gtViewByPackageFor: a
 	<gtView>
 
 	^ aView columnedList 
-		title: 'By Package';
+		title: 'By package';
 		items: [  
 			(self issues 
 				groupedBy: [ :aMethod | aMethod package ]) associations 
@@ -24,7 +24,7 @@ GtClassesImplementingEqualsShouldAlsoHaveHashConstraint >> gtViewByPackageInGTFo
 	<gtView>
 
 	^ aView columnedList 
-		title: 'By Package (in GT)';
+		title: 'By package (in gt)';
 		items: [  
 			| gtPackages |
 			gtPackages := BaselineOfGToolkit gtRlAllValidRPackages.

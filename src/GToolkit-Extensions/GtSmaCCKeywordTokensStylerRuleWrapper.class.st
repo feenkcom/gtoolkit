@@ -46,7 +46,7 @@ GtSmaCCKeywordTokensStylerRuleWrapper >> gtStyleBlockFor: aView [
 	self rule ifNil: [ ^ aView empty ].
 
 	^ aView forward
-		title: 'Style Block';
+		title: 'Style block';
 		priority: 5;
 		object: [ self rule ];
 		view: #gtStyleBlockFor:

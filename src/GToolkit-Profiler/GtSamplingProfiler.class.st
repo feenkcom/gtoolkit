@@ -83,7 +83,7 @@ GtSamplingProfiler >> gtPreviewFor: aView [
 GtSamplingProfiler >> gtRecursionSummaryMessagesTreeIn: aView [
 	<gtView>
 	^ aView forward
-		title: 'Summarize Recursion';
+		title: 'Summarize recursion';
 		priority: 1;
 		object: [ rootTally ];
 		view: #gtRecursionSummaryMessagesTreeIn:

@@ -6,7 +6,7 @@ BrAsyncElementFutureReceivedSignal >> gtSkipReasonFor: aView [
 	self isSkipped ifFalse: [ ^ aView empty ].
 
 	^ aView columnedList
-		title: 'Skip Reason';
+		title: 'Skip reason';
 		priority: 0;
 		items: [ self skipReasonDictionary associations ];
 		column: 'Name' text: #key;

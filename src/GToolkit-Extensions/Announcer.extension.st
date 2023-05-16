@@ -5,7 +5,7 @@ Announcer >> gtSubscriptionsPerSubscriberFor: aView [
 	<gtView>
 	self subscriptions ifNil: [ ^ aView empty ].
 	^ aView columnedTree
-		title: 'Per Subscriber';
+		title: 'Per subscriber';
 		priority: 51;
 		items: [ GtSubscriptionSubscriber fromAnnouncer: self ];
 		children: [ :each | 

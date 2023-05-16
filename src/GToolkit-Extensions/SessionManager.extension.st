@@ -24,7 +24,7 @@ SessionManager >> gtViewShutdownListFor: aView [
 	<gtView>
 	
 	^ aView columnedList 
-		title: 'Shutdow List';
+		title: 'Shutdow list';
 		priority: 25;
 		items: [ 
 			self gtStartupListWithDetails  reversed ];
@@ -39,7 +39,7 @@ SessionManager >> gtViewStartupListFor: aView [
 	<gtView>
 	
 	^ aView columnedList 
-		title: 'Startup List';
+		title: 'Startup list';
 		priority: 20;
 		items: [ 
 			self gtStartupListWithDetails ];

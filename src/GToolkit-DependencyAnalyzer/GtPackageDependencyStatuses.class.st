@@ -62,7 +62,7 @@ GtPackageDependencyStatuses >> gtDependenciesFor: aView [
 GtPackageDependencyStatuses >> gtDisplayAsArrayFor: aView [
 	<gtView>
 	^ aView textEditor
-		title: 'Print as Array';
+		title: 'Print as array';
 		priority: 11;
 		aptitude: BrGlamorousCodeEditorAptitude;
 		text: [ String

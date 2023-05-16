@@ -6,7 +6,7 @@ GtSmaCCParserStyler >> gtStylerRulesFor: aView [
 	stylerRules ifNil: [ ^ aView empty ].
 
 	^ aView columnedList
-		title: 'Styler Rules';
+		title: 'Styler rules';
 		items: [ self stylerRules ];
 		column: 'Class Name' text: #className;
 		column: 'Description'

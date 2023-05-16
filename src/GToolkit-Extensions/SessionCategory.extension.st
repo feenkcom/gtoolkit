@@ -26,7 +26,7 @@ SessionCategory >> gtViewPriorityListsFor: aView [
 	<gtView>
 	
 	^ aView forward 
-		title: 'Priority Lists';
+		title: 'Priority lists';
 		object: [ (priorityLists associations sorted: [ :assoc |
 			assoc key ] ascending) asOrderedDictionary ];
 		priority: 20;

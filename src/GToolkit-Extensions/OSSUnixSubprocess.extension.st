@@ -5,7 +5,7 @@ OSSUnixSubprocess >> gtEnvironmentVariablesFor: aView [
 	<gtView>
 	self envVariables ifNil: [ ^ aView empty ].
 	^ aView forward
-		title: 'Environment Variables';
+		title: 'Environment variables';
 		priority: 10;
 		object: [ self envVariables ];
 		view: #gtItemsFor:

@@ -6,7 +6,7 @@ BlSpaceTaskQueue >> gtPendingTasksFor: aView [
 	tasks lock: [ :theTasks | theTasks ifNil: [ ^ aView empty ] ].
 
 	^ aView forward
-		title: 'Pending Tasks';
+		title: 'Pending tasks';
 		priority: 1;
 		object: [ tasks lock: [ :theTasks | theTasks ] ];
 		view: #gtPendingTasksFor:
@@ -18,7 +18,7 @@ BlSpaceTaskQueue >> gtTasksAtQueueFor: aView [
 	self taskAtQueue ifNil: [ ^ aView empty ].
 
 	^ aView forward
-		title: 'Tasks At Queue';
+		title: 'Tasks at queue';
 		priority: 3;
 		object: [ self taskAtQueue ];
 		view: #gtItemsFor:;
@@ -31,7 +31,7 @@ BlSpaceTaskQueue >> gtTasksFor: aView [
 	tasks lock: [ :theTasks | theTasks ifNil: [ ^ aView empty ] ].
 
 	^ aView forward
-		title: 'Active Tasks';
+		title: 'Active tasks';
 		priority: 2;
 		object: [ tasks lock: [ :theTasks | theTasks ] ];
 		view: #gtActiveTasksFor:
