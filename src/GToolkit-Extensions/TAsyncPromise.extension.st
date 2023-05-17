@@ -13,7 +13,7 @@ TAsyncPromise >> gtFullPromiseTreeFor: aView [
 	<gtView>
 	
 	^ aView mondrian
-		title: 'Full Tree';
+		title: 'Full tree';
 		priority: 3;
 		painting: [ :aMondrian | self gtPaintFullTreeOn: aMondrian ]
 ]
@@ -213,7 +213,7 @@ TAsyncPromise >> gtPromiseTreeFor: aView [
 	<gtView>
 	
 	^ aView mondrian
-		title: 'Promise Tree';
+		title: 'Promise tree';
 		priority: 2;
 		painting: [ :aMondrian | self gtPaintTreeWith: aMondrian ]
 ]

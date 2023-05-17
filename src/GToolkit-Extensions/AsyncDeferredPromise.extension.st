@@ -17,3 +17,23 @@ AsyncDeferredPromise >> gtCompositionChildren [
 AsyncDeferredPromise >> gtCompositionDescription [
 	^ self printString
 ]
+
+{ #category : #'*GToolkit-Extensions' }
+AsyncDeferredPromise >> gtFullPromiseTreeFor: aView [
+	<gtView>
+	
+	^ aView mondrian
+		title: 'Full tree';
+		priority: 3;
+		painting: [ :aMondrian | self gtPaintFullTreeOn: aMondrian ]
+]
+
+{ #category : #'*GToolkit-Extensions' }
+AsyncDeferredPromise >> gtPromiseTreeFor: aView [
+	<gtView>
+	
+	^ aView mondrian
+		title: 'Promise tree';
+		priority: 2;
+		painting: [ :aMondrian | self gtPaintTreeWith: aMondrian ]
+]

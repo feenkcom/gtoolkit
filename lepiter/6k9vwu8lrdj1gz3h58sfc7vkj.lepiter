@@ -1,481 +1,481 @@
 {
-	"__type" : "page",
 	"__schema" : "4.1",
-	"pageType" : {
-		"title" : "Managing dependencies constraint",
-		"__type" : "namedPage"
-	},
-	"editEmail" : {
-		"__type" : "email",
-		"emailString" : "chisvasileandrei@gmail.com"
-	},
-	"createTime" : {
-		"time" : {
-			"dateAndTimeString" : "2021-02-24T15:10:15.123953+01:00",
-			"__type" : "dateAndTime"
-		},
-		"__type" : "time"
-	},
-	"uid" : {
-		"uuid" : "9383b954-7778-0d00-9e33-23a1092ddc6e",
-		"__type" : "uuid"
-	},
+	"__type" : "page",
 	"children" : {
+		"__type" : "snippets",
 		"items" : [
 			{
 				"__type" : "textSnippet",
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Glamorous Toolkit uses baselines to manage dependencies. A baseline indicates the list of packages to load, and for each package its dependencies to other packages and baselines.  ",
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"createTime" : {
-					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:24:14.255227+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				},
-				"uid" : {
-					"uidString" : "LtXzIZYfAAAAAAAAAAAAAA==",
-					"__type" : "uid"
-				},
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:28:32.397805+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
-			},
-			{
-				"__type" : "textSnippet",
-				"paragraphStyle" : {
-					"__type" : "textStyle"
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:24:14.255227+01:00"
+					}
 				},
-				"string" : "To avoid erros during loading a baseline should define all relevant dependencies for its packages. To ensure this we added a custom constraint, namely {{gtClass:GtBaselinesShouldProperlySpecifyDependencies}}.  This constraint does a static analysis for all packages defines inside the baseline and computes  their package dependencies. Then for each package dependency it  checks if that package is defined as a dependency either directly, explicitly using a baseline, or it is an implicit dependency.",
 				"editEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"createTime" : {
+				"editTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:32:36.725424+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:28:32.397805+01:00"
+					}
 				},
 				"uid" : {
-					"uidString" : "47WD4AbUAAAAAAAAAAAAAA==",
-					"__type" : "uid"
+					"__type" : "uid",
+					"uidString" : "LtXzIZYfAAAAAAAAAAAAAA=="
 				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Glamorous Toolkit uses baselines to manage dependencies. A baseline indicates the list of packages to load, and for each package its dependencies to other packages and baselines.  "
+			},
+			{
+				"__type" : "textSnippet",
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:56:23.715081+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
-			},
-			{
-				"__type" : "textSnippet",
-				"paragraphStyle" : {
-					"__type" : "textStyle"
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:32:36.725424+01:00"
+					}
 				},
-				"string" : "In short the constraint checks that all dependencies detected by analysing the source code are defined in the baseline. The constraint returns the list of baselines that do not pass this check.",
 				"editEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"createTime" : {
+				"editTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:53:47.594234+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:56:23.715081+01:00"
+					}
 				},
 				"uid" : {
-					"uidString" : "c3pdx7H2AAAAAAAAAAAAAA==",
-					"__type" : "uid"
+					"__type" : "uid",
+					"uidString" : "47WD4AbUAAAAAAAAAAAAAA=="
 				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To avoid erros during loading a baseline should define all relevant dependencies for its packages. To ensure this we added a custom constraint, namely {{gtClass:GtBaselinesShouldProperlySpecifyDependencies}}.  This constraint does a static analysis for all packages defines inside the baseline and computes  their package dependencies. Then for each package dependency it  checks if that package is defined as a dependency either directly, explicitly using a baseline, or it is an implicit dependency."
+			},
+			{
+				"__type" : "textSnippet",
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:54:41.024522+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
-			},
-			{
-				"__type" : "textSnippet",
-				"paragraphStyle" : {
-					"__type" : "textStyle"
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:53:47.594234+01:00"
+					}
 				},
-				"string" : "As an example, the view below shows the result of applying this analysis on {{gtClass:BaselineOfBloc|show=gtDependencyAnalyzerFor:|expanded=true|height=450}}. For all packages there are no undeclared dependencies.",
 				"editEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"createTime" : {
+				"editTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:52:40.119348+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:54:41.024522+01:00"
+					}
 				},
 				"uid" : {
-					"uidString" : "Q9wS9oIBAAAAAAAAAAAAAA==",
-					"__type" : "uid"
+					"__type" : "uid",
+					"uidString" : "c3pdx7H2AAAAAAAAAAAAAA=="
 				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In short the constraint checks that all dependencies detected by analysing the source code are defined in the baseline. The constraint returns the list of baselines that do not pass this check."
+			},
+			{
+				"__type" : "textSnippet",
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T18:09:19.70618+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
-			},
-			{
-				"__type" : "textSnippet",
-				"paragraphStyle" : {
-					"__type" : "textStyle"
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:52:40.119348+01:00"
+					}
 				},
-				"string" : "We can also take a closer look at the analysis for the package `Bloc-Sparta` . ",
 				"editEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"createTime" : {
+				"editTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T21:48:35.323787+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T18:09:19.70618+01:00"
+					}
 				},
 				"uid" : {
-					"uidString" : "8+3KpLFdAAAAAAAAAAAAAA==",
-					"__type" : "uid"
+					"__type" : "uid",
+					"uidString" : "Q9wS9oIBAAAAAAAAAAAAAA=="
 				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "As an example, the view below shows the result of applying this analysis on {{gtClass:BaselineOfBloc|show=gtDependencyAnalyzerFor:|expanded=true|height=450}}. For all packages there are no undeclared dependencies."
+			},
+			{
+				"__type" : "textSnippet",
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T21:48:58.363114+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
-			},
-			{
-				"__type" : "textSnippet",
-				"paragraphStyle" : {
-					"__type" : "textStyle"
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T21:48:35.323787+01:00"
+					}
 				},
-				"string" : "{{gtExample:GtBaselinesShouldProperlySpecifyDependencies class>>blocSpartaPackageAnalysisExample|noCode=true|previewShow=gtPackageDependenciesFor:}}",
 				"editEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"createTime" : {
+				"editTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T21:49:03.81321+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T21:48:58.363114+01:00"
+					}
 				},
 				"uid" : {
-					"uidString" : "nMZ26VPBAAAAAAAAAAAAAA==",
-					"__type" : "uid"
+					"__type" : "uid",
+					"uidString" : "8+3KpLFdAAAAAAAAAAAAAA=="
 				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can also take a closer look at the analysis for the package `Bloc-Sparta` . "
+			},
+			{
+				"__type" : "textSnippet",
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T21:50:12.506347+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
-			},
-			{
-				"__type" : "textSnippet",
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T21:49:03.81321+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-05-16T19:01:11.25347-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nMZ26VPBAAAAAAAAAAAAAA=="
+				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can see that this package has three types of dependencies,  that are specified correctly inside the baseline",
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"createTime" : {
-					"time" : {
-						"dateAndTimeString" : "2021-02-24T21:50:43.065437+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				},
-				"uid" : {
-					"uidString" : "oZs0zzPtAAAAAAAAAAAAAA==",
-					"__type" : "uid"
-				},
+				"string" : "{{gtExample:GtBaselinesShouldProperlySpecifyDependencies class>>blocSpartaPackageAnalysisExample|noCode=true|previewShow=gtPackageDependenciesFor:context:}}"
+			},
+			{
+				"__type" : "textSnippet",
 				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Dependencies to packages defined in the same baseline",
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "chisvasileandrei@gmail.com"
-							},
-							"createTime" : {
-								"time" : {
-									"dateAndTimeString" : "2021-02-24T21:51:00.791952+01:00",
-									"__type" : "dateAndTime"
-								},
-								"__type" : "time"
-							},
-							"uid" : {
-								"uidString" : "o8zuaV7GAAAAAAAAAAAAAA==",
-								"__type" : "uid"
-							},
 							"children" : {
-								"items" : [ ],
-								"__type" : "snippets"
+								"__type" : "snippets",
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
 								"emailString" : "chisvasileandrei@gmail.com"
 							},
-							"editTime" : {
+							"createTime" : {
+								"__type" : "time",
 								"time" : {
-									"dateAndTimeString" : "2021-02-24T21:55:17.244739+01:00",
-									"__type" : "dateAndTime"
-								},
-								"__type" : "time"
-							}
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-24T21:51:00.791952+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-24T21:55:17.244739+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "o8zuaV7GAAAAAAAAAAAAAA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Dependencies to packages defined in the same baseline"
 						},
 						{
 							"__type" : "textSnippet",
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Dependencies to packages defined in other baselines",
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "chisvasileandrei@gmail.com"
-							},
-							"createTime" : {
-								"time" : {
-									"dateAndTimeString" : "2021-02-24T21:51:14.974715+01:00",
-									"__type" : "dateAndTime"
-								},
-								"__type" : "time"
-							},
-							"uid" : {
-								"uidString" : "u7aiRc+SAAAAAAAAAAAAAA==",
-								"__type" : "uid"
-							},
 							"children" : {
-								"items" : [ ],
-								"__type" : "snippets"
+								"__type" : "snippets",
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
 								"emailString" : "chisvasileandrei@gmail.com"
 							},
-							"editTime" : {
+							"createTime" : {
+								"__type" : "time",
 								"time" : {
-									"dateAndTimeString" : "2021-02-24T21:55:22.132947+01:00",
-									"__type" : "dateAndTime"
-								},
-								"__type" : "time"
-							}
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-24T21:51:14.974715+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-24T21:55:22.132947+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "u7aiRc+SAAAAAAAAAAAAAA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Dependencies to packages defined in other baselines"
 						},
 						{
 							"__type" : "textSnippet",
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Dependencies to packages from the standard Pharo image. ",
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "chisvasileandrei@gmail.com"
-							},
-							"createTime" : {
-								"time" : {
-									"dateAndTimeString" : "2021-02-24T21:51:41.694333+01:00",
-									"__type" : "dateAndTime"
-								},
-								"__type" : "time"
-							},
-							"uid" : {
-								"uidString" : "bf2QyiQ1AAAAAAAAAAAAAA==",
-								"__type" : "uid"
-							},
 							"children" : {
-								"items" : [ ],
-								"__type" : "snippets"
+								"__type" : "snippets",
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
 								"emailString" : "chisvasileandrei@gmail.com"
 							},
-							"editTime" : {
+							"createTime" : {
+								"__type" : "time",
 								"time" : {
-									"dateAndTimeString" : "2021-02-24T21:52:01.6314+01:00",
-									"__type" : "dateAndTime"
-								},
-								"__type" : "time"
-							}
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-24T21:51:41.694333+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "chisvasileandrei@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2021-02-24T21:52:01.6314+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bf2QyiQ1AAAAAAAAAAAAAA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Dependencies to packages from the standard Pharo image. "
 						}
-					],
-					"__type" : "snippets"
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T21:55:19.396048+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
-			},
-			{
-				"__type" : "textSnippet",
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T21:50:43.065437+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "chisvasileandrei@gmail.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T21:55:19.396048+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "oZs0zzPtAAAAAAAAAAAAAA=="
+				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To run this constrait use the code below:",
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"createTime" : {
-					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:50:56.055428+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				},
-				"uid" : {
-					"uidString" : "lCjbK2pcAAAAAAAAAAAAAA==",
-					"__type" : "uid"
-				},
+				"string" : "We can see that this package has three types of dependencies,  that are specified correctly inside the baseline"
+			},
+			{
+				"__type" : "textSnippet",
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:51:03.227539+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:50:56.055428+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "chisvasileandrei@gmail.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:51:03.227539+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lCjbK2pcAAAAAAAAAAAAAA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To run this constrait use the code below:"
 			},
 			{
 				"__type" : "pharoSnippet",
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "chisvasileandrei@gmail.com"
-				},
-				"createTime" : {
-					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:51:08.598103+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				},
-				"code" : "GtBaselinesShouldProperlySpecifyDependencies new",
-				"uid" : {
-					"uidString" : "HVV9UijxAAAAAAAAAAAAAA==",
-					"__type" : "uid"
-				},
 				"children" : {
-					"items" : [ ],
-					"__type" : "snippets"
+					"__type" : "snippets",
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "chisvasileandrei@gmail.com"
 				},
-				"editTime" : {
+				"createTime" : {
+					"__type" : "time",
 					"time" : {
-						"dateAndTimeString" : "2021-02-24T17:51:11.316668+01:00",
-						"__type" : "dateAndTime"
-					},
-					"__type" : "time"
-				}
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:51:08.598103+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "chisvasileandrei@gmail.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-02-24T17:51:11.316668+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "HVV9UijxAAAAAAAAAAAAAA=="
+				},
+				"code" : "GtBaselinesShouldProperlySpecifyDependencies new"
 			}
-		],
-		"__type" : "snippets"
+		]
 	},
 	"createEmail" : {
 		"__type" : "email",
 		"emailString" : "chisvasileandrei@gmail.com"
 	},
-	"editTime" : {
+	"createTime" : {
+		"__type" : "time",
 		"time" : {
-			"dateAndTimeString" : "2021-02-24T21:49:36.169722+01:00",
-			"__type" : "dateAndTime"
-		},
-		"__type" : "time"
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-02-24T15:10:15.123953+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "chisvasileandrei@gmail.com"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2021-02-24T21:49:36.169722+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Managing dependencies constraint"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "9383b954-7778-0d00-9e33-23a1092ddc6e"
 	}
 }

@@ -5,7 +5,7 @@ BlElement >> gtChildrenShortcutsFor: aView [
 	<gtView>
 	
 	^ aView columnedList
-		title: 'Children Shortcuts' translated;
+		title: 'Children shortcuts' translated;
 		priority: 11;
 		items: [ | all |
 			all := OrderedCollection new.

@@ -6,7 +6,7 @@ GtSmaCCNodeVariableStylerRule >> gtVariableNamesFor: aView [
 	self variableNames ifNil: [ ^ aView empty ].
 
 	^ aView columnedList
-		title: 'Variable Names';
+		title: 'Variable names';
 		items: [ self variableNames ifNil: [ #() ] ];
 		column: 'Name' text: #yourself
 ]

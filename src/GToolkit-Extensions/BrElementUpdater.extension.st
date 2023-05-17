@@ -12,7 +12,7 @@ BrElementUpdater >> gtActionMethodFor: aView [
 
 
 	^ aView forward
-		title: 'Updating Method';
+		title: 'Updating method';
 		object: [ self action ];
 		view: aSelector
 ]

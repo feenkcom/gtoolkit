@@ -13,7 +13,7 @@ BaselineOfGToolkit class >> gtGtMapFor: aView [
 			aString asRopedText foreground: (({'GT' . 'Brick' . 'Bloc' . 'Sparta' . 'Xdoc' . 'Glutin'} anySatisfy: [:prefix | aString beginsWith: prefix ]) 
 				ifTrue: [BrGlamorousColors linkColor] 
 				ifFalse: [Color gray]) ])
-			title: 'Gt Map'
+			title: 'Gt map'
 ]
 
 { #category : #'*GToolkit-Extensions' }

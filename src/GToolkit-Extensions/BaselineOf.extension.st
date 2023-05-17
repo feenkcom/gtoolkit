@@ -46,7 +46,7 @@ BaselineOf class >> gtViewAllExamplesFor: aView [
 	<gtView>
 	<gtClassView>
 	^ aView forward
-		title: 'All Examples';
+		title: 'All examples';
 		priority: 33;
 		tooltip: 'Examples defined in packages contained in the baseline or in dependencies.';
 		object: [
@@ -59,7 +59,7 @@ BaselineOf class >> gtViewLocalExamplesFor: aView [
 	<gtView>
 	<gtClassView>
 	^ aView forward
-		title: 'Local Examples';
+		title: 'Local examples';
 		priority: 30;
 		tooltip: 'Examples defined in packages directly contained within the baseline.';
 		object: [

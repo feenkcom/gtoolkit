@@ -4,7 +4,7 @@ Extension { #name : #AsyncStreamTransitionBuffer }
 AsyncStreamTransitionBuffer >> gtBufferedItemsFor: aView [
 	<gtView>
 	^ aView forward
-		title: 'New Buffer Items';
+		title: 'New buffer items';
 		priority: 5;
 		object: [ newBuffer ];
 		view: #gtBufferedItemsFor:

@@ -6,7 +6,7 @@ BrElementUpdaterSignal >> gtActionMethodFor: aView [
 	self updater ifNil: [ ^ aView empty ].
 
 	^ aView forward
-		title: 'Updating Method';
+		title: 'Updating method';
 		object: [ self updater ];
 		view: #gtActionMethodFor:
 ]

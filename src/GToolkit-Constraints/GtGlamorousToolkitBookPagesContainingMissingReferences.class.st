@@ -52,7 +52,7 @@ GtGlamorousToolkitBookPagesContainingMissingReferences >> findMissingReferencesI
 GtGlamorousToolkitBookPagesContainingMissingReferences >> gtIgnoredItemsFor: aView [
 	<gtView>
 	^ aView columnedList
-		title: 'Ignored Issues';
+		title: 'Ignored issues';
 		priority: 5;
 		items: [ self ignoredIssues ];
 		column: 'Index'

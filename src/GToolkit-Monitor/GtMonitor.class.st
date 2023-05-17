@@ -111,7 +111,7 @@ GtMonitor >> gtFutureWorkersPoolFor: aView [
 	<gtView>
 	
 	^ aView forward
-		title: 'Future Workers';
+		title: 'Future workers';
 		priority: 45;
 		object: [ AsyncFutureThreadPool current ];
 		view: #gtWorkersFor:

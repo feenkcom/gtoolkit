@@ -5,7 +5,7 @@ NeoJSONCustomMapping >> gtViewReaderSourceCodeFor: aView [
 	<gtView>
 	
 	^ aView forward
-		title: 'Reader Coder';
+		title: 'Reader coder';
 		priority: 1;
 		object: [ reader ];
 		view: #gtSourceCodeFor:;
@@ -20,7 +20,7 @@ NeoJSONCustomMapping >> gtViewWriterSourceCodeFor: aView [
 	<gtView>
 	
 	^ aView forward
-		title: 'Writer Coder';
+		title: 'Writer coder';
 		priority: 10;
 		object: [ writer ];
 		view: #gtSourceCodeFor:;

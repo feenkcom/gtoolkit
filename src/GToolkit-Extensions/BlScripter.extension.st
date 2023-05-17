@@ -7,7 +7,7 @@ BlScripter >> gtSpaceActiveTasksFor: aView [
 	self space taskQueue isEmpty ifTrue: [ ^ aView empty ].
 
 	^ aView forward
-		title: 'Active Space Tasks';
+		title: 'Active space tasks';
 		priority: 41;
 		object: [ self space taskQueue ];
 		view: #gtTasksFor:;
@@ -24,7 +24,7 @@ BlScripter >> gtSpacePendingTasksFor: aView [
 	self space taskQueue isEmpty ifTrue: [ ^ aView empty ].
 
 	^ aView forward
-		title: 'Pending Space Tasks';
+		title: 'Pending space tasks';
 		priority: 40;
 		object: [ self space taskQueue ];
 		view: #gtPendingTasksFor:;

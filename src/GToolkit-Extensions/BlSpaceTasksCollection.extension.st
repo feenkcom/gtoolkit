@@ -6,7 +6,7 @@ BlSpaceTasksCollection >> gtActiveTasksFor: aView [
 	activeTasks ifNil: [ ^ aView empty ].
 
 	^ aView forward
-		title: 'Active Tasks';
+		title: 'Active tasks';
 		priority: 2;
 		object: [ activeTasks ];
 		view: #gtItemsFor:
@@ -18,7 +18,7 @@ BlSpaceTasksCollection >> gtPendingTasksFor: aView [
 	pendingTasks ifNil: [ ^ aView empty ].
 
 	^ aView forward
-		title: 'Pending Tasks';
+		title: 'Pending tasks';
 		priority: 1;
 		object: [ pendingTasks ];
 		view: #gtItemsFor:

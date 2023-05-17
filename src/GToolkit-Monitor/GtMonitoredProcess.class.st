@@ -1,7 +1,7 @@
 Class {
 	#name : #GtMonitoredProcess,
 	#superclass : #GtMonitoredService,
-	#category : 'GToolkit-Monitor'
+	#category : #'GToolkit-Monitor'
 }
 
 { #category : #accessing }
@@ -55,7 +55,7 @@ GtMonitoredProcess >> gtTerminateActionFor: anAction [
 GtMonitoredProcess >> gtUpdatingStackFor: aView [
 	<gtView>
 	^ aView explicit
-		title: 'Updating Stack';
+		title: 'Updating stack';
 		priority: 2;
 		stencil: [ GtMonitoredProcessElement new service: self ]
 ]

@@ -192,7 +192,7 @@ RPackage >> gtExamplesFor: aView context: aPhlowContext [
 RPackage >> gtPackageCoderFor: aView [
 	<gtView>
 	^ aView explicit
-		title: 'Package Coder';
+		title: 'Package coder';
 		priority: 110;
 		stencil: [ | coder |
 			coder := GtCoder forPackage: self.

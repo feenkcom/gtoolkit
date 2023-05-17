@@ -6,7 +6,7 @@ RPackageTag >> gtClassHierarchyFor: aView [
 	<gtView>
 	<gtPackageTagView>
 	^ aView mondrian
-		  title: 'Classes Map';
+		  title: 'Classes map';
 		  priority: 10.5;
 		  tooltip: 'Classes: black, Traits: orange';
 		  painting: [ :aMondrian | self paintClassHierarchyWith: aMondrian ];

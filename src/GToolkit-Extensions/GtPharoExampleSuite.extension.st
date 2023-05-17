@@ -6,7 +6,7 @@ GtPharoExampleSuite >> gtExamplesWithResultCacheFor: aView [
 	examplesWithResultCache ifNil: [ ^ aView empty ].
 
 	^ aView columnedList
-		title: 'Examples With Result Cache';
+		title: 'Examples with result cache';
 		priority: 1;
 		items: [ Array
 				streamContents: [ :aStream | 
@@ -72,7 +72,7 @@ GtPharoExampleSuite >> gtExamplesWithResultStreamFor: aView [
 	examplesWithResultStream ifNil: [ ^ aView empty ].
 
 	^ aView columnedList
-		title: 'Examples With Result Stream';
+		title: 'Examples with result stream';
 		priority: 2;
 		items: [ examplesWithResultStream asyncSimilarCopy ];
 		column: 'Number'

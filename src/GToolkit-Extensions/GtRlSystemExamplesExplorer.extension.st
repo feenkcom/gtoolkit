@@ -9,7 +9,7 @@ GtRlSystemExamplesExplorer >> gtViewAllExamplesFor: aView context: aPhlowContext
 			inPhlowContext: aPhlowContext.
 
 	^ aView explicit
-		title: 'All GToolkit Examples';
+		title: 'All gtoolkit examples';
 		priority: 15;
 		stencil: [ | aCollection aGroup aGroupView anElement |
 			aGroup := self allContainedExamples.

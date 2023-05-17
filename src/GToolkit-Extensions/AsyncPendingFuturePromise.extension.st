@@ -11,7 +11,7 @@ AsyncPendingFuturePromise >> gtCompositionFor: aView [
 	
 	future ifNil: [ ^ aView empty ].
 	^ aView forward
-		title: 'Future Composition';
+		title: 'Future composition';
 		object: [ future ];
 		view: #gtCompositionFor:
 ]

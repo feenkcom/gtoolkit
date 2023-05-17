@@ -5,7 +5,7 @@ AbstractFileReference >> gtLepiterDuplicateJsonFor: aView [
 	<gtView>
 	(self isFile and: [ self extension = 'duplicate' ]) ifFalse: [ ^ aView empty ].
 	^ aView textEditor
-		title: 'Lepiter Duplicate';
+		title: 'Lepiter duplicate';
 		priority: 1;
 		actionButtonIcon: BrGlamorousIcons tree
 			label: 'JSON'
