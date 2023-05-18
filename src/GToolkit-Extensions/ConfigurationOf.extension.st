@@ -55,7 +55,7 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 				toAll: [:each | |dependedProjects |
 					dependedProjects := each projects collect: #version.
 					projects select: [ :project | dependedProjects anySatisfy: [ :dependedProject | dependedProject = project ] ] ].
-			mondrian layout custom: (GtGradHorizontalDominanceCenteredTreeLayout new levelDistance: 10; nodeDistance: 10)];
+			mondrian layout custom: (GtGradHorizontalDominanceTreeLayout new levelDistance: 10; nodeDistance: 10)];
 		actionUpdateButton
 ]
 
