@@ -27,5 +27,5 @@ GtScaleUIHowToGuide >> scaleToOneHalf [
 	<gtExample>
 	<noTest>
 
-	BlGlutinHostSpace zoomFactor: 1.5
+	BlGlutinHostSpace zoomFactor: 1.5.
 ]
