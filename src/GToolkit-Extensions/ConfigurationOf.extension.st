@@ -45,6 +45,7 @@ ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameD
 				shape: [ :each |
 					BlManhattanLineElement new 
 						zIndex: 0;
+						cornerRadius: 10;
 						border: (BlBorder paint: (Color gray alpha: 0.2) width: 2);
 						toHead: (BlArrowheadSimpleArrow new
 							border: (BlBorder builder paint: (Color gray alpha: 0.2); width: 2; build))  ];
