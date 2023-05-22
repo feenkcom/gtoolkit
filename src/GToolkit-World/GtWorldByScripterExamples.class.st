@@ -399,7 +399,15 @@ GtWorldByScripterExamples >> paneTabLabelKeyAt: aPaneIndex [
 { #category : #'examples - playground' }
 GtWorldByScripterExamples >> playgroundStencil [
 	<gtExample>
-	^ GtPlaygroundStencil new 
+	| aDb aStencil |
+	aDb := LeLogicalDatabase new 
+		primaryDB: LeDatabase new.
+
+	aStencil := GtPlaygroundStencil new knowledgeBase: aDb.
+
+	self assert: aStencil knowledgeBase == aDb.
+
+	^ aStencil
 ]
 
 { #category : #'examples - coder' }

@@ -192,6 +192,17 @@ GtMonitor >> gtProcessesFor: aView [
 ]
 
 { #category : #'gt-extension' }
+GtMonitor >> gtScriptersFor: aView [
+	<gtView>
+	
+	^ aView explicit
+		title: 'Scripters';
+		priority: 47;
+		stencil: [ GtMonitoredScripterPulsersElement new ];
+		actionUpdateButtonTooltip: 'Update scripter list'
+]
+
+{ #category : #'gt-extension' }
 GtMonitor >> gtSpaceRunnerFor: aView [
 	<gtView>
 	
