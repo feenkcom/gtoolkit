@@ -120,7 +120,13 @@ GtWorldElement >> initializeShortcuts [
 				repeatable: true;
 				combination: BlKeyCombination primaryW;
 				action: [ self tabs content children anyOne = home
-						ifFalse: [  "only close the non-home tabs"self tabs removeSelectedTab ] ])
+						ifFalse: [  "only close the non-home tabs"self tabs removeSelectedTab ] ]).
+	self
+		addShortcut: (BlShortcutWithAction new
+				name: 'Close world';
+				repeatable: true;
+				combination: BlKeyCombination primaryQ;
+				action: [ self spaceDo: [ :aSpace | aSpace requestClose ] ])
 ]
 
 { #category : #accessing }
