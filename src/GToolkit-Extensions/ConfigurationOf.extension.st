@@ -12,52 +12,85 @@ ConfigurationOf class >> gtMapFor: aView [
 
 { #category : #'*GToolkit-Extensions' }
 ConfigurationOf class >> gtMapFor: aView selectRelationsThat: aTwoArgBlock nameDisplayedAs: anOneArgBlock [
+	| standardEdge |
+	standardEdge := BlBorder paint: (Color gray alpha: 0.2) width: 2.
 	^ aView mondrian
 		title: 'Map';
 		priority: 10;
-		painting: [ :mondrian |
+		painting: [ :mondrian | 
 			| projects |
 			projects := Set new.
-			self project version 
+			self project version
 				withDeep: [ :each | each projects collect: #version ]
-				relationDo: [ :a :b | (aTwoArgBlock value: a value: b)
-					ifTrue: [ projects add: a; add: b ] ].
-			mondrian nodes 
+				relationDo: [ :a :b | 
+					(aTwoArgBlock value: a value: b)
+						ifTrue: [ projects
+								add: a;
+								add: b ] ].
+			mondrian nodes
 				shape: [ :each | 
 					| text element |
-					text := [
-						| displayString |
-						displayString := (((each gtDisplayString 
-							copyReplaceAll: 'BaselineOf' with: '')
-							copyReplaceAll: 'ConfigurationOf' with: '')
-							copyReplaceAll: 'GToolkit' with: 'GT ').
+					text := [ | displayString |
+						displayString := ((each gtDisplayString
+								copyReplaceAll: 'BaselineOf'
+								with: '') copyReplaceAll: 'ConfigurationOf' with: '')
+								copyReplaceAll: 'GToolkit'
+								with: 'GT '.
 						(anOneArgBlock value: displayString) asRopedText glamorousRegularFont ]
-						on: Error do: [ :e | e asString asRopedText foreground: BrGlamorousColors linkWithErrorColor ].
+							on: Error
+							do: [ :e | e asString asRopedText foreground: BrGlamorousColors linkWithErrorColor ].
 					element := BlTextElement new.
-					element 	
-						text: text; 
-						zIndex: 1; 
-						when: BlClickEvent do: [ :e | 
-							e consumed: true. 
-							element phlow spawnTool: (GtClassCoderTool forClass: each spec project configuration class realClass) ] ];
+					element
+						text: text;
+						zIndex: 1;
+						when: BlClickEvent
+							do: [ :e | 
+								e consumed: true.
+								element phlow
+									spawnTool: (GtClassCoderTool forClass: each spec project configuration class realClass) ];
+						when: BlMouseEnterEvent
+							do: [ :anEvent | 
+								anEvent currentTarget graph connectedEdges incoming
+									do: [ :inner | 
+										inner element border: (BlBorder paint: (Color blue alpha: 0.5) width: 3).
+										inner fromElement background: (Color blue alpha: 0.2) ].
+								anEvent currentTarget graph connectedEdges outgoing
+									do: [ :inner | 
+										inner element border: (BlBorder paint: (Color red alpha: 0.5) width: 3).
+										inner toElement background: (Color red alpha: 0.2) ] ];
+						when: BlMouseLeaveEvent
+							do: [ :anEvent | 
+								anEvent currentTarget graph connectedEdges
+									do: [ :inner | 
+										inner element border: standardEdge.
+										inner fromElement background: Color transparent.
+										inner toElement background: Color transparent ] ] ];
 				with: projects.
 			mondrian edges
-				shape: [ :each |
-					BlManhattanLineElement new 
+				shape: [ :each | 
+					BlManhattanLineElement new
 						zIndex: 0;
 						beFixedTo;
 						fixedDistance: 10;
 						cornerRadius: 10;
-						border: (BlBorder paint: (Color gray alpha: 0.2) width: 2);
+						border: standardEdge;
 						toHead: (BlArrowheadSimpleArrow new
-							border: (BlBorder builder paint: (Color gray alpha: 0.2); width: 2; build))  ];
+								border: (BlBorder builder
+										paint: (Color gray alpha: 0.2);
+										width: 2;
+										build)) ];
 				fromRightCenter;
 				toLeftCenter;
-				connectFrom: #yourself 
-				toAll: [:each | |dependedProjects |
-					dependedProjects := each projects collect: #version.
-					projects select: [ :project | dependedProjects anySatisfy: [ :dependedProject | dependedProject = project ] ] ].
-			mondrian layout custom: (GtGradHorizontalDominanceTreeLayout new levelDistance: 10; nodeDistance: 10)];
+				connectFrom: #yourself
+					toAll: [ :each | 
+						| dependedProjects |
+						dependedProjects := each projects collect: #version.
+						projects
+							select: [ :project | dependedProjects anySatisfy: [ :dependedProject | dependedProject = project ] ] ].
+			mondrian layout
+				custom: (GtGradHorizontalDominanceTreeLayout new
+						levelDistance: 10;
+						nodeDistance: 10) ];
 		actionUpdateButton
 ]
 
