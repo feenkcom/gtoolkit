@@ -17,40 +17,27 @@
     </a>
   </div>
 </div>
-
 ## The Moldable Development Environment
-
 [Glamorous Toolkit](https://gtoolkit.com) is the Moldable Development environment. It empowers you to make systems explainable through experiences tailored for each problem.
-
-
 ## Get started
-
 ### Install and run
-
 Simply download: https://gtoolkit.com/download.
 The download is a self contained installation made of a Glamorous Toolkit image, a virtual machine, and a few other resources and libraries.
 Now, just run the executable.
 - On Mac: `GlamorousToolkit.app`
 - On Windows: `.\bin\GlamorousToolkit.exe`
 - On Linux: `./bin/GlamorousToolkit`
-
 ### Learn how to learn
 Glamorous Toolkit was developed following Moldable Development, and it offers extensive opportunities to learn about itself. So, focus first on learning how to learn:
 - Read the book from inside the environment.
 - Go through the [GT in 7' video series](https://youtu.be/-vFwfwy5WZA?list=PLfrs5bwLJOoAaHvQGSLeKpHWmFuZXPUTJ).
-
-
 ## Engage with the community
+Follow us on Twitter: [@feenkcom](https://twitter.com/feenkcom)
 
-Follow us on Twitter: https://twitter.com/feenkcom
+Chat with us: [discord.gg/FTJr9gP](https://discord.gg/FTJr9gP)
 
-Chat with us: https://discord.gg/FTJr9gP
-
-Watch our videos: https://www.youtube.com/@gtoolkit
-
-
+Watch our videos: [@gtoolkit](https://www.youtube.com/@gtoolkit)
 ## Components
- 
 The current repository embodies the second generation of GT and it is comprised of a set of distinct components:
 - [Inspector](https://github.com/feenkcom/gtoolkit-inspector): the moldable inspector.
 - [Lepiter](https://github.com/feenkcom/lepiter): the multi-language notebook + knowledge management.
