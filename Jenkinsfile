@@ -584,7 +584,7 @@ class TestAndPackageWithGemstone extends TestAndPackage {
     }
 
     String gemstone_package_name() {
-        return "gt4gemstone-3.7.0-${build.gtoolkitVersion}"
+        return "gt4gemstone-3.7"
     }
 
     @Override
@@ -829,14 +829,14 @@ enum Platform {
         if (this == Windows) {
             script.powershell "Remove-Item ${directory} -Recurse -ErrorAction Ignore"
         } else {
-            script.sh """
-                if [ -d "${directory}" ]
+            script.sh("""
+                if [ -d ${directory} ]
                 then
                     echo "Granting write permission for cleanup: ${directory}"
-                    chmod -R u+w "${directory}"
+                    chmod -R u+w ${directory}
                 fi
-                rm -rf "${directory}"
-            """
+                rm -rf ${directory}
+            """)
         }
     }
 

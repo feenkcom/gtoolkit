@@ -5,7 +5,7 @@ Class {
 		'space',
 		'announcer'
 	],
-	#category : 'GToolkit-Monitor-Bloc Spaces'
+	#category : #'GToolkit-Monitor-Bloc Spaces'
 }
 
 { #category : #accessing }
@@ -104,6 +104,26 @@ GtMonitoredBlocSpace >> gtActionsFor: aView [
 								aptitude: BrGlamorousButtonWithLabelAptitude new;
 								label: 'Close';
 								action: [ self close ].
+						}]
+						ifFalse: [ { 
+							BrLabel new
+								aptitude: BrGlamorousLabelAptitude new;
+								text: 'The space is not running'.
+						 } ]));
+				addChild: (BrHorizontalPane new
+					vFitContent;
+					hMatchParent;
+					cellSpacing: 5;
+					alignCenterLeft;
+					addChildren: (self isRunning
+						ifTrue: [ {
+							BrLabel new
+								aptitude: BrGlamorousLabelAptitude new;
+								text: 'Inspect monitored space'.
+							BrButton new
+								aptitude: BrGlamorousButtonWithLabelAptitude new;
+								label: 'Inspect';
+								action: [ :aButton | aButton phlow spawnObject: self space ]
 						}]
 						ifFalse: [ { 
 							BrLabel new
