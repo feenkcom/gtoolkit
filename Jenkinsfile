@@ -584,7 +584,7 @@ class TestAndPackageWithGemstone extends TestAndPackage {
     }
 
     String gemstone_package_name() {
-        return "gt4gemstone-3.7.0-${build.gtoolkitVersion}"
+        return "gt4gemstone-3.7"
     }
 
     @Override
