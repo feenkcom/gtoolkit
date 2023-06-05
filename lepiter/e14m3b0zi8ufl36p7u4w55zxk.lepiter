@@ -771,7 +771,7 @@
 					"__type" : "uid",
 					"uidString" : "BjIS6a2pDQCR3I4HACNusg=="
 				},
-				"operation" : "query Repository($ownername: String!, $reponame: String!) {\n\trepository(owner: $ownername, name: $reponame) {\n\t\turl\n\t\tdescription\n\t}\n}",
+				"operation" : "query Repository($ownername: String!, $reponame: String!) {\n\trepository(owner: $ownername, name: $reponame) {\n\t\turl\n\t\tdescription\n\t\tlk\n\t}\n}",
 				"input" : "{\n\t\"ownername\": \"feenkcom\",\n\t\"reponame\": \"gtoolkit\"\n}",
 				"context" : "aContext",
 				"resultVariableName" : ""
@@ -1098,8 +1098,8 @@
 					"__type" : "uid",
 					"uidString" : "ainMUw6qDQC70GizDaKgQw=="
 				},
-				"operation" : "query Repositories($count: Int!, $login: String!, $after: String, $privacy: RepositoryPrivacy) {\n\torganization (login: $login) {\n\t\tname\n\t\turl\n\t\trepositories(first: $count, after: $after, privacy: $privacy) {\n\t\t\tedges {\n\t\t\t\tnode {\n\t\t\t\t\tname\n\t\t\t\t\turl\n\t\t\t\t\tforks {\n\t\t\t\t\t\ttotalCount } } }\n\t\t\tpageInfo {\n\t\t\t\thasPreviousPage\n\t\t\t\thasNextPage\n\t\t\t\tstartCursor\n\t\t\t\tendCursor } } } }",
-				"input" : "{ \n\t\"count\" : 5,\n\t\"login\" : \"feenkcom\", \n\t\"after\" : null, \n\t\"privacy\" : \"PUBLIC\" }",
+				"operation" : "query Repositories($amount: Int!, $login: String!, $after: String, $privacy: RepositoryPrivacy) {\n\torganization (login: $login) {\n\t\tname\n\t\turl\n\t\trepositories(first: $amount, after: $after, privacy: $privacy) {\n\t\t\tedges {\n\t\t\t\tnode {\n\t\t\t\t\tname\n\t\t\t\t\turl\n\t\t\t\t\tforks {\n\t\t\t\t\t\ttotalCount } } }\n\t\t\tpageInfo {\n\t\t\t\thasPreviousPage\n\t\t\t\thasNextPage\n\t\t\t\tstartCursor\n\t\t\t\tendCursor } } } }",
+				"input" : "{ \n\t\"amount\" : 5,\n\t\"login\" : \"feenkcom\", \n\t\"after\" : null, \n\t\"privacy\" : \"PUBLIC\" }",
 				"context" : "aContext",
 				"resultVariableName" : "repositoriesQuery"
 			},
