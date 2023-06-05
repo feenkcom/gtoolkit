@@ -86,110 +86,87 @@ BaselineOfGToolkit class >> gtoolkitRepositorySpec [
 { #category : #baseline }
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>
-	spec for: #'common' do: [
-		spec preLoadDoIt: #'preLoadGToolkit:'.
-		spec postLoadDoIt: #'postLoadGToolkit:'.
-		spec 
-			baseline: 'GToolkitVirtualMachine' with: [
-				spec repository: 'github://feenkcom/gtoolkit-vm-bindings:main/src' ];
-			baseline: 'GToolkitClipboard' with: [
-				spec repository: 'github://feenkcom/gtoolkit-clipboard:main/src' ];
-			baseline: 'GToolkitPresenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-presenter:main/src' ];
-			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:main/src' ];
-			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:main/src' ];
-			baseline: 'GToolkitFileBrowser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-filebrowser:main/src' ];
-			baseline: 'GToolkitDemos' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:main/src' ];
-			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser:main/src' ];
-			baseline: 'RemoteRunner' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remoterunner:main/src' ];
-			baseline: 'GToolkitConstrainer' with: [
-				spec repository: 'github://feenkcom/gtoolkit-constrainer:main/src' ];
-			baseline: 'GToolkit4Pharo' with: [
-				spec repository: 'github://feenkcom/gt4pharo:main/src' ];
-			baseline: 'GToolkit4SmaCC' with: [
-				spec repository: 'github://feenkcom/gt4smacc:main/src' ];
-			baseline: 'GToolkit4XMLSupport' with: [
-				spec repository: 'github://feenkcom/gt4xmlsupport:main/src' ];
-			baseline: 'GToolkit4PetitParser2' with: [
-				spec repository: 'github://feenkcom/gt4petitparser2:main/src' ];
-			baseline: 'GToolkit4Famix3' with: [
-				spec repository: 'github://feenkcom/gt4famix3:main/src' ];
-			baseline: 'GToolkit4Ruby' with: [
-				spec repository: 'github://feenkcom/gt4ruby:main/src' ];
-			baseline: 'GtGemstoneClient' with: [
-				spec repository: 'github://feenkcom/gt4gemstone:main/src' ];
-			baseline: 'GToolkit4Git' with: [
-				spec repository: 'github://feenkcom/gt4git:main/src' ];
-			baseline: 'GToolkit4GraphQL' with: [
-				spec repository: 'github://feenkcom/gt4graphql:main/src' ];
-			baseline: 'GToolkit4Changes' with: [
-				spec repository: 'github://feenkcom/gt4changes:main/src' ];
-			baseline: 'GToolkit4Jenkins' with: [
-				spec repository: 'github://feenkcom/gt4jenkins:main/src' ];
-			baseline: 'GToolkit4Ops' with: [
-				spec repository: 'github://feenkcom/gt4ops:main/src' ];
-			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder:main/src' ];
-			baseline: 'Gt4PharoLink' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:main/src' ];
-			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:main/src' ];
-			baseline: 'BlocExtensions' with: [
-				spec repository: 'github://feenkcom/Bloc:main/src' ];
-			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:main/src' ];
-			baseline: 'GToolkitScenery' with: [
-				spec repository: 'github://feenkcom/gtoolkit-scenery:main/src' ];
-			baseline: 'GToolkitPager' with: [ 
-				spec repository: 'github://feenkcom/gtoolkit-pager:main/src' ];
-			baseline: 'GToolkitSpotter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-spotter:main/src' ];
-			baseline: 'GToolkitNotifications' with: [
-				spec repository: 'github://feenkcom/gtoolkit-notifications:main/src' ];
-			baseline: 'GToolkitNotificationsExamples' with: [
-				spec repository: 'github://feenkcom/gtoolkit-notifications:main/src' ];
-			baseline: 'XdocClient' with: [
-				spec repository: 'github://feenkcom/xdoc:main/src' ];
-			baseline: 'LepiterEngine' with: [
-				spec repository: 'github://feenkcom/lepiter:main/src' ];
-			baseline: 'GToolkit4Magritte' with: [
-				spec repository: 'github://feenkcom/gt4magritte:main/src' ];
-			baseline: 'GToolkit4OpenAPI' with: [
-				spec repository: 'github://feenkcom/gt4openapi:main/src' ];
-			baseline: 'RBFormatter' with: [
-				spec repository: 'github://j-brant/RBFormatter/src' ].
-				
-		spec 
-			package: 'GToolkit-Extensions' with: [
-				spec requires: #(
-					'GToolkitCoder' 'GToolkit4Pharo' 'GToolkitSpotter' 'GToolkitVirtualMachine'
-					 'GToolkitClipboard' 'GToolkitTranscript' 'GToolkitDebugger' 'GToolkitFileBrowser'
-					 'GToolkitConstrainer' 'GToolkit4Git' 'GToolkitVisualizerPhlow' 'GToolkitReleaser'
-					 'GToolkit4XMLSupport' 'GToolkit-DependencyAnalyzer' 'GToolkit-Docs'
-					 'GToolkit-Monitor' 'GToolkit-Profiler' 'GToolkit-Constraints'
-					 'GToolkit-SceneDriller' 'GToolkit-World' 'GToolkit-Setup' 'GToolkit4GraphQL'). ];
-			package: 'GToolkit-Docs' with: [
-				spec requires: #('GToolkitCoder' 'GToolkit-World'). ];
-			package: 'GToolkit-Monitor' with: [
-				spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow') .];
-			package: 'GToolkit-Profiler' with: [
-				spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow' 'GToolkitNotifications'). ];
-			package: 'GToolkit-Constraints' with: [
-				spec requires: #('GToolkitConstrainer' 'GToolkit-DependencyAnalyzer' 'LepiterEngine'). ];
-			package: 'GToolkit-SceneDriller' with: [
-				spec requires: #('GToolkitVisualizerPhlow' 'GToolkitPager').];
-			package: 'GToolkit-World' with: [
-				spec requires: #('GToolkit-SceneDriller' 'GToolkitFileBrowser' 'LepiterEngine' 'GToolkit4Git' 'GToolkitTranscript' 'GToolkit-Monitor' 'GToolkitReleaser' 'XdocClient' 'GToolkitNotifications' 'GToolkitNotificationsExamples'). ];
-			package: 'GToolkit-Setup' with: [
-				spec requires: #('GToolkitReleaser' 'GToolkitDebugger' 'LepiterEngine'). ];
-			package: 'GToolkit-DependencyAnalyzer'. ].
-
+	spec
+		for: #common
+		do: [ spec preLoadDoIt: #preLoadGToolkit:.
+			spec postLoadDoIt: #postLoadGToolkit:.
+			spec
+				baseline: 'GToolkitVirtualMachine'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-vm-bindings:main/src' ];
+				baseline: 'GToolkitClipboard'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-clipboard:main/src' ];
+				baseline: 'GToolkitPresenter'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-presenter:main/src' ];
+				baseline: 'GToolkitTranscript'
+					with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ];
+				baseline: 'GToolkitDebugger'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-debugger:main/src' ];
+				baseline: 'GToolkitFileBrowser'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-filebrowser:main/src' ];
+				baseline: 'GToolkitDemos'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-demos:main/src' ];
+				baseline: 'GToolkitReleaser'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-releaser:main/src' ];
+				baseline: 'RemoteRunner'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-remoterunner:main/src' ];
+				baseline: 'GToolkitConstrainer'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-constrainer:main/src' ];
+				baseline: 'GToolkit4Pharo'
+					with: [ spec repository: 'github://feenkcom/gt4pharo:main/src' ];
+				baseline: 'GToolkit4SmaCC'
+					with: [ spec repository: 'github://feenkcom/gt4smacc:main/src' ];
+				baseline: 'GToolkit4XMLSupport'
+					with: [ spec repository: 'github://feenkcom/gt4xmlsupport:main/src' ];
+				baseline: 'GToolkit4PetitParser2'
+					with: [ spec repository: 'github://feenkcom/gt4petitparser2:main/src' ];
+				baseline: 'GToolkit4Famix3'
+					with: [ spec repository: 'github://feenkcom/gt4famix3:main/src' ];
+				baseline: 'GToolkit4Ruby'
+					with: [ spec repository: 'github://feenkcom/gt4ruby:main/src' ];
+				baseline: 'GtGemstoneClient'
+					with: [ spec repository: 'github://feenkcom/gt4gemstone:main/src' ];
+				baseline: 'GToolkit4Git'
+					with: [ spec repository: 'github://feenkcom/gt4git:main/src' ];
+				baseline: 'GToolkit4GraphQL'
+					with: [ spec repository: 'github://feenkcom/gt4graphql:main/src' ];
+				baseline: 'GToolkit4Changes'
+					with: [ spec repository: 'github://feenkcom/gt4changes:main/src' ];
+				baseline: 'GToolkit4Jenkins'
+					with: [ spec repository: 'github://feenkcom/gt4jenkins:main/src' ];
+				baseline: 'GToolkit4Ops'
+					with: [ spec repository: 'github://feenkcom/gt4ops:main/src' ];
+				baseline: 'GToolkitCoder'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-coder:main/src' ];
+				baseline: 'Gt4PharoLink'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-remote:main/src' ];
+				baseline: 'GToolkitMorphic'
+					with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ];
+				baseline: 'BlocExtensions'
+					with: [ spec repository: 'github://feenkcom/Bloc:main/src' ];
+				baseline: 'GToolkitVisualizerPhlow'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-visualizer:main/src' ];
+				baseline: 'GToolkitScenery'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-scenery:main/src' ];
+				baseline: 'GToolkitPager'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-pager:main/src' ];
+				baseline: 'GToolkitSpotter'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-spotter:main/src' ];
+				baseline: 'GToolkitNotifications'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-notifications:main/src' ];
+				baseline: 'GToolkitNotificationsExamples'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-notifications:main/src' ];
+				baseline: 'XdocClient'
+					with: [ spec repository: 'github://feenkcom/xdoc:main/src' ];
+				baseline: 'LepiterEngine'
+					with: [ spec repository: 'github://feenkcom/lepiter:main/src' ];
+				baseline: 'GToolkit4Magritte'
+					with: [ spec repository: 'github://feenkcom/gt4magritte:main/src' ];
+				baseline: 'GToolkit4OpenAPI'
+					with: [ spec repository: 'github://feenkcom/gt4openapi:main/src' ];
+				baseline: 'RBFormatter'
+					with: [ spec repository: 'github://j-brant/RBFormatter/src' ];
+				baseline: 'GToolkitWorld'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-world/src' ] ]
 ]
 
 { #category : #'post load' }
