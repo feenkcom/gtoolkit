@@ -100,7 +100,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.1300/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.2879/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.2880/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.1699/src' ].
@@ -112,7 +112,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-demos:v0.8.1487/src' ].
 		spec
 			baseline: 'GToolkitReleaser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.8.178/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.8.179/src' ].
 		spec
 			baseline: 'RemoteRunner' with: [
 				spec repository: 'github://feenkcom/gtoolkit-remoterunner:v0.6.904/src' ].
@@ -163,7 +163,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.1261/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v0.8.2879/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v0.8.2880/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.543/src' ].
@@ -200,24 +200,9 @@ BaselineOfGToolkit >> baseline: spec [
 		spec
 			baseline: 'RBFormatter' with: [
 				spec repository: 'github://j-brant/RBFormatter:5214567865267400a855c3ebbcb61c0f15195f0f/src' ].
-
-		spec package: 'GToolkit-Monitor' with: [
-			spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow') ].
-		spec package: 'GToolkit-Profiler' with: [
-			spec requires: #('LepiterEngine' 'GToolkitVisualizerPhlow' 'GToolkitNotifications') ].
-		spec package: 'GToolkit-SceneDriller' with: [
-			spec requires: #('GToolkitVisualizerPhlow' 'GToolkitPager') ].
-		spec package: 'GToolkit-World' with: [
-			spec requires: #('GToolkit-SceneDriller' 'GToolkitFileBrowser' 'LepiterEngine' 'GToolkit4Git' 'GToolkitTranscript' 'GToolkit-Monitor' 'GToolkitReleaser' 'XdocClient' 'GToolkitNotifications' 'GToolkitNotificationsExamples') ].
-		spec package: 'GToolkit-Docs' with: [
-			spec requires: #('GToolkitCoder' 'GToolkit-World') ].
-		spec package: 'GToolkit-Setup' with: [
-			spec requires: #('GToolkitReleaser' 'GToolkitDebugger' 'LepiterEngine') ].
-		spec package: 'GToolkit-DependencyAnalyzer'.
-		spec package: 'GToolkit-Constraints' with: [
-			spec requires: #('GToolkitConstrainer' 'GToolkit-DependencyAnalyzer' 'LepiterEngine') ].
-		spec package: 'GToolkit-Extensions' with: [
-			spec requires: #('GToolkitCoder' 'GToolkit4Pharo' 'GToolkitSpotter' 'GToolkitVirtualMachine' 'GToolkitClipboard' 'GToolkitTranscript' 'GToolkitDebugger' 'GToolkitFileBrowser' 'GToolkitConstrainer' 'GToolkit4Git' 'GToolkitVisualizerPhlow' 'GToolkitReleaser' 'GToolkit4XMLSupport' 'GToolkit-DependencyAnalyzer' 'GToolkit-Docs' 'GToolkit-Monitor' 'GToolkit-Profiler' 'GToolkit-Constraints' 'GToolkit-SceneDriller' 'GToolkit-World' 'GToolkit-Setup' 'GToolkit4GraphQL') ].
+		spec
+			baseline: 'GToolkitWorld' with: [
+				spec repository: 'github://feenkcom/gtoolkit-world:v0.6.0/src' ].
 	]
 ]
 
