@@ -1298,7 +1298,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-14T08:41:39.628949+01:00"
+												"dateAndTimeString" : "2023-06-04T00:06:06.687176-04:00"
 											}
 										},
 										"uid" : {
@@ -2003,6 +2003,43 @@
 														"__type" : "textStyle"
 													},
 													"string" : "`p not` — Parses `p` and succeeds when `p` fails, but does not consume its input."
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-06-06T16:01:07.744505-04:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-06-07T09:27:01.940456-04:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "I/uGN925DQCvCUmGDNi7KA=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "`p negate` — Parses `p` and consumes any input but p"
 												},
 												{
 													"__type" : "textSnippet",
