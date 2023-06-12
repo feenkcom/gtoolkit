@@ -183,7 +183,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-05T19:46:36.798757+02:00"
+									"dateAndTimeString" : "2023-06-12T10:58:14.414109-04:00"
 								}
 							},
 							"uid" : {
@@ -193,7 +193,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Also, please read the Pharo open documentation on [Baselines](https://github.com/pharo-open-documentation/pharo-wiki/blob/master/General/Baselines.md)."
+							"string" : "For more information, take a look at Pharo’s documentation on [Baselines](https://github.com/pharo-open-documentation/pharo-wiki/blob/master/General/Baselines.md)."
 						}
 					]
 				},
@@ -258,7 +258,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-05T17:55:37.936234+02:00"
+									"dateAndTimeString" : "2023-06-12T10:57:30.568277-04:00"
 								}
 							},
 							"uid" : {
@@ -268,7 +268,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A baseline is a method that specifies the packages to be loaded in a project, and their dependencies."
+							"string" : "A baseline is a method that specifies the packages to be loaded in a project, and the packages the project’s packages depend on."
 						},
 						{
 							"__type" : "textSnippet",
@@ -478,7 +478,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-05T18:56:18.559166+02:00"
+									"dateAndTimeString" : "2023-06-12T10:41:09.817934-04:00"
 								}
 							},
 							"uid" : {
@@ -488,7 +488,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Actually, when you initialize a new github project repo, GT's Git tool can create the baseline automatically for you. For a repo called `X`, it will add a package `X` and a package `BaselineOfX`, with a class `BaselineOfX` and a `baseline:` method."
+							"string" : "When you initialize a new GitHub project repository, GT's Git tool can create the baseline automatically for you. For a repository called `X`, it will add a package `X` and a package `BaselineOfX`, with a class `BaselineOfX` and a `baseline:` method."
 						},
 						{
 							"__type" : "textSnippet",
@@ -515,7 +515,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-05T18:56:49.708944+02:00"
+									"dateAndTimeString" : "2023-06-12T10:41:37.167318-04:00"
 								}
 							},
 							"uid" : {
@@ -525,7 +525,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Initially your package won't have any dependencies, so it will pretty much look like this example: {{gtMethod:name=BaselineOfGToolkitMemoryDemo>>#baseline:|expanded}}  "
+							"string" : "Initially your package won't have any dependencies, so it will look like this example: {{gtMethod:name=BaselineOfGToolkitMemoryDemo>>#baseline:|expanded}}  "
 						}
 					]
 				},
@@ -579,6 +579,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-06-12T10:55:15.531412-04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-06-12T10:55:42.512342-04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7Y2Qo1G6DQC+NKQZD4N7pw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The most important part of adding more packages to your project’s baseline is to specify the order in which they should be loaded."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-05-05T18:57:11.834269+02:00"
 								}
 							},
@@ -590,7 +627,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-05T18:58:54.038461+02:00"
+									"dateAndTimeString" : "2023-06-12T10:55:47.733773-04:00"
 								}
 							},
 							"uid" : {
@@ -600,7 +637,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If you start to add more packages to your project, then you'll want to make sure they are loaded in the correct order. You can specify this by adding a `spec package:` statement to the baseline for each package, and additionally specifying which packages require which others."
+							"string" : "You can specify this by adding a `spec package:` statement to the baseline for each package, and additionally specifying which packages require which others."
 						},
 						{
 							"__type" : "textSnippet",
@@ -627,7 +664,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-05T18:59:23.725925+02:00"
+									"dateAndTimeString" : "2023-06-12T10:55:54.359352-04:00"
 								}
 							},
 							"uid" : {
@@ -637,7 +674,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Here's an example: {{gtMethod:name=BaselineOfGToolkitExamplesEngine>>#baseline:|expanded}}"
+							"string" : "Here’s an example: {{gtMethod:name=BaselineOfGToolkitExamplesEngine>>#baseline:|expanded}}"
 						},
 						{
 							"__type" : "textSnippet",
@@ -697,7 +734,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-05T19:00:08.493128+02:00"
+						"dateAndTimeString" : "2023-06-12T10:54:36.74585-04:00"
 					}
 				},
 				"uid" : {
@@ -707,7 +744,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#How do I add (internal) dependencies to the baseline?"
+				"string" : "#What do I do when I make more packages in my project?"
 			},
 			{
 				"__type" : "textSnippet",
@@ -739,7 +776,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-05T19:03:11.68834+02:00"
+									"dateAndTimeString" : "2023-06-12T10:46:31.11794-04:00"
 								}
 							},
 							"uid" : {
@@ -749,7 +786,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Very quickly you will start to use external classes that are loaded from other projects. You can specify those dependencies as well, but for each package that you depend on, you will need to indicate the repository it comes from."
+							"string" : "For each external package that you depend on, indicate the URL of the git repository it comes from."
 						},
 						{
 							"__type" : "textSnippet",
@@ -776,7 +813,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-05-05T19:03:47.046522+02:00"
+									"dateAndTimeString" : "2023-06-12T10:51:00.051228-04:00"
 								}
 							},
 							"uid" : {
@@ -786,7 +823,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Here's an example that depends on the SmaCC runtime: {{gtMethod:name=BaselineOfYAMLParser>>#baseline:|expanded}}  "
+							"string" : "Here’s an example showing how a package `SmaCC_YAML` depends on the `SmaCCRuntime` package, an external dependency provided by the baseline of `SmaCCRuntime`: {{gtMethod:name=BaselineOfYAMLParser>>#baseline:|expanded}}  "
 						}
 					]
 				},
