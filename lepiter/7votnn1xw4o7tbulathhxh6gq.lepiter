@@ -1411,7 +1411,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-23T14:31:00.505776+01:00"
+									"dateAndTimeString" : "2023-06-14T14:33:25.353356+02:00"
 								}
 							},
 							"uid" : {
@@ -1421,7 +1421,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If you key has a passphrase, you should run a command from the terminal that uses the SSH key, so that the Desktop Manager asks for the passphrase and stores it. If the passphrase is not stored by the Desktop Manager, git operations that require the SSH key will fail from Glamorous Toolkit."
+							"string" : "If your key has a passphrase, you should run a command from the terminal that uses the SSH key, so that the Desktop Manager asks for the passphrase and stores it. If the passphrase is not stored by the Desktop Manager, git operations that require the SSH key will fail from Glamorous Toolkit."
 						}
 					]
 				},
@@ -1630,7 +1630,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-23T14:19:54.939335+01:00"
+						"dateAndTimeString" : "2023-06-14T14:34:06.304036+02:00"
 					}
 				},
 				"uid" : {
@@ -1640,7 +1640,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "As an alternative tp configuring the ssh-agent with your SSH key, you can configure Glamorous Toolkit with the key. This needs to be configured for every new Glamorous Toolkit release. To avoid this by persisting credentials look at [[How to make GitHub credentials persistent]]."
+				"string" : "As an alternative to configuring the ssh-agent with your SSH key, you can configure Glamorous Toolkit with the key. This needs to be configured for every new Glamorous Toolkit release. To avoid this by persisting credentials look at [[How to make GitHub credentials persistent]]."
 			},
 			{
 				"__type" : "textSnippet",
