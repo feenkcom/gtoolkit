@@ -1,0 +1,9 @@
+# Bash needs lf even on windows/cygwin
+*.st eol=lf
+*.sh eol=lf
+
+# st files are always text, even if they contain invalid encoded chars
+*.st text diff
+
+# GitHub is unable to properly detect Smalltalk code, so help it a bit
+*.st linguist-language=Smalltalk
