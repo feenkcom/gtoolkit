@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-19T17:32:45.073572+02:00"
+						"dateAndTimeString" : "2023-06-20T14:35:16.254643+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-19T17:49:03.064891+02:00"
+						"dateAndTimeString" : "2023-06-20T14:36:34.181716+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,328 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "TODO"
+				"string" : "To load Glamorous Toolkit in a base Pharo Image we first clone repositories and load all baselines starting from the baseline retuned by {{gtMethod:BaselineOfGToolkit class>>fullBaselineProject}}."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:37:43.195962+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:39:35.743264+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+l18o/C6DQCsj+5/ARbaBg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Also to use cloner we first need to load it in a base Pharo image. For that we rely on Metacello."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:38:13.549579+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:38:24.49469+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lzRcqfC6DQCvnjdEARbaBg=="
+				},
+				"code" : "Metacello new\n    baseline: 'GToolkitReleaser';\n    repository: 'github://feenkcom/gtoolkit-releaser:main/src';\n    load."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:38:26.969364+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:41:56.245364+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ovsoqvC6DQCv3g5zARbaBg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Once the project  is loaded we can use it to instantiate a {{gtClass:GtRlProjectsCloner}} object. "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:39:09.148164+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:43:17.932287+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "C5KsrPC6DQCwwDDfARbaBg=="
+				},
+				"code" : "projectCloner := GtRlProjectsCloner new.\rprojectCloner \r\tbaseline: BaselineOfGToolkit fullBaselineProject;\r\trepository: BaselineOfGToolkit gtoolkitRepositorySpec."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:43:19.718302+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:44:17.264119+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "7vmbu/C6DQCy1tUYARbaBg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "With cloner it is not possible to see beforehand the list of actions that will be executed, as the list of repositories to load is created at runtime by following dependencies."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:44:20.294073+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:45:50.710741+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "s0s4v/C6DQC3CWkUARbaBg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "One can register a logger with the cloner object that will log all actions done while cloning."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:43:21.939498+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:45:54.984519+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "M929u/C6DQCy26FUARbaBg=="
+				},
+				"code" : "projectCloner registerMemoryLogger"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:45:56.733442+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:46:08.069706+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "g9X3xPC6DQC5jXkGARbaBg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The following snippet performs the cloning."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:38:39.120058+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:39:11.546967+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gmHiqvC6DQCwnCXxARbaBg=="
+				},
+				"code" : "projectCloner execute"
 			}
 		]
 	},

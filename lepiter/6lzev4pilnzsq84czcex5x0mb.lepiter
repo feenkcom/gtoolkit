@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-19T17:33:27.919873+02:00"
+						"dateAndTimeString" : "2023-06-20T14:47:03.082016+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-06-19T17:49:06.421047+02:00"
+						"dateAndTimeString" : "2023-06-20T14:48:56.609908+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,319 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "TODO"
+				"string" : "After all repositories are cloned locally and the baseline specifying dependencies are loaded within the image, we can use {{gtClass:GtRlProjectsLoader}} to load the code."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:51:42.834414+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:52:07.403873+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3uqY2fC6DQC/i4XpARbaBg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can direcly perform the loading using the following snippets"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:53:26.564257+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:53:52.866571+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "abLH3/C6DQCBydd+ARbaBg=="
+				},
+				"code" : "projectLoader := GtRlProjectsLoader new"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:53:30.079587+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:53:50.07756+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wVr93/C6DQCB7YdsARbaBg=="
+				},
+				"code" : "projectLoader registerMemoryLogger"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:52:09.31209+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:54:35.607288+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zu4s2/C6DQCBKz1uARbaBg=="
+				},
+				"code" : "projectLoader \r\tloadBaselineClass: BaselineOfGToolkit fullBaselineProject\r\tfromRepository: BaselineOfGToolkit gtoolkitRepositorySpec"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:54:36.831883+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:56:46.008776+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Fun34/C6DQCC+r5NARbaBg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Alternatively one can perform the loading steps separately by first creating a project and then a worklow. This makes it possible to explicitly see the list of actions executed by the loader"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:57:43.700155+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:58:00.647403+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nkwb7/C6DQCISTo0ARbaBg=="
+				},
+				"code" : "rootProject := BaselineOfGToolkit fullBaselineProject\r\tgtRlProjectWithRepository: BaselineOfGToolkit gtoolkitRepositorySpec."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:57:34.44065+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:58:04.936792+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Z/6N7vC6DQCIODeGARbaBg=="
+				},
+				"code" : "structureBuilder := GtRlLoadDirectiveStructureBuilder new.\rloadDirective := structureBuilder \r\tbuildLoadDirectiveForProject: rootProject."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:57:24.609648+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:57:34.446326+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qv337fC6DQCIBadzARbaBg=="
+				},
+				"code" : "loadWorkflow := GtRlProjectsLoadWorkflow new\r\trootLoadDirective: loadDirective."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:57:37.842176+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-06-20T14:57:38.189307+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kurB7vC6DQCIP9TKARbaBg=="
+				},
+				"code" : "loadWorkflow executeLoadActions."
 			}
 		]
 	},
