@@ -133,6 +133,8 @@ BaselineOfGToolkit >> baseline: spec [
 					with: [ spec repository: 'github://feenkcom/gt4changes:main/src' ];
 				baseline: 'GToolkit4Jenkins'
 					with: [ spec repository: 'github://feenkcom/gt4jenkins:main/src' ];
+				baseline: 'GToolkit4LSP'
+					with: [ spec repository: 'github://feenkcom/gt4lsp:main/src' ];
 				baseline: 'GToolkit4Ops'
 					with: [ spec repository: 'github://feenkcom/gt4ops:main/src' ];
 				baseline: 'GToolkitCoder'
