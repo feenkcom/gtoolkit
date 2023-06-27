@@ -17,6 +17,7 @@
     </a>
   </div>
 </div>
+
 ## The Moldable Development Environment
 [Glamorous Toolkit](https://gtoolkit.com) is the Moldable Development environment. It empowers you to make systems explainable through experiences tailored for each problem.
 ## Get started
