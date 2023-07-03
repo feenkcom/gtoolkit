@@ -40,6 +40,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "SmaCC is the core parsing engine in Glamorous Toolkit."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-03T08:49:22.207328+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-03T08:50:42.325168+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SiexTfG7DQCL16HQAJC5VQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For the moment we don't yet have a dedicated page on learning SmaCC in GT, so the best place to start is [Smacc: a Compiler Compiler](https://books.pharo.org/booklet-Smacc/), the open-source book on SmaCC."
 			}
 		]
 	},
