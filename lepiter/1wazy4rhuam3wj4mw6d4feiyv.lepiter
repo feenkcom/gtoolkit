@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:31:22.571027+02:00"
+						"dateAndTimeString" : "2023-07-07T16:00:00.972866+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:31:54.367089+02:00"
+						"dateAndTimeString" : "2023-07-07T16:00:35.096455+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8wAzZmeADQCtFWz3CHfMWA=="
+					"uidString" : "6O4qyUe8DQCGdhyDDPZO7A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "With a Pharo snippet, a Lepiter document transforms into a typical Playground or Workspace in a Smalltalk system."
+				"string" : "You  can open the *Lepiter* tool from the GT home menu to see the list of available databases and browse them there."
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-07T16:44:49.612132+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-07T16:44:51.538277+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WU1saUi8DQCWzzPRDPZO7A=="
+				},
+				"code" : "LeHomeDatabasesElement new\r\tdatabaseViewModel: LeDatabasesRegistry uniqueInstance currentLoadedDefaultLogicalDatabase\r\t\t\tasContentUIModel",
+				"elementHeight" : 617,
+				"codeHeight" : 50,
+				"codeVisible" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:25:00.006437+02:00"
+						"dateAndTimeString" : "2023-07-07T16:02:23.968272+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,51 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:32:40.964734+02:00"
+						"dateAndTimeString" : "2023-07-07T16:46:53.785938+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wDNIT2eADQCshVU/CHfMWA=="
+					"uidString" : "et2w0Ue8DQCJATy6DPZO7A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Beside typical abilities to expect from a Playground, every Pharo snippet is also populated with a `thisSnippet` variable pointing to ... well, the object representing that snippet."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:25:18.342808+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:25:20.101322+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "w2qIUGeADQCszLhSCHfMWA=="
-				},
-				"code" : "thisSnippet"
+				"string" : "From the *maximized*  view of a Lepiter page (click the `+` on the top left of the page to maximize it) you can see the list of Pages, and a Table of Contents, if one is defined."
 			},
 			{
 				"__type" : "textSnippet",
@@ -126,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:25:23.470872+02:00"
+						"dateAndTimeString" : "2023-07-07T16:46:55.370492+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,20 +140,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T15:21:30.815957+02:00"
+						"dateAndTimeString" : "2023-07-07T16:47:23.485579+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "GnHRUGeADQCszn5fCHfMWA=="
+					"uidString" : "uDvrcEi8DQCaZqLcDPZO7A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is particularly interesting because it provides a way to access the [[Lepiter]] knowledge base:"
+				"string" : "There is also a *Spotter* search (magnifying glass) where you can search for pages by title or content."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "elementSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -163,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:26:34.196679+02:00"
+						"dateAndTimeString" : "2023-07-07T16:47:30.717145+02:00"
 					}
 				},
 				"editEmail" : {
@@ -174,85 +177,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T16:26:39.074761+02:00"
+						"dateAndTimeString" : "2023-07-07T16:47:31.639725+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8toNVWeADQCtEk7ZCHfMWA=="
+					"uidString" : "II8Gc0i8DQCcd6TuDPZO7A=="
 				},
-				"code" : "thisSnippet database"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T17:43:47.61457+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T17:44:04.441538+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "ZMgxaWiADQCtXIkwCHfMWA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Of course, you can also access the current page in a similar fashion:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T17:44:07.07106+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T17:44:12.492795+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "fRVjamiADQCtXgfsCHfMWA=="
-				},
-				"code" : "thisSnippet page"
+				"code" : "(GtPager createWrappedOn: (LePagePhlowTool page: thisSnippet page)) maximized",
+				"elementHeight" : 313,
+				"codeHeight" : 50,
+				"codeVisible" : false
 			}
 		]
 	},
@@ -264,26 +199,26 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-06-05T16:24:57.317004+02:00"
+			"dateAndTimeString" : "2023-07-07T17:44:51.099415+02:00"
 		}
 	},
 	"editEmail" : {
 		"__type" : "email",
-		"emailString" : "veit.heller@feenk.com"
+		"emailString" : "<unknown>"
 	},
 	"editTime" : {
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-12-12T20:38:24.348387+01:00"
+			"dateAndTimeString" : "2023-07-07T17:44:56.518352+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Pharo snippet"
+		"title" : "How do I find my pages?"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "4396474f-6780-0d00-ac84-47230877cc58"
+		"uuid" : "87a61640-49bc-0d00-987c-2df903880c20"
 	}
 }
