@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:22:51.168313+01:00"
+						"dateAndTimeString" : "2023-07-10T17:09:59.466803+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,51 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:23:25.571882+01:00"
+						"dateAndTimeString" : "2023-07-14T14:42:35.817792+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "zUE0D1iwDQC+H/6xCevRJQ=="
+					"uidString" : "IvbwHIW8DQCrksJSD0PcyA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First we find the instance of {{gtClass:GtWorldElement}} based on the name of the current page:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:22:00.471472+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:28:07.325049+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "pSUXDViwDQC+GnzeCevRJQ=="
-				},
-				"code" : "currentWorldElement := GtWorldElement allInstances\r\t\tdetect: [ :eachWorld | \r\t\t\teachWorld tabs tabs\r\t\t\t\tanySatisfy: [ :each | \r\t\t\t\t\teach isSelected\r\t\t\t\t\t\tand: [ each children first text asString beginsWith: 'How to set' ] ] ]"
+				"string" : "Click the Spotter search at the right of the Class Coder."
 			},
 			{
 				"__type" : "textSnippet",
@@ -89,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:23:33.462313+01:00"
+						"dateAndTimeString" : "2023-07-10T17:11:08.489771+02:00"
 					}
 				},
 				"editEmail" : {
@@ -100,20 +66,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:23:40.801129+01:00"
+						"dateAndTimeString" : "2023-07-14T14:42:45.111786+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "g+uTEliwDQC/npVyCevRJQ=="
+					"uidString" : "ry0OIYW8DQCsL1cRD0PcyA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Once we have the world element, we set the extent:"
+				"string" : "This will search in class and the superclass hierarchy for all named methods."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -126,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:15:14.457343+01:00"
+						"dateAndTimeString" : "2023-07-14T14:15:46.437564+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +103,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T11:21:49.99134+02:00"
+						"dateAndTimeString" : "2023-07-14T14:16:41.690176+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "edvj9FewDQC6NYiACevRJQ=="
+					"uidString" : "jOVBJdO8DQCIPbsbDfE3MQ=="
 				},
-				"code" : "currentWorldElement space extent: 1600@1000."
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You can also use the Filter to limit the display to just methods in a particular category, or that access a particular slot."
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-14T14:14:52.862036+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-14T14:14:53.91819+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pmAQItO8DQCH16ZHDfE3MQ=="
+				},
+				"code" : "GtCoder forClass: GtMemoryCard",
+				"elementHeight" : 318,
+				"codeHeight" : 50,
+				"codeVisible" : false
 			}
 		]
 	},
@@ -156,7 +162,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-05T17:14:20.011325+01:00"
+			"dateAndTimeString" : "2023-07-14T14:19:50.140624+02:00"
 		}
 	},
 	"editEmail" : {
@@ -167,15 +173,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-05T17:27:44.533917+01:00"
+			"dateAndTimeString" : "2023-07-14T14:19:50.140624+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to set the extent of the current window"
+		"title" : "How to search for methods?"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "c62a6deb-57b0-0d00-b8ed-2fb809ebd125"
+		"uuid" : "ef88c833-d3bc-0d00-b655-6f710a3aa905"
 	}
 }

@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:22:51.168313+01:00"
+						"dateAndTimeString" : "2023-07-14T17:04:08.767886+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,51 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:23:25.571882+01:00"
+						"dateAndTimeString" : "2023-07-14T17:04:08.767886+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "zUE0D1iwDQC+H/6xCevRJQ=="
+					"uidString" : "7kFnf9W8DQC/2VibAmnbGg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First we find the instance of {{gtClass:GtWorldElement}} based on the name of the current page:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:22:00.471472+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:28:07.325049+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "pSUXDViwDQC+GnzeCevRJQ=="
-				},
-				"code" : "currentWorldElement := GtWorldElement allInstances\r\t\tdetect: [ :eachWorld | \r\t\t\teachWorld tabs tabs\r\t\t\t\tanySatisfy: [ :each | \r\t\t\t\t\teach isSelected\r\t\t\t\t\t\tand: [ each children first text asString beginsWith: 'How to set' ] ] ]"
+				"string" : "You can create a new class from coder with the + button."
 			},
 			{
 				"__type" : "textSnippet",
@@ -89,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:23:33.462313+01:00"
+						"dateAndTimeString" : "2023-07-14T17:04:08.772027+02:00"
 					}
 				},
 				"editEmail" : {
@@ -100,17 +66,91 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:23:40.801129+01:00"
+						"dateAndTimeString" : "2023-07-14T17:04:08.772027+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "g+uTEliwDQC/npVyCevRJQ=="
+					"uidString" : "FVJnf9W8DQC/2kFFAmnbGg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Once we have the world element, we set the extent:"
+				"string" : "In addition to the class name, you need to specify at least the package name."
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-14T17:04:08.773439+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-14T17:04:08.773439+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "aFdnf9W8DQC/20vkAmnbGg=="
+				},
+				"code" : "GtCoder new createInPager maximized",
+				"elementHeight" : 100,
+				"codeHeight" : 50,
+				"codeVisible" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-14T17:04:08.774417+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-07-14T17:04:08.774417+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XFtnf9W8DQC/3KUpAmnbGg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You can also create a class from a fixit in any code snippet or editor."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -126,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:15:14.457343+01:00"
+						"dateAndTimeString" : "2023-07-14T17:04:08.774908+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +177,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-16T11:21:49.99134+02:00"
+						"dateAndTimeString" : "2023-07-14T17:04:08.774908+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "edvj9FewDQC6NYiACevRJQ=="
+					"uidString" : "DV1nf9W8DQC/3TsdAmnbGg=="
 				},
-				"code" : "currentWorldElement space extent: 1600@1000."
+				"code" : "MyGreatNewClass new"
 			}
 		]
 	},
@@ -156,7 +196,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-05T17:14:20.011325+01:00"
+			"dateAndTimeString" : "2023-07-14T17:03:51.799509+02:00"
 		}
 	},
 	"editEmail" : {
@@ -167,15 +207,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-05T17:27:44.533917+01:00"
+			"dateAndTimeString" : "2023-07-14T17:03:51.799509+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to set the extent of the current window"
+		"title" : "How to create a new class?"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "c62a6deb-57b0-0d00-b8ed-2fb809ebd125"
+		"uuid" : "1e55647e-d5bc-0d00-bfb1-48360269db1a"
 	}
 }
