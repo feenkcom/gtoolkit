@@ -215,7 +215,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-23T08:37:18.757423+02:00"
+						"dateAndTimeString" : "2023-07-26T08:21:14.698217+02:00"
 					}
 				},
 				"uid" : {
@@ -225,7 +225,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Accessing the default remote runner will start one or more workers on the local machine, based on the amount of free resources (CPU & RAM)."
+				"string" : "Accessing the default remote runner will start one or more workers on the local machine, based on the amount of free resources (CPU & RAM) (see {{gtClass:GtRrResourceWorkerCountCalculator}})."
 			},
 			{
 				"__type" : "textSnippet",
@@ -263,78 +263,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "The default worker has code synchronisation enabled, allowing tasks to be run in the workers with the same code base as the runner, i.e. what is desired for a typical development environment."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-09-23T08:39:33.491694+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-09-23T08:39:48.499689+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "FvSCLbSlDQCZ/QSsBSq/aw=="
-							},
-							"code" : "SmalltalkImage current snapshot: true andQuit: false.\rGtRemoteRunner default."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-23T08:39:09.615962+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-23T08:39:31.353179+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "woQALLSlDQCZ8wOrBSq/aw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Currently the images are not synchronised on startup, so the development image should be saved prior to starting the remote runner:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -475,7 +403,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-09T13:59:38.892383+01:00"
+									"dateAndTimeString" : "2023-07-26T08:23:17.679571+02:00"
 								}
 							},
 							"uid" : {
@@ -485,7 +413,44 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Remote Runner - Checks (Examples and Tests)]]"
+							"string" : "[[Remote Runner - Checks (Examples and Tests)]] "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-26T08:23:22.482035+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-26T08:23:26.104055+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+FPRnr+9DQCH3DFgAX4PFQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Remote Runner - Start manual runner and workers]] "
 						}
 					]
 				},
