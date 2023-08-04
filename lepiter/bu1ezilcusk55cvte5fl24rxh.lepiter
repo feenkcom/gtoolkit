@@ -741,6 +741,77 @@
 					"uidString" : "HWJ5bB+tDQCkx7fnBc7lxw=="
 				},
 				"code" : "GtExtensionMethodsBaseImageOverridesBuilder forGToolkit"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-04T16:33:29.233779+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-04T16:33:45.131313+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uwxthHu+DQC01Gi2AG006w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can also run this analysis on top of other base images."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-04T16:33:47.578428+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-04T18:37:32.890352+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "m/OEhXu+DQC2aamqAG006w=="
+				},
+				"code" : "builder := GtExtensionMethodsBaseImageOverridesBuilder new.\rbuilder \r\timageName: 'Pharo11-SNAPSHOT-64bit-53659ed.image';\r\timageArchiveName: 'Pharo11-SNAPSHOT.build.700.sha.53659ed.arch.64bit.zip';\r\timageUrl: 'https://files.pharo.org/image/110/Pharo11-SNAPSHOT.build.700.sha.53659ed.arch.64bit.zip'.\r\rwrapper := builder buildWrapperForGToolkit"
 			}
 		]
 	},
