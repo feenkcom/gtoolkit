@@ -8,43 +8,6 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-05T10:37:18.152202+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-05T10:38:37.305956+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "AZZzqIq+DQCEO9OoCZj3Sw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "*THIS PAGE IS A DRAFT*  {{gtTodo:label=To be completed}}. "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -225,7 +188,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-07-26T11:12:12.452151+02:00"
+												"dateAndTimeString" : "2023-08-05T14:36:11.742926+02:00"
 											}
 										},
 										"uid" : {
@@ -528,7 +491,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:55:43.711783+02:00"
+															"dateAndTimeString" : "2023-08-05T13:37:07.438629+02:00"
 														}
 													},
 													"uid" : {
@@ -538,7 +501,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "The most visible of these are custom views. These allow you to customize what you see when you inspect an object of your domain simply by adding a method that uses the `<gtView>` pragma."
+													"string" : "The most visible custom tools are Inspector views. These allow you to customize what you see when you inspect an object of your domain simply by adding a method that uses the `<gtView>` pragma."
 												},
 												{
 													"__type" : "textSnippet",
@@ -602,7 +565,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:57:40.988717+02:00"
+															"dateAndTimeString" : "2023-08-05T13:39:43.988951+02:00"
 														}
 													},
 													"uid" : {
@@ -612,7 +575,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : ""
+													"string" : "Custom views are used in moldable development to highlight the most interesting and important aspects of a domain model. Often these are discovered as the application evolves. See [[Replace navigation by view]] to understand how repeated navigation can reveal the need for custom views."
 												},
 												{
 													"__type" : "textSnippet",
@@ -628,7 +591,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:57:10.738286+02:00"
+															"dateAndTimeString" : "2023-08-05T13:40:50.834161+02:00"
 														}
 													},
 													"editEmail" : {
@@ -639,17 +602,17 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:57:27.377852+02:00"
+															"dateAndTimeString" : "2023-08-05T13:42:05.746658+02:00"
 														}
 													},
 													"uid" : {
 														"__type" : "uid",
-														"uidString" : "VKocxou+DQCjBe93CZj3Sw=="
+														"uidString" : "rzCXN42+DQCEFtN0CgDIaw=="
 													},
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "***CONTINUE EDITING HERE***"
+													"string" : "Don't forget, you can always Secondary-click on the heading of an Inspector view to inspect its source code. "
 												},
 												{
 													"__type" : "textSnippet",
@@ -665,7 +628,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:57:03.829858+02:00"
+															"dateAndTimeString" : "2023-08-05T14:06:20.93592+02:00"
 														}
 													},
 													"editEmail" : {
@@ -676,20 +639,20 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:57:03.829858+02:00"
+															"dateAndTimeString" : "2023-08-05T14:07:12.750948+02:00"
 														}
 													},
 													"uid" : {
 														"__type" : "uid",
-														"uidString" : "tECzxYu+DQCi46N8CZj3Sw=="
+														"uidString" : "VUkPlI2+DQCs/1UBCgDIaw=="
 													},
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : ""
+													"string" : "There are several thousand Inspector views defined in GT. (Inspect the result and go to the *Metrics* view.)"
 												},
 												{
-													"__type" : "textSnippet",
+													"__type" : "pharoSnippet",
 													"children" : {
 														"__type" : "snippets",
 														"items" : [ ]
@@ -702,7 +665,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:54:02.947646+02:00"
+															"dateAndTimeString" : "2023-08-05T14:05:32.552983+02:00"
 														}
 													},
 													"editEmail" : {
@@ -713,54 +676,14 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:56:05.771137+02:00"
+															"dateAndTimeString" : "2023-08-05T14:06:12.81326+02:00"
 														}
 													},
 													"uid" : {
 														"__type" : "uid",
-														"uidString" : "9zHruou+DQCd3RHVCZj3Sw=="
+														"uidString" : "jwctkY2+DQCs3b5yCgDIaw=="
 													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "View"
-												},
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T10:54:39.579591+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:06:25.717103+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "GoeG5oq+DQCQKWIaCZj3Sw=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "[[Replace navigation by view]] "
+													"code" : "#gtView gtPragmas"
 												}
 											]
 										},
@@ -814,7 +737,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T10:56:03.748846+02:00"
+															"dateAndTimeString" : "2023-08-05T13:39:46.575858+02:00"
 														}
 													},
 													"editEmail" : {
@@ -825,17 +748,236 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T10:56:04.797211+02:00"
+															"dateAndTimeString" : "2023-08-05T13:45:19.350406+02:00"
 														}
 													},
 													"uid" : {
 														"__type" : "uid",
-														"uidString" : "nMxJ64q+DQCSDTGRCZj3Sw=="
+														"uidString" : "bUoHNY2+DQCCpsJVCgDIaw=="
 													},
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "[[Replace repeated tasks by custom actions]] "
+													"string" : "Custom actions are complementary to views. Like views, they are specified as methods, but with a `<gtAction>` pragma. Instead of defining an Inspector view, they define the behavior of a button for the Inspector view of an object."
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T13:46:37.252165+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T13:49:18.19146+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "YLeBTY2+DQCL0CXGCgDIaw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "For example, if we inspect the image directory, we see four buttons to browse the class, inspect the object, open the directory in the OS, or to search. Each of these is a gtAction. Secondary click on each ofthem to see the source code. (The simplest one is the third, to “Open in OS”.)"
+												},
+												{
+													"__type" : "elementSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T13:48:08.802534+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T13:48:23.565658+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "XKn2Uo2+DQCQ1BtACgDIaw=="
+													},
+													"code" : "GtInspector newOn: FileLocator imageDirectory",
+													"elementHeight" : 187,
+													"codeHeight" : 50,
+													"codeVisible" : false
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T13:49:23.634118+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T13:49:58.388239+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "BYFsV42+DQCSQbMLCgDIaw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "As with views, the need for custom actions is usually revealed during development. See [[Replace repeated tasks by custom actions]]  for details."
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T13:50:28.375206+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T13:51:46.246107+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "yV9IW42+DQCUYDW5CgDIaw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "Note that there are also variants to mold other tools, such as Lepiter pages or Coders. The buttons at the top of this page are defined by `<lePageAction>` pragmas. Secondary-click on them to inspect thier source code."
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:07:51.144587+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:08:02.328589+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "IsZvmY2+DQCwBAUFCgDIaw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "There are several hundred custom actions in the system."
+												},
+												{
+													"__type" : "pharoSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:07:23.081068+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:07:40.234018+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "wo3Dl42+DQCvtapFCgDIaw=="
+													},
+													"code" : "#gtAction gtPragmas"
 												}
 											]
 										},
@@ -889,7 +1031,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:58:01.617386+02:00"
+															"dateAndTimeString" : "2023-08-05T13:51:54.222433+02:00"
 														}
 													},
 													"editEmail" : {
@@ -900,17 +1042,17 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:58:01.797331+02:00"
+															"dateAndTimeString" : "2023-08-05T13:53:20.27142+02:00"
 														}
 													},
 													"uid" : {
 														"__type" : "uid",
-														"uidString" : "RgUlyYu+DQCkKwBfCZj3Sw=="
+														"uidString" : "5kdmYI2+DQCZADKpCgDIaw=="
 													},
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "Missing a dedicated page"
+													"string" : "Custom searches can be defined by methods with a `<gtSearch>` pragma. Anywhere you see a Spotter (magnifying glass) search, there may be custom searches defined for various categories of searches."
 												},
 												{
 													"__type" : "textSnippet",
@@ -926,7 +1068,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:00:49.362508+02:00"
+															"dateAndTimeString" : "2023-08-05T13:57:35.91593+02:00"
 														}
 													},
 													"editEmail" : {
@@ -937,17 +1079,162 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:05:26.06849+02:00"
+															"dateAndTimeString" : "2023-08-05T14:01:25.793909+02:00"
 														}
 													},
 													"uid" : {
 														"__type" : "uid",
-														"uidString" : "UPeQ/Iq+DQCSwz82CZj3Sw=="
+														"uidString" : "9R3EdI2+DQChAHjiCgDIaw=="
 													},
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "Spotter searches"
+													"string" : "For example, if you inspect this page, by clicking on the “(i)” button, you will see a search button that will show two categories of results, for snippets matching the input, and pages in the same database with matching titles."
+												},
+												{
+													"__type" : "elementSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:00:15.69583+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:00:16.460987+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "lChKfo2+DQCkRrLWCgDIaw=="
+													},
+													"code" : "GtInspector newOn: thisSnippet page",
+													"elementHeight" : 147,
+													"codeHeight" : 50,
+													"codeVisible" : false
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T13:57:15.588019+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:04:26.854321+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "oPKNc42+DQCg966JCgDIaw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "If you secondary-click on the button, you will just see the definition of the search button. To see the custom searches themselves, click on the button, and then secondary-click on the categories (in grey), i.e., “Text & Code snippets” or “Pages.”"
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:09:41.167174+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:09:53.251503+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "YJX+n42+DQCyAwRPCgDIaw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "Explore the examples to get an idea of how they work."
+												},
+												{
+													"__type" : "pharoSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:04:52.291559+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:04:57.790334+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "p7DGjo2+DQCshHGBCgDIaw=="
+													},
+													"code" : "#gtSearch gtPragmas"
 												}
 											]
 										},
@@ -1001,7 +1288,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:57:50.268583+02:00"
+															"dateAndTimeString" : "2023-08-05T14:20:25.272662+02:00"
 														}
 													},
 													"editEmail" : {
@@ -1012,17 +1299,54 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T11:57:58.719117+02:00"
+															"dateAndTimeString" : "2023-08-05T14:23:40.050172+02:00"
 														}
 													},
 													"uid" : {
 														"__type" : "uid",
-														"uidString" : "s9l3yIu+DQCjqP+eCZj3Sw=="
+														"uidString" : "vNpixo2+DQCz0/x+CgDIaw=="
 													},
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "Missing a dedicated page"
+													"string" : "There are numerous other ways to mold tools in GT. For example, custom advices (defined with the `<gtADvice>` pragma) provide linting recommendations. Tools like the GtHome landing page and the debugger can be molded, with varying degrees of effort. "
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:24:12.335284+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-08-05T14:27:25.297646+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "OI7r042+DQC5UHZqCgDIaw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "Opening up tools to be moldable is also an important part of moldable development. For a more general discussion of the principles behind moldable tools, see the paper [Moldable Tools for Object-oriented Development](https://scg.unibe.ch/assets/scgbib/?query=Chis17a&filter=CategoryYearMoldable Tools for Object-oriented Development). "
 												}
 											]
 										},
@@ -1045,7 +1369,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-05T11:56:40.061186+02:00"
+												"dateAndTimeString" : "2023-08-05T14:11:06.241522+02:00"
 											}
 										},
 										"uid" : {
@@ -1055,81 +1379,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "#Custom advices"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-05T11:56:40.656573+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-05T11:56:40.656573+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "W6hRxIu+DQCiiF9dCZj3Sw=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : ""
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-05T11:56:52.265772+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-05T11:56:52.265772+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "dpFly4q+DQCJZeAkCZj3Sw=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : ""
+										"string" : "# Other ways to mold tools"
 									}
 								]
 							},
@@ -1168,80 +1418,6 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-05T11:06:37.717978+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-05T11:06:37.717978+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "XGJZ7oq+DQCSRZrACZj3Sw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-05T10:55:57.417429+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-05T10:55:57.417429+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "7aya6oq+DQCR1zMUCZj3Sw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
 								"items" : [
 									{
 										"__type" : "textSnippet",
@@ -1257,7 +1433,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-07-26T11:11:23.465939+02:00"
+												"dateAndTimeString" : "2023-08-05T14:28:18.134977+02:00"
 											}
 										},
 										"editEmail" : {
@@ -1268,92 +1444,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-07-26T11:11:29.27625+02:00"
+												"dateAndTimeString" : "2023-08-05T14:29:06.840928+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "wNjy98G9DQCOhD0LDUWeCA=="
+											"uidString" : "/yiS4o2+DQC9jff3CgDIaw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Start from Lepiter"
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-25T17:01:47.486714+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-26T11:11:22.185983+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "2Zc8v7K9DQC3zdI+BWaYIA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "## Use Notes to document your questions"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-05T10:31:24.162141+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-05T10:31:24.700844+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "axmb5rK9DQCBKi/3BWaYIA=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "[[Moldable Development best practice patterns]] "
+										"string" : "There are numerous best practices that can help you to apply moldable development effectively. Some of these are documented as [[Moldable Development best practice patterns]]. "
 									}
 								]
 							},
@@ -1420,228 +1521,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Getting started with Moldable Development"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T11:11:42.883385+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T11:11:42.883385+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "D/50pLK9DQCkPchWAFDCPQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:50:06.772858+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:50:06.772858+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Vwfaq8G9DQCMowVQAAEtCg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:50:07.021915+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:50:07.021915+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "lODdq8G9DQCMqOmFAAEtCg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:50:07.26336+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:50:07.26336+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "6o7hq8G9DQCMre+uAAEtCg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:35:22.670442+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T10:35:22.670442+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Krsnd8G9DQC3A6xgAAEtCg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-25T16:53:56.432184+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-25T16:53:56.432184+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "5d0oo7K9DQCi52l0AFDCPQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
 			}
 		]
 	},
