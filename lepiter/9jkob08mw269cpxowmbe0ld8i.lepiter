@@ -647,45 +647,7 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256264+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256264+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "Sg1JQ36+DQCNmVaJD4A0oQ=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "```language=text\nstack addLast: 3\n```"
-												}
-											]
+											"items" : [ ]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -717,6 +679,43 @@
 											"__type" : "textStyle"
 										},
 										"string" : "We find the `addLast:` selector, and experiment with it in the Inspector Playground."
+									},
+									{
+										"__type" : "elementSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-06T09:15:54.680183+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-06T09:53:04.519684+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "WRs3o52+DQCfXlI1D4F27w=="
+										},
+										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: StackMachine new\r\t\tWithPlaygroundText: 'stack addLast: 3'.\rscripter elementWithoutParent",
+										"elementHeight" : 450,
+										"codeHeight" : 110,
+										"codeVisible" : false
 									},
 									{
 										"__type" : "textSnippet",
@@ -797,45 +796,7 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256278+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256278+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "WA1JQ36+DQCNnes0D4A0oQ=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "```language=text\nstack addLast: aValue\n```"
-												}
-											]
+											"items" : [ ]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -869,6 +830,43 @@
 										"string" : "We generalize the code as follows."
 									},
 									{
+										"__type" : "elementSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-06T09:17:45.66819+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-06T09:53:44.538636+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "SKbUqZ2+DQCfn9puD4F27w=="
+										},
+										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: StackMachine new\r\t\tWithPlaygroundText: 'stack addLast: aValue'.\rscripter elementWithoutParent",
+										"elementHeight" : 440,
+										"codeHeight" : 114,
+										"codeVisible" : false
+									},
+									{
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
@@ -893,7 +891,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-04T19:50:01.256281+02:00"
+												"dateAndTimeString" : "2023-08-06T09:21:51.47312+02:00"
 											}
 										},
 										"uid" : {
@@ -903,7 +901,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We select the code and perform an *Extract method* refactoring, and name the new (binary) method `!`. "
+										"string" : "We select the code and perform an *Extract method* refactoring, and name the new (binary) method `!`."
 									},
 									{
 										"__type" : "textSnippet",
@@ -930,7 +928,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-04T19:50:01.256285+02:00"
+												"dateAndTimeString" : "2023-08-06T09:46:31.219506+02:00"
 											}
 										},
 										"uid" : {
@@ -940,85 +938,13 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "(For illustrative purposes we have StackMachine classes to represent the different versions. In reality we would just have one class.)"
-									},
-									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-04T19:50:01.256288+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-04T19:50:01.256288+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "Yg1JQ36+DQCNoLH1D4A0oQ=="
-										},
-										"code" : "StackMachineV1 new "
+										"string" : "(For illustrative purposes we have multiple StackMachine classes to represent the different versions. In reality we would just have one class.)"
 									},
 									{
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256295+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256295+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "aQ1JQ36+DQCNop1cD4A0oQ=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "```language=text\nself ! 3.\rself ! 4.\n```"
-												}
-											]
+											"items" : [ ]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -1050,6 +976,43 @@
 											"__type" : "textStyle"
 										},
 										"string" : "We push two values onto the stack from the Inspector Playground."
+									},
+									{
+										"__type" : "elementSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-06T09:45:54.412361+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-06T09:54:49.973562+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "t9Z8Dp6+DQCnntTeD4F27w=="
+										},
+										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: StackMachineV1 new\r\t\tWithPlaygroundText: 'self ! 3. self ! 4.'.\rscripter elementWithoutParent",
+										"elementHeight" : 446,
+										"codeHeight" : 124,
+										"codeVisible" : false
 									}
 								]
 							},
@@ -1119,7 +1082,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256308+02:00"
+															"dateAndTimeString" : "2023-08-06T09:50:09.318657+02:00"
 														}
 													},
 													"uid" : {
@@ -1129,81 +1092,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "```language=text\nstack\n```"
-												},
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256312+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256312+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "eQ1JQ36+DQCNpmDdD4A0oQ=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "```language=text\nstack isEmpty\n```"
-												},
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256316+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-04T19:50:01.256316+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "fg1JQ36+DQCNp3KYD4A0oQ=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "```language=text\nstack last \"top\"\n```"
+													"string" : "```language=text\nstack.\nstack isEmpty.\nstack last \"top\".\n```"
 												}
 											]
 										},
@@ -1237,6 +1126,43 @@
 											"__type" : "textStyle"
 										},
 										"string" : "It would be nice to inspect the stack and the top of the stack, so  we test each of the following snippets in the Playground, and extract them as methods."
+									},
+									{
+										"__type" : "elementSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-06T09:47:07.940331+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-06T09:55:21.710443+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "U8neEp6+DQCoEu+3D4F27w=="
+										},
+										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: (StackMachineV1 new\r\t\t\t\t! 3;\r\t\t\t\t! 4;\r\t\t\t\tyourself)\r\t\tWithPlaygroundTextAndDoit: 'self top'.\rscripter elementWithoutParent",
+										"elementHeight" : 451,
+										"codeHeight" : 165,
+										"codeVisible" : false
 									},
 									{
 										"__type" : "textSnippet",
