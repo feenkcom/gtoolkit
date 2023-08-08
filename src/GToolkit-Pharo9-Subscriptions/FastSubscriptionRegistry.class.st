@@ -19,11 +19,8 @@ Class {
 
 { #category : #accessing }
 FastSubscriptionRegistry class >> initialize [
-	"Patches for the base image and running SystemAnnouncer"
+	"Replaces the subscription registry of the SystemAnnouncer with an instance of the fast subscription registry"
 	| newReg |
-	Announcer compile: 'initialize
-	super initialize.
-	registry := FastSubscriptionRegistry new.' classified: 'initialization'.
 	
 	newReg := FastSubscriptionRegistry new copyFromSlowRegistry: (SystemAnnouncer uniqueInstance instVarNamed: #registry).
 	SystemAnnouncer uniqueInstance instVarNamed: #registry put: newReg.
