@@ -139,6 +139,7 @@ class GlamorousToolkit {
 
         script.node(agent.label()) {
             release()
+            releaseDockerImage()
         }
     }
 
@@ -171,6 +172,26 @@ class GlamorousToolkit {
         }
 
         script.parallel testers
+    }
+
+    /**
+     * Prepare GToolkit Docker images and push them into a Docker hub.
+     */
+    void releaseDockerImage() {
+        def currentResult = script.currentBuild.result ?: 'SUCCESS'
+        // we must not release if the build is not successful until this point
+        if (currentResult != 'SUCCESS') {
+            return;
+        }
+
+        script.stage("Docker") {
+            doReleaseDockerImage()
+        }
+    }
+
+    void doReleaseDockerImage() {
+        def job = new DockerIt(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64)
+        job.execute()
     }
 
     void release() {
@@ -362,6 +383,30 @@ class Builder extends AgentJob {
             build.stash_for_release(GlamorousToolkit.TENTATIVE_PACKAGE_WITHOUT_GT_WORLD)
             build.stash_internally(GlamorousToolkit.TENTATIVE_PACKAGE)
         }
+    }
+}
+
+/**
+ * I build GToolkit Docker images and push them to the Docker hub.
+ * See https://hub.docker.com/repository/docker/feenkcom/gtoolkit
+ */
+class DockerIt extends AgentJob {
+    final Triplet target
+
+    DockerIt(GlamorousToolkit build, Agent agent, Triplet target) {
+        super(build, agent)
+        this.target = target
+    }
+
+    @java.lang.Override
+    void execute() {
+        script.node(agent.label()) {
+            dockerIt()
+        }
+    }
+
+    void dockerIt() {
+        platform().exec(script, "docker", "buildx --builder gtoolkit build --platform linux/amd64,linux/arm64/v8 --tag feenkcom/gtoolkit:dummy-test --push .")
     }
 }
 
