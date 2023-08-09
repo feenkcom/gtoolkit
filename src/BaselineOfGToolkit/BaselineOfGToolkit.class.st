@@ -168,7 +168,9 @@ BaselineOfGToolkit >> baseline: spec [
 				baseline: 'RBFormatter'
 					with: [ spec repository: 'github://j-brant/RBFormatter/src' ];
 				baseline: 'GToolkitWorld'
-					with: [ spec repository: 'github://feenkcom/gtoolkit-world:main/src' ] ]
+					with: [ spec repository: 'github://feenkcom/gtoolkit-world:main/src' ];
+				baseline: 'GToolkitPhlowExamples'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-phlow:main/src' ] ]
 ]
 
 { #category : #'post load' }

@@ -444,7 +444,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:50:01.256211+02:00"
+									"dateAndTimeString" : "2023-08-09T10:35:41.518112+02:00"
 								}
 							},
 							"uid" : {
@@ -454,7 +454,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Suppose we are implementing a {{gtClass:name=StackMachine}} class to simulate an [RPN](https://en.wikipedia.org/wiki/Reverse_Polish_notation) calculator. So far it just holds a `stack` slot initialized to an empty {{gtClass:name=OrderedCollection}}, and nothing else. We want to implement operations  to perform calculations with the stack machine."
+							"string" : "Suppose we are implementing a `StackMachine` class to simulate an [RPN](https://en.wikipedia.org/wiki/Reverse_Polish_notation) calculator. So far it just holds a `stack` slot initialized to an empty {{gtClass:name=OrderedCollection}}, and nothing else. We want to implement operations  to perform calculations with the stack machine."
 						},
 						{
 							"__type" : "textSnippet",
@@ -523,14 +523,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-04T19:50:01.256232+02:00"
+												"dateAndTimeString" : "2023-08-09T10:34:41.825772+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "Kw1JQ36+DQCNlC8RD4A0oQ=="
 										},
-										"code" : "StackMachine new "
+										"code" : "StackMachineV0 new "
 									},
 									{
 										"__type" : "textSnippet",
@@ -631,14 +631,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-04T19:50:01.256255+02:00"
+												"dateAndTimeString" : "2023-08-09T10:35:56.684413+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "QQ1JQ36+DQCNl9IqD4A0oQ=="
 										},
-										"code" : "GtInspector newOn: StackMachine new",
+										"code" : "GtInspector newOn: StackMachineV0 new",
 										"elementHeight" : 217,
 										"codeHeight" : 50,
 										"codeVisible" : false
@@ -705,14 +705,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-06T09:53:04.519684+02:00"
+												"dateAndTimeString" : "2023-08-09T10:36:15.398665+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "WRs3o52+DQCfXlI1D4F27w=="
 										},
-										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: StackMachine new\r\t\tWithPlaygroundText: 'stack addLast: 3'.\rscripter elementWithoutParent",
+										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: StackMachineV0 new\r\t\tWithPlaygroundText: 'stack addLast: 3'.\rscripter elementWithoutParent",
 										"elementHeight" : 450,
 										"codeHeight" : 110,
 										"codeVisible" : false
@@ -854,14 +854,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-06T09:53:44.538636+02:00"
+												"dateAndTimeString" : "2023-08-09T10:36:31.378829+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "SKbUqZ2+DQCfn9puD4F27w=="
 										},
-										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: StackMachine new\r\t\tWithPlaygroundText: 'stack addLast: aValue'.\rscripter elementWithoutParent",
+										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: StackMachineV0 new\r\t\tWithPlaygroundText: 'stack addLast: aValue'.\rscripter elementWithoutParent",
 										"elementHeight" : 440,
 										"codeHeight" : 114,
 										"codeVisible" : false
