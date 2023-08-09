@@ -23,7 +23,7 @@ FROM ubuntu-gtbase as gtoolkit
 # This build includes all necessary GToolkit executable, data, documentation files.
 
 # Copy basic Pharo run script. You want to replace the run.st file with our own version
-COPY gtoolkit/run.st /gtoolkit/
+COPY docker-image/run.st /gtoolkit/
 
 # Copy Pharo sources, VM (lib, bin), Pharo image and changes
 COPY *.sources /gtoolkit/
