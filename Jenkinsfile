@@ -406,7 +406,7 @@ class DockerIt extends AgentJob {
     }
 
     void dockerIt() {
-        platform().exec(script, "docker", "buildx --builder gtoolkit build --platform linux/amd64,linux/arm64/v8 --tag feenkcom/gtoolkit:dummy-test --push .")
+        platform().exec(script, "docker", "buildx --builder gtoolkit build --platform linux/amd64,linux/arm64/v8 --tag feenkcom/gtoolkit:dummy-test --push glamoroustoolkit")
     }
 }
 

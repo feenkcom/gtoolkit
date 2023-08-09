@@ -23,16 +23,16 @@ FROM ubuntu-gtbase as gtoolkit
 # This build includes all necessary GToolkit executable, data, documentation files.
 
 # Copy basic Pharo run script. You want to replace the run.st file with our own version
-COPY scripts/docker/gtoolkit/run.st /gtoolkit/
+COPY gtoolkit/run.st /gtoolkit/
 
 # Copy Pharo sources, VM (lib, bin), Pharo image and changes
-COPY glamoroustoolkit/*.sources /gtoolkit/
-COPY glamoroustoolkit/lib /gtoolkit/lib/
-COPY glamoroustoolkit/bin /gtoolkit/bin/
-COPY glamoroustoolkit/GlamorousToolkit.changes /gtoolkit/
-COPY glamoroustoolkit/GlamorousToolkit.image /gtoolkit/
+COPY *.sources /gtoolkit/
+COPY lib /gtoolkit/lib/
+COPY bin /gtoolkit/bin/
+COPY GlamorousToolkit.changes /gtoolkit/
+COPY GlamorousToolkit.image /gtoolkit/
 
 # Copy documentation
-COPY glamoroustoolkit/gt-extra /gtoolkit/gt-extra/
+COPY gt-extra /gtoolkit/gt-extra/
 
 ENTRYPOINT [ "./bin/GlamorousToolkit-cli", "GlamorousToolkit.image", "st", "run.st" ]
