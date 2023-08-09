@@ -190,8 +190,17 @@ class GlamorousToolkit {
     }
 
     void doReleaseDockerImage() {
-        def job = new DockerIt(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64)
-        job.execute()
+        def dockerJobs = [:]
+
+        // platformsArgument is picked from https://hub.docker.com/_/ubuntu, latest tag that we currently use in our Dockerfile
+        def jobAMD = new DockerIt(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64, "linux/amd64")
+        def jobARM = new DockerIt(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64, "linux/arm64/v8")
+
+        // Create a map to pass in to the 'parallel' step so we can fire all the builds at once
+        dockerJobs[jobAMD.agent] = { jobAMD.execute() }
+        dockerJobs[jobARM.agent] = { jobARM.execute() }
+
+        script.parallel dockerJobs
     }
 
     void release() {
@@ -392,10 +401,12 @@ class Builder extends AgentJob {
  */
 class DockerIt extends AgentJob {
     final Triplet target
+    final String platformsArgument
 
-    DockerIt(GlamorousToolkit build, Agent agent, Triplet target) {
+    DockerIt(GlamorousToolkit build, Agent agent, Triplet target, String platformsArgument) {
         super(build, agent)
         this.target = target
+        this.platformsArgument = platformsArgument
     }
 
     @java.lang.Override
@@ -407,7 +418,7 @@ class DockerIt extends AgentJob {
 
     void dockerIt() {
         platform().exec(script, "docker", "login")
-        platform().exec(script, "docker", "buildx --builder gtoolkit build --platform linux/amd64,linux/arm64/v8 --tag feenkcom/gtoolkit:dummy-test --push glamoroustoolkit")
+        platform().exec(script, "docker", "buildx --builder gtoolkit build --pull --platform ${platformsArgument} --tag feenkcom/gtoolkit:dummy-test --push glamoroustoolkit")
     }
 }
 
