@@ -418,7 +418,7 @@ class DockerIt extends AgentJob {
 
     void dockerIt() {
         platform().exec(script, "docker", "login")
-        platform().exec(script, "docker", "buildx --builder gtoolkit build --platform ${platformsArgument} --tag feenkcom/gtoolkit:dummy-test --push glamoroustoolkit")
+        platform().exec(script, "docker", "buildx --builder gtoolkit build --pull --platform ${platformsArgument} --tag feenkcom/gtoolkit:dummy-test --push glamoroustoolkit")
     }
 }
 
