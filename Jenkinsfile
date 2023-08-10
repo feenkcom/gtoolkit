@@ -82,6 +82,7 @@ class GlamorousToolkit {
     static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
     static final RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
     static final DOCKER_REPOSITORY = 'feenkcom/gtoolkit'
+    static final DOCKER_TENTATIVE_TAG = 'tentative'
 
     final Script script
     Agent agent
@@ -209,7 +210,7 @@ class GlamorousToolkit {
             return;
         }
 
-        def multiArchTag = "${DOCKER_REPOSITORY}:dummy-test".toString()
+        def multiArchTag = "${DOCKER_REPOSITORY}:${DOCKER_TENTATIVE_TAG}".toString()
         jobAMD.platform().exec(
                 script,
                 "docker",
@@ -438,7 +439,7 @@ class DockerIt extends AgentJob {
 
     @NonCPS
     String tag_name() {
-        return "${GlamorousToolkit.DOCKER_REPOSITORY}:dummy-test-${target.short_label()}".toString()
+        return "${GlamorousToolkit.DOCKER_REPOSITORY}:${GlamorousToolkit.DOCKER_TENTATIVE_TAG}-${target.toString()}".toString()
     }
 }
 
