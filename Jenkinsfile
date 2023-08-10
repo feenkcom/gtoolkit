@@ -463,15 +463,27 @@ class DockerMultiArchManifest extends AgentJob {
         }
     }
 
-    String multi_arch_full_name() {
-        return "${GlamorousToolkit.DOCKER_REPOSITORY}:${GlamorousToolkit.DOCKER_TENTATIVE_TAG}".toString()
+    /**
+     * Return an image tag name that includes repository name and a GToolkit version number.
+     * @return docker image tag
+     */
+    String multi_arch_version_name() {
+        return "${GlamorousToolkit.DOCKER_REPOSITORY}:${build.gtoolkitVersion}".toString()
+    }
+
+    /**
+     * Return an image tag name that includes repository name and a latest version name.
+     * @return docker image tag
+     */
+    String multi_arch_latest_name() {
+        return "${GlamorousToolkit.DOCKER_REPOSITORY}:latest".toString()
     }
 
     void createManifest() {
         def amends = this.manifestFullNames.join(" ")
-        platform().exec(script, "docker", "buildx imagetools create --tag ${this.multi_arch_full_name() ${amends}}".toString())
+        platform().exec(script, "docker", "buildx imagetools create --tag ${this.multi_arch_version_name() ${amends}}".toString())
+        platform().exec(script, "docker", "buildx imagetools create --tag ${this.multi_arch_latest_name() ${amends}}".toString())
     }
-
 }
 
 class TestAndPackage extends AgentJob {
