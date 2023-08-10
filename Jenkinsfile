@@ -475,14 +475,14 @@ class DockerMultiArchManifest extends AgentJob {
      * Return an image tag name that includes repository name and a latest version name.
      * @return docker image tag
      */
-    String multi_arch_latest_name() {
+    static String multi_arch_latest_name() {
         return "${GlamorousToolkit.DOCKER_REPOSITORY}:latest".toString()
     }
 
     void createManifest() {
         def amends = this.manifestFullNames.join(" ")
         platform().exec(script, "docker", "buildx imagetools create --tag ${this.multi_arch_version_name() ${amends}}".toString())
-        platform().exec(script, "docker", "buildx imagetools create --tag ${this.multi_arch_latest_name() ${amends}}".toString())
+        platform().exec(script, "docker", "buildx imagetools create --tag ${multi_arch_latest_name() ${amends}}".toString())
     }
 }
 
