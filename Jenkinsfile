@@ -426,7 +426,7 @@ class DockerOneArchTentativeManifest extends AgentJob {
 
     @java.lang.Override
     void execute() {
-        script.node("Docker ${target.short_label()}".toString()) {
+        script.node(agent.label()) {
             docker_it()
         }
     }
