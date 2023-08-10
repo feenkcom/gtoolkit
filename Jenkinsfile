@@ -481,8 +481,8 @@ class DockerMultiArchManifest extends AgentJob {
 
     void createManifest() {
         def amends = this.manifestFullNames.join(" ")
-        platform().exec(script, "docker", "buildx imagetools create --tag ${this.multi_arch_version_name() ${amends}}".toString())
-        platform().exec(script, "docker", "buildx imagetools create --tag ${multi_arch_latest_name() ${amends}}".toString())
+        platform().exec(script, "docker", "buildx imagetools create --tag ${this.multi_arch_version_name()} ${amends}".toString())
+        platform().exec(script, "docker", "buildx imagetools create --tag ${multi_arch_latest_name()} ${amends}".toString())
     }
 }
 
