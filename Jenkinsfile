@@ -1,3 +1,4 @@
+
 import hudson.tasks.test.AbstractTestResultAction
 import hudson.model.Actionable
 import hudson.tasks.junit.CaseResult
@@ -459,7 +460,6 @@ class DockerMultiArchManifest extends AgentJob {
     void execute() {
         script.node(agent.label()) {
             createManifest()
-            pushManifest()
         }
     }
 
@@ -468,13 +468,10 @@ class DockerMultiArchManifest extends AgentJob {
     }
 
     void createManifest() {
-        def amends = this.manifestFullNames.join(" --amend ")
-        platform().exec(script, "docker", "manifest create ${this.multi_arch_full_name()} --amend ${amends}".toString())
+        def amends = this.manifestFullNames.join(" ")
+        platform().exec(script, "docker", "buildx imagetools create --tag ${this.multi_arch_full_name() ${amends}}".toString())
     }
 
-    void pushManifest() {
-        platform().exec(script, "docker", "manifest push ${this.multi_arch_full_name()}".toString())
-    }
 }
 
 class TestAndPackage extends AgentJob {
