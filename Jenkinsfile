@@ -195,8 +195,8 @@ class GlamorousToolkit {
         def dockerJobs = [:]
 
         // platformsArgument is picked from https://hub.docker.com/_/ubuntu, latest tag that we currently use in our Dockerfile
-        def jobAMD = new DockerIt(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64, "linux/amd64")
-        def jobARM = new DockerIt(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64, "linux/arm64/v8")
+        def jobAMD = new DockerOneArchTentativeManifest(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64, "linux/amd64")
+        def jobARM = new DockerOneArchTentativeManifest(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64, "linux/arm64/v8")
 
         // Create a map to pass in to the 'parallel' step so we can fire all the builds at once
         dockerJobs[jobAMD.agent] = { jobAMD.execute() }
@@ -210,12 +210,11 @@ class GlamorousToolkit {
             return;
         }
 
-        def multiArchTag = "${DOCKER_REPOSITORY}:${DOCKER_TENTATIVE_TAG}".toString()
-        jobAMD.platform().exec(
-                script,
-                "docker",
-                "manifest create ${multiArchTag} --amend ${jobAMD.tag_name()} --amend ${jobARM.tag_name()}".toString())
-        jobAMD.platform().exec(script, "docker", "manifest push ${multiArchTag}".toString())
+        // Publish all manifests as one multi-architecture manifest
+        def manifestFullNames = [jobAMD.manifest_name(), jobARM.manifest_name() ]
+        def jobManifest = new DockerMultiArchManifest(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64, manifestFullNames)
+
+        jobManifest.execute()
     }
 
     void release() {
@@ -411,14 +410,14 @@ class Builder extends AgentJob {
 }
 
 /**
- * I build GToolkit Docker images and push them to the Docker hub.
+ * I build GToolkit Docker images and push them to the Docker hub (which includes manifests).
  * See https://hub.docker.com/repository/docker/feenkcom/gtoolkit
  */
-class DockerIt extends AgentJob {
+class DockerOneArchTentativeManifest extends AgentJob {
     final Triplet target
     final String platformsArgument
 
-    DockerIt(GlamorousToolkit build, Agent agent, Triplet target, String platformsArgument) {
+    DockerOneArchTentativeManifest(GlamorousToolkit build, Agent agent, Triplet target, String platformsArgument) {
         super(build, agent)
         this.target = target
         this.platformsArgument = platformsArgument
@@ -427,19 +426,54 @@ class DockerIt extends AgentJob {
     @java.lang.Override
     void execute() {
         script.node(agent.label()) {
-            dockerIt()
+            docker_it()
         }
     }
 
-    void dockerIt() {
+    void docker_it() {
         platform().exec(script, "docker", "info")
         platform().exec(script, "docker", "login")
-        platform().exec(script, "docker", "buildx --builder gtoolkit build --pull --platform ${platformsArgument} --tag ${this.tag_name()} --push glamoroustoolkit".toString())
+        platform().exec(script, "docker", "buildx --builder gtoolkit build --pull --platform ${platformsArgument} --tag ${this.manifest_name()} --push glamoroustoolkit".toString())
     }
 
     @NonCPS
-    String tag_name() {
+    String manifest_name() {
         return "${GlamorousToolkit.DOCKER_REPOSITORY}:${GlamorousToolkit.DOCKER_TENTATIVE_TAG}-${target.toString()}".toString()
+    }
+}
+
+/**
+ * Create and push a multi-arch manifest.
+ */
+class DockerMultiArchManifest extends AgentJob {
+    final Triplet target
+    final ArrayList<String> manifestFullNames
+
+    DockerMultiArchManifest(GlamorousToolkit build, Agent agent, Triplet target, ArrayList<String> manifestFullNames) {
+        super(build, agent)
+        this.target = target
+        this.manifestFullNames = manifestFullNames
+    }
+
+    @java.lang.Override
+    void execute() {
+        script.node(agent.label()) {
+            createManifest()
+            pushManifest()
+        }
+    }
+
+    String multi_arch_full_name() {
+        return "${GlamorousToolkit.DOCKER_REPOSITORY}:${GlamorousToolkit.DOCKER_TENTATIVE_TAG}".toString()
+    }
+
+    void createManifest() {
+        def amends = this.manifestFullNames.join(" --amend ")
+        platform().exec(script, "docker", "manifest create ${this.multi_arch_full_name()} --amend ${amends}".toString())
+    }
+
+    void pushManifest() {
+        platform().exec(script, "docker", "manifest push ${this.multi_arch_full_name()}".toString())
     }
 }
 
