@@ -81,6 +81,7 @@ class GlamorousToolkit {
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
     static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
     static final RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
+    static final DOCKER_REPOSITORY = 'feenkcom/gtoolkit'
 
     final Script script
     Agent agent
@@ -201,6 +202,19 @@ class GlamorousToolkit {
         dockerJobs[jobARM.agent] = { jobARM.execute() }
 
         script.parallel dockerJobs
+
+        def currentResult = script.currentBuild.result ?: 'SUCCESS'
+        // we must not release if the build is not successful until this point
+        if (currentResult != 'SUCCESS') {
+            return;
+        }
+
+        def multiArchTag = "${DOCKER_REPOSITORY}:dummy-test".toString()
+        jobAMD.platform().exec(
+                script,
+                "docker",
+                "manifest create ${multiArchTag} --amend ${jobAMD.tag_name()} --amend ${jobARM.tag_name()}".toString())
+        jobAMD.platform().exec(script, "docker", "manifest push ${multiArchTag}".toString())
     }
 
     void release() {
@@ -417,10 +431,14 @@ class DockerIt extends AgentJob {
     }
 
     void dockerIt() {
-        platform().exec(script, "id", "")
         platform().exec(script, "docker", "info")
         platform().exec(script, "docker", "login")
-        platform().exec(script, "docker", "buildx --builder gtoolkit build --pull --platform ${platformsArgument} --tag feenkcom/gtoolkit:dummy-test --push glamoroustoolkit")
+        platform().exec(script, "docker", "buildx --builder gtoolkit build --pull --platform ${platformsArgument} --tag ${this.tag_name()} --push glamoroustoolkit".toString())
+    }
+
+    @NonCPS
+    String tag_name() {
+        return "${GlamorousToolkit.DOCKER_REPOSITORY}:dummy-test-${target.short_label()}".toString()
     }
 }
 
