@@ -1,4 +1,4 @@
-"Startup code should appear below."
+"Startup code template."
 Transcript
     cr;
 	show: 'GToolkit ';
@@ -8,5 +8,5 @@ Transcript
 	show: 'Use `COPY run.st /gtoolkit/` Dockerfile command to configure what to execute.';
 	cr.
 
-"Remove the next line if you're starting a server, this is just a template."
+"Remove (or change) the next line if you're starting a server."
 Smalltalk snapshot: false andQuit: true.

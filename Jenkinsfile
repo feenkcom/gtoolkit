@@ -1,3 +1,4 @@
+
 import hudson.tasks.test.AbstractTestResultAction
 import hudson.model.Actionable
 import hudson.tasks.junit.CaseResult
@@ -81,6 +82,8 @@ class GlamorousToolkit {
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
     static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
     static final RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
+    static final DOCKER_REPOSITORY = 'feenkcom/gtoolkit'
+    static final DOCKER_TENTATIVE_TAG = 'tentative'
 
     final Script script
     Agent agent
@@ -190,8 +193,29 @@ class GlamorousToolkit {
     }
 
     void doReleaseDockerImage() {
-        def job = new DockerIt(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64)
-        job.execute()
+        def dockerJobs = [:]
+
+        // platformsArgument is picked from https://hub.docker.com/_/ubuntu, latest tag that we currently use in our Dockerfile
+        def jobAMD = new DockerOneArchTentativeImage(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64, "linux/amd64")
+        def jobARM = new DockerOneArchTentativeImage(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64, "linux/arm64/v8")
+
+        // Create a map to pass in to the 'parallel' step so we can fire all the builds at once
+        dockerJobs[jobAMD.agent] = { jobAMD.execute() }
+        dockerJobs[jobARM.agent] = { jobARM.execute() }
+
+        script.parallel dockerJobs
+
+        def currentResult = script.currentBuild.result ?: 'SUCCESS'
+        // we must not release if the build is not successful until this point
+        if (currentResult != 'SUCCESS') {
+            return;
+        }
+
+        // Publish all manifests as one multi-architecture manifest
+        def tentativeImageNames = [jobAMD.tentative_image_name(), jobARM.tentative_image_name() ]
+        def multiArchJob = new DockerMultiArchImage(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64, tentativeImageNames)
+
+        multiArchJob.execute()
     }
 
     void release() {
@@ -387,27 +411,119 @@ class Builder extends AgentJob {
 }
 
 /**
- * I build GToolkit Docker images and push them to the Docker hub.
- * See https://hub.docker.com/repository/docker/feenkcom/gtoolkit
+ * Build and publish a new tentative one-arch image with Glamorous Toolkit of a just released version.
+ *
+ * Images are published at Docker Hub. See https://hub.docker.com/r/feenkcom/gtoolkit.
  */
-class DockerIt extends AgentJob {
+class DockerOneArchTentativeImage extends AgentJob {
     final Triplet target
 
-    DockerIt(GlamorousToolkit build, Agent agent, Triplet target) {
+    /**
+     * I define platform names that are supposed to build image(s) for.
+     * See `docker buildx build --platform` argument for more details.
+     */
+    final String platformsArgument
+
+    DockerOneArchTentativeImage(GlamorousToolkit build, Agent agent, Triplet target, String platformsArgument) {
         super(build, agent)
         this.target = target
+        this.platformsArgument = platformsArgument
     }
 
     @java.lang.Override
     void execute() {
         script.node(agent.label()) {
-            dockerIt()
+            create_and_publish_image()
         }
     }
 
-    void dockerIt() {
+    /**
+     * Return an image tag name that includes repository name and a GToolkit version number.
+     * @return docker image tag, e.g., feenkcom/gtoolkit:tentative-x86_64-unknown-linux-gnu
+     */
+    @NonCPS
+    String tentative_image_name() {
+        return "${GlamorousToolkit.DOCKER_REPOSITORY}:${GlamorousToolkit.DOCKER_TENTATIVE_TAG}-${target.toString()}".toString()
+    }
+
+    /**
+     * I use `docker buildx build` to build and publish GToolkit images.
+     *
+     * Dockerfile and other relevant files are available at scripts/docker/gtoolkit.
+     * Those files are packed for Jenkins builds using `gt-installer`, see
+     * https://github.com/feenkcom/gtoolkit-maestro-rs/blob/main/src/tools/tentative.rs#L49.
+     *
+     * I use a `gtoolkit` builder (see the `--builder gtoolkit` argument). The builder was created using
+     * on Linux x86-64: `docker buildx create --name gtoolkit --node gtoolkit-amd64 --platform linux/amd64 --bootstrap --use default`
+     * on Linux ARM64: `docker buildx create --name gtoolkit --node gtoolkit-arm64 --platform linux/arm64 --bootstrap --use default`
+     *
+     * Use `docker buildx ls` to list all available builders.
+     */
+    void create_and_publish_image() {
+        // Display docker information (for a debug purpose only)
+        platform().exec(script, "docker", "info")
+        // Login to the Docker Hub.
+        // Note, that the first login in a new machine must happen from a user terminal
+        // using `docker login -u feenkcom --password-stdin`. Token can be generated with read and write access
+        // at https://hub.docker.com/settings/security.
         platform().exec(script, "docker", "login")
-        platform().exec(script, "docker", "buildx --builder gtoolkit build --platform linux/amd64,linux/arm64/v8 --tag feenkcom/gtoolkit:dummy-test --push glamoroustoolkit")
+        // Build and publish GToolkit tentative image
+        platform().exec(script, "docker", "buildx --builder gtoolkit build --pull --platform ${platformsArgument} --tag ${this.tentative_image_name()} --push glamoroustoolkit".toString())
+    }
+}
+
+/**
+ * Create a new multi-arch image based on source images.
+ *
+ * Multi-arch image is a collection of images for different platforms (architectures), e.g., Linux x86_64, Linux AMD64.
+ * Images are published at Docker Hub. See https://hub.docker.com/r/feenkcom/gtoolkit.
+ */
+class DockerMultiArchImage extends AgentJob {
+    final Triplet target
+
+    /**
+     * Source images are strings in a form of feenkcom/gtoolkit:tentative-*,
+     * e.g., feenkcom/gtoolkit:tentative-x86_64-unknown-linux-gnu.
+     * Those images are created by DockerOneArchTentativeImage.
+     */
+    final ArrayList<String> sourceImageNames
+
+    DockerMultiArchImage(GlamorousToolkit build, Agent agent, Triplet target, ArrayList<String> sourceImageNames) {
+        super(build, agent)
+        this.target = target
+        this.sourceImageNames = sourceImageNames
+    }
+
+    @java.lang.Override
+    void execute() {
+        script.node(agent.label()) {
+            create_multi_arch_images()
+        }
+    }
+
+    /**
+     * Return an image tag name that includes repository name and a GToolkit version number.
+     * @return docker image tag, e.g., feenkcom/gtoolkit:v0.8.3085
+     */
+    String multi_arch_version_name() {
+        return "${GlamorousToolkit.DOCKER_REPOSITORY}:${build.gtoolkitVersion}".toString()
+    }
+
+    /**
+     * Return an image tag name that includes repository name and a latest version name.
+     * @return docker image tag in a form feenkcom/gtoolkit:latest
+     */
+    static String multi_arch_latest_name() {
+        return "${GlamorousToolkit.DOCKER_REPOSITORY}:latest".toString()
+    }
+
+    /**
+     * I create and publish two images, one under the GToolkit version number, and another one under the latest tag.
+     */
+    void create_multi_arch_images() {
+        def amends = this.sourceImageNames.join(" ")
+        platform().exec(script, "docker", "buildx imagetools create --tag ${this.multi_arch_version_name()} ${amends}".toString())
+        platform().exec(script, "docker", "buildx imagetools create --tag ${multi_arch_latest_name()} ${amends}".toString())
     }
 }
 
