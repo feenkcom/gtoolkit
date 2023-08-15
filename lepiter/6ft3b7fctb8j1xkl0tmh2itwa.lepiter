@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-14T08:23:01.406071+02:00"
+						"dateAndTimeString" : "2023-08-14T16:01:40.67302+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Add `\"self assertPhlowViews: object\"`  to your example or a test case."
+				"string" : "Add `\"self assertObjectPhlowViewsFor: object\"`  to your example or a test case."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-14T08:22:33.124244+02:00"
+						"dateAndTimeString" : "2023-08-14T16:00:54.936398+02:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtMethod:Object>>#assertPhlowViews:}} instantiates a  {{gtClass:GtPhlowViewTester}} which collects all views from an object, renders them as graphical elements and checks if there are any errors or exceptions in those views or graphical elements."
+				"string" : "{{gtMethod:Object>>#assertObjectPhlowViewsFor:}} instantiates a  {{gtClass:GtPhlowViewTester}} which collects all views from an object, renders them as graphical elements and checks if there are any errors or exceptions in those views or graphical elements."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -140,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-14T08:18:57.096912+02:00"
+						"dateAndTimeString" : "2023-08-14T16:00:42.506658+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "4F4cxT2/DQC8uDudBa7DbA=="
 				},
-				"code" : "myObject := Object new.\rself assertPhlowViews: myObject"
+				"code" : "myObject := Object new.\rself assertObjectPhlowViewsFor: myObject"
 			},
 			{
 				"__type" : "textSnippet",
