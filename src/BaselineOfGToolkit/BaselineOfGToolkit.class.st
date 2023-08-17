@@ -189,7 +189,15 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		newLineAfterPragma: false;
 		sameLineKeywordArgument: true;
 		parenthesizeCascadeReceiver: false;
-		retainBlankLinesBetweenStatements: true
+		retainBlankLinesBetweenStatements: true.
+		
+	self 
+		forPharo11: [ ] 
+		forPharo10: [
+			#Ephemeron asClass classSide 
+				compile: 'leJsonV4Name
+
+	^ nil' classified: 'serialisation'].
 ]
 
 { #category : #'post load' }
