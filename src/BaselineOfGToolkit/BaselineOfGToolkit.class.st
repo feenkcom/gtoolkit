@@ -228,7 +228,7 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		newLineAfterPragma: false;
 		sameLineKeywordArgument: true;
 		parenthesizeCascadeReceiver: false;
-		retainBlankLinesBetweenStatements: true
+		retainBlankLinesBetweenStatements: true.
 ]
 
 { #category : #'post load' }

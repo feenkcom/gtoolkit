@@ -1,6 +1,9 @@
 Class {
 	#name : #BaselineOfGToolkitForPharo9,
 	#superclass : #BaselineOf,
+	#classVars : [
+		'PostLoaded'
+	],
 	#category : #BaselineOfGToolkitForPharo9
 }
 
@@ -20,4 +23,18 @@ BaselineOfGToolkitForPharo9 >> baseline: spec [
 		spec package: 'GToolkit-Pharo9' with: [
 			spec requires: #('GToolkit-Pharo9-Deprecations' 'GToolkit-Pharo9-Debugger' 'GToolkit-Pharo9-Subscriptions' 'GToolkit-Pharo9-Iceberg' 'GToolkit') ].
 	]
+]
+
+{ #category : #baselines }
+BaselineOfGToolkitForPharo9 >> postLoadGToolkit: spec [
+	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
+	PostLoaded := true.
+
+	self 
+		forPharo11: [ ] 
+		forPharo10: [
+			#Ephemeron asClass classSide 
+				compile: 'leJsonV4Name
+
+	^ nil' classified: 'serialisation'].
 ]
