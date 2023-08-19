@@ -8,10 +8,14 @@ LABEL maintainer="feenk <admin@feenk.com>"
 # Source: https://octopus.com/blog/using-ubuntu-docker-image
 RUN echo 'APT::Install-Suggests "0";' >> /etc/apt/apt.conf.d/00-docker
 RUN echo 'APT::Install-Recommends "0";' >> /etc/apt/apt.conf.d/00-docker
-# Install libraries for libSkia.so
+# Install libraries:
+# - libgl1 OpenGL (libgl1 is API and libgl1-mesa is a specific backend),
+# - libegl1 OpenEGL,
+# - libfreetype6 and libfontconfig1 to support font and text rendering,
+# - libx11-6 - for an event loop and windowing support
 RUN DEBIAN_FRONTEND=noninteractive \
   apt-get update \
-  && apt-get install -y libfreetype6 libx11-6 libgl1 libegl1 libfontconfig1 \
+  && apt-get install -y libfreetype6 libx11-6 libgl1-mesa-glx libegl1-mesa libfontconfig1 \
   && rm -rf /var/lib/apt/lists/*
 
 # Create working directory
