@@ -258,7 +258,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:49:01.075119+02:00"
+									"dateAndTimeString" : "2023-08-21T13:53:02.86065+02:00"
 								}
 							},
 							"uid" : {
@@ -268,7 +268,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Start coding by inspecting a live instance of the class you are coding, not in a code editor. "
+							"string" : "Start coding by inspecting *moldable object*, that is, a live instance of the class you are coding, not in a code editor. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -370,7 +370,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:49:01.082938+02:00"
+									"dateAndTimeString" : "2023-08-21T13:53:16.105923+02:00"
 								}
 							},
 							"uid" : {
@@ -380,7 +380,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "You can inspect a live instance in many ways."
+							"string" : "You can inspect a moldable object in many ways."
 						},
 						{
 							"__type" : "textSnippet",
@@ -740,7 +740,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:49:01.082997+02:00"
+									"dateAndTimeString" : "2023-08-21T13:53:56.872141+02:00"
 								}
 							},
 							"uid" : {
@@ -750,7 +750,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If the class you want to work with does not yet exist, you can still inspect a live instance with the help of a *fixit*. From the code snippet below, we can inspect an instance of a class `MyStackMachine`, after clickibg on the wrench icon and selecting the `Create class` fixit."
+							"string" : "If the class you want to work with does not yet exist, you can still inspect a moldable object with the help of a *fixit*. From the code snippet below, we can inspect an instance of a class `MyStackMachine`, after clickibg on the wrench icon and selecting the `Create class` fixit."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -811,7 +811,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:49:01.083004+02:00"
+									"dateAndTimeString" : "2023-08-21T13:54:00.715265+02:00"
 								}
 							},
 							"uid" : {
@@ -821,7 +821,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Once you have a live instance, you can incrementally add behavior and custom views, and immediately see the effect on the live instance."
+							"string" : "Once you have a moldable object, you can incrementally add behavior and custom views, and immediately see the effect on the live instance."
 						},
 						{
 							"__type" : "textSnippet",
@@ -848,7 +848,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:49:01.083007+02:00"
+									"dateAndTimeString" : "2023-08-21T13:54:12.961175+02:00"
 								}
 							},
 							"uid" : {
@@ -858,7 +858,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now you can use the Playground atthe bottom of the Inspector to prototype the new behavior. They key point is that the Playground is bound to the environment of the live instance, so you have access to self and all the slots of the objects. Once you have working code, you can apply an *Extract method* refactoring, or you can copy-paste the code to a new method."
+							"string" : "Now you can use the Playground at the bottom of the Inspector to prototype the new behavior. They key point is that the Playground is bound to the environment of the moldable object, so you have access to self and all the slots of the objects. Once you have working code, you can apply an *Extract method* refactoring, or you can copy-paste the code to a new method."
 						},
 						{
 							"__type" : "textSnippet",
@@ -960,7 +960,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:49:01.084121+02:00"
+									"dateAndTimeString" : "2023-08-21T14:10:13.508421+02:00"
 								}
 							},
 							"uid" : {
@@ -970,7 +970,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If you are modeling external data, [[Wrap data to create an explorable model]]."
+							"string" : "If you are modeling external data, you can create a moldable object from a [[Viewable data wrapper]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -997,7 +997,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:49:01.084128+02:00"
+									"dateAndTimeString" : "2023-08-21T13:55:17.525836+02:00"
 								}
 							},
 							"uid" : {
@@ -1007,7 +1007,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Once you have a live instance, you can [[Prototype new behavior in an Inspector Playground]]."
+							"string" : "Once you have a moldable object, you can mold it from a [[Contextual playground]]."
 						}
 					]
 				},
@@ -1138,12 +1138,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-04T19:46:44.115168+02:00"
+			"dateAndTimeString" : "2023-08-21T13:50:21.114471+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Start coding from a live object, not its class"
+		"title" : "Moldable object"
 	},
 	"uid" : {
 		"__type" : "uuid",

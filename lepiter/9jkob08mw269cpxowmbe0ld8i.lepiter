@@ -258,7 +258,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:50:01.250416+02:00"
+									"dateAndTimeString" : "2023-08-21T14:11:22.546183+02:00"
 								}
 							},
 							"uid" : {
@@ -268,7 +268,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Prototype new behavior in the Playground of an Inspector on a live instance of the class. The Playground will be bound to the environment of the instance, so `self` and all slots can be accessed exactly as they would in a running method."
+							"string" : "Prototype new behavior in the Playground of a [[Moldable object]], i.e., an Inspector on a live instance of the class. The Playground will be bound to the *context* of the instance, so `self` and all slots can be accessed exactly as they would in a running method."
 						},
 						{
 							"__type" : "textSnippet",
@@ -295,7 +295,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:50:01.250423+02:00"
+									"dateAndTimeString" : "2023-08-21T14:11:36.732359+02:00"
 								}
 							},
 							"uid" : {
@@ -305,7 +305,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "From the live instance you can navigate to any parts of the instance, to explore the APIs, or to test experimental code."
+							"string" : "From the moldable object you can navigate to any parts of the instance, to explore the APIs, or to test experimental code."
 						},
 						{
 							"__type" : "textSnippet",
@@ -891,7 +891,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-06T09:21:51.47312+02:00"
+												"dateAndTimeString" : "2023-08-21T14:12:21.7539+02:00"
 											}
 										},
 										"uid" : {
@@ -1787,7 +1787,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:50:01.257085+02:00"
+									"dateAndTimeString" : "2023-08-21T14:12:48.709087+02:00"
 								}
 							},
 							"uid" : {
@@ -1797,7 +1797,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Start coding from a live object, not its class]], in order to get a live instance to prototype from."
+							"string" : "Start with a [[Moldable object]], in order to get a live instance to prototype from."
 						}
 					]
 				},
@@ -1965,12 +1965,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-04T19:46:45.848748+02:00"
+			"dateAndTimeString" : "2023-08-21T13:51:43.048964+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Prototype new behavior in an Inspector Playground"
+		"title" : "Contextual playground"
 	},
 	"uid" : {
 		"__type" : "uuid",
