@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.716032+02:00"
+									"dateAndTimeString" : "2023-08-21T14:08:37.525765+02:00"
 								}
 							},
 							"uid" : {
@@ -81,81 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Although a considerable amount of technology has been developed to support moldability (Lepiter notebooks, a moldable Inspector, a graphical framework with a single rendering tree, and much more), a better way way to learn about moldable development is to focus on the *best practices*."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.716048+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.716048+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "E8EZPH6+DQCMvh0+D4A0oQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "An effective way to describe best practices is as a collection of *patterns*. In this case the focus is not on software design, but rather development practices, so these are not design patterns, but *process patterns*."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.716052+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.716052+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "FsEZPH6+DQCMv+d1D4A0oQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Each pattern is named after something you *do*. There is a *problem* to be solved, there are *forces* at play that motivate the application of the pattern, there is a *solution*, and *steps* to implement the pattern. Finally, there are *related patterns* that may be applied before, during or after the steps."
+							"string" : "A good way to learn about moldable development is to focus on the *patterns* we observe when practicing it. Each of the patterns below addresses a *problem* to be solved, there are *forces* at play that motivate the application of the pattern, there is a *solution*, and *steps* to implement the pattern. Finally, there are *related patterns* that may be applied before, during or after the steps."
 						}
 					]
 				},
@@ -220,7 +146,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718496+02:00"
+									"dateAndTimeString" : "2023-08-21T14:09:16.698985+02:00"
 								}
 							},
 							"uid" : {
@@ -230,7 +156,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Moldable development works best when you incrementally extend a live model with custom tools as you explore it. "
+							"string" : "Moldable development works best when you incrementally extend a live model with custom tools as you explore it.  You can start the exploration and molding process from a [[Moldable object]], a live instance of a key domain entity, even at  the very beginning of a new project. If you are analyzing existing data, you should start with a [[Viewable data wrapper]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -246,7 +172,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718501+02:00"
+									"dateAndTimeString" : "2023-08-21T13:58:07.451532+02:00"
 								}
 							},
 							"editEmail" : {
@@ -257,91 +183,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718501+02:00"
+									"dateAndTimeString" : "2023-08-21T13:58:33.28256+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "p8oZPH6+DQCMxJdED4A0oQ=="
+								"uidString" : "olIbVM+/DQCGf3CEBhqxrQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Start coding from a live object, not its class]] explains how you can start the exploration and molding process from live objects, even at  the very beginning of a new project."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718507+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718507+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "rcoZPH6+DQCMxf7OD4A0oQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[Wrap data to create an explorable model]] illustrates this process when the modeling task is about analyzing existing data."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718511+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718511+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "sMoZPH6+DQCMxqLvD4A0oQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Once you have a live model to explore, [[Prototype new behavior in an Inspector Playground]] explains how you can leverage the context of a live object within an Inspector Playground to prototype new behavior and custom tools."
+							"string" : "Once you have a moldable object to explore, you can leverage its  [[Contextual playground]] to prototype new behavior and custom tools."
 						},
 						{
 							"__type" : "textSnippet",
@@ -368,7 +220,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718514+02:00"
+									"dateAndTimeString" : "2023-08-21T14:03:21.534407+02:00"
 								}
 							},
 							"uid" : {
@@ -378,7 +230,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "As you are developing the live model, you may find yourself repeatedly performing the same sequences of navigation steps to access information, either by clicking through views or evaluating Playground snippets. This is often a sign that you should [[Replace navigation by view]]."
+							"string" : "As you are developing the live model, you may find yourself repeatedly performing the same sequences of navigation steps to access information, either by clicking through views or evaluating Playground snippets. This is often a sign that the information you navigate to should be turned into a [[Viewable Entity]] of your domain object."
 						},
 						{
 							"__type" : "textSnippet",
@@ -405,7 +257,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718516+02:00"
+									"dateAndTimeString" : "2023-08-21T14:03:32.909767+02:00"
 								}
 							},
 							"uid" : {
@@ -415,7 +267,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Similarly, you may repeatedly perform certain code snippets to obtain a certain effect, such as opening a new window. In this case, instead of creating a custom view, you might  [[Replace repeated tasks by custom actions]]. "
+							"string" : "Similarly, you may repeatedly perform certain code snippets to obtain a certain effect, such as opening a new window. In this case, instead of creating a custom view, you might want a  [[Custom action]]. "
 						}
 					]
 				},
