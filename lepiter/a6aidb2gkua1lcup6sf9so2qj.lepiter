@@ -184,11 +184,13 @@
 				"string" : "{{gtClass:GtGemStoneSessionRegistry}} was partially generated from:"
 			},
 			{
+				"__schema" : "4.1",
 				"__type" : "robocoderMetamodelSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
 				},
+				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'Registry'\r@project GemStone\r\r@derive api\r\rsessionRegistry",
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "<unknown>"
@@ -214,8 +216,7 @@
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "k1v7nYSJDQCKQ5vbCzzdqw=="
-				},
-				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'Registry'\r@project GemStone\r\r@derive api\r\rsessionRegistry"
+				}
 			},
 			{
 				"__type" : "textSnippet",
@@ -255,11 +256,13 @@
 				"string" : "{{gtClass:GtGemStoneSession}} was partially generated from:"
 			},
 			{
+				"__schema" : "4.1",
 				"__type" : "robocoderMetamodelSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
 				},
+				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'Client'\r@project GemStone\r\r@derive api\r\rsession",
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "<unknown>"
@@ -285,8 +288,7 @@
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "hx7i+4aJDQCK/YObArtoFw=="
-				},
-				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'Client'\r@project GemStone\r\r@derive api\r\rsession"
+				}
 			},
 			{
 				"__type" : "textSnippet",
@@ -326,11 +328,13 @@
 				"string" : "The view models are generated from:"
 			},
 			{
+				"__schema" : "4.1",
 				"__type" : "robocoderMetamodelSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
 				},
+				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'UI'\r@project GemStone\r@suffix ViewModel\r\r@derive children\r@derive parent\r@derive announcer\r@derive notifier\r@derive api\r@derive phlowList\r@derive print\r\rsessionManager => session(s).\r\rsessionManager {\r\t@derive model(api: TGtWithGemStoneSessionRegistry),\r\tsession(s): #activeSessions\r}.\r\rsession(s) {\r\t@derive model(name: activeSessions),\r\t@derive selection,\r\t@derive activation\r}.\r\rsession {\r\t@derive model(api: TGtWithGemStoneSession),\r\t@derive selection,\r\t@derive activation\r}",
 				"createEmail" : {
 					"__type" : "email",
 					"emailString" : "<unknown>"
@@ -356,8 +360,7 @@
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/V+Y4YSJDQCKnL71Czzdqw=="
-				},
-				"code" : "@prefix Gt\r@package 'GToolkit-GemStone-Pharo'\r@objectTag 'UI'\r@project GemStone\r@suffix ViewModel\r\r@derive children\r@derive parent\r@derive announcer\r@derive notifier\r@derive api\r@derive phlowList\r@derive print\r\rsessionManager => session(s).\r\rsessionManager {\r\t@derive model(api: TGtWithGemStoneSessionRegistry),\r\tsession(s): #activeSessions\r}.\r\rsession(s) {\r\t@derive model(name: activeSessions),\r\t@derive selection,\r\t@derive activation\r}.\r\rsession {\r\t@derive model(api: TGtWithGemStoneSession),\r\t@derive selection,\r\t@derive activation\r}"
+				}
 			},
 			{
 				"__type" : "textSnippet",
@@ -384,7 +387,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-15T16:34:34.667347+02:00"
+						"dateAndTimeString" : "2023-08-23T08:25:45.940075+02:00"
 					}
 				},
 				"uid" : {
@@ -394,7 +397,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Links to [[Pages Containing Missing References - Allowed Failures]] to allow references to missing classes and methods in the page."
+				"string" : "Links to [[Pages containing missing references - allowed failures]] to allow references to missing classes and methods in the page."
 			}
 		]
 	},
@@ -417,12 +420,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-09-29T16:25:46.298706+02:00"
+			"dateAndTimeString" : "2023-08-23T08:25:06.498194+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GemStone session registry and manager UI"
+		"title" : "GemStone session registry and manager user interface"
 	},
 	"uid" : {
 		"__type" : "uuid",
