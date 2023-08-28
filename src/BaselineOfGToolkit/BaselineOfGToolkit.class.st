@@ -170,9 +170,7 @@ BaselineOfGToolkit >> baseline: spec [
 				baseline: 'GToolkitWorld'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-world:main/src' ];
 				baseline: 'GToolkitPhlowExamples'
-					with: [ spec repository: 'github://feenkcom/gtoolkit-phlow:main/src' ];
-				baseline: 'DeepTraverserUI' 
-					with: [ spec repository: 'github://feenkcom/DeepTraverser:main/src' ]. ]
+					with: [ spec repository: 'github://feenkcom/gtoolkit-phlow:main/src' ] ]
 ]
 
 { #category : #'post load' }
