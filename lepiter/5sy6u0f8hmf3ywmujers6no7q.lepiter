@@ -548,14 +548,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:48:05.593248+02:00"
+						"dateAndTimeString" : "2023-08-29T13:14:01.591567+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/CqwHaa/DQC88zuaCbyapg=="
 				},
-				"code" : "connector := GtGemStoneSessionRegistry default propertiesFile addNewConnector.\rconnector \r\tregistry: GtGemStoneSessionRegistry default;\r\tlibraryPath: (FileLocator imageDirectory \r\t/ 'remote-gemstone') asFileReference.\rGtGemStoneSessionRegistry default \r\tnewSessionWithConnector:  connector"
+				"code" : "connector := GtGemStoneSessionRegistry default propertiesFile addNewConnector.\rconnector \r\tregistry: GtGemStoneSessionRegistry default;\r\tlibraryPath: (FileLocator imageDirectory \r\t\t/ 'remote-gemstone') asFileReference.\rconnector username: 'SystemUser'.\r\t\rGtGemStoneSessionRegistry default \r\tnewSessionWithConnector:  connector"
 			}
 		]
 	},
