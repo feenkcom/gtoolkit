@@ -227,13 +227,16 @@ GtTranscriptExamples >> scripterShowString [
 		aStep do
 			label: self feenkString;
 			action: [ :aTranscript | aTranscript show: self feenkString ];
-			onModel.
-		aStep wait forEmptySpaceTaskQueue.
+			onModel;
+			play.
+		aStep wait forEmptySpaceTaskQueue;
+			play.
 		aStep check
 			label: 'Check Transcript Content';
 			satisfies: [ :aTranscript | aTranscript textDo: [ :aText | aText asString = self feenkString ] ];
-			onModel ].
-	aScripter syncContinue.
+			onModel;
+			play ].
+
 	^ aScripter
 ]
 
@@ -243,16 +246,18 @@ GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI [
 	| aScripter |
 	aScripter := self scripter.
 	aScripter substep: 'Write with #show:' do: [ :aStep |
-		aStep set model: [ self transcript ].
+		aStep set model: [ self transcript ];
+			play.
 		aStep do
 			label: 'Show: ', self feenkString;
 			action: [ :theTranscript | theTranscript show: self feenkString ];
-			onModel.
+			onModel;
+			play.
 		aStep check
 			label: 'Check Transcript Content';
 			satisfies: [ :theTranscript | theTranscript textDo: [ :aText | aText asString = self feenkString ] ];
-			onModel. ].
-	aScripter syncContinue.
+			onModel;
+			play. ].
 	^ aScripter
 ]
 
@@ -264,13 +269,16 @@ GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI_AndDisplayTheUI [
 	aScripter substep: 'Display Transcript UI' do: [ :aStep |
 		aStep set 
 			element: [ :theTranscript | theTranscript asElement ];
-			onModel.
-		aStep wait forEmptySpaceTaskQueue.
+			onModel;
+			play.
+		aStep wait forEmptySpaceTaskQueue;
+			play.
 		aStep check
 			label: 'Check UI Transcript Content';
 			childrenCount: 1;
-			onBreadthFirstChildOfClass: BrTextEditorParagraphElement ].
-	aScripter syncContinue.
+			onBreadthFirstChildOfClass: BrTextEditorParagraphElement;
+			play ].
+
 	^ aScripter
 ]
 
