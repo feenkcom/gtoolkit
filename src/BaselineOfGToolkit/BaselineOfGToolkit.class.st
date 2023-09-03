@@ -101,6 +101,8 @@ BaselineOfGToolkit >> baseline: spec [
 					with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ];
 				baseline: 'GToolkitDebugger'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-debugger:main/src' ];
+				baseline: 'GToolkitDebuggerExtensions'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-debugger:main/src' ];
 				baseline: 'GToolkitFileBrowser'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-filebrowser:main/src' ];
 				baseline: 'GToolkitDemos'
