@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-08T18:46:18.085702+02:00"
+						"dateAndTimeString" : "2023-09-12T08:22:08.520096+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The NixOS package definition for GT has been merged in to their package repository but probably won't be available until NixOS 23.11 is released."
+				"string" : "The Nix package definition for GT has been merged in to their package repository."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-12T08:18:28.422933+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-12T08:18:39.933719+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Y0buJYXBDQCv/iGDD8JMQA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Currently only GT on x86_64 is supported."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-08T19:17:26.104879+02:00"
+						"dateAndTimeString" : "2023-09-12T08:20:15.924673+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If you're using the unstable channel you can just add `glamoroustoolkit` to your list of packages."
+				"string" : "If you're using the unstable channel you should be able to just add `glamoroustoolkit` to your list of packages."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-08T19:18:34.951308+02:00"
+						"dateAndTimeString" : "2023-09-12T08:22:26.337198+02:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Otherwise there are two options for installing GT on a stable channel:"
+				"string" : "Otherwise two options for installing GT on a stable channel are:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -145,7 +182,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-08T19:19:23.04609+02:00"
+									"dateAndTimeString" : "2023-09-12T08:23:04.498995+02:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +192,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This has the advantage that it uses the same versions of libraries as the stable channel, so uses a little less disk space on the system disk:"
+							"string" : "This has the advantage that it uses the same versions of libraries as are currently installed, so uses a little less disk space on the system disk:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -187,7 +224,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T18:47:57.77419+02:00"
+												"dateAndTimeString" : "2023-09-12T08:21:08.727857+02:00"
 											}
 										},
 										"uid" : {
@@ -197,7 +234,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "```bash\ngit clone --depth=1  git@github.com:NixOS/nixpkgs.git\n```"
+										"string" : "```bash\ngit clone --depth=1 --branch nixpkgs-unstable git@github.com:NixOS/nixpkgs.git\n```"
 									}
 								]
 							},
@@ -412,7 +449,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T19:22:46.185877+02:00"
+												"dateAndTimeString" : "2023-09-12T08:20:38.387583+02:00"
 											}
 										},
 										"uid" : {
@@ -422,7 +459,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "```nix\n{ config, pkgs, ... }:\nlet\n  unstable = import\n    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/master)\n    # reuse the current configuration\n    { config = config.nixpkgs.config; };\nin\n{\n  environment.systemPackages = with pkgs; [\n    unstable.glamoroustoolkit\n  ];\n}\n```"
+										"string" : "```nix\n{ config, pkgs, ... }:\nlet\n  unstable = import\n    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixpkgs-unstable)\n    # reuse the current configuration\n    { config = config.nixpkgs.config; };\nin\n{\n  environment.systemPackages = with pkgs; [\n    unstable.glamoroustoolkit\n  ];\n}\n```"
 									}
 								]
 							},
@@ -478,7 +515,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-08T19:20:05.605626+02:00"
+						"dateAndTimeString" : "2023-09-12T08:22:33.899491+02:00"
 					}
 				},
 				"uid" : {
@@ -488,7 +525,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### Install from the master branch directly"
+				"string" : "### Install from the unstable branch directly"
 			},
 			{
 				"__type" : "textSnippet",
