@@ -18,6 +18,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-20T23:30:20.067886+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-09-20T23:30:20.067886+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Iri60TLCDQCRKSSgBcLcQQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Glamorous Toolkit allows you to work with REST APIs out of the box."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2021-05-28T06:02:38.029499+02:00"
 					}
 				},
@@ -29,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-28T06:02:38.029499+02:00"
+						"dateAndTimeString" : "2023-09-20T23:30:20.071223+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit allows you to work with REST APIs out of the box. Here, we take a look at how we can play with the GitHub REST API."
+				"string" : "Here, we take a look at how we can play with the GitHub REST API. Take a look at the related [[Exploring the GitHub REST API in 7']] video."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-15T10:59:34.125652+01:00"
+						"dateAndTimeString" : "2023-09-20T23:30:31.805919+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here is the github JSON content located at [https://api.github.com/orgs/feenkcom](https://api.github.com/orgs/feenkcom):"
+				"string" : "As a case study we start from JSON content located at [https://api.github.com/orgs/feenkcom](https://api.github.com/orgs/feenkcom):"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -248,7 +285,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T16:42:33.957252+02:00"
+						"dateAndTimeString" : "2023-09-20T23:31:03.518591+02:00"
 					}
 				},
 				"uid" : {
@@ -258,7 +295,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now, that's just a string. We'd rather parse it:"
+				"string" : "Now, that's just a string. We never really want to work with a string. We'd rather parse it:"
 			},
 			{
 				"__type" : "pharoSnippet",
