@@ -15,7 +15,7 @@ RUN echo 'APT::Install-Recommends "0";' >> /etc/apt/apt.conf.d/00-docker
 # - libx11-6 - for an event loop and windowing support
 RUN DEBIAN_FRONTEND=noninteractive \
   apt-get update \
-  && apt-get install -y libfreetype6 libx11-6 libgl1-mesa-glx libegl1-mesa libfontconfig1 \
+  && apt-get install -y libfreetype6 libfontconfig1 libx11-6 libgl-dev libglvnd-dev libegl1 \
   && rm -rf /var/lib/apt/lists/*
 
 # Create working directory
