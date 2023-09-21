@@ -47,11 +47,4 @@ BaselineOfGToolkitForPharo9 >> postLoadGToolkit: spec [
 				compile: 'leJsonV4Name
 
 	^ nil' classified: 'serialisation'].
-	
-	self 
-		forPharo11: [ 
-			#ConstantBlockClosure asClass  
-				compile: 'gtIsConstantBlockClosure
-	^ true' classified: 'testing' ]
-		forPharo10: []
 ]
