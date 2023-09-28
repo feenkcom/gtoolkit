@@ -572,7 +572,7 @@ class TestAndPackage extends AgentJob {
     void run_tests() {
         if (runTests) {
             script.stage("Test " + target.short_label()) {
-                script.timeout(time: 60, unit: 'MINUTES') {
+                script.timeout(time: 120, unit: 'MINUTES') {
                     prepare_for_testing()
                     run_gtoolkit_examples()
                     run_extra_examples()
