@@ -5,7 +5,7 @@
   </a>
   </div>
     
-  <div> 
+  <div>
     <a href="https://discord.gg/FTJr9gP" target="_blank">
       <img alt="Discord" src="https://img.shields.io/discord/729445214812504107?color=green&label=chat&logo=discord&logoColor=white&style=flat-square">
     </a>
