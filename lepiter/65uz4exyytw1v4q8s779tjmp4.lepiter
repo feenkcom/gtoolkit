@@ -140,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-06T15:47:15.396+02:00"
+						"dateAndTimeString" : "2023-10-06T19:02:51.90637+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "qPPsLW7DDQClji2HAtAYaA=="
 				},
-				"code" : "GtGemStoneSessionRegistry default codeSync:\r\t(GtGemStoneCodeSync new\r\n\t\tsessionStrategy: GtGemStoneCodeSyncDefaultSessionStrategy new;\r\n\t\tclassStrategy: (GtGemStoneCodeSyncSubclassClassStrategy new superclass: PersistentObject)) start."
+				"code" : "GtGemStoneSessionRegistry default codeSync:\r\t(GtGemStoneCodeSync new\r\n\t\tsessionStrategy: GtGemStoneCodeSyncDefaultSessionStrategy new;\r\n\t\tclassStrategy: (GtGemStoneCodeSyncSubclassClassStrategy new superclass: #PersistentObject asClass)) start."
 			},
 			{
 				"__type" : "textSnippet",
@@ -211,7 +211,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-06T15:50:31.004+02:00"
+						"dateAndTimeString" : "2023-10-06T19:02:43.989562+02:00"
 					}
 				},
 				"uid" : {
@@ -221,7 +221,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In the example above, changes to any subclass of {{gtClass:PersistentObject}} will be forwarded to the default GemStone session in the global registry."
+				"string" : "In the example above, changes to any subclass of `PersistentObject` will be forwarded to the default GemStone session in the global registry."
 			},
 			{
 				"__type" : "textSnippet",
@@ -404,14 +404,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-10-06T16:04:26.302+02:00"
+												"dateAndTimeString" : "2023-10-06T19:03:10.49201+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "kElxcG7DDQCHVCkMAtAYaA=="
 										},
-										"code" : "GtGemStoneCodeSyncCustomClassStrategy new valuable:\r\t[ :aClass :aGtGemStoneSessionRegistry | aClass isKindOf: PersistentObject ]"
+										"code" : "GtGemStoneCodeSyncCustomClassStrategy new valuable:\r\t[ :aClass :aGtGemStoneSessionRegistry | aClass isKindOf: #PersistentObject asClass ]"
 									}
 								]
 							},
@@ -548,14 +548,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-10-06T16:00:44.333+02:00"
+												"dateAndTimeString" : "2023-10-06T19:03:23.069451+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "2INUZW7DDQCE66rEAtAYaA=="
 										},
-										"code" : "GtGemStoneCodeSyncSubclassClassStrategy new superclass: PersistentObject"
+										"code" : "GtGemStoneCodeSyncSubclassClassStrategy new superclass: #PersistentObject asClass"
 									}
 								]
 							},
