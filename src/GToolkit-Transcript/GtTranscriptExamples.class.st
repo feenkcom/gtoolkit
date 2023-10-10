@@ -221,21 +221,25 @@ GtTranscriptExamples >> scripter [
 GtTranscriptExamples >> scripterShowString [
 	<gtExample>
 	| aScripter |
-
 	aScripter := self scripterWithTranscript.
-	aScripter substep: 'Write with #show:' do: [ :aStep |
-		aStep do
-			label: self feenkString;
-			action: [ :aTranscript | aTranscript show: self feenkString ];
-			onModel;
-			play.
-		aStep wait forEmptySpaceTaskQueue;
-			play.
-		aStep check
-			label: 'Check Transcript Content';
-			satisfies: [ :aTranscript | aTranscript textDo: [ :aText | aText asString = self feenkString ] ];
-			onModel;
-			play ].
+	aScripter
+		substep: 'Write with #show:'
+		do: [ :aStep | 
+			aStep
+				doStep: [ :s | 
+					s
+						label: self feenkString;
+						action: [ :aTranscript | aTranscript show: self feenkString ];
+						onModel ].
+			aStep wait
+				forEmptySpaceTaskQueue;
+				play.
+			aStep
+				checkStep: [ :s | 
+					s
+						label: 'Check Transcript Content';
+						satisfies: [ :aTranscript | aTranscript textDo: [ :aText | aText asString = self feenkString ] ];
+						onModel ] ].
 
 	^ aScripter
 ]
@@ -245,19 +249,24 @@ GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI [
 	<gtExample>
 	| aScripter |
 	aScripter := self scripter.
-	aScripter substep: 'Write with #show:' do: [ :aStep |
-		aStep set model: [ self transcript ];
-			play.
-		aStep do
-			label: 'Show: ', self feenkString;
-			action: [ :theTranscript | theTranscript show: self feenkString ];
-			onModel;
-			play.
-		aStep check
-			label: 'Check Transcript Content';
-			satisfies: [ :theTranscript | theTranscript textDo: [ :aText | aText asString = self feenkString ] ];
-			onModel;
-			play. ].
+	aScripter
+		substep: 'Write with #show:'
+		do: [ :aStep | 
+			aStep set
+				model: [ self transcript ];
+				play.
+			aStep
+				doStep: [ :s | 
+					s
+						label: 'Show: ' , self feenkString;
+						action: [ :theTranscript | theTranscript show: self feenkString ];
+						onModel ].
+			aStep
+				checkStep: [ :s | 
+					s
+						label: 'Check Transcript Content';
+						satisfies: [ :theTranscript | theTranscript textDo: [ :aText | aText asString = self feenkString ] ];
+						onModel ] ].
 	^ aScripter
 ]
 
@@ -266,18 +275,22 @@ GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI_AndDisplayTheUI [
 	<gtExample>
 	| aScripter |
 	aScripter := self scripterShowStringBeforeDisplayingUI.
-	aScripter substep: 'Display Transcript UI' do: [ :aStep |
-		aStep set 
-			element: [ :theTranscript | theTranscript asElement ];
-			onModel;
-			play.
-		aStep wait forEmptySpaceTaskQueue;
-			play.
-		aStep check
-			label: 'Check UI Transcript Content';
-			childrenCount: 1;
-			onBreadthFirstChildOfClass: BrTextEditorParagraphElement;
-			play ].
+	aScripter
+		substep: 'Display Transcript UI'
+		do: [ :aStep | 
+			aStep set
+				element: [ :theTranscript | theTranscript asElement ];
+				onModel;
+				play.
+			aStep wait
+				forEmptySpaceTaskQueue;
+				play.
+			aStep
+				checkStep: [ :s | 
+					s
+						label: 'Check UI Transcript Content';
+						childrenCount: 1;
+						onBreadthFirstChildOfClass: BrTextEditorParagraphElement ] ].
 
 	^ aScripter
 ]
