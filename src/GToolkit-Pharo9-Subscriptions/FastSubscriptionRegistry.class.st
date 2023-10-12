@@ -132,7 +132,15 @@ FastSubscriptionRegistry >> remove: subscription [
 { #category : #'add/remove' }
 FastSubscriptionRegistry >> removeSubscriber: subscriber [
 
-	^ self protected: [ subscriberMap removeKey: subscriber ifAbsent: [  ] ]
+	^ self protected: [ 
+		self 
+			forPharo11: [
+				| toRemove |
+				toRemove := subscriberMap at: subscriber ifAbsent: [ #() ].
+				toRemove do: [ :e | e unregister ] ]
+			forPharo10: [].
+	
+		subscriberMap removeKey: subscriber ifAbsent: [  ] ]
 ]
 
 { #category : #'add/remove' }
