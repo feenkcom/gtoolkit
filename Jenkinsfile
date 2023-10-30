@@ -662,16 +662,27 @@ class TestAndPackage extends AgentJob {
         script.withCredentials([script.string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')]) {
             script.sh """
                 set +x
-                xcrun altool \
-                    -t osx \
-                    -f ${release_package} \
-                    -itc_provider "77664ZXL29" \
-                    --primary-bundle-id "com.feenk.gtoolkit.darwin-apple-${id_arch}" \
-                    --notarize-app \
+                echo \$APPLE_PASSWORD > ~/.something_secret_tmp
+                xcrun notarytool submit \
                     --verbose \
-                    --username "notarization@feenk.com" \
+                    --apple-id "notarization@feenk.com" \
                     --password \$APPLE_PASSWORD \
+                    --team-id "77664ZXL29" \
+                    --wait \
+                    ${release_package}
             """
+//            script.sh """
+//                set +x
+//                xcrun altool \
+//                    -t osx \
+//                    -f ${release_package} \
+//                    -itc_provider "77664ZXL29" \
+//                    --primary-bundle-id "com.feenk.gtoolkit.darwin-apple-${id_arch}" \
+//                    --notarize-app \
+//                    --verbose \
+//                    --username "notarization@feenk.com" \
+//                    --password \$APPLE_PASSWORD \
+//            """
         }
 
         script.echo "Signed release package ${release_package}"
