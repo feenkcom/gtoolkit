@@ -660,6 +660,17 @@ class TestAndPackage extends AgentJob {
         }
 
         script.withCredentials([script.string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')]) {
+//            script.sh """
+//                set +x
+//                xcode-select --print-path
+//                xcrun notarytool submit \
+//                    --verbose \
+//                    --apple-id "notarization@feenk.com" \
+//                    --password "\$APPLE_PASSWORD" \
+//                    --team-id "77664ZXL29" \
+//                    --wait \
+//                    ${release_package}
+//            """
             script.sh """
                 set +x
                 xcrun altool \
