@@ -122,6 +122,46 @@
 					"__type" : "snippets",
 					"items" : [
 						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-01T11:17:37.217901+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-01T11:17:37.217901+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9T9AUXbFDQC2tjokCCqQvA=="
+							},
+							"exampleSelector" : "patternMapScenery",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "MoldableDevelopmentPatternsSlideshow",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						},
+						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -220,7 +260,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T07:39:31.407095+02:00"
+									"dateAndTimeString" : "2023-11-01T11:35:52.020052+01:00"
 								}
 							},
 							"uid" : {
@@ -230,7 +270,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "As you are developing the live model, you may find yourself repeatedly performing the same sequences of navigation steps to access information, either by clicking through views or evaluating Playground snippets. This is often a sign that the information you navigate to should be turned into a [[Viewable entity]] of your domain object."
+							"string" : "As you are developing the live model, you may find yourself repeatedly performing the same sequences of navigation steps to access information, either by clicking through views or evaluating Playground snippets. This is often a sign that the information you navigate to should be turned into a [[Viewable entity]] of your domain object. Ideally, you should start with a [[Simple view]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -268,6 +308,80 @@
 								"__type" : "textStyle"
 							},
 							"string" : "Similarly, you may repeatedly perform certain code snippets to obtain a certain effect, such as opening a new window. In this case, instead of creating a custom view, you might want a  [[Custom action]]. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-01T11:36:19.217705+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-01T11:37:29.120493+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Paogk3bFDQC4HqOECCqQvA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If your domain deals with collections of entities, you want them to be moldable as well, so you should wrap each of them with a [[Collection wrapper]]. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-01T11:38:06.961657+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-01T11:41:27.910014+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8ITvmHbFDQC7SxD7CCqQvA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Particular domain instances of interest for testing or documentation should each be encapsulated as an [[Example object]]. These can then be embedded in a [[Project diary]] to serve as a starting point for moldable development, to track the progress of your work, or to provide documentation."
 						}
 					]
 				},
