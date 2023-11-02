@@ -8,43 +8,6 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:28:16.003338+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-23T14:21:16.229737+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Tyi1S/K/DQCfAdReBnLj6w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtTodo:label=TODO}} This is a rough [[DRAFT]] to be expanded and reviewed."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -104,7 +67,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:31:47.299242+02:00"
+						"dateAndTimeString" : "2023-11-02T14:53:07.02616+01:00"
 					}
 				},
 				"uid" : {
@@ -114,7 +77,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Problem: "
+				"string" : "# Problem: "
 			},
 			{
 				"__type" : "textSnippet",
@@ -146,7 +109,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:31:55.995197+02:00"
+									"dateAndTimeString" : "2023-11-02T14:30:53.287196+01:00"
 								}
 							},
 							"uid" : {
@@ -156,7 +119,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Concrete examples are need for many purposes, such as documentation, testing, and exploration.\nExamples can be complex to set up.\nUnit tests consume examples, but they are only accessible if a test fails."
+							"string" : "Concrete examples are need for many purposes, such as documentation, testing, and exploration.\nExamples can be complex to set up.Unit tests consume examples, but they are only accessible if a test fails."
 						}
 					]
 				},
@@ -285,7 +248,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:32:21.341804+02:00"
+									"dateAndTimeString" : "2023-11-02T14:48:51.506488+01:00"
 								}
 							},
 							"editEmail" : {
@@ -296,17 +259,171 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:32:45.146122+02:00"
+									"dateAndTimeString" : "2023-11-02T14:50:06.820087+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "PasOXfa/DQCiLaRrBYCxRA=="
+								"uidString" : "PeqJYo3FDQCsKwZOC2Q54w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To start, you need a modified unit testing framework in which tests return the exercised fixture, namely, an example.\n(Mention JExample for Java.)\nIn GT an example method is simple a parameterless method with a gtExample annotation, that returns an example object.\n(\"Example\" may refer either to the method or the returned object.)\nExamples either create a brand new instance, or they start with an existing example as a fixture, and perform some operations and assertions.\nExamples can be chained into a tree."
+							"string" : "To start, you need a modified unit testing framework in which tests return the exercised fixture, namely, an example. In GT, you create an [[Example]] by defining a parameterless method that has a `<gtExample>` pragma, and returns an object. (A similar framework for Java is [JExample](https://scg.unibe.ch/research/jexample).)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:43:23.606084+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:44:57.191104+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xdG9KY3FDQChMOx4C2Q54w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Here's a simple example that returns a parse node for the parsed string `'3+4'`, and asserts that the result is not fully reduced (evaluated)."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:43:08.541387+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:43:08.541387+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "TLMYTo3FDQCjP/4sC2Q54w=="
+							},
+							"exampleSelector" : "a3plus4",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "SPLContextExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : false
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:45:15.336866+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:47:33.391056+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UhXBKY3FDQChNgKDC2Q54w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Unlike normal test methods, examples can be composed. For example, this example method performs an evaluation step on the previous example, and returns the fully reduced expression node, asserting that no more evaluation steps can be performed."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:47:37.034129+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:47:37.034129+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "m5MZXo3FDQCsH1lUC2Q54w=="
+							},
+							"exampleSelector" : "a3plus4is7",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "SPLContextExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : false
 						}
 					]
 				},
@@ -360,6 +477,117 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:50:33.618231+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:50:33.618231+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cQSgaI3FDQCtnmnxC2Q54w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Examples can be run just like classical unit tests."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:50:41.469207+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:50:41.469207+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6tQXaY3FDQCtsa9eC2Q54w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "When an example fails, its dependent examples do not need to be run. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:50:45.620514+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:51:45.591761+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xitXaY3FDQCtueIdC2Q54w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "When an example succeeds, it can be inspected, used as a moldable object to start coding, or embedded as a live example snippet within a notebook page to illustrate some point. (The example snippets above illustrate this.)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-08-23T12:32:27.392916+02:00"
 								}
 							},
@@ -371,7 +599,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:32:36.420623+02:00"
+									"dateAndTimeString" : "2023-11-02T14:50:45.627137+01:00"
 								}
 							},
 							"uid" : {
@@ -381,7 +609,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Examples can be run just like classical unit tests.\nWhen an example fails, its dependent examples do not need to be run.\nWhen an example succeeds, it can be inspected, used as a moldable object to start coding, or embedded as a live example snippet within a notebook page to illustrate some point.\nWhen you are searching for usages of an API, not only do you find examples that illustrate the usage, but by running the example you obtain a live instance that you can explore."
+							"string" : "When you are searching for usages of an API, not only do you find examples that illustrate the usage, but by running the example you obtain a live instance that you can explore."
 						}
 					]
 				},
@@ -435,7 +663,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:32:32.037271+02:00"
+									"dateAndTimeString" : "2023-11-02T14:52:17.968531+01:00"
 								}
 							},
 							"editEmail" : {
@@ -446,7 +674,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:32:34.378437+02:00"
+									"dateAndTimeString" : "2023-11-02T14:52:36.361936+01:00"
 								}
 							},
 							"uid" : {
@@ -456,7 +684,44 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "..."
+							"string" : "Examples can be embedded in the notebook pages of a [[Project diary]]."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:52:36.731498+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:53:00.515153+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "p5j2b43FDQCwu3a5C2Q54w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Examples can produce a [[Moldable object]] for moldable development."
 						}
 					]
 				},
