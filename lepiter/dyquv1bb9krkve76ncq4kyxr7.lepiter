@@ -8,43 +8,6 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T07:41:14.685512+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-23T14:21:42.752646+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "aqj2S/K/DQCfES8rBnLj6w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtTodo:label=TODO}} This is a rough [[DRAFT]] to be expanded and reviewed."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -104,7 +67,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:34:17.178898+02:00"
+						"dateAndTimeString" : "2023-11-02T15:13:54.040616+01:00"
 					}
 				},
 				"uid" : {
@@ -114,7 +77,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Problem: "
+				"string" : "# Problem: "
 			},
 			{
 				"__type" : "textSnippet",
@@ -210,7 +173,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:34:39.956265+02:00"
+									"dateAndTimeString" : "2023-11-02T14:57:01.255682+01:00"
 								}
 							},
 							"editEmail" : {
@@ -221,17 +184,54 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:34:39.956265+02:00"
+									"dateAndTimeString" : "2023-11-02T14:59:29.484202+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "1sFRZfa/DQCj1F8OBYCxRA=="
+								"uidString" : "iei6f43FDQCsiZkdC4WC5A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "It is common to have to deal with collections of domain objects, but it is tedious to create custom views for each of these.\nMany views are essentially collections, and have similar implementations.\nRaw collections have uninteresting views.\nCollections are very similar and have a lot of boilerplate code.\nMany views are just collections, as are the results of searches, and some queries encoded as actions."
+							"string" : "It is common to have to deal with collections of domain objects, but it is tedious to create custom views for each of these. Collections may form part of the internal state of a domain object, such as a website containing pages, or a page containing links, but a collection may also be returned by a query, such as a Spotter search, forexample the set of web pages containing a certain string in their title or page contents."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:57:06.583655+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:57:52.044388+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wzUMgI3FDQCsm3wDC4WC5A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Raw collections have uninteresting views. Collections are very similar and have a lot of boilerplate code. Many views are essentially collections, and have similar implementations."
 						}
 					]
 				},
@@ -360,6 +360,154 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:59:40.993675+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T15:00:57.85205+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+k1AiY3FDQCzAdYLC4WC5A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Create a dedicated wrapper for a collection of domain entities. An example is {{gtClass:name=WebPageGroup}}, which wraps a collection web pages."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:59:41.758136+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T15:02:52.259393+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dvlLiY3FDQCzByW/C4WC5A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Have the collection wrapper use the {{gtClass:name=TGtGroupWithItems}} trait. This trait has an `items` slot for the wrapped collection, and provides a large number of {{gtClass:name=Collection}} methods to make the trait user behave like a Collection. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T15:04:11.794029+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T15:09:53.424197+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Tj3Zl43FDQC6UEf4C4WC5A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In case there are other classes that share views, actions and searches with the collection wrapper, consider putting these in a shared trait as well. For example, a website is also a collection of pages. We put the shared views and other behavior in the trait {{gtClass:name=TWebPageGroup}}. The trait users are {{gtClass:name=AWebsite}} and {{gtClass:name=WebPageGroup}}. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T15:10:10.486532+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T15:11:24.770451+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jZ3Fro3FDQCEdy3bC4WC5A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Wherever you need to show a collection of these objects, just forward the view to the wrapper to avoid duplicating the view code. See {{gtMethod:name=TWebPageGroup>>#gtReachablePagesFor:}}."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-08-23T12:35:05.075561+02:00"
 								}
 							},
@@ -371,7 +519,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:35:06.654199+02:00"
+									"dateAndTimeString" : "2023-11-02T15:12:24.674975+01:00"
 								}
 							},
 							"uid" : {
@@ -381,7 +529,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Use the TGroupWithItems trait. Call the collection “items”.\nShow examples from the ESUG website.\nWherever you need to show a collection of these objects, just forward the view to the wrapper to avoid duplicated the view code.\nIf you have gtSearches, be sure they return the collection wrapper."
+							"string" : "If you have gtSearches, be sure they return the collection wrapper and not the raw collection, using the `sendCategory:` message, for example, {{gtMethod:name=TWebPageGroup>>#gtSpotterForPageContents:}}. "
 						}
 					]
 				},
@@ -435,7 +583,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:26:16.962728+02:00"
+									"dateAndTimeString" : "2023-11-02T15:12:31.488938+01:00"
 								}
 							},
 							"editEmail" : {
@@ -446,17 +594,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:35:18.848608+02:00"
+									"dateAndTimeString" : "2023-11-02T15:13:46.718367+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "4qxWR/a/DQCeWH0aBYCxRA=="
+								"uidString" : "aiItt43FDQCGs78XC4WC5A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Viewable data wrapper]]."
+							"string" : "A collection wrapper is similar to a [[Viewable data wrapper]], since it also serves to make raw data moldable. The difference lies in the specifics of making the wrappers behave like collections, and make sure that any collections returned by queries are also wrapped."
 						}
 					]
 				},
