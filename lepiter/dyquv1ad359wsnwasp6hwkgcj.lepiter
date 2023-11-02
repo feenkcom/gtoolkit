@@ -8,43 +8,6 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:27:07.103449+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-23T14:21:00.771074+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "h936SvK/DQCe1sDYBnLj6w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtTodo:label=TODO}} This is a rough [[DRAFT]] to be expanded and reviewed."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -135,6 +98,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:20:14.595857+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:20:14.595857+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7/Iz/IzFDQCOy0k1C2Q54w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "It's boring to write documentation after the fact, so it is rarely done. Documentation is not part of the running system, so it distracts you from coding."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-08-23T12:30:11.662552+02:00"
 								}
 							},
@@ -146,7 +146,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:30:14.510351+02:00"
+									"dateAndTimeString" : "2023-11-02T14:20:14.597597+01:00"
 								}
 							},
 							"uid" : {
@@ -156,7 +156,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "It's boring to write documentation after the fact, so it is rarely done.\nDocumentation is not part of the running system, so it distracts you from coding.\nTools for tracking your progress are separate from the code base, so they are commonly out of sync with reality."
+							"string" : "Tools for tracking your progress are separate from the code base, so they are commonly out of sync with reality."
 						}
 					]
 				},
@@ -407,7 +407,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:31:16.627996+02:00"
+									"dateAndTimeString" : "2023-11-02T14:30:26.863064+01:00"
 								}
 							},
 							"uid" : {
@@ -417,7 +417,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Consider using notebook tags to organize your pages implicitly. For example, use a dedicated project tag for all the project pages, and additional tags to indicate their status (“todo”, “completed”, ”urgent” etc.)."
+							"string" : "Consider using notebook tags to organize your pages implicitly. For example, use a dedicated project tag for all the project pages, and additional tags to indicate their status (“todo”, “completed”, ”urgent” etc.). For example, the [[DRAFT]] tag is used to  track pages of the GT Book itself that require further editing."
 						},
 						{
 							"__type" : "textSnippet",
@@ -455,6 +455,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "At the end of a project, consider recycling and rewriting the project pages to create documentation. In this way the diary can serve as a rough draft."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:27:06.34004+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-02T14:29:01.828246+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "89iRFI3FDQCTWg+CC2Q54w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For an example, see [[Implementing a Ludo Game as a moldable development exercise]]. This is the starting page of a Project diary for the Ludo Game. The pages initially tracked the development steps of the project, and contain snippets from which to continue development. As the project came to an end, the pages were edited and rewritten to serve as documentation."
 						}
 					]
 				},
@@ -508,7 +545,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:30:43.498915+02:00"
+									"dateAndTimeString" : "2023-11-02T14:20:50.505132+01:00"
 								}
 							},
 							"editEmail" : {
@@ -519,7 +556,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:30:45.207834+02:00"
+									"dateAndTimeString" : "2023-11-02T14:21:53.267069+01:00"
 								}
 							},
 							"uid" : {
@@ -529,7 +566,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "..."
+							"string" : "A project notebook page should contain snippets to create [[Moldable object]] instances that can be used as starting points for Moldable Development."
 						}
 					]
 				},
