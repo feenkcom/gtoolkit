@@ -139,10 +139,10 @@ class GlamorousToolkit {
 
         test_and_package()
 
-        script.node(agent.label()) {
-            release()
-            releaseDockerImage()
-        }
+        //script.node(agent.label()) {
+        //    release()
+        //    releaseDockerImage()
+        //}
     }
 
     void build() {
