@@ -507,14 +507,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-09-30T10:06:16.019503+02:00"
+									"dateAndTimeString" : "2023-11-08T16:49:30.554773+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "KzkokpOJDQC1dKr1A+1lrQ=="
 							},
-							"code" : "session := GtGemStoneSessionRegistry default defaultSession.\rsession connector\r\thost: 'localhost';\n\tlibraryPath: '/path/to/GemStone/ClientLibs' asFileReference;\r\tgemstoneVersion: '3.7.0';\r\tstone: 'gs64stone';\r\tnetldi: '50377';\r\tusername: 'SystemUser';\r\tpassword: '<password>';\r\thostUsername: 'HostUser';\r\thostPassword: '<password>'.\rsession connector notifyUpdated"
+							"code" : "connector := GtGemStoneSessionRegistry default propertiesFile addNewConnector.\rconnector\r\thost: 'localhost';\n\tlibraryPath: '/path/to/GemStone/ClientLibs' asFileReference;\r\tgemstoneVersion: '3.7.0';\r\tstone: 'gs64stone';\r\tnetldi: '50377';\r\tusername: 'SystemUser';\r\tpassword: '<password>';\r\thostUsername: 'HostUser';\r\thostPassword: '<password>'.\rconnector notifyUpdated.\r\rsession := GtGemStoneSessionRegistry default \r\tnewSessionWithConnector:  connector"
 						},
 						{
 							"__type" : "pharoSnippet",
