@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-15T20:12:04.758551+01:00"
+						"dateAndTimeString" : "2023-11-16T00:57:43.99994+01:00"
 					}
 				},
 				"uid" : {
@@ -330,7 +330,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-15T20:17:02.626962+01:00"
+									"dateAndTimeString" : "2023-11-16T00:54:13.54155+01:00"
 								}
 							},
 							"uid" : {
@@ -340,7 +340,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "However, because software is highly contextual, for a given problem we likely do not have an appropriate tool available. This is the main reason why developer read code: reading can handle any context; the only problem is that it's too slow and innacurate."
+							"string" : "However, because software is highly contextual, for a given problem we likely do not have an appropriate tool available.Developers read code because reading can handle any context; the only problem is that it's too slow and innacurate."
 						},
 						{
 							"__type" : "textSnippet",
@@ -367,7 +367,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-15T20:46:09.629961+01:00"
+									"dateAndTimeString" : "2023-11-16T00:54:59.095942+01:00"
 								}
 							},
 							"uid" : {
@@ -377,7 +377,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "That is why it is essential to ask this simple question: \"do we have an appropriate tool through which to carry out the analysis?\". And if we don't have an appropriate tool? We mold one. And we want to do this for every single development problem we have. That's the essence of Moldable Development."
+							"string" : "That is why it is essential to ask a simple question: \"do we have an appropriate tool through which to carry out the analysis?\". If we don't have an appropriate tool, we mold one. And we want to do this for every single development problem we encounter. That's the essence of Moldable Development."
 						},
 						{
 							"__type" : "pictureSnippet",
@@ -478,7 +478,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-15T20:46:23.319926+01:00"
+									"dateAndTimeString" : "2023-11-16T01:03:19.771924+01:00"
 								}
 							},
 							"uid" : {
@@ -690,6 +690,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:20:49.350165+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:56:26.6809+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bBlB45rGDQCyunbQC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Once the cost of answering of questions about systems is getting close to zero, new processes are possible. In particular, we can reimagine how we make decisions concerning a software system as a group."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-11-15T22:57:02.688503+01:00"
 								}
 							},
@@ -738,7 +775,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-16T00:20:30.86371+01:00"
+									"dateAndTimeString" : "2023-11-16T00:50:17.623279+01:00"
 								}
 							},
 							"uid" : {
@@ -748,7 +785,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The act of visualizing a software problem or domain often makes it obvious how the underlying software should change. It literally can guide the design."
+							"string" : "The act of visualizing a software problem or domain often makes it obvious how the underlying software should change. This introduces a feedback loop that literally can guide the design of a system."
 						},
 						{
 							"__type" : "textSnippet",
@@ -775,7 +812,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-15T23:35:47.955475+01:00"
+									"dateAndTimeString" : "2023-11-16T00:57:16.264938+01:00"
 								}
 							},
 							"uid" : {
@@ -785,44 +822,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The ultimate goal of moldable development is to lead to [[Explainable software]]."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-16T00:20:49.350165+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-16T00:22:42.763226+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "bBlB45rGDQCyunbQC8tmfA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Once the cost of answering of questions about systems is getting close to zero, new processes are possible."
+							"string" : "The ultimate goal of Moldable Development is [[Explainable software]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -860,6 +860,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "Moldable Development compresses communication."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:55:37.348977+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:56:52.68893+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Dd9uYJvGDQCCnKhRC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "When there are no walls between tools, we can explore arbitrary problems in a uniform way."
 						}
 					]
 				},
@@ -893,43 +930,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#The implications"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-15T23:50:17.040584+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-15T23:50:17.040584+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "HuVHPMaVAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
 			}
 		]
 	},
