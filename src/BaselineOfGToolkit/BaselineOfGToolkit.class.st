@@ -125,6 +125,8 @@ BaselineOfGToolkit >> baseline: spec [
 					with: [ spec repository: 'github://feenkcom/gt4famix3:main/src' ];
 				baseline: 'GToolkit4Ruby'
 					with: [ spec repository: 'github://feenkcom/gt4ruby:main/src' ];
+				baseline: 'GToolkit4Python'
+					with: [ spec repository: 'github://feenkcom/gt4python:main/src' ];
 				baseline: 'GtGemstoneClient'
 					with: [ spec repository: 'github://feenkcom/gt4gemstone:main/src' ];
 				baseline: 'GToolkit4Git'
