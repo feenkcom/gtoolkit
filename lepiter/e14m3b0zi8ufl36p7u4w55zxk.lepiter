@@ -771,7 +771,7 @@
 					"__type" : "uid",
 					"uidString" : "BjIS6a2pDQCR3I4HACNusg=="
 				},
-				"operation" : "query Repository($ownername: String!, $reponame: String!) {\n\trepository(owner: $ownername, name: $reponame) {\n\t\turl\n\t\tdescription\n\t\tlk\n\t}\n}",
+				"operation" : "query Repository($ownername: String!, $reponame: String!) {\n\trepository(owner: $ownername, name: $reponame) {\n\t\turl\n\t\tdescription\n\t}\n}",
 				"input" : "{\n\t\"ownername\": \"feenkcom\",\n\t\"reponame\": \"gtoolkit\"\n}",
 				"context" : "aContext",
 				"resultVariableName" : ""
