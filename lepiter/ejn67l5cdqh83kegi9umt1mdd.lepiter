@@ -23,13 +23,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-24T12:59:07.206042+02:00"
+						"dateAndTimeString" : "2023-11-15T20:05:53.796799+01:00"
 					}
 				},
 				"uid" : {
@@ -39,60 +39,171 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Moldable Development is a way of programming through which you construct custom tools for each problem."
+				"string" : "Moldable Development is a way of programming through custom tools built for each problem."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:12:05.338439+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:12:11.84528+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9TJwapfGDQC+k5koC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "When we think of software development, we typically think about the active part. Of constructing. Of building new worlds that never existed. It's an empowering view."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:15:14.127672+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T22:22:28.569594+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6eKwdZfGDQCCvJxvC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Yet, [[Developers spend most of their time figuring systems out]]. They do that because they want to learn enough about the system to make a decision. This is the single largest development expense we have. So, we should optimize software engineering for decision making."
+						},
+						{
+							"__type" : "pictureSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T23:41:19.901327+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T23:42:01.224901+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zaC/VprGDQCh3C1jC8tmfA=="
+							},
+							"url" : "attachments/e5f5x58lhdajsu9j7xajpb3q7/50percent-3.png",
+							"caption" : "Decision making accounts for the single largest cost in software development.",
+							"previewHeight" : 300
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:15:50.966486+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:16:19.510977+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FwHjd5fGDQCDfl30C8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Most of this effort is spent reading. From a decision making perspective, reading is but a means to gather information out of data (everything about your system is data; ok, objects if you are lucky). It also happens to be the most manual way to extract information out of data. And this is where we spend most of our time. The alternative is to treat this as a data problem."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-18T23:28:27.811316+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-18T23:28:31.8479+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "eqbultTwAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Software is shapeless. We, humans, need a shape to reason about anything. Tools provide the shape of software. By molding our tools to match the context of our systems, every problem in software can be exhibited in a way that a human can relate to and reason about."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:46:20.151813+02:00"
+						"dateAndTimeString" : "2023-11-15T20:05:36.108664+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,33 +214,181 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-14T14:35:13.510127-05:00"
+						"dateAndTimeString" : "2023-11-16T00:57:43.99994+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2EX3grE/AAAAAAAAAAAAAA=="
+					"uidString" : "ZgU9U5fGDQC1Kb5gC8tmfA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Software is highly contextual. Context has many forms. Simply choosing one framework over the other will change your constraints, the code will be organized differently, and the debugging problems will be different. All these pose different needs, and tools have to acommodate them. For tools to be effective, they need to take that context into account."
+				"string" : "#The problem"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:16:21.992845+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T07:48:18.873047+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "fFJ9apfGDQC+pwM1C8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "When it comes to reasoning about data, we should always start with a hypothesis, apply an analysis, and interpret the results. If we are confident, we act. If not, we repeat. That's just the scientific method."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:16:52.498101+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:54:13.54155+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "X+aNe5fGDQCEDlqlC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "However, because software is highly contextual, for a given problem we likely do not have an appropriate tool available.Developers read code because reading can handle any context; the only problem is that it's too slow and innacurate."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:24:08.841907+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:54:59.095942+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "WPaPlZfGDQCERlJyC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "That is why it is essential to ask a simple question: \"do we have an appropriate tool through which to carry out the analysis?\". If we don't have an appropriate tool, we mold one. And we want to do this for every single development problem we encounter. That's the essence of Moldable Development."
+						},
+						{
+							"__type" : "pictureSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:23:40.765249+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:46:01.993402+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "XpLjk5fGDQCEQiNdC8tmfA=="
+							},
+							"url" : "attachments/e5f5x587uudwtw0jt7nt8jr3a/craft-3.png",
+							"caption" : "Moldable Development is based on the scientific method. The specific difference: creating custom tools when they do not exist",
+							"previewHeight" : 300
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:46:24.494369+02:00"
+						"dateAndTimeString" : "2023-11-15T20:16:25.433936+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,70 +399,107 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T21:11:15.496953+02:00"
+						"dateAndTimeString" : "2023-11-15T20:16:35.894621+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "gHCNWLusAAAAAAAAAAAAAA=="
+					"uidString" : "mO/weZfGDQCDqxP1C8tmfA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A tool that gives you a button encodes in that button an assumption about your specific question and bakes the solution in the response. However, when context is king, we cannot predict specific problems. We can only predict classes of problems. That is why the environment should focus less on hardcoded buttons and more on providing you ways to build your own buttons."
+				"string" : "#The method"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:16:52.776147+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T07:47:55.905676+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dyWSe5fGDQCEFiaBC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Moldable Development relies on two distinct {{gtPage:Moldable Development roles: Facilitator and Stakeholder|db=2j9m7db2i4oz116bexd7wbdxo|label=roles}}: the [[Facilitator]] constructs custom tools; the [[Stakeholder ]]knows what to do with them. It's really not that different from data science. Except we want them embedded in every team working with a system."
+						},
+						{
+							"__type" : "pictureSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:48:03.174667+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:48:20.228755+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dysO65fGDQCHk4VjC8tmfA=="
+							},
+							"url" : "attachments/e5f5x5f49a24o7gl93sfldz2q/roles-2.png",
+							"caption" : "The stakeholder and the facilitator roles.",
+							"previewHeight" : 300
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:46:44.772428+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:46:44.772428+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Wm6rNWD3AAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#McLuhan's law, or why tools are essential in software engineering"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:46:47.022549+02:00"
+						"dateAndTimeString" : "2023-11-15T20:16:52.639835+01:00"
 					}
 				},
 				"editEmail" : {
@@ -214,70 +510,71 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-14T14:34:46.95679-05:00"
+						"dateAndTimeString" : "2023-11-15T22:53:43.260689+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "LOhQxLZFAAAAAAAAAAAAAA=="
+					"uidString" : "DRGQe5fGDQCEEgm4C8tmfA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In a brilliant summary of Marshall McLuhan's work, John Culkin warned us that “We shape our tools, and thereafter our tools shape us”. This is a remarkable statement that deserves closer scrutiny. If it is correct, we should explicitly choose the tools we use because they will determine the way we are going to think."
+				"string" : "#The roles"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T21:54:24.008321+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T23:20:16.874995+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "RtxU2JjGDQCIdTklC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To make the method effective in practice, we need an environment that makes it possible to create custom experiences through which to interact and reason about systems innexpensively. [[The Moldable Development Environment]]"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:46:49.584481+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:46:49.584481+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "S2jWhND/AAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "If you are like most people, you have checked your smartphone within 10 minutes of waking up this morning. This need did not exist before the introduction of the smartphone. The correlation indicates that is not unreasonable to view the tool as having manufactured the need."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:46:39.187498+02:00"
+						"dateAndTimeString" : "2023-11-15T20:25:46.121241+01:00"
 					}
 				},
 				"editEmail" : {
@@ -288,23 +585,246 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-14T14:25:13.47401-05:00"
+						"dateAndTimeString" : "2023-11-15T21:54:22.80875+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "I4aTpQTbAAAAAAAAAAAAAA=="
+					"uidString" : "7Fhcm5fGDQCEbu9qC8tmfA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Software is data. Data does not have a shape. Yet, we need shape to reason about it. The shape of software is provided by the tool. That makes the tool essential. So, what characteristics should the tool have?"
+				"string" : "#The technology"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:20:49.350165+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T07:55:54.974152+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bBlB45rGDQCyunbQC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Custom tools {{gtPage:Mapping Moldable Development|db=2j9m7db2i4oz116bexd7wbdxo|label=commoditize}} the process of gathering information about systems. Once this happens, new processes are possible. First, we want to ask many times more questions. Second, we can reimagine how we make decisions concerning a software system as a group."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T22:57:02.688503+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T07:56:09.278739+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rJJW7JfGDQCHm5cvC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "While the primary focus is on the reading use case, custom experiences apply to how we create software as well."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:01:01.724732+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:50:17.623279+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aM4wnZrGDQCt/z4xC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The act of visualizing a software problem or domain often makes it obvious how the underlying software should change. This introduces a feedback loop that literally can guide the design of a system."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-15T20:48:24.837325+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:57:16.264938+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rLVY7JfGDQCHn01gC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The ultimate goal of Moldable Development is [[Explainable software]]."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:20:56.600631+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:21:11.054187+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ey1p5JrGDQCzzcrbC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Moldable Development compresses communication."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T00:55:37.348977+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-11-16T07:53:48.347285+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Dd9uYJvGDQCCnKhRC8tmfA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "When there are no walls between tools, we can explore arbitrary problems in a uniform way. In other words, a single investment in the skills, technology and associated processes can yield many returns."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -314,312 +834,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T21:12:01.774641+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T21:12:03.868802+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "1/hUphs3AAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Moldability"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:47:02.525132+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:48:30.045149+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "4i+niU7GAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "As an example, let us consider inspecting the object corresponding to the current working directory. A default inspector would show this. It's an accurate description of the variables of the {{gtClass:FileReference}} instance."
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:55:27.174966+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:55:27.174966+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "HIUOqNTaAAAAAAAAAAAAAA=="
-				},
-				"exampleSelector" : "gtExampleDirectory",
-				"previewHeight" : 150,
-				"previewShowSelector" : "gtRawFor:",
-				"exampleBehaviorName" : "FileReference class",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:52:31.698413+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T21:12:35.603297+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "2l9YLktDAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Now consider the very same object viewed like this:"
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:48:25.347839+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:48:25.347839+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "5cEymcJkAAAAAAAAAAAAAA=="
-				},
-				"exampleSelector" : "gtExampleDirectory",
-				"previewHeight" : 150,
-				"previewShowSelector" : "gtTreeFor:",
-				"exampleBehaviorName" : "FileReference class",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:59:26.778793+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-09T22:22:10.316342+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "w98gBltMAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Which one is more recognizable? Which one makes you feel more comfortable? Likely the second one. We do not have to think whether the instance represents a file or a directory. The view clearly shows the contents of the directory through a view that is already familiar to you."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:59:22.953748+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-21T23:59:26.780352+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "vKpABbS2AAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "While the first view is generic in that it is applicable to any object, the second one is useful exactly because it is specific. In fact, each point of view can benefit from a specific view. It is for this reason that the inspector offers multiple views and enables you to craft your own for every single object."
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:00:18.433482+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:00:18.433482+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "U5xVl2ClAAAAAAAAAAAAAA=="
-				},
-				"exampleSelector" : "gtExampleDirectory",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "FileReference class",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:01:41.173722+02:00"
+						"dateAndTimeString" : "2023-11-15T20:48:24.572776+01:00"
 					}
 				},
 				"editEmail" : {
@@ -630,350 +845,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-20T23:32:18.338568+01:00"
+						"dateAndTimeString" : "2023-11-15T21:54:14.005078+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CEx+uFEOAAAAAAAAAAAAAA=="
+					"uidString" : "NatU7JfGDQCHl0QjC8tmfA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This was an example of using the [[Inspector]]. To exploit the full potential of Glamorous Toolkit you need to contextualize it through programming. To this end, Glamorous Toolkit offers multiple ways to extend the tools and to express views and other interactions. Throughout the environment the goal of the engines is to make the cost of custom tools as inexpensive as possible. For example, this applies to how you search (see [[Spotter]]), how you write code (see [[Coder]]) or how manage your knowledge base (see [[Lepiter]])."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:01:30.061641+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:01:41.1751+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "gy0qu5ThAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "This apparently small change in perspective has a dramatic influence on how you can approach software systems. We call this moldable development."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:02:51.222102+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:02:54.216963+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "HuVHPMaVAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Example-driven"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:02:57.931457+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-14T14:32:58.257233-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "p3bPVWWbAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "For every development problem, we create views that make the problem apparent and help us explain our system. The power of a live dynamic environment lies with objects, rather than static code and we want to favor the development in the presence of live objects.s"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:02:59.417861+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:02:59.417861+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "yeIz7FtXAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Tests are a source of objects. A test creates an object and asserts a property, so beside the testing side of it, a test also creates a beautiful object. If only we could make tests provide these beautiful objects. Enter examples. An example is like a test that returns an object. It’s a small change with large effects."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:02:49.797348+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T21:40:30.37898+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "7DkAV0L6AAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Take an introductory example-driven development tutorial: [[Example-driven development by example]]."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:06:00.599339+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:06:00.599339+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qZosbsPjAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Explainable software"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:06:02.073159+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T14:35:46.524212+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "MG4h+TihAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The ultimate goal of moldable development is to lead to explainable software."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:06:03.813167+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-20T23:29:44.585905+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "DszmGYg3AAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Views and examples provide a basic level of explainability. Once these are in place, we can weave them into larger narratives as well. Like with any piece of data, there are many narratives to tell about code, to capture multiple facets. This document is a narrative. So is a document explaining an algorithm like the one found in [[Explaining the squarified treemap algorithm]]."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-22T00:05:53.082549+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-20T23:30:11.814065+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "PwdLKKYBAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Narratives are powerful tools. Only when it comes to software, it’s the system that has to carry it. The principle is that as soon as a human deems a narrative as meaningful, it should be the reponsibility of the system to provide it."
+				"string" : "#The implications"
 			}
 		]
 	},

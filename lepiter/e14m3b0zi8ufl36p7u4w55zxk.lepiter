@@ -771,7 +771,7 @@
 					"__type" : "uid",
 					"uidString" : "BjIS6a2pDQCR3I4HACNusg=="
 				},
-				"operation" : "query Repository($ownername: String!, $reponame: String!) {\n\trepository(owner: $ownername, name: $reponame) {\n\t\turl\n\t\tdescription\n\t\tlk\n\t}\n}",
+				"operation" : "query Repository($ownername: String!, $reponame: String!) {\n\trepository(owner: $ownername, name: $reponame) {\n\t\turl\n\t\tdescription\n\t}\n}",
 				"input" : "{\n\t\"ownername\": \"feenkcom\",\n\t\"reponame\": \"gtoolkit\"\n}",
 				"context" : "aContext",
 				"resultVariableName" : ""
@@ -1867,77 +1867,6 @@
 				"input" : "{ \"login\": \"feenkcom\" }",
 				"context" : "aContext",
 				"resultVariableName" : "organizationQuery"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T10:59:35.766724+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T10:59:41.296758+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "QkiQP0urDQCveVExCRv38A=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "You can also take a quick look like this:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T10:40:21.983236+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T13:33:12.380077+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Imzd+kqrDQCvYdzqCRv38A=="
-				},
-				"code" : "organizationQuery report type inspectorView: #gtQueryPathsFor:"
 			}
 		]
 	},
