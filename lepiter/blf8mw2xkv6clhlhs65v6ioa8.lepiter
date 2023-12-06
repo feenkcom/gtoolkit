@@ -548,7 +548,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-30T22:30:46.693855+01:00"
+						"dateAndTimeString" : "2023-12-06T14:27:51.789777+01:00"
 					}
 				},
 				"uid" : {
@@ -558,7 +558,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "```language=bash\ngit checkout v10.0.8 \ngit switch -c ph10008.00\n```"
+				"string" : "```language=bash\ngit checkout v10.0.9 \ngit switch -c ph10009.00\n```"
 			},
 			{
 				"__type" : "textSnippet",
@@ -622,7 +622,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-01T11:09:43.814372+01:00"
+						"dateAndTimeString" : "2023-12-06T14:28:03.163496+01:00"
 					}
 				},
 				"uid" : {
@@ -632,7 +632,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In the new branch we need to merge our custom changes from the previous stable branch (initially origin/ph10004, now origin/ph10008.00)"
+				"string" : "In the new branch we need to merge our custom changes from the previous stable branch (initially origin/ph10004, in this example origin/ph10008.00)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -659,7 +659,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-30T22:32:16.461266+01:00"
+						"dateAndTimeString" : "2023-12-06T14:27:55.8865+01:00"
 					}
 				},
 				"uid" : {
@@ -1114,7 +1114,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-11-01T18:21:53.322908+01:00"
+												"dateAndTimeString" : "2023-12-06T22:01:32.616984+01:00"
 											}
 										},
 										"uid" : {
@@ -1233,6 +1233,81 @@
 								"__type" : "textStyle"
 							},
 							"string" : "This uses the installer to create a new image by using a local vm and a specific image"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-06T18:33:19.389182+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-06T18:33:44.436974+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Z5SaezzIDQCADaXLCqyJqg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "```language=bash\n./gt-installer --verbose --app-cli-binary /Users/Documents/GlamorousToolkit.app/Contents/MacOS/GlamorousToolkit-cli release-build --image-url https://files.pharo.org/image/110/Pharo11-SNAPSHOT.build.713.sha.05938f2.arch.64bit.zip --no-gt-world\n```"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-06T18:32:23.210744+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-06T22:01:16.073777+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zguLeDzIDQC+cNxyCqyJqg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This creates a release build using a custom vm and image, without opening the world"
 						}
 					]
 				},
@@ -1475,12 +1550,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-10-30T22:27:49.073623+01:00"
+			"dateAndTimeString" : "2023-12-06T14:23:31.42152+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to create a new GT Vm from a new release of the Pharo Vm"
+		"title" : "How to create a new release for the GT Vm  from a new release of the Pharo Vm"
 	},
 	"uid" : {
 		"__type" : "uuid",
