@@ -76,7 +76,7 @@ class GlamorousToolkit {
     static final EXAMPLES_FOLDER = "gt-examples"
     static final LEPITER_WINDOWS = "C:/Users/Administrator/Documents/lepiter"
     static final LEPITER_UNIX = "~/Documents/lepiter"
-    static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo10-SNAPSHOT.build.538.sha.179ef65.arch.64bit.zip"
+    static final PHARO_IMAGE_URL = "https://files.pharo.org/image/110/Pharo11-SNAPSHOT.build.718.sha.f050a0c.arch.64bit.zip"
     static final TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
     static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
@@ -139,10 +139,10 @@ class GlamorousToolkit {
 
         test_and_package()
 
-        script.node(agent.label()) {
-            release()
-            releaseDockerImage()
-        }
+        //script.node(agent.label()) {
+        //    release()
+        //    releaseDockerImage()
+        //}
     }
 
     void build() {
