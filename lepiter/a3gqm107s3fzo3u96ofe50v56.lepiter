@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:00:25.124755+01:00"
+						"dateAndTimeString" : "2023-12-07T10:50:27.768761+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:01:41.262598+01:00"
+						"dateAndTimeString" : "2023-12-07T10:55:59.771334+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "nrc2APSvDQC2aWMICAnzQg=="
+					"uidString" : "31lqIkrIDQCTqToLCqyJqg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This page shows an example of parsing a Releaser log created when releasing Glamorous Toolkit."
+				"string" : "This page shows an example of parsing a Cloner and Loading log created when loading Glamorous Toolkit into a Pharo base image."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:01:46.801633+01:00"
+						"dateAndTimeString" : "2023-12-07T10:56:29.44294+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-07T11:07:50.35676+01:00"
+						"dateAndTimeString" : "2023-12-07T11:07:37.801383+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "4ezdBfSvDQC3XqRBCAnzQg=="
+					"uidString" : "9Av5N0rIDQCVWewMCqyJqg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The example log is a text file on disk that contains a list of beacon signals, one per line."
+				"string" : "There are two specific logs, one for cloning repositories, and one for loading the code."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-07T10:56:21.322716+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-07T11:08:01.124715+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EI85NkrIDQCU1j25CqyJqg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Both example logs are a text file on disk that contains a list of beacon signals, one per line."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -92,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:02:18.68233+01:00"
+						"dateAndTimeString" : "2023-12-07T11:08:19.898471+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:03:40.593578+01:00"
+						"dateAndTimeString" : "2023-12-07T11:11:29.342618+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8QQDCPSvDQC32aLUCAnzQg=="
+					"uidString" : "YrhRYkrIDQCXOta0CqyJqg=="
 				},
-				"code" : "logFile := FileLocator gtResource\r\t/ 'feenkcom/gtoolkit/doc/releaser'\r\t/ 'releaser-log-example.txt'."
+				"code" : "logFile := FileLocator gtResource\r\t/ 'feenkcom/gtoolkit/doc/loader'\r\t/ 'loader-log-example.txt'."
 			},
 			{
 				"__type" : "textSnippet",
@@ -126,7 +163,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:03:48.686857+01:00"
+						"dateAndTimeString" : "2023-12-07T11:11:41.864538+01:00"
 					}
 				},
 				"editEmail" : {
@@ -137,17 +174,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:07:30.186372+01:00"
+						"dateAndTimeString" : "2023-12-07T11:13:47.307804+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "dHQoDfSvDQC5LI3xCAnzQg=="
+					"uidString" : "1nlbbkrIDQCXknQwCqyJqg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can use {{gtClass:GtRlReleaserSignalsLogReader}} to parse the log and inspect the result."
+				"string" : "We can use {{gtClass:GtRlLoadedConsolidatedBaselineEvent}} to parse both logs and inspect the result."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -163,7 +200,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:03:50.503313+01:00"
+						"dateAndTimeString" : "2023-12-07T11:11:58.23245+01:00"
 					}
 				},
 				"editEmail" : {
@@ -174,14 +211,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:06:08.91565+01:00"
+						"dateAndTimeString" : "2023-12-07T11:13:02.426029+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "IVJ+DfSvDQC5P/87CAnzQg=="
+					"uidString" : "ljtVb0rIDQCXpi6lCqyJqg=="
 				},
-				"code" : "eventsGrouper := GtRlReleaserSignalsLogReader readFromFile:  logFile"
+				"code" : "GtRlLoadedConsolidatedBaselineEvent  readFromFile: logFile"
 			},
 			{
 				"__type" : "textSnippet",
@@ -197,7 +234,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:07:47.41556+01:00"
+						"dateAndTimeString" : "2023-12-07T11:13:31.283206+01:00"
 					}
 				},
 				"editEmail" : {
@@ -208,17 +245,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:08:53.710324+01:00"
+						"dateAndTimeString" : "2023-12-07T11:14:27.377194+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "dhQkG/SvDQC6kbl7CAnzQg=="
+					"uidString" : "fhThdErIDQCX2N1WCqyJqg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This returns an object of type {{gtClass:GtRlReleaserEventsGrouper}} that contains information about what actions were executed during the release."
+				"string" : "This returns an object of type {{gtClass:GtRlLoadedConsolidatedBaselineEvent}} that contains information about what repositories, baselines and packages were loaded."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -234,7 +271,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:11:59.849553+01:00"
+						"dateAndTimeString" : "2023-12-07T11:24:34.805735+01:00"
 					}
 				},
 				"editEmail" : {
@@ -245,20 +282,57 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-31T18:11:59.849553+01:00"
+						"dateAndTimeString" : "2023-12-07T11:24:34.805735+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "PimpKvSvDQC79CGLCAnzQg=="
+					"uidString" : "spptnErIDQCacGsVCqyJqg=="
 				},
-				"exampleSelector" : "eventsGrouperWithLoadedData",
+				"exampleSelector" : "consolidatedBaselineEvent",
 				"previewHeight" : 400,
 				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtRlGlamorousToolkitReleaserLogExamples",
+				"exampleBehaviorName" : "GtRlGlamorousToolkitLoaderLogExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : false,
 				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-07T11:25:10.669997+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-07T11:25:36.434667+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0eOQnkrIDQCafgLdCqyJqg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Alternatively we can only parse the log for cloning repositories or loading the code"
 			}
 		]
 	},
@@ -270,7 +344,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-31T18:00:07.618587+01:00"
+			"dateAndTimeString" : "2023-12-07T10:50:27.593077+01:00"
 		}
 	},
 	"editEmail" : {
@@ -281,15 +355,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-31T18:00:07.618587+01:00"
+			"dateAndTimeString" : "2023-12-07T10:50:27.593077+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Example of parsing a Releaser log for Glamorous Toolkit"
+		"title" : "Example of parsing a Cloner and Loading log for Glamorous Toolkit"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "cc623500-f4af-0d00-b668-aa9d0809f342"
+		"uuid" : "aaaa6722-4ac8-0d00-93a8-235f0aac89aa"
 	}
 }
