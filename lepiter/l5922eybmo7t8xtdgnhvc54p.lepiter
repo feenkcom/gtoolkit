@@ -1,0 +1,363 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-11T17:33:51.428013+11:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-11T17:36:00.091081+11:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zhdQuZfIDQCcXqtnCGwhDw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Glamorous Toolkit works with other runtimes. For example, we can work with [[Python]] through [[PythonBridge]]. But what might be less obvious is that we can also extend the inspector using Python."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-04T11:23:49.007133+10:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-11T18:00:02.675872+11:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Xej7tAbIDQCSwmYEB/HrCQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To exemplify how this works, let's consider exploring a movie collection defined in this CSV:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-04T11:27:44.658665+10:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-04T11:27:57.092265+10:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3KkHwwbIDQCVLv/wB/HrCQ=="
+				},
+				"code" : "fileName := '../pharo-local/iceberg/feenkcom/gtoolkit-demos/data/imdb/Movies.csv'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-07T17:50:19.048981+11:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-11T17:09:55.220231+11:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4l0qnkfIDQCfzsojC7RBkw=="
+							},
+							"code" : "PBApplication isRunning ifFalse: [ PBApplication start ].\nPBApplication uniqueInstance installModule: 'pandas'"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-11T18:00:22.336239+11:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-11T18:03:49.768886+11:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Z49tOJjIDQCn4zQgCGwhDw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We load it with pandas, and to do that we first setup the Python runtime by installing the pandas module:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pythonSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-04T11:22:45.452454+10:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-04T11:23:36.564123+10:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9iMysQbIDQCSLkraB/HrCQ=="
+							},
+							"code" : "import pandas\n\nclass Movie:\n\tdef __init__(self, series):\n\t\tself.series  = series\n\n\tdef gtViewDescription(self, builder):\n\t\treturn builder.textEditor().title(\"Description\").setString(str(self.series))\n\nclass MovieCollection:\n\tdef __init__(self, dataFrame):\n\t\tself.df = dataFrame\n\t\t\n\tdef size(self):\n\t\treturn len(self.df.index)\n\n\tdef directors(self):\n\t\tvalues = self.df[\"Directors\"].astype(str).unique()\n\t\tvalues.sort()\n\t\treturn map(lambda each: [each, self.moviesWithDirector(each)], values)\n\t\n\tdef years(self):\n\t\tvalues = self.df[\"Year\"].unique().tolist()\n\t\tvalues.sort()\n\t\treturn map(lambda each: [each, self.moviesReleasedInYear(each)], values)\n\t\n\tdef moviesReleasedInYear(self, year):\n\t\treturn MovieCollection(self.df[self.df[\"Year\"] == year])\n\t\n\tdef moviesWithDirector(self, director):\n\t\treturn MovieCollection(self.df[self.df[\"Directors\"] == director])\n\n\tdef gtViewYears(self, builder):\n\t\tclist = builder.columnedList()\n\t\tclist.title(\"Years\")\n\t\tclist.priority(30)\n\t\tclist.items(lambda: self.years())\n\t\tclist.column(\"Year\", lambda each: str(each[0]))\n\t\tclist.column(\"Count\", lambda each: str(each[1].size()))\n\t\tclist.set_accessor(lambda each: [*self.years()][each - 1][1])\n\t\treturn clist\n\n\tdef gtViewDirectors(self, builder):\n\t\tclist = builder.columnedList()\n\t\tclist.title(\"Directors\")\n\t\tclist.priority(20)\n\t\tclist.items(lambda: self.directors())\n\t\tclist.column(\"Director\", lambda each: str(each[0]))\n\t\tclist.column(\"Count\", lambda each: str(each[1].size()))\n\t\tclist.set_accessor(lambda each: [*self.directors()][each - 1][1])\n\t\treturn clist\n\t\t\n\tdef gtViewMovies(self, aBuilder):\n\t\ttable = aBuilder.columnedList()\n\t\ttable.title(\"Movies\")\n\t\ttable.priority(50)\n\t\ttable.items(lambda: list(self.df.index))\n\t\tfor each in self.df.columns:\n\t\t\t(lambda col: table.column(col, lambda index: str(self.df.at[index, col])))(each)\n\t\ttable.set_accessor(lambda each: Movie(self.df.loc[list(self.df.index)[each  - 1]]))\n\t\treturn table"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-11T18:04:34.003287+11:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-11T18:05:47.813558+11:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xZSysgbIDQCSZAgOB/HrCQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Ok, now that's done. Next, we define views as extensions to the movie collection entities:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pythonSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-08T13:13:41.611214+11:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-11T18:03:22.682655+11:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cvC43lfIDQCiPr9vC12lUg=="
+							},
+							"code" : "MovieCollection(pandas.read_csv(fileName))"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-11T18:03:19.111915+11:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-11T18:04:25.936707+11:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "j60GRJjIDQCtNPM/CGwhDw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Now we are set, so let's inspect the movie collection:"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-12-04T11:22:02.861759+10:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2023-12-11T17:32:50.372763+11:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Inspecting Python objects with custom inspectors"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "f977e79f-06c8-0d00-8fd4-46b107f1eb09"
+	}
+}
