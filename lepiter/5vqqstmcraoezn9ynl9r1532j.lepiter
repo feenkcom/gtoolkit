@@ -229,7 +229,79 @@
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T21:16:40.379205+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T21:42:07.355715+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "KFmldrfIDQC9/ELzAotZYw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Subscribing back to the system announcer"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T21:16:51.990536+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T21:17:16.871149+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "vunQd7fIDQC/kyImAotZYw=="
+										},
+										"code" : "GtPharoIndex current subscribeToSystem"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -1326,6 +1398,111 @@
 								"uidString" : "8rCn3LPIDQCR1dcqAotZYw=="
 							},
 							"code" : "subscriptions := OrderedCollection new.\nSystemAnnouncer uniqueInstance  subscriptions \n\tsubscriptionsOf: GtPharoIndex current  \n\tdo: [ :each | subscriptions add: each ].\nsubscriptions "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T21:19:56.059133+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T21:20:05.31166+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "L5fJgrfIDQC/uxlFAotZYw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Enabling/disabling the debug mode"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T21:20:29.449455+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T21:20:39.365386+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FBXHhLfIDQCAiBMEAotZYw=="
+							},
+							"code" : "GtPharoIndex enableDebugMode"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T21:20:42.702104+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T21:20:49.320569+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "I0+RhbfIDQCAwNuqAotZYw=="
+							},
+							"code" : "GtPharoIndex disableDebugMode"
 						}
 					]
 				},
