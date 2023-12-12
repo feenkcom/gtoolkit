@@ -586,10 +586,187 @@
 							"string" : "The main way to query the cache is to look for senders and implementors."
 						},
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T18:50:21.975973+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T18:52:51.234241+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9fHja7XIDQC2mHL3AotZYw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "One way to do the query is using synchronized methods that work with full selector names."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:01.216017+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:15.890311+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "MWNDh7XIDQC6vRstAotZYw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "There are several ways to query implementers:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:17.383482+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:22.644959+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "wBQ6iLXIDQC7m6u0AotZYw=="
+										},
+										"code" : "GtPharoIndex current allImplementersOf:  #drawOnSpartaCanvas:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:24.189911+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:30.385165+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "pfShiLXIDQC7vZvqAotZYw=="
+										},
+										"code" : "GtPharoIndex current installedImplementersOf:  #drawOnSpartaCanvas:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:32.169718+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:40.084141+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "q7YbibXIDQC78+uWAotZYw=="
+										},
+										"code" : "GtPharoIndex current safeImplementersOf:  #drawOnSpartaCanvas:"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -623,7 +800,147 @@
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:45.18266+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:54.129399+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Y0HiibXIDQC8Gkj2AotZYw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "There are several ways to query senders:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:55.896661+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:58.49009+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "1a6FirXIDQC8vN6uAotZYw=="
+										},
+										"code" : "GtPharoIndex current allSendersOf:  #drawOnSpartaCanvas:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:58:59.729128+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:59:03.40797+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "tT3AirXIDQC83nD8AotZYw=="
+										},
+										"code" : "GtPharoIndex current installedSendersOf:  #drawOnSpartaCanvas:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:59:04.672774+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T18:59:10.130424+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "dqwLi7XIDQC9HpmRAotZYw=="
+										},
+										"code" : "GtPharoIndex current safeSendersOf:  #drawOnSpartaCanvas:"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -652,6 +969,111 @@
 								"uidString" : "pFKBurPIDQCIeuMjAotZYw=="
 							},
 							"code" : "GtPharoIndex current sendersOf:  #drawOnSpartaCanvas:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T18:51:18.644799+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T18:53:03.434175+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aGzXbbXIDQC3c79BAotZYw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Another way to query is using async methods that work with partial selector names."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T18:50:57.650312+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T18:55:44.394877+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "YUcEbrXIDQC3fD8lAotZYw=="
+							},
+							"code" : "GtPharoIndex current asyncImplementersForWord: 'drawOnSparta'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T18:51:58.950979+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-12T18:55:46.099375+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "KKercbXIDQC4wHS8AotZYw=="
+							},
+							"code" : "GtPharoIndex current asyncSendersForWord: 'drawOnSparta'"
 						}
 					]
 				},
