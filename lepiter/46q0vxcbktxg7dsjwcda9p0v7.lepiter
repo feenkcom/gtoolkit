@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-28T09:03:11.412809+02:00"
+						"dateAndTimeString" : "2023-12-12T23:12:37.491612+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This page looks at List views in Remote Phlow. "
+				"string" : "This page looks at how Views and Specifications work in Remote Phlow. It uses a List view as an example."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-28T10:26:14.634958+02:00"
+						"dateAndTimeString" : "2023-12-12T23:12:48.835499+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The data for creating a list view is modeled using {{gtClass:GtPhlowListViewSpecification}}.  The specification is initialized with a phlow data source responsible with accessing items in the list. "
+				"string" : "The data for creating a view is modeled using a {{gtClass:GtPhlowViewSpecification}}.  The specification is initialized with a phlow data source responsible with accessing data from the view. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:12:56.317147+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:13:30.842244+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "thzsFrnIDQCq5zu6AotZYw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For list views the specification is {{gtClass:GtPhlowListViewSpecification}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-15T17:58:06.11865+02:00"
+						"dateAndTimeString" : "2023-12-12T23:10:21.148204+01:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +187,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We use the bytecode view of a compiled method as an example."
+				"string" : "We use an instance of the object {{gtClass:GtRemotePhlowDeclarativeTestInspectable}} as an example"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -177,14 +214,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-15T17:38:47.356642+02:00"
+						"dateAndTimeString" : "2023-12-12T23:09:52.831927+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "FlX0AI2DDQCNtHRUDh24Rg=="
 				},
-				"code" : "targetObject := Object >>#copy"
+				"code" : "targetObject := GtRemotePhlowDeclarativeTestInspectable new"
 			},
 			{
 				"__type" : "textSnippet",
@@ -211,7 +248,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-15T17:58:16.554135+02:00"
+						"dateAndTimeString" : "2023-12-12T23:10:39.861902+01:00"
 					}
 				},
 				"uid" : {
@@ -221,7 +258,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Create an inspector wrapper for the object."
+				"string" : "Next we create an inspector wrapper for the object. In a remote context this will be a proxy."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -327,6 +364,40 @@
 					"uidString" : "kYczD42DDQCNu9NaDh24Rg=="
 				},
 				"code" : "inspectorWrapper getDeclarativeViewMethodNames"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:13:51.280289+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:13:55.10435+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "O8syGrnIDQCsCUbtAotZYw=="
+				},
+				"code" : "inspectorWrapper getViewsDeclarations"
 			},
 			{
 				"__type" : "textSnippet",
@@ -461,7 +532,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-26T14:14:18.673599+02:00"
+						"dateAndTimeString" : "2023-12-12T23:14:34.328623+01:00"
 					}
 				},
 				"uid" : {
@@ -471,7 +542,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can get the  view  specification object for the bytecode view directly from the inspector wrapper.  This will be an instance of  {{gtClass:GtPhlowListViewSpecification}}, or a proxy in case the inspector wrapper is itself a proxy."
+				"string" : "We can get the view specification object for a view directly from the inspector wrapper.  For List views will be an instance of  {{gtClass:GtPhlowListViewSpecification}}, or a proxy in case the inspector wrapper is itself a proxy."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -498,14 +569,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-26T14:17:33.424916+02:00"
+						"dateAndTimeString" : "2023-12-12T23:14:42.145467+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "T5M0BY2DDQCNuDvGDh24Rg=="
 				},
-				"code" : "viewSpecification := inspectorWrapper \r\tgetDeclarativeViewFor: #gtBytecodeFor:"
+				"code" : "viewSpecification := inspectorWrapper \r\tgetDeclarativeViewFor: #gtListFor:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -675,14 +746,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-26T14:11:39.889228+02:00"
+						"dateAndTimeString" : "2023-12-12T23:15:44.93281+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Uy6LcxOEDQCHJf30DicnVw=="
 				},
-				"code" : "viewSpecification \r\tretrieveItems: 2 \r\tfromIndex: 2"
+				"code" : "viewSpecification \r\tretrieveItems: 1 \r\tfromIndex: 2"
 			},
 			{
 				"__type" : "textSnippet",
@@ -820,14 +891,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-26T14:20:45.198018+02:00"
+						"dateAndTimeString" : "2023-12-12T23:15:04.0229+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "EyuC1KPCDQC5nwjrDENBSw=="
 				},
-				"code" : "viewSpecificationData := inspectorWrapper getViewDeclaration: #gtBytecodeFor:"
+				"code" : "viewSpecificationData := inspectorWrapper getViewDeclaration: #gtListFor:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -891,14 +962,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-26T14:23:01.995225+02:00"
+						"dateAndTimeString" : "2023-12-12T23:16:01.296348+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Jwv116PCDQC7JFQwDENBSw=="
 				},
-				"code" : "localViewSpecification := GtPhlowViewSpecification \r\tfromDictionary: viewSpecificationData.\rlocalViewSpecification\r\tmethodSelector: #gtBytecodeFor:;\r\tinitializeFromInspector: inspectorWrapper."
+				"code" : "localViewSpecification := GtPhlowViewSpecification \r\tfromDictionary: viewSpecificationData.\rlocalViewSpecification\r\tmethodSelector: #gtListFor:;\r\tinitializeFromInspector: inspectorWrapper."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1206,12 +1277,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-09-28T09:02:58.877032+02:00"
+			"dateAndTimeString" : "2023-12-12T23:13:17.91253+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "List Views in Remote Phlow"
+		"title" : "Specifications and Views in Remote Phlow"
 	},
 	"uid" : {
 		"__type" : "uuid",
