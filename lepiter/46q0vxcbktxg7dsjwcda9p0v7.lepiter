@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T23:12:48.835499+01:00"
+						"dateAndTimeString" : "2023-12-13T09:33:14.377434+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The data for creating a view is modeled using a {{gtClass:GtPhlowViewSpecification}}.  The specification is initialized with a phlow data source responsible with accessing data from the view. "
+				"string" : "The data for creating a view is modeled using a {{gtClass:GtPhlowViewSpecification}} instance.  The specification is initialized with a phlow data source responsible with accessing data from the view. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T23:13:30.842244+01:00"
+						"dateAndTimeString" : "2023-12-13T09:33:29.478421+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For list views the specification is {{gtClass:GtPhlowListViewSpecification}}."
+				"string" : "For list views, the specification is {{gtClass:GtPhlowListViewSpecification}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-28T10:13:35.376989+02:00"
+						"dateAndTimeString" : "2023-12-13T09:36:33.317315+01:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Example"
+				"string" : "##Getting informations about views"
 			},
 			{
 				"__type" : "textSnippet",
@@ -248,7 +248,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T23:10:39.861902+01:00"
+						"dateAndTimeString" : "2023-12-13T09:37:53.876644+01:00"
 					}
 				},
 				"uid" : {
@@ -258,7 +258,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Next we create an inspector wrapper for the object. In a remote context this will be a proxy."
+				"string" : "Next we create an inspector wrapper for the object. This object knows how to extract view information from the object"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -319,7 +319,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-15T17:58:23.495234+02:00"
+						"dateAndTimeString" : "2023-12-13T09:35:18.984686+01:00"
 					}
 				},
 				"uid" : {
@@ -329,7 +329,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Inspect the declarative views of this object. "
+				"string" : "Inspect the raw data about an objects's views. Here we get the name of the methods defining views and the raw data for creating view specifications."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -724,6 +724,40 @@
 								"uidString" : "WmzNw6PCDQCvWHAhDENBSw=="
 							},
 							"code" : "viewSpecification totalItemsCount"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-13T09:43:26.496627+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-13T09:43:28.952768+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "O9nG5cHIDQC9X9YIAotZYw=="
+							},
+							"code" : "viewSpecification retriveSentItemAt: 1"
 						}
 					]
 				},
@@ -817,7 +851,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-26T14:19:53.275938+02:00"
+						"dateAndTimeString" : "2023-12-13T09:40:05.831431+01:00"
 					}
 				},
 				"uid" : {
@@ -827,7 +861,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "What the inspector does when needing to show a list view is to ask the data of the specification from the inspector wrapper, create a new instance of the  specification locally, and link it with the remote instance of the view specification."
+				"string" : "What the inspector does when needing to show a list view is to get the data of the view specification from the inspector wrapper, create a new instance of the specification locally, and link it with the remote datasouce for that view."
 			},
 			{
 				"__type" : "textSnippet",
@@ -962,14 +996,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T23:16:01.296348+01:00"
+						"dateAndTimeString" : "2023-12-13T09:49:59.790293+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Jwv116PCDQC7JFQwDENBSw=="
 				},
-				"code" : "localViewSpecification := GtPhlowViewSpecification \r\tfromDictionary: viewSpecificationData.\rlocalViewSpecification\r\tmethodSelector: #gtListFor:;\r\tinitializeFromInspector: inspectorWrapper."
+				"code" : "localViewSpecification := GtPhlowViewSpecification \r\tfromDictionary: viewSpecificationData.\rlocalViewSpecification initializeFromInspector: inspectorWrapper."
 			},
 			{
 				"__type" : "textSnippet",
@@ -996,7 +1030,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-26T14:24:07.667048+02:00"
+						"dateAndTimeString" : "2023-12-13T10:11:01.06504+01:00"
 					}
 				},
 				"uid" : {
@@ -1006,7 +1040,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can not use the same methods as before to access the list items."
+				"string" : "We can now use the same methods as before to access the list items."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1033,7 +1067,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-26T14:24:47.837614+02:00"
+						"dateAndTimeString" : "2023-12-13T09:41:51.988639+01:00"
 					}
 				},
 				"uid" : {
@@ -1043,7 +1077,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In this case we make the call to the local view specification, that delegates the call to the remove instance of the view specification, that knows how to get the items from the remove view."
+				"string" : "In this case we make the call to the local view specification, that delegates the call to the remove datasource, that knows how to get the items from the remove view."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1117,6 +1151,40 @@
 								"uidString" : "kd3M5qPCDQCE3r+uDENBSw=="
 							},
 							"code" : "localViewSpecification totalItemsCount"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-13T09:43:15.035044+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-13T09:43:17.929851+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "W/IX5cHIDQC9S6GMAotZYw=="
+							},
+							"code" : "localViewSpecification retriveSentItemAt: 1"
 						}
 					]
 				},
