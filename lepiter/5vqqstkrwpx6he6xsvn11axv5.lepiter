@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:05:41.242859+02:00"
+						"dateAndTimeString" : "2023-12-12T22:31:58.78175+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:06:16.947745+02:00"
+						"dateAndTimeString" : "2023-12-12T22:32:22.204349+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CpxRhqW/DQCp4wk4AQoKYg=="
+					"uidString" : "Wh1xhLjIDQCHbO/rAotZYw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This page documents the steps to load the Gt server code in a GemStone stone using the same scripts that are used by the CI server."
+				"string" : "This page contains snippets for debugging remote GemStone views."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:44:50.580658+01:00"
+						"dateAndTimeString" : "2023-12-12T22:32:22.846834+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:45:25.866527+01:00"
+						"dateAndTimeString" : "2023-12-12T22:36:09.875078+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "sNFxsrjIDQCPHk9MAotZYw=="
+					"uidString" : "3U/ghbjIDQCI+IrrAotZYw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Installation"
+				"string" : "First in the debugging process we need a proxy to an instance of {{gtClass:GtRemotePhlowViewedObject}} that wrapps the object we are interested in."
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:06:20.817635+02:00"
+						"dateAndTimeString" : "2023-12-12T22:54:56.279398+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:11:48.674156+02:00"
+						"dateAndTimeString" : "2023-12-12T22:55:08.893451+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2XatiKW/DQCrI++TAQoKYg=="
+					"uidString" : "LguM1rjIDQCdqrFtAotZYw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "These scripts should be run in the image directory and will install GemStone there. Run the scripts into the same console session, as they set local environmental variables."
+				"string" : "#Obtaining a proxy object"
 			},
 			{
 				"__type" : "textSnippet",
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:07:41.665716+02:00"
+						"dateAndTimeString" : "2023-12-12T22:33:34.062039+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,17 +140,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:11:53.106337+02:00"
+						"dateAndTimeString" : "2023-12-12T22:33:58.329621+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "kBt/jaW/DQCs8HC0AQoKYg=="
+					"uidString" : "7fYeirjIDQCMTvX9AotZYw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First source the `dev_preconfigure_gemstone.sh` script to configure all. This assumes the gt4gemstone repository was cloned locally."
+				"string" : "We can get this using a dedicated snippet, or by explicitly using the session to evaluate code"
+			},
+			{
+				"__type" : "gemstoneSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:34:01.602086+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:35:22.390397+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "YCzDi7jIDQCOoiWxAotZYw=="
+				},
+				"code" : "inspectorProxy := GtRemotePhlowViewedObject object: \r\tGtRemotePhlowDeclarativeTestInspectable new."
 			},
 			{
 				"__type" : "textSnippet",
@@ -166,7 +200,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:09:56.901808+02:00"
+						"dateAndTimeString" : "2023-12-12T22:55:12.702881+01:00"
 					}
 				},
 				"editEmail" : {
@@ -177,17 +211,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:11:56.447125+02:00"
+						"dateAndTimeString" : "2023-12-12T22:55:19.673922+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Xm1LkqW/DQCwtQ1TAQoKYg=="
+					"uidString" : "6aKG17jIDQCe80+dAotZYw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "```bash\nsource ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/dev_preconfigure_gemstone.sh\n```"
+				"string" : "#Getting informations about views"
 			},
 			{
 				"__type" : "textSnippet",
@@ -203,7 +237,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:10:27.245342+02:00"
+						"dateAndTimeString" : "2023-12-12T22:47:36.964104+01:00"
 					}
 				},
 				"editEmail" : {
@@ -214,425 +248,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:17:21.422569+02:00"
+						"dateAndTimeString" : "2023-12-12T22:54:29.316423+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "pKVdl6W/DQCyKnNFAQoKYg=="
+					"uidString" : "LJ1cvLjIDQCTTkanAotZYw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Next, run the script `setup-remote-gemstone.sh` that downloads and configures a new GemsStone in the image directory and also installs the current code of gt4gemstone."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:14:45.553677+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:14:53.912738+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "TB7DpqW/DQC1E0riAQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\n./gt4gemstone/scripts/setup-remote-gemstone.sh\n```"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:17:38.361849+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:18:11.987146+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "GvYPsaW/DQC2HN9+AQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "If the installation worked on, start the netldi server and a stone named gs64stone"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:44:57.051339+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:07.127214+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "54zUsrjIDQCPaa+VAotZYw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Starting/stopping the stone and netldi"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-19T12:18:35.942176+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-19T12:19:03.824513+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "c5F+tKW/DQC4ImjaAQoKYg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "If this fails there can be an issue with permissions for some GemStone files"
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:18:23.188637+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:18:31.72812+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "0PG7s6W/DQC390IFAQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\nstartnetldi -g\n```"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:19:28.369282+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:20:56.697834+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "TWqet6W/DQC6D6+lAQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Next start a stone:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:20:50.553946+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:21:04.492424+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "EJOEvKW/DQC9BglfAQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\nstartstone gs64stone\n```"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:21:09.786379+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:21:17.682163+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "FwiqvaW/DQC9KWwpAQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "To stop the stone and the netldi service"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:19:03.988033+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:21:45.600603+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "/4QqtqW/DQC59wkVAQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\nstopstone -i gs64stone DataCurator swordfish   \nstopnetldi\n```"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:45:16.629866+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:45:21.780135+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "7kv/s7jIDQCQHzWuAotZYw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Setting up a connector"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:47:30.587444+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:47:57.402675+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "/CbjG6a/DQC6gtFGCbyapg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "If there are no connectors to GemStone you can add one using: "
+				"string" : "After we gave a proxy we can get information related to views, like the names of the methods creating the views and the raw data for creating view specifications."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -648,7 +274,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:48:00.800863+02:00"
+						"dateAndTimeString" : "2023-12-12T22:35:11.163613+01:00"
 					}
 				},
 				"editEmail" : {
@@ -659,14 +285,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-29T13:14:01.591567+02:00"
+						"dateAndTimeString" : "2023-12-12T22:35:18.914014+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/CqwHaa/DQC88zuaCbyapg=="
+					"uidString" : "TZPoj7jIDQCOrfluAotZYw=="
 				},
-				"code" : "connector := GtGemStoneSessionRegistry default propertiesFile addNewConnector.\rconnector \r\tregistry: GtGemStoneSessionRegistry default;\r\tlibraryPath: (FileLocator imageDirectory \r\t\t/ 'remote-gemstone') asFileReference.\rconnector username: 'SystemUser'.\r\t\rGtGemStoneSessionRegistry default \r\tnewSessionWithConnector:  connector"
+				"code" : "inspectorProxy getDeclarativeViewMethodNames"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:35:12.753575+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:35:52.82434+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DeIAkLjIDQCOuM7RAotZYw=="
+				},
+				"code" : "inspectorProxy getViewsDeclarations"
 			},
 			{
 				"__type" : "textSnippet",
@@ -682,7 +342,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:11.197662+01:00"
+						"dateAndTimeString" : "2023-12-12T22:51:59.815848+01:00"
 					}
 				},
 				"editEmail" : {
@@ -693,17 +353,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:21.655227+01:00"
+						"dateAndTimeString" : "2023-12-12T22:54:46.989671+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "nus/t7jIDQCRDmE0AotZYw=="
+					"uidString" : "lW0HzLjIDQCWmxOjAotZYw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Script to setup"
+				"string" : "From the proxy object we can also get the view specifications initialized with the remote datasource"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:50:24.099829+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:51:26.758999+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3etSxrjIDQCWNpCcAotZYw=="
+				},
+				"code" : "inspectorProxy proxyObject declarativeViews"
 			},
 			{
 				"__type" : "textSnippet",
@@ -719,7 +413,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:22.167751+01:00"
+						"dateAndTimeString" : "2023-12-12T22:52:54.048022+01:00"
 					}
 				},
 				"editEmail" : {
@@ -730,17 +424,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:40.408251+01:00"
+						"dateAndTimeString" : "2023-12-12T22:53:06.4167+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "0lTnt7jIDQCRd6E/AotZYw=="
+					"uidString" : "TvFCz7jIDQCYfd3BAotZYw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This combines  the scripts from before to setup a stone from scratch"
+				"string" : "We can also get the title displayed by the inspector"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:36:26.245021+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:51:25.445873+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "L0ZilLjIDQCPBOp0AotZYw=="
+				},
+				"code" : "inspectorProxy gtInspectorTitleString"
 			},
 			{
 				"__type" : "textSnippet",
@@ -756,7 +484,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:45.156025+01:00"
+						"dateAndTimeString" : "2023-12-12T22:55:26.952149+01:00"
 					}
 				},
 				"editEmail" : {
@@ -767,17 +495,440 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:47:13.105494+01:00"
+						"dateAndTimeString" : "2023-12-12T22:55:36.089117+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AhlGubjIDQCS7t0dAotZYw=="
+					"uidString" : "GxRg2LjIDQCfp6+wAotZYw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "```bash\nsource ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/dev_preconfigure_gemstone.sh\n./gt4gemstone/scripts/setup-remote-gemstone.sh\nstartnetldi -g\nstartstone gs64stone\n```"
+				"string" : "#Getting informations about specific views"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:48:04.996198+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:48:13.710669+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "F10IvrjIDQCUrISAAotZYw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can also get information about specific views"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:58:47.747696+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:58:50.729825+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wPdX5LjIDQCgtT9bAotZYw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##List views"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:49:15.625614+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:49:17.147553+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TBI+wrjIDQCWKnJ2AotZYw=="
+				},
+				"code" : "listViewProxy := inspectorProxy \r\tgetDeclarativeViewFor: #gtListFor:."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:48:33.791404+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:55:47.308907+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "sry/v7jIDQCVsWMsAotZYw=="
+				},
+				"code" : "listViewProxy retrieveItems: 3 fromIndex: 1"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:58:35.326959+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:58:39.845728+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vnCa47jIDQCgnGHMAotZYw=="
+				},
+				"code" : "listViewProxy retriveSentItemAt: 1"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:59:27.471792+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T22:59:32.481026+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uBi25rjIDQCg9qvDAotZYw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Forward views"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:04:49.098501+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:18:20.802073+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/r7h+bjIDQCiqe6QAotZYw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "###Interacting with a proxy for the view"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:01:15.872028+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:01:33.564944+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iiks7bjIDQChdQEdAotZYw=="
+				},
+				"code" : "forwardViewProxy := inspectorProxy \r\tgetDeclarativeViewFor: #gtForwardListFor:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:02:08.067049+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:02:13.875593+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "a5xI8LjIDQChx+U+AotZYw=="
+				},
+				"code" : "forwardViewProxy retrieveViewSpecificationForForwarding"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:17:08.692651+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:18:22.553153+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mMdS+rjIDQCjJfEmAotZYw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "###Interacting with a local specification"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:03:51.369526+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:05:57.322982+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NOFw9rjIDQCiCXREAotZYw=="
+				},
+				"code" : "forwardViewSpecificationData := inspectorProxy \r\tgetViewDeclaration: #gtForwardListFor:.\rlocalForwardViewSpecification := GtPhlowViewSpecification \r\tfromDictionary: forwardViewSpecificationData.\rlocalForwardViewSpecification\r\tmethodSelector: #gtForwardListFor:;\r\tinitializeFromInspector: inspectorProxy."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:06:23.570351+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-12T23:07:17.817666+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "PUSD/7jIDQCjxuZCAotZYw=="
+				},
+				"code" : "targetListViewSpecification := localForwardViewSpecification\r\tloadViewSpecificationForForwarding"
 			}
 		]
 	},
@@ -789,7 +940,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-19T12:05:40.990207+02:00"
+			"dateAndTimeString" : "2023-12-12T22:31:58.724957+01:00"
 		}
 	},
 	"editEmail" : {
@@ -800,15 +951,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-21T14:56:49.889288+03:00"
+			"dateAndTimeString" : "2023-12-12T22:31:58.724957+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Directly installing GemStone and loading gt4gemstone for development"
+		"title" : "Debugging remote GemStone views"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "56c04d86-a5bf-0d00-a9e2-fc4c010a0a62"
+		"uuid" : "f13e7084-b8c8-0d00-876b-f290028b5963"
 	}
 }
