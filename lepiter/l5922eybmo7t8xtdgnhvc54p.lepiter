@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:43:16.543869+01:00"
+						"dateAndTimeString" : "2023-12-14T10:12:26.000904+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "3KkHwwbIDQCVLv/wB/HrCQ=="
 				},
-				"code" : "fileName := FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data'\r\t\t/ 'imdb' / 'Movies.csv'"
+				"code" : "fileName := (FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data' / 'imdb' / 'Movies.csv') fullName."
 			},
 			{
 				"__type" : "textSnippet",
@@ -172,7 +172,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-11T18:03:49.768886+11:00"
+						"dateAndTimeString" : "2023-12-14T10:01:31.409195+01:00"
 					}
 				},
 				"uid" : {
@@ -182,7 +182,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We load it with pandas, and to do that we first setup the Python runtime by installing the pandas module:"
+				"string" : "We load it with pandas, and to do that we first set up the Python runtime by installing the pandas module. (NB: You might need to install [pipenv](https://pypi.org/project/pipenv/) first.)"
 			},
 			{
 				"__type" : "textSnippet",
