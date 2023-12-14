@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:43:16.543869+01:00"
+						"dateAndTimeString" : "2023-12-14T10:12:26.000904+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "3KkHwwbIDQCVLv/wB/HrCQ=="
 				},
-				"code" : "fileName := FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data'\r\t\t/ 'imdb' / 'Movies.csv'"
+				"code" : "fileName := (FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data' / 'imdb' / 'Movies.csv') fullName."
 			},
 			{
 				"__type" : "textSnippet",
