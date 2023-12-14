@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-04T11:27:57.092265+10:00"
+						"dateAndTimeString" : "2023-12-14T09:43:16.543869+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "3KkHwwbIDQCVLv/wB/HrCQ=="
 				},
-				"code" : "fileName := '../pharo-local/iceberg/feenkcom/gtoolkit-demos/data/imdb/Movies.csv'"
+				"code" : "fileName := FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data'\r\t\t/ 'imdb' / 'Movies.csv'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -142,14 +142,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-11T17:09:55.220231+11:00"
+									"dateAndTimeString" : "2023-12-14T09:42:48.374227+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "4l0qnkfIDQCfzsojC7RBkw=="
 							},
-							"code" : "PBApplication isRunning ifFalse: [ PBApplication start ].\nPBApplication uniqueInstance installModule: 'pandas'"
+							"code" : "PBApplication isRunning ifFalse: [ PBApplication start ].\nPBApplication uniqueInstance installModule: 'pandas'."
 						}
 					]
 				},
