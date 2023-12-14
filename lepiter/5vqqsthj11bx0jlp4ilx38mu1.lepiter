@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T16:06:48.17778+01:00"
+						"dateAndTimeString" : "2023-12-14T16:24:22.974699+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T16:07:49.618478+01:00"
+						"dateAndTimeString" : "2023-12-14T16:25:30.106639+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,121 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We use a set of architctural rules defined in {{gtClass:GtGtoolkitArchitecturalReport}} to ensure various architectural rules that have value for us are respected. We run this report during the release process. In case one of these architectural rules is not satisfied we do not release."
+				"string" : "The report {{gtClass:GtGtoolkitArchitecturalDevelopmentReport}} extends the main architectural report in {{gtClass:GtGtoolkitArchitecturalReport}} with constraints that need the list of repositories to be present. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-14T16:26:22.253512+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-14T16:26:22.771926+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TP6apNvIDQC0ZT+yAotZYw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The current status of the report is shown below."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-14T16:27:22.174136+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-14T16:27:22.174136+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mlAtqNvIDQC0ugGpAotZYw=="
+				},
+				"exampleSelector" : "yourself",
+				"previewHeight" : 500,
+				"previewShowSelector" : "gtItemsFor:",
+				"exampleBehaviorName" : "GtGtoolkitArchitecturalDevelopmentReport class",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-14T16:27:13.142529+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-14T16:27:16.962679+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xH+jp9vIDQC0qJBhAotZYw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To report is created in the method {{gtMethod:GtGtoolkitArchitecturalDevelopmentReport>>build:|expanded=true}}"
 			}
 		]
 	},
