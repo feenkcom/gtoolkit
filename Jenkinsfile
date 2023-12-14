@@ -98,6 +98,7 @@ class GlamorousToolkit {
 
     String releaserVersion
     String installerVersion
+    String gtoolkitVmVersion
 
     String gtoolkitVersion
     String gt4gemstoneCommitHash
@@ -305,7 +306,12 @@ class GlamorousToolkit {
                     script: "cat gtoolkit-builder.version",
                     returnStdout: true
             ).trim()
+            this.gtoolkitVmVersion = script.sh(
+                    script: "cat gtoolkit-vm.version",
+                    returnStdout: true
+            ).trim()
             script.echo "Will install using gtoolkit-installer ${installerVersion}"
+            script.echo "Will release using gtoolkit-vm ${gtoolkitVmVersion}"
             script.echo "Will release using feenk-releaser ${releaserVersion}"
             script.echo "Will run tests: ${runTests}"
         }
@@ -383,6 +389,7 @@ class Builder extends AgentJob {
                     "--verbose " +
                             "--workspace ${GlamorousToolkit.RELEASER_FOLDER} " +
                             "release-build " +
+                            "--app-version ${build.gtoolkitVmVersion} " +
                             "--loader cloner " +
                             "--image-url ${GlamorousToolkit.PHARO_IMAGE_URL} " +
                             "--bump ${build.bump} " +
