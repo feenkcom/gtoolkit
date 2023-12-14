@@ -10094,7 +10094,45 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [ ]
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-12-14T11:44:17.478265+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-12-14T11:44:22.673929+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "n2jPs9fIDQCB7eAPDkTUDg=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "{{gtPage:GtRemotePhlowDeclarativeTestInspectable for Python|db=2j9m7db2i4oz116bexd7wbdxo}}"
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
