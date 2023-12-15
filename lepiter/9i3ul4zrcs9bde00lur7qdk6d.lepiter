@@ -221,6 +221,40 @@
 				"code" : "fileName := (FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data' / 'imdb' / 'Akira Kurosawa Movies.csv') fullName"
 			},
 			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-15T11:13:06.205445+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-15T11:14:21.684953+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nG8dYuvIDQCyhf2DAIFI3w=="
+				},
+				"code" : "fileName := (FileLocator temp / #data , #csv) fullName"
+			},
+			{
 				"__type" : "pythonSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -287,6 +321,108 @@
 					"uidString" : "HD1o+dfIDQCzxzQlDkTUDg=="
 				},
 				"code" : "df"
+			},
+			{
+				"__type" : "pythonSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-15T09:37:13.166141+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-15T10:50:13.198757+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jQU1C+rIDQCh0Tz5AIFI3w=="
+				},
+				"code" : "df.head(2).T"
+			},
+			{
+				"__type" : "pythonSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-15T10:52:02.777727+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-15T10:52:03.480212+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iA/PFuvIDQCqtI2rAIFI3w=="
+				},
+				"code" : "pandas.DataFrame([[1,2],[3,4]])"
+			},
+			{
+				"__type" : "pythonSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-15T10:54:13.98738+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-15T10:54:14.710167+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cymhHuvIDQCq3TKCAIFI3w=="
+				},
+				"code" : "pandas.DataFrame([[1,2],[3,4]], columns=['A','B'])"
 			},
 			{
 				"__type" : "textSnippet",
@@ -376,7 +512,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-09T19:00:09.589822+01:00"
+						"dateAndTimeString" : "2023-12-15T11:03:03.311179+01:00"
 					}
 				},
 				"editEmail" : {
@@ -387,14 +523,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T18:51:41.094877+01:00"
+						"dateAndTimeString" : "2023-12-15T11:08:43.296298+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "JxpkNXnIDQCf8fAQAj+EoA=="
+					"uidString" : "hwEuPuvIDQCsk86IAIFI3w=="
 				},
-				"code" : "def dataframe_gt_view_columns(self, builder):\r    clist = builder.columnedList()\n    clist.title('Columns')\n    clist.priority(10)\n    clist.items(lambda: self.columns.to_list())\r    clist.column('Position', lambda each: df.columns.get_loc(each))\n    clist.column('Column', lambda each: str(each))\r    clist.column('Type', lambda each: str(list(df.dtypes)[df.columns.get_loc(each)]))\r    clist.set_accessor(lambda each: self[self.columns[each]])\n    return clist\n\nsetattr(pandas.DataFrame, 'gtViewColumns', dataframe_gt_view_columns)"
+				"code" : "def dataframe_gt_view_columns(self, builder):\r    clist = builder.columnedList()\n    clist.title('Columns')\n    clist.priority(10)\n    clist.items(lambda: list(range(0, len(self.columns))))\r    clist.column('Position', lambda each: each)\n    clist.column('Column', lambda each: str(self.columns.values[each]))\r    clist.column('Type', lambda each: str(self.dtypes.values[each]))\r    clist.set_accessor(lambda each: self[self.columns.values[each]])\n    return clist\n\nsetattr(pandas.DataFrame, 'gtViewColumns', dataframe_gt_view_columns)"
 			},
 			{
 				"__type" : "textSnippet",
