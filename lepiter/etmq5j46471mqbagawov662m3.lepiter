@@ -34,7 +34,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-15T16:31:21.77592+01:00"
+									"dateAndTimeString" : "2023-12-20T15:17:46.458963+01:00"
 								}
 							},
 							"uid" : {
@@ -44,7 +44,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*[[Reflection]]* is the ability to *query* and *modify* a running system."
+							"string" : "We define *[[Reflection]]* and related terms, and give a couple of simple examples."
 						}
 					]
 				},
@@ -480,7 +480,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-18T18:20:47.825061+01:00"
+									"dateAndTimeString" : "2023-12-20T15:27:51.966725+01:00"
 								}
 							},
 							"uid" : {
@@ -490,10 +490,10 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*Metaobjects* live in the implementation of a language, typically in the VM. To use them, they have to be *reified* to ordinary objects in the run-time image. You can then query these reified metaobjects. This form of reflection is called *introspection*. If you modified these metaobjects, and *reflect* these changes back to the meta-level (*i.e.*, the implementation), then this form of reflection is called *intercession*. Note that the line between the base level and meta level is sometimes called a *mirror*, because the meta-level objects a *reflected* to the base level."
+							"string" : "*Metaobjects* live in the implementation of a language, typically in the VM. To use them, they have to be *reified* to ordinary objects in the run-time image. You can then query these reified metaobjects. This form of reflection is called *introspection*. If you modified these metaobjects, and *reflect* these changes back to the meta-level (*i.e.*, the implementation), then this form of reflection is called *intercession*. Note that the line between the base level and meta level is sometimes called a *mirror*, because the meta-level objects are *reflected* to the base level."
 						},
 						{
-							"__type" : "exampleSnippet",
+							"__type" : "elementSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -506,7 +506,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-18T18:15:51.927687+01:00"
+									"dateAndTimeString" : "2023-12-20T15:27:25.710377+01:00"
 								}
 							},
 							"editEmail" : {
@@ -517,20 +517,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-18T18:15:51.927687+01:00"
+									"dateAndTimeString" : "2023-12-20T15:27:32.698293+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "iMKNoy3JDQCX2z+TCDSwyQ=="
+								"uidString" : "tt3bhFPJDQCd1zICCKoQWw=="
 							},
-							"exampleSelector" : "reflectionScenery",
-							"previewHeight" : 400,
-							"previewShowSelector" : "gtLiveFor:",
-							"exampleBehaviorName" : "ReflectionSceneryExample",
-							"codeExpanded" : true,
-							"previewExpanded" : false,
-							"noCode" : true
+							"code" : "ReflectionSceneryExample  new reflectionScenery",
+							"elementHeight" : 274,
+							"codeHeight" : 50,
+							"codeVisible" : false
 						}
 					]
 				},
