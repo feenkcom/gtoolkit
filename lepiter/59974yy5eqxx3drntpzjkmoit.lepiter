@@ -302,7 +302,7 @@
 				"string" : "Let’s see an example: a search for all the methods annotated with the `#gtView` pragma."
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -315,7 +315,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:25:05.636584+02:00"
+						"dateAndTimeString" : "2023-12-20T16:00:28.573738+01:00"
 					}
 				},
 				"editEmail" : {
@@ -326,20 +326,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:25:05.636584+02:00"
+						"dateAndTimeString" : "2023-12-20T16:01:10.121633+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "GQFlOViADQCqoLvHCHfMWA=="
+					"uidString" : "3PgL+1PJDQCv0QyLCKoQWw=="
 				},
-				"exampleSelector" : "searchForGtViewPragmaMethods",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtWorkWithQueriesHowToGuide",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : false
+				"code" : "#gtView gtPragmas."
 			},
 			{
 				"__type" : "textSnippet",
@@ -453,7 +447,7 @@
 				"string" : "Let’s see an example: a search for all the methods that are annotated with the `#gtView` pragma and implement a tree view."
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -466,7 +460,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:25:47.731785+02:00"
+						"dateAndTimeString" : "2023-12-20T16:00:55.720488+01:00"
 					}
 				},
 				"editEmail" : {
@@ -477,20 +471,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:25:47.731785+02:00"
+						"dateAndTimeString" : "2023-12-20T16:01:12.607497+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "cFPnO1iADQCqpFVcCHfMWA=="
+					"uidString" : "8TKq/FPJDQCv3lcwCKoQWw=="
 				},
-				"exampleSelector" : "searchForGtViewTreeMethods",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtWorkWithQueriesHowToGuide",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : false
+				"code" : "#gtView gtPragmas & #tree gtReferences."
 			},
 			{
 				"__type" : "textSnippet",
@@ -530,7 +518,7 @@
 				"string" : "Now let’s search for those methods above, in addition to those that implement a columnedTree view."
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -543,7 +531,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:27:24.425515+02:00"
+						"dateAndTimeString" : "2023-12-20T16:01:16.623358+01:00"
 					}
 				},
 				"editEmail" : {
@@ -554,20 +542,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:27:24.425515+02:00"
+						"dateAndTimeString" : "2023-12-20T16:01:17.185505+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "VcGqQViADQCqqZkOCHfMWA=="
+					"uidString" : "pybp/VPJDQCv9RV5CKoQWw=="
 				},
-				"exampleSelector" : "searchForGtViewTreeAndColumnedTreeMethods",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtWorkWithQueriesHowToGuide",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : false
+				"code" : "#gtView gtPragmas & (#tree gtReferences | #columnedTree gtReferences)."
 			},
 			{
 				"__type" : "textSnippet",
@@ -644,7 +626,7 @@
 				"string" : "For example, this code snippet returns all example methods from packages starting with `'GToolkit'`."
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -657,7 +639,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:28:06.270985+02:00"
+						"dateAndTimeString" : "2023-12-20T16:01:27.523626+01:00"
 					}
 				},
 				"editEmail" : {
@@ -668,20 +650,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:28:06.270985+02:00"
+						"dateAndTimeString" : "2023-12-20T16:01:28.233067+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MkQpRFiADQCqq+r7CHfMWA=="
+					"uidString" : "ynmP/lPJDQCwAjknCKoQWw=="
 				},
-				"exampleSelector" : "exampleMethodsFromGToolkitPackages",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtWorkWithQueriesHowToGuide",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : false
+				"code" : "#gtExample gtPragmas select: [ :method | \r\t\tmethod package name beginsWith: 'GToolkit']."
 			},
 			{
 				"__type" : "textSnippet",
@@ -832,7 +808,7 @@
 				"string" : "For example, let's search for certain methods in a certain package. The result will be an instance of {{gtClass:GtSearchIntersectionFilter}}, being the intersection of two filters: {{gtClass:GtSearchReferencesFilter}} and {{gtClass:GtSearchMethodsWithPackagePatternFilter}}."
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -845,7 +821,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:29:14.777869+02:00"
+						"dateAndTimeString" : "2023-12-20T16:02:00.351488+01:00"
 					}
 				},
 				"editEmail" : {
@@ -856,20 +832,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:29:14.777869+02:00"
+						"dateAndTimeString" : "2023-12-20T16:02:00.935183+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MZk+SFiADQCqrvoxCHfMWA=="
+					"uidString" : "WmOEAFTJDQCwECbvCKoQWw=="
 				},
-				"exampleSelector" : "searchInCertainPackage",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtWorkWithQueriesHowToGuide",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : false
+				"code" : "#todo gtReferences & 'Bloc' gtPackageMatches."
 			},
 			{
 				"__type" : "textSnippet",
@@ -909,7 +879,7 @@
 				"string" : "A number of such predicates are readily available. Below is a diagram of the {{gtClass:GtSearchFilter}} class hierarchy."
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "elementSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -922,7 +892,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:29:55.732245+02:00"
+						"dateAndTimeString" : "2023-12-20T15:55:25.641331+01:00"
 					}
 				},
 				"editEmail" : {
@@ -933,20 +903,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-04T22:29:55.732245+02:00"
+						"dateAndTimeString" : "2023-12-20T15:58:46.586918+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "PoOvSliADQCqsELlCHfMWA=="
+					"uidString" : "cpb96FPJDQCuipmyCKoQWw=="
 				},
-				"exampleSelector" : "searchFiltersDiagram",
-				"previewHeight" : 720,
-				"previewShowSelector" : "gtHierarchyFor:",
-				"exampleBehaviorName" : "GtWorkWithQueriesHowToGuide",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
+				"code" : "GtWorkWithQueriesHowToGuide  new searchFiltersDiagram gtHierarchyFor: GtPhlowView new",
+				"elementHeight" : 481,
+				"codeHeight" : 50,
+				"codeVisible" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -2959,12 +2926,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-06-04T22:04:12.872792+02:00"
+			"dateAndTimeString" : "2023-12-20T16:06:35.056452+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Querying Pharo code"
+		"title" : "Querying Pharo code with GT filters"
 	},
 	"uid" : {
 		"__type" : "uuid",
