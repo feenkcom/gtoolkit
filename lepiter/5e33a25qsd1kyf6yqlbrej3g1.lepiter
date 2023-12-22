@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T15:52:50.07042+01:00"
+						"dateAndTimeString" : "2023-12-22T08:40:38.368853+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T15:52:59.248567+01:00"
+						"dateAndTimeString" : "2023-12-22T08:40:45.810269+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This page is a [[stub]] "
+				"string" : "This pageis a partial [[DRAFT]] "
 			},
 			{
 				"__type" : "textSnippet",
@@ -443,7 +443,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-21T08:08:59.708741+01:00"
+									"dateAndTimeString" : "2023-12-22T08:42:29.911486+01:00"
 								}
 							},
 							"uid" : {
@@ -453,7 +453,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "From  a class we can navigate to its {{gtClass:name=MethodDictionary}}, and from there to each {{gtClass:name=CompiledMethod}} defined in that class. Furthermore, we can navigate from a method to its AST (Abstract Syntax Tree), which is represented as a tree of {{gtClass:name=RBProgramNode}} instances."
+							"string" : "From  a class we can navigate to its {{gtClass:name=MethodDictionary}}, and from there to each {{gtClass:name=CompiledMethod}} defined in that class. Furthermore, we can navigate from a method to its AST (Abstract Syntax Tree), which is represented as a tree of {{gtClass:name=RBProgramNode}} instances. Each of these classes provides a rich API for querying classes or methods."
 						},
 						{
 							"__type" : "elementSnippet",
@@ -1895,7 +1895,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-21T10:45:49.489244+01:00"
+									"dateAndTimeString" : "2023-12-22T08:40:58.992996+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1906,12 +1906,12 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-21T10:45:49.489244+01:00"
+									"dateAndTimeString" : "2023-12-22T08:40:58.992996+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "0mGbs2PJDQCsX9RhDbQ7MQ=="
+								"uidString" : "Edf6EnbJDQCZfzEDACMXAA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
@@ -2090,6 +2090,40 @@
 								"uidString" : "VVxyuGPJDQCtG0UaDbQ7MQ=="
 							},
 							"code" : "(GtLudoGame >> #gameState) linesOfCode."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-22T08:46:20.352077+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-22T08:47:21.077099+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hmUiJnbJDQCfX6rhACMXAA=="
+							},
+							"code" : "((GtLudoGame package classes flatCollect: #methods) collect: #linesOfCode) sum."
 						},
 						{
 							"__type" : "textSnippet",
@@ -4103,12 +4137,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-12-20T15:52:49.995474+01:00"
+			"dateAndTimeString" : "2023-12-22T08:41:35.986488+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Querying classes"
+		"title" : "Querying classes and methods"
 	},
 	"uid" : {
 		"__type" : "uuid",
