@@ -325,12 +325,49 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T17:23:12.633678+01:00"
+						"dateAndTimeString" : "2024-01-05T08:43:38.169738+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "QIHtIlXJDQCs8DAjBL0nGQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "See the examples in {{gtPackage:name=GToolkit-Demo-Reflection}}. The examples below need to be  updated ..."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-01-05T08:43:12.356001+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-01-05T08:43:12.356001+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0A+1vI/KDQCcqoXGBbxOog=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -585,6 +622,43 @@
 				"code" : "\"Minimal objects\"\rpoint := 1@2.\rLoggingProxy for: point.\rpoint.\r\"inspect to see that the point has been replace by a proxy.\"\r"
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-01-05T08:39:12.493521+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-01-05T08:39:18.6565+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XAppro/KDQCcGOGcBbxOog=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This one is broken"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -609,14 +683,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T17:22:33.681911+01:00"
+						"dateAndTimeString" : "2024-01-05T08:38:10.677884+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "q3+TIFXJDQCsyvDlBL0nGQ=="
 				},
-				"code" : "\"Anonymous classes\"\rTranscript open.\ranonClass := Class new.\ranonClass\r\tsuperclass: Set;\r\tsetFormat: Set format.\ranonClass\r\tcompile:\r\t\t'add: anObject\r\t\tTranscript show: ''adding '', anObject printString; cr.\r\t\t^ super add: anObject'.\rset := Set new.\rset add: 1.\rset primitiveChangeClassTo: anonClass basicNew.\rset add: 2.\r"
+				"code" : "\"Anonymous classes\"\r\"Transcript open.\"\ranonClass := Class new.\ranonClass\r\tsuperclass: Set;\r\tsetFormat: Set format.\ranonClass\r\tcompile:\r\t\t'add: anObject\r\t\tTranscript show: ''adding '', anObject printString; cr.\r\t\t^ super add: anObject'.\rset := Set new.\rset add: 1.\rset primitiveChangeClassTo: anonClass basicNew.\rset add: 2.\r"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -643,7 +717,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T17:22:38.872043+01:00"
+						"dateAndTimeString" : "2024-01-05T08:43:48.376652+01:00"
 					}
 				},
 				"uid" : {
@@ -651,40 +725,6 @@
 					"uidString" : "0NOkIFXJDQCs1C/zBL0nGQ=="
 				},
 				"code" : "\"Method wrappers\"\r\rlogger := LoggingMethodWrapper on: Integer>>#factorial.\r\rlogger invocationCount.\r5 factorial.\rlogger invocationCount.\r\rlogger install.\r[ 5 factorial ] ensure: [logger uninstall].\rlogger invocationCount.\r\r10 factorial.\rlogger invocationCount.\r\r"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T17:22:39.917828+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T17:22:39.917828+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "KlH6IFXJDQCs3qkYBL0nGQ=="
-				},
-				"code" : ""
 			},
 			{
 				"__type" : "textSnippet",
