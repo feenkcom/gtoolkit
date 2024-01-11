@@ -146,15 +146,15 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-19T15:31:59.40544+01:00"
+									"dateAndTimeString" : "2024-01-11T16:37:00.70528+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "EB1Ldz/JDQCzM5mRDJAUSQ=="
 							},
-							"code" : "GtMondrianPatternMapExamples new patternMapWithExplicitPositions",
-							"elementHeight" : 402,
+							"code" : "LepiterMondrianPageMapExamples new patternMapwithExplicitPositions pageMapWithExplicitPositions.",
+							"elementHeight" : 350,
 							"codeHeight" : 50,
 							"codeVisible" : false
 						},
@@ -183,7 +183,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-21T14:09:16.698985+02:00"
+									"dateAndTimeString" : "2024-01-11T16:28:38.463953+01:00"
 								}
 							},
 							"uid" : {
@@ -193,7 +193,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Moldable development works best when you incrementally extend a live model with custom tools as you explore it.  You can start the exploration and molding process from a [[Moldable object]], a live instance of a key domain entity, even at  the very beginning of a new project. If you are analyzing existing data, you should start with a [[Viewable data wrapper]]."
+							"string" : "Moldable development works best when you incrementally extend a live model with custom tools as you explore it.  You can start the exploration and molding process from a [[Moldable Object]], a live instance of a key domain entity, even at  the very beginning of a new project. If you are analyzing existing data, you should start with a [[Viewable data wrapper]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -220,7 +220,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-21T13:58:33.28256+02:00"
+									"dateAndTimeString" : "2024-01-11T16:30:42.761254+01:00"
 								}
 							},
 							"uid" : {
@@ -230,7 +230,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Once you have a moldable object to explore, you can leverage its  [[Contextual playground]] to prototype new behavior and custom tools."
+							"string" : "Once you have a moldable object to explore, you can leverage its  [[Contextual Playground]] to prototype new behavior and custom tools."
 						},
 						{
 							"__type" : "textSnippet",
@@ -257,7 +257,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-01T11:35:52.020052+01:00"
+									"dateAndTimeString" : "2024-01-11T16:30:58.624387+01:00"
 								}
 							},
 							"uid" : {
@@ -267,7 +267,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "As you are developing the live model, you may find yourself repeatedly performing the same sequences of navigation steps to access information, either by clicking through views or evaluating Playground snippets. This is often a sign that the information you navigate to should be turned into a [[Viewable entity]] of your domain object. Ideally, you should start with a [[Simple view]]."
+							"string" : "As you are developing the live model, you may find yourself repeatedly performing the same sequences of navigation steps to access information, either by clicking through views or evaluating Playground snippets. This is often a sign that the information you navigate to should be turned into a [[Custom View]] of your domain object. Ideally, you should start with a [[Simple view]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -294,7 +294,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-21T14:03:32.909767+02:00"
+									"dateAndTimeString" : "2024-01-11T16:31:27.567722+01:00"
 								}
 							},
 							"uid" : {
@@ -304,7 +304,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Similarly, you may repeatedly perform certain code snippets to obtain a certain effect, such as opening a new window. In this case, instead of creating a custom view, you might want a  [[Custom action]]. "
+							"string" : "Similarly, you may repeatedly perform certain code snippets to obtain a certain effect, such as opening a new window. In this case, instead of creating a custom view, you might want a  [[Custom Action]]. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -331,7 +331,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-01T11:37:29.120493+01:00"
+									"dateAndTimeString" : "2024-01-11T16:31:16.836483+01:00"
 								}
 							},
 							"uid" : {
@@ -341,7 +341,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If your domain deals with collections of entities, you want them to be moldable as well, so you should wrap each of them with a [[Collection wrapper]]. "
+							"string" : "If your domain deals with collections of entities, you want them to be moldable as well, so you should wrap each of them with a [[Moldable Collection Wrapper]]. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -368,7 +368,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-01T11:41:27.910014+01:00"
+									"dateAndTimeString" : "2024-01-11T16:31:36.620425+01:00"
 								}
 							},
 							"uid" : {
@@ -378,7 +378,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Particular domain instances of interest for testing or documentation should each be encapsulated as an [[Example object]]. These can then be embedded in a [[Project diary]] to serve as a starting point for moldable development, to track the progress of your work, or to provide documentation."
+							"string" : "Particular domain instances of interest for testing or documentation should each be encapsulated as an [[Example object]]. These can then be embedded in a [[Project Diary]] to serve as a starting point for moldable development, to track the progress of your work, or to provide documentation."
 						}
 					]
 				},
