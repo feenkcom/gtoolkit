@@ -196,7 +196,7 @@ class GlamorousToolkit {
         def dockerJobs = [:]
 
         // platformsArgument is picked from https://hub.docker.com/_/ubuntu, latest tag that we currently use in our Dockerfile
-        def jobAMD = new DockerOneArchTentativeImage(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64, "linux/amd64")
+        def jobAMD = new DockerOneArchTentativeImage(this, new Agent(Triplet.Linux_X86_64, "scooby-doo"), Triplet.Linux_X86_64, "linux/amd64")
         def jobARM = new DockerOneArchTentativeImage(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64, "linux/arm64/v8")
 
         // Create a map to pass in to the 'parallel' step so we can fire all the builds at once
@@ -213,7 +213,7 @@ class GlamorousToolkit {
 
         // Publish all manifests as one multi-architecture manifest
         def tentativeImageNames = [jobAMD.tentative_image_name(), jobARM.tentative_image_name() ]
-        def multiArchJob = new DockerMultiArchImage(this, new Agent(Triplet.Linux_X86_64, "mickey-mouse"), Triplet.Linux_X86_64, tentativeImageNames)
+        def multiArchJob = new DockerMultiArchImage(this, new Agent(Triplet.Linux_X86_64, "scooby-doo"), Triplet.Linux_X86_64, tentativeImageNames)
 
         multiArchJob.execute()
     }
