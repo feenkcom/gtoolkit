@@ -34,7 +34,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-15T16:31:21.77592+01:00"
+									"dateAndTimeString" : "2023-12-20T15:17:46.458963+01:00"
 								}
 							},
 							"uid" : {
@@ -44,7 +44,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*[[Reflection]]* is the ability to *query* and *modify* a running system."
+							"string" : "We define *[[Reflection]]* and related terms, and give a couple of simple examples."
 						}
 					]
 				},
@@ -109,7 +109,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-15T15:59:04.694934+01:00"
+									"dateAndTimeString" : "2024-01-09T15:45:00.903496+01:00"
 								}
 							},
 							"uid" : {
@@ -119,7 +119,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "***Reflection*** is the ability of a program to *manipulate a representation of its own state* during its execution."
+							"string" : "***Reflection*** is the ability of a program to *manipulate a representation of its own state* during its execution. Reflection can be used to build custom and ad hoc analysis tools."
 						},
 						{
 							"__type" : "textSnippet",
@@ -146,7 +146,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-15T15:58:41.362334+01:00"
+									"dateAndTimeString" : "2024-01-09T15:45:49.09787+01:00"
 								}
 							},
 							"uid" : {
@@ -459,6 +459,118 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-18T18:16:12.865885+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T15:27:51.966725+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MN9Xoy3JDQCX1LSUCDSwyQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*Metaobjects* live in the implementation of a language, typically in the VM. To use them, they have to be *reified* to ordinary objects in the run-time image. You can then query these reified metaobjects. This form of reflection is called *introspection*. If you modified these metaobjects, and *reflect* these changes back to the meta-level (*i.e.*, the implementation), then this form of reflection is called *intercession*. Note that the line between the base level and meta level is sometimes called a *mirror*, because the meta-level objects are *reflected* to the base level."
+						},
+						{
+							"__type" : "elementSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T15:27:25.710377+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T15:27:32.698293+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "tt3bhFPJDQCd1zICCKoQWw=="
+							},
+							"code" : "ReflectionSceneryExample  new reflectionScenery",
+							"elementHeight" : 274,
+							"codeHeight" : 50,
+							"codeVisible" : false
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-18T18:12:02.581963+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-18T18:15:47.912956+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DzvilS3JDQCSlEInCDSwyQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Reflection and Reification"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
 								"items" : [
 									{
 										"__type" : "textSnippet",
@@ -474,7 +586,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-12-15T15:54:12.323059+01:00"
+												"dateAndTimeString" : "2024-01-09T15:46:54.78646+01:00"
 											}
 										},
 										"editEmail" : {
@@ -485,17 +597,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-12-15T16:03:28.940605+01:00"
+												"dateAndTimeString" : "2024-01-09T15:46:54.78646+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "XvlpT+/IDQCBO7ZDADxh+g=="
+											"uidString" : "Wg1eH+bKDQCVip4PDlK6UQ=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We can ask an object at run time for its class, query that class for its methods and compute the average number of lines of code. This is *introspection*, because we exploit the *reflective architecture* of Smalltalk to query the object for its class, *reify* its class as a *metaobject*, and perform *structural reflection* to reason about the implementation. Note that the metaobjects are causally connected with the underlying implementation, since any  changes to the code will be faithfully reflected in the result ofthe query."
+										"string" : "We can ask an object at run time for its class, query that class for its methods and compute the average number of lines of code. "
 									},
 									{
 										"__type" : "pharoSnippet",
@@ -530,6 +642,43 @@
 											"uidString" : "S0aDUe/IDQCBq9i2ADxh+g=="
 										},
 										"code" : "anObject := GtLudoGameExamples new emptyGame.\r(anObject class methods collect: #linesOfCode) average."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-15T15:54:12.323059+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-01-09T15:47:09.732326+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "XvlpT+/IDQCBO7ZDADxh+g=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "This is *introspection*, because we exploit the *reflective architecture* of Smalltalk to query the object for its class, *reify* its class as a *metaobject*, and perform *structural reflection* to reason about the implementation. Note that the metaobjects are causally connected with the underlying implementation, since any  changes to the code will be faithfully reflected in the result of the query."
 									}
 								]
 							},
@@ -583,7 +732,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-12-15T16:00:30.383726+01:00"
+												"dateAndTimeString" : "2024-01-09T15:47:18.067524+01:00"
 											}
 										},
 										"editEmail" : {
@@ -594,17 +743,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-12-15T16:10:54.299259+01:00"
+												"dateAndTimeString" : "2024-01-09T15:47:18.067524+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "pLjyZe/IDQCGmcJlADxh+g=="
+											"uidString" : "WU7BIObKDQCVm4j0DlK6UQ=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We can compile and modify classes and methods at run time in Smalltalk. In this snippet we interact with the {{gtClass:name=Object}} metaobject representing the `Object` class to create a new class. We then interact with the `Smalltalk` metaobject representing the system to retrieve the metaobject of the new class, and we reflectively compile a new method, create an instance and send a message. This is *intercession*, and in particular *behavioral reflection* because we are modifying the running system."
+										"string" : "We can compile and modify classes and methods at run time in Smalltalk. "
 									},
 									{
 										"__type" : "pharoSnippet",
@@ -639,6 +788,43 @@
 											"uidString" : "P4QAg+/IDQCW2acmADxh+g=="
 										},
 										"code" : "Object\r\tsubclass: #HelloWorld\r\tinstanceVariableNames: ''\r\tclassVariableNames: ''\r\tcategory: 'HelloWorld'.\rhelloClass := (Smalltalk at: #HelloWorld).\rhelloClass compile: 'hello ^ ''hello'''.\r(helloClass perform: #new) perform: #hello."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-15T16:00:30.383726+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-01-09T15:48:33.150108+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "pLjyZe/IDQCGmcJlADxh+g=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "In this snippet we interact with the {{gtClass:name=Object}} metaobject representing the `Object` class to create a new class. We then interact with the `Smalltalk` metaobject representing the system to retrieve the metaobject of the new class, we reflectively compile a new method, create an instance and send a message. This is *intercession*, and in particular *behavioral reflection* because we are modifying the running system."
 									}
 								]
 							},
@@ -873,6 +1059,117 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-09T15:49:29.337189+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-09T15:52:22.347242+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8FKUKObKDQCVsjYKDlK6UQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "“[Reflection and Open Implementations](http://www.dcc.uchile.cl/TR/2009/TR_DCC-20091123-013.pdf),” Tanter, U Chile, 2009 — Reviews the state of the art in reflection and metaprogramming. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-09T15:51:43.61417+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-09T15:58:26.036105+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7zmVMObKDQCXoXcXDlK6UQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "“[Sub-method, partial behavioral reflection with Reflectivity](https://arxiv.org/pdf/2002.06182v1.pdf),” Costiou et al., The Art, Science, and Engineering of Programming, 2020 — Surveys the Reflectivity framework in Pharo."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-09T15:49:29.564128+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-09T16:00:10.30895+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aMmXKObKDQCVtznjDlK6UQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "“[Pharo: a reflective language — A first systematic analysis of reflective APIs](https://inria.hal.science/hal-04217271/),” Thomas et al., IWST 23, 2023 — Surveys and analyzes the reflective API of Pharo."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-12-15T15:14:03.329731+01:00"
 								}
 							},
@@ -895,43 +1192,6 @@
 								"__type" : "textStyle"
 							},
 							"string" : "See also: [Reflective programming](https://en.wikipedia.org/wiki/Reflective_programming) (Wikipedia page)."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-15T15:09:30.880166+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-15T15:09:30.880166+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "3mWWr+7IDQCrJzKyADxh+g=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
 						}
 					]
 				},

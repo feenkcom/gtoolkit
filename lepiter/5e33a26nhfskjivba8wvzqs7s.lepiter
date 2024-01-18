@@ -23,7 +23,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T18:13:18.211052+02:00"
+									"dateAndTimeString" : "2024-01-18T14:19:01.70034+01:00"
 								}
 							},
 							"editEmail" : {
@@ -34,17 +34,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:07:54.876083+02:00"
+									"dateAndTimeString" : "2024-01-18T14:20:04.413542+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "BJZl6Xy+DQCNsFtTAd+SEg=="
+								"uidString" : "aU0T8ZnLDQCZhjoHAQV+NA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "As you are developing an explorable model of your application, you may find yourself repeatedly evaluating the same code snippets to perform a given action. How can you streamline these tasks?"
+							"string" : "This page provides a brief overview of ways to reflectively query objects, namely *accessing object pointers*, *accessing object state*, and *accessing an object's class*."
 						}
 					]
 				},
@@ -56,7 +56,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T14:00:56.915574+02:00"
+						"dateAndTimeString" : "2024-01-18T14:18:46.419827+01:00"
 					}
 				},
 				"editEmail" : {
@@ -67,17 +67,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T14:00:56.915574+02:00"
+						"dateAndTimeString" : "2024-01-18T14:18:51.154675+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "rwY5J1G+DQClAxC8D2jkHw=="
+					"uidString" : "Q1268JnLDQCZX8xCAQV+NA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Problem"
+				"string" : "# TL;DR"
 			},
 			{
 				"__type" : "textSnippet",
@@ -98,7 +98,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:05:24.497241+02:00"
+									"dateAndTimeString" : "2023-12-20T16:12:34.527836+01:00"
 								}
 							},
 							"editEmail" : {
@@ -109,17 +109,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:08:31.949777+02:00"
+									"dateAndTimeString" : "2023-12-20T16:13:17.640398+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Db/Mon2+DQCDDSl1DR3xDg=="
+								"uidString" : "8yhRJlTJDQC45z8VCKoQWw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Repeated tasks are annoying and time-consuming."
+							"string" : "There are three key aspects of an object in Smalltalk:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -135,7 +135,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:08:32.219464+02:00"
+									"dateAndTimeString" : "2023-12-20T16:13:17.920645+01:00"
 								}
 							},
 							"editEmail" : {
@@ -146,17 +146,91 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:09:02.454374+02:00"
+									"dateAndTimeString" : "2023-12-20T16:14:24.339773+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "0lvtrn2+DQCGY+xUDR3xDg=="
+								"uidString" : "yEbnKFTJDQC6CJlACKoQWw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Remembering how to perform common tasks increases cognitive overload."
+							"string" : "1. An object is a *reference* (*i.e.*, a “pointer”) to a piece of memory in the image."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:14:20.752365+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:15:40.279563+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZwOmLFTJDQC73mzjCKoQWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "2. An object *contains values*. These may be instance variables, indexed (array) values, or, in the degenerate case of a {{gtClass:name=SmallInteger}}, the reference itself is the value."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:15:40.771238+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:15:52.293003+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "AwJrMVTJDQC/+MZQCKoQWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "3. An object is an instance of a class."
 						}
 					]
 				},
@@ -168,7 +242,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T14:00:56.919004+02:00"
+						"dateAndTimeString" : "2023-12-20T16:11:29.302746+01:00"
 					}
 				},
 				"editEmail" : {
@@ -179,17 +253,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T14:00:56.919004+02:00"
+						"dateAndTimeString" : "2023-12-20T16:12:33.959142+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "5xM5J1G+DQClBcgWD2jkHw=="
+					"uidString" : "PeZtIlTJDQC36zXICKoQWw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Forces"
+				"string" : "# What is an object?"
 			},
 			{
 				"__type" : "textSnippet",
@@ -210,7 +284,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:09:12.1786+02:00"
+									"dateAndTimeString" : "2023-12-20T16:20:40.379746+01:00"
 								}
 							},
 							"editEmail" : {
@@ -221,56 +295,18 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-21T14:17:40.305343+02:00"
+									"dateAndTimeString" : "2023-12-20T16:23:59.211073+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "gRFPsX2+DQCH8pLWDR3xDg=="
+								"uidString" : "U6pGQ1TJDQCDIJoxCKoQWw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Add a *custom action* button to the key objects involved in the repeated tasks, encapsulating the boilerplate code to perfom them."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T14:00:56.921831+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T14:00:56.921831+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "/B45J1G+DQClB6OdD2jkHw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "# Solution"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
+							"string" : "Normally you won't care what the actual pointer value of an object is, but you might like to know what points to an object you have in your hand."
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -285,7 +321,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T18:12:00.3422+02:00"
+									"dateAndTimeString" : "2023-12-20T16:29:25.962428+01:00"
 								}
 							},
 							"editEmail" : {
@@ -296,17 +332,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:11:05.309882+02:00"
+									"dateAndTimeString" : "2023-12-20T16:29:49.069413+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "HGbB5Hy+DQCMyH2xAd+SEg=="
+								"uidString" : "vmuaYlTJDQCSvkXGCKoQWw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Consider GT slideshows. These are classes containing methods that use the `<gtSlide>` pragma. Here is a list of all such classes in this image:"
+							"string" : "Here we find all the pointers to a new instance of {{gtClass:name=GtLudoGame}}. "
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -322,7 +358,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:11:07.465438+02:00"
+									"dateAndTimeString" : "2023-12-20T16:16:48.844906+01:00"
 								}
 							},
 							"editEmail" : {
@@ -333,14 +369,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:11:28.313466+02:00"
+									"dateAndTimeString" : "2024-01-09T16:02:50.794798+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "ezcuuH2+DQCN2j82DR3xDg=="
+								"uidString" : "nrh5NVTJDQCCBU6gCKoQWw=="
 							},
-							"code" : "(#gtSlide gtPragmas contents collect: #methodClass) asSet"
+							"code" : "GtLudoGame new pointersTo."
 						},
 						{
 							"__type" : "textSnippet",
@@ -356,7 +392,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:11:47.752128+02:00"
+									"dateAndTimeString" : "2024-01-09T16:03:13.136397+01:00"
 								}
 							},
 							"editEmail" : {
@@ -367,51 +403,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:13:02.813493+02:00"
+									"dateAndTimeString" : "2024-01-09T16:04:09.52782+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "QvKUun2+DQCO7O1VDR3xDg=="
+								"uidString" : "rYCuWebKDQCfGW5+DlK6UQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The way to play a slideshow in a new window, for  example, the {{gtClass:name=GtTour}} slideshow, is to evaluate a snippet like this:"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:12:45.732478+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:12:48.826702+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "WaYJvn2+DQCRQ3JZDR3xDg=="
-							},
-							"code" : "GtPresenterSlideShow openInSpace: GtTour"
+							"string" : "This shows us that an instance of a Ludo game consists of numerous components that point back to the game instance."
 						},
 						{
 							"__type" : "textSnippet",
@@ -427,7 +429,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:13:08.559348+02:00"
+									"dateAndTimeString" : "2023-12-20T16:36:11.149397+01:00"
 								}
 							},
 							"editEmail" : {
@@ -438,313 +440,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:16:27.925498+02:00"
+									"dateAndTimeString" : "2023-12-20T16:49:13.640227+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Dfdlv32+DQCRnVbbDR3xDg=="
+								"uidString" : "CRbBelTJDQCcgnakCKoQWw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Sometime this information is stored in a class comment, as is the case for {{gtClass:name=GtTour}}, or in cases where the slideshows inherit from a common class, it can be encapsulated in a class-side method, such as {{gtMethod:name=PrioritySlideshow class>>#show}}, but in any case, extra steps have to be performed to play the slideshow."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:19:03.844632+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:19:29.586633+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "XjGT1H2+DQCdCVUODR3xDg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "A solution is to add a custom `<gtAction>` button which will be displayed when you inspect the class. Here we see custom gtAction buttons to *Inspect* and to *Play* the {{gtClass:name=GtPharo101}} slideshow."
-						},
-						{
-							"__type" : "elementSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:15:19.898133+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:17:55.656698+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "PAg6x32+DQCZmbwFDR3xDg=="
-							},
-							"code" : "GtInspector newOn: GtPharo101",
-							"elementHeight" : 187,
-							"codeHeight" : 50,
-							"codeVisible" : false
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:19:49.733211+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:21:37.263568+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "Gjdvv32+DQCRoZqiDR3xDg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Since most slideshow classes typically do share a common slideshow hierarchy, these actions are implemented in a trait {{gtClass:name=TGtSlideShow}}, which can then used by all slideshow classes."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:21:39.24798+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:22:16.452334+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "k3XW3X2+DQCiXKFMDR3xDg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "The implementation is straightforward in this case {{gtMethod:name=GtPharo101 class>>#gtOpenSlideshowActionFor:|expanded}}"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:19:34.882544+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:19:34.882544+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "Qsps1n2+DQCdpClXDR3xDg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:24:27.005628+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:25:07.404077+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "UsFw1n2+DQCdqJmzDR3xDg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "In addition to the `<gtAction>` pragmas, there is also a `<gtClassAction>` pragma, so the button will also appear in a Coder."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:25:15.725929+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:26:34.622526+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "DKa96n2+DQCmfYBMDR3xDg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "The first line of the method checks that the class actually has a `<gtSlide>` method, otherwise the button will be suppressed (`noAction`). Then a button is displayed with a priority (the order in which buttons appear), a tooltip to display, an dicon and the action to perform."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:24:12.199614+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:29:12.188188+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "/k/05n2+DQCj1897DR3xDg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Another typical example is the *Open page in a new world tab* button at the top of this page. You can Secondary-click on the button to see its implementation in {{gtMethod:name=LePage>>#gtOpenInNewTabActionFor:}}. It streamlines the task of opening a new window for the current Lepiter notebook page, for example, by copying the page title, pasting it into Spotter, and then opening the found page."
+							"string" : "This and related methods can be useful, for example, for debugging memory leaks. See the `pointing to` protocol of {{gtClass:name=ProtoObject}} for some other pointer querying methods."
 						}
 					]
 				},
@@ -756,7 +462,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T14:00:56.922643+02:00"
+						"dateAndTimeString" : "2023-12-20T16:16:37.674173+01:00"
 					}
 				},
 				"editEmail" : {
@@ -767,17 +473,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-04T18:11:53.355455+02:00"
+						"dateAndTimeString" : "2023-12-20T16:20:36.3723+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "GiI5J1G+DQClCdEoD2jkHw=="
+					"uidString" : "SULPNFTJDQCCAN5bCKoQWw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Steps"
+				"string" : "# Accessing object pointers"
 			},
 			{
 				"__type" : "textSnippet",
@@ -798,7 +504,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-02T14:00:56.931425+02:00"
+									"dateAndTimeString" : "2023-12-20T16:24:50.754949+01:00"
 								}
 							},
 							"editEmail" : {
@@ -809,17 +515,307 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-11T16:30:58.660357+01:00"
+									"dateAndTimeString" : "2023-12-20T16:27:53.903799+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "c0Q5J1G+DQClDXdhD2jkHw=="
+								"uidString" : "+hczUlTJDQCG5Qi7CKoQWw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A [[Custom View]] has a similar intent, but is more suitable when the goal is to quickly access information in an Inspector view that would otherwise be found only be one or more navigation steps."
+							"string" : "Recall that the slots of an object are *private* to that object. If accessors are not provided, then no other object, including other objects of the same class, and even the class of the object, cannot read or write the slots of that object. (For this reason object initialization in Smalltalk is a bit convolution, with instance creation always utilizing instance-side methods to initialize a new object's state.)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:27:55.288815+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:29:18.752869+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FNsyXVTJDQCQEfZPCKoQWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "With reflection, however, we can circumvent this restriction, even if an object provides no accessors."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:33:36.20553+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:34:33.927239+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "G0XocFTJDQCWNsyyCKoQWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For example, an instance of {{gtClass:name=GtLudoRecordingGame}} has a `#routeCache` slot, but no accessor. We can nevertheless access it programmatically with the help of {{gtMethod:name=Object>>#instVarNamed:}}. "
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:31:50.760909+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:33:12.311246+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "WuA7a1TJDQCU5BAZCKoQWw=="
+							},
+							"code" : "game := GtLudoRecordingGame new autoPlay: 10.\rgame instVarNamed: #routeCache."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:34:37.596063+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:35:02.006698+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IJMtdVTJDQCZVk3pCKoQWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We can also change an object's state with {{gtMethod:name=Object>>#instVarNamed:put:}}. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:38:48.004749+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:39:27.605219+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Zn4ahFTJDQCi+PpOCKoQWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "You can similarly access indexed data as follows:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:39:29.348137+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:39:57.248622+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IVqRhlTJDQCkbI+QCKoQWw=="
+							},
+							"code" : "'Hello' instVarAt: 5."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:47:41.918211+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:48:11.404651+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "EWHto1TJDQCw2upuCKoQWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Note that these methods are classified in the `introspection` protocol of {{gtClass:name=Object}}. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:37:45.490602+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:38:28.384189+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+M2qdlTJDQCahrH2CKoQWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Accessing an object's state in this way can be useful for building tools or analyses (such as an Inspector), but for normal applications it is advisable to create dedicated accessors instead."
 						}
 					]
 				},
@@ -831,7 +827,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T14:00:56.92323+02:00"
+						"dateAndTimeString" : "2023-12-20T16:11:53.96211+01:00"
 					}
 				},
 				"editEmail" : {
@@ -842,17 +838,237 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-02T14:00:56.92323+02:00"
+						"dateAndTimeString" : "2023-12-20T16:25:23.742549+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ZCQ5J1G+DQClC1NMD2jkHw=="
+					"uidString" : "qyvmI1TJDQC4Qn0sCKoQWw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Related patterns"
+				"string" : "# Accessing object state"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:41:59.02591+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:42:15.756911+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9RWTI1TJDQC4JNg7CKoQWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To get the class of an object, just send it the message `class`:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:42:19.027923+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:42:47.008364+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "13WukFTJDQCoBCtqCKoQWw=="
+							},
+							"code" : "game := GtLudoRecordingGameExamples new gameShowingAllMoves6.\rgame class."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:43:16.113469+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-20T16:46:10.916785+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "XlfnklTJDQCoq9hWCKoQWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Note that this returns a *reification* of the object's class, that is, a *metaobject* called {{gtClass:name=GtLudoRecordingGame}}. This is for all intents and purposes the object's class, but it is *not* the actual running class in the virtual machine. Since the two are causally connected (changes to the one will affect the other), we don't really notice the difference."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-20T16:11:54.186035+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-20T16:40:34.247232+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3JbpI1TJDQC4R+qpCKoQWw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Accessing an object's class"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-20T16:49:36.093157+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-22T08:41:36.015052+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "JYKMnlTJDQCw1bk1CKoQWw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Next: [[Querying classes and methods]] "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-20T16:11:45.198471+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-12-20T16:11:45.198471+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pHJgI1TJDQC4BKB2CKoQWw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			}
 		]
 	},
@@ -864,7 +1080,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-07-31T11:24:38.603428+02:00"
+			"dateAndTimeString" : "2023-12-20T15:52:49.032451+01:00"
 		}
 	},
 	"editEmail" : {
@@ -875,15 +1091,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-01-11T16:31:27.508732+01:00"
+			"dateAndTimeString" : "2023-12-20T15:52:49.032451+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Custom Action"
+		"title" : "Querying objects"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "d2958cbc-26be-0d00-9ccf-3b7f0415fa7c"
+		"uuid" : "58f0a7df-53c9-0d00-acca-5bf008aa105b"
 	}
 }
