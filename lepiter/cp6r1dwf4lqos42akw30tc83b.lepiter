@@ -437,7 +437,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-18T14:16:22.662674+02:00"
+						"dateAndTimeString" : "2024-01-18T14:32:20.520968+01:00"
 					}
 				},
 				"uid" : {
@@ -447,7 +447,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "```bash\nsource ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/dev_preconfigure_gemstone.sh\n./gt4gemstone/scripts/setup-remote-gemstone.sh\ncp $GEMSTONE/data/extent0.dbf $GEMSTONE/data/extent0-backup.dbf\ncp $GEMSTONE/bin/extent0.rowan.dbf $GEMSTONE/data/extent0.dbf\nchmod u+w $GEMSTONE/data/extent0.dbf\n./Sparkle/src-gs/installSparkle.sh\n./gt4gemstone/scripts/installGt4gemstone.sh\n./gtoolkit-remote/scripts/installGtoolkitRemote.sh\n```"
+				"string" : "```bash\nsource ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/dev_preconfigure_gemstone.sh\n./gt4gemstone/scripts/setup-remote-gemstone.sh\ncp $GEMSTONE/data/extent0.dbf $GEMSTONE/data/extent0-backup.dbf\ncp $GEMSTONE/bin/extent0.rowan.dbf $GEMSTONE/data/extent0.dbf\nchmod u+w $GEMSTONE/data/extent0.dbf\nstartnetldi -g\nstartstone gs64stone\n./Sparkle/src-gs/installSparkle.sh\n./gt4gemstone/scripts/installGt4gemstone.sh\n./gtoolkit-remote/scripts/installGtoolkitRemote.sh\n```"
 			}
 		]
 	},
