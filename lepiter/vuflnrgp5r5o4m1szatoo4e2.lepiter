@@ -172,7 +172,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718496+02:00"
+									"dateAndTimeString" : "2024-01-19T15:23:59.631969+01:00"
 								}
 							},
 							"editEmail" : {
@@ -183,17 +183,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-12T11:06:51.383865+01:00"
+									"dateAndTimeString" : "2024-01-19T15:23:59.631969+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "o8oZPH6+DQCMw0bxD4A0oQ=="
+								"uidString" : "YJ/Q967LDQCGR6VnB7QjZw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Moldable development works best when you incrementally extend a live model with custom tools as you explore it.  You can start the exploration and molding process from a [[Moldable Object]], a live instance of a key domain entity, even at  the very beginning of a new project. If you are analyzing existing data, you should start with a [[Moldable Data Wrapper]]."
+							"string" : "At the top of the map we have [[Explainable System]], which is not a pattern per se, but rather the goal of moldable development."
 						},
 						{
 							"__type" : "textSnippet",
@@ -209,7 +209,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-21T13:58:07.451532+02:00"
+									"dateAndTimeString" : "2024-01-19T15:24:44.562711+01:00"
 								}
 							},
 							"editEmail" : {
@@ -220,17 +220,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-11T16:30:42.761254+01:00"
+									"dateAndTimeString" : "2024-01-19T15:24:44.562711+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "olIbVM+/DQCGf3CEBhqxrQ=="
+								"uidString" : "HTZ++q7LDQCGxSPLB7QjZw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Once you have a moldable object to explore, you can leverage its  [[Contextual Playground]] to prototype new behavior and custom tools."
+							"string" : "An [[Explainable System]] is a software system whose internal model has been exposed with the help of numerous custom tools."
 						},
 						{
 							"__type" : "textSnippet",
@@ -246,7 +246,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718514+02:00"
+									"dateAndTimeString" : "2024-01-19T15:25:07.574672+01:00"
 								}
 							},
 							"editEmail" : {
@@ -257,17 +257,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-12T11:06:57.163815+01:00"
+									"dateAndTimeString" : "2024-01-19T15:25:07.574672+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "s8oZPH6+DQCMxzj4D4A0oQ=="
+								"uidString" : "61Xd+67LDQCG+6f6B7QjZw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "As you are developing the live model, you may find yourself repeatedly performing the same sequences of navigation steps to access information, either by clicking through views or evaluating Playground snippets. This is often a sign that the information you navigate to should be turned into a [[Custom View]] of your domain object. Ideally, you should start with a [[Simple View]]."
+							"string" : "Each custom tool requires the existence of a [[Moldable Tool]], which can be cheaply adapted by a simple customization."
 						},
 						{
 							"__type" : "textSnippet",
@@ -283,7 +283,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:48:00.718516+02:00"
+									"dateAndTimeString" : "2024-01-19T15:26:35.756486+01:00"
 								}
 							},
 							"editEmail" : {
@@ -294,17 +294,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-11T16:31:27.567722+01:00"
+									"dateAndTimeString" : "2024-01-19T15:26:35.756486+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "tsoZPH6+DQCMyEbMD4A0oQ=="
+								"uidString" : "ieQeAa/LDQCH9QGLB7QjZw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Similarly, you may repeatedly perform certain code snippets to obtain a certain effect, such as opening a new window. In this case, instead of creating a custom view, you might want a  [[Custom Action]]. "
+							"string" : "Some domains require a preliminary phase of [[Tooling Buildup]], for example, to create dedicate parsers for programming languages, DSLs or specialized data formats, or bridges to other execution platforms. A [[Blind Spot]] is problematic part of the target system that is hard to understand and work with, and may be a promising starting point for moldable development to initially engage Stakeholders. A [[Project Diary]] is a notebook that serves as a starting point for development tasks.\nA [[Throwaway Analysis Tool]] can be a quick way to solve an urgent problem in a focused way."
 						},
 						{
 							"__type" : "textSnippet",
@@ -320,7 +320,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-01T11:36:19.217705+01:00"
+									"dateAndTimeString" : "2024-01-19T15:27:59.306744+01:00"
 								}
 							},
 							"editEmail" : {
@@ -331,17 +331,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-11T16:31:16.836483+01:00"
+									"dateAndTimeString" : "2024-01-19T15:28:22.936803+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Paogk3bFDQC4HqOECCqQvA=="
+								"uidString" : "ysUZBq/LDQCI3buvB7QjZw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If your domain deals with collections of entities, you want them to be moldable as well, so you should wrap each of them with a [[Moldable Collection Wrapper]]. "
+							"string" : "Moldable development itself starts with a [[Moldable Object]], a live instance of a domain entity that is explored and molded with custom tools that package the results of exploration tasks. An interesting instance can be encapsulated as an [[Example Object]], essentially a unit test that returns a tested object. An example can be embedded in a project diary notebook page, and can also be used as a moldable object itself for further development tasks."
 						},
 						{
 							"__type" : "textSnippet",
@@ -357,7 +357,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-01T11:38:06.961657+01:00"
+									"dateAndTimeString" : "2024-01-19T15:26:40.548618+01:00"
 								}
 							},
 							"editEmail" : {
@@ -368,17 +368,240 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-12T11:07:04.614395+01:00"
+									"dateAndTimeString" : "2024-01-19T15:28:12.814972+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "8ITvmHbFDQC7SxD7CCqQvA=="
+								"uidString" : "uQFoAa/LDQCIAG44B7QjZw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Particular domain instances of interest for testing or documentation should each be encapsulated as an [[Example Object]]. These can then be embedded in a [[Project Diary]] to serve as a starting point for moldable development, to track the progress of your work, or to provide documentation."
+							"string" : "In case the domain includes already existing data entities, each of these can be wrapped in a [[Moldable Data Wrapper]] to produce a moldable object."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:26:45.633168+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:28:38.716087+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6Ji1Aa/LDQCIB6eeB7QjZw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A moldable object can be explored with the help of its [[Contextual Playground]], a live programming environment bound to the state of a live instance. Working code can be extracted from such a playground to create custom tools."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-01-19T15:29:00.698777+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-01-19T15:29:00.698777+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "donCCa/LDQCJtCKjB7QjZw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "• a [[Custom View]], a dedicated view of an object within a moldable tool such as an object inspector or a code browser, to display or visualize domain-specific information,"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-01-19T15:29:14.984583+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-01-19T15:29:14.984583+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "voGcCq/LDQCJ5fZZB7QjZw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "• a [[Custom Action]] that encapsulates a useful domain action, and"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-01-19T15:26:53.888247+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-01-19T15:29:34.481145+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "4I8zAq/LDQCIFY/sB7QjZw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "• a [[Custom Search]], to perform an ad hoc query over objects reachable from a given moldable object."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:26:49.345719+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:28:44.214575+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jTzuAa/LDQCIDvX9B7QjZw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The most common of these tools are:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:23:27.463184+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:30:42.205491+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "WcTl9a7LDQCGEkWkB7QjZw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A custom view is frequently a [[Simple View]] that can be quickly prototyped, and later extended. A custom search often benefits from a [[Moldable Collection Wrapper]], to allow the results of a query to be also molded with custom tools."
 						}
 					]
 				},

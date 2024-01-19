@@ -23,7 +23,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:34:19.268872+02:00"
+									"dateAndTimeString" : "2024-01-19T15:17:58.414546+01:00"
 								}
 							},
 							"editEmail" : {
@@ -34,7 +34,82 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:34:19.268872+02:00"
+									"dateAndTimeString" : "2024-01-19T15:19:39.381984+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "neFI4q7LDQCDveLhB7QjZw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Within your application domain, you not only have to deal with individual domain objects, but also composite entities (e.g., a book of notebook pages, a website of web pages), and collections of entities (e.g.,the result of query)."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-01-19T15:18:05.769382+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-01-19T15:18:05.769382+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rhu54q7LDQCD28sbB7QjZw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Context"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:18:28.734733+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:18:28.737562+01:00"
 								}
 							},
 							"uid" : {
@@ -44,7 +119,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "What is the best way to provide custom views of collections of domain objects, when they may occur in many different contexts?"
+							"string" : "How can you effectively provide custom tools for various kinds of collections of domain entities?"
 						}
 					]
 				},
@@ -98,7 +173,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:34:26.731702+02:00"
+									"dateAndTimeString" : "2024-01-19T15:18:58.015748+01:00"
 								}
 							},
 							"editEmail" : {
@@ -109,92 +184,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:34:26.731702+02:00"
+									"dateAndTimeString" : "2024-01-19T15:18:58.015748+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "o/eHZPa/DQCjn6SEBYCxRA=="
+								"uidString" : "sFLW5a7LDQCEO2QUB7QjZw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "When we explore a website, we have lists of links in a website or a webpage, we have lists of internal links, external links, broken links, or queries returning links that match some text. Providing custom views for each of these is tedious and leads to much duplicated code."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:34:25.175492+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:34:31.499952+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "RDhwZPa/DQCjlieuBYCxRA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Example"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:57:01.255682+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:59:29.484202+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "iei6f43FDQCsiZkdC4WC5A=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "It is common to have to deal with collections of domain objects, but it is tedious to create custom views for each of these. Collections may form part of the internal state of a domain object, such as a website containing pages, or a page containing links, but a collection may also be returned by a query, such as a Spotter search, forexample the set of web pages containing a certain string in their title or page contents."
+							"string" : "Collections are generic data structures with generic views that are not necessarily informative for your domain."
 						},
 						{
 							"__type" : "textSnippet",
@@ -210,7 +210,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:57:06.583655+01:00"
+									"dateAndTimeString" : "2024-01-19T15:18:59.792405+01:00"
 								}
 							},
 							"editEmail" : {
@@ -221,17 +221,54 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:57:52.044388+01:00"
+									"dateAndTimeString" : "2024-01-19T15:18:59.792405+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "wzUMgI3FDQCsm3wDC4WC5A=="
+								"uidString" : "oG7x5a7LDQCEQqn4B7QjZw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Raw collections have uninteresting views. Collections are very similar and have a lot of boilerplate code. Many views are essentially collections, and have similar implementations."
+							"string" : "Collections of domain entities may occur in various forms and contexts, such as the state of a composite object, or the result of a query."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:18:49.658155+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:18:59.794589+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "GsxW5a7LDQCELc63B7QjZw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Providing custom views for each of these can be tedious and lead to much duplicated code."
 						}
 					]
 				},
@@ -296,7 +333,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:34:47.405563+02:00"
+									"dateAndTimeString" : "2024-01-19T15:20:11.465074+01:00"
 								}
 							},
 							"uid" : {
@@ -306,7 +343,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Wrap collections of domain objects in a dedicated group wrapper, and give it dedicated views, actions and searches."
+							"string" : "Wrap collections of domain objects in a dedicated group wrapper, and give it dedicated views, actions and searches. In case there are multiple composite entities or collections that should share the same custom tools, factor these out into a common abstract superclass or trait."
 						}
 					]
 				},
@@ -563,6 +600,81 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Steps"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:20:32.522715+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-01-19T15:20:47.421597+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "BGN4667LDQCEgepzB7QjZw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Composite domain objects and collections of domain objects can be molded to support custom tools. Query results can be similarly molded. Wrapped collections can be made plug-compatible with raw collections."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-01-19T15:20:41.230832+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-01-19T15:20:41.230832+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fUP9667LDQCEn/X3B7QjZw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Consequences"
 			},
 			{
 				"__type" : "textSnippet",
