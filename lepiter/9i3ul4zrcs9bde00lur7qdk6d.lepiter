@@ -129,6 +129,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-01-31T15:29:57.388839+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-01-31T15:30:21.805621+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fg88c6DMDQCxo+nwCdpXaA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The page [[PythonBridge custom views for pandas DataFrame and Series]] describes how to load all this code at once."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-12-14T11:55:19.559894+01:00"
 					}
 				},
@@ -523,14 +560,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T11:08:43.296298+01:00"
+						"dateAndTimeString" : "2024-01-31T09:18:04.705942+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "hwEuPuvIDQCsk86IAIFI3w=="
 				},
-				"code" : "def dataframe_gt_view_columns(self, builder):\r    clist = builder.columnedList()\n    clist.title('Columns')\n    clist.priority(10)\n    clist.items(lambda: list(range(0, len(self.columns))))\r    clist.column('Position', lambda each: each)\n    clist.column('Column', lambda each: str(self.columns.values[each]))\r    clist.column('Type', lambda each: str(self.dtypes.values[each]))\r    clist.set_accessor(lambda each: self[self.columns.values[each]])\n    return clist\n\nsetattr(pandas.DataFrame, 'gtViewColumns', dataframe_gt_view_columns)"
+				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef dataframe_gt_view_columns(self, builder):\r    clist = builder.columnedList()\n    clist.title('Columns')\n    clist.priority(10)\n    clist.items(lambda: list(range(0, len(self.columns))))\r    clist.column('Position', lambda each: each)\n    clist.column('Column', lambda each: str(self.columns.values[each]))\r    clist.column('Type', lambda each: str(self.dtypes.values[each]))\r    clist.set_accessor(lambda each: self[self.columns.values[each]])\n    return clist\n\nsetattr(pandas.DataFrame, 'gtViewColumns', dataframe_gt_view_columns)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -594,14 +631,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T18:51:44.174141+01:00"
+						"dateAndTimeString" : "2024-01-31T11:27:17.47106+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "voa6HJ7IDQCPL6CuCrxuZg=="
 				},
-				"code" : "def dataframe_gt_view_table(self, builder):\n\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] > 100:\r\t\treturn builder.empty()\n\tclist = builder.columnedList()\n\tclist.title('Table')\n\tclist.priority(15)\n\tclist.items(lambda: list(self.index))\r\tclist.column('#', lambda index: index)\n\tfor each in self.columns:\n\t\t(lambda col: clist.column(col, lambda index: str(self.at[index, col])))(each)\n\tclist.set_accessor(lambda each: self.loc[list(self.index)[each]])\n\treturn clist\n\nsetattr(pandas.DataFrame, 'gtViewTable', dataframe_gt_view_table)"
+				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef dataframe_gt_view_table(self, builder):\n\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] > 100:\r\t\treturn builder.empty()\n\tclist = builder.columnedList()\n\tclist.title('Table')\n\tclist.priority(15)\n\tclist.items(lambda: list(self.index))\r\tclist.column('#', lambda index: index)\n\tfor each in self.columns:\n\t\t(lambda col: clist.column(col, lambda index: str(self.at[index, col])))(each)\n\tclist.set_accessor(lambda each: self.loc[list(self.index)[each]])\n\treturn clist\n\nsetattr(pandas.DataFrame, 'gtViewTable', dataframe_gt_view_table)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -665,14 +702,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T18:54:13.114886+01:00"
+						"dateAndTimeString" : "2024-01-31T09:20:28.641899+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "65AXkMnIDQCS/XMjB3rgdg=="
 				},
-				"code" : "def dataframe_gt_view_head(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Head')\r\tforward.priority(16)\r\tforward.object(lambda: self.head())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewHead', dataframe_gt_view_head)"
+				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef dataframe_gt_view_head(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Head')\r\tforward.priority(16)\r\tforward.object(lambda: self.head())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewHead', dataframe_gt_view_head)"
 			},
 			{
 				"__type" : "pythonSnippet",
@@ -699,14 +736,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T18:54:55.343889+01:00"
+						"dateAndTimeString" : "2024-01-31T09:20:31.680757+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "rGErmMnIDQCUblxhB3rgdg=="
 				},
-				"code" : "def dataframe_gt_view_tail(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Tail')\r\tforward.priority(17)\r\tforward.object(lambda: self.tail())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewTail', dataframe_gt_view_tail)"
+				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef dataframe_gt_view_tail(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Tail')\r\tforward.priority(17)\r\tforward.object(lambda: self.tail())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewTail', dataframe_gt_view_tail)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -770,14 +807,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T16:18:51.550463+01:00"
+						"dateAndTimeString" : "2024-01-31T09:20:36.158698+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "9hhJyrLIDQCL2x5JCuBmfw=="
 				},
-				"code" : "def dataframe_gt_view_summary(self, builder):\n\tforward = builder.forward()\r\tforward.title('Summary')\r\tforward.priority(20)\r\tforward.object(lambda: self.describe())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewSummary', dataframe_gt_view_summary)"
+				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef dataframe_gt_view_summary(self, builder):\n\tforward = builder.forward()\r\tforward.title('Summary')\r\tforward.priority(20)\r\tforward.object(lambda: self.describe())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewSummary', dataframe_gt_view_summary)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -841,14 +878,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T19:02:49.255038+01:00"
+						"dateAndTimeString" : "2024-01-31T09:20:38.923742+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Iz/NJ57IDQCP95UQCrxuZg=="
 				},
-				"code" : "def series_gt_view_series(self, builder):\n\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] > 100:\r\t\treturn builder.empty()\n\tclist = builder.columnedList()\n\tclist.title('Series')\n\tclist.priority(10)\n\tclist.items(lambda: list(self.index))\r\tclist.column('Key', lambda each: each)\r\tclist.column('Value', lambda each: str(self.at[each]))\r\tclist.set_accessor(lambda each: self[each])\n\treturn clist\n\nsetattr(pandas.Series, 'gtViewSeries', series_gt_view_series)"
+				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef series_gt_view_series(self, builder):\n\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] > 100:\r\t\treturn builder.empty()\n\tclist = builder.columnedList()\n\tclist.title('Series')\n\tclist.priority(10)\n\tclist.items(lambda: list(self.index))\r\tclist.column('Key', lambda each: each)\r\tclist.column('Value', lambda each: str(self.at[each]))\r\tclist.set_accessor(lambda each: self[each])\n\treturn clist\n\nsetattr(pandas.Series, 'gtViewSeries', series_gt_view_series)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -912,14 +949,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T19:03:01.033817+01:00"
+						"dateAndTimeString" : "2024-01-31T09:20:44.198318+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "YxugrcnIDQCXjzBbB3rgdg=="
 				},
-				"code" : "def series_gt_view_head(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\r\tforward = builder.forward()\r\tforward.title('Head')\r\tforward.priority(11)\r\tforward.object(lambda: self.head())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewHead', series_gt_view_head)"
+				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef series_gt_view_head(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\r\tforward = builder.forward()\r\tforward.title('Head')\r\tforward.priority(11)\r\tforward.object(lambda: self.head())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewHead', series_gt_view_head)"
 			},
 			{
 				"__type" : "pythonSnippet",
@@ -946,14 +983,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T19:01:48.670176+01:00"
+						"dateAndTimeString" : "2024-01-31T09:20:46.980145+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "FFPTsMnIDQCYum6eB3rgdg=="
 				},
-				"code" : "def series_gt_view_tail(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Tail')\r\tforward.priority(12)\r\tforward.object(lambda: self.tail())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewTail', series_gt_view_tail)"
+				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef series_gt_view_tail(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Tail')\r\tforward.priority(12)\r\tforward.object(lambda: self.tail())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewTail', series_gt_view_tail)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1017,14 +1054,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T18:41:49.841436+01:00"
+						"dateAndTimeString" : "2024-01-31T09:20:50.334176+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "fkvdZcnIDQCPtQ4TB3rgdg=="
 				},
-				"code" : "def series_gt_view_summary(self, builder):\n\tforward = builder.forward()\r\tforward.title('Summary')\r\tforward.priority(20)\r\tforward.object(lambda: self.describe())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewSummary', series_gt_view_summary)"
+				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef series_gt_view_summary(self, builder):\n\tforward = builder.forward()\r\tforward.title('Summary')\r\tforward.priority(20)\r\tforward.object(lambda: self.describe())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewSummary', series_gt_view_summary)"
 			},
 			{
 				"__type" : "textSnippet",
