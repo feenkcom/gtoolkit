@@ -141,7 +141,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:51:42.108762+01:00"
+						"dateAndTimeString" : "2024-02-02T16:42:33.867745+01:00"
 					}
 				},
 				"uid" : {
@@ -151,7 +151,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Use the {{gtClass:name=GtHomeStartPageSection}} class."
+				"string" : "Use the {{gtClass:name=GtHomeMultiCardSection}} class."
 			},
 			{
 				"__type" : "textSnippet",
@@ -167,7 +167,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:43:47.655017+01:00"
+						"dateAndTimeString" : "2024-02-02T16:43:09.832322+01:00"
 					}
 				},
 				"editEmail" : {
@@ -178,166 +178,23 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:44:21.334012+01:00"
+						"dateAndTimeString" : "2024-02-06T15:59:23.077455+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uo2c7i6xDQCrpex2Ckj+fQ=="
+					"uidString" : "Ky26tMnMDQCWbzg0CUu0Xw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By default, this will generate a home section with a card containing the first TOC card of the default database."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:43:32.247261+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:51:28.432835+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "xRm67S6xDQCrmooeCkj+fQ=="
-				},
-				"code" : "GtHomeStartPageSection new "
+				"string" : "Create a subclass of {{gtClass:name=GtHomeMultiCardSection}} with cards defined in methods with a `<gtSectionCard>` pragma. For example: {{gtClass:name=GtHomeMultiCardGetStartedSection}}."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:44:23.271537+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T10:04:46.042665+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "UdP67S6xDQCroUzSCkj+fQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "You can configure the section title, card title, description, the lepiter database to use, and the name of the start page."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:26:00.571886+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T10:05:09.380651+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "JdAKry6xDQCmQKq0Ckj+fQ=="
-				},
-				"code" : "GtHomeStartPageSection new \r\tsectionTitle: 'Get started with the YAML Parser project';\r\ttitle: 'YAML Parser';\r\tdescription: 'The YAML Parser project';\r\tdatabaseName: 'YAML Parser Notebook';\r\tstartPageName: 'YAML Parser Overview'"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T09:58:01.071573+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-16T09:58:01.071573+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "/0mDIS+xDQC3XlmdCkj+fQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "```language=text\nGtHome >> yamlSection\r\t<gtHomeSection>\r\t^ GtHomeStartPageSection new \r\t\ttitle: 'YAML Parser';\r\t\tdescription: 'The YAML Parser project';\r\t\tdatabaseName: 'YAML Parser Notebook';\r\t\tstartPageName: 'YAML Parser Overview';\r\t\tpriority: 8\n```"
-						}
-					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -358,7 +215,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:46:23.024003+01:00"
+						"dateAndTimeString" : "2024-02-06T16:00:07.615061+01:00"
 					}
 				},
 				"uid" : {
@@ -368,7 +225,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To  install this as a home section card, you must implement an extension method of the {{gtClass:name=GtHome}} class."
+				"string" : "To  install this as a home section card, you must implement an extension method of the {{gtClass:name=GtHome}} class. For example: {{gtMethod:name=GtHome>>#getStartedSection}}. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -395,7 +252,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:58:01.07308+01:00"
+						"dateAndTimeString" : "2024-02-02T16:54:46.435293+01:00"
 					}
 				},
 				"uid" : {
@@ -405,81 +262,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Note that this should be categorized as an extension method of one of your packages, for example `*YAMLParser` (assuming `YAMLParser` is a package of your repo). In this way, as soon as your repo is loaded, so will the extension method, and your card will automatically appear in the home section."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:37:23.623516+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:37:23.623516+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "I1XB1y6xDQCrB+mxCkj+fQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:37:23.863028+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-16T09:37:23.863028+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "bf/E1y6xDQCrC1igCkj+fQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"string" : "Note that this should be categorized as an extension method of one of your packages, for example `*MyStuff` (assuming `MyStuff` is a package of your repo). In this way, as soon as your repo is loaded, so will the extension method, and your card will automatically appear in the home section."
 			}
 		]
 	},

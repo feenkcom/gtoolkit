@@ -108,6 +108,11 @@ GtTranscript >> insertString: aString withAttributes: aCollection [
 			attributes: aCollection) ]
 ]
 
+{ #category : #translation }
+GtTranscript >> newLine [
+	self cr
+]
+
 { #category : #'api - streaming' }
 GtTranscript >> next [
 	"This is a utility method for enabling a fluent API"
