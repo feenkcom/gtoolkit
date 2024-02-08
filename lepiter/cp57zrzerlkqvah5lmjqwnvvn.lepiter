@@ -211,14 +211,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T14:22:45.466382+01:00"
+						"dateAndTimeString" : "2024-02-07T17:39:43.001989+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "5Q2avcPIDQCLPetZBhN+1g=="
 				},
-				"code" : "class GtRemotePhlowDeclarativeTestInspectable:\r\r\tdef __init__(self):\n\t\tsuper().__init__()\n\t\tself.collection = [42, \"Lorem ipsum dolor sit amet\", True, False, None]\n\t\tself.string = \"Hello GT World !\"\r\r\tdef get_collection(self):\r\t\treturn self.collection\r\r\tdef get_string(self):\r\t\treturn self.string\r\r\tdef gtViewCollection(self, builder):\r\t\tclist = builder.columnedList()\n\t\tclist.title('Collection')\n\t\tclist.priority(25)\n\t\tclist.items(lambda: list(range(0, len(self.get_collection()))))\r\t\tclist.column('#', lambda index: index)\r\t\tclist.column('item', lambda index: str(self.get_collection()[index]))\n\t\tclist.set_accessor(lambda index: self.get_collection()[index])\n\t\treturn clist\n\r\tdef gtViewString(self, builder):\r\t\treturn builder.textEditor().title(\"String\").setString(self.get_string())\r\t\t\r\tdef gtViewEmpty(self, builder):\r\t\treturn builder.empty()\r\t\t\r\tdef gtViewCollectionForward(self, builder):\r\t\tforward = builder.forward()\r\t\tforward.title(\"Collection forward\")\r\t\tforward.priority(30)\r\t\tforward.object(lambda: self)\r\t\tforward.view('gtViewCollection')\r\t\treturn forward"
+				"code" : "from gtoolkit_bridge.gtoolkit.gt import gtView\r\rclass GtRemotePhlowDeclarativeTestInspectable:\r\r\tdef __init__(self):\n\t\tsuper().__init__()\n\t\tself.collection = [42, \"Lorem ipsum dolor sit amet\", 3.14159, True, False, None]\n\t\tself.string = \"Hello GT World !\"\r\r\tdef get_collection(self):\r\t\treturn self.collection\r\r\tdef get_string(self):\r\t\treturn self.string\r\r\t@gtView\r\tdef gtViewCollection(self, builder):\r\t\tclist = builder.columnedList()\n\t\tclist.title('Collection')\n\t\tclist.priority(25)\n\t\tclist.items(lambda: list(range(0, len(self.get_collection()))))\r\t\tclist.column('#', lambda index: index)\r\t\tclist.column('item', lambda index: str(self.get_collection()[index]))\n\t\tclist.set_accessor(lambda index: self.get_collection()[index])\n\t\treturn clist\n\r\t@gtView\r\tdef gtViewString(self, builder):\r\t\teditor = builder.textEditor()\r\t\teditor.title(\"String\")\r\t\teditor.priority(35)\r\t\teditor.setString(self.get_string())\r\t\treturn editor\r\r\t@gtView\r\tdef gtViewError(self, builder):\r\t\traise Exception(\"I'm sorry, Dave. I'm afraid I can't do that.\")\r\t\t\r\t@gtView\r\tdef gtViewEmpty(self, builder):\r\t\treturn builder.empty()\r\t\t\r\t@gtView\r\tdef gtViewCollectionForward(self, builder):\r\t\tforward = builder.forward()\r\t\tforward.title(\"Collection forward\")\r\t\tforward.priority(30)\r\t\tforward.object(lambda: self)\r\t\tforward.view('gtViewCollection')\r\t\treturn forward"
 			},
 			{
 				"__type" : "textSnippet",
