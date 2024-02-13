@@ -754,7 +754,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
             git clone https://github.com/feenkcom/PythonBridge.git 
             cd PythonBridge 
             git checkout ${build.pythonBridgeCommitHash}
-            chmod +x PythonBridge/scripts/publish_gtoolkit_bridge_PyPI.sh
+            chmod +x scripts/publish_gtoolkit_bridge_PyPI.sh
         """
     }
 
