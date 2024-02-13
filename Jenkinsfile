@@ -103,6 +103,7 @@ class GlamorousToolkit {
     String gtoolkitVersion
     String gt4gemstoneCommitHash
     String gt4remoteCommitHash
+    String pythonBridgeCommitHash
     Map<String, String> artefacts
 
     final ArrayList<AgentJob> jobs
@@ -122,12 +123,13 @@ class GlamorousToolkit {
         this.gtoolkitVersion = null
         this.gt4gemstoneCommitHash = null
         this.gt4remoteCommitHash = null
+        this.pythonBridgeCommitHash = null
         this.artefacts = [:]
 
         jobs = [
                 new TestAndPackage(this, new Agent(Triplet.MacOS_Aarch64), Triplet.MacOS_Aarch64),
                 new TestAndPackage(this, new Agent(Triplet.MacOS_X86_64), Triplet.MacOS_X86_64),
-                new TestAndPackageWithGemstone(this, new Agent(Triplet.Linux_X86_64, "scooby-doo"), Triplet.Linux_X86_64),
+                new TestAndPackageWithGemstoneAndPython(this, new Agent(Triplet.Linux_X86_64, "scooby-doo"), Triplet.Linux_X86_64),
                 new TestAndPackage(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64),
                 new TestAndPackage(this, new Agent(Triplet.Windows_X86_64, "daffy-duck"), Triplet.Windows_X86_64)
         ]
@@ -370,10 +372,17 @@ class Builder extends AgentJob {
                 "git",
                 "rev-parse HEAD",
                 "${GlamorousToolkit.RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/gtoolkit-remote")
+        
+         build.pythonBridgeCommitHash = platform().exec_stdout(script,
+                "git",
+                "rev-parse HEAD",
+                "${GlamorousToolkit.RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/PythonBridge")
 
         script.echo "We expect to release gtoolkit ${build.gtoolkitVersion}"
         script.echo "We expect to release gt4gemstone ${build.gt4gemstoneCommitHash}"
         script.echo "We expect to release gtoolkit-remote ${build.gt4remoteCommitHash}"
+
+        script.echo "We expect to use PythonBridge ${build.pythonBridgeCommitHash}"
     }
 
     void build_without_gt_world() {
@@ -695,10 +704,10 @@ class TestAndPackage extends AgentJob {
     }
 }
 
-class TestAndPackageWithGemstone extends TestAndPackage {
+class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
     static final GEMSTONE_FOLDER = "remote-gemstone"
 
-    TestAndPackageWithGemstone(GlamorousToolkit build, Agent agent, Triplet target) {
+    TestAndPackageWithGemstoneAndPython(GlamorousToolkit build, Agent agent, Triplet target) {
         super(build, agent, target)
 
         if (agent.host() != Triplet.Linux_X86_64) {
@@ -738,12 +747,22 @@ class TestAndPackageWithGemstone extends TestAndPackage {
             chmod +x gt4gemstone/scripts/release/*.sh
             chmod +x gtoolkit-remote/scripts/*.sh
         """
+
+        script.sh """
+            cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+            rm -rf PythonBridge
+            git clone https://github.com/feenkcom/PythonBridge.git 
+            cd PythonBridge 
+            git checkout ${build.pythonBridgeCommitHash}
+            chmod +x PythonBridge/scripts/publish_gtoolkit_bridge_PyPI.sh
+        """
     }
 
     @Override
     void run_extra_examples() {
         delete_lepiter_directory()
         run_gemstone_examples()
+        release_gt4python()
     }
 
     void run_gemstone_examples() {
@@ -757,6 +776,17 @@ class TestAndPackageWithGemstone extends TestAndPackage {
                     cd ${GlamorousToolkit.EXAMPLES_FOLDER}
                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
                     ./gt4gemstone/scripts/run-remote-gemstone-examples.sh
+                """
+        }
+    }
+
+    void release_gt4python() {
+        script.withCredentials([script.string(credentialsId: 'flit_password_pypi', variable: 'FLIT_PASSWORD')])
+            // Run the PythonBridge release script.
+            // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
+            script.sh """
+                    cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+                    ./PythonBridge/scripts/publish_gtoolkit_bridge_PyPI.sh
                 """
         }
     }
