@@ -397,8 +397,8 @@ class Builder extends AgentJob {
                     "./gt-installer",
                     "--verbose " +
                             "--workspace ${GlamorousToolkit.RELEASER_FOLDER} " +
+                             "release-build " +
                             "--app-version ${build.gtoolkitVmVersion} " +
-                            "release-build " +
                             "--loader cloner " +
                             "--image-url ${GlamorousToolkit.PHARO_IMAGE_URL} " +
                             "--bump ${build.bump} " +
