@@ -60,7 +60,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-29T19:41:02.119394+02:00"
+									"dateAndTimeString" : "2024-02-13T09:53:13.417853+01:00"
 								}
 							},
 							"editEmail" : {
@@ -71,14 +71,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-06-21T09:04:20.027722+02:00"
+									"dateAndTimeString" : "2024-02-13T09:54:28.848319+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "qFBbNRdgAAAAAAAAAAAAAA=="
+								"uidString" : "YsbrQqHNDQCo3x40BT5e6g=="
 							},
-							"code" : "thisSnippet database properties pythonBridgeSettings serverDebugMode: true.\r\"After setting this, the server will need to be restarted\"\rPBApplication stop."
+							"code" : "pbApplication := PBApplication new.\rpbApplication settings serverDebugMode: true.\rpbApplication start.\rPBApplication uniqueInstance: pbApplication"
 						}
 					]
 				},
@@ -101,7 +101,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T19:40:59.890563+02:00"
+						"dateAndTimeString" : "2024-02-13T10:15:12.215305+01:00"
 					}
 				},
 				"uid" : {
@@ -111,7 +111,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To get the debugger the debug mode should be enabled"
+				"string" : "To get the debugger the debug mode should be enabled before starting."
 			},
 			{
 				"__type" : "textSnippet",
@@ -143,14 +143,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-29T19:41:24.708813+02:00"
+									"dateAndTimeString" : "2024-02-13T10:14:40.086572+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "jEJGDXhgAAAAAAAAAAAAAA=="
 							},
-							"code" : "PBApplication stop."
+							"code" : "PBApplication uniqueInstance"
 						}
 					]
 				},
@@ -162,7 +162,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T19:41:16.929081+02:00"
+						"dateAndTimeString" : "2024-02-13T10:23:29.688409+01:00"
 					}
 				},
 				"editEmail" : {
@@ -173,17 +173,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-21T09:04:29.190527+02:00"
+						"dateAndTimeString" : "2024-02-13T10:23:29.688409+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AtR8V+onAAAAAAAAAAAAAA=="
+					"uidString" : "Md8tr6HNDQC2FdalACRJUA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If there are errors it can be useful to stop the Python server link:"
+				"string" : "Now make sure everything starts up OK."
 			},
 			{
 				"__type" : "textSnippet",
@@ -263,6 +263,78 @@
 					"__type" : "snippets",
 					"items" : [
 						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-02-13T10:23:48.942476+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-02-13T10:23:55.633406+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IK5TsKHNDQC2JOZNACRJUA=="
+							},
+							"code" : "PBApplication stopAllInstances"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2021-05-29T19:41:16.929081+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-13T10:23:29.691612+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "AtR8V+onAAAAAAAAAAAAAA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If there are errors it can be useful to stop the Python server link."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
 							"__type" : "pythonSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -287,7 +359,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-29T19:44:16.946294+02:00"
+									"dateAndTimeString" : "2024-02-13T10:35:20.418726+01:00"
 								}
 							},
 							"uid" : {
@@ -396,14 +468,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-29T19:43:44.969755+02:00"
+									"dateAndTimeString" : "2024-02-13T10:35:24.419222+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "gPEhORZxAAAAAAAAAAAAAA=="
 							},
-							"code" : "import tfactorial\rpbbreak()\rtfactorial.factorial(4,1)"
+							"code" : "import gtoolkit_bridge\rgtoolkit_bridge.reset_signals()\rimport gtoolkit_bridge.PythonBridge.tfactorial as tfactorial\rpbbreak()\rtfactorial.factorial(5,1)"
 						}
 					]
 				},
@@ -468,14 +540,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-06-21T09:09:17.289747+02:00"
+									"dateAndTimeString" : "2024-02-13T09:35:38.109622+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "cmjlSJYeAAAAAAAAAAAAAA=="
 							},
-							"code" : "GtResourcesUtility default resourceAtPath: Path * 'feenkcom'/ 'PythonBridge' / 'PythonBridgeRuntime' / 'PythonBridge' / 'tfactorial.py'"
+							"code" : "GtResourcesUtility default resourceAtPath: Path * 'feenkcom'/ 'PythonBridge' / 'PyPI' / 'src' / 'gtoolkit_bridge' / 'PythonBridge' / 'tfactorial.py'"
 						}
 					]
 				},
