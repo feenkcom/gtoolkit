@@ -397,8 +397,8 @@ class Builder extends AgentJob {
                     "./gt-installer",
                     "--verbose " +
                             "--workspace ${GlamorousToolkit.RELEASER_FOLDER} " +
-                            "release-build " +
                             "--app-version ${build.gtoolkitVmVersion} " +
+                            "release-build " +
                             "--loader cloner " +
                             "--image-url ${GlamorousToolkit.PHARO_IMAGE_URL} " +
                             "--bump ${build.bump} " +
@@ -781,7 +781,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
     }
 
     void release_gt4python() {
-        script.withCredentials([script.string(credentialsId: 'flit_password_pypi', variable: 'FLIT_PASSWORD')])
+        script.withCredentials([script.string(credentialsId: 'flit_password_pypi', variable: 'FLIT_PASSWORD')]) {
             // Run the PythonBridge release script.
             // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
             script.sh """
