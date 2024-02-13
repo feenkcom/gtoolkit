@@ -786,7 +786,8 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
             // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
             script.sh """
                     cd ${GlamorousToolkit.EXAMPLES_FOLDER}
-                    ./PythonBridge/scripts/publish_gtoolkit_bridge_PyPI.sh
+                    cd PythonBridge/PyPI
+                    ../scripts/publish_gtoolkit_bridge_PyPI.sh
                 """
         }
     }
