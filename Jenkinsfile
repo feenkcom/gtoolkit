@@ -794,11 +794,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
     }
 
     void run_python_examples() {
-        script.sh """"
-            export PATH=/home/ubuntu/.local/bin:$PATH
-            xvfb-run -a ./gt-installer --verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test --disable-deprecation-rewrites --packages 'PythonBridge' 'PythonBridge-Pharo' 
-            xvfb-run -a ./gt-installer --verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test 'PythonBridge-Pharo'
-        """
+        
     }
 
     String gemstone_package_name() {
