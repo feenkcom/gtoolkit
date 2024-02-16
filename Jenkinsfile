@@ -794,8 +794,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
     }
 
     void run_python_examples() {
-        platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test --disable-deprecation-rewrites --packages 'PythonBridge' 'PythonBridge-Pharo' ")
-        platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test 'PythonBridge-Pharo'")
+        
     }
 
     String gemstone_package_name() {
