@@ -754,7 +754,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
             git clone https://github.com/feenkcom/PythonBridge.git 
             cd PythonBridge 
             git checkout ${build.pythonBridgeCommitHash}
-            chmod +x scripts/publish_gtoolkit_bridge_PyPI.sh
+            chmod +x scripts/*.sh
         """
     }
 
@@ -762,7 +762,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
     void run_extra_examples() {
         delete_lepiter_directory()
         run_gemstone_examples()
-        run_python_examples()
+        // run_python_examples()
         release_gt4python()
     }
 
@@ -794,7 +794,10 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
     }
 
     void run_python_examples() {
-        
+        script.sh """"
+            cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+            ./PythonBridge/scripts/run_python_examples.sh
+        """
     }
 
     String gemstone_package_name() {
