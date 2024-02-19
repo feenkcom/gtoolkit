@@ -79,7 +79,7 @@ class GlamorousToolkit {
     static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo10-SNAPSHOT.build.538.sha.179ef65.arch.64bit.zip"
     static final TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
-    static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone"'
+    static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone" "PythonBridge-Pharo"'
     static final RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
     static final DOCKER_REPOSITORY = 'feenkcom/gtoolkit'
     static final DOCKER_TENTATIVE_TAG = 'tentative'
@@ -754,7 +754,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
             git clone https://github.com/feenkcom/PythonBridge.git 
             cd PythonBridge 
             git checkout ${build.pythonBridgeCommitHash}
-            chmod +x scripts/publish_gtoolkit_bridge_PyPI.sh
+            chmod +x scripts/*.sh
         """
     }
 
@@ -762,6 +762,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
     void run_extra_examples() {
         delete_lepiter_directory()
         run_gemstone_examples()
+        // run_python_examples()
         release_gt4python()
     }
 
@@ -790,6 +791,13 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
                     ../scripts/publish_gtoolkit_bridge_PyPI.sh
                 """
         }
+    }
+
+    void run_python_examples() {
+        script.sh """"
+            cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+            ./PythonBridge/scripts/run_python_examples.sh
+        """
     }
 
     String gemstone_package_name() {

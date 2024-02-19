@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T14:53:46.888996+01:00"
+						"dateAndTimeString" : "2024-02-16T14:50:02.984492+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-09T16:02:21.916186+01:00"
+						"dateAndTimeString" : "2024-02-16T15:03:42.411884+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "5jhSd+7IDQCfDW0bADxh+g=="
+					"uidString" : "DttHwOHNDQCatW2PB//LUQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "***Introspection*** is the ability for a program to *observe* and reason about its own state. This is useful for numerous software analysis tasks, to query not only the run-time state of a software system but also its source code."
+				"string" : "***Intercession*** is the ability for a program to *modify* its own execution state or alter its own interpretation or meaning. This is especially useful for performing logging, profiling and debugging tasks."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T15:28:22.622845+01:00"
+						"dateAndTimeString" : "2024-02-16T15:03:50.881716+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T15:33:46.775694+01:00"
+						"dateAndTimeString" : "2024-02-16T15:05:16.547791+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "JkhAiFPJDQCeGHmRCKoQWw=="
+					"uidString" : "0A9T8+HNDQCh2Y9nB//LUQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This works by providing a reflective API to query the run-time system. In Smalltalk, this is done by *reifying* metaobjects of the runtime  so they can be queried. "
+				"string" : "As with introspection, this works by *reifying*  metaobjects of the runtime. However, instead of merely querying these reified metaobjects, we alter tham and *reflect* them back to the meta-level, thus changing the behavior of the running system"
 			},
 			{
 				"__type" : "elementSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T15:30:30.982793+01:00"
+						"dateAndTimeString" : "2024-02-16T14:51:34.036159+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,15 +103,15 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T15:30:31.444177+01:00"
+						"dateAndTimeString" : "2024-02-16T14:51:34.767911+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Sejmj1PJDQCejMdICKoQWw=="
+					"uidString" : "na5nx+HNDQCb6G1HB//LUQ=="
 				},
 				"code" : "ReflectionSceneryExample new reflectionScenery",
-				"elementHeight" : 220,
+				"elementHeight" : 258,
 				"codeHeight" : 50,
 				"codeVisible" : false
 			},
@@ -134,7 +134,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-20T15:48:42.133912+01:00"
+									"dateAndTimeString" : "2024-02-16T15:07:16.897057+01:00"
 								}
 							},
 							"editEmail" : {
@@ -145,17 +145,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-20T15:49:19.067903+01:00"
+									"dateAndTimeString" : "2024-02-19T11:07:24.051617+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "+I/w0FPJDQClor7BCKoQWw=="
+								"uidString" : "qpua/+HNDQCrGOyFB//LUQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "— `Smalltalk`, a Facade for interacting with the running image."
+							"string" : "[[Compiling and performing code]] — shows several ways to programmatically create classes or methods, or evaluate code"
 						},
 						{
 							"__type" : "textSnippet",
@@ -171,7 +171,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-20T15:49:47.978737+01:00"
+									"dateAndTimeString" : "2024-02-16T15:00:21.256822+01:00"
 								}
 							},
 							"editEmail" : {
@@ -182,17 +182,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-20T15:50:43.451407+01:00"
+									"dateAndTimeString" : "2024-02-19T11:14:54.284646+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "2EXd1FPJDQCn3NssCKoQWw=="
+								"uidString" : "KW/U5uHNDQCfFiwgB//LUQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "— The core classes of the Smalltalk system, such as {{gtClass:name=Behavior}}, {{gtClass:name=Class}} and {{gtClass:name=Metaclass}}"
+							"string" : "Overriding DNU — {{gtTodo:label=add page on overriding does not understand}}"
 						},
 						{
 							"__type" : "textSnippet",
@@ -208,7 +208,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-20T15:50:46.04917+01:00"
+									"dateAndTimeString" : "2024-02-16T15:00:23.700779+01:00"
 								}
 							},
 							"editEmail" : {
@@ -219,17 +219,91 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-20T15:50:51.057109+01:00"
+									"dateAndTimeString" : "2024-02-19T11:15:13.845687+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "y1pT2FPJDQCp/PGhCKoQWw=="
+								"uidString" : "J7r55uHNDQCfJ2FyB//LUQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "— Any class"
+							"string" : "Anonymous objects — {{gtTodo:label=add page on anonymous objects}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-02-19T11:05:46.754562+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-02-19T11:15:26.414176+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zLJy+RrODQCMJs3wCSYWSQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Method wrappers  — {{gtTodo:label=add page on method wrappers}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-02-19T11:15:34.511011+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-02-19T11:15:54.682169+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FSd7HBvODQCPxuNfCSYWSQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Reflectivity — {{gtTodo:label=add page on the reflectivity API}}"
 						}
 					]
 				},
@@ -241,7 +315,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T15:19:23.215993+01:00"
+						"dateAndTimeString" : "2024-02-16T14:49:31.033038+01:00"
 					}
 				},
 				"editEmail" : {
@@ -252,166 +326,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T16:10:15.650649+01:00"
+						"dateAndTimeString" : "2024-02-16T15:07:14.462734+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "t5YZaFPJDQCX0gyMCKoQWw=="
+					"uidString" : "884SwOHNDQCarRJjB//LUQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Some examples of metaobjects are:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-20T15:52:28.859784+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-09T16:05:18.720143+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "+x903lPJDQCr8BrMCKoQWw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[Querying objects]] — shows examples of querying an object's reference, state and class."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-20T15:52:38.816552+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-18T14:30:25.106701+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "tQ0M31PJDQCsXHzwCKoQWw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[Querying classes and methods]] — shows how to reflectively query classes and methods using numerous APIs."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-20T15:53:01.699634+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-02-16T14:42:30.876478+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "RTdp4FPJDQCs4GkrCKoQWw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[Querying the runtime]]  — shows how to query the run-time stack of execution contexts"
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T15:52:09.321584+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-20T15:54:04.980029+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "O+fjz1PJDQCk3PvWCKoQWw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "We will have a closer look at  concrete examples in three parts:"
+				"string" : "We will explore several forms and styles of intercession, starting with some o f the built-in features of Smalltalk and Pharo, and progressing to some more advanced libraries and frameworks."
 			},
 			{
 				"__type" : "textSnippet",
@@ -427,7 +352,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T14:53:47.799834+01:00"
+						"dateAndTimeString" : "2024-02-19T11:06:46.290918+01:00"
 					}
 				},
 				"editEmail" : {
@@ -438,12 +363,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T14:53:47.799834+01:00"
+						"dateAndTimeString" : "2024-02-19T11:06:46.290918+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "SiNgd+7IDQCfJPh4ADxh+g=="
+					"uidString" : "VSf//BrODQCM7TpwCSYWSQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -460,7 +385,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-12-15T14:53:17.480876+01:00"
+			"dateAndTimeString" : "2024-02-16T14:47:45.589325+01:00"
 		}
 	},
 	"editEmail" : {
@@ -471,15 +396,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-12-15T16:28:55.748379+01:00"
+			"dateAndTimeString" : "2024-02-19T11:03:53.954039+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "What is Introspection?"
+		"title" : "What is Intercession?"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "31839175-eec8-0d00-9e4c-e296003c61fa"
+		"uuid" : "eadfc9b9-e1cd-0d00-9919-727407ffcb51"
 	}
 }
