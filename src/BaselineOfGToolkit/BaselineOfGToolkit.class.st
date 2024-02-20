@@ -97,34 +97,34 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-clipboard:v0.8.61/src' ].
 		spec
 			baseline: 'GToolkitPresenter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.1633/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.1634/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.541/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.542/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.2058/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.2059/src' ].
 		spec
 			baseline: 'GToolkitDebuggerExtensions' with: [
-				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.2058/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.2059/src' ].
 		spec
 			baseline: 'GToolkitFileBrowser' with: [
-				spec repository: 'github://feenkcom/gtoolkit-filebrowser:v0.6.1607/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-filebrowser:v0.6.1608/src' ].
 		spec
 			baseline: 'GToolkitDemos' with: [
-				spec repository: 'github://feenkcom/gtoolkit-demos:v0.8.2103/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-demos:v0.8.2104/src' ].
 		spec
 			baseline: 'GToolkitReleaser' with: [
 				spec repository: 'github://feenkcom/gtoolkit-releaser:v0.8.212/src' ].
 		spec
 			baseline: 'RemoteRunner' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remoterunner:v0.6.1117/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-remoterunner:v0.6.1118/src' ].
 		spec
 			baseline: 'GToolkitConstrainer' with: [
 				spec repository: 'github://feenkcom/gtoolkit-constrainer:v0.8.16/src' ].
 		spec
 			baseline: 'GToolkit4Pharo' with: [
-				spec repository: 'github://feenkcom/gt4pharo:v0.6.1513/src' ].
+				spec repository: 'github://feenkcom/gt4pharo:v0.6.1514/src' ].
 		spec
 			baseline: 'GToolkit4SmaCC' with: [
 				spec repository: 'github://feenkcom/gt4smacc:v0.8.240/src' ].
@@ -142,67 +142,67 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4ruby:v0.6.20/src' ].
 		spec
 			baseline: 'GToolkit4Python' with: [
-				spec repository: 'github://feenkcom/gt4python:v0.6.222/src' ].
+				spec repository: 'github://feenkcom/gt4python:v0.6.223/src' ].
 		spec
 			baseline: 'GtGemstoneClient' with: [
-				spec repository: 'github://feenkcom/gt4gemstone:v0.6.2078/src' ].
+				spec repository: 'github://feenkcom/gt4gemstone:v0.6.2079/src' ].
 		spec
 			baseline: 'GToolkit4Git' with: [
-				spec repository: 'github://feenkcom/gt4git:v0.8.924/src' ].
+				spec repository: 'github://feenkcom/gt4git:v0.8.925/src' ].
 		spec
 			baseline: 'GToolkit4GraphQL' with: [
-				spec repository: 'github://feenkcom/gt4graphql:v0.6.1122/src' ].
+				spec repository: 'github://feenkcom/gt4graphql:v0.6.1123/src' ].
 		spec
 			baseline: 'GToolkit4Changes' with: [
-				spec repository: 'github://feenkcom/gt4changes:v0.6.725/src' ].
+				spec repository: 'github://feenkcom/gt4changes:v0.6.726/src' ].
 		spec
 			baseline: 'GToolkit4Jenkins' with: [
 				spec repository: 'github://feenkcom/gt4jenkins:v0.8.49/src' ].
 		spec
 			baseline: 'GToolkit4LSP' with: [
-				spec repository: 'github://feenkcom/gt4lsp:v0.6.223/src' ].
+				spec repository: 'github://feenkcom/gt4lsp:v0.6.224/src' ].
 		spec
 			baseline: 'GToolkit4Ops' with: [
 				spec repository: 'github://feenkcom/gt4ops:v0.6.37/src' ].
 		spec
 			baseline: 'GToolkitCoder' with: [
-				spec repository: 'github://feenkcom/gtoolkit-coder:v0.8.1531/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-coder:v0.8.1532/src' ].
 		spec
 			baseline: 'Gt4PharoLink' with: [
-				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.1517/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.1518/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.541/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.542/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.626/src' ].
 		spec
 			baseline: 'GToolkitVisualizerPhlow' with: [
-				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.1537/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-visualizer:v0.8.1538/src' ].
 		spec
 			baseline: 'GToolkitScenery' with: [
-				spec repository: 'github://feenkcom/gtoolkit-scenery:v0.6.362/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-scenery:v0.6.363/src' ].
 		spec
 			baseline: 'GToolkitPager' with: [
-				spec repository: 'github://feenkcom/gtoolkit-pager:v0.8.1223/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-pager:v0.8.1224/src' ].
 		spec
 			baseline: 'GToolkitSpotter' with: [
-				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.8.1189/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-spotter:v0.8.1190/src' ].
 		spec
 			baseline: 'GToolkitNotifications' with: [
-				spec repository: 'github://feenkcom/gtoolkit-notifications:v0.6.857/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-notifications:v0.6.858/src' ].
 		spec
 			baseline: 'GToolkitNotificationsExamples' with: [
-				spec repository: 'github://feenkcom/gtoolkit-notifications:v0.6.857/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-notifications:v0.6.858/src' ].
 		spec
 			baseline: 'XdocClient' with: [
-				spec repository: 'github://feenkcom/xdoc:v0.8.723/src' ].
+				spec repository: 'github://feenkcom/xdoc:v0.8.724/src' ].
 		spec
 			baseline: 'LepiterEngine' with: [
-				spec repository: 'github://feenkcom/lepiter:v0.6.2106/src' ].
+				spec repository: 'github://feenkcom/lepiter:v0.6.2107/src' ].
 		spec
 			baseline: 'GToolkit4Magritte' with: [
-				spec repository: 'github://feenkcom/gt4magritte:v0.6.905/src' ].
+				spec repository: 'github://feenkcom/gt4magritte:v0.6.906/src' ].
 		spec
 			baseline: 'GToolkit4OpenAPI' with: [
 				spec repository: 'github://feenkcom/gt4openapi:v0.6.9/src' ].
@@ -211,10 +211,10 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://j-brant/RBFormatter:5214567865267400a855c3ebbcb61c0f15195f0f/src' ].
 		spec
 			baseline: 'GToolkitWorld' with: [
-				spec repository: 'github://feenkcom/gtoolkit-world:v0.6.612/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-world:v0.6.613/src' ].
 		spec
 			baseline: 'GToolkitPhlowExamples' with: [
-				spec repository: 'github://feenkcom/gtoolkit-phlow:v0.8.1220/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-phlow:v0.8.1221/src' ].
 		spec
 			baseline: 'GToolkit4ZTimestamp' with: [
 				spec repository: 'github://feenkcom/gt4ztimestamp:v0.6.4/src' ].
