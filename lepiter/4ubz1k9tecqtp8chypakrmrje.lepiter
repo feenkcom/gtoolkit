@@ -171,6 +171,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-02-20T10:22:36.028511+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-02-20T10:25:47.030164+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "BGRZfC7ODQCByYPvBKWKpw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Understanding object pointers]] — shows how we can walk through memory, and even *swap* pointers systematically to point to other objects"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2024-02-16T15:00:21.256822+01:00"
 								}
 							},
@@ -182,7 +219,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-02-19T11:14:54.284646+01:00"
+									"dateAndTimeString" : "2024-02-20T14:36:47.866599+01:00"
 								}
 							},
 							"uid" : {
@@ -192,7 +229,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Overriding DNU — {{gtTodo:label=add page on overriding does not understand}}"
+							"string" : "[[Overriding doesNotUnderstand:]] — shows how `#doesNotUnderstad:` can be overridden to perform useful tasks, such as logging or generating code"
 						},
 						{
 							"__type" : "textSnippet",
@@ -219,7 +256,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-02-19T11:15:13.845687+01:00"
+									"dateAndTimeString" : "2024-02-20T17:37:28.424622+01:00"
 								}
 							},
 							"uid" : {
@@ -229,7 +266,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Anonymous objects — {{gtTodo:label=add page on anonymous objects}}"
+							"string" : "[[Anonymous classes]] — shows how anonymous classes can be used to selectively change the behavior of specific objects"
 						},
 						{
 							"__type" : "textSnippet",

@@ -794,7 +794,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
     }
 
     void run_python_examples() {
-        script.sh """"
+        script.sh """
             cd ${GlamorousToolkit.EXAMPLES_FOLDER}
             ./PythonBridge/scripts/run_python_examples.sh
         """
