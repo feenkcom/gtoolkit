@@ -959,7 +959,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-02-19T23:41:53.068151+01:00"
+						"dateAndTimeString" : "2024-02-20T14:37:03.258096+01:00"
 					}
 				},
 				"uid" : {
@@ -969,7 +969,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Moldable logging using concrete signal classes"
+				"string" : "#Moldable logging using concrete signal and event classes"
 			},
 			{
 				"__type" : "textSnippet",
@@ -996,7 +996,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-02-19T23:41:57.669041+01:00"
+						"dateAndTimeString" : "2024-02-20T14:36:30.871164+01:00"
 					}
 				},
 				"uid" : {
@@ -1006,7 +1006,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here we build an example by creating concrete classes for signals."
+				"string" : "Here we build an full example by creating concrete classes for signals and events"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1395,14 +1395,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-01T12:00:51.161243+02:00"
+						"dateAndTimeString" : "2024-02-20T11:29:12.100904+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Ohbg2JbADQC0cIXoANFK1w=="
 				},
-				"code" : "1 to: 10 do: [ :anIndex |\r\tGtMyExampleBeaconStartSignal emit: 'Start at index ', anIndex asString.\r\t\r\t100 atRandom  milliSeconds wait.\r\t\r\t(anIndex//4)isZero ifTrue: [\r\t\tGtMyExampleBeaconStartSignal emit: 'Start subcommand at index '\r\t\t\t, anIndex asString.\r\t\t100 atRandom  milliSeconds wait.\r\t\tGtMyExampleBeaconStopSignal emit: 'Start subcommand at index '\r\t\t\t, anIndex asString ].\r\t\r\tGtMyExampleBeaconStopSignal emit: 'Stop at index ', anIndex asString ]."
+				"code" : "1 to: 10 do: [ :anIndex |\r\tGtMyExampleBeaconStartSignal emit: 'Start at index ', anIndex asString.\r\t\r\t100 atRandom  milliSeconds wait.\r\t\r\t(anIndex//4)isZero ifTrue: [\r\t\tGtMyExampleBeaconStartSignal emit: 'Start subcommand at index '\r\t\t\t, anIndex asString.\r\t\t100 atRandom  milliSeconds wait.\r\t\tGtMyExampleBeaconStopSignal emit: 'Stop subcommand at index '\r\t\t\t, anIndex asString ].\r\t\r\tGtMyExampleBeaconStopSignal emit: 'Stop at index ', anIndex asString ]."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1935,6 +1935,500 @@
 					"uidString" : "ePiW4arADQCqZiruD+8bxw=="
 				},
 				"code" : "GtMyExampleBeaconEventsCollector stop"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:36:55.331426+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:37:19.076617+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "szFlCjLODQCTq4baDMk7GQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Moldable logging using generic signal classes and concrete event classes"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:37:20.467521+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:51:25.984461+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ycPkCzLODQCUoO6PDMk7GQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Instead of creating a class for each signal that should start/stop an event, we can use {{gtClass:GtBeaconTypedLogSignal}} and indicate in the signal the name of the event class"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:50:44.927648+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:50:45.948973+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "I9fXOzLODQCWBNNdDMk7GQ=="
+				},
+				"code" : "1 to: 10 do: [ :anIndex |\r\t(GtBeaconTypedLogSignal new \r\t\tmarkAsStartSignal;\r\t\teventTypeName: #GtMyExampleBeaconLogEvent;\r\t\tsignalLabel:  'Start at index ', anIndex asString)\r\t\t\temit.\r\t\r\t100 atRandom  milliSeconds wait.\r\t\r\t(anIndex//4)isZero ifTrue: [\r\t\t(GtBeaconTypedLogSignal new \r\t\t\tmarkAsStartSignal;\r\t\t\teventTypeName: #GtMyExampleBeaconLogEvent;\r\t\t\tsignalLabel:'Start subcommand at index '\r\t\t\t\t, anIndex asString) emit.\r\t\t\t\t\r\t\t100 atRandom  milliSeconds wait.\r\t\t\r\t\t(GtBeaconTypedLogSignal new \r\t\t\tmarkAsEndSignal;\r\t\t\teventTypeName: #GtMyExampleBeaconLogEvent;\r\t\t\tsignalLabel: 'Stop subcommand at index '\r\t\t\t\t, anIndex asString) emit ].\r\t\r\t(GtBeaconTypedLogSignal new \r\t\tmarkAsEndSignal;\r\t\teventTypeName: #GtMyExampleBeaconLogEvent;\r\t\tsignalLabel: 'Stop at index ', anIndex asString)\r\t\t\temit ]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:51:34.360879+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:52:07.188558+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jyTKPjLODQCX8xzxDMk7GQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can use a generic collector that collect events of type {{gtClass:GtBeaconTypedLogSignal}}."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:51:45.53077+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:51:46.35397+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "bJJ0PzLODQCYz4VvDMk7GQ=="
+				},
+				"code" : "eventsCollector := GtBeaconGenericEventsCollector\r\tforSignalType: GtBeaconTypedLogSignal\r\tgroupedUsing: GtBeaconEventsGrouper new."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:51:48.332271+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:51:51.499551+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "p1SfPzLODQCY2dLHDMk7GQ=="
+				},
+				"code" : "eventsCollector start"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:51:51.697957+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:51:53.467817+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mbDSPzLODQCZAQR7DMk7GQ=="
+				},
+				"code" : "eventsCollector stop"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:52:13.849827+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:52:22.707784+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9qwkQTLODQCZ7IJbDMk7GQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Moldable logging using generic signal and event classes "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:52:28.311947+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:54:41.554609+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "sF0BQjLODQCaMsQEDMk7GQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can also avoid creating classes for signals and events by using {{gtClass:GtBeaconLabelledLogSignal}} that result in events of type {{gtClass:GtBeaconGenericLogEvent}} . An event type label can be added to signals to signals to differentiate them."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:54:43.442798+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:54:44.416607+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ZgwPSjLODQCeeccgDMk7GQ=="
+				},
+				"code" : "1 to: 10 do: [ :anIndex |\r\t(GtBeaconLabelledLogSignal new \r\t\tmarkAsStartSignal;\r\t\teventTypeLabel: #MyExampleEvent;\r\t\tsignalLabel:  'Start at index ', anIndex asString)\r\t\t\temit.\r\t\r\t100 atRandom  milliSeconds wait.\r\t\r\t(anIndex//4)isZero ifTrue: [\r\t\t(GtBeaconLabelledLogSignal new \r\t\t\tmarkAsStartSignal;\r\t\t\teventTypeLabel: #MyExampleEvent;\r\t\t\tsignalLabel:'Start subcommand at index '\r\t\t\t\t, anIndex asString) emit.\r\t\t\t\t\r\t\t100 atRandom  milliSeconds wait.\r\t\t\r\t\t(GtBeaconLabelledLogSignal new \r\t\t\tmarkAsEndSignal;\r\t\t\teventTypeLabel: #MyExampleEvent;\r\t\t\tsignalLabel: 'Stop subcommand at index '\r\t\t\t\t, anIndex asString) emit ].\r\t\r\t(GtBeaconLabelledLogSignal new \r\t\tmarkAsEndSignal;\r\t\teventTypeLabel: #MyExampleEvent;\r\t\tsignalLabel: 'Stop at index ', anIndex asString)\r\t\t\temit ]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:54:55.259362+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:55:17.820135+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CpvDSjLODQCeg3okDMk7GQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "When using a collector we are interested in signals of type {{gtClass:GtBeaconLabelledLogSignal}}."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:55:02.623496+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:55:03.008078+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/fYzSzLODQCfGWKjDMk7GQ=="
+				},
+				"code" : "eventsCollector := GtBeaconGenericEventsCollector\r\tforSignalType: GtBeaconLabelledLogSignal\r\tgroupedUsing: GtBeaconEventsGrouper new."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:55:21.446688+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:55:23.296871+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EDNTTDLODQCgMReMDMk7GQ=="
+				},
+				"code" : "eventsCollector start"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:55:23.864119+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-20T14:55:27.324152+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8BZ4TDLODQCgRFjnDMk7GQ=="
+				},
+				"code" : "eventsCollector stop"
 			}
 		]
 	},
