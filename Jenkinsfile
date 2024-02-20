@@ -762,7 +762,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
     void run_extra_examples() {
         delete_lepiter_directory()
         run_gemstone_examples()
-        // run_python_examples()
+        run_python_examples()
         release_gt4python()
     }
 
@@ -794,7 +794,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
     }
 
     void run_python_examples() {
-        script.sh """"
+        script.sh """
             cd ${GlamorousToolkit.EXAMPLES_FOLDER}
             ./PythonBridge/scripts/run_python_examples.sh
         """
