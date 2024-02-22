@@ -661,7 +661,7 @@ class TestAndPackage extends AgentJob {
     void create_release_package_for_target(Triplet target) {
         script.stage("Package " + target.short_label()) {
             def targetString = target.toString()
-            def release_package = platform().exec_stdout(script, "./gt-installer", "--verbose package-release \"${GlamorousToolkit.RELEASE_PACKAGE_TEMPLATE}\" --target \"${targetString}\"")
+            def release_package = platform().exec_stdout(script, "./gt-installer", "package-release \"${GlamorousToolkit.RELEASE_PACKAGE_TEMPLATE}\" --target \"${targetString}\"")
             script.echo "Created release package ${release_package}"
             sign_package(release_package, target)
             build.stash_for_release(release_package, targetString)
