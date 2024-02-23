@@ -28,6 +28,7 @@ function rollback {
 }
 
 rollback "Win64"
+rollback "WinArm64"
 rollback "OSX64"
 rollback "OSXM1"
 rollback "Linux64"
