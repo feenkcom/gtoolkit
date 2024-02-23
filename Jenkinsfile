@@ -131,7 +131,7 @@ class GlamorousToolkit {
                 new TestAndPackage(this, new Agent(Triplet.MacOS_X86_64), Triplet.MacOS_X86_64),
                 new TestAndPackageWithGemstoneAndPython(this, new Agent(Triplet.Linux_X86_64, "scooby-doo"), Triplet.Linux_X86_64),
                 new TestAndPackage(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64),
-                new TestAndPackage(this, new Agent(Triplet.Windows_X86_64, "daffy-duck"), Triplet.Windows_X86_64)
+                new TestAndPackage(this, new Agent(Triplet.Windows_X86_64, "daffy-duck"), Triplet.Windows_X86_64).add_release_target(Triplet.Windows_Aarch64)
         ]
     }
 
@@ -545,16 +545,24 @@ class DockerMultiArchImage extends AgentJob {
 class TestAndPackage extends AgentJob {
     final Triplet target
     boolean runTests
+    ArrayList<Triplet> extraTargets
 
     TestAndPackage(GlamorousToolkit build, Agent agent, Triplet target) {
         super(build, agent)
         this.target = target
         this.runTests = build.runTests
+        this.extraTargets = []
     }
 
     @NonCPS
     TestAndPackage disable_tests() {
         this.runTests = false
+        return this
+    }
+
+    @NonCPS
+    TestAndPackage add_release_target(Triplet target) {
+        this.extraTargets.add(target)
         return this
     }
 
@@ -639,16 +647,24 @@ class TestAndPackage extends AgentJob {
      */
     void create_release_package() {
         def currentResult = script.currentBuild.result ?: 'SUCCESS'
-        // we must not package the build is not successful until this point
+        // we must not package the build if not successful until this point
         if (currentResult != 'SUCCESS') {
             return;
         }
 
+        create_release_package_for_target(this.target)
+        for(int target in this.extraTargets) {
+            create_release_package_for_target(target)
+        }
+    }
+
+    void create_release_package_for_target(Triplet target) {
         script.stage("Package " + target.short_label()) {
-            def release_package = platform().exec_stdout(script, "./gt-installer", "--verbose package-release \"${GlamorousToolkit.RELEASE_PACKAGE_TEMPLATE}\"")
+            def targetString = target.toString()
+            def release_package = platform().exec_stdout(script, "./gt-installer", "package-release \"${GlamorousToolkit.RELEASE_PACKAGE_TEMPLATE}\" --target \"${targetString}\"")
             script.echo "Created release package ${release_package}"
-            sign_package(release_package)
-            build.stash_for_release(release_package, target.toString())
+            sign_package(release_package, target)
+            build.stash_for_release(release_package, targetString)
         }
     }
 
@@ -656,23 +672,9 @@ class TestAndPackage extends AgentJob {
      * Sign the prepared package.
      * Only supported when targeting MacOS.
      */
-    void sign_package(String release_package) {
+    void sign_package(String release_package, Triplet target) {
         if (target.platform() != Platform.MacOS) {
             return
-        }
-
-        def target_arch = target.architecture.toString()
-        def id_arch = ""
-        switch (target_arch) {
-            case "aarch64":
-                id_arch = "aarch64"
-                break
-            case "x86_64":
-                id_arch = "x86-64"
-                break
-            default:
-                script.error "Unsupported architecture: ${target_arch}"
-                break
         }
 
         script.withCredentials([script.string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')]) {
@@ -686,18 +688,6 @@ class TestAndPackage extends AgentJob {
                     --wait \
                     ${release_package}
             """
-//            script.sh """
-//                set +x
-//                xcrun altool \
-//                    -t osx \
-//                    -f ${release_package} \
-//                    -itc_provider "77664ZXL29" \
-//                    --primary-bundle-id "com.feenk.gtoolkit.darwin-apple-${id_arch}" \
-//                    --notarize-app \
-//                    --verbose \
-//                    --username "notarization@feenk.com" \
-//                    --password \$APPLE_PASSWORD \
-//            """
         }
 
         script.echo "Signed release package ${release_package}"
