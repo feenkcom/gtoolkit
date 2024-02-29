@@ -55,6 +55,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:24:47.160541+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:24:55.368102+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Gl6uuuLODQC6aphsBmzzvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#pipenv not found"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2024-01-18T09:33:10.60671+01:00"
 					}
 				},
@@ -140,14 +177,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-18T09:36:15.672092+01:00"
+						"dateAndTimeString" : "2024-02-29T09:15:03.858489+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ZAdi+pXLDQCnHJbtBweB3g=="
 				},
-				"code" : "PBPharoPipenvProcess pipenvPath"
+				"code" : "PBPharoPipenvPathFinder pipenvPath"
 			},
 			{
 				"__type" : "textSnippet",
@@ -211,14 +248,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-18T09:38:48.608923+01:00"
+						"dateAndTimeString" : "2024-02-29T09:15:07.319248+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "S1RfAZbLDQCqvkugBweB3g=="
 				},
-				"code" : "PBPharoPipenvProcess pipenvPath: 'C:\\Users\\sven\\AppData\\Local\\Programs\\Python\\Python312-arm64\\Scripts\\pipenv.exe' asFileReference"
+				"code" : "PBPharoPipenvPathFinder pipenvPath: 'C:\\Users\\sven\\AppData\\Local\\Programs\\Python\\Python312-arm64\\Scripts\\pipenv.exe' asFileReference"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:24:59.983743+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:25:04.41522+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SwNyu+LODQC6xGllBmzzvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#pipenv not working"
 			},
 			{
 				"__type" : "textSnippet",
@@ -282,7 +356,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-18T14:23:30.890395+01:00"
+						"dateAndTimeString" : "2024-02-29T09:15:29.111837+01:00"
 					}
 				},
 				"uid" : {
@@ -292,7 +366,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The location where the bridge infrastructure gets installed to and run from is next to the GT image and is called `PythonBridge`. This is a fixed location."
+				"string" : "The location where the bridge infrastructure gets installed to and run from is next to the GT image and is called `PythonBridgeRuntime`. This is a fixed location."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -353,7 +427,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-29T10:07:34.136684+01:00"
+						"dateAndTimeString" : "2024-02-29T09:17:31.662599+01:00"
 					}
 				},
 				"uid" : {
@@ -363,7 +437,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Notice the `.venv` virtual environment there. The `Pipfile` lists the needed dependencies (flask, requests and msgpack). You could navigate into that directory and manually try to install the dependencies. Make sure you can import those package. You can try the command that GT will use to start the bridge (see also [[Using an alternative Python Bridge controller process]])."
+				"string" : "The PythonBridge uses a virtual environment in that directory. You could navigate into that directory and manually try to install `gtoolkit_bridge` using `pipenv`. You can try the command that GT will use to start the bridge (see also [[Using an alternative Python Bridge controller process]])."
 			},
 			{
 				"__type" : "textSnippet",
@@ -390,7 +464,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-18T14:27:21.105698+01:00"
+						"dateAndTimeString" : "2024-02-29T09:18:27.668146+01:00"
 					}
 				},
 				"uid" : {
@@ -400,7 +474,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "`$ pipenv run python start_bridge.py --port 7007 --pharo 7006 --method msgpack --log`"
+				"string" : "`$ pipenv run python -m gtoolkit_bridge --port 7007 --pharo 7006 --method msgpack --log`"
 			},
 			{
 				"__type" : "textSnippet",
@@ -475,6 +549,299 @@
 					"__type" : "textStyle"
 				},
 				"string" : "`PythonBridge starting`\n`{'port': '7007', 'pharo': '7006', 'method': 'msgpack', 'log': True}`\n`HANDLER (MsgPackSocketPlatform): loop func`\n`PythonBridge ready`\n`PYTHON: Start consuming commands`"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:25:19.504849+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:25:21.020054+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DWpsvOLODQC7KCNZBmzzvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#log files"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:22:35.688344+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:22:35.688344+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+j/YsuLODQC3DIiKBmzzvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Inside the `PythonBridgeRuntime` working directory there should be two log files: `complete.log` and `install.log`."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:20:41.777015+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:23:02.649047+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XhgOrOLODQCxJXxIBmzzvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The first log file, `complete.log`, is written at the end of the initial bridge installation process and marks its successful completion. It contains a timestamp when the installation was completed."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:22:43.339163+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:24:20.802894+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Q/dMs+LODQC3E/PbBmzzvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The second log file, `install.log`, has a line for each Python module that got installed through `pipenv`, with a timestamp and duration."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:24:25.202791+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:25:29.444249+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "r1FfueLODQC6ZaGoBmzzvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#starting over"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:25:55.3367+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:28:32.649012+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FOlMveLODQC7rzMeBmzzvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "When something goes wrong during the automatic installation of the PythonBridgeRuntime and your make changes, or when there are updates to the bridge's Python code, it might become necessary to start over. You can do that by simply deleting the whole directory."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:27:50.007046+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:29:27.200472+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kWOUxeLODQCB+jcfBmzzvA=="
+				},
+				"code" : "PBPlatform current deleteRuntimeEnvironment"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:29:41.476026+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:35:11.068224+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "b0U5zOLODQCDt3xqBmzzvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "With the way `pipenv` virtual environments are managed, it could also be useful to delete that as well. This can be done using {{gtMethod:PBNewPharoPipenvProcess>>#deleteInstalledVirtualEnvironment}}. You can get a handle on this object by inspecting PBApplication > Internals > (process handlerl) > Details > (process)."
 			}
 		]
 	},
