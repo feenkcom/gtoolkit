@@ -854,7 +854,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:54:32.509826+02:00"
+						"dateAndTimeString" : "2024-02-27T11:08:31.536663-03:00"
 					}
 				},
 				"uid" : {
@@ -864,7 +864,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To perform a relese we:"
+				"string" : "To perform a release we:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -968,7 +968,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T19:00:41.886743+02:00"
+						"dateAndTimeString" : "2024-02-27T11:16:36.41882-03:00"
 					}
 				},
 				"uid" : {
@@ -978,7 +978,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Running the exporter creates a new branch named 'release' in all project repositories, tags the latest commit in those branches with the tag =='v0.1.0'==, and updates the project baseliens to load the new tag instead of the latest version. The figure below shows the dependencies between projects in the new release. "
+				"string" : "Running the exporter creates a new branch named 'release' in all project repositories, tags the latest commit in those branches with the tag =='v0.1.0'==, and updates the project baselines to load the new tag instead of the latest version. The figure below shows the dependencies between projects in the new release. "
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -1233,7 +1233,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T19:03:40.168946+02:00"
+						"dateAndTimeString" : "2024-02-27T11:19:32.156859-03:00"
 					}
 				},
 				"uid" : {
@@ -1243,7 +1243,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "On top of this dependency model, a release model decorates projects and repositories with version numbers  and strategies for executing the actual release. The release model is an instance of {{gtClass:GtRlProjectRelease}}  containing a graph of other {{gtClass:GtRlProjectRelease}} and {{gtClass:GtRlRepositoryRelease}} objects. A {{gtClass:GtRlProjectRelease}} decorates a previously created {{gtClass:GtRlProject}} object, and a {{gtClass:GtRlRepositoryRelease}} decorates a {{gtClass:GtRlRepository}} object. The relese model is created using an instance of ${class:GtRlReleaseBuilder}$ that gets as parameter the release configuration."
+				"string" : "On top of this dependency model, a release model decorates projects and repositories with version numbers  and strategies for executing the actual release. The release model is an instance of {{gtClass:GtRlProjectRelease}}  containing a graph of other {{gtClass:GtRlProjectRelease}} and {{gtClass:GtRlRepositoryRelease}} objects. A {{gtClass:GtRlProjectRelease}} decorates a previously created {{gtClass:GtRlProject}} object, and a {{gtClass:GtRlRepositoryRelease}} decorates a {{gtClass:GtRlRepository}} object. The release model is created using an instance of {{gtClass:GtRlReleaseBuilder}} that gets as parameter the release configuration."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -1501,7 +1501,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T19:05:43.312471+02:00"
+						"dateAndTimeString" : "2024-02-27T11:21:26.111136-03:00"
 					}
 				},
 				"uid" : {
@@ -1511,7 +1511,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "One restriction in Releaser is that is uses the same version number for all projects contained in a repository. For example, the repository `'github://example/ComponentB/src'`  contains two projects, `GtRlBaselineExampleComponentBMain` and `GtRlBaselineExampleComponentBUtil`. When refering to either one of these from another baseline the version number associated with the repository is used. This happens as version numbers identify commits within a repository (for example using tags) and it is only possible to checkout a single commit at a time."
+				"string" : "One restriction in Releaser is that it uses the same version number for all projects contained in a repository. For example, the repository `'github://example/ComponentB/src'`  contains two projects, `GtRlBaselineExampleComponentBMain` and `GtRlBaselineExampleComponentBUtil`. When refering to either one of these from another baseline the version number associated with the repository is used. This happens as version numbers identify commits within a repository (for example using tags) and it is only possible to checkout a single commit at a time."
 			},
 			{
 				"__type" : "textSnippet",
