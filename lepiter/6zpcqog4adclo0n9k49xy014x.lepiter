@@ -98,7 +98,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-23T08:31:42.472816+02:00"
+						"dateAndTimeString" : "2024-03-06T07:45:26.460695+01:00"
 					}
 				},
 				"uid" : {
@@ -108,7 +108,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Zooniverse is a [[JavaScript]] / [[React]]/ [[React Native]] system. We first clone it:"
+				"string" : "Zooniverse is a [[JavaScript]] / [[React]]/ [[React Native]] system. We first clone its sources from GitHub:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -582,14 +582,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-22T20:02:37.655528+02:00"
+												"dateAndTimeString" : "2024-03-06T13:48:43.142215+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "ZdnMYiF0AAAAAAAAAAAAAA=="
 										},
-										"code" : "model := GtReactImporter new\r\tparserClass: JSXParser;\r\timportDirectory: rootDirectory;\r\tmodel."
+										"code" : "model := GtReactImporter new\r\tparserClass: JSXParser;\r\timportDirectory: rootDirectory;\r\tfinishImport;\r\tmodel."
 									}
 								]
 							},
