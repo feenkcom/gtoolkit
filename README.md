@@ -53,11 +53,14 @@ What kind of problems? There can be many. Out of the box, you can explore:
 
 Read about more examples in the built-in book.
 ### Go beyond the technology
-Glamorous Toolkit is an environment that shows how the experience of programming can be, but ultimately it's still just a piece of technology. Moldable Development is more than technology. It requires new skills. But even more important is that Moldable Development introduces a new feedback loop that has far reaching consequences, both on the technical and the business level. Use the technology, but focus on learning how to think about programming anew.
+Glamorous Toolkit is an environment that shows how the experience of programming can be, but ultimately it's still just a piece of technology. Moldable Development introduces a new feedback loop that has far reaching consequences, both on the technical and the business level.
 ## Engage with the community
 - Follow us on Twitter: [@feenkcom](https://twitter.com/feenkcom)
 - Chat with us on Discord: [discord.gg/FTJr9gP](https://discord.gg/FTJr9gP)
 - Watch our YouTube videos: [@gtoolkit](https://www.youtube.com/@gtoolkit)
+
+## Glamorous Toolkit and Pharo
+Glamorous Toolkit is built in [Pharo](https://pharo.org), and it enables people to work with Pharo systems. Nevertheless, the goal of Glamorous Toolkit is distinct from that of Pharo and so is its realization. [Read more in the book](https://book.gtoolkit.com/glamorous-toolkit-and-pharo-6k5konpjjknm9u90y4t6le5po).
 ## License
 
 See [LICENSE](LICENSE).
