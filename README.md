@@ -60,7 +60,7 @@ Glamorous Toolkit is an environment that shows how the experience of programming
 - Watch our YouTube videos: [@gtoolkit](https://www.youtube.com/@gtoolkit)
 
 ## Glamorous Toolkit and Pharo
-Glamorous Toolkit (GT) is built in [Pharo](https://pharo.org), and it enables people to work with Pharo systems. Nevertheless, the goal of GT is distinct from that of Pharo and so is its realization. [Read more in the book](https://book.gtoolkit.com/glamorous-toolkit-and-pharo-6k5konpjjknm9u90y4t6le5po).
+Glamorous Toolkit is built in [Pharo](https://pharo.org), and it enables people to work with Pharo systems. Nevertheless, the goal of Glamorous Toolkit is distinct from that of Pharo and so is its realization. [Read more in the book](https://book.gtoolkit.com/glamorous-toolkit-and-pharo-6k5konpjjknm9u90y4t6le5po).
 ## License
 
 See [LICENSE](LICENSE).
