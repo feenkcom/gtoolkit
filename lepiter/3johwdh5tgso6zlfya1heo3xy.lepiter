@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T09:51:22.205229+01:00"
+						"dateAndTimeString" : "2024-03-11T15:46:20.5668+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "When using the {{gtPage:PythonBridge|db=2j9m7db2i4oz116bexd7wbdxo}} objects are transferred from Python to GT as proxies. {{gtClass:PBProxyObject}} are GT native objects that refer to a Python object using an identifier. On the Python side there is a registry where those identifiers are mapped to the corresponding Python object."
+				"string" : "When using the {{gtPage:PythonBridge|db=2j9m7db2i4oz116bexd7wbdxo}} objects are transferred from Python to GT as proxies. {{gtClass:PBProxyObject}} are GT native objects that refer to a Python object using an identifier. On the Python side there is a registry where those identifiers are mapped to the corresponding Python objects."
 			},
 			{
 				"__type" : "textSnippet",
@@ -174,7 +174,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T10:48:57.668543+01:00"
+						"dateAndTimeString" : "2024-03-11T15:46:48.699846+01:00"
 					}
 				},
 				"uid" : {
@@ -184,7 +184,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "What we get when we Inspect this Python expression is a GT Inspector with a double view: a **Remote** view and a **Proxy** view. They look at the same object in GT, a `PBProxyObject`, referring to some Python list. These two views show different prespectives."
+				"string" : "What we get when we Inspect this Python expression is a GT Inspector with a double view: a **Remote** view and a **Proxy** view. They look at the same object in GT, a `PBProxyObject`, referring to some Python `list`. These two views show different perspectives."
 			},
 			{
 				"__type" : "textSnippet",
@@ -211,7 +211,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T10:49:14.565167+01:00"
+						"dateAndTimeString" : "2024-03-11T15:47:01.31302+01:00"
 					}
 				},
 				"uid" : {
@@ -221,7 +221,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The **Remote** view is the default and acts so that it looks as if this is normal objects, even though it is remote. The underlying `PBProxyObject` is hidden and we see inspector tabs related to the Python object. There is even a custom tab showing the list's items."
+				"string" : "The **Remote** view is the default and acts so that it looks as if this is normal object, even though it is remote. The underlying `PBProxyObject` is hidden and we see inspector tabs related to the Python object. There is even a custom tab showing the list's items."
 			},
 			{
 				"__type" : "textSnippet",
@@ -248,7 +248,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T10:49:26.926681+01:00"
+						"dateAndTimeString" : "2024-03-11T15:48:07.824167+01:00"
 					}
 				},
 				"uid" : {
@@ -258,7 +258,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The **Proxy** view looks at the internals and shows the actual `PBProxyObject` with maintaining this illusion: it shows us the internal mechanism. Here we can see the identifier of the Python object in the registry,"
+				"string" : "The **Proxy** view looks at the internals and shows the actual `PBProxyObject` which is maintaining this illusion: it shows us the internal mechanism. Here we can see the identifier of the Python object in the registry  as well as its Python class."
 			},
 			{
 				"__type" : "textSnippet",
@@ -285,7 +285,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T10:11:23.461305+01:00"
+						"dateAndTimeString" : "2024-03-11T15:48:25.906714+01:00"
 					}
 				},
 				"uid" : {
@@ -295,7 +295,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Clicking on a number a inspect an integer, still as a proxy. Now there is a Download local instance action (down arrow) which will convert this primitive type to a matching GT type."
+				"string" : "Clicking on a number will inspect an integer, still as a proxy. Now there is a Download local instance action (down arrow) which will convert this primitive type to a matching GT type."
 			},
 			{
 				"__type" : "textSnippet",
@@ -322,7 +322,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T10:17:04.50448+01:00"
+						"dateAndTimeString" : "2024-03-11T15:49:18.719053+01:00"
 					}
 				},
 				"uid" : {
@@ -332,7 +332,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Where things get a little bit confusing is that some composite primitive types like `list` or `dict` are also converted, but only when using the API, not the Python snippet like above. They are automatically mapped to their GT equivalents."
+				"string" : "Where things get a little bit confusing is that some composite primitive types like `list` or `dict` are also converted, but only when using the API, not using the Python snippet like above. They are automatically mapped to their GT equivalents (Array and Dictionary respectively)."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -427,7 +427,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T10:17:49.93514+01:00"
+						"dateAndTimeString" : "2024-03-11T15:49:34.300277+01:00"
 					}
 				},
 				"uid" : {
@@ -501,7 +501,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T10:18:59.864505+01:00"
+						"dateAndTimeString" : "2024-03-11T15:50:56.06411+01:00"
 					}
 				},
 				"uid" : {
@@ -511,7 +511,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's consider an ultra simple **Person** object. And assign some instances to some variables."
+				"string" : "Let's consider an ultra simple **Person** object and assign some instances to some variables."
 			},
 			{
 				"__type" : "pythonSnippet",
@@ -680,7 +680,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T10:42:30.016079+01:00"
+						"dateAndTimeString" : "2024-03-11T15:51:33.670366+01:00"
 					}
 				},
 				"uid" : {
@@ -690,7 +690,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is not a problem because we can send messages to the Python object. You can open the contextual playground at the bottom of the Inspector where a Python snippet's self will refer to the Python object under inspection. Try `self.first`."
+				"string" : "This is not a problem because we can send messages to the Python object. You can open the contextual playground at the bottom of the Inspector where a Python snippet's `self` will refer to the Python object under inspection. Try `self.first`."
 			},
 			{
 				"__type" : "pythonSnippet",
@@ -751,7 +751,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T10:45:13.499183+01:00"
+						"dateAndTimeString" : "2024-03-11T15:52:00.58177+01:00"
 					}
 				},
 				"uid" : {
@@ -761,7 +761,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can do the same programmatically using {{gtMethod:PBProxyObject>>#attributeAt:}} and {{gtMethod:PBProxyObject>>#callMethod:}} which will invoke Python side functionality over the bridge. You can experiment with this using the contextual playground of the proxy perspecctive instead of the remote prespective."
+				"string" : "We can do the same programmatically using {{gtMethod:PBProxyObject>>#attributeAt:}} and {{gtMethod:PBProxyObject>>#callMethod:}} which will invoke Python side functionality over the bridge. You can experiment with this using the contextual playground of the proxy perspective instead of the remote perspective."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -927,7 +927,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T10:58:53.193498+01:00"
+						"dateAndTimeString" : "2024-03-11T15:52:11.03648+01:00"
 					}
 				},
 				"uid" : {
@@ -937,7 +937,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can go one step further and add a **Mirror** class to our Python class. This is a subclass of {{gtClass:PBProxyObject}} that implements a class side `pythonClass` method returning the name of the Python class that we want to mirror."
+				"string" : "We can go one step further and add a **Mirror** class for our Python class. This is a subclass of {{gtClass:PBProxyObject}} that implements a class side `pythonClass` method returning the name of the Python class that we want to mirror."
 			},
 			{
 				"__type" : "textSnippet",
@@ -964,7 +964,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-11T11:02:11.425278+01:00"
+						"dateAndTimeString" : "2024-03-11T15:52:30.907591+01:00"
 					}
 				},
 				"uid" : {
@@ -974,7 +974,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Create an empty `PBPerson` subclass of of {{gtClass:PBProxyObject}} with a class side `pythonClass` method returning `Person` as a string. From now on, the proxy class on the GT side will change to our new mirror class. "
+				"string" : "Create an empty `PBPerson` subclass of of {{gtClass:PBProxyObject}} with a class side `pythonClass` method returning `Person` as a string or symbol. From now on, the proxy class on the GT side will change to our new mirror class. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -1145,12 +1145,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-03-11T09:44:35.960237+01:00"
+			"dateAndTimeString" : "2024-03-11T15:44:50.442885+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Working with Python Brigde objects"
+		"title" : "Working with Python Bridge objects"
 	},
 	"uid" : {
 		"__type" : "uuid",
