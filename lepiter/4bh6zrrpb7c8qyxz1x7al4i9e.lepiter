@@ -313,7 +313,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-18T14:30:28.248365+01:00"
+						"dateAndTimeString" : "2024-03-12T17:34:34.067238+01:00"
 					}
 				},
 				"uid" : {
@@ -323,7 +323,75 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Python snippets always use the global unique instance and cannot use an independent instance."
+				"string" : "Python snippets always use the global unique instance and can only use an independent instance by adopting it."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-12T17:34:45.856407+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-12T17:35:02.627695+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "el8T+drPDQCXLpXSBzwU9g=="
+				},
+				"code" : "PBApplication uniqueInstance: myPythonBridge"
+			},
+			{
+				"__type" : "pythonSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-12T17:35:25.430153+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-12T17:35:31.560924+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Bzdv+9rPDQCX1GtXBzwU9g=="
+				},
+				"code" : "fac(5)"
 			},
 			{
 				"__type" : "textSnippet",
