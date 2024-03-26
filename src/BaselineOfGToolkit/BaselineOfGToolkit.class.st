@@ -141,6 +141,8 @@ BaselineOfGToolkit >> baseline: spec [
 					with: [ spec repository: 'github://feenkcom/gt4lsp:main/src' ];
 				baseline: 'GToolkit4Ops'
 					with: [ spec repository: 'github://feenkcom/gt4ops:main/src' ];
+				baseline: 'Gt4Aws'
+					with: [ spec repository: 'github://feenkcom/gt4aws:main/src' ];
 				baseline: 'GToolkitCoder'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-coder:main/src' ];
 				baseline: 'Gt4PharoLink'

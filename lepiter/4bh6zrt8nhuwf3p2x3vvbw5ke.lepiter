@@ -507,7 +507,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-17T20:50:46.525635+01:00"
+						"dateAndTimeString" : "2024-02-28T10:55:55.932686+01:00"
 					}
 				},
 				"uid" : {
@@ -517,7 +517,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now try starting the Python Bridge."
+				"string" : "Now try starting the Python Bridge. Please be patient, this takes a while (10s of seconds) the first time as some installation needs to happen."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -589,6 +589,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "If all is well, you should see useful information in different tabs when inspecting the {{gtClass:PBApplication}} instance. In particular, the **Details** view should show a green true value for the client and server processes and not a red false value."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:12:22.858374+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-02-29T09:13:51.395167+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2CtRjuLODQCqf24tBmzzvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "When using **Python Snippets** you will implicitly use this same global instance, transparently. It will start automatically."
 			},
 			{
 				"__type" : "textSnippet",

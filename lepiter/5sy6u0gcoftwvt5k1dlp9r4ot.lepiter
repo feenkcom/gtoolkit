@@ -175,7 +175,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-19T22:50:15.076446+02:00"
+						"dateAndTimeString" : "2024-03-05T11:01:37.158795+01:00"
 					}
 				},
 				"uid" : {
@@ -185,7 +185,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Extensions configurations are instances of {{gtClass:GtMoldableExceptionDebugingExtensionConfiguration}} . At run-time when an exception is not handled the configuration is used to instantiate a debugger of type {{gtClass:GtMoldableExceptionDebuggingElement}} that shows views and actions based on that configuration."
+				"string" : "Extensions configurations are instances of {{gtClass:GtMoldableExceptionDebuggingExtensionConfiguration}} . At run-time when an exception is not handled the configuration is used to instantiate a debugger of type {{gtClass:GtMoldableExceptionDebuggingElement}} that shows views and actions based on that configuration."
 			},
 			{
 				"__type" : "textSnippet",
@@ -286,7 +286,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-19T22:49:59.594262+02:00"
+						"dateAndTimeString" : "2024-03-05T11:01:40.970866+01:00"
 					}
 				},
 				"uid" : {
@@ -296,7 +296,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Exceptions can define one or more views  shown in the debugger. Configurations can indicate the pragma with which these methods are annotate thorugh {{gtMethod:GtMoldableExceptionDebugingExtensionConfiguration>>debuggingViewPragmas:}}. By default the pragma `gtExceptionDebuggingView` is used."
+				"string" : "Exceptions can define one or more views  shown in the debugger. Configurations can indicate the pragma with which these methods are annotate thorugh {{gtMethod:GtMoldableExceptionDebuggingExtensionConfiguration>>debuggingViewPragmas:}}. By default the pragma `gtExceptionDebuggingView` is used."
 			},
 			{
 				"__type" : "textSnippet",
@@ -505,7 +505,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-19T22:50:04.008107+02:00"
+						"dateAndTimeString" : "2024-03-05T11:01:45.033973+01:00"
 					}
 				},
 				"uid" : {
@@ -515,7 +515,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The method {{gtMethod:GtMoldableExceptionDebugingExtensionConfiguration>>addDebuggingTargetFor:}} provides the entry point for adding a new target for a given object."
+				"string" : "The method {{gtMethod:GtMoldableExceptionDebuggingExtensionConfiguration>>addDebuggingTargetFor:}} provides the entry point for adding a new target for a given object."
 			},
 			{
 				"__type" : "textSnippet",
@@ -542,7 +542,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-19T22:50:05.316554+02:00"
+						"dateAndTimeString" : "2024-03-05T11:01:49.48659+01:00"
 					}
 				},
 				"uid" : {
@@ -552,7 +552,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By default, the exception is a target for looking for views. We can remove it using {{gtMethod:GtMoldableExceptionDebugingExtensionConfiguration>>withoutDebuggingExceptionTarget}}."
+				"string" : "By default, the exception is a target for looking for views. We can remove it using {{gtMethod:GtMoldableExceptionDebuggingExtensionConfiguration>>withoutDebuggingExceptionTarget}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -653,7 +653,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-19T22:50:07.369085+02:00"
+						"dateAndTimeString" : "2024-03-05T11:01:52.839796+01:00"
 					}
 				},
 				"uid" : {
@@ -663,7 +663,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can control when the debugging extension is active by using {{gtMethod:name=GtMoldableExceptionDebugingExtensionConfiguration>>enableDebuggingViewExtension:}}. This takes as a parameter a block, and the extension is enabled when the block returns `true`."
+				"string" : "We can control when the debugging extension is active by using {{gtMethod:name=GtMoldableExceptionDebuggingExtensionConfiguration>>enableDebuggingViewExtension:}}. This takes as a parameter a block, and the extension is enabled when the block returns `true`."
 			},
 			{
 				"__type" : "textSnippet",
@@ -764,7 +764,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-19T22:50:09.883698+02:00"
+						"dateAndTimeString" : "2024-03-05T11:01:58.038158+01:00"
 					}
 				},
 				"uid" : {
@@ -774,7 +774,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "An exception can indicate the pragma with which these classes are annotated using {{gtMethod:name=GtMoldableExceptionDebugingExtensionConfiguration>>globalDebuggingActionPragmas:}}."
+				"string" : "An exception can indicate the pragma with which these classes are annotated using {{gtMethod:name=GtMoldableExceptionDebuggingExtensionConfiguration>>globalDebuggingActionPragmas:}}."
 			}
 		]
 	},

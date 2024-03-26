@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:36:36.589547+01:00"
+						"dateAndTimeString" : "2024-03-11T09:44:42.228141+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T16:34:53.878469+01:00"
+						"dateAndTimeString" : "2024-03-11T15:46:20.5668+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "PIwv69XIDQCeeZWpDkTUDg=="
+					"uidString" : "480qSsDPDQCRnfOGCl7oOw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is a technical page that explains how to programmatically set up Remote Phlow for the {{gtPage:PythonBridge|db=2j9m7db2i4oz116bexd7wbdxo}} for the purpose of development and debugging [[Python]] views. It shows the steps involved and gives you handles to participating objects."
+				"string" : "When using the {{gtPage:PythonBridge|db=2j9m7db2i4oz116bexd7wbdxo}} objects are transferred from Python to GT as proxies. {{gtClass:PBProxyObject}} are GT native objects that refer to a Python object using an identifier. On the Python side there is a registry where those identifiers are mapped to the corresponding Python objects."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:38:44.191407+01:00"
+						"dateAndTimeString" : "2024-03-11T10:39:59.185249+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:46:40.812219+01:00"
+						"dateAndTimeString" : "2024-03-11T10:40:08.098932+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8pXK8tXIDQCiHTdjDkTUDg=="
+					"uidString" : "mIbfD8HPDQCREdEVD9Gy2g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Please refer to {{gtPage:Inspecting remote objects using Remote Phlow|db=2j9m7db2i4oz116bexd7wbdxo}} and the related pages {{gtPage:Using a simulation for inspecting objects|db=2j9m7db2i4oz116bexd7wbdxo}} and {{gtPage:Specifications and Views in Remote Phlow|db=2j9m7db2i4oz116bexd7wbdxo}}. The page {{gtPage:Debugging remote GemStone views|db=2j9m7db2i4oz116bexd7wbdxo}} was the template for this page."
+				"string" : "#Numbers"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:47:25.268578+01:00"
+						"dateAndTimeString" : "2024-03-11T09:58:22.064959+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:19:39.027044+01:00"
+						"dateAndTimeString" : "2024-03-11T09:59:28.697126+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qpTZEdbIDQCnJZ1oDkTUDg=="
+					"uidString" : "Z30Ie8DPDQCfz+NxCl7oOw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First make sure you have a working {{gtPage:PythonBridge|db=2j9m7db2i4oz116bexd7wbdxo}} by inspecting a simple expression."
+				"string" : "Let's start with a list of numbers."
 			},
 			{
 				"__type" : "pythonSnippet",
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T11:28:28.060526+01:00"
+						"dateAndTimeString" : "2024-03-11T10:00:32.454893+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T13:08:11.554541+01:00"
+						"dateAndTimeString" : "2024-03-11T10:01:26.884641+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "nA9hXcPIDQC6sKqPBhN+1g=="
+					"uidString" : "9RDOgsDPDQCggqSGCl7oOw=="
 				},
-				"code" : "2**32"
+				"code" : "import random\rnumbers = random.sample(range(100), 10)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -163,7 +163,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:48:43.898724+01:00"
+						"dateAndTimeString" : "2024-03-11T10:02:03.998238+01:00"
 					}
 				},
 				"editEmail" : {
@@ -174,17 +174,344 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:50:51.799073+01:00"
+						"dateAndTimeString" : "2024-03-11T15:46:48.699846+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "LWGJFtbIDQCo3ro/DkTUDg=="
+					"uidString" : "JO5CiMDPDQChFIElCl7oOw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now we define a Python equivalent of a test object that exist in Pharo/Gemstone, namely {{gtClass:GtRemotePhlowDeclarativeTestInspectable}} which is an example object holding some data and showing some gtViews. Here is its definition that you can load/execute."
+				"string" : "What we get when we Inspect this Python expression is a GT Inspector with a double view: a **Remote** view and a **Proxy** view. They look at the same object in GT, a `PBProxyObject`, referring to some Python `list`. These two views show different perspectives."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:03:55.038839+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T15:47:01.31302+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "e0jhjsDPDQCmRWA4Cl7oOw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The **Remote** view is the default and acts so that it looks as if this is normal object, even though it is remote. The underlying `PBProxyObject` is hidden and we see inspector tabs related to the Python object. There is even a custom tab showing the list's items."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:06:33.856999+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T15:48:07.824167+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "x6VYmMDPDQCpS6xFCl7oOw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The **Proxy** view looks at the internals and shows the actual `PBProxyObject` which is maintaining this illusion: it shows us the internal mechanism. Here we can see the identifier of the Python object in the registry  as well as its Python class."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:09:11.658055+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T15:48:25.906714+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UoLAocDPDQCw6Cc2Cl7oOw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Clicking on a number will inspect an integer, still as a proxy. Now there is a Download local instance action (down arrow) which will convert this primitive type to a matching GT type."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:11:52.116127+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T15:49:18.719053+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "T9xQq8DPDQC1d0prCl7oOw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Where things get a little bit confusing is that some composite primitive types like `list` or `dict` are also converted, but only when using the API, not using the Python snippet like above. They are automatically mapped to their GT equivalents (Array and Dictionary respectively)."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:12:07.982635+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:13:23.253591+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jgBDrMDPDQC1e77BCl7oOw=="
+				},
+				"code" : "PBApplication do: [ :application |\r\tapplication newCommandFactory\r\t\t<< #numbers asP3GIdentifier;\r\t\tsendAndWait ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:14:11.128681+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:15:10.793762+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "AhGas8DPDQC5R1KkCl7oOw=="
+				},
+				"code" : "PBApplication do: [ :application |\r\tapplication newCommandStringFactory\r\t\tresultExpression: '{\"x\":1,\"y\":2}';\r\t\tsendAndWait ]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:17:49.93514+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T15:49:34.300277+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "AsmkwMDPDQCBXY0VCl7oOw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Still, this difference disappears when normal Python objects are involved. These are always tranferred as proxies."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:40:22.158415+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:40:25.986013+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EBE+EcHPDQCRcHmND9Gy2g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Persons"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:16:33.186028+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T15:50:56.06411+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SakRvMDPDQC9mHVYCl7oOw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Let's consider an ultra simple **Person** object and assign some instances to some variables."
 			},
 			{
 				"__type" : "pythonSnippet",
@@ -200,7 +527,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T11:55:22.407212+01:00"
+						"dateAndTimeString" : "2024-03-11T10:18:20.095262+01:00"
 					}
 				},
 				"editEmail" : {
@@ -211,14 +538,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-02-27T20:43:04.333749+01:00"
+						"dateAndTimeString" : "2024-03-11T10:20:21.55356+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "5Q2avcPIDQCLPetZBhN+1g=="
+					"uidString" : "N/RwwsDPDQCCgGwBCl7oOw=="
 				},
-				"code" : "from gtoolkit_bridge import gtView\r\rclass GtRemotePhlowDeclarativeTestInspectable:\r\r\tdef __init__(self):\n\t\tsuper().__init__()\n\t\tself.collection = [42, \"Lorem ipsum dolor sit amet\", 3.14159, True, False, None]\n\t\tself.string = \"Hello GT World !\"\r\r\tdef get_collection(self):\r\t\treturn self.collection\r\r\tdef get_string(self):\r\t\treturn self.string\r\r\t@gtView\r\tdef gtViewCollection(self, builder):\r\t\tclist = builder.columnedList()\n\t\tclist.title('Collection')\n\t\tclist.priority(25)\n\t\tclist.items(lambda: list(range(0, len(self.get_collection()))))\r\t\tclist.column('#', lambda index: index)\r\t\tclist.column('item', lambda index: str(self.get_collection()[index]))\n\t\tclist.set_accessor(lambda index: self.get_collection()[index])\n\t\treturn clist\n\r\t@gtView\r\tdef gtViewString(self, builder):\r\t\teditor = builder.textEditor()\r\t\teditor.title(\"String\")\r\t\teditor.priority(35)\r\t\teditor.setString(self.get_string())\r\t\treturn editor\r\r\t@gtView\r\tdef gtViewError(self, builder):\r\t\traise Exception(\"I'm sorry, Dave. I'm afraid I can't do that.\")\r\t\t\r\t@gtView\r\tdef gtViewEmpty(self, builder):\r\t\treturn builder.empty()\r\t\t\r\t@gtView\r\tdef gtViewCollectionForward(self, builder):\r\t\tforward = builder.forward()\r\t\tforward.title(\"Collection forward\")\r\t\tforward.priority(30)\r\t\tforward.object(lambda: self)\r\t\tforward.view('gtViewCollection')\r\t\treturn forward"
+				"code" : "class Person:\r\tdef __init__(self, first, last):\r\t\tself.first = first\r\t\tself.last = last\r\r\tdef __repr__(self):\r\t\treturn f'Person({self.first} {self.last})'\r\rjohn = Person('John','Doe')\rjane = Person('Jane','Doe')\rpersons = [ john, jane ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -234,7 +561,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:53:57.752901+01:00"
+						"dateAndTimeString" : "2024-03-11T10:33:18.387302+01:00"
 					}
 				},
 				"editEmail" : {
@@ -245,17 +572,125 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T11:35:15.37301+01:00"
+						"dateAndTimeString" : "2024-03-11T10:37:02.135453+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "s2o+KdbIDQCt029cDkTUDg=="
+					"uidString" : "qdb798DPDQCK+84oD9Gy2g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "With this class defined, we can instanciate it and see the views in action. Notice there are 3 views, String, Collection and Collection forward. The empty view is skipped."
+				"string" : "You can see the list of Persons, look at one Person and look at the first and last attributes."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:38:13.316603+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:38:42.620822+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kBiQCcHPDQCNK/szD9Gy2g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "When going through the API, the list gets converted but not the elements."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:37:59.484607+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:38:05.649783+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BwO9CMHPDQCM91zqD9Gy2g=="
+				},
+				"code" : "PBApplication do: [ :application |\r\tapplication newCommandFactory\r\t\t<< #persons asP3GIdentifier;\r\t\tsendAndWait ]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:37:16.456224+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T15:51:33.670366+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "HH0sBsHPDQCM8wsMD9Gy2g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This is not a problem because we can send messages to the Python object. You can open the contextual playground at the bottom of the Inspector where a Python snippet's `self` will refer to the Python object under inspection. Try `self.first`."
 			},
 			{
 				"__type" : "pythonSnippet",
@@ -271,7 +706,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:54:51.812651+01:00"
+						"dateAndTimeString" : "2024-03-11T10:41:07.39879+01:00"
 					}
 				},
 				"editEmail" : {
@@ -282,14 +717,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:55:03.404788+01:00"
+						"dateAndTimeString" : "2024-03-11T10:41:10.102928+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "aEx3LNbIDQCv2yRQDkTUDg=="
+					"uidString" : "OFvwE8HPDQCRnNByD9Gy2g=="
 				},
-				"code" : "GtRemotePhlowDeclarativeTestInspectable()"
+				"code" : "jane"
 			},
 			{
 				"__type" : "textSnippet",
@@ -305,7 +740,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:56:26.976808+01:00"
+						"dateAndTimeString" : "2024-03-11T10:42:36.954319+01:00"
 					}
 				},
 				"editEmail" : {
@@ -316,20 +751,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:00:33.507214+01:00"
+						"dateAndTimeString" : "2024-03-11T15:52:00.58177+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uGIjMtbIDQCxlsBeDkTUDg=="
+					"uidString" : "veVGGcHPDQCWPWloD9Gy2g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To get under the hood, we define `remoteInspectorProxy` at the Python side as our GtRemotePhlowDeclarativeTestInspectable instance wrapped inside a GtViewedObject which is a helper to set up the views on the GT side."
+				"string" : "We can do the same programmatically using {{gtMethod:PBProxyObject>>#attributeAt:}} and {{gtMethod:PBProxyObject>>#callMethod:}} which will invoke Python side functionality over the bridge. You can experiment with this using the contextual playground of the proxy perspective instead of the remote perspective."
 			},
 			{
-				"__type" : "pythonSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -342,7 +777,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T13:37:37.493081+01:00"
+						"dateAndTimeString" : "2024-03-11T10:45:19.775514+01:00"
 					}
 				},
 				"editEmail" : {
@@ -353,14 +788,82 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-02-27T20:43:17.120603+01:00"
+						"dateAndTimeString" : "2024-03-11T10:45:35.42957+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "iwlIK8XIDQCcc4QjBhN+1g=="
+					"uidString" : "1lT7IsHPDQCdF3d+D9Gy2g=="
 				},
-				"code" : "from gtoolkit_bridge import GtViewedObject\rremoteInspectorProxy = GtViewedObject(GtRemotePhlowDeclarativeTestInspectable())"
+				"code" : "jane := PBApplication do: [ :application |\r\tapplication newCommandFactory\r\t\t<< #jane asP3GIdentifier;\r\t\tsendAndWait ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:46:06.532751+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:46:15.040289+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iNHEJcHPDQCd4uEKD9Gy2g=="
+				},
+				"code" : "jane attributeAt: #first"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:46:19.022724+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-03-11T10:47:32.610054+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9V+DJsHPDQCeSsIeD9Gy2g=="
+				},
+				"code" : "jane callMethod: #__repr__"
 			},
 			{
 				"__type" : "textSnippet",
@@ -376,7 +879,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:58:46.608978+01:00"
+						"dateAndTimeString" : "2024-03-11T10:47:40.174364+01:00"
 					}
 				},
 				"editEmail" : {
@@ -387,51 +890,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T11:36:45.788395+01:00"
+						"dateAndTimeString" : "2024-03-11T11:09:40.274999+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qAJ2OtbIDQC08uWYDkTUDg=="
+					"uidString" : "9qlZK8HPDQCfI9h+D9Gy2g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Notice how directly inspecting this gives us a double wrapper as compared to the direct instance. Let's grab `remoteInspectorProxy` directly and assign it to `inspectorProxy` in GT."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T12:03:23.912789+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T14:15:25.966863+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "bjVN2sPIDQCOWwB0BhN+1g=="
-				},
-				"code" : "inspectorProxy := PBCommandStringFactory new\n  application: PBApplication uniqueInstance;\r  resultExpression: 'remoteInspectorProxy';\n  sendAndWait"
+				"string" : "#Mirrors"
 			},
 			{
 				"__type" : "textSnippet",
@@ -447,7 +916,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:02:13.452038+01:00"
+						"dateAndTimeString" : "2024-03-11T10:50:31.091311+01:00"
 					}
 				},
 				"editEmail" : {
@@ -458,85 +927,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:03:04.621204+01:00"
+						"dateAndTimeString" : "2024-03-11T15:52:11.03648+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "iTDKRtbIDQC4ElTHDkTUDg=="
+					"uidString" : "41TzK8HPDQCfSrXHD9Gy2g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can now ask the same questions as the Remote Phlow infrastructure would."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T12:40:56.330127+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T12:40:58.066534+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "TmmOYMTIDQCQID0yBhN+1g=="
-				},
-				"code" : "inspectorProxy getDeclarativeViewMethodNames"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T12:39:24.057911+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T12:39:45.497656+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "pHIOW8TIDQCP98XIBhN+1g=="
-				},
-				"code" : "inspectorProxy getViewsDeclarations"
+				"string" : "We can go one step further and add a **Mirror** class for our Python class. This is a subclass of {{gtClass:PBProxyObject}} that implements a class side `pythonClass` method returning the name of the Python class that we want to mirror."
 			},
 			{
 				"__type" : "textSnippet",
@@ -552,7 +953,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:04:39.356861+01:00"
+						"dateAndTimeString" : "2024-03-11T10:59:21.115337+01:00"
 					}
 				},
 				"editEmail" : {
@@ -563,119 +964,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:04:45.96187+01:00"
+						"dateAndTimeString" : "2024-03-11T15:52:30.907591+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "FYB8T9bIDQC6a6xuDkTUDg=="
+					"uidString" : "rsviU8HPDQClbGKJD9Gy2g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## List views"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:05:14.043838+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:06:19.181652+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "MsWNUdbIDQC7BPE/DkTUDg=="
-				},
-				"code" : "listViewProxy := inspectorProxy getDeclarativeViewFor: #gtViewCollection"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:05:23.951804+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:05:41.752249+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "tvckUtbIDQC7HKTMDkTUDg=="
-				},
-				"code" : "listViewProxy retrieveItems: 3 fromIndex: 1"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:05:24.786046+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:05:54.816891+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "T7gxUtbIDQC7IM6HDkTUDg=="
-				},
-				"code" : "listViewProxy retriveSentItemAt: 1"
+				"string" : "Create an empty `PBPerson` subclass of of {{gtClass:PBProxyObject}} with a class side `pythonClass` method returning `Person` as a string or symbol. From now on, the proxy class on the GT side will change to our new mirror class. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -691,7 +990,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:04:48.848675+01:00"
+						"dateAndTimeString" : "2024-03-11T11:02:11.908001+01:00"
 					}
 				},
 				"editEmail" : {
@@ -702,17 +1001,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:04:54.718536+01:00"
+						"dateAndTimeString" : "2024-03-11T11:02:30.2136+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "plwNUNbIDQC6sJ8UDkTUDg=="
+					"uidString" : "A0VPX8HPDQCqvPpvD9Gy2g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Forward views"
+				"string" : "On itself, this does not change anything, yet."
 			},
 			{
 				"__type" : "textSnippet",
@@ -728,7 +1027,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:14:59.437505+01:00"
+						"dateAndTimeString" : "2024-03-11T11:02:38.892385+01:00"
 					}
 				},
 				"editEmail" : {
@@ -739,119 +1038,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:15:05.593255+01:00"
+						"dateAndTimeString" : "2024-03-11T11:03:48.270075+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "QytydNbIDQC9SRBtDkTUDg=="
+					"uidString" : "kPrqYMHPDQCsC4aVD9Gy2g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "###Interacting with a proxy for the view"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T12:57:53.969379+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T13:04:48.55075+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "elk2ncTIDQCYV5ZlBhN+1g=="
-				},
-				"code" : "forwardViewProxy := inspectorProxy getDeclarativeViewFor: #gtViewCollectionForward"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-13T12:58:47.269727+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:08:41.1582+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "uKdjoMTIDQCZHneSBhN+1g=="
-				},
-				"code" : "forwardViewSpecificationData := forwardViewProxy retrieveViewSpecificationForForwarding"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T09:00:53.670044+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:09:18.128792+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "di11a9XIDQCeLselDkTUDg=="
-				},
-				"code" : "localForwardViewSpecification := GtPhlowViewSpecification fromDictionary: forwardViewSpecificationData"
+				"string" : "We can now add GT methods to our mirror class so that it acts more and more like a normal GT class even though it is effectively a proxy to a remote Python object."
 			},
 			{
 				"__type" : "textSnippet",
@@ -867,7 +1064,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:14:30.830214+01:00"
+						"dateAndTimeString" : "2024-03-11T11:03:56.279194+01:00"
 					}
 				},
 				"editEmail" : {
@@ -878,20 +1075,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:15:38.675473+01:00"
+						"dateAndTimeString" : "2024-03-11T11:10:09.612673+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "L6+9ctbIDQC9Re/HDkTUDg=="
+					"uidString" : "htaHZcHPDQCvuCuPD9Gy2g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### Interacting with a local specification"
+				"string" : "Try adding `first` and `last` accessors that use {{gtMethod:PBProxyObject>>#attributeAt:}} or a `repr` method that uses {{gtMethod:PBProxyObject>>#callMethod:}}."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -904,7 +1101,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:15:45.022632+01:00"
+						"dateAndTimeString" : "2024-03-11T11:05:34.961438+01:00"
 					}
 				},
 				"editEmail" : {
@@ -915,116 +1112,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:15:49.974436+01:00"
+						"dateAndTimeString" : "2024-03-11T11:06:58.933433+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Obspd9bIDQC9lGvsDkTUDg=="
+					"uidString" : "p5xpa8HPDQCxjfaLD9Gy2g=="
 				},
-				"code" : "forwardViewSpecificationData := inspectorProxy  getViewDeclaration: #gtViewCollectionForward"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
+				"paragraphStyle" : {
+					"__type" : "textStyle"
 				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:15:47.343251+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:15:51.650583+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Ri1Nd9bIDQC9mya0DkTUDg=="
-				},
-				"code" : "localForwardViewSpecification := GtPhlowViewSpecification fromDictionary: forwardViewSpecificationData"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:10:07.327985+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:15:47.344973+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "S/cIY9bIDQC8TIXlDkTUDg=="
-				},
-				"code" : "localForwardViewSpecification initializeFromInspector: inspectorProxy"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:10:22.088066+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T10:10:50.450777+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "YjHqY9bIDQC8yDjfDkTUDg=="
-				},
-				"code" : "targetListViewSpecification := localForwardViewSpecification loadViewSpecificationForForwarding"
+				"string" : "You can now add more code to the mirror object, like complex, graphical Inspector views that are not possible in Python."
 			}
 		]
 	},
@@ -1036,7 +1134,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-12-13T11:27:59.093225+01:00"
+			"dateAndTimeString" : "2024-03-11T09:44:35.960237+01:00"
 		}
 	},
 	"editEmail" : {
@@ -1047,15 +1145,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-12-14T16:13:56.739402+01:00"
+			"dateAndTimeString" : "2024-03-11T15:44:50.442885+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Debugging remote Python views"
+		"title" : "Working with Python Bridge objects"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "2379da5a-c3c8-0d00-ba1a-bb0406137ed6"
+		"uuid" : "f66bf847-c0cf-0d00-919b-55c30a5ee83b"
 	}
 }
