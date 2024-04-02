@@ -171,14 +171,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-28T12:53:24.082311-05:00"
+						"dateAndTimeString" : "2024-04-02T06:23:49.341183-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "MGYz7x3RDQCgyQFlCyd+yA=="
 				},
-				"code" : "model := GtSmaCCJavaImporter new\r\t\tbaseDirectory: '/Users/johnbrant/projects/temp/spring-boot';\r\t\tbuildJavaModel;\r\t\tmodel"
+				"code" : "model := GtSmaCCJavaImporter new\r\t\tbaseDirectory: rootDirectory;\r\t\tbuildJavaModel;\r\t\tmodel"
 			},
 			{
 				"__type" : "textSnippet",
