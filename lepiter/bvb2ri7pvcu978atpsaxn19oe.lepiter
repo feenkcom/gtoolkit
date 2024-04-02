@@ -171,14 +171,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-28T12:53:24.082311-05:00"
+						"dateAndTimeString" : "2024-04-02T06:23:49.341183-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "MGYz7x3RDQCgyQFlCyd+yA=="
 				},
-				"code" : "model := GtSmaCCJavaImporter new\r\t\tbaseDirectory: '/Users/johnbrant/projects/temp/spring-boot';\r\t\tbuildJavaModel;\r\t\tmodel"
+				"code" : "model := GtSmaCCJavaImporter new\r\t\tbaseDirectory: rootDirectory;\r\t\tbuildJavaModel;\r\t\tmodel"
 			},
 			{
 				"__type" : "textSnippet",
@@ -355,6 +355,43 @@
 					"uidString" : "1mZUOx7RDQCtGMOdCyd+yA=="
 				},
 				"code" : "mapping := (controller handlers collect: #gtJavaSpringMapping)\r\t\tdetect: [ :each | each fullPaths anySatisfy: [ :path | path endsWith: '.html' ] ]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-02T10:47:14.574329-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-02T10:59:07.721565-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VSLLwYDRDQCrqgR5D6EWiw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The {{gtMethod:GtJavaSpringBootImporter>>springBootCallsDo:}} has the logic to determine service calls from Java. By default, it looks for calls to `MockMvcRequestBuilders.delete/get/patch/post/put` as well as calls to `RestTemplate.exchange`.  If your application uses other methods to make service calls, then you'll need to define a subclass and override the `stringBootCallsDo:` method. That method should evaluate the argument block for each service call passing the invocation, url, and request type (get, put, delete, etc)."
 			}
 		]
 	},
