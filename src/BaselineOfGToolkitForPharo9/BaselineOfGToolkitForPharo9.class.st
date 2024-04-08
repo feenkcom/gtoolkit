@@ -37,8 +37,19 @@ BaselineOfGToolkitForPharo9 >> postLoadGToolkit: spec [
 				aClassName asClass classSide 
 					compile: 'leJsonV4Name
 
-	^ nil' classified: 'serialisation' ]
-		] 
+	^ nil' classified: 'serialisation' ].
+			
+			RBInlineMethodRefactoring addSlot: #inlineClass.
+			RBInlineMethodRefactoring compile: 'inlineClass
+
+	^ inlineClass
+		ifNil: [ inlineClass := ( sourceMessage receiver name = ''super''
+				ifTrue: [ class superclass ]
+				ifFalse: [ class ] ) whoDefinesMethod: self inlineSelector
+			]
+		ifNotNil: [ inlineClass ]' classified: 'transforming'.
+	
+	] 
 		forPharo10: [
 			#Ephemeron asClass classSide 
 				compile: 'leJsonV4Name
