@@ -51,6 +51,19 @@ BaselineOfGToolkitForPharo9 >> postLoadGToolkit: spec [
 				ifFalse: [ class ] ) whoDefinesMethod: self inlineSelector
 			]
 		ifNotNil: [ inlineClass ]' classified: 'transforming'.
+		
+			RBInlineMethodFromComponentRefactoring  compile: 'inlineClass
+
+	| imps |
+
+	inlineClass ifNotNil: [ ^ inlineClass ].
+	imps := ( self model allImplementorsOf: self inlineSelector ) asOrderedCollection.
+	imps size = 1
+		ifTrue: [ ^ inlineClass := imps first ].
+	imps ifEmpty: [ self refactoringFailure: ''Nobody defines a method named '' , self inlineSelector ].
+	inlineClass := self requestImplementorToInline: imps.
+	inlineClass ifNil: [ self refactoringFailure: ''No implementor selected'' ].
+	^ inlineClass' classified: 'transforming'.
 	
 	] 
 		forPharo10: [
