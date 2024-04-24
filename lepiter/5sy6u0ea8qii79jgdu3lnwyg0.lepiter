@@ -47,6 +47,224 @@
 					"__type" : "snippets",
 					"items" : [
 						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-18T17:40:04.646884+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-18T17:40:05.019847+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "y3ZZFJa/DQCa3Vt1AQoKYg=="
+										},
+										"code" : "self \r\tassert: GtExampleComparisonExceptionWithDebuggingViews new\r\t\texpectedStringForTest \r\tequals: GtExampleComparisonExceptionWithDebuggingViews new\r\t\tcomputedStringForTest"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-18T17:40:18.11705+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-18T17:40:40.745452+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "6QEnFZa/DQCa6ypeAQoKYg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "An AssertionFailure that does not involve a comporison does not trigger the error."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-08-18T17:40:43.351873+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-09-02T14:26:11.725705+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "cQ2oFpa/DQCc9IGwAQoKYg=="
+										},
+										"code" : "self assert: 1 = 2"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T16:06:03.563091+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T16:06:37.122074+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rV4dxJS/DQCXsU6CAQoKYg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:name=AssertionFailure}} defines a debugging configuration, that at the moment shows a diff view when two strings are being compared."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-20T10:37:10.120502+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-20T10:37:15.015447+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qCrf2OTSDQC3g5pVCUdQfg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##AssertionFailure"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T17:44:34.760246+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T17:45:43.864305+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "V9ohF5a/DQCdDCasAQoKYg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:GtPhlowViewTesterObjectValidationFailure}} is an assertion failure indicating that there is an error in the view of an object. See [[How to test phlow views]] for other examples of views with errors."
+						},
+						{
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -60,7 +278,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T17:40:04.646884+02:00"
+									"dateAndTimeString" : "2023-08-18T17:44:36.860844+02:00"
 								}
 							},
 							"editEmail" : {
@@ -71,14 +289,232 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T17:40:05.019847+02:00"
+									"dateAndTimeString" : "2023-09-01T10:57:18.272678+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "y3ZZFJa/DQCa3Vt1AQoKYg=="
+								"uidString" : "8R2TJJa/DQCdMorkAQoKYg=="
 							},
-							"code" : "self \r\tassert: GtExampleComparisonExceptionWithDebuggingViews new\r\t\texpectedStringForTest \r\tequals: GtExampleComparisonExceptionWithDebuggingViews new\r\t\tcomputedStringForTest"
+							"code" : "self assertObjectPhlowViewsFor: GtPhlowViewWithErrorExamples new."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-20T10:37:26.367446+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-20T10:37:28.915171+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dBTX2eTSDQC34Xq6CUdQfg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##GtPhlowViewTesterObjectValidationFailure"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-01T11:07:37.319807+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-01T11:07:55.772683+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "DQeZOqrADQC/uwgTD+8bxw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:GtPhlowViewTesterViewValidationFailure}} indicates that there is an error inside a single view of an object."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-01T10:57:18.9588+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-01T11:00:07.25215+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "SZa9FarADQC+SaN7D+8bxw=="
+							},
+							"code" : "GtPhlowViewTester new \r\tassertViewOk: (GtPhlowViewWithErrorExamples new \r\t\tgtViewWithFailureInColumnedListFor: GtPhlowView empty)"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-20T10:37:44.940661+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-20T10:37:49.076433+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "IH3y2uTSDQC4AFRGCUdQfg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##GtPhlowViewTesterViewValidationFailure"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-02T14:25:55.577838+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-02T14:40:35.968206+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "1WehHcHADQCV/7cCDpXHLQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:GtPhlowViewsCollectorSameViewError}}  is triggered when building a view if the same view that was given as parameter is returned."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-01T17:08:13.121901+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-17T23:48:30.992402+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FisxRK/ADQC4bnNQCfuD6g=="
+							},
+							"code" : "viewBuilder := GtPhlowView empty. \rviewBuilder\r\tbasicOn: GtPhlowViewWithErrorExamples new \r\tperform: #gtViewWithReturningSameViewFor:\r\twithArguments: {viewBuilder}."
 						},
 						{
 							"__type" : "textSnippet",
@@ -94,7 +530,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T17:40:18.11705+02:00"
+									"dateAndTimeString" : "2024-04-19T14:15:09.735772+02:00"
 								}
 							},
 							"editEmail" : {
@@ -105,17 +541,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T17:40:40.745452+02:00"
+									"dateAndTimeString" : "2024-04-19T14:15:38.187943+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "6QEnFZa/DQCa6ypeAQoKYg=="
+								"uidString" : "weOixtPSDQCxz5KkBb6Krg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "An AssertionFailure that does not involve a comporison does not trigger the error."
+							"string" : "Not in all cases we can easily determine the place where the empty view is created."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -131,7 +567,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T17:40:43.351873+02:00"
+									"dateAndTimeString" : "2024-04-19T13:37:15.398083+02:00"
 								}
 							},
 							"editEmail" : {
@@ -142,14 +578,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-02T14:26:11.725705+02:00"
+									"dateAndTimeString" : "2024-04-19T13:38:41.593343+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "cQ2oFpa/DQCc9IGwAQoKYg=="
+								"uidString" : "aUETP9PSDQCu/HPrBY/W2g=="
 							},
-							"code" : "self assert: 1 = 2"
+							"code" : "viewBuilder := GtPhlowView empty. \rviewBuilder\r\tbasicOn: GtPhlowViewWithErrorExamples new \r\tperform: #gtViewWithReturningIndirectlySameViewFor:\r\twithArguments: {viewBuilder}."
 						}
 					]
 				},
@@ -161,7 +597,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T16:06:03.563091+02:00"
+						"dateAndTimeString" : "2024-04-20T10:38:05.374791+02:00"
 					}
 				},
 				"editEmail" : {
@@ -172,17 +608,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T16:06:37.122074+02:00"
+						"dateAndTimeString" : "2024-04-20T10:38:07.818562+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "rV4dxJS/DQCXsU6CAQoKYg=="
+					"uidString" : "+0gq3OTSDQC4HahBCUdQfg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:name=AssertionFailure}} defines a debugging configuration, that at the moment shows a diff view when two strings are being compared."
+				"string" : "##GtPhlowViewsCollectorSameViewError"
 			},
 			{
 				"__type" : "textSnippet",
@@ -198,7 +634,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T17:44:34.760246+02:00"
+						"dateAndTimeString" : "2024-04-20T10:38:52.45531+02:00"
 					}
 				},
 				"editEmail" : {
@@ -209,51 +645,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T17:45:43.864305+02:00"
+						"dateAndTimeString" : "2024-04-20T10:38:55.322244+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "V9ohF5a/DQCdDCasAQoKYg=="
+					"uidString" : "pQn03eTSDQC4QIE5CUdQfg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:GtPhlowViewTesterObjectValidationFailure}} is an assertion failure indicating that there is an error in the view of an object. See [[How to test phlow views]] for other examples of views with errors."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T17:44:36.860844+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-01T10:57:18.272678+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "8R2TJJa/DQCdMorkAQoKYg=="
-				},
-				"code" : "self assertObjectPhlowViewsFor: GtPhlowViewWithErrorExamples new."
+				"string" : "##BlSingularMatrixError"
 			},
 			{
 				"__type" : "textSnippet",
@@ -269,7 +671,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-01T11:07:37.319807+02:00"
+						"dateAndTimeString" : "2024-04-20T10:38:56.576747+02:00"
 					}
 				},
 				"editEmail" : {
@@ -280,17 +682,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-01T11:07:55.772683+02:00"
+						"dateAndTimeString" : "2024-04-20T10:41:00.904472+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "DQeZOqrADQC/uwgTD+8bxw=="
+					"uidString" : "7JI33+TSDQC4YzACCUdQfg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:GtPhlowViewTesterViewValidationFailure}} indicates that there is an error inside a single view of an object."
+				"string" : "{{gtClass:BlSingularMatrixError}} is thrown when trying to inverse a singular (non-invertible or degenerate) matrix."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -306,7 +708,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-01T10:57:18.9588+02:00"
+						"dateAndTimeString" : "2024-04-20T10:41:08.086059+02:00"
 					}
 				},
 				"editEmail" : {
@@ -317,156 +719,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-01T11:00:07.25215+02:00"
+						"dateAndTimeString" : "2024-04-20T10:41:18.520526+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "SZa9FarADQC+SaN7D+8bxw=="
+					"uidString" : "uzsO5+TSDQC5wjgICUdQfg=="
 				},
-				"code" : "GtPhlowViewTester new \r\tassertViewOk: (GtPhlowViewWithErrorExamples new \r\t\tgtViewWithFailureInColumnedListFor: GtPhlowView empty)"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-02T14:25:55.577838+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-02T14:40:35.968206+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "1WehHcHADQCV/7cCDpXHLQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtClass:GtPhlowViewsCollectorSameViewError}}  is triggered when building a view if the same view that was given as parameter is returned."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-01T17:08:13.121901+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-17T23:48:30.992402+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "FisxRK/ADQC4bnNQCfuD6g=="
-				},
-				"code" : "viewBuilder := GtPhlowView empty. \rviewBuilder\r\tbasicOn: GtPhlowViewWithErrorExamples new \r\tperform: #gtViewWithReturningSameViewFor:\r\twithArguments: {viewBuilder}."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-19T14:15:09.735772+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-19T14:15:38.187943+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "weOixtPSDQCxz5KkBb6Krg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Not in all cases we can easily determine the place where the empty view is created."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-19T13:37:15.398083+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-19T13:38:41.593343+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "aUETP9PSDQCu/HPrBY/W2g=="
-				},
-				"code" : "viewBuilder := GtPhlowView empty. \rviewBuilder\r\tbasicOn: GtPhlowViewWithErrorExamples new \r\tperform: #gtViewWithReturningIndirectlySameViewFor:\r\twithArguments: {viewBuilder}."
+				"code" : "element := BlElement new\n\tsize: 0@0;\n\ttransformDo: [ :t | \r\t\tt scaleBy: 0 .\r\t\tt translateBy: 10@5.\r\t\tt rotateBy: 25.\r\t\tt shearBy: 2@3 ].\relement globalPointToLocal: 10@10"
 			}
 		]
 	},

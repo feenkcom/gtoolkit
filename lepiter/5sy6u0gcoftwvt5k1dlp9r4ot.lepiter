@@ -286,7 +286,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-17T23:56:56.918465+02:00"
+						"dateAndTimeString" : "2024-04-22T16:43:47.685771+02:00"
 					}
 				},
 				"uid" : {
@@ -296,7 +296,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Exceptions can define one or more views  shown in the debugger. Configurations can indicate the pragma with which these methods are annotate thorugh {{gtMethod:GtMoldableExceptionDebuggerConfiguration>>debuggingViewPragmas:}}. By default the pragma `gtExceptionDebuggingView` is used."
+				"string" : "Exceptions can define one or more views  shown in the debugger. Configurations can indicate the pragma with which these methods are annotate thorugh {{gtMethod:GtMoldableExceptionDebuggingExtensionConfiguration>>debuggingViewPragmas:}}. By default the pragma `gtExceptionView` is used."
 			},
 			{
 				"__type" : "textSnippet",
@@ -360,14 +360,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T15:58:07.313226+02:00"
+						"dateAndTimeString" : "2024-04-22T16:43:36.898849+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "unJ0ppS/DQCUKfkAAQoKYg=="
 				},
-				"code" : "#gtExceptionDebuggingView gtPragmas"
+				"code" : "#gtExceptionView gtPragmas"
 			},
 			{
 				"__type" : "textSnippet",
