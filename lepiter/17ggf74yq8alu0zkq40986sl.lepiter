@@ -113,6 +113,40 @@
 				"code" : "self \r\tassert: 'I am a string object' \r\tequals: 'I am another string object'"
 			},
 			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-25T22:36:17.420196+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-25T22:36:42.136543+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cpnbeVPTDQCwXgc3C/MAPA=="
+				},
+				"code" : "self \r\tassert: GtExampleComparisonExceptionWithDebuggingViews new\r\t\texpectedStringForTest\r\tequals: GtExampleComparisonExceptionWithDebuggingViews new\r\t\tcomputedStringForTest"
+			},
+			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
