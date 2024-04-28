@@ -456,45 +456,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-04-25T15:37:06.926901+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-04-25T15:37:06.926901+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "OInFnk3TDQC41BgKBjm/CA=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "*Caveat:* This will only work partially. The update of the README will fail with a *PP2Failure*. We'll fix this later."
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -683,43 +645,6 @@
 										"string" : "# Installation\n```\nMetacello new\n\trepository: 'gitlab://onierstrasz/myproject:master/src';\n\tbaseline: 'Myproject';\n\tload\n```\n## Load Lepiter\n\t\t\t\t\nAfter installing with Metacello, you will be able to execute\n\n```\n#BaselineOfMyproject asClass loadLepiter\n```\n"
 									},
 									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-04-25T15:37:06.929114+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-04-25T15:37:06.929114+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "3JHFnk3TDQC42iLnBjm/CA=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "To fix it, copy-paste the text above into the README, making sure that the `repository:` specifies a `gitlab` project and the `master` (not `main`) branch. You can find the full package name to use in the *Packages* view."
-									},
-									{
 										"__type" : "pictureSnippet",
 										"children" : {
 											"__type" : "snippets",
@@ -776,7 +701,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-04-25T15:37:06.929104+02:00"
+									"dateAndTimeString" : "2024-04-28T14:17:17.068912+02:00"
 								}
 							},
 							"uid" : {
@@ -786,7 +711,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "It should contain the snippets you will need to automate loading both your repo and the Lepiter database. If the baseline setup failed (as expect) you will need to update the load script. It should look something like this:"
+							"string" : "It should contain the snippets you will need to automate loading both your repo and the Lepiter database. It should look something like this:"
 						}
 					]
 				},
