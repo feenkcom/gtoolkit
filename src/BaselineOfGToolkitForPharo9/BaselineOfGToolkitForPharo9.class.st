@@ -32,7 +32,7 @@ BaselineOfGToolkitForPharo9 >> postLoadGToolkit: spec [
 	PostLoaded := true.
 
 	self 
-		forPharo11: [ 
+		forPharo11AndPharo12: [ 
 			#(#FinalizationRegistryEntry #WeakKeyAssociation) do: [ :aClassName | 
 				aClassName asClass classSide 
 					compile: 'leJsonV4Name
