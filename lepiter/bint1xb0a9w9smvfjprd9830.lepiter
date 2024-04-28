@@ -234,7 +234,48 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-26T22:49:49.929204+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-26T22:49:49.929204+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "md4gyGfTDQCUQOLpCIhnBQ=="
+							},
+							"exampleSelector" : "concretePrice",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtOverviewFor:",
+							"exampleBehaviorName" : "GtDPriceExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : true,
+							"noCode" : false
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -268,50 +309,51 @@
 				"string" : "The simplest kind of price is one specified concretely by money."
 			},
 			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-26T22:49:49.929204+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-26T22:49:49.929204+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "md4gyGfTDQCUQOLpCIhnBQ=="
-				},
-				"exampleSelector" : "concretePrice",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtOverviewFor:",
-				"exampleBehaviorName" : "GtDPriceExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : false
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-26T22:50:09.304307+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-26T22:50:09.304307+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "G4JIyWfTDQCUUiUoCIhnBQ=="
+							},
+							"exampleSelector" : "concretePriceDiscountedByMoney",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtOverviewFor:",
+							"exampleBehaviorName" : "GtDPriceExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : true,
+							"noCode" : false
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -345,50 +387,51 @@
 				"string" : "Any discounted price eventually relies on a concrete base price. A discounted price can be by an amount:"
 			},
 			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-26T22:50:09.304307+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-26T22:50:09.304307+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "G4JIyWfTDQCUUiUoCIhnBQ=="
-				},
-				"exampleSelector" : "concretePriceDiscountedByMoney",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtOverviewFor:",
-				"exampleBehaviorName" : "GtDPriceExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : false
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-26T22:50:22.585352+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-26T22:50:22.585352+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "DSoTymfTDQCUZK41CIhnBQ=="
+							},
+							"exampleSelector" : "concretePriceDiscountedByPercentage",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtOverviewFor:",
+							"exampleBehaviorName" : "GtDPriceExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : true,
+							"noCode" : false
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -422,50 +465,51 @@
 				"string" : "Or it can be by percentage:"
 			},
 			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-26T22:50:22.585352+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-26T22:50:22.585352+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "DSoTymfTDQCUZK41CIhnBQ=="
-				},
-				"exampleSelector" : "concretePriceDiscountedByPercentage",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtOverviewFor:",
-				"exampleBehaviorName" : "GtDPriceExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : false
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-26T22:50:51.030821+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-26T22:50:51.030821+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "WjTFy2fTDQCUdu0ICIhnBQ=="
+							},
+							"exampleSelector" : "concretePriceDiscountedByMoneyAndDiscountedByPercentage",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtOverviewFor:",
+							"exampleBehaviorName" : "GtDPriceExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : true,
+							"noCode" : false
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -497,46 +541,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "And of course, the discounts can be combined:"
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-26T22:50:51.030821+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-26T22:50:51.030821+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "WjTFy2fTDQCUdu0ICIhnBQ=="
-				},
-				"exampleSelector" : "concretePriceDiscountedByMoneyAndDiscountedByPercentage",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtOverviewFor:",
-				"exampleBehaviorName" : "GtDPriceExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : false
 			}
 		]
 	},
