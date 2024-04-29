@@ -712,6 +712,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "It should contain the snippets you will need to automate loading both your repo and the Lepiter database. It should look something like this:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-29T07:55:59.479838+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-29T07:57:14.436359+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "RkkHpZfTDQCz5cl5AHybcQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*Caveat:* If there is a `st` following the backquotes in the `README.md` file, it might not render correctly as Smalltalk code on the project page. If that is the case, just delete the `st`, either from GT's Git tool, or directly on the project web page."
 						}
 					]
 				},
