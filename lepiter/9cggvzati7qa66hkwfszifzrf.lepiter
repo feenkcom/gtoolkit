@@ -23,13 +23,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-25T09:26:36.287312+01:00"
+						"dateAndTimeString" : "2024-05-09T15:06:32.264611+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A baseline specifies project dependencies."
+				"string" : "A [[Metacello]]baseline specifies project dependencies."
 			},
 			{
 				"__type" : "textSnippet",
@@ -60,13 +60,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-25T09:31:08.799102+01:00"
+						"dateAndTimeString" : "2024-05-09T15:06:48.515881+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For a project and package called `X`, you might have a baseline package called `BaselineOfX` including a class also  called `BaselineOfX`, and a method `baseline:` that specifies dependencies."
+				"string" : "For a project and package called `X`, you might have a baseline package called `BaselineOfX` including a class also  called {{gtClass:BaselineOf}}, and a method `baseline:` that specifies dependencies."
 			},
 			{
 				"__type" : "textSnippet",
@@ -120,6 +120,43 @@
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-09T15:05:01.072995+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-09T15:06:14.490341+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9o7CzWbUDQCJxjQmAckvVw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Loading and managing code configurations with Metacello]]"
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -242,18 +279,18 @@
 	},
 	"editEmail" : {
 		"__type" : "email",
-		"emailString" : "veit.heller@feenk.com"
+		"emailString" : "<unknown>"
 	},
 	"editTime" : {
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-02-25T09:25:08.098311+01:00"
+			"dateAndTimeString" : "2024-05-09T15:06:26.28525+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "baseline"
+		"title" : "Metacello baseline"
 	},
 	"uid" : {
 		"__type" : "uuid",
