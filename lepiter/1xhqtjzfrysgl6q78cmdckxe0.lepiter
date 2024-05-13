@@ -8,6 +8,150 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "shellCommandSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-12T20:37:46.357054+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-12T20:37:47.712203+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uLxOzafUDQCi31BcBSibIA=="
+							},
+							"code" : "ls"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-05-12T20:37:52.510453+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-05-12T20:39:03.24506+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "h40YzafUDQCi3FDBBSibIA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "It's possible to work with a [[Bash]] shell. For example, listing the contents of the image directory works like this:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "shellCommandSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-12T20:38:04.955938+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-12T20:38:12.736686+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6Y5qzqfUDQCj8nGGBSibIA=="
+							},
+							"code" : "cd pharo-local\rls"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-05-12T20:39:08.286546+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-05-12T20:39:28.734989+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "4DYDz6fUDQCkVrQvBSibIA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The snippet can contain multiple commands, too. Like this:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [ ]
 				},
 				"createEmail" : {
@@ -18,7 +162,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:28:41.029235+02:00"
+						"dateAndTimeString" : "2024-05-12T20:39:30.955029+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +173,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-23T14:21:57.411941+02:00"
+						"dateAndTimeString" : "2024-05-12T20:39:37.276846+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ap6qwvK/DQCmgfzXBnLj6w=="
+					"uidString" : "w8iK06fUDQCoRhYkBSibIA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtTodo:label=TODO}} This is a rough [[DRAFT]] to be expanded and reviewed."
+				"string" : "Furthermore, it is also possible to "
 			},
 			{
 				"__type" : "textSnippet",
@@ -47,7 +191,7 @@
 					"__type" : "snippets",
 					"items" : [
 						{
-							"__type" : "textSnippet",
+							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -60,7 +204,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:36:41.980425+02:00"
+									"dateAndTimeString" : "2024-05-12T20:39:39.486443+02:00"
 								}
 							},
 							"editEmail" : {
@@ -71,17 +215,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:36:41.980425+02:00"
+									"dateAndTimeString" : "2024-05-12T20:40:11.357544+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "fbKXbPa/DQCld3SzBYCxRA=="
+								"uidString" : "VvIM1KfUDQCo/z/QBSibIA=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "How do you design a screenshot to explain a code issue?"
+							"code" : "directoryName := 'pharo-local'"
 						}
 					]
 				},
@@ -93,7 +234,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:36:37.402924+02:00"
+						"dateAndTimeString" : "2024-05-12T20:39:40.852962+02:00"
 					}
 				},
 				"editEmail" : {
@@ -104,17 +245,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:36:40.562611+02:00"
+						"dateAndTimeString" : "2024-05-12T20:40:01.673443+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ZdZRbPa/DQClYEr2BYCxRA=="
+					"uidString" : "f8gh1KfUDQCpBDFPBSibIA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Problem"
+				"string" : "For example, say we have a [[Pharo snippet]] that initializes a string variable:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -122,7 +263,7 @@
 					"__type" : "snippets",
 					"items" : [
 						{
-							"__type" : "textSnippet",
+							"__type" : "shellCommandSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -135,7 +276,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:36:49.067404+02:00"
+									"dateAndTimeString" : "2024-05-12T20:40:21.761844+02:00"
 								}
 							},
 							"editEmail" : {
@@ -146,17 +287,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:36:49.067404+02:00"
+									"dateAndTimeString" : "2024-05-12T20:40:31.813388+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "FNYDbfa/DQClmpHhBYCxRA=="
+								"uidString" : "ngiS1qfUDQCr3xXfBSibIA=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "A picture is worth a 1000 words.\nIt's hard to design a picture that tells a story."
+							"code" : "cd $directoryName\rls"
 						}
 					]
 				},
@@ -168,7 +306,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:36:45.254337+02:00"
+						"dateAndTimeString" : "2024-05-12T20:39:50.388846+02:00"
 					}
 				},
 				"editEmail" : {
@@ -179,242 +317,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:36:47.073328+02:00"
+						"dateAndTimeString" : "2024-05-12T20:40:59.357708+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ZKfJbPa/DQCliOY/BYCxRA=="
+					"uidString" : "Q1Sz1KfUDQCp9NgcBSibIA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Forces"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:36:55.861881+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:36:55.861881+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "4n9rbfa/DQCls/20BYCxRA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Compose a narrative picture as a screenshot showing the flow from some code snippet to the resulting Inspector view."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:36:54.747332+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:36:54.747332+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "poFabfa/DQClqx5YBYCxRA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Solution: "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:37:04.985203+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:37:13.648983+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "C7n2bfa/DQCl0a0pBYCxRA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "The goal is not only to show the resulting issue (an error or a strange situation) but also how you got there.\nThe picture should show the code snippet, which could be a snippet in a notebook page, or a playground within an inspector or another tool, and also the result of evaluating the snippet, queued to the interesting view.\nYou may want to highlight part of the code or the resulting situation either by selecting the code, or post-processing the screenshot (though this is rarely needed).\nSometimes there are several steps to the story. In this case you can use multiple screenshots, or you can resize the pages to show three or more in a single window."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:36:59.495471+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:37:01.251939+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Q/Wibfa/DQClxMWXBYCxRA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Steps"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:37:08.011285+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:37:10.283293+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "Wuckbva/DQCl4gBABYCxRA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "..."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:28:41.900412+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:37:07.394972+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "I0T6T/a/DQCgRaKjBYCxRA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Related patterns"
+				"string" : "Now, we can use that variable in a shell script:"
 			}
 		]
 	},
@@ -426,7 +339,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-23T08:14:26.111796+02:00"
+			"dateAndTimeString" : "2024-05-12T20:37:42.71198+02:00"
 		}
 	},
 	"editEmail" : {
@@ -437,15 +350,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-05-12T20:48:42.891755+02:00"
+			"dateAndTimeString" : "2024-05-12T20:37:42.71198+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Narrative Picture"
+		"title" : "Shell snippet"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "6568a9c2-f2bf-0d00-a680-126e0672e3eb"
+		"uuid" : "082617cd-a7d4-0d00-a2db-b8c405289b20"
 	}
 }
