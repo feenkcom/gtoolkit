@@ -177,14 +177,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-06T13:43:33.061404+01:00"
+						"dateAndTimeString" : "2024-05-14T14:35:19.286092+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "nquBLG7KDQCQbqyFDHr06w=="
 				},
-				"code" : "Metacello new\n   baseline: 'DemoP3F1';\n   repository: 'github://feenkcom/gt4p3';\n   load"
+				"code" : "Metacello new\n   baseline: 'DemoP3F1';\n   repository: 'github://feenkcom/gt4p3';\n   load.\r#BaselineOfGToolkit4P3 asClass loadLepiter"
 			},
 			{
 				"__type" : "textSnippet",
@@ -211,7 +211,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-04T09:33:37.702502+01:00"
+						"dateAndTimeString" : "2024-05-14T14:38:25.966157+02:00"
 					}
 				},
 				"uid" : {
@@ -221,78 +221,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The documentation continues in the Lepiter pages of the GToolkit4P3 project. You can load it with the following expression, after loading the code with expression above."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-04T09:33:43.750564+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-04T09:34:22.950041+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "3BWNU3zKDQC/aeUABEAZ/A=="
-				},
-				"code" : "#BaselineOfGToolkit4P3 asClass loadLepiter"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-05T21:21:19.535696+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-06T11:56:53.659643+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "P4myXXzKDQC/yYsBBEAZ/A=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Continue reading in {{gtPage:Using P3 to interact with the PostgreSQL Relational Database|db=exalrjcx7if2khjdnt9apw3eg}}."
+				"string" : "The documentation continues in the Lepiter pages of the GToolkit4P3 project. Continue reading in {{gtPage:Using P3 to interact with the PostgreSQL relational database|db=exalrjcx7if2khjdnt9apw3eg}}."
 			}
 		]
 	},
