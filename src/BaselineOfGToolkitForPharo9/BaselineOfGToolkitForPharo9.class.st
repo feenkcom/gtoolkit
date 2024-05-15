@@ -24,9 +24,12 @@ BaselineOfGToolkitForPharo9 >> baseline: spec [
 			package: 'GToolkit-PharoMigrations';
 			package: 'GToolkit-Pharo9' with: [ 
 				spec requires:
-						#( 'GToolkit-Pharo9-Deprecations' 'GToolkit-Pharo9-Debugger'
+						#( 'GToolkit-Pharo9-Deprecations' 
+						   'GToolkit-Pharo9-Debugger'
 						   'GToolkit-Pharo9-Subscriptions'
-						   'GToolkit-Pharo9-Iceberg' 'GToolkit' ) ] ]
+						   'GToolkit-Pharo9-Iceberg' 
+						   'GToolkit-PharoMigrations'
+						   'GToolkit' ) ] ]
 ]
 
 { #category : #baselines }
