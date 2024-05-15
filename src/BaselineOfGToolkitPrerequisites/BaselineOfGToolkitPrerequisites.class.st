@@ -14,12 +14,9 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 	spec for: #common do: [ 
 		spec postLoadDoIt: #postLoadGToolkit:.
 		spec
-			package: 'GToolkit-PharoMigrations';
 			package: 'GToolkit-Pharo9-Deprecations';
-			package: 'GToolkit-Pharo9-Subscriptions' with: [ 
-				spec requires: #('GToolkit-PharoMigrations')];
-			package: 'GToolkit-Pharo9-Iceberg' with: [ 
-				spec requires: #('GToolkit-PharoMigrations')];
+			package: 'GToolkit-Pharo9-Subscriptions' ;
+			package: 'GToolkit-Pharo9-Iceberg' ;
 			package: 'GToolkit-Pharo9' ]
 ]
 
