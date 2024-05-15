@@ -18,7 +18,11 @@ BaselineOfGToolkitForPharo9 >> baseline: spec [
 			with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ].
 		spec
 			baseline: 'GToolkit'
-			with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ] ]
+			with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ].
+			
+		spec
+			package: 'GToolkit-PharoOverrides-Debugger' with: [
+				spec requires: #('GToolkitPrerequisites' 'GToolkit')] ]
 ]
 
 { #category : #accessing }
