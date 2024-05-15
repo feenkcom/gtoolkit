@@ -26,7 +26,7 @@ BaselineOfGToolkitForPharo9 >> baseline: spec [
 	]
 ]
 
-{ #category : #baselines }
+{ #category : #accessing }
 BaselineOfGToolkitForPharo9 >> postLoadGToolkit: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
 	PostLoaded := true.
