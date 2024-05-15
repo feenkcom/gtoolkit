@@ -26,18 +26,10 @@ BaselineOfGToolkitForPharo9 >> baseline: spec [
 ]
 
 { #category : #accessing }
-BaselineOfGToolkitForPharo9 >> postLoadGToolkit: spec [
-	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
-	PostLoaded := true.
-
+BaselineOfGToolkitForPharo9 >> patchInlineMethodRefactoring [
+	
 	self 
 		forPharo11AndPharo12: [ 
-			#(#FinalizationRegistryEntry #WeakKeyAssociation) do: [ :aClassName | 
-				aClassName asClass classSide 
-					compile: 'leJsonV4Name
-
-	^ nil' classified: 'serialisation' ].
-			
 			RBInlineMethodRefactoring addSlot: #inlineClass.
 			RBInlineMethodRefactoring compile: 'inlineClass
 
@@ -59,12 +51,33 @@ BaselineOfGToolkitForPharo9 >> postLoadGToolkit: spec [
 	imps ifEmpty: [ self refactoringFailure: ''Nobody defines a method named '' , self inlineSelector ].
 	inlineClass := self requestImplementorToInline: imps.
 	inlineClass ifNil: [ self refactoringFailure: ''No implementor selected'' ].
-	^ inlineClass' classified: 'transforming'.
-	
-	] 
+	^ inlineClass' classified: 'transforming'. ] 
+		forPharo10: [].
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitForPharo9 >> patchLeJsonV4Name [
+	self 
+		forPharo11AndPharo12: [ 
+			#(#FinalizationRegistryEntry #WeakKeyAssociation) do: [ :aClassName | 
+				aClassName asClass classSide 
+					compile: 'leJsonV4Name
+
+	^ nil' classified: 'serialisation' ] 
+	]
 		forPharo10: [
 			#Ephemeron asClass classSide 
 				compile: 'leJsonV4Name
 
-	^ nil' classified: 'serialisation'].
+	^ nil' classified: 'serialisation'
+	].
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitForPharo9 >> postLoadGToolkit: spec [
+	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
+	PostLoaded := true.
+
+	self patchLeJsonV4Name.
+	self patchInlineMethodRefactoring.
 ]
