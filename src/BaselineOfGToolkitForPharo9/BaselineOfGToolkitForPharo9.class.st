@@ -9,27 +9,23 @@ Class {
 
 { #category : #baselines }
 BaselineOfGToolkitForPharo9 >> baseline: spec [
-
 	<baseline>
+	
 	spec for: #common do: [ 
 		spec postLoadDoIt: #postLoadGToolkit:.
 		spec
-			baseline: 'GToolkit'
+			baseline: 'GToolkitPrerequisites'
 			with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ].
 		spec
-			package: 'GToolkit-Pharo9-Deprecations';
-			package: 'GToolkit-Pharo9-Debugger';
-			package: 'GToolkit-Pharo9-Subscriptions';
-			package: 'GToolkit-Pharo9-Iceberg';
-			package: 'GToolkit-PharoMigrations';
-			package: 'GToolkit-Pharo9' with: [ 
-				spec requires:
-						#( 'GToolkit-Pharo9-Deprecations' 'GToolkit-Pharo9-Debugger'
-						   'GToolkit-Pharo9-Subscriptions'
-						   'GToolkit-Pharo9-Iceberg' 'GToolkit' ) ] ]
+			baseline: 'GToolkit'
+			with: [ spec repository: 'github://feenkcom/gtoolkit:main/src' ].
+			
+		spec
+			package: 'GToolkit-PharoOverrides-Debugger' with: [
+				spec requires: #('GToolkitPrerequisites' 'GToolkit')] ]
 ]
 
-{ #category : #baselines }
+{ #category : #accessing }
 BaselineOfGToolkitForPharo9 >> postLoadGToolkit: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
 	PostLoaded := true.

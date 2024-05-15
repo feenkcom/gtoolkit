@@ -1,6 +1,6 @@
 Extension { #name : #OupsDebuggerSystem }
 
-{ #category : #'*GToolkit-Pharo9-Debugger' }
+{ #category : #'*GToolkit-PharoOverrides-Debugger' }
 OupsDebuggerSystem >> gtOpenDebuggerOnRequest: aDebugRequest [
 
 	"Prepare the opening of a debugger, and delegate the debugger selection and opening to a strategy"
@@ -35,7 +35,7 @@ OupsDebuggerSystem >> gtOpenDebuggerOnRequest: aDebugRequest [
 	self suspendDebuggedProcess: aDebugRequest
 ]
 
-{ #category : #'*GToolkit-Pharo9-Debugger' }
+{ #category : #'*GToolkit-PharoOverrides-Debugger' }
 OupsDebuggerSystem >> gtSpawnNewUIProcessIfNecessary: aDebugRequest [
 
 	"If aDebugRequest is about debugging the UI process, we must create a new UI process to take its place. Because the debugged process will be suspended at some point, and suspending the UI process means freezing the UI of the image"
