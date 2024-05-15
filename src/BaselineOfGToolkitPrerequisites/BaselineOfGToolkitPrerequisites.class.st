@@ -12,6 +12,7 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 
 	<baseline>
 	spec for: #common do: [ 
+		spec postLoadDoIt: #postLoadGToolkit:.
 		spec
 			package: 'GToolkit-PharoMigrations';
 			package: 'GToolkit-Pharo9-Deprecations';
