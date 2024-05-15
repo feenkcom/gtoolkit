@@ -32,5 +32,6 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkit: spec [
 	WeakArray
 		addClassVarNamed: 'MournLoopProcess';
 		addClassVarNamed: 'StopRequested';
-		addClassVarNamed: 'StoppedSemaphore'.
+		addClassVarNamed: 'StoppedSemaphore';
+		initialize.
 ]
