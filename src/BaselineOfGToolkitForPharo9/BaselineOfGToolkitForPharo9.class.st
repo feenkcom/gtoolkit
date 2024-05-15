@@ -13,16 +13,14 @@ BaselineOfGToolkitForPharo9 >> baseline: spec [
 	spec for: #'common' do: [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec
+			baseline: 'GToolkitPrerequisites' with: [
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.770/src' ].
+		spec
 			baseline: 'GToolkit' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.769/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.770/src' ].
 
-		spec package: 'GToolkit-Pharo9-Deprecations'.
-		spec package: 'GToolkit-Pharo9-Debugger'.
-		spec package: 'GToolkit-Pharo9-Subscriptions'.
-		spec package: 'GToolkit-Pharo9-Iceberg'.
-		spec package: 'GToolkit-PharoMigrations'.
-		spec package: 'GToolkit-Pharo9' with: [
-			spec requires: #('GToolkit-Pharo9-Deprecations' 'GToolkit-Pharo9-Debugger' 'GToolkit-Pharo9-Subscriptions' 'GToolkit-Pharo9-Iceberg' 'GToolkit') ].
+		spec package: 'GToolkit-PharoOverrides-Debugger' with: [
+			spec requires: #('GToolkitPrerequisites' 'GToolkit') ].
 	]
 ]
 
