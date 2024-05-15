@@ -21,3 +21,14 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 				spec requires: #('GToolkit-PharoMigrations')];
 			package: 'GToolkit-Pharo9' ]
 ]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites >> postLoadGToolkit: spec [
+	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
+	PostLoaded := true.
+
+	WeakArray
+		addClassVarNamed: 'MournLoopProcess';
+		addClassVarNamed: 'StopRequested';
+		addClassVarNamed: 'StoppedSemaphore'.
+]
