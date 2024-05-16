@@ -9,6 +9,17 @@ Class {
 }
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
+	self 
+		forPharo12: [] 
+		forPharo11: [
+			FT2Handle class 
+				compile: 'startUp: isImageStarting'
+			classified: 'startup']
+		forPharo10: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForJob [
 	self 
 		forPharo12: [] 
@@ -48,6 +59,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 
 	self applyPatchForJob.
 	self applyPatchForWeakArray.
+	self applyPatchForFT2Handle.
 ]
 
 { #category : #accessing }
