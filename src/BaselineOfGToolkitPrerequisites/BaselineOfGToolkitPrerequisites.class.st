@@ -9,12 +9,42 @@ Class {
 }
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
+	self 
+		forPharo12: [] 
+		forPharo11: [
+			FT2Handle class 
+				compile: 'startUp: isImageStarting'
+			classified: 'startup']
+		forPharo10: [ ]
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForJob [
+	self 
+		forPharo12: [] 
+		forPharo11AndPharo10: [ Job addSlot: #announcer ] 
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
+	self 
+		forPharo12: [] 
+		forPharo11AndPharo10: [ 
+			WeakArray
+				addClassVarNamed: 'MournLoopProcess';
+				addClassVarNamed: 'StopRequested';
+				addClassVarNamed: 'StoppedSemaphore';
+				initialize ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> baseline: spec [
 
 	<baseline>
 	spec for: #common do: [ 
-		spec preLoadDoIt: #preLoadGToolkit:.
-		spec postLoadDoIt: #postLoadGToolkit:.
+		spec preLoadDoIt: #preLoadGToolkitPrerequisites:.
+		spec postLoadDoIt: #postLoadGToolkitPrerequisites:.
 		spec
 			package: 'GToolkit-Pharo9-Deprecations';
 			package: 'GToolkit-Pharo9-Subscriptions' ;
@@ -23,25 +53,20 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 ]
 
 { #category : #accessing }
-BaselineOfGToolkitPrerequisites >> postLoadGToolkit: spec [
+BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
 	PostLoaded := true.
 
-	WeakArray
-		addClassVarNamed: 'MournLoopProcess';
-		addClassVarNamed: 'StopRequested';
-		addClassVarNamed: 'StoppedSemaphore';
-		initialize.
+	self applyPatchForJob.
+	self applyPatchForWeakArray.
+	self applyPatchForFT2Handle.
 ]
 
 { #category : #accessing }
-BaselineOfGToolkitPrerequisites >> preLoadGToolkit: spec [
+BaselineOfGToolkitPrerequisites >> preLoadGToolkitPrerequisites: spec [
 	(PreLoaded isNotNil and: [ PreLoaded ])
 		ifTrue: [ ^ self ].
 	PreLoaded := true. 
 	
-	self 
-		forPharo12: [] 
-		forPharo11: [ Job addSlot: #announcer ] 
-		forPharo10: [ Job addSlot: #announcer ]
+	
 ]
