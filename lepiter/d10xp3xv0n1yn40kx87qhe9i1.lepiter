@@ -211,14 +211,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-19T13:04:00.919648+01:00"
+						"dateAndTimeString" : "2024-05-17T07:41:13.076357+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "JoMm822xDQCV1KjlCigR3A=="
 				},
-				"code" : "getStartedPage := pages detect: [:each | each title = 'Get started'].\rallReachedPages := getStartedPage deepCollect: [:each | \r\teach allChildOutgoingTextualLinks collectAsSet: [:x | x target ifNotNil: #page] ]."
+				"code" : "getStartedPage := pages detect: [:each | each title = 'Glamorous Toolkit'].\rallReachedPages := getStartedPage deepCollect: [:each | \r\teach allChildOutgoingTextualLinks collectAsSet: [:x | x target ifNotNil: #page] ]."
 			},
 			{
 				"__type" : "textSnippet",
