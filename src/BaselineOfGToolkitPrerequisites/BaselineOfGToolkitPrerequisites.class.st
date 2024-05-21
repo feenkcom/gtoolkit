@@ -15,7 +15,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 		forPharo11: [
 			FT2Handle class 
 				compile: 'startUp: isImageStarting
-					<gtPharoPatch: #Pharo11>'
+	<gtPharoPatch: #Pharo11>'
 			classified: 'startup']
 		forPharo10: [ ]
 ]

@@ -32,7 +32,7 @@ BaselineOfGToolkitForPharo9 >> applyPatchInlineMethodRefactoring [
 		forPharo11AndPharo12: [ 
 			RBInlineMethodRefactoring addSlot: #inlineClass.
 			RBInlineMethodRefactoring compile: 'inlineClass
-			<gtPharoPatch: #Pharo11Pharo12>
+	<gtPharoPatch: #Pharo11Pharo12>
 			
 	^ inlineClass
 		ifNil: [ inlineClass := ( sourceMessage receiver name = ''super''
@@ -42,7 +42,7 @@ BaselineOfGToolkitForPharo9 >> applyPatchInlineMethodRefactoring [
 		ifNotNil: [ inlineClass ]' classified: 'transforming'.
 		
 			RBInlineMethodFromComponentRefactoring  compile: 'inlineClass
-			<gtPharoPatch: #Pharo11Pharo12>
+	<gtPharoPatch: #Pharo11Pharo12>
 
 	| imps |
 
