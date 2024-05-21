@@ -32,27 +32,25 @@ BaselineOfGToolkitPrerequisites class >> assertMethod: aCompiledMethod hasHash: 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol [
 	"Answer the source code, ensuring that the supplied gtPharoPatch: pragma is present"
-	| ast smaccSource pragmaValue pragmaSource |
+	| ast pragmaValue pragmaSource index |
 
-	smaccSource := SmaCCString on: source trimRight.
-	pragmaValue := '#', aSymbol.
-	ast := GtPharoParser
-		parseWithErrors: smaccSource
-		startingAt: GtPharoParser startingStateForMethod.
+	pragmaValue := aSymbol asSymbol.
+	self halt.
+	ast := RBParser parseMethod: source.
 	ast pragmas 
-		detect: [ :pragma | pragma values first value value = pragmaValue ]
+		detect: [ :pragma | (pragma argumentAt: #gtPharoPatch:) value = pragmaValue ]
 		ifFound: [ :pragma | ^ source ].
 	pragmaSource := String streamContents: [ :stream |
 		stream
 			<< '<gtPharoPatch: #';
 			<< aSymbol;
 			<< '>';
-			cr ].
-	ast body leftBar ifNil: 
-		[ smaccSource insert: (String tab, pragmaSource) at: (ast pattern stopPosition + 2) ]
-	ifNotNil: 
-		[ smaccSource insert: (pragmaSource, String tab) at: ast body leftBar startPosition ].
-	^ smaccSource asString.
+			cr;
+			tab ].
+	index := ast body start.
+	^ (source copyFrom: 1 to: index - 1),
+		pragmaSource,
+		(source copyFrom: index to: source size).
 ]
 
 { #category : #accessing }
