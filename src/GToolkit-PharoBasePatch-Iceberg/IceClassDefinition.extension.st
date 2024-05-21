@@ -1,6 +1,6 @@
 Extension { #name : #IceClassDefinition }
 
-{ #category : #'*GToolkit-Pharo9-Iceberg' }
+{ #category : #'*GToolkit-PharoBasePatch-Iceberg' }
 IceClassDefinition >> removeFromPatcher: aMCPatcher [
 	<gtPharoPatch: #Pharo>
 	

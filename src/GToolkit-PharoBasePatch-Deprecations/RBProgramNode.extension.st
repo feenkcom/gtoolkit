@@ -1,13 +1,13 @@
 Extension { #name : #RBProgramNode }
 
-{ #category : #'*GToolkit-Pharo9-Deprecations' }
+{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
 RBProgramNode >> isSelfOrSuper [
 	<gtPharoPatch: #Pharo>
 	
 	^ self isSelfOrSuperVariable
 ]
 
-{ #category : #'*GToolkit-Pharo9-Deprecations' }
+{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
 RBProgramNode >> isTemp [
 	<gtPharoPatch: #Pharo>
 	

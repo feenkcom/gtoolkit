@@ -97,10 +97,9 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 		spec preLoadDoIt: #preLoadGToolkitPrerequisites:.
 		spec postLoadDoIt: #postLoadGToolkitPrerequisites:.
 		spec
-			package: 'GToolkit-Pharo9-Deprecations';
-			package: 'GToolkit-Pharo9-Subscriptions' ;
-			package: 'GToolkit-Pharo9-Iceberg' ;
-			package: 'GToolkit-Pharo9' ]
+			package: 'GToolkit-PharoBasePatch-Deprecations';
+			package: 'GToolkit-PharoBasePatch-Subscriptions' ;
+			package: 'GToolkit-PharoBasePatch-Iceberg' ]
 ]
 
 { #category : #accessing }

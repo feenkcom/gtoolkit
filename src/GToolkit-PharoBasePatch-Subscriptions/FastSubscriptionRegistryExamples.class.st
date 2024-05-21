@@ -1,7 +1,7 @@
 Class {
 	#name : #FastSubscriptionRegistryExamples,
 	#superclass : #Object,
-	#category : #'GToolkit-Pharo9-Subscriptions-Examples'
+	#category : #'GToolkit-PharoBasePatch-Subscriptions-Examples'
 }
 
 { #category : #accessing }

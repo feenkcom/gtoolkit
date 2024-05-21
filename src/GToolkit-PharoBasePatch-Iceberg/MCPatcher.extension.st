@@ -1,6 +1,6 @@
 Extension { #name : #MCPatcher }
 
-{ #category : #'*GToolkit-Pharo9-Iceberg' }
+{ #category : #'*GToolkit-PharoBasePatch-Iceberg' }
 MCPatcher >> modifyDefinition: baseDefinition to: targetDefinition [
 	<gtPharoPatch: #Pharo>
 	

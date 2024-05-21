@@ -1,6 +1,6 @@
 Extension { #name : #BlockClosure }
 
-{ #category : #'*GToolkit-Pharo9-Deprecations' }
+{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
 BlockClosure >> ifError: errorHandlerBlock [		
 	<gtPharoPatch: #Pharo>
 	
@@ -8,7 +8,7 @@ BlockClosure >> ifError: errorHandlerBlock [
 		errorHandlerBlock cull: ex description cull: ex receiver ]
 ]
 
-{ #category : #'*GToolkit-Pharo9-Deprecations' }
+{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
 BlockClosure >> ifErrorDo: errorHandlerBlock [
 	<gtPharoPatch: #Pharo>
 	
