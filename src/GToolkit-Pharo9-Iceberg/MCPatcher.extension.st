@@ -2,7 +2,8 @@ Extension { #name : #MCPatcher }
 
 { #category : #'*GToolkit-Pharo9-Iceberg' }
 MCPatcher >> modifyDefinition: baseDefinition to: targetDefinition [
-
+	<gtPharoPatch: #Pharo>
+	
 	"This check is for https://github.com/feenkcom/gtoolkit/issues/2457"
 	baseDefinition ifNil: [
 		^ self addDefinition: targetDefinition ].

@@ -91,8 +91,8 @@ BaselineOfGToolkitPrerequisites >> applyPatchInlineMethodRefactoring [
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> baseline: spec [
-
 	<baseline>
+	
 	spec for: #common do: [ 
 		spec preLoadDoIt: #preLoadGToolkitPrerequisites:.
 		spec postLoadDoIt: #postLoadGToolkitPrerequisites:.

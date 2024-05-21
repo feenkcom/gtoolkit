@@ -14,7 +14,7 @@ Class {
 		'monitor',
 		'subscriberMap'
 	],
-	#category : #'GToolkit-Pharo9-Subscriptions'
+	#category : #'GToolkit-Pharo9-Subscriptions-Core'
 }
 
 { #category : #accessing }
