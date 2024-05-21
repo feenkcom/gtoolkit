@@ -35,7 +35,6 @@ BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol
 	| ast pragmaValue pragmaSource index |
 
 	pragmaValue := aSymbol asSymbol.
-	self halt.
 	ast := RBParser parseMethod: source.
 	ast pragmas 
 		detect: [ :pragma | (pragma argumentAt: #gtPharoPatch:) value = pragmaValue ]
