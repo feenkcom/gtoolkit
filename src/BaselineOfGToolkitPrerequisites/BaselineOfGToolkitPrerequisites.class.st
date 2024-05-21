@@ -9,6 +9,85 @@ Class {
 }
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites class >> apply: compileBlock toVersions: aCollection [ 
+
+	(aCollection includes: SystemVersion current major) ifFalse: [ ^ self ].
+	^ compileBlock value.
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites class >> apply: compileBlock toVersionsFrom: aNumber [
+
+	(aNumber >= SystemVersion current major) ifFalse: [ ^ self ].
+	^ compileBlock value.
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites class >> assertMethod: aCompiledMethod hasHash: aString [ 
+
+	self assert: aCompiledMethod sha256HashString = aString
+		description: [ 'Unexpected hash for: ', aCompiledMethod printString ].
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol [
+	"Answer the source code, ensuring that the supplied gtPharoPatch: pragma is present"
+	| ast pragmaValue pragmaSource index |
+
+	pragmaValue := aSymbol asSymbol.
+	ast := RBParser parseMethod: source.
+	ast pragmas 
+		detect: [ :pragma | (pragma argumentAt: #gtPharoPatch:) value = pragmaValue ]
+		ifFound: [ :pragma | ^ source ].
+	pragmaSource := String streamContents: [ :stream |
+		stream
+			<< '<gtPharoPatch: #';
+			<< aSymbol;
+			<< '>';
+			cr;
+			tab ].
+	index := ast body start.
+	^ (source copyFrom: 1 to: index - 1),
+		pragmaSource,
+		(source copyFrom: index to: source size).
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
+	| source compileBlock |
+
+	source := 'newFaceFromExternalMemory: aFreeTypeExternalMemory index: anInteger
+	| memSize holder returnCode retryCount |
+
+	retryCount := 1.
+	[ aFreeTypeExternalMemory validate.
+	memSize := aFreeTypeExternalMemory bytes size.
+	holder := PointerHolder new.
+
+	FT2Library current checkLibrary.
+	returnCode := FT2Library current
+		              ffiNewFace: holder
+		              fromMemory: aFreeTypeExternalMemory getHandle
+		              size: memSize
+		              index: anInteger.
+	returnCode ~= 0 and: [ retryCount > 0 ] ] whileTrue:
+		[ retryCount := retryCount - 1 ].
+	returnCode ~= 0 ifTrue: [
+		FT2Error
+			errorCode: returnCode
+			signal: ''Error reading new face from memory'' ].
+
+	handle := holder value.
+	self autoRelease'.
+	compileBlock := [ 
+		self class assertMethod: FT2Face >> #newFaceFromExternalMemory:index:
+			hasHash: 'd09db5da25526bf306c3e7f110aa73154225b866b25577e1f6253d935539e2d6'.
+		FT2Face compile: (self class source: source withPatchPragma: #Pharo11)
+			classified: 'gt-pharo-patch' ].
+	self class apply: compileBlock toVersionsFrom: 11.
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 	self 
 		forPharo12: [] 
@@ -109,6 +188,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 
 	self applyPatchForJob.
 	self applyPatchForWeakArray.
+	self applyPatchForFT2Face.
 	self applyPatchForFT2Handle.
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
@@ -119,6 +199,4 @@ BaselineOfGToolkitPrerequisites >> preLoadGToolkitPrerequisites: spec [
 	(PreLoaded isNotNil and: [ PreLoaded ])
 		ifTrue: [ ^ self ].
 	PreLoaded := true. 
-	
-	
 ]
