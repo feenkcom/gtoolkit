@@ -16,10 +16,43 @@ BaselineOfGToolkitPrerequisites class >> apply: compileBlock toVersions: aCollec
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites class >> apply: compileBlock toVersionsFrom: aNumber [
+
+	(aNumber >= SystemVersion current major) ifFalse: [ ^ self ].
+	^ compileBlock value.
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites class >> assertMethod: aCompiledMethod hasHash: aString [ 
 
 	self assert: aCompiledMethod sha256HashString = aString
 		description: [ 'Unexpected hash for: ', aCompiledMethod printString ].
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol [
+	"Answer the source code, ensuring that the supplied gtPharoPatch: pragma is present"
+	| ast smaccSource pragmaValue pragmaSource |
+
+	smaccSource := SmaCCString on: source trimRight.
+	pragmaValue := '#', aSymbol.
+	ast := GtPharoParser
+		parseWithErrors: smaccSource
+		startingAt: GtPharoParser startingStateForMethod.
+	ast pragmas 
+		detect: [ :pragma | pragma values first value value = pragmaValue ]
+		ifFound: [ :pragma | ^ source ].
+	pragmaSource := String streamContents: [ :stream |
+		stream
+			<< '<gtPharoPatch: #';
+			<< aSymbol;
+			<< '>';
+			cr ].
+	ast body leftBar ifNil: 
+		[ smaccSource insert: (String tab, pragmaSource) at: (ast pattern stopPosition + 2) ]
+	ifNotNil: 
+		[ smaccSource insert: (pragmaSource, String tab) at: ast body leftBar startPosition ].
+	^ smaccSource asString.
 ]
 
 { #category : #accessing }
@@ -52,8 +85,9 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 	compileBlock := [ 
 		self class assertMethod: FT2Face >> #newFaceFromExternalMemory:index:
 			hasHash: 'd09db5da25526bf306c3e7f110aa73154225b866b25577e1f6253d935539e2d6'.
-		FT2Face compile: source classified: 'gt-pharo-patch' ].
-	self class apply: compileBlock toVersions: #(11 12).
+		FT2Face compile: (self class source: source withPatchPragma: #Pharo11)
+			classified: 'gt-pharo-patch' ].
+	self class apply: compileBlock toVersionsFrom: 11.
 ]
 
 { #category : #accessing }
