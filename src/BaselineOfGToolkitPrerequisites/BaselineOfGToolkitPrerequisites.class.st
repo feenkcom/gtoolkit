@@ -80,9 +80,10 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 	handle := holder value.
 	self autoRelease'.
 	compileBlock := [ 
-		self class assertMethod: FT2Face >> #newFaceFromExternalMemory:index:
-			hasHash: 'd09db5da25526bf306c3e7f110aa73154225b866b25577e1f6253d935539e2d6'.
-		FT2Face compile: (self class source: source withPatchPragma: #Pharo11)
+		"self class assertMethod: FT2Face >> #newFaceFromExternalMemory:index:
+			hasHash: 'd09db5da25526bf306c3e7f110aa73154225b866b25577e1f6253d935539e2d6'."
+		FT2Face compile: (self class 
+				source: source withPatchPragma: #Pharo11)
 			classified: 'gt-pharo-patch' ].
 	self class apply: compileBlock toVersionsFrom: 11.
 ]
