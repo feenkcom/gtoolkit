@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T13:22:58.042674+01:00"
+						"dateAndTimeString" : "2024-05-27T12:14:33.139891+02:00"
 					}
 				},
 				"uid" : {
@@ -39,44 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In {{gtPage:Inspecting Python objects with custom inspectors|db=2j9m7db2i4oz116bexd7wbdxo}} you can learn the basics about adding custom Python inspector gtViews for newly defined classes, in that particular case Movie and MovieCollection to model some IMDB data. Refer to that page for setup instructions (including the installation of the pandas module)."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T11:52:07.080773+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T16:33:56.879228+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "t/nMz9fIDQCnh8U0DkTUDg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Like in regular GT modable development you might want to add your own gtViews in existing objects in [[Python]]."
+				"string" : "In {{gtPage:Inspecting Python objects with custom inspectors|db=2j9m7db2i4oz116bexd7wbdxo}} you can learn the basics about adding custom Python inspector views for newly defined classes. Refer to that page for setup instructions (including the installation of the pandas module)."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T11:54:27.732926+01:00"
+						"dateAndTimeString" : "2024-05-27T12:18:07.434934+02:00"
 					}
 				},
 				"uid" : {
@@ -113,13 +76,48 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Next is an example of adding a couple of views to Python pandas DataFrame and Series objects."
+				"string" : "Next is an example of adding a couple of views to [[Python]] [[pandas]] `DataFrame` and `Series` objects. The page [[PythonBridge custom views for pandas DataFrame and Series]] describes how to load all this code at once."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-27T00:12:04.581056+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-27T00:12:09.889902+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ku9+bcTVDQCezOuGC/R74w=="
+							},
+							"code" : "PBApplication isRunning ifFalse: [ PBApplication start ].\nPBApplication uniqueInstance installModule: 'pandas'."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -129,7 +127,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T15:29:57.388839+01:00"
+						"dateAndTimeString" : "2024-05-27T12:17:57.028087+02:00"
 					}
 				},
 				"editEmail" : {
@@ -140,23 +138,58 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T15:30:21.805621+01:00"
+						"dateAndTimeString" : "2024-05-27T12:18:25.880661+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "fg88c6DMDQCxo+nwCdpXaA=="
+					"uidString" : "EYdskc7VDQCtN6/gC/R74w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The page [[PythonBridge custom views for pandas DataFrame and Series]] describes how to load all this code at once."
+				"string" : "We start by setting up the Python application with the pandas module installed:"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-14T11:55:49.751832+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-27T12:35:26.560244+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "56YS3dfIDQCtSNKeDkTUDg=="
+							},
+							"code" : "fileName := (FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data' / 'imdb' / 'Akira Kurosawa Movies.csv') fullName"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -166,7 +199,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T11:55:19.559894+01:00"
+						"dateAndTimeString" : "2024-05-27T12:19:16.241027+02:00"
 					}
 				},
 				"editEmail" : {
@@ -177,23 +210,194 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T13:24:24.142668+01:00"
+						"dateAndTimeString" : "2024-05-27T12:19:18.4074+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "T/NF29fIDQCsn4FgDkTUDg=="
+					"uidString" : "Nzclls7VDQCv+KZvC/R74w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's start by reading some data. The first file contains a lot of data, the second one is way smaller (it might be best to start with that one)."
+				"string" : "Let's start by reading some data."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pythonSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-09T18:59:57.604017+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-14T12:01:21.140441+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "1TitNHnIDQCf6TTAAj+EoA=="
+							},
+							"code" : "import pandas\r\rdf = pandas.read_csv(fileName)"
+						},
+						{
+							"__type" : "pythonSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-14T12:03:45.12126+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-14T12:03:47.359397+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "HD1o+dfIDQCzxzQlDkTUDg=="
+							},
+							"code" : "df"
+						},
+						{
+							"__type" : "pythonSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-15T09:37:13.166141+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-15T10:50:13.198757+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jQU1C+rIDQCh0Tz5AIFI3w=="
+							},
+							"code" : "df.head(2).T"
+						},
+						{
+							"__type" : "pythonSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-15T10:52:02.777727+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-15T10:52:03.480212+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "iA/PFuvIDQCqtI2rAIFI3w=="
+							},
+							"code" : "pandas.DataFrame([[1,2],[3,4]])"
+						},
+						{
+							"__type" : "pythonSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-15T10:54:13.98738+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-12-15T10:54:14.710167+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cymhHuvIDQCq3TKCAIFI3w=="
+							},
+							"code" : "pandas.DataFrame([[1,2],[3,4]], columns=['A','B'])"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -203,7 +407,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T11:55:49.751832+01:00"
+						"dateAndTimeString" : "2024-05-27T12:19:28.527752+02:00"
 					}
 				},
 				"editEmail" : {
@@ -214,252 +418,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T11:59:32.893295+01:00"
+						"dateAndTimeString" : "2024-05-27T12:19:36.417111+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "56YS3dfIDQCtSNKeDkTUDg=="
+					"uidString" : "mo3gls7VDQCwB75IC/R74w=="
 				},
-				"code" : "fileName := (FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data' / 'imdb' / 'Movies.csv') fullName"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
+				"paragraphStyle" : {
+					"__type" : "textStyle"
 				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T11:57:53.626735+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T11:59:44.660076+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "itt05NfIDQCtUt8LDkTUDg=="
-				},
-				"code" : "fileName := (FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data' / 'imdb' / 'Akira Kurosawa Movies.csv') fullName"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T11:13:06.205445+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T11:14:21.684953+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "nG8dYuvIDQCyhf2DAIFI3w=="
-				},
-				"code" : "fileName := (FileLocator temp / #data , #csv) fullName"
-			},
-			{
-				"__type" : "pythonSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-09T18:59:57.604017+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T12:01:21.140441+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "1TitNHnIDQCf6TTAAj+EoA=="
-				},
-				"code" : "import pandas\r\rdf = pandas.read_csv(fileName)"
-			},
-			{
-				"__type" : "pythonSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T12:03:45.12126+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-14T12:03:47.359397+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "HD1o+dfIDQCzxzQlDkTUDg=="
-				},
-				"code" : "df"
-			},
-			{
-				"__type" : "pythonSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T09:37:13.166141+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T10:50:13.198757+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "jQU1C+rIDQCh0Tz5AIFI3w=="
-				},
-				"code" : "df.head(2).T"
-			},
-			{
-				"__type" : "pythonSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T10:52:02.777727+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T10:52:03.480212+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "iA/PFuvIDQCqtI2rAIFI3w=="
-				},
-				"code" : "pandas.DataFrame([[1,2],[3,4]])"
-			},
-			{
-				"__type" : "pythonSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T10:54:13.98738+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-15T10:54:14.710167+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "cymhHuvIDQCq3TKCAIFI3w=="
-				},
-				"code" : "pandas.DataFrame([[1,2],[3,4]], columns=['A','B'])"
+				"string" : "Now try these:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -560,14 +529,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T09:18:04.705942+01:00"
+						"dateAndTimeString" : "2024-05-27T00:10:00.765424+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "hwEuPuvIDQCsk86IAIFI3w=="
 				},
-				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef dataframe_gt_view_columns(self, builder):\r    clist = builder.columnedList()\n    clist.title('Columns')\n    clist.priority(10)\n    clist.items(lambda: list(range(0, len(self.columns))))\r    clist.column('Position', lambda each: each)\n    clist.column('Column', lambda each: str(self.columns.values[each]))\r    clist.column('Type', lambda each: str(self.dtypes.values[each]))\r    clist.set_accessor(lambda each: self[self.columns.values[each]])\n    return clist\n\nsetattr(pandas.DataFrame, 'gtViewColumns', dataframe_gt_view_columns)"
+				"code" : "from gtoolkit_bridge import gtView\r\r@gtView\rdef dataframe_gt_view_columns(self, builder):\r    clist = builder.columnedList()\n    clist.title('Columns')\n    clist.priority(10)\n    clist.items(lambda: list(range(0, len(self.columns))))\r    clist.column('Position', lambda each: each)\n    clist.column('Column', lambda each: str(self.columns.values[each]))\r    clist.column('Type', lambda each: str(self.dtypes.values[each]))\r    clist.set_accessor(lambda each: self[self.columns.values[each]])\n    return clist\n\nsetattr(pandas.DataFrame, 'gtViewColumns', dataframe_gt_view_columns)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -631,14 +600,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:27:17.47106+01:00"
+						"dateAndTimeString" : "2024-05-27T00:10:03.557+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "voa6HJ7IDQCPL6CuCrxuZg=="
 				},
-				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef dataframe_gt_view_table(self, builder):\n\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] > 100:\r\t\treturn builder.empty()\n\tclist = builder.columnedList()\n\tclist.title('Table')\n\tclist.priority(15)\n\tclist.items(lambda: list(self.index))\r\tclist.column('#', lambda index: index)\n\tfor each in self.columns:\n\t\t(lambda col: clist.column(col, lambda index: str(self.at[index, col])))(each)\n\tclist.set_accessor(lambda each: self.loc[list(self.index)[each]])\n\treturn clist\n\nsetattr(pandas.DataFrame, 'gtViewTable', dataframe_gt_view_table)"
+				"code" : "from gtoolkit_bridge import gtView\r\r@gtView\rdef dataframe_gt_view_table(self, builder):\n\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] > 100:\r\t\treturn builder.empty()\n\tclist = builder.columnedList()\n\tclist.title('Table')\n\tclist.priority(15)\n\tclist.items(lambda: list(self.index))\r\tclist.column('#', lambda index: index)\n\tfor each in self.columns:\n\t\t(lambda col: clist.column(col, lambda index: str(self.at[index, col])))(each)\n\tclist.set_accessor(lambda each: self.loc[list(self.index)[each]])\n\treturn clist\n\nsetattr(pandas.DataFrame, 'gtViewTable', dataframe_gt_view_table)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -702,14 +671,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T09:20:28.641899+01:00"
+						"dateAndTimeString" : "2024-05-27T00:10:06.793315+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "65AXkMnIDQCS/XMjB3rgdg=="
 				},
-				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef dataframe_gt_view_head(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Head')\r\tforward.priority(16)\r\tforward.object(lambda: self.head())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewHead', dataframe_gt_view_head)"
+				"code" : "from gtoolkit_bridge import gtView\r\r@gtView\rdef dataframe_gt_view_head(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Head')\r\tforward.priority(16)\r\tforward.object(lambda: self.head())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewHead', dataframe_gt_view_head)"
 			},
 			{
 				"__type" : "pythonSnippet",
@@ -736,14 +705,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T09:20:31.680757+01:00"
+						"dateAndTimeString" : "2024-05-27T00:10:08.854722+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "rGErmMnIDQCUblxhB3rgdg=="
 				},
-				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef dataframe_gt_view_tail(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Tail')\r\tforward.priority(17)\r\tforward.object(lambda: self.tail())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewTail', dataframe_gt_view_tail)"
+				"code" : "from gtoolkit_bridge import gtView\r\r@gtView\rdef dataframe_gt_view_tail(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Tail')\r\tforward.priority(17)\r\tforward.object(lambda: self.tail())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewTail', dataframe_gt_view_tail)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -807,14 +776,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T09:20:36.158698+01:00"
+						"dateAndTimeString" : "2024-05-27T00:10:11.853994+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "9hhJyrLIDQCL2x5JCuBmfw=="
 				},
-				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef dataframe_gt_view_summary(self, builder):\n\tforward = builder.forward()\r\tforward.title('Summary')\r\tforward.priority(20)\r\tforward.object(lambda: self.describe())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewSummary', dataframe_gt_view_summary)"
+				"code" : "from gtoolkit_bridge import gtView\r\r@gtView\rdef dataframe_gt_view_summary(self, builder):\n\tforward = builder.forward()\r\tforward.title('Summary')\r\tforward.priority(20)\r\tforward.object(lambda: self.describe())\r\tforward.view('gtViewTable')\r\treturn forward\n\nsetattr(pandas.DataFrame, 'gtViewSummary', dataframe_gt_view_summary)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -878,14 +847,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T09:20:38.923742+01:00"
+						"dateAndTimeString" : "2024-05-27T00:10:20.66172+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Iz/NJ57IDQCP95UQCrxuZg=="
 				},
-				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef series_gt_view_series(self, builder):\n\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] > 100:\r\t\treturn builder.empty()\n\tclist = builder.columnedList()\n\tclist.title('Series')\n\tclist.priority(10)\n\tclist.items(lambda: list(self.index))\r\tclist.column('Key', lambda each: each)\r\tclist.column('Value', lambda each: str(self.at[each]))\r\tclist.set_accessor(lambda each: self[each])\n\treturn clist\n\nsetattr(pandas.Series, 'gtViewSeries', series_gt_view_series)"
+				"code" : "from gtoolkit_bridge import gtView\r\r@gtView\rdef series_gt_view_series(self, builder):\n\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] > 100:\r\t\treturn builder.empty()\n\tclist = builder.columnedList()\n\tclist.title('Series')\n\tclist.priority(10)\n\tclist.items(lambda: list(self.index))\r\tclist.column('Key', lambda each: each)\r\tclist.column('Value', lambda each: str(self.at[each]))\r\tclist.set_accessor(lambda each: self[each])\n\treturn clist\n\nsetattr(pandas.Series, 'gtViewSeries', series_gt_view_series)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -949,14 +918,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T09:20:44.198318+01:00"
+						"dateAndTimeString" : "2024-05-27T00:10:24.897385+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "YxugrcnIDQCXjzBbB3rgdg=="
 				},
-				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef series_gt_view_head(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\r\tforward = builder.forward()\r\tforward.title('Head')\r\tforward.priority(11)\r\tforward.object(lambda: self.head())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewHead', series_gt_view_head)"
+				"code" : "from gtoolkit_bridge import gtView\r\r@gtView\rdef series_gt_view_head(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\r\tforward = builder.forward()\r\tforward.title('Head')\r\tforward.priority(11)\r\tforward.object(lambda: self.head())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewHead', series_gt_view_head)"
 			},
 			{
 				"__type" : "pythonSnippet",
@@ -983,14 +952,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T09:20:46.980145+01:00"
+						"dateAndTimeString" : "2024-05-27T00:10:27.07645+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "FFPTsMnIDQCYum6eB3rgdg=="
 				},
-				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef series_gt_view_tail(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Tail')\r\tforward.priority(12)\r\tforward.object(lambda: self.tail())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewTail', series_gt_view_tail)"
+				"code" : "from gtoolkit_bridge import gtView\r\r@gtView\rdef series_gt_view_tail(self, builder):\r\tif self.empty:\r\t\treturn builder.empty()\r\tif self.shape[0] <= 100:\r\t\treturn builder.empty()\n\tforward = builder.forward()\r\tforward.title('Tail')\r\tforward.priority(12)\r\tforward.object(lambda: self.tail())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewTail', series_gt_view_tail)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1054,14 +1023,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T09:20:50.334176+01:00"
+						"dateAndTimeString" : "2024-05-27T00:10:30.120854+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "fkvdZcnIDQCPtQ4TB3rgdg=="
 				},
-				"code" : "from gtoolkit.gt import gtView\r\r@gtView\rdef series_gt_view_summary(self, builder):\n\tforward = builder.forward()\r\tforward.title('Summary')\r\tforward.priority(20)\r\tforward.object(lambda: self.describe())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewSummary', series_gt_view_summary)"
+				"code" : "from gtoolkit_bridge import gtView\r\r@gtView\rdef series_gt_view_summary(self, builder):\n\tforward = builder.forward()\r\tforward.title('Summary')\r\tforward.priority(20)\r\tforward.object(lambda: self.describe())\r\tforward.view('gtViewSeries')\r\treturn forward\n\nsetattr(pandas.Series, 'gtViewSummary', series_gt_view_summary)"
 			},
 			{
 				"__type" : "textSnippet",
