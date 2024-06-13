@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:17:49.868515+02:00"
+						"dateAndTimeString" : "2024-06-13T20:24:19.948235+02:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You have been using the ready made GT distribution for a while now, writing your own code, examples, views and actions, occosionally trying to extend or modify existing code. You have something that you would like to propose for addition to GT itself. Maybe you fixed a bug."
+				"string" : "You have been using the ready made GT distribution for a while now, writing your own code, examples, views and actions, occasionally trying to extend or modify existing code. You have something that you would like to propose for addition to GT itself. Maybe you fixed a bug."
 			},
 			{
 				"__type" : "textSnippet",
@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T11:25:27.321547+02:00"
+						"dateAndTimeString" : "2024-06-13T20:24:54.582028+02:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You need a GitHub account, with SSH keys, the command line git executable as well as the gh tool (https://cli.github.com), SSH agent setup as well a a personal access token."
+				"string" : "You need a GitHub account, with SSH keys, the command line `git` executable as well as the `gh` tool (https://cli.github.com), SSH agent setup as well a a personal access token."
 			},
 			{
 				"__type" : "textSnippet",
@@ -251,7 +251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T11:29:01.30142+02:00"
+						"dateAndTimeString" : "2024-06-13T20:25:37.47144+02:00"
 					}
 				},
 				"uid" : {
@@ -261,7 +261,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "There are two ways to access remote GitHub repositories, via two different origin URLs. There are HTTPS URLs in the form of `https://github.com/owner/project.git` and SSH URLs in the form of `git@github.com:owner/project.git`, both referring to the same remote server."
+				"string" : "There are two ways to access remote GitHub repositories, via two different origin URLs. There are HTTPS URLs in the form of `https://github.com/owner/project.git` and SSH URLs in the form of `git@github.com:owner/project.git`, both are equivalent and refer to the same remote server."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1158,7 +1158,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T11:37:45.723741+02:00"
+						"dateAndTimeString" : "2024-06-13T20:23:06.618646+02:00"
 					}
 				},
 				"uid" : {
@@ -1168,7 +1168,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our cloned repository is now switched to our feature branch. We push this branch so that it appears in our cloned repository on GitHub."
+				"string" : "Our cloned repository is now switched to our feature branch. We push this branch so that it appears in our forked repository on GitHub."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1229,7 +1229,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:51:05.022576+02:00"
+						"dateAndTimeString" : "2024-06-13T20:23:20.709864+02:00"
 					}
 				},
 				"uid" : {
@@ -1239,7 +1239,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now we are finally ready to add our code and make the actual change in our image (see the Example section above)."
+				"string" : "Now we are ready to add our code and make the actual change in our image (see the Example section above)."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1303,7 +1303,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T11:38:24.078536+02:00"
+						"dateAndTimeString" : "2024-06-13T20:28:38.577666+02:00"
 					}
 				},
 				"uid" : {
@@ -1313,7 +1313,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now we need to push the changes in our fork so that our changes become visible in our cloned repository on GitHub."
+				"string" : "Next we need to push the changes in our fork so that our changes become visible in our forked repository on GitHub. Do a push."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1340,7 +1340,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T16:04:57.672836+02:00"
+						"dateAndTimeString" : "2024-06-13T20:28:49.398637+02:00"
 					}
 				},
 				"uid" : {
@@ -1350,7 +1350,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now we are finally ready to do the actual pull request, again using our `gh` wrapper."
+				"string" : "Finally we can create the actual pull request, again using our `gh` wrapper."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1411,7 +1411,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T15:01:20.784583+02:00"
+						"dateAndTimeString" : "2024-06-13T20:28:59.509506+02:00"
 					}
 				},
 				"uid" : {
@@ -1421,7 +1421,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If all went well, you can see the pull request appear in the master repository. The team behind GT will either accept your PR to integrate it, or will communicate with you to discuss further options."
+				"string" : "If all went well, you can see your pull request appear in the master repository. The team behind GT will either accept your PR to integrate it, or will communicate with you to discuss further options."
 			}
 		]
 	},
