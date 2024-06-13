@@ -203,6 +203,154 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-13T11:25:27.321547+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-13T11:25:27.321547+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iTH90CPXDQC8wrfSA7eH9w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You need a GitHub account, with SSH keys, the command line git executable as well as the gh tool (https://cli.github.com), SSH agent setup as well a a personal access token."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-13T11:25:31.432832+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-13T11:29:01.30142+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "4eo70SPXDQC8yNbfA7eH9w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "There are two ways to access remote GitHub repositories, via two different origin URLs. There are HTTPS URLs in the form of `https://github.com/owner/project.git` and SSH URLs in the form of `git@github.com:owner/project.git`, both referring to the same remote server."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-13T11:29:06.020471+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-13T11:30:00.563928+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OUgG3iPXDQCDL6qXA7eH9w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You need a username and a personal access token as password in the first case and SSH keys for the second case."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-13T11:30:02.521265+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-13T11:34:06.699293+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "HWZk4SPXDQCFhskVA7eH9w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To allow unattended access (i.e. to prevent any interactive prompts) you need a credentials helper in the first case and an SSH agent in the second case. You'll need both."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2024-06-11T14:20:38.70072+02:00"
 					}
 				},
@@ -214,7 +362,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:26:30.862489+02:00"
+						"dateAndTimeString" : "2024-06-13T11:25:27.335173+02:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +372,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You need a GitHub account, with SSH keys, the command line git executable as well as the gh tool (https://cli.github.com), SSH agent setup as well a a personal access token. Make sure clone, pull, commit, push, as well as the gh tool work on the command line before continuing."
+				"string" : "Make sure clone, pull, commit, push, as well as the gh tool work on the command line before continuing."
 			},
 			{
 				"__type" : "textSnippet",
@@ -905,14 +1053,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:56:20.768693+02:00"
+						"dateAndTimeString" : "2024-06-13T11:35:02.634694+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "tq+jhv7WDQCQwr7bDbYEfg=="
 				},
-				"code" : "GtGitHubCLITool new\r\ttoken: 'ghp_tpt9TBHwAeskG487NivmcsEO3SbAIr8oIvvb';\r\tworkingDirectory: (IceRepository repositoryNamed: 'gtoolkit-inspector') location;\r\tforkRepository"
+				"code" : "GtGitHubCLITool new\r\treadTokenFrom: FileLocator home / '.secrets' / 'gh_token.txt';\r\tworkingDirectory: (IceRepository repositoryNamed: 'gtoolkit-inspector') location;\r\tforkRepository"
 			},
 			{
 				"__type" : "textSnippet",
@@ -976,14 +1124,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:49:34.916616+02:00"
+						"dateAndTimeString" : "2024-06-13T11:35:42.436136+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "wLlJb/7WDQCD1GtdDbYEfg=="
 				},
-				"code" : "(IceRepository repositoryNamed: 'gtoolkit-inspector') createBranch: 'feature-color-gt-view-circle'"
+				"code" : "(IceRepository repositoryNamed: 'gtoolkit-inspector')\r\tcreateBranch: 'feature-color-gt-view-circle';\r\tconfigureUpstreamIfNecessary"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-13T11:36:49.578217+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-13T11:37:45.723741+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "opWn+SPXDQCMM2kBA7eH9w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Our cloned repository is now switched to our feature branch. We push this branch so that it appears in our cloned repository on GitHub."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-11T15:07:07.430726+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-11T15:07:08.142607+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SAEOrv7WDQCb8HUBDbYEfg=="
+				},
+				"code" : "(IceRepository repositoryNamed: 'gtoolkit-inspector') branch push"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1084,7 +1303,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T16:04:31.04632+02:00"
+						"dateAndTimeString" : "2024-06-13T11:38:24.078536+02:00"
 					}
 				},
 				"uid" : {
@@ -1094,41 +1313,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now we need to push to our fork so that our changes and branch become visible in GitHub. NOTE: this does not yet work without intervention. TODO!"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T15:07:07.430726+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T15:07:08.142607+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "SAEOrv7WDQCb8HUBDbYEfg=="
-				},
-				"code" : "(IceRepository repositoryNamed: 'gtoolkit-inspector') branch push"
+				"string" : "Now we need to push the changes in our fork so that our changes become visible in our cloned repository on GitHub."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1192,14 +1377,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:59:26.392885+02:00"
+						"dateAndTimeString" : "2024-06-13T11:35:09.707753+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Gs0Xkv7WDQCVrBVfDbYEfg=="
 				},
-				"code" : "GtGitHubCLITool new\r\ttoken: 'ghp_tpt9TBHwAeskG487NivmcsEO3SbAIr8oIvvb';\r\tworkingDirectory: (IceRepository repositoryNamed: 'gtoolkit-inspector') location;\r\tcreatePullRequest"
+				"code" : "GtGitHubCLITool new\r\treadTokenFrom: FileLocator home / '.secrets' / 'gh_token.txt';\r\tworkingDirectory: (IceRepository repositoryNamed: 'gtoolkit-inspector') location;\r\tcreatePullRequest"
 			},
 			{
 				"__type" : "textSnippet",
