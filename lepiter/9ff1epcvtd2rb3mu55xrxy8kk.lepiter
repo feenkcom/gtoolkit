@@ -1,0 +1,627 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:18:08.189234+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:18:08.189234+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NvpPB83XDQCXIaOxDTxBnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Locally we rely on {{gtClass:BlText}}  and {{gtMethod:Object>>asRopedText}} to provide support for styling and decorating text. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:14:07.609932+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:23:20.38706+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "RZNM+MzXDQCQhJeoDTxBnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Currently {{gtClass:BlText}} is not present in GemStone. Instead {{gtClass:GtPhlowText}} is used. {{gtMethod:Object>>asRopedText}} is implemented in GemStone to return instances of {{gtClass:GtPhlowText}}. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:23:20.70314+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:23:44.231943+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/ZHwGc3XDQCXqe9vDTxBnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The API for working with styled text is the same between GT and GemStone."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:23:44.805329+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:57:45.314839+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "AlhgG83XDQCY2jrbDTxBnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For example the snippet below styles text locally."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:23:18.025314+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-22T11:01:55.272396+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "n67HGc3XDQCXmjFlDTxBnw=="
+				},
+				"code" : "textLocal := 'This is red and this is green' asRopedText.\rtextLocal fontSize: 20.\r(textLocal from: 9 to: 11) \r\tforeground: (GtPhlowColor named: #red) asColor;\r\tfontSize: 45.\r(textLocal from: 25 to: 29) \r\thighlight: (GtPhlowColor named: #green) asColor.\r(textLocal from: 1 to: 4)  decorationDo: [ :aDecoration |\r\taDecoration \r\t\tunderline;\r\t\tdashed; \r\t\tthickness: 3;\r\t\tcolor: (GtPhlowColor named: #blue) asColor ].\r(textLocal from: 17 to: 20)  decorationDo: [ :aDecoration |\r\taDecoration \r\t\tlineThrough;\r\t\twavy ].\rtextLocal"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:24:33.74115+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:57:47.120225+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ZARLHs3XDQCaZabTDTxBnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can use exactly the same API in GemStone."
+			},
+			{
+				"__type" : "gemstoneSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:25:11.370836+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-22T11:01:51.00819+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CTSJIM3XDQCbVXPMDTxBnw=="
+				},
+				"code" : "remoteLocal := 'This is red and this is green' asRopedText.\rremoteLocal fontSize: 20.\r(remoteLocal from: 9 to: 11) \r\tforeground: (GtPhlowColor named: #red) asColor;\r\tfontSize: 45.\r(remoteLocal from: 25 to: 29) \r\thighlight: (GtPhlowColor named: #green) asColor.\r(remoteLocal from: 1 to: 4)  decorationDo: [ :aDecoration |\r\taDecoration \r\t\tunderline;\r\t\tdashed; \r\t\tthickness: 3;\r\t\tcolor: (GtPhlowColor named: #blue) asColor ].\r(remoteLocal from: 17 to: 20)  decorationDo: [ :aDecoration |\r\taDecoration \r\t\tlineThrough;\r\t\twavy ].\rremoteLocal",
+				"sessionName" : "connector:default"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:58:01.5821+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:58:15.696174+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "X0L4lc3XDQCcG3STDTxBnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Examples of text styles"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:58:16.881212+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:59:23.938871+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+rXhls3XDQCcp6uTDTxBnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The method {{gtMethod:GtRemotePhlowDeclarativeTextTestInspectable>>#styledPhlowTextWithHighlights}} and {{gtMethod:GtRemotePhlowDeclarativeTextTestInspectable>>#styledPhlowTextWithDecorations}} show two examples of styling text."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:59:26.124523+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T21:59:41.898864+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "tkcCm83XDQCdxGaaDTxBnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The first one is related to text styles:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T22:00:15.958106+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T22:00:15.958106+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yKz6nc3XDQCeuR5LDTxBnw=="
+				},
+				"exampleSelector" : "styledPhlowTextWithHighlights",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtTextFor:",
+				"exampleBehaviorName" : "GtRemotePhlowDeclarativeTextTestInspectable",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T22:01:06.786995+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T22:01:27.186488+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ZEICoc3XDQCe4j+LDTxBnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And second one is related to text decorations:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T22:01:35.099309+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-21T22:01:35.099309+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jkayos3XDQCflkjjDTxBnw=="
+				},
+				"exampleSelector" : "styledPhlowTextWithDecorations",
+				"previewHeight" : 330,
+				"previewShowSelector" : "gtTextFor:",
+				"exampleBehaviorName" : "GtRemotePhlowDeclarativeTextTestInspectable",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-22T09:58:36.237461+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-22T10:13:42.194934+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Tc+4ptfXDQCf050GDTxBnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The texts above are create in the local image. We can also create them in GemStone."
+			},
+			{
+				"__type" : "gemstoneSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-22T10:04:26.758316+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-22T10:40:02.223748+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pEDZu9fXDQChs3DqDTxBnw=="
+				},
+				"code" : "GtRemotePhlowDeclarativeTextTestInspectable new \r\tstyledPhlowTextWithHighlights",
+				"sessionName" : "connector:default"
+			},
+			{
+				"__type" : "gemstoneSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-22T09:59:45.89013+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-22T10:13:46.294185+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "u/OFqtfXDQChkBsCDTxBnw=="
+				},
+				"code" : "GtRemotePhlowDeclarativeTextTestInspectable new \r\tstyledPhlowTextWithDecorations "
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2024-06-21T21:13:56.186447+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2024-06-21T21:13:56.186447+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Using styled text in GemStone"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "e4bc4af8-ccd7-0d00-9083-375c0d3c419f"
+	}
+}
