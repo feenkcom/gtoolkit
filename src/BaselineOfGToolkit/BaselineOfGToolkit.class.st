@@ -163,6 +163,8 @@ BaselineOfGToolkit >> baseline: spec [
 					with: [ spec repository: 'github://feenkcom/gtoolkit-notifications:main/src' ];
 				baseline: 'GToolkitNotificationsExamples'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-notifications:main/src' ];
+				baseline: 'GToolkitWebView'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-webview:main/src' ];
 				baseline: 'XdocClient'
 					with: [ spec repository: 'github://feenkcom/xdoc:main/src' ];
 				baseline: 'LepiterEngine'
