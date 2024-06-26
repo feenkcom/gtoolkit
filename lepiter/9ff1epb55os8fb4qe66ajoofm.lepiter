@@ -251,7 +251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:39:58.967385+02:00"
+						"dateAndTimeString" : "2024-06-25T23:38:30.35954-04:00"
 					}
 				},
 				"uid" : {
@@ -261,7 +261,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To get all the information needed in one call, {{gtClass:GtRsrInspectorProxySerializationStrategy}} is a serialisation strategy that can return for a remote object a {{gtClass:GtpoGtRemotePhlowViewedObject}} inspector proxy initialized with all data related to views and actions, so that getting this data from the inspector proxy does not require extra remote calls. This strategy is used by the session call {{gtMethod:GtGemStoneSession>>#evaluateInspectorProxy:}} "
+				"string" : "To get all the information needed in one call, {{gtClass:GtRsrProxyOnlySerializationStrategy}} is a serialisation strategy that can return for a remote object a {{gtClass:GtpoGtRemotePhlowViewedObject}} inspector proxy initialized with all data related to views and actions, so that getting this data from the inspector proxy does not require extra remote calls. This strategy is used by the session call {{gtMethod:GtGemStoneSession>>#evaluateInspectorProxy:}} "
 			},
 			{
 				"__type" : "pharoSnippet",
