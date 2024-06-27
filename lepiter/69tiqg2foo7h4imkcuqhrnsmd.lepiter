@@ -253,14 +253,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-06-18T10:20:10.605595+02:00"
+									"dateAndTimeString" : "2024-06-25T15:40:09.530491+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "w1WGfIfXDQCu4dwVAGv0aQ=="
 							},
-							"code" : "individualTimes := 10 timesCollect: [\n\t[session evaluateAndWait: 'Object new'] timeToRun ]"
+							"code" : "individualTimes := 10 timesCollect: [\n\t[ session evaluateAndWait: 'Object new' ] timeToRun ]"
 						}
 					]
 				},
@@ -283,14 +283,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:32:59.93994+02:00"
+						"dateAndTimeString" : "2024-06-25T15:39:46.14765+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "oNH4e4fXDQCuv+rwAGv0aQ=="
 				},
-				"code" : "simpleObject :=  session evaluateAndWait: 'Object new'"
+				"code" : "simpleObject := session evaluateAndWait: 'Object new'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -354,7 +354,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:20:22.242018+02:00"
+						"dateAndTimeString" : "2024-06-24T17:17:36.715079+02:00"
 					}
 				},
 				"uid" : {
@@ -364,7 +364,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "These are snippets for measuring the performance of inspecting objects."
+				"string" : "These are snippets for measuring the performance of inspecting objects. Here we work directly with a proxy to the object."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -385,7 +385,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-06-18T10:20:39.373154+02:00"
+									"dateAndTimeString" : "2024-06-25T15:39:17.27309+02:00"
 								}
 							},
 							"editEmail" : {
@@ -396,14 +396,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-06-18T10:20:40.042768+02:00"
+									"dateAndTimeString" : "2024-06-25T15:39:22.644705+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "zqZ0fofXDQCvKPzLAGv0aQ=="
+								"uidString" : "RE7cwhjYDQCAdKL1ARztLQ=="
 							},
-							"code" : "codeToEvaluate := 'GtRemotePhlowViewedObject object: \n\t<object goes here>'"
+							"code" : "objectCodeToEvaluate := 'Object new'"
 						}
 					]
 				},
@@ -415,7 +415,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:20:31.646982+02:00"
+						"dateAndTimeString" : "2024-06-24T16:48:19.677364+02:00"
 					}
 				},
 				"editEmail" : {
@@ -426,14 +426,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:20:31.920945+02:00"
+						"dateAndTimeString" : "2024-06-24T17:12:57.071261+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Rsv+fYfXDQCvHtd+AGv0aQ=="
+					"uidString" : "ygbtmwXYDQCy2nFTARztLQ=="
 				},
-				"code" : "codeToEvaluate := 'GtRemotePhlowViewedObject object: \n\tGtRemotePhlowDeclarativeTestInspectable new.'"
+				"code" : "objectCodeToEvaluate := 'GtRemotePhlowDeclarativeTestInspectable new'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -460,7 +460,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:20:58.61185+02:00"
+						"dateAndTimeString" : "2024-06-25T15:36:22.377825+02:00"
 					}
 				},
 				"uid" : {
@@ -470,7 +470,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First, we can make individual calls:"
+				"string" : "First, we can make individual calls directly to the proxy object:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -497,14 +497,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:21:07.243275+02:00"
+						"dateAndTimeString" : "2024-06-24T17:13:05.026191+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "G64XgIfXDQCvmdWFAGv0aQ=="
 				},
-				"code" : "inspectorProxy := session evaluateAndWait: codeToEvaluate"
+				"code" : "objectProxy := session evaluateAndWait: objectCodeToEvaluate"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-25T15:36:33.043998+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-25T15:37:22.059699+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "p2ESuRjYDQC7nMc0ARztLQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The views and the string are returned directly from the basic proxy object, which can result in several remote calls."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -531,48 +568,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:21:11.842585+02:00"
+						"dateAndTimeString" : "2024-06-24T17:13:30.814445+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "yh8kgIfXDQCvo9iYAGv0aQ=="
 				},
-				"code" : "inspectorProxy declarativeViews"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:21:12.166276+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:21:15.54204+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "FhZpgIfXDQCvrcoxAGv0aQ=="
-				},
-				"code" : "inspectorProxy getViewsDeclarations"
+				"code" : "objectProxy declarativeViews"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -599,20 +602,55 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:21:21.394793+02:00"
+						"dateAndTimeString" : "2024-06-24T17:15:56.70322+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "sBGwgIfXDQCvtygXAGv0aQ=="
 				},
-				"code" : "inspectorProxy gtInspectorTitleString"
+				"code" : "objectProxy gtInspectorTitleString"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-06-18T10:21:38.922467+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-06-25T15:38:47.794986+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OFYBgofXDQCv2sXWAGv0aQ=="
+							},
+							"code" : "views := objectProxy declarativeViews.\nobjectProxy gtInspectorTitleString.\n(views detect: [ :each | each methodSelector = #gtListFor:]) \r\tretrieveItems: 1 fromIndex: 100"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -646,6 +684,43 @@
 				"string" : "Second, we can group all calls made to show an inspector."
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-24T17:14:50.899376+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-24T17:19:52.008493+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "RyTF+gXYDQC1u1h2ARztLQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can also get directly an inspector proxy and work with it."
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -659,7 +734,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T10:21:38.922467+02:00"
+						"dateAndTimeString" : "2024-06-18T10:20:31.646982+02:00"
 					}
 				},
 				"editEmail" : {
@@ -670,14 +745,119 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-18T11:23:19.225114+02:00"
+						"dateAndTimeString" : "2024-06-25T15:41:10.973075+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "OFYBgofXDQCv2sXWAGv0aQ=="
+					"uidString" : "Rsv+fYfXDQCvHtd+AGv0aQ=="
 				},
-				"code" : "inspectorProxy := session evaluateAndWait: codeToEvaluate.\nviews := inspectorProxy declarativeViews.\ninspectorProxy gtInspectorTitleString.\nviews second retrieveItems: 1 fromIndex: 100"
+				"code" : "inspectorProxy := objectProxy getInspectorProxyWithData"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-18T10:21:12.166276+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-25T15:41:04.85774+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FhZpgIfXDQCvrcoxAGv0aQ=="
+				},
+				"code" : "inspectorProxy getInspectorProxyWithData"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-25T15:41:24.621028+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-25T15:41:32.005079+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2nlzyhjYDQCBQGmuARztLQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Or we can just do the call to get data:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-25T15:41:33.128648+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-25T15:41:37.598885+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ik31yhjYDQCCMKV9ARztLQ=="
+				},
+				"code" : "inspectorProxy getInspectorProxyRawData "
 			}
 		]
 	},
