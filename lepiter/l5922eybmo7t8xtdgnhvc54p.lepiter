@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T12:00:06.591124+01:00"
+						"dateAndTimeString" : "2024-07-05T14:23:04.399363+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "3KkHwwbIDQCVLv/wB/HrCQ=="
 				},
-				"code" : "fileName := (FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data' / 'imdb' / 'Movies.csv') fullName."
+				"code" : "csvFile := (FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data' / 'imdb' / 'Movies.csv') fullName."
 			},
 			{
 				"__type" : "textSnippet",
@@ -214,14 +214,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-04-03T08:43:57.192126+02:00"
+									"dateAndTimeString" : "2024-07-05T19:30:33.940009+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "9iMysQbIDQCSLkraB/HrCQ=="
 							},
-							"code" : "import pandas\rfrom gtoolkit_bridge import gtView\n\nclass Movie:\n\tdef __init__(self, series):\n\t\tself.series  = series\n\r\t@gtView\n\tdef gtViewDescription(self, builder):\r\t\ttext = builder.textEditor()\n\t\ttext.title(\"Description\")\r\t\ttext.priority(30)\r\t\ttext.setString(str(self.series))\r\t\treturn text\r\r\t@gtView\r\tdef gtViewDetails(self, builder):\r\t\tclist = builder.columnedList()\r\t\tclist.title(\"Details\")\r\t\tclist.priority(20)\r\t\tclist.items(lambda: list(self.series.index))\n\t\tclist.column('Key', lambda each: each)\n\t\tclist.column('Value', lambda each: str(self.series[each]))\n\t\tclist.set_accessor(lambda each: self.series[each])\r\t\treturn clist\n\nclass MovieCollection:\n\tdef __init__(self, dataFrame):\n\t\tself.df = dataFrame\n\t\t\n\tdef size(self):\n\t\treturn len(self.df.index)\r\r\tdef movieAtPosition(self, index):\r\t\treturn Movie(self.df.loc[index])\n\n\tdef directors(self):\n\t\tvalues = self.df[\"Directors\"].astype(str).unique()\n\t\tvalues.sort()\n\t\treturn map(lambda each: [each, self.moviesWithDirector(each)], values)\n\t\n\tdef years(self):\n\t\tvalues = self.df[\"Year\"].unique().tolist()\n\t\tvalues.sort()\n\t\treturn map(lambda each: [each, self.moviesReleasedInYear(each)], values)\n\t\n\tdef moviesReleasedInYear(self, year):\n\t\treturn MovieCollection(self.df[self.df[\"Year\"] == year].reset_index(drop=True))\n\t\n\tdef moviesWithDirector(self, director):\n\t\treturn MovieCollection(self.df[self.df[\"Directors\"] == director].reset_index(drop=True))\n\n\t@gtView\r\tdef gtViewYears(self, builder):\n\t\tclist = builder.columnedList()\n\t\tclist.title(\"Years\")\n\t\tclist.priority(30)\n\t\tclist.items(lambda: self.years())\n\t\tclist.column(\"Year\", lambda each: str(each[0]))\n\t\tclist.column(\"Count\", lambda each: str(each[1].size()))\n\t\tclist.set_accessor(lambda each: [*self.years()][each][1])\n\t\treturn clist\n\n\t@gtView\r\tdef gtViewDirectors(self, builder):\n\t\tclist = builder.columnedList()\n\t\tclist.title(\"Directors\")\n\t\tclist.priority(20)\n\t\tclist.items(lambda: self.directors())\n\t\tclist.column(\"Director\", lambda each: str(each[0]))\n\t\tclist.column(\"Count\", lambda each: str(each[1].size()))\n\t\tclist.set_accessor(lambda each: [*self.directors()][each][1])\n\t\treturn clist\r\r\t@gtView\r\tdef gtViewMovies(self, aBuilder):\n\t\ttable = aBuilder.columnedList()\n\t\ttable.title(\"Movies\")\n\t\ttable.priority(50)\n\t\ttable.items(lambda: list(self.df.index))\r\t\ttable.column(\"Title\", lambda index: str(self.df.at[index, \"Title\"]))\n\t\ttable.column(\"Release date\", lambda index: str(self.df.at[index, \"Release Date\"]))\n\t\ttable.column(\"Directors\", lambda index: str(self.df.at[index, \"Directors\"]))\n\t\ttable.column(\"Genres\", lambda index: str(self.df.at[index, \"Genres\"]))\n\t\treturn table\n\t\t\r\tdef gtViewMoviesDetails(self, aBuilder):\n\t\ttable = aBuilder.columnedList()\n\t\ttable.title(\"Movies with details\")\n\t\ttable.priority(50)\n\t\ttable.items(lambda: list(self.df.index))\n\t\tfor each in self.df.columns:\n\t\t\t(lambda col: table.column(col, lambda index: str(self.df.at[index, col])))(each)\n\t\ttable.set_accessor(lambda each: Movie(self.df.loc[list(self.df.index)[each]]))\n\t\treturn table"
+							"code" : "import pandas\rfrom gtoolkit_bridge import gtView\n\nclass Movie:\n\tdef __init__(self, series):\n\t\tself.series  = series\n\r\t@gtView\n\tdef gtViewDescription(self, builder):\r\t\ttext = builder.textEditor()\n\t\ttext.title(\"Description\")\r\t\ttext.priority(30)\r\t\ttext.setString(str(self.series))\r\t\treturn text\r\r\t@gtView\r\tdef gtViewDetails(self, builder):\r\t\tclist = builder.columnedList()\r\t\tclist.title(\"Details\")\r\t\tclist.priority(20)\r\t\tclist.items(lambda: list(self.series.index))\n\t\tclist.column('Key', lambda each: each)\n\t\tclist.column('Value', lambda each: str(self.series[each]))\n\t\tclist.set_accessor(lambda each: self.series[each])\r\t\treturn clist\n\nclass MovieCollection:\n\tdef __init__(self, dataFrame):\n\t\tself.df = dataFrame\n\t\t\n\tdef size(self):\n\t\treturn len(self.df.index)\r\r\tdef movieAtPosition(self, index):\r\t\treturn Movie(self.df.loc[index])\n\n\tdef directors(self):\n\t\tvalues = self.df[\"Directors\"].astype(str).unique()\n\t\tvalues.sort()\n\t\treturn map(lambda each: [each, self.moviesWithDirector(each)], values)\n\t\n\tdef years(self):\n\t\tvalues = self.df[\"Year\"].unique().tolist()\n\t\tvalues.sort()\n\t\treturn map(lambda each: [each, self.moviesReleasedInYear(each)], values)\n\t\n\tdef moviesReleasedInYear(self, year):\n\t\treturn MovieCollection(self.df[self.df[\"Year\"] == year].reset_index(drop=True))\n\t\n\tdef moviesWithDirector(self, director):\n\t\treturn MovieCollection(self.df[self.df[\"Directors\"] == director].reset_index(drop=True))\n\n\t@gtView\r\tdef gtViewYears(self, builder):\n\t\tclist = builder.columnedList()\n\t\tclist.title(\"Years\")\n\t\tclist.priority(30)\n\t\tclist.items(lambda: self.years())\n\t\tclist.column(\"Year\", lambda each: str(each[0]))\n\t\tclist.column(\"Count\", lambda each: str(each[1].size()))\n\t\tclist.set_accessor(lambda each: [*self.years()][each][1])\n\t\treturn clist\n\n\t@gtView\r\tdef gtViewDirectors(self, builder):\n\t\tclist = builder.columnedList()\n\t\tclist.title(\"Directors\")\n\t\tclist.priority(20)\n\t\tclist.items(lambda: self.directors())\n\t\tclist.column(\"Director\", lambda each: str(each[0]))\n\t\tclist.column(\"Count\", lambda each: str(each[1].size()))\n\t\tclist.set_accessor(lambda each: [*self.directors()][each][1])\n\t\treturn clist\r\r\t@gtView\r\tdef gtViewMovies(self, aBuilder):\n\t\ttable = aBuilder.columnedList()\n\t\ttable.title(\"Movies\")\n\t\ttable.priority(50)\n\t\ttable.items(lambda: list(self.df.index))\r\t\ttable.column(\"Title\", lambda index: str(self.df.at[index, \"Title\"]))\n\t\ttable.column(\"Release date\", lambda index: str(self.df.at[index, \"Release Date\"]))\n\t\ttable.column(\"Directors\", lambda index: str(self.df.at[index, \"Directors\"]))\n\t\ttable.column(\"Genres\", lambda index: str(self.df.at[index, \"Genres\"]))\n\t\ttable.set_accessor(lambda each: Movie(self.df.loc[list(self.df.index)[each]]))\r\t\treturn table\n\t\t\r\tdef gtViewMoviesDetails(self, aBuilder):\n\t\ttable = aBuilder.columnedList()\n\t\ttable.title(\"Movies with details\")\n\t\ttable.priority(50)\n\t\ttable.items(lambda: list(self.df.index))\n\t\tfor each in self.df.columns:\n\t\t\t(lambda col: table.column(col, lambda index: str(self.df.at[index, col])))(each)\n\t\ttable.set_accessor(lambda each: Movie(self.df.loc[list(self.df.index)[each]]))\n\t\treturn table"
 						}
 					]
 				},
@@ -318,14 +318,301 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-02-02T10:53:43.68016+01:00"
+						"dateAndTimeString" : "2024-07-05T14:22:54.459862+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "rlAgIJ7MDQCeCBbPCdpXaA=="
 				},
-				"code" : "MovieCollection(pandas.read_csv(fileName))"
+				"code" : "MovieCollection(pandas.read_csv(csvFile))"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:23:32.231909+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:23:50.872703+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3Tde3uDYDQCwCckjDssbEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "###Alternative approach"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:23:54.807288+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:26:56.63822+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2ra23+DYDQCwm3sWDssbEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Instead of putting our code inside a Python snippet, we can also use a traditional Python source file."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:24:56.983233+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:24:57.479541+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Q2dr4+DYDQCys0SQDssbEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First we copy a predefined Python source file `movie.py` into the working directory of the PythonBridge so that it can be found in Python's default search path."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:25:12.018565+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:25:13.159438+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "E9pQ5ODYDQCyvk5nDssbEw=="
+				},
+				"code" : "sourecFile := FileLocator gtResource / 'feenkcom' / 'gt4python' / 'data' / 'python' / 'movie.py'.\rsourecFile copyTo: PBPlatform current workingDirectory / sourecFile basename.\rPBPlatform current workingDirectory"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:25:29.59538+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:30:00.842792+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9A9d5eDYDQCyyV8vDssbEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can open an IDE view on local Python source files in the PythonBridge's working directory to verify that all is OK and to view the file's content. Press the + icon top left to expand the directory view and the - icon to get back."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:25:47.043593+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:25:48.175556+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XE1n5uDYDQCy0681DssbEw=="
+				},
+				"code" : "GtLSPPythonModel onDirectory: PBPlatform current workingDirectory"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:25:53.963594+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:26:07.70655+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "oOTQ5uDYDQCy3GJRDssbEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Now we can use our local source file from a Python snippet."
+			},
+			{
+				"__type" : "pythonSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:26:36.963892+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-07-05T14:26:38.039856+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/ABh6eDYDQCzAFgDDssbEw=="
+				},
+				"code" : "import movie\rimport pandas\r\rmovie.MovieCollection(pandas.read_csv(csvFile))"
 			}
 		]
 	},
