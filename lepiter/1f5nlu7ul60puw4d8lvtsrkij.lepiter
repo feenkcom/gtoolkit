@@ -616,7 +616,7 @@
 				"string" : "Let's add a hello world Python source file into our working directory. First we assign the `helloWorldPy` variable to a string of Python source code. Then we copy that into a `hello_world.py` file."
 			},
 			{
-				"__type" : "stringSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -629,7 +629,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-08T13:09:49.993546+02:00"
+						"dateAndTimeString" : "2024-07-08T17:08:48.889834+02:00"
 					}
 				},
 				"editEmail" : {
@@ -640,17 +640,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-08T13:39:18.066325+02:00"
+						"dateAndTimeString" : "2024-07-08T17:09:02.739397+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "PVtOMBzZDQCC/JkcCr8AGA=="
+					"uidString" : "CYz4hh/ZDQCPERfJArIgAA=="
 				},
-				"code" : "# hello_world.py\rdef greeting(message=\"Hello World!\"):\r\tprint(message)\r\treturn message",
-				"contentString" : "# hello_world.py\rdef greeting(message=\"Hello World!\"):\r\tprint(message)\r\treturn message",
-				"bindingName" : "helloWorldPy",
-				"format" : "PythonParser"
+				"code" : "helloWorldPy := '# hello_world.py\rdef greeting(message=\"Hello World!\"):\r\tprint(message)\r\treturn message'"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -1193,7 +1190,7 @@
 				"string" : "Let's create another example, based on the following source code bound to `nowPy` and place it inside a trivial source tree in a temporary directory."
 			},
 			{
-				"__type" : "stringSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -1206,7 +1203,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-08T14:29:51.12398+02:00"
+						"dateAndTimeString" : "2024-07-08T17:10:09.389132+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1217,17 +1214,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-08T14:51:47.833755+02:00"
+						"dateAndTimeString" : "2024-07-08T17:10:16.968846+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2Md5Th3ZDQCFDcOrCr8AGA=="
+					"uidString" : "yeHEix/ZDQCPTCKkArIgAA=="
 				},
-				"code" : "# my_file.py\rfrom datetime import datetime\rdef now():\r\treturn str(datetime.now())",
-				"contentString" : "from datetime import datetime\rdef now():\r\treturn str(datetime.now())",
-				"bindingName" : "nowPy",
-				"format" : "PythonParser"
+				"code" : "nowPy := 'from datetime import datetime\rdef now():\r\treturn str(datetime.now())'"
 			},
 			{
 				"__type" : "pharoSnippet",
