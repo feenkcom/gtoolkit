@@ -460,14 +460,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-19T14:49:46.49852+01:00"
+						"dateAndTimeString" : "2024-07-11T11:11:31.126641+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "7HBdeq7LDQCNNOqRAWZc4g=="
 				},
-				"code" : "pandas.read_csv(moviesCsvPathString)"
+				"code" : "import pandas\rpandas.read_csv(moviesCsvPathString)"
 			}
 		]
 	},
