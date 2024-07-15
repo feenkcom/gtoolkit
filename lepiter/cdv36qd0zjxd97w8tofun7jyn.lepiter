@@ -18,18 +18,18 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-18T13:34:29.255312+02:00"
+						"dateAndTimeString" : "2024-07-15T12:29:14.076397+02:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-29T11:30:58.132793+02:00"
+						"dateAndTimeString" : "2024-07-15T12:29:43.138525+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The gt4gemstone release is attached to the github release of Glamorous Toolkit"
+				"string" : "Every Glamorous Toolkit release has an associated gt4gemstone release containing the code that needs to be loaded into GemStone. This is an archive file attached to the release, named `gt4gemstone-3.7.zip`."
 			},
 			{
 				"__type" : "textSnippet",
@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-18T12:00:22.069654+02:00"
+						"dateAndTimeString" : "2024-07-15T12:01:06.93474+02:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "`curl -LO https://github.com/feenkcom/gtoolkit/releases/download/${GT_VERSION}/gt4gemstone-3.7.0-${GT_VERSION}.zip`"
+				"string" : "`curl -LO https://github.com/feenkcom/gtoolkit/releases/download/${GT_VERSION}/gt4gemstone-3.7.zip`"
 			},
 			{
 				"__type" : "textSnippet",
@@ -430,14 +430,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-17T08:37:17.179211+02:00"
+						"dateAndTimeString" : "2024-07-15T12:22:25.768791+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "EmS2BzWGDQCtHVUuBP8y0Q=="
 				},
-				"code" : "| releaseArchiveName releaseUrl |\rreleaseArchiveName := 'gt4gemstone-3.7.0-{1}.zip' format: {releaseVersion}. \rreleaseUrl:='https://github.com/feenkcom/gtoolkit/releases/download/{1}/'\r\tformat: {releaseVersion}. \r\r(targetFolder / releaseArchiveName) exists ifFalse: [\r\tZnClient new\r\t\turl: releaseUrl, releaseArchiveName;\r\t\tsignalProgress: true;\r\t\tdownloadTo: targetFolder ].\r\rtargetFolder"
+				"code" : "| releaseArchiveName releaseUrl znClient |\rreleaseArchiveName := 'gt4gemstone-3.7.zip'. \rreleaseUrl:='https://github.com/feenkcom/gtoolkit/releases/download/{1}/'\r\tformat: {releaseVersion}. \r\r(targetFolder / releaseArchiveName) exists ifFalse: [\r\tznClient := ZnClient new\r\t\turl: releaseUrl, releaseArchiveName;\r\t\tsignalProgress: true.\r\t(znClient downloadTo: targetFolder) ifFalse:\r\t\t[ self error: 'Unable to retrieve archive' ] ].\r\rtargetFolder"
 			}
 		]
 	},
