@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-16T11:59:47.505519+02:00"
+						"dateAndTimeString" : "2024-07-15T10:22:56.315496+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-18T11:31:21.370981+02:00"
+						"dateAndTimeString" : "2024-07-15T10:22:56.315496+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "zcZ+/wuGDQCtPLobD44NLg=="
+					"uidString" : "2mZVrKbZDQCnCCJvDlBYTQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A Gtoolkit interface to GemStone."
+				"string" : "This section documents common operations for using GT with GemStone, starting with installation and configuration of the GemStone image."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-18T11:31:44.225622+02:00"
+						"dateAndTimeString" : "2024-07-15T08:37:30.243393+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-18T11:33:21.870624+02:00"
+						"dateAndTimeString" : "2024-07-15T10:23:16.899281+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mGl61jOGDQCsVg1oBP8y0Q=="
+					"uidString" : "WTVFM6XZDQC47EKtBhdkOw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit comes by default with the client code for connecting to a GemStone image. However gt4gemstone also has  a component that needs to be loaded into a GemStone image."
+				"string" : "This documentation assumes working knowledge of GemStone."
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-15T08:29:19.747108+02:00"
+						"dateAndTimeString" : "2024-07-15T08:46:25.252549+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,54 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-15T08:29:36.153863+02:00"
+						"dateAndTimeString" : "2024-07-15T08:46:41.810062+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Yc8IFqXZDQC4ZFEgBhdkOw=="
+					"uidString" : "LES1PaXZDQC6x0nQDlBYTQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[gt4gemstone server]] "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-08-18T11:33:24.648085+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T08:24:46.390726+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "1yu/3DOGDQCsXlpPBP8y0Q=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[Loading GT server code into a Rowan stone]] details how to load the necessary code into GemStone using a gt4gemstone release."
+				"string" : "[[gt4gemstone server installation]] "
 			}
 		]
 	},
@@ -162,7 +125,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-08-16T11:59:46.459999+02:00"
+			"dateAndTimeString" : "2024-07-15T08:37:30.158145+02:00"
 		}
 	},
 	"editEmail" : {
@@ -173,15 +136,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-08-16T11:59:46.459999+02:00"
+			"dateAndTimeString" : "2024-07-15T08:37:30.158145+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "gt4gemstone"
+		"title" : "gt4gemstone server"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "132d7eff-0b86-0d00-ad3b-25250f8e0d2e"
+		"uuid" : "a6e54333-a5d9-0d00-b8eb-f6ae0617643b"
 	}
 }
