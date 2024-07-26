@@ -80,8 +80,14 @@ GtTranscript >> crShow: anObject [
 		show: anObject
 ]
 
-{ #category : #accessing }
+{ #category : #compatibility }
+GtTranscript >> endEntry [
+	"do nothing. it's here for compatibility with the old Transcript"
+]
+
+{ #category : #compatibility }
 GtTranscript >> flush [
+	"do nothing. it's here for compatibility with the old Transcript"
 ]
 
 { #category : #'gt-extension' }
@@ -160,7 +166,7 @@ GtTranscript >> space [
 	self next space
 ]
 
-{ #category : #'api - accessing' }
+{ #category : #compatibility }
 GtTranscript >> stepGlobal [
 	"do nothing. it's here for compatibility with the old Transcript"
 ]
