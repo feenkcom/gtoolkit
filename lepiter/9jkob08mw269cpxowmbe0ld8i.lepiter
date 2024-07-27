@@ -1301,17 +1301,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-01-19T14:57:22.320489+01:00"
+												"dateAndTimeString" : "2024-07-27T03:26:29.355191-04:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "U8neEp6+DQCoEu+3D4F27w=="
 										},
-										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorInPagerOn: (StackMachineV1 new\r\t\t\t\t! 3;\r\t\t\t\t! 4;\r\t\t\t\tyourself)\r\t\tWithPlaygroundTextAndDoit: 'self top'.\rscripter elementWithoutParent",
+										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorInPagerOn: (StackMachineV1 new\r\t\t\t\t! 3;\r\t\t\t\t! 4;\r\t\t\t\tyourself)\r\t\twithPlaygroundTextAndDoit: 'self top'.\rscripter elementWithoutParent",
 										"elementHeight" : 451,
 										"codeHeight" : 165,
-										"codeVisible" : false
+										"codeVisible" : true
 									},
 									{
 										"__type" : "textSnippet",
