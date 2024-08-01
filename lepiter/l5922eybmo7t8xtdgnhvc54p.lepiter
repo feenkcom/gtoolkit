@@ -463,14 +463,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-05T14:25:13.159438+02:00"
+						"dateAndTimeString" : "2024-08-01T19:08:59.827965+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "E9pQ5ODYDQCyvk5nDssbEw=="
 				},
-				"code" : "sourecFile := FileLocator gtResource / 'feenkcom' / 'gt4python' / 'data' / 'python' / 'movie.py'.\rsourecFile copyTo: PBPlatform current workingDirectory / sourecFile basename.\rPBPlatform current workingDirectory"
+				"code" : "sourceFile := FileLocator gtResource / 'feenkcom' / 'gt4python' / 'data' / 'python' / 'movie.py'.\rPBPlatform current workingDirectory ensureCreateDirectory.\rsourceFile copyTo: PBPlatform current workingDirectory / sourceFile basename.\rPBPlatform current workingDirectory"
 			},
 			{
 				"__type" : "textSnippet",
