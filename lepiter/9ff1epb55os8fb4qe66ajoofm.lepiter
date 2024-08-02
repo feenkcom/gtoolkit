@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:05:15.629778+02:00"
+						"dateAndTimeString" : "2024-08-02T14:03:49.247196+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To reduce the number of remote call during inspection of proxy objects ({{gtClass:GtRsrProxyServiceClient}}),  {{gtMethod:GtRsrProxyServiceClient>>#getInspectorProxyWithData}} returns an inspector proxy instance with all data needed by the local inspector already cached in that instance."
+				"string" : "To reduce the number of remote call during inspection of proxy objects ({{gtClass:GtRsrProxyServiceClient}}),  {{gtMethod:GtRsrProxyServiceClient>>#getLocalProxyInspector}} returns an inspector proxy instance with all data needed by the local inspector already cached in that instance."
 			},
 			{
 				"__type" : "textSnippet",
@@ -251,7 +251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-26T10:01:26.922507+02:00"
+						"dateAndTimeString" : "2024-08-02T14:04:03.885+02:00"
 					}
 				},
 				"uid" : {
@@ -261,7 +261,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To get all the information needed in one call, {{gtClass:GtRsrInspectorProxySerializationStrategy}} is a serialisation strategy that can return for a remote object a {{gtClass:GtpoGtRemotePhlowViewedObject}} inspector proxy initialized with all data related to views and actions, so that getting this data from the inspector proxy does not require extra remote calls. This strategy is used by the session call {{gtMethod:GtGemStoneSession>>#evaluateInspectorProxy:}} "
+				"string" : "To get all the information needed in one call, {{gtClass:GtRsrInspectorProxySerializationStrategy}} is a serialisation strategy that can return for a remote object a {{gtClass:GtpoGtRemotePhlowViewedObject}} inspector proxy initialized with all data related to views and actions, so that getting this data from the inspector proxy does not require extra remote calls. This strategy is used by the session call {{gtMethod:GtGemStoneSession>>#evaluateProxyInspector:}} "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -327,14 +327,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-06-25T17:52:21.97989+02:00"
+									"dateAndTimeString" : "2024-08-02T14:04:35.03115+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "9/sxFBrYDQCh+S86ARztLQ=="
 							},
-							"code" : "inspectorProxyWithData := session \r\tevaluateInspectorProxy: 'GtRemotePhlowDeclarativeTestInspectable new'"
+							"code" : "localProxyInspector := session \r\tevaluateProxyInspector: 'GtRemotePhlowDeclarativeTestInspectable new'"
 						}
 					]
 				},
@@ -357,14 +357,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:52:23.371232+02:00"
+						"dateAndTimeString" : "2024-08-02T14:04:46.046378+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "8KasYQrYDQC6BovmARztLQ=="
 				},
-				"code" : "inspectorProxyWithData := session evaluateInspectorProxy:  'Object new'"
+				"code" : "localProxyInspector := session evaluateProxyInspector:  'Object new'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -391,7 +391,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:26:17.667426+02:00"
+						"dateAndTimeString" : "2024-08-02T14:04:11.890818+02:00"
 					}
 				},
 				"uid" : {
@@ -401,7 +401,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can also get the same data from a proxy object using {{gtMethod:GtRsrProxyServiceClient>>#getInspectorProxyWithData}}."
+				"string" : "We can also get the same data from a proxy object using {{gtMethod:GtRsrProxyServiceClient>>#evaluateProxyInspector:}}."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -497,14 +497,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:49:32.504076+02:00"
+						"dateAndTimeString" : "2024-08-02T14:04:35.020209+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Ckt9AwfYDQC4XO/uARztLQ=="
 				},
-				"code" : "inspectorProxyWithData := objectProxy getInspectorProxyWithData "
+				"code" : "localProxyInspector := objectProxy getLocalProxyInspector "
 			},
 			{
 				"__type" : "textSnippet",
@@ -568,14 +568,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:41:59.426651+02:00"
+						"dateAndTimeString" : "2024-08-02T14:04:35.031893+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "PXc2IhrYDQCqLulSARztLQ=="
 				},
-				"code" : "inspectorProxyWithData declarativeViews "
+				"code" : "localProxyInspector declarativeViews "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -602,14 +602,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:17:51.782092+02:00"
+						"dateAndTimeString" : "2024-08-02T14:04:35.032698+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "7VN/rYfXDQCt7dNwDTxBnw=="
 				},
-				"code" : "inspectorProxyWithData printString"
+				"code" : "localProxyInspector printString"
 			},
 			{
 				"__type" : "textSnippet",
@@ -715,14 +715,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-06-25T17:53:38.852499+02:00"
+									"dateAndTimeString" : "2024-08-02T14:05:29.13902+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "Mmp3dhrYDQC3TCL7ARztLQ=="
 							},
-							"code" : "inspectorProxyData := session \r\tevaluateInspectorProxyRawData:  'GtRemotePhlowDeclarativeTestInspectable new'"
+							"code" : "inspectorProxyData := session \r\tevaluateProxyInspectorRawData:  'GtRemotePhlowDeclarativeTestInspectable new'"
 						}
 					]
 				},
@@ -745,14 +745,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:53:37.058985+02:00"
+						"dateAndTimeString" : "2024-08-02T14:05:26.110957+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Y+oTdhrYDQC3FomZARztLQ=="
 				},
-				"code" : "inspectorProxyData := session \r\tevaluateInspectorProxyRawData:  'Object new'"
+				"code" : "inspectorProxyData := session \r\tevaluateProxyInspectorRawData:  'Object new'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -816,14 +816,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:17:06.088997+02:00"
+						"dateAndTimeString" : "2024-08-02T14:04:35.033921+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "rVnfHhrYDQCnLFJFARztLQ=="
 				},
-				"code" : "inspectorProxyWithData := (inspectorProxyData at: 'proxyObject')\r\tinitializeFromProxyData: (inspectorProxyData at: 'proxyData');\r\tyourself"
+				"code" : "localProxyInspector := (inspectorProxyData at: 'proxyObject')\r\tinitializeFromProxyData: (inspectorProxyData at: 'proxyData');\r\tyourself"
 			},
 			{
 				"__type" : "textSnippet",
@@ -850,7 +850,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:18:52.705325+02:00"
+						"dateAndTimeString" : "2024-08-02T14:03:54.755002+02:00"
 					}
 				},
 				"uid" : {
@@ -860,7 +860,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can also directly get this initialized proxy inspector from any normal proxy using {{gtMethod:GtRsrProxyServiceClient>>#getInspectorProxyWithData}}."
+				"string" : "We can also directly get this initialized proxy inspector from any normal proxy using {{gtMethod:GtRsrProxyServiceClient>>#getLocalProxyInspector}}."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -887,14 +887,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-25T17:29:49.418714+02:00"
+						"dateAndTimeString" : "2024-08-02T14:05:36.104851+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "3TOwaQrYDQC65MAXARztLQ=="
 				},
-				"code" : "objectProxy getInspectorProxyRawData"
+				"code" : "objectProxy getLocalProxyInspectorRawData"
 			},
 			{
 				"__type" : "textSnippet",
