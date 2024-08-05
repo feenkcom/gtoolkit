@@ -1,0 +1,411 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-04T22:22:58.513717+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-04T22:38:10.069556+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qhg2EEPbDQCwRNkMAG9yWg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "A [[Spotter]] search is like an inspector view: it's a method implemented in a class of the object in the context of which we want to search. The global Spotter starts from an instance of {{gtClass:GtSpotterStart}}. For example, {{gtMethod:GtSpotterStart>>#gtSearchForPragmasFor:|expanded=true}} defines the search of the pragmas from the image."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-04T22:38:12.750905+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-04T22:47:09.188737+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BkS0RkPbDQC45LUNAG9yWg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The method above defines the search through a fluent API, not unlike the [[Inspector views]]. Specifically, it uses the {{gtMethod:GtSpotterProtoSearch>>#list}}. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-04T21:48:33.55305+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-04T22:48:04.895387+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "sFYhlULbDQCWz1hoAG9yWg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Other methods, like  {{gtMethod:GtSpotterStart>>#gtSearchForClassesFor:|expanded=true}} which is responsible for searching for classes and traits in the image, rely on an explicit search. We use an explicit search because we want to delegate to a cache rather than traversing an existing list."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-04T21:48:55.536788+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-04T21:48:55.726397+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "x8JwlkLbDQCW4bNTAG9yWg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To learn from similar methods, you can look at [[Querying Pharo code with GT filters]]:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-04T21:49:01.508247+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-04T21:49:01.814905+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "LNrLlkLbDQCW7BIAAG9yWg=="
+							},
+							"code" : "#gtSearch gtPragmas"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-04T22:54:13.57576+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-04T22:54:19.54588+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "30n5f0PbDQCN2YSkAG9yWg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Examples"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-04T21:48:46.140277+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-04T21:53:45.546176+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lWHhlULbDQCW16dfAG9yWg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Such search methods can be defined in any class and when Spotter is opened on an instance of the class, the custom search will become available. When a class defines a custom search, the inspector over an instance of that class will have a Spotter action button with the custom search."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-04T22:49:17.929249+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-04T22:53:55.98998+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "3BRabkPbDQCIHcuUAG9yWg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For example, {{gtMethod:GtABAddressBook>>#gtGtSpotterForAddressesFor:}} defines a search over the addresses from an address book. When inspecting an instance of {{gtClass:GtABAddressBook}} we get a search button in the inspector."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-04T22:49:11.362216+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-04T22:49:11.362216+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "XuL1bUPbDQCIFaGsAG9yWg=="
+							},
+							"exampleSelector" : "cartoonAddressBook",
+							"previewHeight" : 300,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "GtABCartoonAddressBookExample",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-04T22:48:58.685726+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-04T22:49:02.79195+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "n/vSbEPbDQCH00v0AG9yWg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Inspecting "
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2024-08-04T21:48:33.504277+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2024-08-04T21:48:33.504277+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Molding Spotter searches"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "6e972095-42db-0d00-96ce-f146006f725a"
+	}
+}
