@@ -42,7 +42,7 @@
 				"string" : "Create a new method from a class Coder using the  + button above the method list."
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T17:04:34.379839+02:00"
+						"dateAndTimeString" : "2024-08-15T23:30:19.150703+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T17:04:34.379839+02:00"
+						"dateAndTimeString" : "2024-08-15T23:30:19.150703+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "kxDugNW8DQCAFH4kAmnbGg=="
+					"uidString" : "pXVOSSHcDQCZQqCnCdCL5g=="
 				},
-				"code" : "(GtCoder forClass: GtMemoryCard)",
-				"elementHeight" : 100,
-				"codeHeight" : 50,
-				"codeVisible" : true
+				"exampleSelector" : "createMethodScripter",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtScreenshotFor:",
+				"exampleBehaviorName" : "GtCoderSlideshow",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			},
 			{
 				"__type" : "textSnippet",
