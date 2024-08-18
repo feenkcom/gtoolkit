@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T14:42:35.817792+02:00"
+						"dateAndTimeString" : "2024-08-15T23:55:58.47138+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Click the Spotter search at the right of the Class Coder."
+				"string" : "Click the Spotter search at the right of the [[Coder]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -116,7 +116,7 @@
 				"string" : "You can also use the Filter to limit the display to just methods in a particular category, or that access a particular slot."
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T14:14:52.862036+02:00"
+						"dateAndTimeString" : "2024-08-15T23:39:22.614837+02:00"
 					}
 				},
 				"editEmail" : {
@@ -140,17 +140,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T14:14:53.91819+02:00"
+						"dateAndTimeString" : "2024-08-15T23:39:22.614837+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "pmAQItO8DQCH16ZHDfE3MQ=="
+					"uidString" : "UhazaSHcDQCBH7SyB2Ojkw=="
 				},
-				"code" : "GtCoder forClass: GtMemoryCard",
-				"elementHeight" : 318,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"exampleSelector" : "searchMethodScripter",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtScreenshotFor:",
+				"exampleBehaviorName" : "GtCoderSlideshow",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			}
 		]
 	},

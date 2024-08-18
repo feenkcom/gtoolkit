@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T17:04:58.983878+02:00"
+						"dateAndTimeString" : "2024-08-18T12:40:26.607506+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To add a slot (or instance variable), click the grey bar just below the class name in the class coder to reveal the class definition."
+				"string" : "To add a slot (or instance variable), expand the class definition by clicking the grey bar just below the class name in the class coder."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T17:04:58.986471+02:00"
+						"dateAndTimeString" : "2024-08-18T12:40:45.115118+02:00"
 					}
 				},
 				"uid" : {
@@ -76,10 +76,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then add (+), edit, and click the checkmark (✓)."
+				"string" : "Then add slots in the dedicated form field:"
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T17:04:58.989114+02:00"
+						"dateAndTimeString" : "2024-08-18T12:39:30.839864+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T17:04:58.989114+02:00"
+						"dateAndTimeString" : "2024-08-18T12:39:30.839864+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qZJlgtW8DQCAO64pAmnbGg=="
+					"uidString" : "uKVei1TcDQCilwhNCMrVQg=="
 				},
-				"code" : "(GtCoder forClass: GtMemoryCard)",
-				"elementHeight" : 100,
-				"codeHeight" : 50,
-				"codeVisible" : true
+				"exampleSelector" : "classCoderForClassUI_click_slot",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtScreenshotFor:",
+				"exampleBehaviorName" : "GtBehaviorCoderByScripterExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			},
 			{
 				"__type" : "textSnippet",
@@ -151,6 +154,46 @@
 					"__type" : "textStyle"
 				},
 				"string" : "You can also add a slot from a fixit in a method coder: if you refer to an unbound variable, the fixit will offer to make it a temporary or a slot."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-18T13:06:20.729049+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-18T13:06:20.729049+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "L5ZT61TcDQCo3+8CCMrVQg=="
+				},
+				"exampleSelector" : "fixitCreateInstVar_01_setup",
+				"previewHeight" : 400,
+				"previewShowSelector" : "gtScreenshotFor:",
+				"exampleBehaviorName" : "GtPharoMethodCoderByScripterExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			}
 		]
 	},

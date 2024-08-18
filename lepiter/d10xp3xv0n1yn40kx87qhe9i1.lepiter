@@ -461,14 +461,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-23T14:54:28.235218+01:00"
+						"dateAndTimeString" : "2024-08-18T15:35:11.121761+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Bvr/FcCxDQCm6GPkB+HMxw=="
 				},
-				"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [ :each | \r\t\t| title color |\r\t\ttitle := (each contentAsString removePrefix: '[[') removeSuffix: ']]'.\r\t\tcolor := Color gray alpha: 0.2.\r\t\t(allReachedPages anySatisfy: [ :aPage | aPage title = title ])\r\t\t\t\tifTrue: [ color := Color red alpha: 0.4 ].\r\t\ttitle = 'Get started' ifTrue: [ color := Color blue alpha: 0.6 ].\r\t\tBlShrinkingTextElement new\r\t\t\tconstraintsDo: [:c |c horizontal exact: 300. c vertical fitContent];\r\t\t\tbackground: color;\r\t\t\ttext: title asRopedText glamorousRegularFont;\r\t\t\twhen: BlClickEvent do: [:e | e consumed: true. e target phlow spawnObject: (each outgoingExplicitLinks anyOne target)] ];\r\twith: allTocSnippets.\rm edges fromRightCenter; toLeftCenter; connectToAll: #children.\rm layout custom: (GtGraphHorizontalTreeLayout new levelDistance: 150).\rm"
+				"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [ :each | \r\t\t| title color |\r\t\ttitle := (each contentAsString removePrefix: '[[') removeSuffix: ']]'.\r\t\tcolor := Color gray alpha: 0.2.\r\t\t(allReachedPages anySatisfy: [ :aPage | aPage title = title ])\r\t\t\t\tifTrue: [ color := Color red alpha: 0.4 ].\r\t\ttitle = 'Glamorous Toolkit' ifTrue: [ color := Color blue alpha: 0.6 ].\r\t\tBlShrinkingTextElement new\r\t\t\tconstraintsDo: [:c |c horizontal exact: 300. c vertical fitContent];\r\t\t\tbackground: color;\r\t\t\ttext: title asRopedText glamorousRegularFont;\r\t\t\twhen: BlClickEvent do: [:e | e consumed: true. e target phlow spawnObject: (each outgoingExplicitLinks anyOne target)] ];\r\twith: allTocSnippets.\rm edges fromRightCenter; toLeftCenter; connectToAll: #children.\rm layout custom: (GtGraphHorizontalTreeLayout new levelDistance: 150).\rm"
 			},
 			{
 				"__type" : "textSnippet",
