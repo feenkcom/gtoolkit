@@ -111,7 +111,7 @@
 					"uidString" : "SoB8GSHcDQCYgbqxCdCL5g=="
 				},
 				"exampleSelector" : "createClassScripter",
-				"previewHeight" : 400,
+				"previewHeight" : 300,
 				"previewShowSelector" : "gtScreenshotFor:",
 				"exampleBehaviorName" : "GtCoderSlideshow",
 				"codeExpanded" : true,
@@ -143,7 +143,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T17:04:08.774417+02:00"
+						"dateAndTimeString" : "2024-08-18T12:17:05.218932+02:00"
 					}
 				},
 				"uid" : {
@@ -153,10 +153,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You can also create a class from a fixit in any code snippet or editor."
+				"string" : "You can also create a class from a fixit in any code snippet or editor:"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -169,7 +169,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T17:04:08.774908+02:00"
+						"dateAndTimeString" : "2024-08-18T12:16:00.377159+02:00"
 					}
 				},
 				"editEmail" : {
@@ -180,14 +180,97 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-14T17:04:08.774908+02:00"
+						"dateAndTimeString" : "2024-08-18T12:16:00.377159+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "DV1nf9W8DQC/3TsdAmnbGg=="
+					"uidString" : "hLRMN1TcDQCY/lYmCMrVQg=="
 				},
-				"code" : "MyGreatNewClass new"
+				"exampleSelector" : "fixitCreateClass_02_click_fixit",
+				"previewHeight" : 300,
+				"previewShowSelector" : "gtScreenshotFor:",
+				"exampleBehaviorName" : "GtPharoMethodCoderByScripterExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-18T12:16:25.752801+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-18T12:17:24.095583+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "sOfPOFTcDQCZGqCNCMrVQg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And then you get an embedded form:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-18T12:16:38.336918+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-18T12:16:38.336918+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "e+2POVTcDQCZS4TWCMrVQg=="
+				},
+				"exampleSelector" : "fixitCreateClass_03_click_define_class",
+				"previewHeight" : 300,
+				"previewShowSelector" : "gtScreenshotFor:",
+				"exampleBehaviorName" : "GtPharoMethodCoderByScripterExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			}
 		]
 	},
