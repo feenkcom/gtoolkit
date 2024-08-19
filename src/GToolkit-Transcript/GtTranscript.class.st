@@ -162,6 +162,12 @@ GtTranscript >> showException: anException [
 ]
 
 { #category : #'api - streaming' }
+GtTranscript >> showObject: anException [
+	self next showObject: anException.
+	self cr
+]
+
+{ #category : #'api - streaming' }
 GtTranscript >> space [
 	self next space
 ]
