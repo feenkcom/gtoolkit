@@ -158,6 +158,24 @@ GtTranscriptNextBuilder >> showException: anException [
 ]
 
 { #category : #streaming }
+GtTranscriptNextBuilder >> showObject: anObject [
+	self
+		expanding: [ (anObject gtViewsFor: GtPhlowEmptyView new)
+				asElementDo: [ :e | 
+					e
+						asVerticallyResizableDo: [ :aContainer | 
+							aContainer margin: (BlInsets all: 10).
+							aContainer layout: BlLinearLayout vertical.
+							aContainer
+								constraintsDo: [ :c | 
+									c horizontal matchParent.
+									c vertical exact: 200 ].
+							aContainer addAptitude: GtPreviewAptitude new.
+							aContainer ] ] ];
+		print: anObject gtDisplayString
+]
+
+{ #category : #streaming }
 GtTranscriptNextBuilder >> space [
 	self put: Character space
 ]
