@@ -322,14 +322,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-19T23:47:04.865685+02:00"
+						"dateAndTimeString" : "2024-08-20T20:02:14.096337+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "e6C51z1uAAAAAAAAAAAAAA=="
 				},
-				"code" : "dictionary := STON fromString: json."
+				"code" : "dictionary := STONJSON fromString: json."
 			},
 			{
 				"__type" : "textSnippet",

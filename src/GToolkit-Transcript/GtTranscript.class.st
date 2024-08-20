@@ -106,9 +106,12 @@ GtTranscript >> initialize [
 ]
 
 { #category : #'private - actions' }
-GtTranscript >> insertString: aString withAttributes: aCollection [
+GtTranscript >> insertString: aString withAttributesForWholeString: aCollection withAttributesAtTheEnd: aCollection2 [
 	self textDo: [ :aText |
-		aText append: (aString asRopedText attributes: aCollection).
+		| toAppend |
+		toAppend := aString asRopedText attributes: aCollection.
+		(toAppend from: toAppend size to: toAppend size) attributes: aCollection2.
+		aText append: toAppend.
 		self announcer announce: (GtTranscriptInsertStringAnnouncement new 
 			string: aString; 
 			attributes: aCollection) ]

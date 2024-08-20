@@ -341,15 +341,13 @@ GtTranscriptExamples >> transcriptWitAnimation [
 		do: [ :anEvent | 
 			| snapshot |
 			snapshot := animation target asSpartaForm.
+			transcript cr.
 			transcript next
-				cr;
 				expanded: [ BlElement new
 						constraintsDo: [ :c | c textFlow pushLine ];
 						size: snapshot extent;
 						background: snapshot ];
-				putAll: 'Animation progress:';
-				space;
-				putAll: anEvent progress asString.
+				putAll: 'Animation progress: ', anEvent progress asString.
 			animation target asSpartaForm extent ];
 		onFinishedDo: [ space close ].
 	
