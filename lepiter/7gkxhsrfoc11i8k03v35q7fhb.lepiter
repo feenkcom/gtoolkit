@@ -18,80 +18,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:12:43.301061+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:44:30.490942+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "8Vx/6/3WDQCKZoONDbYEfg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "### -- experimental -- proof of concept -- not yet finished --"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:13:24.824097+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:13:24.824097+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Pej47f3WDQCL2epNDbYEfg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2024-06-11T14:14:11.815282+02:00"
 					}
 				},
@@ -214,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T20:24:54.582028+02:00"
+						"dateAndTimeString" : "2024-08-20T16:32:56.466657+02:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You need a GitHub account, with SSH keys, the command line `git` executable as well as the `gh` tool (https://cli.github.com), SSH agent setup as well a a personal access token."
+				"string" : "You need a GitHub account, with SSH keys, the command line `git` executable, SSH agent setup as well a a personal access token."
 			},
 			{
 				"__type" : "textSnippet",
@@ -325,7 +251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T11:34:06.699293+02:00"
+						"dateAndTimeString" : "2024-08-20T16:33:29.613947+02:00"
 					}
 				},
 				"uid" : {
@@ -335,7 +261,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To allow unattended access (i.e. to prevent any interactive prompts) you need a credentials helper in the first case and an SSH agent in the second case. You'll need both."
+				"string" : "To allow unattended access (i.e. to prevent any interactive prompts) you need a credentials helper in the first case and an SSH agent in the second case."
 			},
 			{
 				"__type" : "textSnippet",
@@ -362,7 +288,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T11:25:27.335173+02:00"
+						"dateAndTimeString" : "2024-08-20T16:33:48.559528+02:00"
 					}
 				},
 				"uid" : {
@@ -372,7 +298,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Make sure clone, pull, commit, push, as well as the gh tool work on the command line before continuing."
+				"string" : "Make sure clone, pull, commit and push on the command line before continuing."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:34:25.791653+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:37:44.481165+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CE0tD4DcDQCWe/77DjMXXw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Let {{gtClass:GhTokenHolder}} know about your personal access token. You can set it directly as a string using {{gtMethod:GhTokenHolder class>>#token:}} , let it be read and copied from a file using {{gtMethod:GhTokenHolder class>>#readTokenFrom:}} or let is be read each time from a file using {{gtMethod:GhTokenHolder class>>#fromFile:}}. In the last case the token is not stored in an object that is part of the image."
 			},
 			{
 				"__type" : "textSnippet",
@@ -681,6 +644,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T17:07:40.083719+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T17:07:44.582682+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VxnKhYDcDQC0Gx4PDjMXXw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Start clean"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2024-06-11T14:35:32.512498+02:00"
 					}
 				},
@@ -692,7 +692,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T16:01:39.098692+02:00"
+						"dateAndTimeString" : "2024-08-20T17:07:04.680594+02:00"
 					}
 				},
 				"uid" : {
@@ -702,7 +702,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "It is best to start with a fresh, clean, fully up to date, ready made distribution GT image from https://gtoolkit.com/download/ and to launch your image from the command line."
+				"string" : "It is best to start with a fresh, clean, fully up to date, ready made distribution GT image from [https://gtoolkit.com/download/](https://gtoolkit.com/download/) and to launch your image from the command line."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T17:07:53.84488+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T17:08:07.957865+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "esTdhoDcDQC0ftJBDjMXXw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Find the repository we need"
 			},
 			{
 				"__type" : "textSnippet",
@@ -729,7 +766,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:39:45.853734+02:00"
+						"dateAndTimeString" : "2024-08-20T17:10:24.313952+02:00"
 					}
 				},
 				"uid" : {
@@ -739,41 +776,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Since no repositories are defined we first need to find out which repository we need, since there are many of them. When this image was created, some essential information of each repository was recorded. See the records inspector tab in the following class."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:37:59.031282+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:38:16.981794+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "yIfXRf7WDQC0jBoUDbYEfg=="
-				},
-				"code" : "GtGitRepositoryRegistryHistory"
+				"string" : "Since no repositories are defined we first need to find out which repository we need, since there are many of them. When the ready made image was created, some essential information of each repository was recorded. See the `History` inspector tab in {{gtClass:IceRepository}}. Note that the history is not present in a developer image built from sources."
 			},
 			{
 				"__type" : "textSnippet",
@@ -800,7 +803,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:42:03.370952+02:00"
+						"dateAndTimeString" : "2024-08-20T16:42:04.031718+02:00"
 					}
 				},
 				"uid" : {
@@ -810,7 +813,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We need to find which repository holds our package."
+				"string" : "We need to find which repository holds our package. This can be done using {{gtMethod:GtGitRepositoryRegistryHistory>>#repositoryIncludingPackage:}} as follows."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -871,7 +874,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T16:02:40.416652+02:00"
+						"dateAndTimeString" : "2024-08-20T16:43:32.869066+02:00"
 					}
 				},
 				"uid" : {
@@ -881,10 +884,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now that we know this, we can restore this repository (basically clone it)."
+				"string" : "Now that we know this, we have to restore the `gtoolkit-inspector` repository."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -897,7 +900,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:42:52.209595+02:00"
+						"dateAndTimeString" : "2024-08-20T17:08:18.147135+02:00"
 					}
 				},
 				"editEmail" : {
@@ -908,14 +911,127 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:43:27.038675+02:00"
+						"dateAndTimeString" : "2024-08-20T17:08:32.248882+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "3BJRV/7WDQC9ILlqDbYEfg=="
+					"uidString" : "OZVQiIDcDQC1Sv7rDjMXXw=="
 				},
-				"code" : "(GtGitRepositoryRegistryHistory instance repositoryNamed: 'gtoolkit-inspector') restore"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Create your fork"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:43:38.687045+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:44:33.864538+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gdEhMIDcDQCgkloeDjMXXw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To do a pull request you need your personal fork of the repository you want to contribute to. You also need to make your changes in a feature branch."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:47:05.592278+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T17:10:31.103133+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qxQkPIDcDQCkBKsBDjMXXw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Go to the `History` tab of {{gtClass:IceRepository}}, select `gtoolkit-inspector` and click the `Fork` button."
+			},
+			{
+				"__type" : "pictureSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:48:11.40777+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:49:06.983151+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8jZjQIDcDQCnAHLdDjMXXw=="
+				},
+				"url" : "attachments/5mnyduoknx6cbphrs4az64w4c/2024-08-20_14-07-43_BlElement-497029120.png",
+				"caption" : "",
+				"previewHeight" : 567.28125
 			},
 			{
 				"__type" : "textSnippet",
@@ -942,7 +1058,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:43:54.423048+02:00"
+						"dateAndTimeString" : "2024-08-20T17:00:30.554124+02:00"
 					}
 				},
 				"uid" : {
@@ -952,7 +1068,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "When you open the git GT tool, you should now see this repository."
+				"string" : "When you open the GT Git tool, you should now see this repository. It was forked, cloned, created and registered."
 			},
 			{
 				"__type" : "textSnippet",
@@ -979,7 +1095,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:56:39.509977+02:00"
+						"dateAndTimeString" : "2024-08-20T16:58:37.194206+02:00"
 					}
 				},
 				"uid" : {
@@ -989,7 +1105,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is the master repository to which you have no rights to commit to. The pull request process works my first committing to a copy or fork in your own GitHub account and then asking for those changes to be considered for inclusion."
+				"string" : "The pull request process works my first committing to this copy or fork in your own GitHub account and then asking for those changes to be considered for inclusion."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1005,7 +1121,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T16:03:27.55071+02:00"
+						"dateAndTimeString" : "2024-08-20T17:08:48.919756+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1016,51 +1132,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T16:03:48.568251+02:00"
+						"dateAndTimeString" : "2024-08-20T17:08:56.191147+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "vImGd//WDQCmxeBJCdiTzA=="
+					"uidString" : "jCUmioDcDQC2AoGeDjMXXw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We use a wrapper around `gh` to fork our repository in place."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:56:06.152088+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-22T15:58:57.945332+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "tq+jhv7WDQCQwr7bDbYEfg=="
-				},
-				"code" : "GtGitHubCLITool new\r\treadTokenFrom: FileLocator home / '.secrets' / 'gh_token.txt';\r\tworkingDirectory: (IceRepository repositoryNamed: 'gtoolkit-inspector') location;\r\tfork"
+				"string" : "##Create a feature branch"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1087,7 +1169,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:56:48.317499+02:00"
+						"dateAndTimeString" : "2024-08-20T16:51:52.844037+02:00"
 					}
 				},
 				"uid" : {
@@ -1097,10 +1179,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Before committing our changes we also need to create a feature branch which is like a name indicating the intent of our changes. Here we name the new branch `feature-color-gt-view-circle`"
+				"string" : "Before committing our changes we also need to create a feature branch which is like a name indicating the intent of our changes. Here we name the new branch `feature-color-gt-view-circle` by toggling to the inspector view in the Git tool and going to the underlying repository."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "pictureSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -1113,7 +1195,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:49:34.380921+02:00"
+						"dateAndTimeString" : "2024-08-20T16:52:51.780255+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1124,14 +1206,89 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T11:35:42.436136+02:00"
+						"dateAndTimeString" : "2024-08-20T16:53:42.393671+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wLlJb/7WDQCD1GtdDbYEfg=="
+					"uidString" : "LFgZUYDcDQCtJHRoDjMXXw=="
 				},
-				"code" : "(IceRepository repositoryNamed: 'gtoolkit-inspector')\r\tcreateBranch: 'feature-color-gt-view-circle';\r\tconfigureUpstreamIfNecessary"
+				"url" : "attachments/5mnyduq8sog60mq6gx1x55bkq/2024-08-20_16-16-43_BlElement-497029120.png",
+				"caption" : "",
+				"previewHeight" : 583.04296875
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:52:10.570837+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T17:11:11.82761+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "W9ihTYDcDQCqVWVoDjMXXw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "When on the `Branches` inspector tab a `+` button appears that allows you to create and switch to a branch by specifying its name."
+			},
+			{
+				"__type" : "pictureSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:53:53.551314+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:54:30.553234+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "MunHVIDcDQCtKobHDjMXXw=="
+				},
+				"url" : "attachments/5mnydutjg4n9lrfh1ze3r20sz/2024-08-20_16-17-31_BlElement-497029120.png",
+				"caption" : "",
+				"previewHeight" : 573.72265625
 			},
 			{
 				"__type" : "textSnippet",
@@ -1158,7 +1315,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T20:23:06.618646+02:00"
+						"dateAndTimeString" : "2024-08-20T16:59:37.687619+02:00"
 					}
 				},
 				"uid" : {
@@ -1168,10 +1325,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our cloned repository is now switched to our feature branch. We push this branch so that it appears in our forked repository on GitHub."
+				"string" : "Our forked repository is now switched to our feature branch. We push this branch so that it appears in our forked repository on GitHub."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -1184,7 +1341,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T15:07:07.430726+02:00"
+						"dateAndTimeString" : "2024-08-20T17:09:21.847365+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1195,14 +1352,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T15:07:08.142607+02:00"
+						"dateAndTimeString" : "2024-08-20T17:09:33.268419+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "SAEOrv7WDQCb8HUBDbYEfg=="
+					"uidString" : "kIgcjIDcDQC2jQHKDjMXXw=="
 				},
-				"code" : "(IceRepository repositoryNamed: 'gtoolkit-inspector') branch push"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Make your changes, commit and push"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1229,7 +1389,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T20:23:20.709864+02:00"
+						"dateAndTimeString" : "2024-08-20T17:12:08.637684+02:00"
 					}
 				},
 				"uid" : {
@@ -1239,7 +1399,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now we are ready to add our code and make the actual change in our image (see the Example section above)."
+				"string" : "Now we are ready to add our code and make the actual change in our image (see the `Example` section above)."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1266,7 +1426,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T16:04:21.12864+02:00"
+						"dateAndTimeString" : "2024-08-20T17:09:12.040887+02:00"
 					}
 				},
 				"uid" : {
@@ -1276,7 +1436,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Going back to the GT git tool, we can see our repository with our change ready to be committed on our branch. Go ahead and commit."
+				"string" : "Going back to the GT Git tool, we can see our repository with our change ready to be committed on our branch. Go ahead and commit. The first line of the last commit on the branch will be used as comment for the pull request later on."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1329,7 +1489,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:58:38.465715+02:00"
+						"dateAndTimeString" : "2024-08-20T17:09:39.53074+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1340,20 +1500,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T20:28:49.398637+02:00"
+						"dateAndTimeString" : "2024-08-20T17:09:46.015649+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "v863j/7WDQCUgVVXDbYEfg=="
+					"uidString" : "M2YqjYDcDQC3Y0YVDjMXXw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Finally we can create the actual pull request, again using our `gh` wrapper."
+				"string" : "##Create your pull request"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -1366,7 +1526,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:59:18.310386+02:00"
+						"dateAndTimeString" : "2024-06-11T14:58:38.465715+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1377,14 +1537,53 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-13T11:35:09.707753+02:00"
+						"dateAndTimeString" : "2024-08-20T16:55:01.605955+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Gs0Xkv7WDQCVrBVfDbYEfg=="
+					"uidString" : "v863j/7WDQCUgVVXDbYEfg=="
 				},
-				"code" : "GtGitHubCLITool new\r\treadTokenFrom: FileLocator home / '.secrets' / 'gh_token.txt';\r\tworkingDirectory: (IceRepository repositoryNamed: 'gtoolkit-inspector') location;\r\tcreatePullRequest"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Finally we can create the actual pull request, again using the repository inspector view."
+			},
+			{
+				"__type" : "pictureSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:55:10.269552+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-20T16:56:13.175403+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "LohaWYDcDQCuPnM0DjMXXw=="
+				},
+				"url" : "attachments/5mnydus2v04s36eqv3ok2xb5q/2024-08-20_14-10-15_BlElement-497029120.png",
+				"caption" : "",
+				"previewHeight" : 575.8593750000001
 			},
 			{
 				"__type" : "textSnippet",
@@ -1444,12 +1643,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-06-30T23:09:41.084626+02:00"
+			"dateAndTimeString" : "2024-08-20T16:31:47.926721+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to Glamorous Toolkit through a GitHub pull request"
+		"title" : "How to contribute to Glamorous Toolkit through a GitHub pull request"
 	},
 	"uid" : {
 		"__type" : "uuid",
