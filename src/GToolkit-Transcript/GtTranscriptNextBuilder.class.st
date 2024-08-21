@@ -20,10 +20,21 @@ Class {
 	#instVars : [
 		'transcript',
 		'adornmentStrategy',
-		'attributes'
+		'attributes',
+		'adornments'
 	],
 	#category : #'GToolkit-Transcript'
 }
+
+{ #category : #attributes }
+GtTranscriptNextBuilder >> adornment: anAdornment [
+	adornments add: anAdornment 
+]
+
+{ #category : #attributes }
+GtTranscriptNextBuilder >> adornments: aCollection [
+	adornments addAll: aCollection
+]
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> attribute: anAttribute [
@@ -63,7 +74,7 @@ GtTranscriptNextBuilder >> expanded: aBlock [
 		beAppend;
 		stencil: aBlock.
 	
-	self attributes: {
+	self adornments: {
 		BrGlamorousTriangleExpanderTextAttribute new
 			isExpanded: true;
 			createdAttributes: { adornmentAttribute };
@@ -76,7 +87,7 @@ GtTranscriptNextBuilder >> expanded: aBlock [
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> expanding: aBlock [
-	self attribute: (
+	self adornment: (
 		BrGlamorousTriangleExpanderTextAttribute new 
 			attributesCreatingBlock: [
 				BrTextAdornmentDynamicAttribute new 	
@@ -97,7 +108,8 @@ GtTranscriptNextBuilder >> foreground: aColor [
 
 { #category : #initialize }
 GtTranscriptNextBuilder >> initialize [
-	attributes := OrderedCollection with: (BlFontFamilyAttribute named: 'Source Code Pro')
+	attributes := OrderedCollection with: (BlFontFamilyAttribute named: 'Source Code Pro').
+	adornments := OrderedCollection new
 ]
 
 { #category : #attributes }
@@ -122,11 +134,12 @@ GtTranscriptNextBuilder >> put: aCharacter [
 
 { #category : #streaming }
 GtTranscriptNextBuilder >> putAll: aString [
-
 	"We should only modify the editor from within the UI thread"
+
 	transcript
 		insertString: aString
-		withAttributes: attributes
+		withAttributesForWholeString: attributes
+		withAttributesAtTheEnd: adornments
 ]
 
 { #category : #streaming }

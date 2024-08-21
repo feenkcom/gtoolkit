@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-20T23:30:20.067886+02:00"
+						"dateAndTimeString" : "2024-08-21T11:12:47.563855+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-20T23:30:20.067886+02:00"
+						"dateAndTimeString" : "2024-08-21T14:24:34.983185+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Iri60TLCDQCRKSSgBcLcQQ=="
+					"uidString" : "Fnlwpo/cDQCD1hUVAZeY8A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit allows you to work with REST APIs out of the box."
+				"string" : "With a number of configuration steps you can produce signed and verified GitHub commits from Glamorous Toolkit."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-28T06:02:38.029499+02:00"
+						"dateAndTimeString" : "2024-08-21T11:32:36.052307+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-20T23:30:20.071223+02:00"
+						"dateAndTimeString" : "2024-08-21T11:33:22.071384+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "lkGGOWMPAAAAAAAAAAAAAA=="
+					"uidString" : "KPqX9Y/cDQClZVtRBQWa5Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here, we take a look at how we can play with the GitHub REST API. Take a look at the related [[Exploring the GitHub REST API in 7']] video."
+				"string" : "GitHub commit signature verification is described in [https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-02-15T10:58:26.312118+01:00"
+						"dateAndTimeString" : "2024-08-21T11:42:26.42578+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,57 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-11T17:30:40.873229+11:00"
+						"dateAndTimeString" : "2024-08-21T11:44:10.276636+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "oXV8T22UDQChKfRJD3Q2zw=="
+					"uidString" : "vl3IGJDcDQCw93uOBQWa5Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "As a case study we start from JSON content located at [https://api.github.com/orgs/feenkcom](https://api.github.com/orgs/feenkcom) which looks like:"
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-11T17:30:12.156141+11:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-11T17:30:12.156141+11:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "ACWYzZfIDQCd3GhtCGwhDw=="
-				},
-				"exampleSelector" : "responseForFeenkOrg",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtJsonFor:",
-				"exampleBehaviorName" : "GtWorkingWithTheGitHubRestApiShow",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
+				"string" : "The reason signatures and verifications are useful is because the git config options user.name and user.email can be set to anything."
 			},
 			{
 				"__type" : "textSnippet",
@@ -169,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-28T07:39:09.54293+02:00"
+						"dateAndTimeString" : "2024-08-21T11:37:18.037455+02:00"
 					}
 				},
 				"editEmail" : {
@@ -180,17 +140,240 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-28T09:55:10.303152+02:00"
+						"dateAndTimeString" : "2024-08-21T11:37:28.247354+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "TFaFv4ZvAAAAAAAAAAAAAA=="
+					"uidString" : "ZLtmBpDcDQCrdwujBQWa5Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The first thing we do is to get that JSON programmatically:"
+				"string" : "#Use Libgit-CLI "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:34:02.841641+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:35:13.417962+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DkjE+o/cDQCmr398BQWa5Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The functionality described here is only available through the Libgit-CLI implementation. See [[Using Libgit-CLI as an alternative to Libgit2 FFI in Iceberg]] for installation and setup instructions."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:37:33.871279+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:37:35.982269+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "7VZYB5DcDQCrzIgIBQWa5Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Setup"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-21T11:38:14.195444+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-21T11:38:21.440723+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jqS/CZDcDQCr+Wu7BQWa5Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "git config --global gpg.format ssh"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-21T11:38:22.854969+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-08-21T11:39:04.422628+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yMdDCpDcDQCsA30QBQWa5Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "git config --global user.signingkey /full/path/to/your/key"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:37:37.811045+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:49:20.780812+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OHaUB5DcDQCr74sABQWa5Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The simplest route is to upload your SSH key again as signing key and set 2 git config options:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:35:16.352241+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:40:49.746756+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Sfgl/4/cDQCp0tmVBQWa5Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Now enable the signing of commits in {{gtClass:IceGitCliPlatform}}"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -200,31 +383,105 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T22:20:30.255175+02:00"
+						"dateAndTimeString" : "2024-08-21T11:40:12.729644+02:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T22:20:30.257189+02:00"
+						"dateAndTimeString" : "2024-08-21T11:40:13.313103+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Y0RRrcqnDQCfSQaxANEkOQ=="
+					"uidString" : "6UvQEJDcDQCtvuU4BQWa5Q=="
 				},
-				"code" : "url := 'https://api.github.com/orgs/feenkcom'."
+				"code" : "IceGitCliPlatform current signCommits: true"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:41:21.958866+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:41:52.313526+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xyCBFJDcDQCvK+a9BQWa5Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This basically adds the -S option to git commit operations."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:44:56.596962+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-08-21T11:49:54.634713+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pMq7IZDcDQC1nRWbBQWa5Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You can verify your settings by looking at the Details and Config inspector views of the current platform and by running the Validate action."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -240,25 +497,25 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-28T06:00:30.302149+02:00"
+						"dateAndTimeString" : "2024-08-21T11:45:53.689614+02:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T22:20:41.691234+02:00"
+						"dateAndTimeString" : "2024-08-21T11:46:11.389309+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2ZiNXSRmAAAAAAAAAAAAAA=="
+					"uidString" : "OPUiJZDcDQC4cu4NBQWa5Q=="
 				},
-				"code" : "json := ZnClient new get: url."
+				"code" : "IceGitCliPlatform current"
 			},
 			{
 				"__type" : "textSnippet",
@@ -274,7 +531,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-28T07:39:28.210353+02:00"
+						"dateAndTimeString" : "2024-08-21T11:46:15.632529+02:00"
 					}
 				},
 				"editEmail" : {
@@ -285,51 +542,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-20T23:31:03.518591+02:00"
+						"dateAndTimeString" : "2024-08-21T11:50:20.722573+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "HZe66MhJAAAAAAAAAAAAAA=="
+					"uidString" : "6sdxJpDcDQC4j4WSBQWa5Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now, that's just a string. We never really want to work with a string. We'd rather parse it:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-28T06:00:32.832458+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-20T20:02:14.096337+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "e6C51z1uAAAAAAAAAAAAAA=="
-				},
-				"code" : "dictionary := STONJSON fromString: json."
+				"string" : "In the GitHub web interface, properly signed commits are marked as verified using a green label."
 			},
 			{
 				"__type" : "textSnippet",
@@ -345,7 +568,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-28T07:39:56.071731+02:00"
+						"dateAndTimeString" : "2024-08-21T13:46:37.563362+02:00"
 					}
 				},
 				"editEmail" : {
@@ -356,202 +579,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:32:25.353578+02:00"
+						"dateAndTimeString" : "2024-08-21T13:47:47.185903+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CtBw3BqTAAAAAAAAAAAAAA=="
+					"uidString" : "PrLn1JHcDQCVx+TeAcR6Vw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Parsing the JSON string produces a dictionary. That's already better, but still not quite what we want. We want a custom experience for that outcome. To this end, we reify the data into a first class object:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-28T06:00:36.849732+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T22:20:45.576132+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Kh4mWdInAAAAAAAAAAAAAA=="
-				},
-				"code" : "GhOrganization new rawData: dictionary."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:31:12.002154+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:37:25.434635+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "5mXXpgS+AAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Once we have a dedicated object the inspector gets the opportunity of defining custom views. For example, the repositories list is described in {{gtMethod:GhOrganization>>#gtReposFor:}}."
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:27:52.319664+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:27:52.319664+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "jmzCs6jTAAAAAAAAAAAAAA=="
-				},
-				"exampleSelector" : "feenkcomOrganization",
-				"previewHeight" : 300,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GhOrganizationExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:37:46.872633+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:44:26.74872+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "PNGrxfBGAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Now, try exploring. For example, what happens when you double click on a repository?"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:34:25.42467+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:37:16.299339+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "J+41Em7xAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"string" : "Here is an example of a signed and verified commit: [https://github.com/feenkcom/gt4git/commit/dcc47828dd932e059c8315e918e791f1b99f117c](https://github.com/feenkcom/gt4git/commit/dcc47828dd932e059c8315e918e791f1b99f117c)"
 			}
 		]
 	},
@@ -563,7 +601,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-05-27T22:48:13.490083+02:00"
+			"dateAndTimeString" : "2024-08-21T11:10:50.876553+02:00"
 		}
 	},
 	"editEmail" : {
@@ -574,15 +612,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-08T16:20:58.997046+01:00"
+			"dateAndTimeString" : "2024-08-21T11:10:50.876553+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Working with a REST API: the GitHub case study"
+		"title" : "How to produce signed and verified GitHuh commits"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "2ef7629d-b77f-0d00-89be-5f730abbc3b2"
+		"uuid" : "83fa6fa6-8fdc-0d00-83d5-b0e7019798f0"
 	}
 }
