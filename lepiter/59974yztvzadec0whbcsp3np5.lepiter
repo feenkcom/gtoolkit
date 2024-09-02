@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T20:10:50.96617+02:00"
+						"dateAndTimeString" : "2024-09-01T12:19:52.548988+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,12 +66,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-05T20:10:50.96617+02:00"
+						"dateAndTimeString" : "2024-09-01T12:19:52.548988+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "0Nwjd2qADQCvSHBuCHfMWA=="
+					"uidString" : "50TL3W3dDQCy+TsUA1Xbrg=="
 				},
 				"wardleyMapDictionary" : {
 					"edges" : [
@@ -79,17 +79,143 @@
 							"arrow" : false,
 							"color" : {
 								"alpha" : 1.0,
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
+								"red" : 1.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "83d38fe7-6ddd-0d00-b337-76780355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "c1d38fe7-6ddd-0d00-b33c-f61c0355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.7497556207233627,
+								"green" : 0.7497556207233627,
+								"red" : 0.7497556207233627
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "b4d38fe7-6ddd-0d00-b33b-6f480355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "77d38fe7-6ddd-0d00-b336-ade00355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.7497556207233627,
+								"green" : 0.7497556207233627,
+								"red" : 0.7497556207233627
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "77d38fe7-6ddd-0d00-b336-ade00355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "cdd38fe7-6ddd-0d00-b33d-c1300355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
+								"red" : 1.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "a8d38fe7-6ddd-0d00-b33a-95560355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "83d38fe7-6ddd-0d00-b337-76780355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
+								"red" : 1.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "30d38fe7-6ddd-0d00-b331-3aa80355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "e8d28fe7-6ddd-0d00-b32e-458e0355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
 								"blue" : 0.0,
 								"green" : 0.0,
 								"red" : 0.0
 							},
 							"from" : {
 								"__type" : "uuid",
-								"uuid" : "cc5c56d3-1dc2-0d00-af61-b70e044d74b3"
+								"uuid" : "47d38fe7-6ddd-0d00-b333-e6990355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
 							},
 							"to" : {
 								"__type" : "uuid",
-								"uuid" : "036256d3-1dc2-0d00-af63-a3b9044d74b3"
+								"uuid" : "30d38fe7-6ddd-0d00-b331-3aa80355dbae"
 							},
 							"width" : 1.0
 						},
@@ -103,65 +229,17 @@
 							},
 							"from" : {
 								"__type" : "uuid",
-								"uuid" : "036256d3-1dc2-0d00-af63-a3b9044d74b3"
+								"uuid" : "3bd38fe7-6ddd-0d00-b332-118b0355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
 							},
 							"to" : {
 								"__type" : "uuid",
-								"uuid" : "945d56d3-1dc2-0d00-af62-0553044d74b3"
-							},
-							"width" : 1.0
-						},
-						{
-							"arrow" : false,
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.0,
-								"green" : 0.0,
-								"red" : 1.0
-							},
-							"from" : {
-								"__type" : "uuid",
-								"uuid" : "036256d3-1dc2-0d00-af63-a3b9044d74b3"
-							},
-							"to" : {
-								"__type" : "uuid",
-								"uuid" : "886256d3-1dc2-0d00-af64-04fa044d74b3"
-							},
-							"width" : 1.0
-						},
-						{
-							"arrow" : false,
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.0,
-								"green" : 0.0,
-								"red" : 1.0
-							},
-							"from" : {
-								"__type" : "uuid",
-								"uuid" : "036256d3-1dc2-0d00-af63-a3b9044d74b3"
-							},
-							"to" : {
-								"__type" : "uuid",
-								"uuid" : "a36256d3-1dc2-0d00-af65-c4e3044d74b3"
-							},
-							"width" : 1.0
-						},
-						{
-							"arrow" : false,
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.0,
-								"green" : 0.0,
-								"red" : 1.0
-							},
-							"from" : {
-								"__type" : "uuid",
-								"uuid" : "886256d3-1dc2-0d00-af64-04fa044d74b3"
-							},
-							"to" : {
-								"__type" : "uuid",
-								"uuid" : "a36256d3-1dc2-0d00-af65-c4e3044d74b3"
+								"uuid" : "30d38fe7-6ddd-0d00-b331-3aa80355dbae"
 							},
 							"width" : 1.0
 						},
@@ -170,16 +248,70 @@
 							"color" : {
 								"alpha" : 1.0,
 								"blue" : 1.0,
-								"green" : 0.059628543499511244,
-								"red" : 0.059628543499511244
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
 							},
 							"from" : {
 								"__type" : "uuid",
-								"uuid" : "f46256d3-1dc2-0d00-af6a-73d2044d74b3"
+								"uuid" : "dad38fe7-6ddd-0d00-b33e-39e20355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
 							},
 							"to" : {
 								"__type" : "uuid",
-								"uuid" : "106356d3-1dc2-0d00-af6d-451a044d74b3"
+								"uuid" : "f5d38fe7-6ddd-0d00-b340-d2320355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 1.0,
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "f5d38fe7-6ddd-0d00-b340-d2320355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "8fd38fe7-6ddd-0d00-b338-cf010355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 1.0,
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "1fd48fe7-6ddd-0d00-b343-5f480355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "8fd38fe7-6ddd-0d00-b338-cf010355dbae"
 							},
 							"width" : 1.0
 						},
@@ -193,11 +325,113 @@
 							},
 							"from" : {
 								"__type" : "uuid",
-								"uuid" : "c36256d3-1dc2-0d00-af66-15f1044d74b3"
+								"uuid" : "02d48fe7-6ddd-0d00-b341-106a0355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
 							},
 							"to" : {
 								"__type" : "uuid",
-								"uuid" : "eb6256d3-1dc2-0d00-af69-3f5b044d74b3"
+								"uuid" : "e7d38fe7-6ddd-0d00-b33f-5fc20355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
+								"red" : 1.0
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "c1d38fe7-6ddd-0d00-b33c-f61c0355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "1fd48fe7-6ddd-0d00-b343-5f480355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.7497556207233627,
+								"green" : 0.7497556207233627,
+								"red" : 0.7497556207233627
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "cdd38fe7-6ddd-0d00-b33d-c1300355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "11d48fe7-6ddd-0d00-b342-bdd60355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.7497556207233627,
+								"green" : 0.7497556207233627,
+								"red" : 0.7497556207233627
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "11d48fe7-6ddd-0d00-b342-bdd60355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "9bd38fe7-6ddd-0d00-b339-50b40355dbae"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : false,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.7497556207233627,
+								"green" : 0.7497556207233627,
+								"red" : 0.7497556207233627
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "9bd38fe7-6ddd-0d00-b339-50b40355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "02d48fe7-6ddd-0d00-b341-106a0355dbae"
 							},
 							"width" : 1.0
 						},
@@ -207,123 +441,21 @@
 								"alpha" : 1.0,
 								"blue" : 0.0,
 								"green" : 0.0,
-								"red" : 1.0
+								"red" : 0.0
 							},
 							"from" : {
 								"__type" : "uuid",
-								"uuid" : "886256d3-1dc2-0d00-af64-04fa044d74b3"
+								"uuid" : "dad38fe7-6ddd-0d00-b33e-39e20355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
 							},
 							"to" : {
 								"__type" : "uuid",
-								"uuid" : "d76256d3-1dc2-0d00-af68-fe50044d74b3"
-							},
-							"width" : 1.0
-						},
-						{
-							"arrow" : true,
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.7497556207233627,
-								"green" : 0.7497556207233627,
-								"red" : 0.7497556207233627
-							},
-							"from" : {
-								"__type" : "uuid",
-								"uuid" : "eb6256d3-1dc2-0d00-af69-3f5b044d74b3"
-							},
-							"to" : {
-								"__type" : "uuid",
-								"uuid" : "f46256d3-1dc2-0d00-af6a-73d2044d74b3"
-							},
-							"width" : 1.0
-						},
-						{
-							"arrow" : true,
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.7497556207233627,
-								"green" : 0.7497556207233627,
-								"red" : 0.7497556207233627
-							},
-							"from" : {
-								"__type" : "uuid",
-								"uuid" : "076356d3-1dc2-0d00-af6c-40cc044d74b3"
-							},
-							"to" : {
-								"__type" : "uuid",
-								"uuid" : "106356d3-1dc2-0d00-af6d-451a044d74b3"
-							},
-							"width" : 1.0
-						},
-						{
-							"arrow" : false,
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.7497556207233627,
-								"green" : 0.7497556207233627,
-								"red" : 0.7497556207233627
-							},
-							"from" : {
-								"__type" : "uuid",
-								"uuid" : "c36256d3-1dc2-0d00-af66-15f1044d74b3"
-							},
-							"to" : {
-								"__type" : "uuid",
-								"uuid" : "076356d3-1dc2-0d00-af6c-40cc044d74b3"
-							},
-							"width" : 1.0
-						},
-						{
-							"arrow" : true,
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.7497556207233627,
-								"green" : 0.7497556207233627,
-								"red" : 0.7497556207233627
-							},
-							"from" : {
-								"__type" : "uuid",
-								"uuid" : "c36256d3-1dc2-0d00-af66-15f1044d74b3"
-							},
-							"to" : {
-								"__type" : "uuid",
-								"uuid" : "ce6256d3-1dc2-0d00-af67-b79a044d74b3"
-							},
-							"width" : 1.0
-						},
-						{
-							"arrow" : false,
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 1.0,
-								"green" : 0.059628543499511244,
-								"red" : 0.059628543499511244
-							},
-							"from" : {
-								"__type" : "uuid",
-								"uuid" : "ce6256d3-1dc2-0d00-af67-b79a044d74b3"
-							},
-							"to" : {
-								"__type" : "uuid",
-								"uuid" : "106356d3-1dc2-0d00-af6d-451a044d74b3"
-							},
-							"width" : 1.0
-						},
-						{
-							"arrow" : false,
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 1.0,
-								"green" : 0.059628543499511244,
-								"red" : 0.059628543499511244
-							},
-							"from" : {
-								"__type" : "uuid",
-								"uuid" : "f46256d3-1dc2-0d00-af6a-73d2044d74b3"
-							},
-							"to" : {
-								"__type" : "uuid",
-								"uuid" : "ce6256d3-1dc2-0d00-af67-b79a044d74b3"
+								"uuid" : "1aeddee7-6ddd-0d00-b344-8b020355dbae"
 							},
 							"width" : 1.0
 						},
@@ -333,15 +465,21 @@
 								"alpha" : 1.0,
 								"blue" : 0.0,
 								"green" : 0.0,
-								"red" : 1.0
+								"red" : 0.0
 							},
 							"from" : {
 								"__type" : "uuid",
-								"uuid" : "a36256d3-1dc2-0d00-af65-c4e3044d74b3"
+								"uuid" : "1aeddee7-6ddd-0d00-b344-8b020355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
 							},
 							"to" : {
 								"__type" : "uuid",
-								"uuid" : "fd6256d3-1dc2-0d00-af6b-f6ec044d74b3"
+								"uuid" : "e7d38fe7-6ddd-0d00-b33f-5fc20355dbae"
 							},
 							"width" : 1.0
 						}
@@ -350,206 +488,356 @@
 						{
 							"color" : {
 								"alpha" : 1.0,
-								"blue" : 0.0,
-								"green" : 0.0,
-								"red" : 0.0
-							},
-							"height" : 12,
-							"id" : {
-								"__type" : "uuid",
-								"uuid" : "cc5c56d3-1dc2-0d00-af61-b70e044d74b3"
-							},
-							"label" : {
-								"text" : "developers",
-								"x" : -0.08333333333333333,
-								"y" : -1.0833333333333333
-							},
-							"pipeline" : {
-								"is_visible" : false
-							},
-							"width" : 12,
-							"x" : 0.32,
-							"y" : 0.07999999999999996
-						},
-						{
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.0,
-								"green" : 0.0,
-								"red" : 0.0
-							},
-							"height" : 12,
-							"id" : {
-								"__type" : "uuid",
-								"uuid" : "945d56d3-1dc2-0d00-af62-0553044d74b3"
-							},
-							"label" : {
-								"text" : "business",
-								"x" : 0.5,
-								"y" : -0.9166666666666666
-							},
-							"pipeline" : {
-								"is_visible" : false
-							},
-							"width" : 12,
-							"x" : 0.45,
-							"y" : 0.07999999999999996
-						},
-						{
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.0,
-								"green" : 0.0,
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
 								"red" : 1.0
 							},
-							"height" : 12,
-							"id" : {
-								"__type" : "uuid",
-								"uuid" : "036256d3-1dc2-0d00-af63-a3b9044d74b3"
-							},
-							"label" : {
-								"text" : "challenge",
-								"x" : -3.0833333333333335,
-								"y" : 0.5833333333333334
-							},
-							"pipeline" : {
+							"evolve" : {
 								"is_visible" : false
 							},
-							"width" : 12,
-							"x" : 0.39,
-							"y" : 0.18999999999999995
-						},
-						{
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.0,
-								"green" : 0.0,
-								"red" : 1.0
-							},
 							"height" : 12,
 							"id" : {
 								"__type" : "uuid",
-								"uuid" : "886256d3-1dc2-0d00-af64-04fa044d74b3"
+								"uuid" : "99d18fe7-6ddd-0d00-b32c-afb90355dbae"
 							},
 							"label" : {
-								"text" : "specific problem",
-								"x" : -3.25,
-								"y" : -0.8333333333333334
-							},
-							"pipeline" : {
-								"is_visible" : false
-							},
-							"width" : 12,
-							"x" : 0.34,
-							"y" : 0.33999999999999997
-						},
-						{
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.0,
-								"green" : 0.0,
-								"red" : 1.0
-							},
-							"height" : 12,
-							"id" : {
-								"__type" : "uuid",
-								"uuid" : "a36256d3-1dc2-0d00-af65-c4e3044d74b3"
-							},
-							"label" : {
-								"text" : "decision",
-								"x" : 1.5833333333333333,
-								"y" : -0.9166666666666666
-							},
-							"pipeline" : {
-								"is_visible" : false
-							},
-							"width" : 12,
-							"x" : 0.46,
-							"y" : 0.28
-						},
-						{
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 0.7497556207233627,
-								"green" : 0.7497556207233627,
-								"red" : 0.7497556207233627
-							},
-							"height" : 12,
-							"id" : {
-								"__type" : "uuid",
-								"uuid" : "c36256d3-1dc2-0d00-af66-15f1044d74b3"
-							},
-							"label" : {
-								"text" : "manual inspection",
-								"x" : -0.3333333333333333,
-								"y" : 2.4166666666666665
-							},
-							"pipeline" : {
-								"is_visible" : false
-							},
-							"width" : 12,
-							"x" : 0.17749058971141782,
-							"y" : 0.63
-						},
-						{
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 1.0,
-								"green" : 0.059628543499511244,
-								"red" : 0.059628543499511244
-							},
-							"height" : 12,
-							"id" : {
-								"__type" : "uuid",
-								"uuid" : "ce6256d3-1dc2-0d00-af67-b79a044d74b3"
-							},
-							"label" : {
-								"text" : "specific coding",
-								"x" : -0.5833333333333334,
-								"y" : 2.4166666666666665
-							},
-							"pipeline" : {
-								"is_visible" : false
-							},
-							"width" : 12,
-							"x" : 0.39882057716436636,
-							"y" : 0.63
-						},
-						{
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 1.0,
-								"green" : 0.059628543499511244,
-								"red" : 0.059628543499511244
-							},
-							"height" : 12,
-							"id" : {
-								"__type" : "uuid",
-								"uuid" : "d76256d3-1dc2-0d00-af68-fe50044d74b3"
-							},
-							"label" : {
-								"text" : "synthetization",
-								"x" : 4.833333333333333,
+								"text" : "EXPLORATION",
+								"x" : 0.5833333333333334,
 								"y" : -0.75
 							},
 							"pipeline" : {
 								"inner_nodes" : [
 									{
 										"__type" : "uuid",
-										"uuid" : "c36256d3-1dc2-0d00-af66-15f1044d74b3"
+										"uuid" : "77d38fe7-6ddd-0d00-b336-ade00355dbae"
 									},
 									{
 										"__type" : "uuid",
-										"uuid" : "ce6256d3-1dc2-0d00-af67-b79a044d74b3"
+										"uuid" : "83d38fe7-6ddd-0d00-b337-76780355dbae"
 									}
 								],
 								"is_visible" : true,
-								"x" : 0.1674905897114178,
-								"y" : 0.40882057716436637
+								"x" : 0.26,
+								"y" : 0.76
 							},
 							"width" : 12,
-							"x" : 0.32,
-							"y" : 0.63
+							"x" : 0.56,
+							"y" : 0.25153613136273206
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 1.0,
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "59d28fe7-6ddd-0d00-b32d-b5a40355dbae"
+							},
+							"label" : {
+								"text" : "DEVELOPMENT EXPERIENCE",
+								"x" : -3.0,
+								"y" : -1.0
+							},
+							"pipeline" : {
+								"inner_nodes" : [
+									{
+										"__type" : "uuid",
+										"uuid" : "8fd38fe7-6ddd-0d00-b338-cf010355dbae"
+									},
+									{
+										"__type" : "uuid",
+										"uuid" : "9bd38fe7-6ddd-0d00-b339-50b40355dbae"
+									}
+								],
+								"is_visible" : true,
+								"x" : 0.71,
+								"y" : 0.78
+							},
+							"width" : 12,
+							"x" : 0.73,
+							"y" : 0.6092294099615937
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
+								"red" : 1.0
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "e8d28fe7-6ddd-0d00-b32e-458e0355dbae"
+							},
+							"label" : {
+								"text" : "ASSESSMENT",
+								"x" : 4.583333333333333,
+								"y" : -0.75
+							},
+							"pipeline" : {
+								"inner_nodes" : [
+									{
+										"__type" : "uuid",
+										"uuid" : "a8d38fe7-6ddd-0d00-b33a-95560355dbae"
+									},
+									{
+										"__type" : "uuid",
+										"uuid" : "b4d38fe7-6ddd-0d00-b33b-6f480355dbae"
+									}
+								],
+								"is_visible" : true,
+								"x" : 0.32,
+								"y" : 0.72
+							},
+							"width" : 12,
+							"x" : 0.52,
+							"y" : 0.15000000000000002
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
+								"red" : 1.0
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "08d38fe7-6ddd-0d00-b32f-70030355dbae"
+							},
+							"label" : {
+								"text" : "CONVERSATION",
+								"x" : 0.5,
+								"y" : -0.75
+							},
+							"pipeline" : {
+								"inner_nodes" : [
+									{
+										"__type" : "uuid",
+										"uuid" : "c1d38fe7-6ddd-0d00-b33c-f61c0355dbae"
+									},
+									{
+										"__type" : "uuid",
+										"uuid" : "cdd38fe7-6ddd-0d00-b33d-c1300355dbae"
+									}
+								],
+								"is_visible" : true,
+								"x" : 0.31,
+								"y" : 0.68
+							},
+							"width" : 12,
+							"x" : 0.56,
+							"y" : 0.3546134428022767
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 1.0,
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "23d38fe7-6ddd-0d00-b330-f4270355dbae"
+							},
+							"label" : {
+								"text" : "DEVELOPMENT ENVIRONMENT",
+								"x" : 7.083333333333333,
+								"y" : -0.75
+							},
+							"pipeline" : {
+								"inner_nodes" : [
+									{
+										"__type" : "uuid",
+										"uuid" : "dad38fe7-6ddd-0d00-b33e-39e20355dbae"
+									},
+									{
+										"__type" : "uuid",
+										"uuid" : "e7d38fe7-6ddd-0d00-b33f-5fc20355dbae"
+									}
+								],
+								"is_visible" : true,
+								"x" : 0.5104575163398692,
+								"y" : 0.7304575163398692
+							},
+							"width" : 12,
+							"x" : 0.6404575163398692,
+							"y" : 0.8253764597695622
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
+								"red" : 1.0
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "30d38fe7-6ddd-0d00-b331-3aa80355dbae"
+							},
+							"label" : {
+								"text" : "Decision",
+								"x" : 3.9166666666666665,
+								"y" : 0.5833333333333334
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.52,
+							"y" : 0.07999999999999996
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "3bd38fe7-6ddd-0d00-b332-118b0355dbae"
+							},
+							"label" : {
+								"text" : "Business",
+								"x" : -0.16666666666666666,
+								"y" : -1.0833333333333333
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.46,
+							"y" : 0.040000000000000036
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "47d38fe7-6ddd-0d00-b333-e6990355dbae"
+							},
+							"label" : {
+								"text" : "Engineering",
+								"x" : 0.16666666666666666,
+								"y" : -0.9166666666666666
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.57,
+							"y" : 0.040000000000000036
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 1.0,
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "53d38fe7-6ddd-0d00-b334-71c90355dbae"
+							},
+							"label" : {
+								"text" : "SYNTHETIZATION",
+								"x" : 4.083333333333333,
+								"y" : -0.75
+							},
+							"pipeline" : {
+								"inner_nodes" : [
+									{
+										"__type" : "uuid",
+										"uuid" : "f5d38fe7-6ddd-0d00-b340-d2320355dbae"
+									},
+									{
+										"__type" : "uuid",
+										"uuid" : "02d48fe7-6ddd-0d00-b341-106a0355dbae"
+									}
+								],
+								"is_visible" : true,
+								"x" : 0.41392156862745094,
+								"y" : 0.7039215686274509
+							},
+							"width" : 12,
+							"x" : 0.5939215686274509,
+							"y" : 0.7092268856045534
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 1.0,
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "5fd38fe7-6ddd-0d00-b335-5aab0355dbae"
+							},
+							"label" : {
+								"text" : "INFORMATION",
+								"x" : -0.5,
+								"y" : -0.75
+							},
+							"pipeline" : {
+								"inner_nodes" : [
+									{
+										"__type" : "uuid",
+										"uuid" : "11d48fe7-6ddd-0d00-b342-bdd60355dbae"
+									},
+									{
+										"__type" : "uuid",
+										"uuid" : "1fd48fe7-6ddd-0d00-b343-5f480355dbae"
+									}
+								],
+								"is_visible" : true,
+								"x" : 0.286078431372549,
+								"y" : 0.7860784313725491
+							},
+							"width" : 12,
+							"x" : 0.5360784313725491,
+							"y" : 0.49076806568136605
 						},
 						{
 							"color" : {
@@ -558,82 +846,79 @@
 								"green" : 0.7497556207233627,
 								"red" : 0.7497556207233627
 							},
+							"evolve" : {
+								"is_visible" : false
+							},
 							"height" : 12,
 							"id" : {
 								"__type" : "uuid",
-								"uuid" : "eb6256d3-1dc2-0d00-af69-3f5b044d74b3"
+								"uuid" : "77d38fe7-6ddd-0d00-b336-ade00355dbae"
 							},
 							"label" : {
-								"text" : "manual  views",
-								"x" : -4.333333333333333,
+								"text" : "Ad hoc",
+								"x" : 3.6666666666666665,
 								"y" : 0.4166666666666667
 							},
 							"pipeline" : {
 								"is_visible" : false
 							},
 							"width" : 12,
-							"x" : 0.24,
-							"y" : 0.42000000000000004
+							"x" : 0.75,
+							"y" : 0.25153613136273206
 						},
 						{
 							"color" : {
 								"alpha" : 1.0,
-								"blue" : 1.0,
-								"green" : 0.059628543499511244,
-								"red" : 0.059628543499511244
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
+								"red" : 1.0
+							},
+							"evolve" : {
+								"is_visible" : false
 							},
 							"height" : 12,
 							"id" : {
 								"__type" : "uuid",
-								"uuid" : "f46256d3-1dc2-0d00-af6a-73d2044d74b3"
+								"uuid" : "83d38fe7-6ddd-0d00-b337-76780355dbae"
 							},
 							"label" : {
-								"text" : "generated views",
-								"x" : 5.75,
-								"y" : 0.3333333333333333
+								"text" : "Moldable Development",
+								"x" : -6.5,
+								"y" : 0.4166666666666667
 							},
 							"pipeline" : {
 								"is_visible" : false
 							},
 							"width" : 12,
-							"x" : 0.7742158092848181,
-							"y" : 0.42000000000000004
+							"x" : 0.27,
+							"y" : 0.25153613136273206
 						},
 						{
 							"color" : {
 								"alpha" : 1.0,
 								"blue" : 1.0,
-								"green" : 0.059628543499511244,
-								"red" : 0.059628543499511244
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
+							},
+							"evolve" : {
+								"is_visible" : false
 							},
 							"height" : 12,
 							"id" : {
 								"__type" : "uuid",
-								"uuid" : "fd6256d3-1dc2-0d00-af6b-f6ec044d74b3"
+								"uuid" : "8fd38fe7-6ddd-0d00-b338-cf010355dbae"
 							},
 							"label" : {
-								"text" : "information",
-								"x" : 3.5,
-								"y" : -0.8333333333333334
+								"text" : "Composable & contextual",
+								"x" : 7.916666666666667,
+								"y" : 0.4166666666666667
 							},
 							"pipeline" : {
-								"inner_nodes" : [
-									{
-										"__type" : "uuid",
-										"uuid" : "eb6256d3-1dc2-0d00-af69-3f5b044d74b3"
-									},
-									{
-										"__type" : "uuid",
-										"uuid" : "f46256d3-1dc2-0d00-af6a-73d2044d74b3"
-									}
-								],
-								"is_visible" : true,
-								"x" : 0.22999999999999998,
-								"y" : 0.7842158092848182
+								"is_visible" : false
 							},
 							"width" : 12,
-							"x" : 0.5,
-							"y" : 0.42000000000000004
+							"x" : 0.77,
+							"y" : 0.6092294099615937
 						},
 						{
 							"color" : {
@@ -642,86 +927,330 @@
 								"green" : 0.7497556207233627,
 								"red" : 0.7497556207233627
 							},
+							"evolve" : {
+								"is_visible" : false
+							},
 							"height" : 12,
 							"id" : {
 								"__type" : "uuid",
-								"uuid" : "076356d3-1dc2-0d00-af6c-40cc044d74b3"
+								"uuid" : "9bd38fe7-6ddd-0d00-b339-50b40355dbae"
 							},
 							"label" : {
-								"text" : "rigid",
+								"text" : "Fixed",
+								"x" : -3.0,
+								"y" : 0.5833333333333334
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.72,
+							"y" : 0.6092294099615937
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
+								"red" : 1.0
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "a8d38fe7-6ddd-0d00-b33a-95560355dbae"
+							},
+							"label" : {
+								"text" : "Hypothesis driven",
+								"x" : -5.833333333333333,
+								"y" : 0.4166666666666667
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.33,
+							"y" : 0.15000000000000002
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.7497556207233627,
+								"green" : 0.7497556207233627,
+								"red" : 0.7497556207233627
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "b4d38fe7-6ddd-0d00-b33b-6f480355dbae"
+							},
+							"label" : {
+								"text" : "Gut feel driven",
+								"x" : 5.416666666666667,
+								"y" : 0.5
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.71,
+							"y" : 0.15000000000000002
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.030303030303030304,
+								"green" : 0.030303030303030304,
+								"red" : 1.0
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "c1d38fe7-6ddd-0d00-b33c-f61c0355dbae"
+							},
+							"label" : {
+								"text" : "Model centric",
+								"x" : -4.416666666666667,
+								"y" : 0.3333333333333333
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.32,
+							"y" : 0.3546134428022767
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.7497556207233627,
+								"green" : 0.7497556207233627,
+								"red" : 0.7497556207233627
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "cdd38fe7-6ddd-0d00-b33d-c1300355dbae"
+							},
+							"label" : {
+								"text" : "\"Data centric\"",
+								"x" : 5.416666666666667,
+								"y" : 0.4166666666666667
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.67,
+							"y" : 0.3546134428022767
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 1.0,
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "dad38fe7-6ddd-0d00-b33e-39e20355dbae"
+							},
+							"label" : {
+								"text" : "Moldable",
+								"x" : -4.166666666666667,
+								"y" : 0.5
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.5204575163398693,
+							"y" : 0.8253764597695622
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.7497556207233627,
+								"green" : 0.7497556207233627,
+								"red" : 0.7497556207233627
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "e7d38fe7-6ddd-0d00-b33f-5fc20355dbae"
+							},
+							"label" : {
+								"text" : "Institutionalized",
+								"x" : 5.75,
+								"y" : 0.4166666666666667
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.7204575163398692,
+							"y" : 0.8253764597695622
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 1.0,
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "f5d38fe7-6ddd-0d00-b340-d2320355dbae"
+							},
+							"label" : {
+								"text" : "Specific coding",
+								"x" : 5.833333333333333,
+								"y" : 0.4166666666666667
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.6939215686274509,
+							"y" : 0.7092268856045534
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.7497556207233627,
+								"green" : 0.7497556207233627,
+								"red" : 0.7497556207233627
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "02d48fe7-6ddd-0d00-b341-106a0355dbae"
+							},
+							"label" : {
+								"text" : "Manual inspection",
+								"x" : -6.0,
+								"y" : 0.5
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.42392156862745095,
+							"y" : 0.7092268856045534
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.7497556207233627,
+								"green" : 0.7497556207233627,
+								"red" : 0.7497556207233627
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "11d48fe7-6ddd-0d00-b342-bdd60355dbae"
+							},
+							"label" : {
+								"text" : "Manual views",
+								"x" : -4.5,
+								"y" : 0.5
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.296078431372549,
+							"y" : 0.49076806568136605
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 1.0,
+								"green" : 0.030303030303030304,
+								"red" : 0.030303030303030304
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "1fd48fe7-6ddd-0d00-b343-5f480355dbae"
+							},
+							"label" : {
+								"text" : "Generated views",
+								"x" : 6.0,
+								"y" : 0.5
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.7760784313725491,
+							"y" : 0.49076806568136605
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.0,
+								"green" : 0.0,
+								"red" : 0.0
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "1aeddee7-6ddd-0d00-b344-8b020355dbae"
+							},
+							"label" : {
+								"text" : "System",
 								"x" : 0.5,
-								"y" : 2.3333333333333335
+								"y" : 2.0
 							},
 							"pipeline" : {
 								"is_visible" : false
 							},
 							"width" : 12,
-							"x" : 0.53,
-							"y" : 0.84
-						},
-						{
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 1.0,
-								"green" : 0.059628543499511244,
-								"red" : 0.059628543499511244
-							},
-							"height" : 12,
-							"id" : {
-								"__type" : "uuid",
-								"uuid" : "106356d3-1dc2-0d00-af6d-451a044d74b3"
-							},
-							"label" : {
-								"text" : "moldable",
-								"x" : 0.5833333333333334,
-								"y" : 2.25
-							},
-							"pipeline" : {
-								"is_visible" : false
-							},
-							"width" : 12,
-							"x" : 0.6912923462986199,
-							"y" : 0.84
-						},
-						{
-							"color" : {
-								"alpha" : 1.0,
-								"blue" : 1.0,
-								"green" : 0.059628543499511244,
-								"red" : 0.059628543499511244
-							},
-							"height" : 12,
-							"id" : {
-								"__type" : "uuid",
-								"uuid" : "196356d3-1dc2-0d00-af6e-c32e044d74b3"
-							},
-							"label" : {
-								"text" : "tools",
-								"x" : -1.8333333333333333,
-								"y" : -0.25
-							},
-							"pipeline" : {
-								"inner_nodes" : [
-									{
-										"__type" : "uuid",
-										"uuid" : "076356d3-1dc2-0d00-af6c-40cc044d74b3"
-									},
-									{
-										"__type" : "uuid",
-										"uuid" : "106356d3-1dc2-0d00-af6d-451a044d74b3"
-									}
-								],
-								"is_visible" : true,
-								"x" : 0.52,
-								"y" : 0.7012923462986199
-							},
-							"width" : 12,
-							"x" : 0.6,
-							"y" : 0.84
+							"x" : 0.6388020833333333,
+							"y" : 0.9207712511795358
 						}
-					]
+					],
+					"title" : {
+						"is_visible" : true,
+						"text" : "Moldable Development"
+					}
 				},
-				"snippetHeight" : 538
+				"snippetHeight" : 678
 			},
 			{
 				"__type" : "textSnippet",
@@ -737,7 +1266,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-15T19:38:57.911969+01:00"
+						"dateAndTimeString" : "2024-09-01T12:31:12.789817+02:00"
 					}
 				},
 				"editEmail" : {
@@ -748,17 +1277,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-15T19:38:57.916963+01:00"
+						"dateAndTimeString" : "2024-09-01T12:34:40.406752+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "z5kdlWqADQCwVIrMCHfMWA=="
+					"uidString" : "/0J2D27dDQC4hbKpA1Xbrg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "It all starts with some challenge which can concern anything, from a narrow technical detail to a broad business concern. Regardless of the scope, every such challenge relates to a specific problem and requires a decision."
+				"string" : "It all starts with a decision about a system which can concern anything, from a narrow technical detail to a broad business concern. Regardless of the scope, every such challenge relates to the system. Decisions need assessment which rely on explorations. Explorations is enabled by conversations, either between humans or between humans and the system, which entail information. Any information can be gathered from a system through a development experience that allow us to synthesize it by using concrete tools out of the system."
 			},
 			{
 				"__type" : "textSnippet",
@@ -774,7 +1303,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-15T19:48:19.264958+01:00"
+						"dateAndTimeString" : "2024-09-01T12:27:19.513646+02:00"
 					}
 				},
 				"editEmail" : {
@@ -785,17 +1314,91 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-15T20:22:34.185512+01:00"
+						"dateAndTimeString" : "2024-09-01T12:32:21.076277+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "eQhwFZfGDQCgv6OjC8tmfA=="
+					"uidString" : "pMOOAW7dDQCzWvvwA1Xbrg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Each decision requires information. Today, much information is gathered through manual inspection and put together manually, too. This does not scale as systems are too large and change too quickly to be grasped manually. In fact, [[Developers spend most of their time figuring systems out]]."
+				"string" : "The core proposition of [[Moldable Development]]revolves around replacing manual views created through manual inspection by views generated automatically, yet are specific to the problem. It's much like data science, only applied to software."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-09-01T12:27:22.256706+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-09-01T12:29:55.72795+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "65y4AW7dDQCzZtjxA1Xbrg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This is important because of two reasons. First, we replace the single largest cost and the greatest source for unnecessary risk. {{gtPage:Developers spend most of their time figuring systems out|db=2j9m7db2i4oz116bexd7wbdxo|label=Developers alone spend more than half of their time reading}} through the system, but your system is too large to be understood manually. As a consequence, pictures produced manually do not reflect the reality of the system. They constitute beliefs rather than accurate engineering tools. And beliefs are not appropriate for any decision making."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-09-01T12:24:37.311525+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-09-01T12:30:53.159893+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VL/j923dDQCzSkNAA1Xbrg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Second, automating how information is gathered from the system reduces risks and frees energy that can be used for experimenting and acting. Once you can get answers quickly from a system, a new set of practices is made possible, collectively known as [[Moldable Development]], that supports hypothesis-driven decisions for every single problem related to a software systems."
 			},
 			{
 				"__type" : "textSnippet",
@@ -822,7 +1425,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-15T19:53:08.224967+01:00"
+						"dateAndTimeString" : "2024-09-01T12:38:35.063422+02:00"
 					}
 				},
 				"uid" : {
@@ -832,44 +1435,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We want to optimize this activity by relying on generated views instead. And because systems are highly contextual, we also want these views to be contextual. This can only happen through specific coding."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-15T19:39:27.51361+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-11-15T19:39:28.664098+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "mSe+9ZbGDQCdAp70C8tmfA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "To make this economically viable, we need tools that can be quickly put together in context. A moldable development environment stands in contrast to the typical rigid ones in use today in that custom tools can be created quickly and during development."
+				"string" : "Creating custom tools can only happen through specific coding. To make this economically viable, we need tools that can be quickly put together in context. A moldable development environment stands in contrast to the institutionalized rigid ones in use today in that custom tools can be created quickly and during development."
 			},
 			{
 				"__type" : "textSnippet",
