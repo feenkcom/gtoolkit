@@ -179,7 +179,8 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 		spec
 			package: 'GToolkit-PharoBasePatch-Deprecations';
 			package: 'GToolkit-PharoBasePatch-Subscriptions' ;
-			package: 'GToolkit-PharoBasePatch-Iceberg' ]
+			package: 'GToolkit-PharoBasePatch-Iceberg';
+			package: 'GToolkit-PharoBasePatch-PharoIndex' ]
 ]
 
 { #category : #accessing }
