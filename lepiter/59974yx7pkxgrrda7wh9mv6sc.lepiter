@@ -106,14 +106,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-19T12:46:39.612416+01:00"
+									"dateAndTimeString" : "2024-09-07T22:00:13.278439+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "leXykryADQCnVc9HDiSrtQ=="
 							},
-							"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [:each | \r\t\tBlElement new \r\t\t\tbackground: Color black;\r\t\t\tsize: 5@5;\r\t\t\twhen: BlClickEvent do: [:e | \r\t\t\t\te currentTarget phlow spawnTool: each asPhlowTool] ];\r\twith: pages.\rm edges connectToAll: [:page | page allOutgoingTextualLinks collectAsSet: #target].\rm layout force nbIterations: 30.\rm asElement"
+							"code" : "m := GtMondrian new.\rm nodes\r\tstencil: [ :each | \r\t\tBlElement new\r\t\t\tbackground: Color black;\r\t\t\tsize: 5 @ 5;\r\t\t\twhen: BlClickEvent\r\t\t\t\tdo: [ :e | e currentTarget phlow spawnTool: each asPhlowTool ] ];\r\twith: pages.\rm edges\r\tstencil: [ BlLineElement new\r\t\t\tborder: Color veryVeryLightGray;\r\t\t\tzIndex: -1 ];\r\tconnectToAll: [ :page | page allOutgoingTextualLinks collectAsSet: #target ].\rm layout force nbIterations: 30.\rm asElement"
 						}
 					]
 				},
@@ -178,14 +178,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-07-11T11:36:59.262878+02:00"
+									"dateAndTimeString" : "2024-09-07T22:02:00.397239+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "8Gr2q7yADQCoJJs2DiSrtQ=="
 							},
-							"code" : "pages := thisSnippet database pages reject: [:each | \r\teach title = 'Glamorous Toolkit Book']"
+							"code" : "pages := thisSnippet database pages \r\treject: [:each | \r\t\teach title = 'Glamorous Toolkit Book']"
 						}
 					]
 				},
@@ -250,14 +250,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-19T12:46:35.428806+01:00"
+									"dateAndTimeString" : "2024-09-07T22:28:06.877055+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "M4Xak7yADQCnWSLhDiSrtQ=="
 							},
-							"code" : "m := GtMondrian new.\rm nodes \r\tstencil: [:each |\r\t\tBlElement new \r\t\t\tbackground: ((each title includesSubstring: 'Lepiter') \r\t\t\t\tifTrue: [Color red]\r\t\t\t\tifFalse:  [Color black]);\r\t\t\tsize: 5@5;\r\t\t\twhen: BlClickEvent do: [:e | \r\t\t\t\te currentTarget phlow spawnTool: each asPhlowTool] ];\r\twith: pages.\rm edges connectToAll: [:page | page allOutgoingTextualLinks collectAsSet: #target].\rm layout force nbIterations: 30.\rm asElement"
+							"code" : "m := GtMondrian new.\rm nodes\r\tstencil: [ :each | \r\t\tBlElement new\r\t\t\tbackground: ((each title includesSubstring: 'Lepiter')\r\t\t\t\t\tifTrue: [ Color red ]\r\t\t\t\t\tifFalse: [ Color black ]);\r\t\t\tsize: 5 @ 5;\r\t\t\twhen: BlClickEvent\r\t\t\t\tdo: [ :e | \r\t\t\t\t\te consumed: true.\r\t\t\t\t\te currentTarget phlow spawnTool: each asPhlowTool ] ];\r\twith: pages.\rm edges\r\tstencil: [ BlLineElement new\r\t\t\tborder: Color veryVeryLightGray;\r\t\t\tzIndex: -1 ];\r\tconnectToAll: [ :page | page allOutgoingTextualLinks collectAsSet: #target ].\rm layout force nbIterations: 50.\rm"
 						}
 					]
 				},
