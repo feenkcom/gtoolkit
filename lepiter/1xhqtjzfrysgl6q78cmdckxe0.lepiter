@@ -64,7 +64,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-12T20:39:03.24506+02:00"
+						"dateAndTimeString" : "2024-09-10T09:59:17.092475+02:00"
 					}
 				},
 				"uid" : {
@@ -74,7 +74,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "It's possible to work with a [[Bash]] shell. For example, listing the contents of the image directory works like this:"
+				"string" : "It's possible to work with a [[Bash]] shell on Unix like systems (macOS and Linux) or a [[Powershell]] on Windows. For example, listing the contents of the image directory works like this:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -113,7 +113,8 @@
 								"__type" : "uid",
 								"uidString" : "6Y5qzqfUDQCj8nGGBSibIA=="
 							},
-							"code" : "cd pharo-local\rls"
+							"code" : "cd pharo-local\rls",
+							"bindingName" : "listing"
 						}
 					]
 				},
@@ -152,6 +153,78 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-10T09:25:08.092005+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-10T09:25:10.096383+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "EtmQgiDeDQC6OyVzBd0cEw=="
+							},
+							"code" : "listing"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-09-10T09:24:17.558769+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-09-10T09:24:17.558769+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "5MuNfyDeDQC5IaS6Bd0cEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Furthermore, it is also possible to assign the output of the command to a page variable using the `Bindings:` entry field. Enter a variable name and execute the script again. You can then refer to this variable in other snippets."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [ ]
 				},
 				"createEmail" : {
@@ -173,7 +246,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-12T20:39:37.276846+02:00"
+						"dateAndTimeString" : "2024-09-10T09:27:14.963067+02:00"
 					}
 				},
 				"uid" : {
@@ -183,7 +256,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Furthermore, it is also possible to "
+				"string" : "To use a bound page variable in a shell snippet you refer to it like you would with any other shell variable. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -328,6 +401,186 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Now, we can use that variable in a shell script:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-10T09:57:52.330012+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-10T09:58:02.337772+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "nsGk9yDeDQC/mVBGBd0cEw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For macOS and Linux"
+						},
+						{
+							"__type" : "shellCommandSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-10T09:29:24.406068+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-10T10:00:42.617859+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "vuXXkSDeDQC+IZZnBd0cEw=="
+							},
+							"code" : "for ((i = 0 ; i < 10 ; i++)); do\n    echo \"This is line #\" $i\r    sleep 1\ndone"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-10T09:58:08.967868+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-10T09:58:11.902042+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Jp2i+CDeDQC//ZvXBd0cEw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For WIndows"
+						},
+						{
+							"__type" : "shellCommandSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-10T09:57:46.976413+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-10T09:58:18.102158+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qhRT9yDeDQC/jwqXBd0cEw=="
+							},
+							"code" : "For ($i = 0; $i -lt 10; $i++) {\n    Write-host $i\r    Start-Sleep -Seconds 1\n}"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-09-10T09:27:50.467317+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-09-10T10:03:27.272744+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "boU+jCDeDQC8Pi3qBd0cEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The shell snippet can show asynchroneous incremental output that automatically updates. Here is an example."
 			}
 		]
 	},
