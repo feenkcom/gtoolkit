@@ -246,7 +246,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-09-10T09:27:14.963067+02:00"
+						"dateAndTimeString" : "2024-09-13T16:07:38.08617+02:00"
 					}
 				},
 				"uid" : {
@@ -256,7 +256,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To use a bound page variable in a shell snippet you refer to it like you would with any other shell variable. "
+				"string" : "To use a bound page variable in a shell snippet you refer to it like you would with any other shell environment variable. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -288,14 +288,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-05-12T20:40:11.357544+02:00"
+									"dateAndTimeString" : "2024-09-13T16:04:10.870058+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "VvIM1KfUDQCo/z/QBSibIA=="
 							},
-							"code" : "directoryName := 'pharo-local'"
+							"code" : "message := 'It is now {1}' format: { DateAndTime now }"
 						}
 					]
 				},
@@ -336,6 +336,43 @@
 					"__type" : "snippets",
 					"items" : [
 						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-13T16:04:40.388997+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-13T16:06:36.679835+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gjXzcGLeDQCfmocoAGju9w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For macOS and Linux (syntax `$var`)"
+						},
+						{
 							"__type" : "shellCommandSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -360,14 +397,122 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-05-12T20:40:31.813388+02:00"
+									"dateAndTimeString" : "2024-09-13T16:04:31.988219+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "ngiS1qfUDQCr3xXfBSibIA=="
 							},
-							"code" : "cd $directoryName\rls"
+							"code" : "echo $message"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-13T16:04:52.32507+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-13T16:06:52.544848+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "NlqpcWLeDQCgCRrAAGju9w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For Windows (syntax `$Env:var`)"
+						},
+						{
+							"__type" : "shellCommandSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-13T16:05:04.76305+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-13T16:05:21.164708+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QBVncmLeDQCgRo/IAGju9w=="
+							},
+							"code" : "Write-host $Env:message"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-13T16:07:08.834361+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-09-13T16:09:46.0933+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "eK+OeWLeDQChkdoVAGju9w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*Note:* a variable is only bound as an environment variable for the execution of the shell script when its name is referred to in the script's source code and when the value is transferable (basically a primitive like a string). "
 						}
 					]
 				},
@@ -390,7 +535,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-12T20:40:59.357708+02:00"
+						"dateAndTimeString" : "2024-09-13T16:06:19.196309+02:00"
 					}
 				},
 				"uid" : {

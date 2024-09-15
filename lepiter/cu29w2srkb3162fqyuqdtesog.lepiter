@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:23:22.696086+02:00"
+						"dateAndTimeString" : "2024-09-15T22:53:35.08+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-20T13:53:38.394625+02:00"
+						"dateAndTimeString" : "2024-09-15T22:56:01.598+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "PXPFzHKDDQCbiZqFDmriJw=="
+					"uidString" : "kHDFYpDeDQCH1cpSANOFwg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here we manually use the default  {{gtClass:GtGemStoneSession}} to evaluate code."
+				"string" : "We can limit the size of the old space size using {{gtClass:VirtualMachine>>#maxOldSpaceSize:}} by passing it a value in bytes."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:23:59.131022+02:00"
+						"dateAndTimeString" : "2024-07-02T10:18:20.782+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-20T13:54:09.717954+02:00"
+						"dateAndTimeString" : "2024-09-15T22:55:24.456+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uIUp0HKDDQCbk/LBDmriJw=="
+					"uidString" : "sDn5F6HYDQCzCcKEDNHM2A=="
 				},
-				"code" : "gemstoneSession := GtGemStoneSessionRegistry default sessionNamed: 'default'.\rgemstoneSession ensureRunning."
+				"code" : " Smalltalk vm maxOldSpaceSize: 6 * (1024 * 1024 * 1024)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -89,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:25:50.970791+02:00"
+						"dateAndTimeString" : "2024-09-15T22:55:31.799+02:00"
 					}
 				},
 				"editEmail" : {
@@ -100,17 +100,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:27:32.606719+02:00"
+						"dateAndTimeString" : "2024-09-15T22:55:53.33+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "HgY803KDDQCblYqTDmriJw=="
+					"uidString" : "WGn4aZDeDQCKM9+FANOFwg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can evaluate some simple snippets."
+				"string" : "To reset the old space size we can set a value of zero."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -126,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:26:03.075669+02:00"
+						"dateAndTimeString" : "2024-09-15T22:56:05.455+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,82 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-20T13:53:55.711006+02:00"
+						"dateAndTimeString" : "2024-09-15T22:56:07.721+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "cMSM13KDDQCbl4WVDmriJw=="
+					"uidString" : "mDT6a5DeDQCMcYU6ANOFwg=="
 				},
-				"code" : "gemstoneSession evaluateAndWait: 'System stoneName'"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:26:32.782191+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-20T13:53:55.71198+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "mA1S2XKDDQCbmQuHDmriJw=="
-				},
-				"code" : "gemstoneSession evaluateAndWait: 'Dictionary new add: (1->2); yourself'"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-07-14T10:26:54.333234+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-20T13:53:55.715393+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "U+Wa2nKDDQCbm7fcDmriJw=="
-				},
-				"code" : "gemstoneSession evaluateAndWait: 'SessionTemps current'"
+				"code" : " Smalltalk vm maxOldSpaceSize: 0"
 			}
 		]
 	},
@@ -224,7 +156,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-07-14T10:23:02.196909+02:00"
+			"dateAndTimeString" : "2024-09-14T22:37:40.868+02:00"
 		}
 	},
 	"editEmail" : {
@@ -235,15 +167,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-09-14T21:51:08.798+02:00"
+			"dateAndTimeString" : "2024-09-14T22:37:40.868+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to programatically evaluate code in GemStone"
+		"title" : "How to limit the old space size in the VM"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "64c6c4cc-7283-0d00-9b88-970c0e6ae227"
+		"uuid" : "b039f917-a1d8-0d00-b308-c96f0cd1ccd8"
 	}
 }
