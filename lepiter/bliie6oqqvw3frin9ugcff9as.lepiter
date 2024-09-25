@@ -100,20 +100,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-05T11:54:29.218489+01:00"
+									"dateAndTimeString" : "2024-09-25T08:37:11.089454+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "vXhx93aSDQCFiOcXBc7lww=="
 							},
-							"code" : "worker := GtRrWorker serverSocketAddress: 'localhost:7042'.\rworker attributes at: #changesSync put: true.\rworker start."
+							"code" : "worker := GtRrWorker serverSocketAddress: 'localhost:7042'.\rworker attributes at: #changesSync put: false.\rworker start."
 						},
 						{
 							"__type" : "textSnippet",
