@@ -100,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-28T12:53:25.715994-05:00"
+						"dateAndTimeString" : "2024-09-27T20:30:46.961555+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "N5I46h3RDQCfd6PSCyd+yA=="
 				},
-				"code" : "rootDirectory ensureDeleteAll.\rrepository := IceRepositoryCreator\r\t\tfromUrl: 'https://github.com/spring-projects/spring-boot.git'\r\t\tto: rootDirectory.\rrootDirectory"
+				"code" : "IceGitCliPlatform current install.\rrootDirectory ensureDeleteAll.\rrepository := IceRepository repositoryClass creatorClass\r\t\tfromUrl: 'https://github.com/spring-projects/spring-boot.git'\r\t\tto: rootDirectory.\rrootDirectory"
 			},
 			{
 				"__type" : "textSnippet",
