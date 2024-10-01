@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-18T16:06:03.33041+02:00"
+						"dateAndTimeString" : "2024-10-01T10:27:49.867443+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This page gives example of Moldable exception used in Glamorous Toolkit."
+				"string" : "This page gives examples of Moldable exceptions used in Glamorous Toolkit."
 			},
 			{
 				"__type" : "textSnippet",
@@ -50,113 +50,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-18T17:40:04.646884+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-18T17:40:05.019847+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "y3ZZFJa/DQCa3Vt1AQoKYg=="
-										},
-										"code" : "self \r\tassert: GtExampleComparisonExceptionWithDebuggingViews new\r\t\texpectedStringForTest \r\tequals: GtExampleComparisonExceptionWithDebuggingViews new\r\t\tcomputedStringForTest"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-18T17:40:18.11705+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-18T17:40:40.745452+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "6QEnFZa/DQCa6ypeAQoKYg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "An AssertionFailure that does not involve a comporison does not trigger the error."
-									},
-									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-18T17:40:43.351873+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-02T14:26:11.725705+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "cQ2oFpa/DQCc9IGwAQoKYg=="
-										},
-										"code" : "self assert: 1 = 2"
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -177,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-18T16:06:37.122074+02:00"
+									"dateAndTimeString" : "2024-10-01T10:28:02.994688+02:00"
 								}
 							},
 							"uid" : {
@@ -187,7 +81,112 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtClass:name=AssertionFailure}} defines a debugging configuration, that at the moment shows a diff view when two strings are being compared."
+							"string" : "{{gtClass:name=AssertionFailure}} defines a debugging configuration, that at the moment shows a diff view when two strings are compared."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T17:40:04.646884+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T17:40:05.019847+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "y3ZZFJa/DQCa3Vt1AQoKYg=="
+							},
+							"code" : "self \r\tassert: GtExampleComparisonExceptionWithDebuggingViews new\r\t\texpectedStringForTest \r\tequals: GtExampleComparisonExceptionWithDebuggingViews new\r\t\tcomputedStringForTest"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T17:40:18.11705+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-01T10:28:14.223897+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6QEnFZa/DQCa6ypeAQoKYg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "An AssertionFailure that does not involve a comparison does not trigger that error."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-08-18T17:40:43.351873+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-02T14:26:11.725705+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cQ2oFpa/DQCc9IGwAQoKYg=="
+							},
+							"code" : "self assert: 1 = 2"
 						}
 					]
 				},
@@ -226,7 +225,79 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-24T14:54:35.850403+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-01T10:28:39.591998+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "j87f6DjTDQC/mAEFC/MAPA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:Warning}} notifications directly show the message and allow the user to proceed."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-24T14:55:15.423278+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-24T14:55:25.150043+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Sps76zjTDQCCCNX3C/MAPA=="
+							},
+							"code" : "Warning signal: 'I am a warning message'"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -258,77 +329,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "##Warnings"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-24T14:54:35.850403+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-24T14:55:09.512911+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "j87f6DjTDQC/mAEFC/MAPA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtClass:Warning}} notifications define that direcly shows the message and allows the user to proceed."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-24T14:55:15.423278+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-24T14:55:25.150043+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Sps76zjTDQCCCNX3C/MAPA=="
-				},
-				"code" : "Warning signal: 'I am a warning message'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -649,7 +649,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-04-19T14:15:38.187943+02:00"
+									"dateAndTimeString" : "2024-10-01T10:29:06.870695+02:00"
 								}
 							},
 							"uid" : {
@@ -659,7 +659,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Not in all cases we can easily determine the place where the empty view is created."
+							"string" : "Not in all cases can we easily determine the place where the empty view is created."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -732,7 +732,79 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-20T10:38:56.576747+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-20T10:41:00.904472+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7JI33+TSDQC4YzACCUdQfg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:BlSingularMatrixError}} is thrown when trying to inverse a singular (non-invertible or degenerate) matrix."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-20T10:41:08.086059+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-04-20T10:41:18.520526+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uzsO5+TSDQC5wjgICUdQfg=="
+							},
+							"code" : "element := BlElement new\n\tsize: 0@0;\n\ttransformDo: [ :t | \r\t\tt scaleBy: 0 .\r\t\tt translateBy: 10@5.\r\t\tt rotateBy: 25.\r\t\tt shearBy: 2@3 ].\relement globalPointToLocal: 10@10"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -769,78 +841,79 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-20T10:38:56.576747+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-20T10:41:00.904472+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "7JI33+TSDQC4YzACCUdQfg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtClass:BlSingularMatrixError}} is thrown when trying to inverse a singular (non-invertible or degenerate) matrix."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-20T10:41:08.086059+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-20T10:41:18.520526+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "uzsO5+TSDQC5wjgICUdQfg=="
-				},
-				"code" : "element := BlElement new\n\tsize: 0@0;\n\ttransformDo: [ :t | \r\t\tt scaleBy: 0 .\r\t\tt translateBy: 10@5.\r\t\tt rotateBy: 25.\r\t\tt shearBy: 2@3 ].\relement globalPointToLocal: 10@10"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-01T12:34:18.484192+03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-01T19:03:08.968674+03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "XPt47cLTDQCkUmrlB1ZbMg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:ZnTooManyRedirects}} error has a debugging action for inceasing the number of redirects and retrying the request."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-01T12:34:26.796236+03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-01T12:34:45.961297+03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8cv37cLTDQCkV+LcB1ZbMg=="
+							},
+							"code" : "ZnClient new \r\turl: 'https://www.gmail.com';\r\tmaxNumberOfRedirects: 3;\r\tget "
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -877,78 +950,154 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:34:18.484192+03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T19:03:08.968674+03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "XPt47cLTDQCkUmrlB1ZbMg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtClass:ZnTooManyRedirects}} error has a debugging action for inceasing the number of redirects and retrying the request."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:34:26.796236+03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:34:45.961297+03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "8cv37cLTDQCkV+LcB1ZbMg=="
-				},
-				"code" : "ZnClient new \r\turl: 'https://www.gmail.com';\r\tmaxNumberOfRedirects: 3;\r\tget "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-05-01T12:38:22.138379+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-10-01T10:46:03.994166+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Fdr++8LTDQCnqlHcB1ZbMg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "- increasing the timeout in the current  {{gtClass:ZnClient}} instance and retry the request,"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-05-01T12:39:21.073662+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-10-01T10:46:09.045262+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "yCGC/8LTDQCqXo9EB1ZbMg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "- continue reading/writing data with a new timeout set."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-01T12:37:53.359682+03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-01T19:16:54.357559+03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ardH+sLTDQCnAC5IB1ZbMg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The {{gtClass:ConnectionTimedOut}} error has two debugging actions that make it possible to"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-01T12:37:55.286374+03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-01T12:37:55.533465+03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Pxll+sLTDQCnBFo/B1ZbMg=="
+							},
+							"code" : "ZnServer startDefaultOn: 1701.\n\nZnClient new\n\turl: ZnServer default localUrl / #echo;\n\ttimeout: 2;\n\tqueryAt: #delay put: 10;\n\tget"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -1000,7 +1149,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-05-01T12:38:22.138379+03:00"
+									"dateAndTimeString" : "2024-05-01T12:40:30.293134+03:00"
 								}
 							},
 							"editEmail" : {
@@ -1011,17 +1160,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-05-01T12:39:49.69021+03:00"
+									"dateAndTimeString" : "2024-05-01T12:41:11.631682+03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Fdr++8LTDQCnqlHcB1ZbMg=="
+								"uidString" : "SRl+A8PTDQCsipRcB1ZbMg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- inceasing the timeout in the current  {{gtClass:ZnClient}} instance and retry the request,"
+							"string" : "The method {{gtMethod:ZnClient>>retryExceptionSet}} defines a list of exceptions that Zinc handles by doing a retry. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -1037,7 +1186,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-05-01T12:39:21.073662+03:00"
+									"dateAndTimeString" : "2024-05-01T12:41:17.471284+03:00"
 								}
 							},
 							"editEmail" : {
@@ -1048,90 +1197,53 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-05-01T12:39:47.451976+03:00"
+									"dateAndTimeString" : "2024-05-01T12:41:56.252109+03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "yCGC/8LTDQCqXo9EB1ZbMg=="
+								"uidString" : "QDZyBsPTDQCvHsuvB1ZbMg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- continue reading/writting data with a new timeout set."
+							"string" : "The debugging action {{gtClass:GtZnClientFailedRequestRetryDebugAction}} offers the possibility to increase the number of allowed retries and retry execution."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-01T12:41:57.788199+03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-05-01T12:42:08.276478+03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wWTZCMPTDQCxvA/dB1ZbMg=="
+							},
+							"code" : "client := ZnClient new \r\turl: 'https://www.noexistingurl.com';\r\tnumberOfRetries: 2;\r\tget "
 						}
 					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:37:53.359682+03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T19:16:54.357559+03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "ardH+sLTDQCnAC5IB1ZbMg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The {{gtClass:ConnectionTimedOut}} error has two debugging actions that make it possible to"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:37:55.286374+03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:37:55.533465+03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Pxll+sLTDQCnBFo/B1ZbMg=="
-				},
-				"code" : "ZnServer startDefaultOn: 1701.\n\nZnClient new\n\turl: ZnServer default localUrl / #echo;\n\ttimeout: 2;\n\tqueryAt: #delay put: 10;\n\tget"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -1163,114 +1275,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#ZnClient errors"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:40:30.293134+03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:41:11.631682+03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "SRl+A8PTDQCsipRcB1ZbMg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The method {{gtMethod:ZnClient>>retryExceptionSet}} defines a list of exceptions that Zinc handles by doing a retry. "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:41:17.471284+03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:41:56.252109+03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "QDZyBsPTDQCvHsuvB1ZbMg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The debugging action {{gtClass:GtZnClientFailedRequestRetryDebugAction}} offers the possibility to increase the number of allowed retries and retry execution."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:41:57.788199+03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-01T12:42:08.276478+03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "wWTZCMPTDQCxvA/dB1ZbMg=="
-				},
-				"code" : "client := ZnClient new \r\turl: 'https://www.noexistingurl.com';\r\tnumberOfRetries: 2;\r\tget "
 			}
 		]
 	},
