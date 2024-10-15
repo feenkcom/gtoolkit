@@ -180,7 +180,8 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 			package: 'GToolkit-PharoBasePatch-Deprecations';
 			package: 'GToolkit-PharoBasePatch-Subscriptions' ;
 			package: 'GToolkit-PharoBasePatch-Iceberg';
-			package: 'GToolkit-PharoBasePatch-PharoIndex' ]
+			package: 'GToolkit-PharoBasePatch-PharoIndex';
+			package: 'GToolkit-PharoBasePatch-StrictSymbol' ]
 ]
 
 { #category : #accessing }
