@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:29:26.609291+02:00"
+						"dateAndTimeString" : "2024-10-15T10:01:50.396257+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:30:01.770182+02:00"
+						"dateAndTimeString" : "2024-10-15T10:02:34.438832+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "p72hmvLfDQCJfywhBkNL+w=="
+					"uidString" : "ikLKF+HgDQCd9SMiDVk8rg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Pharo treats Strings and Symbols with the same content as equal, i.e.:"
+				"string" : "One of the early ways of identifying all the places in GT that will need to be modified is to run all automated tests and log every instance of a mismatched comparison."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:30:04.654486+02:00"
+						"dateAndTimeString" : "2024-10-15T10:05:32.437414+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,125 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:30:37.365077+02:00"
+						"dateAndTimeString" : "2024-10-15T10:05:41.913115+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "3D7mnPLfDQCL0CxUBkNL+w=="
+					"uidString" : "zZKDJ+HgDQCn1/J6DVk8rg=="
 				},
-				"code" : "\"This will answer true in a default Pharo image\"\r'a string' = #'a string'"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:30:59.259142+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:32:20.099465+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "KXQnoPLfDQCOBWNGBkNL+w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "While in GemStone and VisualWorks it will return `false`."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:32:46.152171+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:35:43.097484+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "6IOGpvLfDQCPaNR0BkNL+w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "This project is an attempt to modify GlamorousToolkit to support strict symbol / string comparison as done by VisualWorks and GemStone, while keeping support for Pharo's interpretation."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:35:43.750765+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:35:53.4014+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qXMcsfLfDQCYAGN7BkNL+w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The intention is that the image may be started in either mode."
+				"code" : "logFile := '/path/to/log.ston' asFileReference."
 			},
 			{
 				"__type" : "textSnippet",
@@ -205,7 +94,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-03T13:34:17.706434+02:00"
+									"dateAndTimeString" : "2024-10-15T10:02:52.19503+02:00"
 								}
 							},
 							"editEmail" : {
@@ -216,128 +105,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-03T13:34:29.678667+02:00"
+									"dateAndTimeString" : "2024-10-15T10:03:00.314285+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "WIb7q/LfDQCTWr8GBkNL+w=="
+								"uidString" : "Y3v2HeHgDQCkl6O5DVk8rg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Strict Symbol Comparison with literals]] "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-03T13:34:30.194183+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-03T13:34:44.370185+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "dhK6rPLfDQCUPFsEBkNL+w=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[Strict Symbol Comparison with variables]] "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-03T13:34:44.95824+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-03T14:04:24.910203+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "VlmbrfLfDQCVJIHEBkNL+w=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[Strict Symbol Comparison in Collections]] "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-03T14:04:28.841889+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-04T09:12:48.945082+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "O0DvF/PfDQCA4eFYBkNL+w=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "[[Strict Symbol Comparison in HashedCollections]] "
+							"string" : "To Be Supplied."
 						}
 					]
 				},
@@ -349,7 +127,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-03T13:33:54.511213+02:00"
+						"dateAndTimeString" : "2024-10-15T10:02:35.11441+02:00"
 					}
 				},
 				"editEmail" : {
@@ -360,17 +138,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-15T09:58:22.254003+02:00"
+						"dateAndTimeString" : "2024-10-15T10:02:50.955016+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "78DQqfLfDQCSR6tOBkNL+w=="
+					"uidString" : "bs7xHOHgDQCj3hFLDVk8rg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "There are 4 scenarios that we need to deal with:"
+				"string" : "## Log comparisons during a test run"
 			},
 			{
 				"__type" : "textSnippet",
@@ -391,7 +169,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-15T10:00:05.956052+02:00"
+									"dateAndTimeString" : "2024-10-15T10:04:43.010335+02:00"
 								}
 							},
 							"editEmail" : {
@@ -402,17 +180,235 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-15T10:01:06.733563+02:00"
+									"dateAndTimeString" : "2024-10-15T10:05:24.678431+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "yN4NFOHgDQCc/U62DVk8rg=="
+								"uidString" : "BkgkIOHgDQCmL7qeDVk8rg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Strict Symbol Comparison logging offline]] "
+							"string" : "Load a log file generated in the previous section:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T10:04:39.6744+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T10:11:56.817599+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "63leJOHgDQCmfh+9DVk8rg=="
+							},
+							"code" : "utility := GtStrictSymbolInstallation new \r\tloadEqualityStatsFromFile: logFile."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-15T10:03:01.099458+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-15T10:03:15.929426+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "KFp+HuHgDQClHQ5aDVk8rg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Load comparisons from a log file"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T10:12:49.733979+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T10:13:11.833904+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "nTKUQeHgDQCuta4sDVk8rg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This will replace all mismatched instances of `#=` with `#sameContentAs:`:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T10:12:28.349378+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T10:13:21.291018+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7dNNQOHgDQCucERiDVk8rg=="
+							},
+							"code" : "utility refactorEqualityCalls"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-15T10:11:58.496838+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-15T10:12:24.399533+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NGGGPuHgDQCtKwONDVk8rg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Refactor equality calls based on the log file"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T10:13:34.958016+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T10:14:30.710231+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dURGROHgDQCw/bPMDVk8rg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This will replace most instance creation of {{gtClass:Dictionary}}, {{gtClass:Set}} and {{gtClass:WeakSet}} with their string content equivalents."
 						},
 						{
 							"__type" : "textSnippet",
@@ -428,7 +424,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-15T10:16:12.547486+02:00"
+									"dateAndTimeString" : "2024-10-15T10:14:31.034592+02:00"
 								}
 							},
 							"editEmail" : {
@@ -439,17 +435,51 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-15T10:16:26.142695+02:00"
+									"dateAndTimeString" : "2024-10-15T10:14:56.339949+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "It+qTeHgDQC4D796DVk8rg=="
+								"uidString" : "SeedR+HgDQC0EsQKDVk8rg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Strict Symbol Comparison logging during development]] "
+							"string" : "This is generally not recommended due to the large number of changes that are made, many of which are probably better handled using one of the other techniques."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T10:15:00.164433+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T10:15:37.4715+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lWVaSeHgDQC3UfD6DVk8rg=="
+							},
+							"code" : "utility\r\trefactorDictionaryReferences;\n\trefactorSetReferences;\n\trefactorWeakSetReferences."
 						}
 					]
 				},
@@ -461,7 +491,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-15T09:59:20.932326+02:00"
+						"dateAndTimeString" : "2024-10-15T10:13:23.042532+02:00"
 					}
 				},
 				"editEmail" : {
@@ -472,54 +502,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-15T09:59:55.968959+02:00"
+						"dateAndTimeString" : "2024-10-15T10:13:33.42465+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/NxeEeHgDQCZ69CxDVk8rg=="
+					"uidString" : "EmiQQ+HgDQCwOw3BDVk8rg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To facilitate enabling strict symbol comparison there are a number of tools in the `GToolkit-Pharo-StrictSymbolComparison` package"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-15T10:07:40.27613+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-10-15T10:07:52.548339+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "zNVXLuHgDQCo9H4xDVk8rg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[Strict Symbol Comparison - Enabling]] "
+				"string" : "## Refactor references to collections"
 			}
 		]
 	},
@@ -531,7 +524,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-10-03T13:29:26.53316+02:00"
+			"dateAndTimeString" : "2024-10-15T10:01:08.557056+02:00"
 		}
 	},
 	"editEmail" : {
@@ -542,15 +535,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-10-03T13:29:26.53316+02:00"
+			"dateAndTimeString" : "2024-10-15T10:01:08.557056+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Strict Symbol Comparison"
+		"title" : "Strict Symbol Comparison logging offline"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "b693a09a-f2df-0d00-897e-ad7606434bfb"
+		"uuid" : "a418c917-e1e0-0d00-9df4-20720d593cae"
 	}
 }
