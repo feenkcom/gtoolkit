@@ -84,10 +84,45 @@
 							"string" : "This logs individual string / symbol comparison mismatches.  This is not usable early on in conversion due to the flood of signals, but is fine once the conversion is largely done."
 						},
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-10-15T16:49:59.181262+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-10-15T16:50:40.131541+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "JbHszebgDQC38XTDCcnNXA=="
+										},
+										"code" : "GtStrictSymbolInstallation new \r\trefactorSymbol;\r\tswitchSymbolTables;\r\tregisterStartup;\r\tinstallStringAndSymbolEquals"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -97,7 +132,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-15T10:17:19.613016+02:00"
+									"dateAndTimeString" : "2024-10-15T16:48:17.701422+02:00"
 								}
 							},
 							"editEmail" : {
@@ -108,14 +143,161 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-15T10:17:21.387925+02:00"
+									"dateAndTimeString" : "2024-10-15T16:49:57.125386+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "ziuqUeHgDQC72vs7DVk8rg=="
+								"uidString" : "BTXgx+bgDQC2eh9BCcnNXA=="
 							},
-							"code" : "GtStrictSymbolEqualityArgumentSignal setLogStringSymbolOnly; start.\nCircularMemoryLogger startFor: GtStrictSymbolEqualityArgumentSignal."
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "First Strict Symbol support must be fully configured in the image:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-10-15T10:17:19.613016+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-10-15T10:17:21.387925+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "ziuqUeHgDQC72vs7DVk8rg=="
+										},
+										"code" : "GtStrictSymbolEqualityArgumentSignal setLogStringSymbolOnly; start.\nCircularMemoryLogger startFor: GtStrictSymbolEqualityArgumentSignal."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T16:51:21.786528+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T16:51:44.855322+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Yx/Z0ubgDQC45YPmCcnNXA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "After that, the signal can be configured and enabled, and a logger started:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-10-15T16:53:11.41536+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-10-15T16:53:34.434869+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "ofZh2ebgDQC/RfcaCcnNXA=="
+										},
+										"code" : "summaryLogger := GtStrictSymbolComparisonSummaryLogger new.\nCircularMemoryLogger instance recordings do: [ :signal |\n\tsummaryLogger nextPut: signal ].\nsummaryLogger."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T16:51:52.958365+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-15T16:53:09.052053+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "tsq01ObgDQC6oDQjCcnNXA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This will include a signal for each mismatching call to `#=`.  If a wide enough portion of the code base has been executed, summary entries can be generated which will provide better refactoring suggestions:"
 						}
 					]
 				},
