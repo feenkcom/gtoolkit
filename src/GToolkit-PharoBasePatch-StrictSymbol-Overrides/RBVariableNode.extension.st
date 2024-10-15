@@ -12,3 +12,8 @@ RBVariableNode class >> identifierNamed: anIdentifierName at: aPosition [
 		
 	^ self named: anIdentifierName start: aPosition
 ]
+
+{ #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
+RBVariableNode >> references: aVariableName [
+	^ self name sameContentAs: aVariableName
+]
