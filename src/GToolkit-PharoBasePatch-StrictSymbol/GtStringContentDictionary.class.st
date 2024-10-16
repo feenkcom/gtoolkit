@@ -4,7 +4,7 @@ Class {
 	#category : #'GToolkit-PharoBasePatch-StrictSymbol-Collections'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #converting }
 GtStringContentDictionary >> asGtStringContentDictionary [
 
 	^ self
