@@ -12,7 +12,7 @@ MetacelloPackagesSpec >> sortPackageSpecs: orderedSpecs packageSpec: packageSpec
 		ifFalse: [ targetSpecNames
 				do: [ :targetPackageOrProjectName | 
 					targetPackage := orderedSpecs
-							detect: [ :each | each name = targetPackageOrProjectName ]
+							detect: [ :each | each name sameContentAs: targetPackageOrProjectName ]
 							ifNone: [ MetacelloNameNotDefinedError
 									signal: 'project group, or package named: ' , targetPackageOrProjectName printString
 											, ' not found when used in requires: or includes: field of package: '
@@ -48,7 +48,7 @@ MetacelloPackagesSpec >> sortPackageSpecs: orderedSpecs packageSpec: packageSpec
 			targetSpecNames
 				do: [ :targetPackageName | 
 					targetPackage := orderedSpecs
-							detect: [ :each | each name = targetPackageName ]
+							detect: [ :each | each name sameContentAs: targetPackageName ]
 							ifNone: [  ].
 					targetIndex := orderedSpecs indexOf: targetPackage.
 					movePackage := movePackage or: [ packageIndex <= targetIndex ] ] ].
