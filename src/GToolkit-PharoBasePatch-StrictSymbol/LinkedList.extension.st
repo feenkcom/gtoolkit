@@ -1,6 +1,6 @@
 Extension { #name : #LinkedList }
 
-{ #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
+{ #category : #'*GToolkit-PharoBasePatch-StrictSymbol' }
 LinkedList >> stringContentIndexOf: anElement startingAt: start ifAbsent: exceptionBlock [
 	"Answer the index of the first occurrence of anElement after start
 	within the receiver. If the receiver does not contain anElement,
