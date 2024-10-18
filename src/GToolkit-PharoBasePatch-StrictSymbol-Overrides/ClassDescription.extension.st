@@ -2,19 +2,21 @@ Extension { #name : #ClassDescription }
 
 { #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
 ClassDescription >> addAndClassifySelector: selector withMethod: compiledMethod inProtocol: category [
-	| priorMethodOrNil priorOriginOrNil oldProtocol newProtocol |
+	| priorMethodOrNil priorOriginOrNil oldProtocol newProtocol categorySelector |
+
 	priorMethodOrNil := self compiledMethodAt: selector ifAbsent: [ nil ].
 	priorMethodOrNil ifNotNil: [ priorOriginOrNil := priorMethodOrNil origin ].
 
 	self addSelectorSilently: selector withMethod: compiledMethod.
 
 	oldProtocol := self organization categoryOfElement: selector.
+	categorySelector := category asSymbol.
 	SystemAnnouncer uniqueInstance
 		suspendAllWhile: [ self organization
 				classify: selector
-				under: ((category sameContentAs: Protocol unclassified)
+				under: ((categorySelector = Protocol unclassified)
 						ifTrue: [ oldProtocol ]
-						ifFalse: [ category ]) ].
+						ifFalse: [ categorySelector ]) ].
 	newProtocol := self organization categoryOfElement: selector.
 
 	self isAnonymous ifTrue: [ ^ self ].

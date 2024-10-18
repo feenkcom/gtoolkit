@@ -97,13 +97,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-26T18:24:17.938092+02:00"
+						"dateAndTimeString" : "2024-10-17T11:18:58.099533+02:00"
 					}
 				},
 				"uid" : {
@@ -156,7 +156,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-17T11:08:16.477046+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-17T11:32:54.961238+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xAONQwrhDQCQzh51Crftqw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Out of these {{gtExample:GtExtensionMethodsGToolkitMetrics class>>gtoolkitProjectForPharoPatchMethods|label=#numberOfExtensions}} extension methods  from {{gtExample:GtExtensionMethodsGToolkitMetrics class>>gtoolkitProjectForPharoPatchMethods|label=#numberOfPackages}} packages in {{gtExample:GtExtensionMethodsGToolkitMetrics class>>gtoolkitProjectForPharoPatchMethods|label=#numberOfRepositoriesWithExtensions}}  repositories are annotated with `gtPharoPatch:`"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
