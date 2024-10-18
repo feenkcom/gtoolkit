@@ -9,6 +9,15 @@ OCAbstractMethodScope >> addCopyingTempToAllScopesUpToDefTemp: aVar [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
+OCAbstractMethodScope >> initialize [
+
+	tempVars :=  GtStringContentOrderedDictionary new.
+	tempVector  := GtStringContentOrderedDictionary new.
+	copiedVars := GtStringContentOrderedDictionary new.
+	id := 0
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
 OCAbstractMethodScope >> lookupVar: name declare: aBoolean [
 
 	copiedVars at: name ifPresent: [:v | ^ v].
