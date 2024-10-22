@@ -542,13 +542,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-26T18:29:21.472505+02:00"
+						"dateAndTimeString" : "2024-10-17T22:56:10.62035+02:00"
 					}
 				},
 				"uid" : {
@@ -558,7 +558,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Extension methods replacing or overriding methods"
+				"string" : "##Extension methods replacing/overriding methods or missing classes"
 			},
 			{
 				"__type" : "textSnippet",
@@ -579,13 +579,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-26T18:30:28.714529+02:00"
+						"dateAndTimeString" : "2024-10-17T22:56:52.18822+02:00"
 					}
 				},
 				"uid" : {
@@ -595,7 +595,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Some extension methods replace methods from the base image, or are added to subclasses overriding methods."
+				"string" : "Extension methods can replace methods from the base image, or can be added to subclasses overriding existing methods. Also in another base image, the class that is extended ca be missing."
 			},
 			{
 				"__type" : "textSnippet",
@@ -621,13 +621,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-12-26T18:31:20.008622+02:00"
+									"dateAndTimeString" : "2024-10-17T22:57:20.373379+02:00"
 								}
 							},
 							"uid" : {
@@ -637,7 +637,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- downloads the base Pharo image used to create this image"
+							"string" : "- downloads the base Pharo image used to create this image (or a given one)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -728,13 +728,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-26T18:34:08.783066+02:00"
+						"dateAndTimeString" : "2024-10-18T16:38:53.224558+02:00"
 					}
 				},
 				"uid" : {
@@ -744,7 +744,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The class {{gtClass:GtExtensionMethodsBaseImageOverridesBuilder}} performs an analysis that extracts these extension methods. This analysis :"
+				"string" : "The class {{gtClass:GtExtensionMethodsBaseImageOverridesReportBuilder}} performs an analysis that extracts these extension methods. This analysis :"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -765,20 +765,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-26T18:33:02.342932+02:00"
+						"dateAndTimeString" : "2024-10-18T16:38:53.371643+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "HWJ5bB+tDQCkx7fnBc7lxw=="
 				},
-				"code" : "GtExtensionMethodsBaseImageOverridesBuilder forGToolkit"
+				"code" : "GtExtensionMethodsBaseImageOverridesReportBuilder forGToolkit"
 			},
 			{
 				"__type" : "textSnippet",
@@ -842,14 +842,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-04T18:37:32.890352+02:00"
+						"dateAndTimeString" : "2024-10-18T16:44:13.714404+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "m/OEhXu+DQC2aamqAG006w=="
 				},
-				"code" : "builder := GtExtensionMethodsBaseImageOverridesBuilder new.\rbuilder \r\timageName: 'Pharo11-SNAPSHOT-64bit-53659ed.image';\r\timageArchiveName: 'Pharo11-SNAPSHOT.build.700.sha.53659ed.arch.64bit.zip';\r\timageUrl: 'https://files.pharo.org/image/110/Pharo11-SNAPSHOT.build.700.sha.53659ed.arch.64bit.zip'.\r\rwrapper := builder buildWrapperForGToolkit"
+				"code" : "builder := GtExtensionMethodsBaseImageOverridesReportBuilder new.\rbuilder \r\timageName: 'Pharo11-SNAPSHOT-64bit-53659ed.image';\r\timageArchiveName: 'Pharo11-SNAPSHOT.build.700.sha.53659ed.arch.64bit.zip';\r\timageUrl: 'https://files.pharo.org/image/110/Pharo11-SNAPSHOT.build.700.sha.53659ed.arch.64bit.zip'.\r\rwrapper := builder buildReportForGToolkit"
 			}
 		]
 	},
