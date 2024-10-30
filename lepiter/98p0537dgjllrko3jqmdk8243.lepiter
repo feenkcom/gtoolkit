@@ -98,7 +98,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T13:56:05.550253+01:00"
+									"dateAndTimeString" : "2024-10-30T13:51:00.64968+01:00"
 								}
 							},
 							"editEmail" : {
@@ -109,7 +109,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T13:56:16.745109+01:00"
+									"dateAndTimeString" : "2024-10-30T13:54:16.376215+01:00"
 								}
 							},
 							"uid" : {
@@ -119,7 +119,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "How can you cheaply and effectively extend the development environment with domain-specific tools that address your application domain?"
+							"string" : "How can you cheaply and effectively extend the development environment with custom tools that address questions about your application domain?"
 						}
 					]
 				},
@@ -173,7 +173,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T13:57:14.677708+01:00"
+									"dateAndTimeString" : "2024-10-30T13:52:00.811818+01:00"
 								}
 							},
 							"editEmail" : {
@@ -184,7 +184,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T13:57:14.677708+01:00"
+									"dateAndTimeString" : "2024-10-30T13:52:02.599139+01:00"
 								}
 							},
 							"uid" : {
@@ -194,7 +194,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Generic software tools are fine for answering generic questions, but they do not scale well when addressing domain-specific questions."
+							"string" : "— Generic software tools are fine for answering generic questions, but they do not work well when addressing domain-specific questions."
 						},
 						{
 							"__type" : "textSnippet",
@@ -210,7 +210,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T13:56:11.050939+01:00"
+									"dateAndTimeString" : "2024-10-30T13:52:11.453859+01:00"
 								}
 							},
 							"editEmail" : {
@@ -221,17 +221,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T13:57:29.074096+01:00"
+									"dateAndTimeString" : "2024-10-30T13:53:35.116674+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "WnTIva3LDQCxmKXADA/m3Q=="
+								"uidString" : "wldG6BLiDQCKY9BnCDj6jg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "For example, consider a generic debugger being used to debug an event-driven application — you want to step through the chain of events, not the stack. A plugin architecture can open up an IDE to new tools, but plugins can be complex and expensive to implement, and they often do not play nicely with existing tools or with each other."
+							"string" : "— A plugin architecture can open up an IDE to new tools, but plugins can be complex and expensive to implement, and they often do not compose nicely with existing tools or with each other."
 						}
 					]
 				},
@@ -285,7 +285,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T13:56:41.705354+01:00"
+									"dateAndTimeString" : "2024-10-30T13:58:08.86884+01:00"
 								}
 							},
 							"editEmail" : {
@@ -296,7 +296,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T13:57:56.871264+01:00"
+									"dateAndTimeString" : "2024-10-30T13:58:43.158145+01:00"
 								}
 							},
 							"uid" : {
@@ -306,8 +306,46 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Make the development tools *moldable* to the *dynamic context* of the artifacts they are intended to work with."
-						},
+							"string" : "Make the development tools *moldable* to the *dynamic context* of the artifacts they are intended to work with [3](https://scg.unibe.ch/assets/scgbib/?query=Chis17a&filter=Author), by associating custom behavior to the artifacts themselves."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-30T13:52:45.752278+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-30T13:52:59.537013+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ObVR6hLiDQCKf5XHCDj6jg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Solution"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -333,7 +371,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T13:58:51.212313+01:00"
+									"dateAndTimeString" : "2024-10-30T13:59:16.18465+01:00"
 								}
 							},
 							"uid" : {
@@ -343,7 +381,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A moldable tool makes its core functionality configurable by means of lightweight mechanisms. For example, a Test Runner in a modern IDE recognizes the presence of test cases by means of various programming conventions, \\ie a test case is a method with a standard annotation, or it's a method whose name starts with `test` and belongs to a class that inherits from a {{gtClass:name=TestCase}} class or implements a `Test` interface."
+							"string" : "A moldable tool makes its core functionality configurable by means of lightweight mechanisms. For example, a Test Runner in a modern IDE recognizes the presence of test cases by means of various programming conventions, *i.e.* a test case is a method with a standard annotation, or it's a method whose name starts with `test` and belongs to a class that inherits from a {{gtClass:name=TestCase}} class or implements a `Test` interface."
 						},
 						{
 							"__type" : "textSnippet",
@@ -700,7 +738,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-19T13:57:36.400773+01:00"
+						"dateAndTimeString" : "2024-10-30T13:53:03.523696+01:00"
 					}
 				},
 				"uid" : {
@@ -710,13 +748,87 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Solution"
+				"string" : "# Examples"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:00:55.522903+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:00:55.522903+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "igKDBxPiDQCMdfgwCDj6jg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A moldable tool requires no up-front configuration, since it will be dynamically molded by the artifacts it encounters. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:00:59.999852+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:00:59.999852+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xUvHBxPiDQCMfSHKCDj6jg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Conversely, since custom tools are an intrinsic part of software systems rather than the IDE, molding happens when needed."
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -742,7 +854,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:00:12.985823+01:00"
+									"dateAndTimeString" : "2024-10-30T14:01:00.036436+01:00"
 								}
 							},
 							"uid" : {
@@ -752,7 +864,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A moldable tool requires no up-front configuration, since it will be dynamically molded by the artifacts it encounters. Conversely, since custom tools are an intrinsic part of software systems rather than the IDE, molding happens when needed.Some tooling effort is required to open up the existing IDE tools to make them moldable, i.e., dynamically customizable."
+							"string" : "Some tooling effort is required to open up the existing IDE tools to make them moldable, i.e., dynamically customizable."
 						}
 					]
 				},
@@ -786,6 +898,230 @@
 					"__type" : "textStyle"
 				},
 				"string" : "# Consequences"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:03:00.597761+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:03:00.597761+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "k373DhPiDQCNY4wBCDj6jg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Unit testing tools such as [JUnit](http://members.pingnet.ch/gamma/junit.htm) rely either on inheritance or annotations to automatically detect which methods in a package are tests, and adapt the IDE to enable test runners, however the tool adaptation is fixed, and cannot be further customized without writing a new plugin. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:03:22.177439+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:03:22.177439+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "YMVAEBPiDQCNjvuoCDj6jg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The [JetBrains IDE](https://www.jetbrains.com/help/idea/customizing-views.html#renderers) allows you to customize the views of objects within a debugging session, though the custom views are specified in the configuration of the tool itself, not in the context of the object. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:01:10.994738+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:04:38.860806+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "3xxvCBPiDQCMxcksCDj6jg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The Glamorous Toolkit includes several moldable tools. The Moldable [[Inspector]] installs custom views, actions (*i.e.*, buttons), and search interfaces whenever an object is inspected that defines such custom tools as annotated methods. The Moldable [[Coder]] (*i.e.*, code editor) also can add custom views, highlighters, actions and searches when editing the source of a class with annotated methods. The Moldable [[Debugger]] provides custom views, actions and searches installed as methods in the class of a caught exception."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-30T14:01:03.260388+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-30T14:01:10.616624+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6RL5BxPiDQCMhby+CDj6jg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#  Known Uses"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:01:47.969857+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-30T14:06:57.795702+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "vkejChPiDQCNNqUdCDj6jg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A Moldable Tool reacts to a [[Moldable Object]], which triggers custom tools such as [[Custom View]], [[Custom Search]] or [[Custom Action]]. A Moldable Tool should provide a [[Contextual Playground]] to enable a live programming interface to the entities it works with (*i.e.*, objects, classes, exceptions)."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-30T14:01:37.641135+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-30T14:01:45.24612+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iq0FChPiDQCM3eAyCDj6jg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Related patterns"
 			}
 		]
 	},
