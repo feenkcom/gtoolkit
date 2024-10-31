@@ -173,7 +173,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:51:58.663645+01:00"
+									"dateAndTimeString" : "2024-10-31T10:58:17.438162+01:00"
 								}
 							},
 							"editEmail" : {
@@ -184,17 +184,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:51:58.663645+01:00"
+									"dateAndTimeString" : "2024-10-31T10:58:17.438162+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "B+VQha7LDQC9GlZVAweJJw=="
+								"uidString" : "ZUwzmCTiDQC+S7LSCmsZVA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Concrete examples are need for many purposes, such as documentation, testing, and exploration."
+							"string" : "— Concrete examples are needed for many purposes, such as documentation, testing, and explo- ration."
 						},
 						{
 							"__type" : "textSnippet",
@@ -210,7 +210,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:31:55.995197+02:00"
+									"dateAndTimeString" : "2024-10-31T10:58:18.664946+01:00"
 								}
 							},
 							"editEmail" : {
@@ -221,17 +221,54 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:52:03.193224+01:00"
+									"dateAndTimeString" : "2024-10-31T10:58:18.664946+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "6umLW/a/DQCh6ysvBYCxRA=="
+								"uidString" : "mARGmCTiDQC+UpUJCmsZVA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Examples can be complex to set up. Unit tests consume examples, but they are only accessible if a test fails."
+							"string" : "— Examples can be complex to set up."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T10:58:12.955165+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T10:58:18.667237+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "B+VQha7LDQC9GlZVAweJJw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "— Unit tests consume examples, but they are only accessible if a test fails."
 						}
 					]
 				},
@@ -296,7 +333,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:32:02.914981+02:00"
+									"dateAndTimeString" : "2024-10-31T10:58:31.4347+01:00"
 								}
 							},
 							"uid" : {
@@ -306,7 +343,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Wrap examples as (instance) methods that optionally evaluate some tests (assertions), and return the example instance. Each example may also use one or more examples as the initial setup for the new example."
+							"string" : "Wrap examples as (instance) methods that optionally evaluate some tests (assertions), and return the example instance. "
 						}
 					]
 				},
@@ -360,7 +397,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:48:51.506488+01:00"
+									"dateAndTimeString" : "2024-10-31T10:58:58.51055+01:00"
 								}
 							},
 							"editEmail" : {
@@ -371,17 +408,277 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:50:06.820087+01:00"
+									"dateAndTimeString" : "2024-10-31T10:58:58.51055+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "PeqJYo3FDQCsKwZOC2Q54w=="
+								"uidString" : "3QOmmiTiDQC+d7rdCmsZVA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To start, you need a modified unit testing framework in which tests return the exercised fixture, namely, an example. In GT, you create an [[Example]] by defining a parameterless method that has a `<gtExample>` pragma, and returns an object. (A similar framework for Java is [JExample](https://scg.unibe.ch/research/jexample).)"
+							"string" : "Each example may also use one or more examples as the initial setup for the new example. To start, you need a modified unit testing framework in which tests return the exercised fixture, namely, an example. "
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T10:59:21.314128+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T10:59:21.318087+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UmQxmyTiDQC+g5pnCmsZVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Steps"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:00:18.946023+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:02:54.306558+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "BVlxnyTiDQC/TW0DCmsZVA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In GT, you create an example by defining a parameterless method that has a `<gtExample>` pragma and returns an object. Here is a simple example method that creates a fresh instance of the gtLudoGame class, asserts a few basic facts (*i.e.*, that the game is not yet over, no one has won yet, and so on). It resembles a classical unit test in all respects except one: it returns the instance of the unit under test, *i.e.*, the game instance. {{gtExample:GtLudoGameExamples>>#emptyGame}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:00:37.632562+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:03:14.553521+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kH+OoCTiDQC/ZAfQCmsZVA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Unlike normal test methods, examples are designed to be composed. Below we see a second example, `playerArolls6`, that starts from the `emptyGame` example, rolls a 6, asserts a few facts, and returns the modified game instance. {{gtExample:name=GtLudoGameExamples>>#playerArolls6}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:01:34.144702+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:01:34.144702+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "a87soyTiDQC/ilcICmsZVA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:01:34.385391+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:01:34.385391+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "tnnwoyTiDQC/jlXfCmsZVA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:01:34.643078+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:01:34.643078+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "B2n0oyTiDQC/ksYUCmsZVA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:01:46.62671+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T11:01:46.62671+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dxojmSTiDQC+XecgCmsZVA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
 						},
 						{
 							"__type" : "textSnippet",
@@ -558,7 +855,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T12:32:50.107083+02:00"
+						"dateAndTimeString" : "2024-10-31T10:59:24.859756+01:00"
 					}
 				},
 				"uid" : {
@@ -568,7 +865,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Steps"
+				"string" : "#Examples"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T11:01:33.892037+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T11:04:38.658471+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "7+/ooyTiDQC/hqofCmsZVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Examples such as these can be embedded into notebook pages and used as moldable objects for further development tasks, or as documentation, as seen in [[Executable domain-driven design: the Ludo game case study]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -589,7 +923,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:50:33.618231+01:00"
+									"dateAndTimeString" : "2024-10-31T11:05:21.110859+01:00"
 								}
 							},
 							"editEmail" : {
@@ -600,12 +934,12 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:50:33.618231+01:00"
+									"dateAndTimeString" : "2024-10-31T11:05:21.110859+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "cQSgaI3FDQCtnmnxC2Q54w=="
+								"uidString" : "tgh0sSTiDQCA6HfnCmsZVA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
@@ -626,7 +960,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:50:41.469207+01:00"
+									"dateAndTimeString" : "2024-10-31T11:05:22.303154+01:00"
 								}
 							},
 							"editEmail" : {
@@ -637,17 +971,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:50:41.469207+01:00"
+									"dateAndTimeString" : "2024-10-31T11:05:22.303154+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "6tQXaY3FDQCtsa9eC2Q54w=="
+								"uidString" : "dzmGsSTiDQCA7zyYCmsZVA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "When an example fails, its dependent examples do not need to be run. "
+							"string" : "When an example fails, its dependent examples do not need to be run."
 						},
 						{
 							"__type" : "textSnippet",
@@ -663,7 +997,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:50:45.620514+01:00"
+									"dateAndTimeString" : "2024-10-31T11:05:24.047317+01:00"
 								}
 							},
 							"editEmail" : {
@@ -674,17 +1008,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:51:45.591761+01:00"
+									"dateAndTimeString" : "2024-10-31T11:05:24.047317+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "xitXaY3FDQCtueIdC2Q54w=="
+								"uidString" : "aNagsSTiDQCA9siiCmsZVA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "When an example succeeds, it can be inspected, used as a moldable object to start coding, or embedded as a live example snippet within a notebook page to illustrate some point. (The example snippets above illustrate this.)"
+							"string" : "When an example succeeds, it can be inspected, used as a moldable object to start coding, or embedded as a live example snippet within a notebook page to illustrate some point."
 						},
 						{
 							"__type" : "textSnippet",
@@ -700,7 +1034,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-23T12:32:27.392916+02:00"
+									"dateAndTimeString" : "2024-10-31T11:05:11.775079+01:00"
 								}
 							},
 							"editEmail" : {
@@ -711,12 +1045,12 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:50:45.627137+01:00"
+									"dateAndTimeString" : "2024-10-31T11:05:24.049587+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "ZABrXfa/DQCiPcOkBYCxRA=="
+								"uidString" : "cQSgaI3FDQCtnmnxC2Q54w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
@@ -775,7 +1109,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:52:17.968531+01:00"
+									"dateAndTimeString" : "2024-10-31T11:05:35.060498+01:00"
 								}
 							},
 							"editEmail" : {
@@ -786,18 +1120,56 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-11T16:31:36.673401+01:00"
+									"dateAndTimeString" : "2024-10-31T11:06:26.753578+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "tt+xXfa/DQCiTV2PBYCxRA=="
+								"uidString" : "PONIsiTiDQCA/he1CmsZVA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Examples can be embedded in the notebook pages of a [[Project Diary]]."
-						},
+							"string" : "[Subtext](https://www.subtext-lang.org) supports example-centric programming by placing live examples at the focus of the development process. [JExample](https://scg.unibe.ch/research/jexample) is a Java-based testing framework in which tests return examples."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T10:59:59.426203+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T11:00:03.173742+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "34NHniTiDQC/AESCCmsZVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Known Uses"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -812,7 +1184,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-11-02T14:52:36.731498+01:00"
+									"dateAndTimeString" : "2024-10-31T11:06:46.461068+01:00"
 								}
 							},
 							"editEmail" : {
@@ -823,17 +1195,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-11T16:28:38.472801+01:00"
+									"dateAndTimeString" : "2024-10-31T11:06:58.584066+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "p5j2b43FDQCwu3a5C2Q54w=="
+								"uidString" : "zl+KtiTiDQCBZZccCmsZVA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Examples can produce a [[Moldable Object]] for moldable development."
+							"string" : "An example can be used as a [[Moldable Object]] to start a new exploration activity. Examples can also be embeddded within a [[Project Diary]] notebook page to illustrate a particular documentation point."
 						}
 					]
 				},

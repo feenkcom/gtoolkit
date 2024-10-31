@@ -140,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-14T14:36:23.136131+02:00"
+						"dateAndTimeString" : "2024-10-31T10:22:51.00438+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "KKZt1xqBDQCFwLEyDhdZCw=="
 				},
-				"code" : "GtWorld allInstances do: [ :aGtWorld |\r\taGtWorld root children first home updateWidget]"
+				"code" : "GtWorld requestAllInstancesHomeUpdate"
 			}
 		]
 	},
