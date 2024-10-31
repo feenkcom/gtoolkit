@@ -184,7 +184,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:21:26.756791+01:00"
+									"dateAndTimeString" : "2024-10-31T16:49:41.175819+01:00"
 								}
 							},
 							"uid" : {
@@ -194,7 +194,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The stakeholders are already heavily committed to their current development tasks, and have little time to spare for you. "
+							"string" : "— The stakeholders are already heavily committed to their current development tasks, and have little time to spare for you. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -221,7 +221,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:21:26.758793+01:00"
+									"dateAndTimeString" : "2024-10-31T16:49:53.406101+01:00"
 								}
 							},
 							"uid" : {
@@ -231,44 +231,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "They are almost certainly skeptical that moldable development will make them more productive."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:21:18.387046+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:21:18.387046+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "2ZWgF67LDQCJ4SUgBqZUnw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "You need to demonstrate early success to get the customer to commit long-term to further collaboration. "
+							"string" : "— They are almost certainly skeptical that moldable development will make them more productive. You need to demonstrate early success to get the customer to commit long-term to further collaboration. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -295,7 +258,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:21:18.388687+01:00"
+									"dateAndTimeString" : "2024-10-31T16:49:55.69511+01:00"
 								}
 							},
 							"uid" : {
@@ -305,7 +268,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "It can be difficult to pick a task that is both feasible in a short amount of time, and also brings value to the stakeholders."
+							"string" : "— It can be difficult to pick a task that is both feasible in a short amount of time, and also brings value to the stakeholders."
 						}
 					]
 				},
@@ -381,6 +344,81 @@
 								"__type" : "textStyle"
 							},
 							"string" : "Find the parts of the system that are creating problems for the stakeholders and make them *explainable*.\n"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T16:50:10.334182+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T16:50:11.674652+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2oOgginiDQCve6nABQWDtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Solution"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T16:51:06.773294+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T16:51:06.773294+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QLj9hSniDQCwHNM3BQWDtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The “blind spots” are the aspects that are difficult to understand, to monitor, or to debug. Pick one of these blind spots as a target. The task should be feasible in reasonable time (*i.e.*, hours or days, but not weeks or months) but non-trivial. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -396,7 +434,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:22:25.829909+01:00"
+									"dateAndTimeString" : "2024-10-31T16:50:49.774821+01:00"
 								}
 							},
 							"editEmail" : {
@@ -407,55 +445,56 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:22:25.829909+01:00"
+									"dateAndTimeString" : "2024-10-31T16:51:06.776109+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "JK6lG67LDQCKnjr2BqZUnw=="
+								"uidString" : "bFn6hCniDQCwBYqaBQWDtA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "These are the “blind spots” that are difficult to understand, to monitor, or to debug. Pick one of these blind spots as a target. "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:22:29.991671+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:22:29.991671+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "wS3lG67LDQCKtKdEBqZUnw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "The task should be feasible in reasonable time but non-trivial. There should be a clear value for the stakeholder, that is, do something that the stakeholder has difficulty with."
-						},
+							"string" : "There should be a clear value for the stakeholder, that is, do something that the stakeholder has difficulty with."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T16:50:45.622991+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T16:50:48.088716+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OP66hCniDQCv3txABQWDtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Steps"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -486,7 +525,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-01-19T14:22:50.508821+01:00"
+												"dateAndTimeString" : "2024-10-31T16:51:23.886887+01:00"
 											}
 										},
 										"uid" : {
@@ -496,7 +535,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "• exposing hidden dependencies between features, "
+										"string" : "(i) exposing hidden dependencies between features, "
 									},
 									{
 										"__type" : "textSnippet",
@@ -523,7 +562,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-01-19T14:22:52.333165+01:00"
+												"dateAndTimeString" : "2024-10-31T16:51:27.106523+01:00"
 											}
 										},
 										"uid" : {
@@ -533,7 +572,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "• visualizing performance costs of test runs on a cluster, or"
+										"string" : "(ii) visualizing performance costs of test runs on a cluster, or"
 									},
 									{
 										"__type" : "textSnippet",
@@ -560,7 +599,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-01-19T14:22:57.645344+01:00"
+												"dateAndTimeString" : "2024-10-31T16:51:43.393556+01:00"
 											}
 										},
 										"uid" : {
@@ -570,7 +609,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "• providing views to gain insights into scheduling deadlocks."
+										"string" : "(iii) providing views to gain insights into scheduling deadlocks."
 									}
 								]
 							},
@@ -604,7 +643,45 @@
 								"__type" : "textStyle"
 							},
 							"string" : "Some typical examples are "
-						},
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T16:50:05.57651+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T16:50:20.369871+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Rzh1Ga7LDQCKISboBqZUnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Examples"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -641,45 +718,44 @@
 								"__type" : "textStyle"
 							},
 							"string" : "Since the stakeholder has little time to spare to guide you, you may have to work in the dark at times. Be sure to always have something to show when you come back with questions."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-19T14:21:49.099861+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-19T14:21:49.099861+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Rzh1Ga7LDQCKISboBqZUnw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "# Solution"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T16:52:04.707982+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T16:52:04.707982+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "f7txiSniDQCwnJkqBQWDtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "By quickly developing a solution to an ongoing problem, you will engage the stakeholder."
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -705,7 +781,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:21:58.811145+01:00"
+									"dateAndTimeString" : "2024-10-31T16:52:06.544046+01:00"
 								}
 							},
 							"uid" : {
@@ -715,7 +791,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "By quickly developing a solution to an ongoing problem, you will engage the stakeholder.\nIt does not matter if the custom tools you develop do not perfectly match the stakeholder's needs, as the only goal is to convince the stakeholders to commit to closer and longer-term collaboration.\n"
+							"string" : "It does not matter if the custom tools you develop do not perfectly match the stakeholder's needs, as the only goal is to convince the stakeholders to commit to closer and longer-term collaboration."
 						}
 					]
 				},
@@ -749,6 +825,156 @@
 					"__type" : "textStyle"
 				},
 				"string" : "# Consequences"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T16:52:36.860324+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T16:53:40.759764+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "1VJciyniDQCw0evuBQWDtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[Finding and understanding legacy feature toggles in the Open edX Proposals project](https://lepiter.io/feenk/steering-agile-architecture-by-example--th-e2p6aps2brbby94deek31xqxh/) is a public example of a Blind Spot tackled with GT during a hackathon [12]."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T16:52:33.835654+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T16:52:33.835654+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GjAuiyniDQCwySMyBQWDtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Known Uses"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T16:52:25.677581+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-10-31T16:52:51.713144+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lLSxiiniDQCwqE0wBQWDtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A Blind Spot will manifest itself as one or more instances of a [[Moldable Object]]."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T16:52:43.318026+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-10-31T16:52:58.100993+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "7t++iyniDQCw55AhBQWDtA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Related patterns"
 			}
 		]
 	},
