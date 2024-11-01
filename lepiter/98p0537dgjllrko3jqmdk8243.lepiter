@@ -408,7 +408,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:08:46.567187+01:00"
+									"dateAndTimeString" : "2024-11-01T10:35:28.476373+01:00"
 								}
 							},
 							"uid" : {
@@ -434,7 +434,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:07:08.97511+01:00"
+									"dateAndTimeString" : "2024-11-01T10:34:21.335558+01:00"
 								}
 							},
 							"editEmail" : {
@@ -445,54 +445,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:07:18.961699+01:00"
+									"dateAndTimeString" : "2024-11-01T10:34:22.168945+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "DZT/5K3LDQC04WRGDA/m3Q=="
+								"uidString" : "ZXxxYDjiDQCDJRLyADVOtQ=="
 							},
-							"code" : "GtInspector newOn: GtLudoRecordingGameExamples new gameShowingAllMoves6",
-							"elementHeight" : 355,
+							"code" : "scripter := BlScripter new.\rgame := GtLudoRecordingGameExamples new gameShowingAllMoves6.\rscripter element: (GtInspector createOn: game) maximized.\rscripter click\r\tid: #bar index: 5;\r\tplay.\t\"Select the Moves view.\"\rscripter click\r\tid: #bar index: 2;\r\tmodifiers: BlKeyModifiers alt;\r\tplay.\t\"Open the source view.\"\rscripter elementWithoutParent",
+							"elementHeight" : 683,
 							"codeHeight" : 50,
 							"codeVisible" : false
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:08:50.546497+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:10:17.958433+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "WnEN663LDQC2GQxODA/m3Q=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "If we OPT-click on the `Moves` heading, we see the method that implements this view: {{gtMethod:name=GtLudoRecordingGame>>#gtMovesFor:|expanded}} "
 						},
 						{
 							"__type" : "textSnippet",
