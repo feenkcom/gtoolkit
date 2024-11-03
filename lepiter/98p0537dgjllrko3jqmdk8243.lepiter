@@ -434,7 +434,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-01T10:34:21.335558+01:00"
+									"dateAndTimeString" : "2024-11-03T09:48:23.965664+01:00"
 								}
 							},
 							"editEmail" : {
@@ -445,15 +445,15 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-01T10:34:22.168945+01:00"
+									"dateAndTimeString" : "2024-11-03T09:48:53.067868+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "ZXxxYDjiDQCDJRLyADVOtQ=="
+								"uidString" : "/hnG91/iDQC/CbtRCgSEaw=="
 							},
-							"code" : "scripter := BlScripter new.\rgame := GtLudoRecordingGameExamples new gameShowingAllMoves6.\rscripter element: (GtInspector createOn: game) maximized.\rscripter click\r\tid: #bar index: 5;\r\tplay.\t\"Select the Moves view.\"\rscripter click\r\tid: #bar index: 2;\r\tmodifiers: BlKeyModifiers alt;\r\tplay.\t\"Open the source view.\"\rscripter elementWithoutParent",
-							"elementHeight" : 683,
+							"code" : "(PatternScripterExamples new moldableToolViewCodeScript) elementWithoutParent",
+							"elementHeight" : 668,
 							"codeHeight" : 50,
 							"codeVisible" : false
 						},
