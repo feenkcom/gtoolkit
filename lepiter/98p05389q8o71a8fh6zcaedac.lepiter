@@ -459,7 +459,7 @@
 							"string" : "Below we can see custom searches for people and addresses within an address book. (Click on the magnifying glass to enter search text.) As with other custom tools, one way to implement a custom search is as a method of the domain object from which the search is initiated, with a dedicated annotation. In GT, custom searches are annotated with `<gtSearch>`, and triggered within multiple moldable tools, such as the inspector, the code editor, and also the notebook."
 						},
 						{
-							"__type" : "exampleSnippet",
+							"__type" : "elementSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -472,7 +472,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:41:48.376213+01:00"
+									"dateAndTimeString" : "2024-11-04T10:14:51.244596+01:00"
 								}
 							},
 							"editEmail" : {
@@ -483,20 +483,54 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:41:48.376213+01:00"
+									"dateAndTimeString" : "2024-11-04T10:35:25.907444+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "aeLdRhXiDQCyCBI3D6VI0g=="
+								"uidString" : "6HA5dHTiDQCkvkTJAXy9mA=="
 							},
-							"exampleSelector" : "cartoonAddressBook",
-							"previewHeight" : 350,
-							"previewShowSelector" : "gtViewsFor:",
-							"exampleBehaviorName" : "GtABCartoonAddressBookExample",
-							"codeExpanded" : true,
-							"previewExpanded" : false,
-							"noCode" : true
+							"code" : "PatternScripterExamples new cartoonAddressBookSearchScript elementWithoutParent",
+							"elementHeight" : 388,
+							"codeHeight" : 50,
+							"codeVisible" : false
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-04T10:14:46.766195+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-04T10:14:46.766195+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bBv1c3TiDQCkulQaAXy9mA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
 						}
 					]
 				},
