@@ -591,14 +591,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:11:29.918204+01:00"
+									"dateAndTimeString" : "2024-11-04T16:23:10.303926+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "O2iIxSTiDQCDGbXvCmsZVA=="
 							},
-							"code" : "url := 'https://api.github.com/orgs/feenkcom'.\rjson := ZnClient new get: url.\rdictionary := STON fromString: json.\rGtInspector newOn: dictionary\r",
+							"code" : "(GtInspector createOn: PatternScripterExamples new rawGitHubDictionary)\r\tmaximized",
 							"elementHeight" : 301,
 							"codeHeight" : 83,
 							"codeVisible" : false
@@ -725,7 +725,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:13:18.172929+01:00"
+									"dateAndTimeString" : "2024-11-04T16:08:43.107501+01:00"
 								}
 							},
 							"editEmail" : {
@@ -736,15 +736,15 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:13:34.195983+01:00"
+									"dateAndTimeString" : "2024-11-04T16:08:54.313917+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "RGvjzSTiDQCD/hl9CmsZVA=="
+								"uidString" : "1/K9ZXniDQCxAcXjCj2vNA=="
 							},
-							"code" : "GtInspector newOn:\r(GhOrganization new rawData: dictionary)",
-							"elementHeight" : 286,
+							"code" : "PatternScripterExamples new wrappedGitHubOrganizationDataScript elementWithoutParent",
+							"elementHeight" : 509,
 							"codeHeight" : 50,
 							"codeVisible" : false
 						}
