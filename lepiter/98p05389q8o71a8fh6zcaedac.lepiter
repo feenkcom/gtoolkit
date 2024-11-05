@@ -459,7 +459,7 @@
 							"string" : "Below we can see custom searches for people and addresses within an address book. (Click on the magnifying glass to enter search text.) As with other custom tools, one way to implement a custom search is as a method of the domain object from which the search is initiated, with a dedicated annotation. In GT, custom searches are annotated with `<gtSearch>`, and triggered within multiple moldable tools, such as the inspector, the code editor, and also the notebook."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -472,7 +472,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T10:14:51.244596+01:00"
+									"dateAndTimeString" : "2024-11-05T17:33:14.362829+01:00"
 								}
 							},
 							"editEmail" : {
@@ -483,17 +483,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T10:35:25.907444+01:00"
+									"dateAndTimeString" : "2024-11-05T17:33:14.362829+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "6HA5dHTiDQCkvkTJAXy9mA=="
+								"uidString" : "m4rasY7iDQCN5eRLCwx3hg=="
 							},
-							"code" : "PatternScripterExamples new cartoonAddressBookSearchScript elementWithoutParent",
-							"elementHeight" : 388,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "cartoonAddressBookSearchScript",
+							"previewHeight" : 450,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -870,7 +873,7 @@
 							"string" : "In the example below we can see several custom searches for page names, page content and link names within a website, by entering an arbitrary search string into the Spotter (magnifying glass icon)."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -883,7 +886,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T09:42:56.235128+01:00"
+									"dateAndTimeString" : "2024-11-05T18:34:04.002232+01:00"
 								}
 							},
 							"editEmail" : {
@@ -894,17 +897,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T09:42:56.235128+01:00"
+									"dateAndTimeString" : "2024-11-05T18:34:04.002232+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "fDq3iiPiDQCplZ01DcCD2A=="
+								"uidString" : "ZKFji4/iDQCfTttOBgGSHw=="
 							},
-							"code" : "GtInspector newOn: PillarWebsiteExamples new esug2014",
-							"elementHeight" : 378,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "esug2014",
+							"previewHeight" : 500,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "PillarWebsiteExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -1005,7 +1011,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T09:42:56.235144+01:00"
+									"dateAndTimeString" : "2024-11-05T18:35:15.010414+01:00"
 								}
 							},
 							"uid" : {
@@ -1015,7 +1021,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "For example thes earch for pages is implemented in {{gtMethod:name=AWebsite>>#gtSpotterForPageNames:|expanded}}  "
+							"string" : "For example this search for pages is implemented in {{gtMethod:name=AWebsite>>#gtSpotterForPageNames:|expanded}}  "
 						}
 					]
 				},
