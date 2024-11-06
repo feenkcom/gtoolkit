@@ -533,7 +533,7 @@
 							"string" : "Below we see an Inspector on an instance of a GtLudoRecordingGame with a Contextual Playground where we can write experimental code that we later extract as methods. (Lift the handle at the bottom of the Inspector.) In this case we are prototyping the autoplay feature. In the second pane we see the Moves view of the object, showing the details of all the moves of the game so far."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -546,7 +546,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T11:58:48.840269+01:00"
+									"dateAndTimeString" : "2024-11-06T09:40:20.674626+01:00"
 								}
 							},
 							"editEmail" : {
@@ -557,17 +557,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T11:59:09.620269+01:00"
+									"dateAndTimeString" : "2024-11-06T09:40:20.674626+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "P5kD6HXiDQC7sh16Bld4LA=="
+								"uidString" : "ccp9NJziDQC1N74/B2i/GQ=="
 							},
-							"code" : "PatternScripterExamples new moldableLudoGamePlaygroundScript elementWithoutParent",
-							"elementHeight" : 677,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "moldableLudoGamePlaygroundScript",
+							"previewHeight" : 700,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -1236,7 +1239,7 @@
 							"string" : "You can also click on an *Inspect Object* button in many tools, for example at the top right of the Inspector of the Ludo Game."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -1249,7 +1252,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:49:01.082973+02:00"
+									"dateAndTimeString" : "2024-11-06T09:43:31.085952+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1260,17 +1263,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-04T19:49:01.082973+02:00"
+									"dateAndTimeString" : "2024-11-06T09:43:31.085952+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "YOGyP36+DQCNCamSD4A0oQ=="
+								"uidString" : "wzvXP5ziDQC1ZLQeB2i/GQ=="
 							},
-							"code" : "GtInspector newOn: GtLudoGame new",
-							"elementHeight" : 399,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "emptyGame",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "GtLudoGameExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",

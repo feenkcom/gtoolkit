@@ -567,7 +567,7 @@
 							"string" : "The dictionary representation, however, is not well-suited for exploring the GitHub organization domain. If we explore the resulting object (see below) we just see the keys and values of the raw downloaded data. From this view, of course we can explore the data by navigating the Dictionary views, or by programatically exploring other paths, but we cannot add or tailor views to specifically support the GitHub Organization domain."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -580,7 +580,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:10:57.991634+01:00"
+									"dateAndTimeString" : "2024-11-06T09:44:53.436725+01:00"
 								}
 							},
 							"editEmail" : {
@@ -591,17 +591,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T16:23:10.303926+01:00"
+									"dateAndTimeString" : "2024-11-06T09:44:53.436725+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "O2iIxSTiDQCDGbXvCmsZVA=="
+								"uidString" : "uMi/RJziDQC5tKdGDdyYHA=="
 							},
-							"code" : "(GtInspector createOn: PatternScripterExamples new rawGitHubDictionary)\r\tmaximized",
-							"elementHeight" : 301,
-							"codeHeight" : 83,
-							"codeVisible" : false
+							"exampleSelector" : "rawGitHubDictionary",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -712,7 +715,7 @@
 							"string" : "We see the result after some moldable development steps below:"
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -725,7 +728,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T16:08:43.107501+01:00"
+									"dateAndTimeString" : "2024-11-06T09:48:34.046464+01:00"
 								}
 							},
 							"editEmail" : {
@@ -736,17 +739,57 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T16:08:54.313917+01:00"
+									"dateAndTimeString" : "2024-11-06T09:48:40.964396+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "1/K9ZXniDQCxAcXjCj2vNA=="
+								"uidString" : "3AnmUZziDQC5+dMnDdyYHA=="
 							},
-							"code" : "PatternScripterExamples new wrappedGitHubOrganizationDataScript elementWithoutParent",
-							"elementHeight" : 509,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*Broken example to fix*"
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-06T09:45:46.217987+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-06T09:45:46.217987+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gjDlR5ziDQC51Pn8DdyYHA=="
+							},
+							"exampleSelector" : "wrappedGitHubOrganizationDataScript",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : false
 						}
 					]
 				},
