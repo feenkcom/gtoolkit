@@ -533,7 +533,7 @@
 							"string" : "A throwaway analysis tool should be cheap to implement. For example, below we see an ad hoc query to find Lepiter [[Project Diary]] pages that match the string “Ludo” and also contain [[Example Object]] snippets, to illustrate the use of example objects in documentation."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -546,7 +546,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T17:47:38.880577+01:00"
+									"dateAndTimeString" : "2024-11-06T10:01:47.251705+01:00"
 								}
 							},
 							"editEmail" : {
@@ -557,17 +557,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T17:47:49.528572+01:00"
+									"dateAndTimeString" : "2024-11-06T10:01:47.251705+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "ZauKx3riDQCaLMugBrOKRA=="
+								"uidString" : "LGUtgZziDQCIlF1XAZZGyQ=="
 							},
-							"code" : "PatternScripterExamples new throwawayQueryToolScript elementWithoutParent",
-							"elementHeight" : 459,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "throwawayQueryToolScript",
+							"previewHeight" : 500,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -794,7 +797,7 @@
 							"string" : "There are numerous examples of ad hoc analyses implemented as Throwaway Tools in the GT book, for example the page on [[Optimizing the links in the book for first time readers]] shows a script to generate a visualization of the pages in the book itself that are reachable by following links contrasted with standalone pages (reproduced below)."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -807,7 +810,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T17:25:09.910459+01:00"
+									"dateAndTimeString" : "2024-11-06T10:04:05.290997+01:00"
 								}
 							},
 							"editEmail" : {
@@ -818,17 +821,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T17:25:10.935661+01:00"
+									"dateAndTimeString" : "2024-11-06T10:04:05.290997+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "aoTF/yniDQC8T8LEBcUTmw=="
+								"uidString" : "ILVniZziDQCItv+EAZZGyQ=="
 							},
-							"code" : "pages := thisSnippet database pages\r\t\treject: [ :each | each title = 'Glamorous Toolkit Book' ].\rgetStartedPage := pages detect: [ :each | each title = 'Glamorous Toolkit' ].\rallReachedPages := getStartedPage\r\t\tdeepCollect: [ :each | \r\t\t\teach allChildOutgoingTextualLinks\r\t\t\t\tcollectAsSet: [ :x | x target ifNotNil: #page ] ].\rm := GtMondrian new.\rm nodes\r\tstencil: [ :each | \r\t\t| color size |\r\t\tcolor := (allReachedPages includes: each)\r\t\t\t\tifTrue: [ Color red ]\r\t\t\t\tifFalse: [ Color black ].\r\t\tsize := 5 @ 5.\r\t\teach = getStartedPage\r\t\t\tifTrue: [ color := Color blue.\r\t\t\t\tsize := 10 @ 10 ].\r\t\tBlElement new\r\t\t\tbackground: color;\r\t\t\tsize: size;\r\t\t\twhen: BlClickEvent\r\t\t\t\tdo: [ :e | e currentTarget phlow spawnTool: each asPhlowTool ] ];\r\twith: pages.\rm edges\r\tstencil: [ BlLineElement new\r\t\t\tborder: Color veryLightGray;\r\t\t\ttoHead: (BlArrowheadSimpleArrow new border: Color veryLightGray);\r\t\t\tzIndex: -1 ];\r\tconnectToAll: [ :page | page allOutgoingTextualLinks collectAsSet: #target ].\rm layout force\r\tnbIterations: 30;\r\tcharge: -50.\rm",
-							"elementHeight" : 334,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "gtBookLinksMondrian",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						}
 					]
 				},

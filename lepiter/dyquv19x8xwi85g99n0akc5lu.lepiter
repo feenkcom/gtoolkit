@@ -533,7 +533,7 @@
 							"string" : "GT supports a wide range of different kinds of views, ranging from simple textual lists and trees, to arbitrary visualizations. However, the most widely used view in the default environment is the forward view, which allows an object to reuse a view of a component or a collaborator. We can see this below, where a webpage object leverages the existing `gtContentsFor:` view of the underlying file to display the file’s contents. This is also the simplest view to implement, since it only requires, at a minimum, the specification of the target object (self webPageFile) and the view method to reuse (#gtContentsFor:). "
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -546,7 +546,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T17:14:45.099954+01:00"
+									"dateAndTimeString" : "2024-11-06T09:57:55.121921+01:00"
 								}
 							},
 							"editEmail" : {
@@ -557,17 +557,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T17:15:58.909299+01:00"
+									"dateAndTimeString" : "2024-11-06T09:57:55.121921+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "3CnlUXriDQCUo2fwBrOKRA=="
+								"uidString" : "O2FXc5ziDQCM8BX6AdvEaw=="
 							},
-							"code" : "PatternScripterExamples new simpleForwardViewScript elementWithoutParent",
-							"elementHeight" : 434,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "simpleForwardViewScript",
+							"previewHeight" : 500,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -607,7 +610,7 @@
 							"string" : "The next most popular view is a `columnedList`, which presents a collection of data in a format resembling a spreadsheet with column headers. The *Moves* view of a Ludo game is an example. A common flow is to start with a forward view to an existing columnedList view of another object, then replace it by a custom columnedList when a need is identified to rename, replace or add columns."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -620,7 +623,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T17:16:59.793977+01:00"
+									"dateAndTimeString" : "2024-11-06T09:58:55.940446+01:00"
 								}
 							},
 							"editEmail" : {
@@ -631,17 +634,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T17:17:11.908165+01:00"
+									"dateAndTimeString" : "2024-11-06T09:58:55.940446+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "SWrsWXriDQCU+dUyBrOKRA=="
+								"uidString" : "c2X3dpziDQCNB3KqAdvEaw=="
 							},
-							"code" : "PatternScripterExamples new moldableToolViewCodeScript elementWithoutParent",
-							"elementHeight" : 428,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "moldableToolViewCodeScript",
+							"previewHeight" : 500,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -718,7 +724,7 @@
 							"string" : "Similarly, the Board view of the Ludo game (first view above) is not a simple view, as it requires some effort to build up the interactive GUI view of the board. On the other hand, once we have such a view, it can be reused and repurposed, as we can see in the Move view of the Ludo Move object."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -731,7 +737,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T17:13:36.003921+01:00"
+									"dateAndTimeString" : "2024-11-06T09:59:39.788427+01:00"
 								}
 							},
 							"editEmail" : {
@@ -742,17 +748,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-04T17:23:27.426402+01:00"
+									"dateAndTimeString" : "2024-11-06T09:59:39.788427+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "QFhp1iniDQC2SpZMBcUTmw=="
+								"uidString" : "K3eUeZziDQCNJ1q4AdvEaw=="
 							},
-							"code" : "PatternScripterExamples new explicitMoveViewScript elementWithoutParent",
-							"elementHeight" : 493,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "explicitMoveViewScript",
+							"previewHeight" : 500,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -1317,7 +1326,7 @@
 										"string" : "The most common non-trivial views are variants of the `list` and `tree` views. The  second view of the address book example is a `list` view."
 									},
 									{
-										"__type" : "elementSnippet",
+										"__type" : "exampleSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -1330,7 +1339,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-11-04T17:26:12.026146+01:00"
+												"dateAndTimeString" : "2024-11-06T10:00:39.831702+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1341,17 +1350,20 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-11-04T17:26:22.210377+01:00"
+												"dateAndTimeString" : "2024-11-06T10:00:39.831702+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "o9PWenriDQCV20+wBrOKRA=="
+											"uidString" : "IqAofZziDQCNQueCAdvEaw=="
 										},
-										"code" : "PatternScripterExamples new simpleListViewScript elementWithoutParent",
-										"elementHeight" : 451,
-										"codeHeight" : 50,
-										"codeVisible" : false
+										"exampleSelector" : "simpleListViewScript",
+										"previewHeight" : 500,
+										"previewShowSelector" : "gtLiveFor:",
+										"exampleBehaviorName" : "PatternScripterExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : false,
+										"noCode" : true
 									}
 								]
 							},

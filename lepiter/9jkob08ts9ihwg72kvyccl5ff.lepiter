@@ -715,43 +715,6 @@
 							"string" : "We see the result after some moldable development steps below:"
 						},
 						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-06T09:48:34.046464+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-06T09:48:40.964396+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "3AnmUZziDQC5+dMnDdyYHA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "*Broken example to fix*"
-						},
-						{
 							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -784,12 +747,12 @@
 								"uidString" : "gjDlR5ziDQC51Pn8DdyYHA=="
 							},
 							"exampleSelector" : "wrappedGitHubOrganizationDataScript",
-							"previewHeight" : 200,
+							"previewHeight" : 500,
 							"previewShowSelector" : "gtViewsFor:",
 							"exampleBehaviorName" : "PatternScripterExamples",
 							"codeExpanded" : true,
 							"previewExpanded" : false,
-							"noCode" : false
+							"noCode" : true
 						}
 					]
 				},
