@@ -458,7 +458,7 @@
 							"string" : "As an example, consider the views of a partially played Ludo game below.  We would like to understand which moves have been played up to now. In the first example we are exploring a “raw view” — a generic view of the state of the object. With this view we can navigate to the individual moves and explore them, but it is a clumsy way to explore the object. "
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -471,7 +471,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-03T09:54:25.078217+01:00"
+									"dateAndTimeString" : "2024-11-05T17:18:21.180231+01:00"
 								}
 							},
 							"editEmail" : {
@@ -482,17 +482,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-03T09:54:50.366025+01:00"
+									"dateAndTimeString" : "2024-11-05T17:18:21.180231+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "ZD9MDWDiDQCBxqLpCgSEaw=="
+								"uidString" : "L6idfI7iDQCMHWuKCwx3hg=="
 							},
-							"code" : "(PatternScripterExamples new customViewRawView) elementWithoutParent",
-							"elementHeight" : 611,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "customViewRawViewScript",
+							"previewHeight" : 650,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -532,7 +535,7 @@
 							"string" : "In the second example we see a custom Moves view that lists the moves in order, with columns showing each roll of the die, the player who rolled the die, and any token that may have moved. From this custom view we can then dive directly into the Move object, which in turn has a custom view visualizing the change in state."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -545,7 +548,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-03T09:55:35.825298+01:00"
+									"dateAndTimeString" : "2024-11-05T17:31:39.31374+01:00"
 								}
 							},
 							"editEmail" : {
@@ -556,54 +559,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-03T09:55:52.913767+01:00"
+									"dateAndTimeString" : "2024-11-05T17:31:39.31374+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "UcODEWDiDQCCTo5zCgSEaw=="
+								"uidString" : "6DQwrI7iDQCNwulWCwx3hg=="
 							},
-							"code" : "(PatternScripterExamples new customViewCustomMovesView) elementWithoutParent",
-							"elementHeight" : 459,
-							"codeHeight" : 50,
-							"codeVisible" : false
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-03T09:55:31.367953+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-03T09:55:31.367953+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "mME/EWDiDQCCSsPTCgSEaw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
+							"exampleSelector" : "customViewCustomMovesViewScript",
+							"previewHeight" : 600,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						}
 					]
 				},

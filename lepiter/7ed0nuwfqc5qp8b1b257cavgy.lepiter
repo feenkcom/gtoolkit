@@ -496,7 +496,7 @@
 							"string" : "As an example, consider the inspector view below of this notebook page in the GT Book, the live documentation system of GT. Common actions (buttons at the top right) are to navigate to the notebook database, to view the file in which the state of the notebook page is stored, or to export an HTML version of the page. Each of these actions can easily be packaged as an inspector button, so that the action can be performed with a single click, opening a new inspector view of the result. In the example we navigate to the database holding all related notebook pages for the given project."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -509,7 +509,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T08:55:47.908968+01:00"
+									"dateAndTimeString" : "2024-11-05T18:41:02.435703+01:00"
 								}
 							},
 							"editEmail" : {
@@ -520,17 +520,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T08:56:24.782506+01:00"
+									"dateAndTimeString" : "2024-11-05T18:41:02.435703+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "V1wi4iLiDQCOfjo3DYB0yw=="
+								"uidString" : "pWhUpI/iDQCKwratCTkXfg=="
 							},
-							"code" : "GtInspector newOn: (LeDatabase gtBook pageNamed: 'Custom Action')",
-							"elementHeight" : 377,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "customLePageActionScript",
+							"previewHeight" : 650,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						}
 					]
 				},
@@ -1036,7 +1039,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T09:43:53.125493+01:00"
+									"dateAndTimeString" : "2024-11-05T18:43:49.430824+01:00"
 								}
 							},
 							"uid" : {
@@ -1046,44 +1049,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A solution is to add a custom `<gtAction>` button which will be displayed when you inspect the class. Here we see custom gtAction buttons to *Inspect* and to *Play* the {{gtClass:name=GtPharo101}} slideshow."
-						},
-						{
-							"__type" : "elementSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T09:43:53.125498+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T09:43:53.125498+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "fE4bjiPiDQCp6+ltDcCD2A=="
-							},
-							"code" : "GtInspector newOn: GtPharo101",
-							"elementHeight" : 187,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"string" : "A solution is to add a custom `<gtAction>` button which will be displayed when you inspect the class. Here we see custom gtAction buttons to *Inspect* and to *Play* the slideshow class {{gtClass:name=GtPharo101|expanded}}"
 						},
 						{
 							"__type" : "textSnippet",

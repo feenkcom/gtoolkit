@@ -496,7 +496,7 @@
 							"string" : "Below we see that when we navigate to the Pages of a website, we obtain not a raw collection, but a WebPageGroup wrapping the collection, and providing custom tools, such as a map of reachable and unreachable pages. Similarly, a query for pages matching a particular string will also return a wrapped group with dedicated tools."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -509,7 +509,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:24:17.02713+01:00"
+									"dateAndTimeString" : "2024-11-06T09:54:52.990434+01:00"
 								}
 							},
 							"editEmail" : {
@@ -520,17 +520,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:24:17.815075+01:00"
+									"dateAndTimeString" : "2024-11-06T09:54:52.990434+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "vLwo9STiDQC9LgCnCyK/0A=="
+								"uidString" : "N0Z8aJziDQCmUPpnBBDjLQ=="
 							},
-							"code" : "GtInspector newOn:\rPillarWebsiteExamples new esug2014",
-							"elementHeight" : 472,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"exampleSelector" : "wrappedEsugWebsitePageCollectionScript",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",

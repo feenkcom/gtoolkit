@@ -607,6 +607,42 @@
 							"string" : "The page [[Inspecting Python objects with custom inspectors]] shows how to obtain an inspector view of an instance of a Python `MovieCollection` class. The notebook page contain live code snippets, which function as contextual playgrounds within the context of the notebook page. From there we can navigate to a moldable object inspector, a moldable tool for exploring live instances. In this case we are exploring a live Python instance of a `MovieCollection` object, with several custom views showing the Directors, Years and Movies of the collection. At the bottom of the inspector we see a contextual playground bound to the context of the Python object."
 						},
 						{
+							"__type" : "pictureSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-06T12:22:31.172757+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2024-11-06T12:22:45.862028+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jGt5eJ7iDQCfjLyrCqYYZQ=="
+							},
+							"url" : "https://raw.githubusercontent.com/feenkcom/paper-moldable-patterns/refs/heads/main/figures/inspectingPythonObjects.png",
+							"caption" : "Exploring Python objects within a contextual playground (bottom of middle pane).",
+							"previewHeight" : 300
+						},
+						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -1316,7 +1352,7 @@
 										"string" : "From the Inspector we dive into the stack slot and query its *Meta* view to see which `add` operations it has."
 									},
 									{
-										"__type" : "elementSnippet",
+										"__type" : "exampleSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -1329,7 +1365,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.287545+01:00"
+												"dateAndTimeString" : "2024-11-05T17:51:22.019826+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1340,17 +1376,20 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.287545+01:00"
+												"dateAndTimeString" : "2024-11-05T17:51:22.019826+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "u8nqfiPiDQCoTeLQDcCD2A=="
+											"uidString" : "3uGu8o7iDQCS5JIBCwx3hg=="
 										},
-										"code" : "GtInspector newOn: StackMachineV0 new",
-										"elementHeight" : 217,
-										"codeHeight" : 50,
-										"codeVisible" : false
+										"exampleSelector" : "emptyStackMachine",
+										"previewHeight" : 200,
+										"previewShowSelector" : "gtViewsFor:",
+										"exampleBehaviorName" : "GtInspectorScripterExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : false,
+										"noCode" : true
 									},
 									{
 										"__type" : "textSnippet",
@@ -1390,7 +1429,7 @@
 										"string" : "We find the `addLast:` selector, and experiment with it in the Inspector Playground."
 									},
 									{
-										"__type" : "elementSnippet",
+										"__type" : "exampleSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -1403,7 +1442,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.287552+01:00"
+												"dateAndTimeString" : "2024-11-05T17:55:28.424485+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1414,17 +1453,20 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.287552+01:00"
+												"dateAndTimeString" : "2024-11-05T17:55:28.424485+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "wsnqfiPiDQCoT+2SDcCD2A=="
+											"uidString" : "zLdeAY/iDQCTU++wCwx3hg=="
 										},
-										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: StackMachineV0 new\r\t\tWithPlaygroundText: 'stack addLast: 3'.\rscripter elementWithoutParent",
-										"elementHeight" : 450,
-										"codeHeight" : 110,
-										"codeVisible" : false
+										"exampleSelector" : "emptyStackMachineWithPlaygroundCode",
+										"previewHeight" : 400,
+										"previewShowSelector" : "gtLiveFor:",
+										"exampleBehaviorName" : "GtInspectorScripterExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : false,
+										"noCode" : true
 									},
 									{
 										"__type" : "textSnippet",
@@ -1539,7 +1581,7 @@
 										"string" : "We generalize the code as follows."
 									},
 									{
-										"__type" : "elementSnippet",
+										"__type" : "exampleSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -1552,7 +1594,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.287579+01:00"
+												"dateAndTimeString" : "2024-11-05T17:59:03.137389+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1563,17 +1605,20 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.287579+01:00"
+												"dateAndTimeString" : "2024-11-05T17:59:03.137389+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "3cnqfiPiDQCoUyV1DcCD2A=="
+											"uidString" : "PfcqDo/iDQCTnuufCwx3hg=="
 										},
-										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: StackMachineV0 new\r\t\tWithPlaygroundText: 'stack addLast: aValue'.\rscripter elementWithoutParent",
-										"elementHeight" : 440,
-										"codeHeight" : 114,
-										"codeVisible" : false
+										"exampleSelector" : "emptyStackMachineWithGeneralizedPlaygroundCode",
+										"previewHeight" : 400,
+										"previewShowSelector" : "gtLiveFor:",
+										"exampleBehaviorName" : "GtInspectorScripterExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : false,
+										"noCode" : true
 									},
 									{
 										"__type" : "textSnippet",
@@ -1687,7 +1732,7 @@
 										"string" : "We push two values onto the stack from the Inspector Playground."
 									},
 									{
-										"__type" : "elementSnippet",
+										"__type" : "exampleSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -1700,7 +1745,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.28761+01:00"
+												"dateAndTimeString" : "2024-11-05T18:02:49.381071+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1711,17 +1756,20 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.28761+01:00"
+												"dateAndTimeString" : "2024-11-05T18:02:49.381071+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "+8nqfiPiDQCoV7ayDcCD2A=="
+											"uidString" : "ZC6nG4/iDQCUCd9xCwx3hg=="
 										},
-										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorOn: StackMachineV1 new\r\t\tWithPlaygroundText: 'self ! 3. self ! 4.'.\rscripter elementWithoutParent",
-										"elementHeight" : 446,
-										"codeHeight" : 124,
-										"codeVisible" : false
+										"exampleSelector" : "emptyStackMachineV1WithPlaygroundCode",
+										"previewHeight" : 400,
+										"previewShowSelector" : "gtLiveFor:",
+										"exampleBehaviorName" : "GtInspectorScripterExamples",
+										"codeExpanded" : true,
+										"previewExpanded" : false,
+										"noCode" : true
 									}
 								]
 							},
@@ -1791,7 +1839,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2024-10-31T09:39:38.287625+01:00"
+															"dateAndTimeString" : "2024-11-05T18:06:11.642731+01:00"
 														}
 													},
 													"uid" : {
@@ -1801,7 +1849,47 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "```language=text\nstack.\nstack isEmpty.\nstack last \"top\".\n```"
+													"string" : "stack.\nstack isEmpty.\nstack last \"top\"."
+												},
+												{
+													"__type" : "exampleSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-05T18:05:32.975942+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2024-11-05T18:05:32.975942+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "tXBnJY/iDQCUPUDYCwx3hg=="
+													},
+													"exampleSelector" : "stackMachineV1WithCodeEvaluated",
+													"previewHeight" : 500,
+													"previewShowSelector" : "gtLiveFor:",
+													"exampleBehaviorName" : "GtInspectorScripterExamples",
+													"codeExpanded" : true,
+													"previewExpanded" : false,
+													"noCode" : true
 												}
 											]
 										},
@@ -1837,43 +1925,6 @@
 										"string" : "It would be nice to inspect the stack and the top of the stack, so  we test each of the following snippets in the Playground, and extract them as methods."
 									},
 									{
-										"__type" : "elementSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.28763+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.28763+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "EMrqfiPiDQCoW0sVDcCD2A=="
-										},
-										"code" : "| scripter |\rscripter := GtInspectorScripterExamples new\r\t\tscriptedInspectorInPagerOn: (StackMachineV1 new\r\t\t\t\t! 3;\r\t\t\t\t! 4;\r\t\t\t\tyourself)\r\t\twithPlaygroundTextAndDoit: 'self top'.\rscripter elementWithoutParent",
-										"elementHeight" : 451,
-										"codeHeight" : 165,
-										"codeVisible" : true
-									},
-									{
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
@@ -1898,7 +1949,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.287635+01:00"
+												"dateAndTimeString" : "2024-11-05T18:33:00.025583+01:00"
 											}
 										},
 										"uid" : {
@@ -1908,44 +1959,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Our API now looks like this."
-									},
-									{
-										"__type" : "elementSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.287643+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-10-31T09:39:38.287643+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "HMrqfiPiDQCoXQQEDcCD2A=="
-										},
-										"code" : "GtCoder forClass: StackMachineV1",
-										"elementHeight" : 357,
-										"codeHeight" : 50,
-										"codeVisible" : false
+										"string" : "Our API now looks like this: {{gtClass:name=StackMachineV1|expanded|height=400}}"
 									}
 								]
 							},
@@ -2015,7 +2029,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2024-10-31T09:39:38.287653+01:00"
+															"dateAndTimeString" : "2024-11-05T18:06:38.721458+01:00"
 														}
 													},
 													"uid" : {
@@ -2025,7 +2039,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "```language=text\nexample := self class new.\rexample ! 3.\rexample ! 4.\rexample\n```"
+													"string" : "example := self class new.\rexample ! 3.\rexample ! 4.\rexample"
 												}
 											]
 										},

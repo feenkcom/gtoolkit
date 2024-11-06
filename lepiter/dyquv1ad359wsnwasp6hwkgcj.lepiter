@@ -496,7 +496,7 @@
 							"string" : "Below we see a live Lepiter page in the GT Book documenting the task of adding some list views to the Ludo game. This page started as a Project Diary page, and was later rewritten as documentation."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -509,7 +509,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T16:28:04.461065+01:00"
+									"dateAndTimeString" : "2024-11-06T09:55:53.24125+01:00"
 								}
 							},
 							"editEmail" : {
@@ -520,17 +520,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T16:31:41.242949+01:00"
+									"dateAndTimeString" : "2024-11-06T09:55:53.24125+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "mkqZMyniDQCQ3rPQCAcH1w=="
+								"uidString" : "9ZoTbJziDQCP0sPoBMkWWQ=="
 							},
-							"code" : "page := LeDatabase gtBook\r\t\tpageNamed: 'Adding simple list views for Ludo Players and Squares'.\relement := LePageToolContentTreeElement new\r\t\tpageViewModel: page asContentUIModel;\r\t\tmatchParent.",
-							"elementHeight" : 342,
-							"codeHeight" : 159,
-							"codeVisible" : false
+							"exampleSelector" : "projectDiaryExample",
+							"previewHeight" : 600,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "PatternScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
