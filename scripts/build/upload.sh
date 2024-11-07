@@ -17,8 +17,9 @@ scp releasedateinseconds "$AWS:$GT_FOLDER/.releasedateinseconds"
 # Remove the oldest 40 releases
 ssh "$AWS" -t "cd ${GT_FOLDER}; ls -tp | grep -v '/$' | tail -n +40 | xargs -d '\n' -r rm --"
 
-# Deploy local build scripts
+# Deploy local build scripts (Mac, Linux and Windows)
 scp scripts/localbuild/*.sh "$AWS:$SCRIPTS_FOLDER"
+scp scripts/localbuild/*.ps1 "$AWS:$SCRIPTS_FOLDER"
 
 pwd
 set +e
