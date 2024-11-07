@@ -100,7 +100,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.2007/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.1281/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.1282/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.2461/src' ].
@@ -175,7 +175,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.1783/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.1281/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.1282/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.727/src' ].
@@ -199,7 +199,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-notifications:v0.6.1054/src' ].
 		spec
 			baseline: 'GToolkitWebView' with: [
-				spec repository: 'github://feenkcom/gtoolkit-webview:v0.6.101/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-webview:v0.6.102/src' ].
 		spec
 			baseline: 'XdocClient' with: [
 				spec repository: 'github://feenkcom/xdoc:v0.8.797/src' ].
