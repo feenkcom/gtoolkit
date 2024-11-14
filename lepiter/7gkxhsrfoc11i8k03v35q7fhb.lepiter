@@ -325,7 +325,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-20T16:37:44.481165+02:00"
+						"dateAndTimeString" : "2024-11-14T09:35:39.522859+01:00"
 					}
 				},
 				"uid" : {
@@ -335,7 +335,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let {{gtClass:GhTokenHolder}} know about your personal access token. You can set it directly as a string using {{gtMethod:GhTokenHolder class>>#token:}} , let it be read and copied from a file using {{gtMethod:GhTokenHolder class>>#readTokenFrom:}} or let is be read each time from a file using {{gtMethod:GhTokenHolder class>>#fromFile:}}. In the last case the token is not stored in an object that is part of the image."
+				"string" : "Let {{gtClass:GtGitHubTokenHolder}} know about your personal access token. You can set it directly as a string using {{gtMethod:GtGitHubTokenHolder class>>#token:}} , let it be read and copied from a file using {{gtMethod:GtGitHubTokenHolder class>>#readAndCacheTokenFrom:}} or let is be read each time from a file using {{gtMethod:GtGitHubTokenHolder class>>#readTokenEachTimeFrom:}}. In the last case the token is not stored in an object that is part of the image."
 			},
 			{
 				"__type" : "textSnippet",
