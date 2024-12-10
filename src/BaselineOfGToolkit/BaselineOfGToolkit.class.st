@@ -180,7 +180,9 @@ BaselineOfGToolkit >> baseline: spec [
 				baseline: 'GToolkitPhlowExamples'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-phlow:main/src' ];
 				baseline: 'GToolkit4ZTimestamp'
-					with: [ spec repository: 'github://feenkcom/gt4ztimestamp:main/src' ] ]
+					with: [ spec repository: 'github://feenkcom/gt4ztimestamp:main/src' ];
+				baseline: 'Gt4Llm'
+					with: [ spec repository: 'github://feenkcom/gt4llm:main/src' ] ]
 ]
 
 { #category : #'post load' }
