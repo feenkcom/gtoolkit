@@ -20,9 +20,9 @@ TonelReader >> loadDefinitions [
 		sort: [ :a :b | (definitionOrders at: a class) < (definitionOrders at: b class) ].
 
 	newCategories := self categoriesFrom: newDefinitions.
-	(newCategories anySatisfy: [:each | each sameContentAs: self package name])
-		ifFalse: [ newCategories := newCategories copyWithFirst: self package name ].
-	organization := MCOrganizationDefinition categories: newCategories.
+	(newCategories anySatisfy: [:each | each sameContentAs: (self package ifNotNil: #name)])
+		ifFalse: [ newCategories := newCategories copyWithFirst: (self package ifNotNil: #name) ].
+	organization := MCOrganizationDefinition categories: (newCategories reject: #isNil).
 
 	definitions := (newDefinitions copyWithFirst: organization) sort
 ]
