@@ -101,6 +101,24 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
+	self 
+		forPharo12: [
+			FinalizationProcess
+				addClassVarNamed: 'MournLoopProcess';
+				addClassVarNamed: 'StopRequested';
+				addClassVarNamed: 'StoppedSemaphore';
+				initialize. 
+		] 
+		forPharo11AndPharo10: [
+			Object subclass: #FinalizationProcess
+	instanceVariableNames: ''
+	classVariableNames: 'TheFinalizationProcess FinalizationSemaphore MournLoopProcess StopRequested StoppedSemaphore '
+	package: 'GToolkit-UtilitySystemStubs'.
+		] 
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForJob [
 	self 
 		forPharo12: [] 
@@ -128,13 +146,62 @@ BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
-		forPharo12: [] 
+		forPharo12: [
+			WeakArray
+				addClassVarNamed: 'MournLoopProcess';
+				addClassVarNamed: 'StopRequested';
+				addClassVarNamed: 'StoppedSemaphore';
+				addClassVarNamed: 'FinalizationProcess';
+				addClassVarNamed: 'FinalizationSemaphore' ] 
 		forPharo11AndPharo10: [ 
 			WeakArray
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
 				addClassVarNamed: 'StoppedSemaphore';
-				initialize ]
+				initialize.
+			WeakArray class 
+				compile: 'startUp: resuming
+	<gtPharoPatch: #Pharo11>
+	"DO NOT EDIT HERE"
+
+	self restartFinalizationProcess'
+				classified: 'gt-pharo-patch'.
+			WeakArray class 
+				compile: 'shutDown: quitting
+	<gtPharoPatch: #Pharo11>
+	"DO NOT EDIT HERE"
+
+	self stopFinalizationProcess'
+				classified: 'gt-pharo-patch'.
+			WeakArray class 
+				compile: 'restartFinalizationProcess
+	"kill any old process, just in case"
+	"DO NOT EDIT HERE"
+	<gtPharoPatch: #Pharo11>
+
+	self stopFinalizationProcess.
+
+	FinalizationSemaphore := Smalltalk specialObjectsArray at: 42.
+	StopRequested := false.
+	FinalizationProcess := [self finalizationProcess]
+		forkAt: Processor userInterruptPriority.
+	FinalizationProcess name: ''WeakArray Finalization Process'''
+				classified: 'gt-pharo-patch'.
+			WeakArray class 
+				compile: 'stopFinalizationProcess
+	<gtPharoPatch: #Pharo11>
+	"DO NOT EDIT HERE"
+
+	FinalizationProcess ifNotNil: 
+		[FinalizationProcess terminate.
+		FinalizationProcess := nil].
+
+	(MournLoopProcess isNil or: [ MournLoopProcess isTerminated ])
+		ifTrue: [ ^ self ].
+	self assert: self stoppedSemaphore isSignaled not.
+	StopRequested := true.
+	StoppedSemaphore wait.'
+				classified: 'gt-pharo-patch' ]
 ]
 
 { #category : #accessing }
@@ -197,6 +264,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 
 	self applyPatchForJob.
 	self applyPatchForWeakArray.
+	self applyPatchForFinalizationProcess.
 	self applyPatchForFT2Face.
 	self applyPatchForFT2Handle.
 	self applyPatchForLeJsonV4Name.
