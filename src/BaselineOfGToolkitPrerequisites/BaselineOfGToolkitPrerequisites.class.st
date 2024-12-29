@@ -53,6 +53,20 @@ BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
+	self 
+		forPharo12: [
+			String compile: 'asClass
+	<gtPharoPatch: #Pharo12>
+	"returns a global class with my name"
+	^ self asClassInEnvironment: Smalltalk globals'
+classified: 'gt-pharo-patch'.
+		] 
+		forPharo11: [ ]
+		forPharo10: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 	| source compileBlock |
 
@@ -295,6 +309,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
 	PostLoaded := true.
 
+	self applyPatchForAsClass.
 	self applyPatchForJob.
 	self applyPatchForWeakArray.
 	self applyPatchForFinalizationProcess.
