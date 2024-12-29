@@ -144,6 +144,33 @@ BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
+	self 
+		forPharo12: [
+			Object << #ProtocolOrganizer
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs'.
+			Object << #ClassOrganization
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs'.
+			Object << #Categorizer
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs'.
+			Object << #EpBehaviorCategoryChange
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs'.
+			Object << #EpCategoryRename
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs'.
+			Object << #EpCategoryChange
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs'.
+		] 
+		forPharo11: [ ]
+		forPharo10: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
 		forPharo12: [
@@ -269,6 +296,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForFT2Handle.
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
+	self applyPatchForPharo11StubsInPharo12.
 ]
 
 { #category : #accessing }
