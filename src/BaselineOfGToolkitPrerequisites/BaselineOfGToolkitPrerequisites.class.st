@@ -144,6 +144,39 @@ BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
+	self 
+		forPharo12: [
+			(Object << #ProtocolOrganizer
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #ClassOrganization
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #Categorizer
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpBehaviorCategoryChange
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpCategoryRename
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpCategoryChange
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #AbstractProtocol
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #AllProtocol
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+		] 
+		forPharo11: [ ]
+		forPharo10: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
 		forPharo12: [
@@ -151,7 +184,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
 				addClassVarNamed: 'StoppedSemaphore';
-				addClassVarNamed: 'FinalizationProcess';
+				addClassVarNamed: 'TheFinalizationProcess';
 				addClassVarNamed: 'FinalizationSemaphore' ] 
 		forPharo11AndPharo10: [ 
 			WeakArray
@@ -269,6 +302,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForFT2Handle.
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
+	self applyPatchForPharo11StubsInPharo12.
 ]
 
 { #category : #accessing }
