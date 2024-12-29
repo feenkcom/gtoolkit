@@ -118,7 +118,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 	self 
 		forPharo12: [
-			FinalizationProcess
+			(#FinalizationProcess asClassInEnvironment: Smalltalk globals)
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
 				addClassVarNamed: 'StoppedSemaphore';
@@ -127,7 +127,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 		forPharo11AndPharo10: [
 			Object subclass: #FinalizationProcess
 	instanceVariableNames: ''
-	classVariableNames: 'TheFinalizationProcess FinalizationSemaphore MournLoopProcess StopRequested StoppedSemaphore '
+	classVariableNames: 'TheFinalizationProcess FinalizationSemaphore MournLoopProcess StopRequested StoppedSemaphore'
 	package: 'GToolkit-UtilitySystemStubs'.
 		] 
 ]
