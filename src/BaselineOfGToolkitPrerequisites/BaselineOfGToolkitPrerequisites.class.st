@@ -178,7 +178,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
 				addClassVarNamed: 'StoppedSemaphore';
-				addClassVarNamed: 'FinalizationProcess';
+				addClassVarNamed: 'TheFinalizationProcess';
 				addClassVarNamed: 'FinalizationSemaphore' ] 
 		forPharo11AndPharo10: [ 
 			WeakArray
