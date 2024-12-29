@@ -147,24 +147,24 @@ BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 	self 
 		forPharo12: [
-			Object << #ProtocolOrganizer
+			(Object << #ProtocolOrganizer
 				slots: {};
-				package: 'GToolkit-Pharo11Stubs'.
-			Object << #ClassOrganization
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #ClassOrganization
 				slots: {};
-				package: 'GToolkit-Pharo11Stubs'.
-			Object << #Categorizer
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #Categorizer
 				slots: {};
-				package: 'GToolkit-Pharo11Stubs'.
-			Object << #EpBehaviorCategoryChange
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpBehaviorCategoryChange
 				slots: {};
-				package: 'GToolkit-Pharo11Stubs'.
-			Object << #EpCategoryRename
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpCategoryRename
 				slots: {};
-				package: 'GToolkit-Pharo11Stubs'.
-			Object << #EpCategoryChange
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpCategoryChange
 				slots: {};
-				package: 'GToolkit-Pharo11Stubs'.
+				package: 'GToolkit-Pharo11Stubs') install.
 		] 
 		forPharo11: [ ]
 		forPharo10: [ ]
