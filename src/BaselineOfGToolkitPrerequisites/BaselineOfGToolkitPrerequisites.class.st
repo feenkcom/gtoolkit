@@ -53,6 +53,20 @@ BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
+	self 
+		forPharo12: [
+			String compile: 'asClass
+	<gtPharoPatch: #Pharo12>
+	"returns a global class with my name"
+	^ self asClassInEnvironment: Smalltalk globals'
+classified: 'gt-pharo-patch'.
+		] 
+		forPharo11: [ ]
+		forPharo10: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 	| source compileBlock |
 
@@ -144,6 +158,39 @@ BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
+	self 
+		forPharo12: [
+			(Object << #ProtocolOrganizer
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #ClassOrganization
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #Categorizer
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpBehaviorCategoryChange
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpCategoryRename
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpCategoryChange
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #AbstractProtocol
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #AllProtocol
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+		] 
+		forPharo11: [ ]
+		forPharo10: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
 		forPharo12: [
@@ -151,7 +198,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
 				addClassVarNamed: 'StoppedSemaphore';
-				addClassVarNamed: 'FinalizationProcess';
+				addClassVarNamed: 'TheFinalizationProcess';
 				addClassVarNamed: 'FinalizationSemaphore' ] 
 		forPharo11AndPharo10: [ 
 			WeakArray
@@ -262,6 +309,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
 	PostLoaded := true.
 
+	self applyPatchForAsClass.
 	self applyPatchForJob.
 	self applyPatchForWeakArray.
 	self applyPatchForFinalizationProcess.
@@ -269,6 +317,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForFT2Handle.
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
+	self applyPatchForPharo11StubsInPharo12.
 ]
 
 { #category : #accessing }
