@@ -114,7 +114,7 @@ GtTranscript >> insertString: aString withAttributesForWholeString: aCollection 
 		aText append: toAppend.
 		self announcer announce: (GtTranscriptInsertStringAnnouncement new 
 			string: aString; 
-			attributes: aCollection) ]
+			attributes: aCollection, aCollection2) ]
 ]
 
 { #category : #translation }
