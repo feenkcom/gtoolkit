@@ -13,7 +13,7 @@ UUID class >> fromBase64EncodedString: aString64 [
 	uid := self nilUUID.
 	self 
 		forPharo12: [
-			uid uuidData: (ZnBase64Encoder new 
+			(ZnBase64Encoder new 
 				decode: aString64 readStream to: uid uuidData writeStream) ] 
 		forPharo11AndPharo10: [
 			ZnBase64Encoder new 
