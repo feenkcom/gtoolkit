@@ -100,7 +100,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.2106/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.1446/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.1447/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.2567/src' ].
@@ -142,13 +142,13 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4ruby:v0.6.22/src' ].
 		spec
 			baseline: 'GToolkit4Python' with: [
-				spec repository: 'github://feenkcom/gt4python:v0.6.1025/src' ].
+				spec repository: 'github://feenkcom/gt4python:v0.6.1026/src' ].
 		spec
 			baseline: 'GtGemstoneClient' with: [
 				spec repository: 'github://feenkcom/gt4gemstone:v0.6.2777/src' ].
 		spec
 			baseline: 'GToolkit4Git' with: [
-				spec repository: 'github://feenkcom/gt4git:v0.8.1343/src' ].
+				spec repository: 'github://feenkcom/gt4git:v0.8.1344/src' ].
 		spec
 			baseline: 'GToolkit4GraphQL' with: [
 				spec repository: 'github://feenkcom/gt4graphql:v0.6.1802/src' ].
@@ -175,7 +175,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.1870/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.1446/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.1447/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.751/src' ].
@@ -217,7 +217,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://j-brant/RBFormatter:905d60c1d93cecd75456e4a011cae240581976b5/src' ].
 		spec
 			baseline: 'GToolkitWorld' with: [
-				spec repository: 'github://feenkcom/gtoolkit-world:v0.6.1412/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-world:v0.6.1413/src' ].
 		spec
 			baseline: 'GToolkitPhlowExamples' with: [
 				spec repository: 'github://feenkcom/gtoolkit-phlow:v0.8.1528/src' ].
