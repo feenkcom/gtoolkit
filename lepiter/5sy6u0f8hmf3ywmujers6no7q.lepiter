@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:06:16.947745+02:00"
+						"dateAndTimeString" : "2025-01-13T13:37:57.710216+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This page documents the steps to load the Gt server code in a GemStone stone using the same scripts that are used by the CI server."
+				"string" : "This page documents the steps to load the Gt server code in a GemStone stone.  The resulting GemStone DB is in the same state as used by the feenk CI."
 			},
 			{
 				"__type" : "textSnippet",
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:07:41.665716+02:00"
+						"dateAndTimeString" : "2025-01-13T13:45:42.126952+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,7 +140,78 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:11:53.106337+02:00"
+						"dateAndTimeString" : "2025-01-13T13:46:00.037593+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nNcqj/fnDQCn73hdD9pILw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Installing GemStone in to:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-01-13T13:46:03.377845+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-01-13T13:46:11.273435+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "URtvkPfnDQCotelhD9pILw=="
+				},
+				"code" : "FileLocator imageDirectory / 'remote-gemstone'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-01-13T13:46:17.879857+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-01-13T13:50:32.005698+01:00"
 					}
 				},
 				"uid" : {
@@ -150,10 +221,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First source the `dev_preconfigure_gemstone.sh` script to configure all. This assumes the gt4gemstone repository was cloned locally."
+				"string" : "Is two command process.  Note that `remote-gemstone` must not exist before installation."
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "shellCommandSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -166,7 +237,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:09:56.901808+02:00"
+						"dateAndTimeString" : "2025-01-13T13:46:24.901287+01:00"
 					}
 				},
 				"editEmail" : {
@@ -177,91 +248,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:11:56.447125+02:00"
+						"dateAndTimeString" : "2025-01-13T13:47:20.051175+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Xm1LkqW/DQCwtQ1TAQoKYg=="
+					"uidString" : "74a3kffnDQCqIRqvD9pILw=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\nsource ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/dev_preconfigure_gemstone.sh\n```"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:10:27.245342+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:17:21.422569+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "pKVdl6W/DQCyKnNFAQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Next, run the script `setup-remote-gemstone.sh` that downloads and configures a new GemsStone in the image directory and also installs the current code of gt4gemstone."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:14:45.553677+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:14:53.912738+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "TB7DpqW/DQC1E0riAQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\n./gt4gemstone/scripts/setup-remote-gemstone.sh\n```"
+				"code" : "#!/usr/bin/env bash\rsource ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/dev_preconfigure_gemstone.sh\r./gt4gemstone/scripts/setup-remote-gemstone.sh"
 			},
 			{
 				"__type" : "textSnippet",
@@ -362,7 +356,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-15T11:37:24.902248+02:00"
+						"dateAndTimeString" : "2025-01-13T13:47:56.855974+01:00"
 					}
 				},
 				"uid" : {
@@ -372,10 +366,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If NetLDI has been configured as a service (requires root permission, see the GemStone documentation), start netldi:"
+				"string" : "If NetLDI has been configured as a service (requires root permission, see the GemStone documentation), start netldi & the stone:"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "shellCommandSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -388,7 +382,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:18:23.188637+02:00"
+						"dateAndTimeString" : "2025-01-13T13:48:01.452099+01:00"
 					}
 				},
 				"editEmail" : {
@@ -399,17 +393,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:18:31.72812+02:00"
+						"dateAndTimeString" : "2025-01-13T13:48:29.468584+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "0PG7s6W/DQC390IFAQoKYg=="
+					"uidString" : "mMZ4l/fnDQCq67pmD9pILw=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\nstartnetldi -g\n```"
+				"code" : "#!/usr/bin/env bash\rsource ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/dev_preconfigure_gemstone.sh\nstartnetldi -g\rstartstone gs64stone"
 			},
 			{
 				"__type" : "textSnippet",
@@ -449,7 +440,7 @@
 				"string" : "If NetLDI hasn't been configured as a service, start it on a known port, e.g.:"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "shellCommandSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -462,7 +453,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-15T11:37:52.131286+02:00"
+						"dateAndTimeString" : "2025-01-13T13:48:44.663368+01:00"
 					}
 				},
 				"editEmail" : {
@@ -473,17 +464,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-15T11:38:05.291516+02:00"
+						"dateAndTimeString" : "2025-01-13T13:48:52.885146+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "xBpOuKfZDQC43x+UDlBYTQ=="
+					"uidString" : "HyAMmvfnDQCsg9yGD9pILw=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\nstartnetldi -g -P 50377\n```"
+				"code" : "#!/usr/bin/env bash\nsource ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/dev_preconfigure_gemstone.sh\nstartnetldi -g -P 50377\nstartstone gs64stone"
 			},
 			{
 				"__type" : "textSnippet",
@@ -536,80 +524,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:19:28.369282+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:20:56.697834+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "TWqet6W/DQC6D6+lAQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Next start a stone:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:20:50.553946+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:21:04.492424+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "EJOEvKW/DQC9BglfAQoKYg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\nstartstone gs64stone\n```"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-08-19T12:21:09.786379+02:00"
 					}
 				},
@@ -621,7 +535,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:21:17.682163+02:00"
+						"dateAndTimeString" : "2025-01-13T13:49:19.266278+01:00"
 					}
 				},
 				"uid" : {
@@ -631,10 +545,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To stop the stone and the netldi service"
+				"string" : "## Stopping the stone and the netldi service"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "shellCommandSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -647,7 +561,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:19:03.988033+02:00"
+						"dateAndTimeString" : "2025-01-13T13:49:22.145099+01:00"
 					}
 				},
 				"editEmail" : {
@@ -658,128 +572,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-19T12:21:45.600603+02:00"
+						"dateAndTimeString" : "2025-01-13T13:49:42.729671+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/4QqtqW/DQC59wkVAQoKYg=="
+					"uidString" : "ig1InPfnDQCtKqbsD9pILw=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\nstopstone -i gs64stone DataCurator swordfish   \nstopnetldi\n```"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:11.197662+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:21.655227+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "nus/t7jIDQCRDmE0AotZYw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Script to setup"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:22.167751+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:40.408251+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "0lTnt7jIDQCRd6E/AotZYw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "This combines  the scripts from before to setup a stone from scratch"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:46:45.156025+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-12T22:47:13.105494+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "AhlGubjIDQCS7t0dAotZYw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```bash\nsource ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/dev_preconfigure_gemstone.sh\n./gt4gemstone/scripts/setup-remote-gemstone.sh\nstartnetldi -g\nstartstone gs64stone\n```"
+				"code" : "#!/usr/bin/env bash\rsource ./pharo-local/iceberg/feenkcom/gt4gemstone/scripts/dev_preconfigure_gemstone.sh\nstopstone -i gs64stone DataCurator swordfish   \nstopnetldi"
 			}
 		]
 	},
