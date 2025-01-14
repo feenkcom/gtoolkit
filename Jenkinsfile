@@ -758,6 +758,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
 
     void run_gemstone_examples() {
         script.withEnv([
+                "GT_GEMSTONE_VERSION=3.7.1.4"
                 "GEMSTONE_WORKSPACE=${script.env.WORKSPACE}/${GlamorousToolkit.EXAMPLES_FOLDER}/${GEMSTONE_FOLDER}",
                 "GT4GEMSTONE_VERSION=${build.gtoolkitVersion}",
                 "RELEASED_PACKAGE_GEMSTONE_NAME=${gemstone_package_name()}"]) {
