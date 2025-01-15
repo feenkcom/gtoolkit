@@ -89,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-28T12:51:51.072389-05:00"
+						"dateAndTimeString" : "2025-01-14T21:35:18.772939+01:00"
 					}
 				},
 				"editEmail" : {
@@ -100,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-09-27T20:30:46.961555+02:00"
+						"dateAndTimeString" : "2025-01-14T21:35:24.041492+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "N5I46h3RDQCfd6PSCyd+yA=="
+					"uidString" : "FrV3PBLoDQCk7JmVBr0e4g=="
 				},
-				"code" : "IceGitCliPlatform current install.\rrootDirectory ensureDeleteAll.\rrepository := IceRepository repositoryClass creatorClass\r\t\tfromUrl: 'https://github.com/spring-projects/spring-boot.git'\r\t\tto: rootDirectory.\rrootDirectory"
+				"code" : "rootDirectory ensureDeleteAll.\rrepository := PureGitRepository on: rootDirectory.\rrepository operations clone: 'git@github.com:spring-projects/spring-boot.git'.\rrepository"
 			},
 			{
 				"__type" : "textSnippet",
