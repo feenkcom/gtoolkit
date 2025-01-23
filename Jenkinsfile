@@ -678,7 +678,7 @@ class TestAndPackage extends AgentJob {
         }
 
         script.withCredentials([
-            string(credentialsId: 'notarizeusername', variable: 'APPLE_ID')
+            string(credentialsId: 'notarizeusername', variable: 'APPLE_ID'),
             string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')
         ]) {
             sh """
