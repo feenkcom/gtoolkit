@@ -677,17 +677,19 @@ class TestAndPackage extends AgentJob {
             return
         }
 
-        script.withCredentials([script.string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')]) {
+        script.withCredentials([
+            script.string(credentialsId: 'notarizeusername', variable: 'APPLE_ID'),
+            script.string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')
+        ]) {
             script.sh """
-                set +x
-                /Library/Developer/CommandLineTools/usr/bin/notarytool submit \
+               /Library/Developer/CommandLineTools/usr/bin/notarytool submit \
                     --verbose \
-                    --apple-id "notarization@feenk.com" \
+                    --apple-id "\$APPLE_ID" \
                     --password "\$APPLE_PASSWORD" \
                     --team-id "77664ZXL29" \
                     --wait \
                     ${release_package}
-            """
+               """
         }
 
         script.echo "Signed release package ${release_package}"
