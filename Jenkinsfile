@@ -678,8 +678,8 @@ class TestAndPackage extends AgentJob {
         }
 
         script.withCredentials([
-            string(credentialsId: 'notarizeusername', variable: 'APPLE_ID'),
-            string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')
+            script.string(credentialsId: 'notarizeusername', variable: 'APPLE_ID'),
+            script.string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')
         ]) {
             sh """
                /Library/Developer/CommandLineTools/usr/bin/notarytool submit \
