@@ -729,12 +729,6 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
 
         script.sh """
             cd ${GlamorousToolkit.EXAMPLES_FOLDER}
-            rm -rf Sparkle
-            git clone https://github.com/feenkcom/Sparkle.git
-        """
-
-        script.sh """
-            cd ${GlamorousToolkit.EXAMPLES_FOLDER}
             chmod +x gt4gemstone/scripts/*.sh
             chmod +x gt4gemstone/scripts/release/*.sh
             chmod +x gtoolkit-remote/scripts/*.sh
