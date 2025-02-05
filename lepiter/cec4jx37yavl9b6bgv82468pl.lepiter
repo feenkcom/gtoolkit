@@ -1,0 +1,150 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-05T21:16:16.923491+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-05T21:18:53.314195+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FdU/h8zpDQCDpc0/B9hr0Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Development tools for GemStone might need to determine if a GemStone session was created from Glamorous Toolkit."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-05T21:17:38.975847+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-05T21:19:07.707446+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qLnOjczpDQCHB8SVB9hr0Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To support this when a RSR session is created from Glamorous Toolkit the session temp `GT_GEMSTONE_SESSION_MARKER` to true in {{gtMethod:GtGemStoneGciConnector>>#setupRsrConnection:}}."
+			},
+			{
+				"__type" : "gemstoneSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-05T21:17:02.988915+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-05T21:18:35.480336+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mpupi8zpDQCHA8ZwB9hr0Q=="
+				},
+				"code" : "SessionTemps current \r\tat: #GT_GEMSTONE_SESSION_MARKER \r\tifAbsent: [ false ]",
+				"sessionIdentifier" : {
+					"__type" : "gtGemStoneDefaultSessionIdentifier"
+				}
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-02-05T21:16:07.325871+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-02-05T21:16:07.325871+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "How to check if a GemStone session was created from Glamorous Toolkit"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "997d3e87-cce9-0d00-83a4-18d707d86bd1"
+	}
+}
