@@ -2401,7 +2401,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:25:23.029811+01:00"
+												"dateAndTimeString" : "2025-02-11T18:25:07.246045+01:00"
 											}
 										},
 										"uid" : {
@@ -2411,7 +2411,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We inherit the `snippetModel` slot from {{gtClass:name=LeAbstractSnippetViewModel}} (via the trait {{gtClass:name=TLeWithSnippetModel}}), so we trivially define {{gtMethod:name=LeBlockQuoteSnippetViewModel>>#text}} to return the `text` of our model."
+										"string" : "We inherit the `snippetModel` slot from {{gtClass:name=LeAbstractSnippetViewModel}} (via the trait {{gtClass:name=TLeWithSnippetModel}}), so we trivially define `LeBlockQuoteSnippetViewModel>>#text` to return the `text` of our model."
 									},
 									{
 										"__type" : "textSnippet",
@@ -2438,7 +2438,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:21:49.043893+01:00"
+												"dateAndTimeString" : "2025-02-11T18:25:10.732668+01:00"
 											}
 										},
 										"uid" : {
@@ -2448,7 +2448,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We also define a slot `textEditorModel` to represent the state for the view's editor, with accessors, and an initialization method {{gtMethod:name=LeBlockQuoteSnippetViewModel>>#initializeTextEditorModel}}. "
+										"string" : "We also define a slot `textEditorModel` to represent the state for the view's editor, with accessors, and an initialization method `LeBlockQuoteSnippetViewModel>>#initializeTextEditorModel`. "
 									},
 									{
 										"__type" : "textSnippet",
@@ -2475,7 +2475,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:23:51.768215+01:00"
+												"dateAndTimeString" : "2025-02-11T18:25:14.092722+01:00"
 											}
 										},
 										"uid" : {
@@ -2485,7 +2485,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "*NB:* in this method we listen for announcements that the text has changed, and notify our dependents that the snippet has changed via {{gtMethod:name=LeBlockQuoteSnippetViewModel>>#announceTextChanged}}."
+										"string" : "*NB:* in this method we listen for announcements that the text has changed, and notify our dependents that the snippet has changed via `LeBlockQuoteSnippetViewModel>>#announceTextChanged`."
 									}
 								]
 							},
