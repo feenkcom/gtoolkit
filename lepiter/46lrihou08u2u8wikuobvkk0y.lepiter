@@ -8,6 +8,43 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-11T18:02:11.546784+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-11T18:02:35.635444+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "75/YhULqDQC8M1m8AFj72w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "{{gtTodo:label=Revise this tutorial to reflect the new, refactored hierarchy.}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -560,7 +597,7 @@
 								"uidString" : "HbNm8drpDQC2iJTPDeapRg=="
 							},
 							"code" : "LeBlockQuoteSnippetUMLExamples new blockQuoteSnippetClassHierarchyWithAssociationsAndLabels",
-							"elementHeight" : 258,
+							"elementHeight" : 413,
 							"codeHeight" : 50,
 							"codeVisible" : false
 						},
@@ -589,7 +626,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T14:30:56.819999+01:00"
+									"dateAndTimeString" : "2025-02-11T17:57:47.86231+01:00"
 								}
 							},
 							"uid" : {
@@ -599,7 +636,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The *view model* holds and manages the state that is needed for the visual representation of the snippet in a page. These are all subclasses of {{gtClass:name=LeSnippetViewModel}}. In this case, {{gtClass:name=LeBlockQuoteSnippetViewModel}} just needs to track the state of the text in the model, and it also tracks the `textEditorModel` of the view."
+							"string" : "The *view model* holds and manages the state that is needed for the visual representation of the snippet in a page. These are all subclasses of {{gtClass:name=LeSnippetViewModel}}. In this case, {{gtClass:name=LeBlockQuoteSnippetViewModel}} just needs to track the state of the text in the model, and it also tracks the `textCoderViewModel` of the view."
 						},
 						{
 							"__type" : "textSnippet",
@@ -626,7 +663,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T14:31:21.580256+01:00"
+									"dateAndTimeString" : "2025-02-11T17:58:30.494881+01:00"
 								}
 							},
 							"uid" : {
@@ -636,7 +673,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The *view* is the element that provides the interactive display of the snippet. It is updated when the view model updates, and conversely, UI events that update the view are propagated to the view model. Snippet views all subclass {{gtClass:name=LeSnippetElement}}. In this case, {{gtClass:name=LeBlockQuoteSnippetElement}} is a composite element holding the {{gtClass:name=BrEditor}} instance in which the block text is edited."
+							"string" : "The *view* is the element that provides the interactive display of the snippet. It is updated when the view model updates, and conversely, UI events that update the view are propagated to the view model. Snippet views all subclass {{gtClass:name=LeSnippetElement}}. In this case, {{gtClass:name=LeBlockQuoteSnippetElement}} is a composite element holding the {{gtClass:name=GtTextualCoderEditorElement}} instance in which the block text is edited."
 						},
 						{
 							"__type" : "textSnippet",
@@ -679,45 +716,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "commentSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:19:13.767899+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:37:37.031796+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "SgtD09rpDQCx+VnSDeapRg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "Is this correct? There should be one view model per view, but elements are recycled?"
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -855,7 +854,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:43:06.211268+01:00"
+												"dateAndTimeString" : "2025-02-11T18:01:24.356419+01:00"
 											}
 										},
 										"uid" : {
@@ -865,7 +864,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Since literal block quotes are textual snippets, we define {{gtClass:name=LeBlockQuoteSnippet}} as a subclass of {{gtClass:name=LeTextualSnippet}}, the parent of text-based snippets, such as the `Text` and `Pharo` snippets, namely {{gtClass:name=LeTextSnippet}} and {{gtClass:name=LePharoSnippet}}."
+										"string" : "Since literal block quotes are textual snippets, we define {{gtClass:name=LeBlockQuoteSnippet}} as a subclass of {{gtClass:name=LePlainTextSnippet}}, the parent of text-based snippets, such as {{gtClass:name=LeTextSnippet}}. Code snippets, on the other hand, subclass {{gtClass:name=LeCodeSnippet}}."
 									},
 									{
 										"__type" : "textSnippet",
@@ -892,7 +891,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:38:19.422365+01:00"
+												"dateAndTimeString" : "2025-02-11T18:01:50.882907+01:00"
 											}
 										},
 										"uid" : {
@@ -902,7 +901,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "There are several abstract methods to implement. We'll get to these step by step."
+										"string" : "There are several methods to implement. We'll get to these step by step."
 									},
 									{
 										"__type" : "pharoSnippet",
@@ -929,14 +928,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:35:35.387396+01:00"
+												"dateAndTimeString" : "2025-02-11T18:01:32.80693+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "IpGzDNvpDQCAWV1RDeapRg=="
 										},
-										"code" : "LeTextualSnippet allMethods select: #isAbstract"
+										"code" : "LePlainTextSnippet allMethods select: #isAbstract"
 									}
 								]
 							},
@@ -976,6 +975,40 @@
 							"children" : {
 								"__type" : "snippets",
 								"items" : [
+									{
+										"__type" : "commentSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-02-11T18:02:44.632223+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-02-11T18:03:08.339842+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Y3jRh0LqDQC9mrAjAFj72w=="
+										},
+										"string" : "CONTINUE EDITING HERE"
+									},
 									{
 										"__type" : "textSnippet",
 										"children" : {
@@ -1145,7 +1178,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T14:43:29.705982+01:00"
+									"dateAndTimeString" : "2025-02-11T18:02:57.222458+01:00"
 								}
 							},
 							"uid" : {
@@ -2974,9 +3007,6 @@
 													"uid" : {
 														"__type" : "uid",
 														"uidString" : "gv9lxNzpDQCCSQ5GDtc83A=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
 													},
 													"string" : "Do we really need *both* a text editor model *and* a BlText `text` object? "
 												}
