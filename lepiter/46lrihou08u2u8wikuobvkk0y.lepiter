@@ -8,43 +8,6 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-11T18:02:11.546784+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-11T18:02:35.635444+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "75/YhULqDQC8M1m8AFj72w=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "{{gtTodo:label=Revise this tutorial to reflect the new, refactored hierarchy.}}"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -523,7 +486,7 @@
 								"uidString" : "HbNm8drpDQC2iJTPDeapRg=="
 							},
 							"code" : "LeBlockQuoteSnippetUMLExamples new blockQuoteSnippetClassHierarchyWithPositions",
-							"elementHeight" : 413,
+							"elementHeight" : 367,
 							"codeHeight" : 50,
 							"codeVisible" : false
 						},
@@ -541,7 +504,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T11:58:41.377623+01:00"
+									"dateAndTimeString" : "2025-02-12T09:54:22.057576+01:00"
 								}
 							},
 							"editEmail" : {
@@ -552,17 +515,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-12T09:36:06.446774+01:00"
+									"dateAndTimeString" : "2025-02-12T09:54:40.123675+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "DrGG3NjpDQCTdux+DeapRg=="
+								"uidString" : "K/0W00/qDQCvA0dZCtuOFw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "These are all subclasses of {{gtClass:name=LeSnippetViewModel}}. In this case, {{gtClass:name=LeBlockQuoteSnippetViewModel}} just needs to track the state of the text in the model, and it also tracks the `textCoderViewModel` of the view."
+							"string" : "Snippet view model classes are all subclasses of {{gtClass:name=LeSnippetViewModel}}. In this case, {{gtClass:name=LeBlockQuoteSnippetViewModel}} subclasses {{gtClass:name=LePlainTextCoderSnippetViewModel}} and tracks the state of the text within a separate `textCoderViewModel`."
 						},
 						{
 							"__type" : "textSnippet",
@@ -578,7 +541,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T14:31:01.544875+01:00"
+									"dateAndTimeString" : "2025-02-12T09:54:58.791928+01:00"
 								}
 							},
 							"editEmail" : {
@@ -589,54 +552,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-12T09:36:33.732353+01:00"
+									"dateAndTimeString" : "2025-02-12T09:56:14.936848+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "bNxy/drpDQC4/WoIDeapRg=="
+								"uidString" : "uYpH1U/qDQCvo8+1CtuOFw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Snippet views all subclass {{gtClass:name=LeSnippetElement}}. In this case, {{gtClass:name=LeBlockQuoteSnippetElement}} is a composite element holding the {{gtClass:name=GtTextualCoderEditorElement}} instance in which the block text is edited."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T11:46:06.344613+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-12T09:34:33.179107+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "tRamr9jpDQCFihsLDeapRg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : " {{gtClass:name=LeBlockQuoteSnippet}}, {{gtClass:name=LeBlockQuoteSnippetViewModel}}, and {{gtClass:name=LeBlockQuoteSnippetElement}}, which we will look at in detail further below. "
+							"string" : "Snippet views all subclass {{gtClass:name=LeSnippetElement}}. In this case, {{gtClass:name=LeBlockQuoteSnippetElement}} subclasses {{gtClass:name=LePlainTextCoderSnippetElement}}, which provides a basic `editorElement` for editing text, an instance of {{gtClass:name=GtTextualCoderEditorElement}}. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -865,40 +791,6 @@
 											"__type" : "textStyle"
 										},
 										"string" : "There are several methods to implement. We'll get to these step by step."
-									},
-									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:35:17.443513+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-11T18:01:32.80693+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "IpGzDNvpDQCAWV1RDeapRg=="
-										},
-										"code" : "LePlainTextSnippet allMethods select: #isAbstract"
 									}
 								]
 							},
@@ -939,44 +831,45 @@
 								"__type" : "snippets",
 								"items" : [
 									{
-										"__type" : "commentSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-11T18:02:44.632223+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-11T18:03:08.339842+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "Y3jRh0LqDQC9mrAjAFj72w=="
-										},
-										"string" : "CONTINUE EDITING HERE"
-									},
-									{
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [ ]
+											"items" : [
+												{
+													"__type" : "pharoSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-12T10:04:13.47266+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-12T10:04:19.527227+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "CE5X9k/qDQC3984cCtuOFw=="
+													},
+													"code" : "(LeBlockQuoteSnippet new string: 'hello') text"
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -986,7 +879,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:53:37.356744+01:00"
+												"dateAndTimeString" : "2025-02-12T09:58:48.422528+01:00"
 											}
 										},
 										"editEmail" : {
@@ -997,128 +890,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:53:37.356744+01:00"
+												"dateAndTimeString" : "2025-02-12T10:00:57.025172+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "oOhCTtvpDQCUWnDdDeapRg=="
+											"uidString" : "j3H34k/qDQCyEBH6CtuOFw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "{{gtClass:name=LeTextualSnippet}} requires us to implement {{gtMethod:name=LeTextualSnippet>>#text}}, so we follow the example of {{gtClass:name=LeTextSnippet}} by defining a slot `text`, and accessors {{gtMethod:name=LeBlockQuoteSnippet>>#text}} and {{gtMethod:name=LeBlockQuoteSnippet>>#text:}}. "
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:47:11.948772+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:53:37.36131+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "Xw5KN9vpDQCKuk+rDeapRg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "The `text` slot should be an instance of {{gtClass:name=BlRunRopedText}}, so we also implement {{gtMethod:name=LeBlockQuoteSnippet>>#string:}} so we can initialize the text from a plain string. This will be needed later when we create a block quote snippet from a string representation."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:55:25.780116+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:56:01.222302+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "Uf5aU9vpDQCVvcf9DeapRg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "Note that we inherit {{gtMethod:name=LeTextualSnippet>>#string}}, which returns the string representation of a textual snippet's text."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:56:54.785578+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:57:04.285827+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "WnAHWtvpDQCZlXgkDeapRg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "We also implement {{gtMethod:name=LeBlockQuoteSnippet>>#contentAsString}}, which is needed by the custom view {{gtMethod:name=LeSnippets>>#gtSnippetsFor:}}."
+										"string" : "We inherit all the state we need from {{gtClass:name=LePlainTextSnippet}}, namely a `text` slot, which is initialized to an instance  of {{gtClass:name=BlRunRopedText}}."
 									}
 								]
 							},
@@ -1162,7 +944,42 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [ ]
+											"items" : [
+												{
+													"__type" : "pharoSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-12T10:02:40.954814+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-12T10:13:18.519909+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "MZjT8E/qDQC19To+CtuOFw=="
+													},
+													"code" : "(LeBlockQuoteSnippet new\r\tstring: 'Literal text';\r\tyourself) storeString"
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -1183,7 +1000,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:54:53.034529+01:00"
+												"dateAndTimeString" : "2025-02-12T10:03:45.38728+01:00"
 											}
 										},
 										"uid" : {
@@ -1193,7 +1010,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We implement {{gtMethod:name=LeBlockQuoteSnippet>>#storeOn:}} to generate a snippet from its string contents."
+										"string" : "We also inherit {{gtMethod:name=LeBlockQuoteSnippet>>#storeOn:}}, which works out of the box for our new snippet:"
 									}
 								]
 							},
@@ -1284,7 +1101,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:12:06.364622+01:00"
+												"dateAndTimeString" : "2025-02-12T10:04:48.33191+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1295,51 +1112,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:12:18.805051+01:00"
+												"dateAndTimeString" : "2025-02-12T10:05:20.540974+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "mwJdkNvpDQCosQ+CDeapRg=="
+											"uidString" : "mzRr+E/qDQC4KNylCtuOFw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Here, for example, is the JSON representation of this page:"
-									},
-									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:08:22.653537+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:21:21.74495+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "2ncHg9vpDQCnWmP0DeapRg=="
-										},
-										"code" : "(thisSnippet database monitor \r\tpageFileReference: thisSnippet page) contents"
+										"string" : "We inherit {{gtMethod:name=LePlainTextSnippet class>>#leJsonV4AttributeMapping}}, and since we add no new state, this works out of the box."
 									},
 									{
 										"__type" : "textSnippet",
@@ -1355,7 +1138,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T14:59:54.979128+01:00"
+												"dateAndTimeString" : "2025-02-12T10:05:21.6658+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1366,54 +1149,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:07:03.431008+01:00"
+												"dateAndTimeString" : "2025-02-12T10:06:18.069209+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "z/nEZNvpDQChFc1TDeapRg=="
+											"uidString" : "lt1n+k/qDQC5svmVCtuOFw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We implement {{gtMethod:name=LeBlockQuoteSnippet class>>#leJsonV4AttributeMapping}}, which simply adds the mapping `#string -> #string` to the inherited mapping. This will map the value of the string slot to the JSON `\"string\"` attribute."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:07:07.838961+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:08:17.207118+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "IOORftvpDQClRVT9DeapRg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "We also implement {{gtMethod:name=LeBlockQuoteSnippet class>>#leJsonV4Name}} to return a name for this kind of snippet in the string representation."
+										"string" : "On the other hand, we have to implement {{gtMethod:name=LeBlockQuoteSnippet class>>#leJsonV4Name}} to return a name — `#blockQuoteSnippet` — for this kind of snippet in the string representation."
 									},
 									{
 										"__type" : "textSnippet",
@@ -1558,6 +1304,78 @@
 											"__type" : "textStyle"
 										},
 										"string" : "We can verify that a mapping now exists:"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "pharoSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-12T10:06:31.903491+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-12T10:08:21.537365+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "h5eX/k/qDQC6opaiCtuOFw=="
+													},
+													"code" : "LeJsonV4 uniqueInstance\r\tserializePretty: (LeBlockQuoteSnippet new\r\t\t\tstring: 'hello';\r\t\t\tyourself)"
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-02-12T10:07:53.816121+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-02-12T10:10:05.796239+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "mwJdkNvpDQCosQ+CDeapRg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "and we can serialize a block snippet like this:"
 									}
 								]
 							},
@@ -1795,7 +1613,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:23:08.300569+01:00"
+												"dateAndTimeString" : "2025-02-12T10:10:33.283104+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1806,17 +1624,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:29:03.772511+01:00"
+												"dateAndTimeString" : "2025-02-12T10:11:17.749299+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "Yl7Rt9vpDQCxJd8ADeapRg=="
+											"uidString" : "S736DFDqDQC8QyPhCtuOFw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "In our case, there are no such dependencies, so {{gtMethod:name=LeBlockQuoteSnippet>>#canMoveToAnotherDatabase}} simply returns true."
+										"string" : "We inherit this method from {{gtMethod:name=LeTextualSnippet>>#canMoveToAnotherDatabase}}, and do not need to change it."
 									},
 									{
 										"__type" : "textSnippet",
@@ -1832,7 +1650,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:33:05.416736+01:00"
+												"dateAndTimeString" : "2025-02-12T10:11:52.49444+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1843,17 +1661,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:35:35.45713+01:00"
+												"dateAndTimeString" : "2025-02-12T10:12:16.486438+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "W6No29vpDQCBnAdtDeapRg=="
+											"uidString" : "wWqzEVDqDQC9qMbRCtuOFw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We also an example page containing the snippet to {{gtClass:name=MovingPagesExamples}} for testing. We define {{gtMethod:name=MovingPagesExamples>>#blockQuoteSnippetPage}}, making sure to set its method category to `*GToolkit-Demo-Snippets`, so it will be an extension method from the new snippet's package, so as not to introduce a dependency from the Lepiter core package to our package. When we are done we can check that the tests pass, especially {{gtMethod:name=MovingPagesExamples>>#moveAllPages}}. "
+										"string" : "We need to add a test case, however, of an example page containing the snippet to {{gtClass:name=MovingPagesExamples}} for testing. We define {{gtMethod:name=MovingPagesExamples>>#blockQuoteSnippetPage}}, making sure to set its method category to `*GToolkit-Demo-Snippets`, so it will be an extension method from the new snippet's package, so as not to introduce a dependency from the Lepiter core package to our package. When we are done we can check that the tests pass, especially {{gtMethod:name=MovingPagesExamples>>#moveAllPages}}. "
 									}
 								]
 							},
@@ -1897,7 +1715,42 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [ ]
+											"items" : [
+												{
+													"__type" : "pharoSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-12T10:16:26.32524+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-12T10:16:34.049395+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "sL4FIlDqDQCA4/+PCtuOFw=="
+													},
+													"code" : "LeBlockQuoteSnippet empty"
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -1918,7 +1771,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:29:40.271922+01:00"
+												"dateAndTimeString" : "2025-02-12T10:16:42.855263+01:00"
 											}
 										},
 										"uid" : {
@@ -1928,7 +1781,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We trivially return `self new` in {{gtMethod:name=LeBlockQuoteSnippet class>>#empty}}"
+										"string" : "Again, we inherit {{gtMethod:name=LeBlockQuoteSnippet class>>#empty}}, and do not need to change anything:"
 									}
 								]
 							},
@@ -2026,7 +1879,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T15:30:29.203244+01:00"
+									"dateAndTimeString" : "2025-02-12T09:58:18.867073+01:00"
 								}
 							},
 							"uid" : {
@@ -2036,7 +1889,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**(8)** Define the View Model class, and use it to implement `asSnippetViewModel` to return an instance of the view model holding all the state needed to create the view."
+							"string" : "**(8)** Define the View Model class, and use it to implement the required method `asSnippetViewModel` to return an instance of the view model holding all the state needed to create the view."
 						},
 						{
 							"__type" : "textSnippet",
@@ -2048,6 +1901,116 @@
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-02-12T10:20:01.885278+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-02-12T10:37:40.336031+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "y/LeLlDqDQCFHmIqCtuOFw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "We implement {{gtMethod:name=LeBlockQuoteSnippet>>#acceptVisitor:}} to simply apply `visitTextSnippet:`. If we want to take special action, we will have to add a new `visit` method, and possibly adapt the existing visitors. See the trait {{gtClass:name=TLeModelVisitor}}. "
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-12T10:17:19.273243+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-12T10:19:45.312823+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dKMtJVDqDQCBGPe8CtuOFw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**(9)** Implement `acceptVisitor:`. This is needed for any utilities that visit the pages of a Lepiter database, such as the HTML export facility."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "pharoSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-06T15:38:32.663549+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-06T15:38:38.230682+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "Qwfq7tvpDQCKXgVvDeapRg=="
+													},
+													"code" : "LeBlockQuoteSnippet allMethods select: #isAbstract"
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -2081,40 +2044,6 @@
 										"string" : "The specific list will depend on where in the class hierarchy the snippet class is defined. We check for any remaining abstract methods as follows:"
 									},
 									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:38:32.663549+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:38:38.230682+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "Qwfq7tvpDQCKXgVvDeapRg=="
-										},
-										"code" : "LeBlockQuoteSnippet allMethods select: #isAbstract"
-									},
-									{
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
@@ -2128,7 +2057,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:39:41.297734+01:00"
+												"dateAndTimeString" : "2025-02-12T10:22:10.990024+01:00"
 											}
 										},
 										"editEmail" : {
@@ -2139,44 +2068,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:54:45.01621+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "yk0B89vpDQCLjqM6DeapRg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "We still  have to implement abstract methods `asPreviewElement`, `appendText:source:`, `updateText:source:`, `asToolElement` and `asPhlowTool`. We can adapt the implementations from {{gtClass:name=LeTextSnippet}}. "
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:36:04.963671+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T15:54:34.384412+01:00"
+												"dateAndTimeString" : "2025-02-12T10:22:25.238873+01:00"
 											}
 										},
 										"uid" : {
@@ -2186,7 +2078,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We can now verify that all abstract methods are implemented."
+										"string" : "There are no remaining abstract methods left to implement, so we are done here."
 									}
 								]
 							},
@@ -2209,7 +2101,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T15:39:12.733755+01:00"
+									"dateAndTimeString" : "2025-02-12T10:17:22.40185+01:00"
 								}
 							},
 							"uid" : {
@@ -2219,7 +2111,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**(9)** Implement any remaining abstract methods."
+							"string" : "**(10)** Implement any remaining abstract methods."
 						}
 					]
 				},
@@ -2289,7 +2181,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:16:58.280271+01:00"
+												"dateAndTimeString" : "2025-02-12T10:28:45.056174+01:00"
 											}
 										},
 										"uid" : {
@@ -2299,7 +2191,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We define {{gtClass:name=LeBlockQuoteSnippetViewModel}} as a subclass of {{gtClass:name=LeTextualSnippetViewModel}}. "
+										"string" : "We define {{gtClass:name=LeBlockQuoteSnippetViewModel}} as a subclass of {{gtClass:name=LePlainTextCoderSnippetViewModel}}. This class provides the scaffolding needed to subscribe to the snippet model, and to update the view model when there are changes."
 									}
 								]
 							},
@@ -2353,7 +2245,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:19:27.734205+01:00"
+												"dateAndTimeString" : "2025-02-12T10:24:09.211425+01:00"
 											}
 										},
 										"editEmail" : {
@@ -2364,17 +2256,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-11T18:25:07.246045+01:00"
+												"dateAndTimeString" : "2025-02-12T10:25:01.793811+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "om15e9zpDQCka0InDtc83A=="
+											"uidString" : "tdCcPVDqDQCJy3DECtuOFw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We inherit the `snippetModel` slot from {{gtClass:name=LeAbstractSnippetViewModel}} (via the trait {{gtClass:name=TLeWithSnippetModel}}), so we trivially define `LeBlockQuoteSnippetViewModel>>#text` to return the `text` of our model."
+										"string" : "We inherit `textCoder` and `textCoderViewModel`, but we still have to initialize them."
 									},
 									{
 										"__type" : "textSnippet",
@@ -2390,7 +2282,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:21:45.792539+01:00"
+												"dateAndTimeString" : "2025-02-12T10:25:04.914764+01:00"
 											}
 										},
 										"editEmail" : {
@@ -2401,54 +2293,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-11T18:25:10.732668+01:00"
+												"dateAndTimeString" : "2025-02-12T10:26:10.493965+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "cAp6idzpDQCqL3ZrDtc83A=="
+											"uidString" : "7M/uQFDqDQCLAIe+CtuOFw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We also define a slot `textEditorModel` to represent the state for the view's editor, with accessors, and an initialization method `LeBlockQuoteSnippetViewModel>>#initializeTextEditorModel`. "
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:22:13.546356+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-11T18:25:14.092722+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "F4Yhi9zpDQCqUEzNDtc83A=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "*NB:* in this method we listen for announcements that the text has changed, and notify our dependents that the snippet has changed via `LeBlockQuoteSnippetViewModel>>#announceTextChanged`."
+										"string" : "We define {{gtMethod:name=LeBlockQuoteSnippetViewModel>>#initializeTextCoderViewModel}} to define the text coder model and view model that we will need for the view."
 									}
 								]
 							},
@@ -2567,7 +2422,42 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [ ]
+											"items" : [
+												{
+													"__type" : "pharoSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-06T16:27:20.140778+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-02-06T16:27:27.823121+01:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "oMlnndzpDQCysejZDtc83A=="
+													},
+													"code" : "LeBlockQuoteSnippetViewModel allMethods select: #isAbstract"
+												}
+											]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -2601,40 +2491,6 @@
 										"string" : "As before, we can check if any abstract methods remain to be implemented:"
 									},
 									{
-										"__type" : "pharoSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:27:20.140778+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:27:27.823121+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "oMlnndzpDQCysejZDtc83A=="
-										},
-										"code" : "LeBlockQuoteSnippetViewModel allMethods select: #isAbstract"
-									},
-									{
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
@@ -2648,7 +2504,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:26:47.963398+01:00"
+												"dateAndTimeString" : "2025-02-12T10:29:08.04352+01:00"
 											}
 										},
 										"editEmail" : {
@@ -2659,7 +2515,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:54:39.794241+01:00"
+												"dateAndTimeString" : "2025-02-12T10:29:18.305305+01:00"
 											}
 										},
 										"uid" : {
@@ -2669,7 +2525,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We implement {{gtMethod:name=LeBlockQuoteSnippetViewModel>>#moveCursorAt:}} with the help of our `textEditorModel`. This is needed to support the arrow keys moving up and down within a page between snippets."
+										"string" : "There is nothing left to implement, so we are done here."
 									}
 								]
 							},
@@ -2772,7 +2628,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:30:07.477629+01:00"
+												"dateAndTimeString" : "2025-02-12T10:30:47.902342+01:00"
 											}
 										},
 										"uid" : {
@@ -2782,7 +2638,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We define {{gtClass:name=LeBlockQuoteSnippetElement}} as a subclass of {{gtClass:name=LeTextualSnippetElement}}, which serves as a base element for textual snippets."
+										"string" : "We define {{gtClass:name=LeBlockQuoteSnippetElement}} as a subclass of {{gtClass:name=LePlainTextCoderSnippetElement}}, which serves as a base element for text-based snippets, and includes an instance of {{gtClass:name=GtTextualCoderEditorElement}} as its `editorElement`."
 									}
 								]
 							},
@@ -2847,7 +2703,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:33:30.007098+01:00"
+												"dateAndTimeString" : "2025-02-12T10:32:28.444933+01:00"
 											}
 										},
 										"uid" : {
@@ -2857,44 +2713,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We need a text editor for the literal block, so we define {{gtMethod:name=LeBlockQuoteSnippetElement>>#initializeEditorElement}} to initialize a `editorElement` slot to a {{gtClass:name=BrEditor}} instance, and set its background to a very light gray."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:33:30.387966+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:34:42.286266+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "AlB5s9zpDQC6V9xvDtc83A=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "We implement the required method {{gtMethod:name=LeTextualSnippetElement>>#editor}} to return this element."
+										"string" : "We inherit and override  {{gtMethod:name=LeBlockQuoteSnippetElement>>#initializeEditorElement}} to set the editor elements background to a very light gray, and to use a code font."
 									}
 								]
 							},
@@ -2917,7 +2736,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T16:31:49.287632+01:00"
+									"dateAndTimeString" : "2025-02-12T10:31:08.479131+01:00"
 								}
 							},
 							"uid" : {
@@ -2927,117 +2746,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**(2)** Define and initialize the snippet element. Implement the required method {{gtMethod:name=LeSnippetElement>>#snippetContent}} to return this element."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "commentSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-02-06T16:38:14.335072+01:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-02-06T16:39:07.297848+01:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "gv9lxNzpDQCCSQ5GDtc83A=="
-													},
-													"string" : "Do we really need *both* a text editor model *and* a BlText `text` object? "
-												}
-											]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:35:52.584939+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:38:07.900544+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "chHzu9zpDQC8ts0FDtc83A=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "In our case, ff the view model changes, we need to bind the editor element to the new editor text model. We override {{gtMethod:name=LeBlockQuoteSnippetElement>>#onSnippetViewModelChanged}} to update the editor element and bind it to the new text editor model and text object."
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T16:34:42.760365+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T16:37:12.076528+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "kZXJt9zpDQC7oJnaDtc83A=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**(3)** Listen to changes in the view model by overriding `onSnippetViewModelChanged`."
+							"string" : "**(2)** Define and initialize the snippet element. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -3058,7 +2767,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:39:43.162054+01:00"
+												"dateAndTimeString" : "2025-02-12T10:33:36.628792+01:00"
 											}
 										},
 										"editEmail" : {
@@ -3069,17 +2778,51 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T16:40:15.337752+01:00"
+												"dateAndTimeString" : "2025-02-12T10:33:52.699455+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "g2OxydzpDQCEo2qEDtc83A=="
+											"uidString" : "4etuX1DqDQCV12ihCtuOFw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "We don't need any tools, so we implement {{gtMethod:name=LeBlockQuoteSnippetElement>>#snippetToolbar}} to return `nil`."
+										"string" : "There is nothing left to do."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-02-12T10:33:19.533567+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-02-12T10:33:28.534516+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "6BdqXlDqDQCVnzLHCtuOFw=="
+										},
+										"code" : "LeBlockQuoteSnippetElement allMethods select: #isAbstract"
 									}
 								]
 							},
@@ -3102,7 +2845,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T16:39:30.487942+01:00"
+									"dateAndTimeString" : "2025-02-12T10:33:18.137879+01:00"
 								}
 							},
 							"uid" : {
@@ -3112,7 +2855,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**(4)** Implement the required method {{gtMethod:name=LeSnippetElement>>#snippetToolbar}} to return the element representing the toolbar to appear below the content. Return `nil` if this is not needed."
+							"string" : "**(4)** Implement any remaining abstract methods."
 						}
 					]
 				},
@@ -3151,120 +2894,7 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T11:25:47.085979+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T17:04:56.330397+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "N6/5ZtjpDQC3WCjbDeapRg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "• If you navigate to another snippet, undo and redo keyboard shortcuts won't apply to the latest changes in the block quote."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T17:00:18.658636+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-06T17:04:59.418224+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "bJJVE93pDQCsB1iRBchtig=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "• Keyboard shortcuts for indentation also do not work."
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T16:58:06.258798+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T17:04:53.558934+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "/0xxC93pDQCm78GjBchtig=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "We now have a mostly functional block quote snippet. Still missing is support for keyboard shortcuts:"
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -3274,7 +2904,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-06T11:25:39.313667+01:00"
+						"dateAndTimeString" : "2025-02-12T10:33:02.840073+01:00"
 					}
 				},
 				"editEmail" : {
@@ -3285,17 +2915,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-06T16:58:05.551946+01:00"
+						"dateAndTimeString" : "2025-02-12T10:37:11.05455+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WBaDZtjpDQC3BG8aDeapRg=="
+					"uidString" : "g2OxydzpDQCEo2qEDtc83A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Pending"
+				"string" : "Now we are basically done. Don't forget, however, if we need to do anything special in visitors, we will have to change {{gtMethod:name=LeBlockQuoteSnippet>>#acceptVisitor:}}, introduce a new `visitBlockQuoteSnippet:` method for all visitors in the trait {{gtClass:name=TLeModelVisitor}}, and eventually update selected visitors to override the default implementation."
 			}
 		]
 	},
