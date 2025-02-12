@@ -430,7 +430,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T11:46:06.344613+01:00"
+									"dateAndTimeString" : "2025-02-12T09:35:42.154931+01:00"
 								}
 							},
 							"editEmail" : {
@@ -441,17 +441,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T14:17:12.372203+01:00"
+									"dateAndTimeString" : "2025-02-12T09:39:32.45457+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "tRamr9jpDQCFihsLDeapRg=="
+								"uidString" : "5alWkE/qDQCfWDwpBn7gBA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The implementation consists of three collaborating classes, {{gtClass:name=LeBlockQuoteSnippet}}, {{gtClass:name=LeBlockQuoteSnippetViewModel}}, and {{gtClass:name=LeBlockQuoteSnippetElement}}, which we will look at in detail further below. "
+							"string" : "A snippet implementation consists of three collaborating classes, a *model*, a *view* and a *view model*, following the *MVVM* pattern — [Model–view–viewmodel](https://en.wikipedia.org/wiki/Model%2Dview%2Dviewmodel). The *model* represents the domain model, holding the state of the snippet and all behavior related to the state. The *view model* holds and manages the state that is needed for the visual representation of the snippet in a page. Finally, the *view* is the element that provides the interactive display of the snippet. It is updated when the view model updates, and conversely, UI events that update the view are propagated to the view model. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -467,7 +467,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T11:58:19.463154+01:00"
+									"dateAndTimeString" : "2025-02-12T09:40:49.560628+01:00"
 								}
 							},
 							"editEmail" : {
@@ -478,91 +478,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T11:58:19.463154+01:00"
+									"dateAndTimeString" : "2025-02-12T09:45:15.418541+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "cpdY29jpDQCTEwpMDeapRg=="
+								"uidString" : "nkypok/qDQChZAfzBn7gBA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Instead of using MVC (Model-View-Controller) pattern, these classes follow the *MVVM* pattern — [Model–view–viewmodel](https://en.wikipedia.org/wiki/Model%2Dview%2Dviewmodel). "
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T11:58:33.680196+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T11:59:20.032179+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "hYYx3NjpDQCTb86SDeapRg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "The *model* represents the domain model, holding the state of the snippet and all behavior related to the state. In this case, {{gtClass:name=LeBlockQuoteSnippet}} holds the actual content of the literal text block."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T14:20:05.245371+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-06T14:29:32.061961+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "9YZU1trpDQCzdzSMDeapRg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Snippet model classes are direct or indirect subclasses of {{gtClass:name=LeSnippet}}:"
+							"string" : "Snippet model classes are all direct or indirect subclasses of {{gtClass:name=LeSnippet}}. In this case, a {{gtClass:name=LeBlockQuoteSnippet}} is a particular kind of *textual* snippet, so we define it as a subclass of {{gtClass:name=LePlainTextSnippet}}, an abstract superclass of pure textual (not code) snippets. As a model class, {{gtClass:name=LeBlockQuoteSnippet}} holds the actual content of the literal text block, as illustrated in this diagram at the left."
 						},
 						{
 							"__type" : "elementSnippet",
@@ -589,14 +515,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-10T10:00:18.111946+01:00"
+									"dateAndTimeString" : "2025-02-12T09:46:26.553931+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "HbNm8drpDQC2iJTPDeapRg=="
 							},
-							"code" : "LeBlockQuoteSnippetUMLExamples new blockQuoteSnippetClassHierarchyWithAssociationsAndLabels",
+							"code" : "LeBlockQuoteSnippetUMLExamples new blockQuoteSnippetClassHierarchyWithPositions",
 							"elementHeight" : 413,
 							"codeHeight" : 50,
 							"codeVisible" : false
@@ -626,7 +552,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-11T17:57:47.86231+01:00"
+									"dateAndTimeString" : "2025-02-12T09:36:06.446774+01:00"
 								}
 							},
 							"uid" : {
@@ -636,7 +562,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The *view model* holds and manages the state that is needed for the visual representation of the snippet in a page. These are all subclasses of {{gtClass:name=LeSnippetViewModel}}. In this case, {{gtClass:name=LeBlockQuoteSnippetViewModel}} just needs to track the state of the text in the model, and it also tracks the `textCoderViewModel` of the view."
+							"string" : "These are all subclasses of {{gtClass:name=LeSnippetViewModel}}. In this case, {{gtClass:name=LeBlockQuoteSnippetViewModel}} just needs to track the state of the text in the model, and it also tracks the `textCoderViewModel` of the view."
 						},
 						{
 							"__type" : "textSnippet",
@@ -663,7 +589,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-11T17:58:30.494881+01:00"
+									"dateAndTimeString" : "2025-02-12T09:36:33.732353+01:00"
 								}
 							},
 							"uid" : {
@@ -673,7 +599,44 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The *view* is the element that provides the interactive display of the snippet. It is updated when the view model updates, and conversely, UI events that update the view are propagated to the view model. Snippet views all subclass {{gtClass:name=LeSnippetElement}}. In this case, {{gtClass:name=LeBlockQuoteSnippetElement}} is a composite element holding the {{gtClass:name=GtTextualCoderEditorElement}} instance in which the block text is edited."
+							"string" : "Snippet views all subclass {{gtClass:name=LeSnippetElement}}. In this case, {{gtClass:name=LeBlockQuoteSnippetElement}} is a composite element holding the {{gtClass:name=GtTextualCoderEditorElement}} instance in which the block text is edited."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-06T11:46:06.344613+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-12T09:34:33.179107+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "tRamr9jpDQCFihsLDeapRg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : " {{gtClass:name=LeBlockQuoteSnippet}}, {{gtClass:name=LeBlockQuoteSnippetViewModel}}, and {{gtClass:name=LeBlockQuoteSnippetElement}}, which we will look at in detail further below. "
 						},
 						{
 							"__type" : "textSnippet",
