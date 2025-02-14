@@ -373,7 +373,12 @@ class Builder extends AgentJob {
                 "rev-parse HEAD",
                 "${GlamorousToolkit.RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/gtoolkit-remote")
         
-         build.pythonBridgeCommitHash = platform().exec_stdout(script,
+        build.gtWireEncodingCommitHash = platform().exec_stdout(script,
+                "git",
+                "rev-parse HEAD",
+                "${GlamorousToolkit.RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/gtoolkit-wireencoding")
+        
+        build.pythonBridgeCommitHash = platform().exec_stdout(script,
                 "git",
                 "rev-parse HEAD",
                 "${GlamorousToolkit.RELEASER_FOLDER}/pharo-local/iceberg/feenkcom/PythonBridge")
@@ -381,6 +386,7 @@ class Builder extends AgentJob {
         script.echo "We expect to release gtoolkit ${build.gtoolkitVersion}"
         script.echo "We expect to release gt4gemstone ${build.gt4gemstoneCommitHash}"
         script.echo "We expect to release gtoolkit-remote ${build.gt4remoteCommitHash}"
+        script.echo "We expect to release gtoolkit-wireencoding ${build.gtWireEncodingCommitHash}"
 
         script.echo "We expect to use PythonBridge ${build.pythonBridgeCommitHash}"
     }
@@ -725,6 +731,14 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
             git clone https://github.com/feenkcom/gtoolkit-remote.git
             cd gtoolkit-remote 
             git checkout ${build.gt4remoteCommitHash}
+        """
+
+        script.sh """
+            cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+            rm -rf gtoolkit-wireencoding
+            git clone https://github.com/feenkcom/gtoolkit-wireencoding.git
+            cd gtoolkit-wireencoding
+            git checkout ${build.gtWireEncodingCommitHash}
         """
 
         script.sh """
