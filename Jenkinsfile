@@ -103,6 +103,7 @@ class GlamorousToolkit {
     String gtoolkitVersion
     String gt4gemstoneCommitHash
     String gt4remoteCommitHash
+    String gtWireEncodingCommitHash
     String pythonBridgeCommitHash
     Map<String, String> artefacts
 
