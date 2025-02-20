@@ -1,0 +1,330 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-20T16:07:27.624435+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-20T16:08:08.082871+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DbEa+PXqDQCrlQAZB5FOeg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The WireEncoding format is used to pass arguments from GT to GemStone and is one of the serialisation options for returning data."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-20T16:08:27.142881+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-20T16:08:53.987782+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Pt2m+/XqDQCwIKt9B5FOeg=="
+							},
+							"code" : "exampleSelectors := GtWireEncodingExamples methods\n\tselect: [ :each | each hasPragmaNamed: #gtExample ]\n\tthenCollect: [ :each | each selector ]."
+						},
+						{
+							"__type" : "gemstoneSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-20T16:08:57.493058+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-20T16:08:58.894805+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "u/d1/fXqDQCwQZIQB5FOeg=="
+							},
+							"code" : "exampleSelectors collect: [ :selector |\n\tGtWireEncodingExamples new perform: selector ].",
+							"sessionIdentifier" : {
+								"__type" : "gtGemStoneDefaultSessionIdentifier"
+							}
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-20T16:31:04.084416+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-20T16:34:47.710463+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "GCaITPbqDQCf1v80D8C1iQ=="
+							},
+							"code" : "nestedSelectors := GtWireNestedEncodingExamples methods\n\tselect: [ :each | (each hasPragmaNamed: #gtExample) and:\r\t\t[ each protocol first ~= $* ] ]\n\tthenCollect: [ :each | each selector ]."
+						},
+						{
+							"__type" : "gemstoneSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-20T16:30:16.618305+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-20T16:34:57.584954+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UOCzSfbqDQCdRzJoD8C1iQ=="
+							},
+							"code" : "nestedSelectors collect: [ :selector |\n\tGtWireNestedEncodingExamples new perform: selector ].",
+							"sessionIdentifier" : {
+								"__type" : "gtGemStoneDefaultSessionIdentifier"
+							}
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-20T16:08:09.710858+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-20T16:08:25.148049+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lt+c+vXqDQCuT20eB5FOeg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To run the examples in GemStone:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-20T17:18:39.10682+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-20T17:18:42.419546+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lVW09vbqDQCh8ecLD8C1iQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Timing:"
+			},
+			{
+				"__type" : "gemstoneSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-20T17:18:51.216865+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-20T17:35:11.250653+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2hxt9/bqDQCiLX/LD8C1iQ=="
+				},
+				"code" : "[ 1000 timesRepeat: [ GtWireEncoderDecoder getDefaultMap; getDefaultReverseMap ] ] timeToRun.",
+				"sessionIdentifier" : {
+					"__type" : "gtGemStoneDefaultSessionIdentifier"
+				}
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-02-20T16:07:27.598229+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-02-20T16:07:27.598229+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "WireEncoding in GemStone"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "574a1af8-f5ea-0d00-ab94-ff4807914e7a"
+	}
+}
