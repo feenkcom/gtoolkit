@@ -208,14 +208,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-20T13:42:18.48849+01:00"
+						"dateAndTimeString" : "2025-02-21T11:36:04.922556+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "VRvDjCLpDQClNSbsBOD//Q=="
 				},
-				"code" : "tutor := GtLlmTutor new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you.';\r\t\tproviderStencil: [ :anInstructionFormat | \r\t\t\tGtOpenAIAssistantProvider withApiKeyFromFile\r\t\t\t\tformat: anInstructionFormat asJsonSchema;\r\t\t\t\tassistantMessageClass: GtOpenAIActionMessage;\r\t\t\t\tuserMessageClass: GtOpenAIActionMessage;\r\t\t\t\taddFile: (GtOpenAIResourceFile new\r\t\t\t\t\t\tfile: aFile;\r\t\t\t\t\t\tdescription: 'Lepiter booklet: GToolkit book');\r\t\t\t\taddTool: (GtOpenAITool new type: 'file_search');\r\t\t\t\tinstructions: anInstructionFormat asInstructionPiece instructionString ].\r\rtutor"
+				"code" : "tutor := GtLlmTutor new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you.';\r\t\tproviderStencil: [ :anInstructionFormat | \r\t\t\tGtOpenAIAssistantProvider withApiKeyFromFile\r\t\t\t\tformat: anInstructionFormat asJsonSchema;\r\t\t\t\tassistantMessageClass: GtOpenAIActionMessage;\r\t\t\t\tuserMessageClass: GtOpenAIActionMessage;\r\t\t\t\taddFile: (GtOpenAIResourceFile new\r\t\t\t\t\t\tfile: aFile;\r\t\t\t\t\t\tdescription: 'Lepiter booklet: GToolkit book');\r\t\t\t\taddTool: (GtLlmTool new type: 'file_search');\r\t\t\t\tinstructions: anInstructionFormat asInstructionPiece instructionString ].\r\rtutor"
 			},
 			{
 				"__type" : "textSnippet",
