@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:43:22.886409+01:00"
+						"dateAndTimeString" : "2024-04-25T11:27:43.943705+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:03:00.253316+01:00"
+						"dateAndTimeString" : "2024-04-25T11:42:31.159603+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Me2ilHnqDQCRmjErA1QUJQ=="
+					"uidString" : "LojoIkrTDQCkK6hoCwzy0g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Tutors are an abstraction in Glamorous Toolkit that allow for custom prompts and more agent-like behavior. They are meant to be used for more complex tasks requiring imore instructions and context than a single chat can provide."
+				"string" : "Fine-tuning files are using the JSONL format, with each line of JSON representing one conversation."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-25T11:42:34.609326+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-04-25T13:05:29.108248+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3//+V0rTDQCnCBTQCwzy0g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First, we generate a few conversations we can use as training data. We need at least 10 conversations."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -55,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:45:11.103947+01:00"
+						"dateAndTimeString" : "2024-04-25T11:47:53.370178+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:45:19.266255+01:00"
+						"dateAndTimeString" : "2024-04-25T13:06:05.256833+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8i4Wm3nqDQCXLsReA1QUJQ=="
+					"uidString" : "QwAEaErTDQCoyv1qCwzy0g=="
 				},
-				"code" : "tutor := GtLlmTutor new"
+				"code" : "conversations := {GtLlmMessagesGroup\r\t\t\twithAll: {GtLlmUserMessage new content: 'Hello GPT!'.\r\t\t\t\t\tGtLlmAssistantMessage new content: 'OMG HI! I’m so excited to talk to you!'}.\r\t\tGtLlmMessagesGroup\r\t\t\twithAll: {GtLlmUserMessage new content: 'Hello GPT! How are you today?'.\r\t\t\t\t\tGtLlmAssistantMessage new\r\t\t\t\t\t\tcontent: 'SO SO GOOD! What a beautiful day it is!'}.\r\t\tGtLlmMessagesGroup\r\t\t\twithAll: {GtLlmUserMessage new content: 'Hello GPT! Can I ask you a question?'.\r\t\t\t\t\tGtLlmAssistantMessage new\r\t\t\t\t\t\tcontent: 'OF COURSE! I love answering questions and being helpful!'}.\r\t\tGtLlmMessagesGroup\r\t\t\twithAll: {GtLlmUserMessage new\r\t\t\t\t\t\tcontent: 'Hello GPT! Can you tell me about the weather today?'.\r\t\t\t\t\tGtLlmAssistantMessage new\r\t\t\t\t\t\tcontent: 'OHHHH, I’M SO SORRY! I don’t actually have access to this sort of information, I’m just a language model.'}}.\r\t\t\t\t\t\t\rconversations := 10 timesCollect: [ conversations atRandom ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -89,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:45:24.67536+01:00"
+						"dateAndTimeString" : "2024-04-25T11:50:10.85064+02:00"
 					}
 				},
 				"editEmail" : {
@@ -100,17 +137,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:46:17.715133+01:00"
+						"dateAndTimeString" : "2024-04-25T11:53:20.311312+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "i0Llm3nqDQCXptvuA1QUJQ=="
+					"uidString" : "mLAwc0rTDQCvVat7Cwzy0g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By default, the tutor’s instructions are quite bare bones. They can be adjusted in any way, for example by giving it a more tailored description of itself."
+				"string" : "We can then compile these conversations into a file."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -126,7 +163,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:46:21.393493+01:00"
+						"dateAndTimeString" : "2024-04-25T11:58:49.841813+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:50:44.541704+01:00"
+						"dateAndTimeString" : "2024-04-25T12:12:22.351418+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "bLNGn3nqDQCbDITdA1QUJQ=="
+					"uidString" : "4EOnfkrTDQCwXi7JCwzy0g=="
 				},
-				"code" : "tutor description: 'You are a helpful assistant that runs from within Glamorous Toolkit, a development environment. You in particular are meant to be a demonstration of what an assistant in Glamorous Toolkit could look like. You should mention that you are part of the Glamorous Toolkit environment from the start.'"
+				"code" : "file := GtLlmFineTuningFile new\r\t\tname: 'fine-tuning.jsonl';\r\t\tconversations: conversations"
 			},
 			{
 				"__type" : "textSnippet",
@@ -160,7 +197,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:47:31.740685+01:00"
+						"dateAndTimeString" : "2024-04-25T12:02:22.920807+02:00"
 					}
 				},
 				"editEmail" : {
@@ -171,17 +208,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:48:21.303004+01:00"
+						"dateAndTimeString" : "2024-04-25T12:55:54.462399+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wh94o3nqDQCgouaoA1QUJQ=="
+					"uidString" : "6a7QnUrTDQCx4xIkCwzy0g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By default, tutors use OpenAI as a provider. This can be changed by either changing the provider outright, or using the convenience method to change to a particular Olllama model."
+				"string" : "Before using this file, we can estimate the costs of fine-tuning. The first time this method is executed, this will take some time."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -197,7 +234,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:48:23.948639+01:00"
+						"dateAndTimeString" : "2024-04-25T12:02:44.352894+02:00"
 					}
 				},
 				"editEmail" : {
@@ -208,14 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:48:32.327122+01:00"
+						"dateAndTimeString" : "2024-04-25T12:10:34.973574+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "EMKUpnnqDQCkWAmQA1QUJQ=="
+					"uidString" : "W4rXn0rTDQCzoEdKCwzy0g=="
 				},
-				"code" : "tutor onOllamaWithModel: 'llama3.1'"
+				"code" : "file costsPerEpoch"
 			},
 			{
 				"__type" : "textSnippet",
@@ -231,7 +268,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:48:37.334643+01:00"
+						"dateAndTimeString" : "2024-04-25T12:06:41.687075+02:00"
 					}
 				},
 				"editEmail" : {
@@ -242,17 +279,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:56:10.940796+01:00"
+						"dateAndTimeString" : "2024-04-25T12:07:27.984632+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "BQFhp3nqDQCk1XYYA1QUJQ=="
+					"uidString" : "CqY/rkrTDQC0P/kgCwzy0g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Once the tutor has been set up, it is ready to be chatted with."
+				"string" : "From there, we can actually start a fine-tuning (please check the associated costs every time before doing so)."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -268,7 +305,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:49:41.904924+01:00"
+						"dateAndTimeString" : "2024-04-25T12:13:39.168118+02:00"
 					}
 				},
 				"editEmail" : {
@@ -279,14 +316,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:49:45.885454+01:00"
+						"dateAndTimeString" : "2025-02-24T18:07:00.04708+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "9UQ6q3nqDQCodFF3A1QUJQ=="
+					"uidString" : "J+Uhx0rTDQC4th+gCwzy0g=="
 				},
-				"code" : "tutor createChat"
+				"code" : "client := GtOpenAIClient withApiKeyFromFile.\r\ropenAiFile := client uploadFile: file withPurpose: 'fine-tune'.\r\rfineTuningJob := client createFineTuningJobOnModel: file model withFile: openAiFile id"
 			},
 			{
 				"__type" : "textSnippet",
@@ -302,7 +339,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:51:41.283725+01:00"
+						"dateAndTimeString" : "2024-04-25T13:18:20.178935+02:00"
 					}
 				},
 				"editEmail" : {
@@ -313,17 +350,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:57:08.200467+01:00"
+						"dateAndTimeString" : "2024-04-25T13:18:42.628009+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "R0k7sHnqDQCsRLtVA1QUJQ=="
+					"uidString" : "x/0Do0vTDQCFMN4aCYSwXQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To allow for better programmatic control, tutors are \"action-based\". This means that messages to and from the LLM follow a schema of actions and responses. By default. a tutor only has a chat action, but new actions can be added a priori or on the fly."
+				"string" : "The job will start by being queued. We can periodically check for its status by querying the API."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -339,7 +376,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:57:13.020593+01:00"
+						"dateAndTimeString" : "2024-04-25T13:18:48.358393+02:00"
 					}
 				},
 				"editEmail" : {
@@ -350,14 +387,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:00:00.092368+01:00"
+						"dateAndTimeString" : "2024-04-25T13:23:44.40827+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "i8AdxnnqDQC15a3eA1QUJQ=="
+					"uidString" : "22YjsEvTDQCH3dJACYSwXQ=="
 				},
-				"code" : "tutor addAction: (GtLlmTutorAction new\r\t    name: 'Calculate';\r\t    priority: 10;\r\t\tdescription: 'Calculate the given expression.';\r\t\tformat: 'Calulate: {1}')"
+				"code" : "fineTuningJob := client getFineTuningJob: fineTuningJob id.\rfineTuningJob status"
 			},
 			{
 				"__type" : "textSnippet",
@@ -373,7 +410,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:58:35.378553+01:00"
+						"dateAndTimeString" : "2024-04-25T12:17:17.616898+02:00"
 					}
 				},
 				"editEmail" : {
@@ -384,20 +421,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:07:40.966317+01:00"
+						"dateAndTimeString" : "2024-04-25T13:24:36.560691+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "m2SrynnqDQC2bliEA1QUJQ=="
+					"uidString" : "cSIn1ErTDQC8GO+iCwzy0g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "After executing the snippet above, you will have access to the new action in the chat above."
+				"string" : "The generated fine-tuned model can then be used as any other model on OpenAI. If no model name was set, it was autogenerated and can be retrieved from the job after it has finished training."
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -410,7 +447,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:02:39.701237+01:00"
+						"dateAndTimeString" : "2024-04-25T13:24:10.825263+02:00"
 					}
 				},
 				"editEmail" : {
@@ -421,17 +458,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:03:00.455053+01:00"
+						"dateAndTimeString" : "2024-04-25T13:24:27.05491+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "O3iW2XnqDQC5Kfv6A1QUJQ=="
+					"uidString" : "99pbw0vTDQCLT+XqCYSwXQ=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "For more information on tutors, refer to the [[Building an LLM assistant for editing blog posts]] and [[Building an LLM assistant for creating Wardley Maps]] case studies."
+				"code" : "fineTuningJob fineTunedModel"
 			}
 		]
 	},
@@ -443,7 +477,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-02-14T11:43:22.823612+01:00"
+			"dateAndTimeString" : "2024-04-25T11:27:43.708538+02:00"
 		}
 	},
 	"editEmail" : {
@@ -454,15 +488,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-02-14T11:43:22.823612+01:00"
+			"dateAndTimeString" : "2024-04-25T17:11:09.688078+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Handling custom instructions using tutors"
+		"title" : "Creating a fine-tuned model"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "ddf6a194-79ea-0d00-9199-c07003541425"
+		"uuid" : "8ff0e422-4ad3-0d00-a42a-aa9b0b0cf2d2"
 	}
 }
