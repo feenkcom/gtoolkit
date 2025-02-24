@@ -1,0 +1,218 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-12-09T08:52:43.213743+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-01-30T17:59:23.243056+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0svvYjPlDQCdx+0hB4K/Qg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[Structured Outputs](https://github.com/ollama/ollama/blob/main/docs/api.md#structured-outputs) allow for providing a JSON schema for the outputs that the model has to adhere to in its responses."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-12-09T08:57:36.421064+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-12-09T08:57:49.683649+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "C8JpdDPlDQCkI4NJB4K/Qg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First, we need to develop a schema that we want the responses to follow."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-12-09T08:57:55.200741+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-12-09T08:58:01.905022+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "81GIdTPlDQClkOVqB4K/Qg=="
+				},
+				"code" : "format := {'type' -> 'object'.\r\t\t'properties'\r\t\t\t-> {'min' -> {'type' -> 'number'} asDictionary.\r\t\t\t\t\t'max' -> {'type' -> 'number'} asDictionary.\r\t\t\t\t\t'unit' -> {'type' -> 'string'} asDictionary} asDictionary.\r\t\t'required'\r\t\t\t-> {'min'.\r\t\t\t\t\t'max'.\r\t\t\t\t\t'unit'}} asDictionary"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-12-09T08:58:05.798481+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-12-09T11:04:42.639993+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VQcqdjPlDQCl4DedB4K/Qg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can then provide it to a chat and interact with it."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-01-31T10:49:11.992209+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-01-31T12:29:57.191213+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "C+YWMV/pDQC9xNvOCWrCrQ=="
+				},
+				"code" : "chat := GtLlmChat new\r\t\tprovider: (GtOllamaProvider new\r\t\t\t\tmodel: 'llama3.1';\r\t\t\t\tformat: format).\r\rchat\r\tsendMessage: 'Hello Llama! What is the normal temperature range of the human body?'"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2024-12-09T08:52:43.1727+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2024-12-09T08:52:43.1727+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Using structured outputs"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "212aef62-33e5-0d00-9dc6-e34d0782bf42"
+	}
+}

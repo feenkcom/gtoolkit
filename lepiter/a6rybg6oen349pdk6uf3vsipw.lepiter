@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:43:22.886409+01:00"
+						"dateAndTimeString" : "2024-01-31T14:49:48.202913+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:03:00.253316+01:00"
+						"dateAndTimeString" : "2024-01-31T14:50:54.397557+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Me2ilHnqDQCRmjErA1QUJQ=="
+					"uidString" : "ws+i45/MDQCZvu/cCm8XrA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Tutors are an abstraction in Glamorous Toolkit that allow for custom prompts and more agent-like behavior. They are meant to be used for more complex tasks requiring imore instructions and context than a single chat can provide."
+				"string" : "Embeddings can be saved in a registry to avoid recreating them. The registry also allows us to search for a given number of related embeddings."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-23T13:39:07.788836+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-06-23T13:39:07.795523+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "YIrI6J/MDQCdq+VECm8XrA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First we get a client (see [[Working with the OpenAI API client]]):"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -55,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:45:11.103947+01:00"
+						"dateAndTimeString" : "2024-01-31T14:51:05.475169+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:45:19.266255+01:00"
+						"dateAndTimeString" : "2024-07-29T13:20:50.432125+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8i4Wm3nqDQCXLsReA1QUJQ=="
+					"uidString" : "gtM96J/MDQCddD9eCm8XrA=="
 				},
-				"code" : "tutor := GtLlmTutor new"
+				"code" : "client := GtOpenAIClient withApiKeyFromFile"
 			},
 			{
 				"__type" : "textSnippet",
@@ -89,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:45:24.67536+01:00"
+						"dateAndTimeString" : "2024-01-31T14:51:10.394158+01:00"
 					}
 				},
 				"editEmail" : {
@@ -100,17 +137,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:46:17.715133+01:00"
+						"dateAndTimeString" : "2024-01-31T14:51:54.132205+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "i0Llm3nqDQCXptvuA1QUJQ=="
+					"uidString" : "+e6I6J/MDQCdfh2HCm8XrA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By default, the tutor’s instructions are quite bare bones. They can be adjusted in any way, for example by giving it a more tailored description of itself."
+				"string" : "We can now try to query the registry."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -126,7 +163,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:46:21.393493+01:00"
+						"dateAndTimeString" : "2024-01-31T14:51:59.764981+01:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:50:44.541704+01:00"
+						"dateAndTimeString" : "2024-01-31T14:54:05.293314+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "bLNGn3nqDQCbDITdA1QUJQ=="
+					"uidString" : "L0J665/MDQChJXJECm8XrA=="
 				},
-				"code" : "tutor description: 'You are a helpful assistant that runs from within Glamorous Toolkit, a development environment. You in particular are meant to be a demonstration of what an assistant in Glamorous Toolkit could look like. You should mention that you are part of the Glamorous Toolkit environment from the start.'"
+				"code" : "input := 'A text for an embedding.'.\r\rembedding := GtLlmEmbeddingRegistry uniqueInstance at: input"
 			},
 			{
 				"__type" : "textSnippet",
@@ -160,7 +197,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:47:31.740685+01:00"
+						"dateAndTimeString" : "2024-01-31T14:52:35.080256+01:00"
 					}
 				},
 				"editEmail" : {
@@ -171,17 +208,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:48:21.303004+01:00"
+						"dateAndTimeString" : "2024-01-31T14:53:12.855491+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wh94o3nqDQCgouaoA1QUJQ=="
+					"uidString" : "cSKV7Z/MDQCiBxjoCm8XrA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By default, tutors use OpenAI as a provider. This can be changed by either changing the provider outright, or using the convenience method to change to a particular Olllama model."
+				"string" : "This code will raise an error if the embedding is not found. We can use the client to instead create it if it isn’t found."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -197,7 +234,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:48:23.948639+01:00"
+						"dateAndTimeString" : "2024-01-31T14:52:31.213488+01:00"
 					}
 				},
 				"editEmail" : {
@@ -208,14 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:48:32.327122+01:00"
+						"dateAndTimeString" : "2024-07-29T13:21:06.562378+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "EMKUpnnqDQCkWAmQA1QUJQ=="
+					"uidString" : "eiRa7Z/MDQCiAuMXCm8XrA=="
 				},
-				"code" : "tutor onOllamaWithModel: 'llama3.1'"
+				"code" : "embedding := GtLlmEmbeddingRegistry\r\tuniqueInstance\r\t\tat: input\r\t\tifAbsentCreateEmbedding: [ (client generateEmbeddingsWithModel: 'text-embedding-ada-002' andInput: input)\r\t\t\t\titems first embedding ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -231,7 +268,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:48:37.334643+01:00"
+						"dateAndTimeString" : "2024-01-31T14:54:13.528116+01:00"
 					}
 				},
 				"editEmail" : {
@@ -242,17 +279,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:56:10.940796+01:00"
+						"dateAndTimeString" : "2024-07-29T13:24:37.495569+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "BQFhp3nqDQCk1XYYA1QUJQ=="
+					"uidString" : "81Rz85/MDQCllSJ7Cm8XrA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Once the tutor has been set up, it is ready to be chatted with."
+				"string" : "We can then query the registry for the most related embeddings we can find in the registry. The input itself will not appear in this list."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -268,7 +305,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:49:41.904924+01:00"
+						"dateAndTimeString" : "2024-01-31T14:54:45.24646+01:00"
 					}
 				},
 				"editEmail" : {
@@ -279,14 +316,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:49:45.885454+01:00"
+						"dateAndTimeString" : "2024-01-31T14:54:52.390443+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "9UQ6q3nqDQCodFF3A1QUJQ=="
+					"uidString" : "REhX9Z/MDQCn7cPKCm8XrA=="
 				},
-				"code" : "tutor createChat"
+				"code" : "GtLlmEmbeddingRegistry uniqueInstance findNearest: 3 for: embedding"
 			},
 			{
 				"__type" : "textSnippet",
@@ -302,7 +339,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:51:41.283725+01:00"
+						"dateAndTimeString" : "2024-01-31T15:06:28.328108+01:00"
 					}
 				},
 				"editEmail" : {
@@ -313,17 +350,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:57:08.200467+01:00"
+						"dateAndTimeString" : "2024-01-31T15:06:39.620397+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "R0k7sHnqDQCsRLtVA1QUJQ=="
+					"uidString" : "Y3w/H6DMDQCoqJKYCm8XrA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To allow for better programmatic control, tutors are \"action-based\". This means that messages to and from the LLM follow a schema of actions and responses. By default. a tutor only has a chat action, but new actions can be added a priori or on the fly."
+				"string" : "If we want to reset the registry we can do so."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -339,7 +376,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:57:13.020593+01:00"
+						"dateAndTimeString" : "2024-01-31T15:06:43.548444+01:00"
 					}
 				},
 				"editEmail" : {
@@ -350,88 +387,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:00:00.092368+01:00"
+						"dateAndTimeString" : "2024-01-31T15:06:53.399262+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "i8AdxnnqDQC15a3eA1QUJQ=="
+					"uidString" : "ebAnIKDMDQCpuzo7Cm8XrA=="
 				},
-				"code" : "tutor addAction: (GtLlmTutorAction new\r\t    name: 'Calculate';\r\t    priority: 10;\r\t\tdescription: 'Calculate the given expression.';\r\t\tformat: 'Calulate: {1}')"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:58:35.378553+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:07:40.966317+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "m2SrynnqDQC2bliEA1QUJQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "After executing the snippet above, you will have access to the new action in the chat above."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:02:39.701237+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:03:00.455053+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "O3iW2XnqDQC5Kfv6A1QUJQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "For more information on tutors, refer to the [[Building an LLM assistant for editing blog posts]] and [[Building an LLM assistant for creating Wardley Maps]] case studies."
+				"code" : "GtLlmEmbeddingRegistry uniqueInstance reset"
 			}
 		]
 	},
@@ -443,7 +406,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-02-14T11:43:22.823612+01:00"
+			"dateAndTimeString" : "2024-01-31T14:49:48.160415+01:00"
 		}
 	},
 	"editEmail" : {
@@ -454,15 +417,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-02-14T11:43:22.823612+01:00"
+			"dateAndTimeString" : "2024-01-31T14:49:48.160415+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Handling custom instructions using tutors"
+		"title" : "Using the embedding registry"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "ddf6a194-79ea-0d00-9199-c07003541425"
+		"uuid" : "c428a2e3-9fcc-0d00-99bd-aa360a6f17ac"
 	}
 }
