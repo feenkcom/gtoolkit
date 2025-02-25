@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T14:59:58.194929+01:00"
+						"dateAndTimeString" : "2025-02-25T11:41:35.614185+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "OpenAI assistants and Ollama chats have, when instructed how, the capability to request function calls to be performed. Tutors mirror that capability."
+				"string" : "OpenAI assistants and Ollama and Anthropic chats have, when instructed how, the capability to request function calls to be performed. Tutors mirror that capability."
 			},
 			{
 				"__type" : "textSnippet",
@@ -137,7 +137,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:18:04.490519+01:00"
+						"dateAndTimeString" : "2025-02-25T11:42:11.062356+01:00"
 					}
 				},
 				"uid" : {
@@ -147,7 +147,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can then add it to the tutor’s provider. Please note that due to a technical limitation, tools and structured outputs do not play well together with Ollama tutors [1]. Otherwise, both providers are equivalent."
+				"string" : "We can then add it to the tutor’s provider. Please note that due to a technical limitation, tools and structured outputs do not play well together with Ollama tutors [1], and Anthropic does not formally support structured outputs [2]. Otherwise, both providers are equivalent."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -290,6 +290,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "[1] This is because OpenAI uses a signal to interrupt the conversation to request a tool call and then resumes answering the question. In Ollama, the tool call is embedded in the answer, thus it’s an in-band communication channel."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-25T11:42:13.19395+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-25T11:42:31.626289+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VJS82FbrDQC9UmoFAurXGw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[2] It is however usually able to adhere to the format even when not forced to."
 			}
 		]
 	},
