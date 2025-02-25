@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-24T17:28:36.249227+01:00"
+									"dateAndTimeString" : "2025-02-25T11:31:23.631037+01:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +155,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The most advanced integration is with OpenAI. An example can be found in the case studies or in the [[gt4openai]] section of this book."
+							"string" : "The most advanced integration is with OpenAI. An example can be found in the case studies or in the [[gt4openai: working with OpenAI]] section of this book."
 						},
 						{
 							"__type" : "textSnippet",
@@ -182,7 +182,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-24T17:28:43.782375+01:00"
+									"dateAndTimeString" : "2025-02-25T11:31:17.908756+01:00"
 								}
 							},
 							"uid" : {
@@ -192,7 +192,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Before you work with it, please set up the API key first: [[Setting up the OpenAI API key]]"
+							"string" : "Before you work with it, please set up the API key first: [[Adding an OpenAI API key]]"
 						}
 					]
 				},
@@ -215,7 +215,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T17:27:44.376225+01:00"
+						"dateAndTimeString" : "2025-02-25T11:32:39.177954+01:00"
 					}
 				},
 				"uid" : {
@@ -225,7 +225,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Working with OpenAI"
+				"string" : "## Working with OpenAI"
 			},
 			{
 				"__type" : "textSnippet",
@@ -251,7 +251,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-24T17:29:27.115362+01:00"
+												"dateAndTimeString" : "2025-02-24T17:29:36.901142+01:00"
 											}
 										},
 										"editEmail" : {
@@ -262,17 +262,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-24T17:29:27.643863+01:00"
+												"dateAndTimeString" : "2025-02-25T11:32:16.67404+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "0KWxlEfrDQCnRepECbGGRg=="
+											"uidString" : "LfdGlUfrDQCnUR0QCbGGRg=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[[Working with an Ollama tutor using custom models]] offers an example of a high level tutor"
+										"string" : "[[Working with the Ollama API client]] talks about the basic API access."
 									},
 									{
 										"__type" : "textSnippet",
@@ -288,7 +288,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-24T17:29:36.901142+01:00"
+												"dateAndTimeString" : "2025-02-25T11:31:59.097644+01:00"
 											}
 										},
 										"editEmail" : {
@@ -299,17 +299,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-24T17:29:37.071143+01:00"
+												"dateAndTimeString" : "2025-02-25T11:32:15.150136+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "LfdGlUfrDQCnUR0QCbGGRg=="
+											"uidString" : "JkHws1brDQC0Z4o0AurXGw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[[Working with the Ollama API client]] talks about the basic API access"
+										"string" : "[[Using structured outputs]] and [[Using modelfiles]] talks about more high level concepts."
 									}
 								]
 							},
@@ -365,7 +365,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T17:29:10.575823+01:00"
+						"dateAndTimeString" : "2025-02-25T11:32:37.120907+01:00"
 					}
 				},
 				"uid" : {
@@ -375,7 +375,82 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Working with Ollama"
+				"string" : "## Working with Ollama"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-25T11:32:43.755183+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-25T11:45:46.714949+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "u6vLtlbrDQC3FOCvAurXGw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Finally, there is an Anthropic integration. It is the simplest of the LLM integrations and can serve as a case study of how to add new LLM integrations. Nonetheless, it supports all the chat use cases including tool calls."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-25T11:32:18.704822+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-25T11:32:30.405668+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GW5NtVbrDQC2cxz9AurXGw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Working with Anthropic"
 			}
 		]
 	},
