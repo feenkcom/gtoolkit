@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:34:33.243738+01:00"
+						"dateAndTimeString" : "2025-02-25T11:51:44.383113+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,12 +29,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:35:45.122873+01:00"
+						"dateAndTimeString" : "2025-02-25T11:51:52.349485+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "iTgRdXnqDQC4qNV1A1QUJQ=="
+					"uidString" : "p0jI+lbrDQCLM0qrAurXGw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:34:39.990416+01:00"
+						"dateAndTimeString" : "2025-02-25T11:54:00.388421+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,16 +66,16 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:34:58.867324+01:00"
+						"dateAndTimeString" : "2025-02-25T12:02:36.755486+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ryR4dXnqDQC4q0LoA1QUJQ=="
+					"uidString" : "n4vjAlfrDQCQLba1AurXGw=="
 				},
-				"code" : "Gt4LlmHomeSection new apiKeyCard",
-				"elementHeight" : 291,
-				"codeHeight" : 31,
+				"code" : "Gt4LlmHomeSection new anthropicApiKeyCard",
+				"elementHeight" : 282,
+				"codeHeight" : 5,
 				"codeVisible" : true
 			},
 			{
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:52:06.526067+01:00"
+						"dateAndTimeString" : "2025-02-25T11:54:18.728405+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,12 +103,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:52:21.36991+01:00"
+						"dateAndTimeString" : "2025-02-25T11:54:19.022547+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "o/iteXnqDQC6tDkVA1QUJQ=="
+					"uidString" : "RWL7A1frDQCQPvkFAurXGw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:52:23.498543+01:00"
+						"dateAndTimeString" : "2025-02-25T11:54:25.573827+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:53:47.082138+01:00"
+						"dateAndTimeString" : "2025-02-25T11:55:09.415386+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "DiAd/VbrDQCMzPJ2AurXGw=="
+					"uidString" : "nthjBFfrDQCQSLB9AurXGw=="
 				},
-				"code" : "apiKey := ''.\rfileLocation := GtOpenAIClient apiKeyFile.\r\rfileLocation ensureDelete writeStreamDo: [ :s | s nextPutAll: apiKey ]"
+				"code" : "apiKey := ''.\rfileLocation := GtAnthropicClient apiKeyFile.\r\rfileLocation ensureDelete writeStreamDo: [ :s | s nextPutAll: apiKey ]"
 			}
 		]
 	},
@@ -159,7 +159,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-02-14T11:34:33.165194+01:00"
+			"dateAndTimeString" : "2025-02-25T11:51:44.285196+01:00"
 		}
 	},
 	"editEmail" : {
@@ -170,15 +170,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-02-14T11:34:33.165194+01:00"
+			"dateAndTimeString" : "2025-02-25T11:51:44.285196+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Adding an OpenAI API key"
+		"title" : "Adding an Anthropic API key"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "24041075-79ea-0d00-b8a7-9b8f03541425"
+		"uuid" : "d1b7c6fa-56eb-0d00-8b32-033002ead71b"
 	}
 }

@@ -171,7 +171,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:48:21.303004+01:00"
+						"dateAndTimeString" : "2025-02-25T11:35:50.466304+01:00"
 					}
 				},
 				"uid" : {
@@ -181,7 +181,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By default, tutors use OpenAI as a provider. This can be changed by either changing the provider outright, or using the convenience method to change to a particular Olllama model."
+				"string" : "By default, tutors use OpenAI as a provider. This can be changed by either changing the provider outright, or using the convenience method to change to a particular Olllama or Anthropic model."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -208,14 +208,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:48:32.327122+01:00"
+						"dateAndTimeString" : "2025-02-25T11:36:10.254769+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "EMKUpnnqDQCkWAmQA1QUJQ=="
 				},
-				"code" : "tutor onOllamaWithModel: 'llama3.1'"
+				"code" : "tutor onOllamaWithModel: 'llama3.1'.\r\"or anthropic:\"\rtutor onAnthropicWithModel: 'claude-3-5-sonnet-20241022'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -350,14 +350,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:00:00.092368+01:00"
+						"dateAndTimeString" : "2025-02-25T12:42:32.614219+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "i8AdxnnqDQC15a3eA1QUJQ=="
 				},
-				"code" : "tutor addAction: (GtLlmTutorAction new\r\t    name: 'Calculate';\r\t    priority: 10;\r\t\tdescription: 'Calculate the given expression.';\r\t\tformat: 'Calulate: {1}')"
+				"code" : "tutor addAction: (GtLlmTutorAction new\r\t    name: 'Calculate';\r\t    priority: 10;\r\t\tdescription: 'Calculate the given expression.';\r\t\tformat: 'Calculate: {1}')"
 			},
 			{
 				"__type" : "textSnippet",

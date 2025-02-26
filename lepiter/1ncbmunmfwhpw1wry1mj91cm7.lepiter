@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-23T08:42:16.872715+02:00"
+						"dateAndTimeString" : "2025-02-25T11:46:35.243024+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:46:20.860247+01:00"
+						"dateAndTimeString" : "2025-02-25T11:46:46.012698+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WYzYs+rXDQCCKn2JC8IszQ=="
+					"uidString" : "KC5b6FbrDQCGBOniAurXGw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The API client offers the direct connection to the OpenAI API. Before you can work with it, please first see about [[Adding an OpenAI API key]]."
+				"string" : "The API client offers the direct connection to the Anthropic API. Before you can work with it, please first see about [[Adding an Anthropic API key]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -60,7 +60,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-30T13:23:12.507046+01:00"
+									"dateAndTimeString" : "2025-02-25T11:46:56.191391+01:00"
 								}
 							},
 							"editEmail" : {
@@ -71,14 +71,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-06-23T08:45:33.743918+02:00"
+									"dateAndTimeString" : "2025-02-25T11:47:49.758179+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "UmMbkIrMDQCW0cHKATK6Xg=="
+								"uidString" : "8NCa6VbrDQCGj3jFAurXGw=="
 							},
-							"code" : "client := GtOpenAIClient withApiKeyFromFile"
+							"code" : "client := GtAnthropicClient withApiKeyFromFile"
 						},
 						{
 							"__type" : "textSnippet",
@@ -94,7 +94,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:47:31.688572+01:00"
+									"dateAndTimeString" : "2025-02-25T11:47:07.827284+01:00"
 								}
 							},
 							"editEmail" : {
@@ -105,12 +105,12 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:47:32.055219+01:00"
+									"dateAndTimeString" : "2025-02-25T11:47:25.810632+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "6nO461brDQCIvu9uAurXGw=="
+								"uidString" : "MFtM6lbrDQCGnWLWAurXGw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
@@ -127,7 +127,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-23T08:45:47.408806+02:00"
+						"dateAndTimeString" : "2025-02-25T11:46:52.135406+01:00"
 					}
 				},
 				"editEmail" : {
@@ -138,12 +138,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-23T08:46:09.223923+02:00"
+						"dateAndTimeString" : "2025-02-25T11:46:52.547679+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "g14DwOrXDQCGVU5vC8IszQ=="
+					"uidString" : "uOpc6VbrDQCGhQcNAurXGw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -169,7 +169,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-06-23T08:45:33.742672+02:00"
+									"dateAndTimeString" : "2025-02-25T11:48:00.801553+01:00"
 								}
 							},
 							"editEmail" : {
@@ -180,14 +180,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:48:25.002175+01:00"
+									"dateAndTimeString" : "2025-02-25T11:48:21.908921+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "54qUv+rXDQCGLC71C8IszQ=="
+								"uidString" : "26907VbrDQCJNQQvAurXGw=="
 							},
-							"code" : "client := GtOpenAIClient withApiKeyFromClipboard"
+							"code" : "client := GtAnthropicClient withApiKeyFromClipboard"
 						}
 					]
 				},
@@ -199,7 +199,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-23T08:46:11.551833+02:00"
+						"dateAndTimeString" : "2025-02-25T11:47:40.398688+01:00"
 					}
 				},
 				"editEmail" : {
@@ -210,12 +210,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-15T15:19:45.701504+02:00"
+						"dateAndTimeString" : "2025-02-25T11:47:55.512323+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "0HLVwerXDQCJGlbHC8IszQ=="
+					"uidString" : "kVs97FbrDQCIyHeMAurXGw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -241,7 +241,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-30T13:24:10.480353+01:00"
+									"dateAndTimeString" : "2025-02-25T11:48:52.935051+01:00"
 								}
 							},
 							"editEmail" : {
@@ -252,12 +252,12 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-30T13:24:14.776772+01:00"
+									"dateAndTimeString" : "2025-02-25T11:48:59.092757+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "IPqPk4rMDQCZTOAkATK6Xg=="
+								"uidString" : "XC2Q8FbrDQCJ0Z1NAurXGw=="
 							},
 							"code" : "client listModels"
 						}
@@ -271,7 +271,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-30T13:23:31.606484+01:00"
+						"dateAndTimeString" : "2025-02-25T11:48:32.428415+01:00"
 					}
 				},
 				"editEmail" : {
@@ -282,17 +282,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-30T13:24:07.216289+01:00"
+						"dateAndTimeString" : "2025-02-25T11:48:39.707935+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WNI+kYrMDQCW/kEUATK6Xg=="
+					"uidString" : "CERX71brDQCJhwLfAurXGw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This client is your entry point for interacting with OpenAI. You can for instance use it to query the list of models."
+				"string" : "This client is your entry point for interacting with Anthropic. You can for instance use it to query the list of models."
 			},
 			{
 				"__type" : "textSnippet",
@@ -313,7 +313,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-30T13:24:36.302779+01:00"
+									"dateAndTimeString" : "2025-02-25T11:49:19.862465+01:00"
 								}
 							},
 							"editEmail" : {
@@ -324,14 +324,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-04-24T21:54:29.477478+02:00"
+									"dateAndTimeString" : "2025-02-25T11:51:13.958519+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "RfoZlYrMDQCaiB6QATK6Xg=="
+								"uidString" : "0Asr8lbrDQCJ3/y8AurXGw=="
 							},
-							"code" : "messages := {\r\tGtLlmSystemMessage new content: 'You are a helpful assistant.'.\r\tGtLlmUserMessage new content: 'Hello ChatGPT! How are you today?'\r}.\r\rclient completeChatWithModel: 'gpt-3.5-turbo' andMessages: messages"
+							"code" : "messages := {\r\tGtLlmUserMessage new content: 'Hello Anthropic! How are you today?'\r}.\r\rclient completeChatWithModel: 'claude-3-5-sonnet-20241022' messages: messages andMaxTokens: 4096"
 						}
 					]
 				},
@@ -343,7 +343,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-30T13:24:18.775741+01:00"
+						"dateAndTimeString" : "2025-02-25T11:48:42.70899+01:00"
 					}
 				},
 				"editEmail" : {
@@ -354,12 +354,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-30T13:24:44.698214+01:00"
+						"dateAndTimeString" : "2025-02-25T11:48:49.52503+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "z7T3k4rMDQCZVtlQATK6Xg=="
+					"uidString" : "iCT071brDQCJxy+nAurXGw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -376,7 +376,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-01-30T13:21:14.538485+01:00"
+			"dateAndTimeString" : "2025-02-25T11:46:35.127789+01:00"
 		}
 	},
 	"editEmail" : {
@@ -387,15 +387,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-06-23T13:26:40.206751+02:00"
+			"dateAndTimeString" : "2025-02-25T11:46:35.127789+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Working with the OpenAI API client"
+		"title" : "Working with the Anthropic API client"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "9b581389-8acc-0d00-92e1-4f0c0132ba5e"
+		"uuid" : "1f6b59e8-56eb-0d00-8603-261002ead71b"
 	}
 }
