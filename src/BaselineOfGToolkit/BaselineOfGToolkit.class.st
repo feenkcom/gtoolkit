@@ -184,7 +184,9 @@ BaselineOfGToolkit >> baseline: spec [
 				baseline: 'Gt4Llm'
 					with: [ spec repository: 'github://feenkcom/gt4llm:main/src' ];
 				baseline: 'MethodProxiesForGlamorousToolkit' 
-					with: [ spec repository: 'github://feenkcom/MethodProxies:gt-pharo11/src' ] ]
+					with: [ spec repository: 'github://feenkcom/MethodProxies:gt-pharo11/src' ];
+				baseline: 'GToolkitProfiler'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-profiler:main/src' ] ]
 ]
 
 { #category : #'post load' }
