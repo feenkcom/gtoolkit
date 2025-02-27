@@ -90,7 +90,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:11:47.114848+01:00"
+						"dateAndTimeString" : "2025-02-27T15:28:17.395148+01:00"
 					}
 				},
 				"editEmail" : {
@@ -101,91 +101,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:38:38.023918+01:00"
+						"dateAndTimeString" : "2025-02-27T15:32:51.240802+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "vmqgiH7rDQCOQwawD4meBQ=="
+					"uidString" : "kfDhFoLrDQCbFwwkCsa4XQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's start with a toy example. Below  we see a running instance of a [Ludo game](https://en.wikipedia.org/wiki/Ludo), a simple strategy game for 2-4 players. We can play the game by clicking on the die, and selecting tokens to move,  but this does not help us to understand the rules of the game, or the design of this implementation. Like most software systems, this Ludo game is *opaque*, because it is hard to answer questions we have about it."
-			},
-			{
-				"__type" : "elementSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:30:11.180974+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:30:11.767009+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "j1Ni6X7rDQCMYD4eD4meBQ=="
-				},
-				"code" : "GtLudoGame new asElement asScalableElement",
-				"elementHeight" : 398,
-				"codeHeight" : 50,
-				"codeVisible" : false
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:41:20.790661+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:45:45.219584+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "I+oGfn7rDQCLb7OiD4meBQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Now consider this alternative view of a partially played game below. We see the current state of the board game, which we can continue to play. But we also have several additional views, which allow us to explore the players of the game and their states, the squares and the tokens, and two alternatives views of the past moves of the game, detailing exactly what happened at each step. At the top right there is even an *autoplay* button which we can use to automatically play one move forward."
+				"string" : "Let's start with an example of understanding an algorithm to nicely layout Treemaps. a [Treemap](https://en.wikipedia.org/wiki/Treemapping) is a common visualization for displaying hierarchical data using nested rectangles. A naive algorithm will generate long, skinny rectangles, whereas more “squarified” treemaps, as we see below, are easier to read. "
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -201,7 +127,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:31:02.785834+01:00"
+						"dateAndTimeString" : "2025-02-27T15:29:04.599987+01:00"
 					}
 				},
 				"editEmail" : {
@@ -212,17 +138,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:31:02.785834+01:00"
+						"dateAndTimeString" : "2025-02-27T15:29:04.599987+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "JMF17H7rDQCM9ybmD4meBQ=="
+					"uidString" : "/+64P4LrDQCdM9NUCsa4XQ=="
 				},
-				"exampleSelector" : "gameShowingAllMoves6",
-				"previewHeight" : 500,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtLudoRecordingGameExamples",
+				"exampleSelector" : "squarifyWithSevenNodes",
+				"previewHeight" : 300,
+				"previewShowSelector" : "gtPreviewFor:",
+				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : false,
 				"noCode" : true
@@ -241,7 +167,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:46:29.649662+01:00"
+						"dateAndTimeString" : "2025-02-27T15:17:39.703567+01:00"
 					}
 				},
 				"editEmail" : {
@@ -252,17 +178,285 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:51:10.701589+01:00"
+						"dateAndTimeString" : "2025-02-27T16:03:40.022864+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "LuB1A3/rDQCTVwYpD4meBQ=="
+					"uidString" : "iEHmFoLrDQCbGwS7Csa4XQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "What we are seeing is nothing but an *object inspector* on an instance of a Ludo game, which has been “molded” with several contextual tools that help us to explore and understand a game instance. A conventional object inspector would only show you the “Raw” view of the game. Instead,, using a lightweight plugin mechanism, the inspector is showing us numerous custom tools that are specific to the context of the Ludo instance."
+				"string" : "But how does the squarified treemap algorithm work? You could read the paper, or you could try to read the source code,  but another way is to make the algorithm itself *explainable* with the help of tiny, contextual tools. Below we see an instance of a squarified treemap within an *object inspector* — a tool we typically only see within a debugger — that has been extended with numerous, tiny contextual tools that serve to explain aspects of the algorithm. The *Preview* view just shows us the final result."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T15:52:10.264215+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T15:52:10.264215+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Pn1QkoLrDQCuiW1ECsa4XQ=="
+				},
+				"exampleSelector" : "squarifyWithSevenNodes",
+				"previewHeight" : 500,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T15:35:03.445929+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T16:04:14.47988+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EH8cVYLrDQConlTLCsa4XQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In a nutshell, the algorithm adds nodes as rectangles incrementally in a given direction, and when a rectangle becomes too oblong, the algorithm switches to a new subdivision. By switching to the *Steps list* view, we can see each of the steps of the algorithm, and we can see the points at which a step was rejected, leading to a new subdivision. At *step 3*, the new node is rejected as being too oblong. "
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T15:49:14.566351+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T15:49:14.566351+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "d5DXh4LrDQCuYolxCsa4XQ=="
+				},
+				"exampleSelector" : "scriptedSquarifyStep3",
+				"previewHeight" : 600,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T16:00:31.242879+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T16:04:38.860677+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DcJxUILrDQCj9VVoCsa4XQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This leads to *step 4*, leaving the first two nodes more squarified, and the new node more squarified as well."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T16:01:26.770569+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T16:01:26.770569+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "RB18s4LrDQC7z/wbCsa4XQ=="
+				},
+				"exampleSelector" : "scriptedSquarifyStep4",
+				"previewHeight" : 600,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T15:33:45.383735+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T16:05:46.97684+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nF11UILrDQCj+RaZCsa4XQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "What we are seeing is nothing but an *object inspector* on an instance of a treemap, which has been “molded” with several contextual tools that help us to explore and understand its construction. A conventional object inspector would only show you the “Raw” view of the treemap. Instead, using a lightweight plugin mechanism, the inspector is showing us numerous custom tools that are specific to the context of the treemap instance."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T15:17:39.949863+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T15:33:34.34768+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dwDqFoLrDQCbH7ZOCsa4XQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For more details, see [[Explaining the squarified treemap algorithm]]."
 			},
 			{
 				"__type" : "textSnippet",
