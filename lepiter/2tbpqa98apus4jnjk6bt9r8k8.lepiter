@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:31:06.818351+01:00"
+						"dateAndTimeString" : "2025-02-27T11:26:59.408022+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,14 +29,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:31:41.118983+01:00"
+						"dateAndTimeString" : "2025-02-27T11:28:57.764378+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "cQCMP33rDQCI+49BCdm0cQ=="
+					"uidString" : "aRb03X7rDQCFKtYSD4meBQ=="
 				},
-				"string" : "This is a DRAFT of a new introductory page to assist in Onboarding.",
+				"string" : "DRAFT of a new onboarding page. Start with a brief definition, then illustrate it with several concrete examples. In this draft we start with some placeholder examples, which we can replace later. The examples should solve real problems, and be available in the default download.",
 				"isHidden" : true
 			},
 			{
@@ -53,7 +53,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:19:53.09126+01:00"
+						"dateAndTimeString" : "2025-02-27T11:08:19.740672+01:00"
 					}
 				},
 				"editEmail" : {
@@ -64,17 +64,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:21:09.700888+01:00"
+						"dateAndTimeString" : "2025-02-27T11:11:56.129366+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Jn0prm/rDQCFxAAbAvRGBA=="
+					"uidString" : "0lQ3m37rDQCPUbs2D4meBQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit is an IDE to support *Moldable Development*, an approach to developing explainable software systems by adding dozens of tiny, contextual tools that answer specific questions about the software."
+				"string" : "Glamorous Toolkit (GT) is the Moldable Development Environment. It enables you to make software systems explainable by creating dozens — or *thousands* — of inexpensive contextual tools that are tailored for each problem."
 			},
 			{
 				"__type" : "textSnippet",
@@ -90,7 +90,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:19:57.006435+01:00"
+						"dateAndTimeString" : "2025-02-27T11:11:47.114848+01:00"
 					}
 				},
 				"editEmail" : {
@@ -101,17 +101,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:19:57.006435+01:00"
+						"dateAndTimeString" : "2025-02-27T11:38:38.023918+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/Tdlrm/rDQCF0fg8AvRGBA=="
+					"uidString" : "vmqgiH7rDQCOQwawD4meBQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Since that sentence is a mouthful, let us deconstruct it. GT is an IDE, so it is an environment consisting of tools to support software development. As you might expect, this means that GT includes tools for editing, compiling, testing and documenting software. However it also includes tools for analyzing and visualizing all aspects of software, not just the source code, but also run-time information."
+				"string" : "Let's start with a toy example. Below  we see a running instance of a [Ludo game](https://en.wikipedia.org/wiki/Ludo), a simple strategy game for 2-4 players. We can play the game by clicking on the die, and selecting tokens to move,  but this does not help us to understand the rules of the game, or the design of this implementation. Like most software systems, this Ludo game is *opaque*, because it is hard to answer questions we have about it."
+			},
+			{
+				"__type" : "elementSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T11:30:11.180974+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T11:30:11.767009+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "j1Ni6X7rDQCMYD4eD4meBQ=="
+				},
+				"code" : "GtLudoGame new asElement asScalableElement",
+				"elementHeight" : 398,
+				"codeHeight" : 50,
+				"codeVisible" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -127,7 +164,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:19:59.333441+01:00"
+						"dateAndTimeString" : "2025-02-27T11:41:20.790661+01:00"
 					}
 				},
 				"editEmail" : {
@@ -138,165 +175,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:21:47.774537+01:00"
+						"dateAndTimeString" : "2025-02-27T11:45:45.219584+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Pr2Irm/rDQCF2VuxAvRGBA=="
+					"uidString" : "I+oGfn7rDQCLb7OiD4meBQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The focus of GT is to *modernize software*, especially legacy software, to make it *explainable*. Most software systems are *opaque*, not explainable, in the sense that when you have questions about any aspect of the software, it can be difficult to find the answers. Of course there exist many generic analysis tools, but we believe that generic tools are mainly good at answering generic questions. To make a software system explainable, we need specific, contextual tools that answer the specific questions that arise in developing and maintaining that system. "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:20:00.67351+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:20:00.67351+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "bi+drm/rDQCF4XT0AvRGBA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "But building specialized tools is usually an expensive task. How can we augment a software system with dozens, or even hundreds of custom tools to answer the specific questions we will have?"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:20:03.620401+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:20:03.620401+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "mibKrm/rDQCF6RAoAvRGBA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The answer is an approach we call “moldable development.” The central idea is that each of the development tools in the GT IDE is moldable, which means it is open to contextual extensions. In effect, each IDE tool is open to plugins. Unlike typical IDE plugins, however, contextual tools in GT are mostly very simple and cheap to implement. For instance, the coding tool, the object inspector, and the debugger can show custom views, custom actions, and custom search tools that are activated by the context of the class, the object, or the exception that the tool is currently operating on."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:03:51.751951+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:05:59.086408+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qt4W3nzrDQCWXGOmCdm0cQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "We can see many examples of moldable development within GT, since the same principles have been applied to creating the environment itself."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:06:09.458991+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:18:15.571508+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "lFncrm/rDQCF8WBlAvRGBA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Suppose we would like to understand better how the notebook pages of GT are organized. We can do this by inspecting the GT Book instance (below). What we see is an object inspector (a common IDE tool normally only used within debuggers) being used to explore the database. What is interesting is that the inspector has been *molded* to show us numerous *contextual views* of the database, each showing us something different of interest. The *Live* view shows us a list of all the pages that we can explore. Other views show us the pages sorted by date, or a map of the pages and the links between them. At the top right there is a contextual search tool (the magnifying glass) which lets us search for pages by title or content. From these views we can navigate and inspect individual pages, with views that expose the structure of the pages, incoming and outgoing links, and so on."
+				"string" : "Now consider this alternative view of a partially played game below. We see the current state of the board game, which we can continue to play. But we also have several additional views, which allow us to explore the players of the game and their states, the squares and the tokens, and two alternatives views of the past moves of the game, detailing exactly what happened at each step. At the top right there is even an *autoplay* button which we can use to automatically play one move forward."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -312,7 +201,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:02:11.75841+01:00"
+						"dateAndTimeString" : "2025-02-27T11:31:02.785834+01:00"
 					}
 				},
 				"editEmail" : {
@@ -323,17 +212,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:02:11.75841+01:00"
+						"dateAndTimeString" : "2025-02-27T11:31:02.785834+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "aRMh2HzrDQCWDr9QCdm0cQ=="
+					"uidString" : "JMF17H7rDQCM9ybmD4meBQ=="
 				},
-				"exampleSelector" : "gtBook",
-				"previewHeight" : 300,
+				"exampleSelector" : "gameShowingAllMoves6",
+				"previewHeight" : 500,
 				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "LeStorageExamples",
+				"exampleBehaviorName" : "GtLudoRecordingGameExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : false,
 				"noCode" : true
@@ -352,7 +241,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T08:54:19.765393+01:00"
+						"dateAndTimeString" : "2025-02-27T11:46:29.649662+01:00"
 					}
 				},
 				"editEmail" : {
@@ -363,17 +252,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:23:02.168958+01:00"
+						"dateAndTimeString" : "2025-02-27T11:51:10.701589+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "hQn/u3zrDQCVQjz+Cdm0cQ=="
+					"uidString" : "LuB1A3/rDQCTVwYpD4meBQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "As another example, we might be curious about the GitHub activities of feenk, the company that has developed GT. Below we see an inspector of the GitHub organization data of the feenk organization, retrieved dynamically through GitHub's REST API. Again we have contextual views, showing us the list of repositories and git events for the organization, from which we can navigate to views of the individual repositories, and so on."
+				"string" : "What we are seeing is nothing but an *object inspector* on an instance of a Ludo game, which has been “molded” with several contextual tools that help us to explore and understand a game instance. A conventional object inspector would only show you the “Raw” view of the game. Instead,, using a lightweight plugin mechanism, the inspector is showing us numerous custom tools that are specific to the context of the Ludo instance."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T11:54:41.844298+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T11:55:37.002918+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Fd0KQX/rDQCufYPBD4meBQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Let's see another example. Suppose we are interested to learn about the GitHub repositories of the GT project itself. Below we see an inspector of the GitHub organization data of the feenk organization, retrieved dynamically through GitHub's REST API. Again we have contextual views, showing us the list of repositories and git events for the organization, from which we can navigate to views of the individual repositories, and so on."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -389,7 +315,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:19:10.582666+01:00"
+						"dateAndTimeString" : "2025-02-27T11:53:26.739041+01:00"
 					}
 				},
 				"editEmail" : {
@@ -400,19 +326,19 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:19:10.582666+01:00"
+						"dateAndTimeString" : "2025-02-27T11:53:26.739041+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "XR3bFH3rDQCvtYGnCdm0cQ=="
+					"uidString" : "EteQPH/rDQCuMJMED4meBQ=="
 				},
-				"exampleSelector" : "feenkcomOrganization",
-				"previewHeight" : 300,
+				"exampleSelector" : "wrappedGitHubOrganization",
+				"previewHeight" : 400,
 				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GhOrganizationExamples",
+				"exampleBehaviorName" : "PatternScripterExamples",
 				"codeExpanded" : true,
-				"previewExpanded" : true,
+				"previewExpanded" : false,
 				"noCode" : true
 			},
 			{
@@ -429,7 +355,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:18:19.666935+01:00"
+						"dateAndTimeString" : "2025-02-27T11:48:41.156609+01:00"
 					}
 				},
 				"editEmail" : {
@@ -440,17 +366,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:24:28.884005+01:00"
+						"dateAndTimeString" : "2025-02-27T11:56:26.457514+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "nTPSEX3rDQCvqa90Cdm0cQ=="
+					"uidString" : "GTaLK3/rDQCplrCoD4meBQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In both these examples we have molded the GT inspector with contextual tools (views, searches and actions), but they are *different* ones, each specific to the context of particular objects and particular questions we want to answer. "
+				"string" : "In both these examples we have molded the GT inspector with contextual tools (views, searches and actions), but they are *different* ones, each specific to the context of particular objects and particular questions we want to answer."
 			},
 			{
 				"__type" : "textSnippet",
@@ -466,7 +392,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:25:01.201676+01:00"
+						"dateAndTimeString" : "2025-02-27T11:48:41.415406+01:00"
 					}
 				},
 				"editEmail" : {
@@ -477,84 +403,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:30:28.489934+01:00"
+						"dateAndTimeString" : "2025-02-27T11:48:41.415406+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "DyLBKX3rDQC/EFPfCdm0cQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "In most cases, these contextual tools are simple, or even trivial to implement in just a few lines of code. However, since moldable development is not (yet) mainstream, and GT is not your average IDE, it can take some time to learn how to use them effectively. The GT Book will provide you with roadmaps allowing you to learn the skills you need apply moldable development."
-			},
-			{
-				"__type" : "commentSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:30:44.800079+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T09:30:52.361494+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "aJlVuW/rDQCGiOZ6AvRGBA=="
-				},
-				"string" : "Need pointers to next steps ....",
-				"isHidden" : true
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T14:24:44.114916+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-26T17:20:04.814694+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "BN7vHVnrDQCsj6lvBbmKLw=="
+					"uidString" : "USmPK3/rDQCpm9CZD4meBQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
@@ -575,7 +429,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T14:24:33.167587+01:00"
+						"dateAndTimeString" : "2025-02-27T11:48:41.630013+01:00"
 					}
 				},
 				"editEmail" : {
@@ -586,12 +440,49 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T14:24:33.167587+01:00"
+						"dateAndTimeString" : "2025-02-27T11:48:41.630013+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "KdNIHVnrDQCshX8EBbmKLw=="
+					"uidString" : "VG+SK3/rDQCpnypnD4meBQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T11:37:28.884867+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T11:37:28.884867+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9Sd5A3/rDQCTXFUoD4meBQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
