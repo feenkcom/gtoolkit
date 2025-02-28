@@ -1,0 +1,181 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T13:10:10.712651+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T13:10:20.270907+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ZEzTbJTrDQCBiVT1ABv/Yw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First we do some setup and spawn a child process. We get stdout/stderr async streams for output and create a future which will wait for the process to finish without blocking the VM:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T13:10:23.048384+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T13:13:06.135262+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "K4WPbZTrDQCBkdT4ABv/Yw=="
+				},
+				"code" : "proc := (GtExternalProcessBuilder new: 'bash')\n\targuments: { '-c'.\n'sleep 2 # hour\necho \"1MB to stderr\" >&2\nfor i in {1..200}\ndo\n  sleep 0.1\n  date\ndone' };\n\tpipeStdout;\n\tpipeStderr;\n\tspawn.\n\nstdout := proc stdoutStream.\nstderr := proc stderrStream.\nstatusFuture := [ proc waitAsyncWithOutput ] asAsyncForkedFuture"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T13:10:43.719885+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T13:11:18.66525+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UvHKbpTrDQCBm3YfABv/Yw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Then create the UI and forward the streams created above:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T13:11:20.329955+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T13:11:26.575319+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dY75cJTrDQCCvWcUABv/Yw=="
+				},
+				"code" : "editorStencil := [ BrEditor  new\n\taptitude: BrGlamorousCodeEditorAptitude + BrGlamorousFocusableShadowAptitude;\n\tbackground: Color white;\n\tmatchParent;\n\twithAsyncSinkDo: [ :anElementSink |\n\t\tanElementSink\n\t\t\tsink: (AsyncFoldSink inject: '' asRopedText into: [ :text :each |\n               text\n                  append: each asRopedText;\n                  append: String cr asRopedText;\n                  yourself ]);\n\t\t\twhenUpdate: [ :aLabel :aSink | aLabel text: aSink value copy ] ] ] asStencil.\n\nstdoutElement := editorStencil asElement.\nstdoutElement asyncSink forwardStream: stdout lines.\n\nstderrElement := editorStencil asElement.\nstderrElement asyncSink forwardStream: stderr lines.\n\noutputContainer := BrHorizontalPane new\n\tmatchParent;\n\tcellSpacing: 20;\n\tpadding: (BlInsets top: 20 bottom: 20);\n\taddChildren: { stdoutElement . stderrElement }.\n\t\n\t\nstatusLabel := BrLabel new\n\taptitude: BrGlamorousLabelAptitude new;\n\tmargin: (BlInsets left: 20);\n\twithAsyncFutureDo: [ :anElementFuture |\n\t\tanElementFuture\n\t\t\twhenPending: [ :aLabel | aLabel text: 'Running..' ];\n\t\t\twhenSuccess: [ :aLabel :anOutput | aLabel text: 'Finished' ];\n\t\t\twhenError: [ :aLabel :anError | aLabel text: anError description ];\n\t\t\tfuture: statusFuture ].\n\t\t\t\n\nBrVerticalPane new\n\tmatchParent;\n\taddChildren: { statusLabel . outputContainer }"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-02-28T13:10:10.677291+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-02-28T13:10:10.677291+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "How to stream output from an external child process to the UI"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "bcc1d26c-94eb-0d00-8188-4543001bff63"
+	}
+}
