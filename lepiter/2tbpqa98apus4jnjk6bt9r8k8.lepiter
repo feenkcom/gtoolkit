@@ -90,7 +90,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T15:28:17.395148+01:00"
+						"dateAndTimeString" : "2025-02-28T08:55:08.274859+01:00"
 					}
 				},
 				"editEmail" : {
@@ -101,57 +101,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T15:32:51.240802+01:00"
+						"dateAndTimeString" : "2025-02-28T08:55:19.186198+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "kfDhFoLrDQCbFwwkCsa4XQ=="
+					"uidString" : "ASAg1pDrDQCUkISFB1RCug=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's start with an example of understanding an algorithm to nicely layout Treemaps. a [Treemap](https://en.wikipedia.org/wiki/Treemapping) is a common visualization for displaying hierarchical data using nested rectangles. A naive algorithm will generate long, skinny rectangles, whereas more “squarified” treemaps, as we see below, are easier to read. "
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T15:29:04.599987+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T15:29:04.599987+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "/+64P4LrDQCdM9NUCsa4XQ=="
-				},
-				"exampleSelector" : "squarifyWithSevenNodes",
-				"previewHeight" : 300,
-				"previewShowSelector" : "gtPreviewFor:",
-				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : true
+				"string" : "Let's start with an example of understanding an algorithm to nicely layout Treemaps. a [Treemap](https://en.wikipedia.org/wiki/Treemapping) is a common visualization for displaying hierarchical data using nested rectangles. A naive algorithm will generate long, skinny rectangles, whereas more “squarified” treemaps, are easier to read. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -167,7 +127,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T15:17:39.703567+01:00"
+						"dateAndTimeString" : "2025-02-28T08:53:17.71311+01:00"
 					}
 				},
 				"editEmail" : {
@@ -178,17 +138,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T16:03:40.022864+01:00"
+						"dateAndTimeString" : "2025-02-28T08:59:02.127471+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "iEHmFoLrDQCbGwS7Csa4XQ=="
+					"uidString" : "I5Uj1pDrDQCUlJ30B1RCug=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "But how does the squarified treemap algorithm work? You could read the paper, or you could try to read the source code,  but another way is to make the algorithm itself *explainable* with the help of tiny, contextual tools. Below we see an instance of a squarified treemap within an *object inspector* — a tool we typically only see within a debugger — that has been extended with numerous, tiny contextual tools that serve to explain aspects of the algorithm. The *Preview* view just shows us the final result."
+				"string" : "Below we see how the algorithm works by incrementally adding nodes to the treemap, adding skinnier rectangles, until they become too skinny, and a new subdivision of the treemap is created. We are in step 4. Two nodes have been added, but the third node was rejected as being too skinny, and we see the fourth node starting as a new rectangle at the top right. By clicking through the steps, you can see how the final treemap is generated."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -204,7 +164,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T15:52:10.264215+01:00"
+						"dateAndTimeString" : "2025-02-28T08:53:46.691535+01:00"
 					}
 				},
 				"editEmail" : {
@@ -215,166 +175,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T15:52:10.264215+01:00"
+						"dateAndTimeString" : "2025-02-28T08:53:46.691535+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Pn1QkoLrDQCuiW1ECsa4XQ=="
-				},
-				"exampleSelector" : "squarifyWithSevenNodes",
-				"previewHeight" : 500,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : true
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T15:35:03.445929+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T16:04:14.47988+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "EH8cVYLrDQConlTLCsa4XQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "In a nutshell, the algorithm adds nodes as rectangles incrementally in a given direction, and when a rectangle becomes too oblong, the algorithm switches to a new subdivision. By switching to the *Steps list* view, we can see each of the steps of the algorithm, and we can see the points at which a step was rejected, leading to a new subdivision. At *step 3*, the new node is rejected as being too oblong. "
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T15:49:14.566351+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T15:49:14.566351+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "d5DXh4LrDQCuYolxCsa4XQ=="
-				},
-				"exampleSelector" : "scriptedSquarifyStep3",
-				"previewHeight" : 600,
-				"previewShowSelector" : "gtLiveFor:",
-				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : true
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T16:00:31.242879+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T16:04:38.860677+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "DcJxUILrDQCj9VVoCsa4XQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "This leads to *step 4*, leaving the first two nodes more squarified, and the new node more squarified as well."
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T16:01:26.770569+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T16:01:26.770569+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "RB18s4LrDQC7z/wbCsa4XQ=="
+					"uidString" : "0L7d15DrDQCUqImkB1RCug=="
 				},
 				"exampleSelector" : "scriptedSquarifyStep4",
 				"previewHeight" : 600,
@@ -409,7 +215,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T16:05:46.97684+01:00"
+						"dateAndTimeString" : "2025-02-28T08:59:36.586775+01:00"
 					}
 				},
 				"uid" : {
@@ -472,7 +278,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:54:41.844298+01:00"
+						"dateAndTimeString" : "2025-02-28T09:01:44.751131+01:00"
 					}
 				},
 				"editEmail" : {
@@ -483,17 +289,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:55:37.002918+01:00"
+						"dateAndTimeString" : "2025-02-28T09:01:44.751131+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Fd0KQX/rDQCufYPBD4meBQ=="
+					"uidString" : "+lxc9JDrDQCfaG4TB1RCug=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's see another example. Suppose we are interested to learn about the GitHub repositories of the GT project itself. Below we see an inspector of the GitHub organization data of the feenk organization, retrieved dynamically through GitHub's REST API. Again we have contextual views, showing us the list of repositories and git events for the organization, from which we can navigate to views of the individual repositories, and so on."
+				"string" : "Let's see another example. Suppose we are interested to learn about the GitHub repositories of the GT project itself. Below we see an inspector of the GitHub organization data of the feenk organization, retrieved dynamically through GitHub's REST API. "
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -527,13 +333,50 @@
 					"__type" : "uid",
 					"uidString" : "EteQPH/rDQCuMJMED4meBQ=="
 				},
-				"exampleSelector" : "wrappedGitHubOrganization",
-				"previewHeight" : 400,
+				"exampleSelector" : "wrappedGitHubOrganizationDataScript",
+				"previewHeight" : 500,
 				"previewShowSelector" : "gtViewsFor:",
 				"exampleBehaviorName" : "PatternScripterExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : false,
 				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-27T11:54:41.844298+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T09:02:18.369197+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Fd0KQX/rDQCufYPBD4meBQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Again we have contextual views, showing us the list of repositories and git events for the organization, from which we can navigate to views of the individual repositories, and so on. For more details see [[Working with a REST API: the GitHub case study]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -586,80 +429,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:48:41.415406+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:48:41.415406+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "USmPK3/rDQCpm9CZD4meBQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:48:41.630013+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-27T11:48:41.630013+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "VG+SK3/rDQCpnypnD4meBQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2025-02-27T11:37:28.884867+01:00"
 					}
 				},
@@ -682,6 +451,41 @@
 					"__type" : "textStyle"
 				},
 				"string" : ""
+			},
+			{
+				"__type" : "commentSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T09:14:03.723806+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T09:14:25.220762+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "hzFoIJHrDQChP7KBB1RCug=="
+				},
+				"string" : "Continue with a few more examples, then with pointers to next steps.",
+				"isHidden" : true
 			}
 		]
 	},
