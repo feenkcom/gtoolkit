@@ -12,6 +12,43 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T13:02:56.001385+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-02-28T13:05:11.279524+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ix/qUpTrDQC9bYi+ABv/Yw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For an introduction on working with external processes, see [[How to work with external child processes]]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
 					"emailString" : "veit.heller@feenk.com"
 				},
 				"createTime" : {
@@ -23,13 +60,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-03-22T20:11:46.961209+01:00"
+						"dateAndTimeString" : "2025-02-28T13:02:50.280421+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The class {{gtClass:GtSubprocessWithInMemoryOutput}} is a convenience wrapper around GToolkit-ExternalProcess for the common case of executing a command and capturing stdout and stderr."
+				"string" : "The class {{gtClass:GtSubprocessWithInMemoryOutput}} , which is now deprecated, was a convenience wrapper around GToolkit-ExternalProcess for the common case of executing a command and capturing stdout and stderr and was compatible with the Pharo OSSubProcess library."
 			},
 			{
 				"__type" : "textSnippet",
