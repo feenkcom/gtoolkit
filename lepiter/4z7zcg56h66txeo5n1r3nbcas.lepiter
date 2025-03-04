@@ -1,0 +1,461 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T12:53:02.615919-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:57:01.291743-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8By20dPrDQCNVgFlD0EXVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Tu support context menus, dropdowns, and tooltip, we implemented {{gtClass:BlSteppedLayout}}. This layout is responsible for placing (sub-)context menus next to each other. The following example shows a possible context menu that is opened from the red circle. The blue and green menus have its submenus that are relative to their menu items. You can drag the red circle and menu items to observe how the stepped layout place all three (blue, green, yellow) menu elements."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T12:55:56.885558-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T12:55:56.885558-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pZnD7dPrDQCVlSxOD0EXVA=="
+				},
+				"exampleSelector" : "elementWithTwoRelativeChildren",
+				"previewHeight" : 600,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "BlSteppedLayoutExamples",
+				"codeExpanded" : false,
+				"previewExpanded" : true,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T13:03:40.41675-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T13:04:07.294093-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "D4FkCdTrDQCaxl4XD0EXVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#The layout algorithm steps"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T13:04:10.411604-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:38:47.542867-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XC8uC9TrDQCbUpkQD0EXVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Let's the previous context menu step by step, considering a screen of {{gtExample: BlSteppedLayoutExamples >> #atMostPaddingNodeWithFirstLargerChild_layoutState | label=#containerExtent}} extent as represented below. It already knows the anchor bounds in red, which is the place around which the first context menu element should be placed. It also knows what are available areas to place the first context menu element. You can mouse hover those gray rectangles to see position and bounds of individual areas."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T13:04:15.360882-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T13:04:15.360882-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zbl5C9TrDQCbVw1/D0EXVA=="
+				},
+				"exampleSelector" : "atMostNodeWithTwoRelativeBounds_left_layoutState",
+				"previewHeight" : 885,
+				"previewShowSelector" : "gtAreasPreviewFor:context:",
+				"exampleBehaviorName" : "BlSteppedLayoutExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T13:26:29.546056-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:46:12.826653-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "X/dBM9TrDQCnV4CuD0EXVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The first context menu element has fixed size {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childOneExtent | label=#yourself}} and therefore fits on the screen:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T13:16:46.027867-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-03T13:16:46.027867-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "U/83ONTrDQConP6BD0EXVA=="
+				},
+				"exampleSelector" : "atMostNodeWithTwoRelativeBounds_left_layoutState_measureFirstChild",
+				"previewHeight" : 885,
+				"previewShowSelector" : "gtAreasPreviewFor:context:",
+				"exampleBehaviorName" : "BlSteppedLayoutExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:45:11.899285-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:51:51.875339-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VjLkaOrrDQC9IBZXC8xqxQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The second context menu element has fixed size {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childOneExtent | label=#yourself}} and also fits on the screen. It's relative bounds to the previous menu element is {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childTwoRelativeBounds | label=#yourself}}, indicating to which part of the first menu element it want to be placed."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:46:43.20146-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:46:43.20146-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UFtVburrDQC91JXmC8xqxQ=="
+				},
+				"exampleSelector" : "atMostNodeWithTwoRelativeBounds_left_layoutState_measureSecondChild",
+				"previewHeight" : 885,
+				"previewShowSelector" : "gtAreasPreviewFor:context:",
+				"exampleBehaviorName" : "BlSteppedLayoutExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:52:18.140279-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:55:05.413722-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nRlMgurrDQCBqrQyC8xqxQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Similarly, the third context menu element has fixed size {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childThreeExtent | label=#yourself}} and also fits on the screen. It's relative bounds to the previous menu element is {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childThreeRelativeBounds | label=#yourself}}, indicating to which part of the second menu element it want to be placed."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:52:34.147449-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-04T15:52:34.147449-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "bFtAg+rrDQCCE9t7C8xqxQ=="
+				},
+				"exampleSelector" : "atMostNodeWithTwoRelativeBounds_left_layoutState_measureThirdChild",
+				"previewHeight" : 885,
+				"previewShowSelector" : "gtAreasPreviewFor:context:",
+				"exampleBehaviorName" : "BlSteppedLayoutExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-03-03T12:48:06.191803-03:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-03-03T13:29:01.208311-03:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Explaining the context menu and dropdown algorithm"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "0466b5d1-d3eb-0d00-8d55-6ea40f411754"
+	}
+}
