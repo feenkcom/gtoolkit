@@ -338,6 +338,7 @@ class Builder extends AgentJob {
     @java.lang.Override
     void execute() {
         script.echo "Will build pre-release image on ${agent.label()}"
+        script.echo "Building on host: ${agent.host()}"
         cleanUp()
         load_latest_commit()
         read_gtoolkit_versions()
