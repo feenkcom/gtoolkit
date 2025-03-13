@@ -439,8 +439,8 @@ class Builder extends AgentJob {
         }
     }
     void archive_artifacts() {
-        script.archiveArtifacts(artificats: 'glamoroustoolkit/*.log', allowEmptyArchive: true)
-        script.archiveArtifacts(artificats: 'gt-releaser/*.log', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'glamoroustoolkit/*.log', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'gt-releaser/*.log', allowEmptyArchive: true)
     }}
 
 /**
@@ -715,10 +715,10 @@ class TestAndPackage extends AgentJob {
     }
 
     void archive_artifacts() {
-        script.archiveArtifacts(artificats: 'gt-examples/*.xml', allowEmptyArchive: true)
-        script.archiveArtifacts(artificats: 'gt-examples/*.log', allowEmptyArchive: true)
-        script.archiveArtifacts(artificats: 'glamoroustoolkit/*.log', allowEmptyArchive: true)
-        script.archiveArtifacts(artificats: 'gt-releaser/*.log', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'gt-examples/*.xml', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'gt-examples/*.log', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'glamoroustoolkit/*.log', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'gt-releaser/*.log', allowEmptyArchive: true)
     }
 }
 
