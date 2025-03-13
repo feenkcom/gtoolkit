@@ -342,6 +342,7 @@ class Builder extends AgentJob {
         load_latest_commit()
         read_gtoolkit_versions()
         package_image()
+        archive_artifacts()
     }
 
     void load_latest_commit() {
@@ -437,7 +438,10 @@ class Builder extends AgentJob {
             build.stash_internally(GlamorousToolkit.TENTATIVE_PACKAGE)
         }
     }
-}
+    void archive_artifacts() {
+        script.archiveArtifacts(artifacts: 'glamoroustoolkit/*.log', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'gt-releaser/*.log', allowEmptyArchive: true)
+    }}
 
 /**
  * Build and publish a new tentative one-arch image with Glamorous Toolkit of a just released version.
@@ -586,6 +590,7 @@ class TestAndPackage extends AgentJob {
             setup_node()
             run_tests()
             create_release_package()
+            archive_artifacts()
         }
     }
 
@@ -707,6 +712,13 @@ class TestAndPackage extends AgentJob {
         }
 
         script.echo "Signed release package ${release_package}"
+    }
+
+    void archive_artifacts() {
+        script.archiveArtifacts(artifacts: 'gt-examples/*.xml', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'gt-examples/*.log', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'glamoroustoolkit/*.log', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'gt-releaser/*.log', allowEmptyArchive: true)
     }
 }
 
