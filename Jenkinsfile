@@ -458,7 +458,7 @@ class Builder extends AgentJob {
               mv gt-releaser/*.log ${artifacts_dir}/gt-releaser/
            fi
         """
-        script.archiveArtifacts(artifacts: '${artifacts/**}', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: 'artifacts/**/*.log', allowEmptyArchive: true)
     }
 }
 
@@ -734,27 +734,13 @@ class TestAndPackage extends AgentJob {
     }
 
     void archive_artifacts() {
-        if (platform() != Platform.Windows) {
-            def artifacts_dir = "artifacts/${agent.host()}"
-            script.sh """
-               mkdir -p ${artifacts_dir}
-               rm -rf ${artifacts_dir}/*
-               if ls glamoroustoolkit/*.log &> /dev/null; then
-                  mkdir ${artifacts_dir}/glamoroustoolkit
-                  mv glamoroustoolkit/*.log ${artifacts_dir}/glamoroustoolkit/
-               fi
-               if ls gt-examples/*.log &> /dev/null; then
-                  mkdir ${artifacts_dir}/gt-examples
-                  mv gt-examples/*.log ${artifacts_dir}/gt-examples/
-               fi
-               if ls gt-releaser/*.log &> /dev/null; then
-                  mkdir ${artifacts_dir}/gt-releaser
-                  mv gt-releaser/*.log ${artifacts_dir}/gt-releaser/
-               fi
-            """
-            script.archiveArtifacts(artifacts: '${artifacts/**}', allowEmptyArchive: true)
-            }
-        }
+        def artifacts_dir = "artifacts/${agent.host()}"
+        agent.platform().delete_directory(script, "${artifacts_dir}")
+        agent.platform().prepare_for_archive(script, "${artifacts_dir}", "glamoroustoolkit")
+        agent.platform().prepare_for_archive(script, "${artifacts_dir}", "gt-releaser")
+        agent.platform().prepare_for_archive(script, "${artifacts_dir}", "gt-examples")
+        script.archiveArtifacts(artifacts: 'artifacts/**/*.log', allowEmptyArchive: true)
+    }
 }
 
 class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
@@ -840,6 +826,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
             script.sh """
                     cd ${GlamorousToolkit.EXAMPLES_FOLDER}
                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
+                    ./gt4gemstone/scripts/run-backward-compatability-checks.sh
                     ./gt4gemstone/scripts/run-remote-gemstone-examples.sh
                 """
         }
@@ -1167,6 +1154,26 @@ enum Platform {
             script.powershell "${command}"
         } else {
             script.sh "${command}"
+        }
+    }
+
+    void prepare_for_archive(Script script, String artifacts_dir, String log_dir) {
+        if (this == Windows) {
+            script.powershell """
+                mkdir -p ${artifacts_dir}
+                if (Get-ChildItem -Path ${log_dir} -Filter "*.log" -File) {
+                  mkdir ${artifacts_dir}/${log_dir}
+                  mv ${log_dir}/*.log ${artifacts_dir}/${log_dir}/
+                }
+            """
+        } else {
+            script.sh """
+                mkdir -p ${artifacts_dir}
+                if ls ${log_dir}/*.log &> /dev/null; then
+                    mkdir ${artifacts_dir}/${log_dir}
+                    mv ${log_dir}/*.log ${artifacts_dir}/${log_dir}/
+                fi               
+            """
         }
     }
 }
