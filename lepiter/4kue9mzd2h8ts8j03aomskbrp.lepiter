@@ -777,14 +777,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-11T22:21:58.7508+01:00"
+									"dateAndTimeString" : "2025-03-14T18:34:29.517122+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "EP0D+6bZDQCroh7gDlBYTQ=="
 							},
-							"code" : "gemstoneVersion := '3.7.1.4'.\r\"Assume the GemStone libraries have been downloaded to 'remote-gemstone'.  If not, update the following to point to the parent directory of the libraries.\"\rlibraryPath := (FileLocator imageDirectory / 'remote-gemstone') asFileReference.\rself assert: (libraryPath / gemstoneVersion) exists\r\tdescription: 'Unable to find GemStone client libraries'.\rconnector := GtGemStoneSessionRegistry default propertiesFile addNewConnector.\nconnector \n\tregistry: GtGemStoneSessionRegistry default;\n\tlibraryPath: libraryPath\r\t\"If NetLDI was started on a specific port (instead of being defined as a service), tell the connector\r\tnetldi: 50377\".\nconnector username: 'SystemUser'.\n\t\nsession := GtGemStoneSessionRegistry default \n\tnewSessionWithConnector:  connector.\rsession beDefaultSession."
+							"code" : "gemstoneVersion := OSPlatform current isMacOSX\r\tifTrue: [ '3.7.1' ]\r\tifFalse: [ '3.7.1.4' ].\r\"Assume the GemStone libraries have been downloaded to 'remote-gemstone'.  If not, update the following to point to the parent directory of the libraries.\"\rlibraryPath := (FileLocator imageDirectory / 'remote-gemstone') asFileReference.\rself assert: (libraryPath / gemstoneVersion) exists\r\tdescription: 'Unable to find GemStone client libraries'.\rconnector := GtGemStoneSessionRegistry default propertiesFile addNewConnector.\nconnector \n\tregistry: GtGemStoneSessionRegistry default;\n\tlibraryPath: libraryPath\r\t\"If NetLDI was started on a specific port (instead of being defined as a service), tell the connector\r\tnetldi: 50377\".\nconnector username: 'SystemUser'.\n\t\nsession := GtGemStoneSessionRegistry default \n\tnewSessionWithConnector:  connector.\rsession beDefaultSession."
 						},
 						{
 							"__type" : "textSnippet",
