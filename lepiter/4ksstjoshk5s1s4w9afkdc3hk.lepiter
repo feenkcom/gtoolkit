@@ -308,7 +308,7 @@
 							"string" : "In this example we can see comments, variable declarations, initialization, arithmetic and Boolean expressions, a `while` statement, and a `print` statement."
 						},
 						{
-							"__type" : "textSnippet",
+							"__type" : "blockQuoteSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -321,7 +321,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T10:19:58.597121+01:00"
+									"dateAndTimeString" : "2025-03-14T17:56:41.330145+01:00"
 								}
 							},
 							"editEmail" : {
@@ -332,17 +332,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T10:20:15.055061+01:00"
+									"dateAndTimeString" : "2025-03-14T17:56:42.12811+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "XuLqdzqzDQCVruU3C/1STQ=="
+								"uidString" : "52gjD7LsDQCxDJXfBDo91w=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "```language=text\n// Factorial in SPL -- computes the factorial of arg\rvar arg=5;\rvar x=arg;\rvar fact=1;\rwhile (x>0) {\r\tfact = fact * x;\r\tx = x - 1;\r}\rprint fact;\n```"
+							"string" : "// Factorial in SPL -- computes the factorial of arg\rvar arg=5;\rvar x=arg;\rvar fact=1;\rwhile (x>0) {\r\tfact = fact * x;\r\tx = x - 1;\r}\rprint fact;"
 						}
 					]
 				},
@@ -420,7 +417,7 @@
 							"string" : "What follows is a complete specification of the grammar of SPL (but without the specification of comments and tokens)."
 						},
 						{
-							"__type" : "textSnippet",
+							"__type" : "blockQuoteSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -433,7 +430,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T10:10:57.065015+01:00"
+									"dateAndTimeString" : "2025-03-14T17:56:57.001856+01:00"
 								}
 							},
 							"editEmail" : {
@@ -444,17 +441,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-03-14T10:11:17.756659+01:00"
+									"dateAndTimeString" : "2025-03-14T17:56:57.590586+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "zMWjVzqzDQCJhje6C/1STQ=="
+								"uidString" : "H60tELLsDQCxLTdsBDo91w=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "```language=text\nprogram        := declaration* EOF ;\ndeclaration    := varDecl\n               | statement ;\nvarDecl        := \"var\" IDENTIFIER ( \"=\" expression )? \";\" ;\nstatement      := exprStmt\n               | ifStmt\n               | printStmt\n               | whileStmt\n               | block ;\nexprStmt       := expression \";\" ;\nifStmt         := \"if\" \"(\" expression \")\" statement ( \"else\" statement )? ;\nprintStmt      := \"print\" expression \";\" ;\nwhileStmt      := \"while\" \"(\" expression \")\" statement ;\nblock          := \"{\" declaration* \"}\" ;\nexpression     := assignment ;\nassignment     := IDENTIFIER \"=\" assignment\n               | logic_or ;\nlogic_or       := logic_and ( \"or\" logic_and )* ;\nlogic_and      := equality ( \"and\" equality )* ;\nequality       := comparison ( ( \"!=\" | \"==\" ) comparison )* ;\ncomparison     := term ( ( \">\" | \">=\" | \"<\" | \"<=\" ) term )* ;\nterm           := factor ( ( \"-\" | \"+\" ) factor )* ;\nfactor         := unary ( ( \"/\" | \"*\" ) unary )* ;\nunary          := ( \"!\" | \"-\" ) unary\n               | primary ;\nprimary        := \"true\" | \"false\" | NUMBER | STRING\n               | \"(\" expression \")\"\n               | IDENTIFIER ;\n```"
+							"string" : "program        := declaration* EOF ;\ndeclaration    := varDecl\n               | statement ;\nvarDecl        := \"var\" IDENTIFIER ( \"=\" expression )? \";\" ;\nstatement      := exprStmt\n               | ifStmt\n               | printStmt\n               | whileStmt\n               | block ;\nexprStmt       := expression \";\" ;\nifStmt         := \"if\" \"(\" expression \")\" statement ( \"else\" statement )? ;\nprintStmt      := \"print\" expression \";\" ;\nwhileStmt      := \"while\" \"(\" expression \")\" statement ;\nblock          := \"{\" declaration* \"}\" ;\nexpression     := assignment ;\nassignment     := IDENTIFIER \"=\" assignment\n               | logic_or ;\nlogic_or       := logic_and ( \"or\" logic_and )* ;\nlogic_and      := equality ( \"and\" equality )* ;\nequality       := comparison ( ( \"!=\" | \"==\" ) comparison )* ;\ncomparison     := term ( ( \">\" | \">=\" | \"<\" | \"<=\" ) term )* ;\nterm           := factor ( ( \"-\" | \"+\" ) factor )* ;\nfactor         := unary ( ( \"/\" | \"*\" ) unary )* ;\nunary          := ( \"!\" | \"-\" ) unary\n               | primary ;\nprimary        := \"true\" | \"false\" | NUMBER | STRING\n               | \"(\" expression \")\"\n               | IDENTIFIER ;"
 						}
 					]
 				},

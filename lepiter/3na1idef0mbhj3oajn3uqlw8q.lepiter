@@ -714,7 +714,7 @@
 													"string" : "Go to the Meta view, add a method that looks like this:"
 												},
 												{
-													"__type" : "textSnippet",
+													"__type" : "blockQuoteSnippet",
 													"children" : {
 														"__type" : "snippets",
 														"items" : [ ]
@@ -727,7 +727,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-10-30T15:48:54.783135+01:00"
+															"dateAndTimeString" : "2025-03-14T17:57:10.545249+01:00"
 														}
 													},
 													"editEmail" : {
@@ -738,17 +738,14 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-10-30T15:49:12.176476+01:00"
+															"dateAndTimeString" : "2025-03-14T17:57:11.134869+01:00"
 														}
 													},
 													"uid" : {
 														"__type" : "uid",
-														"uidString" : "7XLJ31HFDQCuvjb2B5mYPQ=="
+														"uidString" : "G1X8ELLsDQCxPC/xBDo91w=="
 													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "```language=text\ngtJsonFor: aView\r\t<gtView>\r\t^ aView forward\r\t\tobject: [ data asJson ];\r\t\tview: #gtJsonObjectFor:context:\n```"
+													"string" : "gtJsonFor: aView\r\t<gtView>\r\t^ aView forward\r\t\tobject: [ data asJson ];\r\t\tview: #gtJsonObjectFor:context:"
 												}
 											]
 										},
