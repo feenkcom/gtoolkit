@@ -439,10 +439,28 @@ class Builder extends AgentJob {
             build.stash_internally(GlamorousToolkit.TENTATIVE_PACKAGE)
         }
     }
+
     void archive_artifacts() {
-        script.archiveArtifacts(artifacts: 'glamoroustoolkit/*.log', allowEmptyArchive: true)
-        script.archiveArtifacts(artifacts: 'gt-releaser/*.log', allowEmptyArchive: true)
-    }}
+        def artifacts_dir = "artifacts/${agent.host()}"
+        script.sh """
+           mkdir -p ${artifacts_dir}
+           rm -rf ${artifacts_dir}/*
+           if ls glamoroustoolkit/*.log &> /dev/null; then
+              mkdir ${artifacts_dir}/glamoroustoolkit
+              mv glamoroustoolkit/*.log ${artifacts_dir}/glamoroustoolkit/
+           fi
+           if ls gt-examples/*.log &> /dev/null; then
+              mkdir ${artifacts_dir}/gt-examples
+              mv gt-examples/*.log ${artifacts_dir}/gt-examples/
+           fi
+           if ls gt-releaser/*.log &> /dev/null; then
+              mkdir ${artifacts_dir}/gt-releaser
+              mv gt-releaser/*.log ${artifacts_dir}/gt-releaser/
+           fi
+        """
+        script.archiveArtifacts(artifacts: '${artifacts/**}', allowEmptyArchive: true)
+    }
+}
 
 /**
  * Build and publish a new tentative one-arch image with Glamorous Toolkit of a just released version.
@@ -716,10 +734,24 @@ class TestAndPackage extends AgentJob {
     }
 
     void archive_artifacts() {
-        script.archiveArtifacts(artifacts: 'gt-examples/*.xml', allowEmptyArchive: true)
-        script.archiveArtifacts(artifacts: 'gt-examples/*.log', allowEmptyArchive: true)
-        script.archiveArtifacts(artifacts: 'glamoroustoolkit/*.log', allowEmptyArchive: true)
-        script.archiveArtifacts(artifacts: 'gt-releaser/*.log', allowEmptyArchive: true)
+        def artifacts_dir = "artifacts/${agent.host()}"
+        script.sh """
+           mkdir -p ${artifacts_dir}
+           rm -rf ${artifacts_dir}/*
+           if ls glamoroustoolkit/*.log &> /dev/null; then
+              mkdir ${artifacts_dir}/glamoroustoolkit
+              mv glamoroustoolkit/*.log ${artifacts_dir}/glamoroustoolkit/
+           fi
+           if ls gt-examples/*.log &> /dev/null; then
+              mkdir ${artifacts_dir}/gt-examples
+              mv gt-examples/*.log ${artifacts_dir}/gt-examples/
+           fi
+           if ls gt-releaser/*.log &> /dev/null; then
+              mkdir ${artifacts_dir}/gt-releaser
+              mv gt-releaser/*.log ${artifacts_dir}/gt-releaser/
+           fi
+        """
+        script.archiveArtifacts(artifacts: '${artifacts/**}', allowEmptyArchive: true)
     }
 }
 
