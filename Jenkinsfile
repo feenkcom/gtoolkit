@@ -1160,8 +1160,7 @@ enum Platform {
         if (this == Windows) {
             script.powershell """
                 mkdir -p ${artifacts_dir}
-                $logFiles = Get-ChildItem -Path ${log_dir} -Filter "*.log" -File
-                if ($logFiles) {
+                if (Get-ChildItem -Path ${log_dir} -Filter "*.log" -File) {
                   mkdir ${artifacts_dir}/${log_dir}
                   mv ${log_dir}/*.log ${artifacts_dir}/${log_dir}/
                 }
