@@ -458,7 +458,7 @@ class Builder extends AgentJob {
               mv gt-releaser/*.log ${artifacts_dir}/gt-releaser/
            fi
         """
-        script.archiveArtifacts(artifacts: '${artifacts/**}', allowEmptyArchive: true)
+        script.archiveArtifacts(artifacts: '${artifacts/**/*.log}', allowEmptyArchive: true)
     }
 }
 
@@ -752,7 +752,7 @@ class TestAndPackage extends AgentJob {
                   mv gt-releaser/*.log ${artifacts_dir}/gt-releaser/
                fi
             """
-            script.archiveArtifacts(artifacts: '${artifacts/**}', allowEmptyArchive: true)
+            script.archiveArtifacts(artifacts: '${artifacts/**/*.log}', allowEmptyArchive: true)
             }
         }
 }
