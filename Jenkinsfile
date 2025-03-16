@@ -337,13 +337,15 @@ class Builder extends AgentJob {
 
     @java.lang.Override
     void execute() {
-        script.echo "Will build pre-release image on ${agent.label()}"
-        script.echo "Building on host: ${agent.host()}"
-        cleanUp()
-        load_latest_commit()
-        read_gtoolkit_versions()
-        package_image()
-        archive_artifacts()
+        try {
+            script.echo "Will build pre-release image on ${agent.label()}"
+            script.echo "Building on host: ${agent.host()}"
+            cleanUp()
+            load_latest_commit()
+            read_gtoolkit_versions()
+            package_image() }
+        finally
+            { archive_artifacts() }
     }
 
     void load_latest_commit() {
@@ -605,12 +607,14 @@ class TestAndPackage extends AgentJob {
 
     @java.lang.Override
     void execute() {
-        script.node(agent.label()) {
-            setup_node()
-            run_tests()
-            create_release_package()
-            archive_artifacts()
-        }
+            script.node(agent.label()) {
+                try {
+                    setup_node()
+                    run_tests()
+                    create_release_package() }
+                finally
+                    { archive_artifacts() }
+            }
     }
 
     void setup_node() {
