@@ -369,7 +369,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-05-17T09:45:46.504094+02:00"
+									"dateAndTimeString" : "2025-03-18T11:08:12.847491+01:00"
 								}
 							},
 							"uid" : {
@@ -379,7 +379,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Moldable Development is a way of programming through custom tools. Take [[A tour of the environment]] at first, but Moldable Development is best learnt by doing. Start with a concrete problem you care about. Get more ideas here: [[Get started]]."
+							"string" : "Moldable Development is a way of programming through custom tools. Take [[A tour of the environment]] at first, but Moldable Development is best learned by doing. Start with a concrete problem you care about. Get more ideas here: [[Get started]]."
 						}
 					]
 				},
@@ -418,45 +418,7 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-04-04T14:11:05.78991+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-05-17T09:14:27.727967+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "QrOOTuO0DQCWB7xSBmypig=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Figuring systems out is the single most expensive activity in software development. And most of it is spent reading. The development environment can do a much better job in helping developers make software explainable. The central idea is that tools must be moldable to the task at hand, and of course it must be inexpensive to adapt the tools. We call this [[Moldable Development]]."
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -488,6 +450,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Why is Moldable Development important?"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-04T14:11:05.78991+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-18T11:13:15.798085+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QrOOTuO0DQCWB7xSBmypig=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Figuring systems out is the single most expensive activity in software development. And most of it is spent reading. The development environment can do a much better job in helping developers make software explainable. The central idea is that tools must be moldable to the task at hand, and of course it must be inexpensive to adapt the tools. We call this [[Moldable Development]]. We explain how to do it with the help of [[Moldable Development patterns]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -594,7 +593,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-06-20T07:35:46.886298+02:00"
+									"dateAndTimeString" : "2025-03-18T11:14:46.391641+01:00"
 								}
 							},
 							"uid" : {
@@ -604,7 +603,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Glamorous Toolkit is built in Pharo, but the goal of GT is distinct from that of Pharo and so is its realization. Read more about [[Glamorous Toolkit and Pharo]]."
+							"string" : "Glamorous Toolkit is built in [[Pharo]], but the goal of GT is distinct from that of Pharo and so is its realization. Read more about [[Glamorous Toolkit and Pharo]]."
 						}
 					]
 				},
