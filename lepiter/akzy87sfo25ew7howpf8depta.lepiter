@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-12-11T17:30:40.873229+11:00"
+						"dateAndTimeString" : "2025-03-18T14:37:28.941127+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "As a case study we start from JSON content located at [https://api.github.com/orgs/feenkcom](https://api.github.com/orgs/feenkcom) which looks like:"
+				"string" : "As a case study we start from JSON content located at [https://api.github.com/orgs/feenkcom](https://api.github.com/orgs/feenkcom) which looks like this:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -356,7 +356,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:32:25.353578+02:00"
+						"dateAndTimeString" : "2025-03-18T14:38:02.622997+01:00"
 					}
 				},
 				"uid" : {
@@ -366,7 +366,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Parsing the JSON string produces a dictionary. That's already better, but still not quite what we want. We want a custom experience for that outcome. To this end, we reify the data into a first class object:"
+				"string" : "Parsing the JSON string produces a dictionary. That's already better, but still not quite what we want. We want a custom experience for that outcome. To this end, we wrap the data as a first class object:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -427,7 +427,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:37:25.434635+02:00"
+						"dateAndTimeString" : "2025-03-18T14:38:22.535162+01:00"
 					}
 				},
 				"uid" : {
@@ -437,7 +437,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Once we have a dedicated object the inspector gets the opportunity of defining custom views. For example, the repositories list is described in {{gtMethod:GhOrganization>>#gtReposFor:}}."
+				"string" : "Once we have a dedicated object the inspector gets the opportunity to present custom views. For example, the repositories list is described in {{gtMethod:GhOrganization>>#gtReposFor:}}."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -517,7 +517,7 @@
 				"string" : "Now, try exploring. For example, what happens when you double click on a repository?"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "commentSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -530,7 +530,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:34:25.42467+02:00"
+						"dateAndTimeString" : "2025-03-18T14:38:55.608521+01:00"
 					}
 				},
 				"editEmail" : {
@@ -541,17 +541,15 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-29T18:37:16.299339+02:00"
+						"dateAndTimeString" : "2025-03-18T14:39:20.233108+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "J+41Em7xAAAAAAAAAAAAAA=="
+					"uidString" : "4H9bw//sDQCXN15CBc534g=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"string" : "Ends abruptly. Point to the video, and add more explanation.",
+				"isHidden" : true
 			}
 		]
 	},

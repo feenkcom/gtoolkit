@@ -42,43 +42,6 @@
 				"string" : "Every object in [[Glamorous Toolkit]] offers a variety of custom views, each providing a different perspective of the object. This brief tutorial explores the API to define these views, and walks you through a practical example of implementing custom views."
 			},
 			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-28T13:41:14.413371+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-12T20:34:28.035941+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "XFnVCLSvDQCYYnuPAsG/iA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "More details in [[Handling objects through custom views]]."
-			},
-			{
 				"__type" : "youtubeSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -111,6 +74,43 @@
 					"uidString" : "FvYbArSvDQCXR6mZAsG/iA=="
 				},
 				"youtubeUrl" : "https://youtu.be/N0XSImxyszM"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-28T13:41:14.413371+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-18T14:07:04.337428+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XFnVCLSvDQCYYnuPAsG/iA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "More details in [[Handling objects through custom views]] and the {{gtPage:Custom View|db=2j9m7db2i4oz116bexd7wbdxo}} pattern."
 			}
 		]
 	},
