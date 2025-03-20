@@ -3883,6 +3883,118 @@
 								"__type" : "textStyle"
 							},
 							"string" : "### PositionableStream>>#on: precondition"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-03-20T15:33:32.059313+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-03-20T15:35:04.801541+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "OuZUwijtDQCNpilMBSqZSA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Avoid using {{gtMethod:RPackage>>#definedClasses}} to create a list of classes only to select then the one representing the manifest. The manifest is use to check if the package is deprecated, which in turn can slow down checking if class is deprecated in {{gtMethod:Class>>isDeprecated}}"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-03-20T15:35:12.933921+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-03-20T15:35:32.794675+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "siNYyCjtDQCPeYVZBSqZSA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "GT Issue: [Improve performance of the deprecation styler](https://github.com/feenkcom/gtoolkit/issues/4369)"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-03-20T15:32:46.542696+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-03-20T15:33:24.553919+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uGOevyjtDQCMqeP0BSqZSA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "#RPackage>>#packageManifestOrNil should be faster"
 						}
 					]
 				},
