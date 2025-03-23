@@ -122,10 +122,10 @@ GtTranscriptElement >> isAutoScrollEnabled [
 { #category : #'private - instance creation' }
 GtTranscriptElement >> newClearButtonElement [
 	^ BrButton new
-		aptitude: BrIconAptitude + BrGlamorousButtonWithLabelTooltipAptitude;
+		aptitude: BrIconAptitude + BrGlamorousButtonWithLabelTooltipAptitude2;
 		icon: BrGlamorousIcons trash;
 		label: 'Clear Transcript';
-		size: 16@16;
+		size: 16 @ 16;
 		action: [ self clear ]
 ]
 
@@ -139,9 +139,10 @@ GtTranscriptElement >> newEditorElement [
 { #category : #'private - instance creation' }
 GtTranscriptElement >> newScrollButtonElement [
 	^ BlElement new
-		aptitude: (BrGlamorousWithLabelTooltipAptitude new text: 'Enable/Disable Automatic Transcript Scrolling');
+		aptitude: (BrGlamorousWithExplicitTooltipAptitude
+				text: 'Enable/Disable Automatic Transcript Scrolling');
 		geometry: BlEllipseGeometry new;
-		size: 10@10;
+		size: 10 @ 10;
 		background: Color white
 ]
 
