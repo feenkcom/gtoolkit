@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:27:25.581214+01:00"
+						"dateAndTimeString" : "2025-03-24T23:23:32.986829+01:00"
 					}
 				},
 				"uid" : {
@@ -39,10 +39,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By default, the `gt4llm` framework comes with a tutor for editing blog posts. To get a background on what a tutor is, refer to [[Handling custom instructions using tutors]]. For the purposes of this case study, it can be conceptualized as an AI assistant or agent with custom instructions."
+				"string" : "By default, the [[gt4llm]] framework comes with a tutor for editing blog posts. To get a background on what a tutor is, refer to [[Handling custom instructions using tutors]]. For the purposes of this case study, it can be conceptualized as an AI assistant with custom instructions."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:41:49.551181+01:00"
+						"dateAndTimeString" : "2025-03-24T23:23:37.321452+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:47:08.431283+01:00"
+						"dateAndTimeString" : "2025-03-24T23:24:24.911373+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "FF2mZXrqDQCf6D/fA1QUJQ=="
+					"uidString" : "KH+2yn/tDQCOV2zsBH55mg=="
 				},
-				"code" : "blogPostText := 'This is the start of a blog post on LLM. It ain’t much, but it’s mine.' asRopedText"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This particular example relies on OpenAI. Before using it, please go to [[Adding an OpenAI API key]] to ensure you have the key setup."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -89,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:40:26.128736+01:00"
+						"dateAndTimeString" : "2025-03-24T23:25:53.736689+01:00"
 					}
 				},
 				"editEmail" : {
@@ -100,14 +103,198 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-20T10:45:25.982561+01:00"
+						"dateAndTimeString" : "2025-03-24T23:26:05.590705+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "h3KtYHrqDQCdgbrnA1QUJQ=="
+					"uidString" : "hQ7+0n/tDQCXRH3bBH55mg=="
 				},
-				"code" : "GtOpenAIBlogPostTutor new createChatOn: blogPostText"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# A ready made dedicated chat"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-14T12:41:49.551181+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-14T12:47:08.431283+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FF2mZXrqDQCf6D/fA1QUJQ=="
+							},
+							"code" : "blogPostText := 'This is the start of a blog post on LLM. It ain’t much, but it’s mine.' asRopedText"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-24T23:24:35.464133+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-24T23:25:09.147292+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dhnmzX/tDQCSTMnzBH55mg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "As example, let's consider we have a string with a post we want to write. Like this one:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-14T12:40:26.128736+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-20T10:45:25.982561+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "h3KtYHrqDQCdgbrnA1QUJQ=="
+							},
+							"code" : "GtOpenAIBlogPostTutor new createChatOn: blogPostText"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-24T23:25:03.169672+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-24T23:25:46.601997+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Muitz3/tDQCUxDlaBH55mg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And now, let's say we want to have a chat about it with a dedicated LLM:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-24T23:26:09.166372+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-03-24T23:26:20.410546+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "d4bp03/tDQCYAZ73BH55mg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Building a dedicated chat ... while chatting"
 			},
 			{
 				"__type" : "textSnippet",
@@ -134,7 +321,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:43:18.43743+01:00"
+						"dateAndTimeString" : "2025-03-24T23:26:24.4686+01:00"
 					}
 				},
 				"uid" : {
@@ -144,7 +331,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This tutor has been evolved from a generic tutor. We can refine a generic tutor to get to a similar result. This page demonstrates how to do that."
+				"string" : "The above tutor has been evolved from a generic tutor. We can refine a generic tutor to get to a similar result. This page demonstrates how to do that."
 			},
 			{
 				"__type" : "textSnippet",
