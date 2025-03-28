@@ -18,12 +18,11 @@
   </div>
 </div>
 
-## The Moldable Development Environment
-[Glamorous Toolkit](https://gtoolkit.com) is the Moldable Development environment. It empowers you to make systems explainable through experiences tailored for each problem.
+# The Moldable Development Environment
+[Glamorous Toolkit](https://gtoolkit.com) is the Moldable Development Environment. It empowers you to make systems explainable through contextual micro tools.
 
-## Get started
+## Download and run the ready made distribution
 
-### Install and run
 Simply download: https://gtoolkit.com/download.
 The download is a self contained installation made of a Glamorous Toolkit image, a virtual machine, and a few other resources and libraries.
 Now, just run the executable.
@@ -31,36 +30,37 @@ Now, just run the executable.
 - On Windows: `.\bin\GlamorousToolkit.exe`
 - On Linux: `./bin/GlamorousToolkit`
 
-### Take a tour
-Glamorous Toolkit was developed following Moldable Development, and it offers extensive opportunities to learn about itself. Start with a tour through the built-in book to get an overview of the breadth of possibilities.
+## Install from sources
 
-Or explore online:
-- [Read the book](https://book.gtoolkit.com).
-- [Watch GT in 7' video series](https://youtu.be/-vFwfwy5WZA?list=PLfrs5bwLJOoAaHvQGSLeKpHWmFuZXPUTJ).
+Executing the script below installs the VM, clones the sources and builds an image. It can takes ~10 minutes and it is useful for developing Glamorous Toolkit itself.
+
+- On Mac: `curl https://dl.feenk.com/scripts/mac.sh | bash`
+- On Linux: `curl https://dl.feenk.com/scripts/linux.sh | bash`
+- On Windows: `wget https://dl.feenk.com/scripts/windows.ps1 -OutFile windows.ps1; ./windows.ps1`
+
+## Get started
+
+## Learn how to learn
+
+Glamorous Toolkit was developed following Moldable Development. In the core distribution there are thousands of contextual tools that we used to develop and explain the environment. Each of these is based on an underlying language made out of visual and interactive operators that can be combined in many ways. So, first learn this language:
+- Start by watching the [GT in 7' video series](https://youtu.be/-vFwfwy5WZA?list=PLfrs5bwLJOoAaHvQGSLeKpHWmFuZXPUTJ).
+- Read the book directly in the environment or [online](https://book.gtoolkit.com).
 
 ### Pick a problem you care about
-Pick a problem you care about. Pick a problem you care about. We cannot stress this enough.
+Moldable Development is about adapting the environment to match the context. So, pick a problem you care about and work your way through it.
 
-Why? Because the essence of Moldable Development is about adapting the environment to match the context. If you do not have a deep context, you cannot evaluate what contextual tools do for you. Pick a problem you care about.
+Get inspiration from these talks:
+- [Moldable Development with Glamorous Toolkit • Tudor Girba • YOW! 2023](https://youtu.be/_ztGZpo9I9E?si=Vy9RmLoItw9KXJFT)
+- [Moldable Development in Practice — Patterns for Legacy Modernization • Oscar Nierstrasz • YOW! 2024](https://youtu.be/F_-z0aC7Pnk?si=bJQHHet5ybSEOiUN)
 
-What kind of problems? There can be many. Out of the box, you can explore:
-- Explore a GraphQL or REST API
-- Analyze unknown data
-- Discover and model a domain
-- Assess an existing system
-- Document a system
-- Build system specific editors
-
-Read about more examples in the built-in book.
-### Go beyond the technology
-Glamorous Toolkit is an environment that shows how the experience of programming can be, but ultimately it's still just a piece of technology. Moldable Development introduces a new feedback loop that has far reaching consequences, both on the technical and the business level.
 ## Engage with the community
-- Follow us on Twitter: [@feenkcom](https://twitter.com/feenkcom)
 - Chat with us on Discord: [discord.gg/FTJr9gP](https://discord.gg/FTJr9gP)
 - Watch our YouTube videos: [@gtoolkit](https://www.youtube.com/@gtoolkit)
+- Follow us on X: [@feenkcom](https://twitter.com/feenkcom)
 
 ## Glamorous Toolkit and Pharo
 Glamorous Toolkit is built in [Pharo](https://pharo.org), and it enables people to work with Pharo systems. Nevertheless, the goal of Glamorous Toolkit is distinct from that of Pharo and so is its realization. [Read more in the book](https://book.gtoolkit.com/glamorous-toolkit-and-pharo-6k5konpjjknm9u90y4t6le5po).
+
 ## License
 
 See [LICENSE](LICENSE).
