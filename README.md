@@ -40,7 +40,7 @@ Executing the script below installs the VM, clones the sources and builds an ima
 
 ## Get started
 
-## Learn how to learn
+### Learn how to learn
 
 Glamorous Toolkit was developed following Moldable Development. In the core distribution there are thousands of contextual tools that we used to develop and explain the environment. Each of these is based on an underlying language made out of visual and interactive operators that can be combined in many ways. So, first learn this language:
 - Start by watching the [GT in 7' video series](https://youtu.be/-vFwfwy5WZA?list=PLfrs5bwLJOoAaHvQGSLeKpHWmFuZXPUTJ).
