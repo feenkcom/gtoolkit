@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T15:00:12.427105+01:00"
+						"dateAndTimeString" : "2025-03-31T11:57:32.5291+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "2bXsfkXrDQCgIeDVCbGGRg=="
 				},
-				"code" : "tool := GtLlmFunctionTool new\r\t\tname: 'lookupDocumentationPage';\r\t\tparameters: {'pageName'};\r\t\tdescription: 'Looks up a documentation page by name and returns its content in Markdown format. `pageName` may be a substring. If multiple pages are found, only the first one will be returned.';\r\t\tblock: [ :arguments | \r\t\t\tLeDatabase gtBook pages\r\t\t\t\tdetect: [ :aPage | aPage title includesSubstring: arguments first caseSensitive: false ]\r\t\t\t\tifFound: #asMarkdownPage\r\t\t\t\tifNone: 'No page found' ]"
+				"code" : "tool := GtLlmFunctionTool new\r\t\tname: 'lookupDocumentationPage';\r\t\tparameters: {'pageName'};\r\t\tdescription: 'Looks up a documentation page by name and returns its content in Markdown format. `pageName` may be a substring. If multiple pages are found, only the first one will be returned.';\r\t\tblock: [ :arguments | \r\t\t\t(LeDatabase gtBook asyncPagesForWord: arguments first) toArray wait\r\t\t\t\tifEmpty: [ 'No page found' ]\r\t\t\t\tifNotEmpty: [ :pages | pages first asMarkdownPage ] ]"
 			},
 			{
 				"__type" : "textSnippet",
