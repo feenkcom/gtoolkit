@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Tu support context menus, dropdowns, and tooltip, we implemented {{gtClass:BlSteppedLayout}}. This layout is responsible for placing (sub-)context menus next to each other. The following example shows a possible context menu that is opened from the red circle. The blue and green menus have its submenus that are relative to their menu items. You can drag the red circle and menu items to observe how the stepped layout place all three (blue, green, yellow) menu elements."
+				"string" : "To support context menus, dropdowns, and tooltip, we implemented {{gtClass:BlSteppedLayout}}. This layout is responsible for placing (sub-)context menus next to each other. The following example shows a possible context menu that is opened from the red circle. The blue and green menus have its submenus that are relative to their menu items. You can drag the red circle and menu items to observe how the stepped layout place all three (blue, green, yellow) menu elements."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -143,7 +143,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-03-04T15:38:47.542867-03:00"
+						"dateAndTimeString" : "2025-04-06T13:54:09.439327-04:00"
 					}
 				},
 				"uid" : {
@@ -153,7 +153,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's the previous context menu step by step, considering a screen of {{gtExample: BlSteppedLayoutExamples >> #atMostPaddingNodeWithFirstLargerChild_layoutState | label=#containerExtent}} extent as represented below. It already knows the anchor bounds in red, which is the place around which the first context menu element should be placed. It also knows what are available areas to place the first context menu element. You can mouse hover those gray rectangles to see position and bounds of individual areas."
+				"string" : "Let's explore the previous context menu step by step, considering a screen of {{gtExample: BlSteppedLayoutExamples >> #atMostPaddingNodeWithFirstLargerChild_layoutState | label=#containerExtent}} extent as represented below. It already knows the anchor bounds in red, which is the place around which the first context menu element should be placed. It also knows the available areas to place the first context menu element. You can mouse hover those gray rectangles to see position and bounds of individual areas."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -297,7 +297,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-03-04T15:51:51.875339-03:00"
+						"dateAndTimeString" : "2025-04-06T14:18:38.874028-04:00"
 					}
 				},
 				"uid" : {
@@ -307,7 +307,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The second context menu element has fixed size {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childOneExtent | label=#yourself}} and also fits on the screen. It's relative bounds to the previous menu element is {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childTwoRelativeBounds | label=#yourself}}, indicating to which part of the first menu element it want to be placed."
+				"string" : "The second context menu element has a fixed size of {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childOneExtent | label=#yourself}} and also fits on the screen. Its bounds relative to the previous menu element are {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childTwoRelativeBounds | label=#yourself}}, indicating to which part of the first menu element it wants to be placed."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -374,7 +374,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-03-04T15:55:05.413722-03:00"
+						"dateAndTimeString" : "2025-04-06T14:18:47.681802-04:00"
 					}
 				},
 				"uid" : {
@@ -384,7 +384,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Similarly, the third context menu element has fixed size {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childThreeExtent | label=#yourself}} and also fits on the screen. It's relative bounds to the previous menu element is {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childThreeRelativeBounds | label=#yourself}}, indicating to which part of the second menu element it want to be placed."
+				"string" : "Similarly, the third context menu element has a fixed size of {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childThreeExtent | label=#yourself}} and also fits on the screen. Its bounds relative to the previous menu element are {{gtExample: BlSteppedLayoutDemoExamples >> #atMostNodeWithTwoRelativeBounds_childThreeRelativeBounds | label=#yourself}}, indicating to which part of the second menu element it wants to be placed."
 			},
 			{
 				"__type" : "exampleSnippet",
