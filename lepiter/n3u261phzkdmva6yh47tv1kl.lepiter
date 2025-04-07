@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-28T14:30:26.120691+01:00"
+						"dateAndTimeString" : "2025-04-06T15:01:10.182174-04:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First step is to try and reproduce the issue locally in headless mode by running only a subset of tests, in the example below the ones in the package {{gtPackage:GToolkit-World}}."
+				"string" : "The first step is to try to reproduce the issue locally in headless mode by running only a subset of the tests, in the example below the ones in the package {{gtPackage:GToolkit-World}}."
 			},
 			{
 				"__type" : "shellCommandSnippet",
@@ -181,7 +181,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-28T14:32:03.381754+01:00"
+												"dateAndTimeString" : "2025-04-06T15:01:42.819754-04:00"
 											}
 										},
 										"uid" : {
@@ -191,7 +191,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Instead of  of using {{gtMethod:CommandLineHandler class>>#activateWith:}} we can also bypass most logic done by the handler and directly execute example."
+										"string" : "Instead of  of using {{gtMethod:CommandLineHandler class>>#activateWith:}} we can also bypass most logic done by the handler and directly execute examples:"
 									},
 									{
 										"__type" : "pharoSnippet",
@@ -278,7 +278,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-28T14:30:47.223363+01:00"
+						"dateAndTimeString" : "2025-04-06T15:01:25.529097-04:00"
 					}
 				},
 				"uid" : {
@@ -288,7 +288,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can them simulate the same run in an image with GUI:"
+				"string" : "We can then simulate the same run in an image with a GUI:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -456,7 +456,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-28T14:33:02.132262+01:00"
+						"dateAndTimeString" : "2025-04-06T15:02:10.763537-04:00"
 					}
 				},
 				"uid" : {
@@ -466,7 +466,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We also do not need to use {{gtClass:GtExamplesCommandLineHandler}}. Instead we could directly use the example reporter {{gtClass:GtExamplesHudsonReport}} (this will be called by the command line handler)"
+				"string" : "We also do not need to use {{gtClass:GtExamplesCommandLineHandler}}. Instead we could directly use the example reporter {{gtClass:GtExamplesHudsonReport}} (this will also be called by the command line handler)"
 			}
 		]
 	},

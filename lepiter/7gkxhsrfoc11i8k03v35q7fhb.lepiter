@@ -288,7 +288,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-20T16:33:48.559528+02:00"
+						"dateAndTimeString" : "2025-04-06T14:20:52.982953-04:00"
 					}
 				},
 				"uid" : {
@@ -298,7 +298,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Make sure clone, pull, commit and push on the command line before continuing."
+				"string" : "Make sure clone, pull, commit and push all work on the command line before continuing."
 			},
 			{
 				"__type" : "textSnippet",
@@ -325,7 +325,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-11-14T09:35:39.522859+01:00"
+						"dateAndTimeString" : "2025-04-06T14:21:13.34752-04:00"
 					}
 				},
 				"uid" : {
@@ -335,7 +335,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let {{gtClass:GtGitHubTokenHolder}} know about your personal access token. You can set it directly as a string using {{gtMethod:GtGitHubTokenHolder class>>#token:}} , let it be read and copied from a file using {{gtMethod:GtGitHubTokenHolder class>>#readAndCacheTokenFrom:}} or let is be read each time from a file using {{gtMethod:GtGitHubTokenHolder class>>#readTokenEachTimeFrom:}}. In the last case the token is not stored in an object that is part of the image."
+				"string" : "Let {{gtClass:GtGitHubTokenHolder}} know about your personal access token. You can set it directly as a string using {{gtMethod:GtGitHubTokenHolder class>>#token:}} , let it be read and copied from a file using {{gtMethod:GtGitHubTokenHolder class>>#readAndCacheTokenFrom:}} or let it be read each time from a file using {{gtMethod:GtGitHubTokenHolder class>>#readTokenEachTimeFrom:}}. In the last case the token is not stored in an object that is part of the image."
 			},
 			{
 				"__type" : "textSnippet",
@@ -766,7 +766,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-20T17:10:24.313952+02:00"
+						"dateAndTimeString" : "2025-04-06T14:22:26.376908-04:00"
 					}
 				},
 				"uid" : {
@@ -776,7 +776,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Since no repositories are defined we first need to find out which repository we need, since there are many of them. When the ready made image was created, some essential information of each repository was recorded. See the `History` inspector tab in {{gtClass:IceRepository}}. Note that the history is not present in a developer image built from sources."
+				"string" : "Since no repositories are defined we first need to find out which repository we need, since there are many of them. When the ready made image was created, some essential information about each repository was recorded. See the `History` inspector tab in {{gtClass:IceRepository}}. Note that the history is not present in a developer image built from sources."
 			},
 			{
 				"__type" : "textSnippet",
@@ -840,7 +840,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:40:52.866672+02:00"
+						"dateAndTimeString" : "2025-04-06T15:29:14.685908-04:00"
 					}
 				},
 				"uid" : {
@@ -1031,7 +1031,8 @@
 				},
 				"url" : "attachments/5mnyduoknx6cbphrs4az64w4c/2024-08-20_14-07-43_BlElement-497029120.png",
 				"caption" : "",
-				"previewHeight" : 567.28125
+				"previewHeight" : 567.28125,
+				"reference" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -1058,7 +1059,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-20T17:00:30.554124+02:00"
+						"dateAndTimeString" : "2025-04-06T14:30:38.212892-04:00"
 					}
 				},
 				"uid" : {
@@ -1068,7 +1069,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "When you open the GT Git tool, you should now see this repository. It was forked, cloned, created and registered."
+				"string" : "When you open the GT Git tool, you should now see this repository. It was forked, cloned, and then created and registered in GT."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1095,7 +1096,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-20T16:58:37.194206+02:00"
+						"dateAndTimeString" : "2025-04-06T14:30:53.43933-04:00"
 					}
 				},
 				"uid" : {
@@ -1105,7 +1106,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The pull request process works my first committing to this copy or fork in your own GitHub account and then asking for those changes to be considered for inclusion."
+				"string" : "The pull request process works by first committing to this copy or fork in your own GitHub account and then asking for those changes to be considered for inclusion."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1215,7 +1216,8 @@
 				},
 				"url" : "attachments/5mnyduq8sog60mq6gx1x55bkq/2024-08-20_16-16-43_BlElement-497029120.png",
 				"caption" : "",
-				"previewHeight" : 583.04296875
+				"previewHeight" : 583.04296875,
+				"reference" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -1288,7 +1290,8 @@
 				},
 				"url" : "attachments/5mnydutjg4n9lrfh1ze3r20sz/2024-08-20_16-17-31_BlElement-497029120.png",
 				"caption" : "",
-				"previewHeight" : 573.72265625
+				"previewHeight" : 573.72265625,
+				"reference" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -1583,7 +1586,8 @@
 				},
 				"url" : "attachments/5mnydus2v04s36eqv3ok2xb5q/2024-08-20_14-10-15_BlElement-497029120.png",
 				"caption" : "",
-				"previewHeight" : 575.8593750000001
+				"previewHeight" : 575.8593750000001,
+				"reference" : ""
 			},
 			{
 				"__type" : "textSnippet",
