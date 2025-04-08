@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-08T17:08:06.908562+02:00"
+						"dateAndTimeString" : "2025-04-09T00:09:56.457143+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Currently this is used only for searches for class names."
+				"string" : "One usage is for searches for class names in the extension {{gtMethod:GtSpotterStart>>#gtSearchForClassesFor:}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -138,7 +138,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-08T17:08:18.424084+02:00"
+						"dateAndTimeString" : "2025-04-09T00:10:25.270765+02:00"
 					}
 				},
 				"uid" : {
@@ -148,13 +148,84 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Inspectign the default configurations"
+				"string" : "#Inspecting the default configurations"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-09T00:10:52.479114+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-09T00:12:35.552943+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Pp3kXK3uDQCH1RXsCvWbYQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Below is the current default configuration for class searches. This splits the query into words by capitalization and the matching of each word is case sensitive in case the first letter is uppercase."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-09T00:11:08.050621+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-09T00:11:18.299281+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yjXSXa3uDQCJHnvPCvWbYQ=="
+							},
+							"code" : "GtSpotterFiltersConfiguration default \r\tputSubstringsConfigurationWithId: #classSearch \r\twith: [ :aSubstringsConfiguration |\r\t\taSubstringsConfiguration\r\t\t\twithCapitalizationSplitter;\r\t\t\tbeCaseSensitiveByCapitalization ]"
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -288,14 +359,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-08T17:05:09.428352+02:00"
+									"dateAndTimeString" : "2025-04-09T00:01:25.915545+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "4y1vaafuDQCol8SHCvWbYQ=="
 							},
-							"code" : "GtSpotterFiltersConfiguration default \r\tputSubstringsConfigurationWithId: #classSearch \r\twith: [ :aSubstringsConfiguration |\r\t\taSubstringsConfiguration\r\t\t\twithCharacterSplitterBy: (Array \r\t\t\t\twith: Character space);\r\t\t\tbeCaseInsensitive ]"
+							"code" : "GtSpotterFiltersConfiguration default \r\tputSubstringsConfigurationWithId: #classSearch \r\twith: [ :aSubstringsConfiguration |\r\t\taSubstringsConfiguration\r\t\t\twithCharacterSplitter;\r\t\t\tbeCaseInsensitive ]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -322,7 +393,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-08T17:07:29.376483+02:00"
+									"dateAndTimeString" : "2025-04-09T00:13:07.163581+02:00"
 								}
 							},
 							"uid" : {
@@ -332,7 +403,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Splitting where we get an uppercase and using case insensitive matching for each query word."
+							"string" : "Splitting by capitalization and using case insensitive matching for each query word."
 						},
 						{
 							"__type" : "pharoSnippet",
