@@ -1,0 +1,467 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T21:58:42.652738+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T21:59:18.173494+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "F1NJNyTvDQCBXYABA4BSoA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Long running futures executed at the same priority as futures used by the user interface can slow down the entire user interface."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T21:57:24.653546+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T22:01:07.798711+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "x8hgMiTvDQC9fHvAA4BSoA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : " {{gtClass:AsyncFutureExecutionUserBackgroundPriority}} is a priority for futures that is lower than the lowest priority used by the user interface. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T22:01:09.529164+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T22:05:44.989537+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TnwKQCTvDQCEfSkRA4BSoA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The simplest way to execute a computation in a worker process at this priority is using {{gtMethod:BlockClosure>>#asAsyncPromiseWithUserBackgroundPriority}}."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-14T18:50:57.477385+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-14T21:55:33.71358+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "P2DUlyHvDQC8InvaA4BSoA=="
+							},
+							"code" : "promise := [ 50000 factorial ] asAsyncFuture\n\tawaitWithUserBackgroundPriority"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T18:52:42.530041+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T21:55:08.734262+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/14XniHvDQC8cGgmA4BSoA=="
+				},
+				"code" : "promise := [ 50000 factorial ] asAsyncPromiseWithUserBackgroundPriority"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T22:02:40.510454+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T22:02:54.137816+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fjB0QyTvDQCGZxMjA4BSoA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If more control is needed over these computations thet can be run also in dedicated workers."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T18:51:56.666963+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T21:55:35.482745+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CY5bmyHvDQC8RLuIA4BSoA=="
+				},
+				"code" : "promise := [ 50000 factorial ] asAsyncFuture\n\tawaitWithUserBackgroundPriorityInCustomGroup: #MyWorker"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-10T22:20:25.288908+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T21:55:37.123148+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Cn2QDdTuDQCFBxqJD0L2kA=="
+				},
+				"code" : "promise := [ 50000 factorial ] asAsyncFuture\n\tawait: (AsyncFutureExecutionConfiguration new \r\t\tuserBackgroundPriority;\n\t\tcustomGroup: #MyWorker)"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T22:02:58.888953+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T22:05:38.624295+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Fy2PRiTvDQCJk05dA4BSoA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In case multiple such computations are needed and they might also need to wait for the results of other computations, one further option is to use {{gtMethod:BlockClosure>>#asAsyncForkedFuture}} to create futures that run in their own process instead of the worker process."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-14T22:04:59.739735+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-14T22:06:48.745563+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QjfDTSTvDQCP868TA4BSoA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In the code snippet below the worker is responsible for managing the execution of the future in a dedicated process. While the future runs, the worker is free to execute other futures."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-14T22:04:49.933069+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-14T22:05:03.014365+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "fJQtTSTvDQCP52W6A4BSoA=="
+							},
+							"code" : "promise := [ 50000 factorial ] asAsyncForkedFuture\n\tawait: (AsyncFutureExecutionConfiguration new \r\t\tuserBackgroundPriority;\n\t\tcustomGroup: #MyWorker)"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T21:53:48.399311+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-14T22:04:46.149559+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XV+/JSTvDQC8rJsrA4BSoA=="
+				},
+				"code" : "promise := [ 50000 factorial ] asAsyncForkedFuture\n\tawaitWithUserBackgroundPriority"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-04-14T21:57:16.119142+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-04-14T21:59:09.485985+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Running futures at user background priority"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "357a900d-d4ee-0d00-8506-c3130f42f690"
+	}
+}
