@@ -1,0 +1,150 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-18T21:50:27.086936+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-18T21:50:49.283479+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "voThkHTvDQCC8MJWAaI0ig=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "There are several ways to profile the execution of Glamorous Toolkit code from within the environment itself."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-18T22:13:20.414863+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-18T22:14:55.203362+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Mmr44nTvDQCOFB2zAaI0ig=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If we face a synchronous computation, we can just use a [[MessageTally]] which is a way of profiling by observing the stack at constant intervals. [[Profiling the synchronous execution of stylers using message tally]] shows the steps to profile the styling of a method using this approach. In this case, as styling happens in a worker, we first need to isolate the execution to profile it."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-18T22:14:57.06196+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-18T22:20:49.939126+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "aR4T43TvDQCOHeI1AaI0ig=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "But sometimes, we might not want to do that but rather profile multiple workers at the same time. This can be achieved using {{gtClass:VirtualMachineAllProcessesSwitchTelemetry}} which provides fine grained signals coming from the virtual machine. [[Profiling the styling of a method using the virtual machine telemetry]] shows how profiling of the same method can be achieved without extracting the specific computation separately as is the case with the MessageTally."
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-04-18T15:57:03.139887+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-04-18T15:57:03.139887+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Profiling Glamorous Toolkit"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "508b42a1-6fef-0d00-8844-cd5201a2348a"
+	}
+}
