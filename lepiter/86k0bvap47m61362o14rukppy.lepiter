@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-18T22:11:43.813863+02:00"
+						"dateAndTimeString" : "2025-04-18T22:51:11.69588+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "One way to profile [[Pharo]] the synchronous code execution is to use [[MessageTally]]."
+				"string" : "One way to profile [[Pharo]] the synchronous code execution is to use [[Message Tally]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -293,6 +293,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Inspecting the result shows an instance of {{gtClass:MessageTally}} that provides multiple views that allow us to explore the execution tree in multiple ways."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-18T22:51:29.2194+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-18T22:52:01.863479+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "W2f7anXvDQCpexWXAaI0ig=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You also have a quick way to apply message tally on any snippet using the dedicated contextual action."
 			}
 		]
 	},
