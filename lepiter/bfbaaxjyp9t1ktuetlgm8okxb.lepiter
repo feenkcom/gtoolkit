@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-12T23:58:53.674998+02:00"
+						"dateAndTimeString" : "2025-04-19T07:49:03.80057+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The [[Nix]] package definition for [[Glamorous Toolkit]] has been merged in to their package repository. Currently only the [[x86_64]] architecture is supported."
+				"string" : "The [[Nix]] package definition for [[Glamorous Toolkit]] has been merged in to their package repository.  Currently only the [[x86_64]] architecture is supported."
 			},
 			{
 				"__type" : "textSnippet",
@@ -87,195 +87,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T19:18:39.697879+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-12T23:55:13.354814+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "O92U5z3BDQCP6+ppC2TkrA=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "This has the advantage that it uses the same versions of libraries as are currently installed, so uses a little less disk space on the system disk:"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-09-08T18:46:55.05849+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-09-12T23:55:13.355883+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "X1oOdj3BDQC/XFL6CQL9wA=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "```bash\ngit clone --depth=1 --branch nixpkgs-unstable git@github.com:NixOS/nixpkgs.git\n```"
-												}
-											]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T18:46:37.978453+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T18:46:51.690248+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "PMIJdT3BDQC+mTzuCQL9wA=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "Checkout the package repository:"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-09-08T18:48:36.48938+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-09-08T18:48:52.613147+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "qBIafD3BDQCBhWntCQL9wA=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "```nix\nenvironment.systemPackages = with pkgs; [\n    (callPackage /path/to/nixpkgs/pkgs/development/tools/glamoroustoolkit { })\n]\n```"
-												}
-											]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T18:48:14.201424+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T19:24:50.352968+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "RJrveT3BDQC/tfHLCQL9wA=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "Update `configuration.nix` to build the GT package (updating the path to the derivation as appropriate):"
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -285,7 +97,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-08T19:16:35.97463+02:00"
+									"dateAndTimeString" : "2023-09-08T19:20:51.797415+02:00"
 								}
 							},
 							"editEmail" : {
@@ -296,167 +108,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-08T19:16:46.98789+02:00"
+									"dateAndTimeString" : "2023-09-12T23:55:13.357312+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Jfg04D3BDQCI5xHZC2TkrA=="
+								"uidString" : "aYx07z3BDQCYfC7AC2TkrA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "### Clone the repository and install"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T19:20:09.969572+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T19:20:37.804828+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "HE727D3BDQCVNiNRC2TkrA=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "This has the advantage of not requiring any additional steps to get the derivation, but downloads later versions of libraries."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-09-08T19:20:51.797415+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-09-12T23:55:13.357312+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "aYx07z3BDQCYfC7AC2TkrA=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "```nix\n{ config, pkgs, ... }:\nlet\n  unstable = import\n    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixpkgs-unstable)\n    # reuse the current configuration\n    { config = config.nixpkgs.config; };\nin\n{\n  environment.systemPackages = with pkgs; [\n    unstable.glamoroustoolkit\n  ];\n}\n```"
-												}
-											]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T19:20:41.603666+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T19:21:02.396862+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "5gDZ7j3BDQCX3QJXC2TkrA=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "Update `configuration.nix` to include GT:"
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-08T19:19:38.428456+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-12T23:55:13.356143+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "svsU6z3BDQCUUu2RC2TkrA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "### Install from the unstable branch directly"
+							"string" : "```nix\n{ config, pkgs, ... }:\nlet\n  unstable = import\n    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixpkgs-unstable)\n    # reuse the current configuration\n    { config = config.nixpkgs.config; };\nin\n{\n  environment.systemPackages = with pkgs; [\n    unstable.glamoroustoolkit\n  ];\n}\n```"
 						}
 					]
 				},
@@ -468,7 +130,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-08T19:18:05.623246+02:00"
+						"dateAndTimeString" : "2025-04-19T07:53:08.656631+02:00"
 					}
 				},
 				"editEmail" : {
@@ -479,7 +141,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-12T23:55:13.353776+02:00"
+						"dateAndTimeString" : "2025-04-19T07:54:11.464683+02:00"
 					}
 				},
 				"uid" : {
@@ -489,7 +151,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Otherwise two options for installing GT on a stable channel are:"
+				"string" : "If you don't have access to the unstable channel already configured, you can update `configuration.nix` to include GT:"
 			},
 			{
 				"__type" : "textSnippet",
