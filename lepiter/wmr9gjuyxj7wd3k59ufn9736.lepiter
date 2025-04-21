@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-06-09T21:54:42.554036+02:00"
+									"dateAndTimeString" : "2025-04-20T13:05:31.109413+02:00"
 								}
 							},
 							"uid" : {
@@ -116,6 +116,77 @@
 								"uidString" : "UBDtGB5PAAAAAAAAAAAAAA=="
 							},
 							"code" : "aSpace := BlSpace new\r\t\taddChild: GtCreateStandaloneAppHowToGuide new helloWorldScene;\r\t\textent: 800@600;\r\t\ttitle: 'Hello World'.\raSpace show"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-20T13:05:34.06409+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-20T13:07:06.764734+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "1nGqd5XvDQChvEqoD1TTUw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "By default, a space offers the possibility to close the window, but if all windows are closed, the image will still be running. If you want to associate the closing of the window with stopping the image, you can listen to the {{gtClass:BlSpaceClosedEvent}} and exit when it happens:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-20T13:05:32.017553+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-20T13:05:53.876581+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "WjiLd5XvDQChuBCMD1TTUw=="
+							},
+							"code" : "aSpace\r\twhen: BlSpaceClosedEvent\r\tdo: [ Smalltalk snapshot: false andQuit: true ]."
 						}
 					]
 				},

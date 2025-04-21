@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-04T22:57:08.142706+02:00"
+						"dateAndTimeString" : "2025-04-18T21:50:27.086936+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-18T17:00:27.24205+02:00"
+						"dateAndTimeString" : "2025-04-18T21:50:49.283479+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "h/5gikPbDQCWXY7aAG9yWg=="
+					"uidString" : "voThkHTvDQCC8MJWAaI0ig=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The [[Inspector]] not only allows you to extend it with [[Inspector views]], it also allows you to define actions. These are based on [[Phlow]] as well."
+				"string" : "There are several ways to profile the execution of Glamorous Toolkit code from within the environment itself."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-04T23:00:50.316107+02:00"
+						"dateAndTimeString" : "2025-04-18T22:13:20.414863+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,20 +66,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-04T23:06:30.553323+02:00"
+						"dateAndTimeString" : "2025-04-18T22:51:11.699624+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "pxCfl0PbDQCYuSyXAG9yWg=="
+					"uidString" : "Mmr44nTvDQCOFB2zAaI0ig=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The actions are defined, similar to views, through a method annotated with a `gtAction` pragma. For example, {{gtMethod:GtLudoRecordingGame>>#gtAutoplayAction:|expanded=true}} defines such an action. You can see it in the inspector when inspecing an instance of {{gtClass:GtLudoRecordingGame}}."
+				"string" : "If we face a synchronous computation, we can just use a [[Message Tally]] which is a way of profiling by observing the stack at constant intervals. [[Profiling the synchronous execution of stylers using message tally]] shows the steps to profile the styling of a method using this approach. In this case, as styling happens in a worker, we first need to isolate the execution to profile it."
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-04T23:02:22.493917+02:00"
+						"dateAndTimeString" : "2025-04-18T22:14:57.06196+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,61 +103,23 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-04T23:02:22.493917+02:00"
+						"dateAndTimeString" : "2025-04-18T22:20:49.939126+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "I5kdnUPbDQCZBuV1AG9yWg=="
+					"uidString" : "aR4T43TvDQCOHeI1AaI0ig=="
 				},
-				"exampleSelector" : "emptyGame",
-				"previewHeight" : 300,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtLudoRecordingGameExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : true
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "But sometimes, we might not want to do that but rather profile multiple workers at the same time. This can be achieved using {{gtClass:VirtualMachineAllProcessesSwitchTelemetry}} which provides fine grained signals coming from the virtual machine. [[Profiling the styling of a method using the virtual machine telemetry]] shows how profiling of the same method can be achieved without extracting the specific computation separately as is the case with the MessageTally."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-08-04T23:06:41.602621+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-08-04T23:06:46.000764+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "0DyPrEPbDQCi1rwwAG9yWg=="
-							},
-							"code" : "#gtAction gtPragmas"
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -167,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-04T23:06:49.169579+02:00"
+						"dateAndTimeString" : "2025-04-18T23:02:30.90743+02:00"
 					}
 				},
 				"editEmail" : {
@@ -178,17 +140,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-04T23:07:34.759582+02:00"
+						"dateAndTimeString" : "2025-04-18T23:05:36.854138+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "C71WrEPbDQCi0b/EAG9yWg=="
+					"uidString" : "SR4yknXvDQCtd+HhAaI0ig=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "See more examples in this list:"
+				"string" : "Profiling user interfaces can be more involved than looking at computation and background workers. We sometimes want to see profiling split by frame and for each frame we might want to see whethere there was a layout computation or repaint. This is achieved through the {{gtClass:GtProfiler}}. See [[Profiling the user interface for a method styling]] "
 			}
 		]
 	},
@@ -200,7 +162,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-08-04T22:57:08.067611+02:00"
+			"dateAndTimeString" : "2025-04-18T15:57:03.139887+02:00"
 		}
 	},
 	"editEmail" : {
@@ -211,15 +173,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-08-04T22:57:08.067611+02:00"
+			"dateAndTimeString" : "2025-04-18T15:57:03.139887+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Inspector actions"
+		"title" : "Profiling Glamorous Toolkit"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "78d85f8a-43db-0d00-965c-d9f9006f725a"
+		"uuid" : "508b42a1-6fef-0d00-8844-cd5201a2348a"
 	}
 }
