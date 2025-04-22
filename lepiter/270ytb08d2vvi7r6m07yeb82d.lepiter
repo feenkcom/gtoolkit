@@ -429,7 +429,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:45:32.000373+01:00"
+						"dateAndTimeString" : "2025-04-22T22:23:38.625792+02:00"
 					}
 				},
 				"uid" : {
@@ -439,7 +439,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We want the tutor to work on text, so we create it and give information on how to serialize and deserialize it for the tutor."
+				"string" : "We want the tutor to work with a Post format, so we create it and give information on how to serialize and deserialize the blog post for the tutor."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -466,14 +466,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:47:12.921067+01:00"
+						"dateAndTimeString" : "2025-04-22T22:20:57.828009+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Hgw/c3rqDQCq6Gx/A1QUJQ=="
 				},
-				"code" : "blogPostText := 'This is the start of a blog post on LLM. It ain’t much, but it’s mine.' asRopedText.\r\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'Post';\r\t\tcontent: blogPostText;\r\t\tserializer: #asString;\r\t\tupdater: [ :aText :aString | \r\t\t\taText deleteAll\r\t\t\t\tappendString: aString;\r\t\t\t\tyourself ]"
+				"code" : "tutor\r\taddFormat: (GtLlmTutorFormatDescription new\r\t\t\ttype: 'string';\r\t\t\tformat: 'Text';\r\t\t\tname: 'Post';\r\t\t\tpriority: 10).\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'Post';\r\t\tcontent: blogPostText;\r\t\tserializer: #asString;\r\t\tupdater: [ :aText :aString | \r\t\t\taText deleteAll\r\t\t\t\tappendString: aString;\r\t\t\t\tyourself ]"
 			},
 			{
 				"__type" : "textSnippet",
