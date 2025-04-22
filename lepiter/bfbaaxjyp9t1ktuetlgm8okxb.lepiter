@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-19T07:49:03.80057+02:00"
+						"dateAndTimeString" : "2025-04-22T06:54:39.927598+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The [[Nix]] package definition for [[Glamorous Toolkit]] has been merged in to their package repository.  Currently only the [[x86_64]] architecture is supported."
+				"string" : "[[Glamorous Toolkit]] is packaged in [[Nix]] so can be installed simply by listing it in `systemPackages`.  Currently only the [[x86_64]] architecture is supported."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-22T06:55:28.095975+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-22T06:56:08.722074+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3ATFh7jvDQC35rgTASSZRA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "However as updated Virtual Machine's are released fairly regularly, we recommend installing GT from the unstable channel."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-12T23:58:06.041053+02:00"
+						"dateAndTimeString" : "2025-04-22T06:54:51.969774+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +113,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If you are using the unstable channel you should be able to just add `glamoroustoolkit` to your list of packages."
+				"string" : "If you are using the unstable channel you should be able to just add `glamoroustoolkit` to your list of packages:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-22T06:59:04.183566+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-22T06:59:18.948184+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zUCmlLjvDQC84Q58ASSZRA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "```nix\n  environment.systemPackages = with pkgs; [\n    # ...\n    glamoroustoolkit\n    # ...\n  ];\n```"
 			},
 			{
 				"__type" : "textSnippet",
@@ -97,7 +171,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-08T19:20:51.797415+02:00"
+									"dateAndTimeString" : "2025-04-22T06:59:27.770791+02:00"
 								}
 							},
 							"editEmail" : {
@@ -108,17 +182,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-12T23:55:13.357312+02:00"
+									"dateAndTimeString" : "2025-04-22T06:59:42.577083+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "aYx07z3BDQCYfC7AC2TkrA=="
+								"uidString" : "KioOlrjvDQC9YutZASSZRA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "```nix\n{ config, pkgs, ... }:\nlet\n  unstable = import\n    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixpkgs-unstable)\n    # reuse the current configuration\n    { config = config.nixpkgs.config; };\nin\n{\n  environment.systemPackages = with pkgs; [\n    unstable.glamoroustoolkit\n  ];\n}\n```"
+							"string" : "```nix\n{ config, pkgs, ... }:\nlet\n    # Define the unstable channel, reusing the current config\n    unstable = import\n    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixpkgs-unstable) { config = config.nixpkgs.config; };\nin\n{\n  environment.systemPackages = with pkgs; [\n    # ...\n    unstable.glamoroustoolkit\n    # ...\n  ];\n}\n```"
 						}
 					]
 				},
@@ -141,7 +215,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-19T07:54:11.464683+02:00"
+						"dateAndTimeString" : "2025-04-22T07:00:22.067364+02:00"
 					}
 				},
 				"uid" : {
@@ -151,7 +225,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If you don't have access to the unstable channel already configured, you can update `configuration.nix` to include GT:"
+				"string" : "If you are using the stable channel and don't already have `unstable` configured:"
 			},
 			{
 				"__type" : "textSnippet",
