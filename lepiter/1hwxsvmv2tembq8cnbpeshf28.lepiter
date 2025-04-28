@@ -208,7 +208,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-18T13:55:41.939548+02:00"
+						"dateAndTimeString" : "2025-04-28T10:56:01.939763+02:00"
 					}
 				},
 				"uid" : {
@@ -218,7 +218,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Finally, we offer an integration with the [assistants](https://platform.openai.com/docs/assistants/overview) API. This used to be the most advanced integration that we recommended for tool and tutor use, but was superseded by the responses API. OpenAI is deprecating this API in the near future."
+				"string" : "Finally, we offer an integration with the [assistants](https://platform.openai.com/docs/assistants/overview) API. This used to be the most advanced integration that we recommended for tool and assistant use, but was superseded by the responses API. OpenAI is deprecating this API in the near future."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -245,14 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-03-25T17:02:18.296058+01:00"
+						"dateAndTimeString" : "2025-04-28T10:06:37.409712+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "3VK6iI7tDQCApC8oDQJMGQ=="
 				},
-				"code" : "GtLlmTutor new\r\tproviderStencil: [ :anInstructionFormat | \r\t\tGtOpenAIAssistantProvider withApiKeyFromFile\r\t\t\tinstructions: anInstructionFormat asInstructionPiece instructionString;\r\t\t\tformat: anInstructionFormat asJsonSchema ];\r\tcreateChat"
+				"code" : "GtLlmAssistant new\r\tproviderStencil: [ :anInstructionFormat | \r\t\tGtOpenAIAssistantProvider withApiKeyFromFile\r\t\t\tinstructions: anInstructionFormat asInstructionPiece instructionString;\r\t\t\tformat: anInstructionFormat asJsonSchema ];\r\tcreateChat"
 			}
 		]
 	},

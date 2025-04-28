@@ -390,14 +390,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-18T20:49:41.230497+01:00"
+						"dateAndTimeString" : "2025-04-28T10:06:37.4934+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "E9hfp17TDQCH4OBkA0w3Xw=="
 				},
-				"code" : "tutor := GtLlmTutor new.\r\rconversations := (aGroup select: [ :anExample | anExample result isNotNil ])\r\t\tflatCollect: [ :anExample | \r\t\t\t(GtLlmExampleViewConversationCollector new\r\t\t\t\texample: anExample;\r\t\t\t\tinstructions: tutor instruction) conversations ]"
+				"code" : "tutor := GtLlmAssistant new.\r\rconversations := (aGroup select: [ :anExample | anExample result isNotNil ])\r\t\tflatCollect: [ :anExample | \r\t\t\t(GtLlmExampleViewConversationCollector new\r\t\t\t\texample: anExample;\r\t\t\t\tinstructions: tutor instruction) conversations ]"
 			},
 			{
 				"__type" : "textSnippet",
