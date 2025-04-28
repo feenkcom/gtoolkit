@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-18T13:54:30.860321+02:00"
+						"dateAndTimeString" : "2025-04-28T10:39:59.815501+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "OpenAI, Ollama and Anthropic chats have, when instructed how, the capability to request function calls to be performed. Tutors mirror that capability."
+				"string" : "OpenAI, Ollama and Anthropic chats have, when instructed how, the capability to request function calls to be performed. Assistants mirror that capability."
 			},
 			{
 				"__type" : "textSnippet",
@@ -137,7 +137,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:42:11.062356+01:00"
+						"dateAndTimeString" : "2025-04-28T10:40:12.64022+02:00"
 					}
 				},
 				"uid" : {
@@ -147,7 +147,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can then add it to the tutor’s provider. Please note that due to a technical limitation, tools and structured outputs do not play well together with Ollama tutors [1], and Anthropic does not formally support structured outputs [2]. Otherwise, both providers are equivalent."
+				"string" : "We can then add it to the assistant’s provider. Please note that due to a technical limitation, tools and structured outputs do not play well together with Ollama assistants [1], and Anthropic does not formally support structured outputs [2]. Otherwise, both providers are equivalent."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T15:01:37.423558+01:00"
+						"dateAndTimeString" : "2025-04-28T10:45:59.222348+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "R1iCg0XrDQCknxZSCbGGRg=="
 				},
-				"code" : "tutor := GtLlmTutor new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book through tool search.';\r\t\tproviderStencil: [ :anInstructionFormat | \r\t\t\tGtOpenAIAssistantProvider withApiKeyFromFile\r\t\t\t\tformat: anInstructionFormat asJsonSchema;\r\t\t\t\tassistantMessageClass: GtOpenAIActionMessage;\r\t\t\t\tuserMessageClass: GtOpenAIActionMessage;\r\t\t\t\taddTool: tool;\r\t\t\t\tinstructions: anInstructionFormat asInstructionPiece instructionString ].\r\rtutor"
+				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book through tool search.';\r\t\tproviderStencil: [ :anInstructionFormat | \r\t\t\tGtOpenAIAssistantProvider withApiKeyFromFile\r\t\t\t\tformat: anInstructionFormat asJsonSchema;\r\t\t\t\tassistantMessageClass: GtOpenAIActionMessage;\r\t\t\t\tuserMessageClass: GtOpenAIActionMessage;\r\t\t\t\taddTool: tool;\r\t\t\t\tinstructions: anInstructionFormat asInstructionPiece instructionString ].\r\rassistant"
 			},
 			{
 				"__type" : "textSnippet",
@@ -245,14 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:18:21.161267+01:00"
+						"dateAndTimeString" : "2025-04-28T10:45:59.212352+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "jccmQ0jrDQCD2hP/CbGGRg=="
 				},
-				"code" : "chat := tutor createChat.\rchat sendChatRequest: 'Tell me about gt4llm.'"
+				"code" : "chat := assistant createChat.\rchat sendChatRequest: 'Tell me about gt4llm.'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -349,12 +349,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-02-24T14:59:17.198879+01:00"
+			"dateAndTimeString" : "2025-04-28T10:54:51.996813+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Adding custom tools to tutors"
+		"title" : "Adding custom tools to assistants"
 	},
 	"uid" : {
 		"__type" : "uuid",

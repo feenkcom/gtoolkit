@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-03-24T23:23:32.986829+01:00"
+						"dateAndTimeString" : "2025-04-28T10:32:35.192276+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "By default, the [[gt4llm]] framework comes with a tutor for editing blog posts. To get a background on what a tutor is, refer to [[Handling custom instructions using tutors]]. For the purposes of this case study, it can be conceptualized as an AI assistant with custom instructions."
+				"string" : "By default, the [[gt4llm]] framework comes with an assistant for editing blog posts. To get a background on what an assistant is, refer to [[Handling custom instructions using assistants]]. For the purposes of this case study, it can be conceptualized as an AI agent with custom instructions."
 			},
 			{
 				"__type" : "textSnippet",
@@ -217,14 +217,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-20T10:45:25.982561+01:00"
+									"dateAndTimeString" : "2025-04-28T10:08:50.086654+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "h3KtYHrqDQCdgbrnA1QUJQ=="
 							},
-							"code" : "GtOpenAIBlogPostTutor new createChatOn: blogPostText"
+							"code" : "GtOpenAIBlogPostAssistant new createChatOn: blogPostText"
 						}
 					]
 				},
@@ -321,7 +321,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-03-24T23:26:24.4686+01:00"
+						"dateAndTimeString" : "2025-04-28T10:31:35.629563+02:00"
 					}
 				},
 				"uid" : {
@@ -331,7 +331,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The above tutor has been evolved from a generic tutor. We can refine a generic tutor to get to a similar result. This page demonstrates how to do that."
+				"string" : "The above assistant has been evolved from a generic assistant. We can refine a generic assistant to get to a similar result. This page demonstrates how to do that."
 			},
 			{
 				"__type" : "textSnippet",
@@ -358,7 +358,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:43:38.583852+01:00"
+						"dateAndTimeString" : "2025-04-28T10:31:40.885713+02:00"
 					}
 				},
 				"uid" : {
@@ -368,7 +368,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We start by instantiating a generic tutor with a description."
+				"string" : "We start by instantiating a generic assistant with a description."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -395,14 +395,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:44:50.057951+01:00"
+						"dateAndTimeString" : "2025-04-28T10:31:46.166678+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ci9TbHrqDQCm6EqXA1QUJQ=="
 				},
-				"code" : "tutor := GtLlmTutor new\r\t\tdescription: 'You are an assistant that is used to interactively work on blog posts.'"
+				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that is used to interactively work on blog posts.'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -429,7 +429,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-22T22:23:38.625792+02:00"
+						"dateAndTimeString" : "2025-04-28T10:31:55.714524+02:00"
 					}
 				},
 				"uid" : {
@@ -439,7 +439,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We want the tutor to work with a Post format, so we create it and give information on how to serialize and deserialize the blog post for the tutor."
+				"string" : "We want the assistant to work with a Post format, so we create it and give information on how to serialize and deserialize the blog post for the assistant."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -466,14 +466,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-22T22:20:57.828009+02:00"
+						"dateAndTimeString" : "2025-04-28T10:31:53.801527+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Hgw/c3rqDQCq6Gx/A1QUJQ=="
 				},
-				"code" : "tutor\r\taddFormat: (GtLlmTutorFormatDescription new\r\t\t\ttype: 'string';\r\t\t\tformat: 'Text';\r\t\t\tname: 'Post';\r\t\t\tpriority: 10).\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'Post';\r\t\tcontent: blogPostText;\r\t\tserializer: #asString;\r\t\tupdater: [ :aText :aString | \r\t\t\taText deleteAll\r\t\t\t\tappendString: aString;\r\t\t\t\tyourself ]"
+				"code" : "assistant\r\taddFormat: (GtLlmAssistantFormatDescription new\r\t\t\ttype: 'string';\r\t\t\tformat: 'Text';\r\t\t\tname: 'Post';\r\t\t\tpriority: 10).\rserializableText := GtLlmSerializableValueHolder new\r\t\tname: 'Post';\r\t\tcontent: blogPostText;\r\t\tserializer: #asString;\r\t\tupdater: [ :aText :aString | \r\t\t\taText deleteAll\r\t\t\t\tappendString: aString;\r\t\t\t\tyourself ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -537,14 +537,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:48:48.348177+01:00"
+						"dateAndTimeString" : "2025-04-28T10:32:01.683351+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "5eVWfXrqDQCs2GLvA1QUJQ=="
 				},
-				"code" : "chat := tutor createChat.\r\rchat onInstance: serializableText"
+				"code" : "chat := assistant createChat.\r\rchat onInstance: serializableText"
 			},
 			{
 				"__type" : "textSnippet",
@@ -571,7 +571,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:51:00.123158+01:00"
+						"dateAndTimeString" : "2025-04-28T10:32:05.765218+02:00"
 					}
 				},
 				"uid" : {
@@ -581,7 +581,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "As of now, the tutor has no specific actions, however. Let’s add a simple one now."
+				"string" : "As of now, the assistant has no specific actions, however. Let’s add a simple one now."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -608,14 +608,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T12:50:00.947611+01:00"
+						"dateAndTimeString" : "2025-04-28T10:32:06.911489+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "NdqLgXrqDQCxpiZAA1QUJQ=="
 				},
-				"code" : "tutor addAction: (GtLlmTutorAction new\r\t    name: 'Create title';\r\t    priority: 10;\r\t\tdescription: 'Create title. Put result in the `Text` property. Do not use quotes of any kind. Be crisp.')"
+				"code" : "assistant addAction: (GtLlmAssistantAction new\r\t    name: 'Create title';\r\t    priority: 10;\r\t\tdescription: 'Create title. Put result in the `Text` property. Do not use quotes of any kind. Be crisp.')"
 			},
 			{
 				"__type" : "textSnippet",
@@ -642,7 +642,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-22T19:05:28.975132+02:00"
+						"dateAndTimeString" : "2025-04-28T10:32:20.841398+02:00"
 					}
 				},
 				"uid" : {
@@ -652,7 +652,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Ideally, we would add examples, but since we have none, a description of the action will need to be enough. From here, we can reify the tutor. To do so, click on the reify button on any of the messages in the chat. You will be allowed to create a tutor class as well as a message class. The latter then allows you to add custom views for your messages, such as the diff view in {{gtClass:GtOpenAIBlogPostTutor}} above."
+				"string" : "Ideally, we would add examples, but since we have none, a description of the action will need to be enough. From here, we can reify the assistant. To do so, click on the reify button on any of the messages in the chat. You will be allowed to create an assistant class as well as a message class. The latter then allows you to add custom views for your messages, such as the diff view in {{gtClass:GtOpenAIBlogPostAssistant}} above."
 			}
 		]
 	},
