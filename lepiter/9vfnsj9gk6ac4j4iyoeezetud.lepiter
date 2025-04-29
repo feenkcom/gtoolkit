@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:22:51.168313+01:00"
+						"dateAndTimeString" : "2025-04-29T23:38:06.380864+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:23:25.571882+01:00"
+						"dateAndTimeString" : "2025-04-29T23:39:04.935568+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "zUE0D1iwDQC+H/6xCevRJQ=="
+					"uidString" : "UTtfWlPwDQC9Dqa7DCfFpg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First we find the instance of {{gtClass:GtWorldElement}} based on the name of the current page:"
+				"string" : "We first create a class with a few slots:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:22:00.471472+01:00"
+						"dateAndTimeString" : "2025-04-29T23:36:43.817693+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:28:07.325049+01:00"
+						"dateAndTimeString" : "2025-04-29T23:37:29.413381+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "pSUXDViwDQC+GnzeCevRJQ=="
+					"uidString" : "IWtzVVPwDQC8ybvUDCfFpg=="
 				},
-				"code" : "currentWorldElement := GtWorldElement allInstances\r\t\tdetect: [ :eachWorld | \r\t\t\teachWorld tabs tabs\r\t\t\t\tanySatisfy: [ :each | \r\t\t\t\t\teach isSelected\r\t\t\t\t\t\tand: [ each children first text asString beginsWith: 'How to set' ] ] ]"
+				"code" : "Object subclass: #Something\r\tinstanceVariableNames: 'x y z'\r\tclassVariableNames: ''\r\tpackage: 'Something'."
 			},
 			{
 				"__type" : "textSnippet",
@@ -89,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:23:33.462313+01:00"
+						"dateAndTimeString" : "2025-04-29T23:39:11.194043+02:00"
 					}
 				},
 				"editEmail" : {
@@ -100,17 +100,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:23:40.801129+01:00"
+						"dateAndTimeString" : "2025-04-29T23:39:19.924891+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "g+uTEliwDQC/npVyCevRJQ=="
+					"uidString" : "2y88XlPwDQC96w8kDCfFpg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Once we have the world element, we set the extent:"
+				"string" : "Then we script the refactoring:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -126,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-05T17:15:14.457343+01:00"
+						"dateAndTimeString" : "2025-04-29T23:39:08.142307+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-29T23:23:51.192501+02:00"
+						"dateAndTimeString" : "2025-04-29T23:44:21.975075+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "edvj9FewDQC6NYiACevRJQ=="
+					"uidString" : "D6ANXlPwDQC9527+DCfFpg=="
 				},
-				"code" : "currentWorldElement space extent: 1500@1000."
+				"code" : "model := RBNamespace new.\rSomething instVarNames\r\tdo: [ :name | \r\t\t(RBCreateAccessorsForVariableRefactoring\r\t\t\tmodel: model\r\t\t\tvariable: name\r\t\t\tclass: #Something\r\t\t\tclassVariable: false)\r\t\t\tprimitiveExecute ].\rmodel"
 			}
 		]
 	},
@@ -156,7 +156,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-05T17:14:20.011325+01:00"
+			"dateAndTimeString" : "2025-04-29T23:38:03.069033+02:00"
 		}
 	},
 	"editEmail" : {
@@ -167,15 +167,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-05T17:27:44.533917+01:00"
+			"dateAndTimeString" : "2025-04-29T23:38:03.069033+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to set the extent of the current window"
+		"title" : "Programatically generating accessors for a class"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "c62a6deb-57b0-0d00-b8ed-2fb809ebd125"
+		"uuid" : "95697355-53f0-0d00-bcc8-ea4a0c27c5a6"
 	}
 }
