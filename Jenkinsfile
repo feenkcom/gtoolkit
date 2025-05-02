@@ -809,6 +809,12 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
             git checkout ${build.pythonBridgeCommitHash}
             chmod +x scripts/*.sh
         """
+
+        script.sh """
+            pushd ~
+            rm gem*.log
+            popd
+        """
     }
 
     @Override
