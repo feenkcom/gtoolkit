@@ -7,62 +7,67 @@ Class {
 { #category : #examples }
 GtTranscriptExamples >> blocAnimation [
 	<gtExample>
+	<return: #BlParallelAnimation>
 	| animation childTranslate1 element backgroundAnimation childTranslate2 scaleIncrease childTranslate child |
-
 	element := BlElement new
-		size: 50 @ 50;
-		relocate: 50@50;
-		background: Color red twiceDarker;
-		border: (BlBorder paint: Color lightGray width: 5).
-		
+			size: 50 @ 50;
+			relocate: 50 @ 50;
+			background: Color red twiceDarker;
+			border: (BlBorder paint: Color lightGray width: 5).
+
 	child := BlElement new
-		size: 10 @ 10;
-		geometry: BlEllipseGeometry new;
-		background: Color white.
+			size: 10 @ 10;
+			geometry: BlEllipseGeometry new;
+			background: Color white.
 	element addChild: child.
 
 	backgroundAnimation := BlColorTransition new
-		duration: 5 seconds;
-		from: Color red twiceDarker;
-		to: Color blue twiceDarker;
-		onStepDo: [ :aColor :anElement | anElement background: aColor ].
+			duration: 5 seconds;
+			from: Color red twiceDarker;
+			to: Color blue twiceDarker;
+			onStepDo: [ :aColor :anElement | anElement background: aColor ].
 
-	scaleIncrease := (BlTransformAnimation scale: 3@3)
-		duration: 5 seconds;
-		yourself.
+	scaleIncrease := (BlTransformAnimation scale: 3 @ 3)
+			duration: 5 seconds;
+			yourself.
 
 	childTranslate1 := (BlTransformAnimation translate: 35 @ 20)
-		duration: 2.5 seconds.
+			duration: 2.5 seconds.
 
 	childTranslate2 := (BlTransformAnimation translate: -30 @ 15)
-		duration: 2.5 seconds.
+			duration: 2.5 seconds.
 	childTranslate := BlSequentialAnimation new
-		addAll: { childTranslate1. childTranslate2 }.
-			
+			addAll: {childTranslate1.
+					childTranslate2}.
+
 	child addAnimation: childTranslate.
-	
-	element addAnimation: (animation := BlParallelAnimation new
-		addAll:
-			{backgroundAnimation.
-			scaleIncrease.
-			childTranslate}).
+
+	element
+		addAnimation: (animation := BlParallelAnimation new
+					addAll: {backgroundAnimation.
+							scaleIncrease.
+							childTranslate}).
 	^ animation
 ]
 
 { #category : #examples }
 GtTranscriptExamples >> blocElementWithAnimation [
 	<gtExample>
-
+	<return: #BlElement>
 	^ self blocAnimation target
 ]
 
 { #category : #examples }
 GtTranscriptExamples >> characterWithAdornment [
 	<gtExample>
+	<return: #GtTranscript>
 	| transcript |
 	transcript := self transcript.
 	transcript next
-		expanding: [ BlElement new size: 70 @ 50; background: Color blue; yourself ]; 
+		expanding: [ BlElement new
+				size: 70 @ 50;
+				background: Color blue;
+				yourself ];
 		put: $4.
 	transcript next put: $2.
 	^ transcript
@@ -71,6 +76,7 @@ GtTranscriptExamples >> characterWithAdornment [
 { #category : #examples }
 GtTranscriptExamples >> characters [
 	<gtExample>
+	<return: #GtTranscript>
 	| transcript |
 	transcript := self transcript.
 	transcript next put: $4.
@@ -81,6 +87,7 @@ GtTranscriptExamples >> characters [
 { #category : #examples }
 GtTranscriptExamples >> clear [
 	<gtExample>
+	<return: #GtTranscript>
 	| transcript isEmpty |
 	transcript := self completeAPI.
 	transcript textDo: [ :aText | isEmpty := aText isEmpty ].
@@ -88,15 +95,16 @@ GtTranscriptExamples >> clear [
 	transcript clear.
 	transcript textDo: [ :aText | isEmpty := aText isEmpty ].
 	self assert: isEmpty.
-	^ transcript 
+	^ transcript
 ]
 
 { #category : #examples }
 GtTranscriptExamples >> completeAPI [
 	<gtExample>
+	<return: #GtTranscript>
 	| transcript |
 	transcript := self transcript.
-	transcript 
+	transcript
 		nextPutAll: 'This is an example of';
 		space;
 		nextPutAll: 'the new GT Transcript';
@@ -111,72 +119,78 @@ GtTranscriptExamples >> completeAPI [
 		putAll: 'Colored text';
 		cr.
 	transcript tab.
-	transcript next	
+	transcript next
 		fontSize: 20;
 		putAll: 'Varying size text';
 		cr.
 	transcript next
 		tab;
-		expanding: [ BlElement new background: Color indexedColors atRandom; yourself ];
+		expanding: [ BlElement new
+				background: Color indexedColors atRandom;
+				yourself ];
 		putAll: 'Embelished with extra expansion';
 		cr.
-	[ 1/0 ] on: Error do: [ :err | 
-		transcript next 
-			tab;
-			putAll: 'Exception: ';
-			showException: err ].
-	"transcript next 
+	[ 1 / 0 ]
+		on: Error
+		do: [ :err | 
+			transcript next
+				tab;
+				putAll: 'Exception: ';
+				showException: err ].	"transcript next 
 		tab;
 		italic;
 		streamAll: [ transcript next putAll: 'And others ...' ]."
-	^ transcript 
+	^ transcript
 ]
 
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> defaultSpaceExtent [
 	<gtExample>
-	^ 400@640
+	<return: #Point>
+	^ 400 @ 640
 ]
 
 { #category : #examples }
 GtTranscriptExamples >> error [
 	<gtExample>
+	<return: #GtTranscript>
 	| transcript |
 	transcript := self transcript.
-	[ 1/0 ] on: Error do: [ :err | 
-		transcript next 
-			putAll: 'Exception: ';
-			showException: err ].
+	[ 1 / 0 ]
+		on: Error
+		do: [ :err | 
+			transcript next
+				putAll: 'Exception: ';
+				showException: err ].
 	^ transcript
 ]
 
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> feenkString [
 	<gtExample>
+	<return: #ByteString>
 	^ 'How do you feenk today?'
 ]
 
 { #category : #examples }
 GtTranscriptExamples >> objectShower [
 	<gtExample>
+	<return: #GtTranscript>
 	| transcript loop |
-
 	transcript := GtTranscript new.
 
-	loop := [
-		| index |
+	loop := [ | index |
 		index := 1.
-		500 timesRepeat: [
-			transcript next
-				cr;
-				putAll: 'Element ';
-				put: index;
-				expanded: [ self randomElement ];
-				space.
+		500
+			timesRepeat: [ transcript next
+					cr;
+					putAll: 'Element ';
+					put: index;
+					expanded: [ self randomElement ];
+					space.
 
-			index := index + 1.
-			20 milliSeconds wait
-	] ] newProcess.
+				index := index + 1.
+				20 milliSeconds wait ] ] newProcess.
 
 	loop resume.
 
@@ -186,6 +200,7 @@ GtTranscriptExamples >> objectShower [
 { #category : #examples }
 GtTranscriptExamples >> putAll [
 	<gtExample>
+	<return: #GtTranscript>
 	| transcript |
 	transcript := self transcript.
 	transcript next putAll: '42'.
@@ -195,31 +210,33 @@ GtTranscriptExamples >> putAll [
 { #category : #'instance creation' }
 GtTranscriptExamples >> randomElement [
 	<gtExample>
+	<return: #BlElement>
 	| geometries color size geometry |
-	
-	geometries := { BlEllipseGeometry . BlRectangleGeometry }.
+	geometries := {BlEllipseGeometry.
+			BlRectangleGeometry}.
 	color := Color random paler.
-	size := (100 atRandom @ 100 atRandom) + (75 @ 50).
+	size := 100 atRandom @ 100 atRandom + (75 @ 50).
 	geometry := geometries atRandom new.
-		
+
 	^ BlElement new
 		constraintsDo: [ :c | c textFlow pushLine ];
 		geometry: geometry;
 		size: size;
 		background: color;
-		"to allow transcript to log measured size"
-		forceLayout
+		forceLayout	"to allow transcript to log measured size"
 ]
 
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> scripter [
 	<gtExample>
+	<return: #BlScripter>
 	^ BlScripter new
 ]
 
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> scripterShowString [
 	<gtExample>
+	<return: #BlScripter>
 	| aScripter |
 	aScripter := self scripterWithTranscript.
 	aScripter
@@ -247,6 +264,7 @@ GtTranscriptExamples >> scripterShowString [
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI [
 	<gtExample>
+	<return: #BlScripter>
 	| aScripter |
 	aScripter := self scripter.
 	aScripter
@@ -273,6 +291,7 @@ GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI [
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI_AndDisplayTheUI [
 	<gtExample>
+	<return: #BlScripter>
 	| aScripter |
 	aScripter := self scripterShowStringBeforeDisplayingUI.
 	aScripter
@@ -298,9 +317,10 @@ GtTranscriptExamples >> scripterShowStringBeforeDisplayingUI_AndDisplayTheUI [
 { #category : #'examples - scripter' }
 GtTranscriptExamples >> scripterWithTranscript [
 	<gtExample>
+	<return: #BlScripter>
 	| aTranscript |
 	aTranscript := self transcript.
-	^ self scripter 
+	^ self scripter
 		model: aTranscript;
 		element: aTranscript asElement;
 		extent: self defaultSpaceExtent
@@ -309,10 +329,14 @@ GtTranscriptExamples >> scripterWithTranscript [
 { #category : #examples }
 GtTranscriptExamples >> stringWithAdornment [
 	<gtExample>
+	<return: #GtTranscript>
 	| transcript |
 	transcript := self transcript.
 	transcript next
-		expanding: [ BlElement new size: 70 @ 50; background: Color blue; yourself ]; 
+		expanding: [ BlElement new
+				size: 70 @ 50;
+				background: Color blue;
+				yourself ];
 		putAll: '42'.
 	^ transcript
 ]
@@ -320,6 +344,7 @@ GtTranscriptExamples >> stringWithAdornment [
 { #category : #examples }
 GtTranscriptExamples >> transcript [
 	<gtExample>
+	<return: #GtTranscript>
 	^ GtTranscript new
 ]
 
