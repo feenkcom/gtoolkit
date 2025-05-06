@@ -812,7 +812,7 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
 
         script.sh """
             pushd ~
-            rm gem*.log
+            rm -f gem*.log
             popd
         """
     }

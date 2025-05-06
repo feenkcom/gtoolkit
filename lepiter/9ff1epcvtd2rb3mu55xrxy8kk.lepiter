@@ -256,7 +256,10 @@
 					"uidString" : "CTSJIM3XDQCbVXPMDTxBnw=="
 				},
 				"code" : "remoteLocal := 'This is red and this is green' asRopedText.\rremoteLocal fontSize: 20.\r(remoteLocal from: 9 to: 11) \r\tforeground: (GtPhlowColor named: #red) asColor;\r\tfontSize: 45.\r(remoteLocal from: 25 to: 29) \r\thighlight: (GtPhlowColor named: #green) asColor.\r(remoteLocal from: 1 to: 4)  decorationDo: [ :aDecoration |\r\taDecoration \r\t\tunderline;\r\t\tdashed; \r\t\tthickness: 3;\r\t\tcolor: (GtPhlowColor named: #blue) asColor ].\r(remoteLocal from: 17 to: 20)  decorationDo: [ :aDecoration |\r\taDecoration \r\t\tlineThrough;\r\t\twavy ].\rremoteLocal",
-				"sessionName" : "connector:default"
+				"sessionIdentifier" : {
+					"__type" : "gtGemStoneExplicitSessionIdentifier",
+					"sessionName" : "connector:default"
+				}
 			},
 			{
 				"__type" : "textSnippet",
@@ -556,7 +559,10 @@
 					"uidString" : "pEDZu9fXDQChs3DqDTxBnw=="
 				},
 				"code" : "GtRemotePhlowDeclarativeTextTestInspectable new \r\tstyledPhlowTextWithHighlights",
-				"sessionName" : "connector:default"
+				"sessionIdentifier" : {
+					"__type" : "gtGemStoneExplicitSessionIdentifier",
+					"sessionName" : "connector:default"
+				}
 			},
 			{
 				"__type" : "gemstoneSnippet",
