@@ -55,6 +55,77 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-06T12:42:54.298606+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-06T12:44:00.988267+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yhEUBNfwDQCOsLLzBALv0A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You can begin a chat using the default connection if it is set up. See how to check this and change the default connection in [[Managing connections and setting the default]]."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-06T12:44:04.879578+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-06T12:44:11.609229+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8wpJCNfwDQCTyJ1ZBALv0A=="
+				},
+				"code" : "chat := GtLlmChat new"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2025-02-14T11:33:14.672518+01:00"
 					}
 				},
@@ -66,7 +137,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:37:06.679964+01:00"
+						"dateAndTimeString" : "2025-05-06T12:44:36.789101+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +147,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To chat with OpenAI, ensure that you have added an API key. This can be done in [[Adding an OpenAI API key]]. After the API key was added, you will be able to chat with an LLM."
+				"string" : "You can also connect to a specific provider. To chat with OpenAI, for instance, ensure that you have added an API key. This can be done in [[Adding an OpenAI API key]]. After the API key was added, you will be able to chat with an LLM."
 			},
 			{
 				"__type" : "pharoSnippet",
