@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:39:38.970662+02:00"
+						"dateAndTimeString" : "2025-05-13T15:40:00.120752+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:39:38.970662+02:00"
+						"dateAndTimeString" : "2025-05-13T15:45:01.573022+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "iScOTWbxDQC0aByqDD/Alw=="
+					"uidString" : "K9gUTmbxDQC1AkTJDD/Alw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "All providers (Ollama, Anthropic, and OpenAI) have vision capabilities [1]. As such, regular and {{gtPage:Handling custom instructions using assistants|label=assistant}} chats can work with images through the UI or programmatically."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T14:59:17.2389+01:00"
+						"dateAndTimeString" : "2025-05-13T15:42:16.070068+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:39:59.815501+02:00"
+						"dateAndTimeString" : "2025-05-13T15:43:56.240929+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "j9ype0XrDQCfYLQHCbGGRg=="
+					"uidString" : "PU1rVmbxDQC+RcGmDD/Alw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "OpenAI, Ollama and Anthropic chats have, when instructed how, the capability to request function calls to be performed. Assistants mirror that capability."
+				"string" : "To attach an image through the UI, simply attach them using the `Attach` icon at the bottom of the message editor."
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T15:00:04.316864+01:00"
+						"dateAndTimeString" : "2025-05-13T15:44:03.405717+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T15:00:04.561596+01:00"
+						"dateAndTimeString" : "2025-05-13T15:44:43.40303+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "+DJ4fkXrDQCgF6jWCbGGRg=="
+					"uidString" : "nwufXGbxDQCCCsjzDD/Alw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To use it, we first need to define the function."
+				"string" : "In the following, we will exemplify attaching a screenshot of GT programmatically for illustration purposes."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-13T15:45:23.709524+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-13T15:46:00.520688+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qnCaYWbxDQCEve11DD/Alw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First, we create a chat using the default provider (you can learn how to change it in [[Managing connections and setting the default]])."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -129,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T15:00:11.953295+01:00"
+						"dateAndTimeString" : "2025-05-13T15:46:03.078699+02:00"
 					}
 				},
 				"editEmail" : {
@@ -140,14 +177,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-14T14:16:03.573586+02:00"
+						"dateAndTimeString" : "2025-05-13T15:46:10.680978+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2bXsfkXrDQCgIeDVCbGGRg=="
+					"uidString" : "qS3zY2bxDQCHBjJUDD/Alw=="
 				},
-				"code" : "tool := GtLlmFunctionTool new\r\t\tname: 'lookupDocumentationPage';\r\t\tparameters: {'pageName'};\r\t\tdescription: 'Looks up a documentation page by name and returns its content in Markdown format. `pageName` may be a substring. If multiple pages are found, only the first one will be returned.';\r\t\tblock: [ :aFunctionCall | \r\t\t\t(LeDatabase gtBook asyncPagesForWord: aFunctionCall anyArgument) toArray wait\r\t\t\t\tifEmpty: [ 'No page found' ]\r\t\t\t\tifNotEmpty: [ :pages | pages first asMarkdownPage ] ]"
+				"code" : "chat := GtLlmChat new"
 			},
 			{
 				"__type" : "textSnippet",
@@ -163,7 +200,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T15:00:15.906997+01:00"
+						"dateAndTimeString" : "2025-05-13T15:46:13.561056+02:00"
 					}
 				},
 				"editEmail" : {
@@ -174,17 +211,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:40:12.64022+02:00"
+						"dateAndTimeString" : "2025-05-13T15:49:47.875018+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6wQpf0XrDQCgK8xjCbGGRg=="
+					"uidString" : "Rx2TZGbxDQCHiI8iDD/Alw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can then add it to the assistant’s provider. Please note that due to a technical limitation, tools and structured outputs do not play well together with Ollama assistants [1], and Anthropic does not formally support structured outputs [2]. Otherwise, both providers are equivalent."
+				"string" : "We then create a screenshot of the current window of Glamorous Toolkit."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -200,7 +237,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T15:01:28.867546+01:00"
+						"dateAndTimeString" : "2025-05-13T15:49:52.72469+02:00"
 					}
 				},
 				"editEmail" : {
@@ -211,14 +248,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:45:59.222348+02:00"
+						"dateAndTimeString" : "2025-05-13T16:01:08.473954+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "R1iCg0XrDQCknxZSCbGGRg=="
+					"uidString" : "LEujcWbxDQCJGHujDD/Alw=="
 				},
-				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book through tool search.';\r\t\tproviderStencil: [ :anInstructionFormat | \r\t\t\tGtOpenAIAssistantProvider withApiKeyFromFile\r\t\t\t\tformat: anInstructionFormat asJsonSchema;\r\t\t\t\tassistantMessageClass: GtOpenAIActionMessage;\r\t\t\t\tuserMessageClass: GtOpenAIActionMessage;\r\t\t\t\taddTool: tool;\r\t\t\t\tinstructions: anInstructionFormat asInstructionPiece instructionString ].\r\rassistant"
+				"code" : "fileReference := BlExporter png\r\t\tscaled: 2;\r\t\telement: (GtWorldElement allInstances detect: [:aWorldElement | aWorldElement space isFocused]);\r\t\texport"
 			},
 			{
 				"__type" : "textSnippet",
@@ -234,7 +271,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:18:07.706073+01:00"
+						"dateAndTimeString" : "2025-05-13T15:55:28.688531+02:00"
 					}
 				},
 				"editEmail" : {
@@ -245,17 +282,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:18:10.322877+01:00"
+						"dateAndTimeString" : "2025-05-13T15:55:47.095592+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "gVPGQkjrDQCD0LOgCbGGRg=="
+					"uidString" : "jbKphWbxDQCLGUMMDD/Alw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Finally, we can use the chat as before."
+				"string" : "Finally, we can send this screenshot to the chat."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -271,7 +308,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:18:14.026974+01:00"
+						"dateAndTimeString" : "2025-05-13T15:55:25.121765+02:00"
 					}
 				},
 				"editEmail" : {
@@ -282,14 +319,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:45:59.212352+02:00"
+						"dateAndTimeString" : "2025-05-13T15:56:11.016112+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "jccmQ0jrDQCD2hP/CbGGRg=="
+					"uidString" : "90NzhWbxDQCLFBV4DD/Alw=="
 				},
-				"code" : "chat := assistant createChat.\rchat sendChatRequest: 'Tell me about gt4llm.'"
+				"code" : "chat sendFiles: {fileReference} withMessage: 'What do you see?'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -305,7 +342,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:17:26.266882+01:00"
+						"dateAndTimeString" : "2025-05-13T15:40:28.071888+02:00"
 					}
 				},
 				"editEmail" : {
@@ -316,54 +353,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:17:31.227468+01:00"
+						"dateAndTimeString" : "2025-05-13T15:41:09.284605+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "fU3rP0jrDQCBvvYICbGGRg=="
+					"uidString" : "al/7T2bxDQC2rsNADD/Alw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[1] This is because OpenAI uses a signal to interrupt the conversation to request a tool call and then resumes answering the question. In Ollama, the tool call is embedded in the answer, thus it’s an in-band communication channel."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:42:13.19395+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:42:31.626289+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "VJS82FbrDQC9UmoFAurXGw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[2] It is however usually able to adhere to the format even when not forced to."
+				"string" : "[1] Not all models provided by Ollama are equipped with Vision capabilities, but models such as `llava` or `gemma3` come with such capabilities."
 			}
 		]
 	},
@@ -375,7 +375,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-02-24T14:59:17.198879+01:00"
+			"dateAndTimeString" : "2025-05-13T15:39:56.084166+02:00"
 		}
 	},
 	"editEmail" : {
@@ -386,15 +386,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-04-28T10:54:51.996813+02:00"
+			"dateAndTimeString" : "2025-05-13T15:39:56.084166+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Adding custom tools to assistants"
+		"title" : "Working with images"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "763fa97b-45eb-0d00-9f5f-e3d409b18646"
+		"uuid" : "f84a134e-66f1-0d00-b501-8f320c3fc097"
 	}
 }
