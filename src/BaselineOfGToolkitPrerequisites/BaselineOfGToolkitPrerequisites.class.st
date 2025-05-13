@@ -55,7 +55,7 @@ BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
 	self 
-		forPharo12: [
+		fastForPharo12: [
 			String compile: 'asClass
 	<gtPharoPatch: #Pharo12>
 	"returns a global class with my name"
@@ -63,7 +63,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
 classified: 'gt-pharo-patch'.
 		] 
 		forPharo11: [ ]
-		forPharo10: [ ]
 ]
 
 { #category : #accessing }
@@ -105,26 +104,25 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 	self 
-		forPharo12: [] 
+		fastForPharo12: [] 
 		forPharo11: [
 			FT2Handle class 
 				compile: 'startUp: isImageStarting
 	<gtPharoPatch: #Pharo11>'
 			classified: 'startup']
-		forPharo10: [ ]
 ]
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 	self 
-		forPharo12: [
+		fastForPharo12: [
 			(#FinalizationProcess asClassInEnvironment: Smalltalk globals)
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
 				addClassVarNamed: 'StoppedSemaphore';
 				initialize. 
 		] 
-		forPharo11AndPharo10: [
+		forPharo11: [
 			Object subclass: #FinalizationProcess
 	instanceVariableNames: ''
 	classVariableNames: 'TheFinalizationProcess FinalizationSemaphore MournLoopProcess StopRequested StoppedSemaphore'
@@ -135,32 +133,24 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForJob [
 	self 
-		forPharo12: [] 
-		forPharo11AndPharo10: [ Job addSlot: #announcer ] 
+		fastForPharo12: [] 
+		forPharo11: [ Job addSlot: #announcer ] 
 ]
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
-	self 
-		forPharo11AndPharo12: [ 
-			#(#FinalizationRegistryEntry #WeakKeyAssociation) do: [ :aClassName | 
-				aClassName asClass classSide 
-					compile: 'leJsonV4Name
 
-	^ nil' classified: 'serialisation' ] 
-	]
-		forPharo10: [
-			#Ephemeron asClass classSide 
-				compile: 'leJsonV4Name
+	#(#FinalizationRegistryEntry #WeakKeyAssociation) do: [ :aClassName | 
+		aClassName asClass classSide 
+			compile: 'leJsonV4Name
 
-	^ nil' classified: 'serialisation'
-	].
+	^ nil' classified: 'serialisation' ]
 ]
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 	self 
-		forPharo12: [
+		fastForPharo12: [
 			(Object << #ProtocolOrganizer
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
@@ -187,20 +177,19 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 				package: 'GToolkit-Pharo11Stubs') install.
 		] 
 		forPharo11: [ ]
-		forPharo10: [ ]
 ]
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
-		forPharo12: [
+		fastForPharo12: [
 			WeakArray
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
 				addClassVarNamed: 'StoppedSemaphore';
 				addClassVarNamed: 'TheFinalizationProcess';
 				addClassVarNamed: 'FinalizationSemaphore' ] 
-		forPharo11AndPharo10: [ 
+		forPharo11: [ 
 			WeakArray
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
@@ -254,10 +243,9 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchInlineMethodRefactoring [
 	
-	self 
-		forPharo11AndPharo12: [ 
-			RBInlineMethodRefactoring addSlot: #inlineClass.
-			RBInlineMethodRefactoring compile: 'inlineClass
+	
+	RBInlineMethodRefactoring addSlot: #inlineClass.
+	RBInlineMethodRefactoring compile: 'inlineClass
 	<gtPharoPatch: #Pharo11Pharo12>
 			
 	^ inlineClass
@@ -267,7 +255,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchInlineMethodRefactoring [
 			]
 		ifNotNil: [ inlineClass ]' classified: 'transforming'.
 		
-			RBInlineMethodFromComponentRefactoring  compile: 'inlineClass
+	RBInlineMethodFromComponentRefactoring  compile: 'inlineClass
 	<gtPharoPatch: #Pharo11Pharo12>
 
 	| imps |
@@ -279,8 +267,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchInlineMethodRefactoring [
 	imps ifEmpty: [ self refactoringFailure: ''Nobody defines a method named '' , self inlineSelector ].
 	inlineClass := self requestImplementorToInline: imps.
 	inlineClass ifNil: [ self refactoringFailure: ''No implementor selected'' ].
-	^ inlineClass' classified: 'transforming'. ] 
-		forPharo10: [].
+	^ inlineClass' classified: 'transforming'. 
 ]
 
 { #category : #accessing }
@@ -298,11 +285,10 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 			package: 'GToolkit-PharoBasePatch-StrictSymbol';
 			package: 'GToolkit-PharoBasePatch-ForPharo12'.
 		self 
-			forPharo12: [] 
+			fastForPharo12: [] 
 			forPharo11: [
 				spec
-					package: 'GToolkit-PharoBasePatch-StrictSymbol-Overrides'] 
-			forPharo10: [] ]
+					package: 'GToolkit-PharoBasePatch-StrictSymbol-Overrides']  ]
 ]
 
 { #category : #accessing }
