@@ -55,7 +55,7 @@ BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
 	self 
-		forPharo12: [
+		fastForPharo12: [
 			String compile: 'asClass
 	<gtPharoPatch: #Pharo12>
 	"returns a global class with my name"
@@ -63,7 +63,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
 classified: 'gt-pharo-patch'.
 		] 
 		forPharo11: [ ]
-		forPharo10: [ ]
 ]
 
 { #category : #accessing }
@@ -105,13 +104,12 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 	self 
-		forPharo12: [] 
+		fastForPharo12: [] 
 		forPharo11: [
 			FT2Handle class 
 				compile: 'startUp: isImageStarting
 	<gtPharoPatch: #Pharo11>'
 			classified: 'startup']
-		forPharo10: [ ]
 ]
 
 { #category : #accessing }
@@ -160,7 +158,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 	self 
-		forPharo12: [
+		fastForPharo12: [
 			(Object << #ProtocolOrganizer
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
@@ -187,7 +185,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 				package: 'GToolkit-Pharo11Stubs') install.
 		] 
 		forPharo11: [ ]
-		forPharo10: [ ]
 ]
 
 { #category : #accessing }
@@ -298,11 +295,10 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 			package: 'GToolkit-PharoBasePatch-StrictSymbol';
 			package: 'GToolkit-PharoBasePatch-ForPharo12'.
 		self 
-			forPharo12: [] 
+			fastForPharo12: [] 
 			forPharo11: [
 				spec
-					package: 'GToolkit-PharoBasePatch-StrictSymbol-Overrides'] 
-			forPharo10: [] ]
+					package: 'GToolkit-PharoBasePatch-StrictSymbol-Overrides']  ]
 ]
 
 { #category : #accessing }
