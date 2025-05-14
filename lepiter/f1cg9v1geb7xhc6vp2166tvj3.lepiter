@@ -171,7 +171,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:34:55.345073+02:00"
+						"dateAndTimeString" : "2025-05-14T15:01:02.798997+02:00"
 					}
 				},
 				"uid" : {
@@ -181,7 +181,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, we create an assistant and give it a description as well as overriding the provider to give it access to the files and file search capabilities. This is currently only available for the OpenAI assistant provider."
+				"string" : "Then, we create an assistant and give it a description as well as overriding the provider to OpenAI assistant, since file search is currently only available for that provider."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -208,14 +208,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:35:03.569296+02:00"
+						"dateAndTimeString" : "2025-05-14T15:02:04.590252+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "VRvDjCLpDQClNSbsBOD//Q=="
 				},
-				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you.';\r\t\tproviderStencil: [ :anInstructionFormat | \r\t\t\tGtOpenAIAssistantProvider withApiKeyFromFile\r\t\t\t\tformat: anInstructionFormat asJsonSchema;\r\t\t\t\tassistantMessageClass: GtOpenAIActionMessage;\r\t\t\t\tuserMessageClass: GtOpenAIActionMessage;\r\t\t\t\taddFile: (GtOpenAIResourceFile new\r\t\t\t\t\t\tfile: aFile;\r\t\t\t\t\t\tdescription: 'Lepiter booklet: GToolkit book');\r\t\t\t\taddTool: (GtLlmTool new type: 'file_search');\r\t\t\t\tinstructions: anInstructionFormat asInstructionPiece instructionString ].\r\rassistant"
+				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you.';\r\t\tconnection: (GtLlmConnection new\r\t\t\t\tmodel: 'gpt-4.1';\r\t\t\t\tprovider: GtOpenAIAssistantProvider).\r\rassistant"
 			},
 			{
 				"__type" : "textSnippet",
@@ -242,7 +242,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-20T13:43:10.977166+01:00"
+						"dateAndTimeString" : "2025-05-14T15:01:28.002637+02:00"
 					}
 				},
 				"uid" : {
@@ -252,7 +252,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Finally, we start a chat, asking it questions about GT or topics found in its RAG database."
+				"string" : "Finally, we start a chat, add the file and tool to the provider, and start asking it questions about GT or topics found in its RAG database."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -279,14 +279,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:35:07.997617+02:00"
+						"dateAndTimeString" : "2025-05-14T14:59:28.280872+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "NseIAyPpDQCm3gqWBOD//Q=="
 				},
-				"code" : "chat := assistant createChat"
+				"code" : "chat := assistant createChat."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-14T14:59:43.220404+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-14T15:02:14.865508+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1UcZ3HnxDQCwcGUpAReYsQ=="
+				},
+				"code" : "chat provider\r\taddFile: (GtOpenAIResourceFile new\r\t\t\tfile: aFile;\r\t\t\tdescription: 'Lepiter booklet: GToolkit book');\r\taddTool: (GtLlmTool new type: 'file_search');\r\tcreateAssistant"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -313,14 +347,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-01-28T14:14:44.270845+01:00"
+						"dateAndTimeString" : "2025-05-14T15:02:31.652249+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "BlqutSXpDQCrEGvlBOD//Q=="
 				},
-				"code" : "chat sendMessage: 'What is Ludo?'"
+				"code" : "chat sendChatRequest: 'What is Ludo?'"
 			}
 		]
 	},
