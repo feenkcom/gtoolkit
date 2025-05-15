@@ -174,7 +174,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:40:12.64022+02:00"
+						"dateAndTimeString" : "2025-05-14T14:58:14.747633+02:00"
 					}
 				},
 				"uid" : {
@@ -184,7 +184,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can then add it to the assistant’s provider. Please note that due to a technical limitation, tools and structured outputs do not play well together with Ollama assistants [1], and Anthropic does not formally support structured outputs [2]. Otherwise, both providers are equivalent."
+				"string" : "We can then add it to the provider. Please note that due to a technical limitation, tools and structured outputs do not play well together with Ollama assistants [1], and Anthropic does not formally support structured outputs [2]. Otherwise, both providers are equivalent."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-14T14:58:00.509834+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-14T14:58:09.057943+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NAj61XnxDQCue0taAReYsQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First we create an assistant."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -211,14 +248,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:45:59.222348+02:00"
+						"dateAndTimeString" : "2025-05-14T14:57:36.575085+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "R1iCg0XrDQCknxZSCbGGRg=="
 				},
-				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book through tool search.';\r\t\tproviderStencil: [ :anInstructionFormat | \r\t\t\tGtOpenAIAssistantProvider withApiKeyFromFile\r\t\t\t\tformat: anInstructionFormat asJsonSchema;\r\t\t\t\tassistantMessageClass: GtOpenAIActionMessage;\r\t\t\t\tuserMessageClass: GtOpenAIActionMessage;\r\t\t\t\taddTool: tool;\r\t\t\t\tinstructions: anInstructionFormat asInstructionPiece instructionString ].\r\rassistant"
+				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book through tool search.'.\r\rassistant"
 			},
 			{
 				"__type" : "textSnippet",
@@ -245,7 +282,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:18:10.322877+01:00"
+						"dateAndTimeString" : "2025-05-14T14:58:19.684385+02:00"
 					}
 				},
 				"uid" : {
@@ -255,7 +292,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Finally, we can use the chat as before."
+				"string" : "Finally, we can use the chat as before, adding the tool."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -282,14 +319,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:45:59.212352+02:00"
+						"dateAndTimeString" : "2025-05-14T14:58:42.908649+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "jccmQ0jrDQCD2hP/CbGGRg=="
 				},
-				"code" : "chat := assistant createChat.\rchat sendChatRequest: 'Tell me about gt4llm.'"
+				"code" : "chat := assistant createChat.\rchat provider addTool: tool.\rchat sendChatRequest: 'Tell me about gt4llm.'"
 			},
 			{
 				"__type" : "textSnippet",

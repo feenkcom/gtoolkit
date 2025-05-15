@@ -316,14 +316,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:33:32.687289+02:00"
+						"dateAndTimeString" : "2025-05-15T09:38:09.000808+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "i8AdxnnqDQC15a3eA1QUJQ=="
 				},
-				"code" : "assistant addAction: (GtLlmAssistantAction new\r\t    name: 'Calculate';\r\t    priority: 10;\r\t\tdescription: 'Calculate the given expression.';\r\t\tformat: 'Calculate: {1}')"
+				"code" : "assistant addAction: (GtLlmAssistantAction new\r\t    name: 'Calculate';\r\t    priority: 10;\r\t\tdescription: 'Calculate the given expression.';\r\t\taddArgument: 'Expression')"
 			},
 			{
 				"__type" : "textSnippet",

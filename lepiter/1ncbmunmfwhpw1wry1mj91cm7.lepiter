@@ -324,14 +324,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:51:13.958519+01:00"
+									"dateAndTimeString" : "2025-05-14T22:24:14.372884+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "0Asr8lbrDQCJ3/y8AurXGw=="
 							},
-							"code" : "messages := {\r\tGtLlmUserMessage new content: 'Hello Anthropic! How are you today?'\r}.\r\rclient completeChatWithModel: 'claude-3-5-sonnet-20241022' messages: messages andMaxTokens: 4096"
+							"code" : "messages := {\r\tGtLlmUserMessage new content: 'Hello Anthropic! How are you today?'\r}.\r\rclient completeChatWithModel: 'claude-3-7-sonnet-20250219' messages: messages andMaxTokens: 4096"
 						}
 					]
 				},

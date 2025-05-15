@@ -461,14 +461,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:34:22.350316+01:00"
+						"dateAndTimeString" : "2025-05-14T22:23:25.733423+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "lSegulbrDQC4L7WtAurXGw=="
 				},
-				"code" : "chat\r\tprovider: (GtAnthropicProvider withApiKeyFromFile model: 'claude-3-5-sonnet-20241022');\r\tsendMessage: 'And who are you?'"
+				"code" : "chat\r\tprovider: GtAnthropicProvider withApiKeyFromFile;\r\tsendMessage: 'And who are you?'"
 			}
 		]
 	},
