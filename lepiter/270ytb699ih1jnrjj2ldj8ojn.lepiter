@@ -424,7 +424,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:34:49.054425+01:00"
+						"dateAndTimeString" : "2025-05-23T12:35:20.173131+02:00"
 					}
 				},
 				"uid" : {
@@ -434,7 +434,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Anthropic works similarly, but here the provider needs both a model and an API key."
+				"string" : "Anthropic works similarly to OpenAI, and also needs an API key (see [[Adding an Anthropic API key]])."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -469,6 +469,77 @@
 					"uidString" : "lSegulbrDQC4L7WtAurXGw=="
 				},
 				"code" : "chat\r\tprovider: GtAnthropicProvider withApiKeyFromFile;\r\tsendMessage: 'And who are you?'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-23T12:33:43.141961+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-23T12:35:45.005518+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "oXaH3izyDQCYt2WjCptJcg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And lastly, Google Gemini works in the same way (see [[Adding a Gemini API key]])."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-23T12:34:02.65536+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-23T12:34:35.618014+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WTax3yzyDQCaPUhfCptJcg=="
+				},
+				"code" : "chat\r\tprovider: GtAnthropicProvider withApiKeyFromFile;\r\tsendMessage: 'And who are you, then?'"
 			}
 		]
 	},
@@ -491,12 +562,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-02-25T11:33:31.633502+01:00"
+			"dateAndTimeString" : "2025-05-23T12:33:29.177442+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Chatting with an LLM in Ollama, Anthropic or OpenAI"
+		"title" : "Chatting with an LLM in Ollama, Anthropic, Gemini, or OpenAI"
 	},
 	"uid" : {
 		"__type" : "uuid",
