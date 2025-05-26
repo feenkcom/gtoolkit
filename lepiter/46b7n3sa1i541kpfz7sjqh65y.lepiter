@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-28T10:39:59.815501+02:00"
+						"dateAndTimeString" : "2025-05-23T12:35:57.999522+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "OpenAI, Ollama and Anthropic chats have, when instructed how, the capability to request function calls to be performed. Assistants mirror that capability."
+				"string" : "OpenAI, Ollama, Google Gemini, and Anthropic chats have, when instructed how, the capability to request function calls to be performed. Assistants mirror that capability."
 			},
 			{
 				"__type" : "textSnippet",
@@ -174,7 +174,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T14:58:14.747633+02:00"
+						"dateAndTimeString" : "2025-05-23T12:36:16.721063+02:00"
 					}
 				},
 				"uid" : {
@@ -184,7 +184,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can then add it to the provider. Please note that due to a technical limitation, tools and structured outputs do not play well together with Ollama assistants [1], and Anthropic does not formally support structured outputs [2]. Otherwise, both providers are equivalent."
+				"string" : "We can then add it to the provider. Please note that due to a technical limitation, tools and structured outputs do not play well together with Ollama assistants [1], Anthropic does not formally support structured outputs [2], and Google Gemini does not support both at the same time [3]. Otherwise, both providers are equivalent."
 			},
 			{
 				"__type" : "textSnippet",
@@ -401,6 +401,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "[2] It is however usually able to adhere to the format even when not forced to."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-23T12:36:18.979493+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-05-23T12:37:04.319924+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "U1fR5yzyDQCee28ACptJcg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[3] When both are set, we set the tools in the API and rely on the system prompt to enforce the format. It doesn’t work reliably, but seems to perform pretty well, similarly to Anthropic."
 			}
 		]
 	},
