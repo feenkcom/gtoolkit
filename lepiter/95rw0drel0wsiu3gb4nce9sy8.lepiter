@@ -71,14 +71,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-03-26T11:29:22.071353+01:00"
+									"dateAndTimeString" : "2025-05-28T19:39:45.211485+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "EFmGCZ7tDQC7kL5ZBTwTlQ=="
 							},
-							"code" : "\"This is a sample startup script. It will be run whenever you start up a GT image. \nPut whatever you like in here.\"\n\n\"Show explicit references in compact form.\"\nLePageToolContentTreeElement showIncomingReferencesInlined.\n\n\"Scale up the UI.\"\nBlGlutinHostSpace zoomFactor: 1.2.\n\n\"Load my startup repo, if it's not already loaded.\"\nSmalltalk globals\n\tat: #BaselineClassName\n\tifAbsent: [ Metacello new\n\t\t\trepository: ''.\n\t\tSmalltalk saveSession ]."
+							"code" : "\"This is a sample startup script. It will be run whenever you start up a GT image. \nPut whatever you like in here.\"\n\n\"Show explicit references in compact form.\"\nLePageToolContentTreeElement showIncomingReferencesInlined.\n\n\"Scale up the UI.\"\nBlSpace userScale: 1.2.\n\n\"Load my startup repo, if it's not already loaded.\"\nSmalltalk globals\n\tat: #BaselineClassName\n\tifAbsent: [ Metacello new\n\t\t\trepository: ''.\n\t\tSmalltalk saveSession ]."
 						}
 					]
 				},
