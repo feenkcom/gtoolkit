@@ -175,6 +175,9 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 			(Object << #AllProtocol
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #ChangeSet
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
 		] 
 		forPharo11: [ ]
 ]
