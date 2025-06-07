@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-23T12:13:30.585629+03:00"
+						"dateAndTimeString" : "2025-06-07T16:22:27.282579+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If the image freezes, primary+. (ctrl/cmd+.)can be used to interrupt execution. The logic that is called to interrupt a running process is {{gtMethod:GlutinUserInterruptHandler>>#handleUserInterrupt}}. This searches through the currently running processes for a process that can be interrupted using {{gtMethod:GlutinUserInterruptHandler>>#processToInterrupt}}."
+				"string" : "If the image freezes, primary+. (ctrl/cmd+.)can be used to interrupt execution. The logic that is called to interrupt a running process is {{gtMethod:RustWindowingUserInterruptHandler>>#handleUserInterrupt}}. This searches through the currently running processes for a process that can be interrupted using {{gtMethod:RustWindowingUserInterruptHandler>>#processToInterrupt}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-23T10:38:05.298136+03:00"
+						"dateAndTimeString" : "2025-06-07T16:22:27.281708+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Josn687vDQCf22aeDGUI7Q=="
 				},
-				"code" : "GlutinUserInterruptHandler new processToInterrupt"
+				"code" : "RustWindowingUserInterruptHandler new processToInterrupt"
 			},
 			{
 				"__type" : "textSnippet",
