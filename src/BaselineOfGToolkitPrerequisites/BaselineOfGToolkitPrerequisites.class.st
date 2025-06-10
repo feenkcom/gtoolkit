@@ -282,6 +282,7 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 		spec postLoadDoIt: #postLoadGToolkitPrerequisites:.
 		spec
 			package: 'GToolkit-PharoBasePatch-Deprecations';
+			package: 'GToolkit-PharoBasePatch-Extensions';
 			package: 'GToolkit-PharoBasePatch-Subscriptions' ;
 			package: 'GToolkit-PharoBasePatch-Iceberg';
 			package: 'GToolkit-PharoBasePatch-PharoIndex';
