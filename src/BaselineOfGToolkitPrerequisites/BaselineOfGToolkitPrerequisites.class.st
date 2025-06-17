@@ -183,6 +183,19 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForRBAbstractTransformation [
+	self 
+		fastForPharo12: [ #RBAbstractTransformation asClass
+			compile: 'primitiveExecute
+	<gtPharoPatch: #Pharo>
+	
+	^ self 
+		forPharo12: [self generateChanges] 
+		forPharo11AndPharo10: [Error signal] ' classified: 'gt - patch' ] 
+		forPharo11: [ ] 
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
 		fastForPharo12: [
@@ -309,6 +322,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
 	self applyPatchForPharo11StubsInPharo12.
+	self applyPatchForRBAbstractTransformation.
 ]
 
 { #category : #accessing }
