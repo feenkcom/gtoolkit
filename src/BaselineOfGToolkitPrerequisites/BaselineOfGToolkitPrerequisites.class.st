@@ -183,6 +183,43 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo11 [
+	self 
+		fastForPharo12: [ ] 
+		forPharo11: [
+			(Object << #EpBehaviorRepackagedChange
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+		
+
+			(Object << #EpPackageChange
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(#EpPackageChange asClass << #EpPackageAddition
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(#EpPackageChange asClass << #EpPackageRemoval
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(#EpPackageChange asClass << #EpPackageRename
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+				
+			(Object << #EpPackageTagChange
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(#EpPackageTagChange asClass << #EpPackageTagAddition
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(#EpPackageTagChange asClass << #EpPackageTagRemoval
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(#EpPackageTagChange asClass << #EpPackageTagRename
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForRBAbstractTransformation [
 	self 
 		fastForPharo12: [ #RBAbstractTransformation asClass
@@ -322,6 +359,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
 	self applyPatchForPharo11StubsInPharo12.
+	self applyPatchForPharo12StubsInPharo11.
 	self applyPatchForRBAbstractTransformation.
 ]
 
