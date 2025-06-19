@@ -131,6 +131,13 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForGtWorkingSession [
+	self 
+		fastForPharo12: [ GtWorkingSession addSlot: #id ] 
+		forPharo11: [  ] 
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForJob [
 	self 
 		fastForPharo12: [] 
@@ -352,6 +359,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 
 	self applyPatchForAsClass.
 	self applyPatchForJob.
+	self applyPatchForGtWorkingSession.
 	self applyPatchForWeakArray.
 	self applyPatchForFinalizationProcess.
 	self applyPatchForFT2Face.
