@@ -17,3 +17,17 @@ RBClass >> category [
 						whichCategoryIncludes: self name ] ]
 				ifNotNil: [ category ]]
 ]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
+RBClass >> category: aSymbol [
+	<gtPharoPatch: #Pharo12>
+	
+	self 
+		forPharo12: [
+			| converter |
+			converter := CategoryConverter 
+				category: aSymbol environment: self class environment.
+			self packageName: converter packageName.
+			self tagName: converter tagName] 
+		forPharo11AndPharo10: [ category := aSymbol ]
+]
