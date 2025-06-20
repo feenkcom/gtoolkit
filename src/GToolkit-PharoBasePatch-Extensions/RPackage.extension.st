@@ -48,6 +48,15 @@ RPackage >> tagNamed: aSymbol [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+RPackage >> tagNamed: aSymbol ifAbsent: aBlock [
+	<gtPharoPatch:  #Pharo12>
+	
+	^ self tags
+		  detect: [ :each | each name = aSymbol ]
+		  ifNone: aBlock
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RPackage >> tagOf: aClass [
 	<gtPharoPatch: #Pharo>
 	
