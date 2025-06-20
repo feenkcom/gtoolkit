@@ -1,6 +1,14 @@
 Extension { #name : #RPackage }
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+RPackage >> packageName [
+	<gtPharoPatch: #Pharo>
+	
+	"Exists to be polymorphic with packageName in the PackageTag"
+	^ self name
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RPackage >> tagNamed: aSymbol [
 	<gtPharoPatch: #Pharo12>
 	
