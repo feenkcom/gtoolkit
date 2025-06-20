@@ -1,6 +1,15 @@
 Extension { #name : #RPackage }
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+RPackage >> tagNamed: aSymbol [
+	<gtPharoPatch: #Pharo12>
+	
+	^ self 
+		forPharo12: [ self tags detect: [ :each | each name = aSymbol ] ] 
+		forPharo11AndPharo10: [ self classTagNamed: aSymbol  ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RPackage >> tagOf: aClass [
 	<gtPharoPatch: #Pharo>
 	
