@@ -418,7 +418,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-04-04T14:11:05.78991+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-03-18T11:13:15.798085+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QrOOTuO0DQCWB7xSBmypig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Figuring systems out is the single most expensive activity in software development. And most of it is spent reading. The development environment can do a much better job in helping developers make software explainable. The central idea is that tools must be moldable to the task at hand, and of course it must be inexpensive to adapt the tools. We call this [[Moldable Development]]. We explain how to do it with the help of [[Moldable Development patterns]]."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -450,43 +488,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Why is Moldable Development important?"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-04T14:11:05.78991+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-03-18T11:13:15.798085+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "QrOOTuO0DQCWB7xSBmypig=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Figuring systems out is the single most expensive activity in software development. And most of it is spent reading. The development environment can do a much better job in helping developers make software explainable. The central idea is that tools must be moldable to the task at hand, and of course it must be inexpensive to adapt the tools. We call this [[Moldable Development]]. We explain how to do it with the help of [[Moldable Development patterns]]."
 			},
 			{
 				"__type" : "textSnippet",
