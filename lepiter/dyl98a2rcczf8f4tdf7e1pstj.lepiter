@@ -1,0 +1,844 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T14:30:33.5277+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T14:31:36.170472+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6l1CR2f1DQC7sZ1uAsLQ6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[[PythonBridge]] comes with an implementation of Phlow for Python objects. It is meant to be used in the Glamorous Toolkit inspector, for instance through Lepiter pages."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T14:31:36.469272+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T14:39:38.11279+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nUCgS2f1DQCAZR5MAsLQ6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The Python framework allows for views to be defined in Python code. To do this in a Python project, you will first have to install the  [gtoolkit_bridge](https://pypi.org/project/gtoolkit_bridge/) module. Once it is installed, you will be able to add views to your objects."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T14:39:46.359119+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:02:22.479512+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hmDTaGf1DQCGgt1kAsLQ6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Views in Python are methods that are annotated with the @gtView decorator. They take a view builder and return a built view. View exist for `columnedList`, `list`, `textEditor`, `columnedTree`, and `forward`. If a view method decides not to display anything, `empty` may be returned as well."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T14:47:38.355001+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T14:48:05.05067+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lnT1hGf1DQCGyCZcAsLQ6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The API is generally quite similar to that in Smalltalk, though due to language differences necessarily a bit different."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T15:02:25.489711+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T15:02:43.010036+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Sg/WuWf1DQCaS5cXAsLQ6w=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "A view for displaying single-column list data."
+									},
+									{
+										"__type" : "pythonSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T14:49:02.857766+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T15:00:13.375159+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Sd3+iWf1DQCLR0/SAsLQ6w=="
+										},
+										"code" : "from gtoolkit_bridge import gtView\r\rclass MyList:\r\tdef __init__(self, lst):\r\t\tself.lst = lst\r\r\t@gtView\r\tdef gt_view_list(self, builder):\r\t\tif not len(self.lst):\r\t\t\treturn builder.empty()\n\t\tlst = builder.list()\r\t\tlst.title(\"List\")\r\t\tlst.priority(1)\r\t\tlst.items(lambda: self.lst)\r\t\tlst.set_accessor(lambda idx: self.lst[idx] * 2) # for demo purposes, double the item in the click handler\r\t\treturn lst\r\t\t\rMyList([1,2,3])"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T14:48:48.131274+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:02:25.158049+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "5yceiWf1DQCLCjuLAsLQ6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "### Lists"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T15:02:49.816045+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T15:02:50.242603+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "wkBJu2f1DQCbjyONAsLQ6w=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "A view for displaying single-column list data."
+									},
+									{
+										"__type" : "pythonSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T14:53:12.471193+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T15:01:44.122022+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "U6vfmGf1DQCMbKnyAsLQ6w=="
+										},
+										"code" : "from gtoolkit_bridge import gtView\r\rclass MyColumnedList:\r\tdef __init__(self, lst):\r\t\tself.lst = lst\r\r\t@gtView\r\tdef gt_view_list(self, builder):\r\t\tif not len(self.lst):\r\t\t\treturn builder.empty()\n\t\tlst = builder.columnedList()\r\t\tlst.title(\"List\")\r\t\tlst.priority(1)\r\t\tlst.items(lambda: self.lst)\r\t\tlst.column(\"String\", lambda each: each[0])\r\t\tlst.column(\"Integer\", lambda each: each[1])\r\t\treturn lst\r\t\t\rMyColumnedList([[\"hello\", 1], [\" \", 2], [\"world\", 3]])"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T14:52:59.884599+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:02:48.524312+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "AZ4fmGf1DQCMC2yhAsLQ6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "### Columned Lists"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T14:54:45.392499+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:22:00.139548+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Z2xpnmf1DQCM+9lCAsLQ6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "### Text editors"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:02:53.498654+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:02:59.117299+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "0XGBu2f1DQCbmfa9AsLQ6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A view for displaying textual data."
+						},
+						{
+							"__type" : "pythonSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T14:55:01.28104+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:10:24.991982+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rvpbn2f1DQCNWye5AsLQ6w=="
+							},
+							"code" : "from gtoolkit_bridge import gtView\r\rclass MyEditor:\r\tdef __init__(self, txt):\r\t\tself.txt = txt\r\r\t@gtView\r\tdef gt_view_editor(self, builder):\n\t\teditor = builder.textEditor()\r\t\teditor.title(\"Editor\")\r\t\teditor.priority(1)\r\t\teditor.string = self.txt\r\t\treturn editor\r\t\t\rMyEditor(\"hello, world!\")"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T14:39:38.855346+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T14:39:45.586455+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ud5gaGf1DQCGHvG4AsLQ6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Defining views"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:03:32.803717+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:03:41.994328+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FzLZvWf1DQCcLWdXAsLQ6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A view for displaying columnar tree data."
+						},
+						{
+							"__type" : "pythonSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:03:46.778635+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:07:11.746444+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mW+uvmf1DQCdH8HaAsLQ6w=="
+							},
+							"code" : "from gtoolkit_bridge import gtView\r\rclass MyTree:\r\tdef __init__(self, tree):\r\t\tself.tree = tree\r\r\t@gtView\r\tdef gt_view_list(self, builder):\n\t\ttree = builder.columnedTree()\r\t\ttree.title(\"Columned tree\")\r\t\ttree.priority(1)\r\t\ttree.items(lambda: self.tree)\r\t\ttree.children(lambda each: each[\"children\"])\r\t\ttree.column(\"Value\", lambda each: each[\"value\"])\r\t\treturn tree\r\t\t\rMyTree([\r\t{\"value\": 1, \"children\": [\r\t\t{\"value\": 2, \"children\": [\r\t\t\t{\"value\": 2.5, \"children\": []}]}]},\r\t{\"value\": 3, \"children\": []}\r])"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T15:03:06.717532+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T15:03:32.542247+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ax1LvGf1DQCbwU9BAsLQ6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### Columned Trees"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:08:01.744643+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:08:13.29557+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qOXgzWf1DQCkBIIEAsLQ6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A view for forwarding views to other objects."
+						},
+						{
+							"__type" : "pythonSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:08:19.833935+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:10:32.845559+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "m+30zmf1DQCk59SyAsLQ6w=="
+							},
+							"code" : "from gtoolkit_bridge import gtView\r\rclass MyForward:\r\tdef __init__(self, value):\r\t\tself.value = value\r\r\t@gtView\r\tdef gt_view_fwd(self, builder):\n\t\tfwd = builder.forward()\r\t\tfwd.title(\"Forward\")\r\t\tfwd.priority(1)\r\t\tfwd.object(lambda: self.value)\r\t\tfwd.view(\"gt_view_editor\")\r\t\treturn fwd\r\t\t\rMyForward(MyEditor(\"hello, world!\"))"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T15:07:48.524552+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T15:07:58.525134+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "bS8XzWf1DQCjwEPjAsLQ6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### Forwards"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:11:25.760948+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T15:13:57.422585+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "0fEJ2mf1DQCppqOaAsLQ6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The view framework is based on {{gtPage:Inspecting remote objects using Remote Phlow|label=Remote Phlow}}. It is an almost complete implementation of the framework, although currently tree views are missing. Usually, these can be emulated with single-column columned trees, however."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T15:11:15.458066+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T15:11:21.158658+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "k+rF2Gf1DQCown5TAsLQ6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Technical Considerations"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-07-03T14:30:23.127536+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-07-03T14:30:23.127536+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Phlow for Python"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "27274147-67f5-0d00-bbb0-ce6602c2d0eb"
+	}
+}
