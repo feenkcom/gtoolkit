@@ -10,92 +10,55 @@
 					"__type" : "snippets",
 					"items" : [
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T13:28:08.17998+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T13:37:59.843301+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "nF+iaGb1DQCE3traDhLU9w=="
+										},
+										"code" : "GtRemoteRunner hasUniqueInstance ifTrue:\n\t[ GtRemoteRunner cleanUp ].\nGtRrStompMqProcessor defaultHost ifNil:\n\t[ GtRrStompMqProcessor defaultHost: 'localhost:', StampConstants defaultPort asString ].\nmanager := GtRrPluggableManager new.\nmanager \n\tserverManager: GtRrMqServerManager new;\n\tworkerManager: (GtRrWorkerManager new\n\t\tforStompMq;\n\t\tautoRestart: false;\n\t\tchangesSync: false;\n\t\tpoolSize: 0).\nremoteRunner := GtRemoteRunnerMq new.\nremoteRunner managerStartupAndShutdown: manager.\nremoteRunner \r\tstartLogging;\r\tstart."
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
+								"emailString" : "<unknown>"
 							},
 							"createTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-03T20:22:35.836044+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-11T14:08:30.152585+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "txYry4OTDQCDE9NdDROuqw=="
-							},
-							"code" : "GtRemoteRunner hasUniqueInstance ifTrue:\r\t[ GtRemoteRunner cleanUp ].\rrunner := GtRemoteRunner new\r\tmanagerStartupAndShutdown: GtRrManualManagerStartupAndShutdown new;\r\tport: 7042;\r\tstartLogging;\r\tstart.\rGtRemoteRunner setUniqueInstance: runner.\rrunner."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "alistairgrant@fastmail.com.au"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-21T11:38:38.970635+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T08:23:49.161834+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "FYkt9XaSDQCFgOMMBc7lww=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Start a runner that waits for workers and install it as the default runner:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-01-21T11:39:12.443463+01:00"
+									"dateAndTimeString" : "2025-07-03T13:23:45.424058+02:00"
 								}
 							},
 							"editEmail" : {
@@ -106,20 +69,313 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-09-25T08:37:11.089454+02:00"
+									"dateAndTimeString" : "2025-07-03T13:24:18.405693+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "vXhx93aSDQCFiOcXBc7lww=="
+								"uidString" : "9lXMWGb1DQCC3DcCDhLU9w=="
 							},
-							"code" : "worker := GtRrWorker serverSocketAddress: 'localhost:7042'.\rworker attributes at: #changesSync put: false.\rworker start."
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Start a runner using StompMQ that waits for workers and install it as the default runner:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T13:29:54.868114+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T13:29:59.562586+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Ck7+bmb1DQCFfuBaDhLU9w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Start a worker that connects to the specified runner (this will typically be run in a separate image from the runner above):"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T13:30:02.636508+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-03T13:38:15.677012+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Std0b2b1DQCFiuqFDhLU9w=="
+							},
+							"code" : "worker := GtRrWorker serverSocketAddress: GtRrStompMqProcessor defaultHost.\rworker connectionStrategy: (GtRrMqWorkerConnectionStrategy new).\nworker attributes\r\tat: #changesSync put: false;\r\tat: GtRrWorker stompMqQueueNames put: GtRrMqServer stompMqQueueNamesAttribute.\nworker start."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T13:23:35.973119+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-03T13:23:40.741904+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "edBoWGb1DQCCoERRDhLU9w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### StompMQ"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "alistairgrant@fastmail.com.au"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-02-03T20:22:35.836044+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-07-03T13:29:15.539645+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "txYry4OTDQCDE9NdDROuqw=="
+										},
+										"code" : "GtRemoteRunner hasUniqueInstance ifTrue:\r\t[ GtRemoteRunner cleanUp ].\rremoteRunner := GtRemoteRunner new\r\tmanagerStartupAndShutdown: GtRrManualManagerStartupAndShutdown new;\r\tport: 7042;\r\tstartLogging;\r\tstart.\rGtRemoteRunner setUniqueInstance: remoteRunner.\rremoteRunner."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "alistairgrant@fastmail.com.au"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-01-21T11:38:38.970635+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-26T08:23:49.161834+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FYkt9XaSDQCFgOMMBc7lww=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Start a runner that waits for workers and install it as the default runner:"
 						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "alistairgrant@fastmail.com.au"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-01-21T11:39:12.443463+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2024-09-25T08:37:11.089454+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "vXhx93aSDQCFiOcXBc7lww=="
+										},
+										"code" : "worker := GtRrWorker serverSocketAddress: 'localhost:7042'.\rworker attributes at: #changesSync put: false.\rworker start."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "alistairgrant@fastmail.com.au"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2022-02-21T09:02:41.635487+01:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-07-26T08:24:34.097968+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "TFykZOSUDQCV6tGxBgxWzg=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "```bash\nbin/GlamorousToolkit-cli GlamorousToolkit.image clap remoteRunnerWorker --log --serverSocketAddress 7042 --changesSync --detachChangesFromFileSystem --noLepiterReload --noGtImageUpdate\n```"
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "alistairgrant@fastmail.com.au"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-02-21T09:02:30.971674+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "alistairgrant@fastmail.com.au"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-02-21T09:02:34.862334+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "TI8VZOSUDQCV5kPmBgxWzg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "or start one from the command line:"
+									},
 									{
 										"__type" : "textSnippet",
 										"children" : {
@@ -134,28 +390,62 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-02-21T09:02:41.635487+01:00"
+												"dateAndTimeString" : "2022-05-05T10:24:11.330436+02:00"
 											}
 										},
 										"editEmail" : {
 											"__type" : "email",
-											"emailString" : "<unknown>"
+											"emailString" : "alistairgrant@fastmail.com.au"
 										},
 										"editTime" : {
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-07-26T08:24:34.097968+02:00"
+												"dateAndTimeString" : "2022-05-05T10:24:16.039339+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "TFykZOSUDQCV6tGxBgxWzg=="
+											"uidString" : "DvbuM6GaDQCoQGUOA/JcQw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "```bash\nbin/GlamorousToolkit-cli GlamorousToolkit.image clap remoteRunnerWorker --log --serverSocketAddress 7042 --changesSync --detachChangesFromFileSystem --noLepiterReload --noGtImageUpdate\n```"
+										"string" : "or simulate the command line:"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "alistairgrant@fastmail.com.au"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-05-05T10:24:18.449285+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "alistairgrant@fastmail.com.au"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2022-05-05T10:26:36.598602+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Gux/NKGaDQCoRfSKA/JcQw=="
+										},
+										"code" : "commandLine := GtRrWorker commandLineCommand match:\r\t\t#('remoteRunnerWorker'\r\t\t'--log'\r\t\t'--serverSocketAddress' \r\t\t'7042'\r\t\t).\r\"Start the worker in a separate process since it will hibernate\"\r[ GtRrWorker processCommandLineArgs: commandLine ] fork."
 									}
 								]
 							},
@@ -167,111 +457,40 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-21T09:02:30.971674+01:00"
+									"dateAndTimeString" : "2022-01-21T11:39:02.58864+01:00"
 								}
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-02-21T09:02:34.862334+01:00"
+									"dateAndTimeString" : "2023-07-26T08:24:18.489827+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "TI8VZOSUDQCV5kPmBgxWzg=="
+								"uidString" : "kd+/9naSDQCFhZ8WBc7lww=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "or start one from the command line:"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:24:11.330436+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:24:16.039339+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "DvbuM6GaDQCoQGUOA/JcQw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "or simulate the command line:"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:24:18.449285+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-05T10:26:36.598602+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "Gux/NKGaDQCoRfSKA/JcQw=="
-							},
-							"code" : "commandLine := GtRrWorker commandLineCommand match:\r\t\t#('remoteRunnerWorker'\r\t\t'--log'\r\t\t'--serverSocketAddress' \r\t\t'7042'\r\t\t).\r\"Start the worker in a separate process since it will hibernate\"\r[ GtRrWorker processCommandLineArgs: commandLine ] fork."
+							"string" : "Start a worker that connects to the specified runner (this will typically be run in a separate image from the runner above):"
 						}
 					]
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "alistairgrant@fastmail.com.au"
+					"emailString" : "<unknown>"
 				},
 				"createTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-01-21T11:39:02.58864+01:00"
+						"dateAndTimeString" : "2025-07-03T13:23:11.089162+02:00"
 					}
 				},
 				"editEmail" : {
@@ -282,17 +501,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T08:24:18.489827+02:00"
+						"dateAndTimeString" : "2025-07-03T13:23:14.294096+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "kd+/9naSDQCFhZ8WBc7lww=="
+					"uidString" : "1aTMVmb1DQCCSDLnDhLU9w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Start a worker that connects to the specified runner (this will typically be run in a separate image from the runner above):"
+				"string" : "### PharoLink"
 			},
 			{
 				"__type" : "textSnippet",
@@ -318,20 +537,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-13T07:51:33.679841+11:00"
+									"dateAndTimeString" : "2025-07-03T13:29:15.543449+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "Pk+tZuiwDQCv6gcsBpGs+g=="
 							},
-							"code" : "GtRemoteRunner hasUniqueInstance ifTrue:\r\t[ GtRemoteRunner cleanUp ].\rrunner := GtRemoteRunner headlessOnPort: 7042 codeSync: false.\rGtRemoteRunner setUniqueInstance: runner.\rrunner."
+							"code" : "GtRemoteRunner hasUniqueInstance ifTrue:\r\t[ GtRemoteRunner cleanUp ].\rremoteRunner := GtRemoteRunner headlessOnPort: 7042 codeSync: false.\rGtRemoteRunner setUniqueInstance: remoteRunner.\rremoteRunner."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -352,20 +571,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-13T10:57:11.668969+11:00"
+									"dateAndTimeString" : "2025-07-03T13:29:15.543767+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "IjKMYemwDQCbLZ0FAjszvg=="
 							},
-							"code" : "runner startAnnouncementsNotifier."
+							"code" : "remoteRunner startAnnouncementsNotifier."
 						}
 					]
 				},
