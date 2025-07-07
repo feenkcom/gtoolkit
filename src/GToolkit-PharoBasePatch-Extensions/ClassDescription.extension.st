@@ -16,3 +16,15 @@ ClassDescription >> organization [
 								ifFalse: [ ClassOrganization forClass: self ]) ].
 			^ self basicOrganization setSubject: self	"Making sure that subject is set correctly. It should not be necessary." ]
 ]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
+ClassDescription >> protocolNames [
+	<gtPharoPatch: #Pharo12>
+	"Return the list of all the protocol names included in this class."
+
+	^ self 
+		forPharo12: [
+			self protocols collect: [ :protocol | protocol name ] ]
+		forPharo11AndPharo10: [
+			self organization categories ] 
+]
