@@ -1415,13 +1415,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "tudor@tudorgirba.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-24T15:17:59.755682+02:00"
+						"dateAndTimeString" : "2025-07-07T10:08:10.419493-04:00"
 					}
 				},
 				"uid" : {
@@ -1431,7 +1431,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Complicated scenes with deep nesting can pose problems when it comes to understanding how layouts work. For example, every layout needs to measure. The measurement view shows the order of which layouts associated with which elements have measured the current element. In our case, we have 4 such measurements, the last one being from our text element, while the other ones come from the parent elements."
+				"string" : "Complicated scenes with deep nesting can pose problems when it comes to understanding how layouts work. For example, every layout needs to measure. The resizers and measurement view shows the order of which layouts associated with which elements have measured the current element. In our case, we have 4 such measurements (`Width spec` and `Height spec` columns), the last one being from our text element, while the other ones come from the parent elements."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -1467,7 +1467,7 @@
 				},
 				"exampleSelector" : "firstChildOfHierarchyElementsWithEdges",
 				"previewHeight" : 150,
-				"previewShowSelector" : "gtMeasurementChainFor:",
+				"previewShowSelector" : "gtResizersFor:",
 				"exampleBehaviorName" : "GtWhatMakesBlocSpecialExplanation",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
