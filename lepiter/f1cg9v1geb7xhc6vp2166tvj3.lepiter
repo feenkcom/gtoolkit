@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-20T13:41:51.649509+01:00"
+						"dateAndTimeString" : "2025-07-08T09:50:47.722782+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "93PfYCLpDQCaQ3YiBOD//Q=="
 				},
-				"code" : "aFile := FileLocator temp / 'GToolkitBook.txt'.\raFile ensureDelete.\raFile\r\twriteStreamDo: [ :aStream | pages do: [ :aPage | aStream nextPutAll: aPage asMarkdownPage ] ]."
+				"code" : "aFile := FileLocator temp / 'GToolkitBook.txt'.\raFile ensureDelete.\raFile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLlmPageExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -208,7 +208,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T15:02:04.590252+02:00"
+						"dateAndTimeString" : "2025-07-08T10:24:15.712247+02:00"
 					}
 				},
 				"uid" : {
@@ -279,7 +279,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T14:59:28.280872+02:00"
+						"dateAndTimeString" : "2025-07-08T10:03:02.933446+02:00"
 					}
 				},
 				"uid" : {
@@ -347,14 +347,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T15:02:31.652249+02:00"
+						"dateAndTimeString" : "2025-07-08T10:23:35.628158+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "BlqutSXpDQCrEGvlBOD//Q=="
 				},
-				"code" : "chat sendChatRequest: 'What is Ludo?'"
+				"code" : "chat sendChatRequest: 'What is Ludo? Check your answer with file search of the documentation before answering.'"
 			}
 		]
 	},
