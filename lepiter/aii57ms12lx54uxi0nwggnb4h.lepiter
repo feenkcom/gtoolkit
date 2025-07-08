@@ -214,14 +214,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:29:09.440699+02:00"
+						"dateAndTimeString" : "2025-07-08T09:51:18.82133+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "eVfBGnvxDQCI8CY3AReYsQ=="
 				},
-				"code" : "pages := LeDatabase gtBook pages.\r\raFile := FileLocator temp / 'GToolkitBook.txt'.\raFile ensureDelete.\raFile\r\twriteStreamDo: [ :aStream | pages do: [ :aPage | aStream nextPutAll: aPage asMarkdownPage ] ]"
+				"code" : "pages := LeDatabase gtBook pages.\r\raFile := FileLocator temp / 'GToolkitBook.txt'.\raFile ensureDelete.\raFile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLlmPageExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -501,14 +501,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:32:01.143855+02:00"
+						"dateAndTimeString" : "2025-07-08T09:53:46.176988+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ejInJnvxDQCShdVWAReYsQ=="
 				},
-				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you.'.\r\rassistant"
+				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you. Always check your answer with file search before answering.';\r\t\tconnection: (GtLlmConnection new\r\t\t\t\tmodel: 'gpt-4.1';\r\t\t\t\tprovider: GtOpenAIResponseProvider).\r\rassistant"
 			},
 			{
 				"__type" : "textSnippet",
@@ -643,7 +643,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:33:11.653488+02:00"
+						"dateAndTimeString" : "2025-07-08T09:53:56.026632+02:00"
 					}
 				},
 				"uid" : {
