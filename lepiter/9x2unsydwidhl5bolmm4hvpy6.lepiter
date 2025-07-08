@@ -1034,7 +1034,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-02-20T10:23:03.641894+01:00"
+									"dateAndTimeString" : "2025-07-07T16:46:17.811009+02:00"
 								}
 							},
 							"uid" : {
@@ -1044,7 +1044,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*Caveat:* while `become:` can be used to swap the pointers of *any* non-immediate objects (you can't swap an instance of `Object` with an instance `SmallInteger`), `primitiveChangeClassTo:` can *only* be used to change the class of an object to another class with *the same format*. For details, see the method comment of {{gtMethod:name=primitiveChangeClassTo:}}."
+							"string" : "*Caveat:* while `become:` can be used to swap the pointers of *any* non-immediate objects (you can't swap an instance of `Object` with an instance `SmallInteger`), `primitiveChangeClassTo:` can *only* be used to change the class of an object to another class with *the same format*. For details, see the method comment of {{gtMethod:name=Object>>#primitiveChangeClassTo:}}."
 						},
 						{
 							"__type" : "textSnippet",
