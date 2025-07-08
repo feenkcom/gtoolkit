@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-19T23:02:51.104453+01:00"
+						"dateAndTimeString" : "2025-07-08T15:57:45.513165+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[SmaCC]] provides mechanisms for parsing and transformation of code written in arbitrary languages.  This can be used in several ways, one of which is rewriting code from a dedicated snippet."
+				"string" : " [[SmaCC]] provides mechanisms for parsing and transformation of code written in arbitrary languages.  This can be used in several ways, one of which is rewriting code from a dedicated snippet."
 			},
 			{
 				"__type" : "textSnippet",
@@ -191,7 +191,7 @@
 					"__type" : "snippets",
 					"items" : [
 						{
-							"__type" : "textSnippet",
+							"__type" : "blockQuoteSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -204,7 +204,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-03-19T23:03:40.321167+01:00"
+									"dateAndTimeString" : "2025-07-08T15:58:05.243244+02:00"
 								}
 							},
 							"editEmail" : {
@@ -215,17 +215,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-03-19T23:03:46.108489+01:00"
+									"dateAndTimeString" : "2025-07-08T15:58:06.390352+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "2gk7YmzQDQCF6n/oB3+Ftw=="
+								"uidString" : "ZYkbFs31DQCBqLVwCKPiqQ=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "```language=rust\nassert_eq!(something.is_null(), false, \"message\")\n```"
+							"string" : "assert_eq!(something.is_null(), false, \"message\")"
 						},
 						{
 							"__type" : "textSnippet",
@@ -265,7 +262,7 @@
 							"string" : "to something like:"
 						},
 						{
-							"__type" : "textSnippet",
+							"__type" : "blockQuoteSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -278,7 +275,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-03-19T23:03:57.090369+01:00"
+									"dateAndTimeString" : "2025-07-08T15:58:17.976364+02:00"
 								}
 							},
 							"editEmail" : {
@@ -289,17 +286,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-03-19T23:03:57.377096+01:00"
+									"dateAndTimeString" : "2025-07-08T15:58:19.148985+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "muU6Y2zQDQCGAs+hB3+Ftw=="
+								"uidString" : "DdTdFs31DQCBtdjHCKPiqQ=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "```language=rust\nassert_not_null(something, \"message\")\n```"
+							"string" : "assert_not_null(something, \"message\")"
 						}
 					]
 				},
@@ -544,7 +538,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-19T23:05:12.193876+01:00"
+						"dateAndTimeString" : "2025-07-08T15:58:31.377806+02:00"
 					}
 				},
 				"uid" : {
@@ -554,7 +548,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "That is it."
+				"string" : "That's it."
 			}
 		]
 	},
