@@ -31,6 +31,13 @@ Package >> addClassTag: aSymbol [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+Package class >> defaultPackageName [
+	^ self 
+		forPharo12: [ UndefinedPackage undefinedPackageName ] 
+		forPharo11AndPharo10: [ #'_UnpackagedPackage' ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Package class >> named: aString [
 	^ self 
 		forPharo12: [

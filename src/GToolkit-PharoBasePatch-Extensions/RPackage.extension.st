@@ -31,6 +31,13 @@ RPackage >> addClassTag: aSymbol [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+RPackage class >> defaultPackageName [
+	^ self 
+		forPharo12: [ UndefinedPackage undefinedPackageName ] 
+		forPharo11AndPharo10: [ #'_UnpackagedPackage' ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RPackage >> packageName [
 	<gtPharoPatch: #Pharo>
 	
