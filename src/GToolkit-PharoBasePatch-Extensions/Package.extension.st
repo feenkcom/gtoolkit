@@ -1,7 +1,7 @@
-Extension { #name : #RPackage }
+Extension { #name : #Package }
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
-RPackage >> addClassTag: aSymbol [
+Package >> addClassTag: aSymbol [
 	<gtPharoPatch: #Pharo12>
 	"Add the class tag from the receiver, if already added do nothing."
 	
@@ -31,14 +31,25 @@ RPackage >> addClassTag: aSymbol [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
-RPackage class >> defaultPackageName [
+Package class >> defaultPackageName [
 	^ self 
 		forPharo12: [ UndefinedPackage undefinedPackageName ] 
 		forPharo11AndPharo10: [ #'_UnpackagedPackage' ]
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
-RPackage >> packageName [
+Package class >> named: aString [
+	^ self 
+		forPharo12: [
+			self new
+				name: aString;
+				yourself] 
+		forPharo11AndPharo10: [
+			RPackage named: aString ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
+Package >> packageName [
 	<gtPharoPatch: #Pharo>
 	
 	"Exists to be polymorphic with packageName in the PackageTag"
@@ -46,39 +57,7 @@ RPackage >> packageName [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
-RPackage >> tagNamed: aSymbol [
-	<gtPharoPatch: #Pharo12>
-	
-	^ self 
-		forPharo12: [ self tags detect: [ :each | each name = aSymbol ] ] 
-		forPharo11AndPharo10: [ self classTagNamed: aSymbol  ]
-]
-
-{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
-RPackage >> tagNamed: aSymbol ifAbsent: aBlock [
-	<gtPharoPatch:  #Pharo12>
-	
-	^ self tags
-		  detect: [ :each | each name = aSymbol ]
-		  ifNone: aBlock
-]
-
-{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
-RPackage >> tagOf: aClass [
-	<gtPharoPatch: #Pharo>
-	
-	^ self forPharo12:[
-		self tags
-			detect: [ :tag | tag includesClass: aClass ]
-			ifNone: [
-				self error: ('No tag containing {1} found in package {2}' format: {
-					aClass name.
-					self name }) ]]
-		forPharo11AndPharo10: [ self classTagForClass: aClass]
-]
-
-{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
-RPackage >> tagOrNilOf: aClass [
+Package >> tagOrNilOf: aClass [
 	^ self forPharo12:[
 		self tags
 			detect: [ :tag | tag includesClass: aClass ]

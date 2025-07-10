@@ -12,7 +12,7 @@ RGClassDefinition >> category [
 			  		ifFalse: [ aPackage name ]  ]
 			  	ifNotNil: [ :tag | 
 			  		({self packageOrganizer 
-			  			undefinedPackage undefinedTag name. RPackage rootTagName} includes: tag) 
+			  			undefinedPackage undefinedTag name. Package rootTagName} includes: tag) 
 			  				ifTrue: [aPackage isString 
 			  					ifTrue: [ aPackage ]
 			  					ifFalse: [ aPackage name ] ]
