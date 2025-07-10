@@ -31,6 +31,17 @@ Package >> addClassTag: aSymbol [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+Package class >> named: aString [
+	^ self 
+		forPharo12: [
+			self new
+				name: aString;
+				yourself] 
+		forPharo11AndPharo10: [
+			RPackage named: aString ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Package >> packageName [
 	<gtPharoPatch: #Pharo>
 	
