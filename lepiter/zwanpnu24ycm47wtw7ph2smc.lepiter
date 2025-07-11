@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:10:07.609603+02:00"
+						"dateAndTimeString" : "2025-07-11T17:57:03.78239+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:56:08.769172+02:00"
+						"dateAndTimeString" : "2025-07-11T17:58:32.64627+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "YgC7cAr2DQCoC1IXDcrXEA=="
+					"uidString" : "FCIfGQv2DQCfp1WJDcrXEA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "\r\nMCP servers can generate prompts for users. In this example, we’ll use the [fetch example server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) from the MCP community to show how to integrate them into our chats."
+				"string" : "Resources provide context to models provided by the MCP server."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:11:19.221964+02:00"
+						"dateAndTimeString" : "2025-07-11T17:58:39.072166+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:11:42.703794+02:00"
+						"dateAndTimeString" : "2025-07-11T18:05:34.383539+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "C3GIdQr2DQCsQW9QDcrXEA=="
+					"uidString" : "XCHNHgv2DQChUnw9DcrXEA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First, we need to set up the server. This requires `uvx`."
+				"string" : "In this example, we will work with a Postgres database that you are expected to have manually and an MCP server that exposes it (read-only) to the LLM."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:11:44.781671+02:00"
+						"dateAndTimeString" : "2025-07-11T18:05:41.532577+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:11:58.734538+02:00"
+						"dateAndTimeString" : "2025-07-11T18:06:14.843633+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "enIOdwr2DQCuP7JjDcrXEA=="
+					"uidString" : "tFz7Nwv2DQCkkHYnDcrXEA=="
 				},
-				"code" : "process := (GtExternalProcessBuilder new: 'uvx')\r\t\targs: {'mcp-server-fetch'};\r\t\tpipeStdin;\r\t\tpipeStdout;\r\t\tpipeStderr;\r\t\tspawn"
+				"code" : "dbString := 'postgresql://postgres:mysecretpassword@localhost/mydb'.\r\rprocess := (GtExternalProcessBuilder new: 'npx')\r\t\targs: {'@modelcontextprotocol/server-postgres'. dbString};\r\t\tpipeStdin;\r\t\tpipeStdout;\r\t\tpipeStderr;\r\t\tspawn"
 			},
 			{
 				"__type" : "textSnippet",
@@ -126,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:12:04.283041+02:00"
+						"dateAndTimeString" : "2025-07-11T18:06:21.300858+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,17 +137,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:12:11.734077+02:00"
+						"dateAndTimeString" : "2025-07-11T18:06:41.983684+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "XAY4eAr2DQCuZzMSDcrXEA=="
+					"uidString" : "bixaOgv2DQClF8GWDcrXEA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can then build an MCP client for it."
+				"string" : "Once we’ve established the process, we can start the client."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -163,7 +163,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:12:16.839619+02:00"
+						"dateAndTimeString" : "2025-07-11T18:06:46.20052+02:00"
 					}
 				},
 				"editEmail" : {
@@ -174,12 +174,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:12:17.282028+02:00"
+						"dateAndTimeString" : "2025-07-11T18:08:54.760929+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2aD3eAr2DQCvL8acDcrXEA=="
+					"uidString" : "exrWOwv2DQCmiQr/DcrXEA=="
 				},
 				"code" : "mcpClient := GtMcpClient new\r\t\ttransport: (GtMcpStdioTransport new process: process)"
 			},
@@ -197,7 +197,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:12:20.915748+02:00"
+						"dateAndTimeString" : "2025-07-11T18:06:58.019788+02:00"
 					}
 				},
 				"editEmail" : {
@@ -208,54 +208,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:13:26.59716+02:00"
+						"dateAndTimeString" : "2025-07-11T18:08:06.052077+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ENM1eQr2DQCvOS5bDcrXEA=="
+					"uidString" : "qXSKPAv2DQCmnSlZDcrXEA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This particular client only has one prompt, `fetch`, which enables us to create Markdown-based messages from websites and add them to our chat to enrich the context."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:13:33.428257+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:15:09.048938+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "k0aIfQr2DQCy22QSDcrXEA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "In this example, we use [the documentation site of MCP prompts](https://modelcontextprotocol.io/docs/concepts/prompts) to generate messages and add them to the chat."
+				"string" : "This particular server provides one resource per database table. To query the structure of a table named `my_table` we would write:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -271,7 +234,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:15:11.429632+02:00"
+						"dateAndTimeString" : "2025-07-11T18:07:52.978968+02:00"
 					}
 				},
 				"editEmail" : {
@@ -282,14 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:16:37.81751+02:00"
+						"dateAndTimeString" : "2025-07-11T18:08:59.086327+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mahfgwr2DQC1xKiYDcrXEA=="
+					"uidString" : "PRLRPwv2DQCqmQIJDcrXEA=="
 				},
-				"code" : "chat := GtLlmChat new.\r\rmessages := mcpClient\r\tmessagesFromPrompt: 'fetch'\r\twithArguments: {'url' -> 'https://modelcontextprotocol.io/docs/concepts/prompts'} asDictionary.\r\rmessages do: [:aMessage | chat addMessage: aMessage ].\r\rchat sendMessage: 'Can you explain MCP prompts to me concisely?'"
+				"code" : "resource := mcpClient readResource: 'postgres://postgres@localhost/my_table/schema'.\r\r\"to get to the text directly\"\rtableDescription := resource first at: 'text'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -305,7 +268,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:20:53.506978+02:00"
+						"dateAndTimeString" : "2025-07-11T18:09:06.734398+02:00"
 					}
 				},
 				"editEmail" : {
@@ -316,17 +279,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:24:52.21426+02:00"
+						"dateAndTimeString" : "2025-07-11T18:09:43.06627+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "UVjDlwr2DQC++iKjDcrXEA=="
+					"uidString" : "5H02RAv2DQCskj7ADcrXEA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can also list all prompts using {{gtMethod:GtMcpClient>>#listPrompts}} or get individual prompts without converting them to messages using {{gtMethod:GtMcpClient>>#getPrompt:withArguments:}}."
+				"string" : "Now we could, for instance, provide this description to the LLM before asking it to query the table using the query tool provided by the server."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-11T18:09:49.404602+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-07-11T18:12:15.64435+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2ZXBRgv2DQCvtyLZDcrXEA=="
+				},
+				"code" : "chat := GtLlmChat new.\r\rmcpClient llmFunctionTools do: [:aTool | chat provider addTool: aTool].\r\rchat addMessage: (GtLlmUserMessage new content: 'Description of `my_table`:\r\r', tableDescription).\r\rchat sendMessage: '`Query all contents of `my_table` and summarize them for me.'"
 			}
 		]
 	},
@@ -338,7 +335,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-07-11T17:09:58.600203+02:00"
+			"dateAndTimeString" : "2025-07-11T17:57:03.717158+02:00"
 		}
 	},
 	"editEmail" : {
@@ -349,15 +346,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-07-11T17:09:58.600203+02:00"
+			"dateAndTimeString" : "2025-07-11T17:57:03.717158+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Working with MCP prompts"
+		"title" : "Working with MCP resources"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "3345ba70-0af6-0d00-a80a-b09d0dcad710"
+		"uuid" : "64221e19-0bf6-0d00-9fa6-43c50dcad710"
 	}
 }
