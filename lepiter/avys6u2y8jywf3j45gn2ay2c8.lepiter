@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T14:37:44.905053+02:00"
+						"dateAndTimeString" : "2025-07-11T17:25:49.998391+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "`gt4llm` comes with a simple client for [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) servers. Currently, only tools are supported."
+				"string" : "\n`gt4llm` comes with a simple client for [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) servers. Currently, only tools and prompts are supported."
 			},
 			{
 				"__type" : "textSnippet",
@@ -409,7 +409,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-11T14:52:25.915027+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-07-11T17:24:15.980838+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "fkfUhAj2DQCxIMOoDBrptw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Once we have a connection, we can then explore [[Working with MCP tools]] and [[Working with MCP prompts]]."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -441,148 +479,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "## Working with the server"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T14:52:25.915027+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T15:06:34.762877+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "fkfUhAj2DQCxIMOoDBrptw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Once we have a connection, we can then list or call tools programmatically"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T14:56:42.867672+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T14:58:14.710507+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "GxAllAj2DQCyfsGdDBrptw=="
-				},
-				"code" : "mcpClient listTools.\r\rmcpClient callTool: 'list_allowed_directories' withArguments: {} asDictionary"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T14:58:27.84943+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T15:06:45.031252+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "P/Nmmgj2DQC0VtOtDBrptw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "or integrate them into our chat environent:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T15:06:47.62972+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T15:07:16.816939+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "VPswuAj2DQC7Ko11DBrptw=="
-				},
-				"code" : "chat := GtLlmChat new.\rmcpClient llmFunctionTools do: [ :aTool | chat provider addTool: aTool ].\rchat sendMessage: 'List the directories you are allowed to access.'"
 			}
 		]
 	},
