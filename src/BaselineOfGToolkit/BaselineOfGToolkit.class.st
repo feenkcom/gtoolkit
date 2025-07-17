@@ -83,6 +83,27 @@ BaselineOfGToolkit class >> gtoolkitRepositorySpec [
 	^ 'github://feenkcom/gtoolkit:main/src'
 ]
 
+{ #category : #'post load' }
+BaselineOfGToolkit >> applyPatchForClassBuilder [
+	self 
+		forPharo12: [
+			#ShiftClassBuilder  asClass
+				compile: 'install
+	<gtPharoPatch: #Pharo>
+	"Install the class in the system environment"
+	
+	^ GtShiftClassInstaller12 new makeWithBuilder: self' 
+				classified: 'gt-patch' ] 
+		forPharo11AndPharo10: [
+			#FluidBuilder asClass
+				compile: 'install
+	<gtPharoPatch: #Pharo>
+	"Install the class in the system environment"
+	
+	^ GtShiftClassInstaller new makeWithBuilder: self' 
+				classified: 'gt-patch' ]
+]
+
 { #category : #baseline }
 BaselineOfGToolkit >> baseline: spec [
 	<baseline>
@@ -256,6 +277,8 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		sameLineKeywordArgument: true;
 		parenthesizeCascadeReceiver: false;
 		retainBlankLinesBetweenStatements: true.
+
+	self applyPatchForClassBuilder.
 ]
 
 { #category : #'post load' }
