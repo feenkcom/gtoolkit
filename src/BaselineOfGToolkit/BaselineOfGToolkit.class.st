@@ -100,7 +100,7 @@ BaselineOfGToolkit >> applyPatchForClassBuilder [
 	<gtPharoPatch: #Pharo>
 	"Install the class in the system environment"
 	
-	^ GtShiftClassInstaller new makeWithBuilder: self' 
+	^ GtShiftClassInstaller new makeWithBuilder: self shiftClassBuilder' 
 				classified: 'gt-patch' ]
 ]
 
