@@ -8,6 +8,13 @@ Object >> isPharoPackageModel [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+Object >> isPharoPackageTagModel [
+	^ self 
+		forPharo12: [ self isKindOf: PackageTag ] 
+		forPharo11AndPharo10: [ self isKindOf: RPackageTag ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Object >> packageOrganizer [
 	<gtPharoPatch: #Pharo12>
 	
