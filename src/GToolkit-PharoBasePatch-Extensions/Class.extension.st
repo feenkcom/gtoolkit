@@ -26,3 +26,16 @@ Class >> category: aString [
 			SystemAnnouncer uniqueInstance
 				class: self recategorizedFrom: oldCategory to: self basicCategory ]
 ]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
+Class >> packageTag [
+
+	^ self 
+		forPharo12: [
+			packageTag ifNil: [ self packageOrganizer undefinedPackage undefinedTag ] ]
+		forPharo11AndPharo10: [
+			| currentTag |
+
+			currentTag := self package classTagForClass: self.
+		] 
+]
