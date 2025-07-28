@@ -11,3 +11,15 @@ RPackageOrganizer class >> default [
 		forPharo11AndPharo10: [
 		 	default ifNil: [  default := self new ] ]
 ]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
+RPackageOrganizer >> hasPackage: aPackage [
+	<gtPharoPatch: #Pharo12>
+	"Takes a package or a package name as parameter and return true if I include this package."
+
+	^ aPackage isString
+		  ifTrue: [
+			  self packageNamed: aPackage asSymbol ifAbsent: [ ^ false ].
+			  ^ true ]
+		  ifFalse: [ self packages includes: aPackage ]
+]
