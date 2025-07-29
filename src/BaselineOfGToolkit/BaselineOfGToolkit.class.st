@@ -84,6 +84,18 @@ BaselineOfGToolkit class >> gtoolkitRepositorySpec [
 ]
 
 { #category : #'post load' }
+BaselineOfGToolkit >> applyLepiterDatabaseIconInPharoIcons [
+	"Current workaround for IceOperation>>#icon needing the icon name in Pharo 12,
+	instead of returning just the icon. This is used by GtLepiterDatabaseDefinition."
+	
+	self 
+		forPharo12: [ Smalltalk ui theme icons icons 
+			at: #lepiterDatabase 
+			put: LeIcons lepiterDatabase create asSpartaForm ] 
+		forPharo11AndPharo10: []
+]
+
+{ #category : #'post load' }
 BaselineOfGToolkit >> applyPatchForClassBuilder [
 	self 
 		forPharo12: [
@@ -231,6 +243,7 @@ BaselineOfGToolkit >> postLoadGToolkit: spec [
 		retainBlankLinesBetweenStatements: true.
 
 	self applyPatchForClassBuilder.
+	self applyLepiterDatabaseIconInPharoIcons
 ]
 
 { #category : #'post load' }
