@@ -674,7 +674,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-01-03T16:32:24.263999+01:00"
+												"dateAndTimeString" : "2025-07-29T10:12:39.290982+02:00"
 											}
 										},
 										"uid" : {
@@ -684,7 +684,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "The method {{gtMethod:MCPackageLoader>>tryToLoad:}} loads classes twice. This is mentioned in in the  comment if {{gtMethod:MCPackageLoader>>basicLoadDefinitions}}. However, the fact that classes is loaded twice leads to a significant slowdown especially in code that uses traits."
+										"string" : "The method `MCPackageLoader>>tryToLoad:`loads classes twice. This is mentioned in in the  comment if {{gtMethod:MCPackageLoader>>basicLoadDefinitions}}. However, the fact that classes is loaded twice leads to a significant slowdown especially in code that uses traits."
 									},
 									{
 										"__type" : "textSnippet",
@@ -823,7 +823,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-07-26T11:47:24.362472+02:00"
+												"dateAndTimeString" : "2025-07-29T10:13:09.350751+02:00"
 											}
 										},
 										"uid" : {
@@ -833,7 +833,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "The method {{gtMethod:MCMethodDefinition>>#addMethodAdditionTo:}} when creating a {{gtClass:MethodAddition}} uses {{gtMethod:MethodAddition>>#createCompiledMethod}} to create the compiled method that will be later added to the class. However, depending on the actual chages, if some class definitions have errors, not all class definitions might be compiled at that point resulting in compiled methods that point to undeclared variables."
+										"string" : "The method `MCMethodDefinition>>#addMethodAdditionTo:` when creating a `MethodAddition` uses `MethodAddition>>#createCompiledMethod` to create the compiled method that will be later added to the class. However, depending on the actual chages, if some class definitions have errors, not all class definitions might be compiled at that point resulting in compiled methods that point to undeclared variables."
 									},
 									{
 										"__type" : "textSnippet",
@@ -3914,7 +3914,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-03-20T15:35:04.801541+01:00"
+												"dateAndTimeString" : "2025-07-29T10:13:55.142685+02:00"
 											}
 										},
 										"uid" : {
@@ -3924,7 +3924,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Avoid using {{gtMethod:RPackage>>#definedClasses}} to create a list of classes only to select then the one representing the manifest. The manifest is use to check if the package is deprecated, which in turn can slow down checking if class is deprecated in {{gtMethod:Class>>isDeprecated}}"
+										"string" : "Avoid using `RPackage>>#definedClasses` to create a list of classes only to select then the one representing the manifest. The manifest is use to check if the package is deprecated, which in turn can slow down checking if class is deprecated in {{gtMethod:Class>>isDeprecated}}"
 									},
 									{
 										"__type" : "textSnippet",

@@ -34,7 +34,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-06-12T13:56:27.856775+02:00"
+									"dateAndTimeString" : "2025-07-29T10:14:19.977815+02:00"
 								}
 							},
 							"uid" : {
@@ -44,7 +44,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "In Pharo 11 ends ends up in {{gtMethod:RBParser>>#parserError:}} and raises a {{gtClass:SyntaxErrorNotification}} that can be caught. Resuming from that error raises then {{gtClass:ReparseAfterSourceEditing}}, and that triggers another reparsing."
+							"string" : "In Pharo 11 ends ends up in`RBParser>>#parserError:` and raises a {{gtClass:SyntaxErrorNotification}} that can be caught. Resuming from that error raises then `ReparseAfterSourceEditing`, and that triggers another reparsing."
 						},
 						{
 							"__type" : "textSnippet",
