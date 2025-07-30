@@ -11,6 +11,11 @@ RGElementDefinition >> realParent [
 		          ifNil: [ self rootEnvironment classNamed: self parentName ].
 	realParent ifNil: [ ^ nil ].
 
-	self isMeta ifTrue: [ realParent := realParent classSide ].
+	self 
+		forPharo12: [
+			self isMeta ifTrue: [ realParent := realParent classSide ]]
+		forPharo11AndPharo10: [
+			self isMetaSide ifTrue: [ realParent := realParent classSide ] ].
+	
 	^ realParent
 ]
