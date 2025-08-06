@@ -61,6 +61,11 @@ GtTranscript >> asElement [
 	^ GtTranscriptElement new transcript: self
 ]
 
+{ #category : #'api - ui' }
+GtTranscript >> asStencil [
+	^ self
+]
+
 { #category : #'api - streaming' }
 GtTranscript >> clear [ 
 	self textDo: [ :aText | 
@@ -78,6 +83,11 @@ GtTranscript >> crShow: anObject [
 	self 
 		cr; 
 		show: anObject
+]
+
+{ #category : #'api - ui' }
+GtTranscript >> create [
+	^ self asElement
 ]
 
 { #category : #compatibility }
