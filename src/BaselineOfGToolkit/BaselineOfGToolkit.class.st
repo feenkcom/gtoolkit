@@ -133,7 +133,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.2487/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.2034/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.2035/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.2974/src' ].
@@ -169,7 +169,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4petitparser2:v0.8.50/src' ].
 		spec
 			baseline: 'GToolkit4Famix3' with: [
-				spec repository: 'github://feenkcom/gt4famix3:v0.8.114/src' ].
+				spec repository: 'github://feenkcom/gt4famix3:v0.8.115/src' ].
 		spec
 			baseline: 'GToolkit4Ruby' with: [
 				spec repository: 'github://feenkcom/gt4ruby:v0.6.23/src' ].
@@ -208,7 +208,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.2134/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.2034/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.2035/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.916/src' ].
@@ -259,7 +259,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4ztimestamp:v0.6.14/src' ].
 		spec
 			baseline: 'Gt4Llm' with: [
-				spec repository: 'github://feenkcom/gt4llm:v0.6.164/src' ].
+				spec repository: 'github://feenkcom/gt4llm:v0.6.165/src' ].
 		spec
 			baseline: 'Gt4CSS' with: [
 				spec repository: 'github://feenkcom/gt4css:v0.6.142/src' ].
