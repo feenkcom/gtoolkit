@@ -178,6 +178,9 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 			(Object << #ChangeSet
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpIconVisitor
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
 		] 
 		forPharo11: [ ]
 ]
@@ -216,7 +219,11 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo11 [
 				package: 'GToolkit-Pharo12Stubs') install.
 			(#EpPackageTagChange asClass << #EpPackageTagRename
 				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install]
+				package: 'GToolkit-Pharo12Stubs') install.
+				
+			(Object << #EpIconNameVisitor
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.]
 ]
 
 { #category : #accessing }
