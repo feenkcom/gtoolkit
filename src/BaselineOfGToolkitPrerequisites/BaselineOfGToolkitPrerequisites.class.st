@@ -368,6 +368,9 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 		spec postLoadDoIt: #postLoadGToolkitPrerequisites:.
 		spec
 			package: 'GToolkit-PharoBasePatch-Deprecations';
+			package: 'GToolkit-PharoBasePatch-SymbolTableSemaphore-Base';
+			package: 'GToolkit-PharoBasePatch-SymbolTableSemaphore-Patch'
+				with: [ spec requires: #('GToolkit-PharoBasePatch-SymbolTableSemaphore-Base') ] ;
 			package: 'GToolkit-PharoBasePatch-Extensions';
 			package: 'GToolkit-PharoBasePatch-Subscriptions' ;
 			package: 'GToolkit-PharoBasePatch-Iceberg';
