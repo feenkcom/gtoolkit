@@ -7,7 +7,7 @@ Class {
 	#classInstVars : [
 		'enabled'
 	],
-	#category : #'GToolkit-PharoBasePatch-SymbolTableSemaphore-Base-GToolkit-PharoBasePatch-SymbolTableSemaphore-Base'
+	#category : #'GToolkit-PharoBasePatch-SymbolTableSemaphore-Base'
 }
 
 { #category : #accessing }
