@@ -22,7 +22,7 @@ LwGtSymbolTableSemaphore class >> enable [
 
 { #category : #accessing }
 LwGtSymbolTableSemaphore class >> enabled [
-	^ enabled ifNil: [ enabled := false ]
+	^ enabled ifNil: [ enabled := true ]
 ]
 
 { #category : #'instance creation' }
