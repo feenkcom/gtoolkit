@@ -597,7 +597,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T10:41:50.546848+01:00"
+									"dateAndTimeString" : "2025-08-21T10:06:08.632703+02:00"
 								}
 							},
 							"uid" : {
@@ -607,7 +607,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "With the moldable object at hand, we can ask questions like *What is the current state of the Ludo game?*, or *What happened in the last few moves that we autoplayed?* As we answer questions we can create small custom tools, such as a [[Custom View]] or a [[Custom Action]]. The model of the history emerged from the need to answer questions about the evolution of an instance of the game, while the history view was created as a [[Custom View]] to enable exploration of a game’s history. Whenever we identify an interesting state of our moldable object, we can extract it as an [[Example Object]] that we can use as a test case, or as a starting point for further moldable development."
+							"string" : "With the moldable object at hand, we can ask questions like *What is the current state of the Ludo game?*, or *What happened in the last few moves that we autoplayed?* As we answer questions we can create small custom tools, such as a [[Contextual View]] or a [[Contextual Action]]. The model of the history emerged from the need to answer questions about the evolution of an instance of the game, while the history view was created as a [[Contextual View]] to enable exploration of a game’s history. Whenever we identify an interesting state of our moldable object, we can extract it as an [[Example Object]] that we can use as a test case, or as a starting point for further moldable development."
 						},
 						{
 							"__type" : "textSnippet",
@@ -634,7 +634,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T10:46:58.068845+01:00"
+									"dateAndTimeString" : "2025-08-21T09:22:26.928542+02:00"
 								}
 							},
 							"uid" : {
@@ -644,7 +644,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A moldable object can encapsulate entities at different levels of abstractions. When viewed with a [[Custom View]] and connected with other moldable objects we can form various kinds of [[Composed Narrative]]. For example, in the screenshot below we see three related objects. On the left we see a {{gtClass:name=CircularMemoryLogger}} object that shows multiple signals logged for an asynchronous execution. In the middle we have an instance of {{gtClass:name=BrTextStylerAsyncStylingStarted}}. The signal contains the stack and presents it in a [[Custom View]]. Selecting an item in the stack shows the related {{gtClass:name=Context}} object that displays a view with the *Source*. Essentially, we have obtained a postmortem debugger connected to a logger. There are many such combinations possible."
+							"string" : "A moldable object can encapsulate entities at different levels of abstractions. When viewed with a [[Contextual View]] and connected with other moldable objects we can form various kinds of [[Composed Narrative]]. For example, in the screenshot below we see three related objects. On the left we see a {{gtClass:name=CircularMemoryLogger}} object that shows multiple signals logged for an asynchronous execution. In the middle we have an instance of {{gtClass:name=BrTextStylerAsyncStylingStarted}}. The signal contains the stack and presents it in a [[Contextual View]]. Selecting an item in the stack shows the related {{gtClass:name=Context}} object that displays a view with the *Source*. Essentially, we have obtained a postmortem debugger connected to a logger. There are many such combinations possible."
 						},
 						{
 							"__type" : "pictureSnippet",
