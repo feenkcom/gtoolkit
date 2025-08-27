@@ -64,7 +64,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-27T16:04:53.801653+02:00"
+						"dateAndTimeString" : "2025-08-27T21:08:01.382152+02:00"
 					}
 				},
 				"uid" : {
@@ -74,7 +74,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Text, like the one in this very snippet, is modelled as {{gtClass:BlText}}. A simple way to get a text object is to use {{gtMethod:String>>asRopedText}}:"
+				"string" : "\rText, like the one in this very snippet, is modelled as {{gtClass:BlText}}. A simple way to get a text object is to use {{gtMethod:String>>asRopedText}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -142,7 +142,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-27T17:20:45.785846+02:00"
+						"dateAndTimeString" : "2025-08-27T20:49:21.852473+02:00"
 					}
 				},
 				"uid" : {
@@ -236,7 +236,85 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-08-27T20:29:09.501272+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-08-27T20:29:09.501272+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lCqZs775DQCdu5lhD4zQGA=="
+							},
+							"exampleSelector" : "textWithOverlappingFonts",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "BlTextAttributesExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : false
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-08-27T20:34:02.659153+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-08-27T20:37:37.939621+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "oL/gwr75DQChkQKSD4zQGA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In this example, the blue color overrides the red colors for a couple of characters. In that situation, we the {{gtClass:BlTextForegroundAttribute}} is replaced by the new one. If you want to understand how the structure looks under the hood try investigating the `All attributes` and the `Intervals` views of the text object."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -257,7 +335,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-27T17:55:51.139888+02:00"
+						"dateAndTimeString" : "2025-08-27T20:31:32.335182+02:00"
 					}
 				},
 				"uid" : {
@@ -267,84 +345,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Of course, attributes can also overlap. "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-27T10:33:54.531343+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-27T10:34:17.216851+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "L/fRYrb5DQCD87uoD4zQGA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "#Creating longer text with text streams"
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-26T20:17:38.814574+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-26T20:17:38.814574+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "vsCWbKr5DQC3kIdHD4zQGA=="
-				},
-				"exampleSelector" : "completeAPI",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "BlTextStreamExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : false
+				"string" : "Of course, attributes can also overlap. Take a look at the example below:"
 			}
 		]
 	},
@@ -367,12 +368,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-08-24T18:39:48.507533+02:00"
+			"dateAndTimeString" : "2025-08-27T21:04:19.394557+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Enhancing a text with text attributes"
+		"title" : "Enhancing text with basic text attributes"
 	},
 	"uid" : {
 		"__type" : "uuid",
