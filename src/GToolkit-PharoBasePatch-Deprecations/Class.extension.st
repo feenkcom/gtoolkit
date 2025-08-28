@@ -23,6 +23,7 @@ Class >> subclass: aSubclassSymbol instanceVariableNames: instVarNameList classV
 					builder
 						superclass: self;
 						name: aSubclassSymbol;
+						layoutClass: self classLayout class;
 						slotsFromString: instVarNameList;
 						sharedVariablesFromString: classVarNames;
 						category: aPackageSymbol;
