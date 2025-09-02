@@ -11,7 +11,7 @@ RBAddClassChange >> definition [
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RBAddClassChange >> definitionPharo12OldFormat [
 	<gtPharoPatch: #Pharo12>
-	^ '<1s> subclass: #<2s> instanceVariableNames: ''<3s>'' classVariableNames: ''<4s>''  poolDictionaries: ''<5s>''  category: <6p>'
+	^ '<1s> subclass: #<2s> instanceVariableNames: ''<3s>'' classVariableNames: ''<4s>'' poolDictionaries: ''<5s>'' category: <6p>'
 		expandMacrosWithArguments: (Array 
 			with: builder superclassName
 			with: builder name
@@ -23,5 +23,5 @@ RBAddClassChange >> definitionPharo12OldFormat [
 				self sharedPoolNames asStringOn: s delimiter: ' ' ] )
 			with: (builder tag
 		 	 ifNotNil: [ :packageTag | builder package , '-' , packageTag ]
-		 	 ifNil: [ builder package ]))
+		 	 ifNil: [ builder package ]) asString)
 ]
