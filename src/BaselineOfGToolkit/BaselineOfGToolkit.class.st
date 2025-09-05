@@ -226,7 +226,9 @@ BaselineOfGToolkit >> baseline: spec [
 							forPharo11: [
 								spec repository: 'github://feenkcom/MethodProxies:gt-pharo11/src' ] ];
 				baseline: 'GToolkitProfiler'
-					with: [ spec repository: 'github://feenkcom/gtoolkit-profiler:main/src' ] ]
+					with: [ spec repository: 'github://feenkcom/gtoolkit-profiler:main/src' ];
+				baseline: 'GtoolkitRoadmaps'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-roadmaps:main/src' ] ]
 ]
 
 { #category : #'post load' }
