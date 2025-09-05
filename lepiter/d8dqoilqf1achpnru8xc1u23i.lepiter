@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-24T19:21:23.095438+02:00"
+						"dateAndTimeString" : "2025-09-05T23:48:18.763627+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,44 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-24T19:21:33.184168+02:00"
+						"dateAndTimeString" : "2025-09-05T23:48:18.763627+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/9BmiHb6DQCIVr9tD4TceA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Completion can be added to any editor through a {{gtClass:GtCompletionController}} that contains a so called {{gtClass:GtCompletionStrategy}}."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T23:36:57.795117+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T23:49:09.726222+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +76,149 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[DRAFT]]"
+				"string" : "The simplest strategy is based on a collection of strings. For example, the following editor offers a completion anywhere for the class names from the image:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T23:18:49.86703+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T23:39:44.884633+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9pf3Hnb6DQC0qzReD4TceA=="
+				},
+				"code" : "editor := BrEditor new\r\t\taptitude: BrGlamorousCodeEditorAptitude new;\r\t\ttext: 'Type a capital letter to get completion for class names.'.\rtree := GtPrefixTree new.\rObject withAllSubclassesDo: [ :c | tree add: c name ].\rcompletionStrategy := GtStringsCompletionStrategy new completions: tree.\rcompletionController := GtCompletionController\r\t\ton: editor\r\t\tstrategy: completionStrategy.\rcompletionController install.\reditor "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T23:49:11.673774+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-06T00:01:41.958255+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "MyeOi3b6DQCKl3BkD4TceA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "But sometimes, we might want to have a special completion just on a part of the text. That can be accomplished through a dedicated {{gtClass:GtCompletionStrategyAttribute}} that can be installed on only a part of the text:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T23:50:53.473942+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-06T00:01:21.551377+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Nn+fkXb6DQCPuWvHD4TceA=="
+				},
+				"code" : "text := 'Type only in the blue part a capital letter to get completion for class names.'\r\t\tasRopedText.\reditor := BrEditor new\r\t\taptitude: BrGlamorousCodeEditorAptitude new;\r\t\ttext: text.\rtree := GtPrefixTree new.\rObject withAllSubclassesDo: [ :c | tree add: c name ].\rcompletionStrategy := GtStringsCompletionStrategy new completions: tree.\r(GtCompletionController on: editor) install.\r(text from: 1 to: 26)\r\tforeground: Color blue;\r\tattribute: (GtCompletionStrategyAttribute new strategy: completionStrategy).\reditor"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-06T00:01:50.26097+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-06T00:03:18.608046+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "C2hnuHb6DQCUmMp3D4TceA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Combining this the completion strategy attribute with a styler allows you to build highly contextual completion behaviors. See more details about styling at [[Constructing a text editor with styling]]."
 			}
 		]
 	},
@@ -62,12 +241,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-08-24T16:43:02.999019+02:00"
+			"dateAndTimeString" : "2025-09-06T00:03:37.693173+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Working with completion in a text editor"
+		"title" : "Controlling completion in a text editor"
 	},
 	"uid" : {
 		"__type" : "uuid",
