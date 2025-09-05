@@ -295,7 +295,7 @@
 				"string" : "That's a neat little ability, isn't it? If you want to learn more about why that's possible, it has to do with [[One rendering tree]]."
 			},
 			{
-				"__type" : "commentSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -308,7 +308,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-29T00:33:28.234633+02:00"
+						"dateAndTimeString" : "2025-09-05T19:09:51.407536+02:00"
 					}
 				},
 				"editEmail" : {
@@ -319,15 +319,159 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-29T00:33:37.84015+02:00"
+						"dateAndTimeString" : "2025-09-05T19:17:18.007669+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CQTSOtb5DQC+4DRwCszbVA=="
+					"uidString" : "dcqQpHL6DQCobyPTD4TceA=="
 				},
-				"string" : "Explain attribute properties and types",
-				"isHidden" : true
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "So what happens here? {{gtMethod:BlTextNextBuilder>>#appendingAdornment:}} is a utility method that adds a {{gtClass:BrTextAdornmentDynamicAttribute}} which allows you to embed arbitrary elements produced by the stencil block. The code below is equivalent to the one above:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T19:10:17.522452+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T19:10:42.308265+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TUMfpnL6DQCpRnHTD4TceA=="
+				},
+				"code" : "text := '42 is the answer' asRopedText.\r(text from: 2 to: 2)\r\tattribute: (BrTextAdornmentDynamicAttribute new\r\t\t\tbeAppend;\r\t\t\tstencil: [ (GtInspector newOn: 42)\r\t\t\t\t\tsize: 600 @ 400;\r\t\t\t\t\taddAptitude: BrShadowAptitude ]).\rtext"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T19:20:14.624669+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T19:22:55.591693+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "oxcitXL6DQCtGb8mD4TceA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Until now, the adornments did not have interaction. But they are full fledged elements and can handle any interaction an element can. For example, the an expanding triangle, like the one seen next to page links can be created through {{gtMethod:TBlTextStyleable>>#expandingAdornment:}}. In the example below we get an expanding inspector next to the number:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T19:17:56.638961+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T19:42:29.734614+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jdZ8wXL6DQCwKu8GD4TceA=="
+				},
+				"code" : "text := '42 is the answer' asRopedText.\r(text from: 2 to: 2)\r\texpandingAdornment: [ (GtInspector newOn: 42)\r\t\t\theight: 400;\r\t\t\taddAptitude: BrShadowAptitude ].\rtext"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T19:42:31.166968+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-05T19:42:51.624659+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rFdgGXP6DQC+IlGjD4TceA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Explore {{gtClass:BrTextAdornmentAttribute}} for more details."
 			}
 		]
 	},
