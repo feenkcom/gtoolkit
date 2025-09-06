@@ -133,12 +133,9 @@ FastSubscriptionRegistry >> remove: subscription [
 FastSubscriptionRegistry >> removeSubscriber: subscriber [
 
 	^ self protected: [ 
-		self 
-			forPharo11AndPharo12: [
-				| toRemove |
-				toRemove := subscriberMap at: subscriber ifAbsent: [ #() ].
-				toRemove do: [ :e | e unregister ] ]
-			forPharo10: [].
+		| toRemove |
+		toRemove := subscriberMap at: subscriber ifAbsent: [ #() ].
+		toRemove do: [ :e | e unregister ].
 	
 		subscriberMap removeKey: subscriber ifAbsent: [  ] ]
 ]
