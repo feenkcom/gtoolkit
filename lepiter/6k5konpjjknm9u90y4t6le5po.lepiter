@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-08T07:34:35.070441+01:00"
+						"dateAndTimeString" : "2025-09-07T19:31:13.773371+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit (GT) is built in [[Pharo]], and it enables people to work with Pharo systems. Nevertheless, the goal of GT is distinct from that of Pharo and so is its realization."
+				"string" : "Glamorous Toolkit (GT) is built using [[Pharo]] and can be used for developing Pharo systems, but it features a reimagined development experience that extends beyond Smalltalk."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:22:06.322468+02:00"
+						"dateAndTimeString" : "2025-09-07T14:25:20.273412+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-11T22:51:18.993651+02:00"
+						"dateAndTimeString" : "2025-09-07T14:25:30.069818+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "C5sIa8kkAAAAAAAAAAAAAA=="
+					"uidString" : "DzWn5pb6DQCnbmL6AanBzA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Our goal: Moldable Development"
+				"string" : "# A moldable development environment"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:22:52.822322+02:00"
+						"dateAndTimeString" : "2025-09-07T15:20:21.99424+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,54 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-19T13:08:21.424622+02:00"
+						"dateAndTimeString" : "2025-09-07T19:10:35.939997+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ACw4hcPCAAAAAAAAAAAAAA=="
+					"uidString" : "lPaGq5f6DQCyCeD8AanBzA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our goal is to provide a complete and novel development experience to allow people to make the inside of systems explainable. All our work is free and open-source under the MIT license. We contribute two things towards our goal. First, we provide the actual environment. Second, and perhaps more importantly, through GT we enable [[Moldable Development]], the approach we have authored."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:22:56.641933+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-19T13:08:30.708127+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Hy5Ad2UvAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Moldable Development puts forward the hypothesis that the shape of software is essential and that it has to be customized to match the context of the developer. By now, we have a decade worth of experience and experiments in various scenarios. For example, we use it to assess and steer the architecture of  legacy systems, or to explain the business logic to non-technical people."
+				"string" : "The primary goal of GT is to support [[Moldable Development]]. The first generation of GT, which was integrated into Pharo in 2014, started with the [[Inspector]], [[Debugger]] and [[Spotter]] and showed that  we can indeed provide an experience that is distinct from any other, including the classic Smalltalk one. The new GT takes Moldable Development much further."
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-19T13:08:56.817705+02:00"
+						"dateAndTimeString" : "2025-09-07T19:49:23.906958+02:00"
 					}
 				},
 				"uid" : {
@@ -187,44 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Moldable Development was embodied in the first generation of GT which was integrated into Pharo in 2014, and it showed how we can indeed provide an experience that is distinct from any other, including the classic Smalltalk one."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:23:43.637453+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-08T07:34:54.167208+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "kyk9gWTeAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The new GT takes Moldable Development much further. Especially visible are new kinds of tools, like [[Lepiter]] with its live notebooks, slide shows with interactive explanations, or a [[Coder]] with expandable editors."
+				"string" : "Especially visible are new kinds of tools, like [[Lepiter]] with its live multi-language notebooks, or [[Coder]] with expandable editors."
 			},
 			{
 				"__type" : "textSnippet",
@@ -251,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-11T23:26:22.741209+02:00"
+						"dateAndTimeString" : "2025-09-07T19:26:01.501496+02:00"
 					}
 				},
 				"uid" : {
@@ -261,44 +187,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Still, there are less visible parts. Underneath, we have a generic infrastructure for handling other languages. It comes with [[SmaCC]], the parsing engine that allows us to create parsers for new languages (see [[How to parse sources in different languages]] for examples)."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:23:32.118622+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:30:23.100046+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "E9vniwGfAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Then there are even more technical engines. [[Releaser]] makes it possible to version deeply nested projects and repositories completely automatically. [[Visualizer]]  adds significant visualization abilities to the overall environment. "
+				"string" : "Still, there are less visible components that are as interesting. Underneath, we have a generic infrastructure for handling other languages based on [[SmaCC]], the parsing engine. Based on this we get also support for software analysis, and support for editing for other languages including engines for syntax highlighting and completion."
 			},
 			{
 				"__type" : "textSnippet",
@@ -351,7 +240,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:23:58.538764+02:00"
+						"dateAndTimeString" : "2025-09-07T14:38:45.393562+02:00"
 					}
 				},
 				"editEmail" : {
@@ -362,17 +251,239 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-10-11T23:28:36.433478+02:00"
+						"dateAndTimeString" : "2025-09-07T19:17:57.291467+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2PudngVyAAAAAAAAAAAAAA=="
+					"uidString" : "sRifFpf6DQCxY5l3AanBzA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "GT relies on the vm, language, and basic libraries of Pharo, but it comes with a completely separate [[Graphical stack]] and engines for tools, such as syntax highlighting and completion. This stack is particularly relevant because it renders every scene through a single rendering tree. On the one hand, this allows us to create new kind of interfaces. On the other hand, visualizations become first class citizens at a very low cost."
+				"string" : "# Distributed runtime"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T19:18:08.214896+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T19:24:54.749577+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "h+OR7pr6DQC51urBAanBzA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In GT we can escape a single image runtime by splitting a job across multiple worker images through the [[RemoteRunner]]. In this model, the worker images can be either on the same machine or on different machines, and the job tasks can be dispatched both through a logic in GT, or through an external queue. Moreover, the whole support is debuggable and offers extensive observability out of the box."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T14:37:53.057707+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T14:38:09.572921+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xEB5E5f6DQCwiDWQAanBzA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# A novel graphical stack"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T14:38:11.097615+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T19:27:13.717455+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9IysFJf6DQCxSmUgAanBzA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "GT relies on the vm, language, and basic libraries of Pharo, but the environment is based on a completely separate [[Graphical stack]] that renders every scene through a single rendering tree. On the one hand, this allows us to create new kind of interfaces. On the other hand, visualizations become first class citizens at a very low cost (see [[Visualizer]])."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T14:35:14.190811+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T14:35:18.500587+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uyohCpf6DQCqoP4YAanBzA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# A hybrid runtime"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T14:37:30.457528+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T14:37:30.457528+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+25AEpf6DQCwVGjzAanBzA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The overall runtime is based on [[Rust]] which controls the user interface rendering. The Pharo Virtual Machine is used as a library in a separate process."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T14:35:19.153726+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-07T14:37:38.540252+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "g+RsCpf6DQCq/hibAanBzA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "GT loads cleanly in Pharo. In practice, this means people working on projects built on top of the classic Pharo runtime have the option of two distinct environments."
 			},
 			{
 				"__type" : "textSnippet",
@@ -399,7 +510,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:35:25.007265+02:00"
+						"dateAndTimeString" : "2025-09-07T14:35:11.925682+02:00"
 					}
 				},
 				"uid" : {
@@ -436,7 +547,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:35:48.134535+02:00"
+						"dateAndTimeString" : "2025-09-07T19:20:59.453152+02:00"
 					}
 				},
 				"uid" : {
@@ -482,7 +593,7 @@
 				},
 				"exampleSelector" : "itself",
 				"previewHeight" : 420,
-				"previewShowSelector" : "gtGtMapFor:",
+				"previewShowSelector" : "gtDependenciesGraphFor:",
 				"exampleBehaviorName" : "BaselineOfGToolkit class",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
@@ -502,7 +613,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:24:22.593747+02:00"
+						"dateAndTimeString" : "2025-09-07T19:28:06.090874+02:00"
 					}
 				},
 				"editEmail" : {
@@ -513,17 +624,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:24:22.593747+02:00"
+						"dateAndTimeString" : "2025-09-07T19:30:30.627565+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "BjhLPYwTAAAAAAAAAAAAAA=="
+					"uidString" : "WBN/IZv6DQCWzj8QAanBzA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "GT loads cleanly in Pharo. In practice, this means people working on projects built on top of the Pharo runtime have the option of two distinct environments. "
+				"string" : "The development of this extensive ecosystem of project is supported seamlessly by  [[Releaser]], a technical engine that makes it possible to version deeply nested projects and repositories completely automatically. This can also be used by others that build on top of GT to version their code seamlessly as well."
 			},
 			{
 				"__type" : "textSnippet",
@@ -539,7 +650,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:24:24.291613+02:00"
+						"dateAndTimeString" : "2025-09-07T19:50:43.94418+02:00"
 					}
 				},
 				"editEmail" : {
@@ -550,91 +661,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:36:10.394979+02:00"
+						"dateAndTimeString" : "2025-09-07T19:51:06.904614+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2dvPMCPpAAAAAAAAAAAAAA=="
+					"uidString" : "pEhucpv6DQCfH1Z0AanBzA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#A distinct environment"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:24:25.622808+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:24:25.622808+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "eOqww5/RAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "If we define a Smalltalk-like system as being the language plus the environment, GT is a new such system. The tools and the experience are different, but more importantly, the workflow that it enables is distinct."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-05-26T22:22:44.099862+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-03-08T07:35:44.914127+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "stEeP3RuAAAAAAAAAAAAAA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The traditional Smalltalk environment was a revolution when it was created. It enabled humans to interact with the inside of software systems in novel ways that then led to a new way of perceiving programming. We see Moldable Development as yet another leap."
+				"string" : "To get an idea of the extent of the environment, see [[A code size analysis]]."
 			}
 		]
 	},
