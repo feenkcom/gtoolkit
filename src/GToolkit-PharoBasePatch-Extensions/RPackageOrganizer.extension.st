@@ -23,3 +23,10 @@ RPackageOrganizer >> hasPackage: aPackage [
 			  ^ true ]
 		  ifFalse: [ self packages includes: aPackage ]
 ]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
+RPackageOrganizer >> packageNamed: aSymbol ifPresent: aPresentBlock [
+	^ packages
+		at: aSymbol asSymbol
+		ifPresent: aPresentBlock
+]
