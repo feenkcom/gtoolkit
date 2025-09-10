@@ -5,6 +5,6 @@ OpalCompiler >> isScripting: aBoolean [
 	<gtPharoPatch: #Pharo>
 	 
 	self 
-		forPharo12: [ self compilationContext isScripting: aBoolean ]
-		forPharo11AndPharo10: [ self noPattern: aBoolean ]
+		forPharo12AndNewer: [ self compilationContext isScripting: aBoolean ]
+		forPharo11: [ self noPattern: aBoolean ]
 ]

@@ -6,14 +6,14 @@ RPackage >> addClassTag: aSymbol [
 	"Add the class tag from the receiver, if already added do nothing."
 	
 	^ self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			| tagName |
 			"self toTagName: aSymbol"
 			tagName := (aSymbol beginsWith: self name asString, '-')
 				ifTrue: [ (aSymbol allButFirst: self name size + 1) asSymbol ]
 				ifFalse: [ aSymbol ].
 			self ensureTag: tagName ] 
-		forPharo11AndPharo10: [
+		forPharo11: [
 			| tagName newTag |
 
 			"strip package name if needed"
@@ -33,8 +33,8 @@ RPackage >> addClassTag: aSymbol [
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RPackage class >> defaultPackageName [
 	^ self 
-		forPharo12: [ UndefinedPackage undefinedPackageName ] 
-		forPharo11AndPharo10: [ #'_UnpackagedPackage' ]
+		forPharo12AndNewer: [ UndefinedPackage undefinedPackageName ] 
+		forPharo11: [ #'_UnpackagedPackage' ]
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
@@ -50,8 +50,8 @@ RPackage >> tagNamed: aSymbol [
 	<gtPharoPatch: #Pharo12>
 	
 	^ self 
-		forPharo12: [ self tags detect: [ :each | each name = aSymbol ] ] 
-		forPharo11AndPharo10: [ self classTagNamed: aSymbol  ]
+		forPharo12AndNewer: [ self tags detect: [ :each | each name = aSymbol ] ] 
+		forPharo11: [ self classTagNamed: aSymbol  ]
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
@@ -67,21 +67,21 @@ RPackage >> tagNamed: aSymbol ifAbsent: aBlock [
 RPackage >> tagOf: aClass [
 	<gtPharoPatch: #Pharo>
 	
-	^ self forPharo12:[
+	^ self forPharo12AndNewer:[
 		self tags
 			detect: [ :tag | tag includesClass: aClass ]
 			ifNone: [
 				self error: ('No tag containing {1} found in package {2}' format: {
 					aClass name.
 					self name }) ]]
-		forPharo11AndPharo10: [ self classTagForClass: aClass]
+		forPharo11: [ self classTagForClass: aClass]
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RPackage >> tagOrNilOf: aClass [
-	^ self forPharo12:[
+	^ self forPharo12AndNewer:[
 		self tags
 			detect: [ :tag | tag includesClass: aClass ]
 			ifNone: [ nil ]]
-		forPharo11AndPharo10: [ self classTagForClass: aClass]
+		forPharo11: [ self classTagForClass: aClass]
 ]

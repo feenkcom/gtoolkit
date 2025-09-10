@@ -89,16 +89,16 @@ BaselineOfGToolkit >> applyLepiterDatabaseIconInPharoIcons [
 	instead of returning just the icon. This is used by GtLepiterDatabaseDefinition."
 	
 	self 
-		forPharo12: [ Smalltalk ui theme icons icons 
+		forPharo12AndNewer: [ Smalltalk ui theme icons icons 
 			at: #lepiterDatabase 
 			put: LeIcons lepiterDatabase create asSpartaForm ] 
-		forPharo11AndPharo10: []
+		forPharo11: []
 ]
 
 { #category : #'post load' }
 BaselineOfGToolkit >> applyPatchForClassBuilder [
 	self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			#ShiftClassBuilder  asClass
 				compile: 'install
 	<gtPharoPatch: #Pharo>
@@ -106,7 +106,7 @@ BaselineOfGToolkit >> applyPatchForClassBuilder [
 	
 	^ GtShiftClassInstaller12 new makeWithBuilder: self' 
 				classified: 'gt-patch' ] 
-		forPharo11AndPharo10: [
+		forPharo11: [
 			#FluidBuilder asClass
 				compile: 'install
 	<gtPharoPatch: #Pharo>

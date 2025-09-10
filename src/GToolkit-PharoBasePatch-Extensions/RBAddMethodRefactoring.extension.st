@@ -5,12 +5,12 @@ RBAddMethodRefactoring class >> addMethod: aString toClass: aClass inProtocols: 
 	<gtPharoPatch: #Pharo>
 	
 	^ self
-		forPharo12: [ 
+		forPharo12AndNewer: [ 
 			self
 				sourceCode: aString
 				in: aClass
 				withProtocol: (protocolList at: 1 ifAbsent: [ #accessing ]) ]
-		forPharo11AndPharo10: [ 
+		forPharo11: [ 
 			self new
 				addMethod: aString
 				toClass: aClass
@@ -21,12 +21,12 @@ RBAddMethodRefactoring class >> addMethod: aString toClass: aClass inProtocols: 
 RBAddMethodRefactoring class >> model: aRBSmalltalk addMethod: aString toClass: aClass inProtocols: protocolList [
 	<gtPharoPatch: #Pharo>
 	^ self
-		forPharo12: [ self
+		forPharo12AndNewer: [ self
 				model: aRBSmalltalk
 				sourceCode: aString
 				in: aClass
 				withProtocol: (protocolList at: 1 ifAbsent: [ #accessing ]) ]
-		forPharo11AndPharo10: [ ^ self new
+		forPharo11: [ ^ self new
 				model: aRBSmalltalk;
 				addMethod: aString
 					toClass: aClass

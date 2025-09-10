@@ -5,9 +5,9 @@ OCUndeclaredVariableWarning >> location [
 	<gtPharoPatch: #Pharo>
 	
 	^ self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			self node sourceInterval first ] 
-		forPharo11AndPharo10: [ super location ]
+		forPharo11: [ super location ]
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }

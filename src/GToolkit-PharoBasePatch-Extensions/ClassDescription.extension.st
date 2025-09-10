@@ -6,8 +6,8 @@ ClassDescription >> organization [
 	of the messages of the receiver."
 
 	self
-		forPharo12: [ ^ self ]
-		forPharo11AndPharo10: [ 
+		forPharo12AndNewer: [ ^ self ]
+		forPharo11: [ 
 			self basicOrganization
 				ifNil: [ 
 					self
@@ -23,8 +23,8 @@ ClassDescription >> protocolNames [
 	"Return the list of all the protocol names included in this class."
 
 	^ self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			self protocols collect: [ :protocol | protocol name ] ]
-		forPharo11AndPharo10: [
+		forPharo11: [
 			self organization categories ] 
 ]

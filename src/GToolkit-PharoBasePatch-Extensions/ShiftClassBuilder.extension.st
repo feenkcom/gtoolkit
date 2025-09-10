@@ -5,11 +5,11 @@ ShiftClassBuilder >> category: aString [
 	<gtPharoPatch: #Pharo12>
 	
 	self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			| converter |
 			converter := CategoryConverter 
 				category: aString environment: self installingEnvironment.
 			self package: converter packageName.
 			self tag: converter tagName] 
-		forPharo11AndPharo10: [ category := aString ]
+		forPharo11: [ category := aString ]
 ]

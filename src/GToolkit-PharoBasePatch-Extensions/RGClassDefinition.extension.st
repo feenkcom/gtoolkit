@@ -4,7 +4,7 @@ Extension { #name : #RGClassDefinition }
 RGClassDefinition >> category [
 	<gtPharoPatch: #Pharo>
 	^ self 
-		forPharo12: [ 
+		forPharo12AndNewer: [ 
 			self package ifNotNil: [ :aPackage |
 				self packageTag 
 			  	ifNil: [ aPackage isString 
@@ -19,5 +19,5 @@ RGClassDefinition >> category [
 			  				ifFalse: [(aPackage isString 
 			  					ifTrue: [ aPackage ]
 			  					ifFalse: [ aPackage name]) , '-' , tag ] ] ] ] 
-		forPharo11AndPharo10: [ category ]
+		forPharo11: [ category ]
 ]

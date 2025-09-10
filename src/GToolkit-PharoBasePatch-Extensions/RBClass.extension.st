@@ -4,12 +4,12 @@ Extension { #name : #RBClass }
 RBClass >> category [
 	<gtPharoPatch: #Pharo>
 	^ self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			self tagName 
 				ifNil: [ self packageName] 
 				ifNotNil: [ :aTagName |
 					(self packageName, '-', aTagName) asSymbol ] ] 
-		forPharo11AndPharo10: [
+		forPharo11: [
 			category
 				ifNil: [ self isDefined
 					ifTrue: [ category := self realClass category ]
@@ -23,11 +23,11 @@ RBClass >> category: aSymbol [
 	<gtPharoPatch: #Pharo12>
 	
 	self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			| converter |
 			converter := CategoryConverter 
 				category: aSymbol environment: self class environment.
 			self packageName: converter packageName.
 			self tagName: converter tagName] 
-		forPharo11AndPharo10: [ category := aSymbol ]
+		forPharo11: [ category := aSymbol ]
 ]

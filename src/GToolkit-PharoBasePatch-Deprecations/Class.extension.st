@@ -5,7 +5,7 @@ Class >> subclass: aSubclassSymbol instanceVariableNames: instVarNameList classV
 	"Added to allow for a simplified subclass creation experience. "
 
 	^ self
-		forPharo12: [ "self
+		forPharo12AndNewer: [ "self
 				deprecated: 'This method uses the old way of creating classes. The new way is to use the ShiftClassInstaller.'
 				transformWith: '`@rcv subclass: `@name instanceVariableNames: `@instVar classVariableNames: `@classVar package: `@package'
 						-> '`@rcv classInstaller
@@ -28,7 +28,7 @@ Class >> subclass: aSubclassSymbol instanceVariableNames: instVarNameList classV
 						sharedVariablesFromString: classVarNames;
 						category: aPackageSymbol;
 						environment: self environment ] ]
-		forPharo11AndPharo10: [ self
+		forPharo11: [ self
 				subclass: aSubclassSymbol
 				instanceVariableNames: instVarNameList
 				classVariableNames: classVarNames
