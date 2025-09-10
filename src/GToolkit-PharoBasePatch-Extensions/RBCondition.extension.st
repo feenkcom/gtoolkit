@@ -25,10 +25,10 @@ RBCondition class >> true [
 	"Returns a true condition. It is useful when chaining condition. It acts as neutral element of the operation such AND."
 
 	^ self 
-		forPharo12: [	
+		forPharo12AndNewer: [	
 			self new
 				block: [true]
 				errorString: 'true'] 
-		forPharo11AndPharo10: [
+		forPharo11: [
 			self empty  ]
 ]

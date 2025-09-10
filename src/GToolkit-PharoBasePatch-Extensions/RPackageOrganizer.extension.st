@@ -6,9 +6,9 @@ RPackageOrganizer class >> default [
 	  Use RPackage class>>#organizer instead"
 
 	^ self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			self class packageOrganizer ] 
-		forPharo11AndPharo10: [
+		forPharo11: [
 		 	default ifNil: [  default := self new ] ]
 ]
 

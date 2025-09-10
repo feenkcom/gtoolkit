@@ -7,14 +7,14 @@ Class >> category: aString [
 	any previous categorization."
 
 	self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			| converter |
 			self category = aString ifTrue: [ ^ self ].
  
 			converter := CategoryConverter category: aString asSymbol.
 
 			^ self package: converter packageName tag: converter tagName] 
-		forPharo11AndPharo10: [
+		forPharo11: [
 	
 			| oldCategory |
 			oldCategory := self basicCategory.
@@ -31,9 +31,9 @@ Class >> category: aString [
 Class >> packageTag [
 
 	^ self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			packageTag ifNil: [ self packageOrganizer undefinedPackage undefinedTag ] ]
-		forPharo11AndPharo10: [
+		forPharo11: [
 			| currentTag |
 
 			currentTag := self package classTagForClass: self.

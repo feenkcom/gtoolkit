@@ -12,9 +12,9 @@ RGElementDefinition >> realParent [
 	realParent ifNil: [ ^ nil ].
 
 	self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			self isMeta ifTrue: [ realParent := realParent classSide ]]
-		forPharo11AndPharo10: [
+		forPharo11: [
 			self isMetaSide ifTrue: [ realParent := realParent classSide ] ].
 	
 	^ realParent

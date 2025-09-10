@@ -9,7 +9,7 @@ RBProgramNode >> isUsed [
 	return values of blocks."
 
 	^ self 
-		forPharo12: [ self isUsedAsReturnValue ] 
-		forPharo11AndPharo10: [
+		forPharo12AndNewer: [ self isUsedAsReturnValue ] 
+		forPharo11: [
 			parent ifNil: [false] ifNotNil: [parent uses: self] ]
 ]

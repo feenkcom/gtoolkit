@@ -6,14 +6,14 @@ Package >> addClassTag: aSymbol [
 	"Add the class tag from the receiver, if already added do nothing."
 	
 	^ self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			| tagName |
 			"self toTagName: aSymbol"
 			tagName := (aSymbol beginsWith: self name asString, '-')
 				ifTrue: [ (aSymbol allButFirst: self name size + 1) asSymbol ]
 				ifFalse: [ aSymbol ].
 			self ensureTag: tagName ] 
-		forPharo11AndPharo10: [
+		forPharo11: [
 			| tagName newTag |
 
 			"strip package name if needed"
@@ -33,18 +33,18 @@ Package >> addClassTag: aSymbol [
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Package class >> defaultPackageName [
 	^ self 
-		forPharo12: [ UndefinedPackage undefinedPackageName ] 
-		forPharo11AndPharo10: [ #'_UnpackagedPackage' ]
+		forPharo12AndNewer: [ UndefinedPackage undefinedPackageName ] 
+		forPharo11: [ #'_UnpackagedPackage' ]
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Package class >> named: aString [
 	^ self 
-		forPharo12: [
+		forPharo12AndNewer: [
 			self new
 				name: aString;
 				yourself] 
-		forPharo11AndPharo10: [
+		forPharo11: [
 			RPackage named: aString ]
 ]
 
@@ -58,9 +58,9 @@ Package >> packageName [
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Package >> tagOrNilOf: aClass [
-	^ self forPharo12:[
+	^ self forPharo12AndNewer:[
 		self tags
 			detect: [ :tag | tag includesClass: aClass ]
 			ifNone: [ nil ]]
-		forPharo11AndPharo10: [ self classTagForClass: aClass]
+		forPharo11: [ self classTagForClass: aClass]
 ]
