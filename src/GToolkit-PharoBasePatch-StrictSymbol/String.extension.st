@@ -10,5 +10,5 @@ String >> sameContentAs: aString [
 
 	(aString isString and: [self size = aString size]) ifFalse: [^false].
 	^ (self compare: self with: aString collated: AsciiOrder) = (self 
-		fastForPharo12: [0] forPharo11: [2])
+		fastForPharo13AndPharo12: [0] forPharo11: [2])
 ]

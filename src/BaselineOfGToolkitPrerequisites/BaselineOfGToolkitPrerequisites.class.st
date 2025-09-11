@@ -55,7 +55,7 @@ BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
 	self 
-		fastForPharo12: [
+		fastForPharo13AndPharo12: [
 			String compile: 'asClass
 	<gtPharoPatch: #Pharo12>
 	"returns a global class with my name"
@@ -104,7 +104,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 	self 
-		fastForPharo12: [] 
+		fastForPharo13AndPharo12: [] 
 		forPharo11: [
 			FT2Handle class 
 				compile: 'startUp: isImageStarting
@@ -115,7 +115,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 	self 
-		fastForPharo12: [
+		fastForPharo13AndPharo12: [
 			(#FinalizationProcess asClassInEnvironment: Smalltalk globals)
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
@@ -133,7 +133,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForJob [
 	self 
-		fastForPharo12: [] 
+		fastForPharo13AndPharo12: [] 
 		forPharo11: [ Job addSlot: #announcer ] 
 ]
 
@@ -150,7 +150,8 @@ BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 	self 
-		fastForPharo12: [
+		fastForPharo13: []
+		forPharo12: [
 			(Object << #ProtocolOrganizer
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
@@ -186,9 +187,48 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo13 [
+	self 
+		fastForPharo13: [
+			(Object << #ProtocolOrganizer
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #ClassOrganization
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #Categorizer
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpBehaviorCategoryChange
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpCategoryRename
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpCategoryChange
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #AbstractProtocol
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #AllProtocol
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #ChangeSet
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpIconVisitor
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+		] 
+		forPharo12: []
+		forPharo11: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo11 [
 	self 
-		fastForPharo12: [ ] 
+		fastForPharo13AndPharo12: [ ] 
 		forPharo11: [
 			(Object << #EpBehaviorRepackagedChange
 				slots: {};
@@ -233,7 +273,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo11 [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
-		fastForPharo12: [
+		fastForPharo13AndPharo12: [
 			WeakArray
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
@@ -340,7 +380,8 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 			package: 'GToolkit-PharoBasePatch-StrictSymbol';
 			package: 'GToolkit-PharoBasePatch-ForPharo12'.
 		self 
-			fastForPharo12: [] 
+			fastForPharo13: []
+			forPharo12: [] 
 			forPharo11: [
 				spec
 					package: 'GToolkit-PharoBasePatch-StrictSymbol-Overrides']  ]
@@ -360,6 +401,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
 	self applyPatchForPharo11StubsInPharo12.
+	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo11.
 ]
 
