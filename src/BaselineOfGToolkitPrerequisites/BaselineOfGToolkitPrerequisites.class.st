@@ -220,52 +220,14 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo11 [
 			(#EpPackageTagChange asClass << #EpPackageTagRename
 				slots: {};
 				package: 'GToolkit-Pharo12Stubs') install.
-				
+				.
 			(Object << #EpIconNameVisitor
 				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+				
+			(Object << #RBAbstractTransformation
+				slots: {};
 				package: 'GToolkit-Pharo12Stubs') install.]
-]
-
-{ #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForRBAbstractTransformation [
-	self
-		fastForPharo12: [ #RBAbstractTransformation asClass
-				compile: 'primitiveExecute
-	<gtPharoPatch: #Pharo>
-	
-	^ self 
-		forPharo12: [self generateChanges] 
-		forPharo11AndPharo10: [Error signal] '
-					classified: 'gt - patch';
-				compile: 'refactoringFailure: aString
-	<gtPharoPatch: #Pharo>
-	
-	^ self 
-		forPharo12: [self refactoringError: aString] 
-		forPharo11AndPharo10: [Error signal] '
-					classified: 'gt - patch';
-				compile: 'refactoringError: aString with: aBlock
-	^ RBRefactoringError signal: aString with: aBlock'
-					classified: 'gt - patch' ]
-		forPharo11: [  ]
-]
-
-{ #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForRBCondition [
-	self
-		fastForPharo12: [ #RBCondition asClass class
-				compile: 'hasSubclasses: aClass excluding: classList
-	^self new
-		block: [ ((aClass subclasses collect: [:each | each name]) copyWithoutAll: classList) isNotEmpty ]
-		errorString: aClass printString , '' has <1?:no >subclasses'''
-					classified: 'gt - patch';
-				compile: 'isEmptyClass: anObject
-	^ self new
-		block: [ anObject classVariableNames isEmpty
-				and: [ anObject instanceVariableNames isEmpty and: [ anObject selectors isEmpty ] ] ]
-		errorString: anObject printString , '' is <1?:not > empty'''
-					classified: 'gt - patch' ]
-		forPharo11: [  ]
 ]
 
 { #category : #accessing }
@@ -399,7 +361,6 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchInlineMethodRefactoring.
 	self applyPatchForPharo11StubsInPharo12.
 	self applyPatchForPharo12StubsInPharo11.
-	self applyPatchForRBAbstractTransformation.
 ]
 
 { #category : #accessing }
