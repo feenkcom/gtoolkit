@@ -18,7 +18,7 @@ BaselineOfGToolkitPrerequisites class >> apply: compileBlock toVersions: aCollec
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites class >> apply: compileBlock toVersionsFrom: aNumber [
 
-	(aNumber >= SystemVersion current major) ifFalse: [ ^ self ].
+	(SystemVersion current major >= aNumber) ifFalse: [ ^ self ].
 	^ compileBlock value.
 ]
 
@@ -55,7 +55,7 @@ BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
 	self 
-		fastForPharo12: [
+		fastForPharo13AndPharo12: [
 			String compile: 'asClass
 	<gtPharoPatch: #Pharo12>
 	"returns a global class with my name"
@@ -67,7 +67,7 @@ classified: 'gt-pharo-patch'.
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
-	| source compileBlock |
+	| source |
 
 	source := 'newFaceFromExternalMemory: aFreeTypeExternalMemory index: anInteger
 	| memSize holder returnCode retryCount |
@@ -92,19 +92,18 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 
 	handle := holder value.
 	self autoRelease'.
-	compileBlock := [ 
-		self class assertMethod: FT2Face >> #newFaceFromExternalMemory:index:
-			hasHash: 'd09db5da25526bf306c3e7f110aa73154225b866b25577e1f6253d935539e2d6'.
-		FT2Face compile: (self class 
-				source: source withPatchPragma: #Pharo11)
-			classified: 'gt-pharo-patch' ].
-	self class apply: compileBlock toVersionsFrom: 11.
+	
+	self class assertMethod: FT2Face >> #newFaceFromExternalMemory:index:
+		hasHash: 'd09db5da25526bf306c3e7f110aa73154225b866b25577e1f6253d935539e2d6'.
+	FT2Face compile: (self class 
+			source: source withPatchPragma: #Pharo11)
+		classified: 'gt-pharo-patch' 
 ]
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 	self 
-		fastForPharo12: [] 
+		fastForPharo13AndPharo12: [] 
 		forPharo11: [
 			FT2Handle class 
 				compile: 'startUp: isImageStarting
@@ -115,7 +114,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 	self 
-		fastForPharo12: [
+		fastForPharo13AndPharo12: [
 			(#FinalizationProcess asClassInEnvironment: Smalltalk globals)
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
@@ -133,7 +132,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForJob [
 	self 
-		fastForPharo12: [] 
+		fastForPharo13AndPharo12: [] 
 		forPharo11: [ Job addSlot: #announcer ] 
 ]
 
@@ -150,7 +149,8 @@ BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 	self 
-		fastForPharo12: [
+		fastForPharo13: []
+		forPharo12: [
 			(Object << #ProtocolOrganizer
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
@@ -186,9 +186,48 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo13 [
+	self 
+		fastForPharo13: [
+			(Object << #ProtocolOrganizer
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #ClassOrganization
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #Categorizer
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpBehaviorCategoryChange
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpCategoryRename
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpCategoryChange
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #AbstractProtocol
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #AllProtocol
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #ChangeSet
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(Object << #EpIconVisitor
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+		] 
+		forPharo12: []
+		forPharo11: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo11 [
 	self 
-		fastForPharo12: [ ] 
+		fastForPharo13AndPharo12: [ ] 
 		forPharo11: [
 			(Object << #EpBehaviorRepackagedChange
 				slots: {};
@@ -220,58 +259,20 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo11 [
 			(#EpPackageTagChange asClass << #EpPackageTagRename
 				slots: {};
 				package: 'GToolkit-Pharo12Stubs') install.
-				
+				.
 			(Object << #EpIconNameVisitor
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+				
+			(Object << #RBAbstractTransformation
 				slots: {};
 				package: 'GToolkit-Pharo12Stubs') install.]
 ]
 
 { #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForRBAbstractTransformation [
-	self
-		fastForPharo12: [ #RBAbstractTransformation asClass
-				compile: 'primitiveExecute
-	<gtPharoPatch: #Pharo>
-	
-	^ self 
-		forPharo12: [self generateChanges] 
-		forPharo11AndPharo10: [Error signal] '
-					classified: 'gt - patch';
-				compile: 'refactoringFailure: aString
-	<gtPharoPatch: #Pharo>
-	
-	^ self 
-		forPharo12: [self refactoringError: aString] 
-		forPharo11AndPharo10: [Error signal] '
-					classified: 'gt - patch';
-				compile: 'refactoringError: aString with: aBlock
-	^ RBRefactoringError signal: aString with: aBlock'
-					classified: 'gt - patch' ]
-		forPharo11: [  ]
-]
-
-{ #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForRBCondition [
-	self
-		fastForPharo12: [ #RBCondition asClass class
-				compile: 'hasSubclasses: aClass excluding: classList
-	^self new
-		block: [ ((aClass subclasses collect: [:each | each name]) copyWithoutAll: classList) isNotEmpty ]
-		errorString: aClass printString , '' has <1?:no >subclasses'''
-					classified: 'gt - patch';
-				compile: 'isEmptyClass: anObject
-	^ self new
-		block: [ anObject classVariableNames isEmpty
-				and: [ anObject instanceVariableNames isEmpty and: [ anObject selectors isEmpty ] ] ]
-		errorString: anObject printString , '' is <1?:not > empty'''
-					classified: 'gt - patch' ]
-		forPharo11: [  ]
-]
-
-{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
-		fastForPharo12: [
+		fastForPharo13AndPharo12: [
 			WeakArray
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
@@ -378,7 +379,8 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 			package: 'GToolkit-PharoBasePatch-StrictSymbol';
 			package: 'GToolkit-PharoBasePatch-ForPharo12'.
 		self 
-			fastForPharo12: [] 
+			fastForPharo13: []
+			forPharo12: [] 
 			forPharo11: [
 				spec
 					package: 'GToolkit-PharoBasePatch-StrictSymbol-Overrides']  ]
@@ -398,8 +400,8 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
 	self applyPatchForPharo11StubsInPharo12.
+	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo11.
-	self applyPatchForRBAbstractTransformation.
 ]
 
 { #category : #accessing }
