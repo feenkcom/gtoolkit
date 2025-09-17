@@ -214,14 +214,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-08T09:51:18.82133+02:00"
+						"dateAndTimeString" : "2025-09-16T21:30:20.835366+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "eVfBGnvxDQCI8CY3AReYsQ=="
 				},
-				"code" : "pages := LeDatabase gtBook pages.\r\raFile := FileLocator temp / 'GToolkitBook.txt'.\raFile ensureDelete.\raFile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLlmPageExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
+				"code" : "pages := LeDatabase gtBook pages.\r\raFile := FileLocator temp / 'GToolkitBook.txt'.\raFile ensureDelete.\raFile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLlmLepiterContentExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
 			},
 			{
 				"__type" : "textSnippet",

@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-14T14:44:14.049462+02:00"
+						"dateAndTimeString" : "2025-09-17T14:44:05.553562+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,54 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-05-23T23:40:07.501972+02:00"
+						"dateAndTimeString" : "2025-09-17T14:47:44.040979+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "LtSK8RqBDQCF3cLhDhdZCw=="
+					"uidString" : "z902VGD7DQChy3i8D1V3cg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If changes are made to the database files on disk, they need to be reloaded into the image. "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-14T14:44:42.117529+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-14T14:50:54.601923+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qRpL9RqBDQCF31woDhdZCw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "This can happen when using two images on the same database or when the image is closed without saving."
+				"string" : "By default, you can select a completion option with Tab. But, it is possible to also set it to accept a completion with Enter:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -92,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-06-14T14:50:56.710748+02:00"
+						"dateAndTimeString" : "2025-09-17T14:44:25.257085+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,14 +66,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-09-15T14:42:22.35688+02:00"
+						"dateAndTimeString" : "2025-09-17T14:44:41.801307+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "lSSlCxuBDQCF5M62DhdZCw=="
+					"uidString" : "p4RjVWD7DQCh7vigD1V3cg=="
 				},
-				"code" : "LeDatabasesRegistry defaultLogicalDatabase fullReload"
+				"code" : "GtCompletionController completeOnReturn: true"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-17T14:48:08.239334+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-17T14:48:28.98845+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Y7ReYWD7DQClD8lTD1V3cg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Completion pops up automatically after a delay. You can set this delay to match your preference:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-17T14:44:07.168986+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-17T14:44:20.970293+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UoVPVGD7DQCh0Cx/D1V3cg=="
+				},
+				"code" : "GtCompletionController popupDelay: 200 milliSeconds "
 			}
 		]
 	},
@@ -122,7 +156,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-06-14T14:43:38.732773+02:00"
+			"dateAndTimeString" : "2025-09-17T14:43:31.480439+02:00"
 		}
 	},
 	"editEmail" : {
@@ -133,15 +167,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2021-06-14T14:43:38.732773+02:00"
+			"dateAndTimeString" : "2025-09-17T14:48:01.417453+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to reload the content of the default logical database"
+		"title" : "How to configure completion delay and Enter key"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "8b208af1-1a81-0d00-85dc-9ddf0e17590b"
+		"uuid" : "b4f42e52-60fb-0d00-a148-c9860f557772"
 	}
 }

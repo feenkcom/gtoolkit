@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-08T09:50:47.722782+02:00"
+						"dateAndTimeString" : "2025-09-16T21:33:19.17206+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "93PfYCLpDQCaQ3YiBOD//Q=="
 				},
-				"code" : "aFile := FileLocator temp / 'GToolkitBook.txt'.\raFile ensureDelete.\raFile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLlmPageExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
+				"code" : "aFile := FileLocator temp / 'GToolkitBook.txt'.\raFile ensureDelete.\raFile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLlmLepiterContentExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
 			},
 			{
 				"__type" : "textSnippet",
