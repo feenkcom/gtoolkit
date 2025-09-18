@@ -147,6 +147,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "And the double click selection like this:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-17T15:21:14.446501+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-09-17T15:21:26.436953+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "tBIR2WD7DQCsh3u2D1V3cg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Subclasses of {{gtClass:BrWordClassifier}} offer other options."
 			}
 		]
 	},
@@ -169,12 +206,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-05-01T13:34:43.192865+02:00"
+			"dateAndTimeString" : "2025-09-17T15:18:50.496425+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Setting different behavior for cursor word movement and double click selection"
+		"title" : "How to control the word navigation and selection"
 	},
 	"uid" : {
 		"__type" : "uuid",
