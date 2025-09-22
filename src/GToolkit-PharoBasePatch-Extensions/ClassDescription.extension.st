@@ -18,6 +18,20 @@ ClassDescription >> organization [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+ClassDescription >> protocolNamed: aString ifAbsent: aBlock [
+
+	^ self 
+		forPharo12AndNewer: [
+			self protocols
+		 		 detect: [ :e | e name = aString ]
+		  		ifNone: aBlock] 
+		forPharo11: [
+			self organization protocolOrganizer
+				protocolNamed: aString
+				ifAbsent: aBlock ] 
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 ClassDescription >> protocolNames [
 	<gtPharoPatch: #Pharo12>
 	"Return the list of all the protocol names included in this class."
