@@ -53,6 +53,18 @@ BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchAuthor [
+	self 
+		fastForPharo13: [
+			#Author asClass compile: 'useAuthor: aString during: aBlock
+	<gtPharoPatch: #Pharo13>
+			
+	^ aBlock value' classified: 'gt-patch'.] 
+		forPharo12: [ ] 
+		forPharo11: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
 	self 
 		fastForPharo13AndPharo12: [
@@ -423,6 +435,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo11.
+	self applyPatchAuthor.
 ]
 
 { #category : #accessing }
