@@ -260,5 +260,8 @@ BaselineOfGToolkit >> preLoadGToolkit: spec [
 		ifTrue: [ ^ self ].
 	PreLoaded := true.
 	
-	Author fullName: 'GlamorousAuthor'.
+	self 
+		fastForPharo13: [ "Author is removed in Pharo 13" ] 
+		forPharo12: [ Author  fullName: 'GlamorousAuthor' ] 
+		forPharo11: [ Author  fullName: 'GlamorousAuthor' ]
 ]

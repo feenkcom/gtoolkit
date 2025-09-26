@@ -180,7 +180,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 				package: 'GToolkit-Pharo11Stubs') install.
 			(Object << #EpIconVisitor
 				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
+				package: 'GToolkit-Pharo11Stubs') install.
 		] 
 		forPharo11: [ ]
 ]
@@ -218,7 +218,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo13 [
 				package: 'GToolkit-Pharo11Stubs') install.
 			(Object << #EpIconVisitor
 				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
+				package: 'GToolkit-Pharo11Stubs') install.
 		] 
 		forPharo12: []
 		forPharo11: [ ]
@@ -267,6 +267,18 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo11 [
 			(Object << #RBAbstractTransformation
 				slots: {};
 				package: 'GToolkit-Pharo12Stubs') install.]
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo13 [
+	self 
+		fastForPharo13: [
+			(Object << #Author
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+		] 
+		forPharo12: []
+		forPharo11: [ ]
 ]
 
 { #category : #accessing }
@@ -409,6 +421,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchInlineMethodRefactoring.
 	self applyPatchForPharo11StubsInPharo12.
 	self applyPatchForPharo11StubsInPharo13.
+	self applyPatchForPharo12StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo11.
 ]
 
