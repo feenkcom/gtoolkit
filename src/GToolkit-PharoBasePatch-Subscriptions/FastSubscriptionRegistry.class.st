@@ -109,6 +109,11 @@ FastSubscriptionRegistry >> initialize [
 	self reset
 ]
 
+{ #category : #testing }
+FastSubscriptionRegistry >> isEmpty [
+	^ subscriberMap isEmpty 
+]
+
 { #category : #accessing }
 FastSubscriptionRegistry >> numberOfSubscriptions [
 	^ subscriberMap inject: 0 into: [:sum :each | sum + each size]
