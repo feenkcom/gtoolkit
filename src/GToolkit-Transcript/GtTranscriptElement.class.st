@@ -123,7 +123,7 @@ GtTranscriptElement >> isAutoScrollEnabled [
 GtTranscriptElement >> newClearButtonElement [
 	^ BrButton new
 		aptitude: BrIconAptitude + BrGlamorousButtonWithLabelTooltipAptitude2;
-		icon: BrGlamorousIcons trash;
+		icon: BrGlamorousVectorIcons bin;
 		label: 'Clear Transcript';
 		size: 16 @ 16;
 		action: [ self clear ]
