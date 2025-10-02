@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-01T12:49:36.974768-03:00"
+						"dateAndTimeString" : "2025-10-02T07:41:22.383743+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "It is possible to run all GToolkit examples on a local machine, using all CPU cores using:"
+				"string" : "It is possible to run the GToolkit CI examples on a local machine, using all CPU cores with:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -105,7 +105,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-01T12:48:56.571857-03:00"
+									"dateAndTimeString" : "2025-10-02T07:42:14.17325+02:00"
 								}
 							},
 							"uid" : {
@@ -115,7 +115,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "1. The tests are run in the headless runners.  The number of runners is determined by the limitations of RAM and CPU cores.  For pretty much all our machines, the number of cores is the limiting factor, so the number of workers (tests running in parallel) is equal to the number of CPU cores."
+							"string" : "1. The tests are run in the headless workers.  The number of workers is determined by the limitations of RAM and CPU cores.  For most personal machines the number of cores is the limiting factor, so the number of workers (tests running in parallel) is equal to the number of CPU cores."
 						},
 						{
 							"__type" : "textSnippet",
