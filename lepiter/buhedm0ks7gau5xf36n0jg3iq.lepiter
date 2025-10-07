@@ -1,0 +1,224 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:16:14.393886-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:17:57.010617-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "P9KCNuj8DQCrPkO2ByIbyA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "As detailed in [[Specifications and Views in Remote Phlow]], implementations of [[The LanguageLink protocol]] can transmit view specifications to Glamorous Toolkit."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:23:10.989646-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:23:10.989646-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "g45XT+j8DQC6COF/ByIbyA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Many implementations solve this by not just returning a bare value in the value of the `ENQUEUE` command, but instead an object with an ID (in Python, the constructed object is a {{gtClass:PBProxyObject}}). These IDs can then be used to establish a way for both sides of the connection to talk about the same object and query it."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:25:23.847389-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:25:23.847389-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DM5CV+j8DQCCEg06ByIbyA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In the Python Bridge, we can then construct a “Viewed Object” using {{gtMethod:PBProxyObject>>#getRemoteInspectorProxy}} (other implementations follow this pattern). This {{gtClass:GtPythonRemotePhlowViewedObject}} is a special remote object that holds the inspected object’s view specifications ({{gtMethod:GtPythonRemotePhlowViewedObject>>#getViewsDeclarations}})."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:20:57.587536-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:27:37.120893-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "h0wvRuj8DQCySHsjByIbyA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "From here, we can construct views and present them in their own tool ({{gtMethod:PBProxyObject>>#gtRemoteSideInspectorTool}})."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:27:41.106702-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:28:33.721325-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DjZxX+j8DQCDfGyAByIbyA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "While every known implementation follows slightly different patterns, many of the involved objects can be shared if the protocol is followed."
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-06T19:16:14.297458-05:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-06T19:16:14.297458-05:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Transferring Remote Views"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "d2588136-e8fc-0d00-ab3d-1e3907221bc8"
+	}
+}
