@@ -1,0 +1,150 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:29:37.811958-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:30:42.890709-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iXf1ZOj8DQCIw9ffByIbyA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Remote LanguageLink implementation have, by design, no visibility into Glamorous Toolkit or Lepiter. As such, they cannot know about the lifetimes of values or when to free them."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:30:47.882937-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:36:22.990237-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pDKTauj8DQCNt+hFByIbyA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To mitigate this, LanguageLink remote objects should be tagged with an ID and entered into a {{gtClass:LanguageLinkExecutionHandler}} using {{gtMethod:LanguageLinkExecutionHandler>>#registerObject:}}. This will register a finalizer that will call {{gtMethod:LanguageLinkExecutionHandler>>#removeId:}} when the object is finalized, giving the remote implementation a chance to remove the object from its own registry and destroy it or free it for garbage collection."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:37:07.028959-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-06T19:37:42.889404-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/BhTa+j8DQCOnZnSByIbyA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Note that, to avoid infinite GC loops, the object returned from this remote message should not also be electable for garbage collection itself."
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-06T19:29:13.526097-05:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-06T19:29:13.526097-05:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "LanguageLink, Lifetimes, and Garbage Collection"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "646ef364-e8fc-0d00-88c2-62f107221bc8"
+	}
+}
