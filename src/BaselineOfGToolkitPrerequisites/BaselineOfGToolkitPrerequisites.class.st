@@ -294,6 +294,46 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo13 [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo12SystemDictionaryAtPut [
+
+	self 
+		fastForPharo13: []
+		forPharo12: [ SystemDictionary compile:
+'at: aKey put: anObject
+	"Override from Dictionary to check Undeclared and fix up
+	references to undeclared variables."
+	| index assoc registeredMethods |
+	aKey isSymbol ifFalse: [ self error: ''Only symbols are accepted as keys in SystemDictionary'' ].
+
+	registeredMethods := #().
+
+	((self includesKey: aKey) not and: [ Undeclared includesKey: aKey ]) ifTrue: [
+ 			| undeclared |
+ 			undeclared := Undeclared associationAt: aKey.
+ 			"Undeclared variables record using methods in a property, remove. Boostrap might have used Associations"
+ 			(undeclared class == UndeclaredVariable) ifTrue: [
+				registeredMethods := undeclared removeProperty: #registeredMethods ifAbsent: [ #() ]]. 
+ 			"and change class to be Global" 
+ 			self add: (undeclared primitiveChangeClassTo: GlobalVariable new).
+ 			Undeclared removeKey: aKey].
+ 	"code of super at:put:, not using Associations but GlobalVariable"
+ 	index := self findElementOrNil: aKey.
+ 	assoc := array at: index.
+ 	"GT Pharo patch:  Always flush the cache.
+ 	Pharo 12 only flushes if the association isNil, but if it is in Undeclared the cachedClassNames need to be updated."
+ 	assoc
+ 		ifNil: [self atNewIndex: index put: (GlobalVariable key: aKey value: anObject) ]
+ 		ifNotNil: [assoc value: anObject].
+ 	self flushClassNameCache.
+		
+	registeredMethods do: [ :aMethod | aMethod isInstalled ifTrue: [aMethod recompile] ].		
+
+ 	^ anObject'
+			classified: 'gt-pharo-patch' ] 
+		forPharo11: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
 		fastForPharo13AndPharo12: [
@@ -431,6 +471,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForFT2Handle.
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
+	self applyPatchForPharo12SystemDictionaryAtPut.
 	self applyPatchForPharo11StubsInPharo12.
 	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
