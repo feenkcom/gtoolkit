@@ -175,10 +175,19 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 			(Object << #EpBehaviorCategoryChange
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #EpCategoryRename
+			(Object << #EpCategoryChange
+				slots: { #classCategoryName . #affectedPackageName};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(#EpCategoryChange asClass << #EpCategoryAddition
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #EpCategoryChange
+			(#EpCategoryChange asClass << #EpCategoryRegistration
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(#EpCategoryChange asClass << #EpCategoryRemoval
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(#EpCategoryChange asClass << #EpCategoryRename
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
 			(Object << #AbstractProtocol
@@ -213,10 +222,19 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo13 [
 			(Object << #EpBehaviorCategoryChange
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #EpCategoryRename
+			(Object << #EpCategoryChange
+				slots: { #classCategoryName . #affectedPackageName};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(#EpCategoryChange asClass << #EpCategoryAddition
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #EpCategoryChange
+			(#EpCategoryChange asClass << #EpCategoryRegistration
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(#EpCategoryChange asClass << #EpCategoryRemoval
+				slots: {};
+				package: 'GToolkit-Pharo11Stubs') install.
+			(#EpCategoryChange asClass << #EpCategoryRename
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
 			(Object << #AbstractProtocol
