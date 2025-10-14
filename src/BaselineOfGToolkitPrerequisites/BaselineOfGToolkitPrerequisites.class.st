@@ -126,19 +126,130 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 	self 
-		fastForPharo13AndPharo12: [
-			(#FinalizationProcess asClassInEnvironment: Smalltalk globals)
-				addClassVarNamed: 'MournLoopProcess';
-				addClassVarNamed: 'StopRequested';
-				addClassVarNamed: 'StoppedSemaphore';
-				initialize. 
-		] 
-		forPharo11: [
-			Object subclass: #FinalizationProcess
-	instanceVariableNames: ''
-	classVariableNames: 'TheFinalizationProcess FinalizationSemaphore MournLoopProcess StopRequested StoppedSemaphore'
-	package: 'GToolkit-UtilitySystemStubs'.
-		] 
+		fastForPharo13AndPharo12: [ self applyPatchForFinalizationProcessPharo12Plus ] 
+		forPharo11: [ self applyPatchForFinalizationProcessPharo11 ] 
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcessPharo11 [
+
+	Object subclass: #FinalizationProcess
+		instanceVariableNames: ''
+		classVariableNames: 'TheFinalizationProcess FinalizationSemaphore MournLoopProcess StopRequested StoppedSemaphore'
+		package: 'GToolkit-UtilitySystemStubs'.
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcessPharo12Plus [
+
+	(#FinalizationProcess asClassInEnvironment: Smalltalk globals)
+		addClassVarNamed: 'MournLoopProcess';
+		addClassVarNamed: 'StopRequested';
+		addClassVarNamed: 'StoppedSemaphore';
+		initialize.
+
+	FinalizationProcess class compile:
+'finalizationProcess
+	"The finalization process arranges to send mourn to each element of the VM''s finalization queue,
+	 which is accessed via primitiveFetchMourner.  The VM signals FinalizationSemaphore whenever
+	 the queue is non-empty.  This process loops, waiting on the semaphore, fetches the first element
+	 of the queue and then spawns a process at a higher priority to actually send the mourn messages.
+	 If an error occurs in the higher priority mourn loop process then this process will simply spawn
+	 another process, hence ensuring that errors in finalization methods don''t break finalization.
+
+	 In addition this process also runs the old finalization scheme, supporting clients of the older,
+	 WeakRegistry based scheme.  Hopefully this will go away when all clients have moved over."
+	<gtPharoPatch: #Pharo12>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
+	| throttle firstMourner |
+
+	throttle := Semaphore new.
+	[ FinalizationSemaphore wait; initSignals.
+	[ (firstMourner := self primitiveFetchMourner) notNil] whileTrue:
+		[ MournLoopProcess := [
+			[ [ self mournLoopWith: firstMourner]
+				on: Error
+				fork: [ :ex | ex pass ] ]
+					ensure: [ throttle signal ].
+			] forkAt: Processor activePriority + 1.
+	 	throttle wait ] ] repeat'
+		classified: 'gt-pharo-patch'.
+
+	FinalizationProcess class compile:
+'gtSummaryFor: aView
+	<gtView>
+	<gtClassView>
+	<gtPharoPatch: #Pharo12>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
+	^ aView columnedList
+		title: ''Summary'';
+		priority: 10;
+		items: [ {
+			''FinalizationProcess'' -> TheFinalizationProcess.
+			''FinalizationSemaphore'' -> FinalizationSemaphore size.
+			''MournLoopProcess'' -> MournLoopProcess. } ];
+		column: ''Item'' text: #key;
+		column: ''Value'' text: #value;
+		actionUpdateButton.'
+		classified: 'gt-pharo-patch'.
+
+	FinalizationProcess class compile:
+'mournLoopWith: firstMourner
+	"Send mourn to all the objects available in the mourn queue, starting
+	 with firstMourner which the sender has already extracted for us.  If
+	 an error occurs here, it will break this loop but the sender will spawn
+	 another mournLoopWith: so that finalization is not broken by errors in
+	 individual cases."
+	<gtPharoPatch: #Pharo12>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
+	| mourner |
+	mourner := firstMourner.
+	[ [] ensure: [ mourner mourn ].
+	 mourner := self primitiveFetchMourner.
+	 mourner notNil ] whileTrue.
+	MournLoopProcess := nil.'
+		classified: 'gt-pharo-patch'.
+
+	FinalizationProcess class compile:
+'restartFinalizationProcess
+	"kill any old process, just in case"
+	<gtPharoPatch: #Pharo12>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
+	self stopFinalizationProcess.
+
+	FinalizationSemaphore := Smalltalk specialObjectsArray at: 42.
+	TheFinalizationProcess := [self finalizationProcess]
+		forkAt: Processor userInterruptPriority.
+	TheFinalizationProcess name: ''WeakArray Finalization Process'''
+		classified: 'gt-pharo-patch'.
+
+	FinalizationProcess class compile:
+'stopFinalizationProcess
+	<gtPharoPatch: #Pharo12>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
+	TheFinalizationProcess ifNotNil: 
+		[TheFinalizationProcess terminate.
+		TheFinalizationProcess := nil].
+
+	MournLoopProcess ifNil: [ ^ self ].
+	(MournLoopProcess isTerminated or: [ MournLoopProcess isTerminating ]) ifFalse:
+		 [ MournLoopProcess terminate ].
+	MournLoopProcess := nil.'
+		classified: 'gt-pharo-patch'.
+
+	FinalizationProcess class compile:
+'shutDown: quitting
+	<gtPharoPatch: #Pharo12>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
+	self stopFinalizationProcess'
+		classified: 'gt-pharo-patch'.
+
+	FinalizationProcess class compile:
+'startUp: resuming
+	<gtPharoPatch: #Pharo12>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
+	self restartFinalizationProcess'
+		classified: 'gt-pharo-patch'.
 ]
 
 { #category : #accessing }
@@ -354,39 +465,101 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12SystemDictionaryAtPut [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
-		fastForPharo13AndPharo12: [
-			WeakArray
-				addClassVarNamed: 'MournLoopProcess';
-				addClassVarNamed: 'StopRequested';
-				addClassVarNamed: 'StoppedSemaphore';
-				addClassVarNamed: 'TheFinalizationProcess';
-				addClassVarNamed: 'FinalizationSemaphore' ] 
+		fastForPharo13AndPharo12: [] 
 		forPharo11: [ 
 			WeakArray
 				addClassVarNamed: 'MournLoopProcess';
 				addClassVarNamed: 'StopRequested';
 				addClassVarNamed: 'StoppedSemaphore';
 				initialize.
-			WeakArray class 
-				compile: 'startUp: resuming
+			WeakArray class compile:
+'stopRequested
 	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE"
-
-	self restartFinalizationProcess'
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
+	^ StopRequested ifNil: [ false ]'
 				classified: 'gt-pharo-patch'.
-			WeakArray class 
-				compile: 'shutDown: quitting
+			WeakArray class compile:
+'stoppedSemaphore
 	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE"
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
+	^ StoppedSemaphore ifNil: [ StoppedSemaphore := Semaphore new ]'
+				classified: 'gt-pharo-patch'.
+			WeakArray class compile:
+'finalizationProcess
+	"The finalization process arranges to send mourn to each element of the VM''s finalization queue,
+	 which is accessed via primitiveFetchMourner.  The VM signals FinalizationSemaphore whenever
+	 the queue is non-empty.  This process loops, waiting on the semaphore, fetches the first element
+	 of the queue and then spawns a process at a higher priority to actually send the mourn messages.
+	 If an error occurs in the higher priority mourn loop process then this process will simply spawn
+	 another process, hence ensuring that errors in finalization methods don''t break finalization.
 
-	self stopFinalizationProcess'
+	 In addition this process also runs the old finalization scheme, supporting clients of the older,
+	 WeakRegistry based scheme.  Hopefully this will go away when all clients have moved over."
+	<gtPharoPatch: #Pharo11>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
+	| throttle firstMourner |
+	throttle := Semaphore new.
+	[true] whileTrue: [FinalizationSemaphore wait; initSignals.
+
+	 [firstMourner := self primitiveFetchMourner.
+	  firstMourner notNil] whileTrue:
+		[MournLoopProcess := [
+			[ [ self mournLoopWith: firstMourner]
+				on: Error
+				fork: [ :ex | ex pass ] ]
+					ensure: [ throttle signal ].
+		] newProcess.
+		MournLoopProcess priority: Processor activePriority + 1.
+		AsyncProcessProperties
+			process: MournLoopProcess
+			property: #parentProcess
+			put: Processor activeProcess.
+		MournLoopProcess resume.
+		 throttle wait]]'
+		 		classified: 'gt-pharo-patch'.
+			WeakArray class compile:
+'gtSummaryFor: aView
+	<gtView>
+	<gtClassView>
+	<gtPharoPatch: #Pharo11>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
+	^ aView columnedList
+		title: ''Summary'';
+		priority: 10;
+		items: [ {
+			''FinalizationProcess'' -> FinalizationProcess.
+			''FinalizationSemaphore'' -> FinalizationSemaphore size.
+			''MournLoopProcess'' -> MournLoopProcess.
+			''StopRequested'' -> StopRequested.
+			''StoppedSemaphore'' -> StoppedSemaphore size. } ];
+		column: ''Item'' text: #key;
+		column: ''Value'' text: #value;
+		actionUpdateButton.'
+				classified: 'gt-pharo-patch'.
+			WeakArray class compile:
+'mournLoopWith: firstMourner
+	"Send mourn to all the objects available in the mourn queue, starting
+	 with firstMourner which the sender has already extracted for us.  If
+	 an error occurs here, it will break this loop but the sender will spawn
+	 another mournLoopWith: so that finalization is not broken by errors in
+	 individual cases."
+	<gtPharoPatch: #Pharo11>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
+	| mourner |
+	mourner := firstMourner.
+	[ self stopRequested ifTrue:
+		[ self stoppedSemaphore signal.
+		MournLoopProcess := nil.
+		^ self ].
+	mourner mourn.
+	 (mourner := self primitiveFetchMourner) notNil] whileTrue.
+	MournLoopProcess := nil.'
 				classified: 'gt-pharo-patch'.
 			WeakArray class 
 				compile: 'restartFinalizationProcess
 	"kill any old process, just in case"
-	"DO NOT EDIT HERE"
 	<gtPharoPatch: #Pharo11>
-
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
 	self stopFinalizationProcess.
 
 	FinalizationSemaphore := Smalltalk specialObjectsArray at: 42.
@@ -396,9 +569,23 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	FinalizationProcess name: ''WeakArray Finalization Process'''
 				classified: 'gt-pharo-patch'.
 			WeakArray class 
+				compile: 'shutDown: quitting
+	<gtPharoPatch: #Pharo11>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
+
+	self stopFinalizationProcess'
+				classified: 'gt-pharo-patch'.
+			WeakArray class 
+				compile: 'startUp: resuming
+	<gtPharoPatch: #Pharo11>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
+
+	self restartFinalizationProcess'
+				classified: 'gt-pharo-patch'.
+			WeakArray class 
 				compile: 'stopFinalizationProcess
 	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE"
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
 
 	FinalizationProcess ifNotNil: 
 		[FinalizationProcess terminate.
@@ -409,7 +596,8 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self assert: self stoppedSemaphore isSignaled not.
 	StopRequested := true.
 	StoppedSemaphore wait.'
-				classified: 'gt-pharo-patch' ]
+				classified: 'gt-pharo-patch'.
+		 ].
 ]
 
 { #category : #accessing }
