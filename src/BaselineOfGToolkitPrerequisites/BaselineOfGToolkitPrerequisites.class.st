@@ -127,7 +127,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 	self 
 		fastForPharo13AndPharo12: [ self applyPatchForFinalizationProcessPharo12Plus ] 
-		forPharo11: [ "self applyPatchForFinalizationProcessPharo11" ] 
+		forPharo11: [ self applyPatchForFinalizationProcessPharo11 ] 
 ]
 
 { #category : #accessing }
