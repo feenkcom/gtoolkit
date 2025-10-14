@@ -224,20 +224,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcessPharo12Plus [
 		classified: 'gt-pharo-patch'.
 
 	FinalizationProcess class compile:
-'shutDown: quitting
-	<gtPharoPatch: #Pharo12>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
-	self stopFinalizationProcess'
-		classified: 'gt-pharo-patch'.
-
-	FinalizationProcess class compile:
-'startUp: resuming
-	<gtPharoPatch: #Pharo12>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
-	self restartFinalizationProcess'
-		classified: 'gt-pharo-patch'.
-
-	FinalizationProcess class compile:
 'stopFinalizationProcess
 	<gtPharoPatch: #Pharo12>
 	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
@@ -249,6 +235,20 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcessPharo12Plus [
 	(MournLoopProcess isTerminated or: [ MournLoopProcess isTerminating ]) ifFalse:
 		 [ MournLoopProcess terminate ].
 	MournLoopProcess := nil.'
+		classified: 'gt-pharo-patch'.
+
+	FinalizationProcess class compile:
+'shutDown: quitting
+	<gtPharoPatch: #Pharo12>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
+	self stopFinalizationProcess'
+		classified: 'gt-pharo-patch'.
+
+	FinalizationProcess class compile:
+'startUp: resuming
+	<gtPharoPatch: #Pharo12>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForFinalizationProcessPharo12Plus"
+	self restartFinalizationProcess'
 		classified: 'gt-pharo-patch'.
 ]
 
@@ -473,6 +473,19 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 				addClassVarNamed: 'StoppedSemaphore';
 				initialize.
 			WeakArray class compile:
+'stopRequested
+	<gtPharoPatch: #Pharo11>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
+	^ StopRequested ifNil: [ false ]'
+				classified: 'gt-pharo-patch'.
+			WeakArray class compile:
+'stoppedSemaphore
+	<gtPharoPatch: #Pharo11>
+	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
+	^ StoppedSemaphore ifNil: [ StoppedSemaphore := Semaphore new ]'
+				classified: 'gt-pharo-patch'.
+		 ].
+			WeakArray class compile:
 'finalizationProcess
 	"The finalization process arranges to send mourn to each element of the VM''s finalization queue,
 	 which is accessed via primitiveFetchMourner.  The VM signals FinalizationSemaphore whenever
@@ -585,19 +598,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	StopRequested := true.
 	StoppedSemaphore wait.'
 				classified: 'gt-pharo-patch'.
-			WeakArray class compile:
-'stopRequested
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-	^ StopRequested ifNil: [ false ]'
-				classified: 'gt-pharo-patch'.
-			WeakArray class compile:
-'stoppedSemaphore
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-	^ StoppedSemaphore ifNil: [ StoppedSemaphore := Semaphore new ]'
-				classified: 'gt-pharo-patch'.
-		 ]
 ]
 
 { #category : #accessing }
