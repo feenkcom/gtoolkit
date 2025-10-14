@@ -18,6 +18,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T11:34:51.947685+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T11:35:32.362931+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iVhct2j9DQCtYykwCBckxg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We use the term 'check' in a similar way that `test` is normally used, however in the context of Pharo, a 'test' normally a `SUnit` test, i.e. a method beginning with `test` and that is in a subclass of {{gtClass:TestCase}}.  An example is a method that has the <gtExample> pragma, and who's assertions check the correctness of other classes and methods.  A 'check' may be either a {{gtClass:TestCase}} test method, or a <gtExample> method."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2022-09-23T08:49:42.715198+02:00"
 					}
 				},
@@ -66,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-23T08:51:16.043483+02:00"
+						"dateAndTimeString" : "2025-10-13T11:36:25.367818+02:00"
 					}
 				},
 				"uid" : {
@@ -76,47 +113,85 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtClass:GtRrChecksFactory}} provides a convenient way of constructing jobs to run the test suite, e.g.:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-23T08:51:26.135779+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-23T08:56:36.4945+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "/gn9V7SlDQCa7eVcBSq/aw=="
-				},
-				"code" : "factory := GtRrChecksFactory new.\rfactory\r\taddSUnitPackages: { 'Collections-Tests' asPackage };\r\taddExamplePackages: { 'RemoteRunner' asPackage }.\rGtRemoteRunner default submitJob: factory job."
+				"string" : "{{gtClass:GtRrChecksFactory}} provides a convenient way of constructing jobs to run the test suite.   Checks can be added to a job by package, class or individually."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-23T08:51:26.135779+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-13T11:39:35.584419+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "/gn9V7SlDQCa7eVcBSq/aw=="
+							},
+							"code" : "factory := GtRrChecksFactory new.\rfactory\r\taddSUnitPackages: { 'Collections-Tests' asPackage };\r\taddExamplePackages: { 'RemoteRunner' asPackage }.\rjob := factory job.\rGtRemoteRunner default submitJob: job."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-23T08:55:06.164839+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-13T11:37:06.996358+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Nlv/ZLSlDQCbcDUGBSq/aw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Will execute all the checks in the listed packages."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -126,7 +201,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-23T08:55:06.164839+02:00"
+						"dateAndTimeString" : "2025-10-13T11:36:25.727927+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,17 +212,233 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-23T08:55:45.213973+02:00"
+						"dateAndTimeString" : "2025-10-13T11:36:29.922826+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Nlv/ZLSlDQCbcDUGBSq/aw=="
+					"uidString" : "x1HzvGj9DQCwl6i3CBckxg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Will execute all the checks in the listed packages.  (Pressing on the `eg` button in the resulting inspector will break down the results by test providing more details)."
+				"string" : "E.g. to add checks by package:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-13T11:37:22.050609+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-13T13:14:46.235875+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "T75OwGj9DQCxum7ECBckxg=="
+							},
+							"code" : "factory := GtRrChecksFactory new.\nfactory\n\taddSUnitClassNames: #(ArrayTest);\n\taddExampleClassNames: #(GtRrManagerExamples).\rjob := factory job.\nGtRemoteRunner default submitJob: job."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T11:37:08.908254+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T11:37:20.01681+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1zKGv2j9DQCxP9LfCBckxg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To add checks by class:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-13T13:15:14.761362+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-13T13:16:38.07386+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "sDJZHmr9DQCbdgeaBf3h4g=="
+							},
+							"code" : "factory := GtRrChecksFactory new.\nfactory addExampleTestNames:\n\t{ 'ArrayTest' -> #test0FixtureCloneTest.\n\t'DoubleLinkedListTest' ->#testEmpty. }.\njob := factory job.\nGtRemoteRunner default submitJob: job."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T13:14:47.88667+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T13:15:12.414646+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "eB+/HGr9DQCZfELgBf3h4g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To add SUnit tests individual, supply a collection of class name -> selector assocations, e.g.:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-13T11:40:49.628171+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-13T11:43:22.619725+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MCCuzGj9DQC02OniCBckxg=="
+							},
+							"code" : "factory := GtRrChecksFactory new.\rfactory addExampleTestNames:\r\t{ 'GtRrTaskExamples' -> #compoundTask.\r\t'GtRrEpiceaExamples' ->#classCompactChange. }.\rjob := factory job.\rGtRemoteRunner default submitJob: job."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T11:40:02.45163+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-13T11:42:27.648204+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zUTeyWj9DQCz2Fh6CBckxg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To add <gtExample>s individually supply a collection of class name -> selector associations, e.g.:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -174,7 +465,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-23T08:58:33.475854+02:00"
+						"dateAndTimeString" : "2025-10-13T11:44:36.480424+02:00"
 					}
 				},
 				"uid" : {
@@ -184,7 +475,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In the example above the checks are run one class per task.  This means that if one class happens to take much longer to run than the others, the system sits mostly idle waiting for the last class to complete."
+				"string" : "In all the examples above the checks are generally constructed as one task for each call made to the factory adding checks.  This means that the amount of time taken to run each task may vary wildly."
 			},
 			{
 				"__type" : "textSnippet",
