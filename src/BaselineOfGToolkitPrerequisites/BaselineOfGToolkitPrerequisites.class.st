@@ -484,7 +484,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
 	^ StoppedSemaphore ifNil: [ StoppedSemaphore := Semaphore new ]'
 				classified: 'gt-pharo-patch'.
-		 ].
 			WeakArray class compile:
 'finalizationProcess
 	"The finalization process arranges to send mourn to each element of the VM''s finalization queue,
@@ -598,6 +597,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	StopRequested := true.
 	StoppedSemaphore wait.'
 				classified: 'gt-pharo-patch'.
+		 ].
 ]
 
 { #category : #accessing }
