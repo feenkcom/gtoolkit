@@ -601,6 +601,34 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForWinPlatform [
+	WinPlatform
+		compile: 'primGetEnvironmentVariable: lpName into: lpBuffer size: nSize
+	<gtPharoPatch: #Pharo>
+	"Primitive to obtain an environment variable using windows Wide Strings"
+	"DO NOT EDIT: applied in BaselineOfGToolkitPrerequisites>>#applyPatchForWinPlatform"
+	^ self ffiCall: #(ulong GetEnvironmentVariableW (Win32WideString lpName, Win32WideString  lpBuffer, ulong nSize))' 
+		classified: 'gt-patch'.
+		
+	WinPlatform
+		compile: 'getEnvironmentVariable: lpName into: lpBuffer size: nSize
+	<gtPharoPatch: #Pharo>
+	"Obtain an environment variable using windows Wide Strings"
+	"DO NOT EDIT: applied in BaselineOfGToolkitPrerequisites>>#applyPatchForWinPlatform"
+	| wasLpnamePinned wasLpBuffer |
+	wasLpnamePinned := lpName isPinnedInMemory.
+	wasLpBuffer := lpBuffer isPinnedInMemory.
+	[
+		^ self primGetEnvironmentVariable: lpName into: lpBuffer size: nSize] 
+		
+	ensure: [
+		lpName setPinnedInMemory: wasLpnamePinned.
+		lpBuffer setPinnedInMemory: wasLpBuffer.
+	]' 
+		classified: 'gt-patch'.
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWorkingSession [
 	self 
 		fastForPharo13AndPharo12: [ WorkingSession addSlot: #id  ] 
@@ -677,6 +705,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForFT2Handle.
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
+	self applyPatchForWinPlatform.
 	self applyPatchForPharo12SystemDictionaryAtPut.
 	self applyPatchForPharo11StubsInPharo12.
 	self applyPatchForPharo11StubsInPharo13.

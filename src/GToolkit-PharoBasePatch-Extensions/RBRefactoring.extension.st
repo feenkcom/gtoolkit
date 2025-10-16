@@ -14,6 +14,18 @@ RBRefactoring >> model [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+RBRefactoring >> onError: aBlock do: errorBlock [
+	"Pharo 12 has fixed this so it can be removed when Pharo 11 is no longer used."
+
+	<gtPharoPatch: #Pharo11>
+	^ aBlock
+		on: self class preconditionSignal
+		do: [ :ex | 
+			errorBlock cull: ex.
+			ex return: nil ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RBRefactoring >> performCompositeRefactoring: aRefactoring [
 	<gtPharoPatch: #Pharo12>
 	
