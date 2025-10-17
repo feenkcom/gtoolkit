@@ -133,7 +133,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.2613/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.2235/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.2236/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.3106/src' ].
@@ -208,7 +208,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.2217/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.2235/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.2236/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.961/src' ].
@@ -271,7 +271,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-profiler:v0.6.72/src' ].
 		spec
 			baseline: 'GtoolkitRoadmaps' with: [
-				spec repository: 'github://feenkcom/gtoolkit-roadmaps:v0.6.28/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-roadmaps:v0.6.29/src' ].
 	]
 ]
 
