@@ -133,7 +133,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.2618/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.2242/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.2243/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.3111/src' ].
@@ -178,7 +178,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4python:v0.6.1668/src' ].
 		spec
 			baseline: 'GtGemstoneClient' with: [
-				spec repository: 'github://feenkcom/gt4gemstone:v0.6.3417/src' ].
+				spec repository: 'github://feenkcom/gt4gemstone:v0.6.3418/src' ].
 		spec
 			baseline: 'GToolkit4Git' with: [
 				spec repository: 'github://feenkcom/gt4git:v0.8.1676/src' ].
@@ -190,7 +190,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4changes:v0.6.1320/src' ].
 		spec
 			baseline: 'GToolkit4Jenkins' with: [
-				spec repository: 'github://feenkcom/gt4jenkins:v0.8.74/src' ].
+				spec repository: 'github://feenkcom/gt4jenkins:v0.8.75/src' ].
 		spec
 			baseline: 'GToolkit4LSP' with: [
 				spec repository: 'github://feenkcom/gt4lsp:v0.6.913/src' ].
@@ -208,7 +208,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.2221/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.2242/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.2243/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.964/src' ].
@@ -271,7 +271,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-profiler:v0.6.75/src' ].
 		spec
 			baseline: 'GtoolkitRoadmaps' with: [
-				spec repository: 'github://feenkcom/gtoolkit-roadmaps:v0.6.30/src' ].
+				spec repository: 'github://feenkcom/gtoolkit-roadmaps:v0.6.31/src' ].
 	]
 ]
 
