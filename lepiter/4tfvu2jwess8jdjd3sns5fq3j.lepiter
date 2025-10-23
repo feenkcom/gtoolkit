@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-22T22:22:28.732619+02:00"
+						"dateAndTimeString" : "2025-10-23T14:57:17.068053+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This page explores memory leak issues that can appear when mixing weak and strong subscriptions within an announcer."
+				"string" : "This page explores issues related to memory leaks that can appear when mixing weak and strong subscriptions within an announcer."
 			},
 			{
 				"__type" : "textSnippet",
@@ -257,7 +257,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-22T22:29:10.062642+02:00"
+									"dateAndTimeString" : "2025-10-23T15:45:53.087174+02:00"
 								}
 							},
 							"uid" : {
@@ -267,7 +267,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Weak subscriptions are created by  {{gtClass:WeakSubscriptionBuilder}}.   In this case {{gtMethod:WeakSubscriptionBuilder>>#when:do:for:}} creates a {{gtClass:WeakAnnouncementSubscription}} . This is a weak class that holds on weakly to the subscriber ({{gtMethod:WeakAnnouncementSubscription>>#subscriber:}}). The subscription then registers itself with a {{gtClass:FinalizationRegistry}} in  {{gtMethod:WeakAnnouncementSubscription>>#register}} using an ephemeron."
+							"string" : "Weak subscriptions are created by  {{gtClass:WeakSubscriptionBuilder}}.   In this case `WeakSubscriptionBuilder>>#when:do:for:` creates a {{gtClass:WeakAnnouncementSubscription}} . This is a weak class that holds on weakly to the subscriber ({{gtMethod:WeakAnnouncementSubscription>>#subscriber:}}). The subscription then registers itself with a {{gtClass:FinalizationRegistry}} in  {{gtMethod:WeakAnnouncementSubscription>>#register}} using an ephemeron."
 						},
 						{
 							"__type" : "textSnippet",
@@ -406,7 +406,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-22T22:49:06.686984+02:00"
+									"dateAndTimeString" : "2025-10-23T15:39:15.853801+02:00"
 								}
 							},
 							"uid" : {
@@ -416,7 +416,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "In this case we create `subscribedTarget` object that is an association with an {{gtClass:UUID}} as a key, and within the same announcer create both a strong and a weak subscription sending a message to that object."
+							"string" : "In this case we create the `subscribedTarget` object that is an association with an {{gtClass:UUID}} as a key, and within the same announcer create both a strong and a weak subscription sending a message to that object."
 						},
 						{
 							"__type" : "textSnippet",
@@ -2167,7 +2167,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-23T11:06:45.396809+02:00"
+									"dateAndTimeString" : "2025-10-23T14:56:50.407351+02:00"
 								}
 							},
 							"uid" : {
@@ -2177,7 +2177,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "###Weal subscription between model and element"
+							"string" : "###Weak subscription between model and element"
 						}
 					]
 				},
