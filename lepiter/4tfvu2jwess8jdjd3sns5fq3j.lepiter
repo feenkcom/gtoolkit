@@ -923,7 +923,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T23:14:14.801304+02:00"
+												"dateAndTimeString" : "2025-10-23T00:01:27.709237+02:00"
 											}
 										},
 										"uid" : {
@@ -933,7 +933,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "- references to both the strong and weak subscribers are removed"
+										"string" : "- references to both the strong and weak subscribers are removed: both objects are garbaged collected"
 									},
 									{
 										"__type" : "textSnippet",
@@ -960,7 +960,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T23:14:31.468693+02:00"
+												"dateAndTimeString" : "2025-10-23T00:01:45.533748+02:00"
 											}
 										},
 										"uid" : {
@@ -970,7 +970,44 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "- only the reference to the strong subscriber is removed"
+										"string" : "- only the reference to the strong subscriber is removed: no object is garbaged collected"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T00:17:21.677989+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T00:17:37.346876+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "UjLUaij+DQC0GOyUDdk7UA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "- only the reference to the weak subscriber is removed: the weakly subscribed object is garbaged collected"
 									}
 								]
 							},
@@ -993,7 +1030,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-22T23:13:55.996984+02:00"
+									"dateAndTimeString" : "2025-10-23T00:17:19.575827+02:00"
 								}
 							},
 							"uid" : {
@@ -1003,7 +1040,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We will look at two cases based on how we remove references to the two object:"
+							"string" : "We will look at three cases based on how we remove references to the two objects:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1146,14 +1183,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T23:19:51.404426+02:00"
+												"dateAndTimeString" : "2025-10-23T00:01:01.526229+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "R1BtfCf+DQCYwTmiB+5gUQ=="
 										},
-										"code" : "| stronglyTargetId weakTargetId stronglySubscribedTarget weaklySubscribedTarget  announcer |\r\rstronglyTargetId := UUID new.\rweakTargetId := UUID new.\r\r\nstronglySubscribedTarget := Association new.\rstronglySubscribedTarget key: stronglyTargetId.\rstronglySubscribedTarget value: 'strong target'.\r\r\nweaklySubscribedTarget := Association new.\rweaklySubscribedTarget key: weakTargetId.\rweaklySubscribedTarget value: 'weak target'.\r\r\nannouncer := Announcer new.\nannouncer\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: stronglySubscribedTarget.\nannouncer weak\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: weaklySubscribedTarget.\n\t\nannouncer := nil.\t\nstronglySubscribedTarget := nil.\nweaklySubscribedTarget := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= stronglyTargetId ]).\rself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= weakTargetId ])."
+										"code" : "| stronglyTargetId weakTargetId stronglySubscribedTarget weaklySubscribedTarget  announcer |\r\rstronglyTargetId := UUID new.\rweakTargetId := UUID new.\r\r\nstronglySubscribedTarget := Association new.\rstronglySubscribedTarget key: stronglyTargetId.\rstronglySubscribedTarget value: 'strong target'.\r\r\nweaklySubscribedTarget := Association new.\rweaklySubscribedTarget key: weakTargetId.\rweaklySubscribedTarget value: 'weak target'.\r \r\nannouncer := Announcer new.\nannouncer\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: stronglySubscribedTarget.\nannouncer weak\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: weaklySubscribedTarget.\n\t\nannouncer := nil.\t\nstronglySubscribedTarget := nil.\nweaklySubscribedTarget := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= stronglyTargetId ]).\rself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= weakTargetId ])."
 									}
 								]
 							},
@@ -1289,7 +1326,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T23:23:48.32851+02:00"
+												"dateAndTimeString" : "2025-10-23T00:04:57.416462+02:00"
 											}
 										},
 										"uid" : {
@@ -1299,7 +1336,193 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "After we do two garbage collects"
+										"string" : "After we do two garbage collects none of the two references is removed. The reference to the weakly subscribed object cannot be removed as we still explicitly reference it."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-10-23T00:02:45.068301+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-10-23T00:04:07.061088+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "8jOUNij+DQCgmJw5Ddk7UA=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "the finalization registry holds on strongly to the weak subscription"
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-10-23T00:04:08.372592+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-10-23T00:06:40.300648+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "fVGLOyj+DQCjIPZXDdk7UA=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "the weak subscription holds on strongly to the announcer"
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-10-23T00:06:40.715171+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2025-10-23T00:06:59.535198+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "E92fRCj+DQCohGJWDdk7UA=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "the announcer has a strong subscription holding on to the strongly subscribed object"
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T00:02:15.714404+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T00:06:23.504863+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "5EzUNCj+DQCerpCGDdk7UA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "For the strongly referenced object, there is still a path holding on to it:"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T00:07:13.792183+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T10:57:24.10759+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "CZGYRij+DQCqGUAPDdk7UA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Based on this chain, the announcer object and its subscriptions cannot be garbaged collected. So when we mix strong and weak subscriptions, even if the strongly referenced object is no longer used, as the weakly subscribed object is used, that weak subscription preserves a strong reference to the announcer, that holds on strongly to the strongly referened object."
 									}
 								]
 							},
@@ -1333,6 +1556,115 @@
 								"__type" : "textStyle"
 							},
 							"string" : "###Case 2: Removing the reference only to the strong subscriber"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T00:11:38.616445+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T00:18:04.90912+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "RHVhVij+DQCyyWykDdk7UA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "When we remove only the reference to the weakly subscribed object that object can be successfully removed."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T00:11:46.617487+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T00:13:12.12309+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "9pjbVij+DQCy1lTCDdk7UA=="
+										},
+										"code" : "| stronglyTargetId weakTargetId stronglySubscribedTarget weaklySubscribedTarget  announcer |\r\rstronglyTargetId := UUID new.\rweakTargetId := UUID new.\r\r\nstronglySubscribedTarget := Association new.\rstronglySubscribedTarget key: stronglyTargetId.\rstronglySubscribedTarget value: 'strong target'.\r\r\nweaklySubscribedTarget := Association new.\rweaklySubscribedTarget key: weakTargetId.\rweaklySubscribedTarget value: 'weak target'.\r\r\nannouncer := Announcer new.\nannouncer\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: stronglySubscribedTarget.\nannouncer weak\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: weaklySubscribedTarget.\n\t\nannouncer := nil.\t\n\"stronglySubscribedTarget := nil.\"\nweaklySubscribedTarget := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= stronglyTargetId ]) not. \"The reference is not removed\"\rself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= weakTargetId ])"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T00:11:17.057671+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T00:11:34.429137+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "54wYVSj+DQCyi4XADdk7UA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "###Case 3: Removing the reference only to the weak subscriber"
 						}
 					]
 				},
@@ -1366,6 +1698,519 @@
 					"__type" : "textStyle"
 				},
 				"string" : "#Strong and weak subscriptions for different objects"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T00:19:31.681939+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T00:22:00.565065+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dOaTcij+DQC4N7DIDdk7UA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The case of a weak and strong subscription for the same subscriber within the same announcer does not create a memory leak. If not referenced the subscriber and annoucer can be garbaged collected."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T00:22:01.473436+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T00:24:31.766182+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aIuBeyj+DQC/Y2mYDdk7UA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "What becomes problematic is adding another weak subscription to that announcer for a second subscriber. Now just the fact that we added a weak subscription creates a strong reference from the finalization registry to the announcer and to the initial subscriber."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T00:19:35.183711+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T00:45:14.365041+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hFnJcij+DQC4P/yEDdk7UA=="
+							},
+							"code" : "| targetId subscribedTarget extraTargetId extraSubscribedTagget  |\rtargetId := UUID new.\r\nsubscribedTarget := Association new.\rsubscribedTarget key: targetId.\rsubscribedTarget value: Announcer new.\n\nsubscribedTarget value\n\twhen: Announcement \n\tsend: #yourself\n\tto: subscribedTarget.\nsubscribedTarget value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: subscribedTarget.\r\t\r\"We add another weak subscription to the same announcer for another object\"\nextraTargetId := UUID new.\r\nextraSubscribedTagget := Association new.\rextraSubscribedTagget key: extraTargetId.\rextraSubscribedTagget value: 'extra subscriber'.\r\rsubscribedTarget value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: extraSubscribedTagget.\r\nsubscribedTarget := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= targetId ]) not \"The reference is not removed\""
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-23T00:19:01.265544+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-23T00:20:12.809967+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zczDcCj+DQC3KFKnDdk7UA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Adding a weak subcription that prevents garbage collection"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T00:32:05.185918+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T10:59:32.653926+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "2nV9nyj+DQCL/fLPDdk7UA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This example uses the same code as before, just has different names for variables to model an explicit case that of a graphical element and its model using announcements."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T10:59:37.538656+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T11:00:09.198204+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "u8W+YzH+DQCkIyA/Ddk7UA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "In this case the graphical element holds on to the model strongly and also has a strong subscription."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T11:00:15.70446+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T11:06:15.781267+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "rCAFZjH+DQCm3hNoDdk7UA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "When we remove the model and the graphical element, they will not be garbaged collected as the extra weak subscription holds  on to them until the extra object is garbaged collected. The weak subscription holds on to the announcer, which holds on to the strong subscription."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T00:33:03.501948+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T10:56:06.890013+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "sU73oij+DQCRru6lDdk7UA=="
+										},
+										"code" : "| modelId model graphicalElementId graphicalElement extraSubscriberId extraSubscriber  |\rmodelId := UUID new.\r\nmodel := Association new.\rmodel key: modelId.\rmodel value: Announcer new.\r\rgraphicalElementId := UUID new.\rgraphicalElement := Association new.\rgraphicalElement key: graphicalElementId.\r\"The graphical element can hold on to the model\"\rgraphicalElement value: model.\n\r\"We create a subscription from the model to the graphical element.\"\nmodel value \n\twhen: Announcement \n\tsend: #yourself\n\tto: graphicalElement.\r\t\r\"We add another weak subscription to the model, maybe for another graphical element\"\nextraSubscriberId := UUID new.\r\nextraSubscriber := Association new.\rextraSubscriber key: extraSubscriberId.\rextraSubscriber value: 'extra subscriber'.\rmodel value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: extraSubscriber.\r\t\r\nmodel := nil.\rgraphicalElement := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\r\"The graphical element is not removed as through the new weak subscription\rwe create a strong reference to it\"\rself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= graphicalElementId ]) not.\r\"The model is not removed as the graphical element holds on to it\"\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= modelId ]) not."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T11:06:23.829345+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T11:06:32.486442+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jkn2ezH+DQCuPQcODdk7UA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "###Strong subscription between model and element"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T11:06:51.734455+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T11:08:44.996163+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "yhGgfTH+DQCvXcB/Ddk7UA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "In case we have a weak subscription between the model and element, the extra weak subscription will not prevent the model and element to be garbaged collected."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T11:08:45.525423+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T11:21:57.523027+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "oGNohDH+DQCy4dvHDdk7UA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The extra weak subscription holds on to the announcer strongly, but the announcer does not hold on strongly to the model and element."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T11:02:47.680601+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-10-23T11:22:23.874545+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "fx4UbzH+DQCrM5SgDdk7UA=="
+										},
+										"code" : "| modelId model graphicalElementId graphicalElement extraSubscriberId extraSubscriber  |\rmodelId := UUID new.\r\nmodel := Association new.\rmodel key: modelId.\rmodel value: Announcer new.\r\rgraphicalElementId := UUID new.\rgraphicalElement := Association new.\rgraphicalElement key: graphicalElementId.\r\"The graphical element can hold on to the model\"\rgraphicalElement value: model.\n\r\"We create a subscription from the model to the graphical element.\"\nmodel value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: graphicalElement.\r\t\r\"We add another weak subscription to the model, maybe for another graphical element\"\nextraSubscriberId := UUID new.\r\nextraSubscriber := Association new.\rextraSubscriber key: extraSubscriberId.\rextraSubscriber value: 'extra subscriber'.\rmodel value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: extraSubscriber.\r\t\r\nmodel := nil.\rgraphicalElement := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\rself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= graphicalElementId ]) .\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= modelId ]) ."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T11:06:41.479872+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-23T11:06:45.396809+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7JwDfTH+DQCvN+z7Ddk7UA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "###Weal subscription between model and element"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-23T00:28:49.739276+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-23T00:32:03.4818+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SjLXkyj+DQCKL14yDdk7UA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Domain model, graphical element, and an extra weak subscriber"
 			}
 		]
 	},
