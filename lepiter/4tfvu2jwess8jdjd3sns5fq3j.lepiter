@@ -456,7 +456,7 @@
 							"string" : "In this case if we remove both the announcer and the subscriber object after two garbage collects the subscriber object is no longer present in memory."
 						},
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -469,7 +469,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-22T22:37:57.304276+02:00"
+									"dateAndTimeString" : "2025-10-23T16:16:37.750177+02:00"
 								}
 							},
 							"editEmail" : {
@@ -480,14 +480,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-22T22:53:32.644568+02:00"
+									"dateAndTimeString" : "2025-10-23T16:16:44.487784+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "7xdTByf+DQCtuQzEB+5gUQ=="
+								"uidString" : "xi1w0TX+DQClrtJuDdk7UA=="
 							},
-							"code" : "| targetId subscribedTarget announcer |\rtargetId := UUID new.\r\nsubscribedTarget := Association new.\rsubscribedTarget key: targetId.\rsubscribedTarget value: 'target'.\n\nannouncer := Announcer new.\nannouncer\n\twhen: Announcement \n\tsend: #yourself\n\tto: subscribedTarget.\nannouncer weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: subscribedTarget.\n\t\nannouncer := nil.\t\nsubscribedTarget := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= targetId ])"
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtMethod:GtAnnouncementsMemoryLeaksPageExamples>>#exampleWeakAndStrongSubscriptionSameObject_targetAndAnnouncerAsSeparateObjects|expanded}}"
 						},
 						{
 							"__type" : "textSnippet",
@@ -569,7 +572,7 @@
 										"string" : "In this case after removing the reference to the subscriber object, the subscriber is garbaged collected successfully after two garbage collects."
 									},
 									{
-										"__type" : "pharoSnippet",
+										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -582,7 +585,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T22:51:33.111614+02:00"
+												"dateAndTimeString" : "2025-10-23T16:16:51.727057+02:00"
 											}
 										},
 										"editEmail" : {
@@ -593,14 +596,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T22:53:48.097765+02:00"
+												"dateAndTimeString" : "2025-10-23T16:16:57.460412+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "YlPzNyf+DQC9sIrlB+5gUQ=="
+											"uidString" : "S3NF0jX+DQCl/izdDdk7UA=="
 										},
-										"code" : "| targetId subscribedTarget |\rtargetId := UUID new.\r\nsubscribedTarget := Association new.\rsubscribedTarget key: targetId.\rsubscribedTarget value: Announcer new.\n\nsubscribedTarget value\n\twhen: Announcement \n\tsend: #yourself\n\tto: subscribedTarget.\nsubscribedTarget value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: subscribedTarget.\n\t\nsubscribedTarget := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= targetId ])"
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtMethod:GtAnnouncementsMemoryLeaksPageExamples>>#exampleWeakAndStrongSubscriptionSameObject_targetHoldsAnnouncer|expanded}}"
 									}
 								]
 							},
@@ -752,7 +758,7 @@
 										"string" : "In this case after removing the reference to the subscriber object the first garbage collect triggers the finalization, and the second removes the object from memory."
 									},
 									{
-										"__type" : "pharoSnippet",
+										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -765,7 +771,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T22:57:43.331243+02:00"
+												"dateAndTimeString" : "2025-10-23T16:09:50.017192+02:00"
 											}
 										},
 										"editEmail" : {
@@ -776,14 +782,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T23:04:00.730209+02:00"
+												"dateAndTimeString" : "2025-10-23T16:10:02.751246+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "220ETif+DQCJQq5RB+5gUQ=="
+											"uidString" : "1KoiuTX+DQCjvMnwDdk7UA=="
 										},
-										"code" : "| finalizationLog targetId subscribedTarget announcer |\rfinalizationLog := OrderedCollection new.\r\rtargetId := UUID new.\r\nsubscribedTarget := Association new.\rsubscribedTarget key: targetId.\rsubscribedTarget value: 'target'.\n\nannouncer := Announcer new.\nannouncer\n\twhen: Announcement \n\tsend: #yourself\n\tto: subscribedTarget.\nannouncer weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: subscribedTarget.\r\t\rFinalizationRegistry  default \n\tadd: subscribedTarget\n\tfinalizer: (ObjectFinalizer new\n\t\treceiver: finalizationLog;\n\t\tselector: #add:;\n\t\targuments: {targetId printString}).\n\nannouncer := nil.\t\nsubscribedTarget := nil.\r\r\"First garbage collect triggers finalization\"\rSmalltalk garbageCollect.\rself assert: finalizationLog size equals: 1.\rself assert: finalizationLog first equals: targetId printString.\r\n\r\"Secong garbage collect, removes the reference to the receiver\"\nSmalltalk garbageCollect.\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= targetId ]).\r\t\rfinalizationLog"
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtMethod:GtAnnouncementsMemoryLeaksPageExamples >> #exampleWeakAndStrongSubscriptionSameObject_logFinalization|expanded}}"
 									}
 								]
 							},
@@ -1159,7 +1168,7 @@
 										"string" : "After doing two garbage collects both subscribers are removed."
 									},
 									{
-										"__type" : "pharoSnippet",
+										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -1172,7 +1181,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T23:10:41.956842+02:00"
+												"dateAndTimeString" : "2025-10-23T16:10:28.883463+02:00"
 											}
 										},
 										"editEmail" : {
@@ -1183,14 +1192,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-23T00:01:01.526229+02:00"
+												"dateAndTimeString" : "2025-10-23T16:10:39.174709+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "R1BtfCf+DQCYwTmiB+5gUQ=="
+											"uidString" : "MLhzuzX+DQCj/CCyDdk7UA=="
 										},
-										"code" : "| stronglyTargetId weakTargetId stronglySubscribedTarget weaklySubscribedTarget  announcer |\r\rstronglyTargetId := UUID new.\rweakTargetId := UUID new.\r\r\nstronglySubscribedTarget := Association new.\rstronglySubscribedTarget key: stronglyTargetId.\rstronglySubscribedTarget value: 'strong target'.\r\r\nweaklySubscribedTarget := Association new.\rweaklySubscribedTarget key: weakTargetId.\rweaklySubscribedTarget value: 'weak target'.\r \r\nannouncer := Announcer new.\nannouncer\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: stronglySubscribedTarget.\nannouncer weak\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: weaklySubscribedTarget.\n\t\nannouncer := nil.\t\nstronglySubscribedTarget := nil.\nweaklySubscribedTarget := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= stronglyTargetId ]).\rself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= weakTargetId ])."
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtMethod:GtAnnouncementsMemoryLeaksPageExamples>>#exampleWeakAndStrongSubscriptionDifferentObjects_clearBothSubscribers|expanded}}"
 									}
 								]
 							},
@@ -1268,7 +1280,7 @@
 										"string" : "Now we just remove the reference to the strong subscriber."
 									},
 									{
-										"__type" : "pharoSnippet",
+										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -1281,7 +1293,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T23:18:17.495117+02:00"
+												"dateAndTimeString" : "2025-10-23T16:11:21.340073+02:00"
 											}
 										},
 										"editEmail" : {
@@ -1292,14 +1304,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-22T23:23:16.144716+02:00"
+												"dateAndTimeString" : "2025-10-23T16:11:27.660134+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "ekaUlyf+DQCovjGDB+5gUQ=="
+											"uidString" : "DiWUvjX+DQCkUU0ZDdk7UA=="
 										},
-										"code" : "| stronglyTargetId weakTargetId stronglySubscribedTarget weaklySubscribedTarget  announcer |\r\rstronglyTargetId := UUID new.\rweakTargetId := UUID new.\r\r\nstronglySubscribedTarget := Association new.\rstronglySubscribedTarget key: stronglyTargetId.\rstronglySubscribedTarget value: 'strong target'.\r\r\nweaklySubscribedTarget := Association new.\rweaklySubscribedTarget key: weakTargetId.\rweaklySubscribedTarget value: 'weak target'.\r\r\nannouncer := Announcer new.\nannouncer\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: stronglySubscribedTarget.\nannouncer weak\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: weaklySubscribedTarget.\n\t\nannouncer := nil.\t\nstronglySubscribedTarget := nil.\n\"weaklySubscribedTarget := nil.\"\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= stronglyTargetId ]) not. \"The reference is not removed\"\rself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= weakTargetId ]) not. \"The reference is not removed\""
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtMethod:GtAnnouncementsMemoryLeaksPageExamples>>#exampleWeakAndStrongSubscriptionDifferentObjects_clearStrongSubscriber|expanded}}"
 									},
 									{
 										"__type" : "textSnippet",
@@ -1600,7 +1615,7 @@
 										"string" : "When we remove only the reference to the weakly subscribed object that object can be successfully removed."
 									},
 									{
-										"__type" : "pharoSnippet",
+										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -1613,7 +1628,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-23T00:11:46.617487+02:00"
+												"dateAndTimeString" : "2025-10-23T16:11:41.839375+02:00"
 											}
 										},
 										"editEmail" : {
@@ -1624,14 +1639,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-23T00:13:12.12309+02:00"
+												"dateAndTimeString" : "2025-10-23T16:11:48.950814+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "9pjbVij+DQCy1lTCDdk7UA=="
+											"uidString" : "QvDMvzX+DQCkjiqzDdk7UA=="
 										},
-										"code" : "| stronglyTargetId weakTargetId stronglySubscribedTarget weaklySubscribedTarget  announcer |\r\rstronglyTargetId := UUID new.\rweakTargetId := UUID new.\r\r\nstronglySubscribedTarget := Association new.\rstronglySubscribedTarget key: stronglyTargetId.\rstronglySubscribedTarget value: 'strong target'.\r\r\nweaklySubscribedTarget := Association new.\rweaklySubscribedTarget key: weakTargetId.\rweaklySubscribedTarget value: 'weak target'.\r\r\nannouncer := Announcer new.\nannouncer\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: stronglySubscribedTarget.\nannouncer weak\n\t\twhen: Announcement \n\t\tsend: #yourself\n\t\tto: weaklySubscribedTarget.\n\t\nannouncer := nil.\t\n\"stronglySubscribedTarget := nil.\"\nweaklySubscribedTarget := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= stronglyTargetId ]) not. \"The reference is not removed\"\rself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= weakTargetId ])"
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtMethod:GtAnnouncementsMemoryLeaksPageExamples>>#exampleWeakAndStrongSubscriptionDifferentObjects_clearWeakSubscriber|expanded}}"
 									}
 								]
 							},
@@ -1779,7 +1797,7 @@
 							"string" : "What becomes problematic is adding another weak subscription to that announcer for a second subscriber. Now just the fact that we added a weak subscription creates a strong reference from the finalization registry to the announcer and to the initial subscriber."
 						},
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -1792,7 +1810,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-23T00:19:35.183711+02:00"
+									"dateAndTimeString" : "2025-10-23T16:13:19.580745+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1803,14 +1821,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-23T00:45:14.365041+02:00"
+									"dateAndTimeString" : "2025-10-23T16:13:25.6903+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "hFnJcij+DQC4P/yEDdk7UA=="
+								"uidString" : "clqgxTX+DQCk3oSEDdk7UA=="
 							},
-							"code" : "| targetId subscribedTarget extraTargetId extraSubscribedTagget  |\rtargetId := UUID new.\r\nsubscribedTarget := Association new.\rsubscribedTarget key: targetId.\rsubscribedTarget value: Announcer new.\n\nsubscribedTarget value\n\twhen: Announcement \n\tsend: #yourself\n\tto: subscribedTarget.\nsubscribedTarget value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: subscribedTarget.\r\t\r\"We add another weak subscription to the same announcer for another object\"\nextraTargetId := UUID new.\r\nextraSubscribedTagget := Association new.\rextraSubscribedTagget key: extraTargetId.\rextraSubscribedTagget value: 'extra subscriber'.\r\rsubscribedTarget value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: extraSubscribedTagget.\r\nsubscribedTarget := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= targetId ]) not \"The reference is not removed\""
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtMethod:GtAnnouncementsMemoryLeaksPageExamples>>#exampleThirdWeakSubscription|expanded}}"
 						}
 					]
 				},
@@ -1967,7 +1988,7 @@
 										"string" : "When we remove the model and the graphical element, they will not be garbaged collected as the extra weak subscription holds  on to them until the extra object is garbaged collected. The weak subscription holds on to the announcer, which holds on to the strong subscription."
 									},
 									{
-										"__type" : "pharoSnippet",
+										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -1980,7 +2001,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-23T00:33:03.501948+02:00"
+												"dateAndTimeString" : "2025-10-23T16:15:05.928724+02:00"
 											}
 										},
 										"editEmail" : {
@@ -1991,14 +2012,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-23T10:56:06.890013+02:00"
+												"dateAndTimeString" : "2025-10-23T16:15:16.945329+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "sU73oij+DQCRru6lDdk7UA=="
+											"uidString" : "SRj3yzX+DQClJULWDdk7UA=="
 										},
-										"code" : "| modelId model graphicalElementId graphicalElement extraSubscriberId extraSubscriber  |\rmodelId := UUID new.\r\nmodel := Association new.\rmodel key: modelId.\rmodel value: Announcer new.\r\rgraphicalElementId := UUID new.\rgraphicalElement := Association new.\rgraphicalElement key: graphicalElementId.\r\"The graphical element can hold on to the model\"\rgraphicalElement value: model.\n\r\"We create a subscription from the model to the graphical element.\"\nmodel value \n\twhen: Announcement \n\tsend: #yourself\n\tto: graphicalElement.\r\t\r\"We add another weak subscription to the model, maybe for another graphical element\"\nextraSubscriberId := UUID new.\r\nextraSubscriber := Association new.\rextraSubscriber key: extraSubscriberId.\rextraSubscriber value: 'extra subscriber'.\rmodel value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: extraSubscriber.\r\t\r\nmodel := nil.\rgraphicalElement := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\r\"The graphical element is not removed as through the new weak subscription\rwe create a strong reference to it\"\rself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= graphicalElementId ]) not.\r\"The model is not removed as the graphical element holds on to it\"\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= modelId ]) not."
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtMethod:GtAnnouncementsMemoryLeaksPageExamples>>#exampleDomainModelAndElement_strongSubscription|expanded}}"
 									}
 								]
 							},
@@ -2113,7 +2137,7 @@
 										"string" : "The extra weak subscription holds on to the announcer strongly, but the announcer does not hold on strongly to the model and element."
 									},
 									{
-										"__type" : "pharoSnippet",
+										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
 											"items" : [ ]
@@ -2126,7 +2150,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-23T11:02:47.680601+02:00"
+												"dateAndTimeString" : "2025-10-23T16:16:08.226628+02:00"
 											}
 										},
 										"editEmail" : {
@@ -2137,14 +2161,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-23T11:22:23.874545+02:00"
+												"dateAndTimeString" : "2025-10-23T16:16:18.732293+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "fx4UbzH+DQCrM5SgDdk7UA=="
+											"uidString" : "aq+tzzX+DQClcDnHDdk7UA=="
 										},
-										"code" : "| modelId model graphicalElementId graphicalElement extraSubscriberId extraSubscriber  |\rmodelId := UUID new.\r\nmodel := Association new.\rmodel key: modelId.\rmodel value: Announcer new.\r\rgraphicalElementId := UUID new.\rgraphicalElement := Association new.\rgraphicalElement key: graphicalElementId.\r\"The graphical element can hold on to the model\"\rgraphicalElement value: model.\n\r\"We create a subscription from the model to the graphical element.\"\nmodel value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: graphicalElement.\r\t\r\"We add another weak subscription to the model, maybe for another graphical element\"\nextraSubscriberId := UUID new.\r\nextraSubscriber := Association new.\rextraSubscriber key: extraSubscriberId.\rextraSubscriber value: 'extra subscriber'.\rmodel value weak\n\twhen: Announcement \n\tsend: #yourself\n\tto: extraSubscriber.\r\t\r\nmodel := nil.\rgraphicalElement := nil.\n\n2 timesRepeat: [ Smalltalk garbageCollect ].\rself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= graphicalElementId ]) .\nself assert: (Association allInstances allSatisfy: [ :each | \n\teach key ~= modelId ]) ."
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtMethod:GtAnnouncementsMemoryLeaksPageExamples>>#exampleDomainModelAndElement_weakSubscription|expanded}}"
 									}
 								]
 							},
