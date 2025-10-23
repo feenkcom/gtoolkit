@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-23T20:22:21.122868+02:00"
+						"dateAndTimeString" : "2025-10-23T22:51:02.222581+02:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "An example is always annotated with a `<gtExample>` pragma. For example, {{gtMethod:BrTextEditorSelecterExamples >> #select_moveOneRight_at_6}} defines an example method that produces a text editor, moves a cursor, simulates a selection, and eventually asserts that it answers the selection."
+				"string" : "An example is always annotated with a `<gtExample>` pragma. For example, {{gtMethod:BrTextEditorSelecterExamples >> #select_moveOneRight_at_6|expanded=true}} defines an example method that produces a text editor, moves a cursor, simulates a selection, and eventually asserts that it answers the selection."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-23T20:23:46.969817+02:00"
+						"dateAndTimeString" : "2025-10-23T22:51:09.638135+02:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "An example can be based on one or more other examples. In the case above, the example relies on another example from {{gtMethod:BrTextEditorOperatorExamples>>#editorOnMultilineText}}. It does that by calling `self editorOnMultilineText`."
+				"string" : "An example can be based on one or more other examples. In the case above, the example relies on another example from {{gtMethod:BrTextEditorOperatorExamples>>#editorOnMultilineText|expanded=true}}. It does that by calling `self editorOnMultilineText`."
 			}
 		]
 	},
