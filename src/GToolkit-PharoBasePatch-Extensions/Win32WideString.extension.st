@@ -10,6 +10,8 @@ Win32WideString >> asString [
 
 	[|r codepage |
 	codepage := 65001.
+	selfWasPinned := self getHandle isPinnedInMemory.
+	
 	r := OSPlatform current
 		wideCharacterToMultiByteCodepage: codepage
 		flags: 0
@@ -22,7 +24,6 @@ Win32WideString >> asString [
 
 	out := ByteArray new: r.
 	out pinInMemory.
-	selfWasPinned := self getHandle isPinnedInMemory.
 	
 	r := OSPlatform current
 		wideCharacterToMultiByteCodepage: codepage
