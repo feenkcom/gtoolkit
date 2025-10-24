@@ -1,0 +1,578 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T07:23:44.224874-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T08:25:30.568368-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lMKLW0j+DQCiJlCODwF/yQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "On this page, we have some simple example parsers that show parts of the [[SmaCC grammar]]. As our first example, we create a simple csv parser that just returns the collection of tokens. It doesn't handle quoted fields, but that could be added for a more complex regular expression for the `<value>` token."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T08:25:37.240067-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T08:25:37.240067-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "E+DbOEn+DQC7dFYHDwF/yQ=="
+				},
+				"exampleSelector" : "simpleCsv",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtSmaCCCodeGenerationExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T08:26:14.386436-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T08:49:49.9564-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Wa8SO0n+DQC7keHzDwF/yQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The previous example isn't that useful since it is just returning the tokens. It can be used to verify that some string is in the valid format, but not much else. In the next example, we modify the grammar to return a collection of lines where each line is a collection of strings for each value. Since we are using Smalltalk expressions `{}` in our grammar, we need to modify the grammar to remove the `*` and `+` expressions. When generating the grammar, these are transformed into production rules so any variable declarations inside them will not be available to the outside."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T08:40:34.601544-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T08:40:34.601544-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "4IZYbkn+DQCCvhYSDwF/yQ=="
+				},
+				"exampleSelector" : "simpleCsvAsValues",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtSmaCCCodeGenerationExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T08:58:52.526189-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T11:22:13.632627-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rYbJr0n+DQCKDGwcDwF/yQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "As an alternative, we can also modify the grammar to produce an AST. Since we are generating an AST, we can simply take the original grammar, add variable names for the items we want in the AST, add `{{}}` node definitions, and add the `%root` directive that specifies the root node for the AST. In the example, we also specify a `%prefix` and `%suffix` for the AST node class names. In the example, we use `{{}}` for the class names as the productions are already named as we want the classes named. Also, in the example, we use the singular variable names `line` and `value`. SmaCC sees that these can occur multiple times in the node definition and converts them into plural names `lines` and `values`. "
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T09:06:41.416165-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T09:06:41.416165-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+Te8y0n+DQCKEIGUDwF/yQ=="
+				},
+				"exampleSelector" : "simpleCsvAST",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtSmaCCCodeGenerationExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T09:23:38.134019-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T09:36:45.961317-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QRpWCEr+DQCZppHEDwF/yQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For the next example, we create a simple calculator. We use the code expressions `{}` to evaluate the expressions. In the parser we allow whitespace to appear between the numbers and operators. Since the `<whitespace>` token has the same name as the {{gtMethod:SmaCCScanner>>whitespace}} method, the method is executed when the token is matched. The `whitespace` method just ignores the token. The calculator follows standard precedence rules where `*` and `/` are evaluated before `+` and `-`. We do that by using the `%left` directive. Since the `%left \"+\" \"-\";` directive appears before the `%left \"*\" \"/\";` directive, the `+` and `-` tokens have lower precedence than the `*` and `/` tokens. All of these are parsed using left associativity. The `%left`, `%right` and `%nonassoc` directives only work if the productions that cause ambiguity contains the token in the directive. For example, if we used `Expression Op Expression` with `Op` defined as `\"+\" | \"-\" | \"*\" | \"/\"`, the directives would not work. "
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T09:24:45.805266-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T09:24:45.805266-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Dq9eDEr+DQCZqMo9DwF/yQ=="
+				},
+				"exampleSelector" : "arithmeticEvaluation",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtSmaCCCodeGenerationExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T09:40:06.67875-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T11:25:28.041628-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ehlCQ0r+DQCyWI5+DwF/yQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We can modify the previous example grammar to create an AST instead of evaluating the expression. Like our previous AST generation example, we annotate the grammar with variable and class names and provide the `%root`, `%prefix` and `%suffix` directives. This example also uses the `%hierarchy` directory to define an `Expression` node class that is a superclass of `Number` and `BinaryExpression`. This `%hierarchy` directive helps when generating the code for the `\"(\" ''leftParen'' Expression \")\" ''rightParen'' {{}}` reduction. In this line, the `Expression` does not contain a variable name so normally it would be dropped from the AST. However, there is a special case where if an unnamed production returns an AST node that is the same or sub type of type the production is returning, then that unnamed production item is returned instead of creating a new node. In this particular example, the `leftParen` and `rightParen` are added to the node that `Expression` returns. SmaCC also figures out that there can be multiple `leftParen` and `rightParen` objects so adds `leftParens` and `rightParens` variables to the `Expression` class."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T09:40:42.971275-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T09:40:42.971275-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "oeBrRUr+DQC0XS7fDwF/yQ=="
+				},
+				"exampleSelector" : "astGeneration",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtSmaCCCodeGenerationExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T10:20:15.020256-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T10:30:44.153779-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vzLh0Er+DQCMMXv7DwF/yQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "When using a GLR parser, it may be the case that multiple potential parses can occur at the same time. Should we immediately evaluate the Smalltalk expression when we reduce a production even if that production may not be used in a valid parse? `{}` expressions are only evaluated when we know that this is the only reduction possible, and `[]` expressions are always evaluated even if it may never be used in a valid parse. For example, consider the following two examples. Both implement a simple calculator that does `+`, `-`, and `/`. Depending on the input, the expressions are ever evaluated left-to-right or right-to-left. If the expression ends with `|<` then the expression is evaluated left-to-right, but if it ends with `|>` then it is right-to-left. Evaluating `1 /  2 - 2` left-to-right produces a value, but evaluting right-to-left throw a divide by zero error. In the first example, we use `{}` code expressions, so we can evaluate `1 / 2 - 2 |<`, but evaluating `1 / 2 - 2 |>` throws an error."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T10:30:50.779499-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T10:30:50.779499-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "e2Oz+Er+DQCmIwz0DwF/yQ=="
+				},
+				"exampleSelector" : "glrEvaluation",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtSmaCCCodeGenerationExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T10:31:20.683126-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T10:33:04.317435-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yRvu+Ur+DQCmKPHcDwF/yQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In the next example, we use `[]` expressions, so the code is evaluated as soon as possible even if that parse ends in failure. In this case, both `1 / 2 - 2 |<` and `1 / 2 - 2 |>` throw an error even though the first should return a value."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T10:33:11.752699-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T10:33:11.752699-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DHgaAUv+DQCsW5M6DwF/yQ=="
+				},
+				"exampleSelector" : "glrImmediateEvaluation",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtSmaCCCodeGenerationExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-24T07:23:44.163847-05:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-24T07:23:44.163847-05:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Creating SmaCC parsers by example"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "35d38a5b-48fe-0d00-a225-da750f017fc9"
+	}
+}
