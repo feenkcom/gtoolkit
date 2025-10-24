@@ -3,13 +3,15 @@ Extension { #name : #Win32WideString }
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Win32WideString >> asString [
 	<gtPharoPatch: #Pharo>
-	| out  |
+	| out selfWasPinned |
 
 	(handle isNil or: [ handle isNull ])
 		ifTrue: [ ^ '' ].
 
-	[|r codepage|
+	[|r codepage |
 	codepage := 65001.
+	selfWasPinned := self getHandle isPinnedInMemory.
+	
 	r := OSPlatform current
 		wideCharacterToMultiByteCodepage: codepage
 		flags: 0
@@ -22,7 +24,7 @@ Win32WideString >> asString [
 
 	out := ByteArray new: r.
 	out pinInMemory.
-
+	
 	r := OSPlatform current
 		wideCharacterToMultiByteCodepage: codepage
 		flags: 0
@@ -34,7 +36,7 @@ Win32WideString >> asString [
 	r = 0 ifTrue: [ self error: 'Error while transforming windows wide string using codepage ', codepage asString ].
 
 	^ out allButLast utf8Decoded] ensure: [
-		self getHandle unpinInMemory.
+		self getHandle setPinnedInMemory: selfWasPinned.
 		out ifNotNil: [ :aBuffer | aBuffer unpinInMemory ] ]
 ]
 
