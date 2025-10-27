@@ -622,8 +622,8 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWinPlatform [
 		^ self primGetEnvironmentVariable: lpName into: lpBuffer size: nSize] 
 		
 	ensure: [
-		lpName setPinnedInMemory: wasLpnamePinned.
-		lpBuffer setPinnedInMemory: wasLpBuffer.
+		lpName getHandle setPinnedInMemory: wasLpnamePinned.
+		lpBuffer getHandle setPinnedInMemory: wasLpBuffer.
 	]' 
 		classified: 'gt-patch'.
 ]

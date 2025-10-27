@@ -1,0 +1,753 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T12:55:08.230539-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T12:56:18.773095-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "O8mA80r+DQCv93H2A1hhPg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This page explains how to find memory leaks in case users observe that their image is growing and not shrinking."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:57:07.083139-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:57:13.099711-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rN+nVkv+DQCIVht2A1hhPg=="
+							},
+							"code" : "5 timesRepeat: [ Smalltalk garbageCollect ]"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T12:56:40.251571-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T12:57:04.954512-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cZ7xVEv+DQCGgTpdA1hhPg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Before starting the analysis it might be useful to garbage collect all possible objects"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:35:46.055007-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:36:41.720656-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "huVMCkv+DQCztY8UA1hhPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Usually `1 Old space size` and `54 Free old space size` are interesting parameters. "
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:35:38.279842-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:35:41.584887-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+kvWCUv+DQCzqcPnA1hhPg=="
+							},
+							"code" : "GtVmAllParametersReport recordNewReport"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:37:02.845508-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:37:27.733048-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "tcaWDkv+DQC11bJAA1hhPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Compare two different VM parameters snapshots"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:37:29.530943-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:37:30.889198-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZNp3EEv+DQC3HBKKA1hhPg=="
+							},
+							"code" : "diff := GtVmAllParametersDiffReport new.\rdiff recordSourceReport."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:42:06.990601-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:42:15.409028-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FIcBIUv+DQC3cnWaA1hhPg=="
+							},
+							"code" : "diff recordTargetReport.\rdiff"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:42:03.238711-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:46:46.924315-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rYxOFUv+DQC3KYwMA1hhPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If the old space size is just growing, there are memory leaks. To observe figure out what cause those memory leaks, we can use the space tally history, comparing two different snapshots."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T12:35:20.947907-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T12:35:35.594314-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xs3NCEv+DQCzPCSxA1hhPg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Observe VM parameters"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:30:47.488576-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:30:56.352707-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZyyB+Er+DQCwuqwlA1hhPg=="
+							},
+							"code" : "GtSpaceTallyHistory default"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:31:06.791487-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:31:15.977624-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Wran+Ur+DQCwzEcOA1hhPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Create a new snapshot"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:31:18.378855-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:34:42.231367-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hoVY+kr+DQCxNyv6A1hhPg=="
+							},
+							"code" : "GtSpaceTallyHistory\r\trecordDefaultSystemWideDataLabeled: ('Snapshot {1}' format: {Time now print24})"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:34:43.661186-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:34:54.019537-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "seGUBkv+DQCyl8GUA1hhPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Compare different snapshots"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:34:55.616018-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:34:57.356881-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "TUxLB0v+DQCzKi61A1hhPg=="
+							},
+							"code" : "diff := GtSpaceTallyDiff new \r\tsourceVersion: GtSpaceTallyHistory default firstVersion;\r\ttargetVersion: GtSpaceTallyHistory default latestVersion."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:35:02.857485-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:35:03.432167-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ice5B0v+DQCzMhSOA1hhPg=="
+							},
+							"code" : "diff := GtSpaceTallyDiff new \r\tsourceVersion: (GtSpaceTallyHistory default spaceTallyVersions at: 4);\r\ttargetVersion: GtSpaceTallyHistory default latestVersion."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T12:30:40.171063-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T15:07:47.217769-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nIIR+Er+DQCwV0hdA1hhPg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Space tally history (see [[Analysing the image size and its evolution]] for more details) "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:48:08.618403-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T12:52:12.103488-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dIuPNkv+DQC+B5F7A1hhPg=="
+							},
+							"code" : "BlEventHandler instanceCount."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T10:45:01.658961-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-10-24T10:51:02.205597-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hH9Dfkn+DQCpjRwOA1hhPg=="
+							},
+							"code" : "BlEventHandler allInstances\r\tin: [ :aCollection | \r\t\t(100000 to: aCollection size by: 400000)\r\t\t\tcollect: [ :anIndex | GtReferencePaths to: (aCollection at: anIndex) ] ]"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T12:47:06.258937-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-10-24T12:54:33.650358-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "HQbYMkv+DQC8siZTA1hhPg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Once an interesting class is identified, some of their instances can be explored using reference paths"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "juraj.kubelka.yuyv8@slmail.me"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-24T12:29:23.536632-03:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2025-10-24T15:06:52.695511-03:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Analyzing memory leaks"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "c27d437e-49fe-0d00-a98c-01650358613e"
+	}
+}
