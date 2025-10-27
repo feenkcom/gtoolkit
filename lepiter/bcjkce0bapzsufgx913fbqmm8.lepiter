@@ -539,14 +539,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-17T12:40:27.703433+01:00"
+						"dateAndTimeString" : "2025-10-27T16:16:44.780859+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "VWMKfEWxDQClm4yfBr2j6A=="
 				},
-				"code" : "m := GtMondrian new.\rBlElement new\r\twithDeep: [ :each | \r\t\teach class instVarNames\r\t\t\tcollect: [ :iv | each instVarNamed: iv ]\r\t\t\tthenSelect: [ :object | object class package name beginsWith: 'Bloc' ] ]\r\tdo: [ :each | m nodes with: {each} ]\r\trelationDo: [ :from :to | m edges connectAssociations: {from -> to} ].\rm layout custom: GtGraphHorizontalTreeLayout new.\rm"
+				"code" : "m := GtMondrian new.\rBlElement new\r\twithDeep: [ :each | \r\t\teach class instVarNames\r\t\t\tcollect: [ :iv | each instVarNamed: iv ]\r\t\t\tthenSelect: [ :object | object class package name beginsWith: 'Bloc' ] ]\r\tdo: [ :each | m nodes with: {each} ]\r\trelationDo: [ :from :to | m edges connectAssociations: {from -> to} ].\rm layout horizontalDominanceTree.\rm"
 			},
 			{
 				"__type" : "textSnippet",
@@ -573,7 +573,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-17T12:39:50.580338+01:00"
+						"dateAndTimeString" : "2025-10-27T16:17:42.530219+01:00"
 					}
 				},
 				"uid" : {
@@ -583,7 +583,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Of course, once we have the basic graph in place, we can extend the visualization with more ebellishments:"
+				"string" : "Of course, once we have the basic graph in place, we can extend the visualization with more embellishments:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -610,14 +610,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-17T12:22:16.603666+01:00"
+						"dateAndTimeString" : "2025-10-27T16:17:30.583162+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "W+bEuJKMDQCxnls7AEmwvw=="
 				},
-				"code" : "m := GtMondrian new.\rBlElement new\r\twithDeep: [ :each | \r\t\teach class instVarNames\r\t\t\tcollect: [ :iv | each instVarNamed: iv ]\r\t\t\tthenSelect: [ :object | object class package name beginsWith: 'Bloc' ] ]\r\tdo: [ :each | \r\t\tm nodes\r\t\t\tstencil: [ :x | \r\t\t\t\tBrVerticalPane new\r\t\t\t\t\tfitContent;\r\t\t\t\t\taddChild: (BrLabel new\r\t\t\t\t\t\t\ttext: x class name;\r\t\t\t\t\t\t\taptitude: (BrGlamorousLabelAptitude new\r\t\t\t\t\t\t\t\t\tforeground: Color gray;\r\t\t\t\t\t\t\t\t\tfontSize: 10));\r\t\t\t\t\taddChild: (BrLabel new\r\t\t\t\t\t\t\ttext: x gtDisplayString;\r\t\t\t\t\t\t\taptitude: BrGlamorousLabelAptitude new) ];\r\t\t\twith: {each} ]\r\trelationDo: [ :from :to | \r\t\tm edges\r\t\t\tfromRightCenter;\r\t\t\ttoLeftCenter;\r\t\t\tstencil: [ :x | \r\t\t\t\tBlParabollaArcElement new\r\t\t\t\t\tzIndex: 0;\r\t\t\t\t\tcurvatureFraction: 0.3;\r\t\t\t\t\tborder: (BlBorder paint: (Color gray alpha: 0.2) width: 2);\r\t\t\t\t\ttoHead: (BlArrowheadSimpleArrow new\r\t\t\t\t\t\t\tborder: (BlBorder builder\r\t\t\t\t\t\t\t\t\tpaint: (Color gray alpha: 0.2);\r\t\t\t\t\t\t\t\t\twidth: 4;\r\t\t\t\t\t\t\t\t\tbuild)) ];\r\t\t\tconnectAssociations: {from -> to} ].\rm layout custom: (GtGraphHorizontalTreeLayout new\r\tlevelDistance: 50;\r\tnodeDistance: 20).\rm"
+				"code" : "m := GtMondrian new.\rBlElement new\r\twithDeep: [ :each | \r\t\teach class instVarNames\r\t\t\tcollect: [ :iv | each instVarNamed: iv ]\r\t\t\tthenSelect: [ :object | object class package name beginsWith: 'Bloc' ] ]\r\tdo: [ :each | \r\t\tm nodes\r\t\t\tstencil: [ :x | \r\t\t\t\tBrVerticalPane new\r\t\t\t\t\tfitContent;\r\t\t\t\t\taddChild: (BrLabel new\r\t\t\t\t\t\t\ttext: x class name;\r\t\t\t\t\t\t\taptitude: (BrGlamorousLabelAptitude new\r\t\t\t\t\t\t\t\t\tforeground: Color gray;\r\t\t\t\t\t\t\t\t\tfontSize: 10));\r\t\t\t\t\taddChild: (BrLabel new\r\t\t\t\t\t\t\ttext: x gtDisplayString;\r\t\t\t\t\t\t\taptitude: BrGlamorousLabelAptitude new) ];\r\t\t\twith: {each} ]\r\trelationDo: [ :from :to | \r\t\tm edges\r\t\t\tfromRightCenter;\r\t\t\ttoLeftCenter;\r\t\t\tstencil: [ :x | \r\t\t\t\tBlParabollaArcElement new\r\t\t\t\t\tzIndex: 0;\r\t\t\t\t\tcurvatureFraction: 0.3;\r\t\t\t\t\tborder: (BlBorder paint: (Color gray alpha: 0.2) width: 2);\r\t\t\t\t\ttoHead: (BlArrowheadSimpleArrow new\r\t\t\t\t\t\t\tborder: (BlBorder builder\r\t\t\t\t\t\t\t\t\tpaint: (Color gray alpha: 0.2);\r\t\t\t\t\t\t\t\t\twidth: 4;\r\t\t\t\t\t\t\t\t\tbuild)) ];\r\t\t\tconnectAssociations: {from -> to} ].\rm layout horizontalDominanceTree\r\tlevelDistance: 50;\r\tnodeDistance: 20.\rm"
 			},
 			{
 				"__type" : "textSnippet",
