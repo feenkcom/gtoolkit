@@ -454,6 +454,11 @@ class Builder extends AgentJob {
            if ls gt-examples/*.log &> /dev/null; then
               mkdir ${artifacts_dir}/gt-examples
               mv gt-examples/*.log ${artifacts_dir}/gt-examples/
+              if ls gt-examples/workerLogs/*.log &> /dev/null; then
+                 mkdir ${artifacts_dir}/gt-examples/workerLogs
+                 mv gt-examples/workerLogs/*.log ${artifacts_dir}/gt-examples/
+                 mv gt-examples/workerLogs/*.lock ${artifacts_dir}/gt-examples/workerLogs/
+              fi
            fi
            if ls gt-releaser/*.log &> /dev/null; then
               mkdir ${artifacts_dir}/gt-releaser
