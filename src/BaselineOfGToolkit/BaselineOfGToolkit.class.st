@@ -133,7 +133,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-presenter:v0.8.2629/src' ].
 		spec
 			baseline: 'GToolkitTranscript' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.2257/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.2258/src' ].
 		spec
 			baseline: 'GToolkitDebugger' with: [
 				spec repository: 'github://feenkcom/gtoolkit-debugger:v0.8.3122/src' ].
@@ -199,7 +199,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gt4ops:v0.6.117/src' ].
 		spec
 			baseline: 'Gt4Aws' with: [
-				spec repository: 'github://feenkcom/gt4aws:v0.6.46/src' ].
+				spec repository: 'github://feenkcom/gt4aws:v0.6.47/src' ].
 		spec
 			baseline: 'GToolkitCoder' with: [
 				spec repository: 'github://feenkcom/gtoolkit-coder:v0.8.2358/src' ].
@@ -208,7 +208,7 @@ BaselineOfGToolkit >> baseline: spec [
 				spec repository: 'github://feenkcom/gtoolkit-remote:v0.8.2229/src' ].
 		spec
 			baseline: 'GToolkitMorphic' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.2257/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.2258/src' ].
 		spec
 			baseline: 'BlocExtensions' with: [
 				spec repository: 'github://feenkcom/Bloc:v0.8.971/src' ].
