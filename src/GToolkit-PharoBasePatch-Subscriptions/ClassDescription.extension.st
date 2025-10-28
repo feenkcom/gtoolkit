@@ -5,5 +5,5 @@ ClassDescription >> compileSilently: sourceCode classified: protocolName notifyi
 	<gtPharoPatch: #Pharo12>
 	"Compile the code and classify the resulting method in the given protocol, leaving no trail in the system log, nor in any change set, nor in the 'recent submissions' list."
 
-	^ self codeChangeAnnouncer localSuspendWhile: [ self compile: sourceCode classified: protocolName notifying: requestor ]
+	^ SystemAnnouncer uniqueInstance localSuspendWhile: [ self compile: sourceCode classified: protocolName notifying: requestor ]
 ]
