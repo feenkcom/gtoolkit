@@ -452,11 +452,13 @@ class Builder extends AgentJob {
               mv glamoroustoolkit/*.log ${artifacts_dir}/glamoroustoolkit/
            fi
            if ls gt-examples/*.log &> /dev/null; then
+              script.echo "Archiving gt-examples .logs"
               mkdir ${artifacts_dir}/gt-examples
               mv gt-examples/*.log ${artifacts_dir}/gt-examples/
               if ls gt-examples/workerLogs/*.log &> /dev/null; then
+                 script.echo "Archive workerLogs .logs"
                  mkdir ${artifacts_dir}/gt-examples/workerLogs
-                 mv gt-examples/workerLogs/*.log ${artifacts_dir}/gt-examples/
+                 mv gt-examples/workerLogs/*.log ${artifacts_dir}/gt-examples/workerLogs/
                  mv gt-examples/workerLogs/*.lock ${artifacts_dir}/gt-examples/workerLogs/
               fi
            fi
