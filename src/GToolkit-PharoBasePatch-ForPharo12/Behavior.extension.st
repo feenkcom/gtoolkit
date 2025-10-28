@@ -1,6 +1,6 @@
 Extension { #name : #Behavior }
 
-{ #category : #'*GToolkit-PharoBasePatch-Subscriptions' }
+{ #category : #'*GToolkit-PharoBasePatch-ForPharo12' }
 Behavior >> recompile: selector from: oldClass [
 	"Compile the method associated with selector in the receiver's method dictionary."
 
@@ -33,7 +33,7 @@ Behavior >> recompile: selector from: oldClass [
 			self addSelector: selector withRecompiledMethod: newMethod ]
 ]
 
-{ #category : #'*GToolkit-PharoBasePatch-Subscriptions' }
+{ #category : #'*GToolkit-PharoBasePatch-ForPharo12' }
 Behavior >> removeSelectorSilently: selector [
 	<gtPharoPatch: #Pharo12>
 	"Remove selector without sending system change notifications"
