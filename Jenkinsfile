@@ -457,9 +457,8 @@ class Builder extends AgentJob {
               mv gt-examples/*.log ${artifacts_dir}/gt-examples/
               if ls gt-examples/workerLogs/*.log &> /dev/null; then
                  script.echo "Archive workerLogs .logs"
-                 mkdir ${artifacts_dir}/gt-examples/workerLogs
-                 mv gt-examples/workerLogs/*.log ${artifacts_dir}/gt-examples/workerLogs/
-                 mv gt-examples/workerLogs/*.lock ${artifacts_dir}/gt-examples/workerLogs/
+                 mv gt-examples/workerLogs/*.log ${artifacts_dir}/gt-examples/
+                 mv gt-examples/workerLogs/*.lock ${artifacts_dir}/gt-examples/
               fi
            fi
            if ls gt-releaser/*.log &> /dev/null; then
