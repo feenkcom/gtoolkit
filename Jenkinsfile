@@ -445,9 +445,11 @@ class Builder extends AgentJob {
     void archive_artifacts() {
         def artifacts_dir = "artifacts/${agent.host()}"
         script.sh """
+           script.echo "Archiving .logs"
            mkdir -p ${artifacts_dir}
            rm -rf ${artifacts_dir}/*
            if ls glamoroustoolkit/*.log &> /dev/null; then
+              script.echo "Archiving glamoroustoolkit .logs"
               mkdir ${artifacts_dir}/glamoroustoolkit
               mv glamoroustoolkit/*.log ${artifacts_dir}/glamoroustoolkit/
            fi
@@ -456,7 +458,7 @@ class Builder extends AgentJob {
               mkdir ${artifacts_dir}/gt-examples
               mv gt-examples/*.log ${artifacts_dir}/gt-examples/
               if ls gt-examples/workerLogs/*.log &> /dev/null; then
-                 script.echo "Archive workerLogs .logs"
+                 script.echo "Archiving workerLogs .logs"
                  mv gt-examples/workerLogs/*.log ${artifacts_dir}/gt-examples/
                  mv gt-examples/workerLogs/*.lock ${artifacts_dir}/gt-examples/
               fi
