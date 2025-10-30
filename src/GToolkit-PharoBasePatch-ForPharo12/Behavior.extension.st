@@ -8,7 +8,8 @@ Behavior >> recompile: selector from: oldClass [
 	self
 		forPharo12AndNewer: [ | method newMethod |
 			"Recompilation should be done silently, to avoid putting noise in the system"
-			SystemAnnouncer uniqueInstance
+			GtPharoCodeModifier current critical:
+			[ SystemAnnouncer uniqueInstance
 				localSuspendWhile: [ method := oldClass compiledMethodAt: selector.
 					newMethod := oldClass compiler
 							source: (oldClass sourceCodeAt: selector);
@@ -20,7 +21,7 @@ Behavior >> recompile: selector from: oldClass [
 						 	 We are going to reuse the original source pointer." ].
 
 			newMethod sourcePointer: method sourcePointer.
-			selector == newMethod selector ifFalse: [ self error: 'selector changed!' ] ]
+			selector == newMethod selector ifFalse: [ self error: 'selector changed!' ] ] ]
 		forPharo11: [ | method newMethod |
 			method := oldClass compiledMethodAt: selector.
 			newMethod := oldClass compiler
