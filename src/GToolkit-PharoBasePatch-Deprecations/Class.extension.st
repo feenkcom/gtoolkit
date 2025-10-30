@@ -27,7 +27,7 @@ Class >> subclass: aSubclassSymbol instanceVariableNames: instVarNameList classV
 			  		  fillClassSideFromEnvironment: self environment;
 						slotsFromString: instVarNameList;
 						sharedVariablesFromString: classVarNames;
-						category: aPackageSymbol;
+						package: aPackageSymbol;
 						environment: self environment ] ]
 		forPharo11: [ self
 				subclass: aSubclassSymbol
