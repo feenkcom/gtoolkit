@@ -429,8 +429,9 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12SystemDictionaryAtPut [
 		fastForPharo13: []
 		forPharo12: [ SystemDictionary compile:
 'at: aKey put: anObject
-	"Override from Dictionary to check Undeclared and fix up
-	references to undeclared variables."
+	"Override from Dictionary to check Undeclared and fix up references to undeclared variables.
+	This is fixed upstream by https://github.com/pharo-project/pharo/pull/18807.  
+	Once we pick up that image BaselineOfGToolkitPrerequisites>>#applyPatchForPharo12SystemDictionaryAtPut should be removed."
 	| index assoc registeredMethods |
 	aKey isSymbol ifFalse: [ self error: ''Only symbols are accepted as keys in SystemDictionary'' ].
 
