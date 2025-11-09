@@ -19,5 +19,5 @@ GtWeakSubscriptionDisableFinalizationFlag class >> enable [
 
 { #category : #testing }
 GtWeakSubscriptionDisableFinalizationFlag class >> isEnabled [
-	^ enabled ifNil: [ false ]
+	^ enabled ifNil: [ true ]
 ]
