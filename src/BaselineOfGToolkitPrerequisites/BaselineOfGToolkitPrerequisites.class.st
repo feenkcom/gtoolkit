@@ -270,6 +270,14 @@ BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForMethodAnnouncements [
+	MethodModified addSlot: #cachedNewSourceCode.
+	MethodModified addSlot: #cachedOldSourceCode.
+	
+	MethodAdded addSlot: #cachedNewSourceCode
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 	self 
 		fastForPharo13: []
@@ -712,6 +720,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo11.
+	self applyPatchForMethodAnnouncements.
 	self applyPatchAuthor.
 ]
 
