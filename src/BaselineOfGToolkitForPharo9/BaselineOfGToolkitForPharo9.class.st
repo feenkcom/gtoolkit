@@ -14,10 +14,10 @@ BaselineOfGToolkitForPharo9 >> baseline: spec [
 		spec postLoadDoIt: #'postLoadGToolkit:'.
 		spec
 			baseline: 'GToolkitPrerequisites' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.2313/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.2314/src' ].
 		spec
 			baseline: 'GToolkit' with: [
-				spec repository: 'github://feenkcom/gtoolkit:v1.0.2313/src' ].
+				spec repository: 'github://feenkcom/gtoolkit:v1.0.2314/src' ].
 
 		spec package: 'GToolkit-PharoOverrides-Debugger' with: [
 			spec requires: #(#GToolkitPrerequisites #GToolkit) ].
