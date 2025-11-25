@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:00:00.972866+02:00"
+						"dateAndTimeString" : "2025-11-07T21:22:04.183898+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,54 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-19T15:19:36.027267+01:00"
+						"dateAndTimeString" : "2025-11-07T21:22:06.521069+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6O4qyUe8DQCGdhyDDPZO7A=="
+					"uidString" : "wJn5q2j/DQCo3ArvBOdLSw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You  can open the *Knowledge bases* tool from the GT home menu to see the list of available databases and browse them there."
-			},
-			{
-				"__type" : "elementSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:44:49.612132+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:44:51.538277+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "WU1saUi8DQCWzzPRDPZO7A=="
-				},
-				"code" : "LeHomeDatabasesElement new\r\tdatabaseViewModel: LeDatabasesRegistry uniqueInstance currentLoadedDefaultLogicalDatabase\r\t\t\tasContentUIModel",
-				"elementHeight" : 617,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"string" : "By default the cursor in text editors blinks."
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:02:23.968272+02:00"
+						"dateAndTimeString" : "2025-11-07T21:22:06.757666+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +66,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:46:53.785938+02:00"
+						"dateAndTimeString" : "2025-11-07T21:22:17.040632+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "et2w0Ue8DQCJATy6DPZO7A=="
+					"uidString" : "xeMgrGj/DQCpBtaYBOdLSw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "From the *maximized*  view of a Lepiter page (click the `+` on the top left of the page to maximize it) you can see the list of Pages, and a Table of Contents, if one is defined."
+				"string" : "You can control the delay when it starts blinking:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-07T21:22:44.200414+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-07T21:24:04.887234+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8Ttcrmj/DQCroHzOBOdLSw=="
+				},
+				"code" : "BrCursorElement blinkDelay: 0.5 seconds"
 			},
 			{
 				"__type" : "textSnippet",
@@ -129,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:46:55.370492+02:00"
+						"dateAndTimeString" : "2025-11-07T21:22:17.663968+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,20 +137,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:47:23.485579+02:00"
+						"dateAndTimeString" : "2025-11-07T21:22:26.539849+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uDvrcEi8DQCaZqLcDPZO7A=="
+					"uidString" : "+07HrGj/DQCqI9QEBOdLSw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "There is also a *Spotter* search (magnifying glass) where you can search for pages by title or content."
+				"string" : "And you can control the blinking interval:"
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -166,7 +163,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:47:30.717145+02:00"
+						"dateAndTimeString" : "2025-11-07T21:22:41.114193+01:00"
 					}
 				},
 				"editEmail" : {
@@ -177,17 +174,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:47:31.639725+02:00"
+						"dateAndTimeString" : "2025-11-07T21:23:46.320582+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "II8Gc0i8DQCcd6TuDPZO7A=="
+					"uidString" : "YyQtrmj/DQCrnvpuBOdLSw=="
 				},
-				"code" : "(GtPager createWrappedOn: (LePagePhlowTool page: thisSnippet page)) maximized",
-				"elementHeight" : 313,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"code" : "BrCursorElement blinkInterval: 0.5 seconds"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-07T21:21:29.053277+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-07T21:22:37.570202+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cpThqWj/DQCnHr86BOdLSw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "You can also disable the blinking altogether:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-07T21:21:31.373257+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-11-07T21:21:37.642729+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3foEqmj/DQCnIGv/BOdLSw=="
+				},
+				"code" : "BrCursorElement shouldBlink: false"
 			}
 		]
 	},
@@ -199,7 +264,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-07-07T17:44:51.099415+02:00"
+			"dateAndTimeString" : "2025-11-07T21:21:29.00805+01:00"
 		}
 	},
 	"editEmail" : {
@@ -210,15 +275,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-07-07T17:44:56.518352+02:00"
+			"dateAndTimeString" : "2025-11-07T21:21:29.00805+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How do I find my pages?"
+		"title" : "How to control the cursor blinking"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "87a61640-49bc-0d00-987c-2df903880c20"
+		"uuid" : "b5e2e0a9-68ff-0d00-a71d-4c1a04e74b4b"
 	}
 }

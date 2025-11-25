@@ -228,7 +228,9 @@ BaselineOfGToolkit >> baseline: spec [
 				baseline: 'GToolkitProfiler'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-profiler:main/src' ];
 				baseline: 'GtoolkitRoadmaps'
-					with: [ spec repository: 'github://feenkcom/gtoolkit-roadmaps:main/src' ] ]
+					with: [ spec repository: 'github://feenkcom/gtoolkit-roadmaps:main/src' ];
+				baseline: 'GToolkitBookmarks'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-bookmarks:main/src' ] ]
 ]
 
 { #category : #'post load' }

@@ -270,6 +270,14 @@ BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForMethodAnnouncements [
+	MethodModified addSlot: #cachedNewSourceCode.
+	MethodModified addSlot: #cachedOldSourceCode.
+	
+	MethodAdded addSlot: #cachedNewSourceCode
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 	self 
 		fastForPharo13: []
@@ -429,8 +437,9 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12SystemDictionaryAtPut [
 		fastForPharo13: []
 		forPharo12: [ SystemDictionary compile:
 'at: aKey put: anObject
-	"Override from Dictionary to check Undeclared and fix up
-	references to undeclared variables."
+	"Override from Dictionary to check Undeclared and fix up references to undeclared variables.
+	This is fixed upstream by https://github.com/pharo-project/pharo/pull/18807.  
+	Once we pick up that image BaselineOfGToolkitPrerequisites>>#applyPatchForPharo12SystemDictionaryAtPut should be removed."
 	| index assoc registeredMethods |
 	aKey isSymbol ifFalse: [ self error: ''Only symbols are accepted as keys in SystemDictionary'' ].
 
@@ -711,6 +720,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo11.
+	self applyPatchForMethodAnnouncements.
 	self applyPatchAuthor.
 ]
 
