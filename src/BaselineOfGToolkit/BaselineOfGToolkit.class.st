@@ -229,7 +229,7 @@ BaselineOfGToolkit >> baseline: spec [
 					with: [ spec repository: 'github://feenkcom/gtoolkit-profiler:main/src' ];
 				baseline: 'GtoolkitRoadmaps'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-roadmaps:main/src' ];
-				baseline: 'GtoolkitBookmarks'
+				baseline: 'GToolkitBookmarks'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-bookmarks:main/src' ] ]
 ]
 
