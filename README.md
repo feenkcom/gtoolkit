@@ -16,7 +16,7 @@
       <img alt="YouTube Channel Subscribers" src="https://img.shields.io/youtube/channel/subscribers/UClLZHVq_-2D2-iI4rA2O8Ug?color=red&label=%40gtoolkit&logo=youtube&logoColor=white&style=flat-square">
     </a>
   </div>
-</div>
+</div> 
 
 # The Moldable Development Environment
 [Glamorous Toolkit](https://gtoolkit.com) is the Moldable Development Environment. It empowers you to make systems explainable through contextual micro tools.
