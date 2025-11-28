@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-09-16T21:33:19.17206+02:00"
+						"dateAndTimeString" : "2025-11-25T21:31:00.618671+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "93PfYCLpDQCaQ3YiBOD//Q=="
 				},
-				"code" : "aFile := FileLocator temp / 'GToolkitBook.txt'.\raFile ensureDelete.\raFile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLlmLepiterContentExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
+				"code" : "file := FileLocator temp / 'GToolkitBook.txt'.\rfile ensureDelete.\rfile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLlmLepiterContentExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -313,14 +313,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T15:02:14.865508+02:00"
+						"dateAndTimeString" : "2025-11-25T21:31:38.746386+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "1UcZ3HnxDQCwcGUpAReYsQ=="
 				},
-				"code" : "chat provider\r\taddFile: (GtOpenAIResourceFile new\r\t\t\tfile: aFile;\r\t\t\tdescription: 'Lepiter booklet: GToolkit book');\r\taddTool: (GtLlmTool new type: 'file_search');\r\tcreateAssistant"
+				"code" : "chat provider\r\taddFile: (GtOpenAIResourceFile new\r\t\t\tfile: file;\r\t\t\tdescription: 'Lepiter booklet: GToolkit book');\r\taddTool: (GtLlmFileSearchTool new);\r\tcreateAssistant"
 			},
 			{
 				"__type" : "pharoSnippet",

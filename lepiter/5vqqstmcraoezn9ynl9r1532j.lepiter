@@ -518,7 +518,42 @@
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T16:47:18.306574+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T16:47:35.789021+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "xhPKs7PIDQCHHIJHAotZYw=="
+										},
+										"code" : "(GtPharoIndex current selectorCache  \n\tgtImplementersAreInstalled: GtNoAdvice new) result toArray wait"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -528,7 +563,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-12T16:47:18.306574+01:00"
+									"dateAndTimeString" : "2025-11-27T14:10:44.124235+02:00"
 								}
 							},
 							"editEmail" : {
@@ -539,20 +574,55 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-12T16:47:35.789021+01:00"
+									"dateAndTimeString" : "2025-11-27T14:10:51.4374+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "xhPKs7PIDQCHHIJHAotZYw=="
+								"uidString" : "AiiUP18DRWKOnt4c59VZbQ=="
 							},
-							"code" : "(GtPharoIndex current selectorCache  \n\tgtImplementersAreInstalled: GtNoAdvice new) result toArray wait"
+							"code" : "GtPharoIndex current selectorCache gtNotInstalledImplementersBySelector"
 						},
 						{
 							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T16:47:32.588511+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-12T16:47:38.072811+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "gwaktLPIDQCHJktwAotZYw=="
+										},
+										"code" : "(GtPharoIndex current selectorCache  \n\tgtReferencesAreInstalled: GtNoAdvice new) result toArray wait"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -562,7 +632,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-12T16:47:32.588511+01:00"
+									"dateAndTimeString" : "2025-11-27T13:53:29.14167+02:00"
 								}
 							},
 							"editEmail" : {
@@ -573,14 +643,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-12T16:47:38.072811+01:00"
+									"dateAndTimeString" : "2025-11-27T14:10:48.038997+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "gwaktLPIDQCHJktwAotZYw=="
+								"uidString" : "B75n/++2STaKx4VCA2qlKQ=="
 							},
-							"code" : "(GtPharoIndex current selectorCache  \n\tgtReferencesAreInstalled: GtNoAdvice new) result toArray wait"
+							"code" : "GtPharoIndex current selectorCache gtNotInstalledReferencesBySelector"
 						}
 					]
 				},
