@@ -1,1 +1,42 @@
-OmEntry {	#tags : {		#prior : OmReference [ '0' ],		#self : OmReference [ '1' ]	},	#content : EpClassAddition {		#class : RGClassDefinition {			#annotations : IdentityDictionary {				#superclassName : 'CollectionValueHolder',				#traitCompositionSource : '{}',				#definitionSource : 'CollectionValueHolder subclass: #StackMachine\r\tinstanceVariableNames: \'\'\r\tclassVariableNames: \'\'\r\tpackage: \'StackMachine\''			},			#name : #StackMachine,			#methods : IdentityDictionary { },			#protocols : Set [ ],			#instanceVariables : OrderedCollection [ ],			#metaClass : RGMetaclassDefinition {				#annotations : IdentityDictionary {					#traitCompositionSource : '{}',					#definitionSource : 'StackMachine class\r\tinstanceVariableNames: \'\''				},				#name : #'StackMachine class',				#methods : IdentityDictionary { },				#protocols : Set [ ],				#instanceVariables : OrderedCollection [ ],				#baseClass : @6			},			#comment : RGCommentDefinition {				#annotations : IdentityDictionary {					#className : #StackMachine,					#isMetaSide : false				},				#parent : @6,				#content : ''			},			#classVariables : OrderedCollection [ ],			#category : #StackMachine,			#package : #StackMachine,			#sharedPools : OrderedCollection [ ]		}	}}
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'StackMachineClassDef.ombu', '0' ],
+		#self : OmReference [ 'StackMachineClassDef.ombu', '1' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : 'CollectionValueHolder',
+				#traitCompositionSource : '{}',
+				#definitionSource : 'CollectionValueHolder subclass: #StackMachine\r\tinstanceVariableNames: \'\'\r\tclassVariableNames: \'\'\r\tpackage: \'StackMachine\''
+			},
+			#name : #StackMachine,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'StackMachine class\r\tinstanceVariableNames: \'\''
+				},
+				#name : #'StackMachine class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMetaSide : false,
+					#className : #StackMachine
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : #StackMachine,
+			#packageTag : '',
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}

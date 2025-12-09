@@ -1,1 +1,132 @@
-OmEntry {	#tags : {		#prior : OmReference [ '3' ],		#self : OmReference [ '4' ]	},	#content : EpMethodAddition {		#method : RGMethodDefinition {			#annotations : IdentityDictionary {				#className : #GtExamplesTutorial,				#isMetaSide : false			},			#name : #deleteFileFromDisk,			#protocol : #examples,			#sourceCode : 'deleteFileFromDisk\r\tfileOnDisk ensureDelete',			#stamp : 'TudorGirba 5/6/2018 21:53',			#package : #GToolkit-Examples-Dummies		}	}}OmEntry {	#tags : {		#prior : OmReference [ '4' ],		#self : OmReference [ '5' ]	},	#content : EpMethodModification {		#oldMethod : RGMethodDefinition {			#annotations : IdentityDictionary {				#className : #GtExamplesTutorial,				#isMetaSide : false			},			#name : #createFileOnDisk,			#protocol : #examples,			#sourceCode : 'createFileOnDisk\r\t<gtExample>\r\t<after: #deleteFileFromDisk>\r\t^ fileOnDisk ifNil: [\r\t\tfileOnDisk := self directoryOnDisk / self fileName\r\t\t\t\t\t\t\twriteStreamDo: [ :stream | stream nextPutAll: self fileContents ];\r\t\t\t\t\t\t\tyourself ]',			#stamp : 'TudorGirba 5/7/2018 12:14',			#package : #GToolkit-Examples-Dummies		},		#newMethod : RGMethodDefinition {			#annotations : IdentityDictionary {				#className : #GtExamplesTutorial,				#isMetaSide : false			},			#name : #createFileOnDisk,			#protocol : #examples,			#sourceCode : 'createFileOnDisk\r\t<gtExample>\r\t<after: #deleteFileFromDisk>\r\t^ fileOnDisk := self directoryOnDisk / self fileName\r\t\t\twriteStreamDo: [ :stream | stream nextPutAll: self fileContents ];\r\t\t\tyourself',			#stamp : 'TudorGirba 5/7/2018 12:15',			#package : #GToolkit-Examples-Dummies		}	}}OmEntry {	#tags : {		#prior : OmReference [ '5' ],		#self : OmReference [ '6' ]	},	#content : EpClassModification {		#oldClass : RGClassDefinition {			#annotations : IdentityDictionary {				#superclassName : 'Object',				#traitCompositionSource : '{}',				#definitionSource : 'Object subclass: #GtExamplesTutorial\r\tinstanceVariableNames: \'\'\r\tclassVariableNames: \'\'\r\tpoolDictionaries: \'\'\r\tcategory: \'GToolkitExamplesTutorial\''			},			#name : #GtExamplesTutorial,			#methods : IdentityDictionary { },			#protocols : Set [ ],			#instanceVariables : OrderedCollection [ ],			#metaClass : RGMetaclassDefinition {				#annotations : IdentityDictionary {					#traitCompositionSource : '{}',					#definitionSource : 'GtExamplesTutorial class\r\tinstanceVariableNames: \'\''				},				#name : #'GtExamplesTutorial class',				#methods : IdentityDictionary { },				#protocols : Set [ ],				#instanceVariables : OrderedCollection [ ],				#baseClass : @6			},			#comment : RGCommentDefinition {				#annotations : IdentityDictionary {					#className : #GtExamplesTutorial,					#isMetaSide : false				},				#parent : @6,				#content : ''			},			#classVariables : OrderedCollection [ ],			#category : #GToolkitExamplesTutorial,			#package : #GToolkitExamplesTutorial,			#sharedPools : OrderedCollection [ ]		},		#newClass : RGClassDefinition {			#annotations : IdentityDictionary {				#superclassName : 'Object',				#traitCompositionSource : '{}',				#definitionSource : 'Object subclass: #GtExamplesTutorial\r\tinstanceVariableNames: \'fileOnDisk\'\r\tclassVariableNames: \'\'\r\tpoolDictionaries: \'\'\r\tcategory: \'GToolkitExamplesTutorial\''			},			#name : #GtExamplesTutorial,			#methods : IdentityDictionary { },			#protocols : Set [ ],			#instanceVariables : OrderedCollection [				RGInstanceVariableDefinition {					#annotations : IdentityDictionary {						#className : #GtExamplesTutorial,						#isMetaSide : false					},					#name : #fileOnDisk,					#parent : @20				}			],			#metaClass : RGMetaclassDefinition {				#annotations : IdentityDictionary {					#traitCompositionSource : '{}',					#definitionSource : 'GtExamplesTutorial class\r\tinstanceVariableNames: \'\''				},				#name : #'GtExamplesTutorial class',				#methods : IdentityDictionary { },				#protocols : Set [ ],				#instanceVariables : OrderedCollection [ ],				#baseClass : @20			},			#comment : RGCommentDefinition {				#annotations : IdentityDictionary {					#className : #GtExamplesTutorial,					#isMetaSide : false				},				#parent : @20,				#content : ''			},			#classVariables : OrderedCollection [ ],			#category : #GToolkitExamplesTutorial,			#package : #GToolkitExamplesTutorial,			#sharedPools : OrderedCollection [ ]		}	}}
+OmEntry {
+	#tags : {
+		#prior : OmReference [ '05-afterFileOnDisk.ombu', '3' ],
+		#self : OmReference [ '05-afterFileOnDisk.ombu', '4' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMetaSide : false,
+				#className : #GtExamplesTutorial
+			},
+			#name : #deleteFileFromDisk,
+			#protocol : #examples,
+			#sourceCode : 'deleteFileFromDisk\r\tfileOnDisk ensureDelete',
+			#stamp : 'TudorGirba 5/6/2018 21:53',
+			#package : #GToolkit-Examples-Dummies
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '05-afterFileOnDisk.ombu', '4' ],
+		#self : OmReference [ '05-afterFileOnDisk.ombu', '5' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMetaSide : false,
+				#className : #GtExamplesTutorial
+			},
+			#name : #createFileOnDisk,
+			#protocol : #examples,
+			#sourceCode : 'createFileOnDisk\r\t<gtExample>\r\t<after: #deleteFileFromDisk>\r\t^ fileOnDisk ifNil: [\r\t\tfileOnDisk := self directoryOnDisk / self fileName\r\t\t\t\t\t\t\twriteStreamDo: [ :stream | stream nextPutAll: self fileContents ];\r\t\t\t\t\t\t\tyourself ]',
+			#stamp : 'TudorGirba 5/7/2018 12:14',
+			#package : #GToolkit-Examples-Dummies
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMetaSide : false,
+				#className : #GtExamplesTutorial
+			},
+			#name : #createFileOnDisk,
+			#protocol : #examples,
+			#sourceCode : 'createFileOnDisk\r\t<gtExample>\r\t<after: #deleteFileFromDisk>\r\t^ fileOnDisk := self directoryOnDisk / self fileName\r\t\t\twriteStreamDo: [ :stream | stream nextPutAll: self fileContents ];\r\t\t\tyourself',
+			#stamp : 'TudorGirba 5/7/2018 12:15',
+			#package : #GToolkit-Examples-Dummies
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '05-afterFileOnDisk.ombu', '5' ],
+		#self : OmReference [ '05-afterFileOnDisk.ombu', '6' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : 'Object',
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object subclass: #GtExamplesTutorial\r\tinstanceVariableNames: \'\'\r\tclassVariableNames: \'\'\r\tpoolDictionaries: \'\'\r\tcategory: \'GToolkitExamplesTutorial\''
+			},
+			#name : #GtExamplesTutorial,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'GtExamplesTutorial class\r\tinstanceVariableNames: \'\''
+				},
+				#name : #'GtExamplesTutorial class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMetaSide : false,
+					#className : #GtExamplesTutorial
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : #GToolkitExamplesTutorial,
+			#packageTag : '',
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : 'Object',
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object subclass: #GtExamplesTutorial\r\tinstanceVariableNames: \'fileOnDisk\'\r\tclassVariableNames: \'\'\r\tpoolDictionaries: \'\'\r\tcategory: \'GToolkitExamplesTutorial\''
+			},
+			#name : #GtExamplesTutorial,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMetaSide : false,
+						#className : #GtExamplesTutorial
+					},
+					#name : #fileOnDisk,
+					#parent : @20
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'GtExamplesTutorial class\r\tinstanceVariableNames: \'\''
+				},
+				#name : #'GtExamplesTutorial class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @20
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMetaSide : false,
+					#className : #GtExamplesTutorial
+				},
+				#parent : @20,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : #GToolkitExamplesTutorial,
+			#packageTag : '',
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}

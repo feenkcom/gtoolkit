@@ -1,1 +1,60 @@
-OmEntry {	#tags : {		#prior : OmReference [ '6' ],		#self : OmReference [ '7' ]	},	#content : EpClassAddition {		#class : RGClassDefinition {			#annotations : IdentityDictionary {				#superclassName : 'Object',				#traitCompositionSource : '{}',				#definitionSource : 'Object subclass: #GtExamplesTutorial\r\tinstanceVariableNames: \'\'\r\tclassVariableNames: \'\'\r\tpoolDictionaries: \'\'\r\tcategory: \'GToolkitExamplesTutorial\''			},			#name : #GtExamplesTutorial,			#methods : IdentityDictionary { },			#protocols : Set [ ],			#instanceVariables : OrderedCollection [ ],			#metaClass : RGMetaclassDefinition {				#annotations : IdentityDictionary {					#traitCompositionSource : '{}',					#definitionSource : 'GtExamplesTutorial class\r\tinstanceVariableNames: \'\''				},				#name : #'GtExamplesTutorial class',				#methods : IdentityDictionary { },				#protocols : Set [ ],				#instanceVariables : OrderedCollection [ ],				#baseClass : @6			},			#comment : RGCommentDefinition {				#annotations : IdentityDictionary {					#className : #GtExamplesTutorial,					#isMetaSide : false				},				#parent : @6,				#content : ''			},			#classVariables : OrderedCollection [ ],			#category : #GToolkitExamplesTutorial,			#package : #GToolkitExamplesTutorial,			#sharedPools : OrderedCollection [ ]		}	}}OmEntry {	#tags : {		#prior : OmReference [ '7' ],		#self : OmReference [ '8' ]	},	#content : EpMethodAddition {		#method : RGMethodDefinition {			#annotations : IdentityDictionary {				#className : #GtExamplesTutorial,				#isMetaSide : false			},			#name : #createFileInMemory,			#protocol : #examples,			#sourceCode : 'createFileInMemory\r\t<gtExample>\r\t^ FileSystem memory workingDirectory / \'sample.txt\'\r\t\twriteStreamDo: [ :stream | stream nextPutAll: \'Sample contents\' ];\r\t\tyourself',			#stamp : 'TudorGirba 5/20/2018 23:52',			#package : #GToolkit-Examples-Dummies		}	}}
+OmEntry {
+	#tags : {
+		#prior : OmReference [ '01-createFileOnDisk.ombu', '6' ],
+		#self : OmReference [ '01-createFileOnDisk.ombu', '7' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : 'Object',
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object subclass: #GtExamplesTutorial\r\tinstanceVariableNames: \'\'\r\tclassVariableNames: \'\'\r\tpoolDictionaries: \'\'\r\tcategory: \'GToolkitExamplesTutorial\''
+			},
+			#name : #GtExamplesTutorial,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'GtExamplesTutorial class\r\tinstanceVariableNames: \'\''
+				},
+				#name : #'GtExamplesTutorial class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMetaSide : false,
+					#className : #GtExamplesTutorial
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : #GToolkitExamplesTutorial,
+			#packageTag : '',
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '01-createFileOnDisk.ombu', '7' ],
+		#self : OmReference [ '01-createFileOnDisk.ombu', '8' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMetaSide : false,
+				#className : #GtExamplesTutorial
+			},
+			#name : #createFileInMemory,
+			#protocol : #examples,
+			#sourceCode : 'createFileInMemory\r\t<gtExample>\r\t^ FileSystem memory workingDirectory / \'sample.txt\'\r\t\twriteStreamDo: [ :stream | stream nextPutAll: \'Sample contents\' ];\r\t\tyourself',
+			#stamp : 'TudorGirba 5/20/2018 23:52',
+			#package : #GToolkit-Examples-Dummies
+		}
+	}
+}

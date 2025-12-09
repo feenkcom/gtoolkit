@@ -1,1 +1,104 @@
-OmEntry {	#tags : {		#prior : OmReference [ '0' ],		#self : OmReference [ '1' ]	},	#content : EpClassModification {		#oldClass : RGClassDefinition {			#annotations : IdentityDictionary {				#superclassName : 'Object',				#traitCompositionSource : '{}',				#definitionSource : 'Object subclass: #Jumble\r\tinstanceVariableNames: \'wordDict\'\r\tclassVariableNames: \'\'\r\tpackage: \'Tutorial-Jumble\''			},			#name : #Jumble,			#methods : IdentityDictionary { },			#protocols : Set [ ],			#instanceVariables : OrderedCollection [				RGInstanceVariableDefinition {					#annotations : IdentityDictionary {						#className : #Jumble,						#isMetaSide : false					},					#name : #wordDict,					#parent : @6				}			],			#metaClass : RGMetaclassDefinition {				#annotations : IdentityDictionary {					#traitCompositionSource : '{}',					#definitionSource : 'Jumble class\r\tinstanceVariableNames: \'\''				},				#name : #'Jumble class',				#methods : IdentityDictionary { },				#protocols : Set [ ],				#instanceVariables : OrderedCollection [ ],				#baseClass : @6			},			#comment : RGCommentDefinition {				#annotations : IdentityDictionary {					#className : #Jumble,					#isMetaSide : false				},				#parent : @6,				#content : 'A Jumble is an object that knows how to unscramble English words:\n\n\tJumble new unJumble: \'gameses\'\n\nIt encapsulates a dictionary of lists of words, keyed by a sorted string of characters in each word. It unjumbles a word by sorting its characters to form a key and looking up the key in the dictionary.',				#stamp : '<historical>'			},			#classVariables : OrderedCollection [ ],			#category : #Tutorial-Jumble,			#package : #Tutorial-Jumble,			#sharedPools : OrderedCollection [ ]		},		#newClass : RGClassDefinition {			#annotations : IdentityDictionary {				#superclassName : 'Object',				#traitCompositionSource : '{}',				#definitionSource : 'Object subclass: #Jumble\r\tinstanceVariableNames: \'wordDict wordlistUrl\'\r\tclassVariableNames: \'\'\r\tpackage: \'Tutorial-Jumble\''			},			#name : #Jumble,			#methods : IdentityDictionary { },			#protocols : Set [ ],			#instanceVariables : OrderedCollection [				RGInstanceVariableDefinition {					#annotations : IdentityDictionary {						#className : #Jumble,						#isMetaSide : false					},					#name : #wordDict,					#parent : @22				},				RGInstanceVariableDefinition {					#annotations : IdentityDictionary {						#className : #Jumble,						#isMetaSide : false					},					#name : #wordlistUrl,					#parent : @22				}			],			#metaClass : RGMetaclassDefinition {				#annotations : IdentityDictionary {					#traitCompositionSource : '{}',					#definitionSource : 'Jumble class\r\tinstanceVariableNames: \'\''				},				#name : #'Jumble class',				#methods : IdentityDictionary { },				#protocols : Set [ ],				#instanceVariables : OrderedCollection [ ],				#baseClass : @22			},			#comment : RGCommentDefinition {				#annotations : IdentityDictionary {					#className : #Jumble,					#isMetaSide : false				},				#parent : @22,				#content : 'A Jumble is an object that knows how to unscramble English words:\n\n\tJumble new unJumble: \'gameses\'\n\nIt encapsulates a dictionary of lists of words, keyed by a sorted string of characters in each word. It unjumbles a word by sorting its characters to form a key and looking up the key in the dictionary.',				#stamp : '<historical>'			},			#classVariables : OrderedCollection [ ],			#category : #Tutorial-Jumble,			#package : #Tutorial-Jumble,			#sharedPools : OrderedCollection [ ]		}	}}
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'wordListUrlSlot.ombu', '0' ],
+		#self : OmReference [ 'wordListUrlSlot.ombu', '1' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : 'Object',
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object subclass: #Jumble\r\tinstanceVariableNames: \'wordDict\'\r\tclassVariableNames: \'\'\r\tpackage: \'Tutorial-Jumble\''
+			},
+			#name : #Jumble,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMetaSide : false,
+						#className : #Jumble
+					},
+					#name : #wordDict,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Jumble class\r\tinstanceVariableNames: \'\''
+				},
+				#name : #'Jumble class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMetaSide : false,
+					#className : #Jumble
+				},
+				#parent : @6,
+				#content : 'A Jumble is an object that knows how to unscramble English words:\n\n\tJumble new unJumble: \'gameses\'\n\nIt encapsulates a dictionary of lists of words, keyed by a sorted string of characters in each word. It unjumbles a word by sorting its characters to form a key and looking up the key in the dictionary.',
+				#stamp : '<historical>'
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : #Tutorial-Jumble,
+			#packageTag : '',
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : 'Object',
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object subclass: #Jumble\r\tinstanceVariableNames: \'wordDict wordlistUrl\'\r\tclassVariableNames: \'\'\r\tpackage: \'Tutorial-Jumble\''
+			},
+			#name : #Jumble,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMetaSide : false,
+						#className : #Jumble
+					},
+					#name : #wordDict,
+					#parent : @22
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMetaSide : false,
+						#className : #Jumble
+					},
+					#name : #wordlistUrl,
+					#parent : @22
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Jumble class\r\tinstanceVariableNames: \'\''
+				},
+				#name : #'Jumble class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @22
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMetaSide : false,
+					#className : #Jumble
+				},
+				#parent : @22,
+				#content : 'A Jumble is an object that knows how to unscramble English words:\n\n\tJumble new unJumble: \'gameses\'\n\nIt encapsulates a dictionary of lists of words, keyed by a sorted string of characters in each word. It unjumbles a word by sorting its characters to form a key and looking up the key in the dictionary.',
+				#stamp : '<historical>'
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : #Tutorial-Jumble,
+			#packageTag : '',
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}
