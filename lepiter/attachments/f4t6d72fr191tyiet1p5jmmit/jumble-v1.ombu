@@ -1,1 +1,142 @@
-OmEntry {	#tags : {		#prior : OmReference [ '0' ],		#self : OmReference [ '1' ]	},	#content : EpClassAddition {		#class : RGClassDefinition {			#annotations : IdentityDictionary {				#superclassName : 'Object',				#traitCompositionSource : '{}',				#definitionSource : 'Object subclass: #Jumble\r\tinstanceVariableNames: \'wordDict\'\r\tclassVariableNames: \'\'\r\tpackage: \'Tutorial-Jumble\''			},			#name : #Jumble,			#methods : IdentityDictionary { },			#protocols : Set [ ],			#instanceVariables : OrderedCollection [				RGInstanceVariableDefinition {					#annotations : IdentityDictionary {						#className : #Jumble,						#isMetaSide : false					},					#name : #wordDict,					#parent : @6				}			],			#metaClass : RGMetaclassDefinition {				#annotations : IdentityDictionary {					#traitCompositionSource : '{}',					#definitionSource : 'Jumble class\r\tinstanceVariableNames: \'\''				},				#name : #'Jumble class',				#methods : IdentityDictionary { },				#protocols : Set [ ],				#instanceVariables : OrderedCollection [ ],				#baseClass : @6			},			#comment : RGCommentDefinition {				#annotations : IdentityDictionary {					#className : #Jumble,					#isMetaSide : false				},				#parent : @6,				#content : ''			},			#classVariables : OrderedCollection [ ],			#category : #Tutorial-Jumble,			#package : #Tutorial-Jumble,			#sharedPools : OrderedCollection [ ]		}	}}OmEntry {	#tags : {		#prior : OmReference [ '1' ],		#self : OmReference [ '2' ]	},	#content : EpBehaviorCommentChange {		#behavior : RGClassDefinition {			#annotations : IdentityDictionary {				#superclassName : 'Object',				#traitCompositionSource : '{}',				#definitionSource : 'Object subclass: #Jumble\r\tinstanceVariableNames: \'wordDict\'\r\tclassVariableNames: \'\'\r\tpackage: \'Tutorial-Jumble\''			},			#name : #Jumble,			#methods : IdentityDictionary { },			#protocols : Set [ ],			#instanceVariables : OrderedCollection [				RGInstanceVariableDefinition {					#annotations : IdentityDictionary {						#className : #Jumble,						#isMetaSide : false					},					#name : #wordDict,					#parent : @6				}			],			#metaClass : RGMetaclassDefinition {				#annotations : IdentityDictionary {					#traitCompositionSource : '{}',					#definitionSource : 'Jumble class\r\tinstanceVariableNames: \'\''				},				#name : #'Jumble class',				#methods : IdentityDictionary { },				#protocols : Set [ ],				#instanceVariables : OrderedCollection [ ],				#baseClass : @6			},			#comment : RGCommentDefinition {				#annotations : IdentityDictionary {					#className : #Jumble,					#isMetaSide : false				},				#parent : @6,				#content : 'A Jumble is an object that knows how to unscramble English words:\n\n\tJumble new unJumble: \'gameses\'\n\nIt encapsulates a dictionary of lists of words, keyed by a sorted string of characters in each word. It unjumbles a word by sorting its characters to form a key and looking up the key in the dictionary.',				#stamp : '<historical>'			},			#classVariables : OrderedCollection [ ],			#category : #Tutorial-Jumble,			#package : #Tutorial-Jumble,			#sharedPools : OrderedCollection [ ]		},		#oldComment : '',		#newComment : 'A Jumble is an object that knows how to unscramble English words:\n\n\tJumble new unJumble: \'gameses\'\n\nIt encapsulates a dictionary of lists of words, keyed by a sorted string of characters in each word. It unjumbles a word by sorting its characters to form a key and looking up the key in the dictionary.',		#oldStamp : '',		#newStamp : '<historical>'	}}OmEntry {	#tags : {		#prior : OmReference [ '2' ],		#self : OmReference [ '3' ]	},	#content : EpMethodAddition {		#method : RGMethodDefinition {			#annotations : IdentityDictionary {				#className : #Jumble,				#isMetaSide : false			},			#name : #initialize,			#protocol : #accessing,			#sourceCode : 'initialize\r\r\t| wordlistUrl words wordList |\r\twordlistUrl := \'https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt\'.\r\twords := (ZnUrl fromString: wordlistUrl) retrieveContents.\r\twordList := Character cr asString , Character lf asString split:\r\t\t            words.\r\twordDict := Dictionary new.\r\twordList do: [ :word | \r\t\t| key |\r\t\tkey := word sorted.\r\t\twordDict\r\t\t\tat: key\r\t\t\tifPresent: [ :v | v addLast: word ]\r\t\t\tifAbsentPut: [ { word } asOrderedCollection ] ]\n',			#stamp : 'GlamorousAuthor 1/24/2022 08:49',			#package : #Tutorial-Jumble		}	}}OmEntry {	#tags : {		#prior : OmReference [ '3' ],		#self : OmReference [ '4' ]	},	#content : EpMethodAddition {		#method : RGMethodDefinition {			#annotations : IdentityDictionary {				#className : #Jumble,				#isMetaSide : false			},			#name : #'unJumble:',			#protocol : #accessing,			#sourceCode : 'unJumble: aString\r\r\t^ wordDict at: aString sorted',			#stamp : 'GlamorousAuthor 1/24/2022 08:49',			#package : #Tutorial-Jumble		}	}}
+OmEntry {
+	#tags : {
+		#prior : OmReference [ 'jumble-v1.ombu', '0' ],
+		#self : OmReference [ 'jumble-v1.ombu', '1' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : 'Object',
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object subclass: #Jumble\r\tinstanceVariableNames: \'wordDict\'\r\tclassVariableNames: \'\'\r\tpackage: \'Tutorial-Jumble\''
+			},
+			#name : #Jumble,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMetaSide : false,
+						#className : #Jumble
+					},
+					#name : #wordDict,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Jumble class\r\tinstanceVariableNames: \'\''
+				},
+				#name : #'Jumble class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMetaSide : false,
+					#className : #Jumble
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : #Tutorial-Jumble,
+			#packageTag : '',
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ 'jumble-v1.ombu', '1' ],
+		#self : OmReference [ 'jumble-v1.ombu', '2' ]
+	},
+	#content : EpBehaviorCommentChange {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : 'Object',
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object subclass: #Jumble\r\tinstanceVariableNames: \'wordDict\'\r\tclassVariableNames: \'\'\r\tpackage: \'Tutorial-Jumble\''
+			},
+			#name : #Jumble,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMetaSide : false,
+						#className : #Jumble
+					},
+					#name : #wordDict,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Jumble class\r\tinstanceVariableNames: \'\''
+				},
+				#name : #'Jumble class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMetaSide : false,
+					#className : #Jumble
+				},
+				#parent : @6,
+				#content : 'A Jumble is an object that knows how to unscramble English words:\n\n\tJumble new unJumble: \'gameses\'\n\nIt encapsulates a dictionary of lists of words, keyed by a sorted string of characters in each word. It unjumbles a word by sorting its characters to form a key and looking up the key in the dictionary.',
+				#stamp : '<historical>'
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : #Tutorial-Jumble,
+			#packageTag : '',
+			#sharedPools : OrderedCollection [ ]
+		},
+		#oldComment : '',
+		#newComment : 'A Jumble is an object that knows how to unscramble English words:\n\n\tJumble new unJumble: \'gameses\'\n\nIt encapsulates a dictionary of lists of words, keyed by a sorted string of characters in each word. It unjumbles a word by sorting its characters to form a key and looking up the key in the dictionary.',
+		#oldStamp : '',
+		#newStamp : '<historical>'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ 'jumble-v1.ombu', '2' ],
+		#self : OmReference [ 'jumble-v1.ombu', '3' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMetaSide : false,
+				#className : #Jumble
+			},
+			#name : #initialize,
+			#protocol : #accessing,
+			#sourceCode : 'initialize\r\r\t| wordlistUrl words wordList |\r\twordlistUrl := \'https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt\'.\r\twords := (ZnUrl fromString: wordlistUrl) retrieveContents.\r\twordList := Character cr asString , Character lf asString split:\r\t\t            words.\r\twordDict := Dictionary new.\r\twordList do: [ :word | \r\t\t| key |\r\t\tkey := word sorted.\r\t\twordDict\r\t\t\tat: key\r\t\t\tifPresent: [ :v | v addLast: word ]\r\t\t\tifAbsentPut: [ { word } asOrderedCollection ] ]\n',
+			#stamp : 'GlamorousAuthor 1/24/2022 08:49',
+			#package : #Tutorial-Jumble
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ 'jumble-v1.ombu', '3' ],
+		#self : OmReference [ 'jumble-v1.ombu', '4' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMetaSide : false,
+				#className : #Jumble
+			},
+			#name : #'unJumble:',
+			#protocol : #accessing,
+			#sourceCode : 'unJumble: aString\r\r\t^ wordDict at: aString sorted',
+			#stamp : 'GlamorousAuthor 1/24/2022 08:49',
+			#package : #Tutorial-Jumble
+		}
+	}
+}
