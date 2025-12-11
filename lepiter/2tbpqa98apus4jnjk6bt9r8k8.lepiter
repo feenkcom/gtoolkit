@@ -37,7 +37,7 @@
 					"uidString" : "aRb03X7rDQCFKtYSD4meBQ=="
 				},
 				"string" : "DRAFT of a new onboarding page. Start with a brief definition, then illustrate it with several concrete examples. In this draft we start with some placeholder examples, which we can replace later. The examples should solve real problems, and be available in the default download.",
-				"isHidden" : true
+				"isHidden" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -182,9 +182,9 @@
 					"__type" : "uid",
 					"uidString" : "0L7d15DrDQCUqImkB1RCug=="
 				},
-				"exampleSelector" : "scriptedSquarifyStep4",
+				"exampleSelector" : "squarifyWithSevenNodes",
 				"previewHeight" : 600,
-				"previewShowSelector" : "gtLiveFor:",
+				"previewShowSelector" : "gtViewsFor:",
 				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : false,
