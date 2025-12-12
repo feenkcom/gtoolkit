@@ -449,7 +449,42 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "blockQuoteSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-12T10:35:01.163681+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-12T10:35:04.620325+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "nC2QIvqRS1uJgxRLOUB33g=="
+							},
+							"string" : "gtCircleFor: aView\r\t<gtView>\r\t^ aView explicit\r\t\ttitle: 'Circle';\r\t\tpriority: 50;\r\t\tstencil: [ \r\t\t\tBlElement new\r\t\t\t\tgeometry: BlCircleGeometry new;\r\t\t\t\tbackground: self;\r\t\t\t\tsize: 64 @ 64;\r\t\t\t\tmargin: (BlInsets all: 10); \r\t\t\t\tyourself ]"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -481,43 +516,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Here is the source code of such an addition."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:30:52.541792+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-06-11T14:30:53.549198+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "M/y0K/7WDQCmYo7pDbYEfg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "gtCircleFor: aView\r\t<gtView>\r\t^ aView explicit\r\t\ttitle: 'Circle';\r\t\tpriority: 50;\r\t\tstencil: [ \r\t\t\tBlElement new\r\t\t\t\tgeometry: BlCircleGeometry new;\r\t\t\t\tbackground: self;\r\t\t\t\tsize: 64 @ 64;\r\t\t\t\tmargin: (BlInsets all: 10); \r\t\t\t\tyourself ]"
 			},
 			{
 				"__type" : "textSnippet",

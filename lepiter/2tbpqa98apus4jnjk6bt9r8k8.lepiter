@@ -37,7 +37,7 @@
 					"uidString" : "aRb03X7rDQCFKtYSD4meBQ=="
 				},
 				"string" : "DRAFT of a new onboarding page. Start with a brief definition, then illustrate it with several concrete examples. In this draft we start with some placeholder examples, which we can replace later. The examples should solve real problems, and be available in the default download.",
-				"isHidden" : true
+				"isHidden" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -75,6 +75,41 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Glamorous Toolkit (GT) is the Moldable Development Environment. It enables you to make software systems explainable by creating dozens — or *thousands* — of inexpensive contextual tools that are tailored for each problem."
+			},
+			{
+				"__type" : "commentSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-11T15:53:31.185308+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-11T15:56:19.830684+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9cJDvYh0TamnkJPZgXv7pA=="
+				},
+				"string" : "What in fact is GT? There are a bunch of moldable tools, not just the inspector.\nThe examples should show this. \nWe have *examples*. We have contextual views and actions.\nWe have other tools, like lepiter notebooks, contextual playgrouns, refactoring tools, language workbenches etc\n",
+				"isHidden" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -182,9 +217,9 @@
 					"__type" : "uid",
 					"uidString" : "0L7d15DrDQCUqImkB1RCug=="
 				},
-				"exampleSelector" : "scriptedSquarifyStep4",
+				"exampleSelector" : "squarifyWithSevenNodes",
 				"previewHeight" : 600,
-				"previewShowSelector" : "gtLiveFor:",
+				"previewShowSelector" : "gtViewsFor:",
 				"exampleBehaviorName" : "GtGraphTreemapLayoutExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : false,
