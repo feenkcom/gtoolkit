@@ -109,7 +109,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T15:18:28.737562+01:00"
+									"dateAndTimeString" : "2025-12-16T17:45:13.189369+01:00"
 								}
 							},
 							"uid" : {
@@ -119,7 +119,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "How can you effectively provide custom tools for various kinds of collections of domain entities?"
+							"string" : "How can you effectively provide contextual tools for various kinds of collections of domain entities?"
 						}
 					]
 				},
@@ -258,7 +258,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:34:29.102566+01:00"
+									"dateAndTimeString" : "2025-12-16T17:45:17.574664+01:00"
 								}
 							},
 							"uid" : {
@@ -268,7 +268,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "— Providing custom views for each of these can be tedious and lead to much duplicated code."
+							"string" : "— Providing contextual views for each of these can be tedious and lead to much duplicated code."
 						}
 					]
 				},
@@ -408,7 +408,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:34:29.158546+01:00"
+									"dateAndTimeString" : "2025-12-16T17:45:23.491516+01:00"
 								}
 							},
 							"uid" : {
@@ -418,7 +418,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "In case there are multiple composite entities or collections that should share the same custom tools, factor these out into a common abstract superclass or [trait](https://doi.org/10.1145/1119479.1119483)."
+							"string" : "In case there are multiple composite entities or collections that should share the same contextual tools, factor these out into a common abstract superclass or [trait](https://doi.org/10.1145/1119479.1119483)."
 						}
 					]
 				},
@@ -483,7 +483,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:24:11.491305+01:00"
+									"dateAndTimeString" : "2025-12-16T17:45:30.57733+01:00"
 								}
 							},
 							"uid" : {
@@ -493,7 +493,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Below we see that when we navigate to the Pages of a website, we obtain not a raw collection, but a WebPageGroup wrapping the collection, and providing custom tools, such as a map of reachable and unreachable pages. Similarly, a query for pages matching a particular string will also return a wrapped group with dedicated tools."
+							"string" : "Below we see that when we navigate to the Pages of a website, we obtain not a raw collection, but a WebPageGroup wrapping the collection, and providing contextual tools, such as a map of reachable and unreachable pages. Similarly, a query for pages matching a particular string will also return a wrapped group with dedicated tools."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -635,7 +635,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T15:20:47.421597+01:00"
+									"dateAndTimeString" : "2025-12-16T17:45:37.782605+01:00"
 								}
 							},
 							"uid" : {
@@ -645,7 +645,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Composite domain objects and collections of domain objects can be molded to support custom tools. Query results can be similarly molded. Wrapped collections can be made plug-compatible with raw collections."
+							"string" : "Composite domain objects and collections of domain objects can be molded to support contextual tools. Query results can be similarly molded. Wrapped collections can be made plug-compatible with raw collections."
 						}
 					]
 				},

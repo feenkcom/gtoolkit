@@ -109,7 +109,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:59:11.087579+01:00"
+									"dateAndTimeString" : "2025-12-16T17:40:02.294065+01:00"
 								}
 							},
 							"uid" : {
@@ -119,7 +119,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "How do you develop custom tools for existing data?"
+							"string" : "How do you develop contextual tools for existing data?"
 						}
 					]
 				},
@@ -408,7 +408,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:09:13.605834+01:00"
+									"dateAndTimeString" : "2025-12-16T17:40:08.214751+01:00"
 								}
 							},
 							"uid" : {
@@ -418,7 +418,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "As you explore the data, introduce custom tools (views *etc.*) to the domain class that reflect answers to questions you ask about the data."
+							"string" : "As you explore the data, introduce contextual tools (views *etc.*) to the domain class that reflect answers to questions you ask about the data."
 						}
 					]
 				},
@@ -631,7 +631,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:15:16.540643+01:00"
+									"dateAndTimeString" : "2025-12-16T17:39:57.301024+01:00"
 								}
 							},
 							"uid" : {
@@ -641,7 +641,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now we can add custom views specific to this domain, for example, listing the repositories of an organization, or the most recent GitHub events. For each new domain concept, we introduce a dedicated wrapper object, so we can navigate the entire model via the domain concepts. For example:"
+							"string" : "Now we can add contextual views specific to this domain, for example, listing the repositories of an organization, or the most recent GitHub events. For each new domain concept, we introduce a dedicated wrapper object, so we can navigate the entire model via the domain concepts. For example:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -817,7 +817,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T15:00:28.738005+01:00"
+									"dateAndTimeString" : "2025-12-16T17:40:21.876563+01:00"
 								}
 							},
 							"uid" : {
@@ -827,7 +827,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "By wrapping the raw domain data, you obtain a moldable object that can be customized to form part of an explainable system. Each time you navigate to other data representing further domain entities, wrap them as well, to build an explorable domain model. In case custom tools of the underlying data objects are useful, you can always recycle them and make them available to the wrapped objects as well."
+							"string" : "By wrapping the raw domain data, you obtain a moldable object that can be customized to form part of an explainable system. Each time you navigate to other data representing further domain entities, wrap them as well, to build an explorable domain model. In case contextual tools of the underlying data objects are useful, you can always recycle them and make them available to the wrapped objects as well."
 						}
 					]
 				},
@@ -892,7 +892,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T11:17:31.230116+01:00"
+									"dateAndTimeString" : "2025-12-16T17:56:24.381363+01:00"
 								}
 							},
 							"uid" : {
@@ -902,7 +902,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[Lifeware](https://www.lifeware.ch) uses Moldable Data Wrappers extensively to wrap SQL data in the insurance domain to be able to create custom views for these data. Within GT (August, 2024) there are over 40 classes that wrap a rawData slot and provide custom views. These classes wrap diverse data ranging from Jupyter notebooks to social media records. [EGAD](http://bergel.eu/MyPapers/Vale23b-egad.pdf) is a research prototype to explore GitHub actions by wrapping the raw data obtained from GitHub as moldable objects."
+							"string" : "[Lifeware](https://www.lifeware.ch) uses Moldable Data Wrappers extensively to wrap SQL data in the insurance domain to be able to create contextual views for these data. Within GT (August, 2024) there are over 40 classes that wrap a rawData slot and provide contextual views. These classes wrap diverse data ranging from Jupyter notebooks to social media records. [EGAD](http://bergel.eu/MyPapers/Vale23b-egad.pdf) is a research prototype to explore GitHub actions by wrapping the raw data obtained from GitHub as moldable objects."
 						}
 					]
 				},
