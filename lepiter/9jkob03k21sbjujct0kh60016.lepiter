@@ -408,7 +408,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T10:30:37.821458+01:00"
+									"dateAndTimeString" : "2025-12-16T17:47:10.969304+01:00"
 								}
 							},
 							"uid" : {
@@ -418,7 +418,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Incrementally pose domain-specific questions, find the answers by exploring and interacting with the object, and then turn the way you reach those answers into custom tools, behaviors and tests."
+							"string" : "Incrementally pose domain-specific questions, find the answers by exploring and interacting with the object, and then turn the way you reach those answers into contextual tools, behaviors and tests."
 						}
 					]
 				},
@@ -483,7 +483,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T10:30:51.675972+01:00"
+									"dateAndTimeString" : "2025-12-16T17:47:25.785984+01:00"
 								}
 							},
 							"uid" : {
@@ -493,7 +493,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Moldable development is about making systems explainable with the help of custom tools, which means that you need to start the process by asking questions that you want to answer. In most cases you can’t immediately start building the custom tools, but rather you need to explore the domain objects to understand how to answer the question. Once you know how to get the answer, you can turn the exploration steps into a custom tool. Starting with a live object means that you can immediately start the exploration process. Turning the exploration of an object into a custom tool is the process of molding it, hence we call it a “moldable object.”"
+							"string" : "Moldable development is about making systems explainable with the help of contextual tools, which means that you need to start the process by asking questions that you want to answer. In most cases you can’t immediately start building the contextual tools, but rather you need to explore the domain objects to understand how to answer the question. Once you know how to get the answer, you can turn the exploration steps into a contextual tool. Starting with a live object means that you can immediately start the exploration process. Turning the exploration of an object into a contextual tool is the process of molding it, hence we call it a “moldable object.”"
 						},
 						{
 							"__type" : "textSnippet",
@@ -597,7 +597,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-08-21T10:06:08.632703+02:00"
+									"dateAndTimeString" : "2025-12-16T17:47:32.572331+01:00"
 								}
 							},
 							"uid" : {
@@ -607,7 +607,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "With the moldable object at hand, we can ask questions like *What is the current state of the Ludo game?*, or *What happened in the last few moves that we autoplayed?* As we answer questions we can create small custom tools, such as a [[Contextual View]] or a [[Contextual Action]]. The model of the history emerged from the need to answer questions about the evolution of an instance of the game, while the history view was created as a [[Contextual View]] to enable exploration of a game’s history. Whenever we identify an interesting state of our moldable object, we can extract it as an [[Example Object]] that we can use as a test case, or as a starting point for further moldable development."
+							"string" : "With the moldable object at hand, we can ask questions like *What is the current state of the Ludo game?*, or *What happened in the last few moves that we autoplayed?* As we answer questions we can create small contextual tools, such as a [[Contextual View]] or a [[Contextual Action]]. The model of the history emerged from the need to answer questions about the evolution of an instance of the game, while the history view was created as a [[Contextual View]] to enable exploration of a game’s history. Whenever we identify an interesting state of our moldable object, we can extract it as an [[Example Object]] that we can use as a test case, or as a starting point for further moldable development."
 						},
 						{
 							"__type" : "textSnippet",
@@ -746,7 +746,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-01-19T14:51:15.259237+01:00"
+									"dateAndTimeString" : "2025-12-16T17:48:33.993092+01:00"
 								}
 							},
 							"uid" : {
@@ -756,7 +756,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Instead of writing code in a text editor in the context of the source code of a class, you are always working in the context of a live object, whose behavior can be immediately explored. Instead of writing hypothetical code that you must afterward test, you start by prototyping code, and then extracting new behavior. Instead of trying to program custom tools in a vacuum, you first explore and prototype answers to questions, and then extract the code you need to create a custom tool."
+							"string" : "Instead of writing code in a text editor in the context of the source code of a class, you are always working in the context of a live object, whose behavior can be immediately explored. Instead of writing hypothetical code that you must afterward test, you start by prototyping code, and then extracting new behavior. Instead of trying to program contextual tools in a vacuum, you first explore and prototype answers to questions, and then extract the code you need to create a contextual tool."
 						}
 					]
 				},
@@ -821,7 +821,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T10:49:41.786937+01:00"
+									"dateAndTimeString" : "2025-12-16T17:47:59.670151+01:00"
 								}
 							},
 							"uid" : {
@@ -831,7 +831,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The core idea of a Moldable Object is to incrementally mold a live object to obtain immediate feedback into code changes. Interactive, or “live” programming has a [long history](https://programming-journal.org/2019/3/1/). One could argue that any live programming task starts with a “moldable object”, however the key difference is the focus on molding objects to create an explainable system consisting of custom tools, rather than just live programming in general."
+							"string" : "The core idea of a Moldable Object is to incrementally mold a live object to obtain immediate feedback into code changes. Interactive, or “live” programming has a [long history](https://programming-journal.org/2019/3/1/). One could argue that any live programming task starts with a “moldable object”, however the key difference is the focus on molding objects to create an explainable system consisting of contextual tools, rather than just live programming in general."
 						}
 					]
 				},
@@ -1526,7 +1526,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-08-21T13:54:00.715265+02:00"
+									"dateAndTimeString" : "2025-12-16T17:48:09.883936+01:00"
 								}
 							},
 							"uid" : {
@@ -1536,7 +1536,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Once you have a moldable object, you can incrementally add behavior and custom views, and immediately see the effect on the live instance."
+							"string" : "Once you have a moldable object, you can incrementally add behavior and contextual views, and immediately see the effect on the live instance."
 						},
 						{
 							"__type" : "textSnippet",

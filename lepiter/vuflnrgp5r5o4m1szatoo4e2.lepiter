@@ -297,7 +297,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:33:42.940258+01:00"
+									"dateAndTimeString" : "2025-12-16T17:50:41.141465+01:00"
 								}
 							},
 							"uid" : {
@@ -307,7 +307,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "There are two distinct roles involved in moldable development: (i) the [[Facilitator]] is responsible for the technical realization of custom tools, and (ii) the [[Stakeholder]] is responsible for the domain model and questions about the domain that should be answered by the custom tools. In a purely technical domain, these two roles can often be played by the same person (*i.e.*, a developer), but in general they may be distinct people."
+							"string" : "There are two distinct roles involved in moldable development: (i) the [[Facilitator]] is responsible for the technical realization of contextual tools, and (ii) the [[Stakeholder]] is responsible for the domain model and questions about the domain that should be answered by the contextual tools. In a purely technical domain, these two roles can often be played by the same person (*i.e.*, a developer), but in general they may be distinct people."
 						},
 						{
 							"__type" : "textSnippet",
@@ -334,7 +334,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:36:17.062511+01:00"
+									"dateAndTimeString" : "2025-12-16T17:50:49.948089+01:00"
 								}
 							},
 							"uid" : {
@@ -344,7 +344,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "At the top of the map we have [[Explainable System]] which is not a pattern per se, but rather the goal of moldable development. An explainable system is a software system whose domain models have been exposed with the help of numerous custom tools."
+							"string" : "At the top of the map we have [[Explainable System]] which is not a pattern per se, but rather the goal of moldable development. An explainable system is a software system whose domain models have been exposed with the help of numerous contextual tools."
 						},
 						{
 							"__type" : "textSnippet",
@@ -371,7 +371,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T13:41:13.741821+01:00"
+									"dateAndTimeString" : "2025-12-16T17:50:55.591596+01:00"
 								}
 							},
 							"uid" : {
@@ -381,7 +381,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Some domains require a preliminary phase of [[Tooling Buildup]], for example, to create dedicated parsers for programming languages, DSLs or specialized data formats, or bridges to other execution platforms. Each custom tool can be seen as an extension of an existing [[Moldable Tool]], which can be inexpensively customized. A [[Project Diary]] is a notebook that serves as a starting point for development tasks and recording explanations. An explanation generally takes the form of a [[Composed Narrative]], a story built up with the help of live objects. A [[Blind Spot]] is a problematic part of the target system that is hard to understand and work with, and may be a promising starting point for moldable development to initially engage Stakeholders. A [[Throwaway Analysis Tool]] can be a quick way to solve an urgent problem in a focused way."
+							"string" : "Some domains require a preliminary phase of [[Tooling Buildup]], for example, to create dedicated parsers for programming languages, DSLs or specialized data formats, or bridges to other execution platforms. Each contextual tool can be seen as an extension of an existing [[Moldable Tool]], which can be inexpensively customized. A [[Project Diary]] is a notebook that serves as a starting point for development tasks and recording explanations. An explanation generally takes the form of a [[Composed Narrative]], a story built up with the help of live objects. A [[Blind Spot]] is a problematic part of the target system that is hard to understand and work with, and may be a promising starting point for moldable development to initially engage Stakeholders. A [[Throwaway Analysis Tool]] can be a quick way to solve an urgent problem in a focused way."
 						},
 						{
 							"__type" : "textSnippet",
@@ -408,7 +408,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T13:41:52.719668+01:00"
+									"dateAndTimeString" : "2025-12-16T17:51:12.145856+01:00"
 								}
 							},
 							"uid" : {
@@ -418,7 +418,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "At the center of the diagram we see [[Moldable Object]], which is also the most central pattern in terms of methodology. Moldable development itself starts with a moldable object, a live instance of a domain entity that is explored and molded with custom tools that package the results of exploration tasks. An interesting instance can be encapsulated as an [[Example Object]], essentially a unit test that returns a tested object. An example can be embedded in a project diary notebook page, and can also be used as a moldable object itself for further development tasks. In case the domain includes already existing data entities, each of these can be wrapped in a [[Moldable Data Wrapper]] to produce a moldable object."
+							"string" : "At the center of the diagram we see [[Moldable Object]], which is also the most central pattern in terms of methodology. Moldable development itself starts with a moldable object, a live instance of a domain entity that is explored and molded with contextual tools that package the results of exploration tasks. An interesting instance can be encapsulated as an [[Example Object]], essentially a unit test that returns a tested object. An example can be embedded in a project diary notebook page, and can also be used as a moldable object itself for further development tasks. In case the domain includes already existing data entities, each of these can be wrapped in a [[Moldable Data Wrapper]] to produce a moldable object."
 						},
 						{
 							"__type" : "textSnippet",
@@ -557,7 +557,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T13:43:55.006186+01:00"
+									"dateAndTimeString" : "2025-12-16T17:51:23.138402+01:00"
 								}
 							},
 							"uid" : {
@@ -567,7 +567,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A moldable object can be explored with the help of its [[Contextual Playground]], a live programming environment bound to the state of a live instance. Working code can be extracted from such a playground to create custom tools. The most common of these tools are: "
+							"string" : "A moldable object can be explored with the help of its [[Contextual Playground]], a live programming environment bound to the state of a live instance. Working code can be extracted from such a playground to create contextual tools. The most common of these tools are: "
 						},
 						{
 							"__type" : "textSnippet",
@@ -594,7 +594,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T13:43:18.353555+01:00"
+									"dateAndTimeString" : "2025-12-16T17:51:34.92558+01:00"
 								}
 							},
 							"uid" : {
@@ -604,7 +604,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : " A custom view is frequently a [[Simple View]] that can be quickly prototyped, and later extended. A custom search often benefits from a [[Moldable Collection Wrapper]], to allow the results of a query to be also molded with custom tools."
+							"string" : " A contextual view is frequently a [[Simple View]] that can be quickly prototyped, and later extended. A contextual search often benefits from a [[Moldable Collection Wrapper]], to allow the results of a query to be also molded with custom tools."
 						}
 					]
 				},

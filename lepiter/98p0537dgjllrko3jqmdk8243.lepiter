@@ -67,7 +67,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-19T13:55:56.134427+01:00"
+						"dateAndTimeString" : "2025-12-16T17:59:00.304402+01:00"
 					}
 				},
 				"uid" : {
@@ -109,7 +109,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T13:54:16.376215+01:00"
+									"dateAndTimeString" : "2025-12-16T17:52:36.732575+01:00"
 								}
 							},
 							"uid" : {
@@ -119,7 +119,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "How can you cheaply and effectively extend the development environment with custom tools that address questions about your application domain?"
+							"string" : "How can you cheaply and effectively extend the development environment with contextual tools that address questions about your application domain?"
 						}
 					]
 				},
@@ -296,7 +296,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:35:34.660343+01:00"
+									"dateAndTimeString" : "2025-12-16T17:52:44.102283+01:00"
 								}
 							},
 							"uid" : {
@@ -306,7 +306,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Make the development tools *moldable* to the *dynamic context* of the artifacts they are intended to work with, by associating custom behavior to the artifacts themselves."
+							"string" : "Make the development tools *moldable* to the *dynamic context* of the artifacts they are intended to work with, by associating contextual behavior to the artifacts themselves."
 						}
 					]
 				},
@@ -408,7 +408,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-11-01T10:35:28.476373+01:00"
+									"dateAndTimeString" : "2025-12-16T17:57:12.710351+01:00"
 								}
 							},
 							"uid" : {
@@ -418,7 +418,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "By the same token an inspector can be made moldable by recognizing that an object it is inspecting has one or more custom views defined as annotated methods. For example, below we see that an Inspector on an instance of a {{gtClass:name=GtLudoRecordingGame}}  has a custom `Moves` view listing the moves played thus far."
+							"string" : "By the same token an inspector can be made moldable by recognizing that an object it is inspecting has one or more contextual views defined as annotated methods. For example, below we see that an Inspector on an instance of a {{gtClass:name=GtLudoRecordingGame}}  has a contextual `Moves` view listing the moves played thus far."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -485,7 +485,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-31T09:37:57.551574+01:00"
+									"dateAndTimeString" : "2025-12-16T17:52:58.859683+01:00"
 								}
 							},
 							"uid" : {
@@ -495,7 +495,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The inspector detects the `<gtView>` pragma of this method, and knows that it should generate a view for this object. The custom view is defined in a just a few lines of code, creating a `columnedList` from the moves."
+							"string" : "The inspector detects the `<gtView>` pragma of this method, and knows that it should generate a view for this object. The contextual view is defined in a just a few lines of code, creating a `columnedList` from the moves."
 						},
 						{
 							"__type" : "textSnippet",
@@ -783,7 +783,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T14:00:59.999852+01:00"
+									"dateAndTimeString" : "2025-12-16T17:53:14.43953+01:00"
 								}
 							},
 							"uid" : {
@@ -793,7 +793,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Conversely, since custom tools are an intrinsic part of software systems rather than the IDE, molding happens when needed."
+							"string" : "Conversely, since contextual tools are an intrinsic part of software systems rather than the IDE, molding happens when needed."
 						},
 						{
 							"__type" : "textSnippet",
@@ -932,7 +932,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T14:03:22.177439+01:00"
+									"dateAndTimeString" : "2025-12-16T17:53:36.09429+01:00"
 								}
 							},
 							"uid" : {
@@ -942,7 +942,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The [JetBrains IDE](https://www.jetbrains.com/help/idea/customizing-views.html#renderers) allows you to customize the views of objects within a debugging session, though the custom views are specified in the configuration of the tool itself, not in the context of the object. "
+							"string" : "The [JetBrains IDE](https://www.jetbrains.com/help/idea/customizing-views.html#renderers) allows you to customize the views of objects within a debugging session, though the contextual views are specified in the configuration of the tool itself, not in the context of the object. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -969,7 +969,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T14:04:38.860806+01:00"
+									"dateAndTimeString" : "2025-12-16T17:57:41.979903+01:00"
 								}
 							},
 							"uid" : {
@@ -979,7 +979,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The Glamorous Toolkit includes several moldable tools. The Moldable [[Inspector]] installs custom views, actions (*i.e.*, buttons), and search interfaces whenever an object is inspected that defines such custom tools as annotated methods. The Moldable [[Coder]] (*i.e.*, code editor) also can add custom views, highlighters, actions and searches when editing the source of a class with annotated methods. The Moldable [[Debugger]] provides custom views, actions and searches installed as methods in the class of a caught exception."
+							"string" : "The Glamorous Toolkit includes several moldable tools. The Moldable [[Inspector]] installs contextual views, actions (*i.e.*, buttons), and search interfaces whenever an object is inspected that defines such contextual tools as annotated methods. The Moldable [[Coder]] (*i.e.*, code editor) also can add contextual views, highlighters, actions and searches when editing the source of a class with annotated methods. The Moldable [[Debugger]] provides contextual views, actions and searches installed as methods in the class of a caught exception."
 						}
 					]
 				},
@@ -1044,7 +1044,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-08-21T10:06:08.637487+02:00"
+									"dateAndTimeString" : "2025-12-16T17:53:55.913216+01:00"
 								}
 							},
 							"uid" : {
@@ -1054,7 +1054,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A Moldable Tool reacts to a [[Moldable Object]], which triggers custom tools such as [[Contextual View]], [[Contextual Search]] or [[Contextual Action]]. A Moldable Tool should provide a [[Contextual Playground]] to enable a live programming interface to the entities it works with (*i.e.*, objects, classes, exceptions)."
+							"string" : "A Moldable Tool reacts to a [[Moldable Object]], which triggers contextual tools such as [[Contextual View]], [[Contextual Search]] or [[Contextual Action]]. A Moldable Tool should provide a [[Contextual Playground]] to enable a live programming interface to the entities it works with (*i.e.*, objects, classes, exceptions)."
 						}
 					]
 				},

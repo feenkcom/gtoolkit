@@ -370,7 +370,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:09:05.213814+01:00"
+									"dateAndTimeString" : "2025-12-16T17:30:46.464526+01:00"
 								}
 							},
 							"uid" : {
@@ -380,7 +380,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Turn interesting data into a custom view. Extract the navigation steps into a new custom view for the moldable object you start navigating from."
+							"string" : "Turn interesting data into a contextual view. Extract the navigation steps into a new contextual view for the moldable object you start navigating from."
 						}
 					]
 				},
@@ -522,7 +522,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:17:48.409562+01:00"
+									"dateAndTimeString" : "2025-12-16T17:31:08.392+01:00"
 								}
 							},
 							"uid" : {
@@ -532,7 +532,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "In the second example we see a custom Moves view that lists the moves in order, with columns showing each roll of the die, the player who rolled the die, and any token that may have moved. From this custom view we can then dive directly into the Move object, which in turn has a custom view visualizing the change in state."
+							"string" : "In the second example we see a contextual Moves view that lists the moves in order, with columns showing each roll of the die, the player who rolled the die, and any token that may have moved. From this contextual view we can then dive directly into the Move object, which in turn has a contextual view visualizing the change in state."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -637,7 +637,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:21:43.097346+01:00"
+									"dateAndTimeString" : "2025-12-16T17:31:12.916929+01:00"
 								}
 							},
 							"uid" : {
@@ -647,7 +647,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A custom view exposes information about a domain that can otherwise be hard to find."
+							"string" : "A contextual view exposes information about a domain that can otherwise be hard to find."
 						},
 						{
 							"__type" : "textSnippet",
@@ -674,7 +674,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:22:02.445361+01:00"
+									"dateAndTimeString" : "2025-12-16T17:31:16.825568+01:00"
 								}
 							},
 							"uid" : {
@@ -684,7 +684,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Custom views become an intrinsic part of a software system, thus turning it into an [[Explainable System]]."
+							"string" : "Contextual views become an intrinsic part of a software system, thus turning it into an [[Explainable System]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -711,7 +711,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:22:06.868745+01:00"
+									"dateAndTimeString" : "2025-12-16T17:31:22.686977+01:00"
 								}
 							},
 							"uid" : {
@@ -721,7 +721,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "By augmenting an object with a custom view, you can navigate directly to interesting information about that object, without having to fire up a separate tool."
+							"string" : "By augmenting an object with a contextual view, you can navigate directly to interesting information about that object, without having to fire up a separate tool."
 						},
 						{
 							"__type" : "textSnippet",
@@ -748,7 +748,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:22:12.607773+01:00"
+									"dateAndTimeString" : "2025-12-16T17:31:27.039759+01:00"
 								}
 							},
 							"uid" : {
@@ -758,7 +758,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "You first need a [[Moldable Tool]] into which you can dynamically plug custom views."
+							"string" : "You first need a [[Moldable Tool]] into which you can dynamically plug contextual views."
 						}
 					]
 				},
@@ -812,6 +812,81 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-16T17:32:40.929201+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-16T17:33:12.098761+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "TCzKR0f3TMu3nMcVpAooqw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In older documentation, contextual views are referred to as *custom views*."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T17:32:34.299941+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T17:32:40.121599+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dnOxL7AoQAam6Zd9i5bJmg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Also known as"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2024-10-30T16:23:56.011813+01:00"
 								}
 							},
@@ -823,7 +898,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:23:56.011813+01:00"
+									"dateAndTimeString" : "2025-12-16T17:31:34.628515+01:00"
 								}
 							},
 							"uid" : {
@@ -833,7 +908,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[Clerk](https://doi.org/10.1145/3594671.3594682) is an open-source programming assistant for the Clojure language, which offers moldable, custom views within notebook pages. "
+							"string" : "[Clerk](https://doi.org/10.1145/3594671.3594682) is an open-source programming assistant for the Clojure language, which offers moldable, contextual views within notebook pages. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -860,7 +935,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:26:40.11556+01:00"
+									"dateAndTimeString" : "2025-12-16T17:52:08.246439+01:00"
 								}
 							},
 							"uid" : {
@@ -870,7 +945,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Custom views are pervasive in GT. In a standard image from August 2024, there exist over 1800 classes with a total of over 3600 view methods, averaging under 12 lines of code. It is also worthwhile to note that if we take inheritance into account, then the views affect 12000 classes. The treemap below offers an overview of the GT classes organized in packages. A class appears is colored with blue if it or its superclass defines a custom view, and in green if it defines an example method (see Example Object)."
+							"string" : "Contextual views are pervasive in GT. In a standard image from August 2024, there exist over 1800 classes with a total of over 3600 view methods, averaging under 12 lines of code. It is also worthwhile to note that if we take inheritance into account, then the views affect 12000 classes. The treemap below offers an overview of the GT classes organized in packages. A class appears is colored with blue if it or its superclass defines a contextual view, and in green if it defines an example method (see Example Object)."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -975,7 +1050,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-10-30T16:27:46.855939+01:00"
+									"dateAndTimeString" : "2025-12-16T17:32:03.074565+01:00"
 								}
 							},
 							"uid" : {
@@ -985,7 +1060,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A custom view is closely related to a given [[Moldable Object]]. Interconnected objects with custom views can form a [[Composed Narrative]]. A [[Moldable Tool]] is a prerequisite for a custom view to be automatically installed when the relevant artifact (an object, a class, an exception, etc.) is seen by the tool. A custom view should be cheap to implement. Start with a [[Simple View]], and only elaborate it when it is needed."
+							"string" : "A contextual view is closely related to a given [[Moldable Object]]. Interconnected objects with contextual views can form a [[Composed Narrative]]. A [[Moldable Tool]] is a prerequisite for a contextual view to be automatically installed when the relevant artifact (an object, a class, an exception, etc.) is seen by the tool. A contextual view should be cheap to implement. Start with a [[Simple View]], and only elaborate it when it is needed."
 						}
 					]
 				},
