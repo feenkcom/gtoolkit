@@ -85,7 +85,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-16T11:00:33.40475+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-16T11:24:15.476901+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "pN8RpAJ8RRae/wou7WArXw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- [The Moldable Inspector: a framework for domain-specific object inspection](https://scg.unibe.ch/archive/papers/Chis14a-MoldableInspector.pdf), IWST 2014\n- [GTInspector: A Moldable Domain-Aware Object Inspector](https://doi.org/10.1145/2814189.2814194), Software for Humanity, SPLASH 2015\n- [The Moldable Inspector](https://doi.org/10.1145/2814228.2814234), Onward! 2015"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -95,7 +133,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-06-16T22:15:30.158028+02:00"
+						"dateAndTimeString" : "2025-12-16T11:10:10.929758+01:00"
 					}
 				},
 				"editEmail" : {
@@ -106,17 +144,278 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-06-16T22:15:43.721563+02:00"
+						"dateAndTimeString" : "2025-12-16T11:13:35.960307+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8Kc9CfidDQC7jT7zAiwUNQ=="
+					"uidString" : "KPPZ9k6qQNWCgSkT8RjwUg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "See [[Smalltalk history]] for a broader perspective."
+				"string" : "The first version of a *Moldable Inspector* was implemented in 2011, and supported extensible ways to present and inspect objects. It is documented in several papers:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-16T11:18:01.502265+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-16T11:22:11.786621+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MG81bCRvTQq63YnGn3PqjQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- [Towards a Moldable Debugger](https://doi.org/10.1145/2489798.2489801), DYLA 2013\n- [The Moldable Debugger: A Framework for Developing Domain-Specific Debuggers](https://scg.unibe.ch/archive/papers/Chis14b-MoldableDebugger.pdf), SLE 2014\n- [Practical domain-specific debuggers using the Moldable Debugger framework](https://scg.unibe.ch/archive/papers/Chis15c-PracticalDomainSpecificDebuggers.pdf), Computer Languages, Systems & Structures, 2015"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T11:10:04.606844+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T11:17:59.400307+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "J+U8RQZuQSOGJTrvgjGfOQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The *Moldable Debugger* followed in 2013. It offered a tailorable way to debug applications depending on diverse programming styles used, such as announcements, or parsing rules. See"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-16T11:23:42.18613+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-16T11:25:55.208899+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "30a5rtEcQ+GG/Eb4iKUukw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- [Spotter: towards a unified search interface in IDEs](https://doi.org/10.1145/2814189.2817269), Software for Humanity, SPLASH 2015\n- [Moldable, context-aware searching with Spotter](https://doi.org/10.1145/2986012.2986023), Onward! 2016"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T11:22:17.230252+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T11:23:41.760331+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zRDVblxTQnmrrscwvqg0ig=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The first GT *Spotter* was implemented in 2014, offering a unified way to express and combine search tools. See:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T11:26:29.235585+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T11:30:34.617963+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "JdoWtxnSQN+2HfgFGNw3pA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Andrei Chiş defended his dissertation on [Moldable Tools](https://scg.unibe.ch/archive/phd/chis-phd.pdf) at the University of Bern, in September 2016. The thesis showed how integrated development tools, instead of being implemented in a fully generic way, could be adapted dynamically to the context of specific application domains, offering developers tailored ways to reason about applications under development."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T11:31:34.282171+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T11:35:42.56921+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "s/GhAeB5To+vFu4CcFxLuQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[[feenk]] was founded in October 2015. Development of a new Glamorous Toolkit platform began in August 2017, and was first [demoed at ESUG 2018](https://www.youtube.com/watch?v=v4sPmZ4RzoY). The first [Glamorous Toolkit v0.7.1214 beta](https://lepiter.io/feenk/glamorous-toolkit-v0-7-1214-beta-9q25taygvv02i1xvmewisfqmb/) was released in July 2020, and [Glamorous Toolkit v1.0](https://lepiter.io/feenk/what-exactly-is-glamorous-toolkit-v1-0--7sex44dze2dqlocqxwfz8ju0i/) was released in August 2023."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T11:40:39.754301+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-16T11:43:04.697756+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "5vrpFNXqS1mIi4vmCbmzYg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "[[Moldable Development patterns]] are [presented at EuroPLoP 2024](https://doi.org/10.1145/3698322.3698327)."
 			}
 		]
 	},
