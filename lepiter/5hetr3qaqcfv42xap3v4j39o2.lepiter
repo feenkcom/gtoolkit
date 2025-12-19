@@ -29,14 +29,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-16T10:49:46.474114+01:00"
+						"dateAndTimeString" : "2025-12-19T15:41:05.282109+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "OjzeikvlS+68yQKKlEq1oQ=="
 				},
-				"string" : "**Caveat** — This is an initial DRAFT of the first learning module in a self-learning curriculum for moldable development.\n\nfeenkcom/gtoolkit#4831",
+				"string" : "This is an initial DRAFT of the first learning module in a self-learning curriculum for moldable development.\n\nfeenkcom/gtoolkit#4831",
 				"isHidden" : false
 			},
 			{
@@ -225,6 +225,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "*You may take the following side roads:*"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-19T15:39:54.789977+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-19T15:40:49.671061+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CjxYkfxPSLW7wTsBy5thEg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "*Caveat:* see [[Pages to be written]] for a summary of pages that are still needed to complete this module."
 			},
 			{
 				"__type" : "textSnippet",
@@ -591,14 +628,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-19T12:43:50.415893+01:00"
+									"dateAndTimeString" : "2025-12-19T16:07:24.300954+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "XH4CZ8NkT7WNSGSC3xSRmw=="
 							},
-							"string" : "***CONTINUE HERE***",
+							"string" : "***CONTINUE HERE***\nAdd more explanation, showing how each GH entity wraps raw data and provides simple views to expose the information of interest.",
 							"isHidden" : false
 						},
 						{
@@ -626,7 +663,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T11:31:59.056934+01:00"
+									"dateAndTimeString" : "2025-12-19T16:09:02.162277+01:00"
 								}
 							},
 							"uid" : {
@@ -636,41 +673,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtPage:Working with a REST API: the GitHub case study|db=2j9m7db2i4oz116bexd7wbdxo}}"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T11:28:58.626584+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T11:29:00.393099+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "OxWt+awjT1yG7EVqrp0jEQ=="
-							},
-							"code" : "(TopicMap default kindNodeNamed: 'Case study')"
+							"string" : "{{gtPage:Working with a REST API: the GitHub case study|db=2j9m7db2i4oz116bexd7wbdxo}} illustrates how we can turn the raw, static data resturned by a REST API, such as the one offered by GitHub, into an *explainable system* — a live, explorable domain model that makes it much easier to answer questions about the system, simply by exploring, navigating and posing simple queries."
 						}
 					]
 				},
@@ -704,43 +707,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "# Using a simple case study, how can GT be used to create an explainable system"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-19T12:13:50.722332+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-19T12:14:10.453167+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "RZ0Q+9z4QDyuz0Crf687eQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "**TO DO:** log [[Pages to be written]]"
 			},
 			{
 				"__type" : "textSnippet",
