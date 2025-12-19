@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-06T21:43:49.612757+02:00"
+						"dateAndTimeString" : "2025-12-19T12:22:38.142313+01:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit is developed using [Trunk Based Development](https://trunkbaseddevelopment.com/). The root `gtoolkit` repository is hosted on [github.com/feenkcom/gtoolkit](https://github.com/feenkcom/gtoolkit) with the main trunk branch called `main` and release branch called `release`. Developers of Glamorous Toolkit don't commit to the `release` branch, instead they directly stream small commits into the trunk (`main`). Therefore, to develop Glamorous Toolkit team members build it from the latest sources, or as they call it - the bleeding edge."
+				"string" : "Glamorous Toolkit is developed using [Trunk Based Development](https://trunkbaseddevelopment.com/). The root `gtoolkit` repository is hosted on [github.com/feenkcom/gtoolkit](https://github.com/feenkcom/gtoolkit) with the main trunk branch called `main` and release branch called `release`. Developers of Glamorous Toolkit don't commit to the `release` branch, instead they directly stream small commits into the trunk (`main`). Therefore, to develop Glamorous Toolkit team members build it from the latest sources, or as they call it — the bleeding edge."
 			},
 			{
 				"__type" : "textSnippet",
@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-23T08:26:15.74282+02:00"
+						"dateAndTimeString" : "2025-12-19T12:23:30.362053+01:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To orchestrate the build process and make it crossplatform, they use a small tool written in rust called [gt-installer](https://github.com/feenkcom/gtoolkit-maestro-rs). See [[How to use gt-installer]] for a detailed command reference."
+				"string" : "To orchestrate the build process and make it cross-platform, they use a small tool written in [[Rust]] called [gt-installer](https://github.com/feenkcom/gtoolkit-maestro-rs). See [[How to use gt-installer]] for a detailed command reference."
 			},
 			{
 				"__type" : "textSnippet",
@@ -264,7 +264,7 @@
 				"string" : "The easiest way to create a local build ready for development would be to execute the following command:"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "blockQuoteSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -277,7 +277,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-06T21:51:26.038781+02:00"
+						"dateAndTimeString" : "2025-12-19T12:23:02.24375+01:00"
 					}
 				},
 				"editEmail" : {
@@ -288,17 +288,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-06T21:52:09.944004+02:00"
+						"dateAndTimeString" : "2025-12-19T12:23:06.802587+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WoYLtrqHDQCWVc34AzrCzw=="
+					"uidString" : "OxsD6Dm4SCmHnw6YgNSkQA=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "`./gt-installer local-build`"
+				"string" : "./gt-installer local-build"
 			},
 			{
 				"__type" : "textSnippet",
