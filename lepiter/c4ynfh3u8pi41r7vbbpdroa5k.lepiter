@@ -5,41 +5,6 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "commentSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:36:38.980361+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:36:55.498609+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "ARgouyg5Sy++gvYYD01jyg=="
-				},
-				"string" : "DRAFT page for [[Glamorous Toolkit as a case study]] ",
-				"isHidden" : false
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -64,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:35:21.495275+01:00"
+						"dateAndTimeString" : "2025-12-18T11:58:01.656741+01:00"
 					}
 				},
 				"uid" : {
@@ -74,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[Glamorous Toolkit]] contains thousands of tiny contextual tools to help make the system itself more explainable. Many of these tools consists of reusable extensions that work across multiple contexts. \nA good example of reusable extensions within GT is the collection of contextual views that have been introduced for inspecting *files*. Consider that the default “Raw” view obtained when inspecting a file looks like this, showing only a generic view listing the instance variables of  the  internal implementation of a file:"
+				"string" : "[[Glamorous Toolkit]] contains thousands of tiny contextual tools to help make the system itself more explainable. Many of these tools consists of reusable extensions that work across multiple contexts. \nA good example of reusable extensions within GT is the collection of contextual views that have been introduced for inspecting *files*. Consider that by default, an object inspector will only display this basic, “raw” view of a file:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -109,12 +74,49 @@
 					"uidString" : "+TROghwXQvqNckA2A2uAhg=="
 				},
 				"exampleSelector" : "gtBookJsonFile",
-				"previewHeight" : 350,
+				"previewHeight" : 150,
 				"previewShowSelector" : "gtRawFor:",
 				"exampleBehaviorName" : "TMRegistryExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : false,
 				"noCode" : true
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-18T11:56:30.986452+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-18T11:59:10.129212+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9hGuENPCRuW88yWj2a6CPw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This generic, raw view just shows the values of the instance variables of an object, and provides no particular insight into the nature of a file."
 			},
 			{
 				"__type" : "textSnippet",
@@ -141,7 +143,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:31:16.539295+01:00"
+						"dateAndTimeString" : "2025-12-18T11:56:30.383644+01:00"
 					}
 				},
 				"uid" : {
@@ -218,7 +220,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:34:34.865839+01:00"
+						"dateAndTimeString" : "2025-12-18T12:00:22.3959+01:00"
 					}
 				},
 				"uid" : {
@@ -228,7 +230,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The *Raw* view is still there, but it appears as a tab further to the right. The first view we see is a nicely formatted view of the JSON code in the file. Obviously not all files are JSON files, so this view is designed to only appear if the file object recognizes that it contains JSON (i.e., from the `.json` file extension)."
+				"string" : "The *Raw* view is still there, but it appears as a tab further to the right. The first view we see is a nicely formatted view of the JSON code in the file. Obviously not all files are JSON files, so this view is designed to only appear if the file object recognizes that it contains JSON (i.e., from the `.json` file extension).\nHow does this work? It's just an extension method consisting of a few lines of code: {{gtMethod:name=AbstractFileReference>>#gtJsonFor:|expanded}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -244,7 +246,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:31:58.228594+01:00"
+						"dateAndTimeString" : "2025-12-18T12:00:42.38573+01:00"
 					}
 				},
 				"editEmail" : {
@@ -255,7 +257,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:31:58.228594+01:00"
+						"dateAndTimeString" : "2025-12-18T12:18:49.388687+01:00"
 					}
 				},
 				"uid" : {
@@ -265,10 +267,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Many contextual tools are just short methods annotated with a “pragma”, in this case it is `<gtView>`, appearing in the first line of the `gtJsonFor:` method.\nDon't pay too  much attention to the details of the method for  now, but notice that, right after the pragma, there is a guard condition that activates the view only if the file has the right JSON extension. In the following lines we give the view a *title*, “JSON”, we add a “tree” button to the right, with a tootip, and we display the text of the file by parsing and oretty-printing the contents of the file. That's pretty much it! Most (not all) contextual tools are tiny, like this, which means it can be very fast to create them and modify them."
 			},
 			{
-				"__type" : "commentSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -281,7 +283,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:36:26.609191+01:00"
+						"dateAndTimeString" : "2025-12-18T12:19:06.267809+01:00"
 					}
 				},
 				"editEmail" : {
@@ -292,15 +294,57 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:36:31.737217+01:00"
+						"dateAndTimeString" : "2025-12-18T12:20:38.355684+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "IELDJTD5ROKxz+uKST3LXw=="
+					"uidString" : "cmD9aJHsRjKfo+qoGT8uMQ=="
 				},
-				"string" : "CONTINUE HERE",
-				"isHidden" : false
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Another example is the *Store on* view, which generates a snippet to open that file. We can see the source code of any view by *Primary*-clicking on the tab:"
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-18T12:20:44.857143+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-18T12:20:44.857143+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2+uLSfqNQ/qpB7KI//i22g=="
+				},
+				"exampleSelector" : "fileWithStoreOnView",
+				"previewHeight" : 650,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "TMRegistryExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			},
 			{
 				"__type" : "textSnippet",
@@ -327,7 +371,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:31:58.45332+01:00"
+						"dateAndTimeString" : "2025-12-18T12:22:24.092063+01:00"
 					}
 				},
 				"uid" : {
@@ -337,7 +381,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Note that the view code is very similar to the previous example."
 			},
 			{
 				"__type" : "textSnippet",
@@ -353,7 +397,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:31:58.643829+01:00"
+						"dateAndTimeString" : "2025-12-18T12:21:51.840187+01:00"
 					}
 				},
 				"editEmail" : {
@@ -364,17 +408,57 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:31:58.643829+01:00"
+						"dateAndTimeString" : "2025-12-18T17:23:57.456762+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ah2UP3eISTGGAwHwGp480Q=="
+					"uidString" : "4/S3E5iERsW0WENPBj7X1Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "With an image file, on the other hand, the *Picture* view is automatically enabled if the file name is recognized as having a typical image file extension. Note that the view code is similarly compact."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-18T17:17:57.32783+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-18T17:17:57.32783+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CbuybZreQLqYN5TZSu2mLA=="
+				},
+				"exampleSelector" : "daffyDuckFileWithPictureView",
+				"previewHeight" : 450,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "GtABCartoonAddressBookExample",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			},
 			{
 				"__type" : "textSnippet",
@@ -390,7 +474,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:17:20.885631+01:00"
+						"dateAndTimeString" : "2025-12-18T17:24:55.509382+01:00"
 					}
 				},
 				"editEmail" : {
@@ -401,17 +485,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T10:17:20.885631+01:00"
+						"dateAndTimeString" : "2025-12-18T17:25:34.199888+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "SklAmqX3QieHpJVpmi73HA=="
+					"uidString" : "TK3C490bTNupUS5hrOjM7A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Have a look at the code behind other inspector views by *Primary*-clicking on their tabs."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-18T12:21:52.111361+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-18T17:24:51.476468+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ZB3P4o3MQzm9l2r++t34Nw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To learn more about how to create such views, read moldable development patterns, [[Contextual View]] and [[Simple View]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -471,12 +592,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-12-18T10:21:58.740706+01:00"
+			"dateAndTimeString" : "2025-12-18T11:55:40.639192+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GT Inspector  Views for Files"
+		"title" : "GT Inspector  views for files"
 	},
 	"uid" : {
 		"__type" : "uuid",
