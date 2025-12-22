@@ -26,7 +26,7 @@ BaselineOfGToolkitTranscript >> baseline: spec [
 	spec for: #'common' do: [
 		spec
 			baseline: 'Brick' with: [
-				spec repository: 'github://feenkcom/Brick:v0.9.27/src' ].
+				spec repository: 'github://feenkcom/Brick:v0.9.28/src' ].
 
 		spec package: 'GToolkit-Transcript' with: [
 			spec requires: #(#Brick) ].
