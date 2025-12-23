@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-08T18:45:27.789009+02:00"
+						"dateAndTimeString" : "2025-12-22T16:45:26.460111+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,23 +29,211 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-22T06:54:39.927598+02:00"
+						"dateAndTimeString" : "2025-12-22T16:46:07.237303+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MujKaz3BDQC4sM6FCQL9wA=="
+					"uidString" : "exvs29piRCKSTeqJuS45Jg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[Glamorous Toolkit]] is packaged in [[Nix]] so can be installed simply by listing it in `systemPackages`.  Currently only the [[x86_64]] architecture is supported."
+				"string" : "This documentation focusses on NixOS, but can also be used with the Nix package manager on other distributions."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:28:25.094688+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:29:11.894088+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "RXeTa+ZgTiix2y/jUnQXog=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "This has the advantage that it is always available, but may not contain the latest VM version."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:30:36.22584+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:31:11.421913+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "aYwUXr8xSsuyO3rAqgUJPA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Note that if a new VM has just been released it is straightforward to install the latest VM using an overlay, see below."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:25:45.207851+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:32:20.489758+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "EfZxiTIRTR2QgHLGUHV6pw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Nix package."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:28:18.116434+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:31:50.856567+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "XRYwl+KPRn68jnmFYD0Biw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "This has the advantage that the matching VM will always be used with a given image, and mulltiple versions of the VM can be used at once, but has the disadvantage that you are operating in something of a sandboxed environment, e.g. there are restrictions on `sudo`."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:25:56.338863+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:28:17.858274+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UL2kcuYARXWd3ZRX/AGe7w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Using an FHS environment to run the executables distributed with GT."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -55,7 +243,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-22T06:55:28.095975+02:00"
+						"dateAndTimeString" : "2025-12-23T10:08:29.388595+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,91 +254,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-22T06:56:08.722074+02:00"
+						"dateAndTimeString" : "2025-12-23T10:09:02.329499+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "3ATFh7jvDQC35rgTASSZRA=="
+					"uidString" : "wT5VqDUkQSSyZ4rI96yZXw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "However as updated Virtual Machine's are released fairly regularly, we recommend installing GT from the unstable channel."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-08T19:17:01.488424+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-22T06:54:51.969774+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "20q64T3BDQCKmrPwC2TkrA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "If you are using the unstable channel you should be able to just add `glamoroustoolkit` to your list of packages:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-22T06:59:04.183566+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-22T06:59:18.948184+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "zUCmlLjvDQC84Q58ASSZRA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "```nix\n  environment.systemPackages = with pkgs; [\n    # ...\n    glamoroustoolkit\n    # ...\n  ];\n```"
+				"string" : "There are two primary methods for running GT on NixOS, each with its own advantages and disadvantages:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -171,7 +285,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-22T06:59:27.770791+02:00"
+									"dateAndTimeString" : "2023-09-08T18:45:27.789009+02:00"
 								}
 							},
 							"editEmail" : {
@@ -182,17 +296,466 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-22T06:59:42.577083+02:00"
+									"dateAndTimeString" : "2025-04-22T06:54:39.927598+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "KioOlrjvDQC9YutZASSZRA=="
+								"uidString" : "MujKaz3BDQC4sM6FCQL9wA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "```nix\n{ config, pkgs, ... }:\nlet\n    # Define the unstable channel, reusing the current config\n    unstable = import\n    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixpkgs-unstable) { config = config.nixpkgs.config; };\nin\n{\n  environment.systemPackages = with pkgs; [\n    # ...\n    unstable.glamoroustoolkit\n    # ...\n  ];\n}\n```"
+							"string" : "[[Glamorous Toolkit]] is packaged in [[Nix]] so can be installed simply by listing it in `systemPackages`.  Currently only the [[x86_64]] architecture is supported."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-22T06:55:28.095975+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-22T06:56:08.722074+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "3ATFh7jvDQC35rgTASSZRA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "However as updated Virtual Machine's are released fairly regularly, we recommend installing GT from the unstable channel."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-08T19:17:01.488424+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-22T06:54:51.969774+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "20q64T3BDQCKmrPwC2TkrA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If you are using the unstable channel you should be able to just add `glamoroustoolkit` to your list of packages:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-22T06:59:04.183566+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-22T06:59:18.948184+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zUCmlLjvDQC84Q58ASSZRA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "```nix\n  environment.systemPackages = with pkgs; [\n    # ...\n    glamoroustoolkit\n    # ...\n  ];\n```"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-22T06:59:27.770791+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-22T06:59:42.577083+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "KioOlrjvDQC9YutZASSZRA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "```nix\n{ config, pkgs, ... }:\nlet\n    # Define the unstable channel, reusing the current config\n    unstable = import\n    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixpkgs-unstable) { config = config.nixpkgs.config; };\nin\n{\n  environment.systemPackages = with pkgs; [\n    # ...\n    unstable.glamoroustoolkit\n    # ...\n  ];\n}\n```"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-19T07:53:08.656631+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-22T07:00:22.067364+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Akbxcz3BDQC8/zshCQL9wA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If you are using the stable channel and don't already have `unstable` configured:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:10:47.362728+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:12:06.735242+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6xKCLZHZQ5WqKabaPdgNyg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If a new VM with a breaking change has been released and the updated package isn't yet available in the unstable channel, it is straightforward to use an overlay to specify the desired VM, see below."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [
+															{
+																"__type" : "textSnippet",
+																"children" : {
+																	"__type" : "snippets",
+																	"items" : [ ]
+																},
+																"createEmail" : {
+																	"__type" : "email",
+																	"emailString" : "<unknown>"
+																},
+																"createTime" : {
+																	"__type" : "time",
+																	"time" : {
+																		"__type" : "dateAndTime",
+																		"dateAndTimeString" : "2023-09-08T18:49:36.176912+02:00"
+																	}
+																},
+																"editEmail" : {
+																	"__type" : "email",
+																	"emailString" : "<unknown>"
+																},
+																"editTime" : {
+																	"__type" : "time",
+																	"time" : {
+																		"__type" : "dateAndTime",
+																		"dateAndTimeString" : "2023-09-08T18:50:27.564313+02:00"
+																	}
+																},
+																"uid" : {
+																	"__type" : "uid",
+																	"uidString" : "KdWofz3BDQCEa/GzCQL9wA=="
+																},
+																"paragraphStyle" : {
+																	"__type" : "textStyle"
+																},
+																"string" : "A simple script to install the latest image in to the current working directory."
+															}
+														]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-09-08T18:49:19.822799+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-09-08T18:49:35.610717+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "EE6vfj3BDQCD7wEKCQL9wA=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "**GlamorousToolkit-GetImage**"
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [
+															{
+																"__type" : "textSnippet",
+																"children" : {
+																	"__type" : "snippets",
+																	"items" : [ ]
+																},
+																"createEmail" : {
+																	"__type" : "email",
+																	"emailString" : "<unknown>"
+																},
+																"createTime" : {
+																	"__type" : "time",
+																	"time" : {
+																		"__type" : "dateAndTime",
+																		"dateAndTimeString" : "2023-09-08T18:52:26.585802+02:00"
+																	}
+																},
+																"editEmail" : {
+																	"__type" : "email",
+																	"emailString" : "<unknown>"
+																},
+																"editTime" : {
+																	"__type" : "time",
+																	"time" : {
+																		"__type" : "dateAndTime",
+																		"dateAndTimeString" : "2023-09-08T18:52:34.09557+02:00"
+																	}
+																},
+																"uid" : {
+																	"__type" : "uid",
+																	"uidString" : "KyRTgz3BDQCGcS0BCQL9wA=="
+																},
+																"paragraphStyle" : {
+																	"__type" : "textStyle"
+																},
+																"string" : "The GUI and CLI versions of the command line."
+															}
+														]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-09-08T18:50:28.403053+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2023-09-08T18:52:23.605731+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "sMHFgj3BDQCGBDhOCQL9wA=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "**GlamorousToolkit** and **GlamorousToolkit-cli** "
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-09-08T18:48:54.106509+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-09-08T18:49:16.722102+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "0ucmfT3BDQCB8ih4CQL9wA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "After the package is installed the following commands are available:"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-09-08T19:22:47.809406+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:10:14.665929+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "879e9j3BDQCZboZ+C2TkrA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "### Running GT"
 						}
 					]
 				},
@@ -204,7 +767,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-19T07:53:08.656631+02:00"
+						"dateAndTimeString" : "2025-12-23T10:09:35.136991+01:00"
 					}
 				},
 				"editEmail" : {
@@ -215,17 +778,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-22T07:00:22.067364+02:00"
+						"dateAndTimeString" : "2025-12-23T10:09:44.568844+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Akbxcz3BDQC8/zshCQL9wA=="
+					"uidString" : "P1BnFeSwT2yI3F1/IHMKYA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If you are using the stable channel and don't already have `unstable` configured:"
+				"string" : "## Nix Package"
 			},
 			{
 				"__type" : "textSnippet",
@@ -241,45 +804,7 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-09-08T18:49:36.176912+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-09-08T18:50:27.564313+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "KdWofz3BDQCEa/GzCQL9wA=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "A simple script to install the latest image in to the current working directory."
-												}
-											]
+											"items" : [ ]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -289,7 +814,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T18:49:19.822799+02:00"
+												"dateAndTimeString" : "2025-12-23T10:22:23.258935+01:00"
 											}
 										},
 										"editEmail" : {
@@ -300,61 +825,23 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T18:49:35.610717+02:00"
+												"dateAndTimeString" : "2025-12-23T10:27:21.193988+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "EE6vfj3BDQCD7wEKCQL9wA=="
+											"uidString" : "n1OGZkZ0QJCDb4uZ6cOcwA=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "**GlamorousToolkit-GetImage**"
+										"string" : "```nix\n(final: prev: {\n    glamoroustoolkit = prev.glamoroustoolkit.overrideAttrs (old: {\n      version = \"1.1.3\";\n      src = prev.fetchzip {\n        url = \"https://github.com/feenkcom/gtoolkit-vm/releases/download/v1.1.3/GlamorousToolkit-x86_64-unknown-linux-gnu.zip\";\n        stripRoot = false;\n        hash = \"sha256-vVHdYspwBldzB6FiMQRsDr27zXcybsfMfo5SuwClkNM=\";\n      };\n    });\n  })\n```"
 									},
 									{
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-09-08T18:52:26.585802+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-09-08T18:52:34.09557+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "KyRTgz3BDQCGcS0BCQL9wA=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "The GUI and CLI versions of the command line."
-												}
-											]
+											"items" : [ ]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -364,7 +851,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T18:50:28.403053+02:00"
+												"dateAndTimeString" : "2025-12-23T10:24:23.791969+01:00"
 											}
 										},
 										"editEmail" : {
@@ -375,17 +862,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-09-08T18:52:23.605731+02:00"
+												"dateAndTimeString" : "2025-12-23T10:25:03.045064+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "sMHFgj3BDQCGBDhOCQL9wA=="
+											"uidString" : "YzewdwfjSlKH0KEC3HCGGg=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "**GlamorousToolkit** and **GlamorousToolkit-cli** "
+										"string" : "If you don't have the hash of the desired version, don't forget to use an empty hash initially to report the new hash, otherwise an old version of the VM will be installed."
 									}
 								]
 							},
@@ -397,7 +884,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-08T18:48:54.106509+02:00"
+									"dateAndTimeString" : "2025-12-23T10:22:10.352495+01:00"
 								}
 							},
 							"editEmail" : {
@@ -408,17 +895,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-08T18:49:16.722102+02:00"
+									"dateAndTimeString" : "2025-12-23T10:22:22.412668+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "0ucmfT3BDQCB8ih4CQL9wA=="
+								"uidString" : "KNJvwZSdT0+70Fm1yKH6Tw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "After the package is installed the following commands are available:"
+							"string" : "A specific version of the GT VM can be installed with an overlay similar to:"
 						}
 					]
 				},
@@ -430,7 +917,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-08T19:22:47.809406+02:00"
+						"dateAndTimeString" : "2025-12-23T10:13:18.882186+01:00"
 					}
 				},
 				"editEmail" : {
@@ -441,17 +928,391 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-09-08T19:22:53.488989+02:00"
+						"dateAndTimeString" : "2025-12-23T10:13:28.875236+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "879e9j3BDQCZboZ+C2TkrA=="
+					"uidString" : "V+6sxCDXRgSxXupYMgfxIg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Running GT"
+				"string" : "## Specifying the VM version with an Overlay"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-22T16:44:09.034566+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:18:49.868069+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Ef2FzjXSQdyp9FKKAPOu5Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If you have a need to run multiple versions of the GT VM, there are a few options.  One is to install multiple versions using overlays and link to the VM with a versioned name (this method isn't covered here).  Another approach is to set up an FHS environment, allowing the executables delivered with GT to be used directly."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:03:51.449643+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:19:23.531169+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "8crn7iH4R2O5Ud0GZ6rmJQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "```nix\n{ pkgs ? import <nixpkgs> {} }:\n\n(pkgs.buildFHSEnv {\n  name = \"GlamorousToolkit\";\n  targetPkgs = pkgs: (with pkgs; [\n    bash\n    coreutils\n    gcc\n    iputils\n    libcap\n    curl\n    libxcrypt-legacy\n    fontconfig\n    freetype\n    libz\n    linux-pam\n    rpcbind\n    which\n    zip\n    cairo\n    dbus\n    glib\n    gtk3\n    libgit2\n    libglvnd\n    libuuid\n    harfbuzz\n    libsoup_3\n    webkitgtk_4_1\n    zenity\n    libxkbcommon\n  ]) ++ (with pkgs.xorg; [\n    libX11\n    libXft\n    libxcb\n    libXcursor\n    libXext\n    libXi\n    libXrandr\n    libXrender\n  ]);\n  runScript = \"zsh\";\n}).env\n```"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:18:55.769334+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:19:38.316774+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Lz9Ntd9JS6Oj1h/6rU3dNA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To do this, create a file, e.g. `gt-fhs.nix`:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:06:01.801114+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:06:12.780446+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "vL/Aa91fQoihHCs3ox+IWg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "```bash\nnix-shell gt-fhs.nix\n```"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:04:07.618004+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:19:44.089835+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "izI1qOplRRiFc2c+V8ri5A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "and then open a shell:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:32:34.257098+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:32:44.734222+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rAfD5C0DSv2E3Ubx0x+U1A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "### Running GT"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:20:06.995535+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-12-23T10:20:39.273438+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "0ifhKc/OTu6i3sDQI79Cmw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "```bash\nbin/GlamorousToolkit-cli --interactive --enable-wayland --beacon ERROR GlamorousToolkit.image\n```"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:19:51.643461+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:20:05.926043+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "14pAa6iEQguSXmoYixdb8Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "at that point you have a shell that can run the GT executables, e.g.:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:06:15.819141+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-23T10:20:59.698179+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7qcqSZzER5+TP3zgGbUcFw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This has the advantage that the paired image and VM can be used together and mulltiple versions of the VM can be used at once, but has the disadvantage that you are operating in something of a sandboxed environment, e.g. there are restrictions on `sudo`."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-23T10:09:05.635138+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-12-23T10:09:17.06558+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pwyKP2ncTaGwnuvpU3zR0A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## FHS Environment"
 			}
 		]
 	},
