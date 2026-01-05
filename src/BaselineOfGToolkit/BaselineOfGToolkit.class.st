@@ -216,6 +216,8 @@ BaselineOfGToolkit >> baseline: spec [
 					with: [ spec repository: 'github://feenkcom/gt4ztimestamp:main/src' ];
 				baseline: 'Gt4Llm'
 					with: [ spec repository: 'github://feenkcom/gt4llm:main/src' ];
+				baseline: 'Gt4Llm2'
+					with: [ spec repository: 'github://feenkcom/gt4llm:main/src' ];
 				baseline: 'Gt4CSS'
 					with: [ spec repository: 'github://feenkcom/gt4css:main/src' ];
 				baseline: 'MethodProxiesForGlamorousToolkit' 
