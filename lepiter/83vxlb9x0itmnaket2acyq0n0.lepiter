@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-05T10:09:03.233995+01:00"
+						"dateAndTimeString" : "2026-01-06T16:33:58.180001+01:00"
 					}
 				},
 				"uid" : {
@@ -76,81 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This page is intended to provide you with a quick tour of the GT environment and the tools within it."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-05T10:14:18.689679+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-05T10:14:18.689679+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "GtDJSo95Q1WC4wWYdGPXWA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-05T10:14:20.197949+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-05T10:14:29.04902+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "M+fSEr7OTpyepUjalOaDnA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "DRAFT material to rewrite:"
+				"string" : "This page is intended to provide you with a quick tour of the GT environment and several of the tools within it."
 			},
 			{
 				"__type" : "textSnippet",
@@ -171,7 +97,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:44:30.211693+01:00"
+									"dateAndTimeString" : "2026-01-06T14:54:42.385123+01:00"
 								}
 							},
 							"editEmail" : {
@@ -182,17 +108,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:44:32.249683+01:00"
+									"dateAndTimeString" : "2026-01-06T14:54:44.31232+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "shdRNgGdR32nEpeohBz/WQ=="
+								"uidString" : "pMRufJyuQ6a912I1KMZnnw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "GT consists of an image populated with live objects."
+							"string" : "As explained in more detail on the page [[What is Glamorous Toolkit?]], GT is a [[Moldable Development]] Environment for creating inexpensive *contextual tools* to make software systems explainable. But here we will focus just on technical aspects of GT to help you understand what tools make up GT, and how to navigate its UI."
 						},
 						{
 							"__type" : "textSnippet",
@@ -208,7 +134,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:44:44.763575+01:00"
+									"dateAndTimeString" : "2026-01-06T14:52:02.742896+01:00"
 								}
 							},
 							"editEmail" : {
@@ -219,18 +145,766 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:44:44.763575+01:00"
+									"dateAndTimeString" : "2026-01-06T14:59:16.424051+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "5fPLZxOMTeihUAYIGRDXUw=="
+								"uidString" : "cGoYETgmQF6mGYMDddylVg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Home cards, menu**\nAt the top right there is also a quick access menu.\rAnd there is a button to save the current state of the image, if you need to.\rAt the center there are one or more home cards to quickly access a given project, in this case the GT Book.\rNow let's explore some of the classical use cases for GT."
+							"string" : "Technically, GT is a [[Pharo]] Smalltalk environment of live objects. Everything you see and everything you interact with is an *object*. Programming means making small, incremental changes (adding or changing classes or methods) to this live system. GT uses these live objects to model and interact with software systems of interest, whether they are implemented directly in Smalltalk, or in any other language (such as Python, Java or Rust)."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T14:40:35.712203+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T14:51:06.100494+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GtDJSo95Q1WC4wWYdGPXWA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# What is Glamorous Tookit?"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T15:01:45.750836+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:21:00.62827+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ntNi29GMT5e60Qd+v1gX0g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**Tabs** — You probably arrived at this page by clicking on some of the links in the [[Glamorous Toolkit Book]] home card visible on the initial GT World screen. At the top left of *this* screen you can see a number of *tabs*. The currently active tab is probably labeled `A quick tour of GT` (the title of this page). There is also (at least) all the way to the left a tab labeled `gt`, showing you the home screen.\n*Try it:*  Click on the `gt` tab and back again to this tab.\nIf you have multiple open tabs, you can drag their positions around. You can *primary*-click on a tab to get a menu of actions (close tabs to left or right etc.). There are also buttons on the tab to open the tab in a new window or  to close it."
 						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:22:02.364344+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:22:04.349068+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "vGcRSYooQv+VptQlns7Spw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**Spotter** — to the far right at the top of the screen there are three buttons. The first is a *Search* button to search globally within GT for pages, tools, classes, packages, and many other entities. \n*Try it:* Click on the Search button and just start typing to see the list of partial results. If you hit *return*, then you will open a new tab with the result. Come back to this tab.\n*NB:* you will find Spotter search buttons elsewhere in GT, but very often these other tools will show you *specialized* searches restricted to a particular context, for example, just the pages of a particular knowledge base."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T15:17:26.904366+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T15:17:26.904366+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kwJrSXxxQl68MbqkYD9s5g=="
+							},
+							"exampleSelector" : "worldElementOutsideScripter",
+							"previewHeight" : 300,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "GtWorldByScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T14:46:37.791207+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T15:35:35.120609+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "iqW9CgLZS2ebM4Dz950g+A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**Lepiter knowledge base status** — Next to the search button there is a little colored circle that may be green, orange or red. It provides you  information about the status of the various knowledge bases that may be loaded into GT. By default you get the GT Book — a knowledge base ofdedicated notebook pages about GT itself — and your “Local knowledge base” — a collection of pages that you write, and are stored locally on your machine. There may also be other knowledge bases dedicated to projects that you create or load. This button keeps you informed about whether changes have been safely stored to disk."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T15:35:38.205353+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T15:50:14.293069+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IxOQOcZsSG+twpOzvDQ5hg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**Menu** — Finally there is a hamburger menu providing access to several tools within GT as well as buttons to *Save*, *Rename*, and *Quit* the environment. More details follow below."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T14:36:16.53039+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T14:36:16.53039+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "3+UmRNb+THWoaClEkuPdOw=="
+							},
+							"exampleSelector" : "openWorldMenuOutsideScripter",
+							"previewHeight" : 500,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "GtWorldByScripterExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T15:37:22.094945+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T15:38:18.232834+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lmwQiixHSZWYHDXFrnBKHQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# GT tabs and buttons (at top of GT world window)"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:03:36.943116+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:03:36.943116+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "J6qpVTKYTAC2z7DDFtP76w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We said that GT is an environment of *live objects*. This  means that programming consist in making changes to a *live system*: incremental changes to classes or method will affect the behavior of the existing objects.\nBut what happens to these objects when we quit the environment? The short answer is that all these objects are stored in an *image* file containing a frozen snapshot of everything in the live system. When you press the *Save* button, you overwrite the image with a new snapshot. On the other hand, if you *Quit*, then any changes to objects since the last save are lost. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:02:05.236437+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:22:40.054599+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "brkGNi7PT/OU/89u8GQ8XQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*Try it:* *Save* the image, *Quit*, and then restart GT. You should find yourself back in exactly the state you are now."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:03:04.231073+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:10:00.865908+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "u/paZPp7TJu6U8a9QgQQuQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*NB:* although the live objects in the system are saved in the image, notebook pages are separately stored as individual files in JSON format, and code changes are stored in a separate *changes file. This means that even if you quit (or crash) the environment without saving, changes to code and pages will normally be backed up and recoverable. For more details see [[Pharo architecture]] and [[How do I recover my work after a crash?]]."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:09:04.963425+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:09:04.963425+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "sMPQZUjfQqemzNZZI5UUgw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*Tip:* Get into the habit of saving your image periodically, or after any important changes."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T15:50:40.103707+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:09:53.980983+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jaPaLr1zSOGgYdkgoQUlSg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*Pro tip:* If you plan to develop a project with GT, don't rely on saved images. Instead put your project under version control using GitHub, and always start work with a fresh image into which you load your poejct. See [[How to work with GitHub]]."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T15:50:19.987609+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T15:51:56.120565+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UC51UxbtTOKnov0vdj4ERA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Saving and quitting the environment"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:10:16.728983+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:19:36.931769+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "A9+894FYTm6TappdAJaH+A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In the GT Hamburger menu, the first entry is called *Page*. This allows you to create a new notebook page in your local knowledge base. This knowledge base will be created, if it does not already exist, in the *Documents* folder of your local machine in a folder called *lepiter*.\nPages you create will automatically be saved within this folder, and every time you start GT, even from a new download or build of GT, you will find your private database as you left it."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:19:38.526928+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:24:36.006046+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IA1Nwex+TAOtYMhQFIjPTg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*Try it:* Click on the *Page* icon in the menu, and select *Text* as the kind of snippet to create. Give the new page a title and some contents. Then come back to this tab. You should find your new page in the view below of your private database pages."
+						},
+						{
+							"__type" : "elementSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:12:29.327037+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-06T16:17:26.845524+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "I/bynbHiQaKBbyTpX0tGQA=="
+							},
+							"code" : "GtInspector newOn: LeDatabase primaryDB",
+							"elementHeight" : 283,
+							"codeHeight" : 50,
+							"codeVisible" : false
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T15:50:30.451315+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:10:15.737864+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "LuGpc9rOQou3/3A8/eBYCQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Pages"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:28:09.468618+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:28:09.468618+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Dz2f4Dq6SUey/TAREqH0ZA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "commentSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:28:12.258626+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:28:23.228747+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "D9oF7K4SToS1Lxe5RmZB+w=="
+				},
+				"string" : "***CONTINUE HERE***",
+				"isHidden" : false
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -282,117 +956,6 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:45:13.748132+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:45:13.748132+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "TzYFkAzMQKi2ty708wnhRw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**Playground**\nA Playground is Lepiter page of Pharo code snippets.\rWe can enter code like 3 + 4, and Inspect the result."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:45:50.412792+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:45:50.412792+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "hbmlz19xTxWDGXDVJTBA1g=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**Inspector**\nThis opens an Inspector offering various views of the result.\rWe can add a new code snippet by clicking on the +, or we can just type Command-Return in the existing snippet.\rIf we Inspect the string 'hello', and go to the Items view, we can inspect each individual character.\rThe Inspector can always be used like this to explore arbitrary nested objects."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:48:51.812236+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:48:51.812236+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "X9q+KTQ2S1KQR5h3PWO7WA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**Snippets**\nA Note is just like a Playground, except that it starts with a text snippet, and should be given a name.\rAs  before, we can add new snippets with the + button, or using keyboard shortcuts.\rWe can move snippets around with the menu at the bottom right, or with shortcuts.\rAll your Notes and Playgrounds are automatically stored in your personal Lepiter database.\rI use my Lepiter database to track projects, tasks, frequently asked questions and random notes."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2025-12-18T17:49:32.783849+01:00"
 								}
 							},
@@ -404,7 +967,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:49:32.783849+01:00"
+									"dateAndTimeString" : "2026-01-06T16:30:02.321383+01:00"
 								}
 							},
 							"uid" : {
@@ -414,8 +977,46 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Pages**\nYou can have multiple databases and move pages between them.\rA page is a live object, which you can inspect.\rA Lepiter page has many views, such as the Snippets view, or StoreString, which will programmatically generate a copy of the page.\rLepiter pages are saved to the file system.\rWe can also interact with the page by sending it messages.\rHere we can inspect the Lepiter database of this page."
-						},
+							"string" : "**Pages**\nYou can have multiple databases and move pages between them.\rA page is a live object, which you can inspect.\rA Lepiter page has many views, such as the Snippets view, or StoreString, which will programmatically generate a copy of the page.\rLepiter pages are saved to the file system.\rWe can also interact with the page by sending it messages.\rHere we can inspect the Lepiter database of this page.\n**Playground**\nA Playground is Lepiter page of Pharo code snippets.\rWe can enter code like 3 + 4, and Inspect the result.\n**Snippets**\nA Note is just like a Playground, except that it starts with a text snippet, and should be given a name.\rAs  before, we can add new snippets with the + button, or using keyboard shortcuts.\rWe can move snippets around with the menu at the bottom right, or with shortcuts.\rAll your Notes and Playgrounds are automatically stored in your personal Lepiter database.\rI use my Lepiter database to track projects, tasks, frequently asked questions and random notes."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T15:50:33.511262+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:26:15.858211+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EpiBGfGWSce0p02Jf4uLkQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Knowledge bases"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -452,7 +1053,45 @@
 								"__type" : "textStyle"
 							},
 							"string" : "**IDE tools**\rGT can also be seen as a new kind of Integrated Development Environment.\rWith the Coder you can create classes,\radd methods,\rcategorize them,\ror turn them into class methods,\rrun code directly from the browser,\rcreate example methods,\rrun examples as tests,\rsearch for methods,\rand search for classes."
-						},
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:26:16.253468+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:26:19.936295+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pUuPvw6NRA2u2duygqzYgA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Coder"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -489,117 +1128,6 @@
 								"__type" : "textStyle"
 							},
 							"string" : "**Git tool**\nYou can version your code in a Git repository.\rThere are detailed instructions in the GT Book on how to work with GitHub."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:50:51.837227+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:50:51.837227+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "MygTMYn1QqutSo1TOb9zvw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**Modeling**\rAn important use case for GT is as a tool for modeling and exploring arbitrary kinds of data.\rThe approach is always the same: wrap the data as domain objects, and then add custom views and actions to answer questions about the data, and enable exploration of the domain model.\rA good example in the GT book is the GitHub REST API case study.\rYou start by downloading the JSON data of an organization on GitHub using standard tools,\rparse the data,\rand wrap it as an explorable domain object.\rBy adding custom views, we obtain an explorable model of the feenk GitHub organization that shows us all its repositories, and for each repo\rthe events and contributors.\rThese views are cheap to create,\rtypically with a few lines of boilerplate code."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:51:08.419387+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:51:17.577837+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "a7BZh0IATqWYuacHkbCJOQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**Language workbench**\rGT is also a language workbench, supporting the modeling, analysis and execution of multiple languages.\rGT can parse numerous languages out of the box using SmaCC, the Smalltalk compiler compiler.\rGT can be readily extended to support other languages.\rHere is a dedicated snippet for querying GitHub using the GraphQL query language.\rWhile SmaCC can generate parsers from complex grammar specifications, for small tasks, it can be easier to start with PetitParser, a framework for building composable parsers.\rHere is a tiny parser to recognize and compute arithmetic sums.\rThe GT Book offers a tutorial and an in-depth case study showing how to build an interpreter for a small language using PetitParser.\rWhile all of these perspectives are valid, they miss the big picture."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:45:43.763029+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:52:02.904454+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "IulA2lPAR0KqbWJuL3cRPQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**Moldable development**\nGT is really an environment to support moldable development.\rThe key idea is that you should be able to adapt the development tools to your domain to make it easier to understand and explain the system by exposing what is interesting.\rHow can you get started with moldable development?\rRegardless of the specific use case, moldable development implies programming.\rAnd when it comes to GT, this programming happens in Pharo, so first you should develop some skills in programming with Pharo and GT.\rThere are numerous pages in the GT book to help you get started with this.\rThen, when you are programming, try to focus on live objects rather than code.\rInstead of using the Coder to program, get used to working in the Inspector.\rHere we are inspecting a live instance of this slideshow instead of looking at the code that generates it.\rWe can always navigate to the code when we need to, but it is harder to navigate from the code to the instances.\rNext, learn how to adapt the tools by adding custom, domain-specific extensions.\rCustom views, actions, and searches are all examples of simple adaptations written as short methods for your domain objects.\rFinally, learn to use notebooks to document your questions and understanding, using both code snippets and live example methods.\rA good case study to start with is the squarified treemap algorithm.\rSee how the notebook page explains the algorithm using live, embedded examples, and domain-specific views."
 						}
 					]
 				},
@@ -611,7 +1139,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T17:43:10.790119+01:00"
+						"dateAndTimeString" : "2026-01-06T16:26:20.930496+01:00"
 					}
 				},
 				"editEmail" : {
@@ -622,17 +1150,202 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T17:48:04.603398+01:00"
+						"dateAndTimeString" : "2026-01-06T16:26:24.319343+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "vy0F0FLWRDu9BZD4qYGwQw=="
+					"uidString" : "yXInjLGCTTmg8kZDKVtxLw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# How to get started with GT"
+				"string" : "# Git"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:26:24.867363+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:26:29.144382+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "E+ZC1e6ZRmGkc3dRWE+V8g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Code changes"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:26:29.670379+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:26:37.300528+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zRr0hxL1R/ObZYFcAAgBFg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Monitor"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:26:37.764069+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T16:26:42.394756+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "if6RtzZ2RRGuobW/PgLjKA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Transcript"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T15:50:33.741638+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T15:50:33.741638+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fy0uHPRLRvu2oaqTpG76nw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T15:50:33.96087+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-06T15:50:33.96087+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SdRbKta9T861np3e9hk/hA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			}
 		]
 	},
