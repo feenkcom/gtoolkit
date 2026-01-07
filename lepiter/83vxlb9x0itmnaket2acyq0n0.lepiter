@@ -1347,7 +1347,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-07T14:17:48.708214+01:00"
+									"dateAndTimeString" : "2026-01-07T14:21:16.122946+01:00"
 								}
 							},
 							"uid" : {
@@ -1357,7 +1357,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "You should now see the repo `paper-moldable-patterns` at the right, with a simple GUI to explore the *Commits*, *Packages* etc. "
+							"string" : "You should now see the repo `paper-moldable-patterns` at the right, with a simple GUI to explore the *Commits*, *Packages* etc., and to *fetch*, *pull*, *commit* and *push* changes."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -1470,41 +1470,6 @@
 				"string" : "# Git"
 			},
 			{
-				"__type" : "commentSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T16:28:12.258626+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-07T11:34:35.955471+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "D9oF7K4SToS1Lxe5RmZB+w=="
-				},
-				"string" : "***CONTINUE HERE***\n\nfeenkcom/gtoolkit#4831",
-				"isHidden" : false
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -1534,7 +1499,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-07T14:18:49.318055+01:00"
+									"dateAndTimeString" : "2026-01-07T14:29:06.702155+01:00"
 								}
 							},
 							"uid" : {
@@ -1544,7 +1509,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "The *Code changes* tool records all changes to code in GT. It is rarely needed, but is essential in case of a system crash to select and replay any changes since the last time the image was saved. \nSee [[How do I recover my work after a crash?]]."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -1578,7 +1543,7 @@
 								"__type" : "uid",
 								"uidString" : "uGclS2iFR6+xjMNe6brn9A=="
 							},
-							"exampleSelector" : "gitToolElement",
+							"exampleSelector" : "codeChangesElement",
 							"previewHeight" : 400,
 							"previewShowSelector" : "gtLiveFor:",
 							"exampleBehaviorName" : "GtWorldMenuExamples",
@@ -1623,7 +1588,85 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:29:44.085861+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:37:48.186044+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "T81ZkPw+SVabHKT1gmsInQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The *Monitor* tool provides various views of the running processes within GT. There are several buttons at the top right, in particular one to start a *Profiler* on the system\nThe Monitor can be especially useful for track down and killing zombie processes that may be slowing down GT. See [[What to do when GT slows to a crawl?]]"
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:29:56.894949+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:29:56.894949+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "K5aHis7kT7GKfsoeei4diA=="
+							},
+							"exampleSelector" : "monitorElement",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "GtWorldMenuExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -1660,7 +1703,193 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:45:36.638323+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:45:36.638323+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4MDJUJQ8QJecNBHHa+H0ow=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Finally, the [[Transcript]] is a tool for logging information from applications."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:38:00.380943+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:45:50.872536+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "a8hq4VENRr2tYtLii39f7Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*Try it:* Evaluate the following snippet."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:44:37.100927+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:45:29.466802+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "VvhoDp0fShuoeTXqs/7o5A=="
+							},
+							"code" : "Transcript nextPutAll: 'Hello world!'; cr"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:46:08.141602+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:46:26.974801+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "noH3lPOnTXaACKrPa08PEA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Click on the trash can at right to empty the Transcript."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:38:10.00166+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:38:10.00166+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "HJh/Z2eDSrWIuYqveoZQzQ=="
+							},
+							"exampleSelector" : "transcriptElement",
+							"previewHeight" : 400,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "GtWorldMenuExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -1681,7 +1910,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T16:26:42.394756+01:00"
+						"dateAndTimeString" : "2026-01-07T14:37:59.926257+01:00"
 					}
 				},
 				"uid" : {
@@ -1697,7 +1926,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:52:23.545824+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:54:33.764282+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZMNRm33+S6iQZEL7SAcrzA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We have taken a quick tour of the the top-level interface of GT, and seen several of the tools that can be started up in the environment, but this barely gives a hint of how GT can be used effectively to make systems explainable. For the details, go back to [[1. Learn the basics of Glamorous Toolkit]]."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -1707,7 +1974,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T15:50:33.741638+01:00"
+						"dateAndTimeString" : "2026-01-07T14:52:14.727562+01:00"
 					}
 				},
 				"editEmail" : {
@@ -1718,54 +1985,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T15:50:33.741638+01:00"
+						"dateAndTimeString" : "2026-01-07T14:52:22.948403+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "fy0uHPRLRvu2oaqTpG76nw=="
+					"uidString" : "qkQjCthVQr6uud0wVJ/UQw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T15:50:33.96087+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T15:50:33.96087+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "SdRbKta9T861np3e9hk/hA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"string" : "# Summary"
 			}
 		]
 	},

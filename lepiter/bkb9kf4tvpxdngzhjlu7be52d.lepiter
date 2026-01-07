@@ -45,6 +45,46 @@
 								"__type" : "textStyle"
 							},
 							"string" : "• Open the Monitor tool\n• Go to the *Future workers* tab\n• Select a working with a large number of pending tasks (typically Magritte tasks)\n• Double-click on the entry to inspect the worker\n• Open the *Pending queue* tab\n• Click the `x` button to trigger the *Cancel pending tasks* action"
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:32:40.915744+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T14:32:40.915744+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "CCwcMj9cRYm7EKoMy7vUng=="
+							},
+							"exampleSelector" : "monitorElement",
+							"previewHeight" : 500,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "GtWorldMenuExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						}
 					]
 				},
@@ -78,43 +118,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Sometimes you may find GT slowing down noticeably. This may be due to an excess of worker processes not terminating. You can find these by opening the process *Monitor* tool (you can open it from the menu top right)."
-			},
-			{
-				"__type" : "elementSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-25T14:46:34.185493+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-25T14:48:55.943502+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qTC5rpH5DQCRCPLMCIRVww=="
-				},
-				"code" : "(GtInspector createOn: GtMonitor new) maximized",
-				"elementHeight" : 565,
-				"codeHeight" : 50,
-				"codeVisible" : false
 			}
 		]
 	},
