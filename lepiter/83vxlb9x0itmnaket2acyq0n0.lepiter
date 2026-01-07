@@ -18,43 +18,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-05T10:02:12.419274+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-05T10:07:52.048273+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "eR1aZJZIRkO/axjK9UadHQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[DRAFT]] to be integrated into [[Getting started with GT in 7']]\nAdd in ToC under [[A tour of the environment]]"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2026-01-05T10:04:46.054889+01:00"
 					}
 				},
@@ -257,7 +220,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T16:22:04.349068+01:00"
+									"dateAndTimeString" : "2026-01-07T08:58:59.964762+01:00"
 								}
 							},
 							"uid" : {
@@ -267,7 +230,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Spotter** — to the far right at the top of the screen there are three buttons. The first is a *Search* button to search globally within GT for pages, tools, classes, packages, and many other entities. \n*Try it:* Click on the Search button and just start typing to see the list of partial results. If you hit *return*, then you will open a new tab with the result. Come back to this tab.\n*NB:* you will find Spotter search buttons elsewhere in GT, but very often these other tools will show you *specialized* searches restricted to a particular context, for example, just the pages of a particular knowledge base."
+							"string" : "**Spotter** — to the far right at the top of the screen there are three buttons. The first is a *Search* button to search globally within GT for pages, tools, classes, packages, and many other entities. \n*Try it:* Click on the Search button and just start typing to see the list of partial results. If you hit *return*, then you will open a new tab with the result. Then come back to this tab.\n*NB:* you will find Spotter search buttons elsewhere in GT, but very often these other tools will show you *specialized* searches restricted to a particular context, for example, just the pages of a particular knowledge base."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -304,7 +267,7 @@
 							"exampleSelector" : "worldElementOutsideScripter",
 							"previewHeight" : 300,
 							"previewShowSelector" : "gtLiveFor:",
-							"exampleBehaviorName" : "GtWorldByScripterExamples",
+							"exampleBehaviorName" : "GtWorldMenuExamples",
 							"codeExpanded" : true,
 							"previewExpanded" : false,
 							"noCode" : true
@@ -416,9 +379,9 @@
 								"uidString" : "3+UmRNb+THWoaClEkuPdOw=="
 							},
 							"exampleSelector" : "openWorldMenuOutsideScripter",
-							"previewHeight" : 500,
+							"previewHeight" : 350,
 							"previewShowSelector" : "gtLiveFor:",
-							"exampleBehaviorName" : "GtWorldByScripterExamples",
+							"exampleBehaviorName" : "GtWorldMenuExamples",
 							"codeExpanded" : true,
 							"previewExpanded" : false,
 							"noCode" : true
@@ -486,7 +449,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T16:03:36.943116+01:00"
+									"dateAndTimeString" : "2026-01-07T09:25:45.790882+01:00"
 								}
 							},
 							"uid" : {
@@ -496,7 +459,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We said that GT is an environment of *live objects*. This  means that programming consist in making changes to a *live system*: incremental changes to classes or method will affect the behavior of the existing objects.\nBut what happens to these objects when we quit the environment? The short answer is that all these objects are stored in an *image* file containing a frozen snapshot of everything in the live system. When you press the *Save* button, you overwrite the image with a new snapshot. On the other hand, if you *Quit*, then any changes to objects since the last save are lost. "
+							"string" : "We said that GT is an environment of *live objects*. This  means that *programming* consists in making changes to a *live system*: incremental changes to classes or method will affect the behavior of the existing objects.\nBut what happens to these objects when we quit the environment? The short answer is that all these objects are stored in an *image* file containing a frozen snapshot of everything in the live system. When you press the *Save* button, you overwrite the image with a new snapshot. On the other hand, if you *Quit*, then any changes to objects since the last save are lost. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -560,7 +523,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T16:10:00.865908+01:00"
+									"dateAndTimeString" : "2026-01-07T09:26:27.991835+01:00"
 								}
 							},
 							"uid" : {
@@ -570,7 +533,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*NB:* although the live objects in the system are saved in the image, notebook pages are separately stored as individual files in JSON format, and code changes are stored in a separate *changes file. This means that even if you quit (or crash) the environment without saving, changes to code and pages will normally be backed up and recoverable. For more details see [[Pharo architecture]] and [[How do I recover my work after a crash?]]."
+							"string" : "*NB:* although the live objects in the system are saved in the image, notebook pages are separately stored as individual files in JSON format, and code changes are stored in a separate *changes* file. This means that even if you quit (or crash) the environment without saving, changes to code and pages will normally be backed up and recoverable. For more details see [[Pharo architecture]] and [[How do I recover my work after a crash?]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -709,7 +672,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T16:19:36.931769+01:00"
+									"dateAndTimeString" : "2026-01-07T09:27:00.059164+01:00"
 								}
 							},
 							"uid" : {
@@ -719,7 +682,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "In the GT Hamburger menu, the first entry is called *Page*. This allows you to create a new notebook page in your local knowledge base. This knowledge base will be created, if it does not already exist, in the *Documents* folder of your local machine in a folder called *lepiter*.\nPages you create will automatically be saved within this folder, and every time you start GT, even from a new download or build of GT, you will find your private database as you left it."
+							"string" : "In the GT Hamburger menu, the first entry is *Page*. This allows you to *create a new notebook page in your local knowledge base*. This knowledge base will be created, if it does not already exist, in the *Documents* folder of your local machine in a folder called *lepiter*.\nPages you create will automatically be saved within this folder, and every time you start GT, even from a new download or build of GT, you will find your private database as you left it."
 						},
 						{
 							"__type" : "textSnippet",
@@ -759,7 +722,7 @@
 							"string" : "*Try it:* Click on the *Page* icon in the menu, and select *Text* as the kind of snippet to create. Give the new page a title and some contents. Then come back to this tab. You should find your new page in the view below of your private database pages."
 						},
 						{
-							"__type" : "elementSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -772,7 +735,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T16:12:29.327037+01:00"
+									"dateAndTimeString" : "2026-01-07T09:29:33.651575+01:00"
 								}
 							},
 							"editEmail" : {
@@ -783,17 +746,57 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T16:17:26.845524+01:00"
+									"dateAndTimeString" : "2026-01-07T09:29:55.59214+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "I/bynbHiQaKBbyTpX0tGQA=="
+								"uidString" : "rKMIttlGSWCAIrgR42nGyQ=="
 							},
-							"code" : "GtInspector newOn: LeDatabase primaryDB",
-							"elementHeight" : 283,
-							"codeHeight" : 50,
-							"codeVisible" : false
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For more information, see [[How to get started with Lepiter (FAQ)]]."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T09:53:40.662527+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T09:53:40.662527+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hF5QG+vhRCiY77lR3WR5Qw=="
+							},
+							"exampleSelector" : "primaryDBElement",
+							"previewHeight" : 350,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "GtWorldMenuExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
 						}
 					]
 				},
@@ -832,7 +835,85 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T09:29:01.290043+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T09:37:47.192062+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jqtZAgFTT9m7Qfx1K7c05Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The next GT menu entry is *Knowledge bases*. It opens a view of all the currently loaded [[Lepiter]] knowledge bases in your GT environment. By defaultyou get two of these:\n• [[Glamorous Toolkit Book]] (which includes this page) is a knowledge base dedicated to documentation about GT itself.\n• `Documents/lepiter/default` is your *Local knowledge base* which you can use at your pleasure to keep notes, start experiments, track your activities, or anything you like.\nAdditional knowledge bases may be associated with other projects. Very often a GT GitHub project will have its own knowledge base to track development acivities or to store documentation."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T09:58:09.904209+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-07T09:58:09.904209+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lY1aDmJ2QKy0IUWbGI9mSg=="
+							},
+							"exampleSelector" : "knowledgeBasesElement",
+							"previewHeight" : 550,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "GtWorldMenuExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -842,7 +923,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T16:28:09.468618+01:00"
+						"dateAndTimeString" : "2026-01-06T15:50:33.511262+01:00"
 					}
 				},
 				"editEmail" : {
@@ -853,17 +934,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T16:28:09.468618+01:00"
+						"dateAndTimeString" : "2026-01-06T16:26:15.858211+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Dz2f4Dq6SUey/TAREqH0ZA=="
+					"uidString" : "EpiBGfGWSce0p02Jf4uLkQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "# Knowledge bases"
 			},
 			{
 				"__type" : "commentSnippet",
@@ -919,7 +1000,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:45:02.97504+01:00"
+									"dateAndTimeString" : "2026-01-07T09:39:07.313961+01:00"
 								}
 							},
 							"editEmail" : {
@@ -930,93 +1011,18 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:45:02.97504+01:00"
+									"dateAndTimeString" : "2026-01-07T09:39:12.948625+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "01kAff0zREWrhOK7szoAZQ=="
+								"uidString" : "BcsBbZKjS0+H9Ib3VBTl2w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Lepiter**\nAn important use case for GT is as a knowledge base for system documentation.\rThe GT Book is a Lepiter database of linked Notebook pages providing detailed documentation about GT.\rYou can start exploring GT by browsing the book.\rEach page consists of snippets of markdown text, executable code, live examples, or other kinds of content.\rThis page contains a live Treemap with an overview of the organization of the book itself."
+							"string" : "The *Coder* "
 						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-18T17:49:32.783849+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T16:30:02.321383+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "WD6OwFLHTX+mag1t5fbttQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "**Pages**\nYou can have multiple databases and move pages between them.\rA page is a live object, which you can inspect.\rA Lepiter page has many views, such as the Snippets view, or StoreString, which will programmatically generate a copy of the page.\rLepiter pages are saved to the file system.\rWe can also interact with the page by sending it messages.\rHere we can inspect the Lepiter database of this page.\n**Playground**\nA Playground is Lepiter page of Pharo code snippets.\rWe can enter code like 3 + 4, and Inspect the result.\n**Snippets**\nA Note is just like a Playground, except that it starts with a text snippet, and should be given a name.\rAs  before, we can add new snippets with the + button, or using keyboard shortcuts.\rWe can move snippets around with the menu at the bottom right, or with shortcuts.\rAll your Notes and Playgrounds are automatically stored in your personal Lepiter database.\rI use my Lepiter database to track projects, tasks, frequently asked questions and random notes."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T15:50:33.511262+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T16:26:15.858211+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "EpiBGfGWSce0p02Jf4uLkQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "# Knowledge bases"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
 						{
 							"__type" : "textSnippet",
 							"children" : {

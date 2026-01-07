@@ -42,7 +42,7 @@
 				"string" : "You  can open the *Knowledge bases* tool from the GT home menu to see the list of available databases and browse them there."
 			},
 			{
-				"__type" : "elementSnippet",
+				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:44:49.612132+02:00"
+						"dateAndTimeString" : "2026-01-07T09:56:48.074259+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-07T16:44:51.538277+02:00"
+						"dateAndTimeString" : "2026-01-07T09:56:48.074259+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WU1saUi8DQCWzzPRDPZO7A=="
+					"uidString" : "Rm99GSexT2a4dvJtUK3XwA=="
 				},
-				"code" : "LeHomeDatabasesElement new\r\tdatabaseViewModel: LeDatabasesRegistry uniqueInstance currentLoadedDefaultLogicalDatabase\r\t\t\tasContentUIModel",
-				"elementHeight" : 617,
-				"codeHeight" : 50,
-				"codeVisible" : false
+				"exampleSelector" : "knowledgeBasesElement",
+				"previewHeight" : 550,
+				"previewShowSelector" : "gtLiveFor:",
+				"exampleBehaviorName" : "GtWorldMenuExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : true
 			},
 			{
 				"__type" : "textSnippet",
