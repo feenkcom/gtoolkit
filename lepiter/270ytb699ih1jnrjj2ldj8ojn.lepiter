@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:32:58.835009+01:00"
+						"dateAndTimeString" : "2026-01-13T12:50:38.045253+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The basic interface for working with an LLM is the {{gtClass:GtLlmChat}}. It allows the user to interact with an LLM  programmatically or through a UI. The backend of these chats is abstracted and can be changed."
+				"string" : "The basic interface for working with an LLM is zthe {{gtClass:GtLChat}}. It allows the user to interact with an LLM  programmatically or through a UI. The backend of these chats is abstracted and can be changed."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-06T12:44:11.609229+02:00"
+						"dateAndTimeString" : "2026-01-13T12:50:17.436245+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "8wpJCNfwDQCTyJ1ZBALv0A=="
 				},
-				"code" : "chat := GtLlmChat new"
+				"code" : "chat := GtLChat new"
 			},
 			{
 				"__type" : "textSnippet",
@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:37:40.687071+01:00"
+						"dateAndTimeString" : "2026-01-13T12:50:21.82727+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "U/hwfnnqDQC/AVlZA1QUJQ=="
 				},
-				"code" : "chat := GtLlmChat new provider: GtOpenAIProvider withApiKeyFromFile"
+				"code" : "chat := GtLChat new provider: GtLOpenAIProvider withApiKeyFromFile"
 			},
 			{
 				"__type" : "textSnippet",
@@ -245,14 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:38:33.169355+01:00"
+						"dateAndTimeString" : "2026-01-13T12:51:58.603746+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "sNJhgnnqDQCC0M7gA1QUJQ=="
 				},
-				"code" : "chat sendMessage: 'Hello friend! Who are you?'"
+				"code" : "chat sendMarkdown: 'Hello'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -268,7 +268,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:38:37.605166+01:00"
+						"dateAndTimeString" : "2026-01-13T12:51:33.939213+01:00"
 					}
 				},
 				"editEmail" : {
@@ -279,7 +279,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:33:38.529784+01:00"
+						"dateAndTimeString" : "2026-01-13T12:51:33.939213+01:00"
 					}
 				},
 				"uid" : {
@@ -289,257 +289,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Providers are the chat’s backend. Currently, backends for Anthropic, OpenAI and Ollama exist."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:40:56.22828+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:40:56.22828+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "RRLli3nqDQCOwPQGA1QUJQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Providers can be changed at any time, even in the middle of a chat."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:39:39.698949+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:42:58.537457+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "a1BVh3nqDQCJW95WA1QUJQ=="
-				},
-				"code" : "chat\r\tprovider: (GtOllamaProvider new model: 'llama3.1');\r\tsendMessage: 'What is your name?'"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:41:18.651123+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:41:34.613673+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Fjo7jXnqDQCP/ojBA1QUJQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Please note that if you do not have the provided model locally already, it will first be downloaded, which will take some time. It should be fast afterwards as long as the model remains on the machine."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:34:28.469236+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T12:35:20.173131+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "z3cJvVbrDQC5H2s4AurXGw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Anthropic works similarly to OpenAI, and also needs an API key (see [[Adding an Anthropic API key]])."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:33:48.013152+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T22:23:25.733423+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "lSegulbrDQC4L7WtAurXGw=="
-				},
-				"code" : "chat\r\tprovider: GtAnthropicProvider withApiKeyFromFile;\r\tsendMessage: 'And who are you?'"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T12:33:43.141961+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T12:35:45.005518+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "oXaH3izyDQCYt2WjCptJcg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "And lastly, Google Gemini works in the same way (see [[Adding a Gemini API key]])."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T12:34:02.65536+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T12:34:35.618014+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "WTax3yzyDQCaPUhfCptJcg=="
-				},
-				"code" : "chat\r\tprovider: GtAnthropicProvider withApiKeyFromFile;\r\tsendMessage: 'And who are you, then?'"
+				"string" : ""
 			}
 		]
 	},
@@ -562,12 +312,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-05-23T12:33:29.177442+02:00"
+			"dateAndTimeString" : "2026-01-13T12:51:43.914861+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Chatting with an LLM in Ollama, Anthropic, Gemini, or OpenAI"
+		"title" : "Basic chatting"
 	},
 	"uid" : {
 		"__type" : "uuid",
