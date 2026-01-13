@@ -34,14 +34,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-14T11:34:58.867324+01:00"
+									"dateAndTimeString" : "2026-01-13T12:46:00.284844+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "ryR4dXnqDQC4q0LoA1QUJQ=="
 							},
-							"code" : "Gt4LlmHomeSection new apiKeyCard",
+							"code" : "GtLOpenAICardStencil new openAICard",
 							"elementHeight" : 291,
 							"codeHeight" : 31,
 							"codeVisible" : false
@@ -109,14 +109,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:53:47.082138+01:00"
+									"dateAndTimeString" : "2026-01-13T12:49:17.149056+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "DiAd/VbrDQCMzPJ2AurXGw=="
 							},
-							"code" : "apiKey := ''.\rfileLocation := GtOpenAIClient apiKeyFile.\r\rfileLocation ensureDelete writeStreamDo: [ :s | s nextPutAll: apiKey ]"
+							"code" : "apiKey := ''.\rfileLocation := GtLOpenAIClient apiKeyFile.\r\rfileLocation ensureDelete writeStreamDo: [ :s | s nextPutAll: apiKey ]"
 						}
 					]
 				},
