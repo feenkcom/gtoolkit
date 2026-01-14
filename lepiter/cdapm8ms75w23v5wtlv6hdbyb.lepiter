@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-16T12:39:17.761348+02:00"
+						"dateAndTimeString" : "2026-01-12T12:37:20.760736+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The connections are managed using the {{gtClass:GtLlmConnectionRegistry}} class. Individual connections are saved and handled there. You can right click on any of the connectable entries below to set them as default."
+				"string" : "The connections are managed using the {{gtClass:GtLConnectionRegistry}} class. Individual connections are saved and handled there. You can right click on any of the connectable entries below to set them as default."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -113,7 +113,7 @@
 				"exampleSelector" : "instance",
 				"previewHeight" : 200,
 				"previewShowSelector" : "gtConnectionsFor:",
-				"exampleBehaviorName" : "GtLlmConnectionRegistry class",
+				"exampleBehaviorName" : "GtLConnectionRegistry class",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
 				"noCode" : true
@@ -180,85 +180,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-06T11:05:05.064364+02:00"
+						"dateAndTimeString" : "2026-01-13T17:20:27.957331+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "69kSo9XwDQCBxcGABALv0A=="
 				},
-				"code" : "GtLlmConnectionRegistry instance\r\taddConnection: (GtLlmConnection new\r\t\t\tprovider: GtOllamaProvider;\r\t\t\tmodel: 'llama3.1')"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-06T11:05:08.955962+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-06T11:05:47.125309+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "xgl6ptXwDQCEpMiVBALv0A=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "You can also override the default connection to ensure that the next chat or assistant you work with uses that provider by default."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-06T11:05:51.420879+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-06T11:06:20.437863+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "HgECqdXwDQCHpjvGBALv0A=="
-				},
-				"code" : "GtLlmConnectionRegistry instance\r\tdefaultConnection: (GtLlmConnection new\r\t\t\tprovider: GtAnthropicProvider;\r\t\t\tmodel: 'claude-3-7-sonnet-20250219')"
+				"code" : "GtLConnectionRegistry instance\r\taddConnection: (GtLConnection new\r\t\t\tproviderClass: GtLOpenAIProvider;\r\t\t\tlabel: 'GPT 5.1';\r\t\t\tmodel: 'gpt-5.1')"
 			}
 		]
 	},

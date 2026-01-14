@@ -82,7 +82,119 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-12T13:46:10.290271+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-12T13:46:57.050056+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mgXls+fxRsG13Ho43yawag=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "`--detachChanges` will tell GT to write any changes to a process specific changes file on disk."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-05-23T10:04:46.407978+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-12T13:47:04.786182+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "orvbySryDQCiheVgCy1D6w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "`--detachChangesFromFileSystem` will tell GT to write any changes to an internal, memory only, file."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-12T13:47:15.227219+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-12T13:47:46.251469+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MigX2ejhR06osCIGVDJ2bg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In both cases references to the existing `.changes` file will still work."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -92,7 +204,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T10:04:46.407978+02:00"
+						"dateAndTimeString" : "2026-01-12T13:45:56.014626+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +215,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T10:05:14.68685+02:00"
+						"dateAndTimeString" : "2026-01-12T13:46:09.591754+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "orvbySryDQCiheVgCy1D6w=="
+					"uidString" : "7oGZuasdTuqgBGzGRooa+g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Starting the workers with the flag `--detachChangesFromFileSystem` will tell GT to write any changes to an internal, memory only, file."
+				"string" : "There are two flags that allow the image to be shared:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -145,14 +257,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-05-23T10:06:26.047363+02:00"
+									"dateAndTimeString" : "2026-01-12T13:50:42.230633+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "2lTCzCryDQCnsrTqCy1D6w=="
 							},
-							"code" : "| sizes |\n\nsizes := Dictionary new.\n(PharoFilesOpener classVarNamed: #Default) ifNotNil: [ :filesOpener |\n\tfilesOpener class = PharoLinkFilesOpener ifTrue:\n\t\t[ sizes at: #changes put: (filesOpener instVarNamed: #changesVirtual) originalContents size.\n\t\tsizes at: #sources put: (filesOpener instVarNamed: #sourcesVirtual) originalContents size. ] ].\nsizes."
+							"code" : "| sizes |\n\nsizes := Dictionary new.\n(PharoFilesOpener classVarNamed: #Default) ifNotNil: [ :filesOpener |\n\tfilesOpener class = PharoFilesOpener ifTrue:\n\t\t[ sizes at: #changes put: filesOpener changesFileOrNil size.\n\t\tsizes at: #sources put: filesOpener sourcesFileOrNil size. ] ].\nsizes."
 						}
 					]
 				},
@@ -175,7 +287,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T10:05:32.533688+02:00"
+						"dateAndTimeString" : "2026-01-12T13:53:57.176533+01:00"
 					}
 				},
 				"uid" : {
@@ -185,7 +297,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The size of the internal changes and sources files can be determined with:"
+				"string" : "In an image with one of the above flags set, the size of the internal changes and sources files can be determined with:"
 			}
 		]
 	},

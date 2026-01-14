@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T12:37:09.698747+02:00"
+						"dateAndTimeString" : "2026-01-13T17:04:12.863867+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "All providers (Ollama, Anthropic, Gemini, and OpenAI) have vision capabilities [1]. As such, regular and {{gtPage:Handling custom instructions using assistants|label=assistant}} chats can work with images through the UI or programmatically."
+				"string" : "All providers (Ollama, Anthropic, Gemini, and OpenAI) have vision capabilities [1]. As such,  {{gtPage:Handling chat instructions|label=chats}} chats work with images through the UI or programmatically."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:44:43.40303+02:00"
+						"dateAndTimeString" : "2026-01-13T17:04:39.353309+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In the following, we will exemplify attaching a screenshot of GT programmatically for illustration purposes."
+				"string" : "In the following, we illustrate attaching a screenshot of GT programmatically for illustration purposes."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-26T21:18:01.341033+02:00"
+						"dateAndTimeString" : "2026-01-13T17:04:50.222964+01:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First, we create a chat using the default provider (you can learn how to change it in [[Managing LLM provider connections and setting the default]])."
+				"string" : "First, we create a chat using the default provider:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -177,14 +177,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:46:10.680978+02:00"
+						"dateAndTimeString" : "2026-01-13T14:48:16.269151+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "qS3zY2bxDQCHBjJUDD/Alw=="
 				},
-				"code" : "chat := GtLlmChat new"
+				"code" : "chat := GtLChat new"
 			},
 			{
 				"__type" : "textSnippet",
@@ -211,7 +211,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:49:47.875018+02:00"
+						"dateAndTimeString" : "2026-01-13T17:05:39.529875+01:00"
 					}
 				},
 				"uid" : {
@@ -248,14 +248,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T16:01:08.473954+02:00"
+						"dateAndTimeString" : "2026-01-13T14:48:26.131742+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "LEujcWbxDQCJGHujDD/Alw=="
 				},
-				"code" : "fileReference := BlExporter png\r\t\tscaled: 2;\r\t\telement: (GtWorldElement allInstances detect: [:aWorldElement | aWorldElement space isFocused]);\r\t\texport"
+				"code" : "fileReference := BlExporter png\r\t\telement: (GtWorldElement allInstances detect: [:aWorldElement | aWorldElement space isFocused]);\r\t\texport"
 			},
 			{
 				"__type" : "textSnippet",

@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-25T21:31:00.618671+01:00"
+						"dateAndTimeString" : "2026-01-13T22:52:18.222348+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "93PfYCLpDQCaQ3YiBOD//Q=="
 				},
-				"code" : "file := FileLocator temp / 'GToolkitBook.txt'.\rfile ensureDelete.\rfile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLlmLepiterContentExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
+				"code" : "file := FileLocator temp / 'GToolkitBook.txt'.\rfile ensureDelete.\rfile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLLepiterContentExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -208,14 +208,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-08T10:24:15.712247+02:00"
+						"dateAndTimeString" : "2026-01-13T22:52:50.87128+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "VRvDjCLpDQClNSbsBOD//Q=="
 				},
-				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you.';\r\t\tconnection: (GtLlmConnection new\r\t\t\t\tmodel: 'gpt-4.1';\r\t\t\t\tprovider: GtOpenAIAssistantProvider).\r\rassistant"
+				"code" : "chat := GtLChat new\r\t\tinstruction: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you. Always check your answer with file search before answering.'\r\t\t\ttitled: 'Purpose';\r\t\tprovider: (GtLConnection new\r\t\t\t\tproviderClass: GtLOpenAIProvider;\r\t\t\t\tlabel: 'GPT 5.1';\r\t\t\t\tmodel: 'gpt-5.1';\r\t\t\t\taddOption: 'isStreaming' withValue: false) buildProvider"
 			},
 			{
 				"__type" : "textSnippet",
@@ -262,40 +262,6 @@
 				},
 				"createEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-01-28T11:01:29.662118+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-08T10:03:02.933446+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "NseIAyPpDQCm3gqWBOD//Q=="
-				},
-				"code" : "chat := assistant createChat."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
 					"emailString" : "<unknown>"
 				},
 				"createTime" : {
@@ -313,48 +279,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-25T21:31:38.746386+01:00"
+						"dateAndTimeString" : "2026-01-13T22:55:09.498642+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "1UcZ3HnxDQCwcGUpAReYsQ=="
 				},
-				"code" : "chat provider\r\taddFile: (GtOpenAIResourceFile new\r\t\t\tfile: file;\r\t\t\tdescription: 'Lepiter booklet: GToolkit book');\r\taddTool: (GtLlmFileSearchTool new);\r\tcreateAssistant"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-01-28T14:14:28.403354+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-08T10:23:35.628158+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "BlqutSXpDQCrEGvlBOD//Q=="
-				},
-				"code" : "chat sendChatRequest: 'What is Ludo? Check your answer with file search of the documentation before answering.'"
+				"code" : "chat\r\taddTool: GtLFileSearchTool new;\r\tsendWith: [ :m | \r\t\tm\r\t\t\taddFile: (GtLOpenAIResourceFile new\r\t\t\t\t\tfile: file;\r\t\t\t\t\tdescription: 'Lepiter booklet: GToolkit book');\r\t\t\tmarkdown: 'What is Ludo?' ]"
 			}
 		]
 	},
