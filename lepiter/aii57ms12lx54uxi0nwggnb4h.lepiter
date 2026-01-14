@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:26:15.265474+02:00"
+						"dateAndTimeString" : "2026-01-13T23:01:42.196959+01:00"
 					}
 				},
 				"uid" : {
@@ -39,81 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Just as in [[Adding the GT book to a LLM to answer questions about GT]], we can add file search to the OpenAI response provider."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T15:51:54.673751+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:25:49.029466+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "knW/lnrxDQC/RunMAReYsQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "This requires us to set up and manage our own files and vector stores, but allows the provider to remain stateless."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:26:20.378415+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:27:01.430067+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Y5bfEXvxDQCCJ1QpAReYsQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "In the following, we are going to re-create the assistant built in [[Adding the GT book to a LLM to answer questions about GT]] using the responses provider and manual file management."
+				"string" : "We can add file search to the OpenAI response provider. This requires us to set up and manage our own files and vector stores, but allows the provider to remain stateless."
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:28:46.253151+02:00"
+						"dateAndTimeString" : "2026-01-13T22:49:45.710093+01:00"
 					}
 				},
 				"uid" : {
@@ -187,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First we need to set up the book and add it to a vector store. The book file generation is unchanged from the case study."
+				"string" : "First we need to set up the book and add it to a vector store. The book file generation is slightly altered so that we can ensure that the test query is not based on what the LLM already knows."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -214,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-09-16T21:30:20.835366+02:00"
+						"dateAndTimeString" : "2026-01-13T22:53:48.024059+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "eVfBGnvxDQCI8CY3AReYsQ=="
 				},
-				"code" : "pages := LeDatabase gtBook pages.\r\raFile := FileLocator temp / 'GToolkitBook.txt'.\raFile ensureDelete.\raFile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: (GtLlmLepiterContentExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) ] ]"
+				"code" : "pages := LeDatabase gtBook pages.\r\rfile := FileLocator temp / 'GToolkitBook.txt'.\rfile ensureDelete.\rfile\r\twriteStreamDo: [ :aStream | \r\t\tpages\r\t\t\tdo: [ :aPage | \r\t\t\t\taStream\r\t\t\t\t\tnextPutAll: ((GtLLepiterContentExporter new\r\t\t\t\t\t\t\tpage: aPage;\r\t\t\t\t\t\t\texport) copyReplaceAll: 'Ludo' with: 'Bludo') ] ]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -248,7 +174,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:29:45.834331+02:00"
+						"dateAndTimeString" : "2026-01-13T22:49:54.882473+01:00"
 					}
 				},
 				"uid" : {
@@ -258,7 +184,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Unlike in that example, however, we then need to set up our own vector store. To do this, we need to upload the file to OpenAI beforehand."
+				"string" : "We then need to set up our own vector store. To do this, we need to upload the file to OpenAI beforehand."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -285,14 +211,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:30:30.908844+02:00"
+						"dateAndTimeString" : "2026-01-13T22:51:21.765231+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "gFBOHnvxDQCMgbXGAReYsQ=="
 				},
-				"code" : "apiFile := GtOpenAIClient withApiKeyFromFile\r\t\tuploadFile: aFile\r\t\twithPurpose: 'assistants'"
+				"code" : "apiFile := GtOpenAIClient withApiKeyFromFile\r\t\tuploadFile: file\r\t\twithPurpose: 'assistants' \"'user_data'\""
 			},
 			{
 				"__type" : "textSnippet",
@@ -390,7 +316,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:31:04.784566+02:00"
+						"dateAndTimeString" : "2026-01-13T22:51:36.248258+01:00"
 					}
 				},
 				"uid" : {
@@ -400,7 +326,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now we can use that store in the assistant."
+				"string" : "Now we can use that store in the chat."
 			},
 			{
 				"__type" : "textSnippet",
@@ -427,7 +353,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:31:13.135613+02:00"
+						"dateAndTimeString" : "2026-01-13T22:51:46.77863+01:00"
 					}
 				},
 				"uid" : {
@@ -437,7 +363,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### Setting up the assistant"
+				"string" : "### Setting up the chat"
 			},
 			{
 				"__type" : "textSnippet",
@@ -464,7 +390,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:31:57.566698+02:00"
+						"dateAndTimeString" : "2026-01-13T22:52:05.255073+01:00"
 					}
 				},
 				"uid" : {
@@ -474,7 +400,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The assistant itself is generally unchanged from the case study, with the exception that we do not need to reset the provider."
+				"string" : "The chat itself is similarly with the one from the case study, with the exception that we do not need to reset the provider."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -501,156 +427,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-08T09:53:46.176988+02:00"
+						"dateAndTimeString" : "2026-01-13T22:30:14.829783+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ejInJnvxDQCShdVWAReYsQ=="
 				},
-				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you. Always check your answer with file search before answering.';\r\t\tconnection: (GtLlmConnection new\r\t\t\t\tmodel: 'gpt-4.1';\r\t\t\t\tprovider: GtOpenAIResponseProvider).\r\rassistant"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:32:24.240381+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:32:33.099749+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "e7SPJ3vxDQCSlLDDAReYsQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "We then simply create chat and add the tool."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:32:37.933435+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:33:31.594926+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "zKZgKHvxDQCTfjIWAReYsQ=="
-				},
-				"code" : "chat := assistant createChat.\r\rchat provider\r\taddTool: (GtLlmFileSearchTool new vectorStoreIds: {vectorStore id})"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:32:51.042954+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:33:05.268292+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "tq0oKXvxDQCTjQDBAReYsQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Finally, we can ask our questions."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T16:33:08.022004+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-08T09:53:56.026632+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "CcQrKnvxDQCUOwv7AReYsQ=="
-				},
-				"code" : "chat sendChatRequest: 'What is Ludo?'"
+				"code" : "chat := GtLChat new\r\t\tinstruction: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you. Always check your answer with file search before answering.'\r\t\t\ttitled: 'Purpose';\r\t\tprovider: (GtLConnection new\r\t\t\t\tproviderClass: GtLOpenAIProvider;\r\t\t\t\tlabel: 'GPT 5.1';\r\t\t\t\tmodel: 'gpt-5.1';\r\t\t\t\taddOption: 'isStreaming' withValue: false) buildProvider;\r\t\ttools: {GtLFileSearchTool new vectorStoreIds: {vectorStore id}};\r\t\tsendMarkdown: 'What is Ludo?'"
 			}
 		]
 	},

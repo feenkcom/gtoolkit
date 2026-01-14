@@ -71,14 +71,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-06-23T08:45:33.743918+02:00"
+									"dateAndTimeString" : "2026-01-13T21:11:41.026308+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "UmMbkIrMDQCW0cHKATK6Xg=="
 							},
-							"code" : "client := GtOpenAIClient withApiKeyFromFile"
+							"code" : "client := GtLOpenAIClient withApiKeyFromFile"
 						},
 						{
 							"__type" : "textSnippet",
@@ -180,14 +180,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:48:25.002175+01:00"
+									"dateAndTimeString" : "2026-01-13T21:11:37.043262+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "54qUv+rXDQCGLC71C8IszQ=="
 							},
-							"code" : "client := GtOpenAIClient withApiKeyFromClipboard"
+							"code" : "client := GtLOpenAIClient withApiKeyFromClipboard"
 						}
 					]
 				},
@@ -324,14 +324,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-04-24T21:54:29.477478+02:00"
+									"dateAndTimeString" : "2026-01-13T21:13:08.554487+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "RfoZlYrMDQCaiB6QATK6Xg=="
 							},
-							"code" : "messages := {\r\tGtLlmSystemMessage new content: 'You are a helpful assistant.'.\r\tGtLlmUserMessage new content: 'Hello ChatGPT! How are you today?'\r}.\r\rclient completeChatWithModel: 'gpt-3.5-turbo' andMessages: messages"
+							"code" : "messages := {\r\tGtLOpenAIUserMessage new markdown: 'Hello ChatGPT! How are you today?'\r}.\r\rclient completeChatWithModel: 'gpt-5.1' andMessages: messages"
 						}
 					]
 				},
