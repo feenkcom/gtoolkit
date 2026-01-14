@@ -628,6 +628,78 @@
 					"__type" : "snippets",
 					"items" : [
 						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "alistairgrant@fastmail.com.au"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-09-28T12:00:11.354725+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-07-26T08:25:03.839437+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7go7kBumDQCcX9FEBKWdFg=="
+							},
+							"code" : "task := GtRrScriptTask script: '4+3'.\rjob := GtRemoteRunner default submitJob: task asJob."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "alistairgrant@fastmail.com.au"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-28T12:00:05.552783+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "alistairgrant@fastmail.com.au"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-09-28T12:00:08.723478+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "sIGqjxumDQCcXNidBKWdFg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Submit a simple job:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -764,78 +836,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Connect to a headless runner:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-09-28T12:00:11.354725+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-07-26T08:25:03.839437+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "7go7kBumDQCcX9FEBKWdFg=="
-							},
-							"code" : "task := GtRrScriptTask script: '4+3'.\rjob := GtRemoteRunner default submitJob: task asJob."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "alistairgrant@fastmail.com.au"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-28T12:00:05.552783+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "alistairgrant@fastmail.com.au"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-09-28T12:00:08.723478+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "sIGqjxumDQCcXNidBKWdFg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Submit a simple job:"
 			}
 		]
 	},
