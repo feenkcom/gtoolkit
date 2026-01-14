@@ -119,7 +119,150 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-14T15:46:25.344828+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-14T15:47:03.666587+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rxnNZKWPTdqPgZySkIJ4CQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Initialize the package so we don't have problems with package naming when filing in the classes:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-14T15:40:06.59882+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-14T16:08:00.467882+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "oDHWIBgnTgGF6jaBgeQdYQ=="
+							},
+							"code" : "Smalltalk packageOrganizer ensurePackage: 'VisualisationReview'"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-14T11:29:38.739404+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-14T11:29:52.306935+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "CO5fTpfbQA64mneT2d0lQQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "NB: fileOuts of intermediate versions can be found here:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-14T15:38:47.917046+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-14T15:39:25.459515+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "i33JxcQ5Q1G2bWsppCHBRw=="
+							},
+							"code" : "FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data'\r\t\t/ 'visualisation-review' / 'fileOuts'"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -129,7 +272,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-14T11:29:38.739404+01:00"
+						"dateAndTimeString" : "2026-01-14T15:46:10.980019+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,51 +283,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-14T11:29:52.306935+01:00"
+						"dateAndTimeString" : "2026-01-14T15:46:14.95271+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CO5fTpfbQA64mneT2d0lQQ=="
+					"uidString" : "HtqdvVdLTs+kx7l2Cx2XCA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "NB: fileOuts of intermediate versions can be found here:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-14T11:29:53.871739+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-14T11:30:09.122454+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "4/HoaZ8rTu2oW6Gf/8+Gwg=="
-				},
-				"code" : "VRDatasets new datasetFolder / 'fileOuts'"
+				"string" : "# Snapshots"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1822,7 +1931,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-13T17:09:16.229416+01:00"
+												"dateAndTimeString" : "2026-01-14T16:09:19.03672+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1833,17 +1942,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-13T17:11:12.417306+01:00"
+												"dateAndTimeString" : "2026-01-14T16:09:27.796116+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "WJPPyYU4TUatMcmhq1VQzg=="
+											"uidString" : "hebqDOMkQP6jGZVY94id9g=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "{{gtPage:Contextual View|db=2j9m7db2i4oz116bexd7wbdxo}}\n{{gtPage:Simple View|db=2j9m7db2i4oz116bexd7wbdxo}}\n{{gtPage:Inspector views|db=2j9m7db2i4oz116bexd7wbdxo}}"
+										"string" : "[[Contextual View]]\n[[Simple View]]\n[[Inspector views]]"
 									}
 								]
 							},
