@@ -115,6 +115,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "RemoteRunner workers may be given one more scripts to execute on startup by adding an extension method to the worker with the `<gtWorkerStartupScript>` pragma, e.g.:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-12T14:16:35.861552+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-12T14:17:23.723824+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qSnOuU6wQFaWU/sd90ts+w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To perform actions pre- and post- task execution, see [[Remote Runner: Pre- and Post- task actions]]. "
 			}
 		]
 	},
