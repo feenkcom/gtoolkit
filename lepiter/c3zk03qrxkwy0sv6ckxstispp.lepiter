@@ -55,6 +55,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-16T14:32:15.43084+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-16T14:35:41.268581+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NbldRmqFQ9aSnsyQa64kiA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "***Summary*** — this could be a possible first MD tutorial, showing how to mold some simple data. The idea is to take a dataset from a research project, and turn it into an explainable system. We take two CSV files, and extract from it a bunch of objects that can be explored live. The objects wrap the original data (rows of the CSV files) and add  views and actions that let us explore the data in an interactive way, answering questions we have about the data. \nIn this example we take a dataset of software visualization papers, some of which are design studies."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2026-01-14T10:39:03.583381+01:00"
 					}
 				},
@@ -66,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-14T10:39:39.890686+01:00"
+						"dateAndTimeString" : "2026-01-16T14:36:35.065228+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "***To do*** — need an introduction explaining the goals of this tutorial.\nIntegrate it into [[1. Learn the basics of Glamorous Toolkit]]\n"
+				"string" : "***To do*** — need an introduction explaining the goals of this tutorial.\nBelow we just document our explorsation steps. Expand these into a proper tutorial, explaining what we are  doing in each step.\nIntegrate it into [[1. Learn the basics of Glamorous Toolkit]]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -2200,43 +2237,6 @@
 								"uidString" : "WXSb+NqsRuagYnjIUnva+g=="
 							},
 							"code" : "VRDatasets new allPapers"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-14T11:33:20.313806+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-14T11:33:20.313806+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "XeG/0O+FS+enrsKU6AnhDA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
 						}
 					]
 				},
@@ -2270,6 +2270,81 @@
 					"__type" : "textStyle"
 				},
 				"string" : "# # Adding a new contextual view"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-16T14:39:37.329545+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-16T14:54:23.695887+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Vy9GKW+CSMaOJ+fznmuhtg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We only want one instance of each entity (a paper with an id, a person with a name etc).\nWe  also want to wrap collections of these so we can mold them.\nLike the Bellairs example, we can have a registry for a dataset storing all the associated instance. Each instance knows the registry and can query it for related instances. That way we are sure not to generated clones of instances.\nSo, a Dataset is an object that encapsulates a file and generates instances of domain entities. It also serves them by id or name.\nFor each entity we also have a collection wrapper."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-14T11:33:20.313806+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-16T14:37:54.185693+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XeG/0O+FS+enrsKU6AnhDA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Wrapping the dataset collection"
 			},
 			{
 				"__type" : "textSnippet",
