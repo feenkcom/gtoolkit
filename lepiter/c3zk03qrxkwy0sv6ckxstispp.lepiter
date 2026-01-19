@@ -2338,7 +2338,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T09:46:43.565889+01:00"
+									"dateAndTimeString" : "2026-01-19T23:52:14.128131+01:00"
 								}
 							},
 							"uid" : {
@@ -2348,7 +2348,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The solution is to introduce a dedicated [[Moldable Collection Wrapper]].\nWe introduce {{gtClass:name=VRPaperGroup}} using the trait {{gtClass:name=TGtGroupWithItems}}, which provides an `items` slot and duck-typed collection methods that just delegate their behavior to that slot.\nThis simple wrapper introduce sa new object that we can now mold."
+							"string" : "The solution is to introduce a dedicated [[Moldable Collection Wrapper]].\nWe introduce `VRPaperGroup` using the trait {{gtClass:name=TGtGroupWithItems}}, which provides an `items` slot and duck-typed collection methods that just delegate their behavior to that slot.\nThis simple wrapper introduce sa new object that we can now mold."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2409,7 +2409,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T09:52:24.323026+01:00"
+									"dateAndTimeString" : "2026-01-19T23:52:54.714642+01:00"
 								}
 							},
 							"uid" : {
@@ -2419,7 +2419,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We introduce a view {{gtMethod:name=VRPaperGroup>>#gtItemsFor:}} that displays not only the title but also the type, and we turn this into an example.\nNow we can also add columns for authors and venues, or distinct views and actions, but first we need separate classes for these entities of interest."
+							"string" : "We introduce a view `VRPaperGroup>>#gtItemsFor:` that displays not only the title but also the type, and we turn this into an example.\nNow we can also add columns for authors and venues, or distinct views and actions, but first we need separate classes for these entities of interest."
 						},
 						{
 							"__type" : "pharoSnippet",
