@@ -2203,6 +2203,81 @@
 								"uidString" : "Pu5Bz7A5SrObme0SnzU8iA=="
 							},
 							"code" : "VRDatasets new paper327"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-13T15:03:46.324781+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-19T09:23:27.767464+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "g7NDSKxWTqCfTF1+EYZcZg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Adding a new contextual view"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-19T09:24:35.082226+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-19T09:25:51.401534+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FB7AjkQmTvmlNc7FvSEeww=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Although we can mold an individual paper, we can't mold the collection to show more properties or more views, because it is a generic {{gtClass:name=Array}}."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2237,45 +2312,7 @@
 								"uidString" : "WXSb+NqsRuagYnjIUnva+g=="
 							},
 							"code" : "VRDatasets new allPapers"
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T15:03:46.324781+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T17:15:40.77917+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "g7NDSKxWTqCfTF1+EYZcZg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "# # Adding a new contextual view"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -2290,7 +2327,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-16T14:39:37.329545+01:00"
+									"dateAndTimeString" : "2026-01-19T09:24:21.021445+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2301,17 +2338,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-16T14:54:23.695887+01:00"
+									"dateAndTimeString" : "2026-01-19T09:26:10.537522+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Vy9GKW+CSMaOJ+fznmuhtg=="
+								"uidString" : "os4HJGaBSVOB/98JN15iVw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We only want one instance of each entity (a paper with an id, a person with a name etc).\nWe  also want to wrap collections of these so we can mold them.\nLike the Bellairs example, we can have a registry for a dataset storing all the associated instance. Each instance knows the registry and can query it for related instances. That way we are sure not to generated clones of instances.\nSo, a Dataset is an object that encapsulates a file and generates instances of domain entities. It also serves them by id or name.\nFor each entity we also have a collection wrapper."
+							"string" : "The solution is to introduce a "
 						}
 					]
 				},
@@ -2365,7 +2402,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:31:02.243496+01:00"
+									"dateAndTimeString" : "2026-01-19T09:24:25.150205+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2376,17 +2413,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:33:35.787079+01:00"
+									"dateAndTimeString" : "2026-01-19T09:24:25.150205+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "AFC2kGpDQcepfQsDIbqivw=="
+								"uidString" : "uQM9qW/VTA2hpH7RrE43IQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Wrap the list of papers so we can mold it as well.\nAdd Authors and Venues as entities (and views)\nCreate a subclass for selected papers with more properties.\nTurn the snapshotted versions into Ombu files that can be loaded.\nAdd some simple visualizations?\n..."
+							"string" : ""
 						},
 						{
 							"__type" : "textSnippet",
@@ -2402,7 +2439,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-14T16:39:19.14934+01:00"
+									"dateAndTimeString" : "2026-01-13T17:31:02.243496+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2413,17 +2450,54 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-14T16:39:19.14934+01:00"
+									"dateAndTimeString" : "2026-01-19T09:22:30.505631+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "YnVFQw55Qna98TzbBDW+/Q=="
+								"uidString" : "AFC2kGpDQcepfQsDIbqivw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "Add Authors and Venues as entities (and views)\nWrap the list of papers so we can mold it as well.\nCreate a class for Design Study entities associated to selected papers. (Instead of a subclass of papers for papers on design studies.)\nTurn the snapshotted versions into Ombu files that can be loaded.\nAdd some simple visualizations?\n..."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-16T14:39:37.329545+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-16T14:54:23.695887+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Vy9GKW+CSMaOJ+fznmuhtg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We only want one instance of each entity (a paper with an id, a person with a name etc).\nWe  also want to wrap collections of these so we can mold them.\nLike the Bellairs example, we can have a registry for a dataset storing all the associated instance. Each instance knows the registry and can query it for related instances. That way we are sure not to generated clones of instances.\nSo, a Dataset is an object that encapsulates a file and generates instances of domain entities. It also serves them by id or name.\nFor each entity we also have a collection wrapper."
 						}
 					]
 				},
@@ -2494,6 +2568,80 @@
 					"__type" : "textStyle"
 				},
 				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-19T09:24:28.140947+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-19T09:24:28.140947+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kWllX1FdR5i1SJICfKxPZQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-19T09:24:28.345052+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-19T09:29:09.37653+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WP2ehNiQQqGn5eiKGoP3aQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "feenkcom/gtoolkit#4831"
 			}
 		]
 	},
