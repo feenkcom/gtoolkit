@@ -2623,7 +2623,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:59:04.842885+01:00"
+									"dateAndTimeString" : "2026-01-20T08:07:06.236387+01:00"
 								}
 							},
 							"uid" : {
@@ -2633,7 +2633,41 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To extract the authors we need to do a bit of work, because there are several columns in the CSV, respectively attributes in the JSON representing authors. We need to extract all these names and create domain entities for them."
+							"string" : "To extract the authors we need to do a bit of work, because there are several columns in the CSV, respectively attributes in the JSON representing authors. We need to extract all these names and create domain entities for them. We define {{gtMethod:name=VRPaper>>#authorNames}}.\nWe perform a sanity check."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:05:26.270952+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:07:41.141159+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "3nLELnkLS1yk61uP3xU15A=="
+							},
+							"code" : "(VRDatasetExamples new vrDataset allPapers flatCollect: #authorNames) sorted"
 						},
 						{
 							"__type" : "textSnippet",
@@ -2649,7 +2683,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:04.215234+01:00"
+									"dateAndTimeString" : "2026-01-20T08:07:45.795595+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2660,7 +2694,149 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T11:08:11.201124+01:00"
+									"dateAndTimeString" : "2026-01-20T08:08:06.439+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "2DRdIX0PS7CJkkoNPBjnKw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We find some empty names. Let's check where."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:08:07.908289+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:08:43.156048+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ATA80D5hQBWX34sCj7smhQ=="
+							},
+							"code" : "VRDatasetExamples new vrDataset allPapers\r\tselect: [ :p | p authorNames includes: '' ]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:09:22.732635+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:12:43.356135+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "b6Reys9RRFm/vRoAR8866w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "It seems the # Authors field is unreliable, so let's just collect the authors that are not empty instead.\nNow we can find the mismatches."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:12:45.021457+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:15:57.480708+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mYC9KFmuTc6pTBGqBLuV2w=="
+							},
+							"code" : "VRDatasetExamples new vrDataset allPapers\r\treject: [ :p | p numAuthors = p numAuthorsStored ]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:18:40.585167+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:19:30.261637+01:00"
 								}
 							},
 							"uid" : {
@@ -2670,7 +2846,41 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "***CONTINUE HERE***\nwe save an intermediate snapshot\n"
+							"string" : "Now we can introduce and initialize Authors as domain objects."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:19:35.434843+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T08:19:48.80155+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "nIhfB4AKRJGoXFpd2C4rYA=="
+							},
+							"code" : "VRDatasetExamples new vrDataset "
 						},
 						{
 							"__type" : "textSnippet",
@@ -2686,7 +2896,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-16T14:39:37.329545+01:00"
+									"dateAndTimeString" : "2026-01-20T09:07:57.378278+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2697,7 +2907,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-16T14:54:23.695887+01:00"
+									"dateAndTimeString" : "2026-01-20T09:17:27.482351+01:00"
 								}
 							},
 							"uid" : {
@@ -2707,7 +2917,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We only want one instance of each entity (a paper with an id, a person with a name etc).\nWe  also want to wrap collections of these so we can mold them.\nLike the Bellairs example, we can have a registry for a dataset storing all the associated instance. Each instance knows the registry and can query it for related instances. That way we are sure not to generated clones of instances.\nSo, a Dataset is an object that encapsulates a file and generates instances of domain entities. It also serves them by id or name.\nFor each entity we also have a collection wrapper."
+							"string" : "We have the dataset initialize dictionaries of papers and authors. We add a moldable author group, and now we can add views allowing us to navigate from the dataset to papers and authors, and between papers and authors. We extend the dataset papers view with # authors"
 						}
 					]
 				},
@@ -2730,7 +2940,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-19T09:52:42.710082+01:00"
+						"dateAndTimeString" : "2026-01-20T09:13:24.388291+01:00"
 					}
 				},
 				"uid" : {
@@ -2740,7 +2950,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Introducing more domain objects"
+				"string" : "# Introducing Authors"
 			},
 			{
 				"__type" : "textSnippet",
@@ -2761,7 +2971,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T09:24:25.150205+01:00"
+									"dateAndTimeString" : "2026-01-20T09:09:39.077933+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2772,17 +2982,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T09:24:25.150205+01:00"
+									"dateAndTimeString" : "2026-01-20T09:09:42.846449+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "uQM9qW/VTA2hpH7RrE43IQ=="
+								"uidString" : "ISg/rZKJTVCaIf6YNoDC4Q=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "Exercise: Add Venues as entities (and views)."
 						},
 						{
 							"__type" : "textSnippet",
@@ -2809,7 +3019,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:02:33.181406+01:00"
+									"dateAndTimeString" : "2026-01-20T09:14:46.328569+01:00"
 								}
 							},
 							"uid" : {
@@ -2819,7 +3029,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Add Authors and Venues as entities (and views).\nCreate a class for Design Study entities associated to selected papers. (Instead of a subclass of papers for papers on design studies.)\nTurn the snapshotted versions into Ombu files that can be loaded.\nAdd some simple visualizations?\n..."
+							"string" : "Add action to navigate to the dataset of a paper or author.\nExercise: add action to open google scholar on paper\n\nAdd queries for papers, authors and types\n\nCreate a class for Design Study entities associated to selected papers. (Instead of a subclass of papers for papers on design studies.)\n\nTurn the snapshotted versions into Ombu files that can be loaded.\nAdd some simple visualizations?\n..."
 						}
 					]
 				},
