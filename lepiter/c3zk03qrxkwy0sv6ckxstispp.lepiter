@@ -2918,6 +2918,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "We have the dataset initialize dictionaries of papers and authors. We add a moldable author group, and now we can add views allowing us to navigate from the dataset to papers and authors, and between papers and authors. We extend the dataset papers view with # authors"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T09:09:39.077933+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T09:09:42.846449+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ISg/rZKJTVCaIf6YNoDC4Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Exercise: Add Venues as entities (and views)."
 						}
 					]
 				},
@@ -2971,7 +3008,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T09:09:39.077933+01:00"
+									"dateAndTimeString" : "2026-01-20T09:50:35.987587+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2982,17 +3019,51 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T09:09:42.846449+01:00"
+									"dateAndTimeString" : "2026-01-20T09:51:07.86784+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "ISg/rZKJTVCaIf6YNoDC4Q=="
+								"uidString" : "dWAJ0IEuSGS0cstRnqmzdQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Exercise: Add Venues as entities (and views)."
+							"string" : "We would like to navigate from a paper or author back to the dataset."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T09:51:10.544892+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T09:51:52.124427+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ygYoAdRfRK27xZMuIRD2oQ=="
+							},
+							"code" : "VRDatasetExamples new vrDataset papers first"
 						},
 						{
 							"__type" : "textSnippet",
@@ -3008,7 +3079,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:31:02.243496+01:00"
+									"dateAndTimeString" : "2026-01-20T09:52:00.144089+01:00"
 								}
 							},
 							"editEmail" : {
@@ -3019,17 +3090,156 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T09:14:46.328569+01:00"
+									"dateAndTimeString" : "2026-01-20T09:55:11.019646+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "AFC2kGpDQcepfQsDIbqivw=="
+								"uidString" : "5TU4KeoPQSeKdpAHGGC+uA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Add action to navigate to the dataset of a paper or author.\nExercise: add action to open google scholar on paper\n\nAdd queries for papers, authors and types\n\nCreate a class for Design Study entities associated to selected papers. (Instead of a subclass of papers for papers on design studies.)\n\nTurn the snapshotted versions into Ombu files that can be loaded.\nAdd some simple visualizations?\n..."
+							"string" : "We navigate to `self dataset` in the playground and extract an action. We change the icon to `up`.\nWe push the action up to share the action with other domain entities."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:12:08.758823+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:14:15.037883+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rtAX+kNIS3KxX4GEzKbzlw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Exercise: create an action to open the webbrowser on google scholar for a paper from its title.\nHint: use `WebBrowser openOn: ...`.\nExercise: instead of opening an external browser, open the web page view on a `ZnUrl fromString: ...`. Would this be better as an action or a view?"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:08:04.882283+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:14:58.889779+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "R3nSJdRCTjaR449gfTQljw=="
+							},
+							"code" : "gsUrl := 'https://scholar.google.com/scholar?hl=en&q=Techniques+for+Reducing+the+Complexity+of+Object-Oriented+Execution+Traces&btnG='.\r\rZnUrl\r\t\tfromString: gsUrl"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:15:03.095592+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:15:20.993565+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "3Sc3gVGbRQ6Hqu4gQTLlxw=="
+							},
+							"code" : "WebBrowser openOn: gsUrl"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:10:12.060959+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:15:33.899845+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "VfJcSM7XSnGQOS8OYMcC6w=="
+							},
+							"code" : " GtWebViewElement new url: gsUrl"
 						}
 					]
 				},
@@ -3041,7 +3251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T17:10:44.37814+01:00"
+						"dateAndTimeString" : "2026-01-20T09:50:10.322366+01:00"
 					}
 				},
 				"editEmail" : {
@@ -3052,12 +3262,307 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T17:31:01.537126+01:00"
+						"dateAndTimeString" : "2026-01-20T09:50:47.879907+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ZRndvmECQxS9/UfAt4Ekpw=="
+					"uidString" : "cxBIwF2pReOckFB+PUg5Ew=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Adding an actions"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:16:42.283983+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:28:03.033467+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "NVoYkFC+TBmfPeEZj3Rihw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We would like to open a paper group on papers whose title match a substring."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:18:14.314836+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:18:38.504127+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "HIQbFzElSG+p3r8DROv5Bg=="
+							},
+							"code" : "VRDatasetExamples new vrDataset "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:27:51.49236+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:28:45.807232+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UJLIHQT0R1WzgwX3HGAh5A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We add {{gtMethod:name=VRDataset>>#gtSpotterForPaperTitles:}}.\nWe also add {{gtMethod:name=VRDataset>>#gtSpotterForPaperTypes:}} so we can search for all Design study papers by type."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:28:49.021006+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:29:35.943368+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yDuMn7SaR9GxWGVTdXtu7Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Exercise: Add a spotter search for authors by substring of author name."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:29:36.516677+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:30:34.422914+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "suyo0Lq7TgCJbXBncOMFwA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Exercise: add a view of all the paper types in a dataset or a group. It should list the number of papers of each type, and send to a paper group of just those papers."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-20T10:03:22.126141+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-20T10:16:41.620274+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wqq2z+JYQzWIsfXRFauEJw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Adding queries"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-13T17:10:44.37814+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-20T10:33:45.366652+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZRndvmECQxS9/UfAt4Ekpw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Exercise: Create a class for Design Study entities associated to selected papers. (Instead of a subclass of papers for papers on design studies.)\n\n\nTurn the snapshotted versions into Ombu files that can be loaded.\nAdd some simple visualizations?\n..."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-20T10:30:57.747836+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-20T10:30:57.747836+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pwZtwRE4RPCNwl0Jed7Vjg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
