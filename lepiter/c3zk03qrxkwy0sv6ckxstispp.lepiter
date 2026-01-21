@@ -656,7 +656,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T13:27:05.497101+01:00"
+						"dateAndTimeString" : "2026-01-21T13:44:21.975484+01:00"
 					}
 				},
 				"editEmail" : {
@@ -667,12 +667,12 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T13:27:20.429301+01:00"
+						"dateAndTimeString" : "2026-01-21T13:44:23.451235+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "bAqmPe5ZQ0y4jUdSO37C8A=="
+					"uidString" : "ORPvvZvbRymJ6YIah1mqxA=="
 				},
 				"string" : "—————***CONTINUE HERE*** ——————————",
 				"isHidden" : false
@@ -682,6 +682,658 @@
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:37:08.384434+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:37:56.062324+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Vt+EmL2CTuyTBs5IJGF7cw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Luckily we already have a utility to convert CSV files to JSON, so we can just use that.\n(There is a moldable development pattern, [[Tooling Buildup]], which we can skip in this case, because we already have the basic tools we need.)"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:34:36.211585+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:37:08.388027+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "sfGYsb0xS6SsBx5HGz92ig=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Our copies of the dataset files reside in the following folder:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-13T15:23:47.752399+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:35:59.208555+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aBxmuOfoThm0M8VCawfirA=="
+							},
+							"code" : "datasetFolder := FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data'\r\t\t/ 'visualisation-review'"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:34:36.453775+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:41:10.095605+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ziqZbZpsQXGYg8ocEab8BQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Note that we are writing code here directly in a notebook page. In this way we can directly try out snippets of code, while also documenting what we are doing. This is an example of the pattern [[Project Diary]] — instead of directly coding in the IDE, we program in notebook pages so we can track our progress and document our process."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:41:16.224931+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:46:51.339515+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IInn+152S5yLUP/DXep6Xg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If we *Evaluate and inspect* the snippet above (first button), we obtain the view we had earlier of the dataset folder. We can grab the first file and convert it to JSON, like this:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:43:12.696478+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:45:45.947849+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "KWltqmq1RPaGqn5SXa/99g=="
+							},
+							"code" : "allFile := datasetFolder / 'dataset-review-vissoft-all.csv'.\rallJson := (CSV2JSON for: allFile contents) json"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:46:56.024496+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:49:52.000302+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "a7U/cxQdRdi2vcreyCSSkQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Actually, we are not so much interested in the JSON format itself, but in the `jsonObject` view, which is just a {{gtClass:name=Dictionary}} of keys and values. We can convert the CSV to an {{gtClass:name=Array}} of such dictionaries by sending `jsonObject` to the {{gtClass:name=CSV2JSON}} parse tree visitor."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:46:30.325263+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:49:00.586388+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kZFSf7fdTt+Lhrt1bNaT4Q=="
+							},
+							"code" : "allJson := (CSV2JSON for: allFile contents) jsonObject"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:36:03.443209+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:53:27.139437+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ik5oF59HR4qWWMrqWDCrMQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This looks like a good way to break up the original CSV files into smaller chunks that represent the data for individual objects, though they are still just *data*, not domain objects."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:53:30.227391+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:56:03.429385+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "2QyKPZ8yR4OML3NnWCWtiQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "At this point it would be useful to turn each of these entities into an [[Example Object]] that exists also outside of this notebook page. This illustrates the principle that we first prototype code, starting from a notebook page, or *playground* (such as the code snippet above), and then *extract* interesting classes and methods."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:56:30.905764+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:56:37.203372+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "0RCRT+yoQqO8PXKNEJ6VEQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Consider the following snippet:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:56:38.84027+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:56:40.863281+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9DLN6XbhStOGVmcyaVdPPg=="
+							},
+							"code" : "VRDatasetExamples new datasetFolder"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:36:03.703971+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T14:37:57.791312+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QUJ04SiGS+aKXLP3cvMFng=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This code is invalid, because the class `VRDatasetExamples` does not yet exist, nor does the class-side method `datasetFolder`. If you click on the *fixit* (wrench) icon, you can create the missing class:"
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T14:38:01.911403+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T14:38:01.911403+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "5rYM3E5LTzGpcDv+dQIP0g=="
+							},
+							"exampleSelector" : "newClassSnippetWithFixitClickedElement",
+							"previewHeight" : 250,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "VRTutorialExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:56:43.068954+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:56:43.068954+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "RAYZlFzpS2O0rao0QqYzWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:56:43.349955+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:56:43.349955+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "npRUOnxhS2+FUOZLUGkxWQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "commentSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:27:05.497101+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:27:20.429301+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bAqmPe5ZQ0y4jUdSO37C8A=="
+							},
+							"string" : "—————***CONTINUE HERE*** ——————————",
+							"isHidden" : false
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:42:52.896771+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:43:12.69787+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "BQWiXRYXSnmhcAFx8261yg=="
+							},
+							"code" : "selectedFile := datasetFolder / 'dataset-review-vissoft-selected.csv'.\rselectedJson := (CSV2JSON for: selectedFile contents) jsonObject."
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -718,40 +1370,6 @@
 								"__type" : "textStyle"
 							},
 							"string" : "We have a local cache of the files.\nWe can browse the files,  but that's not very helpful.\nWe can also open them in Excel (click the *Open in O/S* button) but "
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T15:23:47.752399+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T15:23:57.353985+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "aBxmuOfoThm0M8VCawfirA=="
-							},
-							"code" : "datasetFolder := FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data'\r\t\t/ 'visualisation-review'."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -982,7 +1600,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T13:31:53.070575+01:00"
+						"dateAndTimeString" : "2026-01-21T13:51:46.591825+01:00"
 					}
 				},
 				"uid" : {
