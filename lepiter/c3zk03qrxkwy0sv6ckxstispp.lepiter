@@ -1139,7 +1139,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T16:27:45.239997+01:00"
+									"dateAndTimeString" : "2026-01-22T09:14:36.23727+01:00"
 								}
 							},
 							"uid" : {
@@ -1165,7 +1165,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:56:43.068954+01:00"
+									"dateAndTimeString" : "2026-01-22T09:20:13.991259+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1176,12 +1176,197 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:56:43.068954+01:00"
+									"dateAndTimeString" : "2026-01-22T09:24:18.51393+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "RAYZlFzpS2O0rao0QqYzWw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Click on the fixit button. Enter the package name `VisualisationReview` and the tag `Examples`. Then click on the checkmark ✓ lower left to accept the changes.*"
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T09:36:28.793808+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T09:36:28.793808+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "3hx7OLpzStqPkg5kB83hXg=="
+							},
+							"exampleSelector" : "newClassSnippetDialogElement",
+							"previewHeight" : 360,
+							"previewShowSelector" : "gtLiveFor:",
+							"exampleBehaviorName" : "VRTutorialExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T10:57:15.022234+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T11:08:54.266607+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+S1nHy1mRWiE0+YivtY+Vw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Now do the same to create the `datasetFolder` method, pasting in the following code:*"
+						},
+						{
+							"__type" : "blockQuoteSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T10:57:18.418573+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T10:57:27.33352+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "/m+G2AqISgSJJrnxXhhrsg=="
+							},
+							"string" : "datasetFolder\r\t<gtExample>\r\t| folder |\r\tfolder := FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos'\r\t\t\t/ 'data' / 'visualisation-review'.\r\tself assert: folder exists.\r\tself assert: (folder allChildrenMatching: '*.csv') size equals: 2.\r\t^ folder"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T11:08:59.44003+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T11:16:16.877898+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7NnSqb6ERKav7pHJXMXsdQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This code defines an [[Example]], a method that serves both as a *factory* for an object of interest, and as a *test case* containing assertions. Examples methods are *unary* methods that are annotated with `<gtExample>`, and return some object. In this case we return a file reference to the dataset folder, while verifying that the folder exists and contains precisely two CSV files."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T11:09:33.086449+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T11:09:33.086449+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "CGY7OBwFRi2P7gI0f79Z+A=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
@@ -1202,7 +1387,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:56:43.349955+01:00"
+									"dateAndTimeString" : "2026-01-22T11:09:33.339437+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1213,12 +1398,49 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:56:43.349955+01:00"
+									"dateAndTimeString" : "2026-01-22T11:09:33.339437+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "npRUOnxhS2+FUOZLUGkxWQ=="
+								"uidString" : "wEMiheLHT+mBsx+TvPxWfg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T11:09:33.553868+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-22T11:09:33.553868+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9Pd416VTTryDleB7KJLqTg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
