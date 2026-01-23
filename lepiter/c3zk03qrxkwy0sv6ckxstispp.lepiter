@@ -597,7 +597,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:26:10.094277+01:00"
+									"dateAndTimeString" : "2026-01-23T09:23:05.005502+01:00"
 								}
 							},
 							"uid" : {
@@ -607,7 +607,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "However when we explore the raw data, even as a spreadsheet, we just get a very generic, table-oriented view of all the data, that makes it difficult to gain insights into the data. Of course, with some spreadsheet savvy, we could probably answer many of the questions we might have, such as:\n• *What different types of papers were identified?*\n• *How many authors are there?*\n• *Which authors published most frequently?*\n• *Which authors wrote about Design Studies?*\n• *What other topics did those authors write about?*\nand so on, but each answer would be hand-crafted as a generic spreadsheet, and it would be hard to navigate the data to answer similar questions about subsets of data."
+							"string" : "However when we explore the raw data, even as a spreadsheet, we just get a very generic, table-oriented view of all the data, that makes it difficult to gain insights into the data. Of course, with some spreadsheet savvy, we could probably answer many of the questions we might have, such as:\n— *What different types of papers were identified?*\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *Which authors wrote about Design Studies?*\n— *What other topics did those authors write about?*\nand so on, but each answer would be hand-crafted as a generic spreadsheet, and it would be hard to navigate the data to answer similar questions about subsets of data."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1610,7 +1610,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:53:09.281902+01:00"
+									"dateAndTimeString" : "2026-01-23T08:54:41.333389+01:00"
 								}
 							},
 							"uid" : {
@@ -1620,7 +1620,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We could extract these methods from the ciode snippets, as we did above, or we can also simply load in the code from the *Changes snippet* below.\n⇒ *Inspect this code to see how the additional examples are defined, and accept the changes (✓ button).*"
+							"string" : "We could extract these methods from the ciode snippets, as we did above, or we can also simply load in the code from the *Changes snippet* below.\n⇒ *Inspect this code to see how the additional examples are defined, and accept the changes (✓ button).*\n⇒ *Can you think of some more critical assertions to include in the examples?*"
 						},
 						{
 							"__type" : "changesSnippet",
@@ -1691,41 +1691,6 @@
 				"string" : "# Converting the CSV to JSON"
 			},
 			{
-				"__type" : "commentSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T13:44:21.975484+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T13:44:23.451235+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "ORPvvZvbRymJ6YIah1mqxA=="
-				},
-				"string" : "—————***CONTINUE HERE*** ——————————",
-				"isHidden" : false
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -1781,6 +1746,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:08:40.10591+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:16:28.752908+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "og2VlzqISg+h4oLD+VoANA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This is an example of the most fundamental of the patterns, namely [[Moldable Object]]. To make a system explainable, we need live, moldable objects which we can augment with contextual tools. We will now start to introduce such objects."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2026-01-13T13:44:31.381368+01:00"
 								}
 							},
@@ -1792,7 +1794,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T13:47:58.806492+01:00"
+									"dateAndTimeString" : "2026-01-23T08:59:50.381254+01:00"
 								}
 							},
 							"uid" : {
@@ -1802,7 +1804,44 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Browsing the two tables, we see that the *selected* dataset about design studies has more detailed information, such as *abstract* and the kind of visualization *task*, but the *all* dataset has more general information about *authors* and the *type* of paper that is not in the *selected* dataset. To recover the authors of the selected dataset we need both sets."
+							"string" : "Browsing the two datasets, we see the first (`...-all`) dataset contains more general information for all the papers about *authors*, the *venue* in which it was presented, the *type* of paper, and so on, while the second (`...-selected`) dataset contains more detailed information about design studies, such as the paper's *abstract* and the kind of visualization *task* considered.\nWe should therefore start by extracting more general domain entities from the first dataset, before diving into the details in the second dataset."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:04:06.159255+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:04:16.092894+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "g6uFz2g9SYWP8y7mD5rZAA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "There are several domain entities that we might like to recover. Domain entities are full-fledged objects (*e.g.*, paper) rather than attributes of objects (*e.g.*, *title* of a paper). The *properties* of these domain entities may consist of both attributes (data values) and relationships to otherdomain entitites. It may happen that something we consider as just data (*e.g.*, the *type* of a paper) could turn out to be a domain entity on its own. We'll discover these as we explore."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1829,7 +1868,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T15:48:49.358324+01:00"
+									"dateAndTimeString" : "2026-01-23T09:04:06.161819+01:00"
 								}
 							},
 							"uid" : {
@@ -1839,7 +1878,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "There are several domain entities that we might like to recover. Domain entities are full-fledged objects. Some of their *properties* are relationships to other domain entities, and others are just data values (e.g., numbers or strings). NB: it may not be obvious at times which properties are worth modeling as objects.\n— *paper* — the publication, which has properties *title* (string), *ID*, *authors* (persons), *venue* \n— *person* — an author or co-author of one or more papers\n— *venue* — a conference (SOFTVIS Or VISSOFT) with a *date*, *location* etc.\nThere may be others, but let's start with *paper* and then add more."
+							"string" : "Here are a few of the most obvious domain entities to extract:\n— *paper* — the publication, which has properties *title* (string), *ID*, *authors* (persons), *venue* \n— *person* — an author or co-author of one or more papers\n— *venue* — a conference (SOFTVIS Or VISSOFT) with a *date*, *location* etc.\nThere may be others, but let's start with *paper* and then add more."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1855,7 +1894,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:55:54.077438+01:00"
+									"dateAndTimeString" : "2026-01-23T09:18:47.884444+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1866,17 +1905,125 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:56:38.039177+01:00"
+									"dateAndTimeString" : "2026-01-23T09:18:47.884444+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "CMcZL9nsSDCec41eVI702w=="
+								"uidString" : "x20+588SSi6BOMYYl68scA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We will start with the first dataset listing all the studied publications, as it also contains information about authors and venues, while the second dataset concerns just the design studies."
+							"string" : "Consider the JSON data we have extracted. It consists of an {{gtClass:name=Array}} of {{gtClass:name=Dictionary}} instances, each of which describes a paper.  "
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:04:50.186669+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:04:57.704415+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "B71yvXrYSZ621NrGzdzAoA=="
+							},
+							"code" : "VRDatasetExamples new allPapersJSON"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:04:59.78404+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:18:47.887289+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+mayhIHfQe2NPK52ePIC5A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We cannot do much with with the raw dictionaries, because a dictionary has nothing to do the visualization review domain per se. We need to turn this raw data into a moldable object by *wrapping* it. This is an example of another, closely-related pattern: [[Moldable Data Wrapper]]. Not all moldable objects are wrappers, but when we are creating an explainable system from existing data, this is the most common way to do it."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:18:13.989927+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:20:43.814339+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "XI/9grBAT4mD5L8tA/Qocg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Let's introduce a new class `VRPaper`. Every instance will wrap (or encapsulate) the raw data dictionary of a paper, and provide a more domain-friendly interface instance.\nThis is how we would like to instantiate papers from the raw data:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1903,14 +2050,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T17:12:09.881446+01:00"
+									"dateAndTimeString" : "2026-01-23T09:20:08.62203+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "LabALEH+QIyTCQa5I+yymg=="
 							},
-							"code" : "VRDatasetExamples new allPapersJSON collect: [ :data | VRPaper for: data ]"
+							"code" : "papers := VRDatasetExamples new allPapersJSON collect: [ :data | VRPaper for: data ]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1937,7 +2084,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:58:40.864197+01:00"
+									"dateAndTimeString" : "2026-01-23T09:25:45.475643+01:00"
 								}
 							},
 							"uid" : {
@@ -1947,7 +2094,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "As before, this code won't work yet, but we can create it by *fixing* it. We want to:\n— create the new class `VRPaper` in the same `VisualisationReview` package, but tagged as a `Model` class\n— add a `data` slot to hold the dictionary\n— add *accessors* `data` and `data:` to get and set the `data` slot \n— add a class-side instance creation method `for:` that instantiates an objects and sets the data"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1963,7 +2110,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:58:41.121296+01:00"
+									"dateAndTimeString" : "2026-01-23T09:25:45.957586+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1974,20 +2121,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:58:41.121296+01:00"
+									"dateAndTimeString" : "2026-01-23T09:38:22.686545+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "8hUO22/QSVWDaopC4quRrA=="
+								"uidString" : "wnS99DKzSUKPvXB6v0h5qg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "Try these steps yourself. You can always browse the proposed changes below and accept them later.\n⇒ *Create `VRPaper` using the fixit dialog, as before.*\n⇒ *Add the missing `for:` method using the fixit dialog. Change the proposed `data` argument to `aDictionary`; add the body `^ self new data: aDictionary`; accept the change.*\n⇒ *In the `for:` method fix the `data:` accessor, adding the body `data := aDictionary`*\n⇒ *In the `data:` setter method, add the missing `data` slot using the fixit dialog, and accept the change*\n⇒ *Add `data` getter. This can be done in several ways. One way is to click on the class name from one of the mathods you have created, opening a class coder view. Click on the grey bar below the class name to open the class specification. Primary-click on the `data` slot to select the *Create accessors* menu item, select it, and accept the refactoring.*"
 						},
 						{
-							"__type" : "commentSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -2000,7 +2147,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:27:05.497101+01:00"
+									"dateAndTimeString" : "2026-01-23T09:38:27.398403+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2011,15 +2158,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:27:20.429301+01:00"
+									"dateAndTimeString" : "2026-01-23T09:39:02.264319+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "bAqmPe5ZQ0y4jUdSO37C8A=="
+								"uidString" : "69/ROAi+QiucY5dxM9qZgw=="
 							},
-							"string" : "—————***CONTINUE HERE*** ——————————",
-							"isHidden" : false
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Your changes should be similar to the proposed changes below. You can also simply accept those:"
 						},
 						{
 							"__type" : "changesSnippet",
@@ -2070,7 +2219,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:58:41.347815+01:00"
+									"dateAndTimeString" : "2026-01-23T09:41:21.250676+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2081,54 +2230,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:58:41.347815+01:00"
+									"dateAndTimeString" : "2026-01-23T09:42:57.499156+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "SepeImOASdCGTOAf1cckKQ=="
+								"uidString" : "HC3CDQd4TQCtWW1t7jrodA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:58:41.593412+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:58:41.593412+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "qXogZdLeQvaWSBCjGJiTbw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
+							"string" : "Now we have all the missing pieces and we can create our collection of `VRPaper` instances.\n⇒ *Inspect the result. Dive into any particular paper, and inspect its `data` slot.*"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2155,14 +2267,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:39.006259+01:00"
+									"dateAndTimeString" : "2026-01-23T09:41:00.912324+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "aVT0C2LvSzudHhochZKxrg=="
 							},
-							"code" : "papers := VRDatasetExamples new allPapersJSON collect: [ :data | VRPaper for: data ]"
+							"code" : "VRDatasetExamples new allPapersJSON collect: [ :data | VRPaper for: data ] "
 						},
 						{
 							"__type" : "textSnippet",
@@ -2178,7 +2290,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T15:03:45.355551+01:00"
+									"dateAndTimeString" : "2026-01-23T09:43:53.304813+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2189,17 +2301,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:25:56.994798+01:00"
+									"dateAndTimeString" : "2026-01-23T09:47:57.242163+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "NPN5YRqRQA2u+0JwbgH0vw=="
+								"uidString" : "SepeImOASdCGTOAf1cckKQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We extract this as an example."
+							"string" : "⇒ *Extract the above snippet as an example in the `VRDatasetExamples` class as `allPapers`. Add an assertion to check the number of papers created.*\nAfter doing this, the following snippet should work:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2234,6 +2346,115 @@
 								"uidString" : "8nlMp1m0RzaaXjflcW83iQ=="
 							},
 							"code" : "VRDatasetExamples new allPapers"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:48:00.305501+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:48:11.75326+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ASAljKhwS1GTFDlIetqYlw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Your changes should look something like this:"
+						},
+						{
+							"__type" : "changesSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:44:29.910371+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:44:29.910371+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "GY3Wr3wcRDWF20IOyxYcIw=="
+							},
+							"previewHeight" : 200,
+							"fileName" : "attachments/10uml94p4sov5eflwfj238y17/VisualisationReview-2a-PaperWrapper-Example.ombu"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:49:02.151072+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T09:51:05.598403+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "NPN5YRqRQA2u+0JwbgH0vw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "So far the domain objects are not much of an improvement over our raw dictionaries, in fact they seem wors, because we have tio navigate to get to the interesting data. But now the fun starts as we begin to mold these objects, adding contextual tools to make them more useful."
 						}
 					]
 				},
@@ -2269,10 +2490,80 @@
 				"string" : "# Modeling domain entities"
 			},
 			{
+				"__type" : "commentSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-21T13:44:21.975484+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-23T09:23:17.823385+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ORPvvZvbRymJ6YIah1mqxA=="
+				},
+				"string" : "—————***CONTINUE BELOW*** ——————————",
+				"isHidden" : false
+			},
+			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "commentSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:27:05.497101+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:27:20.429301+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bAqmPe5ZQ0y4jUdSO37C8A=="
+							},
+							"string" : "—————***CONTINUE HERE*** ——————————",
+							"isHidden" : false
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
