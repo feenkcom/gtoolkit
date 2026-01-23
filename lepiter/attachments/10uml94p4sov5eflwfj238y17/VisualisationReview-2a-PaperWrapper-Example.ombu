@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ '0' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDatasetExamples
+			},
+			#name : #allPapers,
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'allPapers\r\t<gtExample>\r\t| papers |\r\tpapers := self allPapersJSON collect: [ :data | VRPaper for: data ].\r\tself assert: papers size equals: 346.\r\t^ papers',
+			#stamp : '1/13/2026 16:24',
+			#package : #VisualisationReview
+		}
+	}
+}

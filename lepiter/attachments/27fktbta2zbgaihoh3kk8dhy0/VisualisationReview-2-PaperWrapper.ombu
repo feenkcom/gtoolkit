@@ -77,19 +77,26 @@ OmEntry {
 		#prior : OmReference [ '2' ],
 		#self : OmReference [ '3' ]
 	},
-	#content : EpMethodModification {
-		#oldMethod : RGMethodDefinition {
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
 			#annotations : IdentityDictionary {
 				#isMeta : false,
 				#className : #VRPaper
 			},
-			#name : #data,
+			#name : #'data:',
 			#protocol : #accessing,
-			#sourceCode : 'data\n\t^ data',
+			#sourceCode : 'data: aDictionary\r\tdata := aDictionary',
 			#stamp : '1/13/2026 16:11',
 			#package : #VisualisationReview
-		},
-		#newMethod : RGMethodDefinition {
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
 			#annotations : IdentityDictionary {
 				#isMeta : false,
 				#className : #VRPaper
@@ -99,37 +106,6 @@ OmEntry {
 			#sourceCode : 'data\r\t^ data',
 			#stamp : '1/13/2026 16:11',
 			#package : #VisualisationReview
-		},
-		#classPackageName : #VisualisationReview
-	}
-}OmEntry {
-	#tags : {
-		#prior : OmReference [ '3' ],
-		#self : OmReference [ '4' ]
-	},
-	#content : EpMethodModification {
-		#oldMethod : RGMethodDefinition {
-			#annotations : IdentityDictionary {
-				#isMeta : false,
-				#className : #VRPaper
-			},
-			#name : #'data:',
-			#protocol : #accessing,
-			#sourceCode : 'data: anObject\n\tdata := anObject',
-			#stamp : '1/13/2026 16:11',
-			#package : #VisualisationReview
-		},
-		#newMethod : RGMethodDefinition {
-			#annotations : IdentityDictionary {
-				#isMeta : false,
-				#className : #VRPaper
-			},
-			#name : #'data:',
-			#protocol : #accessing,
-			#sourceCode : 'data: anObject\r\tdata := anObject',
-			#stamp : '1/13/2026 16:11',
-			#package : #VisualisationReview
-		},
-		#classPackageName : #VisualisationReview
+		}
 	}
 }
