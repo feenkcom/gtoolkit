@@ -376,7 +376,7 @@
 								"uidString" : "wpSWSVPQTNWb6jJvOhMrIw=="
 							},
 							"exampleSelector" : "datasetFolder",
-							"previewHeight" : 150,
+							"previewHeight" : 170,
 							"previewShowSelector" : "gtTreeFor:",
 							"exampleBehaviorName" : "VRTutorialExamples",
 							"codeExpanded" : true,
@@ -520,7 +520,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:38:24.095378+01:00"
+									"dateAndTimeString" : "2026-01-23T17:26:54.532815+01:00"
 								}
 							},
 							"uid" : {
@@ -530,7 +530,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We can directly view the source data, or we can open these files using a spreadsheet software, such as Excel.\n⇒ *Try it — click below on the *Open in operating system* button at the top right.*"
+							"string" : "We can directly view the source data, or we can open these files using a spreadsheet software, such as Excel.\n⇒ *Try it — click below on the *Open in operating system* button at the top right.* "
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -1181,7 +1181,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:56:40.863281+01:00"
+									"dateAndTimeString" : "2026-01-23T17:27:36.073694+01:00"
 								}
 							},
 							"uid" : {
@@ -2580,7 +2580,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T10:52:59.179253+01:00"
+									"dateAndTimeString" : "2026-01-23T17:11:15.217039+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2591,7 +2591,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T10:52:59.179253+01:00"
+									"dateAndTimeString" : "2026-01-23T17:21:49.160199+01:00"
 								}
 							},
 							"uid" : {
@@ -2601,7 +2601,41 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "To answer this question, we need to be able to query papers for their *id*, their *type* and whether they are *selected* or not.\nA good way to add new behavior to domain objects is to "
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T17:12:21.674609+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T17:13:51.777424+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "h9ZIdN98QHSo2c+ei9/zzA=="
+							},
+							"code" : "VRDatasetExamples new allPapers first"
 						},
 						{
 							"__type" : "textSnippet",
