@@ -92,6 +92,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-23T12:59:48.894797+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-23T12:59:48.894797+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rETtX7opR02JL+K5cfWaGg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Briefly, a “contextual tool” is a (usually small) analysis tool that explains part of a software system by displaying some information, answering a query, computing some metrics, or visualizing some data about that system (the context). We'll see a few examples below, and we'll see many more examples later."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2025-12-15T14:38:12.300515+01:00"
 					}
 				},
@@ -103,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-15T14:52:24.183087+01:00"
+						"dateAndTimeString" : "2026-01-23T12:59:48.901439+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Briefly, a “contextual tool” is a (usually small) analysis tool that explains part of a software system by displaying some information, answering a query, computing some metrics, or visualizing some data about that system (the context). We'll see a few examples below, and we'll see many more examples later.\nGT supports the creation of these tools by means of *moldable development*, a set of development patterns that enable the adaptation (“molding”) of the tools of the development environment itself to the context of the software system to be explained. As we go through the examples of contextual tools, we'll see how moldable development enabled their creation."
+				"string" : "GT supports the creation of these tools by means of *moldable development*, a set of development patterns that enable the adaptation (“molding”) of the tools of the development environment itself to the context of the software system to be explained. As we go through the examples of contextual tools, we'll see how moldable development enabled their creation."
 			},
 			{
 				"__type" : "textSnippet",
