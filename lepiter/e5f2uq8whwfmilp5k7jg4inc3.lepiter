@@ -287,14 +287,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T10:02:26.050933+01:00"
+									"dateAndTimeString" : "2026-01-25T14:48:01.748403+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "pOLtQa9LStaq+6dgzCHFyQ=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\tsendWith: [ :msg | \r\t\t\tmsg\r\t\t\t\tlepiterExplanations: #('Rewriting Pharo code by example');\r\t\t\t\tmarkdown: 'Provide the rewrite rule for removing all `self halt` statements from methods.' ]"
+							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\tlepiterExplanations: #('Rewriting Pharo code by example');\r\t\tsendMarkdown: 'Provide the rewrite rule for removing all `self halt` statements from methods.'"
 						}
 					]
 				},
@@ -359,14 +359,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:36:34.810322+01:00"
+									"dateAndTimeString" : "2026-01-25T14:48:18.817637+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "ioErMQZXQNiRz2EnTHDG9w=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\ttools: GtLTools leSearch;\r\t\tsendWith: [ :msg | \r\t\t\tmsg\r\t\t\t\tmarkdown: 'Provide the rewrite rule for removing all `self halt` statements from methods. Document yourself by reading relevant Lepiter pages.' ]"
+							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\ttools: GtLTools leSearch;\r\t\tsendMarkdown: 'Provide the rewrite rule for removing all `self halt` statements from methods. Document yourself by reading relevant Lepiter pages.'"
 						}
 					]
 				},
@@ -431,14 +431,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:37:20.12651+01:00"
+									"dateAndTimeString" : "2026-01-25T14:48:54.016882+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "oVgHUePrTMibFPts4xF3Zg=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\taddResponseFormatForMagrite: GtLPharoScript named: 'PharoScript';\r\t\tsendWith: [ :msg | \r\t\t\tmsg\r\t\t\t\tlepiterExplanations: #('Querying with GT search filters by example');\r\t\t\t\tmarkdown: 'Provide a PharoScript with a search for methods that are in {{gtClass:BlElement}} and also refer to `assert:description:`.' ]"
+							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\taddResponseFormatForMagrite: GtLPharoScript named: 'PharoScript';\r\t\tlepiterExplanations: #('Querying with GT search filters by example');\r\t\tsendMarkdown: 'Provide a PharoScript with a search for methods that are in {{gtClass:BlElement}} and also refer to `assert:description:`.'"
 						}
 					]
 				},
@@ -503,14 +503,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:40:36.645676+01:00"
+									"dateAndTimeString" : "2026-01-25T14:49:03.868946+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "+6hmC21vQ7atJSFF9Wctcg=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\ttools: (GtLTools withAll: {GtLToolForChatMethodSearch new});\r\t\tsendWith: [ :msg | \r\t\t\tmsg\r\t\t\t\tmarkdown: 'What are a few references of {{gtClass:BlElement}} that also refer to `assert:description:`.' ]"
+							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\ttools: (GtLTools withAll: {GtLToolForChatMethodSearch new});\r\t\tsendMarkdown: 'What are a few references of {{gtClass:BlElement}} that also refer to `assert:description:`.'"
 						}
 					]
 				},
@@ -719,14 +719,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:43:30.278921+01:00"
+									"dateAndTimeString" : "2026-01-25T14:52:39.182314+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "cNTlU7GrQNiDH98fqZIUDg=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\ttools: GtLTools gtSearch , GtLTools gtExamplesRun , GtLTools leSearch\r\t\t\t\t, GtLTools gtCodeChange;\r\t\tsendWith: [ :msg | \r\t\t\tmsg\r\t\t\t\tmarkdown: 'Create a BubbleSorter class that implements bubblesort. Create examples for it. Ensure that the examples are green.';\r\t\t\t\tlepiterExplanations: {'Examples by example'} ]"
+							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\ttools: GtLTools gtSearch , GtLTools gtExamplesRun , GtLTools leSearch\r\t\t\t\t, GtLTools gtCodeChange;\r\t\tlepiterExplanations: {'Examples by example'};\r\t\tsendMarkdown: 'Create a BubbleSorter class that implements bubblesort. Create examples for it. Ensure that the examples are green.'"
 						},
 						{
 							"__type" : "textSnippet",
@@ -790,14 +790,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:44:01.057986+01:00"
+									"dateAndTimeString" : "2026-01-25T14:52:51.034754+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "9sD7KJpgSU2BfYL7yZzNrQ=="
 							},
-							"code" : "chat sendWith: [ :msg | \r\t\t\tmsg\r\t\t\t\tmarkdown: 'Check the examples from {{gtClass:BubbleSorter}}. If they are red, make them green.';\r\t\t\t\tlepiterExplanations: {'Examples by example'} ]"
+							"code" : "chat sendMarkdown: 'Check the examples from {{gtClass:BubbleSorter}}. If they are red, make them green.'"
 						}
 					]
 				},
