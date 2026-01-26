@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-23T20:20:26.238328+02:00"
+						"dateAndTimeString" : "2026-01-26T07:32:26.14258+01:00"
 					}
 				},
 				"uid" : {
@@ -39,44 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "An “example” (or *example method*) is a unary method that produces an *example object*."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-23T20:20:31.167815+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-23T20:20:52.646297+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "n2WoOTn+DQCjfEGZDuVXBw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "In [[Glamorous Toolkit]], examples serve as test methods and can contain assertions."
+				"string" : "An “example\" (or *example method*) is a unary method that produces an *example object*. Examples serve as test methods and can contain assertions. As different from tests, they return objects and can be composed of other examples."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-23T22:51:02.222581+02:00"
+						"dateAndTimeString" : "2026-01-26T07:34:45.475972+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "An example is always annotated with a `<gtExample>` pragma. For example, {{gtMethod:BrTextEditorSelecterExamples >> #select_moveOneRight_at_6|expanded=true}} defines an example method that produces a text editor, moves a cursor, simulates a selection, and eventually asserts that it answers the selection."
+				"string" : "An example method can reside in any class is annotated with a `<gtExample>` pragma. For example, {{gtMethod:BrTextEditorSelecterExamples >> #select_moveOneRight_at_6|expanded=true}} defines an example method that produces a text editor, moves a cursor, simulates a selection, and eventually asserts that it answers the selection."
 			},
 			{
 				"__type" : "textSnippet",
@@ -151,6 +114,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "An example can be based on one or more other examples. In the case above, the example relies on another example from {{gtMethod:BrTextEditorOperatorExamples>>#editorOnMultilineText|expanded=true}}. It does that by calling `self editorOnMultilineText`."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-26T07:32:55.505463+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-26T07:35:00.511251+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/MItqnf3TaKJIVdiyPVrOw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Assertions are expressed with messages like `assert:`, or `assert:equals:`."
 			}
 		]
 	},
