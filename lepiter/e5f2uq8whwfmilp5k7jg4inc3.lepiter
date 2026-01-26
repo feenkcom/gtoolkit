@@ -287,14 +287,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-25T20:08:56.329966+01:00"
+									"dateAndTimeString" : "2026-01-25T14:48:01.748403+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "pOLtQa9LStaq+6dgzCHFyQ=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\tlepiter: 'auhvwh3wo4eisu1kci9jdew92' explanations:'ar1ktsc6wth7k00p38moar4p4';\r\t\tsendMarkdown: 'Provide the rewrite rule for removing all `self halt` statements from methods.'"
+							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\tlepiterExplanations: #('Rewriting Pharo code by example');\r\t\tsendMarkdown: 'Provide the rewrite rule for removing all `self halt` statements from methods.'"
 						}
 					]
 				},
