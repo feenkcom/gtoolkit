@@ -81,8 +81,8 @@ OmEntry {
 		#prior : OmReference [ '3' ],
 		#self : OmReference [ '4' ]
 	},
-	#content : EpMethodAddition {
-		#method : RGMethodDefinition {
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
 			#annotations : IdentityDictionary {
 				#isMeta : false,
 				#className : #VRPaper
@@ -90,8 +90,20 @@ OmEntry {
 			#name : #id,
 			#protocol : #accessing,
 			#sourceCode : 'id\r\t^ self data at: \'ID\'',
-			#stamp : '1/27/2026 10:49',
+			#stamp : '',
 			#package : #VisualisationReview
-		}
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #id,
+			#protocol : #accessing,
+			#sourceCode : 'id\r\t^ (self data at: \'ID\') asNumber',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
 	}
 }
