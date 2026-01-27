@@ -1,0 +1,49 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ '0' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDatasetExamples
+			},
+			#name : #paper128,
+			#protocol : #accessing,
+			#sourceCode : 'paper128\r\t<gtExample>\r\t| paper |\r\tpaper := self allPapers select: [ :p | p id = 128 ].\r\tself assert: paper id equals: 128.\r\tself assert: paper isDesignStudy.\r\t^ paper',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDatasetExamples
+			},
+			#name : #paper128,
+			#protocol : #accessing,
+			#sourceCode : 'paper128\r\t<gtExample>\r\t| paper |\r\tpaper := self allPapers detect: [ :p | p id = 128 ].\r\tself assert: paper id equals: 128.\r\tself assert: paper isDesignStudy.\r\t^ paper',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'gtJsonFor:',
+			#protocol : #views,
+			#sourceCode : 'gtJsonFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: \'Items\';\r\t\tobject: [ self data ];\r\t\tview: #gtItemsFor:',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}

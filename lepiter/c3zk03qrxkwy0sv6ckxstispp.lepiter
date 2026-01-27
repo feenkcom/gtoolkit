@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T17:58:57.967745+01:00"
+									"dateAndTimeString" : "2026-01-27T08:49:34.409581+01:00"
 								}
 							},
 							"uid" : {
@@ -118,7 +118,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Moldable development can be applied to any kind of software system: a “greenfield” project developed within GT itself, existing code in GT, legacy code in some other  language, a web API, a running system with a language bridge to GT, or static data or logs from an existing project. To keep things simple for now, we will start in this tutorial with some static data in CSV dumps of spreadsheets, and we will see how to turn this data into an explainable system. "
+							"string" : "Moldable development can be applied to any kind of software system: a “greenfield” project developed within GT itself, existing code in GT, legacy code in some other  language, a web API, a running system with a language bridge to GT, or static data or logs from an existing project. \nTo keep things simple for now, we will start in this tutorial with an example of analyzing datasets from a research project in the form of CSV dumps of spreadsheets, and we will see how to turn this data into an explainable system. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -182,7 +182,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T17:58:51.936012+01:00"
+									"dateAndTimeString" : "2026-01-27T08:51:38.209989+01:00"
 								}
 							},
 							"uid" : {
@@ -192,7 +192,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Basically the process is:\n— Start with some objects of interest. Create the objects if they don't exist.\n— Ask questions of these objects by interacting with them (i.e., through code).\n— Turn these interactions into tiny, contextual tools that answer your questions. (E.g., Views, actions, searches.)\n— Create new objects if you need them to answer your questions.\n— Repeat."
+							"string" : "Basically the process is:\n— Establish some questions you want answered.\n— Start with some objects of interest. Create the objects if they don't exist.\n— Ask questions of these objects by interacting with them (i.e., through code).\n— Turn these interactions into tiny, contextual tools that answer your questions. (E.g., Views, actions, searches.)\n— Create new objects if you need them to answer your questions.\n— Repeat."
 						},
 						{
 							"__type" : "textSnippet",
@@ -586,6 +586,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:34:58.237161+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:35:29.131089+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qKqZdnTgShSmIC5jQ6zB3g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "When we start to browse the raw data, many questions might come to mind, for example:\n— *Which are the selected design study papers?*\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *What different types of papers were identified?*\n— *Which authors wrote about design studies?*\n— *What other topics did those authors write about?*\n— *Are the two datasets consistent? (Are there any errors in macthing them up?)*\nAnd many more ..."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2026-01-21T13:00:38.797836+01:00"
 								}
 							},
@@ -597,7 +634,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:23:05.005502+01:00"
+									"dateAndTimeString" : "2026-01-27T08:59:39.874138+01:00"
 								}
 							},
 							"uid" : {
@@ -607,7 +644,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "However when we explore the raw data, even as a spreadsheet, we just get a very generic, table-oriented view of all the data, that makes it difficult to gain insights into the data. Of course, with some spreadsheet savvy, we could probably answer many of the questions we might have, such as:\n— *What different types of papers were identified?*\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *Which authors wrote about Design Studies?*\n— *What other topics did those authors write about?*\nand so on, but each answer would be hand-crafted as a generic spreadsheet, and it would be hard to navigate the data to answer similar questions about subsets of data."
+							"string" : "When we explore the raw data, however, even as a spreadsheet, we just get a very generic, table-oriented view of all the data. With a bit of spreadsheet savvy, we can probably answer many of these questions by manipulating and transforming the raw data, but each answer would be hand-crafted, and it would be hard to navigate the data to answer similar questions about subsets of data."
 						},
 						{
 							"__type" : "textSnippet",
@@ -634,7 +671,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:31:20.714642+01:00"
+									"dateAndTimeString" : "2026-01-27T08:59:59.119944+01:00"
 								}
 							},
 							"uid" : {
@@ -644,7 +681,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A different way to proceed is to extract a model of domain objects from the raw data, decorated with tiny contextual tools that answer our questions. The model should consist of *live objects*, so we can interact with it to explore it.\nBefore we can do that, it would help to transform the data to a more convenient form. Since each row of the first dataset represents a publication and ecah row of the second one represents a design study, it would help to extract the data row by row. JSON is a convenient representation for this data."
+							"string" : "A different way to proceed is to *extract a model of domain objects from the raw data, decorated with tiny contextual tools that answer our questions*. The model should consist of *live objects*, so we can interact with it to explore it.\nBefore we can do that, it would help to transform the data to a more convenient form. Since each row of the first dataset represents a publication and ecah row of the second one represents a design study, it would help to extract the data row by row. JSON is a convenient representation for this data."
 						}
 					]
 				},
@@ -667,7 +704,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-20T18:30:36.851027+01:00"
+						"dateAndTimeString" : "2026-01-27T09:00:24.759232+01:00"
 					}
 				},
 				"uid" : {
@@ -677,7 +714,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Exploring the CSV"
+				"string" : "# Exploring the CSV — posing some initial questions"
 			},
 			{
 				"__type" : "textSnippet",
@@ -698,7 +735,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:37:08.384434+01:00"
+									"dateAndTimeString" : "2026-01-27T09:05:29.320912+01:00"
 								}
 							},
 							"editEmail" : {
@@ -709,17 +746,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:37:56.062324+01:00"
+									"dateAndTimeString" : "2026-01-27T09:06:52.297206+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Vt+EmL2CTuyTBs5IJGF7cw=="
+								"uidString" : "9TOsaU2mTlq8aWhaJZtfrQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Luckily we already have a utility to convert CSV files to JSON, so we can just use that.\n(There is a moldable development pattern, [[Tooling Buildup]], which we can skip in this case, because we already have the basic tools we need.)"
+							"string" : "We would like to have a domain object for each publication, but a row of spreadsheet without the header is not a convenient representation. Our job will be easier if we convert the CSV files to JSON.\nLuckily we already have a utility to convert CSV files to JSON, so we can just use that.\n(There is a moldable development pattern, [[Tooling Buildup]], which we can skip in this case, because we already have the basic tools we need.)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -962,7 +999,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:40:44.988089+01:00"
+									"dateAndTimeString" : "2026-01-27T09:07:51.989639+01:00"
 								}
 							},
 							"uid" : {
@@ -972,7 +1009,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Actually, we are not so much interested in the JSON format itself, but in the `jsonObject` view, which is just a {{gtClass:name=Dictionary}} of keys and values. We can convert the CSV to an {{gtClass:name=Array}} of such dictionaries by sending `jsonObject` to the {{gtClass:name=CSV2JSON}} parse tree visitor."
+							"string" : "Actually, we are not so much interested in the JSON format itself, but in the `jsonObject` view, which is just a {{gtClass:name=Dictionary}} of keys and values. We can convert the CSV dataset to an {{gtClass:name=Array}} of such dictionaries by sending `jsonObject` to the {{gtClass:name=CSV2JSON}} parse tree visitor."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1215,7 +1252,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T09:14:36.23727+01:00"
+									"dateAndTimeString" : "2026-01-27T09:08:34.14206+01:00"
 								}
 							},
 							"uid" : {
@@ -1225,7 +1262,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This code is invalid, because the class `VRDatasetExamples` does not yet exist, nor does the class-side method `datasetFolder`. If you click on the *fixit* (wrench) icon, you can create the missing class."
+							"string" : "This code is invalid, because the class `VRDatasetExamples` does not yet exist, nor does the class-side method `datasetFolder`. If you click on the *fixit* (wrench) icon, you can create the missing class. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -1289,7 +1326,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:48:47.534906+01:00"
+									"dateAndTimeString" : "2026-01-27T09:09:21.729356+01:00"
 								}
 							},
 							"uid" : {
@@ -1299,7 +1336,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now we would like to turn the following code snippet into an example.\n⇒ *Evaluate and inspect the snippet to ensure the result is what you expect.*\n⇒ *Select the code, primary (richt) click, and select the *Extract example* code refactoring.*\n⇒ *Fill in the class name `VRDatasetExamples` and method `datasetFolder` exactly as they appear above, and accept the code change.*"
+							"string" : "Now we would like to turn the following code snippet into an example.\n⇒ *Evaluate and inspect the snippet to ensure the result is what you expect.*\n⇒ *Select the code, primary (right) click, and select the *Extract example* code refactoring.*\n⇒ *Fill in the class name `VRDatasetExamples` and method `datasetFolder` exactly as they appear above, and accept the code change.*"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1334,6 +1371,40 @@
 								"uidString" : "E9TYzFEhRomHuwkjm5TNiA=="
 							},
 							"code" : "FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data' / 'visualisation-review'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T09:09:50.58237+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T09:10:13.888823+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hGKu70u0QrO1sw43wUq2fg=="
+							},
+							"code" : "VRDatasetExamples new datasetFolder"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1397,7 +1468,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:50:46.432905+01:00"
+									"dateAndTimeString" : "2026-01-27T09:11:27.015339+01:00"
 								}
 							},
 							"uid" : {
@@ -1407,7 +1478,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "⇒ *Edit the `datasetFolder` method to look like this:*"
+							"string" : "⇒ *Edit the `datasetFolder` method (click on the grey triangle to the right of the name to edit the method) to look like this:*"
 						},
 						{
 							"__type" : "blockQuoteSnippet",
@@ -1542,7 +1613,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:38.963176+01:00"
+									"dateAndTimeString" : "2026-01-27T09:45:40.702966+01:00"
 								}
 							},
 							"uid" : {
@@ -1610,7 +1681,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:54:41.333389+01:00"
+									"dateAndTimeString" : "2026-01-27T08:46:54.968465+01:00"
 								}
 							},
 							"uid" : {
@@ -1620,7 +1691,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We could extract these methods from the ciode snippets, as we did above, or we can also simply load in the code from the *Changes snippet* below.\n⇒ *Inspect this code to see how the additional examples are defined, and accept the changes (✓ button).*\n⇒ *Can you think of some more critical assertions to include in the examples?*"
+							"string" : "We could extract these methods from the code snippets, as we did above, or we can also simply load in the code from the *Changes snippet* below.\n⇒ *Inspect this code to see how the additional examples are defined, and accept the changes (✓ button).*\n⇒ *Can you think of some more critical assertions to include in the examples?*"
 						},
 						{
 							"__type" : "changesSnippet",
@@ -1678,7 +1749,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T13:51:46.591825+01:00"
+						"dateAndTimeString" : "2026-01-27T09:05:21.480241+01:00"
 					}
 				},
 				"uid" : {
@@ -1688,7 +1759,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Converting the CSV to JSON"
+				"string" : "# Transforming the raw data — converting the CSV to JSON"
 			},
 			{
 				"__type" : "textSnippet",
@@ -2121,7 +2192,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:38:22.686545+01:00"
+									"dateAndTimeString" : "2026-01-27T09:38:21.793221+01:00"
 								}
 							},
 							"uid" : {
@@ -2131,7 +2202,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Try these steps yourself. You can always browse the proposed changes below and accept them later.\n⇒ *Create `VRPaper` using the fixit dialog, as before.*\n⇒ *Add the missing `for:` method using the fixit dialog. Change the proposed `data` argument to `aDictionary`; add the body `^ self new data: aDictionary`; accept the change.*\n⇒ *In the `for:` method fix the `data:` accessor, adding the body `data := aDictionary`*\n⇒ *In the `data:` setter method, add the missing `data` slot using the fixit dialog, and accept the change*\n⇒ *Add `data` getter. This can be done in several ways. One way is to click on the class name from one of the mathods you have created, opening a class coder view. Click on the grey bar below the class name to open the class specification. Primary-click on the `data` slot to select the *Create accessors* menu item, select it, and accept the refactoring.*"
+							"string" : "Try these steps yourself. You can always browse the proposed changes below and accept them later.\n⇒ *Create `VRPaper` using the fixit dialog, as before.*\n⇒ *Add the missing `for:` method using the fixit dialog. Change the proposed `data` argument to `aDictionary`; add the body `^ self new data: aDictionary`; change the default method category from “accessing” to “instance creation”; accept the change.*\n⇒ *In the `for:` method fix the `data:` accessor, adding the body `data := aDictionary`*\n⇒ *In the `data:` setter method, add the missing `data` slot using the fixit dialog, change the method category to “initialization” and accept the change*\n⇒ *Add `data` getter. This can be done in several ways. One way is to click on the class name from one of the mathods you have created, opening a class coder view. Click on the grey bar below the class name to open the class specification. Primary-click on the `data` slot to select the *Create accessors* menu item, select it, and accept the refactoring.*"
 						},
 						{
 							"__type" : "textSnippet",
@@ -2277,6 +2348,40 @@
 							"code" : "VRDatasetExamples new allPapersJSON collect: [ :data | VRPaper for: data ] "
 						},
 						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:10:57.163952+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:11:21.764497+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "PhL+M9mLS2uMhYCCDTYzUg=="
+							},
+							"code" : "VRDatasetExamples new allPapers"
+						},
+						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -2301,7 +2406,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:47:57.242163+01:00"
+									"dateAndTimeString" : "2026-01-27T10:10:24.323839+01:00"
 								}
 							},
 							"uid" : {
@@ -2311,7 +2416,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "⇒ *Extract the above snippet as an example in the `VRDatasetExamples` class as `allPapers`. Add an assertion to check the number of papers created.*\nAfter doing this, the following snippet should work:"
+							"string" : "⇒ *Extract the above snippet as an example in the `VRDatasetExamples` class as `allPapers`.*\n*Add an assertion to check the number of papers created.*\nAfter doing this, the following snippet should work:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2444,7 +2549,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:51:05.598403+01:00"
+									"dateAndTimeString" : "2026-01-27T10:13:04.919079+01:00"
 								}
 							},
 							"uid" : {
@@ -2454,7 +2559,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "So far the domain objects are not much of an improvement over our raw dictionaries, in fact they seem wors, because we have tio navigate to get to the interesting data. But now the fun starts as we begin to mold these objects, adding contextual tools to make them more useful."
+							"string" : "So far the domain objects are not much of an improvement over our raw dictionaries, in fact they seem worse, because we have tio navigate to get to the interesting data. But now the fun starts as we begin to mold these objects, adding contextual tools to make them more useful."
 						}
 					]
 				},
@@ -2488,6 +2593,1579 @@
 					"__type" : "textStyle"
 				},
 				"string" : "# Modeling domain entities"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T10:35:49.70698+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:38:21.411154+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "r4jHdk3ZRrm8CEojB/Q0QA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Moldable development should be driven by questions you have about the system that needs explaining. Let's start with an easy question, *which are the selected design study papers?*\nWe know the answer, that the *Design study* papers are the selected ones, but *are the data consistent* is the important  subquestion: are the papers flagged as design study papers in the first dataset precisely those listed in the second dataset?\nTo answer this question, we need to be able to query papers for their *id*, their *type* and whether they are *selected* or not."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T17:11:15.217039+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:33:26.611767+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UKvtBuUJSpiCltMOjvtUFA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A good way to add new behavior to domain objects is to prototype the behavior first in a playground, and then *extract* a method. We can practice this in the snippets below:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:33:23.788044+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:33:23.788044+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "RhtAGQIaS9W0TM8JsCP4IA=="
+							},
+							"code" : "aPaper:= VRDatasetExamples new allPapers first."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:39:31.222409+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:33:23.789121+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UjunmGmITnimKqyfVynsZQ=="
+							},
+							"code" : "aPaper data at: 'Type'"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:39:35.702531+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:34:11.377293+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dbnTCGUZRfW7mPmCUvhInQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Evaluate and inspect the two snippets above to verify that we can get a paper's *type* this way.*\n⇒ *Select the code in the second snippet and primary-click to *Extract method*. Call the  new method `type`.*\nAfter the refactoring, the second snippet should look like this:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T17:12:21.674609+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:34:06.617852+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "h9ZIdN98QHSo2c+ei9/zzA=="
+							},
+							"code" : "aPaper type"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-23T10:52:59.416353+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:46:53.594783+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7RM5Y0SXS32gE4jIh/ijMw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Let's repeat the exercise to creating a Boolean testing method:\n⇒ *Extract a method called `isDesignStudy` from the  snippet below.*\n⇒ *Change the method category to `testing`.* (Click the grey triangle to edit the method.)"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:44:10.510687+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:45:53.953151+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZwfRAFJATXWdZHlLdrG2iA=="
+							},
+							"code" : "aPaper type = 'Design Study'"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:47:08.773989+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:47:16.557696+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xwX+c2jQS7y2P5lxiHa8aA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The result should look like this:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:45:59.880678+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:46:11.822541+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "nxiftAUSRdaVzr97SIRJ2A=="
+							},
+							"code" : "aPaper isDesignStudy"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:02:01.745036+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:02:36.498082+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "H1UKEco0TMe7Z/snfOJUhg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Now let's select all the design study papers and make that an example."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:02:37.351973+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:08:13.047169+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "TannNcC1TV+6nMQrhoZ8ng=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Evaluate the snippet below, and extract it as a new `designStudies` example.*\n⇒ *Add an assertion over the expected size of the result.*\n⇒ *Change the method category to `examples`.*"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:01:08.48832+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:01:32.709898+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "MRY92eK5SgKM+einxgrnOQ=="
+							},
+							"code" : "VRDatasetExamples new allPapers select: #isDesignStudy"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:07:53.538474+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:09:11.3963+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uDCeb+nDQqiOJQnBrmj7qQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We should get 65 papers:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:05:52.916848+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:09:01.397437+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "a0+4UOgYRpawFiPxbqBxzA=="
+							},
+							"code" : "VRDatasetExamples new designStudies"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:02:02.083399+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:18:32.769517+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hJ8BPgueR6q+z7oIX2E/3w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To check whether the datasets are consistent, we still need a paper's id.\n⇒ *Extract a method to access a paper's `id`.*"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:48:18.388333+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:48:29.795657+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ioItAhnjRGaUjRlVE8jIiQ=="
+							},
+							"code" : "aPaper data at: 'ID'"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:18:27.868522+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:20:59.035445+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FFcVpZvRQ86QF6OnWsnaqQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Change the `id` accessor to return a {{gtClass:name=Number}} instead of a {{gtClass:name=ByteString}} (i.e., send `asNumber` before returning the result).*"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:50:53.139432+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:10:13.191643+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "/5DM6y9dSny9YMXUDpYTug=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Now we can get the ids of all design study papers:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:10:16.489815+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:12:02.010556+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "P9oB3VCPRK6m9mnuQ8FcPA=="
+							},
+							"code" : "designStudyPaperIDs := VRDatasetExamples new designStudies collect: #id"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:01:17.26454+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:11:05.066146+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jfT0EBRRRn+phK3gbGJmPA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We haven't created any domain objects from the second data set, so we'll have to extractthem from the raw data:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:52:04.241079+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:11:17.136618+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Jf+l+dUMQRuHhyXBFvM8zg=="
+							},
+							"code" : "selectedPaperIDs := VRDatasetExamples new selectedPapersJSON\r\t\tcollect: [ :d | d at: 'ID' ]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:01:20.841402+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:12:44.310518+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xtkcpuAPSuWjxw3TnPWMUA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If we compare the two lists we get an error:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:53:36.980375+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:54:09.708328+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6qMgze1ISmaqGFTjPvrsFw=="
+							},
+							"code" : "self assert: designStudyIDs equals: selectedPaperIDs"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:12:45.377727+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:13:26.227663+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FuZhgvo8Qk264VfcNY1JtA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "That's because the lists are not in the same order. If we convert them to sets, everything should be ok."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:12:19.188678+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:12:25.681811+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "r7BN+XaHSPOyLPVGTLPIWQ=="
+							},
+							"code" : "self assert: designStudyIDs asSet equals: selectedPaperIDs asSet"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:47:19.07956+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:50:33.410592+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "LRTlAldpSvyJYM5T+s/i0Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Your changes should look like this:"
+						},
+						{
+							"__type" : "changesSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:50:36.737296+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:50:36.737296+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aPTrPR88TAmGtOhimicKXQ=="
+							},
+							"previewHeight" : 200,
+							"fileName" : "attachments/ctzifzvd9uaucnqeckywfuc6u/VisualisationReview-3-DesignStudyPapers.ombu"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-13T16:26:11.67499+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-13T16:44:16.555093+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ja8K1C7zSbyrrE+VH4dpVw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Which are the selected papers?"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:24:23.968726+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:29:08.444857+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "BWRok2seTMSbH0Yc91E/dA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Inspecting the list of design study papers is not very enlightening. Each paper is simply displayed as `a VRPaper`. \n⇒ *Inspect the list of papers below, and dive into one of the papers. Check that the `Print` view just displays `a VRPaper`. Dive into the `Raw` view to locate the paper's title.*"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:24:32.427579+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:24:38.560366+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Mxb+ZvjZQuyB60L39aH18A=="
+							},
+							"code" : "VRDatasetExamples new designStudies"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:29:09.366408+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:30:50.748143+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "b3b4Qmy3S/aVqRENOOjznw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We can do much better. Let's first extract the *title* of a paper.\n⇒ *Extract an accessor for the title of a paper. Call it `title`.*"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:32:15.410999+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:32:15.410999+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "vWWNbYu2TCa46bB0PsALbw=="
+							},
+							"code" : "aPaper := VRDatasetExamples new designStudies first."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:31:30.436618+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:32:07.740626+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9NN+jitnQE6ygivO74KmkQ=="
+							},
+							"code" : "aPaper data at: 'Title'"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:41:54.424397+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:41:54.424397+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mawOUosuSZeBZsP7ZqZZDg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Now let's reimplement the method responsible for “printing” a paper.\n⇒ *Inspect `aPaper`. It should have a *Raw* view, a *Print* view and a *Meta* view.*"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:29:46.981047+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:36:54.30558+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "D/eAGS5PQ/q/70xpVsgEEg=="
+							},
+							"code" : "aPaper "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "blockQuoteSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-01-27T11:39:57.653435+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-01-27T11:40:20.539864+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "241IB3K2RBm4/7Oyg+8Amw=="
+										},
+										"string" : "printOn: aStream\r\taStream nextPutAll: self title"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:39:53.873281+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:41:54.426929+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "GZdJtJBkR3exD97H8p6oHg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Go to the paper's *Meta* view and select `+` to add a new method.*\n⇒ *Enter a `printOn:` method that prints the paper's `title` to a stream. It should look like this:*"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:29:11.195823+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:42:49.09064+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "G2aNx8HHTNWh4Xy9+YDEeA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Accept the change and set the new method's category to `printing`.*\n⇒ *Go back to the  *Print* view and verify that the paper's title is now displayed.*\n⇒ *Now inspect the list of design study papers again. Verify that the paper's titles are now displayed.*"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:42:16.945514+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:42:18.996534+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Ky3z5CrfSKuWmlNlbJ3pEQ=="
+							},
+							"code" : "VRDatasetExamples new designStudies"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:46:28.334557+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:47:24.202799+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "aDQI+5FxS52eDDhONTAlMg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Although this is much better, it hard-codes what we see when we inspect a list of papers. Later we will see how we can mold these views more flexibly."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:29:11.650081+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:45:47.396597+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "C+wEbOgkRlOgZz+Phk4uYQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Here are the last changes:"
+						},
+						{
+							"__type" : "changesSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:43:42.402733+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T11:43:42.402733+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Dt11+QzeQvWnqRFDiok1pA=="
+							},
+							"previewHeight" : 200,
+							"fileName" : "attachments/ee1mfbcz37a7koyau360cyszl/VisualisationReview-4-PrintOn.ombu"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-13T16:18:53.721506+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-27T11:25:32.245475+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Q7FRUquURICK4tLQ8IaKHw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Molding the print view — Implementing printOn:"
 			},
 			{
 				"__type" : "commentSnippet",
@@ -2543,7 +4221,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T10:35:49.70698+01:00"
+									"dateAndTimeString" : "2026-01-27T16:14:58.575468+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2554,54 +4232,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T10:52:46.007014+01:00"
+									"dateAndTimeString" : "2026-01-27T16:15:15.541868+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "r4jHdk3ZRrm8CEojB/Q0QA=="
+								"uidString" : "YxsYBK8IR+uN334C4dCXCA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Moldable development should be driven by questions you have about the system that needs explaining. Let's start with an easy question, *which are the selected design study papers?*\nWe know the answer, that the *Design study* papers are the selected ones, but *are the data consistent* is the important  subquestion: are the papers flagged as design study papers in the first dataset precisely those listed in the second dataset?"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T17:11:15.217039+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T17:21:49.160199+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "UKvtBuUJSpiCltMOjvtUFA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "To answer this question, we need to be able to query papers for their *id*, their *type* and whether they are *selected* or not.\nA good way to add new behavior to domain objects is to "
+							"string" : "Let's have a closer look at one of the papers:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2617,7 +4258,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T17:12:21.674609+01:00"
+									"dateAndTimeString" : "2026-01-27T16:15:18.287205+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2628,14 +4269,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T17:13:51.777424+01:00"
+									"dateAndTimeString" : "2026-01-27T16:30:25.358532+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "h9ZIdN98QHSo2c+ei9/zzA=="
+								"uidString" : "Y7aKgZaXSS+vTpOVhl/COw=="
 							},
-							"code" : "VRDatasetExamples new allPapers first"
+							"code" : "VRDatasetExamples new allPapers detect: [ :p | p id = 128 ]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -2651,7 +4292,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T10:52:59.416353+01:00"
+									"dateAndTimeString" : "2026-01-27T16:15:00.262977+01:00"
 								}
 							},
 							"editEmail" : {
@@ -2662,12 +4303,194 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T10:52:59.416353+01:00"
+									"dateAndTimeString" : "2026-01-27T16:28:56.083231+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "7RM5Y0SXS32gE4jIh/ijMw=="
+								"uidString" : "4XUujr/BTJiVkL+xdlKMlw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Extract this paper as an example `paper128`*\n⇒ *Add assertions for the paper id and type.*"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:27:25.777136+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:27:44.347463+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "/ACEMRBIT46TRguzv5PWxg=="
+							},
+							"code" : "VRDatasetExamples new paper128"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:15:00.493011+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:45:32.267971+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dFLIPjfoQzS4Lb1oSqbp7w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If we inspect this paper we see its title in the *Print* view, but the rest of the useful information is buried in the *Raw* view. If we explore the `data` slot, we find an *Items* view that improves on this somewhat. Let's repurpose that view for our paper by creating a *forwarding view* from the paper to its data.\n⇒ *Evaluate and inspect the paper.*\n⇒ *Open an inspector playground (lift the handle at the bottom of the inspect to reveal a Pharo playground snippet).*\n⇒ *Enter and inspect the code: `self data`.* \n⇒ *Secondary-click (OPT-click or ALT-click) on the *Items* tab to reveal the source code of this view.*\nNote that the view is defined in a method called `gtItemsFor:` of the {{gtClass:name=Dictionary}} class. We would like to repurpose this code without copy-pasting it.\n⇒ *Primary-click in the playground with `self data`, and select the option *Create `<gtView>` forward to Items*. Before accepting this code, change the name of the generated method from `gtViewFor:` to `gtJsonFor:`. Accept the method.*\n⇒ *Go to the new *Items* view of the paper.*\n"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:39:38.954875+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:39:58.588448+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Sy4jxyucSte9+m01oiwZsQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "***todo*** Explain [[Contextual Playground]] pattern"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:13:50.784716+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:13:50.784716+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qfOQdK27SuGZpfuAL2G+ew=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:13:51.048968+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:13:51.048968+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+Rlk1M8TR+SdatSeeA0nmA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
@@ -2708,511 +4531,6 @@
 							},
 							"string" : "—————***CONTINUE HERE*** ——————————",
 							"isHidden" : false
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:35:06.169662+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:38:52.617353+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "4pA74QZ2SqmT/+7B+s3S+Q=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "We first add a few accessors for properties *ID*, *Title* and *Type*. We can extract the ids of the Design Study papers:"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:36:20.55032+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:39.005981+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "f4rBF64UQPy5DUrpYtmjug=="
-							},
-							"code" : "(VRDatasetExamples new allPapers select: [:p | p type = 'Design Study'] thenCollect: #id) asSet"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:27:48.243557+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:31:09.079394+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "4tZabrqGRZu+nOQOLFOuHw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Let's test that the selected papers are exactly those with the type `'Design Study'`"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:28:05.42172+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:39.007375+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "MqPYkV9SRGytc7NdcIeAjg=="
-							},
-							"code" : "(VRDatasetExamples new allPapers\r\tselect: [ :p | p type = 'Design Study' ]\r\tthenCollect: #id) asSet\r\t= (VRDatasetExamples new selectedPapersJSON collect: [ :d | d at: 'ID' ]) asSet"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:31:14.443249+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:31:53.884481+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "DzjrA08WT/iyiF2wGSh1FQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Looks good, so let's add a query method"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:31:55.686496+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:38.964694+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "p8YehJcWQU6dsTkRHTMcNA=="
-							},
-							"code" : "VRDatasetExamples new allPapers select: #isDesignStudy"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:40:28.012811+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:41:25.191177+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "C2erfqvWQjWzanfJnfuhUA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "We make this an example:"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:41:26.741507+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:39.007624+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "8s+LtH4zSlGSlYG3V8oc6g=="
-							},
-							"code" : "VRDatasetExamples new selectedPapers"
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T16:26:11.67499+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T16:44:16.555093+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Ja8K1C7zSbyrrE+VH4dpVw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "# Which are the selected papers?"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:51:38.084623+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:06:28.39145+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "NR7/V0BVRCqZPhG5cILi7Q=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "If we browse the following list, it does not tell us anything about the papers. We have to dive into each entity and browse its dictionary to find out what paper it is."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:44:55.915666+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:38.965087+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "K6F4VR+5QiiEKZjxNeD3ag=="
-							},
-							"code" : "VRDatasetExamples new allPapers"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:52:46.660176+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:57:20.922935+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "gLHQprR9TqC0sj4SScJUUA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "We can improve this slightly by implementing `printOn:` to print the title. We'll do better later"
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T16:18:53.721506+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T16:57:37.220581+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Q7FRUquURICK4tLQ8IaKHw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "# Implementing printOn:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T15:03:46.069494+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:00:25.66291+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "Sy4jxyucSte9+m01oiwZsQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "If we inspect a paper we get a generic *Raw* view of the data of the paper. Let's first try to get a better view of the data. In the playground of an instance we can evaluate:"
 						},
 						{
 							"__type" : "blockQuoteSnippet",
@@ -3395,6 +4713,115 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:53:17.185996+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:53:17.185996+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "U9Sv8m3jTtWKZLFmP5tnkg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:53:22.089877+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:53:27.840187+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "s/XMZishTVyRFT8PiVc1cw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "CHANGES for this section"
+						},
+						{
+							"__type" : "changesSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:53:29.615343+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:53:29.615343+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uwqVo9eeRtCD22kTREzCVA=="
+							},
+							"previewHeight" : 200,
+							"fileName" : "attachments/m0wjudi7a2qoo4h5ecosclpe/VisualisationReview-5-ForwardJSONView.ombu"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
 								"items" : [
 									{
 										"__type" : "commentSnippet",
@@ -3522,7 +4949,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T17:15:24.769106+01:00"
+						"dateAndTimeString" : "2026-01-27T11:45:57.186888+01:00"
 					}
 				},
 				"uid" : {
@@ -3532,7 +4959,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Adding a fowarding contextual view"
+				"string" : "# Adding a forwarding contextual view"
 			},
 			{
 				"__type" : "textSnippet",
@@ -5299,6 +6726,353 @@
 					"__type" : "textStyle"
 				},
 				"string" : "feenkcom/gtoolkit#4831"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:56:57.030955+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:56:57.827867+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6u6H4GelR3SlN57p1EanoA=="
+							},
+							"code" : "#VisualisationReview asPackage "
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:05:39.952527+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:05:48.694602+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "l5gZ15W7QFu9o3Gwy+MK+g=="
+							},
+							"code" : "#VisualisationReview asPackage fileOut"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:06:28.0226+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:06:36.977748+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "JrTidgZHQDO11fH7C5bKvw=="
+							},
+							"code" : "FileLocator imageDirectory"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T09:59:01.228418+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T09:59:03.343986+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "B1gHIGUuS+y2OMd//OTFhQ=="
+							},
+							"code" : "Smalltalk packageOrganizer ensurePackage: 'VisualisationReview'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:01:21.208466+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:01:52.719008+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "C/2bhVh6SfSFkzaREKUBjw=="
+							},
+							"code" : "#VisualisationReview asPackage removeFromSystem."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:01:57.60204+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:02:20.440974+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8WX58mLFQseSo5KQKzwNgQ=="
+							},
+							"code" : "#'VisualisationReview-Examples' asPackage removeFromSystem."
+						},
+						{
+							"__type" : "shellCommandSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:07:31.483946+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:08:44.245878+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "92PzJT3QRJCN/F8FW+ckCA=="
+							},
+							"code" : "ln -s pharo-local/iceberg/feenkcom/gtoolkit-demos/data/visualisation-review/fileOuts "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:55:07.736947+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:55:15.714028+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "pw3aMr7tROeVtJ2ZZ8WWLQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Apply all changes:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T16:55:46.279799+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T17:02:29.741902+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "q5JX2YV5T1ie3OeSDuOspg=="
+							},
+							"code" : "thisSnippet page applyChanges"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-27T09:51:09.981478+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-27T10:06:09.63032+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pxwu/lJ/QMmu5ptRYuUQBw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Snippets for preparing the ombu files"
 			},
 			{
 				"__type" : "textSnippet",

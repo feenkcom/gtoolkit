@@ -1,19 +1,31 @@
 OmEntry {
 	#tags : {
-		#prior : OmReference [ '0' ],
+		#prior : OmNullReference [  ],
 		#self : OmReference [ '1' ]
 	},
-	#content : EpMethodAddition {
-		#method : RGMethodDefinition {
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
 			#annotations : IdentityDictionary {
 				#isMeta : false,
 				#className : #VRDatasetExamples
 			},
 			#name : #allPapers,
-			#protocol : #'as yet unclassified',
-			#sourceCode : 'allPapers\r\t<gtExample>\r\t| papers |\r\tpapers := self allPapersJSON collect: [ :data | VRPaper for: data ].\r\tself assert: papers size equals: 346.\r\t^ papers',
-			#stamp : '1/13/2026 16:24',
+			#protocol : #examples,
+			#sourceCode : 'allPapers\r\t<gtExample>\r\t^ self allPapersJSON collect: [ :data | VRPaper for: data ]',
+			#stamp : '',
 			#package : #VisualisationReview
-		}
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDatasetExamples
+			},
+			#name : #allPapers,
+			#protocol : #examples,
+			#sourceCode : 'allPapers\r\t<gtExample>\r\t| papers |\r\tpapers := self allPapersJSON collect: [ :data | VRPaper for: data ].\r\tself assert: papers size equals: 346.\r\t^ papers',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
 	}
 }

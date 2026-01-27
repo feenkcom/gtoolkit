@@ -1,0 +1,49 @@
+OmEntry {
+	#tags : {
+		#prior : OmNullReference [  ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #title,
+			#protocol : #accessing,
+			#sourceCode : 'title\r\t^ self data at: \'Title\'',
+			#stamp : '1/27/2026 11:32',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'printOn:',
+			#protocol : #printing,
+			#sourceCode : 'printOn: aStream\r\taStream nextPutAll: self title',
+			#stamp : '1/27/2026 11:41',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'printOn:',
+			#protocol : #printing,
+			#sourceCode : 'printOn: aStream\r\taStream nextPutAll: self title',
+			#stamp : '1/27/2026 11:41',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}
