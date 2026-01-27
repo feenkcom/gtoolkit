@@ -62,13 +62,13 @@ OmEntry {
 	#content : EpMethodAddition {
 		#method : RGMethodDefinition {
 			#annotations : IdentityDictionary {
-				#isMeta : true,
-				#className : #'VRPaper class'
+				#isMeta : false,
+				#className : #VRPaper
 			},
-			#name : #'for:',
+			#name : #data,
 			#protocol : #accessing,
-			#sourceCode : 'for: data\r\t^ self new\r\t\tdata: data;\r\t\tyourself',
-			#stamp : '1/13/2026 16:11',
+			#sourceCode : 'data\r\t^ data',
+			#stamp : '1/27/2026 09:38',
 			#package : #VisualisationReview
 		}
 	}
@@ -77,18 +77,30 @@ OmEntry {
 		#prior : OmReference [ '2' ],
 		#self : OmReference [ '3' ]
 	},
-	#content : EpMethodAddition {
-		#method : RGMethodDefinition {
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
 			#annotations : IdentityDictionary {
 				#isMeta : false,
 				#className : #VRPaper
 			},
 			#name : #'data:',
-			#protocol : #accessing,
-			#sourceCode : 'data: aDictionary\r\tdata := aDictionary',
-			#stamp : '1/13/2026 16:11',
+			#protocol : #initialization,
+			#sourceCode : 'data: anObject\r\tdata := anObject',
+			#stamp : '',
 			#package : #VisualisationReview
-		}
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'data:',
+			#protocol : #initialization,
+			#sourceCode : 'data: aDictionary\r\tdata := aDictionary',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
 	}
 }OmEntry {
 	#tags : {
@@ -98,13 +110,13 @@ OmEntry {
 	#content : EpMethodAddition {
 		#method : RGMethodDefinition {
 			#annotations : IdentityDictionary {
-				#isMeta : false,
-				#className : #VRPaper
+				#isMeta : true,
+				#className : #'VRPaper class'
 			},
-			#name : #data,
-			#protocol : #accessing,
-			#sourceCode : 'data\r\t^ data',
-			#stamp : '1/13/2026 16:11',
+			#name : #'for:',
+			#protocol : #'instance creation',
+			#sourceCode : 'for: aDictionary\r\t^ self new\r\t\tdata: aDictionary;\r\t\tyourself',
+			#stamp : '1/27/2026 09:40',
 			#package : #VisualisationReview
 		}
 	}

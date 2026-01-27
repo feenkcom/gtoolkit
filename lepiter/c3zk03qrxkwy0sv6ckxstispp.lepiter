@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T17:58:57.967745+01:00"
+									"dateAndTimeString" : "2026-01-27T08:49:34.409581+01:00"
 								}
 							},
 							"uid" : {
@@ -118,7 +118,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Moldable development can be applied to any kind of software system: a “greenfield” project developed within GT itself, existing code in GT, legacy code in some other  language, a web API, a running system with a language bridge to GT, or static data or logs from an existing project. To keep things simple for now, we will start in this tutorial with some static data in CSV dumps of spreadsheets, and we will see how to turn this data into an explainable system. "
+							"string" : "Moldable development can be applied to any kind of software system: a “greenfield” project developed within GT itself, existing code in GT, legacy code in some other  language, a web API, a running system with a language bridge to GT, or static data or logs from an existing project. \nTo keep things simple for now, we will start in this tutorial with an example of analyzing datasets from a research project in the form of CSV dumps of spreadsheets, and we will see how to turn this data into an explainable system. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -182,7 +182,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T17:58:51.936012+01:00"
+									"dateAndTimeString" : "2026-01-27T08:51:38.209989+01:00"
 								}
 							},
 							"uid" : {
@@ -192,7 +192,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Basically the process is:\n— Start with some objects of interest. Create the objects if they don't exist.\n— Ask questions of these objects by interacting with them (i.e., through code).\n— Turn these interactions into tiny, contextual tools that answer your questions. (E.g., Views, actions, searches.)\n— Create new objects if you need them to answer your questions.\n— Repeat."
+							"string" : "Basically the process is:\n— Establish some questions you want answered.\n— Start with some objects of interest. Create the objects if they don't exist.\n— Ask questions of these objects by interacting with them (i.e., through code).\n— Turn these interactions into tiny, contextual tools that answer your questions. (E.g., Views, actions, searches.)\n— Create new objects if you need them to answer your questions.\n— Repeat."
 						},
 						{
 							"__type" : "textSnippet",
@@ -586,6 +586,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T08:53:20.195594+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T08:57:32.25499+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "t6RdzPdpSimRzOqzSTdjPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "When we start to browse the raw data, many questions might come to mind, for example:\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *What different types of papers were identified?*\n— *Which authors wrote about Design Studies?*\n— *What other topics did those authors write about?*\n— *Are the two datasets consistent? (Are there any errors in macthing them up?)*\nAnd many more ..."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2026-01-21T13:00:38.797836+01:00"
 								}
 							},
@@ -597,7 +634,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:23:05.005502+01:00"
+									"dateAndTimeString" : "2026-01-27T08:59:39.874138+01:00"
 								}
 							},
 							"uid" : {
@@ -607,7 +644,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "However when we explore the raw data, even as a spreadsheet, we just get a very generic, table-oriented view of all the data, that makes it difficult to gain insights into the data. Of course, with some spreadsheet savvy, we could probably answer many of the questions we might have, such as:\n— *What different types of papers were identified?*\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *Which authors wrote about Design Studies?*\n— *What other topics did those authors write about?*\nand so on, but each answer would be hand-crafted as a generic spreadsheet, and it would be hard to navigate the data to answer similar questions about subsets of data."
+							"string" : "When we explore the raw data, however, even as a spreadsheet, we just get a very generic, table-oriented view of all the data. With a bit of spreadsheet savvy, we can probably answer many of these questions by manipulating and transforming the raw data, but each answer would be hand-crafted, and it would be hard to navigate the data to answer similar questions about subsets of data."
 						},
 						{
 							"__type" : "textSnippet",
@@ -634,7 +671,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:31:20.714642+01:00"
+									"dateAndTimeString" : "2026-01-27T08:59:59.119944+01:00"
 								}
 							},
 							"uid" : {
@@ -644,7 +681,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A different way to proceed is to extract a model of domain objects from the raw data, decorated with tiny contextual tools that answer our questions. The model should consist of *live objects*, so we can interact with it to explore it.\nBefore we can do that, it would help to transform the data to a more convenient form. Since each row of the first dataset represents a publication and ecah row of the second one represents a design study, it would help to extract the data row by row. JSON is a convenient representation for this data."
+							"string" : "A different way to proceed is to *extract a model of domain objects from the raw data, decorated with tiny contextual tools that answer our questions*. The model should consist of *live objects*, so we can interact with it to explore it.\nBefore we can do that, it would help to transform the data to a more convenient form. Since each row of the first dataset represents a publication and ecah row of the second one represents a design study, it would help to extract the data row by row. JSON is a convenient representation for this data."
 						}
 					]
 				},
@@ -667,7 +704,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-20T18:30:36.851027+01:00"
+						"dateAndTimeString" : "2026-01-27T09:00:24.759232+01:00"
 					}
 				},
 				"uid" : {
@@ -677,7 +714,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Exploring the CSV"
+				"string" : "# Exploring the CSV — posing some initial questions"
 			},
 			{
 				"__type" : "textSnippet",
@@ -698,7 +735,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:37:08.384434+01:00"
+									"dateAndTimeString" : "2026-01-27T09:05:29.320912+01:00"
 								}
 							},
 							"editEmail" : {
@@ -709,17 +746,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:37:56.062324+01:00"
+									"dateAndTimeString" : "2026-01-27T09:06:52.297206+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Vt+EmL2CTuyTBs5IJGF7cw=="
+								"uidString" : "9TOsaU2mTlq8aWhaJZtfrQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Luckily we already have a utility to convert CSV files to JSON, so we can just use that.\n(There is a moldable development pattern, [[Tooling Buildup]], which we can skip in this case, because we already have the basic tools we need.)"
+							"string" : "We would like to have a domain object for each publication, but a row of spreadsheet without the header is not a convenient representation. Our job will be easier if we convert the CSV files to JSON.\nLuckily we already have a utility to convert CSV files to JSON, so we can just use that.\n(There is a moldable development pattern, [[Tooling Buildup]], which we can skip in this case, because we already have the basic tools we need.)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -962,7 +999,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:40:44.988089+01:00"
+									"dateAndTimeString" : "2026-01-27T09:07:51.989639+01:00"
 								}
 							},
 							"uid" : {
@@ -972,7 +1009,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Actually, we are not so much interested in the JSON format itself, but in the `jsonObject` view, which is just a {{gtClass:name=Dictionary}} of keys and values. We can convert the CSV to an {{gtClass:name=Array}} of such dictionaries by sending `jsonObject` to the {{gtClass:name=CSV2JSON}} parse tree visitor."
+							"string" : "Actually, we are not so much interested in the JSON format itself, but in the `jsonObject` view, which is just a {{gtClass:name=Dictionary}} of keys and values. We can convert the CSV dataset to an {{gtClass:name=Array}} of such dictionaries by sending `jsonObject` to the {{gtClass:name=CSV2JSON}} parse tree visitor."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1215,7 +1252,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T09:14:36.23727+01:00"
+									"dateAndTimeString" : "2026-01-27T09:08:34.14206+01:00"
 								}
 							},
 							"uid" : {
@@ -1225,7 +1262,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This code is invalid, because the class `VRDatasetExamples` does not yet exist, nor does the class-side method `datasetFolder`. If you click on the *fixit* (wrench) icon, you can create the missing class."
+							"string" : "This code is invalid, because the class `VRDatasetExamples` does not yet exist, nor does the class-side method `datasetFolder`. If you click on the *fixit* (wrench) icon, you can create the missing class. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -1289,7 +1326,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:48:47.534906+01:00"
+									"dateAndTimeString" : "2026-01-27T09:09:21.729356+01:00"
 								}
 							},
 							"uid" : {
@@ -1299,7 +1336,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now we would like to turn the following code snippet into an example.\n⇒ *Evaluate and inspect the snippet to ensure the result is what you expect.*\n⇒ *Select the code, primary (richt) click, and select the *Extract example* code refactoring.*\n⇒ *Fill in the class name `VRDatasetExamples` and method `datasetFolder` exactly as they appear above, and accept the code change.*"
+							"string" : "Now we would like to turn the following code snippet into an example.\n⇒ *Evaluate and inspect the snippet to ensure the result is what you expect.*\n⇒ *Select the code, primary (right) click, and select the *Extract example* code refactoring.*\n⇒ *Fill in the class name `VRDatasetExamples` and method `datasetFolder` exactly as they appear above, and accept the code change.*"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1334,6 +1371,40 @@
 								"uidString" : "E9TYzFEhRomHuwkjm5TNiA=="
 							},
 							"code" : "FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data' / 'visualisation-review'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T09:09:50.58237+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T09:10:13.888823+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hGKu70u0QrO1sw43wUq2fg=="
+							},
+							"code" : "VRDatasetExamples new datasetFolder"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1397,7 +1468,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:50:46.432905+01:00"
+									"dateAndTimeString" : "2026-01-27T09:11:27.015339+01:00"
 								}
 							},
 							"uid" : {
@@ -1407,7 +1478,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "⇒ *Edit the `datasetFolder` method to look like this:*"
+							"string" : "⇒ *Edit the `datasetFolder` method (click on the grey triangle to the right of the name to edit the method) to look like this:*"
 						},
 						{
 							"__type" : "blockQuoteSnippet",
@@ -1542,7 +1613,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:38.963176+01:00"
+									"dateAndTimeString" : "2026-01-27T09:45:40.702966+01:00"
 								}
 							},
 							"uid" : {
@@ -1610,7 +1681,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:54:41.333389+01:00"
+									"dateAndTimeString" : "2026-01-27T08:46:54.968465+01:00"
 								}
 							},
 							"uid" : {
@@ -1620,7 +1691,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We could extract these methods from the ciode snippets, as we did above, or we can also simply load in the code from the *Changes snippet* below.\n⇒ *Inspect this code to see how the additional examples are defined, and accept the changes (✓ button).*\n⇒ *Can you think of some more critical assertions to include in the examples?*"
+							"string" : "We could extract these methods from the code snippets, as we did above, or we can also simply load in the code from the *Changes snippet* below.\n⇒ *Inspect this code to see how the additional examples are defined, and accept the changes (✓ button).*\n⇒ *Can you think of some more critical assertions to include in the examples?*"
 						},
 						{
 							"__type" : "changesSnippet",
@@ -1678,7 +1749,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T13:51:46.591825+01:00"
+						"dateAndTimeString" : "2026-01-27T09:05:21.480241+01:00"
 					}
 				},
 				"uid" : {
@@ -1688,7 +1759,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Converting the CSV to JSON"
+				"string" : "# Transforming the raw data — converting the CSV to JSON"
 			},
 			{
 				"__type" : "textSnippet",
@@ -2121,7 +2192,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:38:22.686545+01:00"
+									"dateAndTimeString" : "2026-01-27T09:38:21.793221+01:00"
 								}
 							},
 							"uid" : {
@@ -2131,7 +2202,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Try these steps yourself. You can always browse the proposed changes below and accept them later.\n⇒ *Create `VRPaper` using the fixit dialog, as before.*\n⇒ *Add the missing `for:` method using the fixit dialog. Change the proposed `data` argument to `aDictionary`; add the body `^ self new data: aDictionary`; accept the change.*\n⇒ *In the `for:` method fix the `data:` accessor, adding the body `data := aDictionary`*\n⇒ *In the `data:` setter method, add the missing `data` slot using the fixit dialog, and accept the change*\n⇒ *Add `data` getter. This can be done in several ways. One way is to click on the class name from one of the mathods you have created, opening a class coder view. Click on the grey bar below the class name to open the class specification. Primary-click on the `data` slot to select the *Create accessors* menu item, select it, and accept the refactoring.*"
+							"string" : "Try these steps yourself. You can always browse the proposed changes below and accept them later.\n⇒ *Create `VRPaper` using the fixit dialog, as before.*\n⇒ *Add the missing `for:` method using the fixit dialog. Change the proposed `data` argument to `aDictionary`; add the body `^ self new data: aDictionary`; change the default method category from “accessing” to “instance creation”; accept the change.*\n⇒ *In the `for:` method fix the `data:` accessor, adding the body `data := aDictionary`*\n⇒ *In the `data:` setter method, add the missing `data` slot using the fixit dialog, change the method category to “initialization” and accept the change*\n⇒ *Add `data` getter. This can be done in several ways. One way is to click on the class name from one of the mathods you have created, opening a class coder view. Click on the grey bar below the class name to open the class specification. Primary-click on the `data` slot to select the *Create accessors* menu item, select it, and accept the refactoring.*"
 						},
 						{
 							"__type" : "textSnippet",
@@ -2277,6 +2348,40 @@
 							"code" : "VRDatasetExamples new allPapersJSON collect: [ :data | VRPaper for: data ] "
 						},
 						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:10:57.163952+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:11:21.764497+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "PhL+M9mLS2uMhYCCDTYzUg=="
+							},
+							"code" : "VRDatasetExamples new allPapers"
+						},
+						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -2301,7 +2406,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:47:57.242163+01:00"
+									"dateAndTimeString" : "2026-01-27T10:10:24.323839+01:00"
 								}
 							},
 							"uid" : {
@@ -2311,7 +2416,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "⇒ *Extract the above snippet as an example in the `VRDatasetExamples` class as `allPapers`. Add an assertion to check the number of papers created.*\nAfter doing this, the following snippet should work:"
+							"string" : "⇒ *Extract the above snippet as an example in the `VRDatasetExamples` class as `allPapers`.*\n*Add an assertion to check the number of papers created.*\nAfter doing this, the following snippet should work:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2444,7 +2549,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:51:05.598403+01:00"
+									"dateAndTimeString" : "2026-01-27T10:13:04.919079+01:00"
 								}
 							},
 							"uid" : {
@@ -2454,7 +2559,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "So far the domain objects are not much of an improvement over our raw dictionaries, in fact they seem wors, because we have tio navigate to get to the interesting data. But now the fun starts as we begin to mold these objects, adding contextual tools to make them more useful."
+							"string" : "So far the domain objects are not much of an improvement over our raw dictionaries, in fact they seem worse, because we have tio navigate to get to the interesting data. But now the fun starts as we begin to mold these objects, adding contextual tools to make them more useful."
 						}
 					]
 				},
@@ -5299,6 +5404,248 @@
 					"__type" : "textStyle"
 				},
 				"string" : "feenkcom/gtoolkit#4831"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:05:39.952527+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:05:48.694602+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "l5gZ15W7QFu9o3Gwy+MK+g=="
+							},
+							"code" : "#VisualisationReview asPackage fileOut"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:06:28.0226+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:06:36.977748+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "JrTidgZHQDO11fH7C5bKvw=="
+							},
+							"code" : "FileLocator imageDirectory"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T09:59:01.228418+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T09:59:03.343986+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "B1gHIGUuS+y2OMd//OTFhQ=="
+							},
+							"code" : "Smalltalk packageOrganizer ensurePackage: 'VisualisationReview'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:01:21.208466+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:01:52.719008+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "C/2bhVh6SfSFkzaREKUBjw=="
+							},
+							"code" : "#VisualisationReview asPackage removeFromSystem."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:01:57.60204+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:02:20.440974+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8WX58mLFQseSo5KQKzwNgQ=="
+							},
+							"code" : "#'VisualisationReview-Examples' asPackage removeFromSystem."
+						},
+						{
+							"__type" : "shellCommandSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:07:31.483946+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:08:44.245878+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "92PzJT3QRJCN/F8FW+ckCA=="
+							},
+							"code" : "ln -s pharo-local/iceberg/feenkcom/gtoolkit-demos/data/visualisation-review/fileOuts "
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-27T09:51:09.981478+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-27T10:06:09.63032+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pxwu/lJ/QMmu5ptRYuUQBw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Snippets for preparing the ombu files"
 			},
 			{
 				"__type" : "textSnippet",
