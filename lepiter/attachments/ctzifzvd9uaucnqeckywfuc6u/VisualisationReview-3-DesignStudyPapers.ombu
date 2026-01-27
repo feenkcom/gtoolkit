@@ -1,0 +1,97 @@
+OmEntry {
+	#tags : {
+		#prior : OmNullReference [  ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #type,
+			#protocol : #accessing,
+			#sourceCode : 'type\r\t^ self data at: \'Type\'',
+			#stamp : '1/27/2026 10:43',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #isDesignStudy,
+			#protocol : #testing,
+			#sourceCode : 'isDesignStudy\r\t^ self type = \'Design Study\'',
+			#stamp : '1/27/2026 10:46',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #isDesignStudy,
+			#protocol : #testing,
+			#sourceCode : 'isDesignStudy\r\t^ self type = \'Design Study\'',
+			#stamp : '1/27/2026 10:46',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDatasetExamples
+			},
+			#name : #designStudies,
+			#protocol : #examples,
+			#sourceCode : 'designStudies\r\t<gtExample>\r\t^ self allPapers select: #isDesignStudy',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDatasetExamples
+			},
+			#name : #designStudies,
+			#protocol : #examples,
+			#sourceCode : 'designStudies\r\t<gtExample>\r\t| papers |\r\tpapers := self allPapers select: #isDesignStudy.\r\tself assert: papers size equals: 65.\r\t^ papers',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #id,
+			#protocol : #accessing,
+			#sourceCode : 'id\r\t^ self data at: \'ID\'',
+			#stamp : '1/27/2026 10:49',
+			#package : #VisualisationReview
+		}
+	}
+}
