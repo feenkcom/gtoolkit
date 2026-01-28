@@ -4168,45 +4168,47 @@
 				"string" : "# Molding the print view — Implementing printOn:"
 			},
 			{
-				"__type" : "commentSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T13:44:21.975484+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-23T09:23:17.823385+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "ORPvvZvbRymJ6YIah1mqxA=="
-				},
-				"string" : "—————***CONTINUE BELOW*** ——————————",
-				"isHidden" : false
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-28T08:52:40.692402+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-28T08:56:25.807578+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "TK4vR8AfQqCA7Lzg5pUaTQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The reason we wrapped the publications data into `VRPaper` domain objects is that this enables us to associate tiny, contextual tools to these objects, answering questions that we have about them. The most common of these kinds of tools is a [[Contextual View]], a dedicated inspector view that is associated to that kind of object. Such views can be as simple or elaborate as you like, but most views are cases of a [[Simple View]]. The  simplest of these is a *repurposed forwarding view* that already exists for an existing class. Let's see howe can create on of these."
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -4374,7 +4376,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:45:32.267971+01:00"
+									"dateAndTimeString" : "2026-01-28T08:57:53.552371+01:00"
 								}
 							},
 							"uid" : {
@@ -4384,153 +4386,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If we inspect this paper we see its title in the *Print* view, but the rest of the useful information is buried in the *Raw* view. If we explore the `data` slot, we find an *Items* view that improves on this somewhat. Let's repurpose that view for our paper by creating a *forwarding view* from the paper to its data.\n⇒ *Evaluate and inspect the paper.*\n⇒ *Open an inspector playground (lift the handle at the bottom of the inspect to reveal a Pharo playground snippet).*\n⇒ *Enter and inspect the code: `self data`.* \n⇒ *Secondary-click (OPT-click or ALT-click) on the *Items* tab to reveal the source code of this view.*\nNote that the view is defined in a method called `gtItemsFor:` of the {{gtClass:name=Dictionary}} class. We would like to repurpose this code without copy-pasting it.\n⇒ *Primary-click in the playground with `self data`, and select the option *Create `<gtView>` forward to Items*. Before accepting this code, change the name of the generated method from `gtViewFor:` to `gtJsonFor:`. Accept the method.*\n⇒ *Go to the new *Items* view of the paper.*\n"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:39:38.954875+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:39:58.588448+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "Sy4jxyucSte9+m01oiwZsQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "***todo*** Explain [[Contextual Playground]] pattern"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:13:50.784716+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:13:50.784716+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "qfOQdK27SuGZpfuAL2G+ew=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:13:51.048968+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:13:51.048968+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "+Rlk1M8TR+SdatSeeA0nmA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : ""
-						},
-						{
-							"__type" : "commentSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:27:05.497101+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:27:20.429301+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "bAqmPe5ZQ0y4jUdSO37C8A=="
-							},
-							"string" : "—————***CONTINUE HERE*** ——————————",
-							"isHidden" : false
+							"string" : "If we inspect this paper we see its title in the *Print* view, but the rest of the useful information is buried in the *Raw* view. If we explore the `data` slot, we find an *Items* view that improves on this somewhat. Let's repurpose that view for our paper by creating a *forwarding view* from the paper to its data.\n⇒ *Evaluate and inspect the paper.*\n⇒ *Open an inspector playground (lift the handle at the bottom of the inspect to reveal a Pharo playground snippet).*\n⇒ *Enter and inspect the code: `self data`.* \n⇒ *Secondary-click (OPT-click or ALT-click) on the *Items* tab to reveal the source code of this view.*\nNote that the view is defined in a method called `gtItemsFor:` of the {{gtClass:name=Dictionary}} class. We would like to repurpose this code without copy-pasting it.\n⇒ *Primary-click in the playground with `self data`, and select the option *Create `<gtView>` forward to Items*. Before accepting this code, change the name of the generated method from `gtViewFor:` to `gtJsonFor:`. Accept the method.*\n⇒ *Go to the new *Items* tab of the paper, and verify that it contains the repurposed view.*\n⇒ *Secondary-*click on the tab to see the source code of the new view method.\nThe generated code, belonging to the `VRPaper` class, should look like this:"
 						},
 						{
 							"__type" : "blockQuoteSnippet",
@@ -4546,7 +4402,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:00:27.688774+01:00"
+									"dateAndTimeString" : "2026-01-28T08:50:04.539165+01:00"
 								}
 							},
 							"editEmail" : {
@@ -4557,14 +4413,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:00:29.541609+01:00"
+									"dateAndTimeString" : "2026-01-28T08:50:04.541769+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "JOcHjkerQn2DUbOgVWOnzg=="
+								"uidString" : "Vy1G/4mrSL2RpdDso584IA=="
 							},
-							"string" : "self data asJson"
+							"string" : "gtJsonFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: 'Items';\r\t\tobject: [ self data ];\r\t\tview: #gtItemsFor:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -4580,7 +4436,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:00:35.237159+01:00"
+									"dateAndTimeString" : "2026-01-28T08:58:17.107942+01:00"
 								}
 							},
 							"editEmail" : {
@@ -4591,20 +4447,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:07:08.451547+01:00"
+									"dateAndTimeString" : "2026-01-28T09:09:33.799466+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "PWGdqDEET3KNALan5NZPKA=="
+								"uidString" : "FpQHuD3IRt+/UKvu/LLGEA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This is a nicer view that we can reuse. We can apply the transformation *Create `<gtView>` forward to JSON object*. Now when we inspect an instance we get a nicer view as a *JSON object* view."
+							"string" : "This is all the code that is needed to reuse the dictionary's *Items* view!\nNote that the method takes `aView` as an argument, it has a `<gtView>` pragma (*i.e.,* annotation), and it  returns the result of sending `aView` a number of messages, in this case the first being `forward`. All view methods look like this. Furthermore, the name of the method is `gtJsonFor:`. By convention, view methods are named `gt`*`Something`*`For:`, but this is only a convention.\nThe first message sent to `aView` is the factory message `forward`, specifying the kind of view that we want. (See [[Inspector views]] for an overview.) Then we set the tab *title* for the view, the *object* whose view we want to repurpose, and finally the *view* message to send. That's it!"
 						},
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -4617,7 +4473,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T16:58:42.097004+01:00"
+									"dateAndTimeString" : "2026-01-28T08:58:13.247764+01:00"
 								}
 							},
 							"editEmail" : {
@@ -4628,86 +4484,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:39.006893+01:00"
+									"dateAndTimeString" : "2026-01-28T09:12:04.944778+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "VCZyt/aYTZCgwgEFgP7szw=="
-							},
-							"code" : "VRDatasetExamples new paper327"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "blockQuoteSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-13T17:08:17.772761+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-13T17:08:19.563499+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "Vy1G/4mrSL2RpdDso584IA=="
-										},
-										"string" : "gtJsonObjectFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: 'JSON object';\r\t\tobject: [ self data asGtJson ];\r\t\tview: #gtJsonObjectFor:context:"
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:07:53.892402+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:08:14.343103+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "giywstj1S2iV/Sivp3E6vg=="
+								"uidString" : "Sy4jxyucSte9+m01oiwZsQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We can *primary-*click on the tab to see the source code of the new view method."
+							"string" : "Below the `gtJsonFor:` method you should also see the code of the original method, {{gtMethod:name=Dictionary>>#gtItemsFor:}}. It's a bit more complicated, being a `columnedTree` view, but still just over 20 lines of code."
 						},
 						{
 							"__type" : "textSnippet",
@@ -4723,7 +4510,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:53:17.185996+01:00"
+									"dateAndTimeString" : "2026-01-27T16:13:50.784716+01:00"
 								}
 							},
 							"editEmail" : {
@@ -4734,17 +4521,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:53:17.185996+01:00"
+									"dateAndTimeString" : "2026-01-28T09:13:58.069285+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "U9Sv8m3jTtWKZLFmP5tnkg=="
+								"uidString" : "qfOQdK27SuGZpfuAL2G+ew=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "The new *Items* view is a bit of an improvement over the *Raw* view of a paper, but we still have to dig for the information we want about a paper. We will now see howe can do better."
 						},
 						{
 							"__type" : "textSnippet",
@@ -4760,7 +4547,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:53:22.089877+01:00"
+									"dateAndTimeString" : "2026-01-28T09:12:41.216235+01:00"
 								}
 							},
 							"editEmail" : {
@@ -4771,7 +4558,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T16:53:27.840187+01:00"
+									"dateAndTimeString" : "2026-01-28T09:14:21.051669+01:00"
 								}
 							},
 							"uid" : {
@@ -4781,7 +4568,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "CHANGES for this section"
+							"string" : "These were the only changes we made so far in this section:"
 						},
 						{
 							"__type" : "changesSnippet",
@@ -4817,116 +4604,6 @@
 							},
 							"previewHeight" : 200,
 							"fileName" : "attachments/m0wjudi7a2qoo4h5ecosclpe/VisualisationReview-5-ForwardJSONView.ombu"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "commentSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-13T17:11:05.979151+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-13T17:11:08.261656+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "yEmJyD2SSgq6tuddQ9ImUA=="
-										},
-										"string" : "Add an explanation with pointers to more details of view methods.",
-										"isHidden" : false
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-14T16:09:19.03672+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-14T16:09:27.796116+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "hebqDOMkQP6jGZVY94id9g=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "[[Contextual View]]\n[[Simple View]]\n[[Inspector views]]"
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:09:12.278807+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T17:09:15.528426+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "9EHLQ9nFQO6lBese84uMBQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "## To do"
 						}
 					]
 				},
@@ -4962,10 +4639,80 @@
 				"string" : "# Adding a forwarding contextual view"
 			},
 			{
+				"__type" : "commentSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-21T13:44:21.975484+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-23T09:23:17.823385+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ORPvvZvbRymJ6YIah1mqxA=="
+				},
+				"string" : "—————***CONTINUE BELOW*** ——————————",
+				"isHidden" : false
+			},
+			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "commentSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:27:05.497101+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:27:20.429301+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bAqmPe5ZQ0y4jUdSO37C8A=="
+							},
+							"string" : "—————***CONTINUE HERE*** ——————————",
+							"isHidden" : false
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
