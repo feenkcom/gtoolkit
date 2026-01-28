@@ -1,6 +1,6 @@
 OmEntry {
 	#tags : {
-		#prior : OmReference [ '0' ],
+		#prior : OmNullReference [  ],
 		#self : OmReference [ '1' ]
 	},
 	#content : EpMethodModification {
@@ -41,7 +41,7 @@ OmEntry {
 			},
 			#name : #'gtJsonFor:',
 			#protocol : #views,
-			#sourceCode : 'gtJsonFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: \'Items\';\r\t\tobject: [ self data ];\r\t\tview: #gtItemsFor:',
+			#sourceCode : 'gtJsonFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: \'JSON\';\r\t\tobject: [ self data ];\r\t\tview: #gtItemsFor:',
 			#stamp : '',
 			#package : #VisualisationReview
 		}
