@@ -1,0 +1,19 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ '0' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'gtSummaryFor:',
+			#protocol : #views,
+			#sourceCode : 'gtSummaryFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Summary\';\r\t\tpriority: 10;\r\t\titems: [ {{\'ID\'.\r\t\t\t\t\tself id}.\r\t\t\t\t{\'Title\'.\r\t\t\t\t\tself title}.\r\t\t\t\t{\'Type\'.\r\t\t\t\t\tself type}.\r\t\t\t\t{\'# Authors\'.\r\t\t\t\t\tself data at: \'# Authors\'}.\r\t\t\t\t{\'# Pages\'.\r\t\t\t\t\tself data at: \'# Pages\'}.\r\t\t\t\t{\'Is selected\'.\r\t\t\t\t\tself isDesignStudy}} ];\r\t\tcolumn: \'Key\'\r\t\t\ttext: #first\r\t\t\twidth: 100;\r\t\tcolumn: \'Value\' text: #second;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}

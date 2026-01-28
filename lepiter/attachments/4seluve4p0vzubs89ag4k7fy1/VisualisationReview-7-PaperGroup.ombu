@@ -1,0 +1,92 @@
+OmEntry {
+	#tags : {
+		#prior : OmNullReference [  ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #Object,
+				#traitCompositionSource : 'TGtGroupWithItems',
+				#definitionSource : 'Object << #VRPaperGroup\r\ttraits: {TGtGroupWithItems};\r\tslots: {};\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRPaperGroup,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRPaperGroup
+					},
+					#name : #items,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : 'TGtGroupWithItems classTrait',
+					#definitionSource : 'Object class << VRPaperGroup class\r\ttraits: {TGtGroupWithItems classTrait}'
+				},
+				#name : #'VRPaperGroup class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRPaperGroup
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaperGroup
+			},
+			#name : #'gtItemsFor:',
+			#protocol : #views,
+			#sourceCode : 'gtItemsFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Papers\';\r\t\titems: [ self items ];\r\t\tcolumn: \'Index\'\r\t\t\ttext: [ :eachItem :eachIndex | eachIndex asRopedText foreground: Color gray ]\r\t\t\twidth: 45;\r\t\tcolumn: \'Title\' text: [ :each | each title ];\r\t\tcolumn: \'Type\' text: [ :each | each type ];\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDatasetExamples
+			},
+			#name : #allPapersWrapped,
+			#protocol : #examples,
+			#sourceCode : 'allPapersWrapped\r\t<gtExample>\r\t| papers |\r\tpapers := VRPaperGroup withAll: self allPapers.\r\tself assert: papers size equals: 346.\r\t^ papers',
+			#stamp : '1/28/2026 13:52',
+			#package : #VisualisationReview
+		}
+	}
+}
