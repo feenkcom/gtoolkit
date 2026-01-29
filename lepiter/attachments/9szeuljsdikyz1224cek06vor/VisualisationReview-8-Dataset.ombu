@@ -688,4 +688,64 @@ OmEntry {
 			#package : #VisualisationReview
 		}
 	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'paperWithId:',
+			#protocol : #querying,
+			#sourceCode : 'paperWithId: id\r\t^ self paperDict at: id',
+			#stamp : '1/29/2026 16:12',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'paperWithId:',
+			#protocol : #querying,
+			#sourceCode : 'paperWithId: id\r\t^ self paperDict at: id',
+			#stamp : '1/29/2026 16:13',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDatasetExamples
+			},
+			#name : #paper128,
+			#protocol : #accessing,
+			#sourceCode : 'paper128\r\t<gtExample>\r\t| paper |\r\tpaper := self allPapers detect: [ :p | p id = 128 ].\r\tself assert: paper id equals: 128.\r\tself assert: paper isDesignStudy.\r\t^ paper',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDatasetExamples
+			},
+			#name : #paper128,
+			#protocol : #accessing,
+			#sourceCode : 'paper128\r\t<gtExample>\r\t| paper |\r\tpaper := self vrDataset paperWithId: 128.\r\tself assert: paper id equals: 128.\r\tself assert: paper isDesignStudy.\r\t^ paper',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
 }
