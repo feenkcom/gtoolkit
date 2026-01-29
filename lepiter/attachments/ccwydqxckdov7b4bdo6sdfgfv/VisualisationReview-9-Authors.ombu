@@ -1,0 +1,932 @@
+OmEntry {
+	#tags : {
+		#prior : OmNullReference [  ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #authorFields,
+			#protocol : #constant,
+			#sourceCode : 'authorFields\r\t^ #(\'First Author\' \'Second Author\' \'Third Author\' \'Fourth Author\' \'Fifth Author\' \'Sixth Author\' \'Seven Author\' \'Eighth Author\' \'Nineth Author\' \'Tenth Author\' \'Eleventh Author\' \'Twelfth Author\')',
+			#stamp : '1/29/2026 13:59',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #authorFields,
+			#protocol : #constant,
+			#sourceCode : 'authorFields\r\t^ #(\'First Author\' \'Second Author\' \'Third Author\' \'Fourth Author\' \'Fifth Author\' \'Sixth Author\' \'Seven Author\' \'Eighth Author\' \'Nineth Author\' \'Tenth Author\' \'Eleventh Author\' \'Twelfth Author\')',
+			#stamp : '1/29/2026 13:59',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #authorNames,
+			#protocol : #accessing,
+			#sourceCode : 'authorNames\r\t^ self authorFields collect: [ :f | self data at: f ] thenSelect: #isNotEmpty',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #authorNames,
+			#protocol : #accessing,
+			#sourceCode : 'authorNames\r\t^ (self authorFields collect: [ :f | self data at: f ] thenSelect: #isNotEmpty)\r\t\tcollect: [ :n | n trimBoth: [ :c | c == $" ] ]',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #Object,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #VRDomainEntity\r\tslots: {};\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDomainEntity,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object class << VRDomainEntity class\r\tslots: {}'
+				},
+				#name : #'VRDomainEntity class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDomainEntity
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #Object,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #VRDomainEntity\r\tslots: { #dataset };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDomainEntity,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDomainEntity
+					},
+					#name : #dataset,
+					#parent : @24
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object class << VRDomainEntity class\r\tslots: {}'
+				},
+				#name : #'VRDomainEntity class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @24
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDomainEntity
+				},
+				#parent : @24,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #VRDomainEntity,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity << #VRPaper\r\tslots: { #data };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRPaper,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRPaper
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity class << VRPaper class\r\tslots: {}'
+				},
+				#name : #'VRPaper class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRPaper
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDomainEntity
+			},
+			#name : #dataset,
+			#protocol : #accessing,
+			#sourceCode : 'dataset\r\t^ dataset',
+			#stamp : '1/29/2026 16:27',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #dataset,
+			#protocol : #accessing,
+			#sourceCode : 'dataset\r\t^ dataset',
+			#stamp : '1/29/2026 16:16',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDomainEntity
+			},
+			#name : #'dataset:',
+			#protocol : #accessing,
+			#sourceCode : 'dataset: aDataset\r\tdataset := aDataset',
+			#stamp : '1/29/2026 16:27',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodRemoval {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'dataset:',
+			#protocol : #accessing,
+			#sourceCode : 'dataset: aDataset\r\tdataset := aDataset',
+			#stamp : '1/29/2026 16:16',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #VRDomainEntity,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity << #VRAuthor\r\tslots: { #name . #papers };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRAuthor,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRAuthor
+					},
+					#name : #name,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRAuthor
+					},
+					#name : #papers,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity class << VRAuthor class\r\tslots: {}'
+				},
+				#name : #'VRAuthor class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRAuthor
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #VRDomainEntity,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity << #VRAuthor\r\tslots: { #name . #papers };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRAuthor,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRAuthor
+					},
+					#name : #name,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRAuthor
+					},
+					#name : #papers,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity class << VRAuthor class\r\tslots: {}'
+				},
+				#name : #'VRAuthor class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRAuthor
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #name,
+			#protocol : #accessing,
+			#sourceCode : 'name\r\t^ name',
+			#stamp : '1/29/2026 17:13',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'name:',
+			#protocol : #accessing,
+			#sourceCode : 'name: anObject\r\tname := anObject',
+			#stamp : '1/29/2026 17:13',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #papers,
+			#protocol : #accessing,
+			#sourceCode : 'papers\r\t^ papers',
+			#stamp : '1/29/2026 17:13',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'papers:',
+			#protocol : #accessing,
+			#sourceCode : 'papers: anObject\r\tpapers := anObject',
+			#stamp : '1/29/2026 17:13',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #VRDomainEntity,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity << #VRAuthor\r\tslots: { #name . #papers };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRAuthor,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRAuthor
+					},
+					#name : #name,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRAuthor
+					},
+					#name : #papers,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity class << VRAuthor class\r\tslots: {}'
+				},
+				#name : #'VRAuthor class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRAuthor
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #initialization
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #initialize,
+			#protocol : #initialization,
+			#sourceCode : 'initialize\r\tpapers := OrderedCollection new',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity class << VRAuthor class\r\tslots: {}'
+			},
+			#name : #'VRAuthor class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#superclassName : #VRDomainEntity,
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity << #VRAuthor\r\tslots: { #name . #papers };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+				},
+				#name : #VRAuthor,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#isMeta : false,
+							#className : #VRAuthor
+						},
+						#name : #name,
+						#parent : @11
+					},
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#isMeta : false,
+							#className : #VRAuthor
+						},
+						#name : #papers,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRAuthor
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #VisualisationReview,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Model,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'VRAuthor class'
+			},
+			#name : #'named:in:',
+			#protocol : #accessing,
+			#sourceCode : 'named: aName in: aDataset ',
+			#stamp : '1/29/2026 17:14',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'VRAuthor class'
+			},
+			#name : #'named:in:',
+			#protocol : #accessing,
+			#sourceCode : 'named: aName in: aDataset ',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'VRAuthor class'
+			},
+			#name : #'named:in:',
+			#protocol : #accessing,
+			#sourceCode : 'named: aName in: aDataset\r\t^ self new\r\t\tname: aName;\r\t\tdataset: aDataset;\r\t\tyourself',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'addPaper:',
+			#protocol : #accessing,
+			#sourceCode : 'addPaper: aPaper ',
+			#stamp : '1/29/2026 17:14',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'addPaper:',
+			#protocol : #accessing,
+			#sourceCode : 'addPaper: aPaper ',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'addPaper:',
+			#protocol : #accessing,
+			#sourceCode : 'addPaper: aPaper\r\tpapers add: aPaper',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #initializeAuthorDict,
+			#protocol : #initialization,
+			#sourceCode : 'initializeAuthorDict\r\t| dict |\r\tdict := Dictionary new.\r\tself allPapers\r\t\tdo: [ :p | \r\t\t\tp authorNames\r\t\t\t\tdo: [ :n | (dict at: n ifAbsentPut: [ VRAuthor named: n in: self ]) addPaper: p ] ].\r\t^ dict',
+			#stamp : '1/29/2026 17:35',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #initializeAuthorDict,
+			#protocol : #initialization,
+			#sourceCode : 'initializeAuthorDict\r\t| dict |\r\tdict := Dictionary new.\r\tself allPapers\r\t\tdo: [ :p | \r\t\t\tp authorNames\r\t\t\t\tdo: [ :n | (dict at: n ifAbsentPut: [ VRAuthor named: n in: self ]) addPaper: p ] ].\r\t^ dict',
+			#stamp : '1/29/2026 17:35',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #Object,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #VRDataset\r\tslots: { #allJSON . #selectedJSON . #paperDict };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDataset,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #allJSON,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #selectedJSON,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #paperDict,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object class << VRDataset class\r\tslots: {}'
+				},
+				#name : #'VRDataset class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDataset
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #Object,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #VRDataset\r\tslots: { #allJSON . #selectedJSON . #paperDict . #authorDict };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDataset,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #allJSON,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #selectedJSON,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #paperDict,
+					#parent : @30
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #authorDict,
+					#parent : @30
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object class << VRDataset class\r\tslots: {}'
+				},
+				#name : #'VRDataset class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @30
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDataset
+				},
+				#parent : @30,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #authorDict,
+			#protocol : #accessing,
+			#sourceCode : 'authorDict\r\t^ authorDict ifNil: [ authorDict := self initializeAuthorDict ]',
+			#stamp : '1/29/2026 17:41',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #authors,
+			#protocol : #accessing,
+			#sourceCode : 'authors\r\t^ self authorDict values',
+			#stamp : '1/29/2026 17:47',
+			#package : #VisualisationReview
+		}
+	}
+}
