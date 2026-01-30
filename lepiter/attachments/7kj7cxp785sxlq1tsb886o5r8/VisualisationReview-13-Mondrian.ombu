@@ -1,0 +1,283 @@
+OmEntry {
+	#tags : {
+		#prior : OmNullReference [  ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'mondrianNodeElementHighlighting:',
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianNodeElementHighlighting: aNode\r\t^ BlElement new\r\t\tsize: 10 @ 10;\r\t\tborder: (self mondrianBorderHighlighting:aNode);\r\t\tbackground: self mondrianNodeColor;\r\t\taptitude: (BrGlamorousWithExplicitTooltipAptitude text: self printString)',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'mondrianNodeElementHighlighting:',
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianNodeElementHighlighting: aNode\r\t^ BlTextElement new\r\t\ttext: self initials asRopedText;\r\t\tpadding: (BlInsets all: 12);\r\t\tborder: (self mondrianBorderHighlighting:aNode);\r\t\tbackground: self mondrianNodeColor;\r\t\taptitude: (BrGlamorousWithExplicitTooltipAptitude text: self name);\r\t\tgeometry: BlCircleGeometry new;\r\t\tyourself',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDomainEntity
+			},
+			#name : #'mondrianNodeElementHighlighting:',
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianNodeElementHighlighting: aNode\r\t^ BlElement new\r\t\tsize: 10 @ 10;\r\t\tborder: (self mondrianBorderHighlighting:aNode);\r\t\tbackground: self mondrianNodeColor;\r\t\taptitude: (BrGlamorousWithExplicitTooltipAptitude text: self printString)',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDomainEntity
+			},
+			#name : #'mondrianNodeElementHighlighting:',
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianNodeElementHighlighting: aNode\r\tself subclassResponsibility',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #mondrianNodeColor,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianNodeColor\r\t^ Color paleBlue',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #mondrianNodeColor,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianNodeColor\r\t^ Color paleRed',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #mondrianNodeColor,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianNodeColor\r\t^ Color paleBlue',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDomainEntity
+			},
+			#name : #mondrianNodeColor,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianNodeColor\r\t^ Color paleBlue',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDomainEntity
+			},
+			#name : #mondrianNodeColor,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianNodeColor\r\tself subclassResponsibility',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDomainEntity
+			},
+			#name : #mondrianChildren,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianChildren\rself subclassResponsibility',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDomainEntity
+			},
+			#name : #mondrianChildren,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianChildren\r\tself subclassResponsibility',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #mondrianChildren,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianChildren\r\t^ self authors',
+			#stamp : '1/30/2026 15:46',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #mondrianChildren,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianChildren\r\t^ self authors',
+			#stamp : '1/30/2026 15:46',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #mondrianChildren,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianChildren\r\t^ self papers',
+			#stamp : '1/30/2026 15:37',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #mondrianChildren,
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianChildren\r\t^ self papers',
+			#stamp : '1/30/2026 15:37',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDomainEntity
+			},
+			#name : #'mondrianBorderHighlighting:',
+			#protocol : #mondrian,
+			#sourceCode : 'mondrianBorderHighlighting: aNode\r\t^ BlBorder paint: Color black width: 1',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #initials,
+			#protocol : #mondrian,
+			#sourceCode : 'initials\r\t^ \'\' join: (self name substrings collect: #first)',
+			#stamp : '1/30/2026 15:49',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #initials,
+			#protocol : #mondrian,
+			#sourceCode : 'initials\r\t^ \'\' join: (self name substrings collect: #first)',
+			#stamp : '1/30/2026 15:49',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}

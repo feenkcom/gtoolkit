@@ -1,0 +1,79 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ '0' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'gtSpotterForPaperTitles:',
+			#protocol : #search,
+			#sourceCode : 'gtSpotterForPaperTitles: aSearch\n\t<gtSearch>\n\t^ aSearch list\n\t\ttitle: \'Paper titles\';\n\t\tpriority: 10;\n\t\titems: [ self allPapers ];\n\t\titemsLimit: Float infinity;\n\t\titemName: #title;\n\t\tsendCategory: [ :aCategory :aStep :thisSearch |\n\t\t\tVRPaperGroup withAll: aCategory items contents ];\n\t\tfilterBySubstring',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'gtSpotterForPaperTypes:',
+			#protocol : #search,
+			#sourceCode : 'gtSpotterForPaperTypes: aSearch\n\t<gtSearch>\n\t^ aSearch list\n\t\ttitle: \'Paper titles\';\n\t\tpriority: 10;\n\t\titems: [ self allPapers ];\n\t\titemsLimit: Float infinity;\n\t\titemName: #type;\n\t\tsendCategory: [ :aCategory :aStep :thisSearch |\n\t\t\tVRPaperGroup withAll: aCategory items contents ];\n\t\tfilterBySubstring',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'gtSpotterForPaperTypes:',
+			#protocol : #search,
+			#sourceCode : 'gtSpotterForPaperTypes: aSearch\n\t<gtSearch>\n\t^ aSearch list\n\t\ttitle: \'Paper titles\';\n\t\tpriority: 20;\n\t\titems: [ self allPapers ];\n\t\titemsLimit: Float infinity;\n\t\titemName: #type;\n\t\tsendCategory: [ :aCategory :aStep :thisSearch |\n\t\t\tVRPaperGroup withAll: aCategory items contents ];\n\t\tfilterBySubstring',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'gtSpotterForAuthorNames:',
+			#protocol : #search,
+			#sourceCode : 'gtSpotterForAuthorNames: aSearch\n\t<gtSearch>\n\t^ aSearch list\n\t\ttitle: \'Author name\';\n\t\tpriority: 30;\n\t\titems: [ self authors ];\n\t\titemsLimit: Float infinity;\n\t\titemName: #name;\n\t\tsendCategory: [ :aCategory :aStep :thisSearch |\n\t\t\tVRPaperGroup withAll: aCategory items contents ];\n\t\tfilterBySubstring',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'gtSpotterForAuthorNames:',
+			#protocol : #search,
+			#sourceCode : 'gtSpotterForAuthorNames: aSearch\n\t<gtSearch>\n\t^ aSearch list\n\t\ttitle: \'Author name\';\n\t\tpriority: 30;\n\t\titems: [ self authors ];\n\t\titemsLimit: Float infinity;\n\t\titemName: #name;\n\t\tsendCategory: [ :aCategory :aStep :thisSearch |\n\t\t\tVRAuthorGroup withAll: aCategory items contents ];\n\t\tfilterBySubstring',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}

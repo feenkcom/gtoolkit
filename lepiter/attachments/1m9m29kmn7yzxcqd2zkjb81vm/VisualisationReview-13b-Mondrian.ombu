@@ -1,0 +1,49 @@
+OmEntry {
+	#tags : {
+		#prior : OmReference [ '0' ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'gtCoauthorGraphFor:',
+			#protocol : #views,
+			#sourceCode : 'gtCoauthorGraphFor: aView\r\t<gtView>\r\t^ aView mondrian\r\t\ttitle: \'Co-author graph\';\r\t\tpriority: 40;\r\t\tpainting: [ :aMondrian | self coauthorMondrian: aMondrian ];\r\t\tactionUpdateButton',
+			#stamp : '1/30/2026 16:14',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'coauthorMondrian:',
+			#protocol : #mondrian,
+			#sourceCode : 'coauthorMondrian: aMondrian\r\t| thePapers nodes theAuthors |\r\ttheAuthors := {self} asOrderedCollection , self coauthors.\r\tthePapers := (theAuthors flatCollect: #papers) copyWithoutDuplicates.\r\tnodes := theAuthors , thePapers.\r\taMondrian nodes\r\t\tshape: [ :node | node mondrianNodeElementHighlighting: self ];\r\t\twith: nodes.\r\taMondrian edges connectToAll: #mondrianChildren.\r\taMondrian layout\r\t\tcustom: (GtGraphForceBasedLayout new\r\t\t\t\tcharge: -2000;\r\t\t\t\tlength: 200).\r\t^ aMondrian',
+			#stamp : '1/30/2026 16:27',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'coauthorMondrian:',
+			#protocol : #mondrian,
+			#sourceCode : 'coauthorMondrian: aMondrian\r\t| thePapers nodes theAuthors |\r\ttheAuthors := {self} asOrderedCollection , self coauthors.\r\tthePapers := (theAuthors flatCollect: #papers) copyWithoutDuplicates.\r\tnodes := theAuthors , thePapers.\r\taMondrian nodes\r\t\tshape: [ :node | node mondrianNodeElementHighlighting: self ];\r\t\twith: nodes.\r\taMondrian edges connectToAll: #mondrianChildren.\r\taMondrian layout\r\t\tcustom: (GtGraphForceBasedLayout new\r\t\t\t\tcharge: -2000;\r\t\t\t\tlength: 200).\r\t^ aMondrian',
+			#stamp : '1/30/2026 16:27',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}
