@@ -1,0 +1,1222 @@
+OmEntry {
+	#tags : {
+		#prior : OmNullReference [  ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #VRDomainEntity,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity << #VRDesignStudy\r\tslots: { #data };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDesignStudy,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDesignStudy
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity class << VRDesignStudy class\r\tslots: {}'
+				},
+				#name : #'VRDesignStudy class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDesignStudy
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #VRDomainEntity,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity << #VRDesignStudy\r\tslots: { #data };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDesignStudy,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDesignStudy
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity class << VRDesignStudy class\r\tslots: {}'
+				},
+				#name : #'VRDesignStudy class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDesignStudy
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '2' ],
+		#self : OmReference [ '3' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #data,
+			#protocol : #accessing,
+			#sourceCode : 'data\r\t^ data',
+			#stamp : '1/30/2026 18:21',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '3' ],
+		#self : OmReference [ '4' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #'data:',
+			#protocol : #accessing,
+			#sourceCode : 'data: anObject\r\tdata := anObject',
+			#stamp : '1/30/2026 18:21',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '4' ],
+		#self : OmReference [ '5' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity class << VRDesignStudy class\r\tslots: {}'
+			},
+			#name : #'VRDesignStudy class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#superclassName : #VRDomainEntity,
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity << #VRDesignStudy\r\tslots: { #data };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+				},
+				#name : #VRDesignStudy,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#isMeta : false,
+							#className : #VRDesignStudy
+						},
+						#name : #data,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDesignStudy
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #VisualisationReview,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Model,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '5' ],
+		#self : OmReference [ '6' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'VRDesignStudy class'
+			},
+			#name : #'for:in:',
+			#protocol : #accessing,
+			#sourceCode : 'for: title in: anObject ',
+			#stamp : '1/30/2026 18:24',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '6' ],
+		#self : OmReference [ '7' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity class << VRDesignStudy class\r\tslots: {}'
+			},
+			#name : #'VRDesignStudy class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#superclassName : #VRDomainEntity,
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity << #VRDesignStudy\r\tslots: { #data };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+				},
+				#name : #VRDesignStudy,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#isMeta : false,
+							#className : #VRDesignStudy
+						},
+						#name : #data,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDesignStudy
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #VisualisationReview,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Model,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #'instance creation'
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '7' ],
+		#self : OmReference [ '8' ]
+	},
+	#content : EpProtocolRemoval {
+		#behavior : RGMetaclassDefinition {
+			#annotations : IdentityDictionary {
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity class << VRDesignStudy class\r\tslots: {}'
+			},
+			#name : #'VRDesignStudy class',
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#baseClass : RGClassDefinition {
+				#annotations : IdentityDictionary {
+					#superclassName : #VRDomainEntity,
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity << #VRDesignStudy\r\tslots: { #data };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+				},
+				#name : #VRDesignStudy,
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [
+					RGInstanceVariableDefinition {
+						#annotations : IdentityDictionary {
+							#isMeta : false,
+							#className : #VRDesignStudy
+						},
+						#name : #data,
+						#parent : @11
+					}
+				],
+				#metaClass : @6,
+				#comment : RGCommentDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDesignStudy
+					},
+					#parent : @11,
+					#content : ''
+				},
+				#classVariables : OrderedCollection [ ],
+				#package : RGPackageDefinition {
+					#name : #VisualisationReview,
+					#definedClasses : IdentityDictionary { },
+					#definedMethods : IdentityDictionary { },
+					#extensionMethods : IdentityDictionary { }
+				},
+				#packageTag : #Model,
+				#sharedPools : OrderedCollection [ ]
+			}
+		},
+		#protocol : #accessing
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '8' ],
+		#self : OmReference [ '9' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'VRDesignStudy class'
+			},
+			#name : #'for:in:',
+			#protocol : #accessing,
+			#sourceCode : 'for: title in: anObject ',
+			#stamp : '1/30/2026 18:24',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'VRDesignStudy class'
+			},
+			#name : #'for:in:',
+			#protocol : #'instance creation',
+			#sourceCode : 'for: title in: anObject ',
+			#stamp : '1/30/2026 18:24',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '9' ],
+		#self : OmReference [ '10' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'VRDesignStudy class'
+			},
+			#name : #'for:in:',
+			#protocol : #'instance creation',
+			#sourceCode : 'for: title in: anObject ',
+			#stamp : '1/30/2026 18:24',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'VRDesignStudy class'
+			},
+			#name : #'for:in:',
+			#protocol : #'instance creation',
+			#sourceCode : 'for: title in: anObject ',
+			#stamp : '1/30/2026 18:24',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '10' ],
+		#self : OmReference [ '11' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'VRDesignStudy class'
+			},
+			#name : #'for:in:',
+			#protocol : #'instance creation',
+			#sourceCode : 'for: title in: anObject ',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : true,
+				#className : #'VRDesignStudy class'
+			},
+			#name : #'for:in:',
+			#protocol : #'instance creation',
+			#sourceCode : 'for: aDictionary in: aDataset\r\t^ self new\r\t\tdata: aDictionary;\r\t\tdataset: aDataset;\r\t\tyourself',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '11' ],
+		#self : OmReference [ '12' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #initializeDesignStudyDict,
+			#protocol : #accessing,
+			#sourceCode : 'initializeDesignStudyDict\r\t| dict |\r\tdict := Dictionary new.\r\tself selectedJSON\r\t\tdo: [ :d | \r\t\t\t| id |\r\t\t\tid := d at: \'ID\'.\r\t\t\tdict at: id ifAbsentPut: (VRDesignStudy for: d in: self) ].\r\t^ dict',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #initializeDesignStudyDict,
+			#protocol : #accessing,
+			#sourceCode : 'initializeDesignStudyDict\r\t| dict |\r\tdict := Dictionary new.\r\tself selectedJSON\r\t\tdo: [ :d | dict at: (d at: \'ID\') ifAbsentPut: (VRDesignStudy for: d in: self) ].\r\t^ dict',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpClassModification {
+		#oldClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #Object,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #VRDataset\r\tslots: { #allJSON . #selectedJSON . #paperDict . #authorDict . #venueDict };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDataset,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #allJSON,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #selectedJSON,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #paperDict,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #authorDict,
+					#parent : @6
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #venueDict,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object class << VRDataset class\r\tslots: {}'
+				},
+				#name : #'VRDataset class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDataset
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#newClass : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #Object,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'Object << #VRDataset\r\tslots: { #allJSON . #selectedJSON . #paperDict . #authorDict . #venueDict . #designStudyDict };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDataset,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #allJSON,
+					#parent : @34
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #selectedJSON,
+					#parent : @34
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #paperDict,
+					#parent : @34
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #authorDict,
+					#parent : @34
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #venueDict,
+					#parent : @34
+				},
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDataset
+					},
+					#name : #designStudyDict,
+					#parent : @34
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'Object class << VRDataset class\r\tslots: {}'
+				},
+				#name : #'VRDataset class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @34
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDataset
+				},
+				#parent : @34,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #designStudyDict,
+			#protocol : #accessing,
+			#sourceCode : 'designStudyDict\r\t^ designStudyDict',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #designStudyDict,
+			#protocol : #accessing,
+			#sourceCode : 'designStudyDict\r\t^ designStudyDict ifNil: [ designStudyDict := self initializeDesignStudyDict ]',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpClassAddition {
+		#class : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #VRDomainEntityGroup,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntityGroup << #VRDesignStudyGroup\r\tslots: {};\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDesignStudyGroup,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntityGroup class << VRDesignStudyGroup class'
+				},
+				#name : #'VRDesignStudyGroup class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDesignStudyGroup
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #VRDomainEntityGroup,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntityGroup << #VRDesignStudyGroup\r\tslots: {};\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDesignStudyGroup,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [ ],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntityGroup class << VRDesignStudyGroup class'
+				},
+				#name : #'VRDesignStudyGroup class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDesignStudyGroup
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #views
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudyGroup
+			},
+			#name : #'gtDesignStudiesFor:',
+			#protocol : #views,
+			#sourceCode : 'gtDesignStudiesFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Design studies\';\r\t\titems: [ self items ];\r\t\tcolumn: \'Index\'\r\t\t\ttext: [ :eachItem :eachIndex | eachIndex asRopedText foreground: Color gray ]\r\t\t\twidth: 45;\r\t\tcolumn: \'Title\' text: [ :each | each title ];\r\t\tactionUpdateButton',
+			#stamp : '1/30/2026 18:38',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #title,
+			#protocol : #accessing,
+			#sourceCode : 'title\r\t^ self data at: \'Title\'',
+			#stamp : '1/30/2026 18:38',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpProtocolAddition {
+		#behavior : RGClassDefinition {
+			#annotations : IdentityDictionary {
+				#superclassName : #VRDomainEntity,
+				#traitCompositionSource : '{}',
+				#definitionSource : 'VRDomainEntity << #VRDesignStudy\r\tslots: { #data };\r\ttag: \'Model\';\r\tpackage: \'VisualisationReview\''
+			},
+			#name : #VRDesignStudy,
+			#methods : IdentityDictionary { },
+			#protocols : Set [ ],
+			#instanceVariables : OrderedCollection [
+				RGInstanceVariableDefinition {
+					#annotations : IdentityDictionary {
+						#isMeta : false,
+						#className : #VRDesignStudy
+					},
+					#name : #data,
+					#parent : @6
+				}
+			],
+			#metaClass : RGMetaclassDefinition {
+				#annotations : IdentityDictionary {
+					#traitCompositionSource : '{}',
+					#definitionSource : 'VRDomainEntity class << VRDesignStudy class\r\tslots: {}'
+				},
+				#name : #'VRDesignStudy class',
+				#methods : IdentityDictionary { },
+				#protocols : Set [ ],
+				#instanceVariables : OrderedCollection [ ],
+				#baseClass : @6
+			},
+			#comment : RGCommentDefinition {
+				#annotations : IdentityDictionary {
+					#isMeta : false,
+					#className : #VRDesignStudy
+				},
+				#parent : @6,
+				#content : ''
+			},
+			#classVariables : OrderedCollection [ ],
+			#package : RGPackageDefinition {
+				#name : #VisualisationReview,
+				#definedClasses : IdentityDictionary { },
+				#definedMethods : IdentityDictionary { },
+				#extensionMethods : IdentityDictionary { }
+			},
+			#packageTag : #Model,
+			#sharedPools : OrderedCollection [ ]
+		},
+		#protocol : #printing
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '19' ],
+		#self : OmReference [ '20' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #'printOn:',
+			#protocol : #printing,
+			#sourceCode : 'printOn: aStream\r\taStream nextPutAll: self title',
+			#stamp : '1/30/2026 18:38',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '20' ],
+		#self : OmReference [ '21' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #id,
+			#protocol : #accessing,
+			#sourceCode : 'id\r\t^ self data at: \'ID\'',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #id,
+			#protocol : #accessing,
+			#sourceCode : 'id\r\t^ (self data at: \'ID\') asNumber',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '21' ],
+		#self : OmReference [ '22' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #designStudies,
+			#protocol : #accessing,
+			#sourceCode : 'designStudies\r\t^ VRDesignStudyGroup withAll: (self designStudyDict values sortedAs: #title)',
+			#stamp : '1/30/2026 19:04',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '22' ],
+		#self : OmReference [ '23' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'gtVenuesFor:',
+			#protocol : #views,
+			#sourceCode : 'gtVenuesFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: \'Venues\';\r\t\tobject: [ self venues ];\r\t\tview: #gtVenuesFor:',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'gtVenuesFor:',
+			#protocol : #views,
+			#sourceCode : 'gtVenuesFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: \'Venues\';\r\t\tpriority: 40;\r\t\tobject: [ self venues ];\r\t\tview: #gtVenuesFor:',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '23' ],
+		#self : OmReference [ '24' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'gtDesignStudiesFor:',
+			#protocol : #views,
+			#sourceCode : 'gtDesignStudiesFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: \'Design studies\';\r\t\tpriority: 50;\r\t\tobject: [ self designStudies ];\r\t\tview: #gtDesignStudiesFor:',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '24' ],
+		#self : OmReference [ '25' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #paper,
+			#protocol : #accessing,
+			#sourceCode : 'paper\r\t^ self dataset paperWithId: self id',
+			#stamp : '1/30/2026 19:06',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '25' ],
+		#self : OmReference [ '26' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #initializeDesignStudyDict,
+			#protocol : #accessing,
+			#sourceCode : 'initializeDesignStudyDict\r\t| dict |\r\tdict := Dictionary new.\r\tself selectedJSON\r\t\tdo: [ :d | dict at: (d at: \'ID\') ifAbsentPut: (VRDesignStudy for: d in: self) ].\r\t^ dict',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #initializeDesignStudyDict,
+			#protocol : #accessing,
+			#sourceCode : 'initializeDesignStudyDict\r\t| dict |\r\tdict := Dictionary new.\r\tself selectedJSON\r\t\tdo: [ :d | dict at: (d at: \'ID\') asNumber ifAbsentPut: (VRDesignStudy for: d in: self) ].\r\t^ dict',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '26' ],
+		#self : OmReference [ '27' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #venueName,
+			#protocol : #accessing,
+			#sourceCode : 'venueName\r\t^ self data at: \'Venus\'',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #venueName,
+			#protocol : #accessing,
+			#sourceCode : 'venueName\r\t^ self data at: \'Venue\'',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '27' ],
+		#self : OmReference [ '28' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #year,
+			#protocol : #accessing,
+			#sourceCode : 'year\r\t^ self data at: \'PaperYear\'',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #year,
+			#protocol : #accessing,
+			#sourceCode : 'year\r\t^ self data at: \'Paper Year\'',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '28' ],
+		#self : OmReference [ '29' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #venue,
+			#protocol : #accessing,
+			#sourceCode : 'venue\r\t^ self dataset venueNamed: self venueName year: self year',
+			#stamp : '1/30/2026 19:45',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '29' ],
+		#self : OmReference [ '30' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #abstract,
+			#protocol : #accessing,
+			#sourceCode : 'abstract\r\t^ self data at: \'Abstract\'',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '30' ],
+		#self : OmReference [ '31' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #'gtSummaryFor:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'gtSummaryFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Summary\';\r\t\tpriority: 10;\r\t\titems: [ {{\'ID\'.\r\t\t\t\t\tself id}.\r\t\t\t\t{\'Paper\'.\r\t\t\t\t\tself paper} .\r\t\t\t\t{\'Venue\'.\r\t\t\t\t\tself venue} }];\r\t\tcolumn: \'Key\'\r\t\t\ttext: #first\r\t\t\twidth: 100;\r\t\tcolumn: \'Value\' text: #second;\r\t\tsend: #last;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #'gtSummaryFor:',
+			#protocol : #'as yet unclassified',
+			#sourceCode : 'gtSummaryFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Summary\';\r\t\tpriority: 10;\r\t\titems: [ {{\'ID\'.\r\t\t\t\t\tself id}.\r\t\t\t\t{\'Paper\'.\r\t\t\t\t\tself paper} .\r\t\t\t\t{\'Abstract\'.\r\t\t\t\t\tself abstract} .\r\t\t\t\t{\'Venue\'.\r\t\t\t\t\tself venue} }];\r\t\tcolumn: \'Key\'\r\t\t\ttext: #first\r\t\t\twidth: 100;\r\t\tcolumn: \'Value\' text: #second;\r\t\tsend: #last;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '31' ],
+		#self : OmReference [ '32' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #'gtJsonFor:',
+			#protocol : #views,
+			#sourceCode : 'gtJsonFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: \'Items\';\r\t\tpriority: 20;\r\t\tobject: [ self data ];\r\t\tview: #gtItemsFor:',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDesignStudy
+			},
+			#name : #'gtJsonFor:',
+			#protocol : #views,
+			#sourceCode : 'gtJsonFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: \'Json\';\r\t\tpriority: 20;\r\t\tobject: [ self data ];\r\t\tview: #gtItemsFor:',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '32' ],
+		#self : OmReference [ '33' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #designStudy,
+			#protocol : #accessing,
+			#sourceCode : 'designStudy\r\t^ self dataset designStudyDict at: self id',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #designStudy,
+			#protocol : #accessing,
+			#sourceCode : 'designStudy\r\tself isDesignStudy ifFalse: [ ^ nil ].\r\t^ self dataset designStudyDict at: self id',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '33' ],
+		#self : OmReference [ '34' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'gtSummaryFor:',
+			#protocol : #views,
+			#sourceCode : 'gtSummaryFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Summary\';\r\t\tpriority: 10;\r\t\titems: [ {{\'ID\'.\r\t\t\t\t\tself id}.\r\t\t\t\t{\'Title\'.\r\t\t\t\t\tself title}.\r\t\t\t\t{\'Type\'.\r\t\t\t\t\tself type}.\r\t\t\t\t{\'# Authors\'.\r\t\t\t\t\tself data at: \'# Authors\'}.\r\t\t\t\t{\'# Pages\'.\r\t\t\t\t\tself data at: \'# Pages\'}.\r\t\t\t\t{\'Is selected\'.\r\t\t\t\t\tself isDesignStudy}.\r\t\t\t\t{\'Venue\'.\r\t\t\t\t\tself venue}} ];\r\t\tcolumn: \'Key\'\r\t\t\ttext: #first\r\t\t\twidth: 100;\r\t\tcolumn: \'Value\' text: #second;\r\t\tsend: #last;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'gtSummaryFor:',
+			#protocol : #views,
+			#sourceCode : 'gtSummaryFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Summary\';\r\t\tpriority: 10;\r\t\titems: [ {{\'ID\'.\r\t\t\t\t\tself id}.\r\t\t\t\t{\'Title\'.\r\t\t\t\t\tself title}.\r\t\t\t\t{\'Type\'.\r\t\t\t\t\tself type.\r\t\t\t\t\tself designStudy}.\r\t\t\t\t{\'# Authors\'.\r\t\t\t\t\tself data at: \'# Authors\'}.\r\t\t\t\t{\'# Pages\'.\r\t\t\t\t\tself data at: \'# Pages\'}.\r\t\t\t\t{\'Is selected\'.\r\t\t\t\t\tself isDesignStudy}.\r\t\t\t\t{\'Venue\'.\r\t\t\t\t\tself venue}} ];\r\t\tcolumn: \'Key\'\r\t\t\ttext: #first\r\t\t\twidth: 100;\r\t\tcolumn: \'Value\' text: #second;\r\t\tsend: #last;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}
