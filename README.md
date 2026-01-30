@@ -32,7 +32,7 @@ Now, just run the executable.
 
 ## Install from sources
 
-Executing the script below installs the VM, clones the sources and builds an image. It can takes ~10 minutes and it is useful for developing Glamorous Toolkit itself.
+Executing the script below installs the VM, clones the sources and builds an image. It takes ~10 minutes and it is useful for developing Glamorous Toolkit itself.
 
 - On Mac: `curl https://dl.feenk.com/scripts/mac.sh | bash`
 - On Linux: `curl https://dl.feenk.com/scripts/linux.sh | bash`
