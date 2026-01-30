@@ -8298,41 +8298,6 @@
 				"string" : "# Authors"
 			},
 			{
-				"__type" : "commentSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T13:44:21.975484+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-23T09:23:17.823385+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "ORPvvZvbRymJ6YIah1mqxA=="
-				},
-				"string" : "—————***CONTINUE BELOW*** ——————————",
-				"isHidden" : false
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -8872,7 +8837,7 @@
 							"code" : "VRDatasetExamples new paper128 "
 						},
 						{
-							"__type" : "commentSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -8885,7 +8850,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:27:05.497101+01:00"
+									"dateAndTimeString" : "2026-01-30T13:33:59.17569+01:00"
 								}
 							},
 							"editEmail" : {
@@ -8896,15 +8861,51 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:27:20.429301+01:00"
+									"dateAndTimeString" : "2026-01-30T13:33:59.17569+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "bAqmPe5ZQ0y4jUdSO37C8A=="
+								"uidString" : "9zn1XljBReqSQet4xAoxQA=="
 							},
-							"string" : "—————***CONTINUE HERE*** ——————————",
-							"isHidden" : false
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Change the `authors` method of a dataset to return a *sorted* group of authors.*\n⇒ *Add an *Authors* view to the dataset.*\n⇒ *Add a *# Papers* column to the *Authors* view.*"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T13:26:09.439135+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T13:26:43.540915+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mNmfhdizQP6exUXqgoovow=="
+							},
+							"code" : "VRDatasetExamples new vrDataset"
 						},
 						{
 							"__type" : "textSnippet",
@@ -8920,7 +8921,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T11:59:18.614279+01:00"
+									"dateAndTimeString" : "2026-01-30T13:47:06.863265+01:00"
 								}
 							},
 							"editEmail" : {
@@ -8931,17 +8932,51 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T12:11:18.565493+01:00"
+									"dateAndTimeString" : "2026-01-30T13:47:06.863265+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "D4f/CHf6TqiAMn10M7Buyw=="
+								"uidString" : "20ZJ2GzuSI+FbczbXeq6Yg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "\n⇒ \n⇒ \n⇒ \n"
+							"string" : "We might well ask, *who are the co-authors a given author has worked with?*\n⇒ *In an Inspector playground of an example author, prototype an expression to return the co-authors of an author.*\nTake care that the list of co-authors does not include the author themself!\n⇒ *Extract a method `coauthors` and an associated view.*\n⇒ *Add the # of co-authors to the author summary view and to the author group overview.*"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T13:34:50.677788+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T13:34:59.610042+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "iLm/0oPITEa8E1LEDDwkZg=="
+							},
+							"code" : "VRDatasetExamples new authorLanza"
 						},
 						{
 							"__type" : "textSnippet",
@@ -8957,7 +8992,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T11:49:33.197685+01:00"
+									"dateAndTimeString" : "2026-01-30T13:37:51.382666+01:00"
 								}
 							},
 							"editEmail" : {
@@ -8968,17 +9003,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T11:49:33.740426+01:00"
+									"dateAndTimeString" : "2026-01-30T13:49:57.940055+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "TBRLMLTURUuhuWw+Hqplrg=="
+								"uidString" : "PsZrSaaQSkaIfmIWdWICPQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "⇒\n⇒\n⇒\n⇒\n⇒\n"
+							"string" : "⇒ *Who is the author with the largest number of co-authors? The least?*"
 						},
 						{
 							"__type" : "textSnippet",
@@ -8994,7 +9029,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T10:59:13.728929+01:00"
+									"dateAndTimeString" : "2026-01-30T13:50:33.478264+01:00"
 								}
 							},
 							"editEmail" : {
@@ -9005,17 +9040,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T10:59:13.728929+01:00"
+									"dateAndTimeString" : "2026-01-30T13:51:24.586016+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "64kKCFcCR7yks152OjoNPQ=="
+								"uidString" : "VMYoHXpuR527yGViPfyq2Q=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "Note how we can now navigate comfortably between papers, authors and co-authors, just by clicking between views."
 						},
 						{
 							"__type" : "changesSnippet",
@@ -9175,7 +9210,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T09:50:35.987587+01:00"
+									"dateAndTimeString" : "2026-01-30T14:29:05.115509+01:00"
 								}
 							},
 							"editEmail" : {
@@ -9186,51 +9221,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T09:51:07.86784+01:00"
+									"dateAndTimeString" : "2026-01-30T14:29:05.115509+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "dWAJ0IEuSGS0cstRnqmzdQ=="
+								"uidString" : "OKe2yM/KTUCt90Yxl8LUrA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We would like to navigate from a paper or author back to the dataset."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T09:51:10.544892+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T09:51:52.124427+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "ygYoAdRfRK27xZMuIRD2oQ=="
-							},
-							"code" : "VRDatasetExamples new vrDataset papers first"
+							"string" : "We can easily navigate from the dataset to individual papers or authors, but how can we navigate back? We can evaluate `self dataset` in an inspector playground,  but is there an easier way?\nInstead of introducing another contextual view, what we need here is a [[Contextual Action]], a button that perforns a useful task, possible updating a view, spawning a new view, or launching an external tool."
 						},
 						{
 							"__type" : "textSnippet",
@@ -9246,7 +9247,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T09:52:00.144089+01:00"
+									"dateAndTimeString" : "2026-01-30T14:11:17.944383+01:00"
 								}
 							},
 							"editEmail" : {
@@ -9257,17 +9258,51 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T09:55:11.019646+01:00"
+									"dateAndTimeString" : "2026-01-30T14:29:16.269954+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "5TU4KeoPQSeKdpAHGGC+uA=="
+								"uidString" : "P011J3giQp+zztjI6EETXA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We navigate to `self dataset` in the playground and extract an action. We change the icon to `up`.\nWe push the action up to share the action with other domain entities."
+							"string" : "⇒ *Evaluate `self dataset` in an Inspector playground of paper 128. Extract an *action* to navigate to the dataset.*\n*Hint:* Right-click in the playground as you would to extract a method or a view, but this time select `Create <gtAction> for dataset`. Before accepting the generated method, change the icon from `empty` to `up`, and change the tooltip text to `Spawn dataset`.\n⇒ *Refresh the view to see the new action associated with an “up” button.*\n*Hint:* You can refresh the Inspector views by clicking the ▾ menu icon at the top right, and selecting “↻ Update pane tool.”\nThis action is currently defined only for papers. Let's make it work for authors as well.\n⇒ *Push the `gtDatasetFor:` method up to its superclass, `VRDomainEntity`.*\nNow the action is also available for authors!"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T13:56:56.542553+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T13:57:06.770801+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uqJ+DLEyRnupY0fegT99Eg=="
+							},
+							"code" : "VRDatasetExamples new paper128"
 						},
 						{
 							"__type" : "textSnippet",
@@ -9283,7 +9318,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T10:12:08.758823+01:00"
+									"dateAndTimeString" : "2026-01-30T14:18:58.570425+01:00"
 								}
 							},
 							"editEmail" : {
@@ -9294,17 +9329,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T10:14:15.037883+01:00"
+									"dateAndTimeString" : "2026-01-30T14:19:22.593563+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "rtAX+kNIS3KxX4GEzKbzlw=="
+								"uidString" : "07Ck3yBAT7yef/Sbd0Szkg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Exercise: create an action to open the webbrowser on google scholar for a paper from its title.\nHint: use `WebBrowser openOn: ...`.\nExercise: instead of opening an external browser, open the web page view on a `ZnUrl fromString: ...`. Would this be better as an action or a view?"
+							"string" : "It would be nice to access the actual papers referred to in the dataset. We don't have the URLs or DOIs of these publications, but we can ask Google Scholar to find them for us, like this:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -9320,7 +9355,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T10:08:04.882283+01:00"
+									"dateAndTimeString" : "2026-01-30T14:16:56.15438+01:00"
 								}
 							},
 							"editEmail" : {
@@ -9331,14 +9366,160 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T10:14:58.889779+01:00"
+									"dateAndTimeString" : "2026-01-30T14:17:12.544546+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "R3nSJdRCTjaR449gfTQljw=="
+								"uidString" : "vAxbbGxHQrClUUxg/KSBbg=="
 							},
-							"code" : "gsUrl := 'https://scholar.google.com/scholar?hl=en&q=Techniques+for+Reducing+the+Complexity+of+Object-Oriented+Execution+Traces&btnG='.\r\rZnUrl\r\t\tfromString: gsUrl"
+							"code" : "paper := VRDatasetExamples new paper128.\rquery := paper title copyReplaceAll: String space with: '+'.\rgsUrl := 'https://scholar.google.com/scholar?hl=en&q=' , query.\rWebBrowser openOn: gsUrl"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T14:24:27.291287+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T14:24:27.291287+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4S1EKSI1R8SmIOkhtLo+bQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Create an action for papers that will open a web browser on the Google Scholar query for that paper.*\n*Hint:* You can use the {{gtMethod:name=BrGlamorousVectorIcons class>>#web}} icon for the button."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T13:55:25.007086+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T14:24:59.162687+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jX97AoczQIW4p7VQOxUqEQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Here are the changes:"
+						},
+						{
+							"__type" : "changesSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T14:08:28.133082+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T14:08:28.133082+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "H4GR/9YQSpanOMHaNXKdDg=="
+							},
+							"previewHeight" : 200,
+							"fileName" : "attachments/3edvnb283453eclpcxw95bbue/VisualisationReview-11-Actions.ombu"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T13:55:21.371392+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T13:55:23.44358+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "tUsPoX8nQP+FndO1IQLvMA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To sync to this point in the tutorial (throwing away any other changes) evaluate:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -9354,7 +9535,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T10:15:03.095592+01:00"
+									"dateAndTimeString" : "2026-01-30T13:55:27.131085+01:00"
 								}
 							},
 							"editEmail" : {
@@ -9365,48 +9546,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T10:15:20.993565+01:00"
+									"dateAndTimeString" : "2026-01-30T14:26:56.151235+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "3Sc3gVGbRQ6Hqu4gQTLlxw=="
+								"uidString" : "ro+ciT8FQqq50zKpGMmJPw=="
 							},
-							"code" : "WebBrowser openOn: gsUrl"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T10:10:12.060959+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-20T10:15:33.899845+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "VfJcSM7XSnGQOS8OYMcC6w=="
-							},
-							"code" : " GtWebViewElement new url: gsUrl"
+							"code" : "VRTutorialExamples new fileIn11Actions"
 						}
 					]
 				},
@@ -9429,7 +9576,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-29T17:55:42.642965+01:00"
+						"dateAndTimeString" : "2026-01-30T14:18:16.545742+01:00"
 					}
 				},
 				"uid" : {
@@ -9439,13 +9586,120 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Adding an action"
+				"string" : "# Adding actions"
+			},
+			{
+				"__type" : "commentSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-21T13:44:21.975484+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-01-23T09:23:17.823385+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ORPvvZvbRymJ6YIah1mqxA=="
+				},
+				"string" : "—————***CONTINUE BELOW*** ——————————",
+				"isHidden" : false
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "commentSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:27:05.497101+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-21T13:27:20.429301+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bAqmPe5ZQ0y4jUdSO37C8A=="
+							},
+							"string" : "—————***CONTINUE HERE*** ——————————",
+							"isHidden" : false
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T11:49:33.197685+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-30T11:49:33.740426+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "TBRLMLTURUuhuWw+Hqplrg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒\n⇒\n⇒\n⇒\n⇒\n"
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
