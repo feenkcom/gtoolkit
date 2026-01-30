@@ -1,0 +1,49 @@
+OmEntry {
+	#tags : {
+		#prior : OmNullReference [  ],
+		#self : OmReference [ '1' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDomainEntity
+			},
+			#name : #'gtDatasetFor:',
+			#protocol : #actions,
+			#sourceCode : 'gtDatasetFor: anAction\r\t<gtAction>\r\t^ anAction button\r\t\ticon: BrGlamorousVectorIcons up;\r\t\ttooltip: \'Spawn dataset\';\r\t\taction: [ :button | button phlow spawnObject: self dataset ]',
+			#stamp : '1/30/2026 14:10',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '1' ],
+		#self : OmReference [ '2' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'gtGoogleScholarFor:',
+			#protocol : #views,
+			#sourceCode : 'gtGoogleScholarFor: anAction\r\t<gtAction>\r\t^ anAction button\r\t\ticon: BrGlamorousVectorIcons up;\r\t\ttooltip: \'Spawn dataset\';\r\t\taction: [ :button | button phlow spawnObject: self dataset ]',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRPaper
+			},
+			#name : #'gtGoogleScholarFor:',
+			#protocol : #views,
+			#sourceCode : 'gtGoogleScholarFor: anAction\r\t<gtAction>\r\t^ anAction button\r\t\ticon: BrGlamorousVectorIcons web;\r\t\tpriority: 10;\r\t\ttooltip: \'Look up in Google Scholar\';\r\t\taction: [ :button | \r\t\t\tWebBrowser\r\t\t\t\topenOn: \'https://scholar.google.com/scholar?hl=en&q=\'\r\t\t\t\t\t\t, (self title copyReplaceAll: String space with: \'+\') ]',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}

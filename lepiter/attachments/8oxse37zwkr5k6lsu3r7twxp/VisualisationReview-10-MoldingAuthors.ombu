@@ -418,4 +418,190 @@ OmEntry {
 		},
 		#classPackageName : #VisualisationReview
 	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '12' ],
+		#self : OmReference [ '13' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #authors,
+			#protocol : #accessing,
+			#sourceCode : 'authors\r\t^ VRAuthorGroup withAll: (self authorDict values sorted)',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #authors,
+			#protocol : #accessing,
+			#sourceCode : 'authors\r\t^ VRAuthorGroup withAll: (self authorDict values sortedAs: #name)',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '13' ],
+		#self : OmReference [ '14' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRDataset
+			},
+			#name : #'gtAuthorsFor:',
+			#protocol : #views,
+			#sourceCode : 'gtAuthorsFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: \'Authors\';\r\t\tpriority: 30;\r\t\tobject: [ self authors ];\r\t\tview: #gtAuthorsFor:',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '14' ],
+		#self : OmReference [ '15' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthorGroup
+			},
+			#name : #'gtAuthorsFor:',
+			#protocol : #views,
+			#sourceCode : 'gtAuthorsFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Authors\';\r\t\tpriority: 10;\r\t\titems: [ self items ];\r\t\tcolumn: \'Index\'\r\t\t\ttext: [ :eachItem :eachIndex | eachIndex asRopedText foreground: Color gray ]\r\t\t\twidth: 45;\r\t\tcolumn: \'Author\'\r\t\t\ttext: [ :each | each gtDisplayString ]\r\t\t\twidth: 120;\r\t\tcolumn: \'# Papers\'\r\t\t\ttext: [ :each | each papers size ]\r\t\t\twidth: 80;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthorGroup
+			},
+			#name : #'gtAuthorsFor:',
+			#protocol : #views,
+			#sourceCode : 'gtAuthorsFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Authors\';\r\t\tpriority: 10;\r\t\titems: [ self items ];\r\t\tcolumn: \'Index\'\r\t\t\ttext: [ :eachItem :eachIndex | eachIndex asRopedText foreground: Color gray ]\r\t\t\twidth: 45;\r\t\tcolumn: \'Author\'\r\t\t\ttext: [ :each | each gtDisplayString ]\r\t\t\twidth: 150;\r\t\tcolumn: \'# Papers\'\r\t\t\ttext: [ :each | each papers size ]\r\t\t\twidth: 80;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '15' ],
+		#self : OmReference [ '16' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #coauthors,
+			#protocol : #accessing,
+			#sourceCode : 'coauthors\r\t^ VRAuthorGroup\r\t\twithAll: ((self papers flatCollect: #authors) copyWithoutDuplicates sortedAs: #name)',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #coauthors,
+			#protocol : #accessing,
+			#sourceCode : 'coauthors\r\t^ VRAuthorGroup\r\t\twithAll: (((self papers flatCollect: #authors) copyWithout: self) copyWithoutDuplicates\r\t\t\t\tsortedAs: #name)',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '16' ],
+		#self : OmReference [ '17' ]
+	},
+	#content : EpMethodAddition {
+		#method : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'gtCoauthorsFor:',
+			#protocol : #views,
+			#sourceCode : 'gtCoauthorsFor: aView\r\t<gtView>\r\t^ aView forward\r\t\ttitle: \'Co-Authors\';\r\t\tpriority: 30;\r\t\tobject: [ self coauthors ];\r\t\tview: #gtAuthorsFor:',
+			#stamp : '',
+			#package : #VisualisationReview
+		}
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '17' ],
+		#self : OmReference [ '18' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'gtSummaryFor:',
+			#protocol : #views,
+			#sourceCode : 'gtSummaryFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Summary\';\r\t\tpriority: 10;\r\t\titems: [ {{\'Name\'.\r\t\t\t\t\tself name}.\r\t\t\t\t{\'# Papers\'.\r\t\t\t\t\tself papers size}} ];\r\t\tcolumn: \'Key\'\r\t\t\ttext: #first\r\t\t\twidth: 100;\r\t\tcolumn: \'Value\' text: #second;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthor
+			},
+			#name : #'gtSummaryFor:',
+			#protocol : #views,
+			#sourceCode : 'gtSummaryFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Summary\';\r\t\tpriority: 10;\r\t\titems: [ {{\'Name\'.\r\t\t\t\t\tself name}.\r\t\t\t\t{\'# Papers\'.\r\t\t\t\t\tself papers size}.\r\t\t\t\t{\'# Co-authors\'.\r\t\t\t\t\tself coauthors size}} ];\r\t\tcolumn: \'Key\'\r\t\t\ttext: #first\r\t\t\twidth: 100;\r\t\tcolumn: \'Value\' text: #second;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
+}OmEntry {
+	#tags : {
+		#prior : OmReference [ '18' ],
+		#self : OmReference [ '19' ]
+	},
+	#content : EpMethodModification {
+		#oldMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthorGroup
+			},
+			#name : #'gtAuthorsFor:',
+			#protocol : #views,
+			#sourceCode : 'gtAuthorsFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Authors\';\r\t\tpriority: 10;\r\t\titems: [ self items ];\r\t\tcolumn: \'Index\'\r\t\t\ttext: [ :eachItem :eachIndex | eachIndex asRopedText foreground: Color gray ]\r\t\t\twidth: 45;\r\t\tcolumn: \'Author\'\r\t\t\ttext: [ :each | each gtDisplayString ]\r\t\t\twidth: 150;\r\t\tcolumn: \'# Papers\'\r\t\t\ttext: [ :each | each papers size ]\r\t\t\twidth: 80;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#newMethod : RGMethodDefinition {
+			#annotations : IdentityDictionary {
+				#isMeta : false,
+				#className : #VRAuthorGroup
+			},
+			#name : #'gtAuthorsFor:',
+			#protocol : #views,
+			#sourceCode : 'gtAuthorsFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: \'Authors\';\r\t\tpriority: 10;\r\t\titems: [ self items ];\r\t\tcolumn: \'Index\'\r\t\t\ttext: [ :eachItem :eachIndex | eachIndex asRopedText foreground: Color gray ]\r\t\t\twidth: 45;\r\t\tcolumn: \'Author\'\r\t\t\ttext: [ :each | each gtDisplayString ]\r\t\t\twidth: 150;\r\t\tcolumn: \'# Papers\'\r\t\t\ttext: [ :each | each papers size ]\r\t\t\twidth: 80;\r\t\tcolumn: \'# Co-authors\'\r\t\t\ttext: [ :each | each coauthors size ]\r\t\t\twidth: 80;\r\t\tactionUpdateButton',
+			#stamp : '',
+			#package : #VisualisationReview
+		},
+		#classPackageName : #VisualisationReview
+	}
 }
