@@ -7826,7 +7826,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-29T17:15:18.491618+01:00"
+									"dateAndTimeString" : "2026-01-30T09:05:21.411433+01:00"
 								}
 							},
 							"uid" : {
@@ -7897,7 +7897,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-29T17:34:46.848255+01:00"
+									"dateAndTimeString" : "2026-01-30T09:05:41.556131+01:00"
 								}
 							},
 							"uid" : {
@@ -7907,7 +7907,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now we would like the dataset to maintain a dictionary of authors just as it has for papers, but the procedure will be a little different, because we have to iterate over the papers to create the dictionary\n⇒ *Add an `initializeAuthorDict` method to the dataset.*\n*Hint:* Inspect the dataset example, and prototype the code to initialize the dictionary in an inspector playground. The code should look something like this:"
+							"string" : "Now we would like the dataset to maintain a dictionary of authors just as it has for papers, but the procedure will be a little different, because we have to iterate over the papers to create the dictionary\n⇒ *Add an `initializeAuthorDict` method to the dataset.* \n*Hint:* Inspect the dataset example, and prototype the code to initialize the dictionary in an inspector playground. The code should look something like this:"
 						},
 						{
 							"__type" : "blockQuoteSnippet",
@@ -8073,7 +8073,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-29T17:48:15.49234+01:00"
+									"dateAndTimeString" : "2026-01-30T09:09:46.788897+01:00"
 								}
 							},
 							"uid" : {
@@ -8083,7 +8083,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "⇒ *Inspect `self authorDict values` in the inspector playground to verify that it returns the array of authors.*\n⇒ *Extract this code as a method `authors`.*"
+							"string" : "*NB:* we don't *have to* initialize the `authorDict` lazily, but we must do it *after* the `allJSON` slot has been set. Another place we could initialize the paper and author dictionaries is in the `allJSON:selectedJSON:` initialization method.\n⇒ *Inspect `self authorDict values` in the inspector playground to verify that it returns the array of authors.*\n⇒ *Extract this code as a method `authors`.*"
 						},
 						{
 							"__type" : "textSnippet",
