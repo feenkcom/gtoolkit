@@ -47,6 +47,78 @@
 					"__type" : "snippets",
 					"items" : [
 						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T17:04:30.043051+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T17:04:42.038561+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "L8yu6f24Ro2FEsxn+/xi/w=="
+							},
+							"code" : "VRTutorialExamples new fileIn10MoldingAuthors"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-02T17:45:12.124391+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-02T17:45:12.128309+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "tbIj58+bQN+HyJt1ZxwBuw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If you are jumping into the tutorial at this point, and have some previously saved work not already in this image, you should file it in now. Otherwise, you can file in a sample snapshot reflecting the work completed at the end of the previous part:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
@@ -71,7 +143,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T14:29:05.115509+01:00"
+									"dateAndTimeString" : "2026-02-02T18:06:21.368613+01:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +153,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We can easily navigate from the dataset to individual papers or authors, but how can we navigate back? We can evaluate `self dataset` in an inspector playground,  but is there an easier way?\nInstead of introducing another contextual view, what we need here is a [[Contextual Action]], a button that perforns a useful task, possible updating a view, spawning a new view, or launching an external tool."
+							"string" : "We can easily navigate from the dataset to individual papers or authors, but how can we navigate back? We can evaluate `self dataset` in an inspector playground, but is there an easier way?\nInstead of introducing another contextual view, what we need here is a [[Contextual Action]], a button that performs a useful task, possibly updating a view, spawning a new view, or launching an external tool."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1116,7 +1188,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T16:13:43.090593+01:00"
+									"dateAndTimeString" : "2026-02-02T18:07:11.83284+01:00"
 								}
 							},
 							"uid" : {
@@ -1126,7 +1198,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Here we can see clearly which co-authors are also active in other papers, and which are not. The diagram is also clickable, so we can dive into specific authors and papers.\nNow we would like to turn this intio a dedicated view for authors.\n⇒ *Extract a method `coauthorMondrian:` from this snippet, parameterized by the mondrian instance.*\n*Hint:* copy this code to an inspector playground of an author, replacing `anAuthor` by `self`. \n⇒ *Introduce a mondrian view that uses this helper method.*\n*Hint:* To do this, you need to send the `mondrian` factory message to the view, like this:"
+							"string" : "Here we can see clearly which co-authors are also active in other papers, and which are not. The diagram is also clickable, so we can dive into specific authors and papers.\nNow we would like to turn this into a dedicated view for authors.\n⇒ *Extract a method `coauthorMondrian:` from this snippet, parameterized by the mondrian instance.*\n*Hint:* copy this code to an inspector playground of an author, replacing `anAuthor` by `self`. \n⇒ *Introduce a mondrian view that uses this helper method.*\n*Hint:* To do this, you need to send the `mondrian` factory message to the view, like this:"
 						},
 						{
 							"__type" : "blockQuoteSnippet",
@@ -1221,7 +1293,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T16:37:51.899618+01:00"
+									"dateAndTimeString" : "2026-02-02T18:07:22.116384+01:00"
 								}
 							},
 							"uid" : {
@@ -1231,7 +1303,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Note how you can now navigfate between Co-author graph views by clicking on authors in the graph."
+							"string" : "Note how you can now navigate between Co-author graph views by clicking on authors in the graph."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1434,7 +1506,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T09:29:29.16124+01:00"
+						"dateAndTimeString" : "2026-02-02T17:19:30.671661+01:00"
 					}
 				},
 				"uid" : {
@@ -1444,7 +1516,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "*NB:* This page links to [[Pages containing missing references - allowed failures]] to allow references to missing classes and methods in this page.\nNext: [[5. Molding CSV data — continuing  the exploration]]"
+				"string" : "*NB:* This page links to [[Pages containing missing references - allowed failures]] to allow references to missing classes and methods in this page.\nNext: Part 5. [[Molding CSV data — continuing the exploration]]"
 			}
 		]
 	},
@@ -1467,12 +1539,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-02-02T09:24:58.116393+01:00"
+			"dateAndTimeString" : "2026-02-02T16:57:07.980205+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "4. Molding CSV data — actions, queries and visualizations"
+		"title" : "Molding CSV data — actions, queries and visualizations"
 	},
 	"uid" : {
 		"__type" : "uuid",

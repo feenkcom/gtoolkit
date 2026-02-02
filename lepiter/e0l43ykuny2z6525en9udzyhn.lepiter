@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T14:46:20.742952+01:00"
+						"dateAndTimeString" : "2026-02-02T18:02:08.575695+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,79 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is Part 3 of [[Tutorial: molding CSV data into an explainable system]].\nIn this part, we continue by modeling amodling further domain entities, in particular a *dataset* as an entity that provides a simple API for finding papers and other domain objects, and *authors* who contribute to writing papers."
+				"string" : "This is Part 3 of [[Tutorial: molding CSV data into an explainable system]].\nIn this part, we continue by modeling and molding further domain entities, in particular a *dataset* as an entity that provides a simple API for finding papers and other domain objects, and *authors* who contribute to writing papers."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T17:03:34.536771+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T17:03:43.959992+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "o71xChOlSGqHyS/IdpMhxA=="
+							},
+							"code" : "VRTutorialExamples new fileIn7PaperGroup"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-02T17:03:32.515607+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-02T17:45:07.071822+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "p+bTFGh1StqhyrL3h6ocIg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If you are jumping into the tutorial at this point, and have some previously saved work not already in this image, you should file it in now. Otherwise, you can file in a sample snapshot reflecting the work completed at the end of the previous part:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -71,7 +143,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-29T11:10:52.511476+01:00"
+									"dateAndTimeString" : "2026-02-02T18:02:23.423648+01:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +153,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "There are several more domain entities we would like to make explicit: authors, venues, and design studies. We also want to make sure that there is only one instance of each in an instantiated model of a dataset, so the same author doesn't appear multiple times. We can therefore introduce a *Dataset* entity that wraps the source CSV files, and keeps track of the instances we create.\nInstances of domain entities should know their dataset, so they can query it.\nLet's start by introducing the Dataset sentity, and have it keep track of papers by ID, using a dictionary."
+							"string" : "There are several more domain entities we would like to make explicit: authors, venues, and design studies. We also want to make sure that there is only one instance of each in an instantiated model of a dataset, so the same author doesn't appear multiple times. We can therefore introduce a *Dataset* entity that wraps the source CSV files, and keeps track of the instances we create.\nInstances of domain entities should know their dataset, so they can query it.\nLet's start by introducing the Dataset entity, and have it keep track of papers by ID, using a dictionary."
 						},
 						{
 							"__type" : "textSnippet",
@@ -320,7 +392,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-29T11:18:45.057003+01:00"
+									"dateAndTimeString" : "2026-02-02T18:02:34.35916+01:00"
 								}
 							},
 							"uid" : {
@@ -330,7 +402,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This is an array of all the papers papers. We want (1) each paper to know which dataset it comes from, so it can use it to pose queries about other entities, and (2) we want to build a *dictionary* of these papers keyed by ID.\n⇒ *Adapt the instance creation method to add a new parameter for the dataset:*"
+							"string" : "This is an array of all the papers. We want (1) each paper to know which dataset it comes from, so it can use it to pose queries about other entities, and (2) we want to build a *dictionary* of these papers keyed by ID.\n⇒ *Adapt the instance creation method to add a new parameter for the dataset:*"
 						},
 						{
 							"__type" : "textSnippet",
@@ -718,7 +790,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-29T16:14:17.639999+01:00"
+									"dateAndTimeString" : "2026-02-02T18:03:04.956812+01:00"
 								}
 							},
 							"uid" : {
@@ -728,7 +800,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We still need a way to use the paper  dictionary. \n⇒ *Evaluate the first snippet to assign the `dataset` and `id` variables.*\n⇒ *Evaluate and inspect the second snippet.*\n⇒ *Extract the second snippet as a method `paperWithId:`*"
+							"string" : "We still need a way to use the paper dictionary. \n⇒ *Evaluate the first snippet to assign the `dataset` and `id` variables.*\n⇒ *Evaluate and inspect the second snippet.*\n⇒ *Extract the second snippet as a method `paperWithId:`*"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1288,7 +1360,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-29T16:18:48.546392+01:00"
+									"dateAndTimeString" : "2026-02-02T18:03:27.512975+01:00"
 								}
 							},
 							"uid" : {
@@ -1298,7 +1370,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Note that the author names are surrounded by double quotes. \n⇒ *Use the `trimBoth:` method to remove the quotes from author names before returning them in `authorNames`.*\n*Hint:* {{gtMethod:name=String>>#trimBoth:}} takes a block as an argument that should return `true` for characters to be trimmed. We want to trim the character `$\"`.\n⇒ *Extra task: go back and fix the paper titles to also trim  away the double quotes where they appear.*"
+							"string" : "Note that the author names are surrounded by double quotes. \n⇒ *Use the `trimBoth:` method to remove the quotes from author names before returning them in `authorNames`.*\n*Hint:* {{gtMethod:name=String>>#trimBoth:}} takes a block as an argument that should return `true` for characters to be trimmed. We want to trim the character `$\"`.\n⇒ *Extra task: go back and fix the paper titles to also trim away the double quotes where they appear.*"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1504,7 +1576,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-29T16:20:29.702411+01:00"
+									"dateAndTimeString" : "2026-02-02T18:03:44.187616+01:00"
 								}
 							},
 							"uid" : {
@@ -1514,7 +1586,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "That's fine, but we really want *Author* domain entities rather than just strings, so we can start to ask questions about the authors.\nWe'll take same approach as we did for the papers, having the dataset object create a dictionary of authors keyed by their names, and having each author hold a reference to the dataset so we can query it for an author's papers."
+							"string" : "That's fine, but we really want *Author* domain entities rather than just strings, so we can start to ask questions about the authors.\nWe'll take the same approach as we did for the papers, having the dataset object create a dictionary of authors keyed by their names, and having each author hold a reference to the dataset so we can query it for an author's papers."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1646,7 +1718,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-29T17:08:06.659807+01:00"
+									"dateAndTimeString" : "2026-02-02T18:04:13.68303+01:00"
 								}
 							},
 							"uid" : {
@@ -1656,7 +1728,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now we can introduce authors as domain entities. An author knows their name, their dataset, and the papers  they have authored.\nWe'd like to be able to be able to instantiate a single author object like this:"
+							"string" : "Now we can introduce authors as domain entities. An author knows their name, their dataset, and the papers they have authored.\nWe'd like to be able to instantiate a single author object like this:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2327,7 +2399,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T11:13:07.378434+01:00"
+									"dateAndTimeString" : "2026-02-02T18:04:32.019248+01:00"
 								}
 							},
 							"uid" : {
@@ -2337,7 +2409,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Luckily we have been through the molding process already with papers, so we can just follow the same steps here.\n⇒ *Inspect an author, and mold the *Print* view by implementing `printOn:` to display its name. Verify that a list  of authors now displays authors by name.*"
+							"string" : "Luckily we have been through the molding process already with papers, so we can just follow the same steps here.\n⇒ *Inspect an author, and mold the *Print* view by implementing `printOn:` to display its name. Verify that a list of authors now displays authors by name.*"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -3145,7 +3217,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T09:29:12.42078+01:00"
+						"dateAndTimeString" : "2026-02-02T17:04:06.884086+01:00"
 					}
 				},
 				"uid" : {
@@ -3155,7 +3227,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "*NB:* This page links to [[Pages containing missing references - allowed failures]] to allow references to missing classes and methods in this page.\nNext: [[4. Molding CSV data — actions, queries and visualizations]]"
+				"string" : "*NB:* This page links to [[Pages containing missing references - allowed failures]] to allow references to missing classes and methods in this page.\nNext: Part 4. [[Molding CSV data — actions, queries and visualizations]]"
 			}
 		]
 	},
@@ -3178,12 +3250,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-02-02T09:24:52.500274+01:00"
+			"dateAndTimeString" : "2026-02-02T16:57:02.712427+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "3. Molding CSV data — modeling other entities"
+		"title" : "Molding CSV data — modeling other entities"
 	},
 	"uid" : {
 		"__type" : "uuid",

@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T14:49:07.759102+01:00"
+						"dateAndTimeString" : "2026-02-02T18:29:06.097652+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,79 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is Part 5 of [[Tutorial: molding CSV data into an explainable system]].\nThis last part lets you explore on your own to model and mold *venues* and *design studies*. Instead of giving your step-by-step instructions, you are just given general diorections to explore."
+				"string" : "This is Part 5 of [[Tutorial: molding CSV data into an explainable system]].\nThis last part lets you explore on your own to model and mold *venues* and *design studies*. Instead of giving you step-by-step instructions, you are just given general directions to explore."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T17:05:00.011143+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T17:05:08.350523+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lUleKSq+To2TwyxOosWW/w=="
+							},
+							"code" : "VRTutorialExamples new fileIn13Mondrian"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-02T17:45:15.196551+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-02T17:45:15.200354+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kyjuIymjSayOAKe6Rd7TBQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If you are jumping into the tutorial at this point, and have some previously saved work not already in this image, you should file it in now. Otherwise, you can file in a sample snapshot reflecting the work completed at the end of the previous part:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -71,7 +143,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T17:27:07.705692+01:00"
+									"dateAndTimeString" : "2026-02-02T18:29:06.159798+01:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +153,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We still have some obvious domain entities left to model. The procedure is the same as before.\nThis time you should do evreything without any hints.\n⇒ *Introduce a `VRVenue` entity. A venue has a conference name and a year, as well as a number of papers. You'll want to keep a dictionary of venues in the dataset object, keyed by both venue name and year. Each venue should also have views of their papers and authors. Conversely authors will have views of the venues they have attended.*"
+							"string" : "We still have some obvious domain entities left to model. The procedure is the same as before.\nThis time you should do everything without any hints.\n⇒ *Introduce a `VRVenue` entity. A venue has a conference name and a year, as well as a number of papers. You'll want to keep a dictionary of venues in the dataset object, keyed by both venue name and year. Each venue should also have views of its papers and authors. Conversely, authors will have views of the venues they have attended.*"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -323,7 +395,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-30T20:09:46.670039+01:00"
+									"dateAndTimeString" : "2026-02-02T18:29:06.163166+01:00"
 								}
 							},
 							"uid" : {
@@ -333,7 +405,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We still haven't touched the second CSV file! \n⇒ *Create a `VRDesignStudy` entity with a `data` slot. Generate a dictionary of design studies in the dataset object, keyed by the id of the associated paper.*\n⇒ *Create a summary view for design studies including the most important data.*\n⇒ *Add a *Design studies* view to the dataset.*\n⇒ *Link design studies to their papers and vice versa.*"
+							"string" : "We still haven't touched the second CSV file!\n⇒ *Create a `VRDesignStudy` entity with a `data` slot. Generate a dictionary of design studies in the dataset object, keyed by the id of the associated paper.*\n⇒ *Create a summary view for design studies including the most important data.*\n⇒ *Add a *Design studies* view to the dataset.*\n⇒ *Link design studies to their papers and vice versa.*"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -640,12 +712,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-02-02T09:25:44.244169+01:00"
+			"dateAndTimeString" : "2026-02-02T17:19:30.506651+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "5. Molding CSV data — continuing  the exploration"
+		"title" : "Molding CSV data — continuing the exploration"
 	},
 	"uid" : {
 		"__type" : "uuid",
