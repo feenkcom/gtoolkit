@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T09:11:12.142169+01:00"
+						"dateAndTimeString" : "2026-02-02T14:44:41.354549+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is Part 2 of [[Tutorial: molding CSV data into an explainable system]]."
+				"string" : "This is Part 2 of [[Tutorial: molding CSV data into an explainable system]].\nIn this part we take the JSON data that we extracted from the raw CSV datasets of the research project that we are exploring, and we *wrap* these data into domain entities that model *papers* (*i.e.*, visualization publications). We consider some specific questions we would like to answer about the data, and we then *mold* the paper objects to answer these questions. We see in particular how we can design simple *contextual views* of these objects to answer questions by making interesting information easily accessible."
 			},
 			{
 				"__type" : "textSnippet",
