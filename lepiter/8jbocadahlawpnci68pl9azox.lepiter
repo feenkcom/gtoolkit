@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T09:11:12.142169+01:00"
+						"dateAndTimeString" : "2026-02-02T14:44:41.354549+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is Part 2 of [[Tutorial: molding CSV data into an explainable system]]."
+				"string" : "This is Part 2 of [[Tutorial: molding CSV data into an explainable system]].\nIn this part we take the JSON data that we extracted from the raw CSV datasets of the research project that we are exploring, and we *wrap* these data into domain entities that model *papers* (*i.e.*, visualization publications). We consider some specific questions we would like to answer about the data, and we then *mold* the paper objects to answer these questions. We see in particular how we can design simple *contextual views* of these objects to answer questions by making interesting information easily accessible."
 			},
 			{
 				"__type" : "textSnippet",
@@ -3295,7 +3295,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T12:59:25.400168+01:00"
+									"dateAndTimeString" : "2026-02-02T15:44:24.181242+01:00"
 								}
 							},
 							"editEmail" : {
@@ -3306,12 +3306,12 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T12:59:25.403797+01:00"
+									"dateAndTimeString" : "2026-02-02T15:44:24.950654+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "QFY7G3ZlSLKzC6X/5ORcWg=="
+								"uidString" : "OOsE+xi3RR2xOYpyKIzUhA=="
 							},
 							"string" : "gtSummaryFor: aView\r\t<gtView>\r\t^ aView columnedList\r\t\ttitle: 'Summary';\r\t\tpriority: 10;\r\t\titems: [ {{'ID'.\r\t\t\t\t\tself id}.\r\t\t\t\t{'Title'.\r\t\t\t\t\tself title}.\r\t\t\t\t{'Type'.\r\t\t\t\t\tself type}.\r\t\t\t\t{'# Authors'.\r\t\t\t\t\tself data at: '# Authors'}.\r\t\t\t\t{'# Pages'.\r\t\t\t\t\tself data at: '# Pages'}.\r\t\t\t\t{'Is selected'.\r\t\t\t\t\tself isDesignStudy}} ];\r\t\tcolumn: 'Key'\r\t\t\ttext: #first\r\t\t\twidth: 100;\r\t\tcolumn: 'Value' text: #second;\r\t\tactionUpdateButton"
 						},

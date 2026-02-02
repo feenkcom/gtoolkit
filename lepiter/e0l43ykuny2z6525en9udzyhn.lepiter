@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T09:23:42.571508+01:00"
+						"dateAndTimeString" : "2026-02-02T14:46:20.742952+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is Part 3 of [[Tutorial: molding CSV data into an explainable system]]."
+				"string" : "This is Part 3 of [[Tutorial: molding CSV data into an explainable system]].\nIn this part, we continue by modeling amodling further domain entities, in particular a *dataset* as an entity that provides a simple API for finding papers and other domain objects, and *authors* who contribute to writing papers."
 			},
 			{
 				"__type" : "textSnippet",
@@ -423,7 +423,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-29T11:25:01.197674+01:00"
+												"dateAndTimeString" : "2026-02-02T15:49:12.522025+01:00"
 											}
 										},
 										"editEmail" : {
@@ -434,12 +434,12 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-29T11:25:08.052823+01:00"
+												"dateAndTimeString" : "2026-02-02T15:49:13.064847+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "ZoCWhDhlRSaSTdnQ4G+1bg=="
+											"uidString" : "5VdIFivzRK2h2UQmoIiQVw=="
 										},
 										"string" : "((self allJSON collect: [ :d | VRPaper for: d in: self ])\r\tcollect: [ :p | p id -> p ]) asDictionary"
 									}
@@ -495,7 +495,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-29T11:34:45.540285+01:00"
+												"dateAndTimeString" : "2026-02-02T15:50:19.399059+01:00"
 											}
 										},
 										"editEmail" : {
@@ -506,12 +506,12 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-29T11:35:33.699931+01:00"
+												"dateAndTimeString" : "2026-02-02T15:50:19.807986+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "Y5kURwwJTDSBin1CneQnKQ=="
+											"uidString" : "A4+4IwXoQuOfF1VUTyovYQ=="
 										},
 										"string" : "paperDict\r\t^ paperDict\r\t\tifNil: [ paperDict := ((self allJSON collect: [ :d | VRPaper for: d in: self ])\r\t\t\t\t\tcollect: [ :p | p id -> p ]) asDictionary ]"
 									},
