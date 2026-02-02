@@ -34,7 +34,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T14:00:53.223954+01:00"
+									"dateAndTimeString" : "2026-02-02T16:55:55.295645+01:00"
 								}
 							},
 							"uid" : {
@@ -44,7 +44,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This tutorial is intended as a first step-by-step, hands-on introduction to moldable development, using a CSV dataset from a research study as a case study. This tutorial is part of the learning module [[1. Learn the basics of Glamorous Toolkit]]. "
+							"string" : "This tutorial is intended as a first step-by-step, hands-on introduction to moldable development, using a CSV dataset from a research study as a case study. This tutorial is part of the learning module [[Learn the basics of Glamorous Toolkit]]. "
 						}
 					]
 				},
@@ -146,7 +146,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T08:49:34.409581+01:00"
+									"dateAndTimeString" : "2026-02-02T17:18:15.399343+01:00"
 								}
 							},
 							"uid" : {
@@ -156,7 +156,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Moldable development can be applied to any kind of software system: a “greenfield” project developed within GT itself, existing code in GT, legacy code in some other  language, a web API, a running system with a language bridge to GT, or static data or logs from an existing project. \nTo keep things simple for now, we will start in this tutorial with an example of analyzing datasets from a research project in the form of CSV dumps of spreadsheets, and we will see how to turn this data into an explainable system. "
+							"string" : "Moldable development can be applied to any kind of software system: a “greenfield” project developed within GT itself, existing code in GT, legacy code in some other language, a web API, a running system with a language bridge to GT, or static data or logs from an existing project. \nTo keep things simple for now, we will start in this tutorial with an example of analyzing datasets from a research project in the form of CSV dumps of spreadsheets, and we will see how to turn this data into an explainable system. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -321,6 +321,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T17:06:31.225446+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T17:07:09.037313+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FuzXpQLfTRGMOVuBRvnV4w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "You'll have to write some Smalltalk code in this tutorial. If you're comfortable with that, just proceed. If not, you might want to first consult [[A gentle introduction to Pharo Smalltalk]]."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2026-02-02T14:02:06.346765+01:00"
 								}
 							},
@@ -369,7 +406,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T14:02:06.349169+01:00"
+									"dateAndTimeString" : "2026-02-02T17:18:24.531691+01:00"
 								}
 							},
 							"uid" : {
@@ -379,7 +416,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "At the end of each section you will also find a snippet that will throw away all changes so far and “file in” in a snapshot of the code as it should (could) be at that point in the tutorial.\nNB: If you want to continue working at some given section, you can simply run the file-in snapshot at the end of the previous section to get the code in the right state."
+							"string" : "At the end of each section you will also find a snippet that will throw away all changes so far and *file in* a snapshot of the code as it should (could) be at that point in the tutorial.\nNB: If you want to continue working at some given section, you can simply run the file-in snapshot at the end of the previous section to get the code in the right state."
 						},
 						{
 							"__type" : "textSnippet",
@@ -406,7 +443,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-29T18:32:51.049732+01:00"
+									"dateAndTimeString" : "2026-02-02T17:21:00.455152+01:00"
 								}
 							},
 							"uid" : {
@@ -416,7 +453,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "It is also a good idea to go through this tutorial again as a “Kata” at a faster pace, writing the code yourself, without looking at the detailed instructions."
+							"string" : "It is also a good idea to go through this tutorial again as a “kata” at a faster pace, writing the code yourself, without looking at the detailed instructions."
 						},
 						{
 							"__type" : "textSnippet",
@@ -518,7 +555,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T14:26:57.281506+01:00"
+									"dateAndTimeString" : "2026-02-02T17:07:53.361298+01:00"
 								}
 							},
 							"uid" : {
@@ -528,7 +565,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The tutorial consists of five parts that should be followed in sequence. At any time you can interruot and continue later. You can either continue with your own changes, or load in the demo version of the work done up to that point."
+							"string" : "The tutorial consists of five parts that should be followed in sequence. At any time you can interrupt and continue later. You can either continue with your own changes, or load in the demo version of the work done up to that point."
 						},
 						{
 							"__type" : "textSnippet",
@@ -555,7 +592,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T14:28:36.279688+01:00"
+									"dateAndTimeString" : "2026-02-02T16:56:33.808466+01:00"
 								}
 							},
 							"uid" : {
@@ -565,7 +602,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[1. Molding CSV data — preparing the data]] — this part introduces the software visualization review project and its datasets. We see how to parse and convert the raw CSV data into JSON, which will be more convenient for wrapping the data into domain objects."
+							"string" : "1. [[Molding CSV data — preparing the data]] — this part introduces the software visualization review project and its datasets. We see how to parse and convert the raw CSV data into JSON, which will be more convenient for wrapping the data into domain objects."
 						},
 						{
 							"__type" : "textSnippet",
@@ -592,7 +629,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T14:31:34.003995+01:00"
+									"dateAndTimeString" : "2026-02-02T16:56:51.670335+01:00"
 								}
 							},
 							"uid" : {
@@ -602,7 +639,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[2. Molding CSV data — modeling domain objects]] — here we start to turn the static CSV data into live domain objects that we can then *mold* with contextual tools to answer questions we have about the domain. We start by modeling a *paper* (publication) as an object that wraps the raw data from the dataset about that paper. We then add a couple of *contextual views* so we can see more interesting information about the papers when we inspect them."
+							"string" : "2. [[Molding CSV data — modeling domain objects]] — here we start to turn the static CSV data into live domain objects that we can then *mold* with contextual tools to answer questions we have about the domain. We start by modeling a *paper* (publication) as an object that wraps the raw data from the dataset about that paper. We then add a couple of *contextual views* so we can see more interesting information about the papers when we inspect them."
 						},
 						{
 							"__type" : "textSnippet",
@@ -629,7 +666,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T14:32:32.388773+01:00"
+									"dateAndTimeString" : "2026-02-02T17:19:12.759342+01:00"
 								}
 							},
 							"uid" : {
@@ -639,7 +676,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[3. Molding CSV data — modeling other entities]]— we continue by modeling other useful domain entities, in particular, *datasets* and *authors*, and we mold them as we did the *papers*."
+							"string" : "3. [[Molding CSV data — modeling other entities]] — we continue by modeling other useful domain entities, in particular, *datasets* and *authors*, and we mold them as we did the *papers*."
 						},
 						{
 							"__type" : "textSnippet",
@@ -666,7 +703,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T14:33:44.377848+01:00"
+									"dateAndTimeString" : "2026-02-02T16:57:10.448968+01:00"
 								}
 							},
 							"uid" : {
@@ -676,7 +713,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[4. Molding CSV data — actions, queries and visualizations]] — in addition to adding contextual *views* to domain entities, we can also add *actions* and *queries*, and we can have richer views, such as simple graph visualizations. We see how these are easy to add to the objects we already have."
+							"string" : "4. [[Molding CSV data — actions, queries and visualizations]] — in addition to adding contextual *views* to domain entities, we can also add *actions* and *queries*, and we can have richer views, such as simple graph visualizations. We see how these are easy to add to the objects we already have."
 						},
 						{
 							"__type" : "textSnippet",
@@ -703,7 +740,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T14:34:49.088735+01:00"
+									"dateAndTimeString" : "2026-02-02T17:19:30.669899+01:00"
 								}
 							},
 							"uid" : {
@@ -713,7 +750,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[5. Molding CSV data — continuing  the exploration]] — in this last part you are left on your own to apply what you have seen to continue to model and mold further domain entities, namely *venues* and *design studies*."
+							"string" : "5. [[Molding CSV data — continuing the exploration]] — in this last part you are left on your own to apply what you have seen to continue to model and mold further domain entities, namely *venues* and *design studies*. "
 						}
 					]
 				},
@@ -810,7 +847,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T14:39:25.153977+01:00"
+						"dateAndTimeString" : "2026-02-02T16:55:55.297327+01:00"
 					}
 				},
 				"uid" : {
@@ -820,81 +857,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You can go back to [[1. Learn the basics of Glamorous Toolkit]] and continue from there."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T13:43:48.699726+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T13:43:48.699726+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "kWllX1FdR5i1SJICfKxPZQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-19T09:24:28.345052+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-19T09:29:09.37653+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "WP2ehNiQQqGn5eiKGoP3aQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "feenkcom/gtoolkit#4831"
+				"string" : "You can go back to [[Learn the basics of Glamorous Toolkit]] and continue from there."
 			}
 		]
 	},

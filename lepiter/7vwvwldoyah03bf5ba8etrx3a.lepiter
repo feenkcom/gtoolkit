@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:09:04.235382+01:00"
+									"dateAndTimeString" : "2026-02-02T17:38:00.344473+01:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Moldable development can be applied to any kind of software. In this case our starting point is a research project that reviewed scientific publications on software visualization in order to gain insight into how different software visualizations map to specific developer needs.\nThe results are described in the paper [Towards actionable visualization for software developers](https://doi.org/10.1002/smr.1923) (a [PDF preprint](https://scg.unibe.ch/archive/papers/Meri17a.pdf) is available). The dataset summarizing the contents of the studied publications is available from a  [webpage](https://scg.unibe.ch/research/visualisation-review) briefly summarizing the results, in CSV format."
+							"string" : "Moldable development can be applied to any kind of software. In this case our starting point is a research project that reviewed scientific publications on software visualization in order to gain insight into how different software visualizations map to specific developer needs.\nThe results are described in the paper [Towards actionable visualization for software developers](https://doi.org/10.1002/smr.1923) (a [PDF preprint](https://scg.unibe.ch/archive/papers/Meri17a.pdf) is available). The dataset summarizing the contents of the studied publications is available from a [webpage](https://scg.unibe.ch/research/visualisation-review) briefly summarizing the results, in CSV format."
 						},
 						{
 							"__type" : "textSnippet",
@@ -260,7 +260,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:13:55.918642+01:00"
+									"dateAndTimeString" : "2026-02-02T17:34:06.495894+01:00"
 								}
 							},
 							"uid" : {
@@ -270,7 +270,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Let's suppose are interesting in exploring the datasets from this study. The first one , called `dataset-review-vissoft-all.csv`, summarizes the 346 papers published in the software visualization conferences *SOFTVIS* and *VISSOFT* from 2003 through 2015, and the second dataset, `dataset-review-vissoft-selected.csv`, provides more detailed information about the 65 selected papers that describe *Design Studies*."
+							"string" : "Let's suppose we are interested in exploring the datasets from this study. The first one, called `dataset-review-vissoft-all.csv`, summarizes the 346 papers published in the software visualization conferences *SOFTVIS* and *VISSOFT* from 2003 through 2015, and the second dataset, `dataset-review-vissoft-selected.csv`, provides more detailed information about the 65 selected papers that describe *Design Studies*."
 						},
 						{
 							"__type" : "textSnippet",
@@ -374,7 +374,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T10:35:29.131089+01:00"
+									"dateAndTimeString" : "2026-02-02T17:36:00.748775+01:00"
 								}
 							},
 							"uid" : {
@@ -384,7 +384,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "When we start to browse the raw data, many questions might come to mind, for example:\n— *Which are the selected design study papers?*\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *What different types of papers were identified?*\n— *Which authors wrote about design studies?*\n— *What other topics did those authors write about?*\n— *Are the two datasets consistent? (Are there any errors in macthing them up?)*\nAnd many more ..."
+							"string" : "When we start to browse the raw data, many questions might come to mind, for example:\n— *Which are the selected design study papers?*\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *What different types of papers were identified?*\n— *Which authors wrote about design studies?*\n— *What other topics did those authors write about?*\n— *Are the two datasets consistent? (Are there any errors in matching them up?)*\nAnd many more ..."
 						},
 						{
 							"__type" : "textSnippet",
@@ -448,7 +448,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T08:59:59.119944+01:00"
+									"dateAndTimeString" : "2026-02-02T17:36:37.987366+01:00"
 								}
 							},
 							"uid" : {
@@ -458,7 +458,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A different way to proceed is to *extract a model of domain objects from the raw data, decorated with tiny contextual tools that answer our questions*. The model should consist of *live objects*, so we can interact with it to explore it.\nBefore we can do that, it would help to transform the data to a more convenient form. Since each row of the first dataset represents a publication and ecah row of the second one represents a design study, it would help to extract the data row by row. JSON is a convenient representation for this data."
+							"string" : "A different way to proceed is to *extract a model of domain objects from the raw data, decorated with tiny contextual tools that answer our questions*. The model should consist of *live objects*, so we can interact with it to explore it.\nBefore we can do that, it would help to transform the data to a more convenient form. Since each row of the first dataset represents a publication and each row of the second one represents a design study, it would help to extract the data row by row. JSON is a convenient representation for this data."
 						}
 					]
 				},
@@ -523,7 +523,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T09:06:52.297206+01:00"
+									"dateAndTimeString" : "2026-02-02T17:34:34.014004+01:00"
 								}
 							},
 							"uid" : {
@@ -533,7 +533,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We would like to have a domain object for each publication, but a row of spreadsheet without the header is not a convenient representation. Our job will be easier if we convert the CSV files to JSON.\nLuckily we already have a utility to convert CSV files to JSON, so we can just use that.\n(There is a moldable development pattern, [[Tooling Buildup]], which we can skip in this case, because we already have the basic tools we need.)"
+							"string" : "We would like to have a domain object for each publication, but a row of a spreadsheet without the header is not a convenient representation. Our job will be easier if we convert the CSV files to JSON.\nLuckily we already have a utility to convert CSV files to JSON, so we can just use that.\n(There is a moldable development pattern, [[Tooling Buildup]], which we can skip in this case, because we already have the basic tools we need.)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -668,7 +668,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:40:10.260042+01:00"
+									"dateAndTimeString" : "2026-02-02T17:39:20.885987+01:00"
 								}
 							},
 							"uid" : {
@@ -678,7 +678,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "⇒ *Click on the *Evaluate and inspect* button (first button at the bottom of the snippet above)*\nWe then obtain the view we had earlier of the dataset folder. We can grab the first file and convert it to JSON, like this:"
+							"string" : "⇒ *Click on the *Evaluate and inspect* button (first button at the bottom of the snippet above)*\nWe then obtain the view we had earlier of the dataset folder. We can grab the first file and convert it to JSON, like this: "
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1316,7 +1316,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T11:16:16.877898+01:00"
+									"dateAndTimeString" : "2026-02-02T17:37:24.998931+01:00"
 								}
 							},
 							"uid" : {
@@ -1326,7 +1326,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This code defines an [[Example]], a method that serves both as a *factory* for an object of interest, and as a *test case* containing assertions. Examples methods are *unary* methods that are annotated with `<gtExample>`, and return some object. In this case we return a file reference to the dataset folder, while verifying that the folder exists and contains precisely two CSV files."
+							"string" : "This code defines an [[Example]], a method that serves both as a *factory* for an object of interest, and as a *test case* containing assertions. Example methods are *unary* methods that are annotated with `<gtExample>`, and return some object. In this case we return a file reference to the dataset folder, while verifying that the folder exists and contains precisely two CSV files."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1634,7 +1634,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T09:28:27.104535+01:00"
+						"dateAndTimeString" : "2026-02-02T17:04:16.342797+01:00"
 					}
 				},
 				"uid" : {
@@ -1644,7 +1644,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "*NB:* This page links to [[Pages containing missing references - allowed failures]] to allow references to missing classes and methods in this page.\nNext: [[2. Molding CSV data — modeling domain objects]]"
+				"string" : "*NB:* This page links to [[Pages containing missing references - allowed failures]] to allow references to missing classes and methods in this page.\nNext: Part 2. [[Molding CSV data — modeling domain objects]]"
 			}
 		]
 	},
@@ -1667,12 +1667,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-02-02T09:24:39.941252+01:00"
+			"dateAndTimeString" : "2026-02-02T16:56:31.792101+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "1. Molding CSV data — preparing the data"
+		"title" : "Molding CSV data — preparing the data"
 	},
 	"uid" : {
 		"__type" : "uuid",

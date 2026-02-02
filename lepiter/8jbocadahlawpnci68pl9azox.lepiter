@@ -45,6 +45,77 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-02T17:01:13.262765+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-02T17:44:45.672337+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cH/t8VRsQNOXFoC2SAUjWQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If you are jumping into the tutorial at this point, and have some previously saved work not already in this image, you should file it in now. Otherwise, you can file in a sample snapshot reflecting the work completed at the end of the previous part:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-02T17:03:04.219386+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-02T17:03:06.947117+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FlTFtAlATCyLbAr3VW9nPg=="
+				},
+				"code" : "VRTutorialExamples new fileIn1DatasetExamples"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -182,7 +253,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:04:16.092894+01:00"
+									"dateAndTimeString" : "2026-02-02T17:48:50.807788+01:00"
 								}
 							},
 							"uid" : {
@@ -192,7 +263,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "There are several domain entities that we might like to recover. Domain entities are full-fledged objects (*e.g.*, paper) rather than attributes of objects (*e.g.*, *title* of a paper). The *properties* of these domain entities may consist of both attributes (data values) and relationships to otherdomain entitites. It may happen that something we consider as just data (*e.g.*, the *type* of a paper) could turn out to be a domain entity on its own. We'll discover these as we explore."
+							"string" : "There are several domain entities that we might like to recover. Domain entities are full-fledged objects (*e.g.*, paper) rather than attributes of objects (*e.g.*, *title* of a paper). The *properties* of these domain entities may consist of both attributes (data values) and relationships to other domain entities. It may happen that something we consider as just data (*e.g.*, the *type* of a paper) could turn out to be a domain entity on its own. We'll discover these as we explore."
 						},
 						{
 							"__type" : "textSnippet",
@@ -327,7 +398,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:18:47.887289+01:00"
+									"dateAndTimeString" : "2026-02-02T17:46:30.434409+01:00"
 								}
 							},
 							"uid" : {
@@ -337,7 +408,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We cannot do much with with the raw dictionaries, because a dictionary has nothing to do the visualization review domain per se. We need to turn this raw data into a moldable object by *wrapping* it. This is an example of another, closely-related pattern: [[Moldable Data Wrapper]]. Not all moldable objects are wrappers, but when we are creating an explainable system from existing data, this is the most common way to do it."
+							"string" : "We cannot do much with the raw dictionaries, because a dictionary has nothing to do the visualization review domain per se. We need to turn this raw data into a moldable object by *wrapping* it. This is an example of another, closely-related pattern: [[Moldable Data Wrapper]]. Not all moldable objects are wrappers, but when we are creating an explainable system from existing data, this is the most common way to do it."
 						},
 						{
 							"__type" : "textSnippet",
@@ -435,7 +506,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:25:45.475643+01:00"
+									"dateAndTimeString" : "2026-02-02T17:46:58.131761+01:00"
 								}
 							},
 							"uid" : {
@@ -445,7 +516,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "As before, this code won't work yet, but we can create it by *fixing* it. We want to:\n— create the new class `VRPaper` in the same `VisualisationReview` package, but tagged as a `Model` class\n— add a `data` slot to hold the dictionary\n— add *accessors* `data` and `data:` to get and set the `data` slot \n— add a class-side instance creation method `for:` that instantiates an objects and sets the data"
+							"string" : "As before, this code won't work yet, but we can create it by *fixing* it. We want to:\n— create the new class `VRPaper` in the same `VisualisationReview` package, but tagged as a `Model` class\n— add a `data` slot to hold the dictionary\n— add *accessors* `data` and `data:` to get and set the `data` slot \n— add a class-side instance creation method `for:` that instantiates an object and sets the data"
 						},
 						{
 							"__type" : "textSnippet",
@@ -472,7 +543,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T09:38:21.793221+01:00"
+									"dateAndTimeString" : "2026-02-02T17:52:46.695757+01:00"
 								}
 							},
 							"uid" : {
@@ -482,7 +553,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Try these steps yourself. You can always browse the proposed changes below and accept them later.\n⇒ *Create `VRPaper` using the fixit dialog, as before.*\n⇒ *Add the missing `for:` method using the fixit dialog. Change the proposed `data` argument to `aDictionary`; add the body `^ self new data: aDictionary`; change the default method category from “accessing” to “instance creation”; accept the change.*\n⇒ *In the `for:` method fix the `data:` accessor, adding the body `data := aDictionary`*\n⇒ *In the `data:` setter method, add the missing `data` slot using the fixit dialog, change the method category to “initialization” and accept the change*\n⇒ *Add `data` getter. This can be done in several ways. One way is to click on the class name from one of the mathods you have created, opening a class coder view. Click on the grey bar below the class name to open the class specification. Primary-click on the `data` slot to select the *Create accessors* menu item, select it, and accept the refactoring.*"
+							"string" : "Try these steps yourself. You can always browse the proposed changes below and accept them later.\n⇒ *Create `VRPaper` using the fixit dialog, as before.*\n⇒ *Add the missing `for:` method using the fixit dialog. Change the proposed `data` argument to `aDictionary`; add the body `^ self new data: aDictionary`; change the default method category from “accessing” to “instance creation”; accept the change.*\n⇒ *In the `for:` method fix the `data:` accessor, adding the body `data := aDictionary`*\n⇒ *In the `data:` setter method, add the missing `data` slot using the fixit dialog, change the method category to “initialization” and accept the change*\n⇒ *Add `data` getter. This can be done in several ways. One way is to click on the class name from one of the methods you have created, opening a class coder view. Click on the grey bar below the class name to open the class specification. Primary-click on the `data` slot to select the *Create accessors* menu item, select it, and accept the refactoring.*"
 						},
 						{
 							"__type" : "textSnippet",
@@ -829,7 +900,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T10:13:04.919079+01:00"
+									"dateAndTimeString" : "2026-02-02T17:49:32.882968+01:00"
 								}
 							},
 							"uid" : {
@@ -839,7 +910,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "So far the domain objects are not much of an improvement over our raw dictionaries, in fact they seem worse, because we have tio navigate to get to the interesting data. But now the fun starts as we begin to mold these objects, adding contextual tools to make them more useful."
+							"string" : "So far the domain objects are not much of an improvement over our raw dictionaries, in fact they seem worse, because we have to navigate to get to the interesting data. But now the fun starts as we begin to mold these objects, adding contextual tools to make them more useful."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1188,7 +1259,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T10:46:53.594783+01:00"
+									"dateAndTimeString" : "2026-02-02T18:00:22.87046+01:00"
 								}
 							},
 							"uid" : {
@@ -1198,7 +1269,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Let's repeat the exercise to creating a Boolean testing method:\n⇒ *Extract a method called `isDesignStudy` from the  snippet below.*\n⇒ *Change the method category to `testing`.* (Click the grey triangle to edit the method.)"
+							"string" : "Let's repeat the exercise by creating a Boolean testing method:\n⇒ *Extract a method called `isDesignStudy` from the  snippet below.*\n⇒ *Change the method category to `testing`.* (Click the grey triangle to edit the method.)"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1688,7 +1759,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T11:11:05.066146+01:00"
+									"dateAndTimeString" : "2026-02-02T17:53:23.696536+01:00"
 								}
 							},
 							"uid" : {
@@ -1698,7 +1769,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We haven't created any domain objects from the second data set, so we'll have to extractthem from the raw data:"
+							"string" : "We haven't created any domain objects from the second data set, so we'll have to extract them from the raw data:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -2690,7 +2761,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T08:56:25.807578+01:00"
+									"dateAndTimeString" : "2026-02-02T17:58:46.629561+01:00"
 								}
 							},
 							"uid" : {
@@ -2700,7 +2771,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The reason we wrapped the publications data into `VRPaper` domain objects is that this enables us to associate tiny, contextual tools to these objects, answering questions that we have about them. The most common of these kinds of tools is a [[Contextual View]], a dedicated inspector view that is associated to that kind of object. Such views can be as simple or elaborate as you like, but most views are cases of a [[Simple View]]. The  simplest of these is a *repurposed forwarding view* that already exists for an existing class. Let's see howe can create on of these."
+							"string" : "The reason we wrapped the publications data into `VRPaper` domain objects is that this enables us to associate tiny, contextual tools to these objects, answering questions that we have about them. The most common of these kinds of tools is a [[Contextual View]], a dedicated inspector view that is associated to that kind of object. Such views can be as simple or elaborate as you like, but most views are cases of a [[Simple View]]. The  simplest of these is a *repurposed forwarding view* that already exists for an existing class. Let's see how we can create one of these."
 						},
 						{
 							"__type" : "textSnippet",
@@ -2869,7 +2940,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T09:27:16.843891+01:00"
+									"dateAndTimeString" : "2026-02-02T18:01:10.504602+01:00"
 								}
 							},
 							"uid" : {
@@ -2879,7 +2950,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If we inspect this paper we see its title in the *Print* view, but the rest of the useful information is buried in the *Raw* view. If we explore the `data` slot, we find an *Items* view that improves on this somewhat. Let's repurpose that view for our paper by creating a *forwarding view* from the paper to its data.\n⇒ *Evaluate and inspect the paper.*\n⇒ *Open an inspector playground (lift the handle at the bottom of the inspect to reveal a Pharo playground snippet).*\n⇒ *Enter and inspect the code: `self data`.* \n⇒ *Secondary-click (OPT-click or ALT-click) on the *Items* tab to reveal the source code of this view.*\nNote that the view is defined in a method called `gtItemsFor:` of the {{gtClass:name=Dictionary}} class. We would like to repurpose this code without copy-pasting it.\n⇒ *Primary-click in the playground with `self data`, and select the option *Create `<gtView>` forward to Items*. Before accepting this code, change the name of the generated method from `gtViewFor:` to `gtJsonFor:`. Change the `title:` from `'Itmes'` to `'JSON'`. Accept the method.*\n⇒ *Go to the new *JSON* tab of the paper, and verify that it contains the repurposed view.*\n⇒ *Secondary-*click on the tab to see the source code of the new view method.\nThe generated code, belonging to the `VRPaper` class, should look like this:"
+							"string" : "If we inspect this paper we see its title in the *Print* view, but the rest of the useful information is buried in the *Raw* view. If we explore the `data` slot, we find an *Items* view that improves on this somewhat. Let's repurpose that view for our paper by creating a *forwarding view* from the paper to its data.\n⇒ *Evaluate and inspect the paper.*\n⇒ *Open an inspector playground (lift the handle at the bottom of the inspector to reveal a Pharo playground snippet).*\n⇒ *Enter and inspect the code: `self data`.* \n⇒ *Secondary-click (OPT-click or ALT-click) on the *Items* tab to reveal the source code of this view.*\nNote that the view is defined in a method called `gtItemsFor:` of the {{gtClass:name=Dictionary}} class. We would like to repurpose this code without copy-pasting it.\n⇒ *Primary-click in the playground with `self data`, and select the option *Create `<gtView>` forward to Items*. Before accepting this code, change the name of the generated method from `gtViewFor:` to `gtJsonFor:`. Change the `title:` from `'Items'` to `'JSON'`. Accept the method.*\n⇒ *Go to the new *JSON* tab of the paper, and verify that it contains the repurposed view.*\n⇒ *Secondary-*click on the tab to see the source code of the new view method.\nThe generated code, belonging to the `VRPaper` class, should look like this:"
 						},
 						{
 							"__type" : "blockQuoteSnippet",
@@ -3014,7 +3085,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T09:27:48.093891+01:00"
+									"dateAndTimeString" : "2026-02-02T17:59:04.807114+01:00"
 								}
 							},
 							"uid" : {
@@ -3024,7 +3095,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The new *JSON* view is a bit of an improvement over the *Raw* view of a paper, but we still have to dig for the information we want about a paper. We will now see howe can do better."
+							"string" : "The new *JSON* view is a bit of an improvement over the *Raw* view of a paper, but we still have to dig for the information we want about a paper. We will now see how we can do better."
 						},
 						{
 							"__type" : "textSnippet",
@@ -3269,7 +3340,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T09:44:22.775962+01:00"
+									"dateAndTimeString" : "2026-02-02T17:54:26.838673+01:00"
 								}
 							},
 							"uid" : {
@@ -3279,7 +3350,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Consider the view code below. It is similar to the forwarding view we defined above, except that instead of repurposing an existing view, it creates a new, dedicated *columned list* view, consisting of a list of items with column headings. This view is supposed to provide a high-level summary of  the most important details of a paper, so we call it `gtSummaryFor:` and give it the title *Summary*.\nWe also set the *priority* to 10. This is a number (usually between 1 and 100) that tells the inspector how to order all the views.\nNext come the *items* of the list. In this case we just list a bunch of *Key* and *Value* pairs corresponding to each piece of information we want to display (*id*, *title* etc.).\nWe then define two columns, one for the *Keys* and one for the *Values*. These are just the first and second elements of each item. *NB:* specifying the text of the kay as  `#first` is equivalent to writing the more verbose lambda block, `[:item | item first ]`.\nFinally we add a button to explicitly refresh the view,  in case we need it."
+							"string" : "Consider the view code below. It is similar to the forwarding view we defined above, except that instead of repurposing an existing view, it creates a new, dedicated *columned list* view, consisting of a list of items with column headings. This view is supposed to provide a high-level summary of  the most important details of a paper, so we call it `gtSummaryFor:` and give it the title *Summary*.\nWe also set the *priority* to 10. This is a number (usually between 1 and 100) that tells the inspector how to order all the views.\nNext come the *items* of the list. In this case we just list a bunch of *Key* and *Value* pairs corresponding to each piece of information we want to display (*id*, *title* etc.).\nWe then define two columns, one for the *Keys* and one for the *Values*. These are just the first and second elements of each item. *NB:* specifying the text of the key as  `#first` is equivalent to writing the more verbose lambda block, `[:item | item first ]`.\nFinally we add a button to explicitly refresh the view,  in case we need it."
 						},
 						{
 							"__type" : "blockQuoteSnippet",
@@ -3737,7 +3808,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T13:25:01.931989+01:00"
+									"dateAndTimeString" : "2026-02-02T17:56:49.521626+01:00"
 								}
 							},
 							"uid" : {
@@ -3747,7 +3818,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "For example, we would like to see not just the title of each papers, but also the type, and the number of authors. Cramming this information into the *Print* view of papers is possible, but awkward and not very flexible.\nThe solution is to introduce a dedicated [[Moldable Collection Wrapper]].\nWe introduce a new class `VRPaperGroup` using the trait {{gtClass:name=TGtGroupWithItems}}, which provides an `items` slot and duck-typed collection methods that just delegate their behavior to that slot.\nThis simple wrapper introduce sa new object that we can now mold."
+							"string" : "For example, we would like to see not just the title of each paper, but also the type, and the number of authors. Cramming this information into the *Print* view of papers is possible, but awkward and not very flexible.\nThe solution is to introduce a dedicated [[Moldable Collection Wrapper]].\nWe introduce a new class `VRPaperGroup` using the trait {{gtClass:name=TGtGroupWithItems}}, which provides an `items` slot and duck-typed collection methods that just delegate their behavior to that slot.\nThis simple wrapper introduces a new object that we can now mold."
 						},
 						{
 							"__type" : "textSnippet",
@@ -3953,7 +4024,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T13:43:15.63168+01:00"
+									"dateAndTimeString" : "2026-02-02T17:57:30.874255+01:00"
 								}
 							},
 							"uid" : {
@@ -3963,7 +4034,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "⇒ *Experiment with adding addition columns to the *Papers* view, for example, the number of authors or the year.*\nNote that by introducing a dedicated collection wrapper for papers, we not only can improve on the default *Items* view we had before, but we are free to add other views as well that are sepcific to the domain. For example, we could have a dedicated *Authors* view listing the authors of just this paper group, or we could have a *Summary* view that lists information such as the number of papers, number of authors, or statistics of the types of papers.\n⇒ *Extract an example called `allPapersWrapped` for the wrapped papers.*\n⇒ *Add an assertion on the size of the result.*"
+							"string" : "⇒ *Experiment with adding additional columns to the *Papers* view, for example, the number of authors or the year.*\nNote that by introducing a dedicated collection wrapper for papers, we not only can improve on the default *Items* view we had before, but we are free to add other views as well that are specific to the domain. For example, we could have a dedicated *Authors* view listing the authors of just this paper group, or we could have a *Summary* view that lists information such as the number of papers, number of authors, or statistics of the types of papers.\n⇒ *Extract an example called `allPapersWrapped` for the wrapped papers.*\n⇒ *Add an assertion on the size of the result.*"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -4095,7 +4166,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T14:01:21.4312+01:00"
+									"dateAndTimeString" : "2026-02-02T17:59:35.240474+01:00"
 								}
 							},
 							"uid" : {
@@ -4105,7 +4176,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now that we have a dedicated collection wrapper for papers, we can also leverage it for for returning the results of queries. But first we need some more domain entities."
+							"string" : "Now that we have a dedicated collection wrapper for papers, we can also leverage it for returning the results of queries. But first we need some more domain entities."
 						},
 						{
 							"__type" : "changesSnippet",
@@ -4271,7 +4342,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T09:28:51.848615+01:00"
+						"dateAndTimeString" : "2026-02-02T17:04:21.438683+01:00"
 					}
 				},
 				"uid" : {
@@ -4281,7 +4352,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "*NB:* This page links to [[Pages containing missing references - allowed failures]] to allow references to missing classes and methods in this page.\nNext: [[3. Molding CSV data — modeling other entities]]"
+				"string" : "*NB:* This page links to [[Pages containing missing references - allowed failures]] to allow references to missing classes and methods in this page.\nNext: Part 3. [[Molding CSV data — modeling other entities]]"
 			}
 		]
 	},
@@ -4304,12 +4375,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-02-02T09:24:47.267028+01:00"
+			"dateAndTimeString" : "2026-02-02T16:56:51.450125+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "2. Molding CSV data — modeling domain objects"
+		"title" : "Molding CSV data — modeling domain objects"
 	},
 	"uid" : {
 		"__type" : "uuid",
