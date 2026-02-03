@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T18:32:19.187904+01:00"
+						"dateAndTimeString" : "2026-02-03T09:29:32.108023+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is the start of a [[DRAFT]] curriculum for learning Moldable Development through case studies, tutorials, and exercises in the GT Book. Ongoing work to develop the curriculum is taking place in a dedicated [GitHub repo](https://github.com/feenkcom/gt-curriculum). As material stabilizes, it will be migrated to this book."
+				"string" : "This is the start of a [[DRAFT]] curriculum for learning Moldable Development through case studies, tutorials, and exercises in the GT Book. Ongoing work to develop the curriculum is taking place in a dedicated [GitHub repo](https://github.com/feenkcom/gt-curriculum). As materials stabilize, they will be migrated to this book."
 			},
 			{
 				"__type" : "textSnippet",
@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-07T09:01:43.650369+01:00"
+									"dateAndTimeString" : "2026-02-03T09:37:24.02735+01:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "You are a newcomer to GT. \nYou have a particular software problem, and you think that GT might be able to help you.\n\nFor example:\n- You have a legacy software system and have questions about the source code and the runtime.\n- You want to explore the API of an external software system.\n- You have massive amounts of log data that you want to analyze.\n- You are building a novel application, and need a way to explore different ways of modeling the domain.\n\nIn any case, you have some kind of *software data* that may be static or dynamically generated, which may or may not already exist, and you want to *model* that data so that you can *answer questions* about it. In short, you want to turn your software into an *explainable system*.\n\nHere is a possible roadmap for you to systematically learn about GT and how to use it effectively, with numerous possible sideroads to take along the way."
+							"string" : "You are new to GT.\nYou have a software problem and think GT might help.\n\nFor example:\n- You have a legacy system and questions about the source code and runtime.\n- You want to explore the API of an external system.\n- You have massive log data to analyze.\n- You are building a novel application and need to explore different ways of modeling the domain.\n\nIn any case, you have *software data* (static or dynamic) and you want to *model* that data so you can *answer questions* about it. In short, you want to turn your software into an *explainable system*.\n\nBelow is a possible roadmap to systematically learn GT and use it effectively, with several optional side roads along the way."
 						}
 					]
 				},
@@ -146,7 +146,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T18:32:19.247757+01:00"
+									"dateAndTimeString" : "2026-02-03T09:37:24.053261+01:00"
 								}
 							},
 							"uid" : {
@@ -156,7 +156,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*You will learn:*\n- What is GT?\n- Using a simple case study, how can GT be used to create an explainable system?\n- What is *moldable development*, and how does it support the creation of explainable systems?\n- How to use Lepiter notebooks to create *live documentation* for your exploration?\n\n*Sideroads:*\n- How to navigate the GT book?\n- How to engage with the GT community?\n- How to work with Smalltalk?\n\nSpecific points to cover in unit 1:\n- Understanding snippets and the inspector\n- Reading the interface from top to bottom\n- Reading a view\n- Learning a script from a view (for example, how to get the URL from a string)\n- Understanding Meta\n- Expanding a contextual snippet based on what we see on the right\n- Extracting from a snippet to a method\n- Creating a class from a snippet\n- Creating a view\n- The accordion metaphor (in particular, why it is important to collapse)"
+							"string" : "*You will learn:*\n- What is GT?\n- Using a simple case study, how can GT be used to create an explainable system?\n- What is *moldable development*, and how does it support the creation of explainable systems?\n- How to use Lepiter notebooks to create *live documentation* for your exploration?\n\n*Side roads:*\n- How to navigate the GT book.\n- How to engage with the GT community.\n- How to work with Smalltalk.\n\n*Specific points to cover in unit 1:*\n- Understanding snippets and the inspector.\n- Reading the interface from top to bottom.\n- Reading a view.\n- Learning a script from a view (for example, how to get the URL from a string).\n- Understanding Meta.\n- Expanding a contextual snippet based on what we see on the right.\n- Extracting from a snippet to a method.\n- Creating a class from a snippet.\n- Creating a view.\n- The accordion metaphor (in particular, why it is important to collapse)."
 						},
 						{
 							"__type" : "textSnippet",
@@ -183,7 +183,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T16:55:55.339489+01:00"
+									"dateAndTimeString" : "2026-02-03T09:37:24.174332+01:00"
 								}
 							},
 							"uid" : {
@@ -193,7 +193,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Go to [[Learn the basics of Glamorous Toolkit]]"
+							"string" : "Next: [[Learn the basics of Glamorous Toolkit]]."
 						}
 					]
 				},
@@ -327,7 +327,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-07T09:01:43.657363+01:00"
+						"dateAndTimeString" : "2026-02-03T09:29:33.225375+01:00"
 					}
 				},
 				"uid" : {
@@ -337,7 +337,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# 4. Learn basic and advanced Moldable Development practice and patterns"
+				"string" : "# 4. Learn basic and advanced Moldable Development practices and patterns"
 			}
 		]
 	},

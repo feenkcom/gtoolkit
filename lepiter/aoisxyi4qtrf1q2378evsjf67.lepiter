@@ -106,13 +106,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-07-30T18:32:40.828365+02:00"
+									"dateAndTimeString" : "2026-02-03T10:11:40.381879+01:00"
 								}
 							},
 							"uid" : {
@@ -122,7 +122,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "One way to answer the question is to read the code. However, this particular algorithm was already published previously in[Squarified Treemaps, Bruls etal, 2000](https://www.win.tue.nl/~vanwijk/stm.pdf), a paper that starts with the following abstract: "
+							"string" : "One way to answer the question is to read the code. However, this particular algorithm was already published in [Squarified Treemaps, Bruls et al., 2000](https://www.win.tue.nl/~vanwijk/stm.pdf), a paper that starts with the following abstract:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -675,13 +675,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-07-30T18:21:55.502727+02:00"
+									"dateAndTimeString" : "2026-02-03T10:11:40.484579+01:00"
 								}
 							},
 							"uid" : {
@@ -691,7 +691,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "At the start, the algorithm splits the initial rectangle. It chooses a horizontal subdivision because the rectangle is wider than taller. It then fills the left half with a single rectangle. The aspect ratio of this first rectangle is {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesFirstStep|label=#worstValueRounded}}."
+							"string" : "At the start, the algorithm splits the initial rectangle. It chooses a horizontal subdivision because the rectangle is wider than it is tall. It then fills the left half with a single rectangle. The aspect ratio of this first rectangle is {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesFirstStep|label=#worstValueRounded}}."
 						},
 						{
 							"__type" : "textSnippet",
@@ -753,13 +753,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-17T08:44:44.247371+02:00"
+									"dateAndTimeString" : "2026-02-03T10:11:40.561032+01:00"
 								}
 							},
 							"uid" : {
@@ -769,7 +769,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Next it adds a second rectangle above the first. The worst aspect ratio improves to {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesSecondStep|label=#worstValueRounded}}. "
+							"string" : "Next, it adds a second rectangle above the first. The worst aspect ratio improves to {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesSecondStep|label=#worstValueRounded}}."
 						},
 						{
 							"__type" : "textSnippet",
@@ -909,13 +909,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-08-17T08:43:28.273005+02:00"
+									"dateAndTimeString" : "2026-02-03T10:11:40.608402+01:00"
 								}
 							},
 							"uid" : {
@@ -925,7 +925,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The algorithm therefore decides that it has reached an optimum for the left half in step two, and starts processing the right half. The initial subdivision it chooses here is vertical, because the rectangle is taller than it is wider. In step 4 it adds the rectangle with area 4:"
+							"string" : "The algorithm therefore decides that it has reached an optimum for the left half in step two, and starts processing the right half. The initial subdivision it chooses here is vertical, because the rectangle is taller than it is wider. In step 4, it adds the rectangle with area 4:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1065,13 +1065,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-07-31T12:47:44.874874+02:00"
+									"dateAndTimeString" : "2026-02-03T10:11:40.611568+01:00"
 								}
 							},
 							"uid" : {
@@ -1081,7 +1081,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The addition of the next area (2) however does not improve the result as the worst aspect ratio increases from {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesFifthStep|label=#worstValueRounded}} to {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesSixthStep|label=#worstValueRounded}}:"
+							"string" : "The addition of the next area (2), however, does not improve the result, as the worst aspect ratio increases from {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesFifthStep|label=#worstValueRounded}} to {{gtExample:GtGraphTreemapLayoutExamples>>#squarifyWithSevenNodesSixthStep|label=#worstValueRounded}}:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1176,13 +1176,13 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-07-30T18:37:26.510306+02:00"
+						"dateAndTimeString" : "2026-02-03T10:11:40.638945+01:00"
 					}
 				},
 				"uid" : {
@@ -1192,7 +1192,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Describing the Steps"
+				"string" : "# Describing the Steps"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1297,7 +1297,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-20T23:35:29.301514+01:00"
+						"dateAndTimeString" : "2026-02-03T10:11:40.639772+01:00"
 					}
 				},
 				"uid" : {
@@ -1307,7 +1307,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "An optimal result can not be guaranteed, and counterexamples can be set up. The order in which the rectangles are processed is important. We found that a decreasing order usually gives the best results. The initially large rectangle is then filled in first with the larger subrectangles."
+				"string" : "An optimal result cannot be guaranteed, and counterexamples can be constructed. The order in which the rectangles are processed is important. We found that a decreasing order usually yields the best results. The initially large rectangle is then filled first with the larger subrectangles."
 			}
 		]
 	},

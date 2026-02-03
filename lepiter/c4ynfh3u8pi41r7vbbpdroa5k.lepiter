@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-07T15:19:20.228792+01:00"
+						"dateAndTimeString" : "2026-02-03T10:08:21.298379+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[Glamorous Toolkit]] contains thousands of tiny contextual tools to help make the system itself more explainable. Many of these tools consists of reusable extensions that work across multiple contexts. \nA good example of reusable extensions within GT is the collection of contextual views that have been introduced for inspecting *files*. Consider that by default, an object [[Inspector]] will only display this basic, “raw” view of a file:"
+				"string" : "[[Glamorous Toolkit]] contains thousands of tiny contextual tools to help make the system itself more explainable. Many of these tools consist of reusable extensions that work across multiple contexts. \nA good example of reusable extensions within GT is the collection of contextual views that have been introduced for inspecting *files*. Consider that by default, an object [[Inspector]] will only display this basic, “raw” view of a file:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -220,7 +220,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T12:00:22.3959+01:00"
+						"dateAndTimeString" : "2026-02-03T10:09:48.52563+01:00"
 					}
 				},
 				"uid" : {
@@ -230,7 +230,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The *Raw* view is still there, but it appears as a tab further to the right. The first view we see is a nicely formatted view of the JSON code in the file. Obviously not all files are JSON files, so this view is designed to only appear if the file object recognizes that it contains JSON (i.e., from the `.json` file extension).\nHow does this work? It's just an extension method consisting of a few lines of code: {{gtMethod:name=AbstractFileReference>>#gtJsonFor:|expanded}}"
+				"string" : "The *Raw* view is still there, but it appears as a tab further to the right. The first view we see is a nicely formatted view of the JSON code in the file. Obviously not all files are JSON files, so this view appears only if the file object recognizes that it contains JSON (i.e., from the `.json` file extension).\nHow does this work? It's just an extension method consisting of a few lines of code: {{gtMethod:name=AbstractFileReference>>#gtJsonFor:|expanded}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -257,7 +257,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T12:18:49.388687+01:00"
+						"dateAndTimeString" : "2026-02-03T10:09:48.655799+01:00"
 					}
 				},
 				"uid" : {
@@ -267,7 +267,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Many contextual tools are just short methods annotated with a “pragma”, in this case it is `<gtView>`, appearing in the first line of the `gtJsonFor:` method.\nDon't pay too  much attention to the details of the method for  now, but notice that, right after the pragma, there is a guard condition that activates the view only if the file has the right JSON extension. In the following lines we give the view a *title*, “JSON”, we add a “tree” button to the right, with a tootip, and we display the text of the file by parsing and oretty-printing the contents of the file. That's pretty much it! Most (not all) contextual tools are tiny, like this, which means it can be very fast to create them and modify them."
+				"string" : "Many contextual tools are short methods annotated with a pragma; in this case, it is `<gtView>`, appearing in the first line of the `gtJsonFor:` method.\nDon’t pay too much attention to the details of the method for now, but notice that, right after the pragma, there is a guard condition that activates the view only if the file has a `.json` extension. In the following lines we give the view a *title*, “JSON”, we add a “tree” button to the right, with a tooltip, and we display the text of the file by parsing and pretty-printing its contents. That's pretty much it. Most (not all) contextual tools are tiny like this, which means they can be created and modified quickly."
 			},
 			{
 				"__type" : "textSnippet",
@@ -294,7 +294,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T12:20:38.355684+01:00"
+						"dateAndTimeString" : "2026-02-03T10:09:48.694633+01:00"
 					}
 				},
 				"uid" : {
@@ -304,7 +304,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Another example is the *Store on* view, which generates a snippet to open that file. We can see the source code of any view by *Primary*-clicking on the tab:"
+				"string" : "Another example is the *Store on* view, which generates a snippet to open that file. We can see the source code of any view by *primary*-clicking on the tab:"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -408,7 +408,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T17:23:57.456762+01:00"
+						"dateAndTimeString" : "2026-02-03T10:09:48.722136+01:00"
 					}
 				},
 				"uid" : {
@@ -418,7 +418,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "With an image file, on the other hand, the *Picture* view is automatically enabled if the file name is recognized as having a typical image file extension. Note that the view code is similarly compact."
+				"string" : "With an image file, on the other hand, the *Picture* view is automatically enabled if the filename is recognized as having a typical image-file extension. Note that the view code is similarly compact."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -485,7 +485,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-18T17:25:34.199888+01:00"
+						"dateAndTimeString" : "2026-02-03T10:09:48.722804+01:00"
 					}
 				},
 				"uid" : {
@@ -495,7 +495,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Have a look at the code behind other inspector views by *Primary*-clicking on their tabs."
+				"string" : "Have a look at the code behind other inspector views by *primary*-clicking on their tabs."
 			},
 			{
 				"__type" : "textSnippet",

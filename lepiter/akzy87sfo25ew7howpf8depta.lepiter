@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-19T15:45:48.788918+01:00"
+						"dateAndTimeString" : "2026-02-03T10:45:15.889201+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit allows you to work with REST APIs out of the box.\n\nHere, we take a look at how we can play with the GitHub REST API. Although the case study is specific to GitHub, the approach is essentially the same to work with other REST APIs.\n\nIf you prefer a video introduction, have a look at [[Exploring the GitHub REST API in 7']] on YouTube."
+				"string" : "Glamorous Toolkit allows you to work with REST APIs out of the box.\n\nHere, we take a look at how we can play with the GitHub REST API. Although the case study is specific to GitHub, the approach is essentially the same when working with other REST APIs.\n\nIf you prefer a video introduction, have a look at [[Exploring the GitHub REST API in 7']] on YouTube."
 			},
 			{
 				"__type" : "textSnippet",
@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-19T15:58:34.122295+01:00"
+									"dateAndTimeString" : "2026-02-03T10:45:16.074556+01:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A REST API allows you to download information about a software system in some format, typically JSON. The raw data is interesting, but is cumbersome to work with. The *moldable development* approach in GT to turn this data into an “explainable system” is to *model the domain* by taking the raw data and wrap them into domain entities. Then, we iteratively add tiny, contextual tools to these entities (*i.e.,* contextual views, actions and searches) that make the domain entities into a *live, explorable model* answering questions about the domain — an *explainable system*.\n\nIn the case of the GitHub REST API, we obtain raw JSON data about an *organization* in GitHub (such as feenk), about its *repos*, their *contributors*, their commit *events*, and so on. We turn each of these into live, explorable domain entities by wrapping the raw data and adding contextual tools.\n\nLet's see this in action ..."
+							"string" : "A REST API allows you to download information about a software system in some format, typically JSON. The raw data is interesting, but cumbersome to work with. The *moldable development* approach in GT for turning this data into an “explainable system” is to *model the domain* by taking the raw data and wrapping it into domain entities. Then, we iteratively add tiny, contextual tools to these entities (*i.e.,* contextual views, actions, and searches) that make the domain entities into a *live, explorable model* answering questions about the domain — an *explainable system*.\n\nIn the case of the GitHub REST API, we obtain raw JSON data about an *organization* in GitHub (such as feenk), about its *repos*, their *contributors*, their commit *events*, and so on. We turn each of these into live, explorable domain entities by wrapping the raw data and adding contextual tools.\n\nLet's see this in action..."
 						}
 					]
 				},
@@ -146,7 +146,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-19T15:43:03.778145+01:00"
+									"dateAndTimeString" : "2026-02-03T10:45:16.122543+01:00"
 								}
 							},
 							"uid" : {
@@ -156,7 +156,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "GitHub offers a REST API to explore data about the repositories hosted by any given organization.\n\nAs a case study we start from JSON content located at [https://api.github.com/orgs/feenkcom](https://api.github.com/orgs/feenkcom) which looks like this:"
+							"string" : "GitHub offers a REST API to explore data about the repositories hosted by any given organization.\n\nAs a case study, we start from JSON content available at [https://api.github.com/orgs/feenkcom](https://api.github.com/orgs/feenkcom), which looks like this:"
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -223,7 +223,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-19T12:39:28.927152+01:00"
+									"dateAndTimeString" : "2026-02-03T10:45:16.12339+01:00"
 								}
 							},
 							"uid" : {
@@ -233,7 +233,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The first thing we do is to retrieve that JSON programmatically:"
+							"string" : "The first thing we do is retrieve that JSON programmatically:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -328,7 +328,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-09-20T23:31:03.518591+02:00"
+									"dateAndTimeString" : "2026-02-03T10:45:16.217219+01:00"
 								}
 							},
 							"uid" : {
@@ -338,7 +338,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now, that's just a string. We never really want to work with a string. We'd rather parse it:"
+							"string" : "Now that's just a string. We never really want to work with a string. We'd rather parse it:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -437,7 +437,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-03-18T14:38:02.622997+01:00"
+									"dateAndTimeString" : "2026-02-03T10:45:16.249399+01:00"
 								}
 							},
 							"uid" : {
@@ -447,7 +447,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Parsing the JSON string produces a dictionary. That's already better, but still not quite what we want. We want a custom experience for that outcome. To this end, we wrap the data as a first class object:"
+							"string" : "Parsing the JSON string produces a dictionary. That's already better, but still not quite what we want. We want a custom experience for that outcome. To this end, we wrap the data as a first-class object:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -508,7 +508,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-16T17:48:57.075061+01:00"
+									"dateAndTimeString" : "2026-02-03T10:45:16.250039+01:00"
 								}
 							},
 							"uid" : {
@@ -518,7 +518,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Once we have a dedicated object the inspector gets the opportunity to present contextual views. For example, the repositories list is described in {{gtMethod:GhOrganization>>#gtReposFor:}}."
+							"string" : "Once we have a dedicated object, the inspector gets the opportunity to present contextual views. For example, the repositories list is described in {{gtMethod:GhOrganization>>#gtReposFor:}}."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -585,7 +585,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-19T16:05:37.064881+01:00"
+									"dateAndTimeString" : "2026-02-03T10:45:16.274751+01:00"
 								}
 							},
 							"uid" : {
@@ -595,7 +595,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now, try exploring. For example, what happens when you double click on a repository?\nNotice how you can navigate from the feenk *organization* to its *repositories*, and from there to individual *contributors*, their GitHub *events* and *issues*. "
+							"string" : "Now, try exploring. For example, what happens when you double-click on a repository?\nNotice how you can navigate from the feenk *organization* to its *repositories*, and from there to individual *contributors*, their GitHub *events*, and *issues*."
 						}
 					]
 				},

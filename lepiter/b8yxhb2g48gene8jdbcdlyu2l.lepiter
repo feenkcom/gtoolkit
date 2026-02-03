@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-26T13:25:48.011142+01:00"
+						"dateAndTimeString" : "2026-02-03T10:23:47.260304+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For quite some time we had [an issue](https://github.com/feenkcom/gtoolkit/issues/2579) in the text editor related to the cursor getting stuck when it was at the end of a paragraph. It was annoying, but we did not know how to address it and it stayed open for half a year."
+				"string" : "For quite some time, we had [an issue](https://github.com/feenkcom/gtoolkit/issues/2579) in the text editor related to the cursor getting stuck when it was at the end of a paragraph. It was annoying, but we did not know how to address it, and it stayed open for half a year."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-26T13:49:22.644187+01:00"
+						"dateAndTimeString" : "2026-02-03T10:23:47.359065+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Indeed, [[Glamorous Toolkit]] relies on [[Rust]] plugins. For example, the current implementation of the text editor is based on a wrapper over Rust objects. This is nice because it allows us to reuse external libraries. At the same time, to find issues visible in the high level editor, we need to understand how the low level objects work. To this end, we need at least the ability to inspect."
+				"string" : "Indeed, [[Glamorous Toolkit]] relies on [[Rust]] plugins. For example, the current implementation of the text editor is based on a wrapper around Rust objects. This is helpful because it allows us to reuse external libraries. At the same time, to find issues visible in the high-level editor, we need to understand how the low-level objects work, which requires at least the ability to inspect them."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-26T13:32:48.12892+01:00"
+						"dateAndTimeString" : "2026-02-03T10:23:47.425178+01:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "It was only until we extended the inspector to allow us to explore Rust objects that we could find the issue. The screenshot below shows the actual exploration that led to the bug resolution."
+				"string" : "It was not until we extended the inspector to allow us to explore Rust objects that we could find the issue. The screenshot below shows the actual exploration that led to the bug resolution."
 			},
 			{
 				"__type" : "pictureSnippet",
@@ -186,7 +186,8 @@
 				},
 				"url" : "attachments/b8yxhb7z770mhdyhzqjvbwf6s/Screenshot 2023-01-18 at 18.34.47.png",
 				"caption" : "A screenshot of the inspection session that led to the bug resolution. The inspector shows the Pharo object and the wrapped Rust object in a seamless exploration",
-				"previewHeight" : 300
+				"previewHeight" : 300,
+				"reference" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -213,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-26T13:37:02.13691+01:00"
+						"dateAndTimeString" : "2026-02-03T10:23:47.42751+01:00"
 					}
 				},
 				"uid" : {
@@ -223,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Inspecting the {{gtClass:SkiaParagraph}} instance shows an `Info` view that is actually served by the wrapped Rust object. We can see how selecting the `Line ranges` item, leads to an inspector over a Rust object."
+				"string" : "Inspecting the {{gtClass:SkiaParagraph}} instance shows an `Info` view that is actually provided by the wrapped Rust object. We can see how selecting the `Line ranges` item leads to an inspector over a Rust object."
 			},
 			{
 				"__type" : "textSnippet",
@@ -250,7 +251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-26T13:40:17.425089+01:00"
+						"dateAndTimeString" : "2026-02-03T10:23:47.551156+01:00"
 					}
 				},
 				"uid" : {
@@ -260,7 +261,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "So, what was the issue? Looking at the line ranges, we notice that index `6` is both the end of the first interval, and the beginning of the second interval. Once we saw this, it became obvious that 6 cannot belong in both. It turned out that the end of the interval was expected by the low level library to be exclusive, while our implementation assumed it is inclusive. Once we saw the problem, the [fix](https://github.com/feenkcom/libskia/commit/0e97985eada517495aea051176667ee2d26ade01) was rather straightforward."
+				"string" : "So, what was the issue? Looking at the line ranges, we notice that index `6` is both the end of the first interval and the beginning of the second interval. Once we saw this, it became obvious that 6 cannot belong to both. It turned out that the end of the interval was expected by the low-level library to be exclusive, while our implementation assumed it is inclusive. Once we saw the problem, the [fix](https://github.com/feenkcom/libskia/commit/0e97985eada517495aea051176667ee2d26ade01) was rather straightforward."
 			},
 			{
 				"__type" : "pictureSnippet",
@@ -296,7 +297,8 @@
 				},
 				"url" : "attachments/b8yxhb30alr4xe23zd4sfnj4g/Screenshot 2023-02-26 at 13.04.25.png",
 				"caption" : "The relevant fix was mostly changing the condition from <= to <",
-				"previewHeight" : 300
+				"previewHeight" : 300,
+				"reference" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -323,7 +325,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-26T13:49:28.09227+01:00"
+						"dateAndTimeString" : "2026-02-03T10:23:47.553565+01:00"
 					}
 				},
 				"uid" : {
@@ -333,7 +335,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The differentiator between not knowing how to approach the problem at all and actually solving it was just a matter of seeing the problem in the first place. That is the power of [[Moldable Development]]."
+				"string" : "The difference between not knowing how to approach the problem at all and actually solving it was simply seeing the problem in the first place. That is the power of [[Moldable Development]]."
 			},
 			{
 				"__type" : "textSnippet",
@@ -468,7 +470,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-26T14:46:15.237213+01:00"
+						"dateAndTimeString" : "2026-02-03T10:23:47.607432+01:00"
 					}
 				},
 				"uid" : {
@@ -478,7 +480,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The editor is made out of paragraph elements. In the current implementation they are instances of {{gtClass:BrTextEditorParagraphElement}}. To draw themselves, these objects depend on {{gtClass:SkiaParagraph}} instances that are actually wrappers over  Rust objects."
+				"string" : "The editor is made out of paragraph elements. In the current implementation, they are instances of {{gtClass:BrTextEditorParagraphElement}}. To draw themselves, these objects depend on {{gtClass:SkiaParagraph}} instances that are actually wrappers over Rust objects."
 			},
 			{
 				"__type" : "textSnippet",
@@ -582,7 +584,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-26T12:17:21.900856+01:00"
+									"dateAndTimeString" : "2026-02-03T10:23:47.718968+01:00"
 								}
 							},
 							"uid" : {
@@ -592,7 +594,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Then let's inspect one of the children and access the lower {{gtClass:SkiaParagraph}} instance:"
+							"string" : "Then inspect one of the children and access the lower {{gtClass:SkiaParagraph}} instance:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -619,7 +621,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-26T13:27:50.888825+01:00"
+									"dateAndTimeString" : "2026-02-03T10:23:47.744771+01:00"
 								}
 							},
 							"uid" : {
@@ -629,7 +631,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The resulting inspector has an `R` icon. If you press it, you will get to the Rust object. "
+							"string" : "The resulting inspector has an `R` icon. Press it to open the Rust object."
 						}
 					]
 				},
@@ -652,7 +654,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-26T12:16:55.134335+01:00"
+						"dateAndTimeString" : "2026-02-03T10:23:47.718182+01:00"
 					}
 				},
 				"uid" : {
@@ -662,7 +664,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "How does it work? Follow this:"
+				"string" : "How does it work? Follow these steps:"
 			}
 		]
 	},

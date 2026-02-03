@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-19T12:56:08.858257+01:00"
+						"dateAndTimeString" : "2026-02-03T10:17:02.220279+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Writing isolated pieces of documentation can be entertaining, but sometimes we want to enhance the findability of those pieces. Linking them with other pieces can be a good path to achieve this."
+				"string" : "Writing isolated pieces of documentation can be entertaining, but sometimes we want to improve the discoverability of those pieces. Linking them with other pieces can be a good way to achieve that."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-18T20:28:08.76204+02:00"
+						"dateAndTimeString" : "2026-02-03T10:17:02.334722+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We actually had this very same problem when writing this book: We wanted to make it possible for people to start at [[Glamorous Toolkit]] and have the chance to reach as many pages as possible by following direct links."
+				"string" : "We had the same problem when writing this book: we wanted to make it possible for people to start at [[Glamorous Toolkit]] and be able to reach as many pages as possible by following direct links."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-19T13:00:18.16359+01:00"
+						"dateAndTimeString" : "2026-02-03T10:17:02.337347+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To help us with finding new linking opportunities, we built a visualization. We take inspiration from the visualization described in [[How to visualize the current knowledge base]]. We start by collecting the pages."
+				"string" : "To help us find new linking opportunities, we built a visualization. We took inspiration from the visualization described in [[How to visualize the current knowledge base]]. First, we collect the pages."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -174,7 +174,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-18T20:28:16.317435+02:00"
+						"dateAndTimeString" : "2026-02-03T10:17:02.338215+01:00"
 					}
 				},
 				"uid" : {
@@ -184,7 +184,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then we collect the pages that are reachable from [[Glamorous Toolkit]] by traversing deeply all the outgoing links using [[DeepTraverser]]."
+				"string" : "Then we collect the pages reachable from [[Glamorous Toolkit]] by deeply traversing all outgoing links using [[DeepTraverser]]."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -245,7 +245,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-19T13:01:10.056642+01:00"
+						"dateAndTimeString" : "2026-02-03T10:17:02.440707+01:00"
 					}
 				},
 				"uid" : {
@@ -255,7 +255,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "And then we highlight the reached pages in the overall graph:"
+				"string" : "Then we highlight the reached pages in the overall graph:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -316,7 +316,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-23T14:53:40.581855+01:00"
+						"dateAndTimeString" : "2026-02-03T10:17:02.49966+01:00"
 					}
 				},
 				"uid" : {
@@ -326,7 +326,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "So, now we have an idea of the parts of the book that are not reachable. But would it not be better to show the pages as they are in the book table of contents instead of as a graph of links? Let's try."
+				"string" : "So now we have an idea of the parts of the book that are not reachable. But wouldn't it be better to show the pages as they appear in the book's table of contents instead of as a graph of links? Let's try."
 			},
 			{
 				"__type" : "textSnippet",
@@ -424,7 +424,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-23T14:54:16.447491+01:00"
+						"dateAndTimeString" : "2026-02-03T10:17:02.500291+01:00"
 					}
 				},
 				"uid" : {
@@ -434,7 +434,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "And then we put it together in a simple visualization of the snippets that uses `allReachedPages` computed above to highlight the corresponding snippets:"
+				"string" : "Then we put it together in a simple visualization of the snippets, using the `allReachedPages` computed above to highlight the corresponding snippets:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -495,7 +495,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-23T14:54:55.577585+01:00"
+						"dateAndTimeString" : "2026-02-03T10:17:02.501124+01:00"
 					}
 				},
 				"uid" : {
@@ -505,7 +505,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This now gives us a view that is closer to the mental model of a book. The resulting tree shows pages. But some pages are longer than others, and it can be useful sometimes to also show the size of pages."
+				"string" : "This now gives us a view that is closer to the mental model of a book. The resulting tree shows pages. But some pages are longer than others, and it can be useful to also show the size of pages."
 			},
 			{
 				"__type" : "textSnippet",
@@ -532,7 +532,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-23T14:55:04.387134+01:00"
+						"dateAndTimeString" : "2026-02-03T10:17:02.501604+01:00"
 					}
 				},
 				"uid" : {
@@ -542,7 +542,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To this end, we can count the words from the text representation of a page:"
+				"string" : "To this end, we can count the words in the text representation of a page:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -674,7 +674,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-23T14:55:37.114238+01:00"
+						"dateAndTimeString" : "2026-02-03T10:17:02.501997+01:00"
 					}
 				},
 				"uid" : {
@@ -684,7 +684,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Of course, in a world of executable snippets, we can find other interesting measurements than words. For example, we can also consider the amount of snippets in a page."
+				"string" : "Of course, in a world of executable snippets, we can find other interesting measures than words. For example, we can also consider the number of snippets in a page."
 			},
 			{
 				"__type" : "pharoSnippet",

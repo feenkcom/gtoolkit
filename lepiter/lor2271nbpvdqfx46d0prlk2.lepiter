@@ -141,7 +141,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T11:01:22.942582+02:00"
+						"dateAndTimeString" : "2026-02-03T10:36:46.541295+01:00"
 					}
 				},
 				"uid" : {
@@ -151,7 +151,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Moldable development in a nutshell"
+				"string" : "# Moldable development in a nutshell"
 			},
 			{
 				"__type" : "textSnippet",
@@ -188,7 +188,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-08-05T14:36:11.742926+02:00"
+												"dateAndTimeString" : "2026-02-03T10:36:46.711295+01:00"
 											}
 										},
 										"uid" : {
@@ -198,7 +198,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "To get started, you will first need to get used to programming in Pharo and GT. If you already have experience, you can skip this part. Otherwise you can start with [[A gentle introduction to Pharo Smalltalk]]. "
+										"string" : "To get started, you will first need to get used to programming in Pharo and GT. If you already have experience, you can skip this part. Otherwise, you can start with [[A gentle introduction to Pharo Smalltalk]]."
 									}
 								]
 							},
@@ -337,7 +337,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-19T14:27:31.415083+01:00"
+												"dateAndTimeString" : "2026-02-03T10:36:46.778053+01:00"
 											}
 										},
 										"uid" : {
@@ -347,7 +347,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "See [[Moldable Object]]  for details and examples. You may need a [[Moldable Data Wrapper]]if you are starting from existing data."
+										"string" : "See [[Moldable Object]] for details and examples. You may need a [[Moldable Data Wrapper]] if you are starting from existing data."
 									},
 									{
 										"__type" : "textSnippet",
@@ -374,7 +374,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2024-01-11T16:30:42.791602+01:00"
+												"dateAndTimeString" : "2026-02-03T10:36:46.832663+01:00"
 											}
 										},
 										"uid" : {
@@ -384,7 +384,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Once you have a live object, a good way to incrementally develop new behavior is to [[Contextual Playground]]."
+										"string" : "Once you have a live object, a good way to incrementally develop new behavior is to use the [[Contextual Playground]]."
 									}
 								]
 							},
@@ -565,7 +565,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-12-16T17:43:09.557226+01:00"
+															"dateAndTimeString" : "2026-02-03T10:36:46.918813+01:00"
 														}
 													},
 													"uid" : {
@@ -575,7 +575,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "Contextual views are used in moldable development to highlight the most interesting and important aspects of a domain model. Often these are discovered as the application evolves. See [[Contextual View]] to understand how repeated navigation can reveal the need for contextual views."
+													"string" : "Contextual views are used in Moldable Development to highlight the most interesting and important aspects of a domain model. Often, these are discovered as the application evolves. See [[Contextual View]] to understand how repeated navigation can reveal the need for contextual views."
 												},
 												{
 													"__type" : "textSnippet",
@@ -602,7 +602,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T13:42:05.746658+02:00"
+															"dateAndTimeString" : "2026-02-03T10:36:46.948226+01:00"
 														}
 													},
 													"uid" : {
@@ -612,7 +612,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "Don't forget, you can always Secondary-click on the heading of an Inspector view to inspect its source code. "
+													"string" : "Don't forget, you can always secondary-click on the heading of an Inspector view to inspect its source code."
 												},
 												{
 													"__type" : "textSnippet",
@@ -785,7 +785,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T13:49:18.19146+02:00"
+															"dateAndTimeString" : "2026-02-03T10:36:46.949+01:00"
 														}
 													},
 													"uid" : {
@@ -795,7 +795,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "For example, if we inspect the image directory, we see four buttons to browse the class, inspect the object, open the directory in the OS, or to search. Each of these is a gtAction. Secondary click on each ofthem to see the source code. (The simplest one is the third, to “Open in OS”.)"
+													"string" : "For example, if we inspect the image directory, we see four buttons to browse the class, inspect the object, open the directory in the OS, or to search. Each of these is a gtAction. Secondary-click on each of them to see the source code. (The simplest one is the third, to “Open in OS”.)"
 												},
 												{
 													"__type" : "elementSnippet",
@@ -859,7 +859,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-12-16T17:43:16.514603+01:00"
+															"dateAndTimeString" : "2026-02-03T10:36:46.949833+01:00"
 														}
 													},
 													"uid" : {
@@ -869,7 +869,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "As with views, the need for contextual actions is usually revealed during development. See [[Contextual Action]]  for details."
+													"string" : "As with views, the need for contextual actions is usually revealed during development. See [[Contextual Action]] for details."
 												},
 												{
 													"__type" : "textSnippet",
@@ -896,7 +896,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T13:51:46.246107+02:00"
+															"dateAndTimeString" : "2026-02-03T10:36:46.973485+01:00"
 														}
 													},
 													"uid" : {
@@ -906,7 +906,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "Note that there are also variants to mold other tools, such as Lepiter pages or Coders. The buttons at the top of this page are defined by `<lePageAction>` pragmas. Secondary-click on them to inspect thier source code."
+													"string" : "Note that there are also variants for molding other tools, such as Lepiter pages or Coders. The buttons at the top of this page are defined by `<lePageAction>` pragmas. Secondary-click on them to inspect their source code."
 												},
 												{
 													"__type" : "textSnippet",
@@ -1079,7 +1079,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2023-08-05T14:01:25.793909+02:00"
+															"dateAndTimeString" : "2026-02-03T10:36:46.974222+01:00"
 														}
 													},
 													"uid" : {
@@ -1089,7 +1089,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "For example, if you inspect this page, by clicking on the “(i)” button, you will see a search button that will show two categories of results, for snippets matching the input, and pages in the same database with matching titles."
+													"string" : "For example, if you inspect this page by clicking the “(i)” button, you will see a search button that shows two categories of results: snippets matching the input and pages in the same database with matching titles."
 												},
 												{
 													"__type" : "elementSnippet",
@@ -1299,7 +1299,7 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-12-16T17:43:48.281713+01:00"
+															"dateAndTimeString" : "2026-02-03T10:36:46.989772+01:00"
 														}
 													},
 													"uid" : {
@@ -1309,7 +1309,7 @@
 													"paragraphStyle" : {
 														"__type" : "textStyle"
 													},
-													"string" : "There are numerous other ways to mold tools in GT. For example, contextual advices (defined with the `<gtADvice>` pragma) provide linting recommendations. Tools like the GtHome landing page and the debugger can be molded, with varying degrees of effort. "
+													"string" : "There are numerous other ways to mold tools in GT. For example, contextual advice (defined with the `<gtAdvice>` pragma) provide linting recommendations. Tools like the GtHome landing page and the debugger can be molded, with varying degrees of effort."
 												},
 												{
 													"__type" : "textSnippet",
@@ -1510,7 +1510,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-07-26T11:01:23.060382+02:00"
+						"dateAndTimeString" : "2026-02-03T10:36:46.659444+01:00"
 					}
 				},
 				"uid" : {
@@ -1520,7 +1520,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Getting started with Moldable Development"
+				"string" : "# Getting started with Moldable Development"
 			}
 		]
 	},
