@@ -497,7 +497,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-29T18:31:12.002154+02:00"
+									"dateAndTimeString" : "2026-02-03T13:05:06.514905+01:00"
 								}
 							},
 							"editEmail" : {
@@ -508,17 +508,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-03T10:45:16.250039+01:00"
+									"dateAndTimeString" : "2026-02-03T13:07:11.480504+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "5mXXpgS+AAAAAAAAAAAAAA=="
+								"uidString" : "L7oVcC4iRwmvDhUwHs7Z5w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Once we have a dedicated object, the inspector gets the opportunity to present contextual views. For example, the repositories list is described in {{gtMethod:GhOrganization>>#gtReposFor:}}."
+							"string" : "Once we have a dedicated object, the inspector gets the opportunity to present contextual views that answer questions we have about the domain. What we see below is an object [[Inspector]] view of the organization instance, decorated with a number of tiny, contextual tools. For example, we would like to know which repositories belong to the feenk organization, and we can see that in the first, *Repositories* view."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -585,7 +585,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-03T10:45:16.274751+01:00"
+									"dateAndTimeString" : "2026-02-03T13:08:05.192204+01:00"
 								}
 							},
 							"uid" : {
@@ -595,7 +595,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now, try exploring. For example, what happens when you double-click on a repository?\nNotice how you can navigate from the feenk *organization* to its *repositories*, and from there to individual *contributors*, their GitHub *events*, and *issues*."
+							"string" : "Now, try exploring. For example, what happens when you double-click on a repository?\nNotice how you can navigate from the feenk *organization* to its *repositories*, and from there to individual *contributors*, their GitHub *events*, and *issues*. Each of these entities is just a wrapper around data that has been dynamically retrieved from GitHub using its REST API."
 						}
 					]
 				},
@@ -634,7 +634,193 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:08:47.446581+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:45:23.85855+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "plTRZQSUQAaiXGiFnJb/uw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The process of wrapping data to create live, domain objects and then adding contextual tools to answer questions is called [[Moldable Development]]. The specific development practices can be understood as a number of [[Moldable Development patterns]]. In order to create these tiny, contextual tools, you need a [[Moldable Object]], such as a {{gtClass:name=GhOrganization}} instance. One way to create such a moldable object is to create a [[Moldable Data Wrapper]] around some existing, raw data, which is exactly what we have done here."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:12:24.291718+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:45:24.003761+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mB3DQLqDTIG8W524QwG4mw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Now, what about the tools? There are many interesting tools that you can create, but the most common kind within GT is a [[Contextual View]], such as the *Repositories* view above. We call the process *molding*, because we *mold* the object inspector to display a special view when we inspect a GitHub organization object, rather than just showing the default *Raw* view. Click above on the *Raw* view to see what that looks like. Looks familiar, right? That's pretty much what you see in a standard IDE when you inspect an object within a debugger. Instead we have molded the organization object so the inspector shows us more interesting views."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:16:04.087434+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:17:49.89201+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yNXgcA+2RGamgKmY/KX5xQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "How is a contextual view defined? It is just a method of the class {{gtClass:name=GhOrganization}} that contains a special pragma (or annotation), namely `<gtView>`. The *Repositories* view is defined in {{gtMethod:GhOrganization>>#gtReposFor:|expanded}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:18:08.376675+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:45:24.047254+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Nlzu4G1xQCecRpXU0KP4wA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "All view methods look pretty similar: there is a method named `gt*Something*For:` with `aView` as an argument. The method has the `<gtView>` pragma so the inspector will find it. Then we send a factory message to the view to create a particular kind of view, in this case a `columnedList`. See [[Inspector views]] for other examples. Then we give the view a *title*, namely `Repositories`, we give it a *priority*, so the inspector knows the order in which to show the views, and we have a bunch of further messages to configure the view. Here we just define the items and columns to display."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:22:08.801382+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:23:45.362509+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "oyCp9qJqSHSmBEu1afyoog=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "*NB:* You can always find the source code behind a view by secondary-clicking (*i.e.*, OPT- or ALT-clicking) on the view's name tab. Try it on the views above!"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -644,7 +830,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-19T16:06:15.743656+01:00"
+						"dateAndTimeString" : "2026-02-03T13:04:17.841047+01:00"
 					}
 				},
 				"editEmail" : {
@@ -655,17 +841,320 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-19T16:06:15.743656+01:00"
+						"dateAndTimeString" : "2026-02-03T13:24:01.423164+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Nlzu4G1xQCecRpXU0KP4wA=="
+					"uidString" : "2AFsSAMPSsWjW3CeELBosA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "# Creating contextual views"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:24:10.615856+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:45:24.087762+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "m/5I+vf6SwSuGZkcZPv/nw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The next most common contextual tools are contextual *actions* and *searches*.\nSelect one of the repositories above, for example, `gtoolkit`. You will see two additional buttons at the top right. If you hover over them, you will see their descriptions, *Open in web browser* and possibly *Go to repository*. (The latter won't be visible unless the repository is loaded in your image.) These buttons are examples of a [[Contextual Action]], an action that is only available in the specific context of the object of interest.\nTry the web browser button.\nNow secondary-click on the button to see its source code. Notice how similar it is to a contextual view: it consists of just a few lines of code, and it has a dedicated pragma, `<gtAction>` instead of `<gtView>`."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:25:26.695223+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:25:26.695223+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "GzgK13bWQpCnosZEGfCjDA=="
+							},
+							"exampleSelector" : "gtoolkitRepo",
+							"previewHeight" : 300,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "GhOrganizationExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : true,
+							"noCode" : true
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:35:41.699517+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:45:24.125328+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Xunfz0EsT36T8enmNG3tqw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In the organization object you will also find a search tool at the top right, with a magnifying glass icon 🔍. If you click on it, you can perform a [[Contextual Search]] restricted to repositories in the feenk organization. Try it."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:32:14.040473+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:32:14.040473+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kLqHStUFQDWQ4FKFjLXrLw=="
+							},
+							"exampleSelector" : "feenkcomOrganization",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "GhOrganizationExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : true,
+							"noCode" : true
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:36:20.39704+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:36:31.387992+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hYHo7KQuQ9WB0ZJ/Y+xuHw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The source code for this tool is defined in {{gtMethod:name=GhOrganization>>#gtSpotterForRepoNames:|expanded}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:36:47.364434+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:45:24.151555+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mhxByBdrRTSMkuOSXur2nQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Just like the other tools, it is a dedicated method of the organization class, and has a pragma, this time `<gtSearch>`. \n*NB:* if you secondary-click on the search button, you will find the code of the search action, not the code of the search itself. To get the latter, click on the search button first, then secondary-click on the *Repositories* section. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:42:44.450789+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:42:44.450789+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yuEx1O2GRXaBxKZZ8HWgwg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-03T13:23:53.356658+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-03T13:24:31.1578+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "PIYTaKnQSCy57GjipXfVEA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Other contextual tools"
 			}
 		]
 	},
