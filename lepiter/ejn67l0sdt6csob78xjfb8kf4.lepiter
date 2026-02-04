@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-16T10:30:22.696884+01:00"
+						"dateAndTimeString" : "2026-02-04T09:33:59.210851+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Starting is easy. We just ask you to stick with it for a few days to feel the effect."
+				"string" : "Getting started is easy. We just ask you to stick with it for a few days to feel the effect."
 			},
 			{
 				"__type" : "textSnippet",
@@ -50,119 +50,7 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-03-09T19:27:39.306833+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-10-14T23:14:51.875582+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "lLtbv07sDQCw/m0DC8M11A=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "Spend 30 minutes to go through: [[Getting started with GT in 7']], [[Inspecting objects with contextual views in 7']], [[Understanding Lepiter in 7']], [[How to find stuff in GT in 7']]."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-03-09T19:27:36.499932+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-01-18T15:59:56.106941+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "0/Awv07sDQCw9rrvC8M11A=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "Exploiting GT implies programming it. If you are not familiar with Pharo, go though [[A gentle introduction to Pharo Smalltalk]]."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-03-09T19:29:19.173423+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-03-09T19:29:33.161453+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "NTNpb7ydDQCgwCwfAmLsmg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "To put these to test, follow the example from [[Exploring the GitHub REST API in 7']]."
-									}
-								]
+								"items" : [ ]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -172,7 +60,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-03-09T18:15:54.279753+01:00"
+									"dateAndTimeString" : "2026-02-04T09:30:21.139078+01:00"
 								}
 							},
 							"editEmail" : {
@@ -183,17 +71,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-18T16:01:20.746199+01:00"
+									"dateAndTimeString" : "2026-02-04T09:33:59.432423+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "N9p+vk3sDQCj/BNnC8M11A=="
+								"uidString" : "yqJMGhaNSL26Y8peV2HRZw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The core distribution of GT contains thousands of contextual tools. They were created as engineering support for building GT itself. And they can be used to learn about GT faster. So, it's best to first learn how to exploit them and what's the underlying visual and interactive language:"
+							"string" : "The core distribution of GT contains thousands of contextual tools. They were created as engineering support for building GT itself, and they can help you learn about GT faster. So it is best to start with a tour and a tutorial.\nStart with the learning module, [[Learn the basics of Glamorous Toolkit]]. This will guide you through some introductory material, including short videos, a few case studies, and a step-by-step [[Tutorial: molding CSV data into an explainable system]]. This hands-on tutorial will show you how to apply moldable development in practice with a simple case study.\n\nThe learning module also includes some side roads. In particular, if you are not familiar with Pharo, you will go through [[A gentle introduction to Pharo Smalltalk]] and several follow-up tutorials."
 						}
 					]
 				},
@@ -216,7 +104,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-03-09T19:27:02.478991+01:00"
+						"dateAndTimeString" : "2026-02-04T09:33:59.351935+01:00"
 					}
 				},
 				"uid" : {
@@ -226,7 +114,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Step 1: Learn how to learn"
+				"string" : "# Step 1: Learn the basics"
 			},
 			{
 				"__type" : "textSnippet",
@@ -258,7 +146,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-18T16:02:29.140723+01:00"
+									"dateAndTimeString" : "2026-02-04T09:33:59.840965+01:00"
 								}
 							},
 							"uid" : {
@@ -268,7 +156,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Once you're familiar with the environment, pick a practical scenario you have an interest in. Ideally, pick one that requires only analysis and no editing because they are typically less demanding and you can better focus on learning the environment. You can deal with editing at a later stage."
+							"string" : "Once you're familiar with the environment, pick a practical scenario you are interested in. Ideally, pick one that requires only analysis and no editing, because those are typically less demanding and let you focus on learning the environment. You can deal with editing at a later stage."
 						},
 						{
 							"__type" : "textSnippet",
@@ -370,7 +258,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-15T09:09:43.689178+02:00"
+									"dateAndTimeString" : "2026-02-04T09:33:59.922677+01:00"
 								}
 							},
 							"uid" : {
@@ -380,7 +268,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "What kind of scenarios? "
+							"string" : "What kind of scenarios?"
 						}
 					]
 				},
@@ -403,7 +291,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-14T23:10:42.329868+02:00"
+						"dateAndTimeString" : "2026-02-04T09:33:59.532583+01:00"
 					}
 				},
 				"uid" : {
@@ -413,7 +301,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Step 2: Start with a \"reading\" problem you care about"
+				"string" : "# Step 2: Start with a “reading” problem you care about"
 			},
 			{
 				"__type" : "textSnippet",
@@ -445,7 +333,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-15T09:11:26.038032+02:00"
+									"dateAndTimeString" : "2026-02-04T09:34:00.057558+01:00"
 								}
 							},
 							"uid" : {
@@ -455,7 +343,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Learning is more fun together with others. More productive, too. [[Engage with the community and contribute]]."
+							"string" : "Learning is more fun together with others—more productive, too. [[Engage with the community and contribute]]."
 						}
 					]
 				},
@@ -478,7 +366,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-15T09:10:04.114823+02:00"
+						"dateAndTimeString" : "2026-02-04T09:33:59.923998+01:00"
 					}
 				},
 				"uid" : {
@@ -488,7 +376,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Step 3: Engage with the community"
+				"string" : "# Step 3: Engage with the community"
 			},
 			{
 				"__type" : "textSnippet",
@@ -520,7 +408,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-14T23:17:22.343485+02:00"
+									"dateAndTimeString" : "2026-02-04T09:34:00.158714+01:00"
 								}
 							},
 							"uid" : {
@@ -530,7 +418,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "It's useful to get comfortable working with versioning your code. A good rule of thumb is to start with a fresh image every day and load your code in it. Take a look at [[How to work with GitHub]] to setup the details."
+							"string" : "It is useful to get comfortable working with version control. A good rule of thumb is to start with a fresh image every day and load your code into it. Take a look at [[How to work with GitHub]] to set up the details."
 						},
 						{
 							"__type" : "textSnippet",
@@ -590,7 +478,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-23T21:06:25.625632+01:00"
+						"dateAndTimeString" : "2026-02-04T09:34:00.157778+01:00"
 					}
 				},
 				"uid" : {
@@ -600,7 +488,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Practical details"
+				"string" : "# Practical details"
 			}
 		]
 	},
