@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-25T13:06:05.256833+02:00"
+						"dateAndTimeString" : "2026-02-06T14:28:03.864965+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "QwAEaErTDQCoyv1qCwzy0g=="
 				},
-				"code" : "conversations := {GtLlmMessagesGroup\r\t\t\twithAll: {GtLlmUserMessage new content: 'Hello GPT!'.\r\t\t\t\t\tGtLlmAssistantMessage new content: 'OMG HI! I’m so excited to talk to you!'}.\r\t\tGtLlmMessagesGroup\r\t\t\twithAll: {GtLlmUserMessage new content: 'Hello GPT! How are you today?'.\r\t\t\t\t\tGtLlmAssistantMessage new\r\t\t\t\t\t\tcontent: 'SO SO GOOD! What a beautiful day it is!'}.\r\t\tGtLlmMessagesGroup\r\t\t\twithAll: {GtLlmUserMessage new content: 'Hello GPT! Can I ask you a question?'.\r\t\t\t\t\tGtLlmAssistantMessage new\r\t\t\t\t\t\tcontent: 'OF COURSE! I love answering questions and being helpful!'}.\r\t\tGtLlmMessagesGroup\r\t\t\twithAll: {GtLlmUserMessage new\r\t\t\t\t\t\tcontent: 'Hello GPT! Can you tell me about the weather today?'.\r\t\t\t\t\tGtLlmAssistantMessage new\r\t\t\t\t\t\tcontent: 'OHHHH, I’M SO SORRY! I don’t actually have access to this sort of information, I’m just a language model.'}}.\r\t\t\t\t\t\t\rconversations := 10 timesCollect: [ conversations atRandom ]"
+				"code" : "conversations := {\r\t\tGtLMessagesGroup withAll: {\r\t\t\tGtLOpenAIUserMessage new markdown: 'Hello GPT!'.\r\t\t\tGtLOpenAIAssistantMessage new\r\t\t\t\t\t\trawData: {#content -> {{#text -> 'OMG HI! I’m so excited to talk to you!'} asDictionary}} asDictionary}.\r\t\tGtLMessagesGroup withAll: {\r\t\t\tGtLOpenAIUserMessage new markdown: 'Hello GPT! How are you today?'.\r\t\t\tGtLOpenAIAssistantMessage new\r\t\t\t\t\t\trawData: {#content -> {{#text -> 'SO SO GOOD! What a beautiful day it is!'} asDictionary} } asDictionary}.\r\t\tGtLMessagesGroup withAll: {\r\t\t\tGtLOpenAIUserMessage new markdown: 'Hello GPT! Can I ask you a question?'.\r\t\t\tGtLOpenAIAssistantMessage new\r\t\t\t\t\t\trawData: {#content -> {{#text -> 'OF COURSE! I love answering questions and being helpful!'}\r\t\t\t\t\t\t\t\tasDictionary}} asDictionary}.\r\t\tGtLMessagesGroup withAll: {\r\t\t\tGtLOpenAIUserMessage new\r\t\t\t\t\t\tmarkdown: 'Hello GPT! Can you tell me about the weather today?'.\r\t\t\tGtLOpenAIAssistantMessage new\r\t\t\t\t\t\trawData: {#content\r\t\t\t\t\t\t\t\t\t-> {{#text -> 'OHHHH, I’M SO SORRY! I don’t actually have access to this sort of information, I’m just a language model.'}\r\t\t\t\t\t\t\t\tasDictionary}} asDictionary}\r\t}.\rconversations := 10 timesCollect: [ conversations atRandom ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-25T12:12:22.351418+02:00"
+						"dateAndTimeString" : "2026-02-06T14:14:58.782945+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "4EOnfkrTDQCwXi7JCwzy0g=="
 				},
-				"code" : "file := GtLlmFineTuningFile new\r\t\tname: 'fine-tuning.jsonl';\r\t\tconversations: conversations"
+				"code" : "file := GtLFineTuningFile new\r\t\tname: 'fine-tuning.jsonl';\r\t\tconversations: conversations"
 			},
 			{
 				"__type" : "textSnippet",
@@ -316,14 +316,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:07:00.04708+01:00"
+						"dateAndTimeString" : "2026-02-06T14:02:31.760271+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "J+Uhx0rTDQC4th+gCwzy0g=="
 				},
-				"code" : "client := GtOpenAIClient withApiKeyFromFile.\r\ropenAiFile := client uploadFile: file withPurpose: 'fine-tune'.\r\rfineTuningJob := client createFineTuningJobOnModel: file model withFile: openAiFile id"
+				"code" : "client := GtLOpenAIClient withApiKeyFromFile.\r\ropenAiFile := client uploadFile: file withPurpose: 'fine-tune'.\r\rfineTuningJob := client createFineTuningJobOnModel: file model withFile: openAiFile id"
 			},
 			{
 				"__type" : "textSnippet",

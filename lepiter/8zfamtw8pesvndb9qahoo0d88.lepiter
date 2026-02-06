@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T17:04:12.863867+01:00"
+						"dateAndTimeString" : "2026-02-06T13:44:26.59646+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "All providers (Ollama, Anthropic, Gemini, and OpenAI) have vision capabilities [1]. As such,  {{gtPage:Handling chat instructions|label=chats}} chats work with images through the UI or programmatically."
+				"string" : "Some LLM providers have vision capabilities. As such,  {{gtPage:Handling chat instructions|label=chats}} can work with images through the UI or programmatically."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T17:04:39.353309+01:00"
+						"dateAndTimeString" : "2026-02-06T13:44:51.931938+01:00"
 					}
 				},
 				"uid" : {
@@ -113,13 +113,48 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In the following, we illustrate attaching a screenshot of GT programmatically for illustration purposes."
+				"string" : "The same can be accomplished programmatically. In the following, we illustrate attaching a screenshot of GT programmatically for illustration purposes."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-05-13T15:46:03.078699+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-13T14:48:16.269151+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qS3zY2bxDQCHBjJUDD/Alw=="
+							},
+							"code" : "chat := GtLChat new"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -153,44 +188,45 @@
 				"string" : "First, we create a chat using the default provider:"
 			},
 			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:46:03.078699+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T14:48:16.269151+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qS3zY2bxDQCHBjJUDD/Alw=="
-				},
-				"code" : "chat := GtLChat new"
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-05-13T15:49:52.72469+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-13T14:48:26.131742+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "LEujcWbxDQCJGHujDD/Alw=="
+							},
+							"code" : "fileReference := BlExporter png\r\t\telement: (GtWorldElement allInstances detect: [:aWorldElement | aWorldElement space isFocused]);\r\t\texport"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -224,44 +260,45 @@
 				"string" : "We then create a screenshot of the current window of Glamorous Toolkit."
 			},
 			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:49:52.72469+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T14:48:26.131742+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "LEujcWbxDQCJGHujDD/Alw=="
-				},
-				"code" : "fileReference := BlExporter png\r\t\telement: (GtWorldElement allInstances detect: [:aWorldElement | aWorldElement space isFocused]);\r\t\texport"
-			},
-			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-05-13T15:55:25.121765+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-05-13T15:56:11.016112+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "90NzhWbxDQCLFBV4DD/Alw=="
+							},
+							"code" : "chat sendFiles: {fileReference} withMessage: 'What do you see?'"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -293,77 +330,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Finally, we can send this screenshot to the chat."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:55:25.121765+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:56:11.016112+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "90NzhWbxDQCLFBV4DD/Alw=="
-				},
-				"code" : "chat sendFiles: {fileReference} withMessage: 'What do you see?'"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:40:28.071888+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-13T15:41:09.284605+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "al/7T2bxDQC2rsNADD/Alw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[1] Not all models provided by Ollama are equipped with Vision capabilities, but models such as `llava` or `gemma3` come with such capabilities."
 			}
 		]
 	},
@@ -386,12 +352,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-05-26T21:22:24.839488+02:00"
+			"dateAndTimeString" : "2026-02-06T13:45:29.593287+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Working with images and LLMs"
+		"title" : "Sending images to LLMs"
 	},
 	"uid" : {
 		"__type" : "uuid",
