@@ -60,7 +60,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-04T09:30:21.139078+01:00"
+									"dateAndTimeString" : "2026-02-06T14:46:42.359933+01:00"
 								}
 							},
 							"editEmail" : {
@@ -71,17 +71,54 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-04T09:33:59.432423+01:00"
+									"dateAndTimeString" : "2026-02-06T14:46:42.359933+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "yqJMGhaNSL26Y8peV2HRZw=="
+								"uidString" : "zZcDXEA5RaGKlh63fAyFsw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The core distribution of GT contains thousands of contextual tools. They were created as engineering support for building GT itself, and they can help you learn about GT faster. So it is best to start with a tour and a tutorial.\nStart with the learning module, [[Learn the basics of Glamorous Toolkit]]. This will guide you through some introductory material, including short videos, a few case studies, and a step-by-step [[Tutorial: molding CSV data into an explainable system]]. This hands-on tutorial will show you how to apply moldable development in practice with a simple case study.\n\nThe learning module also includes some side roads. In particular, if you are not familiar with Pharo, you will go through [[A gentle introduction to Pharo Smalltalk]] and several follow-up tutorials."
+							"string" : "The core distribution of GT contains thousands of contextual tools. They were created as engineering support for building GT itself, and they can help you learn about GT faster. So it is best to start with a tour and a tutorial."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-06T14:48:57.983668+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-06T14:48:57.983668+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "dF8DQ+bCQyWZ8lf10sfxyA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Learn the basics of Glamorous Toolkit]] guides you through introductory material, including short videos, a few case studies, and a hand-on [[Tutorial: molding CSV data into an explainable system]]."
 						}
 					]
 				},
@@ -408,7 +445,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-04T09:34:00.158714+01:00"
+									"dateAndTimeString" : "2026-02-06T14:46:32.864212+01:00"
 								}
 							},
 							"uid" : {
@@ -418,7 +455,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "It is useful to get comfortable working with version control. A good rule of thumb is to start with a fresh image every day and load your code into it. Take a look at [[How to work with GitHub]] to set up the details."
+							"string" : "A good rule of thumb is to start with a fresh image every day and load your code from Git into it. Take a look at [[How to work with GitHub]] to set up the details."
 						},
 						{
 							"__type" : "textSnippet",
@@ -445,7 +482,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:48:12.529243+01:00"
+									"dateAndTimeString" : "2026-02-06T14:46:20.584393+01:00"
 								}
 							},
 							"uid" : {
@@ -455,7 +492,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Glamorous Toolkit comes with deep LLM integration. See how to set it up in [[How to work with GenAI / LLM]] and then explore examples at [[Playing with LLMs]]."
+							"string" : "Glamorous Toolkit comes with deep LLM integration. [[How to setup LLM connections]]."
 						}
 					]
 				},
