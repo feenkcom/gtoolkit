@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T14:54:44.31232+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.301757+01:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "As explained in more detail on the page [[What is Glamorous Toolkit?]], GT is a [[Moldable Development]] Environment for creating inexpensive *contextual tools* to make software systems explainable. But here we will focus just on technical aspects of GT to help you understand what tools make up GT, and how to navigate its UI."
+							"string" : "As explained in more detail on the page [[What is Glamorous Toolkit?]], GT is a [[Moldable Development]] environment for creating inexpensive *contextual tools* that make software systems explainable. Here we focus on the technical aspects of GT to help you understand what tools make up GT and how to navigate its UI."
 						},
 						{
 							"__type" : "textSnippet",
@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T14:59:16.424051+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.334423+01:00"
 								}
 							},
 							"uid" : {
@@ -118,7 +118,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Technically, GT is a [[Pharo]] Smalltalk environment of live objects. Everything you see and everything you interact with is an *object*. Programming means making small, incremental changes (adding or changing classes or methods) to this live system. GT uses these live objects to model and interact with software systems of interest, whether they are implemented directly in Smalltalk, or in any other language (such as Python, Java or Rust)."
+							"string" : "Technically, GT is a [[Pharo]] Smalltalk environment of live objects. Everything you see and interact with is an *object*. Programming means making small, incremental changes (adding or changing classes or methods) to this live system. GT uses these live objects to model and interact with software systems of interest, whether they are implemented directly in Smalltalk or in any other language (such as Python, Java, or Rust)."
 						}
 					]
 				},
@@ -141,7 +141,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-06T14:51:06.100494+01:00"
+						"dateAndTimeString" : "2026-02-03T09:56:16.170167+01:00"
 					}
 				},
 				"uid" : {
@@ -151,7 +151,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# What is Glamorous Tookit?"
+				"string" : "# What is Glamorous Toolkit?"
 			},
 			{
 				"__type" : "textSnippet",
@@ -183,7 +183,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T16:21:00.62827+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.459055+01:00"
 								}
 							},
 							"uid" : {
@@ -193,7 +193,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Tabs** — You probably arrived at this page by clicking on some of the links in the [[Glamorous Toolkit Book]] home card visible on the initial GT World screen. At the top left of *this* screen you can see a number of *tabs*. The currently active tab is probably labeled `A quick tour of GT` (the title of this page). There is also (at least) all the way to the left a tab labeled `gt`, showing you the home screen.\n*Try it:*  Click on the `gt` tab and back again to this tab.\nIf you have multiple open tabs, you can drag their positions around. You can *primary*-click on a tab to get a menu of actions (close tabs to left or right etc.). There are also buttons on the tab to open the tab in a new window or  to close it."
+							"string" : "**Tabs** — You probably arrived at this page by clicking on some of the links in the [[Glamorous Toolkit Book]] home card visible on the initial GT World screen. At the top left of *this* screen you can see a number of *tabs*. The currently active tab is probably labeled `A quick tour of GT` (the title of this page). There is also, at least on the far left, a tab labeled `gt`, showing you the home screen.\n*Try it:* Click on the `gt` tab and back again to this tab.\nIf you have multiple open tabs, you can drag their positions around. You can *primary*-click on a tab to get a menu of actions (close tabs to left or right, etc.). There are also buttons on the tab to open it in a new window or close it."
 						},
 						{
 							"__type" : "textSnippet",
@@ -220,7 +220,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-07T08:58:59.964762+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.476146+01:00"
 								}
 							},
 							"uid" : {
@@ -230,7 +230,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Spotter** — to the far right at the top of the screen there are three buttons. The first is a *Search* button to search globally within GT for pages, tools, classes, packages, and many other entities. \n*Try it:* Click on the Search button and just start typing to see the list of partial results. If you hit *return*, then you will open a new tab with the result. Then come back to this tab.\n*NB:* you will find Spotter search buttons elsewhere in GT, but very often these other tools will show you *specialized* searches restricted to a particular context, for example, just the pages of a particular knowledge base."
+							"string" : "**Spotter** — At the far right at the top of the screen there are three buttons. The first is a *Search* button to search globally within GT for pages, tools, classes, packages, and many other entities. \n*Try it:* Click on the Search button and just start typing to see the list of partial results. Press *Return* to open a new tab with the result, then come back to this tab.\n*Note:* You will find Spotter search buttons elsewhere in GT, but these other tools often show you *specialized* searches restricted to a particular context, for example, just the pages of a particular knowledge base."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -297,7 +297,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T15:35:35.120609+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.560812+01:00"
 								}
 							},
 							"uid" : {
@@ -307,7 +307,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Lepiter knowledge base status** — Next to the search button there is a little colored circle that may be green, orange or red. It provides you  information about the status of the various knowledge bases that may be loaded into GT. By default you get the GT Book — a knowledge base ofdedicated notebook pages about GT itself — and your “Local knowledge base” — a collection of pages that you write, and are stored locally on your machine. There may also be other knowledge bases dedicated to projects that you create or load. This button keeps you informed about whether changes have been safely stored to disk."
+							"string" : "**Lepiter knowledge base status** — Next to the search button there is a little colored circle that may be green, orange, or red. It provides information about the status of the various knowledge bases that may be loaded into GT. By default you get the GT Book — a knowledge base of dedicated notebook pages about GT itself — and your “Local knowledge base” — a collection of pages that you write and that are stored locally on your machine. There may also be other knowledge bases dedicated to projects that you create or load. This button keeps you informed about whether changes have been safely stored to disk."
 						},
 						{
 							"__type" : "textSnippet",
@@ -334,7 +334,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T15:50:14.293069+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.576251+01:00"
 								}
 							},
 							"uid" : {
@@ -344,7 +344,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Menu** — Finally there is a hamburger menu providing access to several tools within GT as well as buttons to *Save*, *Rename*, and *Quit* the environment. More details follow below."
+							"string" : "**Menu** — Finally, a hamburger menu provides access to several tools within GT as well as buttons to *Save*, *Rename*, and *Quit* the environment. More details follow below."
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -449,7 +449,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-07T09:25:45.790882+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.577444+01:00"
 								}
 							},
 							"uid" : {
@@ -459,7 +459,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We said that GT is an environment of *live objects*. This  means that *programming* consists in making changes to a *live system*: incremental changes to classes or method will affect the behavior of the existing objects.\nBut what happens to these objects when we quit the environment? The short answer is that all these objects are stored in an *image* file containing a frozen snapshot of everything in the live system. When you press the *Save* button, you overwrite the image with a new snapshot. On the other hand, if you *Quit*, then any changes to objects since the last save are lost. "
+							"string" : "We said that GT is an environment of *live objects*. This means that *programming* consists of making changes to a *live system*: incremental changes to classes or methods will affect the behavior of the existing objects.\nBut what happens to these objects when we quit the environment? The short answer is that all these objects are stored in an *image* file containing a frozen snapshot of everything in the live system. When you press the *Save* button, you overwrite the image with a new snapshot. On the other hand, if you *Quit*, then any changes to objects since the last save are lost."
 						},
 						{
 							"__type" : "textSnippet",
@@ -597,7 +597,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-06T16:09:53.980983+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.60213+01:00"
 								}
 							},
 							"uid" : {
@@ -607,7 +607,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*Pro tip:* If you plan to develop a project with GT, don't rely on saved images. Instead put your project under version control using GitHub, and always start work with a fresh image into which you load your poejct. See [[How to work with GitHub]]."
+							"string" : "*Pro tip:* If you plan to develop a project with GT, do not rely on saved images. Instead put your project under version control using GitHub, and always start work with a fresh image into which you load your project. See [[How to work with GitHub]]."
 						}
 					]
 				},
@@ -861,7 +861,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-07T10:51:49.067677+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.604814+01:00"
 								}
 							},
 							"uid" : {
@@ -871,7 +871,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The next GT menu entry is *Knowledge bases*. It opens a view of all the currently loaded [[Lepiter]] knowledge bases in your GT environment. By defaultyou get two of these:\n• [[Glamorous Toolkit Book]] (which includes this page) is a knowledge base dedicated to documentation about GT itself.\n• `Documents/lepiter/default` is your *Local knowledge base* which you can use at your pleasure to keep notes, start experiments, track your activities, or anything you like.\nAdditional knowledge bases may be associated with other projects. Very often a GT GitHub project will have its own knowledge base to track development acivities or to store documentation."
+							"string" : "The next GT menu entry is *Knowledge bases*. It opens a view of all the currently loaded [[Lepiter]] knowledge bases in your GT environment. By default you get two of these:\n• [[Glamorous Toolkit Book]] (which includes this page) is a knowledge base dedicated to documentation about GT itself.\n• `Documents/lepiter/default` is your *Local knowledge base* which you can use at your pleasure to keep notes, start experiments, track your activities, or anything you like.\nAdditional knowledge bases may be associated with other projects. Very often a GT GitHub project will have its own knowledge base to track development activities or to store documentation."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1164,7 +1164,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-07T13:45:39.965556+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.627593+01:00"
 								}
 							},
 							"uid" : {
@@ -1174,7 +1174,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "*Pro tip:* In practice, coding in GT tends to happens in the context of live objects using Inspector playgrounds rather than using the Coder, which only provides you static views of code divorced from live objects. If you find yourself writing code mostly in the Coder, you should read about [[Moldable Development patterns]], and in particular about [[Contextual Playground]]."
+							"string" : "*Pro tip:* In practice, coding in GT tends to happen in the context of live objects using Inspector playgrounds rather than using the Coder, which only provides static views of code divorced from live objects. If you find yourself writing code mostly in the Coder, you should read about [[Moldable Development patterns]], and in particular about [[Contextual Playground]]."
 						}
 					]
 				},
@@ -1239,7 +1239,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-07T14:10:31.417862+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.628424+01:00"
 								}
 							},
 							"uid" : {
@@ -1249,7 +1249,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The *Git* tool allows you manage git repositories. At the left you will see a list of loaded repositories, and at the right you can manage an individual repo.\n*NB:* In the standard release of GT, there are no git repositories loaded by default, whereas a developer build contains all the GT repositories pre-loaded.\nTo clone a remote repo or to load a local one, use the `+` (*Add repository*) button. There are also buttons to *fetch*, *search* and *refresh* the list of  repos."
+							"string" : "The *Git* tool allows you to manage git repositories. At the left you will see a list of loaded repositories, and at the right you can manage an individual repo.\n*NB:* In the standard release of GT, there are no git repositories loaded by default, whereas a developer build contains all the GT repositories pre-loaded.\nTo clone a remote repo or to load a local one, use the `+` (*Add repository*) button. There are also buttons to *fetch*, *search* and *refresh* the list of repos."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1614,7 +1614,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-07T14:37:48.186044+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.65452+01:00"
 								}
 							},
 							"uid" : {
@@ -1624,7 +1624,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The *Monitor* tool provides various views of the running processes within GT. There are several buttons at the top right, in particular one to start a *Profiler* on the system\nThe Monitor can be especially useful for track down and killing zombie processes that may be slowing down GT. See [[What to do when GT slows to a crawl?]]"
+							"string" : "The *Monitor* tool provides various views of the running processes within GT. There are several buttons at the top right, in particular one to start a *Profiler* on the system.\nThe Monitor can be especially useful for tracking down and killing zombie processes that may be slowing down GT. See [[What to do when GT slows to a crawl?]]"
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -1952,7 +1952,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T16:55:55.294862+01:00"
+									"dateAndTimeString" : "2026-02-03T09:56:16.657721+01:00"
 								}
 							},
 							"uid" : {
@@ -1962,7 +1962,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We have taken a quick tour of the the top-level interface of GT, and seen several of the tools that can be started up in the environment, but this barely gives a hint of how GT can be used effectively to make systems explainable. For the details, go back to [[Learn the basics of Glamorous Toolkit]]."
+							"string" : "We have taken a quick tour of the top-level interface of GT and seen several of the tools that can be started in the environment, but this barely gives a hint of how GT can be used effectively to make systems explainable. For the details, go back to [[Learn the basics of Glamorous Toolkit]]."
 						}
 					]
 				},

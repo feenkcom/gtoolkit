@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-06T21:32:58.905333+02:00"
+						"dateAndTimeString" : "2026-02-03T10:25:25.389228+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Pre-built distribution"
+				"string" : "# Pre-built distribution"
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-06T21:48:11.221529+02:00"
+						"dateAndTimeString" : "2026-02-03T10:25:25.508336+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The easiest way to install Glamorous Toolkit is to download a pre-built distribution for a target Operating System from [gtoolkit.com/download](https://gtoolkit.com/download/)."
+				"string" : "The easiest way to install Glamorous Toolkit is to download a pre-built distribution for a target operating system from [gtoolkit.com/download](https://gtoolkit.com/download/)."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-06T21:33:16.130276+02:00"
+						"dateAndTimeString" : "2026-02-03T10:25:25.51028+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#Building from sources for local development"
+				"string" : "# Building from source for local development"
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-19T12:22:38.142313+01:00"
+						"dateAndTimeString" : "2026-02-03T10:25:25.572+01:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit is developed using [Trunk Based Development](https://trunkbaseddevelopment.com/). The root `gtoolkit` repository is hosted on [github.com/feenkcom/gtoolkit](https://github.com/feenkcom/gtoolkit) with the main trunk branch called `main` and release branch called `release`. Developers of Glamorous Toolkit don't commit to the `release` branch, instead they directly stream small commits into the trunk (`main`). Therefore, to develop Glamorous Toolkit team members build it from the latest sources, or as they call it — the bleeding edge."
+				"string" : "Glamorous Toolkit is developed using [Trunk Based Development](https://trunkbaseddevelopment.com/). The root `gtoolkit` repository is hosted on [github.com/feenkcom/gtoolkit](https://github.com/feenkcom/gtoolkit) with the main trunk branch called `main` and the release branch called `release`. Developers of Glamorous Toolkit do not commit to the `release` branch; instead, they stream small commits directly into the trunk (`main`). Therefore, team members build Glamorous Toolkit from the latest sources, as they call it—the bleeding edge."
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-06T21:43:04.863991+02:00"
+						"dateAndTimeString" : "2026-02-03T10:25:25.637201+01:00"
 					}
 				},
 				"uid" : {
@@ -187,7 +187,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Installer"
+				"string" : "## Installer"
 			},
 			{
 				"__type" : "textSnippet",
@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-19T12:23:30.362053+01:00"
+						"dateAndTimeString" : "2026-02-03T10:25:25.639089+01:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To orchestrate the build process and make it cross-platform, they use a small tool written in [[Rust]] called [gt-installer](https://github.com/feenkcom/gtoolkit-maestro-rs). See [[How to use gt-installer]] for a detailed command reference."
+				"string" : "To orchestrate the build process and make it cross-platform, the team uses a small tool written in [[Rust]] called [gt-installer](https://github.com/feenkcom/gtoolkit-maestro-rs). See [[How to use gt-installer]] for a detailed command reference."
 			},
 			{
 				"__type" : "textSnippet",
@@ -251,7 +251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-06T21:49:26.12178+02:00"
+						"dateAndTimeString" : "2026-02-03T10:25:25.737596+01:00"
 					}
 				},
 				"uid" : {
@@ -261,7 +261,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The easiest way to create a local build ready for development would be to execute the following command:"
+				"string" : "The easiest way to create a local build ready for development is to run the following command:"
 			},
 			{
 				"__type" : "blockQuoteSnippet",
@@ -322,7 +322,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2021-09-06T21:53:56.002331+02:00"
+						"dateAndTimeString" : "2026-02-03T10:25:25.738166+01:00"
 					}
 				},
 				"uid" : {
@@ -332,7 +332,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The above mentioned command provides developers with the exact commands to execute to start Glamorous Toolkit from the terminal."
+				"string" : "The above-mentioned command provides developers with the exact commands to start Glamorous Toolkit from the terminal."
 			}
 		]
 	},

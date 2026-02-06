@@ -5,7 +5,7 @@
 		"__type" : "snippets",
 		"items" : [
 			{
-				"__type" : "commentSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-16T10:42:04.987573+01:00"
+						"dateAndTimeString" : "2026-02-03T14:26:25.090754+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,15 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-19T15:41:05.282109+01:00"
+						"dateAndTimeString" : "2026-02-03T15:35:19.60693+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "OjzeikvlS+68yQKKlEq1oQ=="
+					"uidString" : "x+HNZJRuTlSGCx5evQyQ0A=="
 				},
-				"string" : "This is an initial DRAFT of the first learning module in a self-learning curriculum for moldable development.\n\nfeenkcom/gtoolkit#4831",
-				"isHidden" : false
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This is the first of several *learning modules*, as part of [[A Moldable Development Curriculum]], designed to help newcomers to Glamorous Toolkit navigate the GT knowledge base and use the environment effectively to solve real problems."
 			},
 			{
 				"__type" : "textSnippet",
@@ -64,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T18:34:00.622452+01:00"
+						"dateAndTimeString" : "2026-02-03T14:26:25.102646+01:00"
 					}
 				},
 				"uid" : {
@@ -74,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is the first of several *learning modules* to help newcomers to Glamorous Toolkit find their way through the GT knowledge base and learn how to use the environment effectively to solve real problems.\n\nEach learning module consists of:\n- *introductory material* to read or watch\n- *case studies* to explore\n- *step-by-step tutorials* to follow\n- *exercises* to perform on your own\n- *self-assessment quizzes* to check what you've learned."
+				"string" : "Each learning module combines:\n- *introductory material* to read or watch\n- *case studies* to explore\n- *step-by-step tutorials* to follow\n- *exercises* to perform on your own\n- *self-assessment quizzes* to check what you've learned."
 			},
 			{
 				"__type" : "textSnippet",
@@ -106,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T18:34:00.716536+01:00"
+									"dateAndTimeString" : "2026-02-03T14:24:42.977398+01:00"
 								}
 							},
 							"uid" : {
@@ -116,7 +118,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- What is Glamorous Toolkit?\n- Using a simple case study, how can GT be used to create an explainable systems\n- What is *moldable development*, and how does it support the creation of explainable systems\n- How to use Lepiter notebooks to create *live documentation* for your exploration"
+							"string" : "- What is Glamorous Toolkit?\n- Using a simple case study, how can GT be used to create explainable systems?\n- What is *moldable development*, and how does it support the creation of explainable systems?\n- How do you use Lepiter notebooks to create *live documentation* for your exploration?"
 						}
 					]
 				},
@@ -181,7 +183,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-03T10:58:49.551776+01:00"
+									"dateAndTimeString" : "2026-02-03T09:45:56.906683+01:00"
 								}
 							},
 							"uid" : {
@@ -191,7 +193,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- How to navigate the GT book\n- How to engage with the GT community\n- How to work with Smalltalk"
+							"string" : "- How to navigate the GT book.\n- How to engage with the GT community.\n- How to work with Smalltalk (Pharo basics)."
 						}
 					]
 				},
@@ -214,7 +216,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-09T11:03:20.420276+01:00"
+						"dateAndTimeString" : "2026-02-03T14:26:40.621862+01:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +226,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "*You may take the following side roads:*"
+				"string" : "*You may like to take the following side roads:*"
 			},
 			{
 				"__type" : "textSnippet",
@@ -251,7 +253,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-19T15:40:49.671061+01:00"
+						"dateAndTimeString" : "2026-02-03T09:45:56.948291+01:00"
 					}
 				},
 				"uid" : {
@@ -261,7 +263,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "*Caveat:* see [[Pages to be written]] for a summary of pages that are still needed to complete this module."
+				"string" : "*Caveat:* See [[Pages to be written]] for a list of pages still needed to complete this module."
 			},
 			{
 				"__type" : "textSnippet",
@@ -293,7 +295,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T18:34:00.77766+01:00"
+									"dateAndTimeString" : "2026-02-03T09:45:56.950155+01:00"
 								}
 							},
 							"uid" : {
@@ -303,7 +305,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "In a nutshell, *Glamorous Toolkit* (GT) is an *environment for making systems explainable* through the creation of *contextual tools*. Every system is different, so a “contextual tool” helps you to answer specific questions about a software system in the context of the problems you need to address.\nGT supports the inexpensive creation of such tools:\n\n- by adopting a *moldable development methodology* expressed as a set of development *patterns*\n- by providing a *live, open-source environment* supporting this methodology (*i.e.,* the “toolkit”)"
+							"string" : "In a nutshell, *Glamorous Toolkit* (GT) is an *environment for making systems explainable* through the creation of *contextual tools*. Every system is different, so a contextual tool helps you answer specific questions about a software system in the context of the problems you need to address.\n\nGT supports the inexpensive creation of such tools:\n- by adopting a *moldable development methodology* expressed as a set of development *patterns*\n- by providing a *live, open-source environment* that supports this methodology (*i.e.,* the “toolkit”)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -483,7 +485,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-12-16T11:46:10.047979+01:00"
+												"dateAndTimeString" : "2026-02-03T14:24:43.132559+01:00"
 											}
 										},
 										"uid" : {
@@ -493,7 +495,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Spend 30 minutes to go through several short YouTube videos: [[Getting started with GT in 7']], [[Inspecting objects with contextual views in 7']], [[Understanding Lepiter in 7']], [[How to find stuff in GT in 7']]."
+										"string" : "Spend 30 minutes going through several short YouTube videos: [[Getting started with GT in 7']], [[Inspecting objects with contextual views in 7']], [[Understanding Lepiter in 7']], [[How to find stuff in GT in 7']]."
 									},
 									{
 										"__type" : "textSnippet",
@@ -590,7 +592,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-16T10:24:28.205386+01:00"
+									"dateAndTimeString" : "2026-02-03T09:47:17.342463+01:00"
 								}
 							},
 							"uid" : {
@@ -600,7 +602,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To learn more, you may take the following path through the GT book:"
+							"string" : "To learn more, see:"
 						}
 					]
 				},
@@ -654,7 +656,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:35:09.70153+01:00"
+									"dateAndTimeString" : "2026-02-03T13:51:25.131381+01:00"
 								}
 							},
 							"editEmail" : {
@@ -665,7 +667,44 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:35:12.500224+01:00"
+									"dateAndTimeString" : "2026-02-03T14:32:22.905493+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UMXlEPmrTKa9sJp20pemkg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Developers spend most of their time figuring systems out]] compiles decades of research and observations showing that developers spend most of their time understanding and reading existing code, arguing this dominant “figuring out” effort should be made explicit and optimized."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T13:51:40.125756+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-03T14:33:43.175387+01:00"
 								}
 							},
 							"uid" : {
@@ -675,7 +714,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtPage:Developers spend most of their time figuring systems out|db=2j9m7db2i4oz116bexd7wbdxo}}"
+							"string" : "[[The Moldable Development Environment]] introduces Glamorous Toolkit, using inspector views of a {{gtClass:FileReference}} to show how custom, context-specific tools and views make software understanding and interaction inexpensive and powerful."
 						},
 						{
 							"__type" : "textSnippet",
@@ -691,7 +730,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T11:32:29.922727+01:00"
+									"dateAndTimeString" : "2026-02-03T13:51:56.009269+01:00"
 								}
 							},
 							"editEmail" : {
@@ -702,17 +741,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:17:56.320373+01:00"
+									"dateAndTimeString" : "2026-02-03T14:35:43.618977+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "UauOgHfKR3+bUKHDbeKX5A=="
+								"uidString" : "Ke1ZLnasROSD6Ol6d6NWaA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtPage:The Moldable Development Environment|db=2j9m7db2i4oz116bexd7wbdxo}}"
+							"string" : "[[How to get started with Moldable Development]] outlines how to get started with Moldable Development by learning Pharo/GT, working from live objects, molding tools through contextual views/actions/searches/advice, and following best-practice patterns with pointers to further resources."
 						},
 						{
 							"__type" : "textSnippet",
@@ -728,7 +767,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:27:48.512865+01:00"
+									"dateAndTimeString" : "2026-02-03T13:52:00.96365+01:00"
 								}
 							},
 							"editEmail" : {
@@ -739,7 +778,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:27:51.258178+01:00"
+									"dateAndTimeString" : "2026-02-03T14:36:25.686967+01:00"
 								}
 							},
 							"uid" : {
@@ -749,7 +788,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtPage:How to get started with Moldable Development|db=2j9m7db2i4oz116bexd7wbdxo}}"
+							"string" : "[[Molding the environment]] explains that GT is highly moldable, offers many kinds of extensions (with thousands in the core), and points to resources for extending inspector views/actions, Spotter searches, and the debugger."
 						},
 						{
 							"__type" : "textSnippet",
@@ -765,7 +804,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:17:59.130026+01:00"
+									"dateAndTimeString" : "2026-02-03T13:52:17.768305+01:00"
 								}
 							},
 							"editEmail" : {
@@ -776,7 +815,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:34:46.296286+01:00"
+									"dateAndTimeString" : "2026-02-03T14:36:50.783908+01:00"
 								}
 							},
 							"uid" : {
@@ -786,44 +825,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtPage:Molding the environment|db=2j9m7db2i4oz116bexd7wbdxo}}"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:27:56.956207+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:35:33.722936+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "2gadLoqTQgONNBY1qp3NlA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "{{gtPage:What is the difference between Moldable Development and ...|db=2j9m7db2i4oz116bexd7wbdxo}}"
+							"string" : "[[What is the difference between Moldable Development and ...]] contrasts moldable development with literate programming, model-driven engineering, visual programming, and data science, emphasizing multiple contextual narratives and custom views/tools across the whole system."
 						}
 					]
 				},
@@ -877,7 +879,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T11:28:23.532462+01:00"
+									"dateAndTimeString" : "2026-02-03T13:52:45.489313+01:00"
 								}
 							},
 							"editEmail" : {
@@ -888,52 +890,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T18:34:00.993452+01:00"
+									"dateAndTimeString" : "2026-02-03T13:53:00.011887+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Qg2jyt6RRAiPYGhiEKwP6g=="
+								"uidString" : "13jfCGU0Qe6inqVNQD+sIQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtPage:Working with a REST API: the GitHub case study|db=2j9m7db2i4oz116bexd7wbdxo}} illustrates how we can turn the raw, static data returned by a REST API, such as the one offered by GitHub, into an *explainable system* — a live, explorable domain model that makes it much easier to answer questions about the system, simply by exploring, navigating and posing simple queries."
-						},
-						{
-							"__type" : "commentSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-19T12:43:46.040432+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-05T10:19:02.323434+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "XH4CZ8NkT7WNSGSC3xSRmw=="
-							},
-							"string" : "Add more explanation, showing how each GH entity wraps raw data and provides simple views to expose the information of interest.",
-							"isHidden" : false
+							"string" : "[[Working with a REST API: the GitHub case study]] illustrates how we can turn the raw, static data returned by a REST API, such as the one offered by GitHub, into an *explainable system* — a live, explorable domain model that makes it much easier to answer questions about the system, simply by exploring, navigating and posing simple queries."
 						},
 						{
 							"__type" : "textSnippet",
@@ -960,7 +927,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T13:45:38.630835+01:00"
+									"dateAndTimeString" : "2026-02-03T14:24:43.238493+01:00"
 								}
 							},
 							"uid" : {
@@ -970,7 +937,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Tutorial: molding CSV data into an explainable system]]"
+							"string" : "[[Tutorial: molding CSV data into an explainable system]] is a step-by-step tutorial showing you how to apply moldable development to a very simple case study of an existing CSV dataset for a research project. You will be shown how to extract the raw data, convert it to a more suitable JSON format, wrap the data as moldable domain objects, and then add numerous, tiny contextual tools to these objects to turn them into an explainable system."
 						}
 					]
 				},
@@ -1024,7 +991,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:28:00.286673+01:00"
+									"dateAndTimeString" : "2026-02-03T13:53:08.30054+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1035,17 +1002,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:31:20.91692+01:00"
+									"dateAndTimeString" : "2026-02-03T13:57:43.088685+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "uhgUu9AcRTSnNI/j36LFSQ=="
+								"uidString" : "Fvg5/Dj6SYisOhApKWHfZg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtPage:Lepiter|db=2j9m7db2i4oz116bexd7wbdxo}}"
+							"string" : "[[Lepiter]] is the live documentation system for GT. For more details, see [[How to get started with Lepiter (FAQ)]] and [[Lepiter: a single starting point for scripting, linking and documenting]]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1061,7 +1028,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T14:31:22.679349+01:00"
+									"dateAndTimeString" : "2026-02-03T13:59:41.867827+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1072,17 +1039,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-03T10:22:35.549066+01:00"
+									"dateAndTimeString" : "2026-02-03T14:24:43.38141+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "uQvUsPEeSS6CyNebQiyNgQ=="
+								"uidString" : "9sQ/ohj7RWOgP/FhlzWlIw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "{{gtPage:A single starting point for scripting, linking and documenting|db=2j9m7db2i4oz116bexd7wbdxo}} "
+							"string" : "See [[Project Diary]] for an illustration of how you can use Lepiter notebooks to track the progress of your project."
 						}
 					]
 				},
@@ -1105,7 +1072,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-12-03T11:01:33.014885+01:00"
+						"dateAndTimeString" : "2026-02-03T13:58:14.619168+01:00"
 					}
 				},
 				"uid" : {
@@ -1141,7 +1108,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-19T15:21:49.992951+01:00"
+												"dateAndTimeString" : "2026-02-03T14:00:54.955966+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1152,17 +1119,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-12-03T10:22:38.627072+01:00"
+												"dateAndTimeString" : "2026-02-03T14:01:47.33628+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "R+Pt1bBpS9mP9bBjA/m+Ow=="
+											"uidString" : "hHio6doASAek7qaeId+X7w=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "{{gtPage:About this book|db=2j9m7db2i4oz116bexd7wbdxo}} "
+										"string" : "[[About this book]] gives you some pointers concerning the organization of the GT book and how to navigate it."
 									},
 									{
 										"__type" : "textSnippet",
@@ -1178,7 +1145,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-19T15:19:51.966831+01:00"
+												"dateAndTimeString" : "2026-02-03T14:01:49.595068+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1189,54 +1156,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-19T15:19:52.660716+01:00"
+												"dateAndTimeString" : "2026-02-03T14:02:36.441684+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "Vw+WN6H0RtGl/xJCrGfnHQ=="
+											"uidString" : "g/WTMemmTHe93F0SGYfnwA=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "{{gtPage:How do I find my pages?|db=2j9m7db2i4oz116bexd7wbdxo}}"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-19T15:19:54.830139+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-19T15:20:06.040146+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "94PhR4MfSqmiQFDnXwNMAQ=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "{{gtPage:Topic Map|db=2j9m7db2i4oz116bexd7wbdxo}}"
+										"string" : "[[How do I find my pages?]] shows you how to find pages in other Lepiter databases, including your private notebook."
 									}
 								]
 							},
@@ -1290,7 +1220,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-24T08:47:57.402573+01:00"
+												"dateAndTimeString" : "2026-02-03T14:15:46.570305+01:00"
 											}
 										},
 										"editEmail" : {
@@ -1301,167 +1231,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-24T08:47:59.374624+01:00"
+												"dateAndTimeString" : "2026-02-03T14:17:20.445241+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "cTZbFTt1TLWeuI4RdIAwlg=="
+											"uidString" : "a+w/E8vvSXmAknGck1Y3jA=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "{{gtPage:How to find stuff in GT in 7'|db=2j9m7db2i4oz116bexd7wbdxo}}"
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-24T08:48:23.423929+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-03T11:18:40.889962+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "5JIxRtLMScavYo1nrwl5xQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "## How to find stuff in GT"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-19T15:25:43.134852+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-19T15:26:04.180608+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "cmxEQxLcR4uLFTNfNIs1OQ=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "{{gtPage:A gentle introduction to Pharo Smalltalk|db=2j9m7db2i4oz116bexd7wbdxo}} and related pages ..."
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-11-19T11:21:06.172881+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-12-03T11:18:48.476894+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "4U6dga3ATVq7YhMotgMLVQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "## How to work with Smalltalk"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-19T15:25:33.095044+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-11-19T15:25:41.175502+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "L5VfzIdsSvmM5tUBvSN2pQ=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "{{gtPage:Engage with the community and contribute|db=2j9m7db2i4oz116bexd7wbdxo}}"
+										"string" : "[[Engage with the community and contribute]] tells you how to engage both with other newcomers and with experienced GT developers on Discord."
 									}
 								]
 							},
@@ -1495,6 +1275,81 @@
 								"__type" : "textStyle"
 							},
 							"string" : "## How to engage with the GT community"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-02-03T14:12:28.89365+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-02-03T14:24:43.466357+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "sQMsmF6CTS+k0amC+B6myA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "If you don't have previous experience programming in Smalltalk, you might want to take a side road into [[A gentle introduction to Pharo Smalltalk]]. This page contains a first tutorial introduction to Smalltalk programming, and is followed by a series of further tutorial pages, diving into such details as [[Working with collections in Pharo]] and [[Understanding Smalltalk classes and metaclasses]]."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-11-19T11:21:06.172881+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-12-03T11:18:48.476894+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4U6dga3ATVq7YhMotgMLVQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "## How to work with Smalltalk"
 						}
 					]
 				},
@@ -1559,7 +1414,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-07T15:39:00.082156+01:00"
+									"dateAndTimeString" : "2026-02-03T14:18:02.367503+01:00"
 								}
 							},
 							"uid" : {
@@ -1569,7 +1424,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Quiz: GT Basics]]"
+							"string" : "To test your basic knowledge about GT, please visit [[Quiz: GT Basics]]."
 						}
 					]
 				},
@@ -1618,7 +1473,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-19T11:22:46.463063+01:00"
+						"dateAndTimeString" : "2026-02-03T14:18:45.196238+01:00"
 					}
 				},
 				"editEmail" : {
@@ -1629,44 +1484,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-19T11:22:46.463063+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "piJnw0e2TlGdAi/6kkcuDQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-19T11:22:46.671361+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-11-19T11:22:46.671361+01:00"
+						"dateAndTimeString" : "2026-02-03T14:28:21.665778+01:00"
 					}
 				},
 				"uid" : {
@@ -1676,7 +1494,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "You can find other learning modules as they become available here: [[Page]]"
 			}
 		]
 	},
