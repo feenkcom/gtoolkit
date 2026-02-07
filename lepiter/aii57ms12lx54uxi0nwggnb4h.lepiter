@@ -427,14 +427,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T22:30:14.829783+01:00"
+						"dateAndTimeString" : "2026-02-07T00:49:50.900176+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ejInJnvxDQCShdVWAReYsQ=="
 				},
-				"code" : "chat := GtLChat new\r\t\tinstruction: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you. Always check your answer with file search before answering.'\r\t\t\ttitled: 'Purpose';\r\t\tprovider: (GtLConnection new\r\t\t\t\tproviderClass: GtLOpenAIProvider;\r\t\t\t\tlabel: 'GPT 5.1';\r\t\t\t\tmodel: 'gpt-5.1';\r\t\t\t\taddOption: 'isStreaming' withValue: false) buildProvider;\r\t\ttools: {GtLFileSearchTool new vectorStoreIds: {vectorStore id}};\r\t\tsendMarkdown: 'What is Ludo?'"
+				"code" : "chat := GtLChat new\r\t\tinstruction: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book provided to you. Always check your answer with file search before answering.'\r\t\t\ttitled: 'Purpose';\r\t\tprovider: (GtLConnection new\r\t\t\t\tproviderClass: GtLOpenAIProvider;\r\t\t\t\tlabel: 'GPT 5.1';\r\t\t\t\tmodel: 'gpt-5.1') buildProvider;\r\t\ttools: {GtLFileSearchTool new vectorStoreIds: {vectorStore id}};\r\t\tsendMarkdown: 'What is Ludo?'"
 			}
 		]
 	},
@@ -457,12 +457,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-05-14T15:51:13.201453+02:00"
+			"dateAndTimeString" : "2026-02-07T00:51:21.760586+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "File search in the response provider"
+		"title" : "File search through vector store"
 	},
 	"uid" : {
 		"__type" : "uuid",

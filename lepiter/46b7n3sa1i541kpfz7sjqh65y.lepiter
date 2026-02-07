@@ -103,51 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-14T14:16:03.573586+02:00"
+						"dateAndTimeString" : "2026-02-07T00:43:36.748153+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "2bXsfkXrDQCgIeDVCbGGRg=="
 				},
-				"code" : "tool := GtLlmFunctionTool new\r\t\tname: 'lookupDocumentationPage';\r\t\tparameters: {'pageName'};\r\t\tdescription: 'Looks up a documentation page by name and returns its content in Markdown format. `pageName` may be a substring. If multiple pages are found, only the first one will be returned.';\r\t\tblock: [ :aFunctionCall | \r\t\t\t(LeDatabase gtBook asyncPagesForWord: aFunctionCall anyArgument) toArray wait\r\t\t\t\tifEmpty: [ 'No page found' ]\r\t\t\t\tifNotEmpty: [ :pages | pages first asMarkdownPage ] ]"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T15:00:15.906997+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T12:36:16.721063+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "6wQpf0XrDQCgK8xjCbGGRg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "We can then add it to the provider. Please note that due to a technical limitation, tools and structured outputs do not play well together with Ollama assistants [1], Anthropic does not formally support structured outputs [2], and Google Gemini does not support both at the same time [3]. Otherwise, both providers are equivalent."
+				"code" : "tool := GtLFunctionTool new\r\t\tname: 'lookupDocumentationPage';\r\t\tparameters: {'pageName'};\r\t\tdescription: 'Looks up a documentation page by name and returns its content in Markdown format. `pageName` may be a substring. If multiple pages are found, only the first one will be returned.';\r\t\tblock: [ :aFunctionCall | \r\t\t\t(LeDatabase gtBook asyncPagesForWord: aFunctionCall anyArgument) toArray wait\r\t\t\t\tifEmpty: [ 'No page found' ]\r\t\t\t\tifNotEmpty: [ :pages | pages first asMarkdownPage ] ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -174,7 +137,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T14:58:09.057943+02:00"
+						"dateAndTimeString" : "2026-02-07T00:43:57.977393+01:00"
 					}
 				},
 				"uid" : {
@@ -184,78 +147,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First we create an assistant."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T15:01:28.867546+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T14:57:36.575085+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "R1iCg0XrDQCknxZSCbGGRg=="
-				},
-				"code" : "assistant := GtLlmAssistant new\r\t\tdescription: 'You are an assistant that answers questions about Glamorous Toolkit (also: GToolkit or GT) by referring to the GToolkit book through tool search.'.\r\rassistant"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:18:07.706073+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T14:58:19.684385+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "gVPGQkjrDQCD0LOgCbGGRg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Finally, we can use the chat as before, adding the tool."
+				"string" : "First we create a chat as before, adding the tool."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -282,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-14T14:58:42.908649+02:00"
+						"dateAndTimeString" : "2026-02-07T00:44:21.074612+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "jccmQ0jrDQCD2hP/CbGGRg=="
 				},
-				"code" : "chat := assistant createChat.\rchat provider addTool: tool.\rchat sendChatRequest: 'Tell me about gt4llm.'"
+				"code" : "chat := GtLChat new.\rchat addTool: tool.\rchat sendMarkdown: 'Tell me about gt4llm.'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -305,7 +197,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-05T15:32:37.499403+02:00"
+						"dateAndTimeString" : "2026-02-07T00:47:06.809006+01:00"
 					}
 				},
 				"editEmail" : {
@@ -316,54 +208,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-05T15:34:33.521207+02:00"
+						"dateAndTimeString" : "2026-02-07T00:48:59.889182+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "BgPF/P/3DQC4vdvCD1yYgw=="
+					"uidString" : "7VedYwLUQWKvBt4mPOAjqQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "gt4llm also comes with a simple custom protocol for tools that allows you to serialize errors. It also auto-stringifies regular results, meaning you won’t encounter errors on non-JSON-srializable tool results."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-05T15:34:34.408249+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-05T15:38:34.171266+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "IGSSBQD4DQC+31rXD1yYgw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "To enable it, simply use {{gtClass:GtLlmFunctionToolWithProtocol}} instead of {{gtClass:GtLlmFunctionTool}}. Everything else stays the same."
+				"string" : "There exist also explicit tools already implemented as subclasses of {{gtClass:GtLAbstractFunctionTool}}:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -379,7 +234,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-05T15:38:18.064988+02:00"
+						"dateAndTimeString" : "2026-02-07T00:47:26.949555+01:00"
 					}
 				},
 				"editEmail" : {
@@ -390,125 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-08-05T15:38:25.821139+02:00"
+						"dateAndTimeString" : "2026-02-07T00:47:58.040907+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "jCDnEgD4DQCAw+3RD1yYgw=="
+					"uidString" : "k8hw82D6Q3iT7abECDREZQ=="
 				},
-				"code" : "tool := GtLlmFunctionToolWithProtocol new\r\t\tname: 'lookupDocumentationPage';\r\t\tparameters: {'pageName'};\r\t\tdescription: 'Looks up a documentation page by name and returns its content in Markdown format. `pageName` may be a substring. If multiple pages are found, only the first one will be returned.';\r\t\tblock: [ :aFunctionCall | \r\t\t\t(LeDatabase gtBook asyncPagesForWord: aFunctionCall anyArgument) toArray wait\r\t\t\t\tifEmpty: [ 'No page found' ]\r\t\t\t\tifNotEmpty: [ :pages | pages first asMarkdownPage ] ]"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:17:26.266882+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T18:17:31.227468+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "fU3rP0jrDQCBvvYICbGGRg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[1] This is because OpenAI uses a signal to interrupt the conversation to request a tool call and then resumes answering the question. In Ollama, the tool call is embedded in the answer, thus it’s an in-band communication channel."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:42:13.19395+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:42:31.626289+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "VJS82FbrDQC9UmoFAurXGw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[2] It is however usually able to adhere to the format even when not forced to."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T12:36:18.979493+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T12:37:04.319924+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "U1fR5yzyDQCee28ACptJcg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[3] When both are set, we set the tools in the API and rely on the system prompt to enforce the format. It doesn’t work reliably, but seems to perform pretty well, similarly to Anthropic."
+				"code" : "chat := GtLChat new.\rchat tools: GtLTools leSearch.\rchat sendMarkdown: 'Tell me about gt4llm.'"
 			}
 		]
 	},
@@ -531,12 +275,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-08-21T10:52:26.107179+02:00"
+			"dateAndTimeString" : "2026-02-06T13:40:58.259137+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Adding tools to assistants"
+		"title" : "Adding tools to chats"
 	},
 	"uid" : {
 		"__type" : "uuid",
