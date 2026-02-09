@@ -799,7 +799,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:53:30.227391+01:00"
+									"dateAndTimeString" : "2026-02-09T16:12:56.417702+01:00"
 								}
 							},
 							"editEmail" : {
@@ -810,44 +810,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:56:03.429385+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "2QyKPZ8yR4OML3NnWCWtiQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "At this point it would be useful to turn each of these entities into an [[Example Object]] that exists also outside of this notebook page. This illustrates the principle that we first prototype code, starting from a notebook page, or *playground* (such as the code snippet above), and then *extract* interesting classes and methods."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:56:30.905764+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:56:37.203372+01:00"
+									"dateAndTimeString" : "2026-02-09T16:31:54.12639+01:00"
 								}
 							},
 							"uid" : {
@@ -857,7 +820,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Consider the following snippet:"
+							"string" : "Now let's extract this code as an *example method*, a method that returns an object of interest.\nConsider the code below:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -884,14 +847,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T17:27:36.073694+01:00"
+									"dateAndTimeString" : "2026-02-09T17:52:27.70351+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "9DLN6XbhStOGVmcyaVdPPg=="
 							},
-							"code" : "VRDatasetExamples new datasetFolder"
+							"code" : "VRDatasetExamples new  "
 						},
 						{
 							"__type" : "textSnippet",
@@ -918,7 +881,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T09:08:34.14206+01:00"
+									"dateAndTimeString" : "2026-02-09T17:52:44.207585+01:00"
 								}
 							},
 							"uid" : {
@@ -928,7 +891,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This code is invalid, because the class `VRDatasetExamples` does not yet exist, nor does the class-side method `datasetFolder`. If you click on the *fixit* (wrench) icon, you can create the missing class. "
+							"string" : "This code is invalid, because the class `VRDatasetExamples` does not yet exist. If you click on the *fixit* (wrench) icon, you can create the missing class. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -1063,14 +1026,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T09:10:13.888823+01:00"
+									"dateAndTimeString" : "2026-02-09T17:55:09.692505+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "hGKu70u0QrO1sw43wUq2fg=="
 							},
-							"code" : "VRDatasetExamples new datasetFolder"
+							"code" : "VRDatasetExamples new datasetFolder "
 						},
 						{
 							"__type" : "textSnippet",
@@ -1194,43 +1157,6 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T11:08:59.44003+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T17:37:24.998931+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "7NnSqb6ERKav7pHJXMXsdQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "This code defines an [[Example]], a method that serves both as a *factory* for an object of interest, and as a *test case* containing assertions. Example methods are *unary* methods that are annotated with `<gtExample>`, and return some object. In this case we return a file reference to the dataset folder, while verifying that the folder exists and contains precisely two CSV files."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2026-01-22T11:09:33.086449+01:00"
 								}
 							},
@@ -1268,7 +1194,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T15:40:42.806804+01:00"
+									"dateAndTimeString" : "2026-02-09T17:54:56.67033+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1279,14 +1205,51 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T09:45:40.702966+01:00"
+									"dateAndTimeString" : "2026-02-09T17:55:34.395571+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "M4++7IC1S164IAxDHLjlxA=="
+								"uidString" : "jaxWzYjnQPmFrsDffcwRyw=="
 							},
-							"code" : "VRDatasetExamples new allPapersJSON"
+							"code" : "allPapersFile := VRDatasetExamples new datasetFolder / 'dataset-review-vissoft-all.csv'.  \r(CSV2JSON for: allPapersFile contents) json"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-09T17:59:56.602474+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-09T18:01:58.4657+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "2T8VGQ5vSTOsYJgEwf6yEg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "⇒ *Extract the code above into an example called `allPapersJSON`.*\n⇒ *Also extract the snippet below into an example `selectedPapersJSON`.*\n⇒ *Add assertions for the expected size of the result.*"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -1302,7 +1265,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T15:40:51.995908+01:00"
+									"dateAndTimeString" : "2026-01-13T15:40:42.806804+01:00"
 								}
 							},
 							"editEmail" : {
@@ -1313,14 +1276,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-19T10:05:39.006503+01:00"
+									"dateAndTimeString" : "2026-02-09T18:02:07.54989+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "K15kUztqQmqOgZrs5e4hXQ=="
+								"uidString" : "M4++7IC1S164IAxDHLjlxA=="
 							},
-							"code" : "VRDatasetExamples new selectedPapersJSON"
+							"code" : "selectedPapersFile := VRDatasetExamples new datasetFolder / 'dataset-review-vissoft-selected.csv'.  \r(CSV2JSON for: selectedPapersFile contents) json"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1347,7 +1310,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T08:46:54.968465+01:00"
+									"dateAndTimeString" : "2026-02-09T18:03:50.812674+01:00"
 								}
 							},
 							"uid" : {
@@ -1357,7 +1320,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We could extract these methods from the code snippets, as we did above, or we can also simply load in the code from the *Changes snippet* below.\n⇒ *Inspect this code to see how the additional examples are defined, and accept the changes (✓ button).*\n⇒ *Can you think of some more critical assertions to include in the examples?*"
+							"string" : "We could extract these methods from the code snippets, as we did above, or we can also simply load in the code from the *Changes snippet* below.\n⇒ *Compare your results with those of the changes snippet below.*\n*Hint:* Inspect the snippet (`[i]` button bottom left) to see the code. Click the √ button to accept those changes."
 						},
 						{
 							"__type" : "changesSnippet",
@@ -1497,6 +1460,118 @@
 					"__type" : "textStyle"
 				},
 				"string" : "# Transforming the raw data — converting the CSV to JSON"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-09T15:37:09.268203+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-09T15:39:07.121984+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hbb6lhoyQcmuSb05xVxBdw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The initial process of preparing the data to be wrapped is a pattern known as [[Tooling Buildup]]. In this case we already have the tools we need to translate CSV to JSON, so there is nothing to build."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-09T18:06:23.805989+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-09T18:07:50.186599+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ETfGXj5BSDK6m3b9/kAiJQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The [[Example]] methods we created are factory methods that also serve as test cases. Example methods are *unary* methods that are annotated with `<gtExample>`, and return some object. In this case we return a file reference to the dataset folder, while verifying that the folder exists and contains precisely two CSV files. This pattern is known as [[Example Object]]. The process of turning snippets into examples illustrates the principle that we first prototype code, starting from a notebook page, or *playground* (such as the code snippet above), and then *extract* interesting classes and methods."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-09T15:37:03.058074+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-09T15:37:08.910687+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "33piKqQsTnCT4iTpr1sTBA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Discussion"
 			},
 			{
 				"__type" : "textSnippet",
