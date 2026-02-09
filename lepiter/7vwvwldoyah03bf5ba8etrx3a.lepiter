@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T14:41:29.016303+01:00"
+						"dateAndTimeString" : "2026-02-09T09:24:24.636787+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is Part 1 of [[Tutorial: molding CSV data into an explainable system]].\nIn this part we *introduce* the CSV dataset of a research project, *explore* the data to develop some initial questions, and *transform* the CSV data into JSON to prepare for modeling the domain entities hidden in the data."
+				"string" : "This is Part 1 of [[Tutorial: molding CSV data into an explainable system]].\nIn this part we introduce the CSV dataset of a research project, explore the data to develop some initial questions, and transform the CSV data into JSON to prepare for modeling the domain entities hidden in the data."
 			},
 			{
 				"__type" : "textSnippet",
@@ -153,8 +153,8 @@
 								"uidString" : "wpSWSVPQTNWb6jJvOhMrIw=="
 							},
 							"exampleSelector" : "datasetFolder",
-							"previewHeight" : 170,
-							"previewShowSelector" : "gtTreeFor:",
+							"previewHeight" : 250,
+							"previewShowSelector" : "gtViewsFor:",
 							"exampleBehaviorName" : "VRTutorialExamples",
 							"codeExpanded" : true,
 							"previewExpanded" : false,
@@ -174,7 +174,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:35:30.681232+01:00"
+									"dateAndTimeString" : "2026-02-09T09:32:32.645017+01:00"
 								}
 							},
 							"editEmail" : {
@@ -185,17 +185,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-22T16:35:50.79514+01:00"
+									"dateAndTimeString" : "2026-02-09T09:35:43.723214+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Hdf57jslR8qZ0Ucn1fEeQw=="
+								"uidString" : "V7I4yEQARPuxqoWUHWBxNA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "⇒ *Click on the .csv files above to inspect them.*"
+							"string" : "What we see here is an object  inspector on the folder containing the dataset. You might not recognize it as such because an inspector usually just shows a generic, “raw” view of an object within a  debugger. In this case the inspector has been *molded* to show a more useful *Tree* view of the contents of the folder.\n⇒ *Click on the Raw view and compare it with the Tree view.*\n⇒ *Return to the Tree view and click on the .csv files to inspect them.*"
 						}
 					]
 				},
@@ -286,6 +286,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-01-27T10:34:58.237161+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T17:36:00.748775+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qKqZdnTgShSmIC5jQ6zB3g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "When we start to browse the raw data, many questions might come to mind, for example:\n— *Which are the selected design study papers?*\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *What different types of papers were identified?*\n— *Which authors wrote about design studies?*\n— *What other topics did those authors write about?*\n— *Are the two datasets consistent? (Are there any errors in matching them up?)*\nAnd many more ..."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2026-01-21T13:00:38.576283+01:00"
 								}
 							},
@@ -348,43 +385,6 @@
 							"codeExpanded" : true,
 							"previewExpanded" : false,
 							"noCode" : true
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T10:34:58.237161+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T17:36:00.748775+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "qKqZdnTgShSmIC5jQ6zB3g=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "When we start to browse the raw data, many questions might come to mind, for example:\n— *Which are the selected design study papers?*\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *What different types of papers were identified?*\n— *Which authors wrote about design studies?*\n— *What other topics did those authors write about?*\n— *Are the two datasets consistent? (Are there any errors in matching them up?)*\nAnd many more ..."
 						},
 						{
 							"__type" : "textSnippet",

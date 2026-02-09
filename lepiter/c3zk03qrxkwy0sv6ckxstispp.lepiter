@@ -789,7 +789,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T14:39:11.34877+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-02T14:39:14.82536+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZyxFP2qqQN6gV20M0Lh++w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Did you make it here? Great!\n\nNow here's another exercise you can do: throw out all the code you wrote (or back it up), and *start again*. Only this time, just start with the raw CSV files, and work on your own to model and mold the domain entities you find interesting. Drive your development from the questions you have about the data. You might end up with pretty much the same code, or perhaps you will find yourself going in a different direction. Either way, what is important is that you hone your skills in modeling domain entities and molding them with tiny tools to create an explainable system."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -799,7 +837,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T14:39:11.34877+01:00"
+						"dateAndTimeString" : "2026-02-09T09:15:24.729319+01:00"
 					}
 				},
 				"editEmail" : {
@@ -810,17 +848,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-02T14:39:14.82536+01:00"
+						"dateAndTimeString" : "2026-02-09T09:15:28.00316+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ZyxFP2qqQN6gV20M0Lh++w=="
+					"uidString" : "ZOjDJ2kkQG2l/kfW0jygSg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Did you make it here? Great!\n\nNow here's another exercise you can do: throw out all the code you wrote (or back it up), and *start again*. Only this time, just start with the raw CSV files, and work on your own to model and mold the domain entities you find interesting. Drive your development from the questions you have about the data. You might end up with pretty much the same code, or perhaps you will find yourself going in a different direction. Either way, what is important is that you hone your skills in modeling domain entities and molding them with tiny tools to create an explainable system."
+				"string" : "# Followup"
 			},
 			{
 				"__type" : "textSnippet",
