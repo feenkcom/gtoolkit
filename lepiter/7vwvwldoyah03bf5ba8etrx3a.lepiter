@@ -297,7 +297,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T17:36:00.748775+01:00"
+									"dateAndTimeString" : "2026-02-09T12:22:27.764359+01:00"
 								}
 							},
 							"uid" : {
@@ -307,44 +307,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "When we start to browse the raw data, many questions might come to mind, for example:\n— *Which are the selected design study papers?*\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *What different types of papers were identified?*\n— *Which authors wrote about design studies?*\n— *What other topics did those authors write about?*\n— *Are the two datasets consistent? (Are there any errors in matching them up?)*\nAnd many more ..."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:00:38.576283+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T17:26:54.532815+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "6LdyBAX6SE2vdytTx7kkSQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "We can directly view the source data, or we can open these files using a spreadsheet software, such as Excel.\n⇒ *Try it — click below on the *Open in operating system* button at the top right.* "
+							"string" : "When we start to browse the raw data, many questions might come to mind, for example:\n— *Which are the selected design study papers?*\n— *How many authors are there?*\n— *Which authors published most frequently?*\n— *What different types of papers were identified?*\n— *Which authors wrote about design studies?*\n— *What other topics did those authors write about?*\n— *Are the two datasets consistent? (Are there any errors in matching them up?)*\nAnd many more ...\nWe can directly view the source data, or we can open these files using a spreadsheet software, such as Excel, but it is hard to answer our questions with the raw data.\n⇒ *Try it — click below on the *Open in operating system* button at the top right.* "
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -422,43 +385,6 @@
 								"__type" : "textStyle"
 							},
 							"string" : "When we explore the raw data, however, even as a spreadsheet, we just get a very generic, table-oriented view of all the data. With a bit of spreadsheet savvy, we can probably answer many of these questions by manipulating and transforming the raw data, but each answer would be hand-crafted, and it would be hard to navigate the data to answer similar questions about subsets of data."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:28:32.413149+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T17:36:37.987366+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "pPiLva1EQ0mx9awsN1CW1w=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "A different way to proceed is to *extract a model of domain objects from the raw data, decorated with tiny contextual tools that answer our questions*. The model should consist of *live objects*, so we can interact with it to explore it.\nBefore we can do that, it would help to transform the data to a more convenient form. Since each row of the first dataset represents a publication and each row of the second one represents a design study, it would help to extract the data row by row. JSON is a convenient representation for this data."
 						}
 					]
 				},
@@ -512,7 +438,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T09:05:29.320912+01:00"
+									"dateAndTimeString" : "2026-02-09T12:25:34.799567+01:00"
 								}
 							},
 							"editEmail" : {
@@ -523,17 +449,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-02T17:34:34.014004+01:00"
+									"dateAndTimeString" : "2026-02-09T12:25:34.799567+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "9TOsaU2mTlq8aWhaJZtfrQ=="
+								"uidString" : "pnw2KdGUQ7aa/yHuAcU5tg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We would like to have a domain object for each publication, but a row of a spreadsheet without the header is not a convenient representation. Our job will be easier if we convert the CSV files to JSON.\nLuckily we already have a utility to convert CSV files to JSON, so we can just use that.\n(There is a moldable development pattern, [[Tooling Buildup]], which we can skip in this case, because we already have the basic tools we need.)"
+							"string" : "A different way to proceed is to *extract a model of domain objects from the raw data, decorated with tiny contextual tools that answer our questions*. The model should consist of *live objects*, so we can interact with it to explore it. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -549,7 +475,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:34:36.211585+01:00"
+									"dateAndTimeString" : "2026-02-09T12:24:37.740294+01:00"
 								}
 							},
 							"editEmail" : {
@@ -560,17 +486,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:37:08.388027+01:00"
+									"dateAndTimeString" : "2026-02-09T12:25:39.999114+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "sfGYsb0xS6SsBx5HGz92ig=="
+								"uidString" : "vydtuexNSm2FEIwBXBsS6Q=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Our copies of the dataset files reside in the following folder:"
+							"string" : "Before we can do that, it would help to transform the data to a more convenient form. Since each row of the first dataset represents a publication and each row of the second one represents a design study, it would help to extract the data row by row. JSON is a convenient representation for this data. Luckily we already have a utility to convert CSV files to JSON, so we can just use that.\nOur copies of the dataset files reside in the following folder:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -605,43 +531,6 @@
 								"uidString" : "aBxmuOfoThm0M8VCawfirA=="
 							},
 							"code" : "datasetFolder := FileLocator gtResource / 'feenkcom' / 'gtoolkit-demos' / 'data'\r\t\t/ 'visualisation-review'"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:34:36.453775+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:41:10.095605+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "ziqZbZpsQXGYg8ocEab8BQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Note that we are writing code here directly in a notebook page. In this way we can directly try out snippets of code, while also documenting what we are doing. This is an example of the pattern [[Project Diary]] — instead of directly coding in the IDE, we program in notebook pages so we can track our progress and document our process."
 						},
 						{
 							"__type" : "textSnippet",
@@ -705,14 +594,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:45:45.947849+01:00"
+									"dateAndTimeString" : "2026-02-09T12:30:38.421179+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "KWltqmq1RPaGqn5SXa/99g=="
 							},
-							"code" : "allFile := datasetFolder / 'dataset-review-vissoft-all.csv'.\rallJson := (CSV2JSON for: allFile contents) json"
+							"code" : "allPapersFile := datasetFolder / 'dataset-review-vissoft-all.csv'.\rallJson := (CSV2JSON for: allPapersFile contents) json"
 						},
 						{
 							"__type" : "textSnippet",
@@ -813,14 +702,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-21T13:49:00.586388+01:00"
+									"dateAndTimeString" : "2026-02-09T12:30:38.424196+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "kZFSf7fdTt+Lhrt1bNaT4Q=="
 							},
-							"code" : "allJson := (CSV2JSON for: allFile contents) jsonObject"
+							"code" : "allJson := (CSV2JSON for: allPapersFile contents) jsonObject"
 						},
 						{
 							"__type" : "textSnippet",
