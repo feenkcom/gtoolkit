@@ -211,14 +211,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-13T22:51:21.765231+01:00"
+						"dateAndTimeString" : "2026-02-14T15:18:40.332073+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "gFBOHnvxDQCMgbXGAReYsQ=="
 				},
-				"code" : "apiFile := GtOpenAIClient withApiKeyFromFile\r\t\tuploadFile: file\r\t\twithPurpose: 'assistants' \"'user_data'\""
+				"code" : "apiFile := GtOpenAIClient withApiKeyFromFile\r\t\tuploadFile: file\r\t\twithPurpose: 'assistants'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-14T15:18:36.764735+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-14T15:19:30.668314+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "agmUvlCGTIuos0z7uJpjuA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To check the uploaded files:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-14T15:00:19.035263+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-14T15:00:23.275876+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nEGFuoFCTHWLF9w15M5w7g=="
+				},
+				"code" : "GtOpenAIClient withApiKeyFromFile listFiles"
 			},
 			{
 				"__type" : "textSnippet",
