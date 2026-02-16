@@ -153,7 +153,8 @@
 								"uidString" : "x40xba6iDQC8fB6aAlUF6w=="
 							},
 							"search" : "children isNil ifTrue: [ ^ self ].",
-							"replace" : "children ifNil: [ ^ self ]."
+							"replace" : "children ifNil: [ ^ self ].",
+							"isMethodPattern" : false
 						}
 					]
 				},
@@ -263,7 +264,8 @@
 								"uidString" : "ZxNvvq2iDQC8Pe5SAlUF6w=="
 							},
 							"search" : "``@boolean isNil ifTrue: ``@block",
-							"replace" : "``@boolean ifNil: ``@block"
+							"replace" : "``@boolean ifNil: ``@block",
+							"isMethodPattern" : true
 						}
 					]
 				},
