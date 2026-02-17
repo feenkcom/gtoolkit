@@ -168,43 +168,6 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:08:40.10591+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T09:16:28.752908+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "og2VlzqISg+h4oLD+VoANA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "This is an example of the most fundamental of the patterns, namely [[Moldable Object]]. To make a system explainable, we need live, moldable objects which we can augment with contextual tools. We will now start to introduce such objects."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2026-01-13T13:44:31.381368+01:00"
 								}
 							},
@@ -4316,6 +4279,81 @@
 					"__type" : "textStyle"
 				},
 				"string" : "# Wrapping the paper collection"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-17T11:23:13.983179+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-17T11:24:04.07419+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "7ZvFljdXRx6HoyQ8SIwxLQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Modeling papers is an example of the most fundamental of the patterns, namely [[Moldable Object]]. To make a system explainable, we need live, moldable objects which we can augment with contextual tools. "
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-17T11:23:11.841613+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-17T11:23:12.549396+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "PRZIMc0JS2GtMNTLSUFgBA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Discussion"
 			},
 			{
 				"__type" : "textSnippet",
