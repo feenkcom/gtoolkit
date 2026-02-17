@@ -454,14 +454,14 @@
 														"__type" : "time",
 														"time" : {
 															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2026-02-13T22:28:57.320257+01:00"
+															"dateAndTimeString" : "2026-02-17T09:03:13.991414+01:00"
 														}
 													},
 													"uid" : {
 														"__type" : "uid",
 														"uidString" : "Ev6F7ItCReyiUUVD21LS+g=="
 													},
-													"code" : "GtImageSetup createGt4GemStoneProperties"
+													"code" : "GtImageSetup createLocalGt4GemStoneProperties.\nGtWorld requestAllInstancesHomeUpdate."
 												}
 											]
 										},
@@ -495,40 +495,6 @@
 											"__type" : "textStyle"
 										},
 										"string" : "For a development image:"
-									},
-									{
-										"__type" : "shellCommandSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-02-13T12:49:33.407117+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-02-13T22:05:57.709747+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "kTxwY0+kRFK1pilN1hg8qQ=="
-										},
-										"code" : "cd /path/to/gtimage\rcp gt-extra/feenkcom/gt4gemstone/gt4gemstone.properties pharo-local/lepiter/"
 									}
 								]
 							},
