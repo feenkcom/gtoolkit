@@ -76,7 +76,7 @@ class GlamorousToolkit {
     static final EXAMPLES_FOLDER = "gt-examples"
     static final LEPITER_WINDOWS = "C:/Users/Administrator/Documents/lepiter"
     static final LEPITER_UNIX = "~/Documents/lepiter"
-    static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo12.0-SNAPSHOT.build.1587.sha.97e7f4fc63.arch.64bit.zip"
+    static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo12.0-SNAPSHOT.build.1596.sha.e35513ca60.arch.64bit.zip"
     static final TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
     static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone" "PythonBridge-Pharo"'
