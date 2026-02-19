@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:42:16.984916+01:00"
+						"dateAndTimeString" : "2026-02-18T19:57:12.5134+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A tool can be used by an LLM chat to execute logic. For example, the below chat looks up the definition of a class using {{gtClass:GtLToolForClassLookup}}."
+				"string" : "A tool can be used by an LLM chat to execute logic. For example, the below chat looks up the source of multiple methods using {{gtClass:GtLMagritteToolForMethodsSource}}."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -73,10 +73,10 @@
 					"__type" : "uid",
 					"uidString" : "YMz5qcX/SQiS95XY/9ljxg=="
 				},
-				"exampleSelector" : "messageWithToolCallExample",
+				"exampleSelector" : "methodSourcesForExistingMethods",
 				"previewHeight" : 200,
 				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtLChatLiveExamples",
+				"exampleBehaviorName" : "GtLMagritteToolForMethodsSourceExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : false,
 				"noCode" : false
@@ -106,7 +106,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:44:13.921571+01:00"
+						"dateAndTimeString" : "2026-02-18T20:01:40.890985+01:00"
 					}
 				},
 				"uid" : {
@@ -116,7 +116,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A tool's implementation has a name, takes arguments and returns an instance of {{gtClass:GtLDomainObject}}. This instance knows how to serialize itself. For OpenAI it serializes by implementing {{gtMethod:GtLDomainObject>>#serializeToOpenAIResponseJsonObject}}."
+				"string" : "A tool's implementation has a name, takes arguments and returns an instance of {{gtClass:GtLMagritteInputModel}} that wraps the actual domain model. This instance knows how to serialize itself. For OpenAI it serializes by implementing {{gtMethod:GtLInputModel>>#serializeToOpenAIResponseOutput}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -143,7 +143,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:45:16.595477+01:00"
+						"dateAndTimeString" : "2026-02-18T20:02:07.624561+01:00"
 					}
 				},
 				"uid" : {
@@ -153,7 +153,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Each tool has corresponding examples that test its logic in isolation. For example, {{gtClass:GtLToolForClassLookup}} has examples in {{gtClass:GtLToolForClassLookupExamples}}."
+				"string" : "Each tool has corresponding examples that test its logic in isolation. For example, {{gtClass:GtLMagritteToolForMethodsSource}} has examples in {{gtClass:GtLMagritteToolForMethodsSourceExamples}}."
 			}
 		]
 	},
