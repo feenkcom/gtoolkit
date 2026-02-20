@@ -245,13 +245,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "tudor@tudorgirba.com"
+								"emailString" : "timonoid01@gmail.com"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-24T15:05:47.097973+02:00"
+									"dateAndTimeString" : "2025-04-23T03:41:18.447586+04:00"
 								}
 							},
 							"uid" : {
@@ -439,7 +439,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2021-05-24T15:06:55.100593+02:00"
+												"dateAndTimeString" : "2025-04-22T09:57:40.632033+04:00"
 											}
 										},
 										"uid" : {
@@ -527,6 +527,297 @@
 							},
 							"createEmail" : {
 								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-22T11:07:46.030563+04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T03:38:02.083124+04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "NwurbbnvDQCC44FhAD83+Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "By design, GT checks for closed {{gtClass: GtWorld }} instances. And if the snapshotted image doesn't have any opened windows, then GT will spawn the Morphic World by attaching a renderer and a window to it. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T01:08:40.669249+04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T03:29:13.740428+04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "1fG9HMbvDQCXK+g4DniH/w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The class hierarhy diagram for those renderers is described below."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T01:02:44.371783+04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T01:12:03.612049+04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "1E4AC8bvDQCWFEL9DniH/w=="
+							},
+							"code" : "view := GtMondrian new.\rview nodes\r\tumlClassShapeWithName: [ :each | each name ];\r\twith: AbstractWorldRenderer withAllSubclasses.\rview edges\r\tfromCenterBottom;\r\ttoCenterTop;\r\tconnectFrom: #superclass.\rview layout tree levelDistance: 100.\rview"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T02:25:22.807407+04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T03:39:11.865938+04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "0QeMMsfvDQCxl4y7DlbAcg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The Image is calling the next method to decide which renderer it will use, it is performing a search based on a class {{gtMethod:AbstractWorldRenderer class>>priority | label=priority}} and an {{gtMethod:AbstractWorldRenderer class>>isApplicableFor: | label= isApplicableFor:}}properties. {{gtMethod:AbstractWorldRenderer class >>detectCorrectOneForWorld: | expanded}}  "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T02:30:14.851071+04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T03:26:21.464621+04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+EP0Q8fvDQCyeDzPDlbAcg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Thus, you need to create you own subclass to override these properties, and you need to make sure, what your's class priority is greater than in others. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T01:42:04.185458+04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T03:34:39.460111+04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kTfTYsbvDQClmsc7DniH/w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Evaluate the next snippet to create you own minimal subclass of the {{gtClass:GtNullWorldMorphicRenderer}}"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T01:55:44.931283+04:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "timonoid01@gmail.com"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-23T02:19:59.40146+04:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "DMqTyMbvDQCx8mT5DniH/w=="
+							},
+							"code" : "GtNullWorldMorphicRenderer subclass: #MyWorldRenderer.\rMyWorldRenderer class \r\tcompile: 'priority ^ 200';\r\tcompile: 'isApplicableFor: aWorld ^true'. "
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "timonoid01@gmail.com"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-23T02:34:19.629936+04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "timonoid01@gmail.com"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2025-04-23T03:10:57.134494+04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "LE+xZrnvDQC/l8ATAD83+Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Prevent the Morphic World from appearing"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
 								"emailString" : "tudor@tudorgirba.com"
 							},
 							"createTime" : {
@@ -581,14 +872,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2021-05-24T15:07:23.774569+02:00"
+									"dateAndTimeString" : "2025-04-22T09:59:36.004338+04:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "RLoRpMeUAAAAAAAAAAAAAA=="
 							},
-							"code" : "Smalltalk snapshot: true andQuit: false"
+							"code" : "Smalltalk snapshot: true andQuit: false."
 						}
 					]
 				},
