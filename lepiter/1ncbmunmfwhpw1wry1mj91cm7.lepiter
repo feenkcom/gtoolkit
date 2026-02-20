@@ -71,14 +71,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:47:49.758179+01:00"
+									"dateAndTimeString" : "2026-02-20T17:08:55.024078+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "8NCa6VbrDQCGj3jFAurXGw=="
 							},
-							"code" : "client := GtAnthropicClient withApiKeyFromFile"
+							"code" : "client := GtLAnthropicClient withApiKeyFromFile"
 						},
 						{
 							"__type" : "textSnippet",
@@ -180,14 +180,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:48:21.908921+01:00"
+									"dateAndTimeString" : "2026-02-20T17:08:58.641779+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "26907VbrDQCJNQQvAurXGw=="
 							},
-							"code" : "client := GtAnthropicClient withApiKeyFromClipboard"
+							"code" : "client := GtLAnthropicClient withApiKeyFromClipboard"
 						}
 					]
 				},
@@ -313,7 +313,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:49:19.862465+01:00"
+									"dateAndTimeString" : "2026-02-20T17:09:20.072002+01:00"
 								}
 							},
 							"editEmail" : {
@@ -324,14 +324,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-05-14T22:24:14.372884+02:00"
+									"dateAndTimeString" : "2026-02-20T19:46:04.759953+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "0Asr8lbrDQCJ3/y8AurXGw=="
+								"uidString" : "QzMYD87vTfuhnq0ibzMkdQ=="
 							},
-							"code" : "messages := {\r\tGtLlmUserMessage new content: 'Hello Anthropic! How are you today?'\r}.\r\rclient completeChatWithModel: 'claude-3-7-sonnet-20250219' messages: messages andMaxTokens: 4096"
+							"code" : "messages := GtLMessagesGroup\r\t\twithAll: {GtLAnthropicUserMessage new markdown: 'Hello Anthropic! How are you today?'}.\r\rclient\r\tgenerateResponseWithModel: 'claude-haiku-4-5-20251001'\r\tmessages: messages\r\tmaxTokens: 4096\r\tinstructions: nil\r\ttools: nil\r\tandFormat: nil"
 						}
 					]
 				},

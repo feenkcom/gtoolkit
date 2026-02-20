@@ -324,14 +324,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T21:13:08.554487+01:00"
+									"dateAndTimeString" : "2026-02-20T19:45:35.99876+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "RfoZlYrMDQCaiB6QATK6Xg=="
 							},
-							"code" : "messages := {\r\tGtLOpenAIUserMessage new markdown: 'Hello ChatGPT! How are you today?'\r}.\r\rclient completeChatWithModel: 'gpt-5.1' andMessages: messages"
+							"code" : "messages := GtLMessagesGroup withAll:{\r\tGtLOpenAIUserMessage new markdown: 'Hello ChatGPT! How are you today?'\r}.\r\rclient generateResponseWithModel: 'gpt-5.1' andMessages: messages"
 						}
 					]
 				},
