@@ -8,45 +8,7 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "elementSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-14T11:34:39.990416+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T12:46:00.284844+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "ryR4dXnqDQC4q0LoA1QUJQ=="
-							},
-							"code" : "GtLOpenAICardStencil new openAICard",
-							"elementHeight" : 291,
-							"codeHeight" : 31,
-							"codeVisible" : false
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -67,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-03-24T23:20:48.298828+01:00"
+						"dateAndTimeString" : "2026-02-23T20:41:55.931426+01:00"
 					}
 				},
 				"uid" : {
@@ -77,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Adding an API key can be done through the widget below. Simply save the key to a file and point the widget to it. By default, the file is at {{gtExample:GtOpenAIClient class>>#defaultApiKeyFile|label=#path}}."
+				"string" : "The API key should be provided as a text file that contains only that key string and nothing else. By default, the file is at {{gtExample:GtOpenAIClient class>>#defaultApiKeyFile|label=#path}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -109,14 +71,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-13T12:49:17.149056+01:00"
+									"dateAndTimeString" : "2026-02-23T18:46:35.840738+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "DiAd/VbrDQCMzPJ2AurXGw=="
 							},
-							"code" : "apiKey := ''.\rfileLocation := GtLOpenAIClient apiKeyFile.\r\rfileLocation ensureDelete writeStreamDo: [ :s | s nextPutAll: apiKey ]"
+							"code" : "apiKey := ''.\rfileReference := GtLOpenAIClient apiKeyFile.\rfileReference parent ensureCreateDirectory. \rfileReference ensureDelete writeStreamDo: [ :s | s nextPutAll: apiKey ]"
 						}
 					]
 				},
@@ -139,7 +101,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-03-24T23:21:14.699682+01:00"
+						"dateAndTimeString" : "2026-02-23T20:55:09.796861+01:00"
 					}
 				},
 				"uid" : {
@@ -149,7 +111,79 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You can also store the key programmatically using the following snippet:"
+				"string" : "You can store the key programmatically using the following snippet:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-23T20:43:08.674371+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-23T20:43:23.852794+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "46MMqxyVT6uJ63tPR40t6Q=="
+							},
+							"code" : "GtLOpenAIClient withApiKeyFromFile"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-23T20:56:57.994596+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-23T20:56:58.080585+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "K/8jZJnJQ2el04/gtGiVDg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Once set, you can test the key by trying to inspect the client:"
 			}
 		]
 	},

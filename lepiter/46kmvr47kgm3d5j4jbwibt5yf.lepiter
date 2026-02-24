@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-20T17:06:38.792577+01:00"
+						"dateAndTimeString" : "2026-02-23T20:37:43.119006+01:00"
 					}
 				},
 				"uid" : {
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-12T12:35:31.074719+01:00"
+						"dateAndTimeString" : "2026-02-23T20:39:33.575279+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-12T12:36:46.871008+01:00"
+						"dateAndTimeString" : "2026-02-23T20:40:19.660128+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "yZekGAH4TpiYa2vXmqEguQ=="
+					"uidString" : "JeJBo39MT5KvFnLvkudPJw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "You can set up one or more models, and switch between them at your leisure."
+				"string" : "The view below shows the overview of the currently defined connections. A connection has to be connectable. To make a connection that is based on an API connectable, you need to set the API key.  See [[Adding an OpenAI API key]] or [[Adding an Anthropic API key]] for how to do that."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-07T22:23:32.879586+02:00"
+						"dateAndTimeString" : "2026-02-23T20:39:33.579196+01:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To see which connectors are known by default, and change the default, you can use the view below (right click on any of them and click on `Make default` to make them the default connector):"
+				"string" : "The connection set as default is the one that is picked up when instantiating a chat without specifying the connection (right click on any of them and click on `Make default` to make them the default connector):"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -154,43 +154,6 @@
 				"codeExpanded" : true,
 				"previewExpanded" : true,
 				"noCode" : true
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-07T22:23:38.909386+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-07T22:23:44.706803+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "zKPm22LzDQC4CoW7AiKmRg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "To add different connectors with different models, see [[Managing LLM provider connections and setting the default]]."
 			},
 			{
 				"__type" : "textSnippet",

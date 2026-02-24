@@ -287,7 +287,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-20T12:41:34.72049+01:00"
+									"dateAndTimeString" : "2026-02-23T17:46:01.053718+01:00"
 								}
 							},
 							"uid" : {
@@ -719,14 +719,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T17:45:51.998313+01:00"
+									"dateAndTimeString" : "2026-02-23T17:49:33.200784+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "cNTlU7GrQNiDH98fqZIUDg=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\ttools: GtLTools gtSearch , GtLTools gtExamplesRun , GtLTools leSearch\r\t\t\t\t, GtLTools gtCodeChange;\r\t\tgtPageExplanation: 'Examples by example';\r\t\tsendMarkdown: 'Create a BubbleSorter class that implements bubblesort. Create examples for it. Ensure that the examples are green.'"
+							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\ttools: GtLTools gt;\r\t\tgtPageExplanation: 'Examples by example';\r\t\tsendMarkdown: 'Create a BubbleSorter class that implements bubblesort. Create examples for it. Ensure that the examples are green.'"
 						},
 						{
 							"__type" : "textSnippet",
@@ -790,14 +790,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-25T14:52:51.034754+01:00"
+									"dateAndTimeString" : "2026-02-23T17:51:06.654459+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "9sD7KJpgSU2BfYL7yZzNrQ=="
 							},
-							"code" : "chat sendMarkdown: 'Check the examples from {{gtClass:BubbleSorter}}. If they are red, make them green.'"
+							"code" : "chat sendMarkdown: 'Check the examples about {{gtClass:BubbleSorter}}. If they are red, make them green.'"
 						}
 					]
 				},
@@ -838,10 +838,45 @@
 					"__type" : "snippets",
 					"items" : [
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-02-23T21:13:01.266237+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-02-23T21:13:06.143255+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "NlNXDRVkQEKGi9G1zL4tlw=="
+										},
+										"code" : "chat := GtLChat new\r\tmarkdownResponse;\r\ttools: GtLTools gt, {GtLToolForSmalltalkCodeEvaluation new};\r\tgtPageExplanation: 'Parsing with PetitParser2';\r\taddResponseFormatForMagrite: GtLPharoScript named: 'PharoScript';\r\tsendMarkdown: 'Create a script with a PetitParser2 parser for this ripgrep output format:\r```console\r./some/path/to/file.txt:43:1232:Bla\r```\rTry the script and ensure it works before proposing it.\r'"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -851,7 +886,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:37:37.483453+01:00"
+									"dateAndTimeString" : "2026-02-23T21:12:53.046376+01:00"
 								}
 							},
 							"editEmail" : {
@@ -862,20 +897,58 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T17:46:06.095911+01:00"
+									"dateAndTimeString" : "2026-02-23T21:12:59.329477+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "o5e4Ng9mQeaqqu4ygiLb0g=="
+								"uidString" : "JLxbAHHIS+SSAXuZ5PO3Jw=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\ttools: GtLTools gtSearch , GtLTools leSearch;\r\t\tgtPageExplanation: 'Examples by example';\r\t\tsendMarkdown: 'Explain the {{gtClass:BlElement}} class. Look for examples. Pick an interesing example and explain it.'"
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Create a PetitParser2 parser:"
 						},
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-02-21T20:33:59.192808+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-02-23T21:09:23.390433+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "en/1vynUQOKPLMPSHb6ScQ=="
+										},
+										"code" : "smaccModel := GtLSmaCCModel new.\nchat := GtLChat new\n\t\tmarkdownResponse;\n\t\ttools: GtLTools gt\n\t\t\t\t, (GtLSmaCCTool allSubclasses collect: [ :each | each new model: smaccModel ]);\n\t\tgtPageExplanation: 'SmaCC grammar';\n\t\tsendWith: [ :m | \n\t\t\tm\n\t\t\t\tmarkdown: 'Create a SmaCC parser to parse and evaluate simple math expressions. The class should be named `SampleExpressionParser` and be in the package `TempParsers`. Ensure you get no error in the parser. Compile the parser. Build the abstract syntax tree. Test it with a simple script and once it''s working provide the script' ]"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -885,7 +958,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:38:14.730924+01:00"
+									"dateAndTimeString" : "2026-02-21T20:33:56.22365+01:00"
 								}
 							},
 							"editEmail" : {
@@ -896,14 +969,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-23T08:38:15.095711+01:00"
+									"dateAndTimeString" : "2026-02-23T21:12:28.044528+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "v2+u9Y97Qrej5xgqmGiN2A=="
+								"uidString" : "N3tFjvsXRi67HLP5MZ7BxQ=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\ttools: GtLTools gtSearch , GtLTools leSearch;\r\t\tsendMarkdown: 'What Lepiter pages are relevant for learning about examples?'"
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Create a SmaCC parser:"
 						}
 					]
 				},
@@ -915,7 +991,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-23T08:41:06.842695+01:00"
+						"dateAndTimeString" : "2026-02-23T21:12:44.663478+01:00"
 					}
 				},
 				"editEmail" : {
@@ -926,17 +1002,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-23T08:41:38.349838+01:00"
+						"dateAndTimeString" : "2026-02-23T21:12:47.522869+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qLRbDVr/RgywiJcftvMxtA=="
+					"uidString" : "dq7xJIgOSFSPaI0H8tZROw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Other examples of using tools:"
+				"string" : "Creating parsers:"
 			}
 		]
 	},

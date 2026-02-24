@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:51:44.383113+01:00"
+						"dateAndTimeString" : "2026-02-23T20:53:12.69192+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,79 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:51:52.349485+01:00"
+						"dateAndTimeString" : "2026-02-23T20:54:43.168777+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "RZo2BYT8RlS3WwtRXcXj/w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The API key should be provided as a text file that contains only that key string and nothing else. By default, the file is at {{gtExample:GtAnthropicClient class>>#defaultApiKeyFile|label=#path}}."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-02-25T11:54:25.573827+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-23T20:55:38.764191+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "nthjBFfrDQCQSLB9AurXGw=="
+							},
+							"code" : "apiKey := ''.\rfileReference := GtAnthropicClient apiKeyFile.\rfileReference parent ensureCreateDirectory. \rfileReference ensureDelete writeStreamDo: [ :s | s nextPutAll: apiKey ]"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-23T20:55:11.779546+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-23T20:55:11.783054+01:00"
 					}
 				},
 				"uid" : {
@@ -39,50 +111,48 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Adding an API key can be done through the UI on this page or programmatically."
-			},
-			{
-				"__type" : "elementSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:54:00.388421+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T12:02:36.755486+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "n4vjAlfrDQCQLba1AurXGw=="
-				},
-				"code" : "Gt4LlmHomeSection new anthropicApiKeyCard",
-				"elementHeight" : 282,
-				"codeHeight" : 5,
-				"codeVisible" : true
+				"string" : "You can store the key programmatically using the following snippet:"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-23T20:55:43.975674+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-02-23T20:55:57.941402+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Au+gdOZ+TkCIzvvkLCij4Q=="
+							},
+							"code" : "GtLAnthropicClient withApiKeyFromFile"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -92,7 +162,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:54:18.728405+01:00"
+						"dateAndTimeString" : "2026-02-23T20:55:40.151562+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,51 +173,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:54:19.022547+01:00"
+						"dateAndTimeString" : "2026-02-23T20:56:48.134446+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "RWL7A1frDQCQPvkFAurXGw=="
+					"uidString" : "D4K0DIOJRJ6EYaddltbwdQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To do it programmatically instead, use the following snippet:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:54:25.573827+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:55:09.415386+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "nthjBFfrDQCQSLB9AurXGw=="
-				},
-				"code" : "apiKey := ''.\rfileLocation := GtAnthropicClient apiKeyFile.\r\rfileLocation ensureDelete writeStreamDo: [ :s | s nextPutAll: apiKey ]"
+				"string" : "Once set, you can test the key by trying to inspect the client:"
 			}
 		]
 	},
