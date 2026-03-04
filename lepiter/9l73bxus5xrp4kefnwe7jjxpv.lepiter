@@ -1,0 +1,76 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-02-26T10:12:15.149+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-02T15:38:51.645087+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ur+5nV3J80Gm6tCRzF52Yw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Overview\n\n{{gtClass:GtRrRunnerLogTimingAnalyzer}} reads remote runner log files and extracts timing statistics by processing beacon signals. It records measurements from each log into {{gtClass:GtRrRunnerLogTimingRun}} objects and aggregates them in {{gtClass:GtRrRunnerLogTimingStats}} for analysis and persistence.\n\n## Architecture\n\n### Related Classes\n\n- {{gtClass:GtRrRunnerLogTimingStat}} - Holds individual statistical data points and computes statistics (average, standard deviation, coefficient of variation)\n- {{gtClass:GtRrRunnerLogTimingRun}} - Represents timing data for a single log file; stores a timestamp and points by statistic name\n- {{gtClass:GtRrRunnerLogTimingDataset}} - Aggregates runs and supports merging/append of timing datasets\n- {{gtClass:GtRrRunnerLogTimingStats}} - Wraps a dataset and exposes stats; can be persisted to/loaded from STON files\n- {{gtClass:GtBeaconJsonLogReader}} - Reads log files and deserializes beacon signals\n- {{gtClass:BeaconSignal}} - Base class for all signals; provides `timestamp` for timing calculations\n\n### Key Instance Variables\n\n- `filename` - The log file to analyze (a FileReference)\n- `signals` - Cached collection of signals loaded from the log file (lazily loaded)\n- `timingStats` - The {{gtClass:GtRrRunnerLogTimingStats}} instance being populated\n- `currentRun` - The {{gtClass:GtRrRunnerLogTimingRun}} for the current file; statistic points are recorded on it\n\n## Analysis Flow\n\n{{gtMethod:GtRrRunnerLogTimingAnalyzer>>#analyze}} creates a run for the file, records statistics by calling update methods, stamps the run’s `collectedAt` using the first job startup signal, adds the run to the timing dataset, then computes all statistics. This method assumes a job startup signal exists; missing startup signals will raise an error when setting `collectedAt`.\n\n## How to Add a New Statistic\n\nAdding a new statistic follows a consistent pattern with four steps:\n\n### Step 1: Create Signal Finder Method(s)\n\nSearch for existing signal finder methods first to avoid duplicating logic. If you need a new method, place it in the `private - signals` protocol. For examples of the expected structure, see {{gtMethod:GtRrRunnerLogTimingAnalyzer>>#firstJobStartupSignal}} and {{gtMethod:GtRrRunnerLogTimingAnalyzer>>#lastTaskCompletedSignal}}.\n\n### Step 2: Create Calculation Method\n\nCreate a method that calculates the statistic value and place it in the `private - statistics` protocol. Return `nil` if the required signals are not found. For examples of expected structure and error handling, see {{gtMethod:GtRrRunnerLogTimingAnalyzer>>#calculateFirstTaskQueuedTime}} and {{gtMethod:GtRrRunnerLogTimingAnalyzer>>#calculateAverageTaskTime}}.\n\n### Step 3: Create Update Method\n\nCreate a method that records the calculated value using {{gtMethod:GtRrRunnerLogTimingAnalyzer>>#recordPoint:named:}} and place it in the `statistics` protocol. For examples of expected structure and error handling, see {{gtMethod:GtRrRunnerLogTimingAnalyzer>>#updateFirstTaskQueuedTimeStat}} and {{gtMethod:GtRrRunnerLogTimingAnalyzer>>#updateAverageTaskTimeStat}}.\n\n### Step 4: Register in analyze Method\n\nRegister the new update method in {{gtMethod:GtRrRunnerLogTimingAnalyzer>>#analyze}} alongside the existing updates.\n\n## Current Statistics\n\n- **First task queued time**: job startup → first queued task\n- **Average message queue time**: first queued task → last queued task, divided by queued message count\n- **Average task time**: first task started → last task completed, divided by completed task count\n- **First worker registration**: job startup → first worker registration\n\n## Common Signal Classes\n\nWhen adding statistics, you will likely work with signals that are subclasses of {{gtClass:BeaconSignal}}. Key properties available on all signals:\n\n- `timestamp` - A DateAndTime when the signal was created\n- `processId` - The process ID that created the signal\n\nSignals currently used by the analyzer include:\n\n- {{gtClass:GtRrJobStartupSignal}} (job start)\n- {{gtClass:GtRrMqQueueTaskStartingSignal}} (task queued)\n- {{gtClass:GtRrMqQueueTaskCompletedSignal}} (queue task completed; retry filtered)\n- {{gtClass:GtRrTaskCompletedAnnouncement}} and {{gtClass:GtRrNextTaskCompletedSignal}} (task completed)\n- {{gtClass:GtRrWorkerRegisteredAnnouncement}} (worker registration)\n\nTo find available signal classes for RemoteRunner, search for subclasses of relevant base signal classes or search for classes with names starting with `GtRr`.\n\n## Testing The Statistics\n\n{{gtMethod:GtRrRunnerLogTimingAnalyzerExamples>>#analyzeAllSampleLogs}} demonstrates loading logs from a file and verifying that they are correct.\n\n## Best Practices\n\n1. **Naming**: Use descriptive, human-readable names for statistics (e.g., 'First task queued time' not 'ftqt')\n\n2. **Null safety**: Always check for nil signals before calculating; return nil from calculation methods if data is unavailable\n\n3. **Units**: Document the units in method comments; prefer milliseconds for consistency\n\n4. **Protocol organization**:\n   - `private - signals` for signal finder methods\n   - `private - statistics` for calculation methods\n   - `statistics` for update methods\n   - `api` for public entry points\n\n5. **Reusability**: If multiple statistics need the same signal, create a single finder method and reuse it"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-02-26T10:12:26.707+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-03-02T12:10:45.613622+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "GtRrRunnerLogTimingAnalyzer Developer Guide"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "73803d87-51d2-be43-97a1-aaad6c69f7a1"
+	}
+}
