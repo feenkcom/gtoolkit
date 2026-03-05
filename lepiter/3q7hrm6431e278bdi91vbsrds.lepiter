@@ -106,7 +106,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T18:56:15.549587+01:00"
+						"dateAndTimeString" : "2026-03-05T20:56:57.190702+01:00"
 					}
 				},
 				"uid" : {
@@ -116,7 +116,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A tool's implementation has a name, takes arguments and returns a result. Magritte based tools return an instance of {{gtClass:GtLMagritteBasedModel}} that wraps the actual domain model. This happens in {{gtMethod:GtLAbstractMagritteFunctionTool>>#performToolCall:}}. This instance knows how to serialize itself. For OpenAI it serializes by implementing {{gtMethod:GtLWrappedModel>>#serializeToOpenAIResponseOutput}}. The tool is expected to implement the logic like in {{gtMethod:GtLMagritteToolForMethodsSource>>#privatePerformToolCall:inContext:}} and return a Magritte described object."
+				"string" : "A tool's implementation has a name, takes arguments and returns a result. Magritte based tools return an instance of {{gtClass:GtLMagritteBasedModel}} that wraps the actual domain model. This happens in {{gtMethod:GtLAbstractMagritteFunctionTool>>#performToolCall:inContext:}}. This instance knows how to serialize itself. For OpenAI it serializes by implementing {{gtMethod:GtLWrappedModel>>#serializeToOpenAIResponseOutput}}. The tool is expected to implement the logic like in {{gtMethod:GtLMagritteToolForMethodsSource>>#privatePerformToolCall:inContext:}} and return a Magritte described object."
 			},
 			{
 				"__type" : "textSnippet",

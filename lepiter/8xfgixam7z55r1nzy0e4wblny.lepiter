@@ -34,14 +34,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-05T18:56:52.825271+01:00"
+									"dateAndTimeString" : "2026-03-05T20:55:57.237325+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "ZpF8xBRSQZmSMdzcB2QBnQ=="
 							},
-							"code" : "chat := GtL gt \n\tgtPageExplanation: 'Rules for Moldable Development for Glamorous Toolkit';\r\tgtPageExplanation: 'Instructions for creating LLM tools for Glamorous Toolkit development'.\r\t\rchat sendMarkdown:  'Create an LLM tool for returning the information about a single file. It receives as a parameter a filePath of type {{gtClass:GtLFilePathReference}} . Should return a new subclass of {{gtClass:GtLMagritteDomainObjectExamples}} containing information about the file. It should include: Size, Creation time, Modified time, Access time, Type (file/directory), Permissions. Follow the rules for creating LLM tools'.  "
+							"code" : "chat := GtL gt \n\tgtPageExplanation: 'Rules for Moldable Development for Glamorous Toolkit';\r\tgtPageExplanation: 'LLM tools by example'; \r\tgtPageExplanation: 'Instructions for creating LLM tools for Glamorous Toolkit development'.\r\t\rchat sendMarkdown:  'Create an LLM tool for returning the information about a single file. It receives as a parameter a filePath of type {{gtClass:GtLFilePathReference}} . Should return a new subclass of {{gtClass:GtLMagritteDomainObjectExamples}} containing information about the file. It should include: Size, Creation time, Modified time, Access time, Type (file/directory), Permissions. Follow the rules for creating LLM tools'.  "
 						}
 					]
 				},
@@ -106,14 +106,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-05T18:58:10.390279+01:00"
+									"dateAndTimeString" : "2026-03-05T20:56:01.134528+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "4zlGMQ5tRoiev9hwLcdmmA=="
 							},
-							"code" : "chat := GtL gt \n\tgtPageExplanation: 'Rules for Moldable Development for Glamorous Toolkit';\r\tgtPageExplanation: 'Instructions for creating LLM tools for Glamorous Toolkit development'.\r\t\rchat sendMarkdown:  'Create an LLM tool for returning the information about a collection of files. It receives as a parameter a filePaths list of {{gtClass:GtLFilePathReference}} . Should return a new subclass of {{gtClass:GtLMagritteDomainObjectExamples}} containing information about a list of files.  Follow the same idea as in {{gtClass:GtLMagritteToolForFilesContents}}  for getting a list of file paths as a parameter'.  "
+							"code" : "chat := GtL gt \n\tgtPageExplanation: 'Rules for Moldable Development for Glamorous Toolkit';\r\tgtPageExplanation: 'LLM tools by example'; \r\tgtPageExplanation: 'Instructions for creating LLM tools for Glamorous Toolkit development'.\r\t\rchat sendMarkdown:  'Create an LLM tool for returning the information about a collection of files. It receives as a parameter a filePaths list of {{gtClass:GtLFilePathReference}} . Should return a new subclass of {{gtClass:GtLMagritteDomainObjectExamples}} containing information about a list of files.  Follow the same idea as in {{gtClass:GtLMagritteToolForFilesContents}}  for getting a list of file paths as a parameter'.  "
 						}
 					]
 				},
