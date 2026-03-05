@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:37:04.742294+01:00"
+						"dateAndTimeString" : "2026-03-04T23:20:41.873883+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-18T19:57:12.5134+01:00"
+						"dateAndTimeString" : "2026-03-04T23:31:36.836426+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ilaVZ8r7RhO/Gh8I4i4N+g=="
+					"uidString" : "hb7KpDe7R36joiD8C4cG0g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A tool can be used by an LLM chat to execute logic. For example, the below chat looks up the source of multiple methods using {{gtClass:GtLMagritteToolForMethodsSource}}."
+				"string" : "[[DRAFT]]"
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:41:11.740823+01:00"
+						"dateAndTimeString" : "2026-03-04T23:11:25.25214+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,23 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:41:11.740823+01:00"
+						"dateAndTimeString" : "2026-03-04T23:12:50.7867+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "YMz5qcX/SQiS95XY/9ljxg=="
+					"uidString" : "82sa8RrGQVmS/N4cQD1nMA=="
 				},
-				"exampleSelector" : "methodSourcesForExistingMethods",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtLMagritteToolForMethodsSourceExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : false
+				"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\ttools: GtLTools leSearch;\n\t\tsendMarkdown: 'Provide a PharoScript with a search for methods that are in {{gtClass:BlElement}} and also refer to `assert:description:`. '"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -95,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:42:26.487559+01:00"
+						"dateAndTimeString" : "2026-03-04T07:09:52.182749+01:00"
 					}
 				},
 				"editEmail" : {
@@ -106,20 +100,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T18:56:15.549587+01:00"
+						"dateAndTimeString" : "2026-03-04T07:09:52.182749+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "a2uFIVSyTaGLtE8W5VMf/w=="
+					"uidString" : "jfPNVmisQgOmSO6akwRrmw=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "A tool's implementation has a name, takes arguments and returns a result. Magritte based tools return an instance of {{gtClass:GtLMagritteBasedModel}} that wraps the actual domain model. This happens in {{gtMethod:GtLAbstractMagritteFunctionTool>>#performToolCall:}}. This instance knows how to serialize itself. For OpenAI it serializes by implementing {{gtMethod:GtLWrappedModel>>#serializeToOpenAIResponseOutput}}. The tool is expected to implement the logic like in {{gtMethod:GtLMagritteToolForMethodsSource>>#privatePerformToolCall:inContext:}} and return a Magritte described object."
+				"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\taddResponseFormatForMagrite: GtLPharoScript named: 'PharoScript';\n\t\tgtPageExplanation: 'Querying with GT search filters by example';\n\tsendMarkdown: 'Provide a PharoScript with a search for methods that are in {{gtClass:BlElement}} and also refer to `assert:description:`.'"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -132,7 +123,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:41:14.313554+01:00"
+						"dateAndTimeString" : "2026-03-04T07:09:52.186249+01:00"
 					}
 				},
 				"editEmail" : {
@@ -143,17 +134,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-01T15:01:50.66069+01:00"
+						"dateAndTimeString" : "2026-03-04T07:09:52.186249+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "LJvUu9alTEyxyf8djJdULA=="
+					"uidString" : "Y9k4qEXbSDeYjy+FMYmEHA=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Each tool has corresponding examples that test its logic in isolation. For example, {{gtClass:GtLMagritteToolForMethodsSource}} has examples in {{gtClass:GtLMagritteToolForMethodsSourceExamples}}."
+				"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\ttools: (GtLTools withAll: {GtLToolForChatMethodSearch new});\n\tsendMarkdown: 'What are a few references of {{gtClass:BlElement}} that also refer to `assert:description:`.'"
 			}
 		]
 	},
@@ -165,7 +153,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-01-21T23:37:01.70605+01:00"
+			"dateAndTimeString" : "2026-03-04T07:00:15.893817+01:00"
 		}
 	},
 	"editEmail" : {
@@ -176,15 +164,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-01-21T23:37:01.70605+01:00"
+			"dateAndTimeString" : "2026-03-04T23:28:06.611613+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "LLM tools by example"
+		"title" : "Moldable Chat Tutorial: Tool-augmented interaction"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "a0908d82-da00-4965-b5c7-5863c470f83e"
+		"uuid" : "73b15036-06c1-4e89-baca-1b680c1908f5"
 	}
 }

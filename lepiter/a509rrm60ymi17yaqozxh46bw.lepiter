@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:37:04.742294+01:00"
+						"dateAndTimeString" : "2026-03-04T23:29:04.885139+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,20 +29,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-18T19:57:12.5134+01:00"
+						"dateAndTimeString" : "2026-03-04T23:32:42.412067+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ilaVZ8r7RhO/Gh8I4i4N+g=="
+					"uidString" : "RK6lCCb8SNioCeI0yRsAJA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A tool can be used by an LLM chat to execute logic. For example, the below chat looks up the source of multiple methods using {{gtClass:GtLMagritteToolForMethodsSource}}."
+				"string" : "[[DRAFT]]"
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:41:11.740823+01:00"
+						"dateAndTimeString" : "2026-03-04T23:29:06.851715+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,23 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:41:11.740823+01:00"
+						"dateAndTimeString" : "2026-03-04T23:29:07.82713+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "YMz5qcX/SQiS95XY/9ljxg=="
+					"uidString" : "quo0JQBuSU2JYTc6x0RqeQ=="
 				},
-				"exampleSelector" : "methodSourcesForExistingMethods",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GtLMagritteToolForMethodsSourceExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : false
+				"code" : "GtL gt\n\tsendMarkdown: 'Produce a script that builds an 16x16 element with icon that shows a simple home. Take as blueprint for the script, the icon defined in {{gtMethod:BrGlamorousVectorIcons class>>chat}} which uses {{gtClass:BlPolygonGeometry}}. Execute the code. Evaluate the result by viewing the Live view of the resulting object id. Give a grade of the result.'"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -95,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:42:26.487559+01:00"
+						"dateAndTimeString" : "2026-03-04T23:34:33.488185+01:00"
 					}
 				},
 				"editEmail" : {
@@ -106,20 +100,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T18:56:15.549587+01:00"
+						"dateAndTimeString" : "2026-03-04T23:34:34.005258+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "a2uFIVSyTaGLtE8W5VMf/w=="
+					"uidString" : "Xh5Iq01OQGSNJUJsK1hiXA=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "A tool's implementation has a name, takes arguments and returns a result. Magritte based tools return an instance of {{gtClass:GtLMagritteBasedModel}} that wraps the actual domain model. This happens in {{gtMethod:GtLAbstractMagritteFunctionTool>>#performToolCall:}}. This instance knows how to serialize itself. For OpenAI it serializes by implementing {{gtMethod:GtLWrappedModel>>#serializeToOpenAIResponseOutput}}. The tool is expected to implement the logic like in {{gtMethod:GtLMagritteToolForMethodsSource>>#privatePerformToolCall:inContext:}} and return a Magritte described object."
+				"code" : "GtL gt\r\tsendMarkdown: 'Execute {{gtMethod:BlGridLayoutExamples>>#exampleCellSpacingHorizontal1}}. What are the exact bounds of the two blue squares?'"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -132,7 +123,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-21T23:41:14.313554+01:00"
+						"dateAndTimeString" : "2026-03-04T23:34:38.415362+01:00"
 					}
 				},
 				"editEmail" : {
@@ -143,17 +134,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-01T15:01:50.66069+01:00"
+						"dateAndTimeString" : "2026-03-04T23:34:38.853924+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "LJvUu9alTEyxyf8djJdULA=="
+					"uidString" : "cEb9eKYsRyOJ5q32RRjdIg=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
+				"code" : "container := BrVerticalPane new matchParent; background: Color paleOrange.\rc := GtL gt.\robjectId := c objectStorage addNewObject: container.\rc sendMarkdown: 'Execute {{gtMethod:BlGridLayoutExamples>>#exampleCellSpacingHorizontal1}}. Add it to the object with ', objectId"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
 				},
-				"string" : "Each tool has corresponding examples that test its logic in isolation. For example, {{gtClass:GtLMagritteToolForMethodsSource}} has examples in {{gtClass:GtLMagritteToolForMethodsSourceExamples}}."
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-04T23:34:45.160901+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-04T23:34:45.554852+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "JgoJOcXfQV2/oPn4xkVgWA=="
+				},
+				"code" : "container"
 			}
 		]
 	},
@@ -165,7 +187,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-01-21T23:37:01.70605+01:00"
+			"dateAndTimeString" : "2026-03-04T23:29:04.633263+01:00"
 		}
 	},
 	"editEmail" : {
@@ -176,15 +198,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-01-21T23:37:01.70605+01:00"
+			"dateAndTimeString" : "2026-03-04T23:29:04.633263+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "LLM tools by example"
+		"title" : "Moldable Chat Tutorial: Working with objects"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "a0908d82-da00-4965-b5c7-5863c470f83e"
+		"uuid" : "0cfe7cb3-4b45-4401-8783-e2d204f542ab"
 	}
 }
