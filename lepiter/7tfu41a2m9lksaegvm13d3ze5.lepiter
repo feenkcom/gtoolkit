@@ -208,14 +208,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:32:00.847161+01:00"
+						"dateAndTimeString" : "2026-03-05T15:26:07.140905+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "LWjMl2E/T4KgFHLdnN/VjA=="
 				},
-				"code" : "c := GtL gt\r\t\tgtPageExplanation: 'Parsing with PetitParser2';\r\t\taddResponseFormatForMagrite: GtLPharoScript named: 'PharoScript';\r\t\tsendMarkdown: 'Create a script with a PetitParser2 parser for this ripgrep output format:\\n```console\\n./some/path/to/file.txt:43:1232:Bla\\n```\\nTry the script and ensure it works before proposing it.'"
+				"code" : "c := GtL gt\r\t\tgtPageExplanation: 'Parsing with PetitParser2';\r\t\taddResponseFormatForMagrite: GtLPharoScript named: 'PharoScript';\r\t\tsendMarkdown: 'Create a script with a PetitParser2 parser for this ripgrep output format:\r\t\t\r```console\r./some/path/to/file.txt:43:1232:Bla\r```\r\rTry the script and ensure it works before proposing it.'"
 			}
 		]
 	},
