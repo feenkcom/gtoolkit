@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-06T11:50:21.900948+01:00"
+						"dateAndTimeString" : "2026-03-06T12:30:09.818762+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Below is a guide you should follow when creating LLM tools for Glamorous Toolkit. Further learn more about the patterns for creating LLM tools from related classes in the system."
+				"string" : "Below is a guide you should follow when creating LLM tools for Glamorous Toolkit. Further learn more about the patterns for creating LLM tools  from related classes in the system."
 			},
 			{
 				"__type" : "textSnippet",
@@ -220,7 +220,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-06T11:50:58.575361+01:00"
+									"dateAndTimeString" : "2026-03-06T12:29:13.975323+01:00"
 								}
 							},
 							"uid" : {
@@ -230,7 +230,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- Create a response domain object class (subclass Object) in {{gtPackage:Gt4LlmCore}}.\n- Use Magritte descriptions for all slots:\n  - `MAStringDescription` for strings.\n  - {{gtClass:MAToManyScalarRelationDescription}} for arrays of scalars.\n  - `MAToManyRelationDescription` for arrays of domain objects.\n- Add {{gtPragma:gtView}} methods for key collections.\n- Implement `printOn:` to summarize the object.\n\n**Tip:** Prefer reuse of existing domain objects (e.g., {{gtClass:GtLMethodReferences}}) when semantics align.\n"
+							"string" : "- Create a response domain object class (subclass Object) in {{gtPackage:Gt4LlmCore}}.\n- Use Magritte descriptions for all slots:\n  - `MAStringDescription` for strings.\n  - {{gtClass:MAToManyScalarRelationDescription}} for arrays of scalars.\n  - `MAToManyRelationDescription` for arrays of domain objects.\n- Add {{gtPragma:gtView}} methods for key collections.\n- Implement `printOn:` to summarize the object.\n\n**Tip:** Prefer reuse of existing domain objects (e.g., {{gtClass:GtLMethodsSearchResult}}) when semantics align.\n"
 						}
 					]
 				},
