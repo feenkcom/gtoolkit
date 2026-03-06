@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.483493-05:00"
+						"dateAndTimeString" : "2026-03-06T10:33:07.57739-06:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "SmaCC is a GLR parser generator. It generates both scanner and parser classes from a single definition. The scanner class transforms a string or stream of characters into a stream of tokens. The parser uses the tokens to create abstract syntax tree (AST) or whatever object that is defined by the grammar. "
+				"string" : "SmaCC is a GLR parser generator. It generates both scanner and parser classes from a single definition. The scanner class transforms a string or stream of characters into a stream of tokens. The parser uses the tokens to create an abstract syntax tree (AST) or whatever object is defined by the grammar. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.48795-05:00"
+						"dateAndTimeString" : "2026-03-06T10:33:11.819087-06:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Scanner grammar"
+				"string" : "## Scanner grammar"
 			},
 			{
 				"__type" : "textSnippet",
@@ -771,7 +771,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-24T07:51:49.510507-05:00"
+									"dateAndTimeString" : "2026-03-06T10:42:05.402635-06:00"
 								}
 							},
 							"uid" : {
@@ -781,7 +781,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "`[characters]` : Matches one of the characters inside the `[]`. This is a shortcut for the `|` operator. In addition to single characters, you can also specify character ranges with the `-` character. For example, `[a-z]` matches any lower case letter."
+							"string" : "`[characters]` : Matches one of the characters inside the `[]`. This is a shortcut for the `|` operator. In addition to single characters, you can also specify character ranges with the `-` character. For example, `[a-z]` matches any lowercase letter."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1174,7 +1174,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.510375-05:00"
+						"dateAndTimeString" : "2026-03-06T10:33:31.161535-06:00"
 					}
 				},
 				"uid" : {
@@ -1184,7 +1184,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Each token has a `TokenName` that is a valid Smalltalk variable name and must be surrounded by the `<>` characters. After the `<TokenName>` is a colon (`:`) character. Every token rule must end with a semicolon (`;`). `RegularExpression` is a regular expressions that matches one or more characters. There are many different syntaxes for regular expressions. SmaCC uses the following syntax for its regular expressions:"
+				"string" : "Each token has a `TokenName` that is a valid Smalltalk variable name and must be surrounded by the `<>` characters. After the `<TokenName>` is a colon (`:`) character. Every token rule must end with a semicolon (`;`). `RegularExpression` is a regular expression that matches one or more characters. There are many different syntaxes for regular expressions. SmaCC uses the following syntax for its regular expressions:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1248,7 +1248,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.516114-05:00"
+						"dateAndTimeString" : "2026-03-06T10:33:52.064901-06:00"
 					}
 				},
 				"uid" : {
@@ -1258,7 +1258,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "###Token methods"
+				"string" : "### Token methods"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1274,7 +1274,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.517545-05:00"
+						"dateAndTimeString" : "2026-03-06T10:34:44.508116-06:00"
 					}
 				},
 				"editEmail" : {
@@ -1285,7 +1285,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.517545-05:00"
+						"dateAndTimeString" : "2026-03-06T10:34:44.513379-06:00"
 					}
 				},
 				"uid" : {
@@ -1295,7 +1295,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If your scanner has a method name that matches the name of the token, (e.g. `whitespace`), that method will get called upon a match of that type. The {{gtClass:SmaCCScanner}} superclass already has a default implementation of {{gtMethod:SmaCCScanner>>whitespace}} and {{gtMethod:SmaCCScanner>>comment}}. These methods ignore those tokens by default. "
+				"string" : "If your scanner has a method name that matches the name of the token (e.g., `whitespace`), that method will be called when a token of that type is matched. The {{gtClass:SmaCCScanner}} superclass already has a default implementation of {{gtMethod:SmaCCScanner>>whitespace}} and {{gtMethod:SmaCCScanner>>comment}}. These methods ignore those tokens by default."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1322,7 +1322,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.518194-05:00"
+						"dateAndTimeString" : "2026-03-06T10:34:59.96071-06:00"
 					}
 				},
 				"uid" : {
@@ -1332,7 +1332,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "###Unreferenced tokens"
+				"string" : "### Unreferenced tokens"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1359,7 +1359,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.51889-05:00"
+						"dateAndTimeString" : "2026-03-06T10:35:18.313883-06:00"
 					}
 				},
 				"uid" : {
@@ -1369,7 +1369,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If a token is not referenced from a grammar specification, it will not be included in the generated scanner, unless the token's name is also a name of a method (see previous section). This, coupled with the ability to do substitutions, allows you to have the equivalent of macros within your scanner specification. However, be aware that if you are simply trying to generate a scanner, you will have to make sure that you create a dummy parser specification that references all of the tokens that you want in the final scanner."
+				"string" : "If a token is not referenced from a grammar specification, it will not be included in the generated scanner, unless the token's name is also the name of a method (see previous section). This, coupled with the ability to do substitutions, allows you to have the equivalent of macros within your scanner specification. However, be aware that if you are simply trying to generate a scanner, you will have to make sure that you create a dummy parser specification that references all of the tokens that you want in the final scanner."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1396,7 +1396,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.5195-05:00"
+						"dateAndTimeString" : "2026-03-06T10:35:25.970262-06:00"
 					}
 				},
 				"uid" : {
@@ -1406,7 +1406,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Parser grammar"
+				"string" : "## Parser grammar"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1433,7 +1433,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.52029-05:00"
+						"dateAndTimeString" : "2026-03-06T10:35:37.530793-06:00"
 					}
 				},
 				"uid" : {
@@ -1443,7 +1443,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Parsing converts the stream of tokens provided by the scanner into some object. Normally, this object will be a abstract syntax tree (AST) or parse tree, but it does not have to be an AST. For example, the [SmaCC tutorial](http://www.refactoryworkers.com/SmaCC/Tutorial.html) shows a calculator. This calculator does not produce a parse tree; it produces the result, a number."
+				"string" : "Parsing converts the stream of tokens provided by the scanner into some object. Normally, this object will be an abstract syntax tree (AST) or parse tree, but it does not have to be an AST. For example, the [SmaCC tutorial](http://www.refactoryworkers.com/SmaCC/Tutorial.html) shows a calculator. This calculator does not produce a parse tree; it produces the result, a number."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1470,7 +1470,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.520886-05:00"
+						"dateAndTimeString" : "2026-03-06T10:35:55.775505-06:00"
 					}
 				},
 				"uid" : {
@@ -1480,7 +1480,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "###Production rules"
+				"string" : "### Production rules"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1507,7 +1507,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.521749-05:00"
+						"dateAndTimeString" : "2026-03-06T10:36:26.763193-06:00"
 					}
 				},
 				"uid" : {
@@ -1517,7 +1517,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The production rules contains the definition of the parser. The first production rule is considered to be the starting rule for the parser. Each production rule consists of a non-terminal symbol name followed by a `:` separator which is followed by a list of possible productions separated by vertical bar, `|`, and finally terminated by a semicolon, `;`. "
+				"string" : "The production rules contain the definition of the parser. The first production rule is considered to be the starting rule for the parser. Each production rule consists of a non-terminal symbol name followed by a `:` separator, which is followed by a list of possible productions separated by a vertical bar, `|`, and finally terminated by a semicolon, `;`. "
 			},
 			{
 				"__type" : "blockQuoteSnippet",
@@ -1578,7 +1578,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.524575-05:00"
+						"dateAndTimeString" : "2026-03-06T10:36:44.374396-06:00"
 					}
 				},
 				"uid" : {
@@ -1588,7 +1588,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Each production consists of a sequence of production rule names, token names, or keywords followed by some optional Smalltalk code enclosed in curly `{}` or square `[]` brackets or a AST node definition enclosed in two curly brackets, `{{}}`. Production rule names are valid Smalltalk variable names and must be defined somewhere in the parser definition. Forward references are valid. Tokens are enclosed in angle brackets as they are defined in the scanner grammar above and keywords are enclosed in double-quotes (e.g., `\"then\"`). Keywords that contain double-quotes need to have two double-quotes per each double-quote in the keyword. For example, if you need a keyword for one double-quote character, you would need to enter `\"\"\"\"` (four double-quote characters). Productions can use `()` to group items and also `?`, `*`, and `+` modifiers to specify the number of occurrences for an item similar to what is allowed in the scanner definition above."
+				"string" : "Each production consists of a sequence of production rule names, token names, or keywords followed by some optional Smalltalk code enclosed in curly `{}` or square `[]` brackets or an AST node definition enclosed in two curly brackets, `{{}}`. Production rule names are valid Smalltalk variable names and must be defined somewhere in the parser definition. Forward references are valid. Tokens are enclosed in angle brackets as they are defined in the scanner grammar above and keywords are enclosed in double-quotes (e.g., `\"then\"`). Keywords that contain double-quotes need to have two double-quotes per each double-quote in the keyword. For example, if you need a keyword for one double-quote character, you would need to enter `\"\"\"\"` (four double-quote characters). Productions can use `()` to group items and also `?`, `*`, and `+` modifiers to specify the number of occurrences for an item similar to what is allowed in the scanner definition above."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1652,7 +1652,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.52684-05:00"
+						"dateAndTimeString" : "2026-03-06T10:37:19.992693-06:00"
 					}
 				},
 				"uid" : {
@@ -1662,7 +1662,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Inside the Smalltalk code you can refer to the values of each production item by using literal strings. The literal string, `'1'`, refers the to value of the first production item. The values for tokens and keywords will be {{gtClass:SmaCCToken}} objects. The value for all non-terminal symbols will be whatever the Smalltalk code evaluates to for that non-terminal symbol. While you can reference every value using an integer for the name in the Smalltalk code, using an index makes it difficult to modify the grammar. For example, if you add something to the beginning of a rule, then you must modify all of the indices in the Smalltalk code. Instead you can name each symbol in the production and then refer to the name in the Smalltalk code. To name a symbol (non-terminal, token, or keyword), you need to add a single-quoted variable name after the symbol in the grammar. For example, `MySymbol : Expression 'expr' \"+\" <number> 'num' {expr + num value asInteger} ;` creates two named variables. One for the non-terminal Expression and one for the `<number>` token. These variables are then used in the Smalltalk code."
+				"string" : "Inside the Smalltalk code you can refer to the values of each production item by using literal strings. The literal string, `'1'`, refers to the value of the first production item. The values for tokens and keywords will be {{gtClass:SmaCCToken}} objects. The value for all non-terminal symbols will be whatever the Smalltalk code evaluates to for that non-terminal symbol. While you can reference every value using an integer for the name in the Smalltalk code, using an index makes it difficult to modify the grammar. For example, if you add something to the beginning of a rule, then you must modify all of the indices in the Smalltalk code. Instead you can name each symbol in the production and then refer to the name in the Smalltalk code. To name a symbol (non-terminal, token, or keyword), you need to add a single-quoted variable name after the symbol in the grammar. For example, `MySymbol : Expression 'expr' \"+\" <number> 'num' {expr + num value asInteger} ;` creates two named variables. One for the non-terminal Expression and one for the `<number>` token. These variables are then used in the Smalltalk code."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1689,7 +1689,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.527488-05:00"
+						"dateAndTimeString" : "2026-03-06T10:37:33.139848-06:00"
 					}
 				},
 				"uid" : {
@@ -1699,7 +1699,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "###AST generation"
+				"string" : "### AST generation"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1911,7 +1911,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-24T07:51:49.53251-05:00"
+						"dateAndTimeString" : "2026-03-06T10:38:05.665481-06:00"
 					}
 				},
 				"uid" : {
@@ -1921,7 +1921,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##Directives"
+				"string" : "## Directives"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1990,7 +1990,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-24T07:51:49.536918-05:00"
+									"dateAndTimeString" : "2026-03-06T10:38:20.60993-06:00"
 								}
 							},
 							"uid" : {
@@ -2000,7 +2000,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : " `%ignorecase;` : This directive generates a case-insensitive scanner. "
+							"string" : "`%ignorecase;` : This directive generates a case-insensitive scanner. "
 						},
 						{
 							"__type" : "textSnippet",
@@ -2064,7 +2064,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-24T07:51:49.536925-05:00"
+									"dateAndTimeString" : "2026-03-06T10:38:36.718026-06:00"
 								}
 							},
 							"uid" : {
@@ -2074,7 +2074,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "`%id` : The `%id` directive generates `Id` methods in the scanner that returns the scanner's id for the token."
+							"string" : "`%id` : The `%id` directive generates `Id` methods in the scanner that return the scanner's id for the token."
 						},
 						{
 							"__type" : "textSnippet",
@@ -2138,7 +2138,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-10-24T07:51:49.536929-05:00"
+									"dateAndTimeString" : "2026-03-06T10:39:48.842108-06:00"
 								}
 							},
 							"uid" : {
@@ -2148,7 +2148,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "`%nfa;` : SmaCC generates the regular expressions into methods on the scanner class. For large grammars, this can create an extremely large scanner class. The `%nfa` directive makes the scanner that is driven by the nfa created from the regular expressions. This scanner is quite a bit slower than the method based scanners, but can be faster to generate. When an nfa scanner is run for the first time, it builds the nfa from the grammar at stores it in the scanner class. "
+							"string" : "`%nfa;` : SmaCC generates the regular expressions into methods on the scanner class. For large grammars, this can create an extremely large scanner class. The `%nfa` directive makes the scanner that is driven by the NFA created from the regular expressions. This scanner is quite a bit slower than the method based scanners, but can be faster to generate. When an NFA scanner is run for the first time, it builds the NFA from the grammar and stores it in the scanner class. "
 						}
 					]
 				},
