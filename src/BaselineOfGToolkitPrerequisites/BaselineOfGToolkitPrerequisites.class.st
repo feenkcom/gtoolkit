@@ -56,10 +56,16 @@ BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol
 BaselineOfGToolkitPrerequisites >> applyPatchAuthor [
 	self 
 		fastForPharo13: [
-			#Author asClass compile: 'useAuthor: aString during: aBlock
+			#Author asClass instanceSide compile: 'useAuthor: aString during: aBlock
 	<gtPharoPatch: #Pharo13>
 			
-	^ aBlock value' classified: 'gt-patch'.] 
+	^ aBlock value' classified: 'gt-patch'.
+	
+	#Author asClass classSide compile: 'useAuthor: aString during: aBlock
+	<gtPharoPatch: #Pharo13>
+			
+	^ aBlock value' classified: 'gt-patch'.
+	] 
 		forPharo12: [ ] 
 		forPharo11: [ ]
 ]
