@@ -106,7 +106,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-04T18:50:26.904344+01:00"
+									"dateAndTimeString" : "2026-03-13T22:31:58.965333+01:00"
 								}
 							},
 							"uid" : {
@@ -116,7 +116,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Inspecting the object shows a view with an interactive chat interface. Go ahead, try it."
+							"string" : "Inspecting the object reveals a view with an interactive chat interface. Go ahead and try it."
 						},
 						{
 							"__type" : "textSnippet",
@@ -178,7 +178,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-04T23:10:19.032267+01:00"
+									"dateAndTimeString" : "2026-03-13T22:32:03.674907+01:00"
 								}
 							},
 							"uid" : {
@@ -188,7 +188,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "You can also control the chat programmatically. For example, to send an initial message, you can use {{gtMethod:GtLChat>>#sendMarkdown:}}:"
+							"string" : "You can also control the chat programmatically. For example, to send an initial message, use {{gtMethod:GtLChat>>#sendMarkdown:}}:"
 						}
 					]
 				},
@@ -288,7 +288,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-04T23:10:19.086139+01:00"
+									"dateAndTimeString" : "2026-03-13T22:32:12.543778+01:00"
 								}
 							},
 							"uid" : {
@@ -298,7 +298,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The basic chat has no notion of the expected output. With services that offer structured output, we can define the expected schema of the response. For example, in the previous chat, we received a plain string that is shown as a plain string even if it has Markdown notation inside. If we specify that we expect Markdown, we can do so through {{gtMethod:GtLChat>>#markdownResponse}}:"
+							"string" : "A basic chat has no notion of the expected output. With services that support structured output, we can define the expected response schema. For example, in the previous chat, we received a plain string, so it is shown as plain text even if it contains Markdown notation. If we specify that we expect Markdown, we can do so through {{gtMethod:GtLChat>>#markdownResponse}}:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -325,7 +325,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-12T18:50:31.797771+01:00"
+									"dateAndTimeString" : "2026-03-13T22:32:17.24762+01:00"
 								}
 							},
 							"uid" : {
@@ -335,7 +335,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Executing this chat now shows a Markdown-specific view in addition to the plain-string content one. This is achieved in the following way: the engine sends the expected response schema in the request, and when the response comes, it transparently instantiates objects that conform to the specified schema. In our case, the object is an instance of {{gtClass:GtLMarkdown}}, and such an object knows how to present itself with a styled editor."
+							"string" : "Executing this chat now shows a Markdown-specific view in addition to the plain text view. This works as follows: the engine sends the expected response schema in the request, and when the response arrives, it transparently instantiates objects that conform to the specified schema. In our case, the object is an instance of {{gtClass:GtLMarkdown}}, and that object knows how to present itself through a styled editor."
 						}
 					]
 				},
@@ -400,7 +400,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-04T22:44:49.014162+01:00"
+									"dateAndTimeString" : "2026-03-13T22:32:22.137623+01:00"
 								}
 							},
 							"uid" : {
@@ -410,7 +410,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The structured output can be exploited for various purposes."
+							"string" : "Structured output can be exploited for various purposes."
 						},
 						{
 							"__type" : "textSnippet",
@@ -472,7 +472,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-12T18:50:31.846943+01:00"
+									"dateAndTimeString" : "2026-03-13T22:32:31.624195+01:00"
 								}
 							},
 							"uid" : {
@@ -482,7 +482,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "For example, say we want to get a preview of proposed changes from the LLM. In such a case, we can specify that we expect code transformations. To add a new response schema, we use {{gtMethod:GtLChat>>#addResponseFormatForMagrite:named:}}, which takes the schema from a Magritte class. In our case, the class is {{gtClass:GtLCodeTransformations}}, which, besides describing the structure for different kinds of transformations, also knows how to transform those transformations into dedicated changes that can be directly applied in the image:"
+							"string" : "For example, suppose we want to preview proposed changes from the LLM. In that case, we can specify that we expect code transformations. To add a new response schema, we use {{gtMethod:GtLChat>>#addResponseFormatForMagrite:named:}}, which takes the schema from a Magritte class. In our case, the class is {{gtClass:GtLCodeTransformations}}, which, besides describing the structure of different kinds of transformations, also knows how to turn those transformations into dedicated changes that can be applied directly in the image:"
 						}
 					]
 				},

@@ -64,7 +64,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:00:55.276527+01:00"
+						"dateAndTimeString" : "2026-03-13T22:30:39.252188+01:00"
 					}
 				},
 				"uid" : {
@@ -74,7 +74,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's ask the LLM for help with a less documented part of Glamorous Toolkit: the rewrite rules. In this case, we are asking for a rewrite rule to remove the `self halt` statements from the code."
+				"string" : "Let's ask the LLM for help with a less well-documented part of Glamorous Toolkit: rewrite rules. In this case, we ask it for a rewrite rule that removes `self halt` statements from the code."
 			},
 			{
 				"__type" : "textSnippet",
@@ -136,7 +136,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:10:54.233027+01:00"
+						"dateAndTimeString" : "2026-03-13T22:30:48.700733+01:00"
 					}
 				},
 				"uid" : {
@@ -146,7 +146,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The response looks confident, but it's typically wrong. We can nudge the LLM by providing explanations in the system instructions:"
+				"string" : "The response looks confident, but it is typically wrong. We can nudge the LLM by providing relevant explanations in the system instructions:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -208,7 +208,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T10:22:38.135123+01:00"
+						"dateAndTimeString" : "2026-03-13T22:30:55.412532+01:00"
 					}
 				},
 				"uid" : {
@@ -218,7 +218,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This should have produced a better result. If we combine that explanation with an expected format that knows about rewrite rules, we can quickly explore queries and code transformations: "
+				"string" : "This should produce a better result. If we combine that explanation with an expected response format that knows about rewrite rules, we can quickly explore queries and code transformations:"
 			}
 		]
 	},

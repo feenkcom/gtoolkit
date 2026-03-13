@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T13:54:20.308386+01:00"
+						"dateAndTimeString" : "2026-03-13T22:19:12.475912+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit is a live environment. Generating code ([[Moldable Chat: Generating code]]) or documentation ([[Moldable Chat: Changing Lepiter pages]]) is great, but to leverage the potential of the environment beyond what's possible elsewhere, we should get the LLM to work with objects."
+				"string" : "Glamorous Toolkit is a live environment. Generating code ([[Moldable Chat: Generating code]]) or documentation ([[Moldable Chat: Changing Lepiter pages]]) is useful, but to leverage the environment’s full potential beyond what is possible elsewhere, we should get the LLM to work with objects."
 			},
 			{
 				"__type" : "textSnippet",
@@ -105,7 +105,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-13T14:51:24.150215+01:00"
+									"dateAndTimeString" : "2026-03-13T22:20:28.970019+01:00"
 								}
 							},
 							"uid" : {
@@ -115,7 +115,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To check the Live view of the resulting element, it needs a means to pass the reference from resulting from the code execution tool to the tool that gets the view. This is achieved through an object storage (see {{gtMethod:GtLChat>>#objectStorage}}) that associates ids to objects and stores them in a chat. Tools like  {{gtClass:GtLMagritteToolForSmalltalkCodeEvaluation}} use this mechanism for storing results, and other tools like {{gtClass:GtLToolForObjectView}} can interpret ids sent as arguments."
+							"string" : "To check the Live view of the resulting element, it needs a means to pass the reference from resulting from the code execution tool to the tool that gets the view. This is achieved through an object storage (see {{gtMethod:GtLChat>>#objectStorage}}) that associates ids to objects and stores them in a chat. Tools like  {{gtClass:GtLMagritteToolForSmalltalkCodeEvaluation}} use this mechanism to store results, and other tools such as {{gtClass:GtLToolForObjectView}} can interpret ids passed as arguments."
 						},
 						{
 							"__type" : "textSnippet",
@@ -142,7 +142,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-13T14:50:57.02028+01:00"
+									"dateAndTimeString" : "2026-03-13T22:20:44.498504+01:00"
 								}
 							},
 							"uid" : {
@@ -152,7 +152,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "If you want to explore the same use case further, try this:"
+							"string" : "If you want to explore this use case further, try this:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -209,7 +209,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T13:57:13.642634+01:00"
+						"dateAndTimeString" : "2026-03-13T22:19:38.253079+01:00"
 					}
 				},
 				"uid" : {
@@ -219,7 +219,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's start with a basic case, in which we ask the LLM to script that produces an icon, but we also ask it to run the script and then evaluate the result by looking at the view:"
+				"string" : "Let's start with a basic case in which we ask the LLM to produce a script that builds an icon. We also ask it to run the script and then evaluate the result by looking at the view:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -246,7 +246,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T22:01:11.880281+01:00"
+						"dateAndTimeString" : "2026-03-13T22:20:57.508682+01:00"
 					}
 				},
 				"uid" : {
@@ -256,7 +256,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Inspecting the result of a script and viewing  the result is equivalent to working in a playground and an inspector. To complete the scene and allow the LLM to reach and inspect arbitrary objects, we also need the equivalent of a contextual playground. To this end, we need to be able to bind objects to variables in a script."
+				"string" : "Inspecting the result of a script and viewing it is equivalent to working in a playground and an inspector. To complete the picture and allow the LLM to reach and inspect arbitrary objects, we also need the equivalent of a contextual playground. To this end, we need to be able to bind objects to variables in a script."
 			},
 			{
 				"__type" : "textSnippet",
@@ -322,7 +322,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-13T22:07:31.705975+01:00"
+									"dateAndTimeString" : "2026-03-13T22:21:31.09693+01:00"
 								}
 							},
 							"uid" : {
@@ -332,7 +332,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The example method produces an element. To get the details of that element, the LLM has to execute a script with a variable bound to the element. The example method tool stores the resulting object in the object storage, and the LLM has option of binding a name with an id as an argument in {{gtMethod:GtLMagritteToolForSmalltalkCodeEvaluation>>#bindingsDescription}}. Inspect the smalltalk execution message in the chat above to see it in action."
+							"string" : "The example method produces an element. To obtain details about that element, the LLM has to execute a script with a variable bound to the element. The example method tool stores the resulting object in the object storage, and the LLM has the option of binding a name to an ID as an argument in {{gtMethod:GtLMagritteToolForSmalltalkCodeEvaluation>>#bindingsDescription}}. Inspect the Smalltalk execution message in the chat above to see this in action."
 						}
 					]
 				},
@@ -355,7 +355,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T22:01:37.406824+01:00"
+						"dateAndTimeString" : "2026-03-13T22:21:08.322021+01:00"
 					}
 				},
 				"uid" : {
@@ -365,7 +365,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The case below exemplifies this:"
+				"string" : "The case below exemplifies this idea:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -392,7 +392,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T22:09:41.2962+01:00"
+						"dateAndTimeString" : "2026-03-13T22:21:48.804866+01:00"
 					}
 				},
 				"uid" : {
@@ -402,7 +402,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The above scenario is equivalent to inspect the result of an example method and of running a script in a contextual playground of the result. But, sometimes we want to start the conversation from an existing object from the image."
+				"string" : "The above scenario is equivalent to inspecting the result of an example method and running a script in a contextual playground on that result. Sometimes, however, we want to start the conversation from an existing object in the image."
 			},
 			{
 				"__type" : "textSnippet",
@@ -468,7 +468,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-13T22:14:27.199099+01:00"
+									"dateAndTimeString" : "2026-03-13T22:22:23.092671+01:00"
 								}
 							},
 							"uid" : {
@@ -478,7 +478,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "In this example,  the LLM must find the id of the input object. It can do that with {{gtClass:GtLToolForObjectStorageList}}. It then can run the example to get another object's id, and eventually it can execute a script relying on both ids."
+							"string" : "In this example, the LLM must find the ID of the input object. It can do that with {{gtClass:GtLToolForObjectStorageList}}. It can then run the example to get another object’s ID, and eventually execute a script that relies on both IDs."
 						},
 						{
 							"__type" : "textSnippet",
@@ -572,7 +572,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T22:09:55.39574+01:00"
+						"dateAndTimeString" : "2026-03-13T22:22:23.024445+01:00"
 					}
 				},
 				"uid" : {
@@ -582,7 +582,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can achieve this by storing an object into the object storage from the outside."
+				"string" : "We can achieve this by storing an object in the object storage from outside the chat."
 			}
 		]
 	},

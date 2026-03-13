@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:42:55.731832+01:00"
+						"dateAndTimeString" : "2026-03-13T22:24:19.237092+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Besides generating code entities([[Moldable Chat: Generating code]]), we can also get the LLM to change knowledge bases."
+				"string" : "Besides generating code entities([[Moldable Chat: Generating code]]), we can also use the LLM to modify knowledge bases."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:42:55.742435+01:00"
+						"dateAndTimeString" : "2026-03-13T22:24:38.274709+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Given the unreliability of LLMs, it is always advised to backup your work before using it."
+				"string" : "Given the unreliability of LLMs, it is always advisable to back up your work before using them for this purpose."
 			},
 			{
 				"__type" : "textSnippet",
@@ -138,7 +138,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:44:54.66107+01:00"
+						"dateAndTimeString" : "2026-03-13T22:24:38.345578+01:00"
 					}
 				},
 				"uid" : {
@@ -148,7 +148,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "That said, here is an example that asks the LLM to copy a page and add a new snippet to it:"
+				"string" : "That said, here is an example that asks the LLM to copy a page and add a new snippet:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -175,7 +175,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:45:46.706294+01:00"
+						"dateAndTimeString" : "2026-03-13T22:24:38.443946+01:00"
 					}
 				},
 				"uid" : {
@@ -185,7 +185,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To accomplish this, it has to search knowledge bases, search the page, get the contents, create a new page, and create new snippets."
+				"string" : "To accomplish this, the LLM must search knowledge bases, find the page, retrieve its contents, create a new page, and add new snippets."
 			}
 		]
 	},
