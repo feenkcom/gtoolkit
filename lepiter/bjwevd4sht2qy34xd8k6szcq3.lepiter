@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:32:31.253131+01:00"
+						"dateAndTimeString" : "2026-03-13T12:42:55.731832+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:32:32.992606+01:00"
+						"dateAndTimeString" : "2026-03-13T12:42:55.731832+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2NO/umV/SDeGl3IEbrWjVw=="
+					"uidString" : "kQF/hA9MQMSi/vjmxWjCdA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[DRAFT]]"
+				"string" : "Besides generating code entities([[Moldable Chat: Generating code]]), we can also get the LLM to change knowledge bases."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:25:27.470648+01:00"
+						"dateAndTimeString" : "2026-03-13T12:41:19.498972+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,20 +66,92 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:27:40.575899+01:00"
+						"dateAndTimeString" : "2026-03-13T12:42:55.742435+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "wYMoicpPQhCF7oFiY56bDg=="
+					"uidString" : "2NO/umV/SDeGl3IEbrWjVw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Manipulating Lepiter"
+				"string" : "Given the unreliability of LLMs, it is always advised to backup your work before using it."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T23:25:29.736574+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T12:44:00.918616+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kGPJTsDZSveAzE6Rh+m3Hg=="
+							},
+							"code" : "c := GtL gt sendMarkdown: 'Find the page {{gtPage:Moldable Chat: Changing Lepiter pages|db=2j9m7db2i4oz116bexd7wbdxo}}. Duplicate the contents of the snippets of that page into a new page entitled [[A very interesting page]] and put the new page in the default knowledge base. Then add a new example snippet with {{gtMethod:BlBasicExamples>>#circle}}.'"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T12:42:08.854259+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T12:44:54.66107+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/ez7TnwcTCW39c16HHV6pA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "That said, here is an example that asks the LLM to copy a page and add a new snippet to it:"
+			},
+			{
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -92,7 +164,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:25:29.736574+01:00"
+						"dateAndTimeString" : "2026-03-13T12:44:48.788263+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,14 +175,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:26:31.990696+01:00"
+						"dateAndTimeString" : "2026-03-13T12:45:46.706294+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "kGPJTsDZSveAzE6Rh+m3Hg=="
+					"uidString" : "/4RzSuzASyKaxs2gtAI8tQ=="
 				},
-				"code" : "c := GtL gt sendMarkdown: 'Find the page {{gtPage:Moldable Chat Tutorial: Environment Integration|db=auhvwh3wo4eisu1kci9jdew92}}. Duplicate the contents of the snippets of this page into a new page entitled [[An interesting page]] and put the new page in the default knowledge base. Then add a new example snippet with {{gtMethod:BlBasicExamples>>#circle}}.'"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To accomplish this, it has to search knowledge bases, search the page, get the contents, create a new page, and create new snippets."
 			}
 		]
 	},
@@ -133,12 +208,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-03-04T23:32:39.326933+01:00"
+			"dateAndTimeString" : "2026-03-10T22:52:02.606744+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Moldable Chat Tutorial: Environment integration"
+		"title" : "Moldable Chat: Changing Lepiter pages"
 	},
 	"uid" : {
 		"__type" : "uuid",

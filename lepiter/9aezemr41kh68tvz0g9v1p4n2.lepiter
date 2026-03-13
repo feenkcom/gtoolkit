@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:32:13.750469+01:00"
+						"dateAndTimeString" : "2026-03-13T12:46:30.569937+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:32:13.757059+01:00"
+						"dateAndTimeString" : "2026-03-13T12:47:19.667497+01:00"
 					}
 				},
 				"uid" : {
@@ -39,10 +39,10 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[DRAFT]]"
+				"string" : "Tools provide the interface through which the LLM perceives the world. We can use this to change the level of abstraction."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:08.370846+01:00"
+						"dateAndTimeString" : "2026-03-13T12:47:20.500436+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,92 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:08.370846+01:00"
+						"dateAndTimeString" : "2026-03-13T12:52:26.699833+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ZGler/8lQLiNmTy6eTPEsw=="
+					"uidString" : "5EDSsJWoQFWz6oxKn9y6BA=="
 				},
-				"code" : "smaccModel := GtLSmaCCModel new.\nc := GtL gt\n\t\taddTools: (GtLSmaCCTool allSubclasses collect: [ :each | each new model: smaccModel ]);\n\t\tgtPageExplanation: 'SmaCC grammar';\n\t\tsendMarkdown: 'Create a SmaCC parser to parse and evaluate simple math expressions. The class should be named `SampleExpressionParser` and be in the package `TempParsers`. Ensure you get no error in the parser. Compile the parser. Build the abstract syntax tree. Add expression evaluation logic. Test it with a simple script and once it''s working provide the script'"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "An interesting case can be observed in [[SmaCC]], the compiler-compiler that underpins the tools of Glamorous Toolkit. SmaCC allows us to define parsers in a dedicated succinct language and then offers the mechanism to generate the Smalltalk code. While the generating code is useful for the runtime, for understanding the parser we want to manipulate the higher level language. Tools already support that. For example, {{gtClass:JSParser}} contains the parser for JavaScript, but when you browse the class you see first a dedicated high level browser."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T07:10:08.370846+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T07:10:08.370846+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZGler/8lQLiNmTy6eTPEsw=="
+							},
+							"code" : "smaccModel := GtLSmaCCModel new.\nc := GtL gt\n\t\taddTools: (GtLSmaCCTool allSubclasses collect: [ :each | each new model: smaccModel ]);\n\t\tgtPageExplanation: 'SmaCC grammar';\n\t\tsendMarkdown: 'Create a SmaCC parser to parse and evaluate simple math expressions. The class should be named `SampleExpressionParser` and be in the package `TempParsers`. Ensure you get no error in the parser. Compile the parser. Build the abstract syntax tree. Add expression evaluation logic. Test it with a simple script and once it''s working provide the script'"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T12:52:32.381377+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T12:54:07.429896+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mK7VosHERuSpiIab6VhCwg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If we want to ask the LLM to produce such parsers, it also benefits from working with the higher level representation rather then the actual source code. In the example below, we add dedicated tools that can do that (subclasses of {{gtClass:GtLSmaCCTool}}):"
+			},
+			{
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -89,7 +164,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:08.375123+01:00"
+						"dateAndTimeString" : "2026-03-13T12:58:19.404802+01:00"
 					}
 				},
 				"editEmail" : {
@@ -100,14 +175,89 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:08.375123+01:00"
+						"dateAndTimeString" : "2026-03-13T13:00:06.638295+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CnE8qGfNShCxaSKBPXXM/g=="
+					"uidString" : "gxN0anp6RcmNUXEeDEKw5Q=="
 				},
-				"code" : "c sendMarkdown: 'Update the parser with the ability to raise to power.'"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The prompt above likely makes the LLM use the tools to create a grammar, compile it, test it with an input string. The prompt also asks to extend the generated abstract syntax tree with evaluation logic which must involve compiling methods. This requires mixing the levels of abstractions, and that typically works nicely as well."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T07:10:08.375123+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T07:10:08.375123+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "CnE8qGfNShCxaSKBPXXM/g=="
+							},
+							"code" : "c sendMarkdown: 'Update the parser with the ability to raise to power.'"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T12:58:11.182397+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T12:58:21.244937+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0wM7on+tQq+hqPoK4Bk5dA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To see how a parser can be updated, try the prompt below:"
 			}
 		]
 	},
@@ -130,12 +280,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-03-04T23:31:04.81147+01:00"
+			"dateAndTimeString" : "2026-03-10T22:50:49.004439+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Moldable Chat Tutorial: Raising the chat conversation level through specialized tools"
+		"title" : "Moldable Chat: Raising the chat conversation level through specialized tools"
 	},
 	"uid" : {
 		"__type" : "uuid",

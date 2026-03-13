@@ -325,7 +325,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-04T23:10:19.135991+01:00"
+									"dateAndTimeString" : "2026-03-12T18:50:31.797771+01:00"
 								}
 							},
 							"uid" : {
@@ -335,7 +335,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Executing this chat now shows a Markdown-specific view, in addition to the plain-string content one. This is achieved in the following way: the engine sends the expected response schema in the request, and when the response comes, it transparently instantiates objects that conform to the specified schema. In our case, the object is an instance of {{gtClass:GtLMarkdown}}, and such an object knows how to present itself with a styled editor."
+							"string" : "Executing this chat now shows a Markdown-specific view in addition to the plain-string content one. This is achieved in the following way: the engine sends the expected response schema in the request, and when the response comes, it transparently instantiates objects that conform to the specified schema. In our case, the object is an instance of {{gtClass:GtLMarkdown}}, and such an object knows how to present itself with a styled editor."
 						}
 					]
 				},
@@ -442,7 +442,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-03-05T14:39:08.573246+01:00"
+												"dateAndTimeString" : "2026-03-12T18:08:12.860498+01:00"
 											}
 										},
 										"uid" : {
@@ -472,7 +472,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-04T23:10:19.181399+01:00"
+									"dateAndTimeString" : "2026-03-12T18:50:31.846943+01:00"
 								}
 							},
 							"uid" : {
@@ -482,7 +482,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "For example, say we want to get a preview of proposed changes from the LLM. In such a case, we can specify that we expect code transformations. To add a new response schema, we use {{gtMethod:GtLChat>>#addResponseFormatForMagrite:named:}}, which takes the schema from a Magritte class. In our case, the class is {{gtClass:GtLCodeTransformations}}, which besides describing the structure for different kinds of transformations, also knows how to transform those transformations into dedicated changes that can be directly applied in the image:"
+							"string" : "For example, say we want to get a preview of proposed changes from the LLM. In such a case, we can specify that we expect code transformations. To add a new response schema, we use {{gtMethod:GtLChat>>#addResponseFormatForMagrite:named:}}, which takes the schema from a Magritte class. In our case, the class is {{gtClass:GtLCodeTransformations}}, which, besides describing the structure for different kinds of transformations, also knows how to transform those transformations into dedicated changes that can be directly applied in the image:"
 						}
 					]
 				},
@@ -538,12 +538,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-03-04T22:18:49.971295+01:00"
+			"dateAndTimeString" : "2026-03-10T22:50:10.293541+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Moldable Chat Tutorial: Creating chats and shaping their output"
+		"title" : "Moldable Chat: Creating chats and shaping their output"
 	},
 	"uid" : {
 		"__type" : "uuid",

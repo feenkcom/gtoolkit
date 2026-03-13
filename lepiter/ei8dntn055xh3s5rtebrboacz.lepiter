@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:20:41.873883+01:00"
+						"dateAndTimeString" : "2026-03-12T10:55:55.469151+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:31:36.836426+01:00"
+						"dateAndTimeString" : "2026-03-12T10:56:38.197865+01:00"
 					}
 				},
 				"uid" : {
@@ -39,10 +39,82 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[DRAFT]]"
+				"string" : "To transform the chat into an \"agent\", we can provide tools that the LLM can choose to run."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T23:11:25.25214+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-12T10:53:06.908615+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "82sa8RrGQVmS/N4cQD1nMA=="
+							},
+							"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\ttools: GtLTools leSearch;\n\t\tsendMarkdown: 'What is Ludo and what is it used for in the Glamorous Toolit Book?'"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-12T10:56:41.121151+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-12T11:25:04.329071+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qEIPG6UBRsuecFM71hn33g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For example, to allow the LLM to answer question about how `Ludo` is used in the book, we can add tools for searching through Lepiter:"
+			},
+			{
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -55,7 +127,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:11:25.25214+01:00"
+						"dateAndTimeString" : "2026-03-12T11:33:21.970617+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +138,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-05T15:10:59.329339+01:00"
+						"dateAndTimeString" : "2026-03-12T11:35:36.962427+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "82sa8RrGQVmS/N4cQD1nMA=="
+					"uidString" : "/xc79t/ISL+Ua37l2Ni0gw=="
 				},
-				"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\ttools: GtLTools leSearch;\n\t\tsendMarkdown: 'Provide a PharoScript with a search for methods that are in {{gtClass:BlElement}} and also refer to `assert:description:`. Use tools. Be thorough. Only answer when you are certain.'"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To answer our question, the LLM first needs to read relevant page from the book. To read them, it needs to find them in the book. To know which knowledge base the book is in, it needs to get the existing knowledge bases. Each of these steps should be accessible in some way through tools. For example, the latter step is supported by {{gtClass:GtLToolForLepiterKnowledgeBases}}."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -164,12 +239,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-03-04T23:28:06.611613+01:00"
+			"dateAndTimeString" : "2026-03-10T22:50:27.091061+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Moldable Chat Tutorial: Tool-augmented interaction"
+		"title" : "Moldable Chat: Tool-augmented interaction"
 	},
 	"uid" : {
 		"__type" : "uuid",
