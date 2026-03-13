@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:29:04.885139+01:00"
+						"dateAndTimeString" : "2026-03-13T13:00:26.533839+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:32:42.412067+01:00"
+						"dateAndTimeString" : "2026-03-13T13:54:20.308386+01:00"
 					}
 				},
 				"uid" : {
@@ -39,143 +39,327 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
+				"string" : "Glamorous Toolkit is a live environment. Generating code ([[Moldable Chat: Generating code]]) or documentation ([[Moldable Chat: Changing Lepiter pages]]) is great, but to leverage the potential of the environment beyond what's possible elsewhere, we should get the LLM to work with objects."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T23:29:06.851715+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T13:56:52.349678+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "quo0JQBuSU2JYTc6x0RqeQ=="
+							},
+							"code" : "c := GtL gt\n\tsendMarkdown: 'Produce a script that builds an 16x16 element with icon that shows a simple home. Take as blueprint for the script, the icon defined in {{gtMethod:BrGlamorousVectorIcons class>>chat}} which uses {{gtClass:BlPolygonGeometry}}. Execute the code. Evaluate the result by viewing the Live view of the resulting object. Give a grade of the result.'"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T13:58:10.2729+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T14:51:24.150215+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8lpSRidvRJqARpzGsX6PwQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To check the Live view of the resulting element, it needs a means to pass the reference from resulting from the code execution tool to the tool that gets the view. This is achieved through an object storage (see {{gtMethod:GtLChat>>#objectStorage}}) that associates ids to objects and stores them in a chat. Tools like  {{gtClass:GtLMagritteToolForSmalltalkCodeEvaluation}} use this mechanism for storing results, and other tools like {{gtClass:GtLToolForObjectView}} can interpret ids sent as arguments."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T14:50:49.986495+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T14:50:57.02028+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "1PxInidLQueMxxT0E8czKA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If you want to explore the same use case further, try this:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T13:55:50.250253+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T13:56:08.106243+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8o0vv99UT6a0NaTZwy6tzA=="
+							},
+							"code" : "c sendMarkdown: 'Improve it to get a higher grade.'"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T13:02:32.691154+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T13:57:13.642634+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wHemmL7IQwWnMNOAc1deMg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Let's start with a basic case, in which we ask the LLM to script that produces an icon, but we also ask it to run the script and then evaluate the result by looking at the view:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T23:34:33.488185+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T23:34:34.005258+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Xh5Iq01OQGSNJUJsK1hiXA=="
+							},
+							"code" : "GtL gt\r\tsendMarkdown: 'Execute {{gtMethod:BlGridLayoutExamples>>#exampleCellSpacingHorizontal1}}. What are the exact bounds of the two blue squares?'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T23:34:38.415362+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-10T23:30:47.264375+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cEb9eKYsRyOJ5q32RRjdIg=="
+							},
+							"code" : "container := BrVerticalPane new matchParent; background: Color paleOrange.\rc := GtL gt.\robjectId := c objectStorage addNewObject: container.\rc sendMarkdown: 'Execute {{gtMethod:BlGridLayoutExamples>>#exampleCellSpacingHorizontal1}}. Add it to the object with ', objectId"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T23:34:45.160901+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T23:34:45.554852+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "JgoJOcXfQV2/oPn4xkVgWA=="
+							},
+							"code" : "container"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T14:51:43.424299+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T15:25:53.809248+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iMqvDy7lThSN8Rss4tOwYQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
 				"string" : "[[DRAFT]]"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:29:06.851715+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:29:07.82713+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "quo0JQBuSU2JYTc6x0RqeQ=="
-				},
-				"code" : "GtL gt\n\tsendMarkdown: 'Produce a script that builds an 16x16 element with icon that shows a simple home. Take as blueprint for the script, the icon defined in {{gtMethod:BrGlamorousVectorIcons class>>chat}} which uses {{gtClass:BlPolygonGeometry}}. Execute the code. Evaluate the result by viewing the Live view of the resulting object id. Give a grade of the result.'"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:34:33.488185+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:34:34.005258+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Xh5Iq01OQGSNJUJsK1hiXA=="
-				},
-				"code" : "GtL gt\r\tsendMarkdown: 'Execute {{gtMethod:BlGridLayoutExamples>>#exampleCellSpacingHorizontal1}}. What are the exact bounds of the two blue squares?'"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:34:38.415362+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:34:38.853924+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "cEb9eKYsRyOJ5q32RRjdIg=="
-				},
-				"code" : "container := BrVerticalPane new matchParent; background: Color paleOrange.\rc := GtL gt.\robjectId := c objectStorage addNewObject: container.\rc sendMarkdown: 'Execute {{gtMethod:BlGridLayoutExamples>>#exampleCellSpacingHorizontal1}}. Add it to the object with ', objectId"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:34:45.160901+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:34:45.554852+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "JgoJOcXfQV2/oPn4xkVgWA=="
-				},
-				"code" : "container"
 			}
 		]
 	},
@@ -198,12 +382,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-03-04T23:29:04.633263+01:00"
+			"dateAndTimeString" : "2026-03-10T22:51:46.372126+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Moldable Chat Tutorial: Working with objects"
+		"title" : "Moldable Chat: Working with objects"
 	},
 	"uid" : {
 		"__type" : "uuid",

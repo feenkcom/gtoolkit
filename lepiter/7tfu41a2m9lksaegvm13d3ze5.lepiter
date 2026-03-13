@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:31:48.76861+01:00"
+						"dateAndTimeString" : "2026-03-12T22:39:29.704767+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T23:31:49.365577+01:00"
+						"dateAndTimeString" : "2026-03-12T22:40:29.044075+01:00"
 					}
 				},
 				"uid" : {
@@ -39,13 +39,230 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[DRAFT]]"
+				"string" : "So, how do we get to generate code? We provide tools. And a bit of guidance in the form of explanations."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-03-04T07:10:04.207638+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-03-12T19:22:09.574968+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "9w9qMRS9QqWPcpt/cDT8IA=="
+										},
+										"code" : "c := GtLChat new\r\t\ttools: GtLTools gt;\r\t\tmarkdownResponse;\r\t\tgtPageExplanation: 'Rules for Moldable Development for Glamorous Toolkit';\r\t\tgtPageExplanation: 'Examples by example';\r\t\tgtPageExplanation: 'Inspector phlow views by example';\r\t\tsendMarkdown: 'Create a {{gtClass:BubbleSorter}} class implementing bubblesort. Create at least two examples for it in a separate class. Ensure that the examples are green.'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-12T22:40:39.910763+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-12T22:41:17.914339+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xBcRB9OTRKmKIOSB4/7cZQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Say, you want to build a bubble sorter that you can try quickly. Ask for examples and see what happens:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-03-10T22:53:22.176255+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-03-10T22:53:22.42565+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "v4EzBqq1Q/mk4sKQR52P6Q=="
+										},
+										"code" : "c sendMarkdown: 'Check the examples about {{gtClass:BubbleSorter}}. If they are red, make them green'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-12T22:41:28.081068+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-12T22:42:27.569766+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Z6uY2iuhTJqEz1qLTvsdpA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This likely worked as a first shot. Go change something in the algorithm, like changing the sign of the swap comparison in the algorithm, and then ask it to fix the examples:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-03-04T07:10:04.209553+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-03-10T23:04:07.624912+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Xe7KMN9fTg+gQeCoNCq6jA=="
+										},
+										"code" : "c sendMarkdown: 'Add an explicit object for each comparison step. The {{gtClass:BubbleSorterStep}} should remember the two items to compare, whether there was a swap and the state of the collection before the comparison. Add a view to exemplify the step. Add a view to exemplify the overall algorithm'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-12T22:42:32.053492+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T12:25:41.052387+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "BPjIRtPSSfat/8e0HGkoPw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Or ask it to transform the algorithm to retain explainable steps:"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -55,7 +272,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:04.202072+01:00"
+						"dateAndTimeString" : "2026-03-13T12:29:27.945338+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,91 +283,58 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:19:56.776602+01:00"
+						"dateAndTimeString" : "2026-03-13T12:29:32.94323+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "RZhQ+UjcSROxlsp48Xs9WA=="
+					"uidString" : "29f2IGPxTYaggkrcaB6XxQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Generating code"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:04.207638+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:04.207638+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "9w9qMRS9QqWPcpt/cDT8IA=="
-				},
-				"code" : "c := GtL gt\n\t\tsendMarkdown: 'Create a {{gtClass:BubbleSorter}} class implementing bubblesort. Create at least two examples for it in a separate class. Ensure that the examples are green.'"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:04.209553+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:04.209553+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Xe7KMN9fTg+gQeCoNCq6jA=="
-				},
-				"code" : "c sendMarkdown: 'Check the examples about {{gtClass:BubbleSorter}}. If they are red, make them green'"
+				"string" : "# An example"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T12:28:12.732988+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T12:34:43.267111+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lhV/Vw9QSW+CLxNDjTPoFQ=="
+							},
+							"code" : "GtL gt sendMarkdown: ''"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -160,7 +344,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:04.21382+01:00"
+						"dateAndTimeString" : "2026-03-13T12:29:42.400955+01:00"
 					}
 				},
 				"editEmail" : {
@@ -171,51 +355,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:04.21382+01:00"
+						"dateAndTimeString" : "2026-03-13T12:35:00.547876+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "cf9xy0Q4Ry6hCp4OWqgvZA=="
+					"uidString" : "tN5UOXosSe2prcRC/1MRDA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Evaluating code"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T07:10:04.214589+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-05T15:26:07.140905+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "LWjMl2E/T4KgFHLdnN/VjA=="
-				},
-				"code" : "c := GtL gt\r\t\tgtPageExplanation: 'Parsing with PetitParser2';\r\t\taddResponseFormatForMagrite: GtLPharoScript named: 'PharoScript';\r\t\tsendMarkdown: 'Create a script with a PetitParser2 parser for this ripgrep output format:\r\t\t\r```console\r./some/path/to/file.txt:43:1232:Bla\r```\r\rTry the script and ensure it works before proposing it.'"
+				"string" : "The chat above has the default tools defined in {{gtMethod:GtLTools class>>#gt}}. The explanations are also available "
 			}
 		]
 	},
@@ -238,12 +388,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-03-04T23:28:24.816571+01:00"
+			"dateAndTimeString" : "2026-03-13T12:26:31.802566+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Moldable Chat Tutorial: Code generation and validation"
+		"title" : "Moldable Chat: Generating code"
 	},
 	"uid" : {
 		"__type" : "uuid",
