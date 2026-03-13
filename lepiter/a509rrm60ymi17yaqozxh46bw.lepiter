@@ -225,6 +225,43 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T21:59:28.548556+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T22:01:11.880281+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ilPJ37bfRM2NVgF4/KSD5g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Inspecting the result of a script and viewing  the result is equivalent to working in a playground and an inspector. To complete the scene and allow the LLM to reach and inspect arbitrary objects, we also need the equivalent of a contextual playground. To this end, we need to be able to bind objects to variables in a script."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "pharoSnippet",
@@ -251,7 +288,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-04T23:34:34.005258+01:00"
+									"dateAndTimeString" : "2026-03-13T22:01:54.150115+01:00"
 								}
 							},
 							"uid" : {
@@ -260,6 +297,118 @@
 							},
 							"code" : "GtL gt\r\tsendMarkdown: 'Execute {{gtMethod:BlGridLayoutExamples>>#exampleCellSpacingHorizontal1}}. What are the exact bounds of the two blue squares?'"
 						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T22:02:05.969467+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T22:07:31.705975+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "NFDk+UHbRxawq0IxKGjLYg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The example method produces an element. To get the details of that element, the LLM has to execute a script with a variable bound to the element. The example method tool stores the resulting object in the object storage, and the LLM has option of binding a name with an id as an argument in {{gtMethod:GtLMagritteToolForSmalltalkCodeEvaluation>>#bindingsDescription}}. Inspect the smalltalk execution message in the chat above to see it in action."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T22:01:12.284947+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T22:01:37.406824+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "doZBE3LNSJS1xSSgcKKUjw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The case below exemplifies this:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T22:08:12.509234+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-13T22:09:41.2962+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lGEOW/N0TCqtpIHF6sPJ8g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The above scenario is equivalent to inspect the result of an example method and of running a script in a contextual playground of the result. But, sometimes we want to start the conversation from an existing object from the image."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
 						{
 							"__type" : "pharoSnippet",
 							"children" : {
@@ -285,14 +434,88 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-10T23:30:47.264375+01:00"
+									"dateAndTimeString" : "2026-03-13T22:11:49.002236+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "cEb9eKYsRyOJ5q32RRjdIg=="
 							},
-							"code" : "container := BrVerticalPane new matchParent; background: Color paleOrange.\rc := GtL gt.\robjectId := c objectStorage addNewObject: container.\rc sendMarkdown: 'Execute {{gtMethod:BlGridLayoutExamples>>#exampleCellSpacingHorizontal1}}. Add it to the object with ', objectId"
+							"code" : "container := BrVerticalPane new matchParent; background: Color paleOrange.\rc := GtL gt.\rc objectStorage addNewObject: container.\rc sendMarkdown: 'You have an input object in the object storage. Execute {{gtMethod:BlGridLayoutExamples>>#exampleCellSpacingHorizontal1}}. Add the result to the original input object' "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T22:10:05.200389+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T22:14:27.199099+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "z1KIG69QQA26RVUUpl/BSA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In this example,  the LLM must find the id of the input object. It can do that with {{gtClass:GtLToolForObjectStorageList}}. It then can run the example to get another object's id, and eventually it can execute a script relying on both ids."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T22:14:32.402994+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-13T22:15:05.948705+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "NPjzndoTT1WfU6whlXzSGQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "If the chat is successful, we should see the side effect in our variable external to the chat:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -338,7 +561,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T14:51:43.424299+01:00"
+						"dateAndTimeString" : "2026-03-13T22:09:42.146477+01:00"
 					}
 				},
 				"editEmail" : {
@@ -349,17 +572,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T15:25:53.809248+01:00"
+						"dateAndTimeString" : "2026-03-13T22:09:55.39574+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "iMqvDy7lThSN8Rss4tOwYQ=="
+					"uidString" : "jXZuPuX1RmuxRs3+hCwoNg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "[[DRAFT]]"
+				"string" : "We can achieve this by storing an object into the object storage from the outside."
 			}
 		]
 	},
