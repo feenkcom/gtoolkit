@@ -101,7 +101,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-12T11:25:04.329071+01:00"
+						"dateAndTimeString" : "2026-03-13T22:29:40.352009+01:00"
 					}
 				},
 				"uid" : {
@@ -111,7 +111,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For example, to allow the LLM to answer question about how `Ludo` is used in the book, we can add tools for searching through Lepiter:"
+				"string" : "For example, to allow the LLM to answer questions about how `Ludo` is used in the book, we can add tools for searching through Lepiter:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -138,7 +138,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-12T11:35:36.962427+01:00"
+						"dateAndTimeString" : "2026-03-13T22:29:56.454241+01:00"
 					}
 				},
 				"uid" : {
@@ -148,7 +148,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To answer our question, the LLM first needs to read relevant page from the book. To read them, it needs to find them in the book. To know which knowledge base the book is in, it needs to get the existing knowledge bases. Each of these steps should be accessible in some way through tools. For example, the latter step is supported by {{gtClass:GtLToolForLepiterKnowledgeBases}}."
+				"string" : "To answer our question, the LLM first needs to read the relevant pages from the book. To read them, it needs to find them in the book. To know which knowledge base the book is in, it needs to retrieve the available knowledge bases. Each of these steps should be accessible through tools. For example, the last step is supported by {{gtClass:GtLToolForLepiterKnowledgeBases}}."
 			},
 			{
 				"__type" : "pharoSnippet",

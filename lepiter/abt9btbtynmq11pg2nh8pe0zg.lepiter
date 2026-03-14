@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-12T11:45:52.689928+01:00"
+						"dateAndTimeString" : "2026-03-13T22:31:29.580471+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Prompts can contain pictures or pdfs as well."
+				"string" : "Prompts can also contain images or PDFs."
 			},
 			{
 				"__type" : "textSnippet",
@@ -101,7 +101,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-12T11:47:09.281367+01:00"
+						"dateAndTimeString" : "2026-03-13T22:31:29.672927+01:00"
 					}
 				},
 				"uid" : {
@@ -111,7 +111,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Let's first create a picture. In this case, we save a screenshot of the currently focused world to a file."
+				"string" : "Let’s first create an image. In this example, we save a screenshot of the currently focused world to a file."
 			},
 			{
 				"__type" : "textSnippet",
@@ -173,7 +173,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-12T18:52:43.309646+01:00"
+						"dateAndTimeString" : "2026-03-13T22:31:29.696418+01:00"
 					}
 				},
 				"uid" : {
@@ -183,7 +183,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can pass the picture together with a textual prompt using {{gtMethod:GtLChat>>#sendWith:}} that takes a block as argument in which we can specify multiple inputs, like {{gtMethod:TGtLWithInputModelsAPI>>#markdown:}}, {{gtMethod:TGtLWithInputModelsAPI>>#images:}}, or {{gtMethod:TGtLWithInputModelsAPI>>#pdfs:}}."
+				"string" : "We can pass the image together with a textual prompt using {{gtMethod:GtLChat>>#sendWith:}}. This method takes a block argument in which we can specify multiple inputs, such as {{gtMethod:TGtLWithInputModelsAPI>>#markdown:}}, {{gtMethod:TGtLWithInputModelsAPI>>#images:}}, or {{gtMethod:TGtLWithInputModelsAPI>>#pdfs:}}."
 			}
 		]
 	},

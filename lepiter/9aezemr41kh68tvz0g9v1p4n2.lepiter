@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:47:19.667497+01:00"
+						"dateAndTimeString" : "2026-03-13T22:23:26.233003+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Tools provide the interface through which the LLM perceives the world. We can use this to change the level of abstraction."
+				"string" : "Tools provide the interface through which the LLM perceives the world. We can use them to raise the level of abstraction."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:52:26.699833+01:00"
+						"dateAndTimeString" : "2026-03-13T22:23:26.321174+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "An interesting case can be observed in [[SmaCC]], the compiler-compiler that underpins the tools of Glamorous Toolkit. SmaCC allows us to define parsers in a dedicated succinct language and then offers the mechanism to generate the Smalltalk code. While the generating code is useful for the runtime, for understanding the parser we want to manipulate the higher level language. Tools already support that. For example, {{gtClass:JSParser}} contains the parser for JavaScript, but when you browse the class you see first a dedicated high level browser."
+				"string" : "An interesting case can be observed in [[SmaCC]], the compiler-compiler that underpins many of the tools in Glamorous Toolkit. SmaCC lets us define parsers in a dedicated, succinct language and then generates the corresponding Smalltalk code. While the generated code is useful at runtime, understanding the parser is easier when working with the higher-level language. The tools already support this. For example, {{gtClass:JSParser}} contains the parser for JavaScript, but when you browse the class, you first see a dedicated high-level browser."
 			},
 			{
 				"__type" : "textSnippet",
@@ -138,7 +138,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:54:07.429896+01:00"
+						"dateAndTimeString" : "2026-03-13T22:23:26.422608+01:00"
 					}
 				},
 				"uid" : {
@@ -148,7 +148,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If we want to ask the LLM to produce such parsers, it also benefits from working with the higher level representation rather then the actual source code. In the example below, we add dedicated tools that can do that (subclasses of {{gtClass:GtLSmaCCTool}}):"
+				"string" : "If we want the LLM to produce such parsers, it also benefits from working with the higher-level representation rather than the generated source code. In the example below, we add dedicated tools for that purpose (subclasses of {{gtClass:GtLSmaCCTool}}):"
 			},
 			{
 				"__type" : "textSnippet",
@@ -175,7 +175,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T13:00:06.638295+01:00"
+						"dateAndTimeString" : "2026-03-13T22:23:26.47538+01:00"
 					}
 				},
 				"uid" : {
@@ -185,7 +185,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The prompt above likely makes the LLM use the tools to create a grammar, compile it, test it with an input string. The prompt also asks to extend the generated abstract syntax tree with evaluation logic which must involve compiling methods. This requires mixing the levels of abstractions, and that typically works nicely as well."
+				"string" : "The prompt above will likely lead the LLM to use the tools to create a grammar, compile it, and test it with an input string. The prompt also asks it to extend the generated abstract syntax tree with evaluation logic, which requires compiling methods. This means mixing levels of abstraction, and that typically works well too."
 			},
 			{
 				"__type" : "textSnippet",

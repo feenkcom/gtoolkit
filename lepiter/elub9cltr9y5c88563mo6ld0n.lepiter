@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:33:14.843746+01:00"
+						"dateAndTimeString" : "2026-03-13T22:28:51.889296+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To keep track of existing chats, you can register them in a global registry. {{gtClass:GtL}} offers a fluent interface to do just that."
+				"string" : "To keep track of existing chats, you can register them in a global registry. {{gtClass:GtL}} offers a fluent interface for doing just that."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-13T12:32:23.429126+01:00"
+									"dateAndTimeString" : "2026-03-13T22:28:52.123243+01:00"
 								}
 							},
 							"uid" : {
@@ -150,7 +150,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "you just use:"
+							"string" : "you can simply use:"
 						}
 					]
 				},
@@ -173,7 +173,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:33:14.853971+01:00"
+						"dateAndTimeString" : "2026-03-13T22:28:51.983751+01:00"
 					}
 				},
 				"uid" : {
@@ -183,7 +183,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Instead of:"
+				"string" : "Instead of writing:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -210,7 +210,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:36:47.233927+01:00"
+						"dateAndTimeString" : "2026-03-13T22:28:52.267772+01:00"
 					}
 				},
 				"uid" : {
@@ -220,7 +220,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Another convenient constructor is in {{gtMethod:GtL class>>gt}} which creates a default chat to use for programming typical Glamorous Toolkit code."
+				"string" : "Another convenient constructor is {{gtMethod:GtL class>>#gt}}, which creates a default chat suitable for typical Glamorous Toolkit programming tasks."
 			},
 			{
 				"__type" : "textSnippet",
@@ -282,7 +282,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:40:09.151568+01:00"
+						"dateAndTimeString" : "2026-03-13T22:28:52.336335+01:00"
 					}
 				},
 				"uid" : {
@@ -292,7 +292,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The defaults are useful, but you might still want to specialize them. For example, in the chat below, we start from a default GT chat, but we extend it with explanations and a response for parsing a given string. In this specific case, we ask it to execute the code before proposing, a request which should get the LLM to use the code evaluation tool:"
+				"string" : "The defaults are useful, but you might still want to specialize them. For example, in the chat below we start from a default GT chat, then extend it with an explanation and a response format for parsing a given string. In this case, we explicitly ask it to execute the code before proposing a solution, which should encourage the LLM to use the code evaluation tool:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -391,7 +391,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-13T12:34:22.316742+01:00"
+						"dateAndTimeString" : "2026-03-13T22:28:52.367796+01:00"
 					}
 				},
 				"uid" : {
@@ -401,7 +401,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The registry is also available in the top menu bar."
+				"string" : "The registry is also available from the top menu bar."
 			}
 		]
 	},
