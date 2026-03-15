@@ -18,62 +18,28 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T09:53:24.960776+02:00"
+						"dateAndTimeString" : "2026-03-15T17:42:03.993224+01:00"
 					}
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-08T07:44:25.702093+02:00"
+						"dateAndTimeString" : "2026-03-15T20:21:38.648439+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "R1te4rSaDQC72gvDBHMlPQ=="
+					"uidString" : "aUnYLK0mTqG5u17sxLYljg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In a [Discord discussion](https://discord.com/channels/729445214812504107/736333725788274819/971770666250543154) Tudor Girba explains how to change the font."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T09:53:20.096107+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-15T11:41:52.75613+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "hhOT47SaDQC721bRBHMlPQ=="
-				},
-				"code" : "TBlTextStyleable compile: 'glamorousRegularFont\n    self fontName: ''Desyrel'''.\nTBlTextStyleable compile: 'glamorousRegularDefaultFont\n    self defaultFontName: ''Desyrel'''."
+				"string" : "A key idea behind the [[Moldable Chat]] is to enable developers to contextualize the LLM interaction. In this context, an interesting case for code generation is creating specific tools for the LLM. A tool is essentially a function that receives arguments and returns a result (see [[Moldable Chat: Tool-augmented interaction]])."
 			},
 			{
 				"__type" : "textSnippet",
@@ -89,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T09:54:08.343236+02:00"
+						"dateAndTimeString" : "2026-03-15T20:13:46.159121+01:00"
 					}
 				},
 				"editEmail" : {
@@ -100,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T09:54:35.73257+02:00"
+						"dateAndTimeString" : "2026-03-15T20:22:36.799589+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MuMN5rSaDQC7/1k/BHMlPQ=="
+					"uidString" : "otJ5pcMAQHOqhzWL5sYiFA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Konrad Hinsen suggests changing the font to `JuliaMono` to see Math Symbols."
+				"string" : "The structure of such tool is given. And we can use an explanation, like [[LLM tools by example]], for the LLM to mirror for a new tool. The example below shows how that is achievable for a simple tool:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -126,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T09:54:41.127057+02:00"
+						"dateAndTimeString" : "2026-03-15T17:42:21.508915+01:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-06T09:54:51.721807+02:00"
+						"dateAndTimeString" : "2026-03-15T17:46:34.997599+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2IJn6LSaDQC8AgaVBHMlPQ=="
+					"uidString" : "bL6c2ASdQ4aO4w4zd5ioLA=="
 				},
-				"code" : "TBlTextStyleable compile: 'glamorousRegularFont\n    self fontName: ''JuliaMono'''.\nTBlTextStyleable compile: 'glamorousRegularDefaultFont\n    self defaultFontName: ''JuliaMono'''."
+				"code" : "GtL gt \r\tgtPageExplanation: 'LLM tools by example';\r\tsendMarkdown: 'Build an LLM tool for adding two numbers. Create dedicated examples. Ensure they are green. Package the classes in a package called {{gtPackage:MyLlmPackage}}. Use {{gtClass:GtLMagritteToolForMethodsSource}} as blueprint.'"
 			}
 		]
 	},
@@ -156,7 +122,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-05-06T09:52:59.863815+02:00"
+			"dateAndTimeString" : "2026-03-15T17:42:03.603135+01:00"
 		}
 	},
 	"editEmail" : {
@@ -167,15 +133,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-05-06T09:53:10.76902+02:00"
+			"dateAndTimeString" : "2026-03-15T17:42:03.603135+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to change the default fonts in GT"
+		"title" : "Moldable Chat: Generating LLM tools"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "085a5ee2-b49a-0d00-bbd9-6c2d0473253d"
+		"uuid" : "dde4336e-2760-46f2-a94f-0e99228076c8"
 	}
 }

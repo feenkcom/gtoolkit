@@ -95,6 +95,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-15T17:28:30.704879+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-03-15T17:28:30.704879+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UQ6cD4K8Qt66skUZQI6puw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "A tool's implementation has a name, takes arguments and returns a result."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2026-01-21T23:42:26.487559+01:00"
 					}
 				},
@@ -106,7 +143,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-05T20:56:57.190702+01:00"
+						"dateAndTimeString" : "2026-03-15T17:45:30.849189+01:00"
 					}
 				},
 				"uid" : {
@@ -116,7 +153,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A tool's implementation has a name, takes arguments and returns a result. Magritte based tools return an instance of {{gtClass:GtLMagritteBasedModel}} that wraps the actual domain model. This happens in {{gtMethod:GtLAbstractMagritteFunctionTool>>#performToolCall:inContext:}}. This instance knows how to serialize itself. For OpenAI it serializes by implementing {{gtMethod:GtLWrappedModel>>#serializeToOpenAIResponseOutput}}. The tool is expected to implement the logic like in {{gtMethod:GtLMagritteToolForMethodsSource>>#privatePerformToolCall:inContext:}} and return a Magritte described object."
+				"string" : "{{gtClass:GtLMagritteToolForMethodsSource}} is a typical tool and can serve as blueprint for most tools:\n- It relies on Magritte descriptions to define the arguments. A sample is at {{gtMethod:GtLMagritteToolForMethodsSource>>#methodDescriptorsDescription}}. \n- It returns a result object that is also annotated with Magritte descriptions. A sample is at {{gtClass:GtLMethodsWithSource}}. This object is internally wrapped in a {{gtClass:GtLMagritteBasedModel}}. \n- The logic is implemented in {{gtMethod:GtLAbstractMagritteFunctionTool>>#performToolCall:inContext:}}. Our sample tool implements the logic in {{gtMethod:GtLMagritteToolForMethodsSource>>#privatePerformToolCall:inContext:}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -143,7 +180,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-01T15:01:50.66069+01:00"
+						"dateAndTimeString" : "2026-03-15T17:33:58.139894+01:00"
 					}
 				},
 				"uid" : {
@@ -153,7 +190,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Each tool has corresponding examples that test its logic in isolation. For example, {{gtClass:GtLMagritteToolForMethodsSource}} has examples in {{gtClass:GtLMagritteToolForMethodsSourceExamples}}."
+				"string" : "Each tool has corresponding examples that check its logic in isolation. For example, {{gtClass:GtLMagritteToolForMethodsSource}} has examples in {{gtClass:GtLMagritteToolForMethodsSourceExamples}}."
 			}
 		]
 	},
