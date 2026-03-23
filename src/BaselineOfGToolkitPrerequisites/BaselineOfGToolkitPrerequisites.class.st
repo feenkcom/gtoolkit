@@ -780,6 +780,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForWinPlatform.
 	self applyPatchForPharo12SystemDictionaryAtPut.
 	self applyPatchForPharo11StubsInPharo12.
+	self applyPatchForPharo13StubsInPharo12.
 	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo11.
