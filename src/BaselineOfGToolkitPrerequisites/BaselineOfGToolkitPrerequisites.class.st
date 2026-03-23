@@ -478,6 +478,18 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12SystemDictionaryAtPut [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
+	self 
+		fastForPharo13: [
+			(RBProgramNodeVisitor << #OCProgramNodeVisitor
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+		] 
+		forPharo12: []
+		forPharo11: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
 	self 
 		fastForPharo13AndPharo12: [] 
