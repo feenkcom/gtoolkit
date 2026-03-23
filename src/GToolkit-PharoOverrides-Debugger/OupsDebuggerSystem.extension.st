@@ -59,3 +59,25 @@ OupsDebuggerSystem >> gtSpawnNewUIProcessIfNecessary: aDebugRequest [
 	
 	^ { isForBlocUIProcess . aBlocUniverseIfAny }
 ]
+
+{ #category : #'*GToolkit-PharoOverrides-Debugger' }
+OupsDebuggerSystem >> handleDebugRequest: aDebugRequest [
+	"A DebugRequest has been submitted. Ask what to do to the default UIManager. Typically, the UIManager will call back my #openDebuggerOnRequest: method to open a debugger"
+
+	[ 
+		self 
+			forPharo13AndNewer: [ 
+				"self gtOpenDebuggerOnRequest: aDebugRequest"
+				"For now dispatch also in Pharo 13 through the UI manager"
+				self defaultUIManager 
+					handleDebugRequest: aDebugRequest 
+					fromDebuggerSystem: self
+				] 
+			forOlder: [
+				self defaultUIManager 
+					handleDebugRequest: aDebugRequest 
+					fromDebuggerSystem: self ] ]
+		on: Error
+		do: [ self signalDebuggerError: aDebugRequest ]
+	
+]
