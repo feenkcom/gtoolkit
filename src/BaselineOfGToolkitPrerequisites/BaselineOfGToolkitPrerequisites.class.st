@@ -431,6 +431,16 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo13 [
 			(Object << #Author
 				slots: {};
 				package: 'GToolkit-Pharo12Stubs') install.
+				
+			(Object << #RBAbstractTransformation
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(Object << #RBRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(Object << #RBTransformation
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
 		] 
 		forPharo12: []
 		forPharo11: [ ]
@@ -486,6 +496,12 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
 				package: 'GToolkit-Pharo13Stubs') install.
 				
 			(RBRefactoring << #ReRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+			(RBTransformation << #ReTransformation
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+			(RBAbstractTransformation << #ReAbstractTransformation
 				slots: {};
 				package: 'GToolkit-Pharo13Stubs') install.
 			
