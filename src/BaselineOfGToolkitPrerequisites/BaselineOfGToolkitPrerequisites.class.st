@@ -497,7 +497,8 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12SystemDictionaryAtPut [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
 	self 
-		fastForPharo13: [
+		fastForPharo13: []
+		forPharo12: [
 			(RBProgramNodeVisitor << #OCProgramNodeVisitor
 				slots: {};
 				package: 'GToolkit-Pharo13Stubs') install.
@@ -517,11 +518,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
 				package: 'GToolkit-Pharo13Stubs') install.
 			(RBPullUpInstanceVariableRefactoring << #RePullUpInstanceVariableRefactoring
 				slots: {};
-				package: 'GToolkit-Pharo13Stubs') install.
-				
-			
-		]
-		forPharo12: []
+				package: 'GToolkit-Pharo13Stubs') install.]
 		forPharo11: [ ]
 ]
 
