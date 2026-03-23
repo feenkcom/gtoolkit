@@ -484,6 +484,11 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
 			(RBProgramNodeVisitor << #OCProgramNodeVisitor
 				slots: {};
 				package: 'GToolkit-Pharo13Stubs') install.
+				
+			(RBRefactoring << #ReRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+			
 		] 
 		forPharo12: []
 		forPharo11: [ ]
