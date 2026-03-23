@@ -259,6 +259,15 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcessPharo12Plus [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForGtDebugSession [
+	self 
+		fastForPharo13: [
+			GtDebugSession addSlot: #errorWasInUIProcess] 
+		forPharo12: [] 
+		forPharo11: []
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForJob [
 	self 
 		fastForPharo13AndPharo12: [] 
