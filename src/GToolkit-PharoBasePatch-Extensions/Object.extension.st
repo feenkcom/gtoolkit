@@ -2,7 +2,7 @@ Extension { #name : #Object }
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Object >> isPharoPackageModel [
-	^ self class = Package 
+	^ self isKindOf: Package 
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
