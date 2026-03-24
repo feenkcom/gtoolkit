@@ -38,17 +38,6 @@ Package class >> defaultPackageName [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
-Package class >> named: aString [
-	^ self 
-		forPharo12AndNewer: [
-			self new
-				name: aString;
-				yourself] 
-		forPharo11: [
-			RPackage named: aString ]
-]
-
-{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Package >> packageName [
 	<gtPharoPatch: #Pharo>
 	
