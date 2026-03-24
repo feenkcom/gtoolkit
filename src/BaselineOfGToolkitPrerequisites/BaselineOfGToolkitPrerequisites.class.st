@@ -431,6 +431,23 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo13 [
 			(Object << #Author
 				slots: {};
 				package: 'GToolkit-Pharo12Stubs') install.
+				
+			(Object << #RBAbstractTransformation
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(Object << #RBRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(Object << #RBTransformation
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+				
+			(Object << #RBPullUpMethodRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(Object << #RBPullUpInstanceVariableRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
 		] 
 		forPharo12: []
 		forPharo11: [ ]
@@ -474,6 +491,34 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12SystemDictionaryAtPut [
 
  	^ anObject'
 			classified: 'gt-pharo-patch' ] 
+		forPharo11: [ ]
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
+	self 
+		fastForPharo13: []
+		forPharo12: [
+			(RBProgramNodeVisitor << #OCProgramNodeVisitor
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+				
+			(RBRefactoring << #ReRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+			(RBTransformation << #ReTransformation
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+			(RBAbstractTransformation << #ReAbstractTransformation
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+				
+			(RBPullUpMethodRefactoring << #RePullUpMethodRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+			(RBPullUpInstanceVariableRefactoring << #RePullUpInstanceVariableRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.]
 		forPharo11: [ ]
 ]
 
@@ -723,6 +768,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForWinPlatform.
 	self applyPatchForPharo12SystemDictionaryAtPut.
 	self applyPatchForPharo11StubsInPharo12.
+	self applyPatchForPharo13StubsInPharo12.
 	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo11.
