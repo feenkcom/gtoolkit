@@ -767,11 +767,6 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchInlineMethodRefactoring.
 	self applyPatchForWinPlatform.
 	self applyPatchForPharo12SystemDictionaryAtPut.
-	self applyPatchForPharo11StubsInPharo12.
-	self applyPatchForPharo13StubsInPharo12.
-	self applyPatchForPharo11StubsInPharo13.
-	self applyPatchForPharo12StubsInPharo13.
-	self applyPatchForPharo12StubsInPharo11.
 	self applyPatchForMethodAnnouncements.
 	self applyPatchAuthor.
 ]
@@ -781,4 +776,10 @@ BaselineOfGToolkitPrerequisites >> preLoadGToolkitPrerequisites: spec [
 	(PreLoaded isNotNil and: [ PreLoaded ])
 		ifTrue: [ ^ self ].
 	PreLoaded := true. 
+	
+	self applyPatchForPharo11StubsInPharo12.
+	self applyPatchForPharo13StubsInPharo12.
+	self applyPatchForPharo11StubsInPharo13.
+	self applyPatchForPharo12StubsInPharo13.
+	self applyPatchForPharo12StubsInPharo11.
 ]
