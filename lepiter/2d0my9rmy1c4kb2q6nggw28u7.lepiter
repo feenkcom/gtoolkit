@@ -442,14 +442,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-03-12T18:08:12.860498+01:00"
+												"dateAndTimeString" : "2026-03-25T13:41:43.932631+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "nOn2jPZpQVqa7rIpL/6NGA=="
 										},
-										"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\taddResponseFormatForMagrite: GtLCodeTransformations\n\t\t\tnamed: 'CodeTransformations';\n\t\tsendMarkdown: 'Create a class for a Person with a first and last name. Create a printing method. Use CodeTransformations to express the changes.'"
+										"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\taddResponseFormatForMagritte: GtLCodeTransformations\n\t\t\tnamed: 'CodeTransformations';\n\t\tsendMarkdown: 'Create a class for a Person with a first and last name. Create a printing method. Use CodeTransformations to express the changes.'"
 									}
 								]
 							},
@@ -472,7 +472,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-13T22:32:31.624195+01:00"
+									"dateAndTimeString" : "2026-03-25T13:42:25.610999+01:00"
 								}
 							},
 							"uid" : {
@@ -482,7 +482,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "For example, suppose we want to preview proposed changes from the LLM. In that case, we can specify that we expect code transformations. To add a new response schema, we use {{gtMethod:GtLChat>>#addResponseFormatForMagrite:named:}}, which takes the schema from a Magritte class. In our case, the class is {{gtClass:GtLCodeTransformations}}, which, besides describing the structure of different kinds of transformations, also knows how to turn those transformations into dedicated changes that can be applied directly in the image:"
+							"string" : "For example, suppose we want to preview proposed changes from the LLM. In that case, we can specify that we expect code transformations. To add a new response schema, we use {{gtMethod:GtLChat>>#addResponseFormatForMagritte:named:}}, which takes the schema from a Magritte class. In our case, the class is {{gtClass:GtLCodeTransformations}}, which, besides describing the structure of different kinds of transformations, also knows how to turn those transformations into dedicated changes that can be applied directly in the image:"
 						}
 					]
 				},
