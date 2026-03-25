@@ -34,14 +34,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-20T22:23:12.247247+01:00"
+									"dateAndTimeString" : "2026-03-25T13:41:31.305823+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "5jYcW4vKRVG54g7dCemTUw=="
 							},
-							"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\taddResponseFormatForMagrite: GtLPharoScript named: 'PharoScript';\n\t\tgtPageExplanation: 'Querying with GT search filters by example';\n\tsendMarkdown: 'Provide a PharoScript with a search for methods that are in {{gtClass:BlElement}} and also refer to `assert:description:`.'"
+							"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\taddResponseFormatForMagritte: GtLPharoScript named: 'PharoScript';\n\t\tgtPageExplanation: 'Querying with GT search filters by example';\n\tsendMarkdown: 'Provide a PharoScript with a search for methods that are in {{gtClass:BlElement}} and also refer to `assert:description:`.'"
 						}
 					]
 				},
