@@ -178,14 +178,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-06T22:11:03.29002+01:00"
+									"dateAndTimeString" : "2026-03-25T11:14:46.464508+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "uafkbJ0CSrqEyECSRsgynA=="
 							},
-							"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\tgtPageExplanation: 'Rewriting Pharo code by example';\n\t\taddResponseFormatForMagrite: GtLRewriteRule named: 'RewriteRule';\n\t\tsendMarkdown: 'Provide the rewrite rule for removing all `self halt` statements from methods.'"
+							"code" : "c := GtLChat new\n\t\tmarkdownResponse;\n\t\tgtPageExplanation: 'Rewriting Pharo code by example';\n\t\taddResponseFormatForMagritte: GtLRewriteRule named: 'RewriteRule';\n\t\tsendMarkdown: 'Provide the rewrite rule for removing all `self halt` statements from methods.'"
 						}
 					]
 				},
