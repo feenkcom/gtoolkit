@@ -95,6 +95,8 @@ BaselineOfGToolkitPrerequisites >> applyPatchForAstNodesInPharo12 [
 			RBNode allSubclasses do: [ :each | 
 				('OC', (each name withoutPrefix: 'RB'))asSymbol asClass
 					superclass: ('OC', (each superclass name withoutPrefix: 'RB'))asSymbol asClass ].
+					
+			#OCComment asClass rename: #OCCommentNode
 		]
 		forPharo11: [ ]
 ]
