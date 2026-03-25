@@ -89,12 +89,12 @@ BaselineOfGToolkitPrerequisites >> applyPatchForAstNodesInPharo12 [
 		fastForPharo13: []
 		forPharo12: [
 			RBNode withAllSubclasses do: [ :each | 
-				(RBProgramNodeVisitor << ('OC', (each name removePrefix: 'RB'))asSymbol
+				(RBProgramNodeVisitor << ('OC', (each name withoutPrefix: 'RB'))asSymbol
 					slots: {};
 					package: 'GToolkit-Pharo12Stubs-AST') install ].
 			RBNode allSubclasses do: [ :each | 
-				('OC', (each name removePrefix: 'RB'))asSymbol asClass
-					superclass: ('OC', (each superclass name removePrefix: 'RB'))asSymbol asClass ].
+				('OC', (each name withoutPrefix: 'RB'))asSymbol asClass
+					superclass: ('OC', (each superclass name withoutPrefix: 'RB'))asSymbol asClass ].
 		]
 		forPharo11: [ ]
 ]
