@@ -215,14 +215,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T17:46:33.624585+01:00"
+									"dateAndTimeString" : "2026-03-25T13:40:51.482682+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "XvlybHDJQCm8gpQ/9nr0pw=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\taddResponseFormatForMagrite: GtLCodeTransformations\r\t\t\tnamed: 'CodeTransformations';\r\t\tsendMarkdown: 'Create a class for a Person with a first and last name. Create a printing method. Use CodeTransformations to express the changes.'"
+							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\taddResponseFormatForMagritte: GtLCodeTransformations\r\t\t\tnamed: 'CodeTransformations';\r\t\tsendMarkdown: 'Create a class for a Person with a first and last name. Create a printing method. Use CodeTransformations to express the changes.'"
 						}
 					]
 				},
@@ -287,14 +287,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-23T17:46:01.053718+01:00"
+									"dateAndTimeString" : "2026-03-25T13:40:57.886753+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "pOLtQa9LStaq+6dgzCHFyQ=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\tgtPageExplanation: 'Rewriting Pharo code by example';\r\t\taddResponseFormatForMagrite: GtLRewriteRule\r\t\t\tnamed: 'RewriteRule';\r\t\tsendMarkdown: 'Provide the rewrite rule for removing all `self halt` statements from methods.'"
+							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\tgtPageExplanation: 'Rewriting Pharo code by example';\r\t\taddResponseFormatForMagritte: GtLRewriteRule\r\t\t\tnamed: 'RewriteRule';\r\t\tsendMarkdown: 'Provide the rewrite rule for removing all `self halt` statements from methods.'"
 						}
 					]
 				},
@@ -431,14 +431,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-28T17:45:42.410019+01:00"
+									"dateAndTimeString" : "2026-03-25T13:41:03.470328+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "oVgHUePrTMibFPts4xF3Zg=="
 							},
-							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\taddResponseFormatForMagrite: GtLPharoScript named: 'PharoScript';\r\t\tgtPageExplanation: 'Querying with GT search filters by example';\r\t\tsendMarkdown: 'Provide a PharoScript with a search for methods that are in {{gtClass:BlElement}} and also refer to `assert:description:`.'"
+							"code" : "chat := GtLChat new\r\t\tmarkdownResponse;\r\t\taddResponseFormatForMagritte: GtLPharoScript named: 'PharoScript';\r\t\tgtPageExplanation: 'Querying with GT search filters by example';\r\t\tsendMarkdown: 'Provide a PharoScript with a search for methods that are in {{gtClass:BlElement}} and also refer to `assert:description:`.'"
 						}
 					]
 				},
@@ -867,14 +867,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-02-23T21:13:06.143255+01:00"
+												"dateAndTimeString" : "2026-03-25T13:42:45.778264+01:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "NlNXDRVkQEKGi9G1zL4tlw=="
 										},
-										"code" : "chat := GtLChat new\r\tmarkdownResponse;\r\ttools: GtLTools gt, {GtLToolForSmalltalkCodeEvaluation new};\r\tgtPageExplanation: 'Parsing with PetitParser2';\r\taddResponseFormatForMagrite: GtLPharoScript named: 'PharoScript';\r\tsendMarkdown: 'Create a script with a PetitParser2 parser for this ripgrep output format:\r```console\r./some/path/to/file.txt:43:1232:Bla\r```\rTry the script and ensure it works before proposing it.\r'"
+										"code" : "chat := GtLChat new\r\tmarkdownResponse;\r\ttools: GtLTools gt, {GtLToolForSmalltalkCodeEvaluation new};\r\tgtPageExplanation: 'Parsing with PetitParser2';\r\taddResponseFormatForMagritte: GtLPharoScript named: 'PharoScript';\r\tsendMarkdown: 'Create a script with a PetitParser2 parser for this ripgrep output format:\r```console\r./some/path/to/file.txt:43:1232:Bla\r```\rTry the script and ensure it works before proposing it.\r'"
 									}
 								]
 							},
