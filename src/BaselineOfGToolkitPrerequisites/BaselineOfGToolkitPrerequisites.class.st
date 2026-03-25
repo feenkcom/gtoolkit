@@ -84,6 +84,22 @@ classified: 'gt-pharo-patch'.
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForAstNodesInPharo12 [
+	self 
+		fastForPharo13: []
+		forPharo12: [
+			RBNode withAllSubclasses do: [ :each | 
+				(RBProgramNodeVisitor << ('OC', (each name withoutPrefix: 'RB'))asSymbol
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install ].
+			RBNode allSubclasses do: [ :each | 
+				('OC', (each name withoutPrefix: 'RB'))asSymbol asClass
+					superclass: ('OC', (each superclass name withoutPrefix: 'RB'))asSymbol asClass ].
+		]
+		forPharo11: [ ]
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 	| source |
 
@@ -782,4 +798,6 @@ BaselineOfGToolkitPrerequisites >> preLoadGToolkitPrerequisites: spec [
 	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo11.
+	
+	self applyPatchForAstNodesInPharo12.
 ]
