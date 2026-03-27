@@ -140,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-12T22:24:02.31605+02:00"
+						"dateAndTimeString" : "2026-03-26T14:14:51.6375+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "CNwy8SL2DQCv2G05AdhLOA=="
 				},
-				"code" : "server := GtMcpServer new\r\t\tport: 3000;\r\t\tstart"
+				"code" : "server := GtLMcpServer new\r\t\tport: 3000;\r\t\tstart"
 			},
 			{
 				"__type" : "textSnippet",
@@ -287,14 +287,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-07-12T22:26:01.695168+02:00"
+									"dateAndTimeString" : "2026-03-26T14:15:02.876938+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "ahE3+CL2DQC2gbpfAdhLOA=="
 							},
-							"code" : "server\r\taddTool: (GtLlmFunctionTool new\r\t\t\tname: 'getImplementors';\r\t\t\tparameters: {'methodName'};\r\t\t\tdescription: 'Gets a method by name and returns a list of methods that implement it.';\r\t\t\tblock: [ :functionCall | \r\t\t\t\tCharacter cr\r\t\t\t\t\tjoin: (functionCall anyArgument asSymbol gtImplementors result toArray wait\r\t\t\t\t\t\t\tcollect: #name) ])"
+							"code" : "server\r\taddTool: (GtLFunctionTool new\r\t\t\tname: 'getImplementors';\r\t\t\tparameters: {'methodName'};\r\t\t\tdescription: 'Gets a method by name and returns a list of methods that implement it.';\r\t\t\tblock: [ :functionCall | \r\t\t\t\tCharacter cr\r\t\t\t\t\tjoin: (functionCall anyArgument asSymbol gtImplementors result toArray wait\r\t\t\t\t\t\t\tcollect: #name) ])"
 						},
 						{
 							"__type" : "textSnippet",
@@ -358,14 +358,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-07-12T22:26:57.149489+02:00"
+									"dateAndTimeString" : "2026-03-26T14:15:15.366442+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "A0Bq+iL2DQC4a+7RAdhLOA=="
 							},
-							"code" : "client := GtMcpClient new\r\ttransport: (GtMcpHttpTransport new url: 'http://localhost:3000/')"
+							"code" : "client := GtLMcpClient new\r\ttransport: (GtLMcpHttpTransport new url: 'http://localhost:3000/')"
 						},
 						{
 							"__type" : "textSnippet",
