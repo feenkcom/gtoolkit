@@ -232,9 +232,7 @@ BaselineOfGToolkit >> baseline: spec [
 				baseline: 'GtoolkitRoadmaps'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-roadmaps:main/src' ];
 				baseline: 'GToolkitBookmarks'
-					with: [ spec repository: 'github://feenkcom/gtoolkit-bookmarks:main/src' ];
-				baseline: 'GToolkitEditor'
-					with: [ spec repository: 'github://feenkcom/gtoolkit-editor:main/src' ] ]
+					with: [ spec repository: 'github://feenkcom/gtoolkit-bookmarks:main/src' ] ]
 ]
 
 { #category : #'post load' }
