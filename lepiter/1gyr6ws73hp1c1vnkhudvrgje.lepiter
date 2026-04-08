@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-10-20T10:04:19.379946-05:00"
+						"dateAndTimeString" : "2026-04-08T14:21:52.019228+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Pharo code can be transformed using the {{gtClass:RBParseTreeRewriter}} class. In its basic form, you can specify an expression using {{gtMethod:RBParseTreeRewriter>>replace:with:}} and then use the {{gtMethod:RBParseTreeRewriter>>executeTree:}} method to transform the tree.  In the following example, we transform all occurrances of `collection at: 2` to be `collection second`."
+				"string" : "Pharo code can be transformed using the {{gtClass:RBParseTreeRewriter}} class. In its basic form, you can specify an expression using {{gtMethod:RBParseTreeRewriter>>replace:with:}} and then use the {{gtMethod:RBParseTreeRewriter>>executeTree:}} method to transform the tree.  In the following example, we transform all occurrences of `collection at: 2` to be `collection second`."
 			},
 			{
 				"__type" : "exampleSnippet",
