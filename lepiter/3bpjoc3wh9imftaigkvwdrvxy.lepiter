@@ -337,6 +337,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "When working with objects and Smalltalk code evaluation, use the object tools to explore first. Keep in mind that whenever you get an object with an id as a result of a tool, that object is also accessible through the object storage. When executing code, do not guess; start from objects from the object storage. Pass the object ids as bindings in Smalltalk code evaluation if needed."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-08T22:48:36.795863+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-04-08T22:53:47.689405+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zHrC0J5lSDqrp2BaS0J4Hg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Different objects can serialize themselves in different ways, and it's possibly in multiple ways at the same time. These are produced by methods annotated with {{gtPragma:gtLlmDataView}}. For example, an instance of BlElement will show both the slots and class and an image with the rendering of the element. Exploit each of these data views."
 			}
 		]
 	},

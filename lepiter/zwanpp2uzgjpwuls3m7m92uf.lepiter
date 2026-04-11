@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:22:52.23165+02:00"
+						"dateAndTimeString" : "2026-04-07T22:02:36.344895+02:00"
 					}
 				},
 				"uid" : {
@@ -211,14 +211,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:23:06.236144+02:00"
+						"dateAndTimeString" : "2026-04-07T22:02:46.999963+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "H/yJnwr2DQCG2GI+DcrXEA=="
 				},
-				"code" : "mcpClient := GtMcpClient new\r\t\ttransport: (GtMcpStdioTransport new process: process)"
+				"code" : "mcpClient := GtLMcpClient new\r\t\ttransport: (GtLMcpStdioTransport new process: process)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -353,14 +353,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:23:44.911766+02:00"
+						"dateAndTimeString" : "2026-04-07T22:03:14.920584+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "TrCmoQr2DQCHAE0PDcrXEA=="
 				},
-				"code" : "chat := GtLlmChat new.\r\rmcpClient llmFunctionTools do: [ :aTool | chat provider addTool: aTool ].\r\rchat sendMessage: 'List the directories you are allowed to access.'"
+				"code" : "chat := GtLChat new.\r\rmcpClient llmFunctionTools do: [ :aTool | chat addTool: aTool ].\r\rchat sendMarkdown: 'List the directories you are allowed to access.'"
 			}
 		]
 	},

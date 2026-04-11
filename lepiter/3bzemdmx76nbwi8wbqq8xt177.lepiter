@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-13T00:22:18.299304+02:00"
+						"dateAndTimeString" : "2026-04-07T21:53:06.492511+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**N.B.:** This server was neither hardened nor audited. It is a simple Zinc server that might crash or, depending on the capabilities you give the tools it exposes, do undesirable things to your image or system at large. Use with caution at this time."
+				"string" : "**N.B.:** This server was not hardened. It is a simple Zinc server that might crash or, depending on the capabilities you give the tools it exposes, do undesirable things to your image or system at large. Use with caution at this time."
 			},
 			{
 				"__type" : "textSnippet",
@@ -609,14 +609,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-07-14T11:40:03.03074+02:00"
+									"dateAndTimeString" : "2026-04-07T21:55:18.588416+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "Ga05LEL2DQC+LQ5+DjLqZw=="
 							},
-							"code" : "page := LeDatabase gtBook pages atRandom.\rpageUri := 'lepage://' , page database properties databaseName , ':' , page title.\r\rserver\r\taddResource: (GtMcpResource new\r\t\t\tname: page title;\r\t\t\turi: pageUri;\r\t\t\tmimeType: ZnMimeType textPlain;\r\t\t\tcontentsBlock: [ GtLlmPageExporter new\r\t\t\t\t\tpage: page;\r\t\t\t\t\texport ])"
+							"code" : "page := LeDatabase gtBook pages atRandom.\rpageUri := 'lepage://' , page database properties databaseName , ':' , page title.\r\rserver\r\taddResource: (GtLMcpResource new\r\t\t\tname: page title;\r\t\t\turi: pageUri;\r\t\t\tmimeType: ZnMimeType textPlain;\r\t\t\tcontentsBlock: [ GtLLepiterContentExporter new\r\t\t\t\t\tpage: page;\r\t\t\t\t\texport ])"
 						},
 						{
 							"__type" : "textSnippet",
@@ -680,14 +680,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-07-14T11:42:46.668507+02:00"
+									"dateAndTimeString" : "2026-04-07T21:57:03.062141+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "9NtiNkL2DQCG3/iWDjLqZw=="
 							},
-							"code" : "client := GtMcpClient new\r\ttransport: (GtMcpHttpTransport new url: 'http://localhost:3000/')"
+							"code" : "client := GtLMcpClient new\r\ttransport: (GtLMcpHttpTransport new url: 'http://localhost:3000/')"
 						},
 						{
 							"__type" : "textSnippet",
@@ -931,14 +931,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-07-14T11:44:31.646778+02:00"
+									"dateAndTimeString" : "2026-04-07T21:58:52.276324+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "ZwELPkL2DQCJ4dzoDjLqZw=="
 							},
-							"code" : "server\r\taddPrompt: (GtMcpPrompt new\r\t\t\tname: 'Code Review';\r\t\t\tdescription: 'Asks the LLM to analyze code quality and suggest improvements';\r\t\t\targuments: {'code'};\r\t\t\tpromptBlock: [ :arguments | \r\t\t\t\t{GtLlmUserMessage new\r\t\t\t\t\t\tcontent: {'type' -> 'text'.\r\t\t\t\t\t\t\t\t'text'\r\t\t\t\t\t\t\t\t\t-> ('Review the following code as if you were a senior developer:\r\t\t\t\r```\r' , (arguments at: 'code')\r\t\t\t\t\t\t\t\t\t\t\t, '\r```')} asDictionary} ])"
+							"code" : "server\r\taddPrompt: (GtLMcpPrompt new\r\t\t\tname: 'Code Review';\r\t\t\tdescription: 'Asks the LLM to analyze code quality and suggest improvements';\r\t\t\targuments: {'code'};\r\t\t\tpromptBlock: [ :arguments | \r\t\t\t\t{GtLAnthropicUserMessage new\r\t\t\t\t\t\tmarkdown: 'Review the following code as if you were a senior developer:\r\t\t\t\r```\r' , (arguments at: 'code')\r\t\t\t\t\t\t\t\t\t\t\t, '\r```'} ])"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1002,14 +1002,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-07-14T11:45:28.758188+02:00"
+									"dateAndTimeString" : "2026-04-07T21:59:08.838716+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "Nbr/QEL2DQCLwYX7DjLqZw=="
 							},
-							"code" : "client := GtMcpClient new\r\ttransport: (GtMcpHttpTransport new url: 'http://localhost:3000/')"
+							"code" : "client := GtLMcpClient new\r\ttransport: (GtLMcpHttpTransport new url: 'http://localhost:3000/')"
 						},
 						{
 							"__type" : "textSnippet",

@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:12:17.282028+02:00"
+						"dateAndTimeString" : "2026-04-07T22:12:39.254485+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "2aD3eAr2DQCvL8acDcrXEA=="
 				},
-				"code" : "mcpClient := GtMcpClient new\r\t\ttransport: (GtMcpStdioTransport new process: process)"
+				"code" : "mcpClient := GtLMcpClient new\r\t\ttransport: (GtLMcpStdioTransport new process: process)"
 			},
 			{
 				"__type" : "textSnippet",
@@ -282,14 +282,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:16:37.81751+02:00"
+						"dateAndTimeString" : "2026-04-07T22:12:42.839568+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "mahfgwr2DQC1xKiYDcrXEA=="
 				},
-				"code" : "chat := GtLlmChat new.\r\rmessages := mcpClient\r\tmessagesFromPrompt: 'fetch'\r\twithArguments: {'url' -> 'https://modelcontextprotocol.io/docs/concepts/prompts'} asDictionary.\r\rmessages do: [:aMessage | chat addMessage: aMessage ].\r\rchat sendMessage: 'Can you explain MCP prompts to me concisely?'"
+				"code" : "chat := GtLChat new.\r\rmessages := mcpClient\r\tmessagesFromPrompt: 'fetch'\r\twithArguments: {'url' -> 'https://modelcontextprotocol.io/docs/concepts/prompts'} asDictionary.\r\rmessages do: [:aMessage | chat addMessage: aMessage ].\r\rchat sendMessage: 'Can you explain MCP prompts to me concisely?'"
 			},
 			{
 				"__type" : "textSnippet",
