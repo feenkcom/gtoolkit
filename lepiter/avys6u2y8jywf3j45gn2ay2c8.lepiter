@@ -150,7 +150,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-07-11T15:05:27.233114+02:00"
+												"dateAndTimeString" : "2026-04-07T22:06:38.219265+02:00"
 											}
 										},
 										"uid" : {
@@ -221,14 +221,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-07-11T14:52:18.490939+02:00"
+												"dateAndTimeString" : "2026-04-07T22:06:43.327474+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "VuM8hAj2DQCxFuw/DBrptw=="
 										},
-										"code" : "mcpClient := GtMcpClient new\r\t\ttransport: (GtMcpStdioTransport new process: process)"
+										"code" : "mcpClient := GtLMcpClient new\r\t\ttransport: (GtLMcpStdioTransport new process: process)"
 									}
 								]
 							},
@@ -330,14 +330,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-07-11T15:05:23.834201+02:00"
+												"dateAndTimeString" : "2026-04-07T22:06:47.973202+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "B/QRqAj2DQC5JCDQDBrptw=="
 										},
-										"code" : "mcpClient := GtMcpClient new\r\t\ttransport: (GtMcpHttpTransport new url: 'http://127.0.0.1:5000/mcp')"
+										"code" : "mcpClient := GtLMcpClient new\r\t\ttransport: (GtLMcpHttpTransport new url: 'http://127.0.0.1:5000/mcp')"
 									}
 								]
 							},
