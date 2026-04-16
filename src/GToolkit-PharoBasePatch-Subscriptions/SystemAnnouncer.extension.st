@@ -4,9 +4,15 @@ Extension { #name : #SystemAnnouncer }
 SystemAnnouncer >> announce: anAnnouncement [
 	<gtPharoPatch: #Pharo12>
 	
+	| aResult anInstance |
 	(self isSuspended not and: [ SystemAnnouncerSuspended value ]) ifTrue: [ ^ self ].
 	 
-	^ super announce: anAnnouncement 
+	anInstance := anAnnouncement asAnnouncement.
+	aResult := super announce: anInstance.
+	
+	anInstance gtDoneAnnouncementIn: self.
+	
+	^ aResult
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Subscriptions' }
