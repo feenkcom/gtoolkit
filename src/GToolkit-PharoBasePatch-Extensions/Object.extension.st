@@ -13,6 +13,13 @@ Object >> isPharoPackageTagModel [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+Object >> isPharoRefactoringModel [
+	^ self 
+			forPharo13AndNewer: [ self isKindOf: ReRefactoring ] 
+			forOlder: [ self isKindOf: RBRefactoring ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Object >> packageOrganizer [
 	<gtPharoPatch: #Pharo12>
 	
