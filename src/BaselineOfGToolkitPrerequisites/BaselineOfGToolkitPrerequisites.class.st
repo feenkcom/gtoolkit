@@ -709,7 +709,9 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 			package: 'GToolkit-PharoBasePatch-ForPharo12'.
 		self 
 			fastForPharo13: []
-			forPharo12: [] 
+			forPharo12: [
+				spec
+					package: 'GToolkit-PharoBasePatch-Pharo12Extensions'] 
 			forPharo11: [
 				spec
 					package: 'GToolkit-PharoBasePatch-StrictSymbol-Overrides']  ]
