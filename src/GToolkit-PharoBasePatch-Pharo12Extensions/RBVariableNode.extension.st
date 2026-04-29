@@ -1,13 +1,13 @@
 Extension { #name : #RBVariableNode }
 
-{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
+{ #category : #'*GToolkit-PharoBasePatch-Pharo12Extensions' }
 RBVariableNode >> isBlockVar [
 	<gtPharoPatch: #Pharo>
 	
 	^self isDefinedByBlock
 ]
 
-{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
+{ #category : #'*GToolkit-PharoBasePatch-Pharo12Extensions' }
 RBVariableNode >> isGlobal [
 	<gtPharoPatch: #Pharo>
 	
@@ -17,7 +17,7 @@ RBVariableNode >> isGlobal [
 	^self isLiteralVariable
 ]
 
-{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
+{ #category : #'*GToolkit-PharoBasePatch-Pharo12Extensions' }
 RBVariableNode >> isTemp [
 	<gtPharoPatch: #Pharo>
 	

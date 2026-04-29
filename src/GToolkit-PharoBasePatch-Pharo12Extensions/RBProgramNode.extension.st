@@ -1,6 +1,20 @@
 Extension { #name : #RBProgramNode }
 
-{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
+{ #category : #'*GToolkit-PharoBasePatch-Pharo12Extensions' }
+RBProgramNode >> isSelfOrSuper [
+	<gtPharoPatch: #Pharo>
+	
+	^ self isSelfOrSuperVariable
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Pharo12Extensions' }
+RBProgramNode >> isTemp [
+	<gtPharoPatch: #Pharo>
+	
+	^ self isTempVariable
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Pharo12Extensions' }
 RBProgramNode >> isUsed [
 	<gtPharoPatch: #Pharo>
 	"Answer true if this node could be used as part of another expression. For example, you could use the

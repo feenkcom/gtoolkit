@@ -89,14 +89,37 @@ BaselineOfGToolkitPrerequisites >> applyPatchForAstNodesInPharo12 [
 		fastForPharo13: []
 		forPharo12: [
 			RBNode withAllSubclasses do: [ :each | 
-				(RBProgramNodeVisitor << ('OC', (each name withoutPrefix: 'RB'))asSymbol
+				(Object << ('OC', (each name withoutPrefix: 'RB'))asSymbol
 					slots: {};
 					package: 'GToolkit-Pharo12Stubs-AST') install ].
 			RBNode allSubclasses do: [ :each | 
 				('OC', (each name withoutPrefix: 'RB'))asSymbol asClass
 					superclass: ('OC', (each superclass name withoutPrefix: 'RB'))asSymbol asClass ].
 					
-			#OCComment asClass rename: #OCCommentNode
+			#OCComment asClass rename: #OCCommentNode.
+			
+			(Object << #OCIRBuilder
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+			(Object << #OCParseTreeRewriter
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+					
+			(Object << #OCIRInstruction
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+			(Object << #OCIRMethod
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+			(Object << #OCIRSequence
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+					
+					
+			(Object << #SystemEnvironment
+					slots: {#cachedClassNames . #cachedNonClassNames. #cachedBehaviors};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+			
 		]
 		forPharo11: [ ]
 ]
@@ -306,15 +329,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 	self 
 		fastForPharo13: []
 		forPharo12: [
-			(Object << #ProtocolOrganizer
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #ClassOrganization
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #Categorizer
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
 			(Object << #EpBehaviorCategoryChange
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
@@ -331,15 +345,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
 			(#EpCategoryChange asClass << #EpCategoryRename
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #AbstractProtocol
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #AllProtocol
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #ChangeSet
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
 			(Object << #EpIconVisitor
@@ -353,15 +358,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo13 [
 	self 
 		fastForPharo13: [
-			(Object << #ProtocolOrganizer
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #ClassOrganization
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #Categorizer
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
 			(Object << #EpBehaviorCategoryChange
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
@@ -380,66 +376,12 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo13 [
 			(#EpCategoryChange asClass << #EpCategoryRename
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #AbstractProtocol
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #AllProtocol
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #ChangeSet
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
 			(Object << #EpIconVisitor
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
 		] 
 		forPharo12: []
 		forPharo11: [ ]
-]
-
-{ #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo11 [
-	self 
-		fastForPharo13AndPharo12: [ ] 
-		forPharo11: [
-			(Object << #EpBehaviorRepackagedChange
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-		
-
-			(Object << #EpPackageChange
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageChange asClass << #EpPackageAddition
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageChange asClass << #EpPackageRemoval
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageChange asClass << #EpPackageRename
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-				
-			(Object << #EpPackageTagChange
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageTagChange asClass << #EpPackageTagAddition
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageTagChange asClass << #EpPackageTagRemoval
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageTagChange asClass << #EpPackageTagRename
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-				.
-			(Object << #EpIconNameVisitor
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-				
-			(Object << #RBAbstractTransformation
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.]
 ]
 
 { #category : #accessing }
@@ -535,6 +477,10 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
 				slots: {};
 				package: 'GToolkit-Pharo13Stubs') install.
 			(RBPullUpInstanceVariableRefactoring << #RePullUpInstanceVariableRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+				
+			(ClapCommand << #ClapCommandSpec
 				slots: {};
 				package: 'GToolkit-Pharo13Stubs') install.]
 		forPharo11: [ ]
@@ -763,7 +709,9 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 			package: 'GToolkit-PharoBasePatch-ForPharo12'.
 		self 
 			fastForPharo13: []
-			forPharo12: [] 
+			forPharo12: [
+				spec
+					package: 'GToolkit-PharoBasePatch-Pharo12Extensions'] 
 			forPharo11: [
 				spec
 					package: 'GToolkit-PharoBasePatch-StrictSymbol-Overrides']  ]
@@ -799,7 +747,6 @@ BaselineOfGToolkitPrerequisites >> preLoadGToolkitPrerequisites: spec [
 	self applyPatchForPharo13StubsInPharo12.
 	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
-	self applyPatchForPharo12StubsInPharo11.
 	
 	self applyPatchForAstNodesInPharo12.
 ]
