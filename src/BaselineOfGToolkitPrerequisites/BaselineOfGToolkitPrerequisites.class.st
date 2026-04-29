@@ -89,14 +89,26 @@ BaselineOfGToolkitPrerequisites >> applyPatchForAstNodesInPharo12 [
 		fastForPharo13: []
 		forPharo12: [
 			RBNode withAllSubclasses do: [ :each | 
-				(RBProgramNodeVisitor << ('OC', (each name withoutPrefix: 'RB'))asSymbol
+				(Object << ('OC', (each name withoutPrefix: 'RB'))asSymbol
 					slots: {};
 					package: 'GToolkit-Pharo12Stubs-AST') install ].
 			RBNode allSubclasses do: [ :each | 
 				('OC', (each name withoutPrefix: 'RB'))asSymbol asClass
 					superclass: ('OC', (each superclass name withoutPrefix: 'RB'))asSymbol asClass ].
 					
-			#OCComment asClass rename: #OCCommentNode
+			#OCComment asClass rename: #OCCommentNode.
+			
+			(Object << #OCIRBuilder
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+			(Object << #OCParseTreeRewriter
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+					
+			(Object << #SystemEnvironment
+					slots: {#cachedClassNames . #cachedNonClassNames. #cachedBehaviors};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+			
 		]
 		forPharo11: [ ]
 ]
