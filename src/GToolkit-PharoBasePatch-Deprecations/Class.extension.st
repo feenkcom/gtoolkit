@@ -1,77 +1,96 @@
 Extension { #name : #Class }
 
 { #category : #'*GToolkit-PharoBasePatch-Deprecations' }
-Class >> subclass: aSubclassSymbol instanceVariableNames: instVarNameList classVariableNames: classVarNames package: aPackageSymbol [
-	"Added to allow for a simplified subclass creation experience. "
+Class >> subclass: aSubclassSymbol instanceVariableNames: instVarNameList classVariableNames: classVarNames category: aCategorySymbol [
 
-	^ self
-		forPharo12AndNewer: [ "self
-				deprecated: 'This method uses the old way of creating classes. The new way is to use the ShiftClassInstaller.'
-				transformWith: '`@rcv subclass: `@name instanceVariableNames: `@instVar classVariableNames: `@classVar package: `@package'
-						-> '`@rcv classInstaller
-			make: [ :builder |
-				builder
-					superclass: `@rcv;
-					name: `@name;
-					slotsFromString: `@instVar;
-					sharedVariablesFromString: `@classVar;
-					package: `@package;
-					environment: `@rcv environment ]'."
-
-			self classInstaller
-				make: [ :builder | 
-					builder
-						superclass: self;
-						name: aSubclassSymbol;
-						layoutClass: self classLayout class;
-			  		  fillClassSideFromEnvironment: self environment;
-						slotsFromString: instVarNameList;
-						sharedVariablesFromString: classVarNames;
-						package: aPackageSymbol;
-						environment: self environment ] ]
-		forPharo11: [ self
-				subclass: aSubclassSymbol
-				instanceVariableNames: instVarNameList
-				classVariableNames: classVarNames
-				poolDictionaries: ''
-				package: aPackageSymbol ]
+	^ (self << aSubclassSymbol
+			slotsFromString: instVarNameList;
+			sharedVariablesFromString: classVarNames;
+			category: aCategorySymbol) install
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Deprecations' }
-Class >> subclass: t instanceVariableNames: f classVariableNames: d poolDictionaries: s category: cat [
+Class >> subclass: aSubclassSymbol instanceVariableNames: instVarNameList classVariableNames: classVarNames package: aPackageSymbol [
+	"Added to allow for a simplified subclass creation experience. "
 
-	^ self
-		forPharo12AndNewer: [  "self
-			deprecated: 'This method uses the old way of creating classes. The new way is to use the ShiftClassInstaller.'
-			transformWith:
-				'`@rcv subclass: `@name instanceVariableNames: `@instVar classVariableNames: `@classVar poolDictionaries: `@pools category: `@package'
-				-> '`@rcv classInstaller
-				make: [ :builder |
-					builder
-						superclass: `@rcv;
-						name: `@name;
-						slotsFromString: `@instVar;
-						sharedVariablesFromString: `@classVar;
-						sharedPools: `@pools;
-						category: `@package;
-						environment: `@rcv environment ]'."
+	^ (self << aSubclassSymbol
+			slotsFromString: instVarNameList;
+			sharedVariablesFromString: classVarNames;
+			package: aPackageSymbol) install
+]
 
-			self classInstaller make: [ :builder |
-				  builder
-					  superclass: self;
-					  name: t;
-					  layoutClass: self classLayout class;
-					  fillClassSideFromEnvironment: self environment;
-					  slotsFromString: f;
-					  sharedVariablesFromString: d;
-					  sharedPoolsFromString: s;
-					  category: cat;
-					  environment: self environment ] ]
-		forPharo11: [
-			self
-				subclass: t
-				instanceVariableNames: f
-				classVariableNames: d
-				poolDictionaries: s
-				package: cat	]
+{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
+Class >> subclass: aSubclassSymbol instanceVariableNames: instVarNameList classVariableNames: classVarNames poolDictionaries: poolDictionariesString category: aCategory [
+
+	^ (self << aSubclassSymbol
+			slotsFromString: instVarNameList;
+			sharedVariablesFromString: classVarNames;
+			sharedPoolsFromString: poolDictionariesString;
+			category: aCategory) install
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
+Class >> subclass: aSubclassSymbol instanceVariableNames: instVarNameList classVariableNames: classVarNames poolDictionaries: poolDictionariesString package: aPackageName [
+
+	^ (self << aSubclassSymbol
+			slotsFromString: instVarNameList;
+			sharedVariablesFromString: classVarNames;
+			sharedPoolsFromString: poolDictionariesString;
+			package: aPackageName) install
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
+Class >> variableByteSubclass: className instanceVariableNames: instVarNameList classVariableNames: classVarNames category: cat [
+
+	^ self classInstaller make: [ :builder |
+		  builder
+			  superclass: self;
+			  name: className;
+			  layoutClass: (self checkForCompiledMethodLayout: className);
+			  slotsFromString: instVarNameList;
+			  sharedVariablesFromString: classVarNames;
+			  category: cat;
+			  environment: self environment ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
+Class >> variableByteSubclass: className instanceVariableNames: instVarNameList classVariableNames: classVarNames package: package [
+
+	^ self classInstaller make: [ :builder |
+		  builder
+			  superclass: self;
+			  name: className;
+			  layoutClass: (self checkForCompiledMethodLayout: className);
+			  slotsFromString: instVarNameList;
+			  sharedVariablesFromString: classVarNames;
+			  package: package;
+			  environment: self environment ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
+Class >> variableSubclass: className instanceVariableNames: instVarNameList classVariableNames: classVarNames category: cat [
+
+	^ self classInstaller make: [ :builder |
+		  builder
+			  superclass: self;
+			  name: className;
+			  layoutClass: VariableLayout;
+			  slotsFromString: instVarNameList;
+			  sharedVariablesFromString: classVarNames;
+			  category: cat;
+			  environment: self environment ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Deprecations' }
+Class >> variableSubclass: className instanceVariableNames: instVarNameList classVariableNames: classVarNames package: package [
+
+	^ self classInstaller make: [ :builder |
+		  builder
+			  superclass: self;
+			  name: className;
+			  layoutClass: VariableLayout;
+			  slotsFromString: instVarNameList;
+			  sharedVariablesFromString: classVarNames;
+			  package: package;
+			  environment: self environment ]
 ]
