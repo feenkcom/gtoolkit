@@ -177,13 +177,13 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 		forPharo11: [ self applyPatchForFinalizationProcessPharo11 ] 
 ]
 
-{ #category : #accessing }
+{ #category : #private }
 BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcessPharo11 [
 
-	Object subclass: #FinalizationProcess
-		instanceVariableNames: ''
-		classVariableNames: 'TheFinalizationProcess FinalizationSemaphore MournLoopProcess StopRequested StoppedSemaphore'
-		package: 'GToolkit-UtilitySystemStubs'.
+	(Object << #FinalizationProcess
+		slots: {};
+		sharedVariables: { #TheFinalizationProcess . #FinalizationSemaphore . #MournLoopProcess . #StopRequested . #StoppedSemaphore };
+		package: 'GToolkit-UtilitySystemStubs') install.
 ]
 
 { #category : #accessing }
