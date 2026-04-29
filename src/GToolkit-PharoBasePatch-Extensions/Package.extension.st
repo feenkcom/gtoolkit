@@ -38,6 +38,11 @@ Package class >> defaultPackageName [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+Package >> isPharoPackageModel [
+	^ true
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Package >> packageName [
 	<gtPharoPatch: #Pharo>
 	
