@@ -105,6 +105,17 @@ BaselineOfGToolkitPrerequisites >> applyPatchForAstNodesInPharo12 [
 					slots: {};
 					package: 'GToolkit-Pharo12Stubs-AST') install.
 					
+			(Object << #OCIRInstruction
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+			(Object << #OCIRMethod
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+			(Object << #OCIRSequence
+					slots: {};
+					package: 'GToolkit-Pharo12Stubs-AST') install.
+					
+					
 			(Object << #SystemEnvironment
 					slots: {#cachedClassNames . #cachedNonClassNames. #cachedBehaviors};
 					package: 'GToolkit-Pharo12Stubs-AST') install.
