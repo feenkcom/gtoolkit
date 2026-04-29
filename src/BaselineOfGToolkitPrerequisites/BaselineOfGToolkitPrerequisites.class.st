@@ -306,9 +306,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 	self 
 		fastForPharo13: []
 		forPharo12: [
-			(Object << #ClassOrganization
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
 			(Object << #EpBehaviorCategoryChange
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
@@ -338,10 +335,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo13 [
 	self 
 		fastForPharo13: [
-		
-			(Object << #ClassOrganization
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
 			(Object << #EpBehaviorCategoryChange
 				slots: {};
 				package: 'GToolkit-Pharo11Stubs') install.
