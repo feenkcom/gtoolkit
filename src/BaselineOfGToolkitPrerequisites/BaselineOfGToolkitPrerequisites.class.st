@@ -398,51 +398,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo13 [
 ]
 
 { #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo11 [
-	self 
-		fastForPharo13AndPharo12: [ ] 
-		forPharo11: [
-			(Object << #EpBehaviorRepackagedChange
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-		
-
-			(Object << #EpPackageChange
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageChange asClass << #EpPackageAddition
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageChange asClass << #EpPackageRemoval
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageChange asClass << #EpPackageRename
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-				
-			(Object << #EpPackageTagChange
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageTagChange asClass << #EpPackageTagAddition
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageTagChange asClass << #EpPackageTagRemoval
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-			(#EpPackageTagChange asClass << #EpPackageTagRename
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-				.
-			(Object << #EpIconNameVisitor
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.
-				
-			(Object << #RBAbstractTransformation
-				slots: {};
-				package: 'GToolkit-Pharo12Stubs') install.]
-]
-
-{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo13 [
 	self 
 		fastForPharo13: [
@@ -799,7 +754,6 @@ BaselineOfGToolkitPrerequisites >> preLoadGToolkitPrerequisites: spec [
 	self applyPatchForPharo13StubsInPharo12.
 	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
-	self applyPatchForPharo12StubsInPharo11.
 	
 	self applyPatchForAstNodesInPharo12.
 ]
