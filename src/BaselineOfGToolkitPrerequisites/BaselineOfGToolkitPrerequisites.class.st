@@ -455,6 +455,10 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
 				package: 'GToolkit-Pharo13Stubs') install.
 			(RBPullUpInstanceVariableRefactoring << #RePullUpInstanceVariableRefactoring
 				slots: {};
+				package: 'GToolkit-Pharo13Stubs') install.
+				
+			(ClapCommand << #ClapCommandSpec
+				slots: {};
 				package: 'GToolkit-Pharo13Stubs') install.]
 		forPharo11: [ ]
 ]
