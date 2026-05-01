@@ -2,5 +2,7 @@ Extension { #name : #RBParser }
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RBParser class >> gtParseErrorClass [
-	^ CodeError 
+	^ self 
+		forPharo13AndNewer: [ #OCCodeError asClass] 
+		forOlder: [CodeError] 
 ]

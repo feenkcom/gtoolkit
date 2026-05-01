@@ -3,9 +3,8 @@ Extension { #name : #RGClassDefinition }
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RGClassDefinition >> category [
 	<gtPharoPatch: #Pharo>
-	^ self 
-		forPharo12AndNewer: [ 
-			self package ifNotNil: [ :aPackage |
+	^  self package 
+			ifNotNil: [ :aPackage |
 				self packageTag 
 			  	ifNil: [ aPackage isString 
 			  		ifTrue: [ aPackage ]
@@ -18,6 +17,5 @@ RGClassDefinition >> category [
 			  					ifFalse: [ aPackage name ] ]
 			  				ifFalse: [(aPackage isString 
 			  					ifTrue: [ aPackage ]
-			  					ifFalse: [ aPackage name]) , '-' , tag ] ] ] ] 
-		forPharo11: [ category ]
+			  					ifFalse: [ aPackage name]) , '-' , tag ] ] ] 
 ]
