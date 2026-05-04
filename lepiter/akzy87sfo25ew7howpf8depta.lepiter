@@ -125,7 +125,48 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "exampleSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-11T17:30:12.156141+11:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2023-12-11T17:30:12.156141+11:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "ACWYzZfIDQCd3GhtCGwhDw=="
+										},
+										"exampleSelector" : "responseForFeenkOrg",
+										"previewHeight" : 600,
+										"previewShowSelector" : "gtJsonFor:",
+										"exampleBehaviorName" : "GtWorkingWithTheGitHubRestApiShow",
+										"codeExpanded" : true,
+										"previewExpanded" : true,
+										"noCode" : true
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -157,46 +198,6 @@
 								"__type" : "textStyle"
 							},
 							"string" : "GitHub offers a REST API to explore data about the repositories hosted by any given organization.\n\nAs a case study, we start from JSON content available at [https://api.github.com/orgs/feenkcom](https://api.github.com/orgs/feenkcom), which looks like this:"
-						},
-						{
-							"__type" : "exampleSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-11T17:30:12.156141+11:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-12-11T17:30:12.156141+11:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "ACWYzZfIDQCd3GhtCGwhDw=="
-							},
-							"exampleSelector" : "responseForFeenkOrg",
-							"previewHeight" : 600,
-							"previewShowSelector" : "gtJsonFor:",
-							"exampleBehaviorName" : "GtWorkingWithTheGitHubRestApiShow",
-							"codeExpanded" : true,
-							"previewExpanded" : true,
-							"noCode" : true
 						},
 						{
 							"__type" : "textSnippet",
@@ -254,20 +255,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T22:20:30.257189+02:00"
+									"dateAndTimeString" : "2026-04-30T21:22:33.896614+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "Y0RRrcqnDQCfSQaxANEkOQ=="
 							},
-							"code" : "url := 'https://api.github.com/orgs/feenkcom'."
+							"code" : "url := 'https://api.github.com/orgs/feenkcom'"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -288,20 +289,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T22:20:41.691234+02:00"
+									"dateAndTimeString" : "2026-04-30T21:22:32.62949+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "2ZiNXSRmAAAAAAAAAAAAAA=="
 							},
-							"code" : "json := ZnClient new get: url."
+							"code" : "json := ZnClient new get: url"
 						},
 						{
 							"__type" : "textSnippet",
@@ -365,14 +366,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-08-20T20:02:14.096337+02:00"
+									"dateAndTimeString" : "2026-04-30T21:22:31.130951+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "e6C51z1uAAAAAAAAAAAAAA=="
 							},
-							"code" : "dictionary := STONJSON fromString: json."
+							"code" : "dictionary := STONJSON fromString: json"
 						}
 					]
 				},
@@ -468,20 +469,20 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "veit.heller@feenk.com"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T22:20:45.576132+02:00"
+									"dateAndTimeString" : "2026-05-01T07:11:59.888439+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "Kh4mWdInAAAAAAAAAAAAAA=="
 							},
-							"code" : "GhOrganization new rawData: dictionary."
+							"code" : "GhOrganization new rawData: dictionary"
 						},
 						{
 							"__type" : "textSnippet",
