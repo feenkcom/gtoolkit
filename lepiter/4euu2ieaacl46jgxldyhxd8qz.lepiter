@@ -400,14 +400,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-06-05T09:43:57.672517+02:00"
+												"dateAndTimeString" : "2026-05-04T17:04:07.337514+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "6B0YPhCdDQCxUBPvDAdcLA=="
 										},
-										"code" : "edition := model allClasses entityNamed: #'Edition'"
+										"code" : "edition := model allClasses entityNamed: #'Unpublishing'"
 									}
 								]
 							},
@@ -430,7 +430,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-06-05T09:46:34.536511+02:00"
+									"dateAndTimeString" : "2026-05-04T17:04:23.188506+02:00"
 								}
 							},
 							"uid" : {
@@ -440,7 +440,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "For example, one of the classes is `Edition`:"
+							"string" : "For example, one of the classes is `Unpublishing`:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -472,14 +472,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-06-05T09:47:00.718704+02:00"
+												"dateAndTimeString" : "2026-05-04T17:04:20.604197+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "CxkmSxCdDQCxYGDADAdcLA=="
 										},
-										"code" : "model allTables entityNamed: #'editions'"
+										"code" : "model allTables entityNamed: #'unpublishings'"
 									}
 								]
 							},
@@ -502,7 +502,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-06-05T09:47:17.091714+02:00"
+									"dateAndTimeString" : "2026-05-04T17:04:26.10987+02:00"
 								}
 							},
 							"uid" : {
@@ -512,7 +512,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This class is mapped on a table called `editions`."
+							"string" : "This class is mapped on a table called `unpublishings`."
 						},
 						{
 							"__type" : "textSnippet",
@@ -539,7 +539,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-06-05T10:06:33.043458+02:00"
+									"dateAndTimeString" : "2026-05-04T17:04:36.268465+02:00"
 								}
 							},
 							"uid" : {
@@ -549,7 +549,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Thus, to reason about the `Edition` as a conceptual entity, we need to look at two kinds of sources: one with logic, and one with the persistent state. That is why when inspecting the Edition class, we have two views: Source and Table source."
+							"string" : "Thus, to reason about the `Unpublishing` as a conceptual entity, we need to look at two kinds of sources: one with logic, and one with the persistent state. That is why when inspecting the Edition class, we have two views: Source and Table source."
 						},
 						{
 							"__type" : "textSnippet",
@@ -576,7 +576,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-06-05T10:08:47.518146+02:00"
+									"dateAndTimeString" : "2026-05-04T17:04:40.67125+02:00"
 								}
 							},
 							"uid" : {
@@ -586,7 +586,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Furthermore, when we have a field like `document_id` in the table definition, that is mapped on a foreign key to a `documents` table that corresponds to a `Document` Ruby class. Thus, even if Ruby is a dynamically typed language, the `document` field is statically typed through the framework. This is a piece of information we can leverage in our tools. For example, take a look at the `All connections` view of the Edition class."
+							"string" : "Furthermore, when we have a field like `document_id` in the table definition, that is mapped on a foreign key to a `documents` table that corresponds to a `Document` Ruby class. Thus, even if Ruby is a dynamically typed language, the `document` field is statically typed through the framework. This is a piece of information we can leverage in our tools. For example, take a look at the `All connections` view of the Unpublishing class."
 						}
 					]
 				},

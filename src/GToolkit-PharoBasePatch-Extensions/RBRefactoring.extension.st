@@ -1,6 +1,13 @@
 Extension { #name : #RBRefactoring }
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
+RBRefactoring >> applicabilityPreconditionsFor: aCollection [
+	^ self
+		forPharo13AndNewer: [ aCollection ]
+		forOlder: [ aCollection inject: RBCondition true into: [ :sum :each | sum & each ] ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RBRefactoring >> model [
 	<gtPharoPatch:  #Pharo12>
 	

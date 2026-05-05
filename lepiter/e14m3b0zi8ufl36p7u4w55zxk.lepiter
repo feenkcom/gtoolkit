@@ -357,20 +357,20 @@
 				},
 				"editEmail" : {
 					"__type" : "email",
-					"emailString" : "veit.heller@feenk.com"
+					"emailString" : "<unknown>"
 				},
 				"editTime" : {
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-27T16:17:27.244401+01:00"
+						"dateAndTimeString" : "2026-05-04T16:59:24.688779+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "LkdrjHOqDQCdtW+JC1RiEA=="
 				},
-				"code" : "githubAccessKeyFile := FileLocator home / '.secrets' / 'home-github.txt'.\rgithubAccessKey := githubAccessKeyFile contents trimBoth"
+				"code" : "githubAccessKeyFile := FileLocator home / '.secrets' / 'gh_token.txt'.\rgithubAccessKey := githubAccessKeyFile contents trimBoth"
 			},
 			{
 				"__type" : "textSnippet",
