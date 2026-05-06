@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-24T17:58:00.697231+02:00"
+						"dateAndTimeString" : "2026-05-06T09:38:16.091231+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-24T17:59:00.617683+02:00"
+						"dateAndTimeString" : "2026-05-06T10:34:42.609465+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mW7QeDvTDQCLnyUICwzy0g=="
+					"uidString" : "tVBUT+AWSbW+5XYeT516vQ=="
 				},
-				"code" : "client := GtOllamaClient new"
+				"code" : "model := GtLModelFactory new ollama_generate: 'tinyllama'.\rprovider := model provider."
 			},
 			{
 				"__type" : "textSnippet",
@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T19:24:15.299653+02:00"
+						"dateAndTimeString" : "2026-05-06T10:29:07.525791+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "q/OpfDvTDQCNJWP0Cwzy0g=="
 				},
-				"code" : "client pullModel: 'llama3.1'"
+				"code" : "provider pullModel."
 			},
 			{
 				"__type" : "textSnippet",
@@ -171,7 +171,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-24T18:06:08.613049+02:00"
+						"dateAndTimeString" : "2026-05-06T10:15:50.522904+02:00"
 					}
 				},
 				"uid" : {
@@ -181,7 +181,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To find out which models are available, you can query the list of clients."
+				"string" : "To find out which models are available on your machine, you can query the list of clients."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -208,14 +208,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-24T18:06:12.697484+02:00"
+						"dateAndTimeString" : "2026-05-06T10:08:44.570875+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/eoUljvTDQCTaQO0Cwzy0g=="
 				},
-				"code" : "client listModels"
+				"code" : "provider availableModels."
 			},
 			{
 				"__type" : "textSnippet",
@@ -279,14 +279,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-01-09T10:49:14.303561+01:00"
+						"dateAndTimeString" : "2026-05-06T10:24:28.049837+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "NEc6lDvTDQCRyhd+Cwzy0g=="
 				},
-				"code" : "messages := {\r\tGtLlmSystemMessage new content: 'You are a helpful assistant.'.\r\tGtLlmUserMessage new content: 'Hello Llama! How are you today?'\r}.\r\rclient completeChatWithModel: 'llama3.1' andMessages: messages"
+				"code" : "chat := provider chat.\rchat instructions\n\tsectionNamed: 'Behaviour'\n\tifAbsent: [ :aSection |\n\t\taSection addString: 'Begin all responses with ''Hi There!!!''.' ].\rchat sendString: 'Hello Llama! How are you today?'."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-06T10:25:59.488533+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-06T10:26:35.094612+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "19dDEEfIQLyiYOUCMw7cYg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And finally we can delete the model when we are finished with it (you'll probably want something more capable than llama 3.2):"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-06T10:26:38.298302+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-06T10:30:44.876244+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "g02J2bqLTBqnNM25253LeQ=="
+				},
+				"code" : "provider deleteModel."
 			}
 		]
 	},

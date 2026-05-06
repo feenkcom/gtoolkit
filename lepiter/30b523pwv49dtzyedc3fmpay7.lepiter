@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T12:58:49.858676+02:00"
+						"dateAndTimeString" : "2026-05-06T11:58:11.934883+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Using the client initialization code from [[Working with the Ollama API client]]:"
+				"string" : "Using the initialization code similar to [[Working with the Ollama API client]]:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:26:13.606331+02:00"
+						"dateAndTimeString" : "2026-05-06T14:23:52.20938+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "37siNjXaDQCWHNj3Ap3RMg=="
 				},
-				"code" : "client := GtOllamaClient new"
+				"code" : "model := GtLModelFactory new ollama_generate: 'nomic-embed-text-v2-moe'."
 			},
 			{
 				"__type" : "textSnippet",
@@ -137,7 +137,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:26:13.606398+02:00"
+						"dateAndTimeString" : "2026-05-06T11:58:17.294676+02:00"
 					}
 				},
 				"uid" : {
@@ -147,7 +147,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can now use this client to generate an embedding for text."
+				"string" : "We can now use this to generate an embedding for text."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-08-15T15:27:45.043377+02:00"
+						"dateAndTimeString" : "2026-05-06T13:24:26.381343+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "iLwiNjXaDQCWHvx8Ap3RMg=="
 				},
-				"code" : "client generateEmbeddingsWithModel: 'llama3.1' andInput: 'A text to embed'"
+				"code" : "command := model newCreateEmbeddingsCommand.\rcommand context input: 'A text to embed'.\rembeddings := command perform.\r"
 			},
 			{
 				"__type" : "textSnippet",
@@ -245,14 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T13:16:29.480926+02:00"
+						"dateAndTimeString" : "2026-05-06T14:32:47.626253+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "fihfucLaDQCw/5kFBBdUnw=="
 				},
-				"code" : "client\r\tgenerateEmbeddingsWithModel: 'llama3.1'\r\tandInput: {'A text to embed'. 'Another text to embed'}"
+				"code" : "command := model newCreateEmbeddingsCommand.\rdocuments := {\n  'Our refund policy lasts 30 days.'.\n  'You can change your password from account settings.'.\n  'Shipping usually takes 5 to 7 business days.'. }.\ncommand context input: documents.\nembeddings := command perform."
 			},
 			{
 				"__type" : "textSnippet",
@@ -268,7 +268,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:26:13.606547+02:00"
+						"dateAndTimeString" : "2026-05-06T14:30:38.907432+02:00"
 					}
 				},
 				"editEmail" : {
@@ -279,17 +279,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:26:13.606547+02:00"
+						"dateAndTimeString" : "2026-05-06T14:30:41.029318+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "lLwiNjXaDQCWHzw7Ap3RMg=="
+					"uidString" : "fU0HFOx+R0O5ibt7LeJNuQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If we want to preserve the input, we can also use the {{gtClass:GtLlmEmbedding}} utility class for that."
+				"string" : "We can then for instance apply distance functions on them using {{gtMethod:GtLlmEmbeddingsUtilities class>>distancesFromEmbeddings:to:}}. "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -305,7 +305,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:26:13.606558+02:00"
+						"dateAndTimeString" : "2026-05-06T14:12:51.751919+02:00"
 					}
 				},
 				"editEmail" : {
@@ -316,14 +316,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T13:16:43.934191+02:00"
+						"dateAndTimeString" : "2026-05-06T14:32:52.664383+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "oLwiNjXaDQCWIElDAp3RMg=="
+					"uidString" : "s7Y76HxdSMCh4Az6IgvDRg=="
 				},
-				"code" : "input := 'A text to embed'.\r\rembedding := GtLlmEmbedding new\r\t\tinput: input;\r\t\tembedding: (client generateEmbeddingsWithModel: 'llama3.1' andInput: 'A text to embed')\r\t\t\t\titems first embedding"
+				"code" : "command context input: 'How long does delivery take?'.\rqueryEmbeddings := command perform.\rqueryLlmEmbedding := GtLlmEmbedding new\r\tinput: command context input;\r\tembedding: queryEmbeddings embeddings first.\r\rllmEmbeddings := (1 to: embeddings input size) collect: [ :i |\r\tGtLlmEmbedding new\r\t\tinput: (embeddings input at: i);\r\t\tembedding: (embeddings embeddings at: i) ].\rdistances := GtLlmEmbeddingsUtilities\r\t\tdistancesFromEmbeddings: llmEmbeddings\r\t\tto: queryLlmEmbedding.\rsorted := distances sorted: #distance ascending.\rsorted first embedding input."
 			},
 			{
 				"__type" : "textSnippet",
@@ -350,7 +350,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:26:13.606564+02:00"
+						"dateAndTimeString" : "2026-05-06T14:30:36.829737+02:00"
 					}
 				},
 				"uid" : {
@@ -360,7 +360,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can then for instance apply distance functions on them using {{gtMethod:GtLlmEmbeddingsUtilities class>>distancesFromEmbeddings:to:}}. The default distance metric is `cosine`. To explore them, you can look at the distance metrics view on the {{gtClass:GtLlmEmbeddingsUtilities}} class."
+				"string" : "The default distance metric is `cosine`. To explore them, you can look at the distance metrics view on the {{gtClass:GtLlmEmbeddingsUtilities}} class."
 			},
 			{
 				"__type" : "exampleSnippet",
