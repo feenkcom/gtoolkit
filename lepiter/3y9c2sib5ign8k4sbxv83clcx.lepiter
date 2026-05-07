@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-12-09T08:58:01.905022+01:00"
+						"dateAndTimeString" : "2026-05-07T09:32:58.704664+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "81GIdTPlDQClkOVqB4K/Qg=="
 				},
-				"code" : "format := {'type' -> 'object'.\r\t\t'properties'\r\t\t\t-> {'min' -> {'type' -> 'number'} asDictionary.\r\t\t\t\t\t'max' -> {'type' -> 'number'} asDictionary.\r\t\t\t\t\t'unit' -> {'type' -> 'string'} asDictionary} asDictionary.\r\t\t'required'\r\t\t\t-> {'min'.\r\t\t\t\t\t'max'.\r\t\t\t\t\t'unit'}} asDictionary"
+				"code" : "format := {'type' -> 'object'.\r\t\t'properties'\r\t\t\t-> {'min' -> {'type' -> 'number'} asDictionary.\r\t\t\t\t\t'max' -> {'type' -> 'number'} asDictionary.\r\t\t\t\t\t'unit' -> {'type' -> 'string'} asDictionary} asDictionary.\r\t\t'required'\r\t\t\t-> {'min'.\r\t\t\t\t\t'max'.\r\t\t\t\t\t'unit'}} asDictionary.\rresponseFormat := GtLResponseJsonSchemaFormat new \r\tname: 'Body Temperature';\r\tschemaDictionary: format."
 			},
 			{
 				"__type" : "textSnippet",
@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-01-31T12:29:57.191213+01:00"
+						"dateAndTimeString" : "2026-05-07T09:12:50.106801+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "C+YWMV/pDQC9xNvOCWrCrQ=="
 				},
-				"code" : "chat := GtLlmChat new\r\t\tprovider: (GtOllamaProvider new\r\t\t\t\tmodel: 'llama3.1';\r\t\t\t\tformat: format).\r\rchat\r\tsendMessage: 'Hello Llama! What is the normal temperature range of the human body?'"
+				"code" : "model := GtLModelFactory new ollama_completions: 'llama3.2'.\rchat := model provider chat.\rchat addResponseFormat: responseFormat.\rchat sendString: 'Hello Llama! What is the normal temperature range of the human body?'."
 			}
 		]
 	},

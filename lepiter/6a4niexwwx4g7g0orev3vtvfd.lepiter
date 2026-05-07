@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T12:57:00.073852+02:00"
+						"dateAndTimeString" : "2026-05-07T08:50:20.999401+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "KeOFtQfZDQChWbAkBJAZag=="
 				},
-				"code" : "modelfile := GtLlmModelFile new\r\tfrom: 'llama3';\r\tsystem: 'You are Mario from Super Mario Bros, acting as an assistant.';\r\tmessageFrom: 'user' withText: 'Who are you?';\r\tmessageFrom: 'assistant' withText: 'It’s me, Mario! What can I do for you today?'"
+				"code" : "modelfile := GtLlmModelFile new\r\tfrom: 'llama3.2';\r\tsystem: 'You are Mario from Super Mario Bros, acting as an assistant.';\r\tmessageFrom: 'user' withText: 'Who are you?';\r\tmessageFrom: 'assistant' withText: 'It’s me, Mario! What can I do for you today?';\r\tparameter: 'num_ctx' at: 4096."
 			},
 			{
 				"__type" : "textSnippet",
@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-01-30T13:36:36.892204+01:00"
+						"dateAndTimeString" : "2026-05-06T16:01:21.846326+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "irvuuAfZDQCqXXKCBJAZag=="
 				},
-				"code" : "GtOllamaClient new createModel: 'mario' withModelFile: modelfile"
+				"code" : "model := GtLModelFactory new ollama_generate: 'llama3.2'.\rcommand := model newCreateModelCommand.\rcommand context \r\tname: 'mario';\r\tfromModelFile: modelfile.\rresult := command perform."
 			},
 			{
 				"__type" : "textSnippet",
@@ -245,14 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-01-31T12:29:57.309399+01:00"
+						"dateAndTimeString" : "2026-05-07T08:56:30.568182+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ER1UvwfZDQC8i7q0BJAZag=="
 				},
-				"code" : "GtLlmChat new provider: (GtOllamaProvider new model: 'mario')"
+				"code" : "model := GtLModelFactory new ollama_generate: 'mario'.\rchat := model provider chat.\rchat sendString: 'Hi, who are you?'.\rchat."
 			}
 		]
 	},
