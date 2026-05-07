@@ -177,14 +177,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-23T08:40:40.365749+02:00"
+									"dateAndTimeString" : "2026-05-06T21:29:37.220832+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "LQQvnP6bDQCRAsvRBRaJSg=="
 							},
-							"code" : "importer := GtSmaCCRubyImporter new.\rmodel := importer\n\timportASTs: (importer parseDirectory: rootDirectory); \r\tcreateForeignKeys;\n\tcreateActiveRecordLinksAndAttributes;\n\tcreateStubClassesFromTables;\n\tinferDeclaredTypes;\n\tcreateRoutes;\n\tmodel"
+							"code" : "(rootDirectory / 'test') ensureDeleteAll.\rimporter := GtSmaCCRubyImporter new.\rmodel := importer\n\timportASTs: (importer parseDirectory: rootDirectory ); \r\tcreateForeignKeys;\n\tcreateActiveRecordLinksAndAttributes;\n\tcreateStubClassesFromTables;\n\tinferDeclaredTypes;\n\tcreateRoutes;\n\tmodel"
 						}
 					]
 				},
