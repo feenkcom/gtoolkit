@@ -68,32 +68,19 @@ GtTranscriptNextBuilder >> cr [
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> expanded: aBlock [
-	| adornmentAttribute |
-	
-	adornmentAttribute := BrTextAdornmentDynamicAttribute new 	
-		beAppend;
-		stencil: aBlock.
-	
-	self adornments: {
-		BrGlamorousTriangleExpanderTextAttribute new
-			isExpanded: true;
-			createdAttributes: { adornmentAttribute };
-			attributesCreatingBlock: [
-				BrTextAdornmentDynamicAttribute new 	
-					beAppend;
-					stencil: aBlock ] . 
-		adornmentAttribute }
+	| expanderAttribute |
+	expanderAttribute := BrGlamorousTriangleExpanderTextAttributeV2 new
+			beExpandedByDefault;
+			stencil: aBlock.
+
+	self
+		adornments: {expanderAttribute.
+				expanderAttribute expandedAppendingAttribute}
 ]
 
 { #category : #attributes }
 GtTranscriptNextBuilder >> expanding: aBlock [
-	self adornment: (
-		BrGlamorousTriangleExpanderTextAttribute new 
-			attributesCreatingBlock: [
-				BrTextAdornmentDynamicAttribute new 	
-					beAppend;
-					stencil: aBlock ])
-
+	self adornment: (BrGlamorousTriangleExpanderTextAttributeV2 new stencil: aBlock)
 ]
 
 { #category : #attributes }
