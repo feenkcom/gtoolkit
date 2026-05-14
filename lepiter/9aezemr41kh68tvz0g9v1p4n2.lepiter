@@ -108,14 +108,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-04T07:10:08.370846+01:00"
+									"dateAndTimeString" : "2026-05-12T14:24:47.327836+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "ZGler/8lQLiNmTy6eTPEsw=="
 							},
-							"code" : "smaccModel := GtLSmaCCModel new.\nc := GtL gt\n\t\taddTools: (GtLSmaCCTool allSubclasses collect: [ :each | each new model: smaccModel ]);\n\t\tgtPageExplanation: 'SmaCC grammar';\n\t\tsendMarkdown: 'Create a SmaCC parser to parse and evaluate simple math expressions. The class should be named `SampleExpressionParser` and be in the package `TempParsers`. Ensure you get no error in the parser. Compile the parser. Build the abstract syntax tree. Add expression evaluation logic. Test it with a simple script and once it''s working provide the script'"
+							"code" : "smaccModel := GtLSmaCCModel new.\nc := GtL gt\n\t\taddTools: (GtLSmaCCTool allSubclasses collect: [ :each | each new model: smaccModel ]);\n\t\tgtPageExplanation: 'SmaCC grammar';\n\t\tsendMarkdown: 'Create a SmaCC parser to parse and evaluate simple math expressions. The class should be named {{gtClass:SampleExpressionParser}} and be in the package `TempParsers`. Ensure you get no error in the parser. Compile the parser. Build the abstract syntax tree. Add expression evaluation logic. Test it with a simple script and once it''s working provide the script'"
 						}
 					]
 				},

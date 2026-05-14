@@ -137,6 +137,78 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-05-12T14:26:02.612717+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-05-12T14:26:38.894835+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Y+ox19lXRVW+aL+dHw/awQ=="
+										},
+										"code" : "GtLChat new sendString: 'Hello'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-12T14:26:18.80062+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-12T14:26:32.386226+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "1KFiafS0RuCyXawYxaB5Gg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "You can also control the chat programmatically. For example, to send a plain message:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
 												"dateAndTimeString" : "2026-03-04T07:16:32.43042+01:00"
 											}
 										},
@@ -148,14 +220,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-03-04T16:06:25.135496+01:00"
+												"dateAndTimeString" : "2026-05-12T14:28:02.760355+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "VC+MzBhaSx+YGDHmsF96Gw=="
 										},
-										"code" : "c := GtLChat new.\rc sendMarkdown: 'Write a script for adding 2 and 40 in Smalltalk'."
+										"code" : "c := GtLChat new.\rc sendMarkdown: 'Write a script for adding `2` and `40` in Smalltalk. And a short poem about it.'."
 									}
 								]
 							},
@@ -178,7 +250,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-13T22:32:03.674907+01:00"
+									"dateAndTimeString" : "2026-05-12T14:27:43.22326+02:00"
 								}
 							},
 							"uid" : {
@@ -188,7 +260,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "You can also control the chat programmatically. For example, to send an initial message, use {{gtMethod:GtLChat>>#sendMarkdown:}}:"
+							"string" : "You can also send Markdown formatted text with {{gtMethod:GtLChat>>#sendMarkdown:}}:"
 						}
 					]
 				},
@@ -258,14 +330,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-03-04T07:16:32.435333+01:00"
+												"dateAndTimeString" : "2026-05-12T14:28:08.852219+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "kidit8QjTIKbqk4OZqjRzw=="
 										},
-										"code" : "c := GtLChat new markdownResponse.\nc sendMarkdown: 'Write a script for adding 2 and 40 in Smalltalk. And a short poem about it.'"
+										"code" : "c := GtLChat new markdownResponse.\nc sendMarkdown: 'Write a script for adding `2` and `40` in Smalltalk. And a short poem about it.'"
 									}
 								]
 							},
