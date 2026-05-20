@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-23T20:37:43.119006+01:00"
+						"dateAndTimeString" : "2026-05-20T11:29:06.936893+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To use LLMs, you have to set up connections to providers of models. For now, we offer by default a connection for the API of {{gtPage:Working with OpenAI|db=2j9m7db2i4oz116bexd7wbdxo|label=OpenAI}} and {{gtPage:Working with Anthropic|db=2j9m7db2i4oz116bexd7wbdxo|label=Anthropic}}."
+				"string" : "To use LLMs, you have to set up connections to providers of models. By default connections for  {{gtPage:Working with OpenAI|db=2j9m7db2i4oz116bexd7wbdxo|label=OpenAI}} and {{gtPage:Working with Anthropic|db=2j9m7db2i4oz116bexd7wbdxo|label=Anthropic}} are listed."
 			},
 			{
 				"__type" : "textSnippet",
@@ -191,6 +191,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Once you esteblished a default connection, test it at [[Moldable Chat tutorial]]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-20T11:29:28.73312+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-20T11:29:43.941771+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fuRwxj3RSxq4e4MGWIsOCQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "To include locally available models from Ollama, see [[Managing LLM provider connections and setting the default]]. "
 			}
 		]
 	},
