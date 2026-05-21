@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:26:16.847154+01:00"
+						"dateAndTimeString" : "2026-05-20T16:20:16.115486+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,54 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:26:51.882374+01:00"
+						"dateAndTimeString" : "2026-05-20T16:20:17.252129+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Sc96V3nqDQCfdw+vA1QUJQ=="
+					"uidString" : "zCFaTJO0RpWw+UnzydK2Yg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "`gt4llm` is a framework for working with Large Language Models (LLMs) from within Glamorous Toolkit."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:26:54.588751+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-14T11:27:29.109013+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "x6+6WXnqDQCiHUWPA1QUJQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "It allows users to chat with LLMs as well as manage their models, fine-tune, build custom prompts and assistants, and more."
+				"string" : "GT includes a proof-of-concept implementation of a Vector DB that can be used to index the GT Book and provide RAG enhanced queries to an LLM."
 			},
 			{
 				"__type" : "textSnippet",
@@ -97,7 +60,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-24T17:27:45.433369+01:00"
+									"dateAndTimeString" : "2026-05-20T17:29:09.323926+02:00"
 								}
 							},
 							"editEmail" : {
@@ -108,17 +71,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-12T12:35:26.517632+01:00"
+									"dateAndTimeString" : "2026-05-20T17:29:09.323926+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "oxqijkfrDQCkyQ+1CbGGRg=="
+								"uidString" : "CgBoOspyQ+K4EqLrWW54Iw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The most advanced integration is with OpenAI. An example can be found in the case studies or in the [[Working with OpenAI]] section of this book."
+							"string" : "The Vector DB is stored on disk in a simple STON file (around 400MB serialised) and held in memory during use."
 						},
 						{
 							"__type" : "textSnippet",
@@ -134,7 +97,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-24T17:28:43.378823+01:00"
+									"dateAndTimeString" : "2026-05-20T17:29:19.475841+02:00"
 								}
 							},
 							"editEmail" : {
@@ -145,167 +108,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:31:17.908756+01:00"
+									"dateAndTimeString" : "2026-05-20T18:02:52.889875+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "nkcWkkfrDQCm/pG2CbGGRg=="
+								"uidString" : "ijp5NhTzRw2VpR63kt1+7g=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Before you work with it, please set up the API key first: [[Adding an OpenAI API key]]"
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T17:27:43.678217+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:32:39.177954+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "2VGHjkfrDQCkvl5UCbGGRg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "## Working with OpenAI"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-24T17:29:36.901142+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-25T11:32:16.67404+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "LfdGlUfrDQCnUR0QCbGGRg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "[[Working with the Ollama API client]] talks about the basic API access."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-25T11:31:59.097644+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-02-25T11:32:15.150136+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "JkHws1brDQC0Z4o0AurXGw=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "[[Using structured outputs]] and [[Using modelfiles]] talks about more high level concepts."
-									}
-								]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-24T17:29:19.613941+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-24T17:29:19.849183+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "MC4/lEfrDQCnOqkXCbGGRg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "It's possible to work with Ollama as well. For example:"
+							"string" : "Generating the embeddings and querying the LLM both assume that Ollama is installed with the default embedding and reasoning model (see below)."
 						},
 						{
 							"__type" : "textSnippet",
@@ -321,7 +134,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-07T09:35:08.507476+02:00"
+									"dateAndTimeString" : "2026-05-20T18:09:30.337064+02:00"
 								}
 							},
 							"editEmail" : {
@@ -332,58 +145,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-07T09:35:42.285002+02:00"
+									"dateAndTimeString" : "2026-05-21T08:16:17.26858+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "tY76CpiVR92KjatNb9Xemw=="
+								"uidString" : "9FIgQMz3SFuaCqPsZ9C6vQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Note that the models used in the examples are chosen because they are small and thus more likely to run on any given system.  They're not chosen because the provide good results."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-24T17:29:10.115776+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:32:37.120907+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "9T+uk0frDQCnKmieCbGGRg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "## Working with Ollama"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
+							"string" : "The context length of the running model needs to be significantly larger than the default explanation length (listed below).  Note that the running context length in Ollama is not the same as the maximum context length size of the underlying model.  The running context length may be viewed after the model has been loaded in to Ollama with:"
+						},
 						{
-							"__type" : "textSnippet",
+							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -396,7 +171,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-02-25T11:32:43.755183+01:00"
+									"dateAndTimeString" : "2026-05-20T18:14:54.363907+02:00"
 								}
 							},
 							"editEmail" : {
@@ -407,17 +182,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-05-23T14:03:57.46847+02:00"
+									"dateAndTimeString" : "2026-05-20T18:15:08.322481+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "u6vLtlbrDQC3FOCvAurXGw=="
+								"uidString" : "bzqsDszHRlmTb3dbUGk/+g=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "There is also an Anthropic integration. It is the simplest of the LLM integrations and can serve as a case study of how to add new LLM integrations. Nonetheless, it supports all the chat use cases including tool calls and vision."
+							"code" : "(GtLModelFactory new ollama_completions: 'qwen3.5:9b') provider runningModels"
 						},
 						{
 							"__type" : "textSnippet",
@@ -433,7 +205,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-05-23T14:04:20.31017+02:00"
+									"dateAndTimeString" : "2026-05-20T16:20:19.198208+02:00"
 								}
 							},
 							"editEmail" : {
@@ -444,17 +216,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-05-23T14:04:48.684473+02:00"
+									"dateAndTimeString" : "2026-05-20T17:29:13.348016+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Zw6cIi7yDQCGBO+6CptJcg=="
+								"uidString" : "QjFbndyASzy8IEeF2dWjdg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "To use it, you will have to {{gtPage:Adding an Anthropic API key|label=add an API key}}."
+							"string" : "I.e. this is not intended to be a production-ready implementation."
 						}
 					]
 				},
@@ -466,7 +238,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:32:18.704822+01:00"
+						"dateAndTimeString" : "2026-05-20T17:28:53.569535+02:00"
 					}
 				},
 				"editEmail" : {
@@ -477,17 +249,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-02-25T11:32:30.405668+01:00"
+						"dateAndTimeString" : "2026-05-20T17:28:53.569535+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "GW5NtVbrDQC2cxz9AurXGw=="
+					"uidString" : "X0NeX/tmTParmUNPvOFYWg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Working with Anthropic"
+				"string" : "## Limitations"
 			},
 			{
 				"__type" : "textSnippet",
@@ -508,7 +280,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-05-23T14:03:47.36812+02:00"
+									"dateAndTimeString" : "2026-05-20T16:21:32.593233+02:00"
 								}
 							},
 							"editEmail" : {
@@ -519,17 +291,341 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-05-23T14:05:26.173168+02:00"
+									"dateAndTimeString" : "2026-05-20T18:02:05.661741+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "yGelIC7yDQCEGQ1+CptJcg=="
+								"uidString" : "HDQ0Y6qeQkm2LtLMI1Pe4Q=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Finally, there is an integration for Google Gemini. Much like Anthropic, it is simple, but because it deviates a bit from the format of the other providers, it is a bit more involved, and might serve as a case study for adding providers that do things a bit differently."
+							"string" : "This will regenerate the entire DB from scratch, and will likely take 15 minutes or more, depending on the hardware and models chosen, see below."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T16:22:21.129329+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T17:17:51.421259+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "faBW2Ak4S22QLURyOIcKpw=="
+							},
+							"code" : "[ GtLGtBookExperimentalRag cleanUp.\rgtRag := GtLGtBookExperimentalRag uniqueInstance.\rgtRag vectorDbFile ensureDelete.\r\"Requesting the DB has the side-effect of generating it when the file doesn't exist\"\rgtRag vectorDb.\r] forkAt: Processor userBackgroundPriority - 1."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-20T16:21:20.974799+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-20T16:21:40.467866+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0FK35hI8QxaxWgTxzxEDog=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Generate the Vector DB"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T16:23:58.305027+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T16:24:13.194478+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZAPoeE5ZT6KQgA+BxczEXQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This will re-index any pages modified since the DB file modification timestamp."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T16:23:39.224825+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T16:23:55.324366+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zFnltYnYSQaTgspJZanT7Q=="
+							},
+							"code" : "gtRag := GtLGtBookExperimentalRag uniqueInstance.\rgtRag updateVectorDb."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-20T16:23:31.533481+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-20T16:23:34.864341+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nU+UV5C8TAyM3h8MhgQQBA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Update the Vector DB"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T17:27:43.018053+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T17:27:43.018053+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "L6ZZs86WTaWGfRigh1XrcQ=="
+							},
+							"code" : "\"Ensure that the VectorDB has been loaded first, as it can be quite slow to load\"\rGtLGtBookExperimentalRag uniqueInstance utilities."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T17:10:38.376705+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-21T08:31:12.279905+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "E47cCYt+TZ28S3Lwnc9MBw=="
+							},
+							"code" : "chat := GtLChat new provider: \r\t(GtLModelFactory new ollama_completions: 'qwen3.5:9b') provider.\rchat\r\tqueryMarkdown: 'How do I change the colour of text?'\r\twithRag: GtLGtBookExperimentalRag default."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-20T16:24:26.387716+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-20T16:24:38.768144+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vbaDeBz+QfGjnvq13CtdmA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Sample query using the Vector DB"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T16:40:52.997407+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T16:41:38.452371+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "L6WqxoNpRHWB6JSOYw0fGg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The indexing strategy is described in {{gtClass:GtLepiterVectorDbUtilities}}'s class comments."
 						},
 						{
 							"__type" : "textSnippet",
@@ -545,7 +641,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-05-23T14:05:31.61156+02:00"
+									"dateAndTimeString" : "2026-05-20T18:04:05.865994+02:00"
 								}
 							},
 							"editEmail" : {
@@ -556,58 +652,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-05-23T14:06:21.745996+02:00"
+									"dateAndTimeString" : "2026-05-20T18:04:12.953597+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "Ly+vJi7yDQCLxd+UCptJcg=="
+								"uidString" : "JLxM++NyTlifGf+2ugmXaw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "It, too, {{gtPage:Adding a Gemini API key|label=requires an API key}}."
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T14:03:29.354002+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-05-23T14:03:45.44413+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "NIiSHy7yDQCDc1LICptJcg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "## Working with Google Gemini"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
+							"string" : "The default embedding parameters are:"
+						},
 						{
-							"__type" : "textSnippet",
+							"__type" : "exampleSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -620,7 +678,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T16:19:01.756499+02:00"
+									"dateAndTimeString" : "2026-05-20T18:03:12.032364+02:00"
 								}
 							},
 							"editEmail" : {
@@ -631,17 +689,20 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T16:20:01.097906+02:00"
+									"dateAndTimeString" : "2026-05-20T18:03:12.032364+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "2fb97mi2Qc+Dpw8q791fEQ=="
+								"uidString" : "5ouOEOYDQG6W2BfN8Vyq9w=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "GT includes a proof-of-concept implementation of a Vector DB that can be used to index the GT Book and provide RAG enhanced queries to an LLM.  See [[LLM Retrieval Augmented Generation]]."
+							"exampleSelector" : "instance",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtSummaryFor:",
+							"exampleBehaviorName" : "GtLGtBookExperimentalRag class",
+							"codeExpanded" : true,
+							"previewExpanded" : true,
+							"noCode" : true
 						}
 					]
 				},
@@ -653,7 +714,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T16:18:33.105256+02:00"
+						"dateAndTimeString" : "2026-05-20T16:40:39.964979+02:00"
 					}
 				},
 				"editEmail" : {
@@ -664,17 +725,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T16:18:43.788264+02:00"
+						"dateAndTimeString" : "2026-05-20T16:40:51.380599+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Gs43NUo3Sne4W4U4Sm5CRg=="
+					"uidString" : "LAA1xj9UQ+2g73E6oCWwJQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## RAG (Retrieval Augmented Generation)"
+				"string" : "## Indexing Strategy"
 			}
 		]
 	},
@@ -686,7 +747,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-02-14T11:26:16.756877+01:00"
+			"dateAndTimeString" : "2026-05-20T16:20:04.254257+02:00"
 		}
 	},
 	"editEmail" : {
@@ -697,15 +758,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-05-10T20:30:12.169702+02:00"
+			"dateAndTimeString" : "2026-05-20T16:20:04.254257+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "gt4llm: Working with LLMs"
+		"title" : "LLM Retrieval Augmented Generation"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "766d7957-79ea-0d00-9f76-c69303541425"
+		"uuid" : "a8e837a9-b1bb-4d46-8ed2-580965c7e451"
 	}
 }
