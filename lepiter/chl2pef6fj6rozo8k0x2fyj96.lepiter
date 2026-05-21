@@ -279,14 +279,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-06T10:24:28.049837+02:00"
+						"dateAndTimeString" : "2026-05-20T12:21:56.353288+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "NEc6lDvTDQCRyhd+Cwzy0g=="
 				},
-				"code" : "chat := provider chat.\rchat instructions\n\tsectionNamed: 'Behaviour'\n\tifAbsent: [ :aSection |\n\t\taSection addString: 'Begin all responses with ''Hi There!!!''.' ].\rchat sendString: 'Hello Llama! How are you today?'."
+				"code" : "chat := GtLChat new provider: provider.\rchat instructions\n\tsectionNamed: 'Behaviour'\n\tifAbsent: [ :aSection |\n\t\taSection addString: 'Begin all responses with ''Hi There!!!''.' ].\rchat sendString: 'Hello Llama! How are you today?'."
 			},
 			{
 				"__type" : "textSnippet",
