@@ -188,6 +188,78 @@
 					"uidString" : "69kSo9XwDQCBxcGABALv0A=="
 				},
 				"code" : "GtLConnectionRegistry instance\r\taddConnection: (GtLConnection new\r\t\t\tproviderClass: GtLOpenAIProvider;\r\t\t\tlabel: 'GPT 5.1';\r\t\t\tmodel: 'gpt-5.1')"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T11:27:56.266361+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-20T11:28:12.430302+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FZ68aUQ1R2+X9ssHQUoe6Q=="
+							},
+							"code" : "GtLOllamaProvider markConnectable"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-20T11:27:26.543283+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-20T11:27:51.604843+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "MC2sx82TQBe6Lr4DG8mWzg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The list of Ollama locally available models will be added to the registry if the Ollama provided is marked as connectable:"
 			}
 		]
 	},

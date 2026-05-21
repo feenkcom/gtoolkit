@@ -245,14 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-07T08:56:30.568182+02:00"
+						"dateAndTimeString" : "2026-05-20T12:20:10.061681+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ER1UvwfZDQC8i7q0BJAZag=="
 				},
-				"code" : "model := GtLModelFactory new ollama_generate: 'mario'.\rchat := model provider chat.\rchat sendString: 'Hi, who are you?'.\rchat."
+				"code" : "model := GtLModelFactory new ollama_generate: 'mario'.\rchat := GtLChat new provider: model provider.\rchat sendString: 'Hi, who are you?'.\rchat."
 			}
 		]
 	},
