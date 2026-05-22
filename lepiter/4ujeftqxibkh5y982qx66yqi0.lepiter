@@ -171,7 +171,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T18:14:54.363907+02:00"
+									"dateAndTimeString" : "2026-05-22T10:37:19.558553+02:00"
 								}
 							},
 							"editEmail" : {
@@ -182,14 +182,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T18:15:08.322481+02:00"
+									"dateAndTimeString" : "2026-05-22T10:38:04.905449+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "bzqsDszHRlmTb3dbUGk/+g=="
+								"uidString" : "W9njwoieS6OOtb16R2kRTA=="
 							},
-							"code" : "(GtLModelFactory new ollama_completions: 'qwen3.5:9b') provider runningModels"
+							"code" : "provider := GtLConnection new\r\tproviderClass: GtLOllamaProvider;\r\tmodelName: 'qwen3.5:9b';\r\tbuildBareProvider.\rprovider runningModels."
 						},
 						{
 							"__type" : "textSnippet",
@@ -543,14 +543,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-21T08:31:12.279905+02:00"
+									"dateAndTimeString" : "2026-05-22T10:38:48.147866+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "E47cCYt+TZ28S3Lwnc9MBw=="
 							},
-							"code" : "chat := GtLChat new provider: \r\t(GtLModelFactory new ollama_completions: 'qwen3.5:9b') provider.\rchat\r\tqueryMarkdown: 'How do I change the colour of text?'\r\twithRag: GtLGtBookExperimentalRag default."
+							"code" : "provider := GtLConnection new\r\tproviderClass: GtLOllamaProvider;\r\tmodelName: 'qwen3.5:9b';\r\tbuildBareProvider.\rchat := GtLChat new provider: provider.\rchat\r\tqueryMarkdown: 'How do I change the colour of text?'\r\twithRag: GtLGtBookExperimentalRag default."
 						}
 					]
 				},
