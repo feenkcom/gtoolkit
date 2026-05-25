@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-12T22:21:43.8899+02:00"
+						"dateAndTimeString" : "2026-05-25T20:46:21.47701+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-14T11:36:28.231524+02:00"
+						"dateAndTimeString" : "2026-05-25T21:39:57.373927+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CLh96SL2DQCniPaYAdhLOA=="
+					"uidString" : "9WsvfXV7SqiOtt108kyOlA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "GT ships with a minimal implementation of an MCP server that can execute tools, expose resources, and define prompts."
+				"string" : "The MCP server can generate prompts based on a given template."
 			},
 			{
 				"__type" : "textSnippet",
@@ -60,7 +60,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-07-12T22:23:53.202383+02:00"
+									"dateAndTimeString" : "2026-05-25T20:47:18.695576+02:00"
 								}
 							},
 							"editEmail" : {
@@ -71,14 +71,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-26T14:14:51.6375+01:00"
+									"dateAndTimeString" : "2026-05-25T20:47:21.646871+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "CNwy8SL2DQCv2G05AdhLOA=="
+								"uidString" : "EsI2kClCSxC57Aj8XGm9AA=="
 							},
-							"code" : "server := GtLMcpServer new\r\t\tport: 3000;\r\t\tstart"
+							"code" : "server := GtLMcpServer new\r\t\tport: 3003;\r\t\tstart"
 						}
 					]
 				},
@@ -90,7 +90,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-12T22:23:30.344799+02:00"
+						"dateAndTimeString" : "2026-05-25T21:39:58.187478+02:00"
 					}
 				},
 				"editEmail" : {
@@ -101,17 +101,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-12T22:23:51.472905+02:00"
+						"dateAndTimeString" : "2026-05-25T21:40:02.947971+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "JhPW7yL2DQCuXARoAdhLOA=="
+					"uidString" : "HxCHw+SjQMC0yHQpKecRNw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To start an MCP server on port 3000, execute the following snippet."
+				"string" : "Start the server:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -132,7 +132,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-07-12T22:24:51.642301+02:00"
+									"dateAndTimeString" : "2026-05-25T20:46:22.840501+02:00"
 								}
 							},
 							"editEmail" : {
@@ -143,12 +143,228 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-07-12T22:24:53.884204+02:00"
+									"dateAndTimeString" : "2026-05-25T20:46:28.441271+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "5JKu9CL2DQCyoz08AdhLOA=="
+								"uidString" : "9SfCh6shRWaTWDV0ulvxRA=="
+							},
+							"code" : "server\r\taddPrompt: (GtLMcpPrompt new\r\t\t\tname: 'Code Review';\r\t\t\tdescription: 'Asks the LLM to analyze code quality and suggest improvements';\r\t\t\targuments: {'code'};\r\t\t\tpromptBlock: [ :arguments | \r\t\t\t\t{GtLAnthropicUserMessage new\r\t\t\t\t\t\tmarkdown: 'Review the following code as if you were a senior developer:\r\t\t\t\r```\r' , (arguments at: 'code')\r\t\t\t\t\t\t\t\t\t\t\t, '\r```'} ])"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-25T21:40:08.537624+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-25T21:40:12.056261+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "I3uBFVKtSG29N5lruwJU4w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Add a prompt to it:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-25T20:46:41.683575+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-25T21:36:35.28594+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "L0OeyQzeQOW5ALv0RZ5TkQ=="
+							},
+							"code" : "client := GtLMcpClient new\r\ttransport: (GtLMcpHttpTransport new url: 'http://localhost:3003/')"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-25T20:46:35.895012+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-25T21:40:58.531911+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "kVumRY6gSW+9K4aJM9Vq8g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Once we have the prompt, we can access it from the client. For example, we can set up a GT client:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-25T20:47:04.732532+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-25T20:47:09.007963+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "fAeq4AzSRxq9jQsrJFmKTA=="
+							},
+							"code" : "(client\r\tmessagesFromPrompt: 'Code Review'\r\twithArguments: {'code' -> '(defn a-clojure-fn [x] (* x 2))'} asDictionary)\r\tfirst"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-25T20:47:02.720503+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-25T21:41:05.520232+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "eXG6d7T8REe2hhPPj0fTmQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And create messages from it directly."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-25T20:47:26.144793+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-25T20:47:28.184559+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "JIxJdyljQQO8yYr69oJK3g=="
 							},
 							"code" : "server stop"
 						}
@@ -162,7 +378,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-12T22:24:06.673374+02:00"
+						"dateAndTimeString" : "2026-05-25T20:47:33.051757+02:00"
 					}
 				},
 				"editEmail" : {
@@ -173,165 +389,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-12T22:31:17.565774+02:00"
+						"dateAndTimeString" : "2026-05-25T20:47:41.518756+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "WWkA8iL2DQCv5+dgAdhLOA=="
+					"uidString" : "PsWLl/KeQ6mRmMV9As6vmQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To stop the server, you can call {{gtMethod:GtMcpServer>>#stop}} on it."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-12T22:22:17.571801+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-25T19:42:08.681749+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "5KZ/6yL2DQCpOT/FAdhLOA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "A note: this server was not hardened. It is a simple Zinc server that might crash or, depending on the capabilities you give the tools it exposes, do undesirable things to your image or system at large. Use with caution at this time."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-25T21:41:46.723804+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-25T21:41:46.723804+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "oQz3UxNSSaW4vg+z9URmRA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[Adding tools to the GT MCP server]]"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-25T21:41:52.005421+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-25T21:41:52.005421+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "2JUVve+dRFe3wOrGIcFfMQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[Adding resources to the GT MCP server]]"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-25T21:41:55.665477+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-25T21:41:55.665477+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "oklxGt6FRZSoaW5tTZCAiw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "[[Adding prompts to the GT MCP server]]"
+				"string" : "Stop the server once you're done with it:"
 			}
 		]
 	},
@@ -343,7 +411,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-07-12T22:21:43.821642+02:00"
+			"dateAndTimeString" : "2026-05-25T19:43:10.12399+02:00"
 		}
 	},
 	"editEmail" : {
@@ -354,15 +422,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-07-12T22:21:43.821642+02:00"
+			"dateAndTimeString" : "2026-05-25T19:43:10.12399+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Working with GT as an MCP server"
+		"title" : "Adding prompts to the GT MCP server"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "53ac7ce9-22f6-0d00-a787-e51d01d84b38"
+		"uuid" : "d8c9fcf7-85c0-42ad-9daf-2220ff610ae7"
 	}
 }
