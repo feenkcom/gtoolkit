@@ -328,14 +328,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T17:17:51.421259+02:00"
+									"dateAndTimeString" : "2026-05-26T08:00:06.489193+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "faBW2Ak4S22QLURyOIcKpw=="
 							},
-							"code" : "[ GtLGtBookExperimentalRag cleanUp.\rgtRag := GtLGtBookExperimentalRag uniqueInstance.\rgtRag vectorDbFile ensureDelete.\r\"Requesting the DB has the side-effect of generating it when the file doesn't exist\"\rgtRag vectorDb.\r] forkAt: Processor userBackgroundPriority - 1."
+							"code" : "[ GtLGtBookExperimentalRag cleanUp.\rgtRag := GtLExperimentalRag gtBook.\rgtRag vectorDbFile ensureDelete.\r\"Requesting the DB has the side-effect of generating it when the file doesn't exist\"\rgtRag lepiterRagDb.\r] forkAt: Processor userBackgroundPriority - 1."
 						}
 					]
 				},
@@ -437,14 +437,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T16:23:55.324366+02:00"
+									"dateAndTimeString" : "2026-05-26T07:59:08.089892+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "zFnltYnYSQaTgspJZanT7Q=="
 							},
-							"code" : "gtRag := GtLGtBookExperimentalRag uniqueInstance.\rgtRag updateVectorDb."
+							"code" : "gtRag := GtLExperimentalRag gtBook.\rgtRag updateVectorDb."
 						}
 					]
 				},
@@ -509,14 +509,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T17:27:43.018053+02:00"
+									"dateAndTimeString" : "2026-05-26T08:00:17.457198+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "L6ZZs86WTaWGfRigh1XrcQ=="
 							},
-							"code" : "\"Ensure that the VectorDB has been loaded first, as it can be quite slow to load\"\rGtLGtBookExperimentalRag uniqueInstance utilities."
+							"code" : "\"Ensure that the VectorDB has been loaded first, as it can be quite slow to load\"\rGtLExperimentalRag gtBook lepiterRagDb."
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -543,14 +543,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-22T10:38:48.147866+02:00"
+									"dateAndTimeString" : "2026-05-26T07:59:52.562733+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "E47cCYt+TZ28S3Lwnc9MBw=="
 							},
-							"code" : "provider := GtLConnection new\r\tproviderClass: GtLOllamaProvider;\r\tmodelName: 'qwen3.5:9b';\r\tbuildBareProvider.\rchat := GtLChat new provider: provider.\rchat\r\tqueryMarkdown: 'How do I change the colour of text?'\r\twithRag: GtLGtBookExperimentalRag default."
+							"code" : "provider := GtLConnection new\r\tproviderClass: GtLOllamaProvider;\r\tmodelName: 'qwen3.5:9b';\r\tbuildBareProvider.\rchat := GtLChat new provider: provider.\rchat\r\tqueryMarkdown: 'How do I change the colour of text?'\r\twithRag: GtLExperimentalRag gtBook."
 						}
 					]
 				},
@@ -615,7 +615,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T16:41:38.452371+02:00"
+									"dateAndTimeString" : "2026-05-25T13:15:34.67243+02:00"
 								}
 							},
 							"uid" : {
@@ -625,7 +625,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The indexing strategy is described in {{gtClass:GtLepiterVectorDbUtilities}}'s class comments."
+							"string" : "The indexing strategy is described in {{gtClass:GtLLepiterRagDb}}'s class comments."
 						},
 						{
 							"__type" : "textSnippet",
@@ -696,10 +696,10 @@
 								"__type" : "uid",
 								"uidString" : "5ouOEOYDQG6W2BfN8Vyq9w=="
 							},
-							"exampleSelector" : "instance",
+							"exampleSelector" : "gtBook",
 							"previewHeight" : 200,
 							"previewShowSelector" : "gtSummaryFor:",
-							"exampleBehaviorName" : "GtLGtBookExperimentalRag class",
+							"exampleBehaviorName" : "GtLExperimentalRag class",
 							"codeExpanded" : true,
 							"previewExpanded" : true,
 							"noCode" : true
