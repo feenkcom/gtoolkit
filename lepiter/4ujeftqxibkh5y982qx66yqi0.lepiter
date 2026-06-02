@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T16:20:17.252129+02:00"
+						"dateAndTimeString" : "2026-05-28T12:08:59.616755+02:00"
 					}
 				},
 				"uid" : {
@@ -39,13 +39,162 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "GT includes a proof-of-concept implementation of a Vector DB that can be used to index the GT Book and provide RAG enhanced queries to an LLM."
+				"string" : "GT includes a proof-of-concept implementation of user a Vector DB to index the GT Book and provide RAG enhanced queries to an LLM."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-28T12:09:15.911822+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-28T12:10:04.068057+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "PVMXHS1dSV2LkJjZXFqSFQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:GtSimpleInMemoryVectorDatabase}} stores all information in the image and doesn't have any external dependencies."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-28T12:10:10.135093+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-28T12:11:27.429667+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "BvddUPyhSBqE33pSURuJ1A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "ChromaDB ({{gtClass:LeChromaDb}}) is a light-weight vector database that is more scalable.  GT assumes that is is already installed and the server running."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-28T12:09:05.577692+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-05-28T12:09:14.277894+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FSYEmto0RuixfSH11qKaXg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Currently two vector DBs are supported:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-28T12:08:28.476713+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-28T12:08:32.16936+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "tLeAL8sjTAeyg+25yef2Tw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "### In-memory database"
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -227,6 +376,81 @@
 								"__type" : "textStyle"
 							},
 							"string" : "I.e. this is not intended to be a production-ready implementation."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-05-28T08:03:43.956531+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-05-28T12:13:08.709624+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "adBZTRsERV2uD6AEWHmkLw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "This assumes that ChromaDB is installed locally with the server listening on the port defined in {{gtMethod:GtChromaDbClient class>>#defaultBaseUrl}}.  The code currently just uses the default tenant and database."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-28T08:03:32.47847+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-28T12:12:48.888322+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zQlAtU7sS0+Ij7A4UvNsow=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "### ChromaDB"
 						}
 					]
 				},
@@ -291,7 +515,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T18:02:05.661741+02:00"
+									"dateAndTimeString" : "2026-06-01T09:05:10.414322+02:00"
 								}
 							},
 							"uid" : {
@@ -301,13 +525,82 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "This will regenerate the entire DB from scratch, and will likely take 15 minutes or more, depending on the hardware and models chosen, see below."
+							"string" : "If needed, this will regenerate the entire DB from scratch, and will likely take 15 minutes or more, depending on the hardware and models chosen, see below."
 						},
 						{
-							"__type" : "pharoSnippet",
+							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-06-01T09:05:19.138906+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-06-01T09:05:59.520402+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "U8xaB0loSZiyAwOZm3pArw=="
+										},
+										"code" : "\"To force a reload of the vector db, remove the old file\"\r GtLExperimentalRag cleanUp.\rGtLExperimentalRag defaultVectorDbFile ensureDelete."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-05-20T16:22:21.129329+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-06-01T09:06:09.169494+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "faBW2Ak4S22QLURyOIcKpw=="
+										},
+										"code" : "[\rgtRag := GtLExperimentalRag gtBook.\rgtRag loadInMemoryLepiterRagDb: GtLExperimentalRag defaultVectorDbFile.\r] forkAt: Processor userBackgroundPriority - 1."
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -317,7 +610,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T16:22:21.129329+02:00"
+									"dateAndTimeString" : "2026-05-28T12:58:58.602838+02:00"
 								}
 							},
 							"editEmail" : {
@@ -328,14 +621,89 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-26T08:00:06.489193+02:00"
+									"dateAndTimeString" : "2026-05-28T12:59:01.484769+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "faBW2Ak4S22QLURyOIcKpw=="
+								"uidString" : "7X6prtv+RNSv/ArZeMjn/w=="
 							},
-							"code" : "[ GtLGtBookExperimentalRag cleanUp.\rgtRag := GtLExperimentalRag gtBook.\rgtRag vectorDbFile ensureDelete.\r\"Requesting the DB has the side-effect of generating it when the file doesn't exist\"\rgtRag lepiterRagDb.\r] forkAt: Processor userBackgroundPriority - 1."
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In-memory:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-05-28T13:01:41.995381+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-05-28T13:02:29.992154+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "CfeHAJvqSRezU1n3HHpcDA=="
+										},
+										"code" : "\"For now it is up to you to empty the collection if needed\"\r[ gtRag := GtLExperimentalRag gtBook.\ngtRag loadChromaDbLepiterRagDb.\r] forkAt: Processor userBackgroundPriority - 1."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-28T13:01:38.033739+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-05-28T13:01:39.176371+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "JSVagBvYTFC4s7XACKsbRg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "ChromaDB:"
 						}
 					]
 				},
@@ -347,7 +715,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T16:21:20.974799+02:00"
+						"dateAndTimeString" : "2026-05-28T08:05:46.230183+02:00"
 					}
 				},
 				"editEmail" : {
@@ -358,7 +726,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T16:21:40.467866+02:00"
+						"dateAndTimeString" : "2026-05-28T12:58:35.898472+02:00"
 					}
 				},
 				"uid" : {
@@ -368,7 +736,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Generate the Vector DB"
+				"string" : "## Load the database"
 			},
 			{
 				"__type" : "textSnippet",
@@ -498,40 +866,6 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-20T17:27:43.018053+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-26T08:00:17.457198+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "L6ZZs86WTaWGfRigh1XrcQ=="
-							},
-							"code" : "\"Ensure that the VectorDB has been loaded first, as it can be quite slow to load\"\rGtLExperimentalRag gtBook lepiterRagDb."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2026-05-20T17:10:38.376705+02:00"
 								}
 							},
@@ -562,7 +896,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T16:24:26.387716+02:00"
+						"dateAndTimeString" : "2026-06-01T08:24:15.060926+02:00"
 					}
 				},
 				"editEmail" : {
@@ -573,7 +907,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T16:24:38.768144+02:00"
+						"dateAndTimeString" : "2026-06-01T08:24:19.168445+02:00"
 					}
 				},
 				"uid" : {
@@ -583,7 +917,79 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Sample query using the Vector DB"
+				"string" : "## Query with RAG"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-01T08:24:42.533983+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-01T09:39:42.680909+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yRupIKYYT7a0wEAai82F7A=="
+							},
+							"code" : "provider := GtLConnection new\n\tproviderClass: GtLOllamaProvider;\n\tmodelName: 'qwen3.5:9b';\n\tbuildBareProvider.\nchat := GtLChat new provider: provider.\nchat\n\tqueryMarkdown: 'How do I change the colour of roped text?'\n\twithRag: (GtLExperimentalRag gtBook asRagQueryContext\r\t\toptionAt: #reRank put: GtLCrossEncoderReranker new;\r\t\tyourself)."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-01T08:23:24.659426+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-01T08:52:37.610454+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "etnZOGz0TvuSPSnxelDPvw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Query with re-ranking"
 			},
 			{
 				"__type" : "textSnippet",
