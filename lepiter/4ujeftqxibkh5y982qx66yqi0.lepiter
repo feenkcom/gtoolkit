@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-28T12:11:27.429667+02:00"
+									"dateAndTimeString" : "2026-06-02T13:58:35.635921+02:00"
 								}
 							},
 							"uid" : {
@@ -118,7 +118,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "ChromaDB ({{gtClass:LeChromaDb}}) is a light-weight vector database that is more scalable.  GT assumes that is is already installed and the server running."
+							"string" : "ChromaDB (LeChromaDb) is a light-weight vector database that is more scalable.  GT assumes that is is already installed and the server running."
 						}
 					]
 				},
@@ -407,7 +407,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-05-28T12:13:08.709624+02:00"
+												"dateAndTimeString" : "2026-06-02T13:58:11.058905+02:00"
 											}
 										},
 										"uid" : {
@@ -417,7 +417,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "This assumes that ChromaDB is installed locally with the server listening on the port defined in {{gtMethod:GtChromaDbClient class>>#defaultBaseUrl}}.  The code currently just uses the default tenant and database."
+										"string" : "This assumes that ChromaDB is installed locally with the server listening on the port defined in GtChromaDbClient class>>#defaultBaseUrl.  The code currently just uses the default tenant and database."
 									}
 								]
 							},
