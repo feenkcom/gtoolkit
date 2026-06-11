@@ -1,0 +1,76 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:52:29.029095-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:52:29.029095-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "RxO8+2jBSCC1O/mBKk0b6A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Scripts can define methods that can be called from other rewrite rules or methods. These methods are compiled on a specially created subclass of {{gtClass:SmaCCRewriteMatchContext}} and can be called by using `self` when evaluated in a rewrite match or method. As an example, in the Javascript conversion we compute the free variables that are used by the program or function and create a `var` Javascript statement. This code is the same so we can create a method that creates the `var` statement and call it from different locations:\n{{gtExample:GtSmaCCTransformationExamples>>jsTemporariesMethod|noCode|previewShow=gtSimpleEditorFor:|previewHeight=300}}"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-06-11T10:52:09.341745-05:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-06-11T10:52:09.341745-05:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "SmaCC Transformation Toolkit methods"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "3c3d5d07-b693-4293-8361-62659307f6d4"
+	}
+}
