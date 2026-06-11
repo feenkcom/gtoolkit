@@ -220,14 +220,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-05-12T14:28:02.760355+02:00"
+												"dateAndTimeString" : "2026-06-11T18:16:06.090206+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "VC+MzBhaSx+YGDHmsF96Gw=="
 										},
-										"code" : "c := GtLChat new.\rc sendMarkdown: 'Write a script for adding `2` and `40` in Smalltalk. And a short poem about it.'."
+										"code" : "c := GtLChat new.\rc sendString: 'Write a script for adding `2` and `40` in Smalltalk. And a short poem about it.'."
 									}
 								]
 							},

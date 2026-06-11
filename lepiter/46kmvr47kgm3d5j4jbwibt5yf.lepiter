@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-01-12T12:36:46.865795+01:00"
+						"dateAndTimeString" : "2026-06-11T22:01:49.455061+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T11:29:06.936893+02:00"
+						"dateAndTimeString" : "2026-06-11T22:01:49.455061+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "S99V5OlLQmmzMJLSClSJEQ=="
+					"uidString" : "xW5uhfL3S9iv6DonlcEX+g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To use LLMs, you have to set up connections to providers of models. By default connections for  {{gtPage:Working with OpenAI|db=2j9m7db2i4oz116bexd7wbdxo|label=OpenAI}} and {{gtPage:Working with Anthropic|db=2j9m7db2i4oz116bexd7wbdxo|label=Anthropic}} are listed."
+				"string" : "To use LLMs, you have to set up connections to providers of LLMs."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-23T20:39:33.575279+01:00"
+						"dateAndTimeString" : "2026-06-11T22:10:09.879486+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-23T20:40:19.660128+01:00"
+						"dateAndTimeString" : "2026-06-11T22:38:45.127378+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "JeJBo39MT5KvFnLvkudPJw=="
+					"uidString" : "t6jq43bdRbKf4jk+sdh+sA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The view below shows the overview of the currently defined connections. A connection has to be connectable. To make a connection that is based on an API connectable, you need to set the API key.  See [[Adding an OpenAI API key]] or [[Adding an Anthropic API key]] for how to do that."
+				"string" : "The view below shows the currently defined connections. By default connections for OpenAI and Anthropic are listed. A connection has to be connectable. To make a connection that is based on an API connectable, you need to set the API key, as described in [[Adding an OpenAI API key]] or [[Adding an Anthropic API key]]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T22:02:00.710193+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T22:11:20.226644+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BkL9BYVqRZKNPRBNeAs7Kg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "If you have Ollama running locally, the connections registered there will also appear once you specify that it is connectable. Learn more at [[Working with Ollama]]."
 			},
 			{
 				"__type" : "textSnippet",

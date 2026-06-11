@@ -71,14 +71,48 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-12T14:55:20.641843+02:00"
+									"dateAndTimeString" : "2026-06-11T18:40:13.426924+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "quo0JQBuSU2JYTc6x0RqeQ=="
 							},
-							"code" : "c := GtL gt\n\tsendMarkdown: 'Produce a script that builds an 16x16 element with icon that shows a simple home. Take as blueprint for the script, the icon defined in {{gtMethod:BrGlamorousVectorIcons class>>chat}} which uses {{gtClass:BlPolygonGeometry}}. Execute the code. Grade the resulting image (do not use getViewContent) on a scale from 1 to 10.'"
+							"code" : "c := GtL gt\n\tsendMarkdown: 'Produce a script that builds an 160x160 element with icon that shows a simple home. Take as blueprint for the script, the icon defined in {{gtMethod:BrGlamorousVectorIcons class>>chat}} which uses {{gtClass:BlPolygonGeometry}}. Execute the code. Grade the resulting image (do not use getViewContent) on a scale from 1 to 10.'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-11T18:43:11.01227+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-11T18:43:18.321714+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "3mxdETkvTnmHnQExezAsWw=="
+							},
+							"code" : "c := GtL gt\n\tsendMarkdown: 'Produce a script that builds an 160x160 element with icon that shows a simple home. Take as blueprint for the script, the icon defined in {{gtMethod:BrGlamorousVectorIcons class>>chat}} which uses {{gtClass:BlPolygonGeometry}}. Execute the code. Grade the resulting image by using getViewContent on a scale from 1 to 10.'"
 						},
 						{
 							"__type" : "textSnippet",
