@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T22:01:49.455061+02:00"
+						"dateAndTimeString" : "2026-06-11T07:26:20.420724-05:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T22:01:49.455061+02:00"
+						"dateAndTimeString" : "2026-06-11T10:58:10.089614-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "xW5uhfL3S9iv6DonlcEX+g=="
+					"uidString" : "uIaBkKXWSU+fa68zmIqsWQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To use LLMs, you have to set up connections to providers of LLMs."
+				"string" : "Scripts are files that contain[[SmaCC Transformation Toolkit rewrite rules]],[[SmaCC Transformation Toolkit methods]], [[SmaCC Transformation Toolkit properties]], or imports of other script files. When AST nodes are processed by the script, the rules are processed in order that they appear in the script. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T22:10:09.879486+02:00"
+						"dateAndTimeString" : "2026-06-11T11:03:21.781813-05:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T22:38:45.127378+02:00"
+						"dateAndTimeString" : "2026-06-11T11:04:11.730869-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "t6jq43bdRbKf4jk+sdh+sA=="
+					"uidString" : "+SG8O3DUTCKtn8S18/RmNQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The view below shows the currently defined connections. By default connections for OpenAI and Anthropic are listed. A connection has to be connectable. To make a connection that is based on an API connectable, you need to set the API key, as described in [[Adding an OpenAI API key]] or [[Adding an Anthropic API key]]."
+				"string" : "#Best practices"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T22:02:00.710193+02:00"
+						"dateAndTimeString" : "2026-06-11T11:04:14.358522-05:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T22:11:20.226644+02:00"
+						"dateAndTimeString" : "2026-06-11T11:04:48.827395-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "BkL9BYVqRZKNPRBNeAs7Kg=="
+					"uidString" : "nGrlX4MOT0+zcpJMzifmzg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If you have Ollama running locally, the connections registered there will also appear once you specify that it is connectable. Learn more at [[Working with Ollama]]."
+				"string" : "##Editing vs. building"
 			},
 			{
 				"__type" : "textSnippet",
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-07T22:21:51.578395+02:00"
+						"dateAndTimeString" : "2026-06-11T11:04:53.803353-05:00"
 					}
 				},
 				"editEmail" : {
@@ -140,57 +140,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-23T20:39:33.579196+01:00"
+						"dateAndTimeString" : "2026-06-11T11:16:44.92874-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "BOWA1WLzDQC0QQNcAiKmRg=="
+					"uidString" : "9FS06+jKQ3GCp9wW7oi2oQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The connection set as default is the one that is picked up when instantiating a chat without specifying the connection (right click on any of them and click on `Make default` to make them the default connector):"
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-07T22:20:53.087658+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-06-07T22:20:53.087658+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "eWIE0mLzDQCz/o0lAiKmRg=="
-				},
-				"exampleSelector" : "instance",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtConnectionsFor:",
-				"exampleBehaviorName" : "GtLConnectionRegistry class",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
+				"string" : "In general it is better to structure your rules as editing operations instead of building a new source for everything. As an example, consider the these two different rules for rewriting `begin` and `end` in blocks to be `{}` for Javascript. The first just edits the original source by changing the tokens to be curly brackets:\n{{gtExample:GtSmaCCTransformationExamples>>jsBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}\nThe second replaces all of the original source with a string that is built from the statements in the block:\n{{gtExample:GtSmaCCTransformationExamples>>jsCopyingBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=500}}\nNot only is the first version better because it is faster, it is better since it keeps most of the formatting of the original code and it also makes debugging easier each edit operation is tagged with the rule that performed the operation."
 			},
 			{
 				"__type" : "textSnippet",
@@ -206,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-06T15:11:05.913072+01:00"
+						"dateAndTimeString" : "2026-06-11T11:31:05.807344-05:00"
 					}
 				},
 				"editEmail" : {
@@ -217,17 +177,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-04-05T20:53:43.8916+02:00"
+						"dateAndTimeString" : "2026-06-11T11:31:08.707076-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "+W6z7MQkStO4Qyr57F+QHg=="
+					"uidString" : "x6V+vV38Szu7YopaGolvNg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Once you esteblished a default connection, test it at [[Moldable Chat tutorial]]."
+				"string" : "##Control flow"
 			},
 			{
 				"__type" : "textSnippet",
@@ -243,7 +203,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T11:29:28.73312+02:00"
+						"dateAndTimeString" : "2026-06-11T11:34:52.677363-05:00"
 					}
 				},
 				"editEmail" : {
@@ -254,17 +214,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T11:29:43.941771+02:00"
+						"dateAndTimeString" : "2026-06-11T11:46:11.955701-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "fuRwxj3RSxq4e4MGWIsOCQ=="
+					"uidString" : "8NWc4AR1StGYdkmziV9dxA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To include locally available models from Ollama, see [[Managing LLM provider connections and setting the default]]. "
+				"string" : "The order which the nodes are processed can be determined by where the {{gtMethod:SmaCCRewriteMatchContext>>#continue}},  {{gtMethod:SmaCCRewriteMatchContext>>#processChild:}}, or {{gtMethod:SmaCCRewriteMatchContext>>#processChildren}} messages are put in the code. For example, normally AST nodes are processed from the root to the leaves, but that can be changed. For example, if you add a rewrite rule at the top of the script that simply does a `self processChildren` followed by a `self continue`, you can effectively change the top-down traversal into a bottom-up (leaves to root) traversal. If the order does not matter, then having `self continue` at the end is the best since tail recursion elimination is performed to keep the stack size down."
 			}
 		]
 	},
@@ -276,7 +236,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-06-07T22:20:24.484701+02:00"
+			"dateAndTimeString" : "2026-06-11T07:24:21.668064-05:00"
 		}
 	},
 	"editEmail" : {
@@ -287,15 +247,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-06-07T23:03:47.02469+02:00"
+			"dateAndTimeString" : "2026-06-11T10:58:01.305537-05:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to setup LLM connections"
+		"title" : "SmaCC Transformation Toolkit script file"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "67f64fd0-62f3-0d00-b3f8-bd270222a646"
+		"uuid" : "5ca40c30-7d9e-403c-9090-dae126dd495d"
 	}
 }

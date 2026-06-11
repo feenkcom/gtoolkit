@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-30T13:45:42.913645+01:00"
+						"dateAndTimeString" : "2026-06-11T07:08:39.87516-05:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T14:50:15.650499+01:00"
+						"dateAndTimeString" : "2026-06-11T11:29:45.385315-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "qXNl4IrMDQCc/EukATK6Xg=="
+					"uidString" : "N8BAdWMpSd2r/ulcbXqM1Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can use the OpenAI client to generate embeddings."
+				"string" : "The SmaCC Transformation Toolkit can be used to create scripts to transform large code bases. It has been used on several projects to convert programs written in one language to another language. The basic process is to write a [[SmaCC Transformation Toolkit script file]] that performs the transformation, check the transformed code by running, and then iterate by fixing the script and rerunning the transformation."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-30T13:47:58.974983+01:00"
+						"dateAndTimeString" : "2026-06-11T07:09:12.789223-05:00"
 					}
 				},
 				"editEmail" : {
@@ -66,51 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T22:15:25.856403+02:00"
+						"dateAndTimeString" : "2026-06-11T07:09:12.789223-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "0Q+16IrMDQCfxB7uATK6Xg=="
+					"uidString" : "FeDBgaRzRFeoz+hbzfC10A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "First we get a client (see [[Working directly with the OpenAI API client]]):"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-30T13:48:16.487584+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-17T14:34:39.068612+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "U0nA6YrMDQChAdPjATK6Xg=="
-				},
-				"code" : "client := GtOpenAIClient withApiKeyFromFile"
+				"string" : "The transformation toolkit takes a script and a set of files to be transformed. It processes each file individually by first parsing the file to get an AST and then running the script on the nodes in the AST. By default the nodes in the AST are processed top down, but this can be changed by the script. Once the script has processed the AST, the results are saved and the next file is processed. Unlike other tools that modify the AST and then generate the updated source from the modified AST, the SmaCC transformation toolkit, uses edit operations to modify the original source to the new source."
 			},
 			{
 				"__type" : "textSnippet",
@@ -126,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-30T13:48:28.218122+01:00"
+						"dateAndTimeString" : "2026-06-11T07:34:26.901996-05:00"
 					}
 				},
 				"editEmail" : {
@@ -137,51 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-04-27T21:08:38.15703+02:00"
+						"dateAndTimeString" : "2026-06-11T08:14:42.27724-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2U5z6orMDQChjzkcATK6Xg=="
+					"uidString" : "PIyXuC3VSZyoqhM1e+iZhg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can now use this client to generate an embedding for text."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-30T13:45:49.43395+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T13:01:55.508948+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "m3D84IrMDQCdmOF5ATK6Xg=="
-				},
-				"code" : "client\r\tgenerateEmbeddingsWithModel: 'text-embedding-3-small'\r\tandInput: 'A text to embed'"
+				"string" : "As an example, consider a script that converts a simple language defined by {{gtClass:GtSmaCCTransformationExampleParser}} into Javascript. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -197,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T13:02:26.26098+02:00"
+						"dateAndTimeString" : "2026-06-11T07:35:52.051408-05:00"
 					}
 				},
 				"editEmail" : {
@@ -208,51 +140,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T13:02:37.410289+02:00"
+						"dateAndTimeString" : "2026-06-11T08:34:07.750077-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "f2OGiMLaDQCu9JqIBBdUnw=="
+					"uidString" : "FfTxGoeIRjyWSqo597KjiQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We may also generate multiple embeddings at once."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T13:02:43.190952+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T13:02:52.552349+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Yb6IicLaDQCwKbG6BBdUnw=="
-				},
-				"code" : "client\r\tgenerateEmbeddingsWithModel: 'text-embedding-3-small'\r\tandInput: {'A text to embed'. 'Another text to embed'}"
+				"string" : "{{gtExample:GtSmaCCTransformationExamples>>jsScript|noCode|previewHeight=500|previewShow=gtEditorFor:context:}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -268,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:18:54.214696+01:00"
+						"dateAndTimeString" : "2026-06-11T07:38:50.384252-05:00"
 					}
 				},
 				"editEmail" : {
@@ -279,51 +177,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:19:23.163057+01:00"
+						"dateAndTimeString" : "2026-06-11T07:42:43.273067-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Uz9m8ZzMDQC7tUzqCm8XrA=="
+					"uidString" : "w5wmkatOSr2Mv+7F6UjW9Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If we want to preserve the input, we can also use the {{gtClass:GtLlmEmbedding}} utility class for that."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:19:29.016213+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T13:02:00.288731+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "xkN585zMDQC91kJBCm8XrA=="
-				},
-				"code" : "input := 'A text to embed'.\r\rembedding := GtLlmEmbedding new\r\t\tinput: input;\r\t\tembedding: (client generateEmbeddingsWithModel: 'text-embedding-3-small' andInput: input)\r\t\t\t\titems first embedding"
+				"string" : "We can use this script to transform a program from our simple language into Javascript:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -339,7 +203,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:21:34.68269+01:00"
+						"dateAndTimeString" : "2026-06-11T07:42:46.104835-05:00"
 					}
 				},
 				"editEmail" : {
@@ -350,57 +214,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:29:37.858442+01:00"
+						"dateAndTimeString" : "2026-06-11T07:46:18.99418-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "UeZU+pzMDQCAAX6FCm8XrA=="
+					"uidString" : "NKkGMx6EQc2iCnrAR8jHag=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can then for instance apply distance functions on them using {{gtMethod:GtLlmEmbeddingsUtilities class>>distancesFromEmbeddings:to:}}. The default distance metric is `cosine`. To explore them, you can look at the distance metrics view on the {{gtClass:GtLlmEmbeddingsUtilities}} class."
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:29:41.871638+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:29:41.871638+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "kbcAGJ3MDQCGoDlaCm8XrA=="
-				},
-				"exampleSelector" : "exampleSelf",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtDistanceMetricsFor:",
-				"exampleBehaviorName" : "GtLlmEmbeddingsUtilities class",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
+				"string" : "{{gtExample:GtSmaCCTransformationExamples>>factorialSource|noCode|previewShow=gtStringFor:|previewHeight=330}}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -416,7 +240,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:22:48.260615+02:00"
+						"dateAndTimeString" : "2026-06-11T07:47:30.470523-05:00"
 					}
 				},
 				"editEmail" : {
@@ -427,17 +251,91 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:26:58.834601+02:00"
+						"dateAndTimeString" : "2026-06-11T11:00:48.879499-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ZGTlKTXaDQCTRS6hAp3RMg=="
+					"uidString" : "nUPpCgl9TXa+tTc8pnvvZA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For a local and free option for generating embeddings, see [[Embeddings in Ollama]] and [[Generating embeddings using Ollama models]]."
+				"string" : "This is the result of using the above script on the simple program:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T07:44:35.026724-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T07:46:37.965486-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lFr9dLcPTLqNFHdxllTjEA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "{{gtExample:GtSmaCCTransformationExamples>>convertJS|noCode|previewShow=gtSourceFor:|previewHeight=350}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:23:56.370471-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:29:07.671843-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1Xrtt+5jTzmMP+ccjcizvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The [[Transforming Delphi code into C# (at syntax level)]] page has a simple script that converts basic Delphi syntax into C#. It isn't meant to be a full Delphi conversion, but does show how some of the Delphi syntax can be converted to C#."
 			}
 		]
 	},
@@ -449,7 +347,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-01-30T13:45:39.495301+01:00"
+			"dateAndTimeString" : "2026-06-11T07:08:31.808685-05:00"
 		}
 	},
 	"editEmail" : {
@@ -460,15 +358,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2024-06-23T13:34:55.697279+02:00"
+			"dateAndTimeString" : "2026-06-11T07:08:31.808685-05:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Generating embeddings"
+		"title" : "SmaCC Transformation Toolkit"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "3ad064e0-8acc-0d00-9cfb-a5770132ba5e"
+		"uuid" : "3cc0d7a8-362e-4391-bc69-98e61492beff"
 	}
 }

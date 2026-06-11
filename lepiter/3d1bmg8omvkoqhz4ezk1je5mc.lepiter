@@ -1,0 +1,76 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:54:16.246479-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:55:59.109799-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FYAC+wBaRmWRPQMJpRKFUQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Scripts can define properties that can be accessed through getter and setter methods that are automatically created. As an example, consider the method from the[[SmaCC Transformation Toolkit methods]] page, it used `temporaryVariables` and `functions` that properties are defined by a property rule:\n{{gtExample:GtSmaCCTransformationExamples>>properties|noCode|previewShow=gtSimpleEditorFor:|previewHeight=200}}\nProperties can be local or global. Local properties are initialized to `nil` for each file that is transformed. Global properties retain their value across files that are transformed. Globals are useful for lengthy computations of values that are used for every file processed. For example, you may load some external file that control the rules. You don't want to load the file for every source file processed as there may be thousands of source files. Instead you can initialize the global property once using the {{gtMethod:SmaCCRewriteMatchContext>>#initializeGlobalProperty:withValueFrom:}} method and access its value when processing other files. To initialize the properties before other rules are applied, it is common to create a rewrite rule that matches the top level node in the AST, and for the rewrite transformation, it performs all of the initialization necessary, and then calls `self continue`. To match the top level AST node, you can either match the node type that you know the parser returns, or you can match {{gtClass:SmaCCParseNode}} and a matching expression of `match parent isNil`."
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-06-11T10:53:58.629807-05:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-06-11T10:54:45.89707-05:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "SmaCC Transformation Toolkit properties"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "f4aa698c-531b-49a3-9ab9-f0e7ab5aca38"
+	}
+}

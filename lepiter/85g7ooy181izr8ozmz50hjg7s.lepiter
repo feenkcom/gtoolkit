@@ -1,0 +1,187 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:50:09.150447-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:50:09.150447-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "leXHyc76TRS0jUHowHFh8Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The rewrite rules do the work of the transformation. They have two parts: a match and a transformation. The match checks the current AST node to see if the transformation should be run. If the match doesn't succeed, then the next rewrite rule is run. If the rewrite rule is the last rule, then the child nodes are processed."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:50:20.442929-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:50:20.442929-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xucayZPRSM+ov0Slcne0Cg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "As an example, consider a rewrite rule converting blocks defined by {{gtClass:GtSmaCCTransformationExampleParser}} into Javascript:\n{{gtExample:GtSmaCCTransformationExamples>>jsBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}\nThis rule matches all nodes of type {{gtClass:GtSmaCCTransformationExampleBlockNode}}, and when a block node is matched it runs the code in the transformation. That code replaces the `begin` and `end` keywords with `{}`. Once the `begin` and `end` keywords have been replaced, the rule does `self continue` . That looks for other rules that match the node and when no other rules are found, will process the children of the block node which are its statements. The code inside of the rules is evaluated in the context of a {{gtClass:SmaCCRewriteMatchContext}} class so `self` understands all messages defined on that class."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:50:31.445023-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:50:31.445023-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6lqQd445T2OTlDSyVtlFvA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The matching part of a rewrite rule can contain code that only if it returns true runs the transformation. If it returns anything besides true or throws an error the transformation isn't run.  For example, consider a rule that converts the `.` that terminates the statement in our {{gtClass:GtSmaCCTransformationExampleParser}}. In Javascript those should be converted to `;`. Instead of writing several rules that match only subclasses of {{gtClass:GtSmaCCTransformationExampleStatementNode}} that contain a period, we can simply match any statement and check if it's period token isn't nil. For statements that don't have a period, this throws an error, but that is handled and treated as not matching:\n{{gtExample:GtSmaCCTransformationExamples>>jsConvertPeriodsToSemicolons|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:51:01.901614-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:51:01.901614-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6j8IgYjCR5W5LT1zh98m1g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The rewrite rules can also use patterns both for matching and transforming the code. For example, we can create a specific rule that matches the increment by one and converts it to use `++` in Javascript:\n{{gtExample:GtSmaCCTransformationExamples>>jsConvertPlusOne|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-06-11T10:49:40.648981-05:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-06-11T10:51:11.531717-05:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "SmaCC Transformation Toolkit rewrite rules"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "d899e128-f5fa-4811-bb78-c56470daaf89"
+	}
+}
