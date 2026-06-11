@@ -1,0 +1,261 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T07:26:20.420724-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T10:58:10.089614-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uIaBkKXWSU+fa68zmIqsWQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Scripts are files that contain[[SmaCC Transformation Toolkit rewrite rules]],[[SmaCC Transformation Toolkit methods]], [[SmaCC Transformation Toolkit properties]], or imports of other script files. When AST nodes are processed by the script, the rules are processed in order that they appear in the script. "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:03:21.781813-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:04:11.730869-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+SG8O3DUTCKtn8S18/RmNQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "#Best practices"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:04:14.358522-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:04:48.827395-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nGrlX4MOT0+zcpJMzifmzg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Editing vs. building"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:04:53.803353-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:16:44.92874-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9FS06+jKQ3GCp9wW7oi2oQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In general it is better to structure your rules as editing operations instead of building a new source for everything. As an example, consider the these two different rules for rewriting `begin` and `end` in blocks to be `{}` for Javascript. The first just edits the original source by changing the tokens to be curly brackets:\n{{gtExample:GtSmaCCTransformationExamples>>jsBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}\nThe second replaces all of the original source with a string that is built from the statements in the block:\n{{gtExample:GtSmaCCTransformationExamples>>jsCopyingBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=500}}\nNot only is the first version better because it is faster, it is better since it keeps most of the formatting of the original code and it also makes debugging easier each edit operation is tagged with the rule that performed the operation."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:31:05.807344-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:31:08.707076-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "x6V+vV38Szu7YopaGolvNg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "##Control flow"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:34:52.677363-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-11T11:46:11.955701-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8NWc4AR1StGYdkmziV9dxA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The order which the nodes are processed can be determined by where the {{gtMethod:SmaCCRewriteMatchContext>>#continue}},  {{gtMethod:SmaCCRewriteMatchContext>>#processChild:}}, or {{gtMethod:SmaCCRewriteMatchContext>>#processChildren}} messages are put in the code. For example, normally AST nodes are processed from the root to the leaves, but that can be changed. For example, if you add a rewrite rule at the top of the script that simply does a `self processChildren` followed by a `self continue`, you can effectively change the top-down traversal into a bottom-up (leaves to root) traversal. If the order does not matter, then having `self continue` at the end is the best since tail recursion elimination is performed to keep the stack size down."
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-06-11T07:24:21.668064-05:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-06-11T10:58:01.305537-05:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "SmaCC Transformation Toolkit script file"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "5ca40c30-7d9e-403c-9090-dae126dd495d"
+	}
+}
