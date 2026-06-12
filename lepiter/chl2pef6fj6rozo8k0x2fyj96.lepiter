@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-06T09:38:16.091231+02:00"
+						"dateAndTimeString" : "2026-06-12T07:31:51.304474+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-06T10:34:42.609465+02:00"
+						"dateAndTimeString" : "2026-06-12T07:32:56.699323+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "tVBUT+AWSbW+5XYeT516vQ=="
+					"uidString" : "dJZ35L3uTyKpTp6Mn1Ew5w=="
 				},
-				"code" : "model := GtLModelFactory new ollama_generate: 'tinyllama'.\rprovider := model provider."
+				"code" : "provider := GtLOllamaProvider new modelName: 'tinyllama'."
 			},
 			{
 				"__type" : "textSnippet",
@@ -313,7 +313,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-06T10:26:35.094612+02:00"
+						"dateAndTimeString" : "2026-06-12T07:34:24.251552+02:00"
 					}
 				},
 				"uid" : {
@@ -323,7 +323,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "And finally we can delete the model when we are finished with it (you'll probably want something more capable than llama 3.2):"
+				"string" : "And finally we can delete the model when we are finished with it (you'll probably want something more capable than tinylamallama):"
 			},
 			{
 				"__type" : "pharoSnippet",
