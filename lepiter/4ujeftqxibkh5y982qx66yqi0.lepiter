@@ -557,14 +557,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-06-01T09:05:59.520402+02:00"
+												"dateAndTimeString" : "2026-06-09T08:45:39.342984+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "U8xaB0loSZiyAwOZm3pArw=="
 										},
-										"code" : "\"To force a reload of the vector db, remove the old file\"\r GtLExperimentalRag cleanUp.\rGtLExperimentalRag defaultVectorDbFile ensureDelete."
+										"code" : "\"To force a reload of the vector db, remove the old file\"\rGtLExperimentalRag cleanUp.\r(GtLExperimentalRag localStore / GtLExperimentalRag gtBookBasename) ensureDelete."
 									},
 									{
 										"__type" : "pharoSnippet",
@@ -591,14 +591,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-06-01T09:06:09.169494+02:00"
+												"dateAndTimeString" : "2026-06-09T08:48:16.027301+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "faBW2Ak4S22QLURyOIcKpw=="
 										},
-										"code" : "[\rgtRag := GtLExperimentalRag gtBook.\rgtRag loadInMemoryLepiterRagDb: GtLExperimentalRag defaultVectorDbFile.\r] forkAt: Processor userBackgroundPriority - 1."
+										"code" : "\"Accessing the RAG Db is enough to load it.\rThis can take some time, so do it in a background process.\"\r[ gtRag := GtLExperimentalRag gtBookInMemory] \r\tforkAt: Processor userBackgroundPriority - 1."
 									}
 								]
 							},
@@ -652,6 +652,40 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-06-09T09:09:01.645446+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-06-09T09:09:10.903504+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "WSfGtBlGQrmKfZ6QGpWAvQ=="
+										},
+										"code" : "\"For now it is up to you to empty the collection if needed\"\rGtLExperimentalRag cleanUp."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
 												"dateAndTimeString" : "2026-05-28T13:01:41.995381+02:00"
 											}
 										},
@@ -663,14 +697,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-05-28T13:02:29.992154+02:00"
+												"dateAndTimeString" : "2026-06-09T09:09:41.90167+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "CfeHAJvqSRezU1n3HHpcDA=="
 										},
-										"code" : "\"For now it is up to you to empty the collection if needed\"\r[ gtRag := GtLExperimentalRag gtBook.\ngtRag loadChromaDbLepiterRagDb.\r] forkAt: Processor userBackgroundPriority - 1."
+										"code" : "\"The first time load is likely to take 15 minutes or more.\rSubsequent startups will be subsecond.\"\r[ GtLExperimentalRag gtBookChromaDb. ]\r\tforkAt: Processor userBackgroundPriority - 1."
 									}
 								]
 							},
@@ -805,14 +839,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-26T07:59:08.089892+02:00"
+									"dateAndTimeString" : "2026-06-09T08:48:49.131959+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "zFnltYnYSQaTgspJZanT7Q=="
 							},
-							"code" : "gtRag := GtLExperimentalRag gtBook.\rgtRag updateVectorDb."
+							"code" : "GtLExperimentalRag gtBook updateVectorDb."
 						}
 					]
 				},
@@ -924,6 +958,77 @@
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-09T09:34:28.513656+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-09T09:39:20.188201+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "iNOjg+ScTsajsSPEqhzBaw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "This requires that the `sentence_transformers` module be installed in the local PythonBridge, which will download the associated libraries and LLM models, i.e. it will take some time (minutes)."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-09T09:35:16.853571+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-09T09:39:08.872855+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xQ2w68XgT4yv+wVdNzaS2Q=="
+							},
+							"code" : "GtLSentenceTransformerCrossEncoder new installSentenceTransformers."
+						},
 						{
 							"__type" : "pharoSnippet",
 							"children" : {
@@ -1102,7 +1207,7 @@
 								"__type" : "uid",
 								"uidString" : "5ouOEOYDQG6W2BfN8Vyq9w=="
 							},
-							"exampleSelector" : "gtBook",
+							"exampleSelector" : "exampleGtBook",
 							"previewHeight" : 200,
 							"previewShowSelector" : "gtSummaryFor:",
 							"exampleBehaviorName" : "GtLExperimentalRag class",
