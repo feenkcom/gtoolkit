@@ -101,7 +101,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-05T07:43:02.723994+01:00"
+						"dateAndTimeString" : "2026-06-12T21:31:10.308318+02:00"
 					}
 				},
 				"uid" : {
@@ -111,7 +111,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here is a simple chat:"
+				"string" : "Let's start with an example. Execute the following snippet to see an agent in practice:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -138,7 +138,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-05T14:18:15.321409+01:00"
+						"dateAndTimeString" : "2026-06-12T21:31:49.299681+02:00"
 					}
 				},
 				"uid" : {
@@ -148,7 +148,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "# Why a moldable chat?"
+				"string" : "# Why moldable agents?"
 			},
 			{
 				"__type" : "textSnippet",
@@ -175,7 +175,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-06T22:25:09.912432+01:00"
+						"dateAndTimeString" : "2026-06-12T21:33:04.750145+02:00"
 					}
 				},
 				"uid" : {
@@ -185,13 +185,125 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Glamorous Toolkit is an environment for humans to make sense of systems through tools built contextually to match specific situations. Controlling the environment through which we perceive our systems allows us to influence how we think about them. LLMs are a new kind of system, and working with them follows the same principles in a slightly different form."
+				"string" : "Glamorous Toolkit is an environment for humans to make sense of systems through tools built contextually to match specific situations. Controlling the environment through which we perceive our systems allows us to influence how we think about them. LLMs are a new kind of system, and working with them follows the same principles in a slightly different form. Moreover, the perfromance of LLMs themselves benefit from these principles, too."
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-12T21:27:59.526543+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-12T21:27:59.526543+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "LxPTma/nRV+sPhGS+ZHggA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "1. Define the context"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-12T21:28:00.604979+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-12T21:28:00.604979+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "iVqJqh5mQ9uwLnbnHO6bKg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "2. Specify the intent"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-04T21:38:21.36592+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-12T21:28:00.607477+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "noURmBmkT+6Y9HjUjvZUdw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "3. Understand the output"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -201,7 +313,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-04T21:38:21.36592+01:00"
+						"dateAndTimeString" : "2026-06-12T21:27:57.116541+02:00"
 					}
 				},
 				"editEmail" : {
@@ -212,17 +324,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-05T07:37:11.250293+01:00"
+						"dateAndTimeString" : "2026-06-12T21:27:57.116541+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "noURmBmkT+6Y9HjUjvZUdw=="
+					"uidString" : "dW7RHDF8SiCKlhEdIRMATA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "To work with LLMs, we need to:\n1. Define the context\n2. Specify the intent\n3. Understand the output"
+				"string" : "To work with LLMs, we need to:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -249,7 +361,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-05T07:37:45.242373+01:00"
+						"dateAndTimeString" : "2026-06-12T21:34:54.467727+02:00"
 					}
 				},
 				"uid" : {
@@ -259,7 +371,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Moldable Chat supports steps 1 and 3 by using the same pieces used throughout the environment, such as views, examples and a composable interface. Like the rest of the environment, the chat is programmable, allowing developers to contextualize it for each conversation."
+				"string" : "The moldable agent harness supports steps 1 and 3 by using the same pieces used throughout the environment, such as views, examples and a composable interface. Like the rest of the environment, the interaction with the agent is programmable, allowing developers to contextualize it for each conversation. And the views, examples and documentation can directly influence the agent's behavior."
 			},
 			{
 				"__type" : "textSnippet",
@@ -291,7 +403,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-15T21:05:35.114207+01:00"
+									"dateAndTimeString" : "2026-06-12T21:28:43.056388+02:00"
 								}
 							},
 							"uid" : {
@@ -301,7 +413,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Creating chats and shaping their output]]"
+							"string" : "[[Moldable Agent Harness: Creating chats with structured output]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -328,7 +440,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-15T21:05:41.740085+01:00"
+									"dateAndTimeString" : "2026-06-12T21:28:48.766783+02:00"
 								}
 							},
 							"uid" : {
@@ -338,7 +450,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Multimodal inputs]]"
+							"string" : "[[Moldable Agent Harness: Multimodal inputs]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -365,7 +477,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-15T21:05:47.743027+01:00"
+									"dateAndTimeString" : "2026-06-12T21:28:51.801098+02:00"
 								}
 							},
 							"uid" : {
@@ -375,7 +487,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Guiding chats through explanations]]"
+							"string" : "[[Moldable Agent Harness: Guiding chats through explanations]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -402,7 +514,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-15T21:06:18.21646+01:00"
+									"dateAndTimeString" : "2026-06-12T21:28:54.962565+02:00"
 								}
 							},
 							"uid" : {
@@ -412,7 +524,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Tool-augmented interaction]]"
+							"string" : "[[Moldable Agent Harness: Tool-augmented interaction]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -439,7 +551,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-15T21:06:34.704859+01:00"
+									"dateAndTimeString" : "2026-06-12T21:28:57.751579+02:00"
 								}
 							},
 							"uid" : {
@@ -449,7 +561,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Keeping track of multiple chats]]"
+							"string" : "[[Moldable Agent Harness: Keeping track of multiple chats]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -476,7 +588,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-13T09:36:29.42706+02:00"
+									"dateAndTimeString" : "2026-06-12T21:29:00.646831+02:00"
 								}
 							},
 							"uid" : {
@@ -486,7 +598,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Generating code]]"
+							"string" : "[[Moldable Agent Harness: Generating code]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -513,7 +625,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-15T21:06:46.565445+01:00"
+									"dateAndTimeString" : "2026-06-12T21:29:03.5569+02:00"
 								}
 							},
 							"uid" : {
@@ -523,7 +635,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Generating LLM tools]]"
+							"string" : "[[Moldable Agent Harness: Generating LLM tools]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -550,7 +662,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-15T21:07:02.681498+01:00"
+									"dateAndTimeString" : "2026-06-12T21:29:09.309306+02:00"
 								}
 							},
 							"uid" : {
@@ -560,7 +672,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Changing Lepiter pages]]"
+							"string" : "[[Moldable Agent Harness: Changing Lepiter pages]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -587,7 +699,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-15T21:07:08.046429+01:00"
+									"dateAndTimeString" : "2026-06-12T21:29:12.09626+02:00"
 								}
 							},
 							"uid" : {
@@ -597,7 +709,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Raising the chat conversation level through specialized tools]]"
+							"string" : "[[Moldable Agent Harness: Raising the chat conversation level through specialized tools]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -624,7 +736,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-20T22:22:59.80497+01:00"
+									"dateAndTimeString" : "2026-06-12T21:29:14.997587+02:00"
 								}
 							},
 							"uid" : {
@@ -634,7 +746,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Searching code]]"
+							"string" : "[[Moldable Agent Harness: Searching code]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -661,7 +773,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-15T21:07:08.252496+01:00"
+									"dateAndTimeString" : "2026-06-12T21:29:18.780352+02:00"
 								}
 							},
 							"uid" : {
@@ -671,7 +783,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Moldable Chat: Working with objects]]"
+							"string" : "[[Moldable Agent Harness: Working with objects]]"
 						}
 					]
 				},
@@ -727,12 +839,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2026-03-10T22:49:49.258135+01:00"
+			"dateAndTimeString" : "2026-06-12T21:28:28.504243+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Moldable Chat tutorial"
+		"title" : "Moldable Agent Harness: a step-by-step tutorial"
 	},
 	"uid" : {
 		"__type" : "uuid",
