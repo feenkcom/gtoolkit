@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-14T13:49:04.694806+01:00"
+						"dateAndTimeString" : "2026-06-13T09:04:38.673847-05:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "```llanguage=SmaCC\n%scopes default one;\n%excludes two;\n<a> : a ;\none <b> : b ;\ntwo <c> : c ;\nStart \n    : \"0\" Abcd\n    | SwitchToOne \"1\" Abcd\n    | SwitchToTwo \"2\" Abcd\n    ;\nAbcd\n    : (<a> | <b> | <c> | \"d\")+\n    ;\nSwitchToTwo\n    : [self scope: #two]\n    ;\nSwitchToOne\n    : [self scope: #one]\n    ;\n```"
+				"string" : "```language=SmaCC\n%scopes default one;\n%excludes two;\n<a> : a ;\none <b> : b ;\ntwo <c> : c ;\nStart \n    : \"0\" Abcd\n    | SwitchToOne \"1\" Abcd\n    | SwitchToTwo \"2\" Abcd\n    ;\nAbcd\n    : (<a> | <b> | <c> | \"d\")+\n    ;\nSwitchToTwo\n    : [self scope: #two]\n    ;\nSwitchToOne\n    : [self scope: #one]\n    ;\n```"
 			},
 			{
 				"__type" : "textSnippet",
