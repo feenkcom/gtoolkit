@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T10:50:20.442929-05:00"
+						"dateAndTimeString" : "2026-06-12T14:26:48.958552-05:00"
 					}
 				},
 				"uid" : {
@@ -151,6 +151,80 @@
 					"__type" : "textStyle"
 				},
 				"string" : "The rewrite rules can also use patterns both for matching and transforming the code. For example, we can create a specific rule that matches the increment by one and converts it to use `++` in Javascript:\n{{gtExample:GtSmaCCTransformationExamples>>jsConvertPlusOne|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-12T06:41:09.582908-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-12T11:04:18.583373-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "zAVp7JzpTrGU4brt3rn/0w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Many of the above rules use the {{gtMethod:SmaCCRewriteMatchContext>>#replace:with:}} method to do the edit operations. That method takes a AST node or token and replaces its source with the string passed in the second argument. If the argument is a node, then that node's source interval is updated so that future edit operations on the node will use the new source. Token's don't update their source interval when used in edit operations. However, if the token is part of the current matched node, then the matched node's source interval may be updated."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-12T11:05:22.299399-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-12T14:32:26.024029-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "KO/xLix6QYeh+VIi1F4/OA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "There are many other edit operation methods like {{gtMethod:SmaCCRewriteMatchContext>>#delete:}}, {{gtMethod:SmaCCRewriteMatchContext>>#insert:after:}}, {{gtMethod:SmaCCRewriteMatchContext>>#move:before:}}, etc. The edit operations  can be found in the `source editing` protocol of the  {{gtClass:SmaCCRewriteMatchContext}} class. Most of them take AST nodes or tokens for their positions. When using operations such as {{gtMethod:SmaCCRewriteMatchContext>>#insert:after:}}, order matters. Order can be controlled by either the location of the rule script file or by moving the edit operation before or after a `self continue` or a `self processChildren` statement. The {{gtMethod:SmaCCRewriteMatchContext>>#continue}} method continues processing the current matching node in the script file. If you don't want to continue with the current matching node, you can process any other node by using {{gtMethod:SmaCCRewriteMatchContext>>#processChild:}}, {{gtMethod:SmaCCRewriteMatchContext>>#processChildren}}, or {{gtMethod:SmaCCRewriteMatchContext>>#processChildren:}}. If none of these methods are called, then processing of the current matching node and its children stops."
 			}
 		]
 	},
