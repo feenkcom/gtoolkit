@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T11:29:45.385315-05:00"
+						"dateAndTimeString" : "2026-06-15T06:38:56.977259-05:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The SmaCC Transformation Toolkit can be used to create scripts to transform large code bases. It has been used on several projects to convert programs written in one language to another language. The basic process is to write a [[SmaCC Transformation Toolkit script file]] that performs the transformation, check the transformed code by running, and then iterate by fixing the script and rerunning the transformation."
+				"string" : "The SmaCC Transformation Toolkit can be used to create scripts that transform large codebases. It has been used on several projects to convert programs written in one language into another. The basic process is to write a [[SmaCC Transformation Toolkit script file]] that performs the transformation, run the transformed code to validate the result, and then iterate by refining the script and rerunning the transformation."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T07:09:12.789223-05:00"
+						"dateAndTimeString" : "2026-06-15T06:38:57.002123-05:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The transformation toolkit takes a script and a set of files to be transformed. It processes each file individually by first parsing the file to get an AST and then running the script on the nodes in the AST. By default the nodes in the AST are processed top down, but this can be changed by the script. Once the script has processed the AST, the results are saved and the next file is processed. Unlike other tools that modify the AST and then generate the updated source from the modified AST, the SmaCC transformation toolkit, uses edit operations to modify the original source to the new source."
+				"string" : "The transformation toolkit takes a script and a set of files to transform. It processes each file individually by first parsing the file into an AST and then running the script on the nodes in that AST. By default, the nodes are processed top down, but this can be changed by the script. Once the script has processed the AST, the resulting edits are saved and the next file is processed. Unlike tools that modify the AST and then regenerate source code from the modified tree, the SmaCC transformation toolkit uses edit operations to transform the original source directly."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T08:14:42.27724-05:00"
+						"dateAndTimeString" : "2026-06-15T06:38:57.003344-05:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "As an example, consider a script that converts a simple language defined by {{gtClass:GtSmaCCTransformationExampleParser}} into Javascript. "
+				"string" : "As an example, consider a script that converts a simple language defined by {{gtClass:GtSmaCCTransformationExampleParser}} into JavaScript."
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T07:42:43.273067-05:00"
+						"dateAndTimeString" : "2026-06-15T06:38:57.00456-05:00"
 					}
 				},
 				"uid" : {
@@ -187,7 +187,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can use this script to transform a program from our simple language into Javascript:"
+				"string" : "We can use this script to transform a program written in our simple language into JavaScript:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T07:46:18.99418-05:00"
+						"dateAndTimeString" : "2026-06-15T06:38:57.005018-05:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "{{gtExample:GtSmaCCTransformationExamples>>factorialSource|noCode|previewShow=gtStringFor:|previewHeight=330}}}"
+				"string" : "{{gtExample:GtSmaCCTransformationExamples>>factorialSource|noCode|previewShow=gtStringFor:|previewHeight=330}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -251,7 +251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T11:00:48.879499-05:00"
+						"dateAndTimeString" : "2026-06-15T06:38:57.108513-05:00"
 					}
 				},
 				"uid" : {
@@ -261,7 +261,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is the result of using the above script on the simple program:"
+				"string" : "This is the result of applying the script above to the simple program:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -325,7 +325,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T11:29:07.671843-05:00"
+						"dateAndTimeString" : "2026-06-15T06:38:57.109942-05:00"
 					}
 				},
 				"uid" : {
@@ -335,7 +335,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The [[Transforming Delphi code into C# (at syntax level)]] page has a simple script that converts basic Delphi syntax into C#. It isn't meant to be a full Delphi conversion, but does show how some of the Delphi syntax can be converted to C#."
+				"string" : "The [[Transforming Delphi code into C# (at syntax level)]] page contains a simple script that converts basic Delphi syntax into C#. It is not intended to be a complete Delphi-to-C# conversion, but it does show how parts of Delphi syntax can be transformed into C#."
 			}
 		]
 	},
