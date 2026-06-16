@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T10:50:09.150447-05:00"
+						"dateAndTimeString" : "2026-06-15T06:22:45.136003-05:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The rewrite rules do the work of the transformation. They have two parts: a match and a transformation. The match checks the current AST node to see if the transformation should be run. If the match doesn't succeed, then the next rewrite rule is run. If the rewrite rule is the last rule, then the child nodes are processed."
+				"string" : "The rewrite rules do the work of the transformation. They have two parts: a match and a transformation. The match checks the current AST node to determine whether the transformation should run. If the match does not succeed, the next rewrite rule is run. If the current rewrite rule is the last one, the child nodes are then processed."
 			},
 			{
 				"__type" : "textSnippet",
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-12T14:26:48.958552-05:00"
+						"dateAndTimeString" : "2026-06-15T06:22:45.153256-05:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "As an example, consider a rewrite rule converting blocks defined by {{gtClass:GtSmaCCTransformationExampleParser}} into Javascript:\n{{gtExample:GtSmaCCTransformationExamples>>jsBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}\nThis rule matches all nodes of type {{gtClass:GtSmaCCTransformationExampleBlockNode}}, and when a block node is matched it runs the code in the transformation. That code replaces the `begin` and `end` keywords with `{}`. Once the `begin` and `end` keywords have been replaced, the rule does `self continue` . That looks for other rules that match the node and when no other rules are found, will process the children of the block node which are its statements. The code inside of the rules is evaluated in the context of a {{gtClass:SmaCCRewriteMatchContext}} class so `self` understands all messages defined on that class."
+				"string" : "As an example, consider a rewrite rule that converts blocks defined by {{gtClass:GtSmaCCTransformationExampleParser}} into JavaScript:\n{{gtExample:GtSmaCCTransformationExamples>>jsBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}\nThis rule matches all nodes of type {{gtClass:GtSmaCCTransformationExampleBlockNode}}. When a block node is matched, it runs the transformation code. That code replaces the `begin` and `end` keywords with `{}`. Once the `begin` and `end` keywords have been replaced, the rule does `self continue`. That looks for other rules that match the node and, when no other rules are found, processes the children of the block node, which are its statements. The code inside the rules is evaluated in the context of {{gtClass:SmaCCRewriteMatchContext}}, so `self` understands all messages defined on that class."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T10:50:31.445023-05:00"
+						"dateAndTimeString" : "2026-06-15T06:22:45.219112-05:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +113,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The matching part of a rewrite rule can contain code that only if it returns true runs the transformation. If it returns anything besides true or throws an error the transformation isn't run.  For example, consider a rule that converts the `.` that terminates the statement in our {{gtClass:GtSmaCCTransformationExampleParser}}. In Javascript those should be converted to `;`. Instead of writing several rules that match only subclasses of {{gtClass:GtSmaCCTransformationExampleStatementNode}} that contain a period, we can simply match any statement and check if it's period token isn't nil. For statements that don't have a period, this throws an error, but that is handled and treated as not matching:\n{{gtExample:GtSmaCCTransformationExamples>>jsConvertPeriodsToSemicolons|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}"
+				"string" : "The matching part of a rewrite rule can also contain code that controls whether the transformation runs. The transformation runs only if that code returns true. If it returns anything other than true, or throws an error, the transformation is not run.\n\nFor example, consider a rule that converts the `.` terminating a statement in {{gtClass:GtSmaCCTransformationExampleParser}}. In JavaScript, those should be converted to `;`. Instead of writing several rules that match only subclasses of {{gtClass:GtSmaCCTransformationExampleStatementNode}} that contain a period, we can simply match any statement and check whether its period token is not nil. For statements that do not have a period, this throws an error, but that is handled and treated as not matching:\n{{gtExample:GtSmaCCTransformationExamples>>jsConvertPeriodsToSemicolons|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T10:51:01.901614-05:00"
+						"dateAndTimeString" : "2026-06-15T06:22:45.307158-05:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The rewrite rules can also use patterns both for matching and transforming the code. For example, we can create a specific rule that matches the increment by one and converts it to use `++` in Javascript:\n{{gtExample:GtSmaCCTransformationExamples>>jsConvertPlusOne|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}"
+				"string" : "Rewrite rules can also use patterns for both matching and transforming code. For example, we can create a specific rule that matches an increment by one and converts it to `++` in JavaScript:\n{{gtExample:GtSmaCCTransformationExamples>>jsConvertPlusOne|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}"
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-12T11:04:18.583373-05:00"
+						"dateAndTimeString" : "2026-06-15T06:22:45.326215-05:00"
 					}
 				},
 				"uid" : {
@@ -187,7 +187,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Many of the above rules use the {{gtMethod:SmaCCRewriteMatchContext>>#replace:with:}} method to do the edit operations. That method takes a AST node or token and replaces its source with the string passed in the second argument. If the argument is a node, then that node's source interval is updated so that future edit operations on the node will use the new source. Token's don't update their source interval when used in edit operations. However, if the token is part of the current matched node, then the matched node's source interval may be updated."
+				"string" : "Many of the rules above use {{gtMethod:SmaCCRewriteMatchContext>>#replace:with:}} to perform edit operations. That method takes an AST node or token and replaces its source with the string passed as the second argument. If the argument is a node, that node's source interval is updated so that future edit operations on the node use the new source. Tokens do not update their source interval when used in edit operations. However, if the token is part of the current matched node, the matched node's source interval may be updated."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-15T06:04:49.546893-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-06-15T06:22:45.41135-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BAkcRdhFTcm4Bd5rFdXsPg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "There are many other edit operation methods, such as {{gtMethod:SmaCCRewriteMatchContext>>#delete:}}, {{gtMethod:SmaCCRewriteMatchContext>>#insert:after:}}, and {{gtMethod:SmaCCRewriteMatchContext>>#move:before:}}. The edit operations can be found in the `source editing` protocol of {{gtClass:SmaCCRewriteMatchContext}}. Most of them take AST nodes or tokens to identify positions. The edited source for a node can be retrieved with {{gtMethod:SmaCCRewriteMatchContext>>#sourceFor:}}."
 			},
 			{
 				"__type" : "textSnippet",
@@ -214,7 +251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-12T14:32:26.024029-05:00"
+						"dateAndTimeString" : "2026-06-15T06:22:45.452782-05:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +261,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "There are many other edit operation methods like {{gtMethod:SmaCCRewriteMatchContext>>#delete:}}, {{gtMethod:SmaCCRewriteMatchContext>>#insert:after:}}, {{gtMethod:SmaCCRewriteMatchContext>>#move:before:}}, etc. The edit operations  can be found in the `source editing` protocol of the  {{gtClass:SmaCCRewriteMatchContext}} class. Most of them take AST nodes or tokens for their positions. When using operations such as {{gtMethod:SmaCCRewriteMatchContext>>#insert:after:}}, order matters. Order can be controlled by either the location of the rule script file or by moving the edit operation before or after a `self continue` or a `self processChildren` statement. The {{gtMethod:SmaCCRewriteMatchContext>>#continue}} method continues processing the current matching node in the script file. If you don't want to continue with the current matching node, you can process any other node by using {{gtMethod:SmaCCRewriteMatchContext>>#processChild:}}, {{gtMethod:SmaCCRewriteMatchContext>>#processChildren}}, or {{gtMethod:SmaCCRewriteMatchContext>>#processChildren:}}. If none of these methods are called, then processing of the current matching node and its children stops."
+				"string" : "When using operations such as {{gtMethod:SmaCCRewriteMatchContext>>#insert:after:}}, order matters. Order can be controlled either by the location of the rule in the script file or by moving the edit operation before or after a `self continue` or `self processChildren` statement. The {{gtMethod:SmaCCRewriteMatchContext>>#continue}} method continues processing the current matching node in the script file. If you do not want to continue with the current matching node, you can process another node by using {{gtMethod:SmaCCRewriteMatchContext>>#processChild:}}, {{gtMethod:SmaCCRewriteMatchContext>>#processChildren}}, or {{gtMethod:SmaCCRewriteMatchContext>>#processChildren:}}. If none of these methods is called, processing of the current matching node and its children stops."
 			}
 		]
 	},

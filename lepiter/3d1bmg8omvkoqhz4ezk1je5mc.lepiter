@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T10:55:59.109799-05:00"
+						"dateAndTimeString" : "2026-06-15T06:26:53.205324-05:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Scripts can define properties that can be accessed through getter and setter methods that are automatically created. As an example, consider the method from the[[SmaCC Transformation Toolkit methods]] page, it used `temporaryVariables` and `functions` that properties are defined by a property rule:\n{{gtExample:GtSmaCCTransformationExamples>>properties|noCode|previewShow=gtSimpleEditorFor:|previewHeight=200}}\nProperties can be local or global. Local properties are initialized to `nil` for each file that is transformed. Global properties retain their value across files that are transformed. Globals are useful for lengthy computations of values that are used for every file processed. For example, you may load some external file that control the rules. You don't want to load the file for every source file processed as there may be thousands of source files. Instead you can initialize the global property once using the {{gtMethod:SmaCCRewriteMatchContext>>#initializeGlobalProperty:withValueFrom:}} method and access its value when processing other files. To initialize the properties before other rules are applied, it is common to create a rewrite rule that matches the top level node in the AST, and for the rewrite transformation, it performs all of the initialization necessary, and then calls `self continue`. To match the top level AST node, you can either match the node type that you know the parser returns, or you can match {{gtClass:SmaCCParseNode}} and a matching expression of `match parent isNil`."
+				"string" : "Scripts can define properties that are accessed through automatically generated getter and setter methods. For example, the method described on the [[SmaCC Transformation Toolkit methods]] page uses `temporaryVariables` and `functions`, and these properties are defined by a property rule:\n{{gtExample:GtSmaCCTransformationExamples>>properties|noCode|previewShow=gtSimpleEditorFor:|previewHeight=200}}\n\nProperties can be local or global. Local properties are initialized to `nil` for each file being transformed. Global properties retain their values across transformed files.\n\nGlobal properties are useful for expensive computations whose results are reused for every processed file. For example, you might load an external file that controls the rules. You do not want to load that file for every source file, especially when processing thousands of files. Instead, you can initialize the global property once using {{gtMethod:SmaCCRewriteMatchContext>>#initializeGlobalProperty:withValueFrom:}} and then access its value while processing other files.\n\nTo initialize properties before other rules are applied, it is common to create a rewrite rule that matches the top-level AST node. In the rewrite transformation, perform the required initialization and then call `self continue`.\n\nTo match the top-level AST node, you can either match the node type returned by the parser, or match {{gtClass:SmaCCParseNode}} with a matching expression such as `match parent isNil`."
 			}
 		]
 	},

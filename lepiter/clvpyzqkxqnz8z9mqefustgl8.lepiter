@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T10:52:29.029095-05:00"
+						"dateAndTimeString" : "2026-06-15T06:23:45.832604-05:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Scripts can define methods that can be called from other rewrite rules or methods. These methods are compiled on a specially created subclass of {{gtClass:SmaCCRewriteMatchContext}} and can be called by using `self` when evaluated in a rewrite match or method. As an example, in the Javascript conversion we compute the free variables that are used by the program or function and create a `var` Javascript statement. This code is the same so we can create a method that creates the `var` statement and call it from different locations:\n{{gtExample:GtSmaCCTransformationExamples>>jsTemporariesMethod|noCode|previewShow=gtSimpleEditorFor:|previewHeight=300}}"
+				"string" : "Scripts can define methods that can be called from other rewrite rules or methods. These methods are compiled into a specially created subclass of {{gtClass:SmaCCRewriteMatchContext}}, and they can be invoked using `self` when evaluated in a rewrite match or method.\n\nFor example, in the JavaScript conversion we compute the free variables used by the program or function and generate a JavaScript `var` statement. Because this logic is shared, we can define a method that creates the `var` statement and call it from different locations:\n{{gtExample:GtSmaCCTransformationExamples>>jsTemporariesMethod|noCode|previewShow=gtSimpleEditorFor:|previewHeight=300}}"
 			}
 		]
 	},

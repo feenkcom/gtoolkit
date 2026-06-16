@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T10:58:10.089614-05:00"
+						"dateAndTimeString" : "2026-06-15T06:30:00.700492-05:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Scripts are files that contain[[SmaCC Transformation Toolkit rewrite rules]],[[SmaCC Transformation Toolkit methods]], [[SmaCC Transformation Toolkit properties]], or imports of other script files. When AST nodes are processed by the script, the rules are processed in order that they appear in the script. "
+				"string" : "Scripts are files that contain [[SmaCC Transformation Toolkit rewrite rules]], [[SmaCC Transformation Toolkit methods]], [[SmaCC Transformation Toolkit properties]], or imports of other script files. When AST nodes are processed by the script, the rules are applied in the order in which they appear in the script."
 			},
 			{
 				"__type" : "textSnippet",
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-11T11:16:44.92874-05:00"
+						"dateAndTimeString" : "2026-06-15T06:30:00.772111-05:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In general it is better to structure your rules as editing operations instead of building a new source for everything. As an example, consider the these two different rules for rewriting `begin` and `end` in blocks to be `{}` for Javascript. The first just edits the original source by changing the tokens to be curly brackets:\n{{gtExample:GtSmaCCTransformationExamples>>jsBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}\nThe second replaces all of the original source with a string that is built from the statements in the block:\n{{gtExample:GtSmaCCTransformationExamples>>jsCopyingBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=500}}\nNot only is the first version better because it is faster, it is better since it keeps most of the formatting of the original code and it also makes debugging easier each edit operation is tagged with the rule that performed the operation."
+				"string" : "In general, it is better to structure your rules as editing operations instead of building entirely new source text. For example, consider these two different rules for rewriting `begin` and `end` in blocks to `{}` for Javascript. The first edits the original source by changing the tokens to curly brackets:\n{{gtExample:GtSmaCCTransformationExamples>>jsBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=350}}\nThe second replaces the original source with a string built from the statements in the block:\n{{gtExample:GtSmaCCTransformationExamples>>jsCopyingBeginEndTransformation|noCode|previewShow=gtSimpleEditorFor:|previewHeight=500}}\nThe first version is better not only because it is faster, but also because it preserves most of the formatting of the original code. It also makes debugging easier, because each edit operation is tagged with the rule that performed it."
 			},
 			{
 				"__type" : "textSnippet",
@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-12T14:25:15.272401-05:00"
+						"dateAndTimeString" : "2026-06-15T06:30:00.775239-05:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The order which the nodes are processed can be determined by where the {{gtMethod:SmaCCRewriteMatchContext>>#continue}},  {{gtMethod:SmaCCRewriteMatchContext>>#processChild:}}, or {{gtMethod:SmaCCRewriteMatchContext>>#processChildren}} messages are put in the code. For example, normally AST nodes are processed from the root to the leaves, but that can be changed. For example, if you add a rewrite rule at the top of the script that simply does a `self processChildren` followed by a `self continue`, you can effectively change the top-down traversal into a bottom-up (leaves to root) traversal. If the order does not matter, then having `self continue` at the end is the best since tail recursion elimination is performed to keep the stack size down."
+				"string" : "The order in which nodes are processed can be controlled by where the {{gtMethod:SmaCCRewriteMatchContext>>#continue}}, {{gtMethod:SmaCCRewriteMatchContext>>#processChild:}}, or {{gtMethod:SmaCCRewriteMatchContext>>#processChildren}} messages are sent in the code. Normally, AST nodes are processed from the root to the leaves, but this can be changed. For example, if you add a rewrite rule at the top of the script that simply sends `self processChildren` followed by `self continue`, you can effectively change the top-down traversal into a bottom-up traversal from leaves to root. If the order does not matter, having `self continue` at the end is best, because tail-recursion elimination is performed to keep the stack size down."
 			}
 		]
 	},
