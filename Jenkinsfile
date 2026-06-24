@@ -661,11 +661,11 @@ class TestAndPackage extends AgentJob {
                 script.string(credentialsId: 'editor-customer-id', variable: 'FEENK_CUSTOMER_ID'),
                 script.string(credentialsId: 'editor-private-key', variable: 'FEENK_CUSTOMER_KEY')
             ]) {
-                platform().exec(script, "./gt-installer", "download vm --customer-level pro")
+                platform().exec(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} download vm --customer-level pro")
             }
         }
         else {
-            platform().exec(script, "./gt-installer", "download vm --customer-level regular")
+            platform().exec(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} download vm --customer-level regular")
         }
 
         // On Windows we must disable the firewall for the exe, otherwise there will be no internet access when running examples / tests
