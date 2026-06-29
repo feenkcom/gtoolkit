@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-06-17T12:01:30.42339-04:00"
+									"dateAndTimeString" : "2026-06-29T08:59:22.5294+02:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,41 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Ensure that the Ollama application is installed and running, e.g., `ollama serve`."
+							"string" : "Ensure that the Ollama application is installed and running. For example, by running in your terminal:"
+						},
+						{
+							"__type" : "shellCommandSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-29T08:58:40.16341+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-06-29T08:58:46.103993+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "kC6dxJ9DQKy5HqMNi2aAhQ=="
+							},
+							"code" : "ollama serve"
 						},
 						{
 							"__type" : "textSnippet",

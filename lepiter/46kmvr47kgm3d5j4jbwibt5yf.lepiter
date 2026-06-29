@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-02-23T20:39:33.579196+01:00"
+						"dateAndTimeString" : "2026-06-29T08:55:18.879943+02:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The connection set as default is the one that is picked up when instantiating a chat without specifying the connection (right click on any of them and click on `Make default` to make them the default connector):"
+				"string" : "The default connection is picked up when instantiating a chat without specifying the connection (right click on any of them and click on `Make default` to make them the default connector):"
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -228,43 +228,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "Once you established a default connection, test it at [[Moldable Agent Harness: a step-by-step tutorial]]."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T11:29:28.73312+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-20T11:29:43.941771+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "fuRwxj3RSxq4e4MGWIsOCQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "To include locally available models from Ollama, see [[Managing LLM provider connections and setting the default]]. "
 			}
 		]
 	},
@@ -287,12 +250,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2025-06-07T23:03:47.02469+02:00"
+			"dateAndTimeString" : "2026-06-29T08:59:47.717776+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "How to setup LLM connections"
+		"title" : "How to setup LLM connections for the Moldable Agent Harness"
 	},
 	"uid" : {
 		"__type" : "uuid",
