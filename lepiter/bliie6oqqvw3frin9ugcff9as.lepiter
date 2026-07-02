@@ -143,14 +143,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-08-28T15:27:26.457967+02:00"
+									"dateAndTimeString" : "2026-07-01T10:02:05.364545+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "Std0b2b1DQCFiuqFDhLU9w=="
 							},
-							"code" : "worker := GtRrWorker serverSocketAddress: GtRrStompMqProcessor defaultHostAndPort.\rworker connectionStrategy: (GtRrMqWorkerConnectionStrategy new).\nworker attributes\r\tat: #changesSync put: false;\r\tat: GtRrWorker stompMqQueueNames put: GtRrMqServer stompMqQueueNamesAttribute.\nworker start."
+							"code" : "worker := GtRrWorker serverSocketAddress: 'localhost:', StampConstants defaultPort asString.\rworker connectionStrategy: (GtRrMqWorkerConnectionStrategy new).\nworker attributes\r\tat: #changesSync put: false;\r\tat: GtRrWorker stompMqQueueNames put: GtRrMqServer stompMqQueueNamesAttribute.\nworker start."
 						}
 					]
 				},
