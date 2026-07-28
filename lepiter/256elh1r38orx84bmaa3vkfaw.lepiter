@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-06-18T16:25:11.365906+02:00"
+						"dateAndTimeString" : "2026-07-27T17:38:11.969102+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "dQNcweCBRLWB+9lHUK0Z8A=="
 				},
-				"code" : "provider := GtLOllamaProvider new modelName: 'gemma3:27b-cloud'.\nprovider\n\tendpoint: #generate;\n\tbaseUrl: 'https://ollama.com' asZnUrl;\n\tloadApiKeyFromFile.\nchat := GtLChat new provider: provider.\nchat sendString: 'Hi, who are you?'"
+				"code" : "provider := GtLOllamaProvider new modelName: 'gemma3:27b-cloud'.\nprovider\n\tgenerate;\n\tbaseUrl: 'https://ollama.com' asZnUrl;\n\tloadApiKeyFromFile.\nchat := GtLChat new provider: provider.\nchat sendString: 'Hi, who are you?'"
 			}
 		]
 	},
