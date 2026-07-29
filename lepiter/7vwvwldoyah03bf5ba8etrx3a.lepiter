@@ -847,7 +847,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-10T16:57:05.505728+01:00"
+									"dateAndTimeString" : "2026-07-29T09:40:58.680367+02:00"
 								}
 							},
 							"uid" : {
@@ -881,7 +881,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-10T17:01:51.412666+01:00"
+									"dateAndTimeString" : "2026-07-29T09:39:44.935963+02:00"
 								}
 							},
 							"uid" : {
@@ -891,7 +891,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "⇒ *Evaluate and inspect the code above.*\n⇒ *Select, right-click and Extract example (not extract method).*\n⇒ *Set the class to `VRDatasetExamples` and the method to `dataFolder`*\n⇒ *Enter the package name `VisualisationReview` and the tag `Examples`. Then click on the checkmark ✓ lower left to accept the changes.*\nThe transformed snippet should look like this:"
+							"string" : "⇒ *Evaluate and inspect the code above.*\n⇒ *Select all the code in the Pharo snippet above, right-click and Extract example (*not* extract method).*\n⇒ *Set the class to `VRDatasetExamples` and the method to `datasetFolder`*\n⇒ *Enter the package name `VisualisationReview` and the tag `Examples`. Then click on the checkmark ✓ lower left to accept the changes.*\nThe transformed snippet should look like this:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -918,14 +918,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-02-10T17:00:28.063965+01:00"
+									"dateAndTimeString" : "2026-07-29T09:40:08.895867+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "RGT022uRT8e4yIIklEDJfw=="
 							},
-							"code" : "VRDatasetExamples new dataFolder"
+							"code" : "VRDatasetExamples new datasetFolder"
 						},
 						{
 							"__type" : "textSnippet",
