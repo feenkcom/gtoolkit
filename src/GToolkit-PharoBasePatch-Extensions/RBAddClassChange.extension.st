@@ -3,9 +3,8 @@ Extension { #name : #RBAddClassChange }
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 RBAddClassChange >> definition [
 	<gtPharoPatch: #Pharo12>
-	^ self 
-		forPharo12AndNewer: [ self definitionPharo12OldFormat ] 
-		forPharo11: [ super definition ]
+	
+	^ self definitionPharo12OldFormat 
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
