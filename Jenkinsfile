@@ -852,8 +852,8 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
             script.sh """
                     cd ${GlamorousToolkit.EXAMPLES_FOLDER}
                     ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
-                    xvfb-run -a ./gt4gemstone/scripts/run-backward-compatability-checks.sh
-                    xvfb-run -a ./gt4gemstone/scripts/run-remote-gemstone-examples.sh
+                    ./gt4gemstone/scripts/run-backward-compatability-checks.sh
+                    ./gt4gemstone/scripts/run-remote-gemstone-examples.sh
                 """
         }
     }
