@@ -45,7 +45,82 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-08T17:07:52.064678+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-08-24T18:42:04.970417+03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "CzsadKfuDQCuCOBDCvWbYQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- configuring searches for class names in the extension {{gtMethod:GtSpotterStart>>#gtSearchForClassesFor:}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-08-24T18:42:05.929811+03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-08-24T18:44:23.608005+03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wQrH1RovTkC/SWa8MN2R4g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- configuring searches for methods within a class, like in {{gtMethod:Class>>#gtSpotterMethodsFor:}} or {{gtMethod:Class>>#gtSpotterClassMethodsFor:}}"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -55,7 +130,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-08T17:07:52.064678+02:00"
+						"dateAndTimeString" : "2026-08-24T18:41:52.282935+03:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +141,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-04-09T00:09:56.457143+02:00"
+						"dateAndTimeString" : "2026-08-24T18:42:28.70996+03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "CzsadKfuDQCuCOBDCvWbYQ=="
+					"uidString" : "3WwtJ3rrSW+CaXw1KApE2A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "One usage is for searches for class names in the extension {{gtMethod:GtSpotterStart>>#gtSearchForClassesFor:}}."
+				"string" : "Some of its usages are:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -143,7 +218,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-09T14:01:40.357455+02:00"
+									"dateAndTimeString" : "2026-08-24T18:44:51.824998+03:00"
 								}
 							},
 							"uid" : {
@@ -153,7 +228,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "##Inspecting the default configurations"
+							"string" : "##Inspecting the current configurations"
 						},
 						{
 							"__type" : "textSnippet",
@@ -327,7 +402,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-04-08T17:07:15.727745+02:00"
+												"dateAndTimeString" : "2026-08-24T19:43:07.111583+03:00"
 											}
 										},
 										"uid" : {
@@ -337,7 +412,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Using just spaces to separate query words and using case insensitive matching for each one."
+										"string" : "Using only spaces to separate query words and using case insensitive matching for each one."
 									},
 									{
 										"__type" : "pharoSnippet",
@@ -465,7 +540,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-09T14:01:41.567073+02:00"
+									"dateAndTimeString" : "2026-08-24T18:45:28.906792+03:00"
 								}
 							},
 							"uid" : {
@@ -475,7 +550,329 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "##Adding a new configuration"
+							"string" : "##Configuring class searches by name"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T18:45:58.730427+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T23:05:17.500788+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "1rKi56bfSHmFMnqa6wMtrA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Below is the current default configuration for method selector searches. This splits the query into words by capitalization and uses the character colon (`:`) as a separator that is included in the word. It does not spit for the character  underscore (`_`),  and characters for binary selectors (`+-/\\*~<>=@,%|&?!·÷±×`). The matching of each word is case sensitive in case the first letter is uppercase."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T18:46:28.858475+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T18:46:48.456052+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Yw1lKmJISR+R1QHT17V3wQ=="
+										},
+										"code" : "GtSpotterFiltersConfiguration default \r\tputSubstringsConfigurationWithId: #methodSelectorSearch \r\twith: [ :aSubstringsConfiguration |\r\t\taSubstringsConfiguration\r\t\t\twithSelectorWordsSplitter;\r\t\t\tbeCaseSensitiveByCapitalization ]"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:46:24.616327+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:47:00.172314+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "4r+ApS1ESiKs2KtT7wGYDg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "We keep the split based selector words, but use case insensitive matching for each word."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:46:49.003875+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:46:50.111301+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "mPZB53+eRjqkH+wExizLPg=="
+										},
+										"code" : "GtSpotterFiltersConfiguration default \r\tputSubstringsConfigurationWithId: #methodSelectorSearch \r\twith: [ :aSubstringsConfiguration |\r\t\taSubstringsConfiguration\r\t\t\twithSelectorWordsSplitter;\r\t\t\tbeCaseSensitiveByCapitalization ]"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:41:34.763112+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:47:04.44347+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "xKvuD2/kR2K8YkUTPbiM9A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Using only spaces to separate query words and using case insensitive matching for each word."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:41:42.77684+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:41:46.291942+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "1tfeggUhTA2sVOuHfy/IVg=="
+										},
+										"code" : "GtSpotterFiltersConfiguration default \r\tputSubstringsConfigurationWithId: #methodSelectorSearch \r\twith: [ :aSubstringsConfiguration |\r\t\taSubstringsConfiguration\r\t\t\twithCharacterSplitter;\r\t\t\tbeCaseInsensitive ]"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:42:58.602779+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:43:19.865755+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "wMIhJ41gQWiWYLAVIijWZA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Using only spaces to separate query words and using case sensitive matching for each one."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:43:24.496397+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:43:28.805386+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "PImJsi04RnSnYV6B5Yk7aQ=="
+										},
+										"code" : "GtSpotterFiltersConfiguration default \r\tputSubstringsConfigurationWithId: #methodSelectorSearch \r\twith: [ :aSubstringsConfiguration |\r\t\taSubstringsConfiguration\r\t\t\twithCharacterSplitter;\r\t\t\tbeCaseSensitive ]"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-08-24T18:45:36.407576+03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-08-24T18:45:47.879782+03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "HviJr85SSTqcsYaeIJ8RSA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "##Configuring method serches by selector"
 						},
 						{
 							"__type" : "textSnippet",
@@ -515,6 +912,40 @@
 											"uidString" : "YlYiU6fuDQCdb7gWCvWbYQ=="
 										},
 										"code" : "GtSpotterFiltersConfiguration default \r\tremoveConfigurationWithId: #classSearch"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:42:21.05341+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T19:42:23.273983+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "HfLqkNPTTFCtsl83pw4kwQ=="
+										},
+										"code" : "GtSpotterFiltersConfiguration default \r\tremoveConfigurationWithId: #methodSelectorSearch"
 									}
 								]
 							},
@@ -643,6 +1074,43 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:33:41.101703+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:33:41.101703+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "QiiokeBOQzud5yEk3h81xw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtClass:GtSpotterBySelectorWordsQuerySplitter}}"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
 												"dateAndTimeString" : "2025-04-09T14:03:05.240917+02:00"
 											}
 										},
@@ -665,394 +1133,6 @@
 											"__type" : "textStyle"
 										},
 										"string" : "{{gtClass:name=GtSpotterByCharacterQuerySplitter}}"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:03:30.9648+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:04:11.88279+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "Hp2m/rjuDQCUKeEzCvWbYQ=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "The character splitter in {{gtClass:GtSpotterByCharacterQuerySplitter}} takes a list of characters by which it splits the query into words. By default space is used"
-												},
-												{
-													"__type" : "pharoSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:04:14.361838+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:04:21.787823+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "k808AbnuDQCXb6ZqCvWbYQ=="
-													},
-													"code" : "splitter := GtSpotterByCharacterQuerySplitter new."
-												},
-												{
-													"__type" : "pharoSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:04:22.050045+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:04:34.150533+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "yB6yAbnuDQCXzgnICvWbYQ=="
-													},
-													"code" : "splitter splitQueryString: 'one two three'"
-												}
-											]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-04-09T14:03:23.134759+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-04-09T14:03:37.505437+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "XB8v/rjuDQCTpcJBCvWbYQ=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "##Character splitter"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:05:01.287226+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:10:00.072316+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "xs4IBLnuDQCZDIINCvWbYQ=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "The splitter {{gtClass:GtSpotterByWordsQuerySplitter}} splits by camel case, and also  when there are non letter characters."
-												},
-												{
-													"__type" : "pharoSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:07:07.455175+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:08:38.423945+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "U/qNC7nuDQCclrwjCvWbYQ=="
-													},
-													"code" : "splitter := GtSpotterByWordsQuerySplitter new."
-												},
-												{
-													"__type" : "pharoSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:07:16.355023+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:07:25.68368+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "8MYVDLnuDQCcqo5QCvWbYQ=="
-													},
-													"code" : "splitter splitQueryString: 'OneTwoThree'"
-												},
-												{
-													"__type" : "pharoSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:07:20.490117+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:07:20.922785+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "cOJUDLnuDQCctOX2CvWbYQ=="
-													},
-													"code" : "splitter splitQueryString: 'one two three'"
-												},
-												{
-													"__type" : "pharoSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:07:37.960061+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:07:58.58066+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "2HhfDbnuDQCc5hEhCvWbYQ=="
-													},
-													"code" : "splitter splitQueryString: 'ONeTwoThree3 Four fiveSix'"
-												},
-												{
-													"__type" : "pharoSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:09:30.127219+02:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2025-04-09T14:09:42.95208+02:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "NgEPFLnuDQCdx3cVCvWbYQ=="
-													},
-													"code" : "splitter splitQueryString: 'One***Two---Three!@$Four'"
-												}
-											]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-04-09T14:04:48.269447+02:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2025-04-09T14:09:53.461007+02:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "rytCA7nuDQCYZHYdCvWbYQ=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "##Words splitter"
 									}
 								]
 							},
@@ -1075,7 +1155,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2025-04-09T14:02:39.518994+02:00"
+									"dateAndTimeString" : "2026-08-24T20:33:24.746805+03:00"
 								}
 							},
 							"uid" : {
@@ -1085,7 +1165,780 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The substrings filter splits a query into words. There are currently two available splitters:"
+							"string" : "The substrings filter splits a query into words. There are currently three available splitters:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:03:30.9648+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:04:11.88279+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Hp2m/rjuDQCUKeEzCvWbYQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The character splitter in {{gtClass:GtSpotterByCharacterQuerySplitter}} takes a list of characters by which it splits the query into words. By default space is used"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:04:14.361838+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:04:21.787823+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "k808AbnuDQCXb6ZqCvWbYQ=="
+										},
+										"code" : "splitter := GtSpotterByCharacterQuerySplitter new."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:04:22.050045+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:04:34.150533+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "yB6yAbnuDQCXzgnICvWbYQ=="
+										},
+										"code" : "splitter splitQueryString: 'one two three'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-09T14:03:23.134759+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-09T14:03:37.505437+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "XB8v/rjuDQCTpcJBCvWbYQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "##Character splitter"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:05:01.287226+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:10:00.072316+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "xs4IBLnuDQCZDIINCvWbYQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The splitter {{gtClass:GtSpotterByWordsQuerySplitter}} splits by camel case, and also  when there are non letter characters."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:07:07.455175+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:08:38.423945+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "U/qNC7nuDQCclrwjCvWbYQ=="
+										},
+										"code" : "splitter := GtSpotterByWordsQuerySplitter new."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:07:16.355023+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:07:25.68368+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "8MYVDLnuDQCcqo5QCvWbYQ=="
+										},
+										"code" : "splitter splitQueryString: 'OneTwoThree'"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:07:20.490117+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:07:20.922785+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "cOJUDLnuDQCctOX2CvWbYQ=="
+										},
+										"code" : "splitter splitQueryString: 'one two three'"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:07:37.960061+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:07:58.58066+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "2HhfDbnuDQCc5hEhCvWbYQ=="
+										},
+										"code" : "splitter splitQueryString: 'ONeTwoThree3 Four fiveSix'"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:09:30.127219+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2025-04-09T14:09:42.95208+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "NgEPFLnuDQCdx3cVCvWbYQ=="
+										},
+										"code" : "splitter splitQueryString: 'One***Two---Three!@$Four'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-09T14:04:48.269447+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2025-04-09T14:09:53.461007+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rytCA7nuDQCYZHYdCvWbYQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "##Words splitter"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-08-24T20:34:45.754975+03:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-08-24T20:38:58.940484+03:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "51gPzIuETFGFyDlMeD+jGQ=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "So if there are no colon, underscore and special selectors characters it slipts like{{gtClass:GtSpotterByCharacterQuerySplitter}}."
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:38:20.08157+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T23:06:42.065468+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "3yLjkk2wQgOCjw/QEM2zwA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The splitter {{gtClass:GtSpotterBySelectorWordsQuerySplitter}} splits by camel case and non letter characters, using also the character colon (`:`) as the end of a word. It does not split the character underscore (`_`),  and characters for binary selectors (`+-/\\*~<>=@,%|&?!·÷±×`).   "
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:39:03.31996+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:39:13.435279+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "FIfC13m1S2OCDuR1EftIFA=="
+										},
+										"code" : "splitter := GtSpotterBySelectorWordsQuerySplitter new."
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:39:26.17162+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:39:27.983506+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "RFJe+L1bSdKWD8VpsBnBJQ=="
+										},
+										"code" : "splitter splitQueryString: 'printon:'"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:40:04.58726+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:40:09.222172+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "JRtmAnnERUG1V16QTmQGgg=="
+										},
+										"code" : "splitter splitQueryString: 'printOn:'"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:39:14.485537+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:44:14.14924+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "rBXHGQc1QVOAeUhVZGcawQ=="
+										},
+										"code" : "splitter splitQueryString: 'copyFrom:to:'"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:42:30.327906+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:42:30.577684+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "ft0pCklYRMaSagTpkuXQlA=="
+										},
+										"code" : "splitter splitQueryString: 'copy12From:to:'"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:41:48.032074+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:41:55.662723+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "2nejB0K7RUKdbPH43myJnw=="
+										},
+										"code" : "splitter splitQueryString: 'copy_from:to:'"
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T20:41:02.222345+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T23:07:32.794387+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "zVyOzS3iS9as/cPcgehN3Q=="
+										},
+										"code" : "splitter splitQueryString: 'deprecated:on:in:transformWith:when:' "
+									},
+									{
+										"__type" : "pharoSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T23:06:51.85848+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-24T23:06:55.067407+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "YJsDW91LT/mrRZgjQzGNyQ=="
+										},
+										"code" : "splitter splitQueryString: '~~'"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-08-24T20:33:58.043207+03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-08-24T20:34:49.660805+03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zA56wi7OTpWjlzJjLium8A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "##Words for selectors slitter"
 						}
 					]
 				},
