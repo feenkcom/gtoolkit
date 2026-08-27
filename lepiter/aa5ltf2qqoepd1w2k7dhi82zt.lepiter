@@ -690,14 +690,14 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-08-24T19:46:50.111301+03:00"
+												"dateAndTimeString" : "2026-08-26T10:21:02.107199+03:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
 											"uidString" : "mPZB53+eRjqkH+wExizLPg=="
 										},
-										"code" : "GtSpotterFiltersConfiguration default \r\tputSubstringsConfigurationWithId: #methodSelectorSearch \r\twith: [ :aSubstringsConfiguration |\r\t\taSubstringsConfiguration\r\t\t\twithSelectorWordsSplitter;\r\t\t\tbeCaseSensitiveByCapitalization ]"
+										"code" : "GtSpotterFiltersConfiguration default \r\tputSubstringsConfigurationWithId: #methodSelectorSearch \r\twith: [ :aSubstringsConfiguration |\r\t\taSubstringsConfiguration\r\t\t\twithSelectorWordsSplitter;\r\t\t\tbeCaseInsensitive ]"
 									},
 									{
 										"__type" : "textSnippet",

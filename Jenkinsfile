@@ -130,8 +130,7 @@ class GlamorousToolkit {
 
         jobs = [
                 new TestAndPackage(this, new Agent(Triplet.MacOS_Aarch64), Triplet.MacOS_Aarch64),
-                // TEMP-DISABLE-MACOS-INTEL: MacOS x86_64 node is offline. Re-enable by uncommenting the line below.
-                // new TestAndPackage(this, new Agent(Triplet.MacOS_X86_64), Triplet.MacOS_X86_64),
+                new TestAndPackage(this, new Agent(Triplet.MacOS_X86_64), Triplet.MacOS_X86_64),
                 new TestAndPackageWithGemstoneAndPython(this, new Agent(Triplet.Linux_X86_64, "scooby-doo"), Triplet.Linux_X86_64),
                 new TestAndPackage(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64),
                 new TestAndPackage(this, new Agent(Triplet.Windows_X86_64, "daffy-duck"), Triplet.Windows_X86_64).add_release_target(Triplet.Windows_Aarch64)
@@ -642,7 +641,7 @@ class TestAndPackage extends AgentJob {
     void run_tests() {
         if (runTests) {
             script.stage("Test " + target.short_label()) {
-                script.timeout(time: 2, unit: 'HOURS') {
+                script.timeout(time: 150, unit: 'MINUTES') {
                     prepare_for_testing()
                     run_extra_examples()
                     run_gtoolkit_examples()

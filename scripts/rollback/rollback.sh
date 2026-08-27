@@ -29,9 +29,7 @@ function rollback {
 
 rollback "Win64"
 rollback "WinArm64"
-# TEMP-DISABLE-MACOS-INTEL: no new Intel release to roll back while MacOS x86_64 builds are paused.
-# Re-enable by uncommenting the line below.
-# rollback "OSX64"
+rollback "OSX64"
 rollback "OSXM1"
 rollback "Linux64"
 rollback "LinuxArm64"
