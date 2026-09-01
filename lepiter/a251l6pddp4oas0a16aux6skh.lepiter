@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-08-28T10:44:27.673846+03:00"
+						"dateAndTimeString" : "2026-09-01T13:12:31.760279+02:00"
 					}
 				},
 				"editEmail" : {
@@ -29,54 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-08-28T10:44:27.673846+03:00"
+						"dateAndTimeString" : "2026-09-01T15:14:02.716199+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "aN/JtGQiRwOAJxKQ2sVopw=="
+					"uidString" : "Eg1ZlSPNR0mBsGCzNMRHcw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This page describes how to create views that work both locally and remotely in Glamorous Toolkit."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.179+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-08-28T10:44:27.677539+03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "k/zJHAgG5kOhslOFdu+aNQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : " These views subclass {{gtClass:GtRemotePhlowLocalView}} and participate in both the local inspector rendering and the remote declarative view pipeline."
+				"string" : "This page is a practical skill for implementing Phlow views that work in both local and remote inspectors.  **Explore the current implementation in the image before adopting a pattern.**"
 			},
 			{
 				"__type" : "textSnippet",
@@ -87,7 +50,193 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T10:44:44.343969+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T10:47:11.391506+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "FoM9PThETQSjjvwyXj+9Tw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "1. **View** (subclass of {{gtClass:GtRemotePhlowLocalView}}) — the view definition created by {{gtPragma:gtView}} methods. Holds computation blocks for producing the view's data."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T10:44:45.994351+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T10:44:45.994351+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "aDhEBNdoTRO1TjjJdlqbcQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "2. **Specification** (subclass of {{gtClass:GtPhlowViewSpecification}}) — a serializable description of the view that can cross process boundaries. Knows how to serialize/deserialize itself and how to create a local rendering element."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T10:44:48.080276+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T10:44:48.080276+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "ZSvFDsI7QGu/FBumubs7Aw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "3. **Data Source** (subclass of {{gtClass:GtRemotePhlowDeclarativeViewDataSource}}) — evaluates the view's computation blocks and produces view data. Wraps errors into {{gtClass:GtRemotePhlowViewErrorData}}."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T10:44:49.257203+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T10:44:49.257203+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "VD9MXtFsQ622Zwr0FItPMQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "4. **View Data** (subclass of {{gtClass:GtRemotePhlowBasicViewData}}) — a value object carrying the computed data (e.g., bytes, dimensions). Serializes to/from dictionaries for transport."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-07-27T22:57:18.213+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T10:44:49.261639+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "KZRXlJPM2Uq9+VNBlye/iQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "5. **GemStone Proxy** (subclass of {{gtClass:GtpoGtPhlowViewSpecification}}) — client-side proxy that fetches data from a remote GemStone specification via `proxyPerform:`."
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -97,7 +246,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:44:41.61849+03:00"
+									"dateAndTimeString" : "2026-09-01T13:15:38.614347+02:00"
 								}
 							},
 							"editEmail" : {
@@ -108,12 +257,12 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:44:41.61849+03:00"
+									"dateAndTimeString" : "2026-09-01T13:15:38.614347+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "dLVAyieIRa6KtYaAGs75zA=="
+								"uidString" : "8jkumpcx0USwDqRZw1wKQw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
@@ -134,7 +283,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:44:44.343969+03:00"
+									"dateAndTimeString" : "2026-09-01T13:15:19.947779+02:00"
 								}
 							},
 							"editEmail" : {
@@ -145,17 +294,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:47:11.391506+03:00"
+									"dateAndTimeString" : "2026-09-01T15:17:08.500712+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "FoM9PThETQSjjvwyXj+9Tw=="
+								"uidString" : "SFplzOVrQBGKHZAQMMPvWQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "1. **View** (subclass of {{gtClass:GtRemotePhlowLocalView}}) — the view definition created by {{gtPragma:gtView}} methods. Holds computation blocks for producing the view's data."
+							"string" : "For views that just need to pass a single data object around use {{gtClass:GtRemotePhlowPictureView}}  as a starting example. For these views,  {{gtClass:GtRemotePhlowConcreteDataViewSpecification}} and the generic data source {{gtClass:GtRemotePhlowConcreteDataViewDataSource}} are sufficient. The application defines only the view by subclassing {{gtClass:GtRemotePhlowLocalView}}, its {{gtClass:GtRemotePhlowBasicViewData}} subclass, and its rendering stencil(s). "
 						},
 						{
 							"__type" : "textSnippet",
@@ -171,7 +320,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:44:45.994351+03:00"
+									"dateAndTimeString" : "2026-09-01T13:15:23.751139+02:00"
 								}
 							},
 							"editEmail" : {
@@ -182,128 +331,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:44:45.994351+03:00"
+									"dateAndTimeString" : "2026-09-01T13:15:23.751139+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "aDhEBNdoTRO1TjjJdlqbcQ=="
+								"uidString" : "b96KwQNiSN+R5Ac0DiteKg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "2. **Specification** (subclass of {{gtClass:GtPhlowViewSpecification}}) — a serializable description of the view that can cross process boundaries. Knows how to serialize/deserialize itself and how to create a local rendering element."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:44:48.080276+03:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:44:48.080276+03:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "ZSvFDsI7QGu/FBumubs7Aw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "3. **Data Source** (subclass of {{gtClass:GtRemotePhlowDeclarativeViewDataSource}}) — evaluates the view's computation blocks and produces view data. Wraps errors into {{gtClass:GtRemotePhlowViewErrorData}}."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:44:49.257203+03:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:44:49.257203+03:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "VD9MXtFsQ622Zwr0FItPMQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "4. **View Data** (subclass of {{gtClass:GtRemotePhlowBasicViewData}}) — a value object carrying the computed data (e.g., bytes, dimensions). Serializes to/from dictionaries for transport."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.213+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:44:49.261639+03:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "KZRXlJPM2Uq9+VNBlye/iQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "5. **GemStone Proxy** (subclass of {{gtClass:GtpoGtPhlowViewSpecification}}) — client-side proxy that fetches data from a remote GemStone specification via `proxyPerform:`."
+							"string" : "Define an application-specific specification/datasource pair only if generic concrete-data retrieval is insufficient. {{gtClass:GtRemotePhlowWebBrowserView}} is that advanced example."
 						}
 					]
 				},
@@ -315,7 +353,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.204+02:00"
+						"dateAndTimeString" : "2026-09-01T13:13:42.086472+02:00"
 					}
 				},
 				"editEmail" : {
@@ -326,17 +364,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.204+02:00"
+						"dateAndTimeString" : "2026-09-01T13:13:42.086472+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8jkumpcx0USwDqRZw1wKQw=="
+					"uidString" : "OGs0yyIHQ6G8kcmy1Tg0+Q=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Architecture Overview"
+				"string" : "## Architecture overview"
 			},
 			{
 				"__type" : "textSnippet",
@@ -421,7 +459,45 @@
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T13:20:06.294699+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T13:20:44.388573+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "2U8XQngtR1y7VBqvPd4ohQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Usually this is {{gtClass:GtRemotePhlowConcreteDataViewSpecification}}, backed by {{gtClass:GtRemotePhlowConcreteDataViewDataSource}}; the datasource invokes the view's `computeViewData` (e.g., {{gtMethod:GtRemotePhlowPictureView>>#computeViewData}})."
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -590,7 +666,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:53:49.129013+03:00"
+									"dateAndTimeString" : "2026-09-01T13:21:35.454762+02:00"
 								}
 							},
 							"uid" : {
@@ -600,7 +676,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "6. When rendering, the specification and dadatasource provide methods that compute and return the  the relevant **View Data**. For example {{gtMethod:GtRemotePhlowPictureViewSpecification>>#retrieveData}} and {{gtMethod:GtRemotePhlowDeclarativePictureViewDataSource>>#retrieveData}} for the picture view."
+							"string" : "6. When rendering, the specification and data source provide methods that compute and return the  the relevant **View Data**. For example {{gtMethod:GtRemotePhlowConcreteDataViewSpecification>>#retrieveData}} and {{gtMethod:GtRemotePhlowConcreteDataViewDataSource>>#retrieveData}} for the picture view, and {{gtMethod:GtRemotePhlowWebBrowserViewSpecification>>#retrieveContent}}/{{gtMethod:GtRemotePhlowWebBrowserViewSpecification>>#retrieveDynamicHeaders}} and {{gtMethod:GtRemotePhlowDeclarativeWebBrowserViewDataSource>>#retrieveContent}}/{{gtMethod:GtRemotePhlowDeclarativeWebBrowserViewDataSource>>#retrieveDynamicHeaders}} for the web browser view."
 						}
 					]
 				},
@@ -623,7 +699,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.216+02:00"
+						"dateAndTimeString" : "2026-09-01T13:20:58.772709+02:00"
 					}
 				},
 				"uid" : {
@@ -633,7 +709,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Data Flow"
+				"string" : "## Data flow"
 			},
 			{
 				"__type" : "textSnippet",
@@ -659,7 +735,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-08-28T10:55:13.418095+03:00"
+												"dateAndTimeString" : "2026-09-01T13:22:38.373052+02:00"
 											}
 										},
 										"editEmail" : {
@@ -670,17 +746,17 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-08-28T10:59:01.59105+03:00"
+												"dateAndTimeString" : "2026-09-01T15:19:13.396876+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "idSjmS5ZStOwJcqXoq7hbg=="
+											"uidString" : "nqnm614ITKSFkrdlyNVV/Q=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "- Holdes a builder API (e.g., {{gtMethod:name=GtRemotePhlowPictureView>>#content:|label=#selector}}, {{gtMethod:name=GtRemotePhlowPictureView>>#width:|label=#selector}}, {{gtMethod:name=GtRemotePhlowPictureView>>#height:|label=#selector}})\n- Implements {{gtMethod:name=GtRemotePhlowView>>#asGtDeclarativeView|label=#selector}} to create the specification with a data source\n- Reuses {{gtMethod:name=GtRemotePhlowView>>#configureGenericViewSpecificationOn:|label=#selector}} from {{gtClass:GtRemotePhlowView}} which sets title, priority, and action specifications"
+										"string" : "- Provides a builder API (e.g., {{gtMethod:name=GtRemotePhlowPictureView>>#content:|label=#selector}}, {{gtMethod:name=GtRemotePhlowPictureView>>#width:|label=#selector}}, {{gtMethod:GtRemotePhlowWebBrowserView>>#dynamicHeaders:|label=#selector}}, {{gtMethod:GtRemotePhlowWebBrowserView>>#content:|label=#selector}})\n- Implements {{gtMethod:name=GtRemotePhlowView>>#asGtDeclarativeView|label=#selector}} to create the specification with a data source\n- Reuses {{gtMethod:name=GtRemotePhlowView>>#configureGenericViewSpecificationOn:|label=#selector}} from {{gtClass:GtRemotePhlowView}} which sets title, priority, and action specifications"
 									}
 								]
 							},
@@ -692,7 +768,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:55:12.048896+03:00"
+									"dateAndTimeString" : "2026-09-01T13:22:34.616277+02:00"
 								}
 							},
 							"editEmail" : {
@@ -703,17 +779,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:55:12.048896+03:00"
+									"dateAndTimeString" : "2026-09-01T15:19:03.469923+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "NBada0IUTZGSpdjSqqgtRA=="
+								"uidString" : "TiV0sC0MTAaWLG4ayqLjBQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The view class subclasses {{gtClass:GtRemotePhlowLocalView}} and is the entry point from {{gtPragma:gtView}} methods:"
+							"string" : "The view class subclasses {{gtClass:GtRemotePhlowLocalView}} and is the entry point for {{gtPragma:gtView}} methods. The view class:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -729,7 +805,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.224+02:00"
+									"dateAndTimeString" : "2026-09-01T13:23:17.83097+02:00"
 								}
 							},
 							"editEmail" : {
@@ -740,23 +816,98 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T10:55:13.425178+03:00"
+									"dateAndTimeString" : "2026-09-01T13:23:17.83097+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "/FhOxvwI1UqgK7k0jrQNuw=="
+								"uidString" : "pZBXpi1eTvOyEhFwmonYkQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The view is registered as a builder method on both {{gtClass:GtPhlowProtoView}} (for local use) and {{gtClass:GtRemotePhlowProtoView}} (for remote use). Both return an instance of the same view class."
+							"string" : "For the primary generic approach, implement `computeViewData` to answer a serializable concrete data value. {{gtMethod:GtRemotePhlowPictureView>>#computeViewData}} is the example. Its {{gtMethod:GtRemotePhlowPictureView>>#asGtDeclarativeView}} installs the generic concrete-data specification and datasource."
 						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-07-27T22:57:18.225+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-07-27T22:57:18.225+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "JGqi2MuT4kqMmWQZ21ck1w=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Example — the picture view builder on {{gtClass:GtPhlowProtoView}}:\n{{gtMethod:GtPhlowProtoView>>picture|expanded}}"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-07-27T22:57:18.226+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-07-27T22:57:18.226+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Jh+4qgEFokOAHkZ4iZFCpg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Example — the picture view builder on {{gtClass:GtRemotePhlowProtoView}}:\n{{gtMethod:GtRemotePhlowProtoView>>picture|expanded}}"
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -766,7 +917,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.225+02:00"
+									"dateAndTimeString" : "2026-09-01T13:23:20.970184+02:00"
 								}
 							},
 							"editEmail" : {
@@ -777,54 +928,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.225+02:00"
+									"dateAndTimeString" : "2026-09-01T13:24:20.607633+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "JGqi2MuT4kqMmWQZ21ck1w=="
+								"uidString" : "O+bRbtVORx2/HNAy+kNwIg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Example — the picture view builder on {{gtClass:GtPhlowProtoView}}:\n{{gtMethod:GtPhlowProtoView>>picture|expanded}}"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.226+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.226+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "Jh+4qgEFokOAHkZ4iZFCpg=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Example — the picture view builder on {{gtClass:GtRemotePhlowProtoView}}:\n{{gtMethod:GtRemotePhlowProtoView>>picture|expanded}}"
+							"string" : "Register the same view type on {{gtClass:GtPhlowProtoView}} and {{gtClass:GtRemotePhlowProtoView}}. "
 						}
 					]
 				},
@@ -836,7 +950,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.22+02:00"
+						"dateAndTimeString" : "2026-09-01T13:22:05.825005+02:00"
 					}
 				},
 				"editEmail" : {
@@ -847,23 +961,135 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.22+02:00"
+						"dateAndTimeString" : "2026-09-01T13:46:17.205225+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "87608O1zl0uYetXNY66JOQ=="
+					"uidString" : "cm5/92i7SUGba93hLFZ+6g=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## The View Class"
+				"string" : "## Declarative views"
 			},
 			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:23:07.863922+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:23:07.863922+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8SPTFLgdSwC2WZ3io6HZpA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A view specification is a serializable description of a Phlow view: it carries the view’s title, priority, actions, transport configuration, and any data needed to reconstruct and render it in another place. It creates the local explicit view—typically with a declarative stencil—and coordinates retrieving or holding the concrete view data. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:21:53.188912+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:25:51.70406+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "vwY53kmoTNG49zv0nEkimg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtClass:GtRemotePhlowWebBrowserViewSpecification}} exists because browser content and dynamic headers are distinct computed values that must be retrieved, cached/cleared, merged, and rendered together."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:25:46.356297+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:25:46.356297+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gBs7koodQ7OqFFJzWcYayQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Most new views can use the generic {{gtClass:GtRemotePhlowConcreteDataViewSpecification}}; define a custom specification, such as {{gtClass:GtRemotePhlowWebBrowserViewSpecification}}, only when the view needs specialized retrieval, state, rendering, or refresh behavior."
+						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
@@ -1005,7 +1231,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-08-28T11:03:12.912592+03:00"
+												"dateAndTimeString" : "2026-09-01T13:30:09.70369+02:00"
 											}
 										},
 										"uid" : {
@@ -1015,44 +1241,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "- {{gtMethod:GtPhlowViewSpecification>>#initializeFromInspector:|label=#selector}} — reconnects the `phlowDataSource` after deserialization for lazy data transport"
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-08-28T11:01:49.766592+03:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-08-28T11:09:38.846968+03:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "99ZtXoVjRX+l+EfpIKbbzg=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "- relevant methods in the specification and datasource that return the view's data; these should handle the case of errors happening during the local and remote computation, e.g., {{gtMethod:GtRemotePhlowDeclarativePictureViewDataSource>>#retrieveData}} /  {{gtMethod:name=GtRemotePhlowPictureViewSpecification>>#createDeclarativeStencilForViewData:}}"
+										"string" : "- {{gtMethod:GtPhlowViewSpecification>>#initializeFromInspector:|label=#selector}} — reconnects the `phlowDataSource` after deserialization for lazy data transport as in {{gtMethod:GtRemotePhlowConcreteDataViewSpecification>>#initializeFromInspector:}}"
 									}
 								]
 							},
@@ -1075,7 +1264,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:00:05.815324+03:00"
+									"dateAndTimeString" : "2026-09-01T13:28:50.691843+02:00"
 								}
 							},
 							"uid" : {
@@ -1085,13 +1274,200 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The specification (subclass of {{gtClass:GtPhlowViewSpecification}}) must implement:"
+							"string" : "Whether generic or custom the specification (subclass of {{gtClass:GtPhlowViewSpecification}}) must implement:"
 						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-07-27T22:57:18.23+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-09-01T13:33:08.060605+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "ut/3MOwTTUy5vHZUFlDclw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "{{gtMethod:GtRemotePhlowConcreteDataViewSpecification>>viewFor:|expanded}}"
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-09-01T12:00:28.16039+02:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-09-01T12:00:31.334596+02:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "w7UHaNDvT8ueBHa39hmsyw=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "{{gtMethod:GtRemotePhlowWebBrowserViewSpecification>>#viewFor:|expanded}}"
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T12:00:22.341972+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T13:32:28.546048+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "KOXUA2/eScW/HPHMds4+Pw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "- use an explicit view with a declarative specification ({{gtMethod:GtPhlowExplicitView>>#declarativeStencil:}}) so the view both renders locally AND remains declarative. Examples are:"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T13:33:14.477574+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T13:33:58.614364+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "9UJnUx3IQMSfOR0ANrm0YQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "- set the current specificatio in the created view using {{gtMethod:GtPhlowView>>#phlowViewSpecification:}}"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T13:35:06.972491+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T13:35:43.975888+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "m0zidPuWTU6Xsd3awfmJYA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "- handle the case or error data, like in {{gtMethod:GtRemotePhlowConcreteDataViewSpecification>>#createDeclarativeStencilForViewData:}} or {{gtMethod:GtRemotePhlowWebBrowserViewSpecification>>#createDeclarativeContentStencil}} "
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -1101,7 +1477,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.23+02:00"
+									"dateAndTimeString" : "2026-09-01T13:30:44.205805+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1112,54 +1488,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:10:35.272523+03:00"
+									"dateAndTimeString" : "2026-09-01T13:30:44.205805+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "ut/3MOwTTUy5vHZUFlDclw=="
+								"uidString" : "RaYhsQmrSZKCXxUaLJjsfA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Key pattern for implementing {{gtMethod:GtPhlowViewSpecification>>#viewFor:|label=#selector}} — use an explicit view with a declarative specification ({{gtMethod:GtPhlowExplicitView>>#declarativeStencil:}}) so the view both renders locally AND remains declarative. An example is\n{{gtMethod:GtRemotePhlowPictureViewSpecification>>viewFor:|expanded}}"
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.23+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:11:10.424239+03:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "iceVhhq2U0SJk4zDEvEZIw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Key pattern for implementing  {{gtMethod:GtPhlowViewSpecification>>#initializeFromInspector:|label=#selector}}  — reconnects the data source after deserialization:\n{{gtMethod:GtRemotePhlowPictureViewSpecification>>initializeFromInspector:|expanded}}"
+							"string" : "Key pattern for implementing {{gtMethod:GtPhlowViewSpecification>>#viewFor:|label=#selector}} "
 						}
 					]
 				},
@@ -1171,7 +1510,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.226+02:00"
+						"dateAndTimeString" : "2026-09-01T13:25:41.326725+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1182,17 +1521,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-08-28T10:59:59.978649+03:00"
+						"dateAndTimeString" : "2026-09-01T13:47:24.151648+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "+MbJXCGljk2VsaBNGP4ghQ=="
+					"uidString" : "E5RjgJCpSPCxSLIBbgJ8Jw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## The Specification Class"
+				"string" : "## View specifications"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1213,7 +1552,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.233+02:00"
+									"dateAndTimeString" : "2026-09-01T13:37:12.326279+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1224,17 +1563,54 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.233+02:00"
+									"dateAndTimeString" : "2026-09-01T13:37:25.99094+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "B10MnW6bFE+/GM67UhkE3g=="
+								"uidString" : "ZhoeH5ZoT6u0P7yK5OarTw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The data source (subclass of {{gtClass:GtRemotePhlowDeclarativeViewDataSource}}) evaluates the view's computations and wraps results in a view data object. On errors, it returns a {{gtClass:GtRemotePhlowViewErrorData}} instead of propagating the exception:\n{{gtMethod:GtRemotePhlowDeclarativePictureViewDataSource>>retrieveData|expanded}}"
+							"string" : "The data source (subclass of {{gtClass:GtRemotePhlowDeclarativeViewDataSource}}) evaluates the view's computations and wraps results in a view data object. On errors, it returns a {{gtClass:GtRemotePhlowViewErrorData}} instead of propagating the exception, e.g.,\n{{gtMethod:GtRemotePhlowConcreteDataViewDataSource>>retrieveData|expanded}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:29:22.679758+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:29:22.679758+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "jkYj5OBdRraJOerYfOP74Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Most concrete-data views use {{gtClass:GtRemotePhlowConcreteDataViewDataSource}}, while a custom source such as {{gtClass:GtRemotePhlowDeclarativeWebBrowserViewDataSource}} is appropriate when a view has multiple or specialized values to retrieve."
 						}
 					]
 				},
@@ -1246,7 +1622,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.233+02:00"
+						"dateAndTimeString" : "2026-09-01T13:47:17.865374+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1257,17 +1633,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.233+02:00"
+						"dateAndTimeString" : "2026-09-01T13:47:19.928865+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "EnnY7T3cVEStQhkl7wk7Qg=="
+					"uidString" : "fFol8EOLTyWOulqwb/fdGQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## The Data Source Class"
+				"string" : "##Data sources"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1304,7 +1680,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-08-28T11:14:28.541882+03:00"
+												"dateAndTimeString" : "2026-09-01T13:39:20.509062+02:00"
 											}
 										},
 										"uid" : {
@@ -1326,7 +1702,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:11:56.171407+03:00"
+									"dateAndTimeString" : "2026-09-01T13:45:58.748051+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1337,7 +1713,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:11:57.64153+03:00"
+									"dateAndTimeString" : "2026-09-01T13:45:58.748051+02:00"
 								}
 							},
 							"uid" : {
@@ -1347,13 +1723,88 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The view data (subclass of {{gtClass:GtRemotePhlowBasicViewData}}) is a value object that:"
+							"string" : "Concrete values crossing the boundary subclass {{gtClass:GtRemotePhlowBasicViewData}} and implement dictionary export/import. Keep them independent of computation blocks."
 						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-07-27T22:57:18.235+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T12:02:46.310152+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "bO0RJ2wPbE2SikxfG6vMRA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "For the picture view all data is modeles in a single object {{gtClass:GtRemotePhlowPictureViewData}} that knows how to serialize itself in   {{gtMethod:GtRemotePhlowPictureViewData>>asDictionaryForExport|expanded}}"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T12:02:57.427473+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T13:39:40.581623+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Hg5pRAOkRrm9QkFsRS3Hig=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "For the web browser view distinct data objects are used, namely subclasses of {{gtClass:GtRemotePhlowWebViewContent}} for what the browser shows and {{gtClass:GtRemotePhlowWebViewHeader}}. In this case this data can be retried in distinct calls. "
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -1363,7 +1814,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.235+02:00"
+									"dateAndTimeString" : "2026-09-01T12:01:52.028862+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1374,17 +1825,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:11:54.168284+03:00"
+									"dateAndTimeString" : "2026-09-01T12:01:52.028862+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "bO0RJ2wPbE2SikxfG6vMRA=="
+								"uidString" : "gN/u6p4fTCaKgVERg3FCtg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Example:\n{{gtMethod:GtRemotePhlowPictureViewData>>asDictionaryForExport|expanded}}"
+							"string" : "Example:"
 						}
 					]
 				},
@@ -1407,7 +1858,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-08-28T11:11:35.599149+03:00"
+						"dateAndTimeString" : "2026-09-01T13:45:07.657997+02:00"
 					}
 				},
 				"uid" : {
@@ -1417,7 +1868,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## The View Data Class"
+				"string" : "## Data Values"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1438,7 +1889,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:15:00.329522+03:00"
+									"dateAndTimeString" : "2026-09-01T13:37:49.71163+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1449,12 +1900,124 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:28:31.601023+03:00"
+									"dateAndTimeString" : "2026-09-01T13:37:49.71163+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "SZo/IVmsRW2D6BN68P9pZQ=="
+								"uidString" : "A+FLZi6JRFCYYSN40KpbCA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The generic concrete-data specification uses a configured rendering-stencil name and {{gtClass:GtPhlowNamedStencil}}. This is how {{gtClass:GtRemotePhlowPictureView}} permits callers to select an alternative rendering class, including a local-only stencil."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-07-27T22:57:18.233+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:31:50.462149+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "EnnY7T3cVEStQhkl7wk7Qg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For a fixed rendering contract, a dedicated stencil subclassing {{gtClass:GtPhlowStencil}} is appropriate. {{gtClass:GtRemotePhlowWebBrowserStencil}} demonstrates this. It owns only concrete serializable values, implements {{gtMethod:GtRemotePhlowWebBrowserStencil>>#asDictionaryForExport|label=#selector}} and {{gtMethod:GtRemotePhlowWebBrowserStencil>>#initializeFromJSONDictionary:|label=#selector}}, and inherits {{gtMethod:GtPhlowStencil>>#asGtStencilSpecification}}. Its standalone API accepts concrete values, never closures."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-09-01T13:37:45.799459+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-09-01T13:45:15.111315+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SBurNfvmRpy2tyiD7STpVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Declarative stencils"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T13:40:12.518758+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T13:40:12.518758+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "e/dseDFQTL6OBsU7nBKHeQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
@@ -1475,7 +2038,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:29:10.774183+03:00"
+									"dateAndTimeString" : "2026-09-01T13:40:18.746648+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1486,17 +2049,129 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:29:10.774183+03:00"
+									"dateAndTimeString" : "2026-09-01T13:40:18.746648+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "UINMexIkTAq6R18urIZY+A=="
+								"uidString" : "rk72fkZzSe28+UYaHtwHKg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The proxy must implement the relevant methods for retrieving the view data.  "
+							"string" : "Add a client-side `Gtpo...Specification` proxy in `GToolkit-GemStone-Pharo` / `Proxies` only when the specification exposes specialized retrieval or update operations not already handled by the generic pipeline."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-07-27T22:57:18.238+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T13:40:18.782094+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "vgYmGqcvqU6OLe6E+Cgj5Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:GtpoGtRemotePhlowWebBrowserViewSpecification}} is the advanced example: it forwards content/header retrieval and cache flushing through `proxyPerform:` and reconstructs returned dictionaries as basic view data. Deploy the implementation to GemStone before running its GemStone examples."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-09-01T13:39:44.0988+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-09-01T13:39:44.0988+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "m+B/4tkTTSOOw4da5YcHSQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## GemStone proxy"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-08-28T11:54:58.491717+03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-08-28T11:54:58.491717+03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "FD++Ct1PSGaBd2/JiJOwJg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Use two complementary example hierarchies. Both are abstract on the class side; concrete subclasses select the execution context and inherit every applicable example."
 						},
 						{
 							"__type" : "textSnippet",
@@ -1507,45 +2182,7 @@
 										"__type" : "textSnippet",
 										"children" : {
 											"__type" : "snippets",
-											"items" : [
-												{
-													"__type" : "textSnippet",
-													"children" : {
-														"__type" : "snippets",
-														"items" : [ ]
-													},
-													"createEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"createTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2026-08-28T11:28:36.323265+03:00"
-														}
-													},
-													"editEmail" : {
-														"__type" : "email",
-														"emailString" : "<unknown>"
-													},
-													"editTime" : {
-														"__type" : "time",
-														"time" : {
-															"__type" : "dateAndTime",
-															"dateAndTimeString" : "2026-08-28T11:32:18.537479+03:00"
-														}
-													},
-													"uid" : {
-														"__type" : "uid",
-														"uidString" : "XfvadHPjQAOlGt1/RP0ocQ=="
-													},
-													"paragraphStyle" : {
-														"__type" : "textStyle"
-													},
-													"string" : "1. Use {{gtMethod:GtpoGtRemotePhlowPictureViewSpecification>>#retrievePrimitiveData|label=#selector}} get serialized data from the remote side\n2. Deserializes via {{gtMethod:GtPhlowDeclarativeSpecification class>>#fromDictionary:}}\n"
-												}
-											]
+											"items" : [ ]
 										},
 										"createEmail" : {
 											"__type" : "email",
@@ -1555,7 +2192,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-08-28T11:32:18.531096+03:00"
+												"dateAndTimeString" : "2026-09-01T15:34:17.51831+02:00"
 											}
 										},
 										"editEmail" : {
@@ -1566,17 +2203,91 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-08-28T11:32:31.365016+03:00"
+												"dateAndTimeString" : "2026-09-01T15:34:17.51831+02:00"
 											}
 										},
 										"uid" : {
 											"__type" : "uid",
-											"uidString" : "gOefOoRRQzWEepntGnmwsg=="
+											"uidString" : "h10HUs+GTeezv02PeAddTw=="
 										},
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "It does the following:"
+										"string" : "{{gtClass:GtRemotePhlowPictureViewAbstractExamples}} tests the view API and the specification/data path. Its Local and Remote subclasses implement {{gtMethod:GtRemotePhlowPictureViewAbstractExamples>>#createProtoView}} to answer, respectively, a {{gtClass:GtPhlowProtoView}} or a {{gtClass:GtRemotePhlowProtoView}}. **Always create a view through `self createProtoView`** in this hierarchy—never instantiate/configure only one proto-view type—so the same inherited examples exercise both APIs."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:54:42.805035+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:35:13.924753+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "e7a2CtngQbGm1ZNnigtrbg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtClass:GtRemotePhlowExplicitViewAbstractExamples}} follows the same construction-hierarchy pattern for the more complex explicit view"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:54:28.806359+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:54:44.237361+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "3bcKp+lVTeSPfh3q5DKYDw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Put shared examples in the abstract class: configure the view, create its declarative specification, retrieve normal and error data, round-trip view data and specifications, and render the resulting stencil. Add a subclass-specific example only when its behaviour genuinely belongs to one API."
 									}
 								]
 							},
@@ -1588,7 +2299,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:31:57.863615+03:00"
+									"dateAndTimeString" : "2026-08-28T11:54:22.811203+03:00"
 								}
 							},
 							"editEmail" : {
@@ -1599,23 +2310,172 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:32:13.213711+03:00"
+									"dateAndTimeString" : "2026-08-28T11:54:58.496901+03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "W5fM5DzWRm6jIZUizW/5LA=="
+								"uidString" : "23B+R1kPRyeOKJ8ZQGLsdg=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "An example is {{gtMethod:GtpoGtRemotePhlowPictureViewSpecification>>#retrieveData|expanded}} "
+							"string" : "### 1. View-construction and declarative-pipeline examples"
 						},
 						{
 							"__type" : "textSnippet",
 							"children" : {
 								"__type" : "snippets",
-								"items" : [ ]
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:55:38.901099+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:55:38.901099+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "slEfjnC6Rbab9qKq5HLv5Q=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtClass:GtRemotePhlowPictureViewInspectionExamples}} tests a view as an inspector user sees it. Its subclasses implement {{gtMethod:GtRemotePhlowPictureViewInspectionExamples>>#createTestObject}} (and, where needed, `createErrorTestObject`, and other relevant objects) to supply a local object, a remote object, or a simulation/proxy object. "
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:54:46.380083+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:55:38.910656+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "FylHeC/cQwCg51X0+0uCvg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Shared examples belong in the abstract superclass and verify that object views render, picture tabs create picture elements, full-size views have the expected result, and errors produce debuggable elements. Use {{gtClass:BlScripter}} examples for tab interaction and definition browsing such as alt-click."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:54:49.638183+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:54:49.638183+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "XdbEr4jsQlC55ndGs0sg+w=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Keep object-context-specific checks in the corresponding subclass: for example, local debugging controls versus remote inspection controls, remote error presentation, or connection/version-dependent behaviour. This keeps each shared assertion meaningful for every supported object context."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:33:08.080089+03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-08-28T11:54:49.641502+03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "yDIlt9+iQpaNt8A/rchmAA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Run the concrete example classes, not the abstract bases, and keep all examples green after changing a view."
+									}
+								]
 							},
 							"createEmail" : {
 								"__type" : "email",
@@ -1625,7 +2485,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.241+02:00"
+									"dateAndTimeString" : "2026-08-28T11:54:36.474079+03:00"
 								}
 							},
 							"editEmail" : {
@@ -1636,17 +2496,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:31:21.005928+03:00"
+									"dateAndTimeString" : "2026-08-28T11:54:36.474079+03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "3565YKfxp0SjML8aGHbZMA=="
+								"uidString" : "4KLpc9rvRO+dmySXafQmmw=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The proxy class name follows the pattern `Gtpo` + the specification class name (e.g., {{gtClass:GtpoGtRemotePhlowPictureViewSpecification}} for {{gtClass:GtRemotePhlowPictureViewSpecification}})."
+							"string" : "### 2. Inspection examples"
 						}
 					]
 				},
@@ -1658,7 +2518,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.238+02:00"
+						"dateAndTimeString" : "2026-09-01T13:47:49.76265+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1669,17 +2529,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.238+02:00"
+						"dateAndTimeString" : "2026-09-01T13:47:49.76265+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "vgYmGqcvqU6OLe6E+Cgj5Q=="
+					"uidString" : "vg9WMLART3WCTlAV3YjEhA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## GemStone Proxy"
+				"string" : "## Testing with examples"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1700,7 +2560,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:33:08.080089+03:00"
+									"dateAndTimeString" : "2026-09-01T15:36:02.923425+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1711,17 +2571,92 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-08-28T11:42:34.199396+03:00"
+									"dateAndTimeString" : "2026-09-01T15:36:02.923425+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "yDIlt9+iQpaNt8A/rchmAA=="
+								"uidString" : "ZwVLhnP2QlWGl2D+UJOlag=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Local/remote views are tested using {{gtPragma:gtExample}} methods in an abstract examples class with Local and Remote subclasses. This ensures the same tests run against both paths.\n\n**Structure:**\n- **Abstract class** (e.g., {{gtClass:GtRemotePhlowPictureViewAbstractExamples}}) — holds all examples and setup methods. Has `isAbstract` returning `true` on the class side.\n- **Local subclass** (e.g., {{gtClass:GtRemotePhlowPictureViewLocalExamples}}) — {{gtMethod:name=createProtoView|label=#selector}} returns a view  instance of  type {{gtClass:GtPhlowProtoView}}\n- **Remote subclass** (e.g., {{gtClass:GtRemotePhlowPictureViewRemoteExamples}}) — {{gtMethod:name=GtRemotePhlowPictureViewRemoteExamples>>#createProtoView|label=#selector}} returns a view instance of type {{gtClass:GtRemotePhlowProtoView}}.\n\nThe polymorphic `createProtoView` is used by error examples that test the view construction path directly.\n\n**Test categories:**\n1. **Error examples** — test that computation errors produce {{gtClass:GtRemotePhlowViewErrorData}} rather than propagating exceptions\n2. **Scripter examples** — use {{gtClass:BlScripter}} to test the full rendering pipeline in an inspector (tab clicks, element checks, error displays)\n3. **Declarative views examples** — test the specification/data pipeline via {{gtClass:GtRemotePhlowDeclarativeViewsExamples}} subclasses (Local, Remote, ProxySimulation — not GemStone)\n4. **Alt+click examples** — test that alt+clicking a tab header opens the source definition in a new pager pane"
+							"string" : "For a new local/remote view that computes one custom serializable value, start with the generic concrete-data pipeline. This is now the main and simplest approach. {{gtClass:GtRemotePhlowPictureView}} is the reference implementation."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:36:11.123476+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:36:11.123476+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "OJVgE3qsSgG2LBUPMkfqqw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "1. a view subclass of {{gtClass:GtRemotePhlowLocalView}} that owns computation blocks and implements `computeViewData`;\n2. a serializable view-data value subclass of {{gtClass:GtRemotePhlowBasicViewData}};\n3. a declarative rendering stencil, normally selected by name."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:36:09.527087+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:36:09.527087+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "bWF80vovQVq6Z5NEDpFQFA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The author normally creates only three application-specific components:"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1737,7 +2672,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.247+02:00"
+									"dateAndTimeString" : "2026-09-01T15:36:24.263634+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1748,17 +2683,128 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.247+02:00"
+									"dateAndTimeString" : "2026-09-01T15:36:24.263634+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "GXEGrsVwY0+0DYuB8NKXNw=="
+								"uidString" : "x+5hbgONQZ6gqXr+Oyjg/w=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Example — a declarative pipeline test:\n{{gtMethod:GtRemotePhlowDeclarativeViewsExamples>>pictureView|expanded}}"
+							"string" : "The view does **not** need an application-specific specification or datasource. {{gtMethod:GtRemotePhlowPictureView>>#asGtDeclarativeView}} configures the generic {{gtClass:GtRemotePhlowConcreteDataViewSpecification}} and {{gtClass:GtRemotePhlowConcreteDataViewDataSource}}. The generic datasource invokes `computeViewData` and catches errors; the generic specification handles data transport, rehydration, refresh, and the explicit declarative rendering flow."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:36:29.269968+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:36:29.269968+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ZxhhX9wVSm6+M5REA4b5mA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The picture view's `computeViewData` answers {{gtClass:GtRemotePhlowPictureViewData}}, which carries picture bytes, media type, width, and height. Its configured rendering-stencil name is turned into a {{gtClass:GtPhlowNamedStencil}} by {{gtMethod:GtRemotePhlowConcreteDataViewSpecification>>#createDeclarativeStencilForViewData:}}."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:37:32.536585+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:37:32.536585+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OCZjbE5lSES14lD6wTrg0A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtMethod:GtRemotePhlowConcreteDataViewSpecification>>#viewFor:}} creates an explicit view with {{gtMethod:GtPhlowExplicitView>>#declarativeStencil:|label=#selector}}. The block retrieves generic view data and answers a declarative stencil. This preserves both local rendering and remote declarative transport."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T11:53:27.303901+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:36:29.313378+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "AL2Z0wIcSkyXRu2cKuk5JQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Use this approach unless the view requires custom retrieval, multiple independently retrieved values, specialized cache invalidation, or another behavior that the generic pipeline cannot express."
 						}
 					]
 				},
@@ -1770,7 +2816,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.242+02:00"
+						"dateAndTimeString" : "2026-09-01T13:48:07.181633+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1781,17 +2827,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.242+02:00"
+						"dateAndTimeString" : "2026-09-01T13:48:07.181633+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "xBe8i6AUYEi9kCgOhqzVJg=="
+					"uidString" : "0nKtS5ShR5uwj6TCT104uw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Testing with Examples"
+				"string" : "## Primary approach: generic concrete-data views"
 			},
 			{
 				"__type" : "textSnippet",
@@ -1812,7 +2858,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-27T22:57:18.252+02:00"
+									"dateAndTimeString" : "2026-09-01T15:40:59.330528+02:00"
 								}
 							},
 							"editEmail" : {
@@ -1823,17 +2869,165 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-07-31T11:13:15.691+02:00"
+									"dateAndTimeString" : "2026-09-01T15:40:59.330528+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "SvebY+45ckmYxTbn7lyjtg=="
+								"uidString" : "AhGB8hvUQ+mv6miuOCXyzA=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "1. **View class** — subclass {{gtClass:GtRemotePhlowLocalView}}. Add instance variables for computation blocks. Implement `asGtDeclarativeView` creating the specification with a data source.\n2. **Builder method** — add a method on both {{gtClass:GtPhlowProtoView}} and {{gtClass:GtRemotePhlowProtoView}} that creates and returns the view instance (with `originalView:` and `definingMethod:` set).\n3. **Specification class** — subclass {{gtClass:GtPhlowViewSpecification}}. Implement `viewFor:` using {{gtMethod:GtPhlowExplicitView>>#declarativeStencil:}}, `asBasicViewDataForExport`, `fromJSONDictionary:`, `initializeFromInspector:`, `retrieveData`, `retrievePrimitiveData`.\n4. **Data source class** — subclass {{gtClass:GtRemotePhlowDeclarativeViewDataSource}}. Implement `retrieveData` evaluating computations, wrapping errors.\n5. **View data class** — subclass {{gtClass:GtRemotePhlowBasicViewData}}. Hold computed values, implement `asDictionaryForExport` and class-side `fromDictionary:`.\n6. **GemStone proxy** — subclass {{gtClass:GtpoGtPhlowViewSpecification}} in `GToolkit-GemStone-Pharo-Proxies`. Implement `retrieveData` calling `proxyPerform: #retrievePrimitiveData`.\n7. **Test object** — a class with a `gtView` method using the new view.\n8. **Examples** — abstract + Local/Remote subclasses testing error handling, scripter rendering, declarative pipeline, and alt+click definition browsing.\n9. **Declarative views example** — add a method in {{gtClass:GtRemotePhlowDeclarativeViewsExamples}} testing the specification roundtrip (skip in GemStone subclass if no connection available)."
+							"string" : "Use a custom specification/datasource pair only when the generic concrete-data pipeline does not provide enough control. {{gtClass:GtRemotePhlowWebBrowserView}} is the reference implementation."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:40:58.171238+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:40:59.355761+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "n8322zteRbmcLJQkZ/Gt5Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The browser view needs separate content and dynamic-header retrieval, static headers, specialized included-versus-lazy behavior, merging before rendering, and explicit local/remote cache invalidation. It therefore defines {{gtClass:GtRemotePhlowWebBrowserViewSpecification}} and {{gtClass:GtRemotePhlowDeclarativeWebBrowserViewDataSource}}."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:40:56.904193+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:40:58.206009+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "82UYk1HwQNioh8H+Oc4b7Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Its {{gtMethod:GtRemotePhlowWebBrowserViewSpecification>>#viewFor:}} still follows the same essential rendering rule: create an explicit view, set {{gtMethod:GtPhlowView>>#phlowViewSpecification:|label=#selector}}, and use {{gtMethod:GtPhlowExplicitView>>#declarativeStencil:|label=#selector}}. {{gtMethod:GtRemotePhlowWebBrowserViewSpecification>>#createDeclarativeContentStencil}} retrieves/merges the values and answers {{gtClass:GtRemotePhlowWebBrowserStencil}} or {{gtClass:GtPhlowErrorStencil}}."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:40:55.346244+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:40:56.928465+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "L4VGG49RRtK7pIxEi6A2ow=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The dedicated browser stencil subclasses {{gtClass:GtPhlowStencil}}, exports its concrete state with {{gtMethod:GtRemotePhlowWebBrowserStencil>>#asDictionaryForExport}}, and restores it with {{gtMethod:GtRemotePhlowWebBrowserStencil>>#initializeFromJSONDictionary:}}. It inherits {{gtMethod:GtPhlowStencil>>#asGtStencilSpecification}}, which creates a {{gtClass:GtRemotePhlowDirectStencilSpecification}}; do not add a redundant stencil-specification class."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T11:53:27.436159+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:40:55.386176+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qpHVox4jR/6LXNm9AvNuwQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Provide a value-based standalone API on such a stencil, but never blocks. {{gtMethod:GtRemotePhlowWebBrowserStencilTestObject>>#gtWebBrowserHeadersFor:}} shows the stencil used directly in an explicit declarative view."
 						}
 					]
 				},
@@ -1845,7 +3039,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.248+02:00"
+						"dateAndTimeString" : "2026-09-01T13:48:38.92759+02:00"
 					}
 				},
 				"editEmail" : {
@@ -1856,17 +3050,760 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-07-27T22:57:18.248+02:00"
+						"dateAndTimeString" : "2026-09-01T13:48:38.92759+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "gBMuqNuKN0OEuPXzDe1exA=="
+					"uidString" : "BiRYmVtXQH2M++y7MkweCQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## Checklist for Creating a New Local/Remote View"
+				"string" : "## Alternative: a custom specification and datasource"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:08.537236+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:08.537236+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "LHt6hH81RNKuDHkHEalQ1A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "1. Start from {{gtClass:GtRemotePhlowPictureView}} and verify its current code in the image."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:10.162669+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:10.162669+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Yr0Bl9vdQK2RmhDxlNH0iQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "2. Create a {{gtClass:GtRemotePhlowLocalView}} subclass with computation blocks, `computeViewData`, a rendering-stencil name, and lazy/included transport intent."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:20.85308+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:20.85308+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "Hw6mehTnTzeLmDzIRDveOA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "3. Create a {{gtClass:GtRemotePhlowBasicViewData}} subclass that fully serializes/deserializes the concrete data needed by the stencil."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:46.020936+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:46.020936+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "nJilIHIiTFuKR/AePmvsng=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "4. In `asGtDeclarativeView`, use {{gtClass:GtRemotePhlowConcreteDataViewSpecification}} plus {{gtClass:GtRemotePhlowConcreteDataViewDataSource}}. Do not duplicate either generic class."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:22.466295+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:46.05853+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "rR5OQfVtQHe+NJ7z5rb8Xw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "5. Add builders to {{gtClass:GtPhlowProtoView}} and {{gtClass:GtRemotePhlowProtoView}}."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T13:49:37.494786+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:22.503303+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "IsKlzdHaReOKxfAtbwUgHg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "6. Provide the named rendering stencil(s), including any locally-only alternative stencil needed by callers."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:55.255741+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:24.421694+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "/2OxWedCRmOop3r66a4vZQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "7. Create relevant view construction and inspection examples and make sure they pass"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T13:49:41.236353+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T13:49:41.236353+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "PHF0+24LRau9yWy2f/KHoQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "### Default: generic concrete-data view"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:28.76198+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:28.76198+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "u9SuhLNpTDOnTQUDxE4qpg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "1. Start from {{gtClass:GtRemotePhlowWebBrowserView}} and identify the missing generic capability."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:30.50084+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:30.50084+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "7LID9J3yQnmVYYNF7bgdRg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "2. Create a specification subclass and datasource subclass only for that extra behavior."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:32.095371+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:43.766188+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "g6DHGPiwRpOnPRN6Na0yVg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "3. Keep computations on the view; make the datasource evaluate them and convert failures to {{gtClass:GtRemotePhlowViewErrorData}}."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:33.191802+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:33.191802+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "r4d+M8+cQEWykeBWhH9h/g=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "4. Serialize every specification field that crosses the boundary and tolerate absent optional keys when reading old/incomplete dictionaries."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:50.264783+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:45:03.136489+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "x9rJ6OW7S3e9jc6jGoduWA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "5. Implement {{gtMethod:GtPhlowViewSpecification>>#initializeFromInspector:|label=#selector}} to reconnect remote lazy retrieval."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:51.57718+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:45:23.424762+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "GxHtRRsgSXuULYu1tEfsfw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "6. Add {{gtMethod:GtPhlowViewSpecification>>#flushCachedData|label=#selector}} when values can be retained locally or remotely; clear local values and forward the operation to the data source/proxy."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:52.883165+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:45:45.062902+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "DuwBQY2VTwGPGfIRYFo53A=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "7. Implement {{gtMethod:GtPhlowViewSpecification>>#configureViewActionsFor:|label=#selector}} to add normal actions and the refresh action."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:41:15.470574+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:42:52.92003+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "b0JbNR2CTLaRgVwaRvU7BQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "8. Add the `Gtpo...Specification` proxy if GemStone needs to fetch/flush specialized values."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:43:14.050888+02:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-09-01T15:43:15.615879+02:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "C+XlQWnPRhqHFN6md4a5UQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "9. Create relevant view construction and inspection examples and make sure they pass"
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T13:49:43.893861+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T13:49:43.893861+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "KMlMh4hvQESNYpSWK9mK4A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "### Custom pipeline: only when necessary"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T11:53:27.467445+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-01T15:41:15.508839+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "y+q1DtybR2W0znjieskrrg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "For any newly created class that defines `initialize`, also define class-side `new` as `^ self basicNew initialize` because GemStone does not reliably perform automatic initialization in the relevant path."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-09-01T13:48:43.425785+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-09-01T13:48:43.425785+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "b06McMgXRTGgSkLJBi/kEA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Implementation checklist"
 			}
 		]
 	},
