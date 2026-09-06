@@ -456,7 +456,82 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-16T18:05:28.75066+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-03-16T18:06:42.261221+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "78ssI4lBQ269ZUlhR2sq9A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Keep Markdown answers short. Do not list existing methods or class definitions code unless asked for it. Link to code entities instead."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-06T08:28:13.555828+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-09-06T08:30:17.149587+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UUCQM0ftSWyR6h0znpy99A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "HoWhen referring to values you already computed through tools, do not hard code the values. Instead, refer to the objects through `{{gtObject:}}` annotations."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -466,7 +541,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-16T18:05:28.75066+01:00"
+						"dateAndTimeString" : "2026-09-06T08:28:05.073074+02:00"
 					}
 				},
 				"editEmail" : {
@@ -477,17 +552,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-03-16T18:06:42.261221+01:00"
+						"dateAndTimeString" : "2026-09-06T08:28:09.864734+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "78ssI4lBQ269ZUlhR2sq9A=="
+					"uidString" : "0r0HLw9+R1yQvX3f9jiUqA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Keep Markdown answers short. Do not list existing methods or class definitions code unless asked for it. Link to code entities instead."
+				"string" : "# Response style"
 			}
 		]
 	},

@@ -434,6 +434,54 @@
 								"uuid" : "23d38fe7-6ddd-0d00-b330-f4270355dbae"
 							},
 							"width" : 1.0
+						},
+						{
+							"arrow" : true,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.8504398826979472,
+								"green" : 0.0,
+								"red" : 0.8504398826979472
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "a8d38fe7-6ddd-0d00-b33a-95560355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "467ac354-aa2a-4673-9997-476488870072"
+							},
+							"width" : 1.0
+						},
+						{
+							"arrow" : true,
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.5004887585532747,
+								"green" : 0.0,
+								"red" : 0.5004887585532747
+							},
+							"from" : {
+								"__type" : "uuid",
+								"uuid" : "f5d38fe7-6ddd-0d00-b340-d2320355dbae"
+							},
+							"label" : {
+								"is_visible" : false,
+								"text" : "Edge label",
+								"x" : 0.5,
+								"y" : 0.5
+							},
+							"to" : {
+								"__type" : "uuid",
+								"uuid" : "3321cb4a-4e55-4fc3-aa50-e23f2a8db0fd"
+							},
+							"width" : 1.0
 						}
 					],
 					"nodes" : [
@@ -505,6 +553,10 @@
 									{
 										"__type" : "uuid",
 										"uuid" : "b4d38fe7-6ddd-0d00-b33b-6f480355dbae"
+									},
+									{
+										"__type" : "uuid",
+										"uuid" : "467ac354-aa2a-4673-9997-476488870072"
 									}
 								],
 								"is_visible" : true,
@@ -547,12 +599,12 @@
 									}
 								],
 								"is_visible" : true,
-								"x" : 0.31,
-								"y" : 0.68
+								"x" : 0.31561097256857856,
+								"y" : 0.6856109725685784
 							},
 							"width" : 12,
-							"x" : 0.56,
-							"y" : 0.36183738501073903
+							"x" : 0.5450374064837904,
+							"y" : 0.3633758465492006
 						},
 						{
 							"color" : {
@@ -888,8 +940,8 @@
 								"is_visible" : false
 							},
 							"width" : 12,
-							"x" : 0.32,
-							"y" : 0.36183738501073903
+							"x" : 0.32561097256857857,
+							"y" : 0.3633758465492006
 						},
 						{
 							"color" : {
@@ -915,8 +967,8 @@
 								"is_visible" : false
 							},
 							"width" : 12,
-							"x" : 0.67,
-							"y" : 0.36183738501073903
+							"x" : 0.6756109725685784,
+							"y" : 0.3633758465492006
 						},
 						{
 							"color" : {
@@ -989,8 +1041,8 @@
 							},
 							"label" : {
 								"text" : "Specific coding",
-								"x" : 5.833333333333333,
-								"y" : 0.4166666666666667
+								"x" : 4.5,
+								"y" : 2.1666666666666665
 							},
 							"pipeline" : {
 								"is_visible" : false
@@ -1133,6 +1185,60 @@
 							"width" : 12,
 							"x" : 0.5681525735294117,
 							"y" : 0.8006086579119771
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.8504398826979472,
+								"green" : 0.0,
+								"red" : 0.8504398826979472
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "467ac354-aa2a-4673-9997-476488870072"
+							},
+							"label" : {
+								"text" : "LLM-augmented",
+								"x" : 0.5,
+								"y" : 2.0
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.40341684050064186,
+							"y" : 0.15000000000000002
+						},
+						{
+							"color" : {
+								"alpha" : 1.0,
+								"blue" : 0.8504398826979472,
+								"green" : 0.0,
+								"red" : 0.8504398826979472
+							},
+							"evolve" : {
+								"is_visible" : false
+							},
+							"height" : 12,
+							"id" : {
+								"__type" : "uuid",
+								"uuid" : "3321cb4a-4e55-4fc3-aa50-e23f2a8db0fd"
+							},
+							"label" : {
+								"text" : "LLM-augmented",
+								"x" : 1.25,
+								"y" : -1.0
+							},
+							"pipeline" : {
+								"is_visible" : false
+							},
+							"width" : 12,
+							"x" : 0.7299171614249037,
+							"y" : 0.6982331730769231
 						}
 					],
 					"title" : {
