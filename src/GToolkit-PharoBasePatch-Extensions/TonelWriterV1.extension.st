@@ -1,7 +1,7 @@
-Extension { #name : #TonelWriter }
+Extension { #name : #TonelWriterV1 }
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
-TonelWriter >> setPackageInfoOf: aClassDefinition in: definition [
+TonelWriterV1 >> setPackageInfoOf: aClassDefinition in: definition [
 	<gtPharoPatch: #Pharo>
 	
 	self at: #category put: aClassDefinition category asSymbol in: definition
