@@ -1688,14 +1688,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-01-27T11:12:02.010556+01:00"
+									"dateAndTimeString" : "2026-09-21T21:38:34.522087-06:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "P9oB3VCPRK6m9mnuQ8FcPA=="
 							},
-							"code" : "designStudyPaperIDs := VRDatasetExamples new designStudies collect: #id"
+							"code" : "designStudyIDs := VRDatasetExamples new designStudies collect: #id"
 						},
 						{
 							"__type" : "textSnippet",
