@@ -1,7 +1,8 @@
 #!/bin/bash
-set -e
+set -o xtrace # print each command to stderr after expanding variables/substitutions, prefixed with `+` (or PS4)
+set -e        # exit immediately if any command returns a non-zero exist status
 
-export GTfolder=/var/www/html/gt
+export GTfolder=/data/www/html/gt
 
 cd $GTfolder
 
