@@ -80,6 +80,13 @@ class GlamorousToolkit {
     static final TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
     static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "GToolkit-Editor" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone" "PythonBridge-Pharo"'
+    // The rust editor examples, which TEST_OPTIONS skips. They need a windowing event loop, which
+    // --interactive asks for: without it an example that renders an element declines to run and is
+    // reported as a success. Grep a build log for LIB-EDITOR-EXAMPLE-SKIPPED to see which ran.
+    static final EDITOR_TEST_OPTIONS = '--disable-deprecation-rewrites --interactive --packages "GToolkit-Editor"'
+    // One report per example class, named <package>-<class>-Examples.xml. Narrow on purpose: the broad
+    // *.xml glob would re-report the main suite, which report_test_results has already collected.
+    static final EDITOR_TEST_REPORTS = 'GToolkit-Editor-*-Examples.xml'
     static final RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
     static final DOCKER_REPOSITORY = 'feenkcom/gtoolkit'
     static final DOCKER_TENTATIVE_TAG = 'tentative'
@@ -129,7 +136,7 @@ class GlamorousToolkit {
         this.artefacts = [:]
 
         jobs = [
-                new TestAndPackage(this, new Agent(Triplet.MacOS_Aarch64), Triplet.MacOS_Aarch64),
+                new TestAndPackage(this, new Agent(Triplet.MacOS_Aarch64), Triplet.MacOS_Aarch64).enable_editor_examples(),
                 new TestAndPackage(this, new Agent(Triplet.MacOS_X86_64), Triplet.MacOS_X86_64).disable_tests(),
                 new TestAndPackageWithGemstoneAndPython(this, new Agent(Triplet.Linux_X86_64, "scooby-doo"), Triplet.Linux_X86_64),
                 new TestAndPackage(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64),
@@ -587,18 +594,29 @@ class DockerMultiArchImage extends AgentJob {
 class TestAndPackage extends AgentJob {
     final Triplet target
     boolean runTests
+    boolean runEditorExamples
     ArrayList<Triplet> extraTargets
 
     TestAndPackage(GlamorousToolkit build, Agent agent, Triplet target) {
         super(build, agent)
         this.target = target
         this.runTests = build.runTests
+        // Off by default, enabled per target. Only MacOS and Windows get a VM carrying libEditor, see
+        // prepare_for_testing, and only MacOS has ever run GlamorousToolkit interactively on CI, which
+        // `gt-installer start` does in the Package image stage.
+        this.runEditorExamples = false
         this.extraTargets = []
     }
 
     @NonCPS
     TestAndPackage disable_tests() {
         this.runTests = false
+        return this
+    }
+
+    @NonCPS
+    TestAndPackage enable_editor_examples() {
+        this.runEditorExamples = true
         return this
     }
 
@@ -649,7 +667,38 @@ class TestAndPackage extends AgentJob {
                     report_test_results() 
                 }
             }
+            run_editor_examples()
         }
+    }
+
+    /**
+     * Runs the examples of the rust text editor, which the main example run skips.
+     *
+     * A stage of its own so that a failure here is not mistaken for a failure of the main suite, and
+     * so the two can be read apart in Blue Ocean. It relies on the Test stage having prepared
+     * EXAMPLES_FOLDER, so it must run after it, not instead of it.
+     */
+    void run_editor_examples() {
+        if (!runEditorExamples) {
+            return
+        }
+
+        script.stage("Examples Editor " + target.short_label()) {
+            script.timeout(time: 30, unit: 'MINUTES') {
+                delete_lepiter_directory()
+                // exec_ui, not exec: on Linux it supplies the X display that --interactive draws into.
+                platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.EDITOR_TEST_OPTIONS}")
+                report_editor_test_results()
+            }
+        }
+    }
+
+    /**
+     * Reports the results of the rust editor examples only.
+     * Needed because report_test_results has already run inside the Test stage.
+     */
+    void report_editor_test_results() {
+        script.junit "${GlamorousToolkit.EXAMPLES_FOLDER}/${GlamorousToolkit.EDITOR_TEST_REPORTS}"
     }
 
     void prepare_for_testing() {
