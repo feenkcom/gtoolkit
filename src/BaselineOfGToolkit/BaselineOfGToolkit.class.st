@@ -207,7 +207,9 @@ BaselineOfGToolkit >> baseline: spec [
 				baseline: 'GToolkit4OpenAPI'
 					with: [ spec repository: 'github://feenkcom/gt4openapi:main/src' ];
 				baseline: 'RBFormatter'
-					with: [ spec repository: 'github://j-brant/RBFormatter/src' ];
+					with: [ self
+							forPharo13AndNewer: [ spec repository: 'github://j-brant/RBFormatter/src' ]
+							forOlder: [ spec repository: 'github://j-brant/RBFormatter:Pharo12/src' ] ];
 				baseline: 'GToolkitWorld'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-world:main/src' ];
 				baseline: 'GToolkitPhlowExamples'
@@ -220,13 +222,10 @@ BaselineOfGToolkit >> baseline: spec [
 					with: [ spec repository: 'github://feenkcom/gt4llm:main/src' ];
 				baseline: 'Gt4CSS'
 					with: [ spec repository: 'github://feenkcom/gt4css:main/src' ];
-				baseline: 'MethodProxiesForGlamorousToolkit' 
-					with: [ 
-						self 
-							fastForPharo13AndPharo12: [ 
-								spec repository: 'github://feenkcom/MethodProxies:master/src'] 
-							forPharo11: [
-								spec repository: 'github://feenkcom/MethodProxies:gt-pharo11/src' ] ];
+				baseline: 'MethodProxiesForGlamorousToolkit'
+					with: [ self
+							fastForPharo13AndPharo12: [ spec repository: 'github://feenkcom/MethodProxies:master/src' ]
+							forPharo11: [ spec repository: 'github://feenkcom/MethodProxies:gt-pharo11/src' ] ];
 				baseline: 'GToolkitProfiler'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-profiler:main/src' ];
 				baseline: 'GtoolkitRoadmaps'
