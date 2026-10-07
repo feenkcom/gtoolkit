@@ -79,6 +79,9 @@ class GlamorousToolkit {
     static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo12.0-SNAPSHOT.build.1596.sha.e35513ca60.arch.64bit.zip"
     static final TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
+    // List of rust editor packages that includes examples.
+    // It is listed separately because it is used in two places.
+    // Please, use the "<PACKAGE-NAME>-RustEditor" package naming so it is detected by EDITOR_TEST_REPORTS.
     static final EDITOR_TEST_PACKAGES = '"GToolkit-Editor" "GToolkit-Pharo-Coder-Examples-RustEditor"'
     static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone" "PythonBridge-Pharo" ' + EDITOR_TEST_PACKAGES
     // The rust editor examples, which TEST_OPTIONS skips. They need a windowing event loop, which
