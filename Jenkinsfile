@@ -79,14 +79,15 @@ class GlamorousToolkit {
     static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo12.0-SNAPSHOT.build.1596.sha.e35513ca60.arch.64bit.zip"
     static final TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
-    static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "GToolkit-Editor" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone" "PythonBridge-Pharo"'
+    static final EDITOR_TEST_PACKAGES = '"GToolkit-Editor" "GToolkit-Pharo-Coder-Examples-RustEditor"'
+    static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone" "PythonBridge-Pharo" ' + EDITOR_TEST_PACKAGES
     // The rust editor examples, which TEST_OPTIONS skips. They need a windowing event loop, which
     // --interactive asks for: without it an example that renders an element declines to run and is
     // reported as a success. Grep a build log for LIB-EDITOR-EXAMPLE-SKIPPED to see which ran.
-    static final EDITOR_TEST_OPTIONS = '--disable-deprecation-rewrites --interactive --packages "GToolkit-Editor"'
+    static final EDITOR_TEST_OPTIONS = '--disable-deprecation-rewrites --interactive --packages ' + EDITOR_TEST_PACKAGES
     // One report per example class, named <package>-<class>-Examples.xml. Narrow on purpose: the broad
     // *.xml glob would re-report the main suite, which report_test_results has already collected.
-    static final EDITOR_TEST_REPORTS = 'GToolkit-Editor-*-Examples.xml'
+    static final EDITOR_TEST_REPORTS = EXAMPLES_FOLDER + '/GToolkit-Editor-*-Examples.xml,' + EXAMPLES_FOLDER + '/*-RustEditor-*-Examples.xml'
     static final RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
     static final DOCKER_REPOSITORY = 'feenkcom/gtoolkit'
     static final DOCKER_TENTATIVE_TAG = 'tentative'
@@ -698,7 +699,7 @@ class TestAndPackage extends AgentJob {
      * Needed because report_test_results has already run inside the Test stage.
      */
     void report_editor_test_results() {
-        script.junit "${GlamorousToolkit.EXAMPLES_FOLDER}/${GlamorousToolkit.EDITOR_TEST_REPORTS}"
+        script.junit GlamorousToolkit.EDITOR_TEST_REPORTS
     }
 
     void prepare_for_testing() {
