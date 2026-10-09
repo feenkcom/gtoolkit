@@ -213,9 +213,7 @@ BaselineOfGToolkit >> baseline: spec [
 				baseline: 'Gt4CSS'
 					with: [ spec repository: 'github://feenkcom/gt4css:main/src' ];
 				baseline: 'MethodProxiesForGlamorousToolkit'
-					with: [ self
-							fastForPharo13AndPharo12: [ spec repository: 'github://feenkcom/MethodProxies:master/src' ]
-							forPharo11: [ spec repository: 'github://feenkcom/MethodProxies:gt-pharo11/src' ] ];
+					with: [ spec repository: 'github://feenkcom/MethodProxies:master/src' ];
 				baseline: 'GToolkitProfiler'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-profiler:main/src' ];
 				baseline: 'GtoolkitRoadmaps'

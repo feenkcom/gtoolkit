@@ -157,21 +157,8 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 ]
 
 { #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
-	self 
-		fastForPharo13AndPharo12: [] 
-		forPharo11: [
-			FT2Handle class 
-				compile: 'startUp: isImageStarting
-	<gtPharoPatch: #Pharo11>'
-			classified: 'startup']
-]
-
-{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
-	self 
-		fastForPharo13AndPharo12: [ self applyPatchForFinalizationProcessPharo12Plus ] 
-		forPharo11: [ ] 
+	self applyPatchForFinalizationProcessPharo12Plus 
 ]
 
 { #category : #accessing }
@@ -396,9 +383,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForWinPlatform [
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForWorkingSession [
-	self 
-		fastForPharo13AndPharo12: [ WorkingSession addSlot: #id  ] 
-		forPharo11: [ ] 
+	WorkingSession addSlot: #id  
 ]
 
 { #category : #accessing }
@@ -468,7 +453,6 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchForWorkingSession.
 	self applyPatchForFinalizationProcess.
 	self applyPatchForFT2Face.
-	self applyPatchForFT2Handle.
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
 	self applyPatchForWinPlatform.
