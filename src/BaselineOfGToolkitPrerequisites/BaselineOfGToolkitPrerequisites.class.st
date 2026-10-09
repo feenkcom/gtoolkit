@@ -54,20 +54,10 @@ BaselineOfGToolkitPrerequisites class >> source: source withPatchPragma: aSymbol
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchAuthor [
-	self 
-		fastForPharo13: [
-			#Author asClass instanceSide compile: 'useAuthor: aString during: aBlock
-	<gtPharoPatch: #Pharo13>
-			
-	^ aBlock value' classified: 'gt-patch'.
-	
-	#Author asClass classSide compile: 'useAuthor: aString during: aBlock
-	<gtPharoPatch: #Pharo13>
-			
-	^ aBlock value' classified: 'gt-patch'.
-	] 
-		forPharo12: [ ] 
-		forPharo11: [ ]
+	self
+		fastForPharo14: [ self compileMethodsForAuthor ]
+		forPharo13: [ self compileMethodsForAuthor ]
+		forPharo12: [  ]
 ]
 
 { #category : #accessing }
@@ -83,7 +73,8 @@ BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForAstNodesInPharo12 [
 	self 
-		fastForPharo13: []
+		fastForPharo14: [ ]
+		forPharo13:[ ]
 		forPharo12: [
 			RBNode withAllSubclasses do: [ :each | 
 				(Object << ('OC', (each name withoutPrefix: 'RB'))asSymbol
@@ -118,7 +109,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForAstNodesInPharo12 [
 					package: 'GToolkit-Pharo12Stubs-AST') install.
 			
 		]
-		forPharo11: [ ]
 ]
 
 { #category : #accessing }
@@ -295,7 +285,8 @@ BaselineOfGToolkitPrerequisites >> applyPatchForMethodAnnouncements [
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo13 [
 	self 
-		fastForPharo13: [
+		fastForPharo14: [ ]
+		forPharo13: [
 			(Object << #Author
 				slots: {};
 				package: 'GToolkit-Pharo12Stubs') install.
@@ -318,13 +309,42 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo13 [
 				package: 'GToolkit-Pharo12Stubs') install.
 		] 
 		forPharo12: []
-		forPharo11: [ ]
+]
+
+{ #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo14 [
+	self 
+		fastForPharo14: [ 
+			(Object << #Author
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+				
+			(Object << #RBAbstractTransformation
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(Object << #RBRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(Object << #RBTransformation
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+				
+			(Object << #RBPullUpMethodRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+			(Object << #RBPullUpInstanceVariableRefactoring
+				slots: {};
+				package: 'GToolkit-Pharo12Stubs') install.
+		]
+		forPharo13: [] 
+		forPharo12: []
 ]
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
 	self 
-		fastForPharo13: []
+		fastForPharo14: [ ]
+		forPharo13: [ ]
 		forPharo12: [
 			(RBProgramNodeVisitor << #OCProgramNodeVisitor
 				slots: {};
@@ -347,10 +367,9 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
 				slots: {};
 				package: 'GToolkit-Pharo13Stubs') install.
 				
-			(ClapCommand << #ClapCommandSpec
+			(#ClapCommand asClass << #ClapCommandSpec
 				slots: {};
-				package: 'GToolkit-Pharo13Stubs') install.]
-		forPharo11: [ ]
+				package: 'GToolkit-Pharo13Stubs') install ]
 ]
 
 { #category : #accessing }
@@ -437,6 +456,23 @@ BaselineOfGToolkitPrerequisites >> baseline: spec [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> compileMethodsForAuthor [
+	#Author asClass instanceSide
+		compile: 'useAuthor: aString during: aBlock
+	<gtPharoPatch: #Pharo13>
+			
+	^ aBlock value'
+		classified: 'gt-patch'.
+
+	^ #Author asClass classSide
+		compile: 'useAuthor: aString during: aBlock
+	<gtPharoPatch: #Pharo13>
+			
+	^ aBlock value'
+		classified: 'gt-patch'
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	(PostLoaded isNotNil and: [ PostLoaded ]) ifTrue: [ ^ self ].
 	PostLoaded := true.
@@ -460,6 +496,7 @@ BaselineOfGToolkitPrerequisites >> preLoadGToolkitPrerequisites: spec [
 	
 	self applyPatchForPharo13StubsInPharo12.
 	self applyPatchForPharo12StubsInPharo13.
+	self applyPatchForPharo12StubsInPharo14.
 	
 	self applyPatchForAstNodesInPharo12.
 ]
