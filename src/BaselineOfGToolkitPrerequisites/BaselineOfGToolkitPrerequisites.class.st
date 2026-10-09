@@ -316,36 +316,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForMethodAnnouncements [
 ]
 
 { #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo13 [
-	self 
-		fastForPharo13: [
-			(Object << #EpBehaviorCategoryChange
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #EpCategoryChange
-				slots: { #classCategoryName . #affectedPackageName};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(#EpCategoryChange asClass << #EpCategoryAddition
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(#EpCategoryChange asClass << #EpCategoryRegistration
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(#EpCategoryChange asClass << #EpCategoryRemoval
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(#EpCategoryChange asClass << #EpCategoryRename
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #EpIconVisitor
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-		] 
-		forPharo12: []
-		forPharo11: [ ]
-]
-
-{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo13 [
 	self 
 		fastForPharo13: [
@@ -705,7 +675,6 @@ BaselineOfGToolkitPrerequisites >> preLoadGToolkitPrerequisites: spec [
 	PreLoaded := true. 
 	
 	self applyPatchForPharo13StubsInPharo12.
-	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
 	
 	self applyPatchForAstNodesInPharo12.
