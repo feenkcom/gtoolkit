@@ -18,17 +18,3 @@ RBCondition class >> isEmptyClass: anObject [
 					  anObject selectors isEmpty ] ] ]
 		  errorString: anObject printString , ' is <1?:not > empty'
 ]
-
-{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
-RBCondition class >> true [
-	<gtPharoPatch: #Pharo12>
-	"Returns a true condition. It is useful when chaining condition. It acts as neutral element of the operation such AND."
-
-	^ self 
-		forPharo12AndNewer: [	
-			self new
-				block: [true]
-				errorString: 'true'] 
-		forPharo11: [
-			self empty  ]
-]

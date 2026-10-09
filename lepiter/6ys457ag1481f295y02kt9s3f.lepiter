@@ -2648,7 +2648,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-12-14T10:38:23.153191+01:00"
+												"dateAndTimeString" : "2026-10-09T14:32:40.928521+02:00"
 											}
 										},
 										"uid" : {
@@ -2658,44 +2658,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "{{gtClass:EpBehaviorCategoryChange}} does not have the name of the old package name. This means we cannot distinguish package/tag name by looking at the event. Makes it harder to group changes by package in Epicea."
-									},
-									{
-										"__type" : "textSnippet",
-										"children" : {
-											"__type" : "snippets",
-											"items" : [ ]
-										},
-										"createEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"createTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-12-14T10:39:30.240561+01:00"
-											}
-										},
-										"editEmail" : {
-											"__type" : "email",
-											"emailString" : "<unknown>"
-										},
-										"editTime" : {
-											"__type" : "time",
-											"time" : {
-												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-12-14T11:15:11.543772+01:00"
-											}
-										},
-										"uid" : {
-											"__type" : "uid",
-											"uidString" : "+hQCQCisDQCCoFPzBJyqdQ=="
-										},
-										"paragraphStyle" : {
-											"__type" : "textStyle"
-										},
-										"string" : "Patched in gt4changes in a hack-ish way. In the postload of  {{gtClass:BaselineOfGToolkit4Changes}} we add the trait {{gtClass:TGtEpBehaviorCategoryChangeOldPackageName}} to {{gtClass:EpBehaviorCategoryChange}} and override {{gtMethod:EpBehaviorCategoryChange>>initializeOldCategory:newCategory:class:}} in {{gtPackage:GToolkit4Epicea}}  to extract the old package name."
+										"string" : "EpBehaviorCategoryChange does not have the name of the old package name. This means we cannot distinguish package/tag name by looking at the event. Makes it harder to group changes by package in Epicea."
 									},
 									{
 										"__type" : "textSnippet",

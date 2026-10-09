@@ -88,11 +88,9 @@ BaselineOfGToolkit >> applyLepiterDatabaseIconInPharoIcons [
 	"Current workaround for IceOperation>>#icon needing the icon name in Pharo 12,
 	instead of returning just the icon. This is used by GtLepiterDatabaseDefinition."
 	
-	self 
-		forPharo12AndNewer: [ Smalltalk ui theme icons icons 
+	Smalltalk ui theme icons icons 
 			at: #lepiterDatabase 
-			put: LeIcons lepiterDatabase create asSpartaForm ] 
-		forPharo11: []
+			put: LeIcons lepiterDatabase create asSpartaForm
 ]
 
 { #category : #'post load' }

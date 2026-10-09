@@ -2,9 +2,7 @@ Extension { #name : #UUID }
 
 { #category : #'*GToolkit-PharoBasePatch-ForPharo12' }
 UUID >> base64Encoded [
-	^ self 
-		forPharo12AndNewer: [ self uuidData base64Encoded ] 
-		forPharo11: [ super base64Encoded ]
+	^ self uuidData base64Encoded 
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-ForPharo12' }

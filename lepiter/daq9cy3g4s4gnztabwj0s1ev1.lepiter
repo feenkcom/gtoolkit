@@ -419,45 +419,7 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-05-15T23:55:13.493958+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-05-15T23:57:43.56004+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "adb56ObUDQC1XqrqCv9byw=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "In Pharo 12, {{gtClass:Job}} has an announcemt. So we add it to Pharo 10&11 in {{gtMethod:BaselineOfGToolkitPrerequisites>>#applyPatchForJob}} as we need {{gtClass:GtJob}} to have its own announcemet."
-						}
-					]
+					"items" : [ ]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -606,43 +568,6 @@
 								"__type" : "textStyle"
 							},
 							"string" : "In Pharo 11 the logic to handle the finalization process is on the class side of {{gtClass:WeakArray}}. In Pharo 12 a dedicated class, {{gtClass:FinalizationProcess}}, was added."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-12-27T17:37:40.049429+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2024-12-27T17:38:59.896492+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "nXbc+qPmDQCWxvyUDyD9uQ=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "One issue is that in Pharo 11, the class WeakArray has an class variable named FinalisationProcess, that is being changed. We add those methods that change the class variable FinalisationProcess using  the patch {{gtMethod:BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray}} only in Pharo 11."
 						},
 						{
 							"__type" : "textSnippet",

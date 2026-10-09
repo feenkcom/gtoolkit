@@ -8,8 +8,5 @@ OCProgramNode >> isUsed [
 	return value of a block. This differs from isDirectlyUsed in that it is conservative since it also includes
 	return values of blocks."
 
-	^ self 
-		forPharo12AndNewer: [ self isUsedAsReturnValue ] 
-		forPharo11: [
-			parent ifNil: [false] ifNotNil: [parent uses: self] ]
+	^ self isUsedAsReturnValue
 ]
