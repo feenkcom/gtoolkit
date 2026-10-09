@@ -51,8 +51,4 @@ ChangeRecord >> timeStamp [
 			| tokens |
 			tokens := self stamp findTokens: Character separators.
 			self gtReadTimeStampFromTokens: tokens format: 'm/d/yyyy' ] 
-		forPharo11: [ 
-			| tokens |
-			tokens := self stamp findTokens: Character separators.
-			self gtReadTimeStampFromTokens: tokens format: nil]
 ]
