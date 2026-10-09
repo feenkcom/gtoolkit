@@ -174,16 +174,7 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFT2Handle [
 BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcess [
 	self 
 		fastForPharo13AndPharo12: [ self applyPatchForFinalizationProcessPharo12Plus ] 
-		forPharo11: [ self applyPatchForFinalizationProcessPharo11 ] 
-]
-
-{ #category : #private }
-BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcessPharo11 [
-
-	(Object << #FinalizationProcess
-		slots: {};
-		sharedVariables: { #TheFinalizationProcess . #FinalizationSemaphore . #MournLoopProcess . #StopRequested . #StoppedSemaphore };
-		package: 'GToolkit-UtilitySystemStubs') install.
+		forPharo11: [ ] 
 ]
 
 { #category : #accessing }
@@ -322,36 +313,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForMethodAnnouncements [
 	MethodModified addSlot: #cachedOldSourceCode.
 	
 	MethodAdded addSlot: #cachedNewSourceCode
-]
-
-{ #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForPharo11StubsInPharo12 [
-	self 
-		fastForPharo13: []
-		forPharo12: [
-			(Object << #EpBehaviorCategoryChange
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #EpCategoryChange
-				slots: { #classCategoryName . #affectedPackageName};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(#EpCategoryChange asClass << #EpCategoryAddition
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(#EpCategoryChange asClass << #EpCategoryRegistration
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(#EpCategoryChange asClass << #EpCategoryRemoval
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(#EpCategoryChange asClass << #EpCategoryRename
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-			(Object << #EpIconVisitor
-				slots: {};
-				package: 'GToolkit-Pharo11Stubs') install.
-		] 
-		forPharo11: [ ]
 ]
 
 { #category : #accessing }
@@ -743,7 +704,6 @@ BaselineOfGToolkitPrerequisites >> preLoadGToolkitPrerequisites: spec [
 		ifTrue: [ ^ self ].
 	PreLoaded := true. 
 	
-	self applyPatchForPharo11StubsInPharo12.
 	self applyPatchForPharo13StubsInPharo12.
 	self applyPatchForPharo11StubsInPharo13.
 	self applyPatchForPharo12StubsInPharo13.
