@@ -72,15 +72,12 @@ BaselineOfGToolkitPrerequisites >> applyPatchAuthor [
 
 { #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForAsClass [
-	self 
-		fastForPharo13AndPharo12: [
-			String compile: 'asClass
+	String 
+		compile: 'asClass
 	<gtPharoPatch: #Pharo12>
 	"returns a global class with my name"
 	^ self asClassInEnvironment: Smalltalk globals'
-classified: 'gt-pharo-patch'.
-		] 
-		forPharo11: [ ]
+		classified: 'gt-pharo-patch'.
 ]
 
 { #category : #accessing }
@@ -291,13 +288,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForFinalizationProcessPharo12Plus [
 ]
 
 { #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForJob [
-	self 
-		fastForPharo13AndPharo12: [] 
-		forPharo11: [ Job addSlot: #announcer ] 
-]
-
-{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForLeJsonV4Name [
 
 	#(#FinalizationRegistryEntry #WeakKeyAssociation) do: [ :aClassName | 
@@ -345,47 +335,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo12StubsInPharo13 [
 ]
 
 { #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForPharo12SystemDictionaryAtPut [
-
-	self 
-		fastForPharo13: []
-		forPharo12: [ SystemDictionary compile:
-'at: aKey put: anObject
-	"Override from Dictionary to check Undeclared and fix up references to undeclared variables.
-	This is fixed upstream by https://github.com/pharo-project/pharo/pull/18807.  
-	Once we pick up that image BaselineOfGToolkitPrerequisites>>#applyPatchForPharo12SystemDictionaryAtPut should be removed."
-	| index assoc registeredMethods |
-	aKey isSymbol ifFalse: [ self error: ''Only symbols are accepted as keys in SystemDictionary'' ].
-
-	registeredMethods := #().
-
-	((self includesKey: aKey) not and: [ Undeclared includesKey: aKey ]) ifTrue: [
- 			| undeclared |
- 			undeclared := Undeclared associationAt: aKey.
- 			"Undeclared variables record using methods in a property, remove. Boostrap might have used Associations"
- 			(undeclared class == UndeclaredVariable) ifTrue: [
-				registeredMethods := undeclared removeProperty: #registeredMethods ifAbsent: [ #() ]]. 
- 			"and change class to be Global" 
- 			self add: (undeclared primitiveChangeClassTo: GlobalVariable new).
- 			Undeclared removeKey: aKey].
- 	"code of super at:put:, not using Associations but GlobalVariable"
- 	index := self findElementOrNil: aKey.
- 	assoc := array at: index.
- 	"GT Pharo patch:  Always flush the cache.
- 	Pharo 12 only flushes if the association isNil, but if it is in Undeclared the cachedClassNames need to be updated."
- 	assoc
- 		ifNil: [self atNewIndex: index put: (GlobalVariable key: aKey value: anObject) ]
- 		ifNotNil: [assoc value: anObject].
- 	self flushClassNameCache.
-		
-	registeredMethods do: [ :aMethod | aMethod isInstalled ifTrue: [aMethod recompile] ].		
-
- 	^ anObject'
-			classified: 'gt-pharo-patch' ] 
-		forPharo11: [ ]
-]
-
-{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
 	self 
 		fastForPharo13: []
@@ -415,144 +364,6 @@ BaselineOfGToolkitPrerequisites >> applyPatchForPharo13StubsInPharo12 [
 				slots: {};
 				package: 'GToolkit-Pharo13Stubs') install.]
 		forPharo11: [ ]
-]
-
-{ #category : #accessing }
-BaselineOfGToolkitPrerequisites >> applyPatchForWeakArray [
-	self 
-		fastForPharo13AndPharo12: [] 
-		forPharo11: [ 
-			WeakArray
-				addClassVarNamed: 'MournLoopProcess';
-				addClassVarNamed: 'StopRequested';
-				addClassVarNamed: 'StoppedSemaphore';
-				initialize.
-			WeakArray class compile:
-'stopRequested
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-	^ StopRequested ifNil: [ false ]'
-				classified: 'gt-pharo-patch'.
-			WeakArray class compile:
-'stoppedSemaphore
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-	^ StoppedSemaphore ifNil: [ StoppedSemaphore := Semaphore new ]'
-				classified: 'gt-pharo-patch'.
-			WeakArray class compile:
-'finalizationProcess
-	"The finalization process arranges to send mourn to each element of the VM''s finalization queue,
-	 which is accessed via primitiveFetchMourner.  The VM signals FinalizationSemaphore whenever
-	 the queue is non-empty.  This process loops, waiting on the semaphore, fetches the first element
-	 of the queue and then spawns a process at a higher priority to actually send the mourn messages.
-	 If an error occurs in the higher priority mourn loop process then this process will simply spawn
-	 another process, hence ensuring that errors in finalization methods don''t break finalization.
-
-	 In addition this process also runs the old finalization scheme, supporting clients of the older,
-	 WeakRegistry based scheme.  Hopefully this will go away when all clients have moved over."
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-	| throttle firstMourner |
-	throttle := Semaphore new.
-	[true] whileTrue: [FinalizationSemaphore wait; initSignals.
-
-	 [firstMourner := self primitiveFetchMourner.
-	  firstMourner notNil] whileTrue:
-		[MournLoopProcess := [
-			[ [ self mournLoopWith: firstMourner]
-				on: Error
-				fork: [ :ex | ex pass ] ]
-					ensure: [ throttle signal ].
-		] newProcess.
-		MournLoopProcess priority: Processor activePriority + 1.
-		AsyncProcessProperties
-			process: MournLoopProcess
-			property: #parentProcess
-			put: Processor activeProcess.
-		MournLoopProcess resume.
-		 throttle wait]]'
-		 		classified: 'gt-pharo-patch'.
-			WeakArray class compile:
-'gtSummaryFor: aView
-	<gtView>
-	<gtClassView>
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-	^ aView columnedList
-		title: ''Summary'';
-		priority: 10;
-		items: [ {
-			''FinalizationProcess'' -> FinalizationProcess.
-			''FinalizationSemaphore'' -> FinalizationSemaphore size.
-			''MournLoopProcess'' -> MournLoopProcess.
-			''StopRequested'' -> StopRequested.
-			''StoppedSemaphore'' -> StoppedSemaphore size. } ];
-		column: ''Item'' text: #key;
-		column: ''Value'' text: #value;
-		actionUpdateButton.'
-				classified: 'gt-pharo-patch'.
-			WeakArray class compile:
-'mournLoopWith: firstMourner
-	"Send mourn to all the objects available in the mourn queue, starting
-	 with firstMourner which the sender has already extracted for us.  If
-	 an error occurs here, it will break this loop but the sender will spawn
-	 another mournLoopWith: so that finalization is not broken by errors in
-	 individual cases."
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-	| mourner |
-	mourner := firstMourner.
-	[ self stopRequested ifTrue:
-		[ self stoppedSemaphore signal.
-		MournLoopProcess := nil.
-		^ self ].
-	mourner mourn.
-	 (mourner := self primitiveFetchMourner) notNil] whileTrue.
-	MournLoopProcess := nil.'
-				classified: 'gt-pharo-patch'.
-			WeakArray class 
-				compile: 'restartFinalizationProcess
-	"kill any old process, just in case"
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-	self stopFinalizationProcess.
-
-	FinalizationSemaphore := Smalltalk specialObjectsArray at: 42.
-	StopRequested := false.
-	FinalizationProcess := [self finalizationProcess]
-		forkAt: Processor userInterruptPriority.
-	FinalizationProcess name: ''WeakArray Finalization Process'''
-				classified: 'gt-pharo-patch'.
-			WeakArray class 
-				compile: 'shutDown: quitting
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-
-	self stopFinalizationProcess'
-				classified: 'gt-pharo-patch'.
-			WeakArray class 
-				compile: 'startUp: resuming
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-
-	self restartFinalizationProcess'
-				classified: 'gt-pharo-patch'.
-			WeakArray class 
-				compile: 'stopFinalizationProcess
-	<gtPharoPatch: #Pharo11>
-	"DO NOT EDIT HERE, see BaselineOfGToolkitPrerequisites>>#applyPatchForWeakArray"
-
-	FinalizationProcess ifNotNil: 
-		[FinalizationProcess terminate.
-		FinalizationProcess := nil].
-
-	(MournLoopProcess isNil or: [ MournLoopProcess isTerminated ])
-		ifTrue: [ ^ self ].
-	self assert: self stoppedSemaphore isSignaled not.
-	StopRequested := true.
-	StoppedSemaphore wait.'
-				classified: 'gt-pharo-patch'.
-		 ].
 ]
 
 { #category : #accessing }
@@ -654,16 +465,13 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	PostLoaded := true.
 
 	self applyPatchForAsClass.
-	self applyPatchForJob.
 	self applyPatchForWorkingSession.
-	self applyPatchForWeakArray.
 	self applyPatchForFinalizationProcess.
 	self applyPatchForFT2Face.
 	self applyPatchForFT2Handle.
 	self applyPatchForLeJsonV4Name.
 	self applyPatchInlineMethodRefactoring.
 	self applyPatchForWinPlatform.
-	self applyPatchForPharo12SystemDictionaryAtPut.
 	self applyPatchForMethodAnnouncements.
 	self applyPatchAuthor.
 ]
