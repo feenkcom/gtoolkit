@@ -97,23 +97,13 @@ BaselineOfGToolkit >> applyLepiterDatabaseIconInPharoIcons [
 
 { #category : #'post load' }
 BaselineOfGToolkit >> applyPatchForClassBuilder [
-	self 
-		forPharo12AndNewer: [
-			#ShiftClassBuilder  asClass
+	#ShiftClassBuilder  asClass
 				compile: 'install
 	<gtPharoPatch: #Pharo>
 	"Install the class in the system environment"
 	
 	^ GtShiftClassInstaller12 new makeWithBuilder: self' 
-				classified: 'gt-patch' ] 
-		forPharo11: [
-			#FluidBuilder asClass
-				compile: 'install
-	<gtPharoPatch: #Pharo>
-	"Install the class in the system environment"
-	
-	^ GtShiftClassInstaller new makeWithBuilder: self shiftClassBuilder' 
-				classified: 'gt-patch' ]
+				classified: 'gt-patch' 
 ]
 
 { #category : #baseline }

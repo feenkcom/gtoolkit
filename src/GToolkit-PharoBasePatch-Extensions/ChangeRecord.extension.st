@@ -10,9 +10,7 @@ ChangeRecord >> asMCMethodDefinition [
 		className: class
 		classIsMeta: meta
 		selector: self methodSelector
-		category: (self 
-			forPharo12AndNewer: [self protocol] 
-			forPharo11: [self category])
+		category: self protocol
 		timeStamp: stamp
 		source: self string
 ]
