@@ -9,6 +9,5 @@ String >> sameContentAs: aString [
 	" 'def' = 'abc' >>> false"
 
 	(aString isString and: [self size = aString size]) ifFalse: [^false].
-	^ (self compare: self with: aString collated: AsciiOrder) = (self 
-		fastForPharo13AndPharo12: [0] forPharo11: [2])
+	^ (self compare: self with: aString collated: AsciiOrder) = 0
 ]

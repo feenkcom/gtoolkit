@@ -88,11 +88,9 @@ BaselineOfGToolkit >> applyLepiterDatabaseIconInPharoIcons [
 	"Current workaround for IceOperation>>#icon needing the icon name in Pharo 12,
 	instead of returning just the icon. This is used by GtLepiterDatabaseDefinition."
 	
-	self 
-		forPharo12AndNewer: [ Smalltalk ui theme icons icons 
+	Smalltalk ui theme icons icons 
 			at: #lepiterDatabase 
-			put: LeIcons lepiterDatabase create asSpartaForm ] 
-		forPharo11: []
+			put: LeIcons lepiterDatabase create asSpartaForm
 ]
 
 { #category : #'post load' }
@@ -102,7 +100,7 @@ BaselineOfGToolkit >> applyPatchForClassBuilder [
 	<gtPharoPatch: #Pharo>
 	"Install the class in the system environment"
 	
-	^ GtShiftClassInstaller12 new makeWithBuilder: self' 
+	^ GtShiftClassInstaller new makeWithBuilder: self' 
 				classified: 'gt-patch' 
 ]
 
@@ -300,8 +298,4 @@ BaselineOfGToolkit >> preLoadGToolkit: spec [
 		ifTrue: [ ^ self ].
 	PreLoaded := true.
 	
-	self 
-		fastForPharo13: [ "Author is removed in Pharo 13" ] 
-		forPharo12: [ Author  fullName: 'GlamorousAuthor' ] 
-		forPharo11: [ Author  fullName: 'GlamorousAuthor' ]
 ]
