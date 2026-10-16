@@ -112,6 +112,16 @@ BaselineOfGToolkitPrerequisites >> applyPatchForAstNodesInPharo12 [
 ]
 
 { #category : #accessing }
+BaselineOfGToolkitPrerequisites >> applyPatchForBreakpoint [
+
+	self 
+		fastForPharo14: [] 
+		forPharo13: [
+			Breakpoint addSlot: #hitMutex ] 
+		forPharo12: []
+]
+
+{ #category : #accessing }
 BaselineOfGToolkitPrerequisites >> applyPatchForFT2Face [
 	| source |
 
@@ -485,6 +495,7 @@ BaselineOfGToolkitPrerequisites >> postLoadGToolkitPrerequisites: spec [
 	self applyPatchInlineMethodRefactoring.
 	self applyPatchForWinPlatform.
 	self applyPatchForMethodAnnouncements.
+	self applyPatchForBreakpoint.
 	self applyPatchAuthor.
 ]
 
