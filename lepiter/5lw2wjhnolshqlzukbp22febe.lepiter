@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-05-17T14:34:39.068612+02:00"
+						"dateAndTimeString" : "2026-10-20T17:05:11.398464+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "U0nA6YrMDQChAdPjATK6Xg=="
 				},
-				"code" : "client := GtOpenAIClient withApiKeyFromFile"
+				"code" : "client := GtLOpenAIClient withApiKeyFromFile"
 			},
 			{
 				"__type" : "textSnippet",
@@ -279,7 +279,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:19:23.163057+01:00"
+						"dateAndTimeString" : "2026-10-20T17:06:14.954941+02:00"
 					}
 				},
 				"uid" : {
@@ -289,7 +289,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If we want to preserve the input, we can also use the {{gtClass:GtLlmEmbedding}} utility class for that."
+				"string" : "If we want to preserve the input, we can also use the {{gtClass:GtLEmbedding}} utility class for that."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -316,14 +316,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-29T13:02:00.288731+02:00"
+						"dateAndTimeString" : "2026-10-20T17:05:15.931542+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "xkN585zMDQC91kJBCm8XrA=="
 				},
-				"code" : "input := 'A text to embed'.\r\rembedding := GtLlmEmbedding new\r\t\tinput: input;\r\t\tembedding: (client generateEmbeddingsWithModel: 'text-embedding-3-small' andInput: input)\r\t\t\t\titems first embedding"
+				"code" : "input := 'A text to embed'.\r\rembedding := GtLEmbedding new\r\t\tinput: input;\r\t\tembedding: (client generateEmbeddingsWithModel: 'text-embedding-3-small' andInput: input)\r\t\t\t\titems first embedding"
 			},
 			{
 				"__type" : "textSnippet",
@@ -350,7 +350,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:29:37.858442+01:00"
+						"dateAndTimeString" : "2026-10-20T17:04:18.082486+02:00"
 					}
 				},
 				"uid" : {
@@ -360,47 +360,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can then for instance apply distance functions on them using {{gtMethod:GtLlmEmbeddingsUtilities class>>distancesFromEmbeddings:to:}}. The default distance metric is `cosine`. To explore them, you can look at the distance metrics view on the {{gtClass:GtLlmEmbeddingsUtilities}} class."
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:29:41.871638+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-01-31T11:29:41.871638+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "kbcAGJ3MDQCGoDlaCm8XrA=="
-				},
-				"exampleSelector" : "exampleSelf",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtDistanceMetricsFor:",
-				"exampleBehaviorName" : "GtLlmEmbeddingsUtilities class",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
+				"string" : "We can then for instance apply distance functions on them using {{gtMethod:GtLEmbeddingsUtilities class>>distancesFromEmbeddings:to:}}. The default distance metric is `cosine`. To explore them, you can look at the distance metrics view on the {{gtClass:GtLEmbeddingsUtilities}} class."
 			},
 			{
 				"__type" : "textSnippet",
@@ -427,7 +387,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:26:58.834601+02:00"
+						"dateAndTimeString" : "2026-10-20T17:06:03.773557+02:00"
 					}
 				},
 				"uid" : {
@@ -437,7 +397,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For a local and free option for generating embeddings, see [[Embeddings in Ollama]] and [[Generating embeddings using Ollama models]]."
+				"string" : "For a local and free option for generating embeddings, see [[Generating embeddings using Ollama models]]."
 			}
 		]
 	},
