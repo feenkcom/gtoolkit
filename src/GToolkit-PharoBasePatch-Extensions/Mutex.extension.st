@@ -2,15 +2,24 @@ Extension { #name : #Mutex }
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 Mutex >> criticalReleasingOnError: aBlock [
-	"Execute aBlock only if the receiver is not already used by another process.
-	If it is, wait until the resource is available.
-	If the mutex is already used by the current process, execution proceeds.
-	Answer the block's result."
-
-	| activeProcess |
+	"Execute aBlock with mutual exclusion, allowing reentrant calls.
+	Release ownership before passing an exception to the semaphore's handler,
+	which releases the semaphore before invoking external exception handlers.
+	Resuming an exception does not reacquire the mutex."
+	| activeProcess released |
+	
 	activeProcess := Processor activeProcess.
-	activeProcess == owner ifTrue:[ ^aBlock value ].
+	activeProcess == owner ifTrue: [ ^ aBlock value ].
 	^ semaphore criticalReleasingOnError: [
-			owner := activeProcess.
-			aBlock ensure: [ owner := nil ] ]
+		released := false.
+		owner := activeProcess.
+		[
+			aBlock
+				on: Exception
+				do: [ :exception |
+					released ifFalse: [
+						released := true.
+						owner := nil ].
+					exception pass ]
+		] ensure: [ released ifFalse: [ owner := nil ] ] ]
 ]
