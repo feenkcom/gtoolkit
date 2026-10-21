@@ -82,7 +82,7 @@ class GlamorousToolkit {
     // List of rust editor packages that includes examples.
     // It is listed separately because it is used in two places.
     // Please, use the "<PACKAGE-NAME>-RustEditor" package naming so it is detected by EDITOR_TEST_REPORTS.
-    static final EDITOR_TEST_PACKAGES = '"GToolkit-Editor" "GToolkit-Pharo-Coder-Examples-RustEditor" "GToolkit4PetitParser2-RustEditor"'
+    static final EDITOR_TEST_PACKAGES = '"GToolkit-Editor" "GToolkit-Pharo-Coder-Examples-RustEditor" "GToolkit4PetitParser2-RustEditor" "Gt4CSS-Examples-RustEditor"'
     static final TEST_OPTIONS = '--disable-deprecation-rewrites --skip-packages "GToolkit-Boxer" "Sparta-Cairo" "Sparta-Skia" "GToolkit-RemoteExamples-GemStone" "PythonBridge-Pharo" ' + EDITOR_TEST_PACKAGES
     // The rust editor examples, which TEST_OPTIONS skips. They need a windowing event loop, which
     // --interactive asks for: without it an example that renders an element declines to run and is
