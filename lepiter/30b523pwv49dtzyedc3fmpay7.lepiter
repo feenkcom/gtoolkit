@@ -279,7 +279,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-06T14:30:41.029318+02:00"
+						"dateAndTimeString" : "2026-10-20T17:03:11.055164+02:00"
 					}
 				},
 				"uid" : {
@@ -289,7 +289,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can then for instance apply distance functions on them using {{gtMethod:GtLlmEmbeddingsUtilities class>>distancesFromEmbeddings:to:}}. "
+				"string" : "We can then for instance apply distance functions on them using {{gtMethod:GtLEmbeddingsUtilities class>>distancesFromEmbeddings:to:}}. "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -350,7 +350,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-05-06T14:30:36.829737+02:00"
+						"dateAndTimeString" : "2026-10-20T17:03:18.04604+02:00"
 					}
 				},
 				"uid" : {
@@ -360,47 +360,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The default distance metric is `cosine`. To explore them, you can look at the distance metrics view on the {{gtClass:GtLlmEmbeddingsUtilities}} class."
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:26:13.60657+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2024-07-22T12:26:13.60657+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "rbwiNjXaDQCWIjBtAp3RMg=="
-				},
-				"exampleSelector" : "exampleSelf",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtDistanceMetricsFor:",
-				"exampleBehaviorName" : "GtLlmEmbeddingsUtilities class",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
+				"string" : "The default distance metric is `cosine`. To explore them, you can look at the distance metrics view on the {{gtClass:GtLEmbeddingsUtilities}} class."
 			},
 			{
 				"__type" : "textSnippet",

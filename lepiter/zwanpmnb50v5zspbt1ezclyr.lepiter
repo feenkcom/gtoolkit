@@ -316,7 +316,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2025-07-11T17:24:52.21426+02:00"
+						"dateAndTimeString" : "2026-10-20T17:02:48.069715+02:00"
 					}
 				},
 				"uid" : {
@@ -326,7 +326,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We can also list all prompts using {{gtMethod:GtMcpClient>>#listPrompts}} or get individual prompts without converting them to messages using {{gtMethod:GtMcpClient>>#getPrompt:withArguments:}}."
+				"string" : "We can also list all prompts using {{gtMethod:GtLMcpClient>>#listPrompts}} or get individual prompts without converting them to messages using {{gtMethod:GtLMcpClient>>#getPrompt:withArguments:}}."
 			}
 		]
 	},
