@@ -76,7 +76,7 @@ class GlamorousToolkit {
     static final EXAMPLES_FOLDER = "gt-examples"
     static final LEPITER_WINDOWS = "C:/Users/Administrator/Documents/lepiter"
     static final LEPITER_UNIX = "~/Documents/lepiter"
-    static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo13.0-SNAPSHOT.build.749.sha.d7c6f761d5.arch.64bit.zip"
+    static final PHARO_IMAGE_URL = "https://dl.feenk.com/pharo/Pharo13.0-SNAPSHOT.build.750.sha.81f614957c.arch.64bit.zip"
     static final TENTATIVE_PACKAGE_WITHOUT_GT_WORLD = 'GlamorousToolkit-image-without-world.zip'
     static final TENTATIVE_PACKAGE = 'GlamorousToolkit-tentative.zip'
     // List of rust editor packages that includes examples.
@@ -142,10 +142,16 @@ class GlamorousToolkit {
         jobs = [
                 new TestAndPackage(this, new Agent(Triplet.MacOS_Aarch64), Triplet.MacOS_Aarch64).enable_editor_examples(),
                 new TestAndPackage(this, new Agent(Triplet.MacOS_X86_64), Triplet.MacOS_X86_64).disable_tests(),
-                new TestAndPackageWithGemstoneAndPython(this, new Agent(Triplet.Linux_X86_64, "scooby-doo"), Triplet.Linux_X86_64),
+                new TestAndPackageWithPython(this, new Agent(Triplet.Linux_X86_64, "scooby-doo"), Triplet.Linux_X86_64),
                 new TestAndPackage(this, new Agent(Triplet.Linux_Aarch64, "peter-pan"), Triplet.Linux_Aarch64),
                 new TestAndPackage(this, new Agent(Triplet.Windows_X86_64, "daffy-duck"), Triplet.Windows_X86_64).add_release_target(Triplet.Windows_Aarch64).enable_editor_examples()
         ]
+
+        // The GemStone examples run in parallel with the other examples on a dedicated agent.
+        // With tests disabled there is nothing to run, so the agent is not started at all.
+        if (this.runTests) {
+            jobs.add(new GemstoneExamples(this, new Agent(Triplet.Linux_X86_64, "gemstone-examples"), Triplet.Linux_X86_64))
+        }
     }
 
     void execute() {
@@ -805,8 +811,16 @@ class TestAndPackage extends AgentJob {
         script.echo "Signed release package ${release_package}"
     }
 
+    /**
+     * Directory the logs are collected in. Jobs that run on the same host must not share it,
+     * otherwise archiving overwrites the logs of one another.
+     */
+    String artifacts_dir_name() {
+        return "artifacts/${agent.host()}"
+    }
+
     void archive_artifacts() {
-        def artifacts_dir = "artifacts/${agent.host()}"
+        def artifacts_dir = artifacts_dir_name()
         agent.platform().delete_directory(script, "${artifacts_dir}")
         agent.platform().prepare_for_archive(script, "${artifacts_dir}", "glamoroustoolkit")
         agent.platform().prepare_for_archive(script, "${artifacts_dir}", "gt-releaser")
@@ -815,10 +829,14 @@ class TestAndPackage extends AgentJob {
     }
 }
 
-class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
+/**
+ * Linux x86_64 job that clones the remote repositories (GemStone, remote, wire encoding, llm and
+ * PythonBridge) next to the examples. Shared by the Python and the GemStone jobs.
+ */
+abstract class TestAndPackageWithRemoteRepositories extends TestAndPackage {
     static final GEMSTONE_FOLDER = "remote-gemstone"
 
-    TestAndPackageWithGemstoneAndPython(GlamorousToolkit build, Agent agent, Triplet target) {
+    TestAndPackageWithRemoteRepositories(GlamorousToolkit build, Agent agent, Triplet target) {
         super(build, agent, target)
 
         if (agent.host() != Triplet.Linux_X86_64) {
@@ -884,30 +902,21 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
             popd
         """
     }
+}
+
+/**
+ * Runs the GToolkit examples and tests together with the Python examples, and releases PythonBridge.
+ */
+class TestAndPackageWithPython extends TestAndPackageWithRemoteRepositories {
+    TestAndPackageWithPython(GlamorousToolkit build, Agent agent, Triplet target) {
+        super(build, agent, target)
+    }
 
     @Override
     void run_extra_examples() {
         delete_lepiter_directory()
-        run_gemstone_examples()
         run_python_examples()
         release_gt4python()
-    }
-
-    void run_gemstone_examples() {
-        script.withEnv([
-                "GT_GEMSTONE_VERSION=3.7.2.1",
-                "GEMSTONE_WORKSPACE=${script.env.WORKSPACE}/${GlamorousToolkit.EXAMPLES_FOLDER}/${GEMSTONE_FOLDER}",
-                "GT4GEMSTONE_VERSION=${build.gtoolkitVersion}",
-                "RELEASED_PACKAGE_GEMSTONE_NAME=${gemstone_package_name()}"]) {
-            // Run the GemStone remote examples.
-            // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
-            script.sh """
-                    cd ${GlamorousToolkit.EXAMPLES_FOLDER}
-                    ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
-                    ./gt4gemstone/scripts/run-backward-compatability-checks.sh
-                    ./gt4gemstone/scripts/run-remote-gemstone-examples.sh
-                """
-        }
     }
 
     void release_gt4python() {
@@ -928,15 +937,63 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
             ./PythonBridge/scripts/run_python_examples.sh
         """
     }
+}
+
+/**
+ * Runs only the GemStone examples and releases the GemStone package.
+ *
+ * Runs on its own agent in parallel with the other jobs because the GemStone examples take long.
+ * The GToolkit examples, the Pharo tests and the Linux release package belong to
+ * {@link TestAndPackageWithPython}, so they are not repeated here.
+ */
+class GemstoneExamples extends TestAndPackageWithRemoteRepositories {
+    GemstoneExamples(GlamorousToolkit build, Agent agent, Triplet target) {
+        super(build, agent, target)
+    }
+
+    @Override
+    void run_tests() {
+        if (!runTests) {
+            return
+        }
+
+        script.stage("Test GemStone " + target.short_label()) {
+            script.timeout(time: 240, unit: 'MINUTES') {
+                prepare_for_testing()
+                delete_lepiter_directory()
+                run_gemstone_examples()
+                report_test_results()
+            }
+        }
+    }
+
+    void run_gemstone_examples() {
+        script.withEnv([
+                "GT_GEMSTONE_VERSION=3.7.2.1",
+                "GEMSTONE_WORKSPACE=${script.env.WORKSPACE}/${GlamorousToolkit.EXAMPLES_FOLDER}/${GEMSTONE_FOLDER}",
+                "GT4GEMSTONE_VERSION=${build.gtoolkitVersion}",
+                "RELEASED_PACKAGE_GEMSTONE_NAME=${gemstone_package_name()}"]) {
+            // Run the GemStone remote examples.
+            // Relies on the Linux Examples stage configuring EXAMPLES_FOLDER correctly.
+            script.sh """
+                    cd ${GlamorousToolkit.EXAMPLES_FOLDER}
+                    ./gt4gemstone/scripts/jenkins_preconfigure_gemstone.sh
+                    ./gt4gemstone/scripts/run-backward-compatability-checks.sh
+                    ./gt4gemstone/scripts/run-remote-gemstone-examples.sh
+                """
+        }
+    }
 
     String gemstone_package_name() {
         return "gt4gemstone-3.7"
     }
 
+    /**
+     * Only the GemStone package is released. The Linux package is created by the job that runs the
+     * GToolkit examples, stashing it again would clash with it.
+     */
     @Override
     void create_release_package() {
-        super.create_release_package()
-
         // Gemstone package is prepared during examples running step
         if (!build.runTests) {
             return
@@ -947,6 +1004,11 @@ class TestAndPackageWithGemstoneAndPython extends TestAndPackage {
 
         script.sh "cp -rf ${gemstone_workspace}/${gemstone_package} ."
         build.stash_for_release(gemstone_package, 'GemStone')
+    }
+
+    @Override
+    String artifacts_dir_name() {
+        return super.artifacts_dir_name() + "-gemstone"
     }
 }
 
