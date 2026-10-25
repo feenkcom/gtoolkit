@@ -116,6 +116,8 @@ BaselineOfGToolkit >> baseline: spec [
 					with: [ spec repository: 'github://feenkcom/gtoolkit-vm-bindings:main/src' ];
 				baseline: 'GToolkitClipboard'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-clipboard:main/src' ];
+				baseline: 'GToolkitObjectClipboard'
+					with: [ spec repository: 'github://feenkcom/gtoolkit-objectclipboard/src' ];
 				baseline: 'GToolkitPresenter'
 					with: [ spec repository: 'github://feenkcom/gtoolkit-presenter:main/src' ];
 				baseline: 'GToolkitTranscript'
