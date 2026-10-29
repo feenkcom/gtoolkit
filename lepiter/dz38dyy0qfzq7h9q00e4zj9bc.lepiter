@@ -1,0 +1,76 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "alistairgrant@fastmail.com.au"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-10-14T09:27:12.244135+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "alistairgrant@fastmail.com.au"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-10-28T13:48:01.099486+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gqCIFpr6QcG1dgp0Cyl7Ug=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Use this loop to update `GT.gs` and load it into the local GemStone stone.\n\n1. Regenerate the GemStone export through the GToolkit MCP server:\n\n   ```smalltalk\n   GtGemStoneGtCodeExporter new export\n   ```\n\n   This updates `$GT_CURRENT_DIR/gt4gemstone/src-gs/GT.gs`.\n\n2. Run the loader:\n\n   ```sh\n   ./loadGsGt.sh\n   ```\n\n   Output is captured in $CURRENT_DIR/loadGsGt.log.  The last 10 lines of the log file are written by the script to enable a quick check of success or not (errorCount should be 0).\n   \n   The execution sandbox blocks socket creation, including connections to the\n   local NetLDI on `akgd:50377` (it fails with `Operation not permitted`). Run\n   this command with escalated sandbox permission so it can reach the local\n   `netldid` process. A normal sandbox run can misleadingly report that the\n   stone service cannot be found.\n\n3. Inspect the end of `loadGsGt.log`. If the load fails because of an\n   undefined class — for example, `undefined symbol GtRBNamespace` — check the\n   the superclass, if it is Exception or Error, add exactly that class name to the\n   array of classes by evaluating `GtGemStoneGtCodeExporter class>>#addAdditionalClassName:`\n   with the undefined class name, otherwise add exactly that class name by evaluating\n   `GtGemStoneGtCodeExporter class>>#addStubClassName:` with the undefined class name,\n   then return to step 1.\n\n   If the undefined symbol is `Smalltalk`, add the failing method reference\n   (for example, `GtLClassCreationDataExtractor>>#extractTargetClassNameIfError:`)\n   to `GtGemStoneGtCodeExporter>>#excludedMethodsList`, preserving the existing\n   literal array and pragma, then return to step 1.\n\n   If the undefined symbol is `thisContext`, add the failing method reference\n   (for example, `GtLClassCreationDataExtractor>>#extractTargetClassNameIfError:`)\n   to `GtGemStoneGtCodeExporter>>#excludedMethodsList`, preserving the existing\n   literal array and pragma, then return to step 1.\n\n   If the error is 'missing end of literal mark', add the failing method reference\n   (for example, `GtLClassCreationDataExtractor>>#extractTargetClassNameIfError:`)\n   to `GtGemStoneGtCodeExporter>>#excludedMethodsList`, preserving the existing\n   literal array and pragma, then return to step 1.\n\n   If the error is 'The object was not a block or a non-literal expression'\n   (or equivalent),\n   caused by a symbol being used in place of a block closure, e.g.\n   `anObject ifNotNil: #doSomething`, replace it in GT with the equivalent block\n   closure, e.g. `anObject ifNotNil: [ :obj | obj doSomething ]`.\n\n4. If the error is none of the conditions listed above symbol,\n   stop the loop and report the current state, including the failing\n   class/method and the relevant error from `loadGsGt.log`.\n\n5. In the GToolkit MCP server, update the source exporter when necessary.\n\n   - Read `GtGemStoneGtCodeExporter>>#stubClasses4` with `getCodeOfMethods`.\n   - To add a missing class, compile the complete updated method with\n     `compileMethods`. Preserve the existing list and add the missing class to\n     the returned literal array.\n\nUseful checks:\n\n```sh\ntail -n 80 $GT_CURRENT_DIR/loadGsGt.log\nrg -n 'CompileError|undefined symbol|Error Category|Fatal' $GT_CURRENT_DIR/loadGsGt.log | tail -n 20\n```\n"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "alistairgrant@fastmail.com.au"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-10-14T09:26:39.832303+02:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "alistairgrant@fastmail.com.au"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-10-14T09:27:26.647461+02:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Updating GT.gs and load in to GemStone"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "e828e4da-b708-4227-aadb-b4c5c7bc0cec"
+	}
+}
