@@ -1034,8 +1034,8 @@ class TimedTransfer {
     private static void report(Script script, String kind, String key, long started, String sizedPath) {
         def seconds = (System.currentTimeMillis() - started) / 1000.0
         def bytes = sizeOf(script, sizedPath)
-        def speed = (bytes > 0 && seconds > 0) ? " ${Math.round(bytes / 1.0e6 / seconds * 100) / 100.0} MB/s" : ""
-        script.echo "${kind} ${key}: ${Math.round(seconds * 10) / 10.0} s, ${bytes} bytes,${speed} on ${script.env.NODE_NAME}"
+        def speed = (bytes > 0 && seconds > 0) ? " ${String.format('%.2f', bytes / 1.0e6 / seconds)} MB/s" : ""
+        script.echo "${kind} ${key}: ${String.format('%.1f', seconds)} s, ${bytes} bytes,${speed} on ${script.env.NODE_NAME}"
     }
 
     private static long sizeOf(Script script, String path) {
