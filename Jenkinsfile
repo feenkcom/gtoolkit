@@ -249,7 +249,7 @@ class GlamorousToolkit {
         def artefacts_to_release = ""
         this.artefacts.each {
             key, path ->
-                script.unstash "${key}"
+                TimedTransfer.unstash(script, "${key}", path)
                 script.echo "Unstashed ${key} as ${path}"
                 artefacts_to_release += "${path} "
         }
@@ -304,7 +304,7 @@ class GlamorousToolkit {
 
     void stash_internally(String path, String key = null) {
         script.echo "About to stash ${path} as ${key ?: path}"
-        script.stash includes: path, name: key ?: path
+        TimedTransfer.stash(script, path, key ?: path)
         script.echo "Stashed ${path} as ${key ?: path}"
     }
 
@@ -661,7 +661,7 @@ class TestAndPackage extends AgentJob {
     }
 
     void unpackage_tentative() {
-        script.unstash "${GlamorousToolkit.TENTATIVE_PACKAGE}"
+        TimedTransfer.unstash(script, "${GlamorousToolkit.TENTATIVE_PACKAGE}", GlamorousToolkit.TENTATIVE_PACKAGE)
         download_installer()
         platform().exec(script, "./gt-installer", "--verbose unpackage-tentative ${GlamorousToolkit.TENTATIVE_PACKAGE}")
     }
@@ -1009,6 +1009,38 @@ class GemstoneExamples extends TestAndPackageWithRemoteRepositories {
     @Override
     String artifacts_dir_name() {
         return super.artifacts_dir_name() + "-gemstone"
+    }
+}
+
+/**
+ * Logs how long `stash` and `unstash` take and how fast they were, so that slow transfers
+ * between the controller and an agent are visible in the console log of every build.
+ * Only logs. The size is read with `findFiles` (Pipeline Utility Steps), which finds nothing
+ * for a missing file, so a missing file is reported as 0 bytes instead of failing the build.
+ */
+class TimedTransfer {
+    static void stash(Script script, String path, String key) {
+        def started = System.currentTimeMillis()
+        script.stash includes: path, name: key
+        report(script, 'Stash', key, started, path)
+    }
+
+    static void unstash(Script script, String key, String sizedPath) {
+        def started = System.currentTimeMillis()
+        script.unstash key
+        report(script, 'Unstash', key, started, sizedPath)
+    }
+
+    private static void report(Script script, String kind, String key, long started, String sizedPath) {
+        def seconds = (System.currentTimeMillis() - started) / 1000.0
+        def bytes = sizeOf(script, sizedPath)
+        def speed = (bytes > 0 && seconds > 0) ? " ${Math.round(bytes / 1.0e6 / seconds * 100) / 100.0} MB/s" : ""
+        script.echo "${kind} ${key}: ${Math.round(seconds * 10) / 10.0} s, ${bytes} bytes,${speed} on ${script.env.NODE_NAME}"
+    }
+
+    private static long sizeOf(Script script, String path) {
+        def files = script.findFiles(glob: path)
+        return files ? files[0].length : 0
     }
 }
 
