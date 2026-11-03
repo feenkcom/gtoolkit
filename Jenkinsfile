@@ -94,6 +94,8 @@ class GlamorousToolkit {
     static final RELEASE_PACKAGE_TEMPLATE = 'GlamorousToolkit-{{os}}-{{arch}}-v{{version}}.zip'
     static final DOCKER_REPOSITORY = 'feenkcom/gtoolkit'
     static final DOCKER_TENTATIVE_TAG = 'tentative'
+    // Label of the node that has the aws CLI and the instance role that may publish the transfer metrics.
+    static final METRICS_LABEL = 'metrics-publisher'
 
     final Script script
     Agent agent
@@ -120,6 +122,8 @@ class GlamorousToolkit {
     Map<String, String> artefacts
 
     final ArrayList<AgentJob> jobs
+    // One record per stash/unstash of this build, collected by TimedTransfer and published by publish_transfer_metrics.
+    final ArrayList<Map> transfers
 
     GlamorousToolkit(Script script, Agent agent, Map params) {
         this.script = script
@@ -138,6 +142,7 @@ class GlamorousToolkit {
         this.gt4remoteCommitHash = null
         this.pythonBridgeCommitHash = null
         this.artefacts = [:]
+        this.transfers = []
 
         jobs = [
                 new TestAndPackage(this, new Agent(Triplet.MacOS_Aarch64), Triplet.MacOS_Aarch64).enable_editor_examples(),
@@ -155,15 +160,41 @@ class GlamorousToolkit {
     }
 
     void execute() {
-        script.node(agent.label()) {
-            build()
+        try {
+            script.node(agent.label()) {
+                build()
+            }
+
+            test_and_package()
+
+            script.node(agent.label()) {
+                release()
+                releaseDockerImage()
+            }
+        }
+        finally {
+            publish_transfer_metrics()
+        }
+    }
+
+    /**
+     * Publishes the stash and unstash times of this build to CloudWatch. Last, so that it includes the transfers
+     * of the Release stage, and in a finally, so that failed and aborted builds report too.
+     * It never fails the build, and a missing or busy node only skips the metrics after the timeout.
+     */
+    void publish_transfer_metrics() {
+        if (script.env.BRANCH_NAME != 'main' || transfers.isEmpty()) {
+            return
         }
 
-        test_and_package()
-
-        script.node(agent.label()) {
-            release()
-            releaseDockerImage()
+        script.stage('Metrics') {
+            script.catchError(buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
+                script.timeout(time: 5, unit: 'MINUTES') {
+                    script.node(METRICS_LABEL) {
+                        TimedTransfer.publish(script, transfers)
+                    }
+                }
+            }
         }
     }
 
@@ -249,7 +280,7 @@ class GlamorousToolkit {
         def artefacts_to_release = ""
         this.artefacts.each {
             key, path ->
-                TimedTransfer.unstash(script, "${key}", path)
+                TimedTransfer.unstash(script, transfers, "${key}", path)
                 script.echo "Unstashed ${key} as ${path}"
                 artefacts_to_release += "${path} "
         }
@@ -304,7 +335,7 @@ class GlamorousToolkit {
 
     void stash_internally(String path, String key = null) {
         script.echo "About to stash ${path} as ${key ?: path}"
-        TimedTransfer.stash(script, path, key ?: path)
+        TimedTransfer.stash(script, transfers, path, key ?: path)
         script.echo "Stashed ${path} as ${key ?: path}"
     }
 
@@ -661,7 +692,7 @@ class TestAndPackage extends AgentJob {
     }
 
     void unpackage_tentative() {
-        TimedTransfer.unstash(script, "${GlamorousToolkit.TENTATIVE_PACKAGE}", GlamorousToolkit.TENTATIVE_PACKAGE)
+        TimedTransfer.unstash(script, build.transfers, "${GlamorousToolkit.TENTATIVE_PACKAGE}", GlamorousToolkit.TENTATIVE_PACKAGE)
         download_installer()
         platform().exec(script, "./gt-installer", "--verbose unpackage-tentative ${GlamorousToolkit.TENTATIVE_PACKAGE}")
     }
@@ -1022,27 +1053,67 @@ class GemstoneExamples extends TestAndPackageWithRemoteRepositories {
 /**
  * Logs how long `stash` and `unstash` take and how fast they were, so that slow transfers
  * between the controller and an agent are visible in the console log of every build.
- * Only logs. The size is read with `findFiles` (Pipeline Utility Steps), which finds nothing
+ * The size is read with `findFiles` (Pipeline Utility Steps), which finds nothing
  * for a missing file, so a missing file is reported as 0 bytes instead of failing the build.
+ *
+ * Every transfer is also appended to the list of the build, which `publish` turns into CloudWatch
+ * metrics. Dimensions are only the agent and the kind of the transfer, because every combination of
+ * dimensions is a separate billed metric.
  */
 class TimedTransfer {
-    static void stash(Script script, String path, String key) {
+    static final CLOUDWATCH_REGION = 'eu-central-1'
+    static final CLOUDWATCH_NAMESPACE = 'Feenk/Jenkins'
+    static final METRICS_FILE = 'transfer-metrics.json'
+
+    static void stash(Script script, List transfers, String path, String key) {
         def started = System.currentTimeMillis()
         script.stash includes: path, name: key
-        report(script, 'Stash', key, started, path)
+        report(script, transfers, 'Stash', key, started, path)
     }
 
-    static void unstash(Script script, String key, String sizedPath) {
+    static void unstash(Script script, List transfers, String key, String sizedPath) {
         def started = System.currentTimeMillis()
         script.unstash key
-        report(script, 'Unstash', key, started, sizedPath)
+        report(script, transfers, 'Unstash', key, started, sizedPath)
     }
 
-    private static void report(Script script, String kind, String key, long started, String sizedPath) {
+    private static void report(Script script, List transfers, String kind, String key, long started, String sizedPath) {
         def seconds = (System.currentTimeMillis() - started) / 1000.0
         def bytes = sizeOf(script, sizedPath)
-        def speed = (bytes > 0 && seconds > 0) ? " ${String.format('%.2f', bytes / 1.0e6 / seconds)} MB/s" : ""
-        script.echo "${kind} ${key}: ${String.format('%.1f', seconds)} s, ${bytes} bytes,${speed} on ${script.env.NODE_NAME}"
+        def speed = (bytes > 0 && seconds > 0) ? bytes / 1.0e6 / seconds : null
+        def speedText = speed ? " ${String.format('%.2f', speed)} MB/s" : ""
+        script.echo "${kind} ${key}: ${String.format('%.1f', seconds)} s, ${bytes} bytes,${speedText} on ${script.env.NODE_NAME}"
+        transfers.add([kind: kind, key: key, agent: script.env.NODE_NAME, at: System.currentTimeMillis() / 1000.0, seconds: seconds, bytes: bytes, speed: speed])
+    }
+
+    /**
+     * Writes the transfers as CloudWatch metric data, archives the file and sends it with the aws CLI.
+     * The file is archived first, so it is kept even when the call fails and can be sent again by hand.
+     * Needs the aws CLI and credentials that may call PutMetricData in CLOUDWATCH_NAMESPACE (the instance role).
+     * The call ignores static credentials (a key in ~/.aws/credentials or in the environment takes priority over the
+     * instance role, and the key of the controller is far broader), so it always runs as the instance role. The
+     * identity is logged, to see in the build which one published.
+     */
+    static void publish(Script script, List transfers) {
+        def data = []
+        for (transfer in transfers) {
+            def dimensions = [[Name: 'Agent', Value: transfer.agent], [Name: 'Kind', Value: transfer.kind]]
+            data.add([MetricName: 'TransferSeconds', Dimensions: dimensions, Timestamp: transfer.at, Value: transfer.seconds, Unit: 'Seconds'])
+            data.add([MetricName: 'TransferBytes', Dimensions: dimensions, Timestamp: transfer.at, Value: transfer.bytes, Unit: 'Bytes'])
+            if (transfer.speed != null) {
+                data.add([MetricName: 'TransferMegabytesPerSecond', Dimensions: dimensions, Timestamp: transfer.at, Value: transfer.speed, Unit: 'Megabytes/Second'])
+            }
+        }
+
+        script.writeJSON file: METRICS_FILE, json: data, pretty: 2
+        script.archiveArtifacts artifacts: METRICS_FILE
+        script.sh """
+            aws_as_instance_role() {
+                env -u AWS_ACCESS_KEY_ID -u AWS_SECRET_ACCESS_KEY -u AWS_SESSION_TOKEN -u AWS_PROFILE AWS_SHARED_CREDENTIALS_FILE=/dev/null aws --region ${CLOUDWATCH_REGION} "\$@"
+            }
+            aws_as_instance_role sts get-caller-identity --query Arn --output text
+            aws_as_instance_role cloudwatch put-metric-data --namespace ${CLOUDWATCH_NAMESPACE} --metric-data file://${METRICS_FILE}
+        """
     }
 
     private static long sizeOf(Script script, String path) {
