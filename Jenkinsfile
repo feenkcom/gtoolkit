@@ -733,9 +733,16 @@ class TestAndPackage extends AgentJob {
         }
     }
 
+    /**
+      * Runs the GToolkit examples. A healthy run prints one line per example, so 45 minutes without
+      * any console output means the run is stalled. The activity timeout aborts it early instead of
+      * waiting for the stage timeout.
+      */
     void run_gtoolkit_examples() {
         delete_lepiter_directory()
-        platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS}")
+        script.timeout(time: 45, unit: 'MINUTES', activity: true) {
+            platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS}")
+        }
     }
 
     void run_extra_examples() {
