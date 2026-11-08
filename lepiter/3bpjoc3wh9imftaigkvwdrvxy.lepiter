@@ -220,7 +220,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-03-01T20:31:34.695979+01:00"
+									"dateAndTimeString" : "2026-11-08T22:06:28.947038+01:00"
 								}
 							},
 							"uid" : {
@@ -231,6 +231,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "Views describe objects. They are implemented in methods of the class of the object, and are annotated with {{gtPragma:gtView}}. Views should document the intent. Examples can be combined with views to express narratives. Examples produce objects, views compress intent."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-08T22:06:29.458971+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-08T22:06:49.886203+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Fc371nJIQKKdv/K1F05kwg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Only create views when they help you answer questions about the object. Track the questions explicitly as comments in the view method."
 						},
 						{
 							"__type" : "textSnippet",
@@ -519,7 +556,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-09-06T08:30:17.149587+02:00"
+									"dateAndTimeString" : "2026-11-08T22:02:03.413703+01:00"
 								}
 							},
 							"uid" : {
@@ -529,7 +566,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "HoWhen referring to values you already computed through tools, do not hard code the values. Instead, refer to the objects through `{{gtObject:}}` annotations."
+							"string" : "When referring to values you already computed through tools, do not hard code the values. Instead, refer to the objects through `{{gtObject:}}` annotations."
 						}
 					]
 				},
