@@ -370,7 +370,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-11-04T22:27:02.285949+01:00"
+									"dateAndTimeString" : "2026-11-07T18:25:52.161696+01:00"
 								}
 							},
 							"uid" : {
@@ -380,7 +380,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The keep alive does not take care of a session forever. Each connector has a *max keep alive*, by default 60 minutes after the session connected ({{gtMethod:GtGemStoneSessionKeepAlive class>>#maxKeepAlive}}). What happens when it is reached depends on whether the connector has auto-logout enabled (it is off by default, see {{gtMethod:GtGemStoneGciConnector>>#initialize}}):"
+							"string" : "The keep alive does not take care of a session forever. Each connector has a *max keep alive*, by default 120 minutes after the session connected ({{gtMethod:GtGemStoneSessionKeepAlive class>>#maxKeepAlive}}). What happens when it is reached depends on whether the connector has auto-logout enabled (it is off by default, see {{gtMethod:GtGemStoneGciConnector>>#initialize}}):"
 						},
 						{
 							"__type" : "textSnippet",
