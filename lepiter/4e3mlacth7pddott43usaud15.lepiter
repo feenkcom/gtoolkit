@@ -23,7 +23,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-11-08T22:00:59.846203+01:00"
+									"dateAndTimeString" : "2026-11-09T07:20:47.878104+01:00"
 								}
 							},
 							"editEmail" : {
@@ -34,17 +34,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-11-09T00:04:04.359618+01:00"
+									"dateAndTimeString" : "2026-11-09T07:20:52.786512+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "T9zeQJHpTaaAeRf4agwioQ=="
+								"uidString" : "WVyoRfSHShyk89kVtniWdQ=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- Smalltalk classes using {{gtClass:ClassName}}, where `ClassName` is the name of the class to be referenced.\r- Smalltalk methods using {{gtMethod:ClassName>>#methodName}}, where `ClassName` is the name of the class and `methodName` is the name of the method.\r- Smalltalk objects using {{gtObject:id=idValue|show=#someViewFor:|fallbackLabelString=''fallback message''}}, where `idValue` is the value identifying the objects in the current object storage, `#someViewFor:` is an optional message denoting a view selector applicable to the object, and `''fallback message''` is an optional short message describing the object for the case when the object is remvoed from the storage, . "
+							"string" : "- Smalltalk classes using `{{gtClass:ClassName}}`, where `ClassName` is the name of the class to be referenced.\n- Smalltalk methods using `{{gtMethod:ClassName>>#methodName}}`, where `ClassName` is the name of the class and `methodName` is the name of the method.\r- Smalltalk objects using `{{gtObject:id=idValue|show=#someViewFor:|fallbackLabelString=''fallback message''}}`, where `idValue` is the value identifying the objects in the current object storage, `#someViewFor:` is an optional message denoting a view selector applicable to the object, and `''fallback message''` is an optional short message describing the object for the case when the object is remvoed from the storage, . "
 						}
 					]
 				},
@@ -216,7 +216,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-11-08T22:01:01.114914+01:00"
+						"dateAndTimeString" : "2026-11-09T07:21:07.153941+01:00"
 					}
 				},
 				"uid" : {
@@ -226,7 +226,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "For code use three backticks sections. DO NOT annotate entities in code sections."
+				"string" : "For code use three backticks sections. Do not annotate entities in code sections."
 			}
 		]
 	},
