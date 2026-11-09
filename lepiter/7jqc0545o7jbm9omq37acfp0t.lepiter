@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-11-07T00:28:38.201489+01:00"
+						"dateAndTimeString" : "2026-11-09T23:59:58.529211+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-11-07T00:41:06.804661+01:00"
+						"dateAndTimeString" : "2026-11-09T23:59:58.529211+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Akr7sax1S32LDRVbyjFrnw=="
+					"uidString" : "LC/H1CSMT2mBQEpqTu2u3w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Inspect {{gtClass:GtLACPClaudeCodeSessionStore}} or {{gtClass:GtLACPCodexSessionStore}} to browse saved sessions and copy a session ID:"
+				"string" : "Inspect {{gtClass:GtLACPClaudeCodeSessionStore}} or {{gtClass:GtLACPCodexSessionStore}} to browse saved sessions."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -145,6 +145,43 @@
 					"uidString" : "d1GoBtB5T3+C2DTA1LHPRA=="
 				},
 				"code" : "codexStore := GtLACPCodexSessionStore new read.\ncodexStore"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-07T00:28:38.201489+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-09T23:59:58.559004+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Akr7sax1S32LDRVbyjFrnw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Inspect a stored session and click **Load session** to open its ACP chat, or send {{gtMethod:GtLACPStoredSession>>#load}}. Its type selects the matching client:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -361,43 +398,6 @@
 					"uidString" : "16Nk5A0aTfex4pEJbus4Jw=="
 				},
 				"code" : "sessionId := 'your-session-id'.\nsession := nil.\nstores := {\n    GtLACPClaudeCodeSessionStore new read.\n    GtLACPCodexSessionStore new read }.\n\nstores do: [ :store |\n    store\n        sessionWithId: sessionId\n        ifPresent: [ :storedSession |\n            session := store\n                loadSession: storedSession sessionId\n                configureClient: [ :client |\n                    client configuration requestTimeout: 180 ] ] ].\n\nsession"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-11-07T00:28:38.245228+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2026-11-07T00:41:18.430344+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "UQVlBaRuR0ucgnie3x8gGw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "The result is nil when neither store contains the ID. If both match, both sessions are loaded and the last result is retained."
 			},
 			{
 				"__type" : "textSnippet",
