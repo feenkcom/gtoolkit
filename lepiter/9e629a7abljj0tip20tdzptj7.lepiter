@@ -1,0 +1,637 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371567+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371567+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6kVbHbwMQTCyc7Z0YtxF4A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Some problems in a GT image only show while they happen: a slow UI, a process that hangs, many garbage collections, memory that grows. A report captures such a moment as plain data, so that it can be looked at later, possibly in another image than the one where it happened."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371595+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371595+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "tt1xZ2tlSNCtM1sOmPr5ww=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The infrastructure keeps four things apart, because they change for different reasons: **what** is recorded (the report), **how and when** it is recorded (the recorder), **where** it is kept (the store), and **how it is found and read again** (the metadata). Recording reports is on {{gtPage:GT reports available for data collection}}, analysing them on {{gtPage:Analysing stored GT reports}}. The classes are in {{gtPackage:GToolkit-Utility-SpaceTally}}, {{gtPackage:GToolkit-Utility-GarbageCollectAnalysis}} and {{gtPackage:GToolkit-Utility-Basic}}."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371474+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371474+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Yf6ie/EHSFirUPkczPnqpg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Why reports"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371601+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371601+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "C6aYfC4sSgWc1GTV3YNZUg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "| Piece | Classes | Responsibility | Why it is separate |\n|---|---|---|---|\n| Report | {{gtClass:GtProcessesReport}}, {{gtClass:GtMessageTallyReport}}, {{gtClass:GtGarbageCollectsReport}}, {{gtClass:GtSpaceTallyReport}} | the recorded data, its image data and its report uid; writes its own files ({{gtMethod:GtProcessesReport>>#writeFilesTo:|label=#selector}}) and reads itself back ({{gtMethod:GtProcessesReport class>>#fromStoredFiles:|label=#selector}}) | a report is a plain object: create it, inspect it, and only then decide whether to store it |\n| Image data | {{gtClass:GtReportImageData}} | the GT, GT VM, Pharo VM and Pharo image versions | every report says which image it came from, without identifying the user or the machine |\n| Recorder | {{gtClass:GtReportRecorder}} and its subclasses | how one kind of report is recorded: {{gtMethod:GtReportRecorder>>#recordReport|label=#selector}} (the time-sensitive part) and {{gtMethod:GtReportRecorder>>#completeReport:|label=#selector}} (the slow part) | the same report can be recorded with other settings or other image data |\n| Recording | {{gtClass:GtReportRecording}} | one background run of a recorder into a store; announces its start and end ({{gtClass:GtReportRecordingStarted}}, {{gtClass:GtReportRecordingEnded}}); holds the report and the entry, or the error | recording must not block the UI, and a Message Tally must see what the UI does |\n| Store | {{gtClass:GtReportsStore}}: {{gtClass:GtReportsLocalStore}}, {{gtClass:GtReportsCompositeStore}}, {{gtClass:GtNoReportsStore}} | where reports go: the folder layout, the storage id, writing text and bytes ({{gtMethod:GtReportsLocalStore>>#write:to:|label=#selector}}, {{gtMethod:GtReportsLocalStore>>#writeBytes:to:|label=#selector}}) | a report does not know where it is kept |\n| Entry | {{gtClass:GtReportsStoreEntry}} with {{gtClass:GtReportsStoreDataFile}} and {{gtClass:GtReportsStoreMetadataFile}} | one stored copy: its folder, the files written (size and write time) and the metadata | shows what was written, without keeping the contents in memory |\n| Metadata | {{gtClass:GtReportMetadata}}, {{gtClass:GtReportFileDescription}} | `meta.json`: report type, class and alias, report uid, storage id, machine name, image data, files with their sizes, format version | reports can be found, grouped and sized without reading their data |\n| Reading back | {{gtClass:GtStoredReportFiles}} and the report's class-side {{gtMethod:GtProcessesReport class>>#fromStoredFiles:|label=#selector}} | turns a stored folder back into the report object | an analysis works on the same objects that were recorded |"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371599+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371599+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/cThtw0DSoeRMmvndUMisA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## The pieces"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371605+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371605+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rNx/STICTJm/7e5L5Lqi7w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**Recording.** {{gtMethod:GtReportRecorder>>#recordInBackgroundInto:|label=#selector}} on a recorder starts a recording ({{gtMethod:GtReportRecording>>#start|label=#selector}}). The recording runs {{gtMethod:GtReportRecorder>>#recordReport|label=#selector}} at the recording priority, above the UI ({{gtMethod:GtReportRecorder>>#recordingPriority|label=#selector}}); then it lowers its own priority to background and runs {{gtMethod:GtReportRecorder>>#completeReport:|label=#selector}} and {{gtMethod:GtProcessesReport>>#storeIn:|label=#selector}} ({{gtMethod:GtReportRecording>>#record|label=#selector}}). {{gtMethod:GtReportRecorder>>#createReport|label=#selector}} does the same synchronously, without storing."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371608+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371608+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wQ/fE60LS9WzbgVh6icfcQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**Storing.** {{gtMethod:GtProcessesReport>>#storeIn:|label=#selector}} on a report asks the store to store it ({{gtMethod:GtReportsStore>>#store:|label=#selector}}): the store creates an entry with a new storage id ({{gtMethod:GtReportsStore>>#entryFor:storageId:|label=#selector}}), the report writes its files into the entry ({{gtMethod:GtProcessesReport>>#writeFilesTo:|label=#selector}}), and the entry writes `meta.json` last ({{gtMethod:GtReportsStoreEntry>>#writeMetadataOf:|label=#selector}}). Every write goes through the entry, which records the file with the number of bytes the store read back from the written file ({{gtMethod:GtReportsStoreEntry>>#record:writing:|label=#selector}}). A composite store creates one entry per store with the same storage id ({{gtMethod:GtReportsCompositeStore>>#entryFor:storageId:|label=#selector}}), so every store gets the same folder name."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.37161+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.37161+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qkT6E4ACRi2Ra0cKbT7F2A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "**Reading back.** {{gtClass:GtStoredReportFiles}} {{gtMethod:GtStoredReportFiles class>>#folder:|label=#selector}} reads `meta.json`; {{gtMethod:GtStoredReportFiles>>#report|label=#selector}} takes the report class from the metadata ({{gtMethod:GtStoredReportFiles>>#reportClass|label=#selector}}) and asks it for {{gtMethod:GtProcessesReport class>>#fromStoredFiles:|label=#selector}}. The folder layout and the content of `meta.json` are described under *Where reports are stored* on {{gtPage:GT reports available for data collection}}."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371603+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371603+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NISnCmq6QLyS5lRaGq4hoA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## From recording to stored files, and back"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371614+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371614+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "w6HISFi8TXisWcW3CwP/Hg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- **No common report superclass.** Reports have little in common beyond a small protocol: {{gtMethod:GtProcessesReport>>#reportType|label=#selector}}, {{gtMethod:GtProcessesReport>>#imageData|label=#selector}}, {{gtMethod:GtProcessesReport>>#reportUid|label=#selector}}, {{gtMethod:GtProcessesReport>>#writeFilesTo:|label=#selector}}, {{gtMethod:GtProcessesReport>>#storeIn:|label=#selector}} and the class-side {{gtMethod:GtProcessesReport class>>#fromStoredFiles:|label=#selector}}. Each report implements it, so a new report does not have to fit a hierarchy.\n- **Recording in two steps.** {{gtMethod:GtReportRecorder>>#recordReport|label=#selector}} must be quick and runs high, so that a busy UI does not delay it; completing and storing are slow and run at background priority, so that the UI stays usable meanwhile ({{gtMethod:GtReportRecording>>#record|label=#selector}}). Only one Message Tally can run at a time.\n- **`meta.json` is written last** ({{gtMethod:GtReportsStore>>#store:|label=#selector}}). A folder without it is an interrupted write, never a report.\n- **Report type first in the layout** ({{gtMethod:GtReportsStore>>#folderFor:storageId:machineName:|label=#selector}}). Most questions start from a kind of report. A store that keeps the reports of several machines can add a machine level to the layout; it gets the machine name for every report ({{gtMethod:GtReportsStore>>#machineNameFor:|label=#selector}}). Ids and date folders are in UTC, so that images in different time zones sort together.\n- **No identifying data in GT.** {{gtClass:GtReportImageData}} holds only versions and an empty machine name ({{gtMethod:GtReportImageData>>#machineName|label=#selector}}); a subclass can add more where that is wanted, and a recorder decides which image data its reports get ({{gtMethod:GtReportRecorder class>>#imageData:|label=#selector}}).\n- **Two ids.** The storage id names one stored copy ({{gtMethod:GtReportsStore>>#newStorageId|label=#selector}}). The report uid is a {{gtClass:UUID}} given in the report's {{gtMethod:GtProcessesReport>>#initialize|label=#selector}} and kept by every copy, so copies can be recognised and analysed once.\n- **Class name plus alias.** The metadata names the report class ({{gtMethod:GtReportMetadata>>#reportClassName|label=#selector}}), to read the report back, and its {{gtMethod:GtProcessesReport class>>#leJsonV4Name|label=#selector}} as a stable alias ({{gtMethod:GtReportMetadata>>#reportAlias|label=#selector}}), to read it back after the class is renamed.\n- **Nothing large in memory.** Entries keep where and how much was written, not what ({{gtClass:GtReportsStoreFile}}); the sizes come from the written files.\n- **The format version is a label.** Every `meta.json` carries {{gtMethod:GtReportMetadata>>#formatVersion|label=#selector}} ({{gtMethod:GtReportMetadata class>>#currentFormatVersion|label=#selector}}); no code branches on it yet. When the format changes, read the version from the plain JSON first and pick a reader for it, because {{gtClass:LeJsonV4}} reads the file into the current class before the version is known."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371612+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371612+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rTHSruU4RVm7CmXfrz5Z3A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Design decisions and their intent"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371619+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371619+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "SARPYNkoQWWthuEUoyMjEw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "1. **Write the report class**, without a superclass, following {{gtClass:GtProcessesReport}}:\n   - slots for the data, plus `imageData` and `reportUid`; in {{gtMethod:GtProcessesReport>>#initialize|label=#selector}} set `imageData := GtReportImageData new` ({{gtClass:GtReportImageData}}) and `reportUid := UUID new`;\n   - {{gtMethod:GtProcessesReport>>#reportType|label=#selector}} answers the folder name, lowercase with dashes;\n   - {{gtMethod:GtProcessesReport>>#writeFilesTo:|label=#selector}} writes the files: {{gtMethod:GtReportsStoreEntry>>#writeJsonOf:|label=#selector}} for most reports, {{gtMethod:GtReportsStoreEntry>>#writeText:extension:|label=#selector}} for text, {{gtMethod:GtReportsStoreEntry>>#writeGzippedStonOf:|label=#selector}} for large object graphs, {{gtMethod:GtReportsStoreEntry>>#writeBytes:named:extension:|label=#selector}} for several files of one kind;\n   - the class-side {{gtMethod:GtProcessesReport class>>#fromStoredFiles:|label=#selector}} reads them back ({{gtMethod:GtStoredReportFiles>>#readJson|label=#selector}}, {{gtMethod:GtStoredReportFiles>>#readText:|label=#selector}}, {{gtMethod:GtStoredReportFiles>>#readGzippedSton|label=#selector}}, {{gtMethod:GtStoredReportFiles>>#readBytesNamed:extension:|label=#selector}});\n   - the class-side {{gtMethod:GtProcessesReport class>>#leJsonV4Name|label=#selector}} gives a stable name; run {{gtClass:LeJsonV4}} {{gtMethod:LeJsonV4 class>>#cleanUniqueInstance|label=#selector}} after adding it or after changing slots. The JSON reader sets every written slot through a setter of the same name, so each one needs a setter (e.g. {{gtMethod:GtProcessesReport>>#reportUid:|label=#selector}}); a class-side `leJsonV4AttributeMapping` leaves out slots that must not be written (like the live tally of {{gtMethod:GtMessageTallyReport class>>#leJsonV4AttributeMapping}});\n   - {{gtMethod:GtProcessesReport>>#storeIn:|label=#selector}} answers `aStore store: self`; add {{gtMethod:GtProcessesReport>>#printOn:|label=#selector}} and a summary view, so that the report is useful in the inspector before it is stored.\n2. **Write a recorder** only when recording needs settings or must run in the background: subclass {{gtClass:GtReportRecorder}} and implement {{gtMethod:GtReportRecorder>>#recordReport|label=#selector}}, plus {{gtMethod:GtReportRecorder>>#completeReport:|label=#selector}} for slow work (e.g. {{gtClass:GtMessageTallyReportRecorder}}).\n3. **Check it** with examples that store the report in a memory store ({{gtClass:GtReportsLocalStore}} {{gtMethod:GtReportsLocalStore class>>#rootFolder:|label=#selector}} with `FileSystem memory root / 'gt-reports'`) and read it back (see {{gtClass:GtReportsStoreExamples}} and {{gtClass:GtStoredReportFilesExamples}}).\n4. **Document it**: add a section to {{gtPage:GT reports available for data collection}}, with one sentence on what the report shows, a snippet that creates it and one that stores it."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.37162+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.37162+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "udG3ISQ7QkaB5PYHnrqq8g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The smallest report, as a sketch (accessors and views left out):\n\n```smalltalk\nObject << #GtExampleDataReport\n\tslots: { #values . #imageData . #reportUid };\n\tpackage: 'GToolkit-Utility-SpaceTally'\n\nGtExampleDataReport >> initialize\n\tsuper initialize.\n\tvalues := #().\n\timageData := GtReportImageData new.\n\treportUid := UUID new\n\nGtExampleDataReport >> reportType\n\t^ 'example-data'\n\nGtExampleDataReport >> writeFilesTo: anEntry\n\tanEntry writeJsonOf: self\n\nGtExampleDataReport >> storeIn: aStore\n\t^ aStore store: self\n\nGtExampleDataReport class >> leJsonV4Name\n\t^ #gtExampleDataReport\n\nGtExampleDataReport class >> fromStoredFiles: aStoredReportFiles\n\t^ aStoredReportFiles readJson\n```"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371616+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371616+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "AHr2KmceQiOttQiq6/c3Dg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Adding a new report"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371623+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-10T13:28:28.371623+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6CAzdvK5Qju9htFR2J9r7A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A store decides where reports go, for example a remote file service. Subclass {{gtClass:GtReportsStore}} and implement:\n\n- {{gtMethod:GtReportsStore>>#rootFolder|label=#selector}}: the root of the layout, any object that answers `/` like a file reference;\n- {{gtMethod:GtReportsStore>>#write:to:|label=#selector}} and {{gtMethod:GtReportsStore>>#writeBytes:to:|label=#selector}}: write the text or bytes and answer the number of bytes written, read back from the written file (as {{gtMethod:GtReportsLocalStore>>#write:to:|label=#selector}} does), because that number goes into the metadata;\n- {{gtMethod:GtReportsStore>>#description|label=#selector}}: a short name shown in the entries and recordings;\n- optionally {{gtMethod:GtReportsStore>>#machineName|label=#selector}} and {{gtMethod:GtReportsStore>>#folderFor:storageId:machineName:|label=#selector}}, to add a machine level to the layout.\n\nThe entries, file objects, metadata and composite stores then work without changes."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371622+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-10T13:28:28.371622+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "7dxxNxRxSC+AWyGgWZOn/Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Adding a new store"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-11-10T13:28:28.371437+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-11-10T13:28:28.371437+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Report infrastructure for collecting data in GT"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "c38878a8-bc57-4499-b017-31bb562bab9e"
+	}
+}
