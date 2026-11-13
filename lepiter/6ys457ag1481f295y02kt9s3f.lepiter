@@ -2579,6 +2579,303 @@
 								"__type" : "textStyle"
 							},
 							"string" : "###Library names for LGitLibrary  and CairoLibrary"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:10:12.870983-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:11:42.602036-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "5OcpAofjQaCGCebzM5BmYg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "{{gtClass:ProcessMonitorTestService}} tracks the processes forked during a test in a WeakSet (forkedProcesses) and their failures in testFailures. Several processes change them at the same time: {{gtMethod:ProcessMonitorTestService>>#handleNewProcess:}} runs in the forking process, often a lower-priority Futures worker, while the test process calls {{gtMethod:ProcessMonitorTestService>>#cleanUpAfterTest}}. Since examples run in a managed execution environment, all examples of a class share one service, and {{gtMethod:ProcessMonitorTestService>>#cleanUpAfterTest | label=#selector}}  runs after every example."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:11:56.870644-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:13:03.807273-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "0kX8EQVHQW6S8HsayGLbbA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "`forkedProcesses removeAll` replaces the empty-slot marker (flag) of the {{gtClass:WeakSet}}. If an adding process is preempted inside {{gtMethod:WeakSet>>#growTo:}} between creating and storing the new array, the set is corrupted: old markers count as elements, and examples fail with `Object>>doesNotUnderstand: #isTerminated` or `#terminate` until the end of the class."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:13:16.210913-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:15:54.338378-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "iP1U4k/GQSyEBq0z99sUcQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "We patch it in the installer by adding a mutex instance variable that guards every access to `forkedProcesses` and `testFailures`. Readers take a copy under the mutex; terminate, resume and suspend run outside it. "
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:13:59.3142-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:15:09.352259-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "jVuevZYFRMKoXLjMsEFPPg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The race is reproduced deterministically by {{gtMethod:GtProcessMonitorTestServiceExamples>>#cleanUpWaitsForProcessGrowingForkedProcesses}}.  "
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:16:15.303762-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:17:06.262554-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "uezHG/24STOuNnQ3Om7Uvg=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "GT issue: [Run examples in managed execution environment](https://github.com/feenkcom/gtoolkit/issues/5252#issuecomment-6840011110). "
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:17:22.123798-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:18:23.438679-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "WMKgLNdYQEuXTYA9oLL1mA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Patched in installer: ProcessMonitorTestService should be process safe [feenkcom/gtoolkit-maestro-rs/commit@f0bb2b3](https://github.com/feenkcom/gtoolkit-maestro-rs/commit/f0bb2b3175b339c3e8b25dec5eb9a61faa74f2c3).  "
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:18:39.744903-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:18:39.744903-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "/YXIVZe4R8W+o6WP67QB1Q=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Pharo Issue: none yet. Pharo 12–14 have the same code."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-12T22:10:00.128969-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-12T22:10:00.128969-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "BfSPl5PnRoeLWrqePwNTKQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "###ProcessMonitorTestService forkedProcesses race"
 						}
 					]
 				},
