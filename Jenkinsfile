@@ -162,6 +162,7 @@ class GlamorousToolkit {
     void execute() {
         try {
             script.node(agent.label()) {
+                check_notarization_access()
                 build()
             }
 
@@ -174,6 +175,23 @@ class GlamorousToolkit {
         }
         finally {
             publish_transfer_metrics()
+        }
+    }
+
+    /**
+     * Warns on Slack at the start of the build when Apple would refuse the notarization of the packages later,
+     * so that somebody can fix it (for example accept a new agreement) while the build is still running.
+     * It does not fail the build: the packaging stages run hours later and fail by themselves if the problem
+     * is still there. `notarytool history` only lists past submissions, but it needs the same credentials,
+     * team and signed agreements as `notarytool submit`. Other failures (for example a flaky network) only
+     * print a warning in the console.
+     */
+    void check_notarization_access() {
+        script.stage('Check Apple notarization') {
+            def result = Notarytool.run(script, 'history', '', 'preflight')
+            if (result.status != 0 && !Notarytool.warn_if_blocked(script, 'Apple notarization pre-check', result)) {
+                script.echo "WARNING: notarytool pre-check failed (exit ${result.status}) for an unclear reason; the build goes on."
+            }
         }
     }
 
@@ -831,19 +849,9 @@ class TestAndPackage extends AgentJob {
             return
         }
 
-        script.withCredentials([
-            script.string(credentialsId: 'notarizeusername', variable: 'APPLE_ID'),
-            script.string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')
-        ]) {
-            script.sh """
-               /Library/Developer/CommandLineTools/usr/bin/notarytool submit \
-                    --verbose \
-                    --apple-id "\$APPLE_ID" \
-                    --password "\$APPLE_PASSWORD" \
-                    --team-id "77664ZXL29" \
-                    --wait \
-                    ${release_package}
-               """
+        def result = Notarytool.run(script, 'submit', "--wait ${release_package}", release_package)
+        if (result.status != 0) {
+            Notarytool.fail(script, "Notarization of ${release_package}", result)
         }
 
         script.echo "Signed release package ${release_package}"
@@ -1047,6 +1055,80 @@ class GemstoneExamples extends TestAndPackageWithRemoteRepositories {
     @Override
     String artifacts_dir_name() {
         return super.artifacts_dir_name() + "-gemstone"
+    }
+}
+
+/**
+ * Runs Apple's `notarytool` with the notarization credentials of the team, keeps its output in a log file of the
+ * workspace, and explains the failures we know how to fix. The most important one: Apple blocks the notary service
+ * with HTTP 403 "A required agreement is missing or has expired" until the Account Holder accepts new terms at
+ * https://developer.apple.com/account. Such failures are reported to Slack at once and with the reason, instead of
+ * only as "script returned exit code 1" when the whole build ends. A pre-check at the start of the build warns
+ * early without failing it; the packaging stages fail by themselves.
+ */
+class Notarytool {
+    static final COMMAND = '/Library/Developer/CommandLineTools/usr/bin/notarytool'
+    static final TEAM_ID = '77664ZXL29'
+    static final ACCOUNT_URL = 'https://developer.apple.com/account'
+
+    /**
+     * Runs `notarytool <subcommand> --verbose <credentials> <extraArguments>`, streams its output into the console,
+     * and never throws for a non-zero exit code.
+     * @return a map with `status` (exit code) and `output` (stdout and stderr)
+     */
+    static Map run(Script script, String subcommand, String extraArguments, String logName) {
+        def logFile = "notarytool-${logName}.log".toString()
+        def status = 0
+        script.withCredentials([
+            script.string(credentialsId: 'notarizeusername', variable: 'APPLE_ID'),
+            script.string(credentialsId: 'notarizepassword-manager', variable: 'APPLE_PASSWORD')
+        ]) {
+            status = script.sh(returnStatus: true, script: """
+                set -o pipefail
+                ${COMMAND} ${subcommand} \
+                    --verbose \
+                    --apple-id "\$APPLE_ID" \
+                    --password "\$APPLE_PASSWORD" \
+                    --team-id "${TEAM_ID}" \
+                    ${extraArguments} 2>&1 | tee "${logFile}"
+                """)
+        }
+        return [status: status, output: script.readFile(logFile)]
+    }
+
+    /** @return why Apple blocks every notarization until a person acts, or null when the output shows no such reason */
+    static String blocking_reason(String output) {
+        if (output.contains('required agreement is missing or has expired')) {
+            return "A required Apple agreement is missing or has expired. The Account Holder must accept it at ${ACCOUNT_URL} (also check App Store Connect > Agreements)."
+        }
+        if (output.contains('HTTP status code: 401')) {
+            return "Apple rejected the notarization credentials (Jenkins credentials notarizeusername and notarizepassword-manager)."
+        }
+        return null
+    }
+
+    /**
+     * Warns on Slack when the output shows a known blocking reason, and lets the build go on.
+     * @return true when a blocking reason was found
+     */
+    static boolean warn_if_blocked(Script script, String what, Map result) {
+        def reason = blocking_reason(result.output)
+        if (reason == null) {
+            return false
+        }
+        script.echo "${what}: ${reason}"
+        script.slackSend(color: '#FFFF00', message: "${what}: ${reason} The build goes on and its packaging stages fail if this is not fixed by then. <${script.env.BUILD_URL}|${script.env.JOB_NAME} [${script.env.BUILD_NUMBER}]>")
+        return true
+    }
+
+    /** Reports a known blocking reason to Slack and fails the build with a message that says what went wrong. */
+    static void fail(Script script, String what, Map result) {
+        def reason = blocking_reason(result.output)
+        if (reason != null) {
+            script.slackSend(color: '#FF0000', message: "${what} is blocked: ${reason} <${script.env.BUILD_URL}|${script.env.JOB_NAME} [${script.env.BUILD_NUMBER}]>")
+        }
+        def lines = result.output.trim().split('\n')
+        script.error("${what} failed (exit code ${result.status}): ${reason ?: lines[lines.length - 1]}")
     }
 }
 
