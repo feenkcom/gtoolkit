@@ -1179,7 +1179,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-11-12T23:02:37.287431-03:00"
+									"dateAndTimeString" : "2026-11-12T23:05:30.191584-03:00"
 								}
 							},
 							"uid" : {
@@ -1189,7 +1189,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Managed execution** ({{gtMethod:TestExecutionEnvironment>>#runExampleEvaluator:}}):\n- Signals the watchdog semaphore to start timing\n- Calls {{gtMethod:TestExecutionEnvironment>>#runExampleUnderWatchdogUsingEvaluator:}}\n- Will signal `TestTookTooMuchTime` if the example exceeds its time limit, {{gtMethod:GtExample>>#timeLimit}} (the {{gtPragma:timeLimit:}} pragma, by default {{gtMethod:GtExample>>#defaultTimeLimit}}, 1 minute)\n- Calls `handleCompletedTest` on services when done\n- Calls `cleanUpAfterTest` after every example: terminates forked processes, cancels unfinished promises and stops the thread pool of the example"
+							"string" : "**Managed execution** ({{gtMethod:TestExecutionEnvironment>>#runExampleEvaluator:}}):\n- Signals the watchdog semaphore to start timing\n- Calls {{gtMethod:TestExecutionEnvironment>>#runExampleUnderWatchdogUsingEvaluator:}}\n- Will signal `TestTookTooMuchTime` if the example exceeds its time limit, {{gtMethod:GtExample>>#timeLimit}} (the {{gtPragma:timeLimit:}} pragma, by default {{gtMethod:GtExample>>#defaultTimeLimit}}, 1 minute)\n- Calls {{gtSymbol:handleCompletedTest}} on services when done\n- Calls {{gtSymbol:cleanUpAfterTest}} after every example: terminates forked processes, cancels unfinished promises and stops the thread pool of the example"
 						},
 						{
 							"__type" : "textSnippet",
