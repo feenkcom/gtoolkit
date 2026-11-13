@@ -258,7 +258,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-27T15:33:00.029+02:00"
+									"dateAndTimeString" : "2026-11-12T22:53:42.738313-03:00"
 								}
 							},
 							"uid" : {
@@ -268,7 +268,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- {{gtMethod:GtExampleEvaluator>>#runManaged}} - Runs with watchdog monitoring (time limits enforced)"
+							"string" : "- {{gtMethod:GtExampleEvaluator>>#runManaged}} - Runs with watchdog monitoring (time limits enforced) and cleans up after the example. {{gtMethod:GtExampleEvaluator>>#result}} uses it, so it is the default."
 						},
 						{
 							"__type" : "textSnippet",
@@ -295,7 +295,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-27T15:33:01.442+02:00"
+									"dateAndTimeString" : "2026-11-12T22:53:45.087292-03:00"
 								}
 							},
 							"uid" : {
@@ -305,7 +305,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "- {{gtMethod:GtExampleEvaluator>>#runUnmanaged}} - Runs without watchdog but still tracks the example in the test environment"
+							"string" : "- {{gtMethod:GtExampleEvaluator>>#runUnmanaged}} - Runs without the watchdog and without the clean up: services that clean up after a test are disabled ({{gtMethod:TestExecutionEnvironment>>#disableServicesForUnmanagedExampleRun}}), so processes and promises the example starts keep running. Used when a user plays an example ({{gtMethod:GtPharoMethodCoder>>#playExample}}, {{gtMethod:GtExampleEvaluator>>#unmanagedResult}})."
 						},
 						{
 							"__type" : "textSnippet",
@@ -483,7 +483,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-05-28T15:53:58.803+02:00"
+												"dateAndTimeString" : "2026-11-12T22:53:46.58895-03:00"
 											}
 										},
 										"uid" : {
@@ -493,7 +493,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "2. {{gtMethod:GtExampleEvaluator>>#result}} calls {{gtMethod:GtExampleEvaluator>>#runUnmanaged}}"
+										"string" : "2. {{gtMethod:GtExampleEvaluator>>#result}} calls {{gtMethod:GtExampleEvaluator>>#runManaged}}"
 									},
 									{
 										"__type" : "textSnippet",
@@ -520,7 +520,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-05-28T15:54:04.502+02:00"
+												"dateAndTimeString" : "2026-11-12T22:53:47.934873-03:00"
 											}
 										},
 										"uid" : {
@@ -530,7 +530,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "3. This calls {{gtMethod:CurrentExecutionEnvironment class>>#runUnmanagedExampleEvaluator:}}"
+										"string" : "3. This calls {{gtMethod:CurrentExecutionEnvironment class>>#runExampleEvaluator:}}"
 									},
 									{
 										"__type" : "textSnippet",
@@ -557,7 +557,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-05-28T15:54:06.397+02:00"
+												"dateAndTimeString" : "2026-11-12T22:53:49.534048-03:00"
 											}
 										},
 										"uid" : {
@@ -567,7 +567,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "4. Since no test environment is pre-installed, {{gtMethod:DefaultExecutionEnvironment>>#runUnmanagedExampleEvaluator:}} creates and activates a new {{gtClass:TestExecutionEnvironment}}"
+										"string" : "4. Since no test environment is pre-installed, {{gtMethod:DefaultExecutionEnvironment>>#runExampleEvaluator:}} creates and activates a new {{gtClass:TestExecutionEnvironment}}"
 									},
 									{
 										"__type" : "textSnippet",
@@ -594,7 +594,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-05-28T15:54:06.397+02:00"
+												"dateAndTimeString" : "2026-11-12T22:53:51.698366-03:00"
 											}
 										},
 										"uid" : {
@@ -604,7 +604,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "5. {{gtMethod:TestExecutionEnvironment>>#runUnmanagedExampleEvaluator:}} sets the evaluator as the current `testCase` and executes it"
+										"string" : "5. {{gtMethod:TestExecutionEnvironment>>#runExampleEvaluator:}} sets the evaluator as the current `testCase` and runs it managed: under the watchdog, then `handleCompletedTest` and `cleanUpAfterTest`"
 									}
 								]
 							},
@@ -664,14 +664,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-27T10:59:43.081+02:00"
+									"dateAndTimeString" : "2026-11-12T22:53:52.890933-03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "wpAQZo/9NUmRiEmFS5MhrQ=="
 							},
-							"code" : "\"From DefaultExecutionEnvironment>>#runUnmanagedExampleEvaluator:\"\ntestEnv := TestExecutionEnvironment new.\ntestEnv beActiveDuring: [\n\texampleResult := testEnv runUnmanagedExampleEvaluator: anExampleEvaluator ]."
+							"code" : "\"From DefaultExecutionEnvironment>>#runExampleEvaluator:\"\ntestEnv := TestExecutionEnvironment new.\ntestEnv beActiveDuring: [\n\texampleResult := testEnv runExampleEvaluator: anExampleEvaluator ]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -740,7 +740,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-05-28T15:55:39.272+02:00"
+												"dateAndTimeString" : "2026-11-12T22:54:22.397184-03:00"
 											}
 										},
 										"uid" : {
@@ -750,7 +750,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "2. This installs a {{gtClass:TestExecutionEnvironment}} for the entire batch run via {{gtMethod:DefaultExecutionEnvironment>>#runTestsBy:}}"
+										"string" : "2. This installs a {{gtClass:TestExecutionEnvironment}} via {{gtMethod:DefaultExecutionEnvironment>>#runTestsBy:}} for all examples of the report. {{gtMethod:GtExamplesHudsonReport class>>#runPackage:}} creates one report per example class, so each class gets its own environment"
 									},
 									{
 										"__type" : "textSnippet",
@@ -814,7 +814,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-05-28T15:55:40.709+02:00"
+												"dateAndTimeString" : "2026-11-12T22:53:54.84721-03:00"
 											}
 										},
 										"uid" : {
@@ -824,7 +824,156 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "4. Since a test environment is already active, {{gtMethod:TestExecutionEnvironment>>#runUnmanagedExampleEvaluator:}} is called directly (no new environment created)"
+										"string" : "4. {{gtMethod:GtExample>>#debug}} uses a {{gtClass:GtExampleDebugger}}, which runs the example managed. Since a test environment is already active, {{gtMethod:TestExecutionEnvironment>>#runExampleEvaluator:}} is called directly (no new environment created): each example runs under the watchdog and is cleaned up after it ends"
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-11-12T22:54:13.230854-03:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-11-12T22:54:13.230854-03:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "SssoGIXkSFiortRskJ2t6w=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "The environment and its services (e.g. {{gtClass:ProcessMonitorTestService}}) are shared by all examples one report runs, i.e. the examples of one class. Services therefore have to be safe for use from several processes (see [[Patches/changes to the base Pharo Image]])."
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-11-12T22:54:13.342689-03:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-11-12T22:54:13.342689-03:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "2nYNnukXRHWZMUzkXYBj/g=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "An example that is started while another example or test is running gets its own environment ({{gtMethod:TestExecutionEnvironment>>#runNestedExampleEvaluator:}}), so that its clean up does not stop the processes, promises, and time limit of the running one."
+												},
+												{
+													"__type" : "textSnippet",
+													"children" : {
+														"__type" : "snippets",
+														"items" : [ ]
+													},
+													"createEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"createTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-11-12T22:54:13.430981-03:00"
+														}
+													},
+													"editEmail" : {
+														"__type" : "email",
+														"emailString" : "<unknown>"
+													},
+													"editTime" : {
+														"__type" : "time",
+														"time" : {
+															"__type" : "dateAndTime",
+															"dateAndTimeString" : "2026-11-12T22:54:13.430981-03:00"
+														}
+													},
+													"uid" : {
+														"__type" : "uid",
+														"uidString" : "CQirhsF2RLWDo1oGbxsI6g=="
+													},
+													"paragraphStyle" : {
+														"__type" : "textStyle"
+													},
+													"string" : "{{gtMethod:GtExamplesHudsonReport>>#runExample:}} retries a failing example up to three times. A failed attempt first unwinds ({{gtMethod:GtExamplesHudsonReport>>#runAttemptOf:isLastAttempt:addingStackTo:}}), so the environment marks the example as completed and the watchdog stops; only then {{gtMethod:GtExamplesHudsonReport>>#prepareForRetryOf:}} collects garbage and waits. See {{gtMethod:GtExamplesHudsonReportExamples>>#slowRetryOfTimedOutExampleIsReported}}."
+												}
+											]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:54:05.433195-03:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-12T22:54:05.433195-03:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "ry/HE4dcREKCcaEjFFYLqw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Notes:"
 									}
 								]
 							},
@@ -892,6 +1041,80 @@
 								"uidString" : "ph+CD5XKd0OM9H1Y8V4h1A=="
 							},
 							"code" : "\"From GtExamplesTestingHudsonReport>>#runAll\"\nCurrentExecutionEnvironment runTestsBy: [ \n\tself testCasesToRun do: [ :each |  \n\t\tself runTestCase: each ] ]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-12T22:54:05.340954-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-12T22:54:05.340954-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ABKi7QgcTOiSwPPV9a0GOQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Playing an example in a method coder ({{gtMethod:GtPharoMethodCoder>>#playExample}}) is different: it calls {{gtMethod:GtExample>>#runUnmanaged}}, so the processes and promises the example starts keep running while the user works with the returned object."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-12T23:00:10.121091-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-12T23:02:18.271665-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "zv7TKHIVSjS2TR2bZv0wzg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Similarly, {{gtMethod:GtPharoMethodCoder>>#debugExample}} calls {{gtMethod:GtExampleOpenDebugger>>#unmanagedResult}}, so the processes and promises the example starts keep running while the user debugs and then works with the returned object."
 						}
 					]
 				},
@@ -956,7 +1179,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-28T15:54:49.384+02:00"
+									"dateAndTimeString" : "2026-11-12T23:05:30.191584-03:00"
 								}
 							},
 							"uid" : {
@@ -966,7 +1189,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Managed execution** ({{gtMethod:TestExecutionEnvironment>>#runExampleEvaluator:}}):\n- Signals the watchdog semaphore to start timing\n- Calls {{gtMethod:TestExecutionEnvironment>>#runExampleUnderWatchdogUsingEvaluator:}}\n- Will signal `TestTookTooMuchTime` if the example exceeds its time limit\n- Calls `handleCompletedTest` on services when done"
+							"string" : "**Managed execution** ({{gtMethod:TestExecutionEnvironment>>#runExampleEvaluator:}}):\n- Signals the watchdog semaphore to start timing\n- Calls {{gtMethod:TestExecutionEnvironment>>#runExampleUnderWatchdogUsingEvaluator:}}\n- Will signal `TestTookTooMuchTime` if the example exceeds its time limit, {{gtMethod:GtExample>>#timeLimit}} (the {{gtPragma:timeLimit:}} pragma, by default {{gtMethod:GtExample>>#defaultTimeLimit}}, 1 minute)\n- Calls {{gtSymbol:handleCompletedTest}} on services when done\n- Calls {{gtSymbol:cleanUpAfterTest}} after every example: terminates forked processes, cancels unfinished promises and stops the thread pool of the example"
 						},
 						{
 							"__type" : "textSnippet",
@@ -993,7 +1216,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-05-28T15:54:49.396+02:00"
+									"dateAndTimeString" : "2026-11-12T22:54:00.087008-03:00"
 								}
 							},
 							"uid" : {
@@ -1003,7 +1226,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "**Unmanaged execution** ({{gtMethod:TestExecutionEnvironment>>#runUnmanagedExampleEvaluator:}}):\n- Sets the evaluator as the current `testCase` (for Epicea logging checks)\n- Executes the evaluator directly without watchdog timing\n- Does NOT trigger the watchdog or call service handlers"
+							"string" : "**Unmanaged execution** ({{gtMethod:TestExecutionEnvironment>>#runUnmanagedExampleEvaluator:}}):\n- Sets the evaluator as the current `testCase` (for Epicea logging checks)\n- Executes the evaluator directly without watchdog timing\n- Disables the services that clean up after a test and does not clean up, so processes and promises the example starts keep running\n- If a test case or an example is already running, the evaluator simply runs as a part of it, so the running one's clean up still covers it"
 						}
 					]
 				},
