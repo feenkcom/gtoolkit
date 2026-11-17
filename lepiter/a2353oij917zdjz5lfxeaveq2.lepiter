@@ -552,7 +552,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-11-17T17:03:32.724819+01:00"
+									"dateAndTimeString" : "2026-11-18T00:03:25.507287+01:00"
 								}
 							},
 							"uid" : {
@@ -562,7 +562,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The rest, {{gtExample:GtMemoryMetrics class>>totalNotAnalysedSize|label=#humanReadableIsqByteSize}}, is not analysed yet. It contains the global state of the system (for example fonts and caches of forms), the objects created by the UI and the user, and the Lepiter databases loaded at startup (all loaded databases use {{gtExample:GtLepiterMemoryMetrics class>>totalDatabasesSize|label=#humanReadableIsqByteSize}})."
+							"string" : "The rest, {{gtExample:GtMemoryMetrics class>>totalNotAnalysedSize|label=#humanReadableIsqByteSize}}, is not part of these analyses. It contains the global state of the system (for example fonts and caches of forms), the objects created by the UI and the user, and the Lepiter databases loaded at startup (all loaded databases use {{gtExample:GtLepiterMemoryMetrics class>>totalDatabasesSize|label=#humanReadableIsqByteSize}}). {{gtClass:GtImageStateMemoryMetrics}} attributes all objects that are not code to who holds them: the GT Book, the code index, the other Lepiter databases, the class-side state of each package and the globals. It walks the whole image, so it takes a while; see [[Analysing memory in a live image]]."
 						}
 					]
 				},

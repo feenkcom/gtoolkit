@@ -1,0 +1,928 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:29.435066+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:29.435066+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "is91uixwTy+stsz3qxgw9Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This page describes a small model for investigating memory in a running image, by people or by agents. It complements [[Analysing the size of the image]], which explains what a saved image contains.\n\nTwo questions are useful when memory grows: **what kinds of objects** take the space, and **who holds them**. A space tally answers the first question quickly. The memory-space model answers the second one: it walks the objects reachable from chosen roots and attributes their memory to the root that reaches them first. Neither answer is exact, and they do not have to be: the goal is to see quickly where space is spent."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.075865+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.075865+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "XzFCFYMRRs+ECBGUIGPhRg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A few objects, each with one job:\n- a {{gtClass:GtMemorySpaceRootsDefinition}} says where to look: ordered groups of roots, where to stop, and which kinds of objects to tag. It is configured in a snippet, without writing a class;\n- a {{gtClass:GtMemorySpaceRootGroup}} is a named group of roots ({{gtClass:GtMemorySpaceRoot}}), computed when the estimation runs. Its class side has ready-made groups for the class-side state of all classes (by package) and for the globals;\n- a {{gtClass:GtMemorySpaceBoundary}} says at which classes a walk stops (by default code entities and processes) and which classes are tagged;\n- a {{gtClass:GtMemorySpaceEstimator}} walks the objects, counting each object once, by identity;\n- a {{gtClass:GtMemorySpaceEstimate}} holds the result: memory per category (where it comes from), per tag (what kind of objects), per root and per group of roots.\n\nGroups are estimated in order. An object reachable from several groups is counted in the first one, so put specific roots first and roots that reach almost everything last."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.077208+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.077208+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "4zYC3lKoTiy3sR4GY3AgLw=="
+							},
+							"exampleSelector" : "estimateOfRootGroups",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtViewRootGroupsFor:",
+							"exampleBehaviorName" : "GtMemorySpaceRootsDefinitionExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:29.436583+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:29.436583+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ht2rypNtRES19T/BjpNsnA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## The model"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.079249+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.079249+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Ujc/jf0rROWKG+Q6Srd+RQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "A space tally counts the instances of every class and their memory, per class, package and repository. It needs no knowledge of the object model and takes about a second, even with a heap of a few gigabytes. It does not say why the objects are alive."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.079696+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.079696+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "j/nnD9FtQB66VUqNyvOIlA=="
+							},
+							"code" : "GtSpaceTally new\n\tsystemWideSpaceTally;\n\tyourself"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:30.078569+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:30.078569+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "X7S0vwI1RcSGKxwdJsx+Wg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Recipe 1: what kinds of objects take space"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.08144+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.08144+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "BcxbtmQcQhutCYbcrKpgjw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Describe the roots in the order in which they should claim memory, then inspect the estimation. The Root groups and Roots views show who holds what; Categories split the class-side state by package. Walking a large heap takes minutes (about 150 thousand objects per second in a heap of 4 GB), so start with a few groups."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.08171+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.08171+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "IrfFfVgpSDO0gFm0UDhzvQ=="
+							},
+							"code" : "\"Who holds memory: the Lepiter databases first, then the class-side state of all classes and the globals.\nThe walk stops at code entities, processes and Bloc spaces.\"\n| definition |\ndefinition := GtMemorySpaceRootsDefinition new\n\troots: 'Lepiter databases'\n\t\tare: [ LeDatabasesRegistry default currentLoadedDefaultLogicalDatabase\n\t\t\t\tifNil: [ #() ]\n\t\t\t\tifNotNil: [ :aLogicalDatabase | aLogicalDatabase databases ] ];\n\trootGroup: GtMemorySpaceRootGroup classSideState;\n\trootGroup: GtMemorySpaceRootGroup globals;\n\tstopAtInstancesOf: { BlSpace };\n\ttag: #string instancesOf: { ByteString. WideString };\n\texpectedObjects: 5000000;\n\tyourself.\ndefinition estimate"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:30.080887+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:30.080887+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "voE+si2mSgOgQ6DI1CCBEA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Recipe 2: who holds the memory"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.08355+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:18:34.376882+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "UH7VPUgXRveICf1RGyDnSg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Combine both: take the largest classes of a space tally and tag their instances. The Tags view of the estimate then shows, for each class, the memory of its instances in each category. What the space tally counts and no root reaches is held elsewhere, for example by processes or by the virtual machine. The default boundary stops at processes, so their stacks (`Context` objects) are not walked; to include them, use `boundary: (GtMemorySpaceBoundary new stopAtCodeEntities; yourself)`."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.083792+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.083792+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "J/T64a/pTZa6kE9ktCt+2A=="
+							},
+							"code" : "| largestClasses definition |\nlargestClasses := ((GtSpaceTally new systemWideSpaceTally asArray\n\tsort: [ :a :b | a spaceForInstances > b spaceForInstances ])\n\t\tfirst: 5)\n\t\tcollect: [ :each | Smalltalk globals at: each analyzedClassName ].\ndefinition := GtMemorySpaceRootsDefinition new\n\trootGroup: GtMemorySpaceRootGroup classSideState;\n\trootGroup: GtMemorySpaceRootGroup globals;\n\ttagEachOf: largestClasses;\n\texpectedObjects: 5000000;\n\tyourself.\ndefinition estimate"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.180467+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.180467+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wkpFwYY8RP+HT5ohfGjVkA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To look inside one object, make it the only root. A group can also split its roots with an attribution, for example a {{gtClass:GtMemorySpaceSlotsAttribution}} that sends each slot to its own category, when the object model is stable enough for slot names."
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.180838+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.180838+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "26/mUgoGR6quvTOoZjwNRQ=="
+							},
+							"exampleSelector" : "rootGroupWithAttribution",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtViewCategoriesFor:",
+							"exampleBehaviorName" : "GtMemorySpaceRootsDefinitionExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:30.083061+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:18:32.716188+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GC+gZ0eRTtaYx2EQ4aeCQA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Recipe 3: who holds the largest classes"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.203236+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.203236+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "NGIqTJTQQ22lGo7fsOkDFA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- **Order matters.** In a running image, the Bloc universes reach almost every object through the UI. Estimate specific roots first, or stop at UI classes such as `BlSpace` and `BlElement`.\n- **Results are estimates.** Memory reachable from several roots goes to the first one; weak references and the keys of ephemerons are not followed; the walk stops at code entities and, by default, at processes.\n- **Cost.** The time grows with the number of objects reached, and the set of visited objects needs memory too. Use `expectedObjects:` for large walks.\n- **A long-running image is not a saved image.** Its heap also holds the objects of the UI, of tools and of the user, and can be many times larger than the image file.\n- **For agents.** Run long estimations in a background process at a low priority (for example `forkAt: 20`), and write a summary to a file or keep the estimation in a variable. {{gtClass:GtMemorySpaceViewsCheck}} checks that the views of a result can be computed."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:30.181256+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:30.181256+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VYP4yT4hSmWV9ebBlCxgbQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Tips"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.205283+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.205283+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QaQsshmgR/qm22l+hv5evw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:GtImageStateMemoryMetrics}} applies the model to the whole image: the objects that are not code entities, attributed to the GT Book, the code index, the other Lepiter databases, the class-side state of all classes and the globals. Code entities are measured by {{gtClass:GtMemoryMetrics}}, and what no root reaches is reported as not reached. To explain the size of the image on disk, compute it in a freshly started image, or in the build before saving."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.205876+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T23:17:30.205876+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "clfDGe2NSne+Wra3QaBZQw=="
+							},
+							"code" : "GtImageStateMemoryMetrics default"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:30.204374+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-17T23:17:30.204374+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cxm/rUs5SSCi28VtmYjBJg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## The state of a saved image"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T00:06:25.592258+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T00:28:10.280926+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+9oVwLP1SzOLS7WaglFhMA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In a running image almost everything reaches almost everything, through the UI, processes and announcers, so a tool's memory usually goes to whatever root reaches it first. Two questions help:\n- **What does it hold?** Add a focus group: it is estimated before all other groups and stops at the shared hubs of the image (processes, Bloc elements and spaces, the async thread pool), so that it gets its own objects, for example the history of the MCP server with its results.\n- **What does it keep alive?** A {{gtClass:GtMemorySpaceRetention}} splits the memory reached through the instances of some classes in two: what is reached **only through them** (retained, freed without them) and what is **also reached from other places** (shared, it would stay). Its Classes view shows the instances of each class and the memory retained through them. The retained part is measured in a single walk, so it does not depend on changes of the heap between walks."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T00:06:25.593667+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T00:06:25.593667+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "AxKvxUuCTeWmO5BXIRAvhA=="
+							},
+							"code" : "\"What the MCP server holds, and what only it keeps alive. Each walk takes about a minute.\"\n| metrics |\nmetrics := GtImageStateMemoryMetrics focusedOn: (GtMemorySpaceRootGroup\n\tlabel: 'MCP server'\n\troots: [ { GtLMcpServer classPool at: #Current } ]).\nmetrics retentionOf: { GtLMcpServer. GtLToolMessage. GtLMcpChatAdapter }"
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T00:06:25.596218+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T00:06:25.596218+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "2NI/WwtcQTORu96sRhdXfA=="
+							},
+							"exampleSelector" : "retentionOfInstances",
+							"previewHeight" : 200,
+							"previewShowSelector" : "gtViewSummaryFor:",
+							"exampleBehaviorName" : "GtMemorySpaceRootsDefinitionExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : false,
+							"noCode" : true
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-18T00:06:25.577287+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-18T00:06:25.577287+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rwgNEo42RRC/yd5SyEcgVA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## Recipe 4: what a tool or a server holds"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-11-17T23:17:01.794512+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-11-17T23:17:01.794512+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Analysing memory in a live image"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "10c09743-4ca9-4988-b505-2a6b559d3ff2"
+	}
+}
