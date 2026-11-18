@@ -120,6 +120,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "All code is managed from within GT, any time a method is to be added or modified it should be done in GT and then updated in GemStone."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T08:53:37.571371+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T08:53:37.571371+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "hTtQ3rJmT9Opde/Mc78Emg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The compile tools run through their own machinery (e.g. {{gtClass:GtLMethodCompilationDataExtractor}}), so changing that code through the tool changes the tool part-way through a batch.  Add new callees before their callers, in separate calls, and never put a caller and its new callee in the same `compileMethods` batch.  If the tool breaks itself, only an evaluation can repair it."
 						}
 					]
 				},
@@ -178,13 +215,13 @@
 							},
 							"editEmail" : {
 								"__type" : "email",
-								"emailString" : "alistairgrant@fastmail.com.au"
+								"emailString" : "<unknown>"
 							},
 							"editTime" : {
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-10-20T14:34:33.978443+02:00"
+									"dateAndTimeString" : "2026-11-18T08:53:29.186566+01:00"
 								}
 							},
 							"uid" : {
@@ -194,7 +231,81 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "When modifying an existing method, check what it's protocol is, and unless it is 'as yet unclassified', DO NOT CHANGE THE PROTOCOL unless explicitly requested.  This is particularly important for EXTENSION METHODS (where the protocol begins with a '*').  If you feel the need to change a protocol, stop and ask for confirmation"
+							"string" : "When modifying an existing method with `compileMethods`, `gemstoneCompileMethod` or `gemstoneCompileMethods`, OMIT `protocol`: the method keeps its current protocol (in GemStone, its category).  Don't pass a protocol you've guessed or copied.  A wrong protocol is a silent change, and for an EXTENSION METHOD (where the protocol begins with a '*') it moves the method to another package.  Change the protocol of an existing method only when explicitly asked.  If you feel the need to change a protocol, stop and ask for confirmation."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T08:53:37.567129+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T08:53:37.567129+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "3F3+XKD9QeOFZmwOAKLWPg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Give a protocol for every NEW method.  A new method without one goes into 'as yet unclassified'.  A blank or whitespace-only protocol counts as no protocol, and a given protocol is trimmed."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T08:53:37.568462+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T08:53:37.568462+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "j2ynntPBTg6syMB+YTtfoQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "To check a protocol, use `(Class >> #selector) protocolName` in GT and `Class categoryOfSelector: #selector environmentId: 0` in the stone."
 						}
 					]
 				},
@@ -2098,6 +2209,80 @@
 								"__type" : "textStyle"
 							},
 							"string" : "`gemstoneGetCodeOfMethods` and the other session tools show the GT session's uncommitted compiles, not what a fresh load of GT.gs produces, and uncommitted compiles can be lost.  At milestones, export GT.gs and load it into a clean stone (`loadGsGt.sh`, log in `$GT_CURRENT_DIR/loadGsGt.log`) before trusting a result."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T08:53:37.572258+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T08:53:37.572258+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "awjMrz/1R0G/CFeghewy5w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "`gsCode:` variants run only in the stone, so GT examples don't cover them.  When you change one, make sure an example class that exercises it is in {{gtMethod:GtGemStoneExampleRunner>>#select}}, or check it by hand in the stone.  The Magritte compile-tool example classes aren't in `select` at present."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T08:53:37.572776+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-18T08:53:37.572776+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "DrZy7yevSFODe0NNtbRrag=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The runner selects every example in its target classes, so the totals grow as examples are added.  Compare a result with the per-class list from the last baseline, not with the bare counts."
 						}
 					]
 				},
