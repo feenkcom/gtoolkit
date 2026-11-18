@@ -137,7 +137,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-18T14:32:56.504136+02:00"
+						"dateAndTimeString" : "2026-11-17T15:22:22.774665+01:00"
 					}
 				},
 				"uid" : {
@@ -147,7 +147,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Current image size is {{gtExample:GtMemoryMetrics class>>totalImageSize|label=#humanReadableIsqByteSize}}."
+				"string" : "The image file on disk has {{gtExample:GtMemoryMetrics class>>totalImageSize|label=#humanReadableIsqByteSize}}, as of the last save. In memory, the image now has {{gtExample:GtMemoryMetrics class>>totalImageSizeInMemory|label=#humanReadableIsqByteSize}}: the size of all objects after a full garbage collection, which also includes objects created by the UI and the user. The heap reserved by the virtual machine is larger, {{gtExample:GtMemoryMetrics class>>totalHeapSize|label=#humanReadableIsqByteSize}}, as it also includes free space."
 			},
 			{
 				"__type" : "textSnippet",
@@ -184,7 +184,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-17T17:46:24.030047+02:00"
+												"dateAndTimeString" : "2026-11-17T14:31:55.267135+01:00"
 											}
 										},
 										"uid" : {
@@ -194,7 +194,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "The size of methods includes all bytecodes, additional state and literals. Literals include strings and literal arrays, but excludes symbols."
+										"string" : "The size of methods includes bytecodes, embedded blocks, the additional method state (pragmas with their arguments, and the associations holding properties) and literals. Literals include strings, literal arrays and other literals without pointers (byte arrays, large integers, floats), but exclude symbols and variable bindings. Literals shared between methods are counted once for each method."
 									},
 									{
 										"__type" : "textSnippet",
@@ -1335,7 +1335,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-18T14:34:43.199567+02:00"
+									"dateAndTimeString" : "2026-11-17T14:31:55.400483+01:00"
 								}
 							},
 							"uid" : {
@@ -1345,7 +1345,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Pragmas Cache: {{gtExample:GtMemoryMetrics class>>totalPragmasCacheSize|label=#humanReadableIsqByteSize}}"
+							"string" : "Pragmas Cache: {{gtExample:GtMemoryMetrics class>>totalPragmasCacheSize|label=#humanReadableIsqByteSize}} (only the cache structure; the pragma objects are counted as part of methods)"
 						},
 						{
 							"__type" : "textSnippet",
@@ -1457,6 +1457,81 @@
 								"__type" : "textStyle"
 							},
 							"string" : "Navigation Environment: {{gtExample:GtMemoryMetrics class>>navigationEnvironmentSize|label=#humanReadableIsqByteSize}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-17T16:01:17.47792+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-17T16:01:17.47792+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "V8HRdEa6QVKyViRALekzAw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Not included in the total: the whole GT Book database, including its index, uses {{gtExample:GtLepiterMemoryMetrics class>>totalGtBookSize|label=#humanReadableIsqByteSize}}. See [[Analysing the size of Lepiter databases]]."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T15:36:15.262564+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T15:36:15.262564+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "ukemi672TVua2g2+mTWr9g=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Lepiter GT Book index: {{gtExample:GtMemoryMetrics class>>totalLepiterGtBookIndexSize|label=#humanReadableIsqByteSize}}. The GT Book is the only Lepiter database saved in the image. The indexes of all loaded databases, including the ones loaded at startup, use {{gtExample:GtMemoryMetrics class>>totalLepiterDatabasesIndexSize|label=#humanReadableIsqByteSize}} of the heap."
 						}
 					]
 				},
@@ -1521,7 +1596,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-18T14:34:49.009348+02:00"
+									"dateAndTimeString" : "2026-11-17T14:31:56.07399+01:00"
 								}
 							},
 							"uid" : {
@@ -1531,7 +1606,81 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Traits overhead: {{gtExample:GtMemoryMetrics class>>totalTraitsOverheadSize|label=#humanReadableIsqByteSize}}"
+							"string" : "Extra method dictionaries: {{gtExample:GtMemoryMetrics class>>totalTraitsOverheadSize|label=#humanReadableIsqByteSize}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T14:32:03.283678+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T14:32:03.283678+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OVljA0GpRmmcv2qcG+YHiA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Of which for classes and traits that do not use traits themselves (their extra dictionaries repeat their method dictionaries): {{gtExample:GtMemoryMetrics class>>totalTraitsOverheadForClassesWithoutTraitsSize|label=#humanReadableIsqByteSize}}"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T14:32:03.296751+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-17T14:32:03.296751+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QqHtrRDYReu9BduylMA5jQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Methods installed from traits: {{gtExample:GtMemoryMetrics class>>totalMethodsFromTraitsSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMemoryMetrics class>>totalMethodsFromTraitsCount|label=#asString}} methods"
 						}
 					]
 				},
@@ -1554,7 +1703,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-05-17T15:22:37.40159+02:00"
+						"dateAndTimeString" : "2026-11-17T14:31:55.698276+01:00"
 					}
 				},
 				"uid" : {
@@ -1564,7 +1713,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "When using traits, metaclasses use two extra arrays. This can introduce a memory overhead when traits have many users. "
+				"string" : "Classes that use traits, or inherit from a class that uses traits, have a {{gtClass:TraitedMetaclass}}. It keeps two extra method dictionaries with the methods defined locally in the class, for the instance and the class side. Methods coming from traits are also copied into every class that uses the trait. These sizes are already included in the sizes above."
 			},
 			{
 				"__type" : "textSnippet",
@@ -1638,7 +1787,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2022-05-23T15:00:54.310683+02:00"
+												"dateAndTimeString" : "2026-11-17T14:31:57.255689+01:00"
 											}
 										},
 										"uid" : {
@@ -1648,7 +1797,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "{{gtExample:GtMemoryMetrics class>>totalMethodDictionarySize|label=#humanReadableIsqByteSize}}  using {{gtMethod:name=HashedCollection>>#gtSpecificSizeInMemory}}"
+										"string" : "{{gtExample:GtMemoryMetrics class>>totalMethodDictionarySize|label=#humanReadableIsqByteSize}}  using {{gtMethod:name=MethodDictionary>>#gtSpecificSizeInMemory}}"
 									},
 									{
 										"__type" : "textSnippet",
