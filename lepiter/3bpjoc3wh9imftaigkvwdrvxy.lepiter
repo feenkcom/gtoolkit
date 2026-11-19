@@ -257,7 +257,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-11-08T22:06:49.886203+01:00"
+									"dateAndTimeString" : "2026-11-18T16:24:51.879538+01:00"
 								}
 							},
 							"uid" : {
@@ -267,7 +267,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Only create views when they help you answer questions about the object. Track the questions explicitly as comments in the view method."
+							"string" : "Only create views when they help you answer questions about the object. Track the questions explicitly with `question: '...'` sent to the view."
 						},
 						{
 							"__type" : "textSnippet",
