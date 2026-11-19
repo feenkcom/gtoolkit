@@ -1766,7 +1766,7 @@
 								"__type" : "uid",
 								"uidString" : "Jf+l+dUMQRuHhyXBFvM8zg=="
 							},
-							"code" : "selectedPaperIDs := VRDatasetExamples new selectedPapersJSON\r\t\tcollect: [ :d | d at: 'ID' ]"
+							"code" : "selectedPaperIDs := VRDatasetExamples new selectedPapersJSON\r\t\tcollect: [ :d | (d at: 'ID') asNumber ]"
 						},
 						{
 							"__type" : "textSnippet",
