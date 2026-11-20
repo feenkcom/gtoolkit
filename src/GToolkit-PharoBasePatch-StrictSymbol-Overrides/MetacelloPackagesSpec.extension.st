@@ -1,71 +1,68 @@
 Extension { #name : #MetacelloPackagesSpec }
 
 { #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
-MetacelloPackagesSpec >> sortPackageSpecs: orderedSpecs packageSpec: packageSpec groupLoops: groupLoops for: aVersionSpec [
-	| packageIndex moved movePackage targetPackage targetIndex targetSpecNames groupLoopDetected |
-	packageIndex := orderedSpecs indexOf: packageSpec.
-	moved := movePackage := false.
-	targetSpecNames := packageSpec
-			requiredSpecNamesForPackageOrdering: aVersionSpec.
-	groupLoopDetected := groupLoops includes: packageSpec.
-	groupLoopDetected
-		ifFalse: [ targetSpecNames
-				do: [ :targetPackageOrProjectName | 
-					targetPackage := orderedSpecs
-							detect: [ :each | each name sameContentAs: targetPackageOrProjectName ]
-							ifNone: [ MetacelloNameNotDefinedError
-									signal: 'project group, or package named: ' , targetPackageOrProjectName printString
-											, ' not found when used in requires: or includes: field of package: '
-											, packageSpec name printString , ' for version: '
-											, aVersionSpec versionString , ' of ' , aVersionSpec projectLabel
-											, '.'.
-								nil	"return nil if resumed" ].
-					targetIndex := orderedSpecs indexOf: targetPackage.
-					(groupLoopDetected not and: [ packageIndex = targetIndex ])
-						ifTrue: [ self
-								notify: 'A group loop has been detected. The package: ' , packageSpec name printString
-										, ' requires a group that includes itself. If you resume, the group loop will be ignored and details will be written to the system log.'.
-							groupLoopDetected := true.
-							groupLoops add: packageSpec.
-							MetacelloNotification signal: 'Package: ' , packageSpec name printString.
-							MetacelloNotification signal: 'Raw Requires:' level: 2.
-							packageSpec requires
-								do: [ :each | MetacelloNotification signal: each asString level: 3 ].
-							MetacelloNotification
-								signal: 'Package: ' , packageSpec name printString , ' has a group loop:'.
-							MetacelloNotification signal: 'Expanded Requires:' level: 2.
-							targetSpecNames
-								do: [ :each | MetacelloNotification signal: each asString level: 3 ] ].
-					movePackage := movePackage or: [ packageIndex <= targetIndex ].
-					false
-						ifTrue: [  "use for debugging non-obvious reference loops"packageIndex < targetIndex
-								ifTrue: [ MetacelloNotification
-										signal: 'Moving ' , targetPackageOrProjectName , ' from ' , targetIndex printString
-												, ' to ' , packageIndex printString ] ] ] ].
-	groupLoopDetected
-		ifTrue: [  "old implementation that does not resolve group names"targetSpecNames := packageSpec
-					requires.
-			targetSpecNames
-				do: [ :targetPackageName | 
-					targetPackage := orderedSpecs
-							detect: [ :each | each name sameContentAs: targetPackageName ]
-							ifNone: [  ].
-					targetIndex := orderedSpecs indexOf: targetPackage.
-					movePackage := movePackage or: [ packageIndex <= targetIndex ] ] ].
-	movePackage
-		ifTrue: [ moved := true.
-			orderedSpecs
-				remove: packageSpec
-				ifAbsent: [ ^ self error: 'unexpected error removing package' ].
-			targetIndex := 0.
-			targetSpecNames
-				do: [ :targetPackageOrProjectName | 
-					(targetPackage := orderedSpecs
-							detect: [ :each | each name sameContentAs: targetPackageOrProjectName ]
-							ifNone: [  ]) ~~ nil
-						ifTrue: [ targetIndex := targetIndex max: (orderedSpecs indexOf: targetPackage) ] ].
-			targetIndex == 0
-				ifTrue: [ orderedSpecs add: packageSpec beforeIndex: packageIndex ]
-				ifFalse: [ orderedSpecs add: packageSpec afterIndex: targetIndex ] ].
-	^ moved
+MetacelloPackagesSpec >> packageNamed: aString ifAbsent: aBlock [
+	"The map is keyed by Strings (see MetacelloMemberListSpec>>#mapAdd:into:)"
+	<gtPharoPatch: #StrictComparison>
+
+	^self map at: (aString isSymbol ifTrue: [ aString asString ] ifFalse: [ aString ]) ifAbsent: aBlock
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
+MetacelloPackagesSpec >> packageSpecsInLoadOrderFor: aVersionSpec [
+	"order only the packageSpecs and projectSpecs. groupSpec order does not matter"
+	"The map is keyed by Strings (see MetacelloMemberListSpec>>#mapAdd:into:)"
+	<gtPharoPatch: #StrictComparison>
+
+	| orderedPackageSpecs groupSpecs moved lastMovedSpecs count terminationLimit map specsWithIncludes firstTime groupLoops |
+	map := self map.
+	orderedPackageSpecs := OrderedCollection new.
+	groupSpecs := Set new.
+	self list do: [ :member |
+		| spec |
+		spec := map at: (member name isSymbol ifTrue: [ member name asString ] ifFalse: [ member name ]) ifAbsent: [  ].
+		(spec isNil or: [ orderedPackageSpecs includes: spec ]) ifFalse: [
+			spec
+				projectDo: [ :prjSpec | "specification order is the default order" orderedPackageSpecs add: prjSpec ]
+				packageDo: [ :pkgSpec | "specification order is the default order" orderedPackageSpecs add: pkgSpec ]
+				groupDo: [ :groupSpec | groupSpecs add: groupSpec ] ] ].
+	orderedPackageSpecs isEmpty ifTrue: [ ^ orderedPackageSpecs , groupSpecs asOrderedCollection ].
+	moved := true.
+	count := 0.
+	terminationLimit := orderedPackageSpecs size * 2.
+	groupLoops := IdentitySet new.
+	[ moved ] whileTrue: [
+		count := count + 1.
+		count > terminationLimit ifTrue: [ "Cheap termination hack - an APPARENT loop" self error: 'Apparent loop in before/after dependency definitions' ].
+		moved := false.
+		orderedPackageSpecs copy do: [ :packageSpec |
+			moved := moved or: [
+				         self
+					         sortPackageSpecs: orderedPackageSpecs
+					         packageSpec: packageSpec
+					         groupLoops: groupLoops
+					         for: aVersionSpec ] ] ].
+	lastMovedSpecs := Set new.
+	moved := true.
+	count := 0.
+	specsWithIncludes := orderedPackageSpecs select: [ :pkgSpec | pkgSpec includesForPackageOrdering isEmpty not ].
+	firstTime := true.
+	[ moved ] whileTrue: [
+		| result |
+		count := count + 1. "count > terminationLimit"
+		count > 14 ifTrue: [ "Cheap termination hack - an APPARENT loop" self error: 'Apparent loop in before/after dependency definitions' ].
+		moved := false.
+		result := Set new.
+		specsWithIncludes do: [ :packageSpec |
+			result addAll: (self
+					 applyIncludesTo: orderedPackageSpecs
+					 for: packageSpec
+					 firstTime: firstTime
+					 for: aVersionSpec) ].
+		result size = lastMovedSpecs size
+			ifTrue: [ result do: [ :name | (lastMovedSpecs includes: name) ifFalse: [ moved := true ] ] ]
+			ifFalse: [ moved := true ].
+		lastMovedSpecs := result.
+		firstTime := false ].
+	^ orderedPackageSpecs , groupSpecs asOrderedCollection
 ]
