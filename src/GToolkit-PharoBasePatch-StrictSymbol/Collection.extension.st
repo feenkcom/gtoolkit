@@ -13,6 +13,14 @@ Collection >> asGtStringContentSet [
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-StrictSymbol' }
+Collection >> includesSameContentAs: anObject [
+	"Answer whether one of my elements has the same content as anObject: a String and a Symbol with the same characters match (see #sameContentAs:), other objects match by #=.
+	Use me where a collection may hold names of both kinds (for example Iceberg package names); where all elements are Symbols and a Symbol is at hand, #includes: is enough."
+
+	^ self anySatisfy: [ :each | each sameContentAs: anObject ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-StrictSymbol' }
 Collection >> sameContentAs: aCollection [
 	"Answer true if the receiver contains the same elements as aCollection, and vice versa, comparing strings and symbols based on their content.
 	The elements of the receiver are counted in a GtStringContentDictionary (#occurrencesOf: compares with #=), then counted down with the elements of aCollection."
