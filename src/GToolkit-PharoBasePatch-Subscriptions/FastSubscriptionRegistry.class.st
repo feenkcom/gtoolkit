@@ -36,6 +36,18 @@ FastSubscriptionRegistry >> add: subscription [
 ]
 
 { #category : #accessing }
+FastSubscriptionRegistry >> allStrongSubscriptions [
+	^(self protected: [self subscriptions])
+		reject: [:each | each isWeakSubscription]
+]
+
+{ #category : #accessing }
+FastSubscriptionRegistry >> allWeakSubscriptions [
+	^(self protected: [self subscriptions])
+		select: [:each | each isWeakSubscription]
+]
+
+{ #category : #accessing }
 FastSubscriptionRegistry >> copyFromSlowRegistry: aReg [
 	aReg protected: [ 
 		aReg subscriptions do: [ :each | self add: each].
@@ -96,6 +108,14 @@ FastSubscriptionRegistry >> handleSubscriberClass: subClass [
 
 	^ subscriberMap keys
 		anySatisfy: [ :subscriber | subscriber class == subClass or: [ subscriber class includesBehavior: subClass ] ]
+]
+
+{ #category : #testing }
+FastSubscriptionRegistry >> hasLeakProneSubscriptionMix [
+	| theSubscriptions |
+	theSubscriptions := self protected: [self subscriptions].
+	^(theSubscriptions contains: [:each | each isWeakSubscription])
+		and: [theSubscriptions contains: [:each | each isWeakSubscription not]]
 ]
 
 { #category : #testing }
@@ -197,4 +217,9 @@ FastSubscriptionRegistry >> subscriptionsOf: aSubscriber do: aBlock [
 	"We work on a copy to avoid issues caused by 
 	concurrent changes of the subscriber map."
 	copy do: [ :subscription | aBlock value: subscription ]
+]
+
+{ #category : #weak }
+FastSubscriptionRegistry >> weakSubscriptionBuilderFor: anAnnouncer [
+	^WeakSubscriptionBuilder on: anAnnouncer
 ]

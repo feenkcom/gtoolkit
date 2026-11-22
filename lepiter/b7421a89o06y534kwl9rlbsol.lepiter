@@ -1,0 +1,1008 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-22T16:25:43.574289+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-22T16:25:53.808138+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "0rsc3fRfSBeMfNQeWgvKaQ=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "- **Strong subscriptions** behave as before: the announcer keeps their subscribers alive.\n- **Weak subscriptions** reference their subscriber weakly. Instead of one entry per subscription in the global {{gtClass:FinalizationRegistry}}, the registry keeps one ephemeron per weak subscriber itself, so a live weak subscriber can no longer keep the announcer and its strong subscribers alive, and unsubscribing leaves nothing behind."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:53.803262+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:53.803262+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mUydtzu8SuGYNQMRPyc8dA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:GtMixedSubscriptionRegistry}} is a subscription registry an {{gtClass:Announcer}} can use instead of Pharo's {{gtClass:SubscriptionRegistry}}. It understands the same messages and accepts the same subscriptions, and it lets one announcer have strong and weak subscribers at the same time without leaking:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574319+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574319+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OPW/vpQDRzyQiuMdQ4ZnzQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Why Pharo's registries leak in this situation, and how this one avoids it, is explained on the page \"How mixing weak and strong announcement subscriptions leaks memory\"."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-22T16:25:43.57433+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-22T16:25:43.57433+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "vj9aQLDkTWSvZj6etNUviA=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "The registry keeps its strong subscriptions in a set, as Pharo does. Its weak subscriptions are grouped by subscriber, and each group is held behind one ephemeron, keyed on the subscriber, that only the registry references. When a weak subscriber is garbage collected, the registry drops its whole group; unsubscribing simply removes the group. Announcers without weak subscribers share one empty weak part, so they pay nothing for it. How the registry locks, matches and delivers is described on the design page."
+									}
+								]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574327+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574327+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9nbuPopOSpKX95ddGjSQwQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "# How it works"
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:25:43.574165+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:25:43.574165+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Rp6eUMoqS4O9chfdgG8dXw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# What it is"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:26:16.320347+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:26:16.320347+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "h0fHqe+sRmqAr5C+npBE8Q=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Install the registry when the announcer is created, then subscribe as with any announcer. Strong subscriptions are made as usual, weak ones through {{gtMethod:Announcer>>#weak|label=#selector}}; a weak block subscription always names its subscriber with {{gtMethod:GtEphemeronSubscriptionBuilder>>#when:do:for:|label=#selector}}, and lives as long as that object. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574332+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:26:16.324596+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "/hsdWXE0QUmtBO5lnBya8w=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In this snippet the model is subscribed strongly and the element weakly, once with a message and once with a block; after {{gtMethod:Announcer>>#unsubscribe:|label=#selector}} only the model's subscription remains:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574338+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574338+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "sWJZMGZKRye4MFRGYs37Hg=="
+							},
+							"code" : "| announcer aModel anElement |\nannouncer := Announcer new useMixedSubscriptionRegistry.\naModel := OrderedCollection new.\nanElement := OrderedCollection new.\nannouncer when: Announcement send: #add: to: aModel.\nannouncer weak when: Announcement send: #add: to: anElement.\nannouncer weak\n\twhen: Announcement\n\tdo: [ :anAnnouncement | anElement add: anAnnouncement ]\n\tfor: anElement.\nannouncer announce: Announcement new.\nannouncer unsubscribe: anElement.\nannouncer"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:26:19.840227+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:26:19.840227+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mqFvCPioS1qUFx43C09NHg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The block refers to `anElement`. With a plain registry this weak block subscription would keep `anElement` alive as long as the announcer lives; with the mixed registry it does not."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574343+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:26:19.845321+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "cba34VHfSlmpVjINotltxw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The next example shows what a weak subscription is in this registry: {{gtMethod:Announcer>>#weak|label=#selector}} {{gtMethod:GtEphemeronSubscriptionBuilder>>#when:send:to:|label=#selector}} creates a {{gtClass:GtEphemeronAnnouncementSubscription}} whose action is a {{gtClass:WeakMessageSend}}; it is kept in the weak part (no strong subscriptions, one weak subscriber), and only announcements it handles reach the subscriber (a {{gtClass:JobStart}} does, a {{gtClass:JobEnd}} does not). It answers the announcer, which can be inspected:\n\n{{gtMethod:GtMixedSubscriptionRegistryExamples>>#weakSubscriptionDelivers|expanded}}\n\nA weak subscription without a subscriber, or whose action is its own subscriber, is refused with an error, because it could never be collected or would vanish at the next garbage collection ({{gtMethod:GtMixedSubscriptionRegistryExamples>>#weakSubscriptionNeedsASubscriber}}, {{gtMethod:GtMixedSubscriptionRegistryExamples>>#valuableThatIsItsOwnSubscriberCannotBeSubscribedWeakly}})."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:07.431337+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:07.431337+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8XGjrn7zRAqDwy8VUOEqGg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Using it"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:27:09.980791+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:27:09.980791+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Zc1xZI/SRKCpQwItQlubcQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "| | {{gtClass:SubscriptionRegistry}} | {{gtClass:FastSubscriptionRegistry}} | {{gtClass:GtMixedSubscriptionRegistry}} |\n|---|---|---|---|\n| Used by | every new {{gtClass:Announcer}} | {{gtClass:SystemAnnouncer}} in GT | announcers that opt in |\n| Strong subscription keeps its subscriber alive | yes | no | yes |\n| Global finalization entry per weak subscription | yes | yes | no |\n| A live weak subscriber keeps the announcer alive | yes, with its strong subscribers | yes | no |\n| A weak block subscription whose block refers to its subscriber keeps it alive | yes | no | no |\n| Something left behind after unsubscribing | yes, until the subscriber dies | yes, until the subscriber dies | no |\n\n"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574345+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:27:09.991171+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mcFzRw9bQs2gBCq0qgYZ0A=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "{{gtClass:SubscriptionRegistry}} is Pharo's registry. {{gtClass:FastSubscriptionRegistry}} is the registry GT installs for the {{gtClass:SystemAnnouncer}}; it keys all subscriptions by subscriber in a weak-key dictionary, so not even its strong subscriptions keep their subscribers alive."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:25.41613+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:25.41613+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iHfuAwW5TtqittbiqfbLtQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Compared with the other registries"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:27:39.665385+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:27:39.665385+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "OesLRbW7TNaGdlY+vbUirQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Measured against a plain {{gtClass:SubscriptionRegistry}}:\n\n- **Subscribing and unsubscribing weakly is faster**: a weak subscription takes 1.1 µs instead of 2.7 µs, and when many subscribers come and go the mixed registry is about 10 times faster (683 page view models created on one page and unsubscribed: 10 µs instead of 96 µs per view model). A plain weak subscription creates a global finalization entry, and a plain {{gtMethod:Announcer>>#unsubscribe:|label=#selector}} scans all subscriptions.\n- **Strong subscriptions are a little slower**: subscribing and unsubscribing takes 960 ns instead of 720 ns, partly because the lock is reentrant.\n- **Delivering an announcement** takes about as long as with a plain registry for a few subscribers (1.9 µs for one strong subscriber in both), and about twice as long for 100 or more weak subscribers, because the weak part is walked in two levels, subscribers and then their subscriptions. It never allocates more than the plain registry (2.8 KB instead of 3.5 KB for one strong subscriber, 3.5 KB instead of 3.7 KB for 1,000 weak subscribers), because only the subscriptions that handle the announcement are collected.\n- **Memory:** an empty registry takes 184 bytes instead of 128. Most announcers never get a weak subscriber and pay nothing more; weak subscriptions take about as much memory as plain ones.\n"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574347+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:27:39.678176+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "srqY10pyQj6pFIQX5RMeNg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The measurements and where the overhead comes from are on the page \"Mixed subscription registry: design\"."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:41.217409+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:41.217409+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QTIKvp6IQvOSA4guPcNYkg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# What it costs"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574353+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:26:44.226107+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "9WQ7zlkySAODhJbiJnzLKQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- {{gtMethod:Announcer>>#unsubscribe:|label=#selector}} and {{gtMethod:Announcer>>#removeSubscription:|label=#selector}} remove the subscriptions completely ({{gtMethod:GtMixedSubscriptionRegistryExamples>>#unsubscribeRemovesStrongAndWeakSubscriptions}}).\n- {{gtMethod:GtEphemeronAnnouncementSubscription>>#makeStrong|label=#selector}} moves a weak subscription to the strong part; as in Pharo, the weak subscription becomes the strong one, so references to it stay valid ({{gtMethod:GtMixedSubscriptionRegistryExamples>>#makeStrongMovesWeakSubscriptionToStrongPart}}).\n- {{gtMethod:AnnouncementSubscription>>#makeWeak|label=#selector}} answers a new weak subscription in the weak part; as in Pharo, the old strong subscription object is not changed, so use the answered one ({{gtMethod:GtMixedSubscriptionRegistryExamples>>#makeWeakInMixedRegistryBuildsEphemeronSubscription}}).\n- {{gtMethod:GtEphemeronAnnouncementSubscription>>#subscriber:|label=#selector}} files a weak subscription under its new subscriber ({{gtMethod:GtMixedSubscriptionRegistryExamples>>#changingTheSubscriberRefilesTheSubscription}}).\n- {{gtMethod:Announcer>>#useSubscriptionRegistry:}} moves an announcer to another registry with its subscriptions. Moved to a plain registry, weak subscriptions become {{gtClass:WeakAnnouncementSubscription}}s, and those with a block action become strong subscriptions. Moved into a mixed registry, old-style weak subscriptions keep their behaviour, so install the registry before subscribing."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:44.223898+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:44.223898+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3aiugBtQSYWhBRYOaTEQmA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Changing subscriptions"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574354+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:26:47.494745+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "qL9J06nTQkOZ84xtSbdiYQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "- A dead weak subscriber can still receive announcements until the finalization process has removed it, shortly after the garbage collection that notices its death (a scavenge for young objects, a full collection for old ones), as with Pharo's weak subscriptions.\n- Holding a weak subscription does not keep its subscriber alive, unless its action references the subscriber, for example a block that captures it.\n- {{gtMethod:GtMixedSubscriptionRegistry>>#subscriptions|label=#selector}} answers a copy, an {{gtClass:Array}}; delivery reaches strong subscribers before weak ones.\n- As in Pharo's registry, announcements are matched under the registry's lock, so matching code such as a {{gtMethod:Announcement class>>#where:|label=#selector}} condition should be short. If such code changes the registry while it is matched, the registry matches again on its subscriptions as they are then.\n- A shallow {{gtMethod:Object>>#copy|label=#selector}} of a registry gets its own sets and ephemerons but shares the subscription objects with the original.\n- Never send {{gtMethod:Object>>#deepCopy|label=#selector}} or {{gtMethod:Object>>#storeString|label=#selector}} to an announcer, a registry or a subscription: they contain cycles, and both recurse until memory runs out. This is the same with Pharo's registries."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:47.491161+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:47.491161+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "CteRmMUgSv6qvg40m2ARiw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Good to know"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574356+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:26:49.992975+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "33HHoipTRRqxPgxz/AQICA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Lepiter models (pages, snippets, databases and their store monitors) create their announcers through {{gtMethod:LeUseMixedSubscriptionRegistryFlag class>>#newAnnouncer}}. The flag {{gtClass:LeUseMixedSubscriptionRegistryFlag}} is disabled by default; when it is enabled, models created afterwards use the mixed registry, so it must be enabled before the databases are loaded. With the flag enabled, a load of the Glamorous Toolkit Book needs 2,051 fewer global finalization entries, one per model subscription. {{gtMethod:LeUseMixedSubscriptionRegistryFlag class>>#usePlainSubscriptionRegistriesIn:}} moves the announcers of a loaded database back to plain registries if needed."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:49.99053+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:49.99053+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FTn2B7JESrKo0DLaYMuQUQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# In Lepiter"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:25:43.574358+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2026-11-22T16:50:04.95012+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "voS/eE9JQA2CL2ZD4MNvbw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "How the registry works inside, why it is built this way, its performance and its limitations are described on the page [[Mixed subscription registry: design]]."
+						}
+					]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:52.395764+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-22T16:26:52.395764+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "7z+14m5UTy+6K+P7IDs8Lg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "# Further reading"
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-11-22T16:25:43.574136+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-11-22T16:25:43.574136+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Mixed subscription registry: overview"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "f5b654ee-5bd2-4828-82bd-7633d9f623bd"
+	}
+}
