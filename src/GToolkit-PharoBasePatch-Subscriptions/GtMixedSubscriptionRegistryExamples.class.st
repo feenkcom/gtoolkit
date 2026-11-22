@@ -1724,17 +1724,21 @@ GtMixedSubscriptionRegistryExamples >> replaceMissingSubscriptionSignalsNotFound
 
 { #category : #'private - concurrency' }
 GtMixedSubscriptionRegistryExamples >> runWorkers: thePrioritizedWorkers until: aDeadline [
-	| aLock theErrors theFinished theProcesses aWaitDeadline |
+	| aLock theErrors theFinished theWorkers haveFinished theProcesses aWaitDeadline |
 	aLock := Mutex new.
 	theErrors := OrderedCollection new.
 	theFinished := Semaphore new.
-	theProcesses := thePrioritizedWorkers asArray collect: 
-					[:aPrioritizedWorker |
+	theWorkers := thePrioritizedWorkers asArray.
+	haveFinished := Array new: theWorkers size withAll: false.
+	theProcesses := theWorkers withIndexCollect: 
+					[:aPrioritizedWorker :anIndex |
 					(
 					[
 					[[aPrioritizedWorker value value] on: Error
 						do: [:anError | aLock critical: [theErrors add: anError]]]
-							ensure: [theFinished signal]]
+							ensure: 
+								[haveFinished at: anIndex put: true.
+								theFinished signal]]
 							newProcess)
 						priority: aPrioritizedWorker key;
 						name: 'GtMixedSubscriptionRegistryExamples worker';
@@ -1744,9 +1748,9 @@ GtMixedSubscriptionRegistryExamples >> runWorkers: thePrioritizedWorkers until: 
 	theProcesses size timesRepeat: 
 			[theFinished
 				waitTimeoutMilliseconds: (aWaitDeadline - Time millisecondClockValue max: 1)].
-	theProcesses do: 
-			[:each |
-			each isTerminated
+	theProcesses withIndexDo: 
+			[:each :anIndex |
+			(haveFinished at: anIndex)
 				ifFalse: 
 					[aLock critical: 
 							[theErrors add: 'A worker did not finish: ' , each priority printString].
