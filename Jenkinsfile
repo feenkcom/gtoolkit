@@ -5,7 +5,8 @@ import hudson.tasks.junit.CaseResult
 properties([
         parameters([
                 choice(name: 'BUMP', choices: ['patch', 'minor', 'major'], description: 'What to bump when releasing'),
-                booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests during the build')
+                booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run examples and tests during the build'),
+                booleanParam(name: 'RUN_EXAMPLES_IN_PARALLEL', defaultValue: false, description: 'Run the GToolkit examples in parallel using all available CPU cores')
         ]),
         buildDiscarder(logRotator(numToKeepStr: '50')),
         disableConcurrentBuilds()
@@ -101,6 +102,7 @@ class GlamorousToolkit {
     Agent agent
 
     final boolean runTests
+    final boolean runExamplesInParallel
     final String bump
     final boolean freshBuild
     final boolean cleanUp
@@ -129,6 +131,7 @@ class GlamorousToolkit {
         this.script = script
         this.agent = agent
         this.runTests = params.RUN_TESTS
+        this.runExamplesInParallel = params.RUN_EXAMPLES_IN_PARALLEL
         this.freshBuild = params.FRESH_BUILD
         this.cleanUp = params.CLEAN_UP
         this.bump = params.BUMP
@@ -378,6 +381,7 @@ class GlamorousToolkit {
             script.echo "Will release using gtoolkit-vm ${gtoolkitVmVersion}"
             script.echo "Will release using feenk-releaser ${releaserVersion}"
             script.echo "Will run tests: ${runTests}"
+            script.echo "Will run examples in parallel: ${runExamplesInParallel}"
         }
     }
 
@@ -654,6 +658,7 @@ class TestAndPackage extends AgentJob {
     final Triplet target
     boolean runTests
     boolean runEditorExamples
+    boolean runParallelExamples
     ArrayList<Triplet> extraTargets
 
     TestAndPackage(GlamorousToolkit build, Agent agent, Triplet target) {
@@ -664,6 +669,7 @@ class TestAndPackage extends AgentJob {
         // prepare_for_testing, and only MacOS has ever run GlamorousToolkit interactively on CI, which
         // `gt-installer start` does in the Package image stage.
         this.runEditorExamples = false
+        this.runParallelExamples = build.runExamplesInParallel
         this.extraTargets = []
     }
 
@@ -783,14 +789,24 @@ class TestAndPackage extends AgentJob {
     }
 
     /**
-      * Runs the GToolkit examples. A healthy run prints one line per example, so 45 minutes without
-      * any console output means the run is stalled. The activity timeout aborts it early instead of
-      * waiting for the stage timeout.
+      * Runs the GToolkit examples. The serial runner has a 45-minute activity timeout.
+      * The parallel runner uses a total timeout because its worker results are reported at completion.
       */
     void run_gtoolkit_examples() {
         delete_lepiter_directory()
-        script.timeout(time: 45, unit: 'MINUTES', activity: true) {
-            platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS}")
+        if (runParallelExamples) {
+            script.timeout(time: 45, unit: 'MINUTES') {
+                try {
+                    platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS} --parallel-examples")
+                } catch (e) {
+                    script.junit(testResults: "${GlamorousToolkit.EXAMPLES_FOLDER}/*.xml", allowEmptyResults: true)
+                    throw e
+                }
+            }
+        } else {
+            script.timeout(time: 45, unit: 'MINUTES', activity: true) {
+                platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS}")
+            }
         }
     }
 
