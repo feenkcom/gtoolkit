@@ -1,36 +1,30 @@
 Extension { #name : #ClassDescription }
 
 { #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
-ClassDescription >> addAndClassifySelector: selector withMethod: compiledMethod inProtocol: category [
-	| priorMethodOrNil priorOriginOrNil oldProtocol newProtocol categorySelector |
+ClassDescription >> hasProtocol: aProtocol [
+	"Protocol names are Symbols; callers pass Strings ('accessing')"
+	<gtPharoPatch: #StrictComparison>
 
-	priorMethodOrNil := self compiledMethodAt: selector ifAbsent: [ nil ].
-	priorMethodOrNil ifNotNil: [ priorOriginOrNil := priorMethodOrNil origin ].
+	^ self protocolNames includes: (aProtocol isString ifTrue: [ aProtocol asSymbol ] ifFalse: [ aProtocol name ])
+]
 
-	self addSelectorSilently: selector withMethod: compiledMethod.
+{ #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
+ClassDescription >> isTaggedWith: aSymbol [
+	"Tag names are Symbols; callers pass Strings"
+	<gtPharoPatch: #StrictComparison>
 
-	oldProtocol := self organization categoryOfElement: selector.
-	categorySelector := category asSymbol.
-	SystemAnnouncer uniqueInstance
-		suspendAllWhile: [ self organization
-				classify: selector
-				under: ((categorySelector = Protocol unclassified)
-						ifTrue: [ oldProtocol ]
-						ifFalse: [ categorySelector ]) ].
-	newProtocol := self organization categoryOfElement: selector.
+	^ self packageTagName
+		  ifNil: [ false ]
+		  ifNotNil: [ :tag | tag = (aSymbol isString ifTrue: [ aSymbol asSymbol ] ifFalse: [ aSymbol ]) ]
+]
 
-	self isAnonymous ifTrue: [ ^ self ].
-
-	(priorMethodOrNil isNil or: [ priorOriginOrNil ~= compiledMethod origin ])
-		ifTrue: [ SystemAnnouncer uniqueInstance methodAdded: compiledMethod ]
-		ifFalse: [  "If protocol changed and someone is from different package, I need to throw a method recategorized"self
-				notifyRepackage: selector
-				method: compiledMethod
-				oldProtocol: oldProtocol
-				newProtocol: newProtocol.
-
-			SystemAnnouncer uniqueInstance
-				methodChangedFrom: priorMethodOrNil
-				to: compiledMethod
-				oldProtocol: oldProtocol ]
+{ #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
+ClassDescription >> protocolNamed: aString ifAbsent: aBlock [
+	"Protocol names are Symbols; callers pass Strings"
+	<gtPharoPatch: #StrictComparison>
+	| aName |
+	aName := aString isString ifTrue: [ aString asSymbol ] ifFalse: [ aString ].
+	^ self protocols
+		  detect: [ :e | e name = aName ]
+		  ifNone: aBlock
 ]

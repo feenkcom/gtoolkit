@@ -2,25 +2,26 @@ Extension { #name : #FFIInferenceResolutionMode }
 
 { #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
 FFIInferenceResolutionMode >> resolveUndeclaredTypeForArgument: aFFIValueArgument withResolver: aResolver [
-
-	"Convert 'nil' and 'NULL' to symbols"
-	(aFFIValueArgument value isNil
-		or: [aFFIValueArgument value = #'nil'
-			or: [ aFFIValueArgument value = #'NULL' ]])
+	"Constant values are Symbols in literal-array signatures and Strings in String signatures"
+	<gtPharoPatch: #StrictComparison>
+	| aValue |
+	aValue := aFFIValueArgument value.
+	(aValue isNil
+		or: [ aValue isString and: [ aValue asString = 'nil' or: [ aValue asString = 'NULL' ] ] ])
 				ifTrue: [ ^ (aResolver resolveType: #'void *') ].
-	(#(true false) includes: aFFIValueArgument value)
+	(#(true false) includes: aValue)
 		ifTrue: [ ^ aResolver resolveType: #bool ].
-	aFFIValueArgument value isInteger
-		ifTrue: [ ^ (aFFIValueArgument value >=0
+	aValue isInteger
+		ifTrue: [ ^ (aValue >=0
 			ifTrue: [ aResolver resolveType: #uint32 ]
 			ifFalse: [ aResolver resolveType: #int32 ]) ].
-	(aFFIValueArgument value == #self) ifTrue: [
+	(aValue isString and: [ aValue asString = 'self' ]) ifTrue: [
 		^ (aResolver requestor asExternalTypeOn: aResolver)
 			prepareAsSelfFromCalloutDeclaration ].
 
-	^ aFFIValueArgument value isSymbol
+	^ aValue isSymbol
 		ifTrue: [
 			"This is actually a class variable with a value..."
-			aResolver resolveType: aFFIValueArgument value ]
-		ifFalse: [ aResolver unsupportedUntypedLiteral: aFFIValueArgument value ]
+			aResolver resolveType: aValue ]
+		ifFalse: [ aResolver unsupportedUntypedLiteral: aValue ]
 ]
