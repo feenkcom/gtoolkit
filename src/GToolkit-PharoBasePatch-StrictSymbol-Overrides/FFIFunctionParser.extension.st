@@ -13,46 +13,61 @@ FFIFunctionParser >> parseArgument [
  - type name *** arg name
 
 "
+	"Tokens are Symbols in literal-array signatures and Strings in String signatures: compare the type name as a String"
+	<gtPharoPatch: #StrictComparison>
 	"constant conditions"
-	(stream contents size = 1 and: [ stream contents first ~= #void ])
-		ifTrue: [ ^ self integerConstantArgument: stream next ].
-	stream peek isArray ifTrue: [ ^ self parseArgumentCastedType ].	"none of them, parse type and name"
+	(stream contents size = 1 and: [
+		stream contents first asString ~= 'void' ]) ifTrue: [
+		^ self integerConstantArgument: stream next ].
+	stream peek isArray ifTrue: [
+		^ self parseArgumentCastedType ].
+
+	"none of them, parse type and name"
 	typeAndPtrArity := self parseType.
 	argName := stream next.
 	next := stream peek.
 	next = $@
-		ifTrue: [ stream next.
+		ifTrue: [
+			stream next.
 			argName := argName.
-			indirectIndex := self parseInt ].	"for sole 'void' fake argument "
-	((typeAndPtrArity sameContentAs: #('void' 0)) and: [ argName isNil ])
+			indirectIndex := self parseInt ].
+	"for sole 'void' fake argument "
+	((typeAndPtrArity first asString = 'void' and: [ typeAndPtrArity second = 0 ]) and: [ argName isNil ])
 		ifTrue: [ ^ nil ].
 	argument := self
-			argName: argName
-			indirectIndex: indirectIndex
-			type: typeAndPtrArity first
-			ptrArity: typeAndPtrArity second.
+		argName: argName
+		indirectIndex: indirectIndex
+		type: typeAndPtrArity first
+		ptrArity: typeAndPtrArity second.
 
 	^ argument
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-StrictSymbol-Overrides' }
 FFIFunctionParser >> parseType [
+
 	" parse type name and optional number of asterisks, following it"
+	"Tokens are Symbols in literal-array signatures and Strings in String signatures"
+	<gtPharoPatch: #StrictComparison>
+
 	| typeName ptrArity |
 
 	typeName := stream next.
-	typeName ifNil: [ ^ self error: 'type name expected' ].	"skip 'const' , which is often used but has no any use for us "
-	typeName = #const
-		ifTrue: [ typeName := stream next.
-			typeName ifNil: [ ^ self error: 'type name expected' ] ].
+	typeName ifNil: [ ^ self error: 'type name expected' ].
+
+	"skip 'const' , which is often used but has no any use for us "
+	typeName asString = 'const'
+		ifTrue: [
+			typeName := stream next.
+			typeName ifNil: [ ^ self error: 'type name expected' ]
+			].
 
 	ptrArity := 0.
-	[ stream atEnd not
-		and: [ stream peek isString and: [ stream peek beginsWith: '*' ] ] ]
-		whileTrue: [ | pointerMarker |
-			pointerMarker := stream next.
-			self assert: (pointerMarker allSatisfy: [ :e | e = $* ]).
-			ptrArity := ptrArity + pointerMarker size ].	"Answer a tuple name, arity"
-	^ {typeName.
-		ptrArity}
+	[ stream atEnd not and: [ stream peek isString and: [ stream peek beginsWith: '*' ] ] ] whileTrue: [ | pointerMarker |
+		pointerMarker := stream next.
+		self assert: (pointerMarker allSatisfy: [ :e | e = $* ]).
+		ptrArity := ptrArity + pointerMarker size ].
+
+	"Answer a tuple name, arity"
+	^ {typeName. ptrArity}
 ]
