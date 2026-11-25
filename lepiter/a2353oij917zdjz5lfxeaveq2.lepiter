@@ -408,7 +408,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-11-17T17:03:43.082984+01:00"
+												"dateAndTimeString" : "2026-11-24T12:44:23.741875+01:00"
 											}
 										},
 										"uid" : {
@@ -418,7 +418,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "Symbols: {{gtExample:GtMemoryMetrics class>>totalSymbolsSize|label=#humanReadableIsqByteSize}}. Pragmas cache, packages and the navigation environment are small; see [[Analysing the size of code-related entities]]."
+										"string" : "Symbols: {{gtExample:GtMemoryMetrics class>>totalSymbolsSize|label=#humanReadableIsqByteSize}}, and {{gtExample:GtMemoryMetrics class>>totalSymbolTablesSize|label=#humanReadableIsqByteSize}} for the symbol tables that hold them. Pragmas cache, packages and the navigation environment are small; see [[Analysing the size of code-related entities]]."
 									},
 									{
 										"__type" : "textSnippet",
@@ -493,6 +493,43 @@
 											"__type" : "textStyle"
 										},
 										"string" : "GT Book: {{gtExample:GtLepiterMemoryMetrics class>>totalGtBookSize|label=#humanReadableIsqByteSize}}, the only Lepiter database saved in the image, including its index. See [[Analysing the size of Lepiter databases]]."
+									},
+									{
+										"__type" : "textSnippet",
+										"children" : {
+											"__type" : "snippets",
+											"items" : [ ]
+										},
+										"createEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"createTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-24T12:44:23.747448+01:00"
+											}
+										},
+										"editEmail" : {
+											"__type" : "email",
+											"emailString" : "<unknown>"
+										},
+										"editTime" : {
+											"__type" : "time",
+											"time" : {
+												"__type" : "dateAndTime",
+												"dateAndTimeString" : "2026-11-24T12:44:23.747448+01:00"
+											}
+										},
+										"uid" : {
+											"__type" : "uid",
+											"uidString" : "bMw2kT7bTW6S+cM5es8elw=="
+										},
+										"paragraphStyle" : {
+											"__type" : "textStyle"
+										},
+										"string" : "Space tally history: {{gtExample:GtMemoryMetrics class>>totalSpaceTallyHistorySize|label=#humanReadableIsqByteSize}}, the space tallies recorded while the image is built."
 									}
 								]
 							},
