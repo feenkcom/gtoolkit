@@ -220,7 +220,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2026-11-11T12:00:29.757599+01:00"
+									"dateAndTimeString" : "2026-11-25T11:46:35.062562+01:00"
 								}
 							},
 							"uid" : {
@@ -230,7 +230,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Denote the definition of a new Smalltalk class in the form of a script:\n\r```smalltalk\rObject subclass: #SomeClass\r\tinstanceVariableNames: ''someSlotA someSlotB''\r\tclassVariableNames: ''\r\tpackage: ''SomePackage''\r```"
+							"string" : "Denote the definition of a new Smalltalk class in the form of a script using fluid class syntax:\n\n```smalltalk\nObject << #SomeClass\n\tslots: { #someSlotA . #someSlotB };\n\tpackage: 'SomePackage';\n\tinstall\n```\n\nAdd other options as needed, such as a package tag (`tag:`), class-side slots (`classSlots:`), traits (`traits:`), or shared variables (`sharedVariables:`). This list is not exhaustive. Consult {{gtClass:ShiftClassBuilder}} for the available configuration messages and its class comment for an explanation of the fluid syntax. {{gtMethod:Behavior>>#<<}} creates this builder.\n\nEnd the cascade by sending `install` to the class builder to apply the definition; configuring the builder alone does not make the change."
 						}
 					]
 				},
