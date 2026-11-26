@@ -726,10 +726,13 @@ class TestAndPackage extends AgentJob {
             script.stage("Test " + target.short_label()) {
                 script.timeout(time: 240, unit: 'MINUTES') {
                     prepare_for_testing()
-                    run_extra_examples()
-                    run_gtoolkit_examples()
-                    run_pharo_tests()
-                    report_test_results() 
+                    try {
+                        run_extra_examples()
+                        run_gtoolkit_examples()
+                        run_pharo_tests()
+                    } finally {
+                        report_test_results()
+                    }
                 }
             }
             run_editor_examples()
@@ -796,12 +799,7 @@ class TestAndPackage extends AgentJob {
         delete_lepiter_directory()
         if (runParallelExamples) {
             script.timeout(time: 45, unit: 'MINUTES') {
-                try {
-                    platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS} --parallel-examples")
-                } catch (e) {
-                    script.junit(testResults: "${GlamorousToolkit.EXAMPLES_FOLDER}/*.xml", allowEmptyResults: true)
-                    throw e
-                }
+                platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS} --parallel-examples")
             }
         } else {
             script.timeout(time: 45, unit: 'MINUTES', activity: true) {
