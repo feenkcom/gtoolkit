@@ -798,7 +798,7 @@ class TestAndPackage extends AgentJob {
     void run_gtoolkit_examples() {
         delete_lepiter_directory()
         if (runParallelExamples) {
-            script.timeout(time: 45, unit: 'MINUTES') {
+            script.timeout(time: 45, unit: 'MINUTES', activity: true) {
                 platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS} --parallel-examples")
             }
         } else {
