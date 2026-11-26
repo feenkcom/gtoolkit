@@ -184,7 +184,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2026-11-17T14:31:55.267135+01:00"
+												"dateAndTimeString" : "2026-11-24T12:44:23.753232+01:00"
 											}
 										},
 										"uid" : {
@@ -194,7 +194,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "The size of methods includes bytecodes, embedded blocks, the additional method state (pragmas with their arguments, and the associations holding properties) and literals. Literals include strings, literal arrays and other literals without pointers (byte arrays, large integers, floats), but exclude symbols and variable bindings. Literals shared between methods are counted once for each method."
+										"string" : "The size of methods includes bytecodes, embedded blocks, the additional method state (pragmas with their arguments, and the associations holding properties) and literals. Literals include strings, literal arrays and other literals without pointers (byte arrays, large integers, floats), but exclude symbols and variable bindings. A literal shared by several methods is counted once."
 									},
 									{
 										"__type" : "textSnippet",
@@ -1298,7 +1298,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-05-18T14:34:38.844747+02:00"
+									"dateAndTimeString" : "2026-11-24T12:44:23.748248+01:00"
 								}
 							},
 							"uid" : {
@@ -1308,7 +1308,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Symbols: {{gtExample:GtMemoryMetrics class>>totalSymbolsSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMemoryMetrics class>>totalSymbolsCount|label=#asString}} symbols"
+							"string" : "Symbols: {{gtExample:GtMemoryMetrics class>>totalSymbolsSize|label=#humanReadableIsqByteSize}} for {{gtExample:GtMemoryMetrics class>>totalSymbolsCount|label=#asString}} symbols, and {{gtExample:GtMemoryMetrics class>>totalSymbolTablesSize|label=#humanReadableIsqByteSize}} for the symbol tables that hold them"
 						},
 						{
 							"__type" : "textSnippet",

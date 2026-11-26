@@ -726,10 +726,13 @@ class TestAndPackage extends AgentJob {
             script.stage("Test " + target.short_label()) {
                 script.timeout(time: 240, unit: 'MINUTES') {
                     prepare_for_testing()
-                    run_extra_examples()
-                    run_gtoolkit_examples()
-                    run_pharo_tests()
-                    report_test_results() 
+                    try {
+                        run_extra_examples()
+                        run_gtoolkit_examples()
+                        run_pharo_tests()
+                    } finally {
+                        report_test_results()
+                    }
                 }
             }
             run_editor_examples()
@@ -795,13 +798,8 @@ class TestAndPackage extends AgentJob {
     void run_gtoolkit_examples() {
         delete_lepiter_directory()
         if (runParallelExamples) {
-            script.timeout(time: 45, unit: 'MINUTES') {
-                try {
-                    platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS} --parallel-examples")
-                } catch (e) {
-                    script.junit(testResults: "${GlamorousToolkit.EXAMPLES_FOLDER}/*.xml", allowEmptyResults: true)
-                    throw e
-                }
+            script.timeout(time: 45, unit: 'MINUTES', activity: true) {
+                platform().exec_ui(script, "./gt-installer", "--verbose --workspace ${GlamorousToolkit.EXAMPLES_FOLDER} test ${GlamorousToolkit.TEST_OPTIONS} --parallel-examples")
             }
         } else {
             script.timeout(time: 45, unit: 'MINUTES', activity: true) {
@@ -887,7 +885,8 @@ class TestAndPackage extends AgentJob {
         agent.platform().prepare_for_archive(script, "${artifacts_dir}", "glamoroustoolkit")
         agent.platform().prepare_for_archive(script, "${artifacts_dir}", "gt-releaser")
         agent.platform().prepare_for_archive(script, "${artifacts_dir}", "gt-examples")
-        script.archiveArtifacts(artifacts: 'artifacts/**/*.log', allowEmptyArchive: true)
+        agent.platform().prepare_scripter_for_archive(script, "${artifacts_dir}", GlamorousToolkit.EXAMPLES_FOLDER)
+        script.archiveArtifacts(artifacts: 'artifacts/**/*.log,artifacts/**/gt-examples/pharo-local/scripter/**/*', allowEmptyArchive: true)
     }
 }
 
@@ -1502,6 +1501,27 @@ enum Platform {
             script.powershell "${command}"
         } else {
             script.sh "${command}"
+        }
+    }
+
+    void prepare_scripter_for_archive(Script script, String artifacts_dir, String examples_dir) {
+        def source_dir = "${examples_dir}/pharo-local/scripter"
+        def destination_dir = "${artifacts_dir}/${examples_dir}/pharo-local/scripter"
+        if (this == Windows) {
+            script.powershell """
+                if (Test-Path -LiteralPath '${source_dir}' -PathType Container) {
+                    New-Item -ItemType Directory -Force -Path '${destination_dir}' | Out-Null
+                    Get-ChildItem -LiteralPath '${source_dir}' -Force |
+                        Copy-Item -Destination '${destination_dir}' -Recurse -Force
+                }
+            """
+        } else {
+            script.sh """
+                if [ -d '${source_dir}' ]; then
+                    mkdir -p '${destination_dir}'
+                    cp -R '${source_dir}/.' '${destination_dir}/'
+                fi
+            """
         }
     }
 
