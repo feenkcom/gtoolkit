@@ -885,7 +885,8 @@ class TestAndPackage extends AgentJob {
         agent.platform().prepare_for_archive(script, "${artifacts_dir}", "glamoroustoolkit")
         agent.platform().prepare_for_archive(script, "${artifacts_dir}", "gt-releaser")
         agent.platform().prepare_for_archive(script, "${artifacts_dir}", "gt-examples")
-        script.archiveArtifacts(artifacts: 'artifacts/**/*.log', allowEmptyArchive: true)
+        agent.platform().prepare_scripter_for_archive(script, "${artifacts_dir}", GlamorousToolkit.EXAMPLES_FOLDER)
+        script.archiveArtifacts(artifacts: 'artifacts/**/*.log,artifacts/**/gt-examples/pharo-local/scripter/**/*', allowEmptyArchive: true)
     }
 }
 
@@ -1500,6 +1501,27 @@ enum Platform {
             script.powershell "${command}"
         } else {
             script.sh "${command}"
+        }
+    }
+
+    void prepare_scripter_for_archive(Script script, String artifacts_dir, String examples_dir) {
+        def source_dir = "${examples_dir}/pharo-local/scripter"
+        def destination_dir = "${artifacts_dir}/${examples_dir}/pharo-local/scripter"
+        if (this == Windows) {
+            script.powershell """
+                if (Test-Path -LiteralPath '${source_dir}' -PathType Container) {
+                    New-Item -ItemType Directory -Force -Path '${destination_dir}' | Out-Null
+                    Get-ChildItem -LiteralPath '${source_dir}' -Force |
+                        Copy-Item -Destination '${destination_dir}' -Recurse -Force
+                }
+            """
+        } else {
+            script.sh """
+                if [ -d '${source_dir}' ]; then
+                    mkdir -p '${destination_dir}'
+                    cp -R '${source_dir}/.' '${destination_dir}/'
+                fi
+            """
         }
     }
 
