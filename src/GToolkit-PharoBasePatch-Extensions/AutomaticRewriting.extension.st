@@ -2,22 +2,50 @@ Extension { #name : #AutomaticRewriting }
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
 AutomaticRewriting class >> addLog: anElement [
-	"Logged elements are mostly looked at after the deprecated method returned,
-	when its context is dead (see #copyContextUpToSender)"
+	"Log a copy that keeps the message text but no contexts (see #copyForLog)"
 
 	<gtPharoPatch: #Pharo>
-	anElement copyContextUpToSender.
-	self log add: anElement
+	self log add: anElement copyForLog
 ]
 
 { #category : #'*GToolkit-PharoBasePatch-Extensions' }
-AutomaticRewriting >> copyContextUpToSender [
-	"Once the deprecated method returns, its context is dead and has no sender,
-	so the message text can no longer say who called it (see #sendingMethodName).
-	We copy the contexts up to the sender, and not the rest of the stack, 
-	as that would keep many more objects alive."
+AutomaticRewriting >> copyForLog [
+	"Answer a copy to keep in the deprecation log, which is mostly looked at after the deprecated
+	method returned. The message text is computed now, while the contexts still know the sender.
+	The copy references no contexts, signaler or condition: they would keep alive the receivers
+	and temporaries of the deprecated method and of its senders, for example whole user interfaces.
+	The original exception keeps its contexts, so transformations and warnings still work."
 
-	| aSendingContext |
-	aSendingContext := self contextOfSender ifNil: [ ^ self ].
-	context := context copyTo: aSendingContext sender
+	^ self shallowCopy
+		privateClearForLogWithMessageText: self messageTextForLog;
+		yourself
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
+AutomaticRewriting >> messageTextForLog [
+	"The message text names the sender, which is not known when the deprecated method
+	was called from a block that ran after its method returned"
+
+	^ [ self messageText ]
+		on: Error
+		do: [ :anError | 
+			anError
+				return: (String
+						streamContents: [ :aStream | 
+							aStream
+								nextPutAll: 'The method ';
+								nextPutAll: ([ self deprecatedMethodName ] on: Error do: [ :e | e return: '?' ]);
+								nextPutAll: ' has been deprecated. ';
+								nextPutAll: (explanationString ifNil: [ '' ]) asString ]) ]
+]
+
+{ #category : #'*GToolkit-PharoBasePatch-Extensions' }
+AutomaticRewriting >> privateClearForLogWithMessageText: aString [
+	messageText := aString.
+	context := nil.
+	condition := nil.
+	signaler := nil.
+	signalContext := nil.
+	handlerContext := nil.
+	outerContext := nil
 ]
