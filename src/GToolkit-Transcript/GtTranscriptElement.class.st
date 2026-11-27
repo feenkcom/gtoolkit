@@ -152,22 +152,22 @@ GtTranscriptElement >> onAddedToSceneGraph [
 	super onAddedToSceneGraph.
 
 	self unsubscribeFromTranscript.
-	
-	aTranscript := self transcript
-		ifNil: [ ^ self ].
 
-	aTranscript textDo: [ :aText |
-		editorElement editor text: aText copy.
-	
-		aTranscript announcer
-			when: GtTranscriptInsertStringAnnouncement
-			send: #insertStringAnnouncement:
-			to: self.
-			
-		aTranscript announcer
-			when: GtTranscriptDeleteAllAnnouncement
-			send: #deleteAllAnnouncement:
-			to: self ].
+	aTranscript := self transcript ifNil: [ ^ self ].
+
+	aTranscript
+		textDo: [ :aText | 
+			editorElement editor text: aText copy.
+
+			aTranscript announcer weak
+				when: GtTranscriptInsertStringAnnouncement
+				send: #insertStringAnnouncement:
+				to: self.
+
+			aTranscript announcer weak
+				when: GtTranscriptDeleteAllAnnouncement
+				send: #deleteAllAnnouncement:
+				to: self ].
 
 	self updateScroll
 ]
