@@ -1,0 +1,298 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T08:06:52.933889+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T10:17:12.789437+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "W0dMEXvrR7WP0VBB4hEZZw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "An LLM data view gives an object a representation that LLMs can consume. The **LLM views** tab in the object inspector lists the data views the object exposes. Tools such as the Smalltalk evaluation tool include the returned object’s JSON views under `objectDetails`."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T08:06:52.952788+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T10:17:15.426988+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WlhdzeBPStq9SrVx7cPjnQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "An LLM data view is defined in a one-argument method on the object that owns the data. The {{gtPragma:gtLlmDataView}} pragma marks the method. The view’s title labels it in the inspector, and `dataKey:` names its field in the JSON result. A block supplies the data on demand. {{gtMethod:GtLDataView>>#jsonObject:}} takes a block that returns a JSON-ready object. {{gtMethod:GtLDataView>>#magritteObject:}} serializes the object returned by the block using its Magritte descriptions."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T08:06:52.955579+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T10:17:17.939946+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yLvkYqs1R66cHdFMJd8AUQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "{{gtSymbol:forwardObject}} with `object: [ ... ]` delegates to another object. By default, the forwarding view collects all of the target’s data views and exposes their keys at the current level. The optional `view:` selects one view, and `dataKey:` nests the forwarded data under a key. {{gtMethod:GtSearchFilter>>#llmResultDataViewsFor:}} forwards the views of its result stream this way."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T08:06:52.960027+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T10:17:20.881907+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "OUcrAQo6RQGcNuJ2rk8OrQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "{{gtMethod:GtAsyncSearchMethodGroupStream>>#llmMatchingMethodsDataViewFor:}} contributes the `methodMatches` field. It reads a copy of the stream, collects at most 50 method references, and checks one extra match to set `mayHaveMore`. The Smalltalk snippet below returns the filter’s JSON data."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T08:06:52.963857+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T08:06:52.963857+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "LzgM8c7FTyi2zh2Xh/oJcw=="
+				},
+				"code" : "| filter |\nfilter := 'GToolkit-Pharo-Coder-AddOns' asPackage gtMethodsInPackage\n\t& (Color gtReferences | BrGlamorousColors gtReferences).\n((filter llmDataViewsFor: GtLDataView new) serializeToLlmPrimiteData) llmJsonData"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T08:06:52.97258+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T10:17:23.422031+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Q+d836cLR/anhV0N6Lj8uw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The example below checks that serializing the view leaves the stream available to read. {{gtMethod:GtLMethodsSearchResultExamples>>#methodFilterResultViewIsBounded}} checks the limit and the truncation flag."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T08:06:52.975907+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2026-11-27T08:06:52.975907+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ma4YZIEpRsa9O8+AbKp4rA=="
+				},
+				"exampleSelector" : "methodGroupStreamDataViewPreservesStream",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "GtLMethodsSearchResultExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-11-27T08:06:32.951214+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2026-11-27T08:06:32.951214+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "LLM data views by example"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "46aa9f59-b1ad-46ec-991b-936dd7fdc965"
+	}
+}
