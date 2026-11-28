@@ -1709,7 +1709,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Here we first create a new `OrderedCollection`, and then send four messages to this object. Note that sence the `add:` method returns its argument rather than the receiver, to ensure that the final result is the collection and not the literal `#blue`, we send a final message `#yourself`, which returns the collection. (This is a common idiom in Smalltalk cascades.)"
+							"string" : "Here we first create a new `OrderedCollection`, and then send four messages to this object. Note that since the `add:` method returns its argument rather than the receiver, to ensure that the final result is the collection and not the literal `#blue`, we send a final message `#yourself`, which returns the collection. (This is a common idiom in Smalltalk cascades.)"
 						}
 					]
 				},

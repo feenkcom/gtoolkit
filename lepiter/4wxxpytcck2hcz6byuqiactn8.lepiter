@@ -44,7 +44,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "`self` and `super` both represent the reciever of a message. The difference is in the method lookup. A self send is always dynamically resolved while a super send is static."
+							"string" : "`self` and `super` both represent the receiver of a message. The difference is in the method lookup. A self send is always dynamically resolved while a super send is static."
 						}
 					]
 				},
